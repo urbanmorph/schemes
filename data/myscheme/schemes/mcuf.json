@@ -1,0 +1,173 @@
+{
+ "_id": "68becc49680383bd53bec9f5",
+ "_slug": "mcuf",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "To provide medical check-up benefits as part of social security to construction workers registered with the Uttarakhand Building and Other Construction Workers Welfare Board, medical check-up facilities are offered through door-to-door visits, health camps, and collection centers."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "To provide medical check-up benefits as part of social security to construction workers registered with the Uttarakhand Building and Other Construction Workers Welfare Board, medical check-up facilities are offered through door-to-door visits, health camps, and collection centers.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Building And Other Construction Workers Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Labour",
+    "value": 50000014
+   },
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Medical Check-Up facility (UKBOCWWB)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MCUFUKBOCWWB",
+   "schemeSubCategory": [
+    {
+     "label": "Workplace health and safety",
+     "value": "Workplace health and safety"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Labour",
+    "Building Worker",
+    "Construction Worker",
+    "Medical Check-Up",
+    "Health"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "Under this scheme, medical check-up facilities are provided to construction workers."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Under this scheme, medical check-up facilities are provided to construction workers.\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide medical check-up facilities to registered construction workers through door-to-door visits, health camps, and collection centers.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Medical Check-Up Facility” is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide medical check-up facilities to registered construction workers through door-to-door visits, health camps, and collection centers."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Medical Check-Up Facility” is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide medical check-up facilities to registered construction workers through door-to-door visits, health camps, and collection centers.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 33)",
+     "url": "https://uk.gov.in/department92/library_file/file-30-01-2025-04-25-16.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mcuf"
+}

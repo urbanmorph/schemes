@@ -1,0 +1,275 @@
+{
+ "_id": "65b0f44f66a1d73a2183f63c",
+ "_slug": "kvy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "How to get register and apply for the scheme",
+        "underline": true
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicant must visit the below offices"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Nearest labor office."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Tehsildar of the concerned tehsil."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Block Development Officer of the concerned development block."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "text": "Get the application form and fill out the completely."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Attach required documents in the prescribed format."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the application form in the same office."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "> **How to get register and apply for the scheme**\n\n\n1. Applicant must visit the below offices\n\n  - Nearest labor office.\n  - Tehsildar of the concerned tehsil.\n  - Block Development Officer of the concerned development block.\n\n1. Get the application form and fill out the completely.\n1. Attach required documents in the prescribed format.\n1. Submit the application form in the same office.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department, Uttar Pradesh",
+    "value": 90000031
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Kaushal Vikas Yojana",
+   "schemeOpenDate": "2011-07-15",
+   "schemeShortTitle": "KVY",
+   "schemeSubCategory": [
+    {
+     "label": "Apprenticeships and training",
+     "value": "Apprenticeships and training"
+    }
+   ],
+   "state": {
+    "label": "Uttar Pradesh",
+    "value": 9
+   },
+   "tags": [
+    "Labor",
+    "Training",
+    "Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Applicant himself or his/her husband/wife/father must be a registered construction worker and his/her contribution must be updated."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "If the registered worker himself wants to undergo training, then his/her age should be between 18-35."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Age dependencies: "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Dependent wife/ unmarried daughter has no age limit. "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The maximum age of dependent son is 21 years"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. Applicant himself or his/her husband/wife/father must be a registered construction worker and his/her contribution must be updated.\n1. If the registered worker himself wants to undergo training, then his/her age should be between 18-35.\n1. Age dependencies: \n\n  - Dependent wife/ unmarried daughter has no age limit. \n  - The maximum age of dependent son is 21 years\n\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Training fees and materials:"
+        },
+        {
+         "text": " Board will reimburse expenses of institute-fixed fees, textbooks, and other training-related stationery."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Exam: "
+        },
+        {
+         "text": "After training, will have to pass an assessment test."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Wages"
+        },
+        {
+         "text": ": In case the registered worker himself receives training, an amount equivalent to the minimum wage of the unskilled worker will be reimbursed but only registered workers are eligible, not dependents."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. **Training fees and materials:** Board will reimburse expenses of institute-fixed fees, textbooks, and other training-related stationery.1. **Exam:** After training, will have to pass an assessment test.1. **Wages**: In case the registered worker himself receives training, an amount equivalent to the minimum wage of the unskilled worker will be reimbursed but only registered workers are eligible, not dependents.\n",
+   "briefDescription": "The Uttar Pradesh Kaushal Vikas Mission (UPSDM) is a scheme launched by the Government of Uttar Pradesh to equip young people in the state with the necessary skills for employment. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "This scheme aims to address the skill gap faced by construction workers registered with the Board by providing them with access to essential training opportunities for competency development and technical advancement. Currently, construction workers rely solely on on-the-job experience, lacking formal technical training due to institutional limitations. This hinders their ability to secure fair wages and access better services. Recognizing the financial constraints often preventing workers and their families from pursuing formal training, this scheme offers reimbursement for both training costs and lost wages. By bridging this financial gap, the initiative empowers individuals to elevate their skillsets and career prospects."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "This scheme aims to address the skill gap faced by construction workers registered with the Board by providing them with access to essential training opportunities for competency development and technical advancement. Currently, construction workers rely solely on on-the-job experience, lacking formal technical training due to institutional limitations. This hinders their ability to secure fair wages and access better services. Recognizing the financial constraints often preventing workers and their families from pursuing formal training, this scheme offers reimbursement for both training costs and lost wages. By bridging this financial gap, the initiative empowers individuals to elevate their skillsets and career prospects.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.upbocw.in/pdf/adhisuchna/kaushal%20vikas%20yojna.pdf"
+    },
+    {
+     "title": "Details",
+     "url": "https://www.upbocw.in/StaticPages/schemes.aspx#tab5"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "kvy"
+}

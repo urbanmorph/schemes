@@ -1,0 +1,262 @@
+{
+ "_id": "6777d8ff09be7bb7dfa1d965",
+ "_slug": "mssg",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-1:"
+         },
+         {
+          "text": " The applicant must fill out the prescribed form with complete details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-2: "
+         },
+         {
+          "text": "Submit the form along with the necessary documents to the Women's Economic Development Corporation."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Helpdesk: "
+           },
+           {
+            "children": [
+             {
+              "text": "Contact Details."
+             }
+            ],
+            "link": "https://wcd.gujarat.gov.in/general_contact",
+            "type": "link"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "block_quote"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step-1:** The applicant must fill out the prescribed form with complete details.\n**Step-2:** Submit the form along with the necessary documents to the Women&amp;#39;s Economic Development Corporation.\n&amp;gt; **Helpdesk:** [Contact Details.](https://wcd.gujarat.gov.in/general_contact)\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Women and Child Development Department",
+    "value": 2444469
+   },
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mahila Swavlamban Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MSSG",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Economic Development",
+    "Women Empowerment",
+    "Loans"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a woman."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be a resident of Gujarat."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must belong to the BPL (Below Poverty Line) category "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's annual income must be ₹1,20,000/- in rural areas and ₹1,50,000/-in urban areas."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a woman.\n1. The applicant must be a resident of Gujarat.\n1. The applicant must belong to the BPL (Below Poverty Line) category \n1. The applicant&#39;s annual income must be ₹1,20,000/- in rural areas and ₹1,50,000/-in urban areas.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Subsidy Support: "
+          },
+          {
+           "text": "A subsidy of 15% or up to ₹30,000/- (whichever is lower) is provided to eligible women to support their business ventures."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Loan Facility: "
+          },
+          {
+           "text": "Women can avail of loans up to ₹2,00,000/- to start or expand their economic activities."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Subsidy Support:** A subsidy of 15% or up to ₹30,000/- (whichever is lower) is provided to eligible women to support their business ventures.\n\n  - **Loan Facility:** Women can avail of loans up to ₹2,00,000/- to start or expand their economic activities.\n",
+   "briefDescription": "The scheme provides financial assistance to women from rural and urban areas for undertaking economic activities, with support in the form of a subsidy and loans.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Mahila Swavlamban Scheme\" launched by the Women and Child Development Department, Gujarat, aims to empower women by providing financial assistance for starting or expanding economic activities. This initiative targets women from rural and urban areas, especially those from families living below the poverty line. The scheme offers a subsidy and a loan to support the economic development of women, helping them become self-reliant."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Mahila Swavlamban Scheme&amp;quot; launched by the Women and Child Development Department, Gujarat, aims to empower women by providing financial assistance for starting or expanding economic activities. This initiative targets women from rural and urban areas, especially those from families living below the poverty line. The scheme offers a subsidy and a loan to support the economic development of women, helping them become self-reliant.\n&lt;br&gt;\n\n&lt;br&gt;\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://wcd.gujarat.gov.in/initiativedetails?id=233"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mssg"
+}

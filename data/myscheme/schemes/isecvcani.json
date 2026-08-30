@@ -1,0 +1,303 @@
+{
+ "_id": "67d78a5f622d293942a384f3",
+ "_slug": "isecvcani",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "text": "The \"Incentive Scheme For The Electricity Consumers Under Various Categories In Andaman & Nicobar Islands\" does not require any formal application process. Eligible consumers with functioning meters and paid-up bills will be automatically considered for incentives based on their energy savings as evaluated by the department's committees."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "The &quot;Incentive Scheme For The Electricity Consumers Under Various Categories In Andaman &amp; Nicobar Islands&quot; does not require any formal application process. Eligible consumers with functioning meters and paid-up bills will be automatically considered for incentives based on their energy savings as evaluated by the department&#39;s committees.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Electricity Department",
+    "value": 3500011
+   },
+   "schemeCategory": [
+    {
+     "label": "Utility & Sanitation",
+     "value": "628ce97ad6d1a3bde468537d"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Incentive Scheme For The Electricity Consumers Under Various Categories In Andaman & Nicobar Islands",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ISECVCANI",
+   "schemeSubCategory": [
+    {
+     "label": "Electricity",
+     "value": "Electricity"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Andaman and Nicobar Islands",
+    "value": 35
+   },
+   "tags": [
+    "Electricity",
+    "Consumer",
+    "Incentive",
+    "Energy"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The consumers those have installed Solar Water Heating System, Rooftop Solar & Ground Mounted Solar for their domestic requirements will be considered under Green Energy."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The consumers whose energy meters are in running condition."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The calculation of saving done by the consumer shall be on the basis of past three months average consumption."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The consumers having electricity bill paid up to date will only be considered."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Ownership of the meter should be in the name of the beneficiary who should be present at the time of evaluation, if called by the department."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Only those consumers will be eligible whose minimum energy savings are more than 30%."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The highest savings done by the consumers would be eligible for the prizes."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "In case the percentage saving is equal for more than one consumer, say Mr. A & Mr. B both are with 40% saving, then the winner will be selected by drawing of lots."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The consumers those have installed Solar Water Heating System, Rooftop Solar &amp; Ground Mounted Solar for their domestic requirements will be considered under Green Energy.\n- The consumers whose energy meters are in running condition.\n- The calculation of saving done by the consumer shall be on the basis of past three months average consumption.\n- The consumers having electricity bill paid up to date will only be considered.\n- Ownership of the meter should be in the name of the beneficiary who should be present at the time of evaluation, if called by the department.\n- Only those consumers will be eligible whose minimum energy savings are more than 30%.\n- The highest savings done by the consumers would be eligible for the prizes.\n- In case the percentage saving is equal for more than one consumer, say Mr. A &amp; Mr. B both are with 40% saving, then the winner will be selected by drawing of lots.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Prize Money for Domestic Consumers (Green Energy & Energy Conservation)"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "First Prize: ₹75,000/-; Second Prize: ₹50,000/-; Third Prize: ₹30,000/-"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Prize Money for Domestic Consumers (Energy Conservation)"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "First Prize: ₹50,000/-; Second Prize: ₹30,000/-; Third Prize: ₹15,000/-"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Prize Money for Commercial Consumers"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "First Prize: ₹75,000/-; Second Prize: ₹50,000/-; Third Prize: ₹30,000/-"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Prize Money for Industrial Consumers"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "First Prize: ₹75,000/-; Second Prize: ₹50,000/-; Third Prize: ₹30,000/-"
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Prize Money for Domestic Consumers (Green Energy &amp; Energy Conservation)**\nFirst Prize: ₹75,000/-; Second Prize: ₹50,000/-; Third Prize: ₹30,000/-\n**Prize Money for Domestic Consumers (Energy Conservation)**\nFirst Prize: ₹50,000/-; Second Prize: ₹30,000/-; Third Prize: ₹15,000/-\n**Prize Money for Commercial Consumers**\nFirst Prize: ₹75,000/-; Second Prize: ₹50,000/-; Third Prize: ₹30,000/-\n**Prize Money for Industrial Consumers**\nFirst Prize: ₹75,000/-; Second Prize: ₹50,000/-; Third Prize: ₹30,000/-\n",
+   "briefDescription": "\"Incentive Scheme For The Electricity Consumers Under Various Categories In Andaman & Nicobar Islands\" aims to reduce power consumption through demand side management and promote green energy adoption. The scheme offers monetary incentives to consumers who achieve at least 30% energy savings.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "Launched in 2018, the scheme \"Incentive Scheme For The Electricity Consumers Under Various Categories In Andaman & Nicobar Islands\" by the Electricity Department, Andaman & Nicobar Administration aims to encourage energy conservation among electricity consumers and promote adoption of green energy initiatives. The scheme offers monetary incentives ranging from ₹15,000/- to ₹75,000/- to consumers who achieve significant energy savings. Eligible participants include domestic, commercial, and industrial consumers with properly functioning meters and up-to-date bill payments. The scheme is implemented by the Electricity Department of Andaman & Nicobar Islands through an evaluation committee headed by the Commissioner-cum-Secretary (Power)."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "Launched in 2018, the scheme &quot;Incentive Scheme For The Electricity Consumers Under Various Categories In Andaman &amp; Nicobar Islands&quot; by the Electricity Department, Andaman &amp; Nicobar Administration aims to encourage energy conservation among electricity consumers and promote adoption of green energy initiatives. The scheme offers monetary incentives ranging from ₹15,000/- to ₹75,000/- to consumers who achieve significant energy savings. Eligible participants include domestic, commercial, and industrial consumers with properly functioning meters and up-to-date bill payments. The scheme is implemented by the Electricity Department of Andaman &amp; Nicobar Islands through an evaluation committee headed by the Commissioner-cum-Secretary (Power).\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Consumers With Stop/tampered Meter."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Consumers Billed on Average Basis."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Consumers Having Outstanding Dues."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Consumers Under Disconnection During the Month of Evaluation."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Consumers Physically Not Present in Their Residence."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Consumers With Disputed Ownership of the Electric Connection."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "exclusions_md": "\n- Consumers With Stop/tampered Meter.\n- Consumers Billed on Average Basis.\n- Consumers Having Outstanding Dues.\n- Consumers Under Disconnection During the Month of Evaluation.\n- Consumers Physically Not Present in Their Residence.\n- Consumers With Disputed Ownership of the Electric Connection.\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://vidyut.andaman.gov.in/doc/24-01-2024_38DIS.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "isecvcani"
+}

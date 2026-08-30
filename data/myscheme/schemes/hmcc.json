@@ -1,0 +1,447 @@
+{
+ "_id": "65c336bfed4030e118cea70e",
+ "_slug": "hmcc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the "
+       },
+       {
+        "children": [
+         {
+          "text": "Office/ Sub-Office"
+         }
+        ],
+        "link": "https://socwelfare.py.gov.in/sub--office-social-welfare-department",
+        "type": "link"
+       },
+       {
+        "text": " of the Department of Social Welfare, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "OR"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "The interested applicant should take print of the prescribed format "
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "link": "https://wcd.py.gov.in/sites/default/files/wcdmarrigeofpoorbride.pdf",
+        "type": "link"
+       },
+       {
+        "text": "of the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents to the authority given below - "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Puducherry: "
+         },
+         {
+          "text": "The Deputy Director, Differently Abled Section, Directorate of Social Welfare. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Karaikal: "
+         },
+         {
+          "text": "The Assistant Director, Social Welfare Department (Sub Office)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Mahe / Yanam: "
+         },
+         {
+          "text": "The Welfare Officer (i\\c), Social Welfare Department (Sub Office). "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the [Office/ Sub-Office](https://socwelfare.py.gov.in/sub--office-social-welfare-department) of the Department of Social Welfare, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\nOR\nThe interested applicant should take print of the prescribed format of the application form.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the authority given below - \n\n- **Puducherry:** The Deputy Director, Differently Abled Section, Directorate of Social Welfare. - **Karaikal:** The Assistant Director, Social Welfare Department (Sub Office).- **Mahe / Yanam:** The Welfare Officer (i\\c), Social Welfare Department (Sub Office). \n**Step 4:** Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department, Puducherry",
+    "value": 34000038
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    },
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Home for Mentally Challenged Children",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "HMCC",
+   "schemeSubCategory": [
+    {
+     "label": "Shelter, integrated support and assistance",
+     "value": "Shelter, integrated support and assistance"
+    },
+    {
+     "label": "Free Meal",
+     "value": "Free Meal"
+    },
+    {
+     "label": "Children’s health and immunization",
+     "value": "Children’s health and immunization"
+    }
+   ],
+   "state": {
+    "label": "Puducherry",
+    "value": 34
+   },
+   "tags": [
+    "Food",
+    "Shelter",
+    "Child",
+    "Medical Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "text": "The applicant should qualify as ANY ONE of the following:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Boys in the age group of 7 to 17 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Mild Mental Retardedness with an IQ level between 50-70."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Moderate Mental Retardedness with an IQ level between 35-49."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Severe Mental Retardedness with an IQ level between 20-34."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Profound Mental Retardedness with an IQ level under 20."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Unspecified Mental Retardedness with mental efficiency and sub-normality."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "The applicant should qualify as ANY ONE of the following:\n\n- Boys in the age group of 7 to 17 years.\n- Mild Mental Retardedness with an IQ level between 50-70.\n- Moderate Mental Retardedness with an IQ level between 35-49.\n- Severe Mental Retardedness with an IQ level between 20-34.\n- Profound Mental Retardedness with an IQ level under 20.\n- Unspecified Mental Retardedness with mental efficiency and sub-normality.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Free boarding and lodging for all the inmates."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free supply of 4 uniform sets to the inmates per year."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free supply of all daily living needs for the inmates."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free medical check-ups, including paediatric and psychiatric services, for all the inmates."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Annual tours and local picnic trips to places of interest for the inmates."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Annual Day for prize distribution to winners in sports events and cultural programmes."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Non-formal education to assist and develop inmates in their day-to-day activities."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Training in habits of discipline, cleanliness, good health, drawing, painting, yoga, and other extracurricular activities."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE:"
+      },
+      {
+       "text": " Contact the authorities below in case of delay in disbursal of benefits:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Puducherry: "
+        },
+        {
+         "text": "The Director, Directorate of Social Welfare, Saradhambal Nagar, Ellaipillaichavadhy, Puducherry. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Karaikal: "
+        },
+        {
+         "text": "The Collector, Karaikal."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Mahe/Yanam: "
+        },
+        {
+         "text": "The Regional Administrator, Mahe/Yanam."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Free boarding and lodging for all the inmates.\n- Free supply of 4 uniform sets to the inmates per year.\n- Free supply of all daily living needs for the inmates.\n- Free medical check-ups, including paediatric and psychiatric services, for all the inmates.\n- Annual tours and local picnic trips to places of interest for the inmates.\n- Annual Day for prize distribution to winners in sports events and cultural programmes.\n- Non-formal education to assist and develop inmates in their day-to-day activities.\n- Training in habits of discipline, cleanliness, good health, drawing, painting, yoga, and other extracurricular activities.\n\n<br>\n\n**NOTE:** Contact the authorities below in case of delay in disbursal of benefits:\n\n- **Puducherry:** The Director, Directorate of Social Welfare, Saradhambal Nagar, Ellaipillaichavadhy, Puducherry. - **Karaikal:** The Collector, Karaikal.- **Mahe/Yanam:** The Regional Administrator, Mahe/Yanam.\n",
+   "briefDescription": "The scheme \"Home for Mentally Challenged Children\" by the Department of Social Welfare, Government of Puducherry, aims to provide care for children facing mental challenges, i.e. low Intelligence Quotient (IQ). The scheme offers free boarding and lodging, uniform sets, daily living needs, etc.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme \"Home for Mentally Challenged Children\" by the Department of Social Welfare, Government of Puducherry, aims to provide care for children facing mental challenges, i.e. low Intelligence Quotient (IQ). The scheme offers free boarding and lodging, uniform sets, daily living needs, and medical check-ups for the inmates. Additionally, it includes educational and recreational activities to enhance their overall well-being."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &quot;Home for Mentally Challenged Children&quot; by the Department of Social Welfare, Government of Puducherry, aims to provide care for children facing mental challenges, i.e. low Intelligence Quotient (IQ). The scheme offers free boarding and lodging, uniform sets, daily living needs, and medical check-ups for the inmates. Additionally, it includes educational and recreational activities to enhance their overall well-being.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Citizen's Charter",
+     "url": "https://socwelfare.py.gov.in/sites/default/files/citizen-charter.pdf"
+    },
+    {
+     "title": "Contact Us",
+     "url": "https://socwelfare.py.gov.in/contact-us"
+    },
+    {
+     "title": "Sub Offices",
+     "url": "https://socwelfare.py.gov.in/sub--office-social-welfare-department"
+    },
+    {
+     "title": "Grievance Redressal",
+     "url": "https://pgportal.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "hmcc"
+}

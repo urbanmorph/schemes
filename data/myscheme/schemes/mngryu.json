@@ -1,0 +1,201 @@
+{
+ "_id": "67f62f4e13ec05eecbbc2162",
+ "_slug": "mngryu",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The list of Antyodaya ration card holders is provided by the District Supply Officer to the respective gas agency in the area."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "An Antyodaya ration card holder can avail a free gas refill after linking their ration card details, Aadhaar, and bank account with the nearest gas agency."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "To receive one free refill every four months, the cardholder must first pay the full price of the gas to the gas agency and collect the cylinder. The cost of the gas will then be reimbursed directly to the cardholder’s bank account through DBT."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The list of Antyodaya ration card holders is provided by the District Supply Officer to the respective gas agency in the area.\n  - An Antyodaya ration card holder can avail a free gas refill after linking their ration card details, Aadhaar, and bank account with the nearest gas agency.\n  - To receive one free refill every four months, the cardholder must first pay the full price of the gas to the gas agency and collect the cylinder. The cost of the gas will then be reimbursed directly to the cardholder’s bank account through DBT.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Food & Civil Supplies",
+    "value": 50000012
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Mukhyamantri Nishulk Gas Refill Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MMNGRY",
+   "schemeSubCategory": [],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Gas Cylinder",
+    "Free Gas Refill",
+    "Antyodaya",
+    "Ration Card",
+    "Pink Card"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Uttarakhand."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must hold an Antyodaya (pink card) ration card issued by the state."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The applicant must be a resident of Uttarakhand.\n- The applicant must hold an Antyodaya (pink card) ration card issued by the state.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, Antyodaya ration card (pink card) holders in the state are entitled to receive 03 free gas cylinder refills every year."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Under this scheme, Antyodaya ration card (pink card) holders in the state are entitled to receive 03 free gas cylinder refills every year.\n<br>\n\n",
+   "briefDescription": "The scheme aims to support poor families by reducing their household fuel expenses. Under this scheme, Antyodaya (pink card) ration card holders in the state are entitled to receive three free gas cylinder refills every year.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Mukhyamantri Nishulk Gas Refill Yojana\" was launched by the Department of Food, Civil Supplies & Consumer Affairs, Government of Uttarakhand. The scheme aims to support poor families holding Antyodaya (pink) ration cards in the state by reducing their household fuel expenses."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Mukhyamantri Nishulk Gas Refill Yojana&amp;quot; was launched by the Department of Food, Civil Supplies &amp;amp; Consumer Affairs, Government of Uttarakhand. The scheme aims to support poor families holding Antyodaya (pink) ration cards in the state by reducing their household fuel expenses.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 61)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mngryu"
+}

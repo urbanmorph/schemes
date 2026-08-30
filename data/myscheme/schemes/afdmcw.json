@@ -1,0 +1,237 @@
+{
+ "_id": "67f7646fca4dbdfd53102cf5",
+ "_slug": "afdmcw",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "The online application can be submitted through Shramik Suvidha Kendras. "
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "Along with the application form, applicants must submit their Shramik Card, bank account details, marriage card, Aadhaar cards of the bride and groom, the marriage registration certificate, a self-written certificate stating that no assistance has been received from any other department, and a self-declaration certificate. "
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "It is mandatory to apply within one year from the date of marriage. After submission, the department conducts verification, and if the application and documents are found to be correct, the financial assistance is transferred directly to the construction worker’s bank account."
+             }
+            ],
+            "type": "list_item"
+           }
+          ],
+          "type": "ul_list"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The online application can be submitted through Shramik Suvidha Kendras. \n  - Along with the application form, applicants must submit their Shramik Card, bank account details, marriage card, Aadhaar cards of the bride and groom, the marriage registration certificate, a self-written certificate stating that no assistance has been received from any other department, and a self-declaration certificate. \n  - It is mandatory to apply within one year from the date of marriage. After submission, the department conducts verification, and if the application and documents are found to be correct, the financial assistance is transferred directly to the construction worker’s bank account.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Building And Other Construction Workers Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Labour",
+    "value": 50000014
+   },
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Financial Assistance for Daughter's Marriage (UKBOCWWB)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FADMUKBOCWWB",
+   "schemeSubCategory": [
+    {
+     "label": "Marriage",
+     "value": "Marriage"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Labour",
+    "Marriage",
+    "Construction Worker",
+    "Girl Marriage"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Financial assistance is available for the worker’s own marriage and for the marriage of up to two daughters."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board.\n   1. Financial assistance is available for the worker’s own marriage and for the marriage of up to two daughters.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "An amount of ₹51,000/- for each marriage is provided."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " Assistance is provided for the marriage of up to two daughters of the registered worker as well as for the worker’s own marriage."
+        }
+       ],
+       "type": "block_quote"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n- An amount of ₹51,000/- for each marriage is provided.\n\n&gt; **Note:** Assistance is provided for the marriage of up to two daughters of the registered worker as well as for the worker’s own marriage.\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide financial assistance of ₹51,000/- per marriage for the marriage of registered construction workers themselves or for the marriage of up to two daughters.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Financial Assistance for Daughter's Marriage” scheme is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide financial support for the marriage of registered construction workers and their daughters."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Financial Assistance for Daughter&amp;#39;s Marriage” scheme is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide financial support for the marriage of registered construction workers and their daughters.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 55)",
+     "url": "https://uk.gov.in/assets/pdf/MERI%20_YOJANA_book_04-12-23.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://ukbocw.uk.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "afdmcw"
+}

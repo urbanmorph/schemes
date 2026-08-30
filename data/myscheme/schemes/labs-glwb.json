@@ -1,0 +1,375 @@
+{
+ "_id": "65f9650be06bfd7340436c6f",
+ "_slug": "labs-glwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Application Process for Scheme Benefit:",
+          "underline": true
+         }
+        ],
+        "type": "block_quote"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The applicant may visit the Sanman Portal: "
+         },
+         {
+          "children": [
+           {
+            "text": "https://sanman.gujarat.gov.in/"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " On the home page, under the tab ‘Citizen Login’, click on ‘"
+         },
+         {
+          "children": [
+           {
+            "text": "Please Register Here"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/Home/Registration",
+          "type": "link"
+         },
+         {
+          "text": "’."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03: "
+         },
+         {
+          "text": "Enter your Aadhaar Card Number, select user type, and then enter your Labour Welfare Fund Account Number."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " Now, click on ‘Fetch’ & verify the details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " Enter user details and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06:"
+         },
+         {
+          "text": " After successful registration, the applicants can login through their User ID and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 07: "
+         },
+         {
+          "text": "Now, select the scheme and read the instructions carefully for the selected scheme."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 08:"
+         },
+         {
+          "text": " Fill out the application form and upload all the relevant documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 09:"
+         },
+         {
+          "text": " Agree with the Rules & Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note:"
+         },
+         {
+          "text": " The application form submitted except for incomplete details and complete enclosure will be done in the office. No correspondence will be entertained regarding that."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "&gt; **Application Process for Scheme Benefit:**\n\n**Step 01:** The applicant may visit the Sanman Portal: [https://sanman.gujarat.gov.in/](https://sanman.gujarat.gov.in/)\n**Step 02:** On the home page, under the tab ‘Citizen Login’, click on ‘[Please Register Here](https://sanman.gujarat.gov.in/Home/Registration)’.\n**Step 03:** Enter your Aadhaar Card Number, select user type, and then enter your Labour Welfare Fund Account Number.\n**Step 04:** Now, click on ‘Fetch’ &amp;amp; verify the details.\n**Step 05:** Enter user details and Password.\n**Step 06:** After successful registration, the applicants can login through their User ID and Password.\n**Step 07:** Now, select the scheme and read the instructions carefully for the selected scheme.\n**Step 08:** Fill out the application form and upload all the relevant documents.\n**Step 09:** Agree with the Rules &amp;amp; Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID.\n**Note:** The application form submitted except for incomplete details and complete enclosure will be done in the office. No correspondence will be entertained regarding that.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Gujarat Labour Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour and Employment Department",
+    "value": 2444454
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Labour Accident benefit Scheme- Gujarat Labour Welfare Board",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "LABS-GLWB",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Accident",
+    "Shramyogi",
+    "Labour",
+    "Industrial Worker",
+    "Organized Worker",
+    "Disability",
+    "Financial Support"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Workers who have become disabled during their duty period due to an accident or any other reason at the working premises of the establishment can avail of the benefits under the scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Only those workers (Shramyogis) whose organization/unit has regularly paid their Labour Welfare Fund for the last one year will be eligible."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 01:"
+        },
+        {
+         "text": " Application must be made within 2 years of the accident. Applications received after the deadline will be processed at the office."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 02:"
+        },
+        {
+         "text": " The worker has to submit proof of payment of said amount by the organization."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 03: "
+        },
+        {
+         "text": "The decision of the Welfare Commissioner will be final and the jurisdiction will be Ahmedabad."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. Workers who have become disabled during their duty period due to an accident or any other reason at the working premises of the establishment can avail of the benefits under the scheme.\n   1. Only those workers (Shramyogis) whose organization/unit has regularly paid their Labour Welfare Fund for the last one year will be eligible.\n\n**Note 01:** Application must be made within 2 years of the accident. Applications received after the deadline will be processed at the office.\n**Note 02:** The worker has to submit proof of payment of said amount by the organization.\n**Note 03:** The decision of the Welfare Commissioner will be final and the jurisdiction will be Ahmedabad.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under the scheme, workers with disabilities ranging from 40% to 70% will receive financial assistance of ₹25,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Workers with disabilities exceeding 70% will receive financial assistance of ₹50,000/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " The organization has to pay ₹12,500/- for disabilities ranging from 40% to 70%, and for disabilities exceeding 70%, the benefit amount is ₹25,000/-. Additionally, any amount to be paid as per law will be covered by the board."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. Under the scheme, workers with disabilities ranging from 40% to 70% will receive financial assistance of ₹25,000/-.\n   1. Workers with disabilities exceeding 70% will receive financial assistance of ₹50,000/-.\n\n**Note:** The organization has to pay ₹12,500/- for disabilities ranging from 40% to 70%, and for disabilities exceeding 70%, the benefit amount is ₹25,000/-. Additionally, any amount to be paid as per law will be covered by the board.\n",
+   "briefDescription": "Under the scheme, financial assistance is provided to workers (Shramyogis) who become disabled during their duty period due to an accident or any other reason at the working premises of the establishment.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Labour Accident Benefit Scheme” was launched by the Gujarat Labour Welfare Board, Labour, Skill Development & Employment Department, Government of Gujarat. Under the scheme, financial assistance is provided to workers (Shramyogis) who become disabled during their duty period due to an accident or any other reason at the working premises of the establishment."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The “Labour Accident Benefit Scheme” was launched by the Gujarat Labour Welfare Board, Labour, Skill Development &amp;amp; Employment Department, Government of Gujarat. Under the scheme, financial assistance is provided to workers (Shramyogis) who become disabled during their duty period due to an accident or any other reason at the working premises of the establishment.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://glwb.gujarat.gov.in/labour-acc-benifite-scheme.htm"
+    },
+    {
+     "title": "Sanman Portal",
+     "url": "https://sanman.gujarat.gov.in/Home/GLWBScheme#"
+    },
+    {
+     "title": "Scheme Details (Page No. 365)",
+     "url": "https://planning.gujarat.gov.in/images/pdf/dp-eng-22-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "labs-glwb"
+}

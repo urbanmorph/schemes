@@ -1,0 +1,231 @@
+{
+ "_id": "66bae642c5af5de22681ae29",
+ "_slug": "hrs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1:"
+       },
+       {
+        "text": " The interested applicant visits the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://tbocwwb.telangana.gov.in/index.html",
+        "type": "link"
+       },
+       {
+        "text": " and clicks on \""
+       },
+       {
+        "children": [
+         {
+          "text": "Downloads"
+         }
+        ],
+        "link": "https://tbocwwb.telangana.gov.in/new_downloads.html",
+        "type": "link"
+       },
+       {
+        "text": "\" at the top of menu options."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2: "
+       },
+       {
+        "text": "Now click on the download button corresponding to the scheme name."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3"
+       },
+       {
+        "text": ": In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the concerned Assistant Labour Officer."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-5:"
+       },
+       {
+        "text": " Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant visits the [official website](https://tbocwwb.telangana.gov.in/index.html) and clicks on &quot;[Downloads](https://tbocwwb.telangana.gov.in/new_downloads.html)&quot; at the top of menu options.\n**Step-2:** Now click on the download button corresponding to the scheme name.\n**Step-3**: In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step-4:** Submit the duly filled and signed application form along with the documents to the concerned Assistant Labour Officer.\n**Step-5:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour, Employment Training and Factories Department",
+    "value": 3666676
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Hospitalisation Relief Scheme",
+   "schemeOpenDate": "2010-07-27",
+   "schemeShortTitle": "HRS",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Disease and conditions",
+     "value": "Disease and conditions"
+    },
+    {
+     "label": "Emergency medical assistance",
+     "value": "Emergency medical assistance"
+    }
+   ],
+   "state": {
+    "label": "Telangana",
+    "value": 36
+   },
+   "tags": [
+    "Financial Assistance",
+    "Accident",
+    "Disability",
+    "Disease",
+    "Construction Worker"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The worker must be a registered building and other construction worker with the Telangana Building and Other Construction Workers Welfare Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The worker should be hospitalized for at least five days due to an accident or disease."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The worker must be a registered building and other construction worker with the Telangana Building and Other Construction Workers Welfare Board.\n1. The worker should be hospitalized for at least five days due to an accident or disease.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "The relief amount is ₹300/- per day, subject to a maximum of ₹4,500/- per month."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **The relief amount is ₹300/- per day, subject to a maximum of ₹4,500/- per month.**\n\n",
+   "briefDescription": "This scheme was launched by the Telangana Building & Other Construction Workers Welfare Board, LET&F (Labour) Department Telangana financial assistance is provided to construction workers who suffer temporary disabilities due to accidents or diseases & hospitalized for five or more days.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Hospitalisation Relief Scheme\" was launched by the Telangana Building & Other Construction Workers Welfare Board, LET&F (Labour) Department Telangana. The scheme aims to provide financial assistance to construction workers who suffer temporary disabilities due to accidents or diseases and are hospitalized for five or more days. The relief may be extended up to three months for severe or terminal conditions."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Hospitalisation Relief Scheme&quot; was launched by the Telangana Building &amp; Other Construction Workers Welfare Board, LET&amp;F (Labour) Department Telangana. The scheme aims to provide financial assistance to construction workers who suffer temporary disabilities due to accidents or diseases and are hospitalized for five or more days. The relief may be extended up to three months for severe or terminal conditions.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://tbocwwb.telangana.gov.in/newsite/pdf_files/2017LETF_MS15.pdf"
+    },
+    {
+     "title": "List Of Schemes",
+     "url": "https://tbocwwb.telangana.gov.in/new_gos.html"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "hrs"
+}

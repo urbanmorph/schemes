@@ -1,0 +1,299 @@
+{
+ "_id": "6852ac00eb051dab224e0033",
+ "_slug": "pafdost",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The application of the concerned student is first forwarded/recommended by the school principal and then further recommended by the Assistant Director of the respective district. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Required documents include the student’s Aadhaar card and bank account details. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "For students studying in the same class during the same session, the student or their guardian can apply online through the "
+           },
+           {
+            "children": [
+             {
+              "text": "Aapni Sarkar portal"
+             }
+            ],
+            "link": "https://eservices.uk.gov.in/",
+            "type": "link"
+           },
+           {
+            "text": "."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The application of the concerned student is first forwarded/recommended by the school principal and then further recommended by the Assistant Director of the respective district. \n  - Required documents include the student’s Aadhaar card and bank account details. \n  - For students studying in the same class during the same session, the student or their guardian can apply online through the [Aapni Sarkar portal](https://eservices.uk.gov.in/).\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Directorate Of Sanskrit Education, Uttarakhand",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Sanskrit Education",
+    "value": 50000017
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Printing and Free Distribution of Sanskrit Textbooks",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PFDOST",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Free Textbooks Of Sanskrit",
+    "Student",
+    "Printing Sanskrit Textbooks",
+    "Sanskrit"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The students studying in Classes 1 to 12 at Sanskrit schools across Uttarakhand are eligible."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The students studying in Classes 1 to 12 at Sanskrit schools across Uttarakhand are eligible.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Each student is provided annual financial assistance under the scheme as follows:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Classes 1"
+          },
+          {
+           "superscript": true,
+           "text": "st"
+          },
+          {
+           "text": " to 5"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": ": ₹250/- per student"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Classes 6"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": " to 8"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": ": ₹400/- per student"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Classes 9"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": " to 10"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": ": ₹600/- per student"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Classes 11"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": " to 12"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": ": ₹700/- per student"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Each student is provided annual financial assistance under the scheme as follows:**\n\n\n  - Classes 1st to 5th: ₹250/- per student  - Classes 6th to 8th: ₹400/- per student  - Classes 9th to 10th: ₹600/- per student  - Classes 11th to 12th: ₹700/- per student\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to promote Sanskrit education by providing free Sanskrit textbooks to students studying in Classes 1 to 12. Under this scheme, annual financial assistance ranging from ₹250/- to ₹700/- is provided to each student enrolled in Classes 1 to 12 of Sanskrit schools.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Printing and Free Distribution of Sanskrit Textbooks” is implemented by the Directorate of Sanskrit Education under the Department of Sanskrit Education, Government of Uttarakhand. The scheme aims to promote Sanskrit education by providing free Sanskrit textbooks to students studying in Classes 1 to 12."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Printing and Free Distribution of Sanskrit Textbooks” is implemented by the Directorate of Sanskrit Education under the Department of Sanskrit Education, Government of Uttarakhand. The scheme aims to promote Sanskrit education by providing free Sanskrit textbooks to students studying in Classes 1 to 12.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 93)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "pafdost"
+}

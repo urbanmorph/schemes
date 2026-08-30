@@ -1,0 +1,256 @@
+{
+ "_id": "65db599f938a0b13cc948c1b",
+ "_slug": "aniwps",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The application form shall be available free of cost at the Directorate of Social Welfare, Port Blair, and the sub-divisional offices of Child Development Project Officers (CDPOs). Also, the "
+         },
+         {
+          "children": [
+           {
+            "text": "application form"
+           }
+          ],
+          "link": "http://andssw1.and.nic.in/socialwelfare/pdf/allowances_form.pdf",
+          "type": "link"
+         },
+         {
+          "text": " can be downloaded from the "
+         },
+         {
+          "children": [
+           {
+            "text": "official website"
+           }
+          ],
+          "link": "http://andssw1.and.nic.in/socialwelfare/",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " The completely filled application form along with all the relevant documents shall be submitted in the office of the concerned Child Development Project Officer."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 01:** The application form shall be available free of cost at the Directorate of Social Welfare, Port Blair, and the sub-divisional offices of Child Development Project Officers (CDPOs). Also, the [application form](http://andssw1.and.nic.in/socialwelfare/pdf/allowances_form.pdf) can be downloaded from the [official website](http://andssw1.and.nic.in/socialwelfare/).\n**Step 02:** The completely filled application form along with all the relevant documents shall be submitted in the office of the concerned Child Development Project Officer.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Directorate Of Social Welfare, Union Territory Of Andaman And Nicobar Islands",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 3500028
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "The Andaman & Nicobar Islands Widow Pension Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ANIWPS",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    },
+    {
+     "label": "Assistance to Widows",
+     "value": "Assistance to Widows"
+    },
+    {
+     "label": "Citizen empowerment",
+     "value": "Citizen empowerment"
+    }
+   ],
+   "state": {
+    "label": "Andaman and Nicobar Islands",
+    "value": 35
+   },
+   "tags": [
+    "Widow",
+    "Pension",
+    "Woman",
+    "Financial Assistance",
+    "Poor"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a permanent resident of the Union Territory of Andaman and Nicobar Islands or have resided in the Union Territory of Andaman and Nicobar Islands for more than 10 years at the time of making the application."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be a poor widow."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The household income of the applicant does not exceed ₹4000/- per month."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should not be availing of any other financial assistance or grant from the government or any other source."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant shall cease to receive the assistance if she gets remarried or becomes financially independent afterward, which may be divulged by due enquiry or through records."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a permanent resident of the Union Territory of Andaman and Nicobar Islands or have resided in the Union Territory of Andaman and Nicobar Islands for more than 10 years at the time of making the application.\n   1. The applicant should be a poor widow.\n   1. The household income of the applicant does not exceed ₹4000/- per month.\n   1. The applicant should not be availing of any other financial assistance or grant from the government or any other source.\n   1. The applicant shall cease to receive the assistance if she gets remarried or becomes financially independent afterward, which may be divulged by due enquiry or through records.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The quantum of Widow Allowance shall be ₹2500/- per month subject to eligibility."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Payment of allowance shall be made through the Bank Account on a monthly basis."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. The quantum of Widow Allowance shall be ₹2500/- per month subject to eligibility.\n   1. Payment of allowance shall be made through the Bank Account on a monthly basis.\n\n",
+   "briefDescription": "The scheme “The Andaman & Nicobar Islands Widow Pension Scheme” is implemented by the Directorate of Social Welfare, Union Territory of Andaman and Nicobar Islands to provide financial assistance to poor and destitute widows in the Andaman and Nicobar Islands.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “The Andaman & Nicobar Islands Widow Pension Scheme” is implemented by the Directorate of Social Welfare, Union Territory of Andaman and Nicobar Islands to provide financial assistance to poor and destitute widows in the Andaman and Nicobar Islands. The beneficiary shall cease to receive the assistance if she gets remarried or becomes financially independent afterward, which may be divulged by due enquiry or through records."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme “The Andaman &amp;amp; Nicobar Islands Widow Pension Scheme” is implemented by the Directorate of Social Welfare, Union Territory of Andaman and Nicobar Islands to provide financial assistance to poor and destitute widows in the Andaman and Nicobar Islands. The beneficiary shall cease to receive the assistance if she gets remarried or becomes financially independent afterward, which may be divulged by due enquiry or through records.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "http://andssw1.and.nic.in/socialwelfare/"
+    },
+    {
+     "title": "Notification",
+     "url": "http://andssw1.and.nic.in/socialwelfare/pdf/widownotif.pdf"
+    },
+    {
+     "title": "Application Form",
+     "url": "http://andssw1.and.nic.in/socialwelfare/pdf/allowances_form.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "aniwps"
+}

@@ -1,0 +1,296 @@
+{
+ "_id": "6458aee7607242dc9bf0f890",
+ "_slug": "hiip",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "Child Welfare Committee"
+         }
+        ],
+        "link": "https://jjis.maharashtra.gov.in/Site/ViewCWCList",
+        "type": "link"
+       },
+       {
+        "text": ""
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "link": "https://sjsa.maharashtra.gov.in/en/contacts",
+        "type": "link"
+       },
+       {
+        "text": ", and request a hard copy of the format of the application form for the scheme from the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across), and attach all the (self-attested) mandatory documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents at the office of the concerned "
+       },
+       {
+        "children": [
+         {
+          "text": "Child Welfare Committee"
+         }
+        ],
+        "link": "https://jjis.maharashtra.gov.in/Site/ViewCWCList",
+        "type": "link"
+       },
+       {
+        "text": ""
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "link": "https://sjsa.maharashtra.gov.in/en/contacts",
+        "type": "link"
+       },
+       {
+        "text": "."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Acquire the receipt/acknowledgment of the successful submission of the application form from the office."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": "District Social Welfare Offices Of The Department Of Social Justice & Special Assistance, Govt. Of Maharashtra",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Special Assistance Department",
+    "value": 27111139
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Homes For Intellectually Impaired Persons",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "HIIP",
+   "schemeSubCategory": [
+    {
+     "label": "Shelter, integrated support and assistance",
+     "value": "Shelter, integrated support and assistance"
+    },
+    {
+     "label": "Short home Stay",
+     "value": "Short home Stay"
+    },
+    {
+     "label": "Child benefit",
+     "value": "Child benefit"
+    },
+    {
+     "label": "Shelter",
+     "value": "Shelter"
+    },
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    }
+   ],
+   "state": {
+    "label": "Maharashtra",
+    "value": 27
+   },
+   "tags": [
+    "Child",
+    "Person With Disability",
+    "Shelter",
+    "Social Justice"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a citizen of India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be an orphan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of Maharashtra State."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a Mentally Deficient Child (MDC) who is in need of care and protection."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The percentage of the disability should be 40% or above."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a citizen of India.\n1. The applicant should be an orphan.\n1. The applicant should be a permanent resident of Maharashtra State.\n1. The applicant should be a Mentally Deficient Child (MDC) who is in need of care and protection.\n1. The percentage of the disability should be 40% or above.\n\n<br>\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The Mentally Deficient Children who are in need of care and protection are admitted into shelter homes."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "There are free facilities of food, shelter, and care & protection are provided in these homes."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "briefDescription": "The \"Homes for Intellectually Impaired Persons\" is a scheme by the Department of Social Justice & Special Assistance, Govt. of Maharashtra. In this scheme, Mentally Deficient Children who are in need of care and protection are admitted into shelter homes through the Child Welfare Committees.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Homes for Intellectually Impaired Persons\" is a scheme by the Department of Social Justice & Special Assistance, Govt. of Maharashtra. In this scheme, Mentally Deficient Children who are in need of care and protection are admitted into shelter homes through the Child Welfare Committee of the district formed under the Juvenile Justice (Care & Protection of Children) Act 2000 and Amendment Act 2006. The numbers of MDC homes are 19 out of which 14 are granted and 5 are non-granted."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Homes for Intellectually Impaired Persons&quot; is a scheme by the Department of Social Justice &amp; Special Assistance, Govt. of Maharashtra. In this scheme, Mentally Deficient Children who are in need of care and protection are admitted into shelter homes through the Child Welfare Committee of the district formed under the Juvenile Justice (Care &amp; Protection of Children) Act 2000 and Amendment Act 2006. The numbers of MDC homes are 19 out of which 14 are granted and 5 are non-granted.\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sjsa.maharashtra.gov.in/en/scheme-category/disability-welfare"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "hiip"
+}

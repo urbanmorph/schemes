@@ -1,0 +1,225 @@
+{
+ "_id": "6447ae10aca47f16a8710b90",
+ "_slug": "uascs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicants need to visit the official website "
+         },
+         {
+          "children": [
+           {
+            "text": "https://www.digitalgujarat.gov.in"
+           }
+          ],
+          "link": "https://www.digitalgujarat.gov.in",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         },
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "link": "https://www.digitalgujarat.gov.in",
+          "type": "link"
+         },
+         {
+          "text": "New applicants have to register his/her self first."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "At the time of registration, applicants have to provide their mobile number, email & set password."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Update their profile."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Applying for the scholarship."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "url": "https://www.digitalgujarat.gov.in"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": "District Deputy Director(SCW) Office",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 2444464
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Uniform Assistance To SC Students",
+   "schemeOpenDate": "2015-10-13",
+   "schemeShortTitle": "UASCS",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Uniform Assistance",
+    "Scheduled Caste",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The student should be of Scheduled Caste."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Students should be studying in classes 1 to 8."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "No Income Limit."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The student should be of Scheduled Caste.\n1. Students should be studying in classes 1 to 8.\n1. No Income Limit.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "Rs.900/- assistance for three pairs of uniforms."
+      }
+     ],
+     "type": "list_item"
+    }
+   ],
+   "briefDescription": "The Government of Gujarat launched a financial Assistance scheme for the student who comes under the scheduled caste.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Objective "
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "Main Objective is to provide economic support and motivation for education. Under this scheme, assistance is given to Students studying in classes 1 to 8. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Through this scheme, the Gujarat government promotes primary education."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "**Objective** \n- Main Objective is to provide economic support and motivation for education. Under this scheme, assistance is given to Students studying in classes 1 to 8. \n- Through this scheme, the Gujarat government promotes primary education.\n",
+   "references": [
+    {
+     "title": "Details",
+     "url": "https://sje.gujarat.gov.in/dscw/schemes/1544?lang=English"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "uascs"
+}

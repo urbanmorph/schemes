@@ -1,0 +1,203 @@
+{
+ "_id": "689b3251d6b90ac25c417c54",
+ "_slug": "kbyuk",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Registration of beneficiaries is carried out through the "
+         },
+         {
+          "children": [
+           {
+            "text": "Poshan Tracker App"
+           }
+          ],
+          "link": "https://play.google.com/store/apps/details?id=com.poshantracker&pli=1",
+          "type": "link"
+         },
+         {
+          "text": ", for which the Aadhaar card and birth certificate of the adolescent girl are required."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "Registration of beneficiaries is carried out through the [Poshan Tracker App](https://play.google.com/store/apps/details?id=com.poshantracker&amp;pli=1), for which the Aadhaar card and birth certificate of the adolescent girl are required.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Woman Empowerment & Child Development",
+    "value": 50000023
+   },
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Kishori Balika Yojana- Uttarakhand",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "KBYUK",
+   "schemeSubCategory": [
+    {
+     "label": "Health promotion",
+     "value": "Health promotion"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Adolescent Girls",
+    "Awareness On Nutrition",
+    "Awareness On Health",
+    "Teenage Girl"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a resident of Uttarakhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be an adolescent girl in the age group of 14 to 18 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be residing in one of the aspirational districts of Uttarakhand- Haridwar or Udham Singh Nagar."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a resident of Uttarakhand.\n1. The applicant must be an adolescent girl in the age group of 14 to 18 years.\n1. The applicant must be residing in one of the aspirational districts of Uttarakhand- Haridwar or Udham Singh Nagar.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, awareness is created among adolescent girls about nutrition, health, and life cycle issues. They are also provided supplementary nutrition (fortified rice and wheat for 25 days each month) for 300 days in a year."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Under this scheme, awareness is created among adolescent girls about nutrition, health, and life cycle issues. They are also provided supplementary nutrition (fortified rice and wheat for 25 days each month) for 300 days in a year.\n<br>\n\n",
+   "briefDescription": "The scheme aims to create awareness among adolescent girls aged 14 to 18 years about nutrition, health, and life cycle issues, and also provides supplementary nutrition for 300 days in a year.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Kishori Balika Yojana\" is implemented by the Department of Women Empowerment & Child Development, Government of Uttarakhand. The scheme aims to create awareness among adolescent girls aged 14 to 18 years about nutrition, health, and life cycle issues, and also provides supplementary nutrition for 300 days in a year."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Kishori Balika Yojana&amp;quot; is implemented by the Department of Women Empowerment &amp;amp; Child Development, Government of Uttarakhand. The scheme aims to create awareness among adolescent girls aged 14 to 18 years about nutrition, health, and life cycle issues, and also provides supplementary nutrition for 300 days in a year.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 32)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "kbyuk"
+}

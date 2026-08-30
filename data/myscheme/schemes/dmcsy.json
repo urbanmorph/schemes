@@ -1,0 +1,186 @@
+{
+ "_id": "650790464b1a0fc5d94f0393",
+ "_slug": "dmcsy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Registered construction workers can apply through any CSC center or labor office."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Get the application form."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill out with required details."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Attach the necessary documents. "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Registered construction workers can apply through any CSC center or labor office.\n1. Get the application form.\n1. Fill out with required details.\n1. Attach the necessary documents. \n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department",
+    "value": 2200018
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Durghatana Mein Chikitsa Sahaayata Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DMCSY",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Chhattisgarh",
+    "value": 22
+   },
+   "tags": [
+    "Financial Assistance",
+    "Labor Workers",
+    "Accident"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a permanent resident of Chhattisgarh state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "It is mandatory for construction workers to be registered in any district."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Must have completed 90 days as a laborer in the board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a permanent resident of Chhattisgarh state.\n1. It is mandatory for construction workers to be registered in any district.\n1. Must have completed 90 days as a laborer in the board.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "To the registered beneficiaries, medical assistance of ₹ 20,000/- or the actual expenditure incurred on the treatment, whichever is less, will be provided."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- To the registered beneficiaries, medical assistance of ₹ 20,000/- or the actual expenditure incurred on the treatment, whichever is less, will be provided.\n\n",
+   "briefDescription": "Chhattisgarh State Government started this scheme \"Durghatana Mein Chikitsa Sahaayata Yojana\" for labor workers. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "\"Chhattisgarh Durghatana Mein Chikitsa Sahaayata Yojana\" has been started by the Chhattisgarh Government and manage/run by the Chhattisgarh, Labor Department. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "&quot;Chhattisgarh Durghatana Mein Chikitsa Sahaayata Yojana&quot; has been started by the Chhattisgarh Government and manage/run by the Chhattisgarh, Labor Department. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cglabour.nic.in/BOCW/ApplicationSchemes.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dmcsy"
+}

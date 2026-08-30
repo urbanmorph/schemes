@@ -1,0 +1,268 @@
+{
+ "_id": "645227a63cd7ca3499a97889",
+ "_slug": "sevtgi",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "District Social Welfare Office"
+         }
+        ],
+        "link": "https://sjsa.maharashtra.gov.in/en/contacts",
+        "type": "link"
+       },
+       {
+        "text": ", and request a hard copy of the format of the application form for the scheme from the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across), and attach all the (self-attested) mandatory documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents to the Assistant Commissioner, District Social Welfare Office."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Acquire the receipt/acknowledgment of the successful submission of the application form from the District Social Welfare Office."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": "District Social Welfare Offices Of The Department Of Social Justice & Special Assistance, Govt. Of Maharashtra",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Special Assistance Department",
+    "value": 27111139
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Special Education And Vocational Training Through Government Institutions",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SEVTGI",
+   "schemeSubCategory": [
+    {
+     "label": "Early childhood",
+     "value": "Early childhood"
+    },
+    {
+     "label": "Citizen empowerment",
+     "value": "Citizen empowerment"
+    },
+    {
+     "label": "Voctional education",
+     "value": "Voctional education"
+    },
+    {
+     "label": "Welfare measures",
+     "value": "Welfare measures"
+    },
+    {
+     "label": "Shelter",
+     "value": "Shelter"
+    }
+   ],
+   "state": {
+    "label": "Maharashtra",
+    "value": 27
+   },
+   "tags": [
+    "Persons With Disability",
+    "Education",
+    "Student",
+    "Vocational Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a citizen of India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of Maharashtra State."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a Person with Disability (Visually Impaired, Hearing Impaired, Orthopedically Handicapped, etc)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The percentage of disability should be 40% and above."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "For Special Education, the age of the applicant should be between 6 to 18 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "For Vocational Education, the age of the applicant should be 18 years and above."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a citizen of India.\n1. The applicant should be a permanent resident of Maharashtra State.\n1. The applicant should be a Person with Disability (Visually Impaired, Hearing Impaired, Orthopedically Handicapped, etc).\n1. The percentage of disability should be 40% and above.\n1. For Special Education, the age of the applicant should be between 6 to 18 years.\n1. For Vocational Education, the age of the applicant should be 18 years and above.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The child will have access to free education in an appropriate environment till he/she attains the age of eighteen years "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Special children above 18 years in age will be given vocational training."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The free facilities of food, shelter, clothing and education are provided in these institutions."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "briefDescription": "In this scheme, Special Education is provided to children with disability between the age group of 6 to 18 years in the Government Special Schools and Vocational Training is provided to special children above the age of 18 years. Only citizens who are permanent residents of Maharashtra are eligible.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Special Education and Vocational Training through Government Institutions\" is a scheme by the Department of Social Justice & Special Assistance, Govt. of Maharashtra. In this scheme, Special Education is provided to children with disability between the age group of 6 to 18 years in the Government Special Schools and Vocational Training is provided to special children above the age of 18 years. Only citizens who are permanent residents of the state of Maharashtra are eligible to apply for this scheme. This scheme is 100% funded by the Govt. of Maharashtra."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Special Education and Vocational Training through Government Institutions&quot; is a scheme by the Department of Social Justice &amp; Special Assistance, Govt. of Maharashtra. In this scheme, Special Education is provided to children with disability between the age group of 6 to 18 years in the Government Special Schools and Vocational Training is provided to special children above the age of 18 years. Only citizens who are permanent residents of the state of Maharashtra are eligible to apply for this scheme. This scheme is 100% funded by the Govt. of Maharashtra.\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sjsa.maharashtra.gov.in/en/scheme-category/disability-welfare"
+    },
+    {
+     "title": "District Social Welfare Office",
+     "url": "https://sjsa.maharashtra.gov.in/en/contacts"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sevtgi"
+}

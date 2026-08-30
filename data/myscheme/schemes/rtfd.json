@@ -1,0 +1,239 @@
+{
+ "_id": "6451ffd4764d8354dc2a84fa",
+ "_slug": "rtfd",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applications through the office of the District Social Welfare Officer of 11 Districts."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "To get the list of District Social Welfare Officers "
+         },
+         {
+          "children": [
+           {
+            "text": "click here"
+           }
+          ],
+          "link": "https://megsocialwelfare.gov.in/key_contacts.html",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 1777813
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Rehabilitation Treatment For The Disabled",
+   "schemeOpenDate": "2007-04-01",
+   "schemeShortTitle": "RTFD",
+   "schemeSubCategory": [
+    {
+     "label": "Medicine and health products",
+     "value": "Medicine and health products"
+    },
+    {
+     "label": "Rehabilitation",
+     "value": "Rehabilitation"
+    }
+   ],
+   "state": {
+    "label": "Meghalaya",
+    "value": 17
+   },
+   "tags": [
+    "Medical Treatment",
+    "Assistive Devices",
+    "Rehabilitation Services",
+    "Training",
+    "Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The person must be a resident of Meghalaya."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The person must have a disability certificate issued by a registered medical practitioner."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The disability percentage should be more than 40%."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The person must be a resident of Meghalaya.\n1. The person must have a disability certificate issued by a registered medical practitioner.\n1. The disability percentage should be more than 40%.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Medical treatment:"
+          },
+          {
+           "text": " The scheme provides medical treatment to persons with disabilities, including surgeries and therapies."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Assistive devices:"
+          },
+          {
+           "text": " The scheme provides assistive devices such as hearing aids, wheelchairs, crutches, and prosthetic limbs."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Rehabilitation services:"
+          },
+          {
+           "text": " The scheme provides rehabilitation services such as physiotherapy, occupational therapy, and speech therapy."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Training and education:"
+          },
+          {
+           "text": " The scheme provides training and education to persons with disabilities to develop their skills and enhance their employability."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "paragraph"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "briefDescription": "The government of Meghalaya provides rehabilitation treatment for persons with disabilities under the \"Disability Rehabilitation Scheme\". ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "Financial assistance to disabled persons who cannot afford to undergo treatment inside and outside the state."
+      }
+     ],
+     "type": "list_item"
+    }
+   ],
+   "detailedDescription_md": "- Financial assistance to disabled persons who cannot afford to undergo treatment inside and outside the state.\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://meghalaya.gov.in/schemes/content/15649"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "rtfd"
+}

@@ -1,0 +1,393 @@
+{
+ "_id": "66050edbc90f6c809877c25b",
+ "_slug": "psscsscspms",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To avail the benefits of the scheme, eligible students need to contact the principal of their school."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "The Principal of concerned school has to submit the online proposal on the Digital Gujarat Portal (Portal: "
+           },
+           {
+            "children": [
+             {
+              "text": "https://www.digitalgujarat.gov.in/"
+             }
+            ],
+            "link": "https://www.digitalgujarat.gov.in/",
+            "type": "link"
+           },
+           {
+            "text": ")."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ol_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n   1. To avail the benefits of the scheme, eligible students need to contact the principal of their school.\n   1. The Principal of concerned school has to submit the online proposal on the Digital Gujarat Portal (Portal: [https://www.digitalgujarat.gov.in/](https://www.digitalgujarat.gov.in/)).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "District Deputy Director (SCW) Office, Gujarat",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 2444464
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Pre-SSC Scholarship for Scheduled Caste Students (Parixitlal Majmudar Scholarship)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PSSCSSCS(PMS)",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Student",
+    "Scholarship",
+    "Scheduled Caste",
+    "Pre-SSC"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The student should belong to the Scheduled Caste Category of Gujarat."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be enrolled in Standards 1 to 10."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There is no income limit for the scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The student should belong to the Scheduled Caste Category of Gujarat.\n   1. The student should be enrolled in Standards 1 to 10.\n   1. There is no income limit for the scheme.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Assistance Details:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Sl. No."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Standard"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Boys/Girls"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Scholarship Rate (Yearly)"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "1"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Standard 1 to 5"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Both"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹750/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "2"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Standard 6 to 8"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Boys"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹750/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "3"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Standard 6 to 8"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Girls"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1000/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "4"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Standard 9 to 10"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Both"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1000/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      }
+     ],
+     "type": "table"
+    }
+   ],
+   "benefits_md": "**Assistance Details:**\nSl. No.StandardBoys/GirlsScholarship Rate (Yearly)1Standard 1 to 5Both₹750/-2Standard 6 to 8Boys₹750/-3Standard 6 to 8Girls₹1000/-4Standard 9 to 10Both₹1000/-",
+   "briefDescription": "Under this scheme, scholarships are provided to Scheduled Caste students who are studying in Class 1 to 10 in Government/Grant-in-Aid Schools/Private Schools.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Pre-SSC Scholarship for Scheduled Caste Students” scheme is administered by the Director, Scheduled Caste Welfare, Government of Gujarat. Under this scheme, scholarships are provided to Scheduled Caste students who are studying in Class 1 to 10 in Government/Grant-in-Aid Schools/Private Schools."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The “Pre-SSC Scholarship for Scheduled Caste Students” scheme is administered by the Director, Scheduled Caste Welfare, Government of Gujarat. Under this scheme, scholarships are provided to Scheduled Caste students who are studying in Class 1 to 10 in Government/Grant-in-Aid Schools/Private Schools.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://sje.gujarat.gov.in/Dscw/schemes/1555?lang=English"
+    },
+    {
+     "title": "Scheme Details (Page No. 82)",
+     "url": "https://sje.gujarat.gov.in/assets/downloads/SCSP_202021_09072021.pdf"
+    },
+    {
+     "title": "Notification -1",
+     "url": "https://sje.gujarat.gov.in/dscw/assets/downloads/tharav_dscw2_25082022.pdf"
+    },
+    {
+     "title": "Notification - 2",
+     "url": "https://sje.gujarat.gov.in/dscw/assets/downloads/tharav_dscw_25082022.pdf"
+    },
+    {
+     "title": "Scheme Details",
+     "url": "https://sje.gujarat.gov.in/dscw/downloads/outlay_phy_target_2015_16.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "psscsscspms"
+}

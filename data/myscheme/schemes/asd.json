@@ -1,0 +1,248 @@
+{
+ "_id": "64802710481f59106a67bc65",
+ "_slug": "asd",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicants have to visit the "
+         },
+         {
+          "children": [
+           {
+            "text": "official portal"
+           }
+          ],
+          "link": "https://ashirwad.punjab.gov.in/ashirwad/",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click on Applicant "
+         },
+         {
+          "children": [
+           {
+            "text": "Registration"
+           }
+          ],
+          "link": "https://ashirwad.punjab.gov.in/ashirwad/Public/ApplicantRegistration.aspx",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "On the new page, the registration form will appear."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Applicants have to provide the required details. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit. "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Applicants have to visit the [official portal](https://ashirwad.punjab.gov.in/ashirwad/).1. Click on Applicant [Registration](https://ashirwad.punjab.gov.in/ashirwad/Public/ApplicantRegistration.aspx).1. On the new page, the registration form will appear.\n1. Applicants have to provide the required details. \n1. Submit. \n\n",
+    "url": "https://ashirwad.punjab.gov.in/Default.aspx"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Social Justice, Empowerment and Minorities",
+    "value": 300000041
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Ashirwad",
+   "schemeOpenDate": "1997-04-01",
+   "schemeShortTitle": "ASD",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Punjab",
+    "value": 3
+   },
+   "tags": [
+    "Financial Assistance",
+    "Social Welfare",
+    "Empowerment",
+    "Shagun"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Girl should be 18 years old or above."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Annual income of the family from all sources does not exceed ₹32,790/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Parents/Guardians of the girl should be domiciled in Punjab State."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The application can be given before the fixed date of marriage or after the 30 days of the marriage by the applicant for getting financial assistance."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The amount of Ashirwad is limited up to two girls of the concerned family under the scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Financial assistance is given to Scheduled Castes/Christian girls, Backward Classes/Castes, Economically weaker sections girls, daughters of widows of any caste at the time of their marriage, and Scheduled Castes widows/divorcees at the time of their re-marriage."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. Girl should be 18 years old or above.\n   1. Annual income of the family from all sources does not exceed ₹32,790/-.\n   1. Parents/Guardians of the girl should be domiciled in Punjab State.\n   1. The application can be given before the fixed date of marriage or after the 30 days of the marriage by the applicant for getting financial assistance.\n   1. The amount of Ashirwad is limited up to two girls of the concerned family under the scheme.\n   1. Financial assistance is given to Scheduled Castes/Christian girls, Backward Classes/Castes, Economically weaker sections girls, daughters of widows of any caste at the time of their marriage, and Scheduled Castes widows/divorcees at the time of their re-marriage.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Financial assistance of ₹51,000/-. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Financial assistance of ₹51,000/-. \n\n",
+   "briefDescription": "The Punjabi government has established the Punjab Ashirwad Scheme to offer financial support for a girl's marriage.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "There are many members of the economically disadvantaged part of society who are unable to plan their daughters’ weddings owing to their precarious financial situation. And they deal with several issues relating to this. The Punjab Ashirwad plan has been introduced by the Punjab government by keeping such a situation in mind. Girls from economically disadvantaged parts of society will get financial aid under this program. so that they won’t have to worry about any financial obligations when planning their daughter’s wedding. The scheme aims not only to help girls but also to encourage such families who are raising girls and want to marry them."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "There are many members of the economically disadvantaged part of society who are unable to plan their daughters’ weddings owing to their precarious financial situation. And they deal with several issues relating to this. The Punjab Ashirwad plan has been introduced by the Punjab government by keeping such a situation in mind. Girls from economically disadvantaged parts of society will get financial aid under this program. so that they won’t have to worry about any financial obligations when planning their daughter’s wedding. The scheme aims not only to help girls but also to encourage such families who are raising girls and want to marry them.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://ashirwad.punjab.gov.in/ashirwad/Public/pdf/Ashirwad_Shagun_Scheme.pdf"
+    },
+    {
+     "title": "Official Web Portal",
+     "url": "https://ashirwad.punjab.gov.in/ashirwad/"
+    },
+    {
+     "title": "Application",
+     "url": "https://ashirwad.punjab.gov.in/ashirwad/Public/ApplicantRegistration.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "asd"
+}

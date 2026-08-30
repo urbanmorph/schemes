@@ -1,0 +1,325 @@
+{
+ "_id": "67162042835cbb1e57f52298",
+ "_slug": "fatlclnbsmec",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1:"
+       },
+       {
+        "text": " Download the prescribed "
+       },
+       {
+        "children": [
+         {
+          "text": "application form"
+         }
+        ],
+        "link": "https://schooleducation.karnataka.gov.in/uploads/schooledu_pdfs/tbfpdfs/TBFProfCourseCircular_201819.pdf",
+        "type": "link"
+       },
+       {
+        "text": " the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://schooleducation.karnataka.gov.in/en",
+        "type": "link"
+       },
+       {
+        "text": ". "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2:"
+       },
+       {
+        "text": " Fill in the student and teacher's details in the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3:"
+       },
+       {
+        "text": " Attach the required documents (certified mark sheets, loan details, teacher's HRMS copy, proof of schooling, etc.)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Get the proposal recommended by the Controlling Officer and the head of the concerned institution."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-5:"
+       },
+       {
+        "text": " Submit the complete application along with all certified documents to the Karnataka State Teachers' Welfare Fund office."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-6:"
+       },
+       {
+        "text": " Request a receipt or acknowledgment from the Karnataka State Teachers' Welfare Fund office to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** Download the prescribed [application form](https://schooleducation.karnataka.gov.in/uploads/schooledu_pdfs/tbfpdfs/TBFProfCourseCircular_201819.pdf) the [official website](https://schooleducation.karnataka.gov.in/en). \n**Step-2:** Fill in the student and teacher&#39;s details in the application form.\n**Step-3:** Attach the required documents (certified mark sheets, loan details, teacher&#39;s HRMS copy, proof of schooling, etc.).\n**Step-4:** Get the proposal recommended by the Controlling Officer and the head of the concerned institution.\n**Step-5:** Submit the complete application along with all certified documents to the Karnataka State Teachers&#39; Welfare Fund office.\n**Step-6:** Request a receipt or acknowledgment from the Karnataka State Teachers&#39; Welfare Fund office to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of School Education",
+    "value": 3000019
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Financial Assistance to the Teachers/Lecturers Children who taken loan from Nationalised Banks for studying Medical/Engineering Courses",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FATLCLNBSMEC",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Education and training grants, fellowship, stipend",
+     "value": "Education and training grants, fellowship, stipend"
+    }
+   ],
+   "state": {
+    "label": "Karnataka",
+    "value": 29
+   },
+   "tags": [
+    "Financial Assistance",
+    "Children",
+    "Teachers",
+    "Lecturers",
+    "Medical",
+    "Engineering Courses"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant parent should be a teacher/lecturer working in a government or aided institution with life membership of the Welfare Fund. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student must have passed each year or semester of the course on the first attempt."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student should have studied from 1"
+        },
+        {
+         "superscript": true,
+         "text": "st"
+        },
+        {
+         "text": " to 10"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " standard in government or aided schools in Karnataka."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have availed educational loan from a nationalized bank for professional education in medicine or engineering."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The educational loan should be taken for courses within India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Only one child per family can avail of the financial assistance."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Assistance is only available for final-year students in vocational medical, engineering, or postgraduate programs."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant parent should be a teacher/lecturer working in a government or aided institution with life membership of the Welfare Fund. \n1. The student must have passed each year or semester of the course on the first attempt.\n1. The student should have studied from 1st to 10th standard in government or aided schools in Karnataka.1. The applicant should have availed educational loan from a nationalized bank for professional education in medicine or engineering.\n1. The educational loan should be taken for courses within India.\n1. Only one child per family can avail of the financial assistance.\n1. Assistance is only available for final-year students in vocational medical, engineering, or postgraduate programs.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "One-time financial assistance up to ₹50,000/- covers the interest component of educational loans availed from nationalized banks."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": "Note: The sanctioned amount is directly transferred to the borrower's bank account."
+      }
+     ],
+     "type": "block_quote"
+    }
+   ],
+   "benefits_md": "\n- **One-time financial assistance up to ₹50,000/- covers the interest component of educational loans availed from nationalized banks.**\n\n> Note: The sanctioned amount is directly transferred to the borrower&#39;s bank account.\n\n",
+   "briefDescription": "The “Financial Assistance to the Teachers/Lecturers Children who taken loan from Nationalised Banks for studying Medical/Engineering Courses” aims to provide financial assistance to the children of teachers/lecturers working in govt. & aided primary, secondary, graduate, & post-graduate institution.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The “Financial Assistance to the Teachers/Lecturers Children who taken loan from Nationalised Banks for studying Medical/Engineering Courses” aims to provide financial assistance to the children of teachers/lecturers working in government and aided primary, secondary, graduate, and post-graduate institutions. This assistance helps reduce the financial burden on families by covering interest charges on educational loans for vocational courses in medicine and engineering, including postgraduate courses."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Financial Assistance to the Teachers/Lecturers Children who taken loan from Nationalised Banks for studying Medical/Engineering Courses” aims to provide financial assistance to the children of teachers/lecturers working in government and aided primary, secondary, graduate, and post-graduate institutions. This assistance helps reduce the financial burden on families by covering interest charges on educational loans for vocational courses in medicine and engineering, including postgraduate courses.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The retired teacher's children are not eligible for this scheme. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "exclusions_md": "\n- The retired teacher&#39;s children are not eligible for this scheme. \n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://schooleducation.karnataka.gov.in/uploads/schooledu_pdfs/tbfpdfs/TBFProfCourseCircular_201819.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "fatlclnbsmec"
+}

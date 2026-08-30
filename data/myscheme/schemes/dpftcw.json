@@ -1,0 +1,230 @@
+{
+ "_id": "67f76c35ca4dbdfd53103d32",
+ "_slug": "dpftcw",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "Online applications are submitted through Shramik Suvidha Kendras. "
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "Along with the application form, it is mandatory to attach the following documents: Shramik Card, Aadhaar Card, Medical Certificate of permanent disability issued by a Government CMS/CMO, an Affidavit stating that no benefits have been taken under any other scheme, and a Self-Declaration Certificate."
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "The worker must apply within one year from the date of becoming permanently disabled. After submission, the department conducts an investigation. If the details are verified as correct, the department provides a monthly pension of ₹1,000/- and a one-time ex-gratia amount of ₹40,000/- directly into the construction worker’s account."
+             }
+            ],
+            "type": "list_item"
+           }
+          ],
+          "type": "ul_list"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - Online applications are submitted through Shramik Suvidha Kendras. \n  - Along with the application form, it is mandatory to attach the following documents: Shramik Card, Aadhaar Card, Medical Certificate of permanent disability issued by a Government CMS/CMO, an Affidavit stating that no benefits have been taken under any other scheme, and a Self-Declaration Certificate.\n  - The worker must apply within one year from the date of becoming permanently disabled. After submission, the department conducts an investigation. If the details are verified as correct, the department provides a monthly pension of ₹1,000/- and a one-time ex-gratia amount of ₹40,000/- directly into the construction worker’s account.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Building And Other Construction Workers Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Labour",
+    "value": 50000014
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Disability Pension (UKBOCWWB)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DPUKBOCWWB",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Labour",
+    "Pension",
+    "Construction Workers",
+    "Disability",
+    "Disabled Person"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board who has become permanently disabled due to paralysis, leprosy, tuberculosis, accident, etc."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board who has become permanently disabled due to paralysis, leprosy, tuberculosis, accident, etc.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Pension Amount:"
+          },
+          {
+           "text": "   ₹1,000/- per month"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "One-time Ex-gratia Amount:"
+          },
+          {
+           "text": "   ₹40,000/-"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Pension Amount:**   ₹1,000/- per month  - **One-time Ex-gratia Amount:**   ₹40,000/-\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide a monthly pension of ₹1,000 to construction workers registered with Uttarakhand Building & Other Construction Workers Welfare Board who have become permanently disabled due to paralysis, leprosy, accidents, etc. In addition, an ex-gratia amount of ₹40,000 is also provided.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Disability Pension” scheme is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide a monthly pension to registered construction workers who have become permanently disabled due to paralysis, leprosy, tuberculosis, accidents, etc."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Disability Pension” scheme is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide a monthly pension to registered construction workers who have become permanently disabled due to paralysis, leprosy, tuberculosis, accidents, etc.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 55)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://ukbocw.uk.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dpftcw"
+}

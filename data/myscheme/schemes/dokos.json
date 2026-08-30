@@ -1,0 +1,197 @@
+{
+ "_id": "678e4fb1223469f4f1dc05ef",
+ "_slug": "dokos",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Visit the nearest ration shop or designated enrollment center with the required documents."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "If Aadhaar is not available, apply for Aadhaar enrollment at an authorized center."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the Aadhaar number or Aadhaar Enrolment Identification Slip during registration."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Verify the eligibility and documents with the designated officer."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Collect the Kerosene Oil from the distribution center as per the monthly schedule."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Visit the nearest ration shop or designated enrollment center with the required documents.\n1. If Aadhaar is not available, apply for Aadhaar enrollment at an authorized center.\n1. Submit the Aadhaar number or Aadhaar Enrolment Identification Slip during registration.\n1. Verify the eligibility and documents with the designated officer.\n1. Collect the Kerosene Oil from the distribution center as per the monthly schedule.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Food, Public Distribution and Consumer affairs Department",
+    "value": 2000007
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Distribution of Kerosene Oil Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DOKOS",
+   "schemeSubCategory": [
+    {
+     "label": "Food Security / Public Distribution System",
+     "value": "Food Security / Public Distribution System"
+    }
+   ],
+   "state": {
+    "label": "Jharkhand",
+    "value": 20
+   },
+   "tags": [
+    "Kerosene Oil",
+    "Subsidized Rate",
+    "National Food Security Act"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a resident of Jharkhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be covered under the c (NFSA), 2013, Jharkhand State Food Security Scheme, or possess a White Card."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must not have access to other subsidized fuel schemes."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a resident of Jharkhand.\n1. The applicant must be covered under the c (NFSA), 2013, Jharkhand State Food Security Scheme, or possess a White Card.\n1. The applicant must not have access to other subsidized fuel schemes.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Beneficiaries receive 1 liter of kerosene oil at subsidized rates."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Dealer commission of ₹0.50 per liter is covered by the government."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Distribution occurs monthly through designated PDS dealers."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. Beneficiaries receive 1 liter of kerosene oil at subsidized rates.\n1. Dealer commission of ₹0.50 per liter is covered by the government.\n1. Distribution occurs monthly through designated PDS dealers.\n\n",
+   "briefDescription": "The \"Distribution of Kerosene Oil Scheme\" by the Department of Food, Public Distribution and Consumer Affairs, Government of Jharkhand, supports NFSA beneficiaries and others by providing 1 liter of kerosene oil at subsidized rates.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Distribution of Kerosene Oil Scheme\" by the Department of Food, Public Distribution and Consumer Affairs, Government of Jharkhand, aims to support eligible families under the National Food Security Act (NFSA), 2013, Jharkhand State Food Security Scheme, and White Card holders. Through this scheme, beneficiaries receive 1 liter of kerosene oil at subsidized rates with a dealer commission of ₹0.50 per liter supported by the government. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Distribution of Kerosene Oil Scheme&quot; by the Department of Food, Public Distribution and Consumer Affairs, Government of Jharkhand, aims to support eligible families under the National Food Security Act (NFSA), 2013, Jharkhand State Food Security Scheme, and White Card holders. Through this scheme, beneficiaries receive 1 liter of kerosene oil at subsidized rates with a dealer commission of ₹0.50 per liter supported by the government. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.jharkhand.gov.in/PDepartment/ViewDoc?id=D009DO003SD00625102023010241639"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dokos"
+}

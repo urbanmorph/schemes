@@ -1,0 +1,339 @@
+{
+ "_id": "65002c3d8b9d77aaeb8939a0",
+ "_slug": "spfappbga",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit the Directorate Of Art & Culture, Government of Goa, 5th Floor, Shram Shakti Bhavan, Panaji, Patto, Panaji, Goa - 403001"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "Take a print of the "
+       },
+       {
+        "children": [
+         {
+          "text": "proforma"
+         }
+        ],
+        "link": "https://www.goa.gov.in/wp-content/uploads/2022/06/Goan-Authors-and-Publishers-Form-22-23.pdf",
+        "type": "link"
+       },
+       {
+        "text": " of "
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "link": "https://artandculture.goa.gov.in/sites/default/files/Application%20form%20SPECIAL%20FINANCIAL%20ASStt.%20(GRANTS)%20FOR%20ORGANIZING%20CULTURAL%20EVENTS.pdf",
+        "type": "link"
+       },
+       {
+        "text": "the application form of the respective scheme, or request a hard copy from the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across), and attach copies of all the mandatory documents (self-attest if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents to the Director or to the ACO-II, Directorate of Art & Culture, Phone: 0832-2404623, Email: aco3-dac.goa@nic.in"
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit the Directorate Of Art &amp; Culture, Government of Goa, 5th Floor, Shram Shakti Bhavan, Panaji, Patto, Panaji, Goa - 403001\n**Step 2:** Take a print of the [proforma](https://www.goa.gov.in/wp-content/uploads/2022/06/Goan-Authors-and-Publishers-Form-22-23.pdf) of the application form of the respective scheme, or request a hard copy from the concerned authority.\n**Step 3:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across), and attach copies of all the mandatory documents (self-attest if required).\n**Step 4:** Submit the duly filled and signed application form along with the documents to the Director or to the ACO-II, Directorate of Art &amp; Culture, Phone: 0832-2404623, Email: aco3-dac.goa@nic.in\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Art, Culture and Museums Department",
+    "value": 30000005
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Sports & Culture",
+     "value": "628ce8aad6d1a3bde4685320"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Scheme to Provide Financial Assistance to the Publishers for Publishing Books of Goan Authors",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SPFAPPBGA",
+   "schemeSubCategory": [
+    {
+     "label": "Culture",
+     "value": "Culture"
+    }
+   ],
+   "state": {
+    "label": "Goa",
+    "value": 30
+   },
+   "tags": [
+    "Book",
+    "Publish",
+    "Culture",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Any Goan publisher is eligible for the scheme provided the writer of the book is Goan. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have substantial experience in publication. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should publish a minimum of 500 copies of the book for which he wants to avail the financial assistance. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The book could be published by the author himself or published by any other publishing unit provided NOC is issued by the author to the publisher. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The book should contain 100% originality."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The printing and paper of the book should be of good quality & standard. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE: "
+      },
+      {
+       "text": "The person who has lived in Goa for a minimum of 10 years of his creative lifespan, will be treated as Goan for the purpose of this scheme."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. Any Goan publisher is eligible for the scheme provided the writer of the book is Goan. \n1. The applicant should have substantial experience in publication. \n1. The applicant should publish a minimum of 500 copies of the book for which he wants to avail the financial assistance. \n1. The book could be published by the author himself or published by any other publishing unit provided NOC is issued by the author to the publisher. \n1. The book should contain 100% originality.\n1. The printing and paper of the book should be of good quality &amp; standard. \n\n**NOTE:** The person who has lived in Goa for a minimum of 10 years of his creative lifespan, will be treated as Goan for the purpose of this scheme.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Upto 300 books will be purchased, subject to the condition that the total amount should not exceed ₹ 50,000/-. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE: "
+      },
+      {
+       "text": "The publisher shall give a minimum 15% discount on the price of the book."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n1. Upto 300 books will be purchased, subject to the condition that the total amount should not exceed ₹ 50,000/-. \n\n**NOTE:** The publisher shall give a minimum 15% discount on the price of the book.\n",
+   "briefDescription": "\"Scheme to Provide Financial Assistance to the Publishers for Publishing Books of Goan Authors\"  by the Directorate of Art and Culture, Government of Goa, has been designed to promote Goan publishers to provide them with financial support for the publication of books.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "\"Scheme to Provide Financial Assistance to the Publishers for Publishing Books of Goan Authors\"  by the Directorate of Art and Culture, Government of Goa, has been designed to promote Goan publishers to provide them with financial support for the publication of books."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Objectives"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "To support Goan publishers, by providing them with opportunities and encouraging them in publishing the books. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "To give financial support to Goan publishers for publishing the books. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "detailedDescription_md": "&quot;Scheme to Provide Financial Assistance to the Publishers for Publishing Books of Goan Authors&quot;  by the Directorate of Art and Culture, Government of Goa, has been designed to promote Goan publishers to provide them with financial support for the publication of books.\n<br>\n\n> **Objectives**\n\n\n1. To support Goan publishers, by providing them with opportunities and encouraging them in publishing the books. \n1. To give financial support to Goan publishers for publishing the books. \n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "No grants should be given for the printing of the second edition. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Works of translation will not be considered. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "No anthology/ compilation shall be considered. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "exclusions_md": "\n1. No grants should be given for the printing of the second edition. \n1. Works of translation will not be considered. \n1. No anthology/ compilation shall be considered. \n\n",
+   "references": [
+    {
+     "title": "Citizen's Charter",
+     "url": "https://www.goa.gov.in/wp-content/uploads/2022/06/Chitizen-Charter-2022-2023-art-and-culture.pdf"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://www.goa.gov.in/wp-content/uploads/2022/06/Goan-Authors-and-Publishers-Form-22-23.pdf"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://www.artandculture.goa.gov.in/en/schemes-programmesgrants/scheme-to-provide-financial-assistance-to-the-publishers-for-publishing"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "spfappbga"
+}

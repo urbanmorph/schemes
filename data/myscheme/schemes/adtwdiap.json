@@ -1,0 +1,270 @@
+{
+ "_id": "66ed4851a2ae583ad3e22f67",
+ "_slug": "adtwdiap",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1: "
+         },
+         {
+          "text": "The interested applicant should collect the application form from the office of the District Adi Dravidar and Tribal Welfare Officer."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2: "
+         },
+         {
+          "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3: "
+         },
+         {
+          "text": "Submit the duly filled and signed application form along with the documents to the concerned authority."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should collect the application form from the office of the District Adi Dravidar and Tribal Welfare Officer.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the concerned authority.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable).\n&lt;br&gt;\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Adi Dravidar and Tribal Welfare Department",
+    "value": 3333331
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Adi Dravidar and Tribal Welfare Department-Incentive/Award of Prizes",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ADTWDIAP",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Tamil Nadu",
+    "value": 33
+   },
+   "tags": [
+    "Tribal Welfare",
+    "Adi Dravidar",
+    "Students",
+    "Financial Assistance",
+    "Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a Student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a resident of Tamil Nadu."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should belong to the Adi Dravidar/ Tribal/ Adi Dravidar (converted to Christianity) community."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should have secured the highest marks in 10th or 12th standard exams within the district."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The beneficiary should be a Student.\n  - The beneficiary should be a resident of Tamil Nadu.\n  - The beneficiary should belong to the Adi Dravidar/ Tribal/ Adi Dravidar (converted to Christianity) community.\n  - The beneficiary should have secured the highest marks in 10th or 12th standard exams within the district.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "10+2 Examination:"
+          },
+          {
+           "text": " ₹3,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "10th Std. First Prize: "
+          },
+          {
+           "text": "₹1,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "10th Std. Second Prize:"
+          },
+          {
+           "text": " ₹5,00/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "10th Std. Third Prize: "
+          },
+          {
+           "text": "₹3,00/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **10+2 Examination:** ₹3,000/-.  - **10th Std. First Prize:** ₹1,000/-.  - **10th Std. Second Prize:** ₹5,00/-.  - **10th Std. Third Prize:** ₹3,00/-.\n<br>\n\n",
+   "briefDescription": "The scheme “Adi Dravidar and Tribal Welfare Department-Incentive/Award of Prizes” offers incentives to One Boy and One Girl each from Adi Dravidar/ Tribal/ Adi Dravidar Converted to Christianity who have secured highest mark who have achieved top marks in 10th and 12th standard examinations.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Adi Dravidar and Tribal Welfare Department-Incentive/Award of Prizes” by the Adi Dravidar and Tribal Welfare Department, Tamil Nadu, provides district-level prizes to students based on their performance in the 10th and 12th standard examinations. The incentives are given to one Boy and one Girl each from Adi Dravidar/ Tribal/ Adi Dravidar Converted to Christianity who have secured the highest mark."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Adi Dravidar and Tribal Welfare Department-Incentive/Award of Prizes” by the Adi Dravidar and Tribal Welfare Department, Tamil Nadu, provides district-level prizes to students based on their performance in the 10th and 12th standard examinations. The incentives are given to one Boy and one Girl each from Adi Dravidar/ Tribal/ Adi Dravidar Converted to Christianity who have secured the highest mark.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.tn.gov.in/scheme/data_view/83082"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "adtwdiap"
+}

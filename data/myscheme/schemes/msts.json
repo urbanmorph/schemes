@@ -1,0 +1,182 @@
+{
+ "_id": "685cf42f38d49a55968eafe5",
+ "_slug": "msts",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Based on the scores provided by the Registrar's Office, the Dean of Student Welfare prepares a list of the top three students in each undergraduate program. The list is then approved by the Registrar and the Vice-Chancellor, after which the scholarship is disbursed to the selected students."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "Based on the scores provided by the Registrar&amp;#39;s Office, the Dean of Student Welfare prepares a list of the top three students in each undergraduate program. The list is then approved by the Registrar and the Vice-Chancellor, after which the scholarship is disbursed to the selected students.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Govind Ballabh Pant University Of Agriculture And Technology, Pantnagar",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Agriculture Department",
+    "value": 50000001
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Merit Scholarship (Top 3 UG Students)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MST3UGS",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Scholarship",
+    "Undergraduate",
+    "Merit",
+    "Student",
+    "Medical",
+    "Veterinary"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be enrolled in the 3rd year of the Medical or 4th year of the Veterinary undergraduate (UG) program at Govind Ballabh Pant University of Agriculture and Technology, Pantnagar."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a student.\n   1. The applicant must be enrolled in the 3rd year of the Medical or 4th year of the Veterinary undergraduate (UG) program at Govind Ballabh Pant University of Agriculture and Technology, Pantnagar.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Rate of Scholarship:"
+      },
+      {
+       "text": " ₹800/- per month."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Rate of Scholarship:** ₹800/- per month.\n<br>\n\n",
+   "briefDescription": "The scheme aims to recognize and support academically outstanding undergraduate students by providing monthly financial assistance of ₹800/- in the form of scholarships to students in their 3rd year of Medical and 4th year of Veterinary undergraduate (UG) programs.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Merit Scholarship (Top 3 UG Students)” scheme is implemented by Govind Ballabh Pant University of Agriculture and Technology, Pantnagar, under the Department of Agriculture, Government of Uttarakhand. The scheme aims to recognize and support academically outstanding undergraduate students by providing monthly financial assistance in the form of scholarships to students in their 3rd year of Medical and 4th year of Veterinary undergraduate (UG) programs."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Merit Scholarship (Top 3 UG Students)” scheme is implemented by Govind Ballabh Pant University of Agriculture and Technology, Pantnagar, under the Department of Agriculture, Government of Uttarakhand. The scheme aims to recognize and support academically outstanding undergraduate students by providing monthly financial assistance in the form of scholarships to students in their 3rd year of Medical and 4th year of Veterinary undergraduate (UG) programs.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 180)",
+     "url": "https://uk.gov.in/department92/library_file/file-30-01-2025-04-25-16.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "msts"
+}

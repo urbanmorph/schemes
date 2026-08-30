@@ -1,0 +1,322 @@
+{
+ "_id": "642d415468da74277a17240b",
+ "_slug": "iscwr",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " First go to the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://swdservices.karnataka.gov.in/SWIncentive/WRM/WRMHAhome.aspx",
+        "type": "link"
+       },
+       {
+        "text": "."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Using your Aadhaar Card, do the registration and provide all the required information."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " Upload all the relevant documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " After Registration, an SMS will be sent to the applicant and she can print the acknowledgement form as proof of application."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5:"
+       },
+       {
+        "text": " Social Welfare department will do spot verification to verify the details provided by the applicant and process the application further."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 6:"
+       },
+       {
+        "text": " After successful spot verification by the department, the incentive will be credited to the registered bank account of the applicant."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** First go to the [official website](https://swdservices.karnataka.gov.in/SWIncentive/WRM/WRMHAhome.aspx).\n**Step 2:** Using your Aadhaar Card, do the registration and provide all the required information.\n**Step 3:** Upload all the relevant documents.\n**Step 4:** After Registration, an SMS will be sent to the applicant and she can print the acknowledgement form as proof of application.\n**Step 5:** Social Welfare department will do spot verification to verify the details provided by the applicant and process the application further.\n**Step 6:** After successful spot verification by the department, the incentive will be credited to the registered bank account of the applicant.\n",
+    "url": "https://sw.kar.nic.in/swincentive/WRM/WRMRegistrationForm.aspx"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Social Welfare Department",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 3000020
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Incentive for the SC Widow Re-Marriage",
+   "schemeOpenDate": "2018-01-01",
+   "schemeShortTitle": "ISCWR",
+   "schemeSubCategory": [
+    {
+     "label": "Marriage",
+     "value": "Marriage"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Karnataka",
+    "value": 29
+   },
+   "tags": [
+    "Marriage",
+    "Widow",
+    "Widow",
+    "SC",
+    "Incentive",
+    "Re-marriage"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a resident of Karnataka."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be a widow."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The widow should belong to the Scheduled Caste community."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There is no annual income limit for this scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Incentives will be provided only to those who submit their application within one year of marriage."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There are no caste/religion restrictions for the spouse."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " The couple should reside in Karnataka."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a resident of Karnataka.\n   1. The applicant should be a widow.\n   1. The widow should belong to the Scheduled Caste community.\n   1. There is no annual income limit for this scheme.\n   1. Incentives will be provided only to those who submit their application within one year of marriage.\n   1. There are no caste/religion restrictions for the spouse.\n\n**Note:** The couple should reside in Karnataka.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "If a widow from the Scheduled Caste community remarries a male from another caste, she will receive an incentive of ₹3 lakh."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "If the beneficiary has already received an incentive under the simple marriage, she will be eligible for ₹2.50 lakh under this scheme."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- If a widow from the Scheduled Caste community remarries a male from another caste, she will receive an incentive of ₹3 lakh.\n- If the beneficiary has already received an incentive under the simple marriage, she will be eligible for ₹2.50 lakh under this scheme.\n\n",
+   "briefDescription": "Under this scheme, the Social Welfare Department, Government of Karnataka gives incentives to the remarried widows belonging to SC Community. The incentive amount is ₹ 3 Lakh. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "This scheme is aimed at encouraging widows to remarry by providing financial assistance to lead a normal life. The main objective of the scheme is to promote widow remarriage and rehabilitate widows by providing financial assistance. This scheme brings in a new dimension of social change among the widows."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, the Social Welfare Department, Government of Karnataka will give incentives to the remarried widows belonging to the SC Community. The incentive is provided only to those who have submitted applications within 1 year of marriage."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "This scheme is aimed at encouraging widows to remarry by providing financial assistance to lead a normal life. The main objective of the scheme is to promote widow remarriage and rehabilitate widows by providing financial assistance. This scheme brings in a new dimension of social change among the widows.\nUnder this scheme, the Social Welfare Department, Government of Karnataka will give incentives to the remarried widows belonging to the SC Community. The incentive is provided only to those who have submitted applications within 1 year of marriage.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Applicant Manual",
+     "url": "https://sw.kar.nic.in/swincentive/Documents/ApplicantManualWRM.pdf"
+    },
+    {
+     "title": "Scheme Details",
+     "url": "https://sw.kar.nic.in/swincentive/WRM/WRMHAHome.aspx"
+    },
+    {
+     "title": "Schemes In Kodagu District",
+     "url": "https://kodagu.nic.in/en/social-welfare-department/"
+    },
+    {
+     "title": "Online Application Portal",
+     "url": "https://swdservices.karnataka.gov.in/SWIncentive/WRM/WRMHAhome.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "iscwr"
+}

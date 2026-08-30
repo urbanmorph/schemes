@@ -1,0 +1,263 @@
+{
+ "_id": "6751c8a1d109737353c745b6",
+ "_slug": "aay",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the Block or District Office and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the Block or District Office."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the Block or District Office and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step 2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the Block or District Office.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   },
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Self-Registration by Candidate:",
+        "underline": true
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The applicant visit the "
+         },
+         {
+          "children": [
+           {
+            "text": "Abua Awas Yojana"
+           }
+          ],
+          "link": "https://aay.jharkhand.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": " official website to register him/herself under the scheme to get the benefit."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Log in using the provided Username and Password."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill the form and upload the required documents on the portal."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     }
+    ],
+    "process_md": "***Self-Registration by Candidate:***\n\n- The applicant visit the [Abua Awas Yojana](https://aay.jharkhand.gov.in/) official website to register him/herself under the scheme to get the benefit.- Log in using the provided Username and Password.\n- Fill the form and upload the required documents on the portal.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Rural Development Department",
+    "value": 2000017
+   },
+   "schemeCategory": [
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Abua Awas Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "AAY",
+   "schemeSubCategory": [
+    {
+     "label": "Housing",
+     "value": "Housing"
+    },
+    {
+     "label": "Shelter, integrated support and assistance",
+     "value": "Shelter, integrated support and assistance"
+    },
+    {
+     "label": "Slum Rehabilitation/Redevelopment",
+     "value": "Slum Rehabilitation/Redevelopment"
+    }
+   ],
+   "state": {
+    "label": "Jharkhand",
+    "value": 20
+   },
+   "tags": [
+    "Construction",
+    "Housing",
+    "Rural Development",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The families living in kutcha houses or without permanent housing."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The specially vulnerable tribal groups (PVTG), victims of natural calamities, and released bonded laborers are eligible for this scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The family should not be benefited from existing housing schemes like PMAY-R, Indira Awas Yojana, or Birsa Awas Yojana."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The families living in kutcha houses or without permanent housing.\n1. The specially vulnerable tribal groups (PVTG), victims of natural calamities, and released bonded laborers are eligible for this scheme.\n1. The family should not be benefited from existing housing schemes like PMAY-R, Indira Awas Yojana, or Birsa Awas Yojana.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Financial assistance of ₹2,00,000/- per beneficiary for house construction."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Provision for 95 days of unskilled labor wages under MGNREGA."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Financial assistance of ₹2,00,000/- per beneficiary for house construction.\n- Provision for 95 days of unskilled labor wages under MGNREGA.\n\n",
+   "briefDescription": "The Abua Awas Yojana aims to provide pucca houses to 8,00,000 homeless families in three phases. Each house will feature three rooms and a kitchen, covering an area of 31 square meters.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Abua Awas Yojana\" was launched by the Department of Rural Development, Government of Jharkhand. The scheme aims to provide pucca houses to 8,00,000 homeless families in three phases with a budget of ₹16,320/- crore, prioritizes housing for vulnerable and underprivileged families, providing financial and labor assistance for construction. Each house will feature three rooms and a kitchen, covering an area of 31 square meters. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Abua Awas Yojana&quot; was launched by the Department of Rural Development, Government of Jharkhand. The scheme aims to provide pucca houses to 8,00,000 homeless families in three phases with a budget of ₹16,320/- crore, prioritizes housing for vulnerable and underprivileged families, providing financial and labor assistance for construction. Each house will feature three rooms and a kitchen, covering an area of 31 square meters. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cm.jharkhand.gov.in/sites/default/files/Press_Release_3-18-10-2023%28English%29.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://aay.jharkhand.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "aay"
+}

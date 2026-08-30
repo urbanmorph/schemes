@@ -1,0 +1,414 @@
+{
+ "_id": "6807cb9192da06bdddb7d8ec",
+ "_slug": "aby",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "To avail of the benefits of the scheme, the parents/guardians need to contact their respective government school."
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Data Entry on Shala Darpan Portal:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "School authorities log in through the "
+         },
+         {
+          "children": [
+           {
+            "text": "Shala Darpan School Login"
+           }
+          ],
+          "link": "https://rajshaladarpan.rajasthan.gov.in/SD2/BSP/Home/HomePage.aspx",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Navigate to the \"Student\" tab and fill required details in Form-9."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Category Selection for Eligible Girls:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Under the “Mandatory Student Information for Beneficiary Schemes” section, select class-wise eligible girls under “BPL” and “Orphan/Single Parent” categories."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Beneficiary Approval:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Visit the Beneficiary Scheme Portal through School Login."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Select the appropriate scheme and approve and lock the displayed list of eligible girls."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Verification by District Education Officer (DEO):"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Locked data is reflected on the DEO (primary/secondary) office login."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "DEO completes final verification using OTP-based approval."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Jan Aadhaar Verification:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Before submission, ensure that the girl’s Jan Aadhaar is verified on the Shala Darpan Portal, as funds are transferred via DBT."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     }
+    ],
+    "process_md": "> ***To avail of the benefits of the scheme, the parents/guardians need to contact their respective government school.***\n\n**Data Entry on Shala Darpan Portal:**\n\n- School authorities log in through the [Shala Darpan School Login](https://rajshaladarpan.rajasthan.gov.in/SD2/BSP/Home/HomePage.aspx).- Navigate to the &quot;Student&quot; tab and fill required details in Form-9.\n\n**Category Selection for Eligible Girls:**\n\n- Under the “Mandatory Student Information for Beneficiary Schemes” section, select class-wise eligible girls under “BPL” and “Orphan/Single Parent” categories.\n\n**Beneficiary Approval:**\n\n- Visit the Beneficiary Scheme Portal through School Login.\n- Select the appropriate scheme and approve and lock the displayed list of eligible girls.\n\n**Verification by District Education Officer (DEO):**\n\n- Locked data is reflected on the DEO (primary/secondary) office login.\n- DEO completes final verification using OTP-based approval.\n\n**Jan Aadhaar Verification:**\n\n- Before submission, ensure that the girl’s Jan Aadhaar is verified on the Shala Darpan Portal, as funds are transferred via DBT.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": "Rajasthan Balika Shiksha Foundation",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education (Elementary and Secondary) Department",
+    "value": 8000008
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Aapki Beti Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ABY",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Financial Assistance",
+     "value": "Financial Assistance"
+    }
+   ],
+   "state": {
+    "label": "Rajasthan",
+    "value": 8
+   },
+   "tags": [
+    "Financial Assistance",
+    "Girl Student",
+    "BPL",
+    "Below Poverty Line",
+    "Daughter"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a native of Rajasthan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a girl student "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be studying in a government school in Rajasthan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be studying in classes 1"
+        },
+        {
+         "superscript": true,
+         "text": "st"
+        },
+        {
+         "text": " to 12"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": "."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s family should fall under the Below Poverty Line (BPL) category."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have lost either one parent (single parent) or both parents."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a native of Rajasthan.\n1. The applicant should be a girl student \n1. The applicant should be studying in a government school in Rajasthan.\n1. The applicant should be studying in classes 1st to 12th.1. The applicant’s family should fall under the Below Poverty Line (BPL) category.\n1. The applicant should have lost either one parent (single parent) or both parents.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Financial Assistance:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹2,100/- per annum for girl students in classes 1"
+        },
+        {
+         "superscript": true,
+         "text": "st"
+        },
+        {
+         "text": " to 8"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": "."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹2,500/- per annum for girl students in classes 9"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " to 12"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": "."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "Mode of Disbursement:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Direct Benefit Transfer (DBT) to the bank account linked with Jan Aadhaar of the family head or the girl child."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "> **Financial Assistance:**\n\n\n- ₹2,100/- per annum for girl students in classes 1st to 8th.- ₹2,500/- per annum for girl students in classes 9th to 12th.\n> ***Mode of Disbursement:***\n\n\n- Direct Benefit Transfer (DBT) to the bank account linked with Jan Aadhaar of the family head or the girl child.\n\n",
+   "briefDescription": "Under the scheme, financial assistance of ₹2,100/- per year is provided to girls studying in Class 1 to 8 in government schools, belonging to families living below the poverty line (BPL) and whose both or one parent has passed away. Girls studying in Class 9 to 12 receive ₹2,500/- per year.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Aapki Beti Yojana\" scheme was launched by the School Education Department, Government of Rajasthan, to support girls in continuing their education in government schools from Class 1 to 12. Under the scheme, financial assistance of ₹2,100/- per year is provided to girls studying in Class 1 to 8 in government schools who belong to families living below the poverty line (BPL) and whose one or both parents have passed away. For girls studying in Class 9 to 12, the assistance is ₹2,500/- per year. The scheme is implemented by the Rajasthan Balika Shiksha Foundation."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Aapki Beti Yojana&amp;quot; scheme was launched by the School Education Department, Government of Rajasthan, to support girls in continuing their education in government schools from Class 1 to 12. Under the scheme, financial assistance of ₹2,100/- per year is provided to girls studying in Class 1 to 8 in government schools who belong to families living below the poverty line (BPL) and whose one or both parents have passed away. For girls studying in Class 9 to 12, the assistance is ₹2,500/- per year. The scheme is implemented by the Rajasthan Balika Shiksha Foundation.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://rajshaladarpan.rajasthan.gov.in/SD2/BSP/Home/ShowFile.aspx?oid=670104fd629122007438dba7"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "aby"
+}

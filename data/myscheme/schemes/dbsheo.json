@@ -1,0 +1,218 @@
+{
+ "_id": "64e5e20b9a06d82f412d2dd2",
+ "_slug": "dbsheo",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Take a print of the "
+       },
+       {
+        "children": [
+         {
+          "text": "proforma "
+         }
+        ],
+        "link": "https://www.goa.gov.in/wp-content/uploads/2019/10/Dayanand-Bandodkar-Scheme-for-Orphans.pdf",
+        "type": "link"
+       },
+       {
+        "text": "of the application form, or request a hard copy from the concerned authority at the institution."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across), and attach copies of all the mandatory documents (self-attest if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "At the time of admission, submit the duly filled and signed application form along with the documents to the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "The concerned Institution shall process the applications of all such beneficiaries and sanction the fee waiver to them right at the time of admission itself."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Take a print of the [proforma ](https://www.goa.gov.in/wp-content/uploads/2019/10/Dayanand-Bandodkar-Scheme-for-Orphans.pdf)of the application form, or request a hard copy from the concerned authority at the institution.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across), and attach copies of all the mandatory documents (self-attest if required).\n**Step 3:** At the time of admission, submit the duly filled and signed application form along with the documents to the concerned authority.\n**Step 4:** The concerned Institution shall process the applications of all such beneficiaries and sanction the fee waiver to them right at the time of admission itself.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 30000044
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Dayanand Bandodkar Scheme For Higher Education For Orphans",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "Dbsheo",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Goa",
+    "value": 30
+   },
+   "tags": [
+    "Scholarship",
+    "Fee Waiver",
+    "Orphan",
+    "Higher Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should have been born in Goa or have resided in Goa for at least the last fifteen (15) years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have passed his/her qualifying examination from any of the Institutions located in Goa."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be an Orphan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be enrolled for the First Year of their Degree/PG Courses."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should have been born in Goa or have resided in Goa for at least the last fifteen (15) years.\n1. The applicant should have passed his/her qualifying examination from any of the Institutions located in Goa.\n1. The applicant should be an Orphan.\n1. The applicant should be enrolled for the First Year of their Degree/PG Courses.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "A full waiver of the fees that were supposed to have been paid by the beneficiary in the Institutions where they have sought the admissions. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The amount of fee waiver shall consist of Tuition fees, Library fees, Laboratory fees and Development fees, if any plus other charges payable to Institution like Lodging/Boarding, Food (Hostel charges) or Transport, etc."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. A full waiver of the fees that were supposed to have been paid by the beneficiary in the Institutions where they have sought the admissions. \n1. The amount of fee waiver shall consist of Tuition fees, Library fees, Laboratory fees and Development fees, if any plus other charges payable to Institution like Lodging/Boarding, Food (Hostel charges) or Transport, etc.\n\n",
+   "briefDescription": "\"Dayanand Bandodkar Scheme for Higher Education for Orphans\" supports the educational needs of orphan children who are deprived of higher education for want of financial resources. The Scheme envisages taking care of such children from their Undergraduate Course to the Post Graduate Course.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "\"Dayanand Bandodkar Scheme for Higher Education for Orphans\" is a Fee Waiver Scheme by the Department of Education, Art & Culture, Government of Goa. The objective of this scheme is to support the educational needs of the children who are orphaned of both parents i.e. father and mother and are deprived of higher education for want of financial resources. The Scheme envisages taking care of such children from their Undergraduate Course to the Post Graduate Course in the areas of General Education and Technical Education. The Scheme will be operated by the Directorate of Higher Education for students pursuing courses in General Education and by the Directorate of Technical Education for students pursuing Technical Education."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "&quot;Dayanand Bandodkar Scheme for Higher Education for Orphans&quot; is a Fee Waiver Scheme by the Department of Education, Art &amp; Culture, Government of Goa. The objective of this scheme is to support the educational needs of the children who are orphaned of both parents i.e. father and mother and are deprived of higher education for want of financial resources. The Scheme envisages taking care of such children from their Undergraduate Course to the Post Graduate Course in the areas of General Education and Technical Education. The Scheme will be operated by the Directorate of Higher Education for students pursuing courses in General Education and by the Directorate of Technical Education for students pursuing Technical Education.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.goa.gov.in/wp-content/uploads/2019/10/Dayanand-Bandodkar-Scheme-for-Orphans.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dbsheo"
+}

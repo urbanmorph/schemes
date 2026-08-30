@@ -1,0 +1,451 @@
+{
+ "_id": "629f3f7aeaca073ef507c38e",
+ "_slug": "onorc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The interested person must provide their ration card details at the closest Fair Price Shop."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Recipients can visit any Fair Price Shop in the nation with their Aadhaar number or their ration card number."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Any family member who has seeded their Aadhaar number on their ration card is eligible for authentication and to have their ration lifted. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Beneficiary have the option to use their iris or fingerprints for Aadhaar authentication."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n- The interested person must provide their ration card details at the closest Fair Price Shop.\n- Recipients can visit any Fair Price Shop in the nation with their Aadhaar number or their ration card number.\n- Any family member who has seeded their Aadhaar number on their ration card is eligible for authentication and to have their ration lifted. \n- Beneficiary have the option to use their iris or fingerprints for Aadhaar authentication.\n\n",
+    "url": ""
+   },
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "For registering new user, the beneficiary is required to register on the official web page of "
+           },
+           {
+            "bold": true,
+            "text": "National  Food Security Portal"
+           },
+           {
+            "text": " i.e "
+           },
+           {
+            "children": [
+             {
+              "text": "https://nfsa.gov.in/sso/frmSSOUserRegistration.aspx"
+             }
+            ],
+            "link": "https://nfsa.gov.in/sso/frmSSOUserRegistration.aspx",
+            "type": "link"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "In case person is required to check the status of his Ration card, the beneficiary can log in on  the official web page of "
+           },
+           {
+            "bold": true,
+            "text": "National  Food Security Portal"
+           },
+           {
+            "text": " i.e "
+           },
+           {
+            "children": [
+             {
+              "text": "https://nfsa.gov.in/sso/frmPublicLogin.aspx"
+             }
+            ],
+            "link": "https://nfsa.gov.in/sso/frmPublicLogin.aspx",
+            "type": "link"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Alternatively, an individual can also download \""
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Mera Ration"
+             }
+            ],
+            "link": "https://play.google.com/store/apps/details?id=com.nic.onenationonecard&hl=en_GB",
+            "type": "link"
+           },
+           {
+            "text": "\" mobile application. Once downloaded, the beneficiary can :"
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ol_list"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Register."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Know his nearest Ration Shops."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Eligibility criteria"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Transactions"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Aadhaar seeding"
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n   1. For registering new user, the beneficiary is required to register on the official web page of **National  Food Security Portal** i.e [https://nfsa.gov.in/sso/frmSSOUserRegistration.aspx](https://nfsa.gov.in/sso/frmSSOUserRegistration.aspx)   1. In case person is required to check the status of his Ration card, the beneficiary can log in on  the official web page of **National  Food Security Portal** i.e [https://nfsa.gov.in/sso/frmPublicLogin.aspx](https://nfsa.gov.in/sso/frmPublicLogin.aspx)   1. Alternatively, an individual can also download &amp;quot;[**Mera Ration**](https://play.google.com/store/apps/details?id=com.nic.onenationonecard&amp;hl=en_GB)&amp;quot; mobile application. Once downloaded, the beneficiary can :\n\n  - Register.\n  - Know his nearest Ration Shops.\n  - Eligibility criteria\n  - Transactions\n  - Aadhaar seeding\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Food And Public Distribution",
+    "value": 1590
+   },
+   "nodalMinistryName": {
+    "label": "Ministry Of Consumer Affairs, Food And Public Distribution",
+    "value": 1566
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "One Nation One Ration Card",
+   "schemeOpenDate": "2018-10-31",
+   "schemeShortTitle": "ONORC ",
+   "schemeSubCategory": [
+    {
+     "label": "Food Security / Public Distribution System",
+     "value": "Food Security / Public Distribution System"
+    }
+   ],
+   "schemeType": {
+    "label": "Centrally Sponsored Scheme",
+    "value": "centrally-sponsored-scheme"
+   },
+   "tags": [
+    "Ration Card Holders",
+    "Migrant Workers",
+    "Food Security"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    },
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The scheme is eligible to all ration cardholders or beneficiaries covered under the National Food Security Act (NFSA), 2013 with Aadhaar Card numbers seeded."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The scheme is eligible to all ration cardholders or beneficiaries covered under the National Food Security Act (NFSA), 2013 with Aadhaar Card numbers seeded.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "label": "In Kind",
+    "value": "in kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "It will benefit approximately 81 crores beneficiaries by digitizing Ration Cards."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "This system allows all NFSA beneficiaries, particularly migrant beneficiaries, to claim either full or part food grains from any Fair Price Shop (FPS) in the country through an existing ration card with biometric/Aadhaar authentication in a seamless manner. "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "With the ONORC, all the beneficiaries in one state can get the same fair rations in other states where the ration card was issued."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The scheme will ensure food security of migrant laborers who move to other states to seek better job opportunities."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "It will improve the mechanism to identify fake/duplicate ration cards. It seeks to provide universal access to PDS food grains for migrant workers."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Ration card portability will be achieved by implementing an IT-driven system that installs ePoS devices in each Fair Price Shop (FPS)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The "
+          },
+          {
+           "bold": true,
+           "text": "ONORC"
+          },
+          {
+           "text": " will also help achieve the target set under "
+          },
+          {
+           "bold": true,
+           "text": "SDG 2"
+          },
+          {
+           "text": ": Ending hunger by 2030."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n- It will benefit approximately 81 crores beneficiaries by digitizing Ration Cards.\n- This system allows all NFSA beneficiaries, particularly migrant beneficiaries, to claim either full or part food grains from any Fair Price Shop (FPS) in the country through an existing ration card with biometric/Aadhaar authentication in a seamless manner. \n- With the ONORC, all the beneficiaries in one state can get the same fair rations in other states where the ration card was issued.\n- The scheme will ensure food security of migrant laborers who move to other states to seek better job opportunities.\n- It will improve the mechanism to identify fake/duplicate ration cards. It seeks to provide universal access to PDS food grains for migrant workers.\n- Ration card portability will be achieved by implementing an IT-driven system that installs ePoS devices in each Fair Price Shop (FPS).\n- The **ONORC** will also help achieve the target set under **SDG 2**: Ending hunger by 2030.\n",
+   "briefDescription": "\"One Nation, One Ration Card\" is Aadhaar-based national ration card portability scheme to ensure food security for all, including internal migrants within India, under which beneficiaries can purchase subsidized food anywhere in India.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \""
+        },
+        {
+         "bold": true,
+         "text": "One Nation One Ration Card\""
+        },
+        {
+         "text": " (ONORC) Scheme was launched by the Department of Food & Supplies and Consumer Affairs, Ministry of Consumer Affairs, Food & Public Distribution in 2018. It is a national Ration Card portability scheme to ensure food security for all including internal migrants within India. It enables migrant workers and their family members to access PDS benefits from any Fair Price Shop anywhere in the country, thus ensuring the food security through the inter-state portability of ration cards under the National Food Security Act, 2013 (NFSA). A Fair Price Shop (FPS) is a public ration store licensed under Section 3 of the Essential Commodities Act of 1955. Ration card details and entitlements are available online on any ePoS device in the country. It includes both inter-State and intra-State (inter-district/intra-district) portability of ration cards."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "Assam is the 36"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " State to implement the One Nation One Ration Card (ONORC) scheme. The ONORC plan has successfully been implemented in all 36 States/UTs making food security portable throughout the country. The government has launched a mobile app, namely ‘"
+        },
+        {
+         "bold": true,
+         "text": "MERA RATION"
+        },
+        {
+         "text": "’ for acquiring the maximum benefit of the ONORC plan. The mobile app shall provide the user with real-time information. It is available in 13 languages. As per the official website of "
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "National Food Security Portal"
+          }
+         ],
+         "link": "https://nfsa.gov.in/",
+         "type": "link"
+        },
+        {
+         "text": ", there are more than 20 crores Ration Cards issued through more than 4.5 lakh POS enabled Fair Price Shops."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;**One Nation One Ration Card&amp;quot;** (ONORC) Scheme was launched by the Department of Food &amp;amp; Supplies and Consumer Affairs, Ministry of Consumer Affairs, Food &amp;amp; Public Distribution in 2018. It is a national Ration Card portability scheme to ensure food security for all including internal migrants within India. It enables migrant workers and their family members to access PDS benefits from any Fair Price Shop anywhere in the country, thus ensuring the food security through the inter-state portability of ration cards under the National Food Security Act, 2013 (NFSA). A Fair Price Shop (FPS) is a public ration store licensed under Section 3 of the Essential Commodities Act of 1955. Ration card details and entitlements are available online on any ePoS device in the country. It includes both inter-State and intra-State (inter-district/intra-district) portability of ration cards.\nAssam is the 36th State to implement the One Nation One Ration Card (ONORC) scheme. The ONORC plan has successfully been implemented in all 36 States/UTs making food security portable throughout the country. The government has launched a mobile app, namely ‘**MERA RATION**’ for acquiring the maximum benefit of the ONORC plan. The mobile app shall provide the user with real-time information. It is available in 13 languages. As per the official website of [**National Food Security Portal**](https://nfsa.gov.in/), there are more than 20 crores Ration Cards issued through more than 4.5 lakh POS enabled Fair Price Shops.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://dfpd.gov.in/"
+    },
+    {
+     "title": "National Food Security Portal",
+     "url": "https://nfsa.gov.in/"
+    },
+    {
+     "title": "Mera Ration App",
+     "url": "https://play.google.com/store/apps/details?id=com.nic.onenationonecard&hl=en_GB&pli=1"
+    },
+    {
+     "title": "ONORC",
+     "url": "https://www.nic.in/wp-content/themes/NICTheme/Brochures/One%20Nation%20One%20Ration%20Card.pdf"
+    },
+    {
+     "title": "PIB Notification",
+     "url": "https://static.pib.gov.in/WriteReadData/userfiles/one_nation.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "onorc"
+}

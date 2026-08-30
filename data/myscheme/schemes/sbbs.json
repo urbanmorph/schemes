@@ -1,0 +1,259 @@
+{
+ "_id": "68fb5c9b9229ef59f24807ab",
+ "_slug": "sbbs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Under this scheme, registered labourers under the \"Mukhyamantri Mazdoor Kalyan (Sambal) Yojana–2018\" and construction workers are provided with a domestic electricity connection free of cost (without any connection charge). In addition, the eligible consumer is required to pay only ₹200 per month."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - Under this scheme, registered labourers under the &amp;quot;Mukhyamantri Mazdoor Kalyan (Sambal) Yojana–2018&amp;quot; and construction workers are provided with a domestic electricity connection free of cost (without any connection charge). In addition, the eligible consumer is required to pay only ₹200 per month.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Energy Department",
+    "value": 2300010
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Utility & Sanitation",
+     "value": "628ce97ad6d1a3bde468537d"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Saral Bijli Bill Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SBBS",
+   "schemeSubCategory": [
+    {
+     "label": "Electricity",
+     "value": "Electricity"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Electricity",
+    "Subsidy"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a registered labourer under the Mukhyamantri Mazdoor Kalyan (Sambal) Yojana–2018."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be a registered construction worker."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should have a domestic electricity connection or intend to obtain one under this scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "paragraph"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant should be a registered labourer under the Mukhyamantri Mazdoor Kalyan (Sambal) Yojana–2018.\n  - The applicant should be a registered construction worker.\n  - The applicant should have a domestic electricity connection or intend to obtain one under this scheme.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Free Electricity Connection: "
+          },
+          {
+           "text": "Eligible registered labourers and construction workers receive free domestic electricity connections without any connection charge."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Fixed Monthly Electricity Bill: "
+          },
+          {
+           "text": "The beneficiary is required to pay only ₹200 per month for electricity consumption."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Free Electricity Connection:** Eligible registered labourers and construction workers receive free domestic electricity connections without any connection charge.  - **Fixed Monthly Electricity Bill:** The beneficiary is required to pay only ₹200 per month for electricity consumption.\n<br>\n\n",
+   "briefDescription": "The scheme offers free domestic connections and a fixed monthly charge to ensure easy electricity access for eligible beneficiaries.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Saral Bijli Bill Scheme” launched by the Energy Department, Government of Madhya Pradesh, aims to ensure electricity accessibility to registered labourers and construction workers by providing free domestic connections and a fixed electricity bill of ₹200/- per month."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Saral Bijli Bill Scheme” launched by the Energy Department, Government of Madhya Pradesh, aims to ensure electricity accessibility to registered labourers and construction workers by providing free domestic connections and a fixed electricity bill of ₹200/- per month.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should not have a connected load exceeding 1000 watts."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not have an air conditioner or heater connected to the domestic connection."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "\n- The applicant should not have a connected load exceeding 1000 watts.\n- The applicant should not have an air conditioner or heater connected to the domestic connection.\n\n<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/schemes.aspx?vID=0"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sbbs"
+}

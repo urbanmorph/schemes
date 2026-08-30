@@ -1,0 +1,276 @@
+{
+ "_id": "66db27ef926d5490dea623d0",
+ "_slug": "mmvpy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1: "
+         },
+         {
+          "text": "To avail benefits under this scheme, students should visit the office of the District Minority Welfare Officer at the District Headquarters to collect the application form."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " Fill out the form, attach all required documents, and have it attested by the headmaster/principal of your school/institution."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3: "
+         },
+         {
+          "text": "Submit the completed and attested application form to the District Minority Welfare Office in your district."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note:"
+         },
+         {
+          "text": " For more information, please contact the District Minority Welfare Office in your district."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** To avail benefits under this scheme, students should visit the office of the District Minority Welfare Officer at the District Headquarters to collect the application form.\n**Step 2:** Fill out the form, attach all required documents, and have it attested by the headmaster/principal of your school/institution.\n**Step 3:** Submit the completed and attested application form to the District Minority Welfare Office in your district.\n**Note:** For more information, please contact the District Minority Welfare Office in your district.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": "Minority Welfare Department, Government Of Bihar",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Minority Welfare Department",
+    "value": 10111136
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhyamantri Vidyarthi Protsahan Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MMVPY",
+   "schemeSubCategory": null,
+   "schemeType": null,
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Minority",
+    "Student",
+    "Incentive",
+    "Intermediate",
+    "Maulvi",
+    "Fauquania",
+    "Matriculation"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "1.\tThe applicant should be a resident of Bihar."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "2.\tThe applicant should be a student."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "3.\tThe student should belong to a minority community."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "4.\tThe student should meet one of the following educational qualifications:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The student has passed the Matriculation/Fauquania exam with a first division from the Bihar School Examination Board or the Bihar Madrasa Education Board."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "A Muslim girl student has passed the Intermediate/Maulvi exam with first class from the Bihar School Examination Board or the Bihar Madrasa Education Board."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "A Bengali-speaking student has passed the Matriculation exam with a first division from the Bihar School Examination Board."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "1.\tThe applicant should be a resident of Bihar.\n2.\tThe applicant should be a student.\n3.\tThe student should belong to a minority community.\n4.\tThe student should meet one of the following educational qualifications:\n\n  - The student has passed the Matriculation/Fauquania exam with a first division from the Bihar School Examination Board or the Bihar Madrasa Education Board.\n  - A Muslim girl student has passed the Intermediate/Maulvi exam with first class from the Bihar School Examination Board or the Bihar Madrasa Education Board.\n  - A Bengali-speaking student has passed the Matriculation exam with a first division from the Bihar School Examination Board.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, eligible students receive the following incentive amounts:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Minority students who pass the Matriculation/Fauquania exam with first division from the Bihar School Examination Board/Bihar Madrasa Education Board are awarded ₹10,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Minority (Muslim) girl students who pass the Intermediate/Maulvi exam with first-class marks from the Bihar School Examination Board/Bihar Madrasa Education Board are awarded ₹15,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Bengali-speaking students who pass the Matriculation exam with first division from the Bihar School Examination Board are awarded ₹10,000/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "Under this scheme, eligible students receive the following incentive amounts:\n\n  - Minority students who pass the Matriculation/Fauquania exam with first division from the Bihar School Examination Board/Bihar Madrasa Education Board are awarded ₹10,000/-.\n  - Minority (Muslim) girl students who pass the Intermediate/Maulvi exam with first-class marks from the Bihar School Examination Board/Bihar Madrasa Education Board are awarded ₹15,000/-.\n  - Bengali-speaking students who pass the Matriculation exam with first division from the Bihar School Examination Board are awarded ₹10,000/-.\n\n",
+   "briefDescription": "Under this scheme, an incentive amount is provided to minority students who pass the Intermediate/Matriculation/Fauquania/Maulvi examinations with first-class marks from the Bihar School Examination Board/Bihar Madrasa Education Board. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Mukhyamantri Vidyarthi Protsahan Yojana\" is initiated by the Minority Welfare Department, Government of Bihar. Under this scheme, an incentive amount is provided to minority students who pass the Intermediate/Matriculation/Fauquania/Maulvi examinations with first-class marks from the Bihar School Examination Board/Bihar Madrasa Education Board. The incentive amount is transferred directly to the students' bank accounts through Direct Benefit Transfer (DBT)."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Mukhyamantri Vidyarthi Protsahan Yojana&amp;quot; is initiated by the Minority Welfare Department, Government of Bihar. Under this scheme, an incentive amount is provided to minority students who pass the Intermediate/Matriculation/Fauquania/Maulvi examinations with first-class marks from the Bihar School Examination Board/Bihar Madrasa Education Board. The incentive amount is transferred directly to the students&amp;#39; bank accounts through Direct Benefit Transfer (DBT).\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://state.bihar.gov.in/minoritywelfare/SectionInformation.html?editForm&rowId=3393"
+    },
+    {
+     "title": "Guidelines (Page No. 9)",
+     "url": "https://bsmfc.org/wp-content/uploads/2020/01/Yojnadarpan.pdf"
+    },
+    {
+     "title": "Notification 1",
+     "url": "https://state.bihar.gov.in/minoritywelfare/cache/42/09-Aug-23/SHOW_DOCS/AdvertisementMMVPY.pdf"
+    },
+    {
+     "title": "Notification 2",
+     "url": "https://cdn.s3waas.gov.in/s34f4adcbf8c6f66dcfc8a3282ac2bf10a/uploads/2024/07/2024070521.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mmvpy"
+}

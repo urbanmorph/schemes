@@ -1,0 +1,222 @@
+{
+ "_id": "67ff8518321976fb6b05f758",
+ "_slug": "mfpffw",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Freedom Fighters and their widows are required to obtain the application form from the office of the District Magistrate."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "The list of documents to be submitted along with the application form is specified in pages 13 to 17 of the Uttar Pradesh Freedom Fighters and their Families Grant and Freedom Pension Rules, 1975 (as applicable in Uttarakhand). "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "After attaching the required documents, the completed application must be submitted to the District Magistrate. Following verification by the District Magistrate and based on their report/recommendation, the case is forwarded for approval by the Hon’ble Departmental Minister/Hon’ble Chief Minister. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Once the approval is granted at the Government level, the pension is sanctioned and disbursed to the beneficiary."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - Freedom Fighters and their widows are required to obtain the application form from the office of the District Magistrate.\n  - The list of documents to be submitted along with the application form is specified in pages 13 to 17 of the Uttar Pradesh Freedom Fighters and their Families Grant and Freedom Pension Rules, 1975 (as applicable in Uttarakhand). \n  - After attaching the required documents, the completed application must be submitted to the District Magistrate. Following verification by the District Magistrate and based on their report/recommendation, the case is forwarded for approval by the Hon’ble Departmental Minister/Hon’ble Chief Minister. \n  - Once the approval is granted at the Government level, the pension is sanctioned and disbursed to the beneficiary.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Police Department, Uttarakhand",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Home",
+    "value": 50000052
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Monthly/Family Pension for Freedom Fighters and their Widows of Uttarakhand State",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MFPFFWUS",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Pension",
+    "Widow",
+    "Freedom Fighter"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    },
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a permanent resident of Uttarakhand."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be either a Freedom Fighter or the widow of a Freedom Fighter."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a permanent resident of Uttarakhand.\n   1. The applicant must be either a Freedom Fighter or the widow of a Freedom Fighter.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Monthly/Family Pension Amount:"
+        },
+        {
+         "text": "  ₹25,000/- "
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Monthly/Family Pension Amount:**  ₹25,000/- \n<br>\n\n",
+   "briefDescription": "The scheme aims to provide financial assistance in the form of a monthly pension of ₹25,000/- to the freedom fighters of Uttarakhand and to the widows of deceased freedom fighters, in recognition of their contribution to the nation.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Monthly/Family Pension for Freedom Fighters and their Widows of Uttarakhand State\" scheme is implemented by the Police Department under the Department of Home, Government of Uttarakhand. The scheme aims to provide financial assistance in the form of a monthly pension to the freedom fighters of Uttarakhand and to the widows of deceased freedom fighters, in recognition of their contribution to the nation."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Monthly/Family Pension for Freedom Fighters and their Widows of Uttarakhand State&amp;quot; scheme is implemented by the Police Department under the Department of Home, Government of Uttarakhand. The scheme aims to provide financial assistance in the form of a monthly pension to the freedom fighters of Uttarakhand and to the widows of deceased freedom fighters, in recognition of their contribution to the nation.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 63)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mfpffw"
+}

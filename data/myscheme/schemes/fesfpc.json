@@ -1,0 +1,266 @@
+{
+ "_id": "67051cc5b603a228b8e7663c",
+ "_slug": "fesfpc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-1: "
+         },
+         {
+          "text": "The interested applicant should collect the application form from the concerned educational institute."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-2:"
+         },
+         {
+          "text": " In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-3: "
+         },
+         {
+          "text": "Submit the duly filled and signed application form along with the documents to the institution."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-4: "
+         },
+         {
+          "text": "Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant should collect the application form from the concerned educational institute.\n**Step-2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step-3:** Submit the duly filled and signed application form along with the documents to the institution.\n**Step-4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Backward Classes Most Backward Classes and Minorities Welfare Department",
+    "value": 3333334
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Free Education Scholarship for Professional Courses (Engineering, Medical, Agriculture, Veterinary, and Law)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FESFPC",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Tamil Nadu",
+    "value": 33
+   },
+   "tags": [
+    "Minority Welfare",
+    "Scholarship",
+    "Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a resident of Tamil Nadu."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should belong to the Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be pursuing a professional course in a Government/Government Aided or Self-Financing college."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary’s family income should not exceed ₹1,00,000/- annually."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There should be no graduate in the family."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The beneficiary should be a student.\n   1. The beneficiary should be a resident of Tamil Nadu.\n   1. The beneficiary should belong to the Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC).\n   1. The beneficiary should be pursuing a professional course in a Government/Government Aided or Self-Financing college.\n   1. The beneficiary’s family income should not exceed ₹1,00,000/- annually.\n   1. There should be no graduate in the family.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial Assistance: ",
+         "underline": true
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Full payment of tuition fees."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Coverage of special and other non-refundable compulsory fees."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Full reimbursement of examination fees as per government norms."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "&gt; **Financial Assistance:** \n\n\n  - Full payment of tuition fees.\n  - Coverage of special and other non-refundable compulsory fees.\n  - Full reimbursement of examination fees as per government norms.\n\n&lt;br&gt;\n\n",
+   "briefDescription": "This scheme provides full coverage of tuition fees, special fees, and examination fees for Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC) students pursuing professional courses.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Free Education Scholarship for Professional Courses (Engineering, Medical, Agriculture, Veterinary, and Law)\" launched on 7th May, 2012, by the Backward Classes, Most Backward Classes and Minorities Welfare Department, Tamil Nadu, is designed to assist students from Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC). The scheme covers tuition fees, special fees, and non-refundable compulsory fees as prescribed by the government, along with the full examination fee."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Free Education Scholarship for Professional Courses (Engineering, Medical, Agriculture, Veterinary, and Law)&amp;quot; launched on 7th May, 2012, by the Backward Classes, Most Backward Classes and Minorities Welfare Department, Tamil Nadu, is designed to assist students from Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC). The scheme covers tuition fees, special fees, and non-refundable compulsory fees as prescribed by the government, along with the full examination fee.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines-1",
+     "url": "https://www.tn.gov.in/scheme/data_view/27488"
+    },
+    {
+     "title": "Guidelines-2",
+     "url": "https://cms.tn.gov.in/sites/default/files/schemes/bcmbcmw_5.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "fesfpc"
+}

@@ -1,0 +1,207 @@
+{
+ "_id": "68c2445f85a1cbc4007f05f1",
+ "_slug": "etps",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The applicant school should submit an application as per the prescribed checklist with resolutions related to the plan and five high-resolution photographs related to the educational tour/project."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The applicant school should submit an application as per the prescribed checklist with resolutions related to the plan and five high-resolution photographs related to the educational tour/project.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education Department",
+    "value": 2444444
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Educational Travel Promotion Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ETPS",
+   "schemeSubCategory": [
+    {
+     "label": "Education and training grants, fellowship, stipend",
+     "value": "Education and training grants, fellowship, stipend"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Educational Tour",
+    "Personality Development",
+    "Student",
+    "School"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be enrolled in a government secondary and higher secondary school (including RMSA, Model/Model Day) of the state."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a student.\n  - The applicant must be enrolled in a government secondary and higher secondary school (including RMSA, Model/Model Day) of the state.\n\n<br>\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Financial Assistance:"
+          },
+          {
+           "text": " ₹500/- per student per year is allocated to the school for organizing educational tours within the state."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Financial Assistance:** ₹500/- per student per year is allocated to the school for organizing educational tours within the state.\n<br>\n\n",
+   "briefDescription": "The \"Educational Travel Promotion Scheme\" by the Department of Education, aims to promote personality development, observation skills, and curiosity among students through funding educational tours.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Educational Travel Promotion Scheme\" by the Department of Education, Government of Gujarat, aims to promote the overall personality development of students, enhance their observation skills, and satisfy their curiosity to learn new things by supporting educational tours within the state. It provides financial assistance of ₹500/- per student per year to government secondary and higher secondary schools (including RMSA and Model/Model Day schools) to enable students to study with pleasure."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Educational Travel Promotion Scheme&amp;quot; by the Department of Education, Government of Gujarat, aims to promote the overall personality development of students, enhance their observation skills, and satisfy their curiosity to learn new things by supporting educational tours within the state. It provides financial assistance of ₹500/- per student per year to government secondary and higher secondary schools (including RMSA and Model/Model Day schools) to enable students to study with pleasure.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Scheme No. 166)",
+     "url": "https://mariyojana.gujarat.gov.in/Schemeatoz.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "etps"
+}

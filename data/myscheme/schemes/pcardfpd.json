@@ -1,0 +1,303 @@
+{
+ "_id": "672db5efcef677932c63a572",
+ "_slug": "pcardfpd",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " The interested applicant should collect the application form by contacting the Secretary/ Special Officer of the Primary Cooperative Agriculture and Rural Development Bank."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2: "
+         },
+         {
+          "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the duly filled and signed application form along with the documents to the concerned authority."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should collect the application form by contacting the Secretary/ Special Officer of the Primary Cooperative Agriculture and Rural Development Bank.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the concerned authority.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Co-operation, Food and Consumer Protection Department",
+    "value": 3333335
+   },
+   "schemeCategory": [
+    {
+     "label": "Banking,Financial Services and Insurance",
+     "value": "628ce7f6d6d1a3bde46852d0"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Primary Cooperative Agriculture and Rural Development Bank: For Poultry Development",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PCARDFPD",
+   "schemeSubCategory": [
+    {
+     "label": "Loan",
+     "value": "Loan"
+    }
+   ],
+   "state": {
+    "label": "Tamil Nadu",
+    "value": 33
+   },
+   "tags": [
+    "Poultry Development",
+    "Cattle Development",
+    "Loan",
+    "Farmer",
+    "Agriculture And Rural Development Bank"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a resident of Tamil Nadu."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a farmer."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be engaged in poultry farming or cattle development."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be interested to avail loan for poultry farming or cattle development."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should have the intention to use the loan specifically for poultry farming or cattle development."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The beneficiary should be a resident of Tamil Nadu.\n  - The beneficiary should be a farmer.\n  - The beneficiary should be engaged in poultry farming or cattle development.\n  - The beneficiary should be interested to avail loan for poultry farming or cattle development.\n  - The beneficiary should have the intention to use the loan specifically for poultry farming or cattle development.\n\n&lt;br&gt;\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Access to Loan: "
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Up to ₹14,800/- for 200 birds (poultry)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Up to ₹17,000/- for 2 cows."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Interest Rate: "
+          },
+          {
+           "text": "14.5% to 16.5% (subject to change)."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Access to Loan:** \n\n\n   1. Up to ₹14,800/- for 200 birds (poultry).\n   1. Up to ₹17,000/- for 2 cows.\n\n\n  - **Interest Rate:** 14.5% to 16.5% (subject to change).\n&lt;br&gt;\n\n",
+   "briefDescription": "The scheme offers loans to farmers for poultry development and cattle development, with funding of up to ₹14,800/- for 200 birds or ₹17,000/- for 2 cows, with an interest rate of 14.5% to 16.5%.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Primary Cooperative Agriculture and Rural Development Bank: For Poultry Development\" scheme launched by the Co-operation, Food and Consumer Protection Department, Tamil Nadu, aims to provide financial support to farmers for poultry and cattle development, with loans available up to ₹14,800/- for 200 poultry birds or ₹17,000/- for 2 cows. The interest rate ranges from 14.5% to 16.5%, subject to periodic changes."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Primary Cooperative Agriculture and Rural Development Bank: For Poultry Development&amp;quot; scheme launched by the Co-operation, Food and Consumer Protection Department, Tamil Nadu, aims to provide financial support to farmers for poultry and cattle development, with loans available up to ₹14,800/- for 200 poultry birds or ₹17,000/- for 2 cows. The interest rate ranges from 14.5% to 16.5%, subject to periodic changes.\n<br>\n\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.tn.gov.in/scheme_details.php?id=MTI1MA=="
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "pcardfpd"
+}

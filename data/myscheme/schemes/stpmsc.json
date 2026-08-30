@@ -1,0 +1,269 @@
+{
+ "_id": "648f618d380f8e12353fd21a",
+ "_slug": "stpmsc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicant to log in to "
+         },
+         {
+          "children": [
+           {
+            "text": "RajSSO"
+           }
+          ],
+          "link": "https://sso.rajasthan.gov.in",
+          "type": "link"
+         },
+         {
+          "text": " Portal using his/her SSOID."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "If SSOID is not available then the applicant to first register on RajSSO Portal to create SSOID and update SSO Profile at first login."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "After successful authentication/login and updation of the SSOID Profile and select the scheme name. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Select his/her name, the bank account and fill in personal details."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Upload the required document."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Clicking the “SUBMIT” button. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Applicant to log in to [RajSSO](https://sso.rajasthan.gov.in) Portal using his/her SSOID.1. If SSOID is not available then the applicant to first register on RajSSO Portal to create SSOID and update SSO Profile at first login.\n1. After successful authentication/login and updation of the SSOID Profile and select the scheme name. \n1. Select his/her name, the bank account and fill in personal details.\n1. Upload the required document.\n1. Clicking the “SUBMIT” button. \n\n",
+    "url": "https://sso.rajasthan.gov.in/register"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education (Elementary and Secondary) Department",
+    "value": 8000008
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Schedule Tribe Pre-Metric Scholarship Class 06 To 08",
+   "schemeOpenDate": "1984-04-01",
+   "schemeShortTitle": "STPMSC",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Rajasthan",
+    "value": 8
+   },
+   "tags": [
+    "Financial Assistance",
+    "Learning",
+    "Student Finance",
+    "Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The student should belong to the Scheduled Tribe category."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student who is studying as a regular student in classes 6 to 8 in schools run by the Central Government, State Government, Municipalities and schools recognized by the Department of Education."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Students whose parents/guardians are not income taxpayers when they are not alive."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student who is not getting any other type of scholarship or allowance for study from central, state / public sources."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student who has not failed in the lower class in the last session. If he fails in any year's examination, his scholarship will be stopped, but if he fails in the same class in the next"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "If he passes the examination, he will be eligible for the scholarship in the new class from the next session. For this, the student will have to apply for a new scholarship again."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Students who are not living in hostels are run or aided by the Department of Social Justice and Empowerment."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The student should belong to the Scheduled Tribe category.\n1. The student who is studying as a regular student in classes 6 to 8 in schools run by the Central Government, State Government, Municipalities and schools recognized by the Department of Education.\n1. Students whose parents/guardians are not income taxpayers when they are not alive.\n1. The student who is not getting any other type of scholarship or allowance for study from central, state / public sources.\n1. The student who has not failed in the lower class in the last session. If he fails in any year&#39;s examination, his scholarship will be stopped, but if he fails in the same class in the next\n1. If he passes the examination, he will be eligible for the scholarship in the new class from the next session. For this, the student will have to apply for a new scholarship again.\n1. Students who are not living in hostels are run or aided by the Department of Social Justice and Empowerment.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "For Schedule Caste Boy Students Rs. 75/- per month."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "For Schedule Caste Girl Students Rs. 125/- per month."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- For Schedule Caste Boy Students Rs. 75/- per month.\n- For Schedule Caste Girl Students Rs. 125/- per month.\n\n",
+   "briefDescription": "In the year 1984, Rajasthan Government started a scholarship to encourage the education of the Schedule Tribe.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The Rajasthan government aims to provide educational opportunities to students belonging to Schedule Tribe student, specifically those studying in grades 6 to 8. "
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "This program targets students from Schedule Tribe whose parents/guardians are not income taxpayers and not getting any other type of scholarship or allowance for study from central, state / public sources."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The Rajasthan government aims to provide educational opportunities to students belonging to Schedule Tribe student, specifically those studying in grades 6 to 8. \nThis program targets students from Schedule Tribe whose parents/guardians are not income taxpayers and not getting any other type of scholarship or allowance for study from central, state / public sources.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://schemes.rajasthan.gov.in/scheme/detail/268"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "stpmsc"
+}

@@ -1,0 +1,229 @@
+{
+ "_id": "67220fd93d70c46ec2c65313",
+ "_slug": "igteicm",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the concerned District Social Welfare Office (or the Social Welfare Office in Chembur if the applicant is in Mumbai City or Mumbai Suburbs)"
+       },
+       {
+        "children": [
+         {
+          "text": " "
+         }
+        ],
+        "link": "https://sjsa.maharashtra.gov.in/en/contacts",
+        "type": "link"
+       },
+       {
+        "text": "and request a hard copy of the prescribed format of the application form from the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents, within the prescribed period (if any), to the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "NOTE: "
+       },
+       {
+        "text": "Ensure that the application is submitted within the prescribed period, if any."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the concerned District Social Welfare Office (or the Social Welfare Office in Chembur if the applicant is in Mumbai City or Mumbai Suburbs)[ ](https://sjsa.maharashtra.gov.in/en/contacts)and request a hard copy of the prescribed format of the application form from the concerned authority.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents, within the prescribed period (if any), to the concerned authority.\n**Step 4:** Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n**NOTE:** Ensure that the application is submitted within the prescribed period, if any.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Special Assistance Department",
+    "value": 27111139
+   },
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Incentive given to Encourage Inter caste Marriages",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "IGTEICM",
+   "schemeSubCategory": [
+    {
+     "label": "Marriage",
+     "value": "Marriage"
+    },
+    {
+     "label": "Financial Assistance",
+     "value": "Financial Assistance"
+    }
+   ],
+   "state": {
+    "label": "Maharashtra",
+    "value": 27
+   },
+   "tags": [
+    "Intercaste",
+    "Marriage",
+    "Financial Assistance",
+    "Bride",
+    "Groom"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The bride as well as the bridegroom should be permanent residents of Maharashtra."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "One spouse must belong to the Savarna, Hindu Lingayat, Jain, or Sikh community."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "One spouse must belong to one of the following communities: Scheduled Caste, Scheduled Tribe, Vimukta Jati (denoted tribe), Nomadic Tribe, and Special Backward Class."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The male spouse should be 21 years or above in age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The female spouse should be 18 years or above in age."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The bride as well as the bridegroom should be permanent residents of Maharashtra.\n1. One spouse must belong to the Savarna, Hindu Lingayat, Jain, or Sikh community.\n1. One spouse must belong to one of the following communities: Scheduled Caste, Scheduled Tribe, Vimukta Jati (denoted tribe), Nomadic Tribe, and Special Backward Class.\n1. The male spouse should be 21 years or above in age.\n1. The female spouse should be 18 years or above in age.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "A financial assistance of ₹50,000/- issued as a joint draft in the names of both spouses."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "A financial assistance of ₹50,000/- issued as a joint draft in the names of both spouses.\n",
+   "briefDescription": "The \"Incentive for Encouraging Inter-Caste Marriages\" scheme is implemented by the Department of Social Justice & Special Assistance, Government of Maharashtra, and funded jointly by the State and Central Government (50:50). The scheme provides financial incentives to support inter-caste marriages.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Incentive for Encouraging Inter-Caste Marriages\" scheme is implemented by the Department of Social Justice & Special Assistance, Government of Maharashtra, and funded jointly by the State and Central Government (50:50). The scheme provides financial incentives to support inter-caste marriages between Savarna Hindus (including Hindu, Jain, Lingayat, and Sikh communities) and individuals from Scheduled Castes, Scheduled Tribes, Nomadic Tribes, Nomadic Castes, and Special Backward Classes. The scheme promotes social harmony and aims to eradicate untouchability. The bride as well as the bridegroom should be permanent residents of Maharashtra."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Incentive for Encouraging Inter-Caste Marriages&quot; scheme is implemented by the Department of Social Justice &amp; Special Assistance, Government of Maharashtra, and funded jointly by the State and Central Government (50:50). The scheme provides financial incentives to support inter-caste marriages between Savarna Hindus (including Hindu, Jain, Lingayat, and Sikh communities) and individuals from Scheduled Castes, Scheduled Tribes, Nomadic Tribes, Nomadic Castes, and Special Backward Classes. The scheme promotes social harmony and aims to eradicate untouchability. The bride as well as the bridegroom should be permanent residents of Maharashtra.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sjsa.maharashtra.gov.in/en/scheme-category/social-integration"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "igteicm"
+}

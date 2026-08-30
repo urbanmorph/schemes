@@ -1,0 +1,313 @@
+{
+ "_id": "678e4358d78fb5990789cf1f",
+ "_slug": "fbds",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the District Welfare Officer and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the District Welfare Officer/Block Welfare Officer and School Headmaster."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgment from the District Welfare Officer/Block Welfare Officer and School Headmaster to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant should visit (during office hours) the District Welfare Officer and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step-2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step-3:** Submit the duly filled and signed application form along with the documents to the District Welfare Officer/Block Welfare Officer and School Headmaster.\n**Step-4:** Request a receipt or acknowledgment from the District Welfare Officer/Block Welfare Officer and School Headmaster to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Scheduled Tribe, Scheduled Caste, Minority and Backward Class Welfare",
+    "value": 2000026
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Free Bicycle Distribution Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FBDS",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Resources for schools",
+     "value": "Resources for schools"
+    }
+   ],
+   "state": {
+    "label": "Jharkhand",
+    "value": 20
+   },
+   "tags": [
+    "Financial Assistance",
+    "Bicycle",
+    "Student",
+    "Scheduled Caste"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a student."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be studying in Class 8"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": "."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should belong to the Scheduled Caste (SC) category."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s family should either belong to the BPL or APL category."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a student.\n1. The applicant should be studying in Class 8th.1. The applicant should belong to the Scheduled Caste (SC) category.\n1. The applicant’s family should either belong to the BPL or APL category.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Monetary assistance of ₹3000 per student for purchasing bicycles."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note",
+       "underline": true
+      },
+      {
+       "bold": true,
+       "text": ":"
+      },
+      {
+       "text": " "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The amount is disbursed directly to the beneficiary’s bank account via DBT."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Ensures purchase of new bicycles conforming to ISI/ISO standards."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n- Monetary assistance of ₹3000 per student for purchasing bicycles.\n\n<br>\n\n> **Note****:** \n\n\n- The amount is disbursed directly to the beneficiary’s bank account via DBT.\n- Ensures purchase of new bicycles conforming to ISI/ISO standards.\n\n<br>\n\n",
+   "briefDescription": "The \"Free Bicycle Distribution Scheme\" by the Welfare Department, Government of Jharkhand, aims to provide financial aid for bicycle purchases to Scheduled Caste (SC) students studying in Class 8th. Each student receives ₹3000 through DBT.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Free Bicycle Distribution Scheme\" by the Welfare Department, Government of Jharkhand, aims to provide financial support for purchasing bicycles to Scheduled Caste (SC) students studying in Class 8"
+      },
+      {
+       "superscript": true,
+       "text": "th"
+      },
+      {
+       "text": ". Through this scheme, ₹3000 is directly transferred to the bank accounts of eligible students via Direct Benefit Transfer (DBT)."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "Objective:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Promotes education by ensuring better accessibility to schools for students."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Available to both Below Poverty Line (BPL) and Above Poverty Line (APL) students."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Free Bicycle Distribution Scheme&quot; by the Welfare Department, Government of Jharkhand, aims to provide financial support for purchasing bicycles to Scheduled Caste (SC) students studying in Class 8th. Through this scheme, ₹3000 is directly transferred to the bank accounts of eligible students via Direct Benefit Transfer (DBT).\n<br>\n\n> ***Objective:***\n\n\n- Promotes education by ensuring better accessibility to schools for students.\n- Available to both Below Poverty Line (BPL) and Above Poverty Line (APL) students.\n\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.jharkhand.gov.in/PDepartment/ViewDoc?id=D030DO004SD001115012019053406479"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "fbds"
+}

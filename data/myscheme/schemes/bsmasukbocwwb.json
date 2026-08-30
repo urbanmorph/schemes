@@ -1,0 +1,206 @@
+{
+ "_id": "66190ba7d7abbe47ee2969fa",
+ "_slug": "bsmasukbocwwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The online application is made through Shramik Suvidha Kendras. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "A self-attested photocopy of the Shramik Card, Aadhaar Card, and a self-declaration certificate must be submitted along with the application form."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "After verification through the departmental investigation, bicycles/sewing machines are provided to the construction workers by the department. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "This benefit is given only once in a lifetime."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The online application is made through Shramik Suvidha Kendras. \n  - A self-attested photocopy of the Shramik Card, Aadhaar Card, and a self-declaration certificate must be submitted along with the application form.\n  - After verification through the departmental investigation, bicycles/sewing machines are provided to the construction workers by the department. \n  - This benefit is given only once in a lifetime.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Building And Other Construction Workers’ Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Labour",
+    "value": 50000014
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Bicycle/Sewing Machine Assistance Scheme (UKBOCWWB)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "BSMAS(UKBOCWWB)",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Bicycle",
+    "Sewing Machine",
+    "Construction Worker",
+    "Building Worker",
+    "Labour"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board, or a dependent of such a worker."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a construction worker registered with the Uttarakhand Building and Other Construction Workers Welfare Board, or a dependent of such a worker.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Bicycles are provided to construction workers in the plain areas, while sewing machines are provided to construction workers or their dependents in the hilly areas."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Bicycles are provided to construction workers in the plain areas, while sewing machines are provided to construction workers or their dependents in the hilly areas.\n<br>\n\n",
+   "briefDescription": "Under the scheme, bicycles are provided to registered building & construction workers in plain areas, while sewing machines are provided to registered workers or their dependents in mountainous/hilly areas. These benefits are granted only once in a lifetime.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Bicycle/Sewing Machine Assistance Scheme” is a welfare scheme which is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. Under the scheme, bicycles are provided to registered building & construction workers in plain areas, while sewing machines are provided to registered workers or their dependents in mountainous/hilly areas."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Bicycle/Sewing Machine Assistance Scheme” is a welfare scheme which is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. Under the scheme, bicycles are provided to registered building &amp;amp; construction workers in plain areas, while sewing machines are provided to registered workers or their dependents in mountainous/hilly areas.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details (Page No. 53)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://ukbocw.uk.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "bsmasukbocwwb"
+}

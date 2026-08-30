@@ -1,0 +1,237 @@
+{
+ "_id": "65b1de8debb318a5b53455b1",
+ "_slug": "sdsscp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the "
+       },
+       {
+        "children": [
+         {
+          "text": "Office/ Sub-Office"
+         }
+        ],
+        "link": "https://adwelfare.py.gov.in/contact-us",
+        "type": "link"
+       },
+       {
+        "text": " of the Adi Dravidar Welfare and Scheduled Tribes Welfare Department, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents to the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the [Office/ Sub-Office](https://adwelfare.py.gov.in/contact-us) of the Adi Dravidar Welfare and Scheduled Tribes Welfare Department, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the concerned authority.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Adi Dravidar Welfare Department, Puducherry",
+    "value": 34000002
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Supply of Dhotis and Sarees to Scheduled Caste (SC) People",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SDSSCP",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Puducherry",
+    "value": 34
+   },
+   "tags": [
+    "Clothes",
+    "Scheduled Caste",
+    "Social Welfare",
+    "SC"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a citizen of India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be 18 years or above in age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have his/her name included in the yellow/red ration card supplied by the Civil Supplies Department."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have continuous residence in Puducherry for at least 5 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The annual income of the applicant should not exceed ₹ 24,000/-."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The applicant should be a citizen of India.\n- The applicant should be 18 years or above in age.\n- The applicant should have his/her name included in the yellow/red ration card supplied by the Civil Supplies Department.\n- The applicant should have continuous residence in Puducherry for at least 5 years.\n- The annual income of the applicant should not exceed ₹ 24,000/-.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Each male member of the family is supplied with a lungi and shirt bit."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Each female member of the family is supplied with a saree and a blouse."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The benefits are provided annually."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Each male member of the family is supplied with a lungi and shirt bit.\n- Each female member of the family is supplied with a saree and a blouse.\n- The benefits are provided annually.\n\n",
+   "briefDescription": "The scheme “Supply of Dhotis and Sarees to Scheduled Caste (SC) People” by the Adi Dravidar Welfare and Scheduled Tribes Welfare Department, Union Territory of Puducherry is introduced to provide clothing items (lungi, shirt, saree, blouse, etc) to the Scheduled Caste (SC) people of Puducherry.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme “Supply of Dhotis and Sarees to Scheduled Caste (SC) People” by the Adi Dravidar Welfare and Scheduled Tribes Welfare Department, Government of Puducherry is introduced to provide clothing items (lungi, shirt, saree, blouse, etc) to the Yellow/Red Ration Card Holders from the Scheduled Caste (SC) Category residing in the Union Territory of Puducherry."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Supply of Dhotis and Sarees to Scheduled Caste (SC) People” by the Adi Dravidar Welfare and Scheduled Tribes Welfare Department, Government of Puducherry is introduced to provide clothing items (lungi, shirt, saree, blouse, etc) to the Yellow/Red Ration Card Holders from the Scheduled Caste (SC) Category residing in the Union Territory of Puducherry.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Citizen's Charter",
+     "url": "https://py.gov.in/sites/default/files/citizencharter-adidravidar.pdf"
+    },
+    {
+     "title": "Contact Us",
+     "url": "https://adwelfare.py.gov.in/contact-us"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://py.gov.in/sites/default/files/adwsupply-dhotis-and-sarees-s.c.people.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sdsscp"
+}

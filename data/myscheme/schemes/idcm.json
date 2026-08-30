@@ -1,0 +1,512 @@
+{
+ "_id": "64217df20912d761b99e8b01",
+ "_slug": "idcm",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "text": "Step 01: First go to the official website."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "Step 02: Using your Aadhaar Card, do the registration and provide all the required information."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "Step 03: Upload all the relevant documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "Step 04: After Registration, an SMS will be sent to the couple and they can print the acknowledgement form as proof of application."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "Step 05: Social Welfare will do spot verification to verify the details provided by the couple and process the application further."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "Step 06: After successful spot verification by the department, the incentive will be credited to the joint account of the couple."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "url": "https://sw.kar.nic.in/swincentive/dvds/DVDSRegistrationForm.aspx"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 3000020
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Family",
+   "schemeName": "Incentive For The Devadasi Children’s Marriage",
+   "schemeOpenDate": "1989-01-01",
+   "schemeShortTitle": "Idcm",
+   "schemeSubCategory": [
+    {
+     "label": "Marriage",
+     "value": "Marriage"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Karnataka",
+    "value": 29
+   },
+   "tags": [
+    "Devadasi",
+    "Marriage",
+    "Incentive",
+    "SC"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Applicant should be a resident of Karnataka state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Applicant should belong to the  SC community."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Family income from all sources should be within Rs. 5 lakh per annum."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The scheme is applicable within 18 months of marriage."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n- Applicant should be a resident of Karnataka state.\n- Applicant should belong to the  SC community.\n- Family income from all sources should be within Rs. 5 lakh per annum.\n- The scheme is applicable within 18 months of marriage.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, the Social Welfare Department, Government of Karnataka will give incentive to the Devadasi's Children's Married Couple."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The incentive will be provided only to those who have submitted applications within 1.5 years (18 months) of marriage. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The couple who are married on or after 01-04-2018 are eligible for a revised rate of incentive (i.e. 3.00 lakh for men, 5.00 lakh for women)"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "briefDescription": "Under this scheme, the Social Welfare Department, Government of Karnataka will give incentives of ₹3.00 lakh for men,₹5.00 lakh for women to the Devadasi's Children who are Married Couples.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "Under this scheme, the Social Welfare Department, Government of Karnataka will give incentives to the Devadasi's Children's Married Couple."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "To avail this scheme, both bride and groom should belong to SC Community. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The incentive will be provided only to those who have submitted applications within 1.5 years (18 months) of marriage. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The couple who are married on or after 01-04-2018 are eligible for a revised rate of incentive (i.e. 3.00 lakh for men, 5.00 lakh for women)"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The annual family income of the applicant should be below Rs.5,00,000/-"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The following are the eligibility criteria for this scheme "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Applicant should be a resident of Karnataka state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Applicant should belong to the  SC community."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Family income from all sources should be within Rs. 5 lakhs per annum."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The scheme is applicable within 18 months of marriage."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": "The following documents are required while applying for this scheme"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Aadhaar"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "RD Number of Caste Certificate"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "RD Number of Income Certificate"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Copy of the Bank Passbook"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Marriage Registration Certificate"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Marriage Photo"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Mobile Number    "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Devadasi Registration Certificate    "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "Under this scheme, the Social Welfare Department, Government of Karnataka will give incentives to the Devadasi&#39;s Children&#39;s Married Couple.\nTo avail this scheme, both bride and groom should belong to SC Community. \nThe incentive will be provided only to those who have submitted applications within 1.5 years (18 months) of marriage. \nThe couple who are married on or after 01-04-2018 are eligible for a revised rate of incentive (i.e. 3.00 lakh for men, 5.00 lakh for women)\nThe annual family income of the applicant should be below Rs.5,00,000/-\n<br>\n\nThe following are the eligibility criteria for this scheme \n\n- Applicant should be a resident of Karnataka state.\n- Applicant should belong to the  SC community.\n- Family income from all sources should be within Rs. 5 lakhs per annum.\n- The scheme is applicable within 18 months of marriage.\n\nThe following documents are required while applying for this scheme\n\n- Aadhaar\n- RD Number of Caste Certificate\n- RD Number of Income Certificate\n- Copy of the Bank Passbook\n- Marriage Registration Certificate\n- Marriage Photo\n- Mobile Number    \n- Devadasi Registration Certificate    \n\n<br>\n\n<br>\n\n<br>\n\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "references": [
+    {
+     "title": "Devadasi Children Marriage Applicant Manual",
+     "url": "https://sw.kar.nic.in/swincentive/Documents/DevaDasichildrensmarriageApplicantManual.pdf"
+    },
+    {
+     "title": "Scheme Details",
+     "url": "https://sw.kar.nic.in/swincentive/dvds/dvdshome.aspx"
+    }
+   ],
+   "schemeImageUrl": "https://sw.kar.nic.in/swincentive/dvds/dvdshome.aspx"
+  },
+  "schemeDefinitions": [
+   {
+    "definition": [
+     {
+      "children": [
+       {
+        "text": "The practice of dedicating women to deities, idols, objects of worship, temples, and other religious institutions or places of worship."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "name": "Devadasi",
+    "source": "India Code https://www.indiacode.nic.in/bitstream/123456789/7912/1/1_of_1984_%28e%29.pdf"
+   }
+  ]
+ },
+ "slug": "idcm"
+}

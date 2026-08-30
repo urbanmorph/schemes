@@ -1,0 +1,173 @@
+{
+ "_id": "669df5f68c4bd3d4059066d2",
+ "_slug": "sfsmttpotc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The parents/guardians should visit (during office hours) the State Government or UT Administration office. and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the State Government or UT Administration office."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The parents/guardians should visit (during office hours) the State Government or UT Administration office. and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step 2:** Submit the duly filled and signed application form along with the documents to the State Government or UT Administration office.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Social Justice & Empowerment",
+    "value": 11112
+   },
+   "nodalMinistryName": {
+    "label": "Ministry Of Social Justice and Empowerment",
+    "value": 712
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Scheme for Supportive Money to the Parents of Transgender Children",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SFSMTTPOTC",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Childcare",
+     "value": "Childcare"
+    }
+   ],
+   "schemeType": {
+    "label": "Centrally Sponsored Scheme",
+    "value": "centrally-sponsored-scheme"
+   },
+   "tags": [
+    "Financial Assistance",
+    "Transgender",
+    "Child"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The Parents must certify on an affidavit that they have a child exhibiting gender non-conforming behavior."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The child's age should be less than 18 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The Parents must certify on an affidavit that they have a child exhibiting gender non-conforming behavior.\n- The child&#39;s age should be less than 18 years.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial assistance of ₹1,000/- per transgender parent per child per month. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Financial assistance of ₹1,000/- per transgender parent per child per month.** \n\n",
+   "briefDescription": "The \"Scheme for Supportive Money to the Parents of Transgender Children\" aims to provide financial assistance of ₹1,000/- to the parents of transgender children. Transgender persons face stigma and discrimination in almost every sphere of their life including within the group, health facilities.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Scheme for Supportive Money to the Parents of Transgender Children\" was launched by the Ministry of Social Justice and Empowerment. The scheme aims to support 5,000 beneficiaries annually, with the potential for higher numbers based on State/UT identification. Transgender persons face stigma and discrimination in almost every sphere of their life including within the group, health facilities, education, employment, etc. Awareness and information are needed among parents to support their gender-nonconforming or transgender children, setting aside their discomfort and deeply held normative attitudes. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Scheme for Supportive Money to the Parents of Transgender Children&quot; was launched by the Ministry of Social Justice and Empowerment. The scheme aims to support 5,000 beneficiaries annually, with the potential for higher numbers based on State/UT identification. Transgender persons face stigma and discrimination in almost every sphere of their life including within the group, health facilities, education, employment, etc. Awareness and information are needed among parents to support their gender-nonconforming or transgender children, setting aside their discomfort and deeply held normative attitudes. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "http://esomsa.hp.gov.in/sites/default/files/scan0001-74363681.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sfsmttpotc"
+}

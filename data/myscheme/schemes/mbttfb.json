@@ -1,0 +1,253 @@
+{
+ "_id": "66f7e0147e9b228ef8bbb793",
+ "_slug": "mbttfb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the Manipur Building and Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "OR"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "The interested applicant visits the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "http://manipurbcwb.in/",
+        "type": "link"
+       },
+       {
+        "text": " and downloads the "
+       },
+       {
+        "children": [
+         {
+          "text": "application form"
+         }
+        ],
+        "link": "http://manipurbcwb.in/files/forms/beneficiaryForm.pdf",
+        "type": "link"
+       },
+       {
+        "text": ". "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the Labour Board Inspector"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgement from the Labour Board Inspector to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant should visit (during office hours) the Manipur Building and Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**OR**\nThe interested applicant visits the [official website](http://manipurbcwb.in/) and downloads the [application form](http://manipurbcwb.in/files/forms/beneficiaryForm.pdf). \n**Step-2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step-3:** Submit the duly filled and signed application form along with the documents to the Labour Board Inspector\n**Step-4:** Request a receipt or acknowledgement from the Labour Board Inspector to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour and Employment Department",
+    "value": 1444463
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Maternity Benefit to the Female Beneficiary",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MBTTFB",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Financial Assistance",
+     "value": "Financial Assistance"
+    },
+    {
+     "label": "Pregnancy Care",
+     "value": "Pregnancy Care"
+    }
+   ],
+   "state": {
+    "label": "Manipur",
+    "value": 14
+   },
+   "tags": [
+    "Financial Assistance",
+    "Women",
+    "Construction Worker",
+    "Pregnant"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a female construction worker. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The worker should be registered under the Manipur Building and Other Construction Workers Welfare Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have gone through a miscarriage or medical termination."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a female construction worker. \n1. The worker should be registered under the Manipur Building and Other Construction Workers Welfare Board.\n1. The applicant should have gone through a miscarriage or medical termination.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial assistance of ₹6,000/- for miscarriage or medical termination."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Financial assistance of ₹6,000/- for miscarriage or medical termination.**\n\n",
+   "briefDescription": "The Manipur Building and Other Construction Workers' Welfare Board (MBOCWWB) provide \"Maternity Benefit\" to female workers registered under the Act. Financial assistance is provided in cases of miscarriage or medical termination of pregnancy, up to two times. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The Manipur Building and Other Construction Workers' Welfare Board (MBOCWWB) launched welfare scheme \"Maternity Benefit to the Female Beneficiary\". The scheme provides financial assistance in cases of miscarriage or medical termination of pregnancy, up to two times. This benefit is aimed at ensuring health and financial support for female workers during such critical situations."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The Manipur Building and Other Construction Workers&#39; Welfare Board (MBOCWWB) launched welfare scheme &quot;Maternity Benefit to the Female Beneficiary&quot;. The scheme provides financial assistance in cases of miscarriage or medical termination of pregnancy, up to two times. This benefit is aimed at ensuring health and financial support for female workers during such critical situations.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "http://manipurbcwb.in/SchemeDetails?title=maternity+benefit+to+the+female+beneficiary"
+    },
+    {
+     "title": "Official Website",
+     "url": "http://manipurbcwb.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mbttfb"
+}

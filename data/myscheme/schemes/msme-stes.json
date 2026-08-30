@@ -1,0 +1,385 @@
+{
+ "_id": "64de4d849a06d82f41279e46",
+ "_slug": "msme-stes",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The applicant (MSME) may apply online through the "
+         },
+         {
+          "children": [
+           {
+            "text": "Official Website"
+           }
+          ],
+          "link": "https://www.msmeonline.tn.gov.in/ammaskill/index.php",
+          "type": "link"
+         },
+         {
+          "text": " of the Micro, Small and Medium Enterprises Department, Government of Tamil Nadu. "
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " On the home page, click on “Apply Online” and then click on “Apply New MSME”. "
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " If not registered, click on ‘Register’ and fill in all mandatory details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " After successful registration, click on ‘login’ to apply for the scheme."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " Fill in all the mandatory details in the application form and upload all the necessary documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06:"
+         },
+         {
+          "text": " Submit the application form."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 01:** The applicant (MSME) may apply online through the [Official Website](https://www.msmeonline.tn.gov.in/ammaskill/index.php) of the Micro, Small and Medium Enterprises Department, Government of Tamil Nadu. \n**Step 02:** On the home page, click on “Apply Online” and then click on “Apply New MSME”. \n**Step 03:** If not registered, click on ‘Register’ and fill in all mandatory details.\n**Step 04:** After successful registration, click on ‘login’ to apply for the scheme.\n**Step 05:** Fill in all the mandatory details in the application form and upload all the necessary documents.\n**Step 06:** Submit the application form.\n"
+   },
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The MSME unit fulfilling all the necessary eligibility criteria may contact the following offices to avail of the benefits of the scheme:"
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": "1.\tThe office of the Commissionerate of Industries and Commerce at the State level,"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "2.\tThe office of the Regional Joint Director of Industries and Commerce for Chennai district,"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "3.\tThe office of the General Managers of District Industries Centre for other districts in Tamil Nadu."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "The MSME unit fulfilling all the necessary eligibility criteria may contact the following offices to avail of the benefits of the scheme:\n1.\tThe office of the Commissionerate of Industries and Commerce at the State level,\n2.\tThe office of the Regional Joint Director of Industries and Commerce for Chennai district,\n3.\tThe office of the General Managers of District Industries Centre for other districts in Tamil Nadu.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Commissionerate Of Industries And Commerce , Government Of Tamil Nadu",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Micro Small and Medium Enterprises Department",
+    "value": 3333350
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Msme Skill Training And Employment Scheme",
+   "schemeOpenDate": "2021-04-01",
+   "schemeShortTitle": "Msme-stes",
+   "schemeSubCategory": [
+    {
+     "label": "Training and Skill Up-gradation",
+     "value": "Training and Skill Up-gradation"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Tamil Nadu",
+    "value": 33
+   },
+   "tags": [
+    "MSME",
+    "Skill",
+    "Training",
+    "Employment",
+    "Stipend",
+    "Trainee"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Industries",
+     "value": "industries"
+    },
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be an MSME unit in the state who has the requisite infrastructure."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Only in respect of vocation/trade in which MSMEs have expertise will be encouraged, MSME units should have experience, expertise, and running business."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The trainees selected by the applicant (MSME) shall be between 18 to 25 years of age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The trainees selected by the applicant shall have an engineering degree, a polytechnic diploma, or an Industrial Training Institute (ITI) certificate, or qualification as prescribed by the respective sector skill council."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant shall provide the trainee with a stipend of ₹5000/- per month, for a maximum of 6 months."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant, MSME Unit, should not have been blacklisted at any point in time by any Government Norms/Rules/Acts. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note: "
+      },
+      {
+       "text": "The scheme is funded by Tamil Nadu Skill Development Corporation (TNSDC)"
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be an MSME unit in the state who has the requisite infrastructure.\n1. Only in respect of vocation/trade in which MSMEs have expertise will be encouraged, MSME units should have experience, expertise, and running business.\n1. The trainees selected by the applicant (MSME) shall be between 18 to 25 years of age.\n1. The trainees selected by the applicant shall have an engineering degree, a polytechnic diploma, or an Industrial Training Institute (ITI) certificate, or qualification as prescribed by the respective sector skill council.\n1. The applicant shall provide the trainee with a stipend of ₹5000/- per month, for a maximum of 6 months.\n1. The applicant, MSME Unit, should not have been blacklisted at any point in time by any Government Norms/Rules/Acts. \n\n**Note:** The scheme is funded by Tamil Nadu Skill Development Corporation (TNSDC)\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under the scheme, the subsidy will be provided to the MSMEs for training; subject to a maximum of ₹2000/- per month per candidate for a maximum of 6 months."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Certificates will be provided by the National Skill Development Corporation (NSDC), after the assessment of acquired skills by the trained candidates. "
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. Under the scheme, the subsidy will be provided to the MSMEs for training; subject to a maximum of ₹2000/- per month per candidate for a maximum of 6 months.\n   1. Certificates will be provided by the National Skill Development Corporation (NSDC), after the assessment of acquired skills by the trained candidates. \n\n",
+   "briefDescription": "The scheme “MSME Skill Training and Employment Scheme” was launched by the Department of Micro, Small and Medium Enterprises, Government of Tamil Nadu during the years 2021-22.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “MSME Skill Training and Employment Scheme” was launched by the Department of Micro, Small and Medium Enterprises, Government of Tamil Nadu during the years 2021-22. The scheme is implemented by the Commissionerate of Industries and Commerce at the State level, the Regional Joint Director of Industries and Commerce for Chennai district, and General Managers of the District Industries Centre for other districts in Tamil Nadu."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Objective:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "The objective of the scheme is to fulfill the skilled manpower requirement of MSMEs by imparting necessary on-the-job training by the MSMEs themselves and thereby creating employment. The scheme will assist the MSME sector by sharing the training cost which otherwise would be borne by the enterprises themselves."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Training provider:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "MSMEs will have to give employment based job oriented on the job training which will lead to certification. It will be the responsibility of the MSMEs to ensure that for the proposed training, the relevant capacities are available to them."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “MSME Skill Training and Employment Scheme” was launched by the Department of Micro, Small and Medium Enterprises, Government of Tamil Nadu during the years 2021-22. The scheme is implemented by the Commissionerate of Industries and Commerce at the State level, the Regional Joint Director of Industries and Commerce for Chennai district, and General Managers of the District Industries Centre for other districts in Tamil Nadu.\n**Objective:**\nThe objective of the scheme is to fulfill the skilled manpower requirement of MSMEs by imparting necessary on-the-job training by the MSMEs themselves and thereby creating employment. The scheme will assist the MSME sector by sharing the training cost which otherwise would be borne by the enterprises themselves.\n**Training provider:**\nMSMEs will have to give employment based job oriented on the job training which will lead to certification. It will be the responsibility of the MSMEs to ensure that for the proposed training, the relevant capacities are available to them.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://www.msmetamilnadu.tn.gov.in/skill-development.php"
+    },
+    {
+     "title": "Guideline",
+     "url": "https://www.msmeonline.tn.gov.in/ammaskill/pdf/MSME_skill_training_scheme.pdf"
+    },
+    {
+     "title": "Flow Chart Of The Scheme",
+     "url": "https://www.msmeonline.tn.gov.in/ammaskill/pdf/MSME_skill_flow.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "msme-stes"
+}

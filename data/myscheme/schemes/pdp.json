@@ -1,0 +1,197 @@
+{
+ "_id": "66c8d411bfeff774c3932339",
+ "_slug": "pdp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Applicants should submit their applications in the prescribed format, along with all relevant documents, to the Joint Director/Deputy Director District Office, Panchayat and Social Welfare Department."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - Applicants should submit their applications in the prescribed format, along with all relevant documents, to the Joint Director/Deputy Director District Office, Panchayat and Social Welfare Department.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Social Welfare Department, Government Of Chhattisgarh",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 2200033
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Potency Development Plan",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PDP",
+   "schemeSubCategory": [
+    {
+     "label": "Aids/Appliances",
+     "value": "Aids/Appliances"
+    }
+   ],
+   "state": {
+    "label": "Chhattisgarh",
+    "value": 22
+   },
+   "tags": [
+    "Samarthy",
+    "PwD",
+    "Artificial Limbs",
+    "Assistive Devices",
+    "Disability",
+    "BPL"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a resident of Chhattisgarh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should have a disability."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant's disability should be 40% or more."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should possess a Disability Certificate or a UDID Card."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should either be a member of a BPL family or have a recommendation from the Collector or Sub-Divisional Officer (Revenue)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The monthly income of the applicant’s parents/guardian should be less than ₹8,000/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a resident of Chhattisgarh.\n   1. The applicant should have a disability.\n   1. The applicant&amp;#39;s disability should be 40% or more.\n   1. The applicant should possess a Disability Certificate or a UDID Card.\n   1. The applicant should either be a member of a BPL family or have a recommendation from the Collector or Sub-Divisional Officer (Revenue).\n   1. The monthly income of the applicant’s parents/guardian should be less than ₹8,000/-.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under this scheme, artificial limbs/assistive devices worth up to ₹6,900/- are provided to persons with disabilities."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - Under this scheme, artificial limbs/assistive devices worth up to ₹6,900/- are provided to persons with disabilities.\n\n",
+   "briefDescription": "The objective of this scheme is to increase the mobility of all eligible PwDs of the state by providing them artificial limbs/assistive devices. The scheme provides artificial limbs/assistive devices worth up to ₹6,900/- to PwDs of 40% or more, provided they meet the other eligibility criteria.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Potency Development Plan\" implemented by the Social Welfare Department of the Government of Chhattisgarh, aims to increase the mobility of all eligible persons with disabilities of the state by providing them artificial limbs/assistive devices. The scheme provides artificial limbs/assistive devices worth up to ₹6,900/- to persons with disabilities of 40% or more, provided they meet the other eligibility criteria."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Potency Development Plan&amp;quot; implemented by the Social Welfare Department of the Government of Chhattisgarh, aims to increase the mobility of all eligible persons with disabilities of the state by providing them artificial limbs/assistive devices. The scheme provides artificial limbs/assistive devices worth up to ₹6,900/- to persons with disabilities of 40% or more, provided they meet the other eligibility criteria.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://sw.cg.gov.in/en/potency-development-plan"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "pdp"
+}

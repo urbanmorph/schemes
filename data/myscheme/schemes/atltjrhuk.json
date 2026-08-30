@@ -1,0 +1,190 @@
+{
+ "_id": "68c7d8cef8ec7e9e8a888a13",
+ "_slug": "atltjrhuk",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Information about the disaster and the resulting damage is received from various sources. The concerned Patwari verifies the damage and records it in the P-20 form. The Patwari’s report is subsequently verified by the Tehsildar and the Sub-Divisional Magistrate. Approval is then obtained from the District Magistrate. Once the District Magistrate’s approval is received, relief funds are disbursed to the concerned beneficiaries at the Tehsil level."
+           }
+          ],
+          "type": "paragraph"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "Information about the disaster and the resulting damage is received from various sources. The concerned Patwari verifies the damage and records it in the P-20 form. The Patwari’s report is subsequently verified by the Tehsildar and the Sub-Divisional Magistrate. Approval is then obtained from the District Magistrate. Once the District Magistrate’s approval is received, relief funds are disbursed to the concerned beneficiaries at the Tehsil level.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand State Disaster Management Authority",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Disaster Management",
+    "value": 50000007
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Ex-Gratia Payment for Life-Threatening Injury Requiring Hospital Stay for Treatment",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "EPLTIRHST",
+   "schemeSubCategory": [
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Injury",
+    "Medical Treatment",
+    "Hospitalization",
+    "Disaster"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Uttarakhand."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be a person admitted to a government or non-government hospital due to an injury caused by a disaster, including those engaged in relief or disaster preparedness activities who sustained injuries during such work."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a resident of Uttarakhand.\n   1. The applicant must be a person admitted to a government or non-government hospital due to an injury caused by a disaster, including those engaged in relief or disaster preparedness activities who sustained injuries during such work.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, an ex-gratia grant of ₹16,000/- per person is provided in case of a hospital stay for more than one week, and ₹5,400/- per person in case of a hospital stay for less than one week."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Under this scheme, an ex-gratia grant of ₹16,000/- per person is provided in case of a hospital stay for more than one week, and ₹5,400/- per person in case of a hospital stay for less than one week.\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide financial assistance to individuals who sustain life-threatening injuries due to disasters and require hospitalization for treatment.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Ex-Gratia Payment for Life-Threatening Injury Requiring Hospital Stay for Treatment” is implemented by the Uttarakhand State Disaster Management Authority under the Department of Disaster Management, Government of Uttarakhand. The scheme aims to provide financial assistance to individuals who sustain life-threatening injuries due to disasters and require hospitalization for treatment."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Ex-Gratia Payment for Life-Threatening Injury Requiring Hospital Stay for Treatment” is implemented by the Uttarakhand State Disaster Management Authority under the Department of Disaster Management, Government of Uttarakhand. The scheme aims to provide financial assistance to individuals who sustain life-threatening injuries due to disasters and require hospitalization for treatment.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 304)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "atltjrhuk"
+}

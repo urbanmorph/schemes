@@ -1,0 +1,195 @@
+{
+ "_id": "68ad4bc4ad491bb9813283e2",
+ "_slug": "macuk",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "A Scholarship Cell has been established at the university level to manage the scholarship process. The cell provides application forms to students, who must complete the forms and submit them along with their high school certificate, Aadhaar card, grade sheet, and bank account details. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "After scrutinizing the applications, the cell prepares a list of eligible students. Upon administrative and financial approval, the scholarship funds are transferred directly to the bank accounts of the eligible students."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - A Scholarship Cell has been established at the university level to manage the scholarship process. The cell provides application forms to students, who must complete the forms and submit them along with their high school certificate, Aadhaar card, grade sheet, and bank account details. \n  - After scrutinizing the applications, the cell prepares a list of eligible students. Upon administrative and financial approval, the scholarship funds are transferred directly to the bank accounts of the eligible students.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Sanskrit University, Haridwar",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Sanskrit Education",
+    "value": 50000017
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Scholarship on Merit Basis",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SMB",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Scholarship",
+    "Sanskrit University",
+    "Student",
+    "Merit",
+    "Undergraduate",
+    "Postgraduate"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be enrolled in an undergraduate or postgraduate course at Uttarakhand Sanskrit University."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student must have secured the highest marks in the relevant course, class, or subject."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be enrolled in an undergraduate or postgraduate course at Uttarakhand Sanskrit University.\n1. The student must have secured the highest marks in the relevant course, class, or subject.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, one student from each undergraduate and postgraduate class at Uttarakhand Sanskrit University is awarded a scholarship equal to the tuition fee of their respective class."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Under this scheme, one student from each undergraduate and postgraduate class at Uttarakhand Sanskrit University is awarded a scholarship equal to the tuition fee of their respective class.\n<br>\n\n",
+   "briefDescription": "The scheme aims to encourage meritorious students pursuing undergraduate and postgraduate studies at Uttarakhand Sanskrit University by awarding scholarships to those who secure the highest marks in the relevant course, class, or subject.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Scholarship on Merit Basis” is implemented by Uttarakhand Sanskrit University, Haridwar, under the Department of Sanskrit Education, Government of Uttarakhand. The scheme aims to encourage meritorious students pursuing undergraduate and postgraduate studies at Uttarakhand Sanskrit University by awarding scholarships to those who secure the highest marks in the relevant course, class, or subject."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Scholarship on Merit Basis” is implemented by Uttarakhand Sanskrit University, Haridwar, under the Department of Sanskrit Education, Government of Uttarakhand. The scheme aims to encourage meritorious students pursuing undergraduate and postgraduate studies at Uttarakhand Sanskrit University by awarding scholarships to those who secure the highest marks in the relevant course, class, or subject.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 92)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "macuk"
+}

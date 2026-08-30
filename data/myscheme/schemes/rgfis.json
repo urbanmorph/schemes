@@ -1,0 +1,341 @@
+{
+ "_id": "6492d9bd380f8e123540bd26",
+ "_slug": "rgfis",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01: "
+         },
+         {
+          "text": "The applicant needs to visit the office of the Social Welfare Department (DSWO) in his/her Block/District and collect the application form. The "
+         },
+         {
+          "children": [
+           {
+            "text": "application form"
+           }
+          ],
+          "link": "https://cdn.s3waas.gov.in/s3a01a0380ca3c61428c26a231f0e49a09/uploads/2018/03/2018032249.pdf",
+          "type": "link"
+         },
+         {
+          "text": " can also be downloaded from the "
+         },
+         {
+          "children": [
+           {
+            "text": "Official Website"
+           }
+          ],
+          "link": "https://charkhidadri.gov.in/form/form-for-rajiv-gandhi-bima-parivar-yojna/",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " The applicant should fill out the application form and attach all the essential documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " After filling out the application form, the applicant needs to get attested to the form from the concerned authority mentioned in the application form."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " Then the application form has to be submitted to the office of the Social Welfare Department (DSWO) of your Block/District."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " After successful verification, the applicant may get the benefits of the scheme."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 01:** The applicant needs to visit the office of the Social Welfare Department (DSWO) in his/her Block/District and collect the application form. The [application form](https://cdn.s3waas.gov.in/s3a01a0380ca3c61428c26a231f0e49a09/uploads/2018/03/2018032249.pdf) can also be downloaded from the [Official Website](https://charkhidadri.gov.in/form/form-for-rajiv-gandhi-bima-parivar-yojna/).\n**Step 02:** The applicant should fill out the application form and attach all the essential documents.\n**Step 03:** After filling out the application form, the applicant needs to get attested to the form from the concerned authority mentioned in the application form.\n**Step 04:** Then the application form has to be submitted to the office of the Social Welfare Department (DSWO) of your Block/District.\n**Step 05:** After successful verification, the applicant may get the benefits of the scheme.\n",
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": "Department Of Social Justice And Empowerment, Government Of Haryana",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 666702
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Rajiv Gandhi Family Insurance Scheme",
+   "schemeOpenDate": "2006-06-01",
+   "schemeShortTitle": "RGFIS",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Citizen empowerment",
+     "value": "Citizen empowerment"
+    }
+   ],
+   "state": {
+    "label": "Haryana",
+    "value": 6
+   },
+   "tags": [
+    "Family",
+    "Insurance",
+    "Accidental Death",
+    "Permanent Disability",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    },
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be only eligible in case of Accidental Death/ Permanent disability, or total/partial disability."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Under this scheme, compensation is given in case of accidental death/permanent disability in the age group of 18-60 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of Haryana."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The name of the applicant should appear in the Voter’s list or should be a holder of the Ration Card"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The annual family income should not exceed ₹2.5 lacs."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must not be a Government or Semi-Government employee."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be only eligible in case of Accidental Death/ Permanent disability, or total/partial disability.\n1. Under this scheme, compensation is given in case of accidental death/permanent disability in the age group of 18-60 years.\n1. The applicant should be a permanent resident of Haryana.\n1. The name of the applicant should appear in the Voter’s list or should be a holder of the Ration Card\n1. The annual family income should not exceed ₹2.5 lacs.\n1. The applicant must not be a Government or Semi-Government employee.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "The financial assistance/compensation will be given to eligible beneficiaries as under:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Accidental Death/Permanent Disability"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1.00 Lakh"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Loss of two limbs, two eyes, one limb, and one eye"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹50,000/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Loss of one eye or one limb"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹25,000/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      }
+     ],
+     "type": "table"
+    }
+   ],
+   "benefits_md": "The financial assistance/compensation will be given to eligible beneficiaries as under:\nAccidental Death/Permanent Disability₹1.00 LakhLoss of two limbs, two eyes, one limb, and one eye₹50,000/-Loss of one eye or one limb₹25,000/-",
+   "briefDescription": "The scheme “Rajiv Gandhi Family Insurance Scheme” was launched by the Department of Social Justice and Empowerment, Government of Haryana on 1st April 2006.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Rajiv Gandhi Family Insurance Scheme” was launched by the Department of Social Justice and Empowerment, Government of Haryana on 1st April 2006. Under this scheme, compensation is given in case of accidental death/permanent disability in the age group of 18-60 years, who is a resident of Haryana and whose name appears in the electoral roll or holds a ration card issued by the competent authority and Income taxpayers and government employees are not. The scheme has been amended and implemented on 30th August 2011 and accordingly, the compensation amount will not be given to the person having an income of more than ₹2.50 Lakh per annum."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Rajiv Gandhi Family Insurance Scheme” was launched by the Department of Social Justice and Empowerment, Government of Haryana on 1st April 2006. Under this scheme, compensation is given in case of accidental death/permanent disability in the age group of 18-60 years, who is a resident of Haryana and whose name appears in the electoral roll or holds a ration card issued by the competent authority and Income taxpayers and government employees are not. The scheme has been amended and implemented on 30th August 2011 and accordingly, the compensation amount will not be given to the person having an income of more than ₹2.50 Lakh per annum.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://socialjusticehry.gov.in/"
+    },
+    {
+     "title": "Guideline",
+     "url": "https://haryana.gov.in/hi/scheme/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%80%E0%A4%B5-%E0%A4%97%E0%A4%BE%E0%A4%82%E0%A4%A7%E0%A5%80-%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B0-%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE-%E0%A4%AF/"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://cdn.s3waas.gov.in/s3a01a0380ca3c61428c26a231f0e49a09/uploads/2018/03/2018032249.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "rgfis"
+}

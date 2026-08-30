@@ -1,0 +1,457 @@
+{
+ "_id": "63ae7e58dc9a0dc54aab0449",
+ "_slug": "nsap-ignoaps",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 01:"
+       },
+       {
+        "text": " One can download UMANG App or visit the website "
+       },
+       {
+        "children": [
+         {
+          "text": "https://web.umang.gov.in/web_new/home"
+         }
+        ],
+        "link": "https://web.umang.gov.in/web_new/home",
+        "type": "link"
+       },
+       {
+        "text": " "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 02: "
+       },
+       {
+        "text": "The citizen can log in using their mobile number and OTP."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 03: "
+       },
+       {
+        "text": "Once logged in, the citizen can search for NSAP."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 04: "
+       },
+       {
+        "text": "Click on “Apply Online”"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 05: "
+       },
+       {
+        "text": "Fill in the basic details, choose the mode of payment of pension, upload photo and click on \"Submit.\""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 01:** One can download UMANG App or visit the website [https://web.umang.gov.in/web_new/home](https://web.umang.gov.in/web_new/home) \n**Step 02:** The citizen can log in using their mobile number and OTP.\n**Step 03:** Once logged in, the citizen can search for NSAP.\n**Step 04:** Click on “Apply Online”\n**Step 05:** Fill in the basic details, choose the mode of payment of pension, upload photo and click on &quot;Submit.&quot;\n<br>\n\n",
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Rural Development",
+    "value": 505
+   },
+   "nodalMinistryName": {
+    "label": "Ministry Of Rural Development",
+    "value": 487
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Banking,Financial Services and Insurance",
+     "value": "628ce7f6d6d1a3bde46852d0"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "NSAP - Indira Gandhi National Old Age Pension Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "NSAP-IGNOAPS",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Citizen empowerment",
+     "value": "Citizen empowerment"
+    }
+   ],
+   "schemeType": {
+    "label": "Centrally Sponsored Scheme",
+    "value": "centrally-sponsored-scheme"
+   },
+   "tags": [
+    "BPL",
+    "Pension",
+    "Senior Citizen",
+    "Social Welfare"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a citizen of India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should belong to a Below Poverty Line (BPL) household."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be 60 years of age or above."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a citizen of India.\n1. The applicant should belong to a Below Poverty Line (BPL) household.\n1. The applicant should be 60 years of age or above.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹200 per month for beneficiaries aged 60–79 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹500 per month for beneficiaries aged 80 years and above."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note: "
+      },
+      {
+       "text": "At present old age beneficiaries are getting anywhere between ₹200/- to ₹1000/- depending on the State Contribution."
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n- ₹200 per month for beneficiaries aged 60–79 years.\n- ₹500 per month for beneficiaries aged 80 years and above.\n\n> **Note:** At present old age beneficiaries are getting anywhere between ₹200/- to ₹1000/- depending on the State Contribution.\n\n<br>\n\n",
+   "briefDescription": "\"Indira Gandhi National Old Age Pension Scheme\" is one of the five sub-schemes of the National Social Assistance Programme. Under IGNOAPS, citizens living Below Poverty Line and 60 years or above in age are eligible to apply. A monthly pension of ₹ 200 up to 79 years and ₹ 500 thereafter.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Indira Gandhi National Old Age Pension Scheme (IGNOAPS)\" is one of the five sub-schemes of the National Social Assistance Programme, Ministry of Rural Development. Under this scheme, persons belonging to BPL households and 60 years or above in age are eligible to apply. This program is being implemented in rural areas as well as urban areas. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The Government of India, on 15th August 1995, introduced the National Social Assistance Programme (NSAP) as a fully funded Centrally Sponsored Scheme targeting the destitute, defined as any person who has little or no regular means of subsistence from his/her own source of income or through financial support from family members or other sources. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "The NSAP at present includes five sub-schemes as its components- "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "a) Indira Gandhi National Old Age Pension Scheme (IGNOAPS)"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "b) Indira Gandhi National Widow Pension Scheme (IGNWPS)"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "c) Indira Gandhi National Disability Pension Scheme (IGNDPS)"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "d) National Family Benefit Scheme (NFBS)"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "e) Annapurna Scheme"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Objectives of NSAP- "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "1. Provides social assistance benefits to poor households in the case of death, maternity, or old age of the breadwinner."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "2. Ensure minimum national standards, in addition to the benefits that the states are currently providing or might provide in the future."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "3. Ensure uniform social protection for the beneficiaries across the country without interruption."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Expansion to cover all eligible BPL persons- "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "In 2007, the scheme was expanded to cover all eligible persons Below Poverty Line (BPL)."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Indira Gandhi National Old Age Pension Scheme (IGNOAPS)&quot; is one of the five sub-schemes of the National Social Assistance Programme, Ministry of Rural Development. Under this scheme, persons belonging to BPL households and 60 years or above in age are eligible to apply. This program is being implemented in rural areas as well as urban areas. \nThe Government of India, on 15th August 1995, introduced the National Social Assistance Programme (NSAP) as a fully funded Centrally Sponsored Scheme targeting the destitute, defined as any person who has little or no regular means of subsistence from his/her own source of income or through financial support from family members or other sources. \n> **The NSAP at present includes five sub-schemes as its components-** \n\na) Indira Gandhi National Old Age Pension Scheme (IGNOAPS)\nb) Indira Gandhi National Widow Pension Scheme (IGNWPS)\nc) Indira Gandhi National Disability Pension Scheme (IGNDPS)\nd) National Family Benefit Scheme (NFBS)\ne) Annapurna Scheme\n> **Objectives of NSAP-** \n\n1. Provides social assistance benefits to poor households in the case of death, maternity, or old age of the breadwinner.\n2. Ensure minimum national standards, in addition to the benefits that the states are currently providing or might provide in the future.\n3. Ensure uniform social protection for the beneficiaries across the country without interruption.\n> **Expansion to cover all eligible BPL persons-** \n\nIn 2007, the scheme was expanded to cover all eligible persons Below Poverty Line (BPL).\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://nsap.dord.gov.in/Guidelines/social_audit_guidelines.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://nsap.dord.gov.in/"
+    },
+    {
+     "title": "FAQs",
+     "url": "https://nsap.dord.gov.in/circular.do?method=faq"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": [
+   {
+    "definition": [
+     {
+      "children": [
+       {
+        "text": "any person who has little or no regular means of subsistence from his / her own source of income or through"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "financial support from family members or other sources"
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "definitions_md": "any person who has little or no regular means of subsistence from his / her own source of income or through\nfinancial support from family members or other sources\n",
+    "name": "destitutes",
+    "source": "https://nsap.nic.in/Guidelines/nsap_guidelines_oct2014.pdf"
+   },
+   {
+    "definition": [
+     {
+      "children": [
+       {
+        "text": "As per Section 56(4) of the Persons with Disabilities Act, 1995 (PWD Act, 95), “persons with severe disability” means a person with 80% or more of one or more disabilities"
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "definitions_md": "As per Section 56(4) of the Persons with Disabilities Act, 1995 (PWD Act, 95), “persons with severe disability” means a person with 80% or more of one or more disabilities\n",
+    "name": "persons with severe disability",
+    "source": "https://nsap.nic.in/Guidelines/nsap_guidelines_oct2014.pdf"
+   },
+   {
+    "definition": [
+     {
+      "children": [
+       {
+        "text": "As per Section 2(h) of the National Trust for the Welfare of Persons with Autism, Cerebral Palsy, Mental Retardation, and Multiple Disabilities Act, 1999 (National Trust Act,1999), “Multiple Disabilities” means a combination of 2 or more disabilities."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "definitions_md": "As per Section 2(h) of the National Trust for the Welfare of Persons with Autism, Cerebral Palsy, Mental Retardation, and Multiple Disabilities Act, 1999 (National Trust Act,1999), “Multiple Disabilities” means a combination of 2 or more disabilities.\n",
+    "name": "Multiple Disabilities",
+    "source": "https://nsap.nic.in/Guidelines/nsap_guidelines_oct2014.pdf"
+   }
+  ]
+ },
+ "slug": "nsap-ignoaps"
+}

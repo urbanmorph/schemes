@@ -1,0 +1,260 @@
+{
+ "_id": "655f2e3136f1561c3bd38c94",
+ "_slug": "sscttti",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The students applying for the scholarship for the first time need to \"Register\" using the icon “New Registration” at the NSP Portal URL - "
+         },
+         {
+          "children": [
+           {
+            "text": "https://scholarships.gov.in/"
+           }
+          ],
+          "link": "https://scholarships.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": ", by providing accurate and correct information as per their documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " After successfully get registration done, students will get their “Student Registration ID”."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " Through “Student Registration ID” students will be able to login into the account using the icon “Fresh Application” at NSP Portal."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " After successful login to the portal, the welcome page appeared. On clicking the “Application Form” icon, students will be directed to the application screen."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " Now, the students may fill out the complete application form and on clicking the “Final Submit” button, the application is finally submitted."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06:"
+         },
+         {
+          "text": " On successful submission of the application, a system-generated registration number is sent to the students which can be used for future reference."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 01:** The students applying for the scholarship for the first time need to &amp;quot;Register&amp;quot; using the icon “New Registration” at the NSP Portal URL - [https://scholarships.gov.in/](https://scholarships.gov.in/), by providing accurate and correct information as per their documents.\n**Step 02:** After successfully get registration done, students will get their “Student Registration ID”.\n**Step 03:** Through “Student Registration ID” students will be able to login into the account using the icon “Fresh Application” at NSP Portal.\n**Step 04:** After successful login to the portal, the welcome page appeared. On clicking the “Application Form” icon, students will be directed to the application screen.\n**Step 05:** Now, the students may fill out the complete application form and on clicking the “Final Submit” button, the application is finally submitted.\n**Step 06:** On successful submission of the application, a system-generated registration number is sent to the students which can be used for future reference.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Adi Dravidar Welfare And Scheduled Tribes Welfare Department, Union Territory Of Puducherry",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Adi Dravidar Welfare Department, Puducherry",
+    "value": 34000002
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Stipend to Scheduled Caste Trainees in Technical Training Institutions",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SSCTTTI",
+   "schemeSubCategory": [
+    {
+     "label": "Education and training grants, fellowship, stipend",
+     "value": "Education and training grants, fellowship, stipend"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Puducherry",
+    "value": 34
+   },
+   "tags": [
+    "Stipend",
+    "Scheduled Caste",
+    "Trainee",
+    "ITI"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The candidates/trainees who are undergoing training in the Government Technical Training Institutions of the Union Territory of Puducherry are eligible to apply under the scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The candidate should belong to the Scheduled Caste community."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There is no income limit to apply under the scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The candidates/trainees who are undergoing training in the Government Technical Training Institutions of the Union Territory of Puducherry are eligible to apply under the scheme.\n   1. The candidate should belong to the Scheduled Caste community.\n   1. There is no income limit to apply under the scheme.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "1.\tUnder this scheme, a stipend is paid at the rate of ₹170/- per month per trainee for the whole period of training."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "1.\tUnder this scheme, a stipend is paid at the rate of ₹170/- per month per trainee for the whole period of training.\n",
+   "briefDescription": "The objective of the scheme is to provide financial support to Scheduled Tribe candidates/trainees who are undergoing training in the Government Technical Training Institutions of the Union Territory of Puducherry.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Stipend to Scheduled Caste Trainees in Technical Training Institutions” was implemented by the Adi Dravidar Welfare and Scheduled Tribes Welfare Department, Union Territory of Puducherry. The objective of the scheme is to provide financial support to Scheduled Tribe candidates/trainees who are undergoing training in the Government Technical Training Institutions of the Union Territory of Puducherry."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Stipend to Scheduled Caste Trainees in Technical Training Institutions” was implemented by the Adi Dravidar Welfare and Scheduled Tribes Welfare Department, Union Territory of Puducherry. The objective of the scheme is to provide financial support to Scheduled Tribe candidates/trainees who are undergoing training in the Government Technical Training Institutions of the Union Territory of Puducherry.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://adwelfare.py.gov.in/stipend-sc-trainees-technical-training-institutions"
+    },
+    {
+     "title": "Order",
+     "url": "https://scholarships.gov.in/public/schemeGuidelines/Puducherry/Pudu_3021_G.pdf"
+    },
+    {
+     "title": "National Scholarship Portal",
+     "url": "https://scholarships.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sscttti"
+}

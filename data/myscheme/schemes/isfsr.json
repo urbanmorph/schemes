@@ -1,0 +1,344 @@
+{
+ "_id": "66d09b6f9c9ff8daef6b6215",
+ "_slug": "isfsr",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-01: "
+       },
+       {
+        "text": "Applicant need to visits the Karnataka Minorities Development Corporation "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://kmdconline.karnataka.gov.in/Portal/home",
+        "type": "link"
+       },
+       {
+        "text": ".  "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-02: "
+       },
+       {
+        "text": "Click "
+       },
+       {
+        "children": [
+         {
+          "text": "\"Apply Online\""
+         }
+        ],
+        "link": "https://kmdconline.karnataka.gov.in/Portal/login",
+        "type": "link"
+       },
+       {
+        "text": " and Enter \"Mobile Number\" and \"Submit\".   "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-03: "
+       },
+       {
+        "text": "Enter \"Aadhaar Number\" Fill in the \"Captcha\" and Select \"Next\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-04: "
+       },
+       {
+        "text": "Applicant will get OTP in his/her Aadhaar Linked Mobile Number."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-05: "
+       },
+       {
+        "text": "Enter \"OTP\" and select \"Continue\", After that Allow the official notice."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-06: "
+       },
+       {
+        "text": "After verifying the Aadhaar again fill in the \"OTP\" and Submit."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-07: "
+       },
+       {
+        "text": "Select the scheme \"Sikhligar’s Community Development Scheme\" and fill in the basic details father's name, gender, qualification detail"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-08: "
+       },
+       {
+        "text": "Select \"Next\" Fill in the address detail and again select \"Next\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-09: "
+       },
+       {
+        "text": "Upload the required document passport-size photo, educational document, income certificate, etc. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-10: "
+       },
+       {
+        "text": "Click \"Proceed\" and Select \"Submit Application\" and get an Application ID."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-01:** Applicant need to visits the Karnataka Minorities Development Corporation [official website](https://kmdconline.karnataka.gov.in/Portal/home).  \n**Step-02:** Click [&quot;Apply Online&quot;](https://kmdconline.karnataka.gov.in/Portal/login) and Enter &quot;Mobile Number&quot; and &quot;Submit&quot;.   \n**Step-03:** Enter &quot;Aadhaar Number&quot; Fill in the &quot;Captcha&quot; and Select &quot;Next&quot;.\n**Step-04:** Applicant will get OTP in his/her Aadhaar Linked Mobile Number.\n**Step-05:** Enter &quot;OTP&quot; and select &quot;Continue&quot;, After that Allow the official notice.\n**Step-06:** After verifying the Aadhaar again fill in the &quot;OTP&quot; and Submit.\n**Step-07:** Select the scheme &quot;Sikhligar’s Community Development Scheme&quot; and fill in the basic details father&#39;s name, gender, qualification detail\n**Step-08:** Select &quot;Next&quot; Fill in the address detail and again select &quot;Next&quot;.\n**Step-09:** Upload the required document passport-size photo, educational document, income certificate, etc. \n**Step-10:** Click &quot;Proceed&quot; and Select &quot;Submit Application&quot; and get an Application ID.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Karnataka Minorities Development Corporation",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Minorities Welfare Department",
+    "value": 3000027
+   },
+   "schemeCategory": [
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    },
+    {
+     "label": "Banking,Financial Services and Insurance",
+     "value": "628ce7f6d6d1a3bde46852d0"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Incentive Scheme for Sericulture Reelers",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ISFSR",
+   "schemeSubCategory": [
+    {
+     "label": "Loan",
+     "value": "Loan"
+    },
+    {
+     "label": "Setting up / start-up / entrepreneurship",
+     "value": "Setting up / start-up / entrepreneurship"
+    },
+    {
+     "label": "Financial regulation",
+     "value": "Financial regulation"
+    }
+   ],
+   "state": {
+    "label": "Karnataka",
+    "value": 29
+   },
+   "tags": [
+    "Laon",
+    "Minority Community",
+    "Subsidy",
+    "Financial Assitance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should belong to the religious minority category of the state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of the state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's age should be between 18 to 55 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The family income from all sources should not exceed more than ₹6,00,000/-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "No member of the applicant's family should be a State/Central Government employee."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant or his family members should not have availed of any loan/subsidy facility from the Corporation in the last 5 years except the Arivu education loan and Foreign Education Loan Scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be a sustainer of the corporation."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should belong to the religious minority category of the state.\n1. The applicant should be a permanent resident of the state.\n1. The applicant&#39;s age should be between 18 to 55 years.\n1. The family income from all sources should not exceed more than ₹6,00,000/-\n1. No member of the applicant&#39;s family should be a State/Central Government employee.\n1. The applicant or his family members should not have availed of any loan/subsidy facility from the Corporation in the last 5 years except the Arivu education loan and Foreign Education Loan Scheme.\n1. The applicant should not be a sustainer of the corporation.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Financial Assistance:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Silk reeling/spinning workers can receive a loan of up to ₹2,00,000/-, with 50% of the loan amount being provided as a subsidy. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "> **Financial Assistance:**\n\n\n- Silk reeling/spinning workers can receive a loan of up to ₹2,00,000/-, with 50% of the loan amount being provided as a subsidy. \n\n",
+   "briefDescription": "The \"Incentive Scheme for Sericulture Reelers\" is aimed at improving the financial condition of minority communities involved in silk reeling and spinning. The corporation will provide loans to support working capital and basic infrastructure for silk spinners.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Incentive Scheme for Sericulture Reelers\" was launched by the Minorities Welfare Department, Government of Karnataka, and is implemented by the Karnataka Minorities Development Corporation. The scheme aims to improve the financial condition of minority communities involved in silk reeling and spinning by providing financial assistance through loans and subsidies. This support is intended to enhance working capital, improve basic infrastructure, and promote better productivity and economic stability."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Incentive Scheme for Sericulture Reelers&quot; was launched by the Minorities Welfare Department, Government of Karnataka, and is implemented by the Karnataka Minorities Development Corporation. The scheme aims to improve the financial condition of minority communities involved in silk reeling and spinning by providing financial assistance through loans and subsidies. This support is intended to enhance working capital, improve basic infrastructure, and promote better productivity and economic stability.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://kmdconline.karnataka.gov.in/Portal/home"
+    },
+    {
+     "title": "Login & Apply",
+     "url": "https://kmdconline.karnataka.gov.in/Portal/login"
+    },
+    {
+     "title": "Track Application",
+     "url": "https://kmdconline.karnataka.gov.in/Portal/track"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "isfsr"
+}

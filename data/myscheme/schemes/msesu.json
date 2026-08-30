@@ -1,0 +1,263 @@
+{
+ "_id": "67f63c21ca4dbdfd530ebc6a",
+ "_slug": "msesu",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Advertisement is issued by the department to select the beneficiary. Thereafter, the application form can be obtained from the district offices of the state (District Minority Welfare Officer / District Social Welfare Officer)."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Along with the application form, the applicant must attach the prescribed income certificate / BPL certificate, caste certificate, permanent residence certificate, Aadhaar card, bank account details, and a project report for the proposed scheme. The completed application form should then be submitted to the office of the District Minority Welfare Officer / District Social Welfare Officer of the concerned district."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Thereafter, an interview is conducted by a selection committee constituted under the chairmanship of the Chief Development Officer at the district level. The application forms of candidates who are successful in the interview are forwarded to the applicant’s bank for loan sanction."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "After the bank sanctions the loan, the district office sends the application form to the corporation headquarters for the release of 25% of the grant amount upon completion of all formalities. The grant amount is made available to the district office after approval from the Managing Director at the Corporation Headquarters."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Thereafter, the district office, after receiving 15% of the beneficiary’s share, transfers 40% of the total amount to the concerned bank, after which the bank releases the loan to the applicant."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "text": "Currently, the application process is offline, while the online process is under development."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - Advertisement is issued by the department to select the beneficiary. Thereafter, the application form can be obtained from the district offices of the state (District Minority Welfare Officer / District Social Welfare Officer).\n  - Along with the application form, the applicant must attach the prescribed income certificate / BPL certificate, caste certificate, permanent residence certificate, Aadhaar card, bank account details, and a project report for the proposed scheme. The completed application form should then be submitted to the office of the District Minority Welfare Officer / District Social Welfare Officer of the concerned district.\n  - Thereafter, an interview is conducted by a selection committee constituted under the chairmanship of the Chief Development Officer at the district level. The application forms of candidates who are successful in the interview are forwarded to the applicant’s bank for loan sanction.\n  - After the bank sanctions the loan, the district office sends the application form to the corporation headquarters for the release of 25% of the grant amount upon completion of all formalities. The grant amount is made available to the district office after approval from the Managing Director at the Corporation Headquarters.\n  - Thereafter, the district office, after receiving 15% of the beneficiary’s share, transfers 40% of the total amount to the concerned bank, after which the bank releases the loan to the applicant.\n\nCurrently, the application process is offline, while the online process is under development.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Minority Welfare, Uttarakhand",
+    "value": 50000030
+   },
+   "schemeCategory": [
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Self-Employment Scheme for Unemployed Minority Communities",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SESUMC",
+   "schemeSubCategory": [
+    {
+     "label": "Loan",
+     "value": "Loan"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Minority",
+    "Self Employment",
+    "Loan",
+    "Subsidy",
+    "Unemployed"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a permanent resident of Uttarakhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must belong to a minority community (Muslim, Sikh, Christian, Parsi, Buddhist, or Jain)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s age should be between 18 and 55 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The annual family income from all sources should not exceed ₹2,50,000/-, or the applicant should be a member of a BPL family."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a permanent resident of Uttarakhand.\n1. The applicant must belong to a minority community (Muslim, Sikh, Christian, Parsi, Buddhist, or Jain).\n1. The applicant’s age should be between 18 and 55 years.\n1. The annual family income from all sources should not exceed ₹2,50,000/-, or the applicant should be a member of a BPL family.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under this scheme, a grant is provided for self-employment. On taking a loan of ₹1 lakh to ₹10 lakh, a grant of 25% of the loan amount is given, with a minimum grant of ₹25,000/- and a maximum of ₹2,50,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The benefit of the scheme is available only on taking a loan, in which 60% of the project cost is provided as a loan, 25% as grant/subsidy by the department, and 15% as contribution by the applicant."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Interest on the loan will be charged according to the current prevailing rates of the bank."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - Under this scheme, a grant is provided for self-employment. On taking a loan of ₹1 lakh to ₹10 lakh, a grant of 25% of the loan amount is given, with a minimum grant of ₹25,000/- and a maximum of ₹2,50,000/-.\n  - The benefit of the scheme is available only on taking a loan, in which 60% of the project cost is provided as a loan, 25% as grant/subsidy by the department, and 15% as contribution by the applicant.\n  - Interest on the loan will be charged according to the current prevailing rates of the bank.\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide a grant of 25% of the loan amount (for loans ranging from ₹1 lakh to ₹10 lakh) to individuals belonging to minority communities, who are permanent residents of Uttarakhand, for the purpose of self-employment.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Self-Employment Scheme for Unemployed Minority Communities” was launched by the Minority Welfare Department, Government of Uttarakhand. The scheme aims to provide a grant of 25% of the loan amount to individuals belonging to minority communities who are permanent residents of Uttarakhand. The grant is available when a loan of ₹1 lakh to ₹10 lakh is taken for starting self-employment activities."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Self-Employment Scheme for Unemployed Minority Communities” was launched by the Minority Welfare Department, Government of Uttarakhand. The scheme aims to provide a grant of 25% of the loan amount to individuals belonging to minority communities who are permanent residents of Uttarakhand. The grant is available when a loan of ₹1 lakh to ₹10 lakh is taken for starting self-employment activities.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 42)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "msesu"
+}

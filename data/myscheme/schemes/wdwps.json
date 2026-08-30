@@ -1,0 +1,388 @@
+{
+ "_id": "64eb757e031061909aee3b5c",
+ "_slug": "wdwps",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1: "
+       },
+       {
+        "text": "Applicants have to visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://connect.punjab.gov.in/service/citizenservice/112",
+        "type": "link"
+       },
+       {
+        "text": "."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2"
+       },
+       {
+        "text": ": Click on the \"Click to apply services\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3"
+       },
+       {
+        "text": ": Now login on Digital Punjab portal with Email/Phone number and password. If does have any account then register "
+       },
+       {
+        "children": [
+         {
+          "text": "here"
+         }
+        ],
+        "link": "https://ssocitizen.psegs.in/register",
+        "type": "link"
+       },
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Fill out the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-5"
+       },
+       {
+        "text": ": Attach the required documents"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-6"
+       },
+       {
+        "text": ": Submit."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** Applicants have to visit the [official website](https://connect.punjab.gov.in/service/citizenservice/112).\n**Step-2**: Click on the &quot;Click to apply services&quot;.\n**Step-3**: Now login on Digital Punjab portal with Email/Phone number and password. If does have any account then register [here](https://ssocitizen.psegs.in/register)\n**Step-4:** Fill out the application form.\n**Step-5**: Attach the required documents\n**Step-6**: Submit.\n"
+   },
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1"
+       },
+       {
+        "text": ": Applicants have to visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://connect.punjab.gov.in/service/citizenservice/112",
+        "type": "link"
+       },
+       {
+        "text": " and download the "
+       },
+       {
+        "children": [
+         {
+          "text": "application form."
+         }
+        ],
+        "link": "https://punjab.gov.in/wp-content/uploads/2023/08/Widow-Destitute-pension-1.pdf",
+        "type": "link"
+       },
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2"
+       },
+       {
+        "text": ": Fill out the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3"
+       },
+       {
+        "text": ": Attach required documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4"
+       },
+       {
+        "text": ": Submit the Application Form along with all the documents in the same office or centre from where it was collected."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1**: Applicants have to visit the [official website](https://connect.punjab.gov.in/service/citizenservice/112) and download the [application form.](https://punjab.gov.in/wp-content/uploads/2023/08/Widow-Destitute-pension-1.pdf)\n**Step-2**: Fill out the application form.\n**Step-3**: Attach required documents.\n**Step-4**: Submit the Application Form along with all the documents in the same office or centre from where it was collected.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Social Security and Development of Women and Children",
+    "value": 300000042
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Widow / Destitute Women Pension Scheme - Punjab",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "Wdwps",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "Punjab",
+    "value": 3
+   },
+   "tags": [
+    "Pension",
+    "Welfare",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Beneficiary should be a Permanent Resident of Punjab ."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The Annual Income of Beneficiary should not be more than Rs. 60,000/-per year ."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The below mentioned women are eligible for monthly pension :-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Widow Women."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Destitute Women."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Unmarried Women."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "text": "The Age of the beneficiary should be :- "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Widow or Destitute Women: Below 58 Years."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Unmarried Women: Above 30 Years."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. Beneficiary should be a Permanent Resident of Punjab .\n1. The Annual Income of Beneficiary should not be more than Rs. 60,000/-per year .\n1. The below mentioned women are eligible for monthly pension :-\n\n   1. Widow Women.\n   1. Destitute Women.\n   1. Unmarried Women.\n\n1. The Age of the beneficiary should be :- \n\n   1. Widow or Destitute Women: Below 58 Years.\n   1. Unmarried Women: Above 30 Years.\n\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "Amount : ₹ 1,500/- per month"
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Amount : ₹ 1,500/- per month\n",
+   "briefDescription": "Punjab State Government started a pension for widow and destitute women.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "This is the major social welfare scheme of Punjab Government. The main objective behind launching this scheme is to provide monthly pension to those women who don't have any sustainable income source. This Scheme is implemented by Social Security and Women & Child Development Department of Punjab Government."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "This is the major social welfare scheme of Punjab Government. The main objective behind launching this scheme is to provide monthly pension to those women who don&#39;t have any sustainable income source. This Scheme is implemented by Social Security and Women &amp; Child Development Department of Punjab Government.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://upload.indiacode.nic.in/showfile?actid=AC_PB_82_985_00002_00002_1553492693909&type=rule&filename=notification_pdf_13.6.2017_in_eng.pdf"
+    },
+    {
+     "title": "Portal",
+     "url": "https://connect.punjab.gov.in/service/citizenservice/112"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://punjab.gov.in/wp-content/uploads/2023/08/Widow-Destitute-pension-1.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "wdwps"
+}

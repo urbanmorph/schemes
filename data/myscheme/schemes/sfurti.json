@@ -1,0 +1,723 @@
+{
+ "_id": "65467165ca66628dc29f2333",
+ "_slug": "sfurti",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " Eligible agencies/organizations may submit the proposal online. The applicant/agency/organization needs to visit on "
+         },
+         {
+          "children": [
+           {
+            "text": "SFURTI Portal"
+           }
+          ],
+          "link": "https://sfurti.msme.gov.in/SFURTI/Home.aspx",
+          "type": "link"
+         },
+         {
+          "text": " and register/sign up on the portal by entering their correct details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2"
+         },
+         {
+          "text": ": The applicant organization needs to log in through their ID on the "
+         },
+         {
+          "children": [
+           {
+            "text": "SFURTI Portal"
+           }
+          ],
+          "link": "https://sfurti.msme.gov.in/SFURTI/SignUp.aspx",
+          "type": "link"
+         },
+         {
+          "text": " and fill out the application form completely."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Upload all the relevant documents and verify the details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Submit the application form."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Instructions for Filling the Concept Scorecard: "
+         },
+         {
+          "children": [
+           {
+            "text": "Click here"
+           }
+          ],
+          "link": "https://sfurti.msme.gov.in/WriteReadData/Circular/DemoUserManualForScorecard.pdf",
+          "type": "link"
+         },
+         {
+          "bold": true,
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Eligible agencies/organizations may submit the proposal online. The applicant/agency/organization needs to visit on [SFURTI Portal](https://sfurti.msme.gov.in/SFURTI/Home.aspx) and register/sign up on the portal by entering their correct details.\n**Step 2**: The applicant organization needs to log in through their ID on the [SFURTI Portal](https://sfurti.msme.gov.in/SFURTI/SignUp.aspx) and fill out the application form completely.\n**Step 3:** Upload all the relevant documents and verify the details.\n**Step 4:** Submit the application form.\n\n- **Instructions for Filling the Concept Scorecard:** [Click here](https://sfurti.msme.gov.in/WriteReadData/Circular/DemoUserManualForScorecard.pdf)**.**\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Coir Board, Ministry Of Micro, Small & Medium Enterprises, Government Of India",
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": null,
+   "nodalMinistryName": {
+    "label": "Ministry Of Micro, Small and Medium Enterprises",
+    "value": 497
+   },
+   "schemeCategory": [
+    {
+     "label": "Banking,Financial Services and Insurance",
+     "value": "628ce7f6d6d1a3bde46852d0"
+    },
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Scheme of Fund for Regeneration of Traditional Industries",
+   "schemeOpenDate": "2005-04-01",
+   "schemeShortTitle": "SFURTI",
+   "schemeSubCategory": [
+    {
+     "label": "Machine & skill up-Gradation",
+     "value": "Machine & skill up-Gradation"
+    },
+    {
+     "label": "Loan",
+     "value": "Loan"
+    },
+    {
+     "label": "Technology upgradation",
+     "value": "Technology upgradation"
+    }
+   ],
+   "schemeType": {
+    "label": "Central Sector Scheme",
+    "value": "central-sector-scheme"
+   },
+   "tags": [
+    "SFURTI",
+    "Traditional Industries",
+    "MSME",
+    "Coir",
+    "Soft Intervention",
+    "Hard Intervention",
+    "Thematic Intervention"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Artists",
+     "value": "artists"
+    },
+    {
+     "label": "Government Organisation",
+     "value": "government-organisation"
+    },
+    {
+     "label": "Industries",
+     "value": "industries"
+    },
+    {
+     "label": "NGO",
+     "value": "ngo"
+    },
+    {
+     "label": "Registered Societies",
+     "value": "registered-societies"
+    },
+    {
+     "label": "Self Help Groups (SHGS)",
+     "value": "self-help-groups"
+    },
+    {
+     "label": "State Government",
+     "value": "state-government"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Non-Government organizations (NGOs), institutions of the Central and State Governments and Semi-Government institutions, field functionaries of State and Central Govt., Panchayati Raj institutions (PRIs), Private sector by forming cluster-specific SPVs, Corporates and Corporate Responsibility (CSR) foundations with expertise to undertake cluster development."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Criteria for Selection of Clusters:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The Selection of Clusters will be based on their geographical concentration which would be around 500 beneficiary families of artisans/micro-enterprises, suppliers of raw materials, traders, service providers, etc., located within one or two revenue subdivisions in a District (or in contiguous Districts.)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The potential for growth in production and generation of employment opportunities will also be considered in selecting clusters under SFURTI."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The geographical distribution of the clusters throughout the country, with at least 10% located in the North Eastern region will also be kept in view while selecting Clusters."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - Non-Government organizations (NGOs), institutions of the Central and State Governments and Semi-Government institutions, field functionaries of State and Central Govt., Panchayati Raj institutions (PRIs), Private sector by forming cluster-specific SPVs, Corporates and Corporate Responsibility (CSR) foundations with expertise to undertake cluster development.\n\n&gt; **Criteria for Selection of Clusters:**\n\n\n  - The Selection of Clusters will be based on their geographical concentration which would be around 500 beneficiary families of artisans/micro-enterprises, suppliers of raw materials, traders, service providers, etc., located within one or two revenue subdivisions in a District (or in contiguous Districts.)\n  - The potential for growth in production and generation of employment opportunities will also be considered in selecting clusters under SFURTI.\n  - The geographical distribution of the clusters throughout the country, with at least 10% located in the North Eastern region will also be kept in view while selecting Clusters.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "100% of Project cost excluding/except Hard Interventions."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": " 90% of Hard Intervention is eligible for the  North Eastern Region, UT of Jammu & Kashmir and Hill States, and 75% of Hard Intervention for Others."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "#"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Project Intervention"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Scheme Funding"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Financial Limit "
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Financial Limit "
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Implementing Agency Share"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "A"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Cluster Interventions"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "A1"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Soft Interventions including skill training, capacity building, and design development "
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "100%"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Subject to a maximum of 33% of A (Total cost of Cluster Interventions both hard and soft interventions) or ₹25.00 lakh, whichever is less."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Maximum ₹8 crores per project (A+B+C)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Nil"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "A2"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Hard Interventions including CFCs, RMBs, training Centres, etc.*"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "75%"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Maximum ₹8 crores per project (A+B+C)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "25% of Project Cost"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "B"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Cost of Technical Agency "
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "100%"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "8% of A1+A2 (Total cost of Cluster Interventions both hard and soft interventions)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Maximum ₹8 crores per project (A+B+C)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Nil"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "C"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "**Cost of IA/SPV including CDE"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "100%"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Maximum ₹20.00 lakh per project."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Maximum ₹8 crores per project (A+B+C)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Nil"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      }
+     ],
+     "type": "table"
+    },
+    {
+     "children": [
+      {
+       "text": "* 90%:10% in the case of the North Eastern Region (NER), UT of J&K and hill states."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "** This may include remuneration of Cluster Development Executive (CDE) and other expenses incidental to the entire 3-year project implementation. "
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. 100% of Project cost excluding/except Hard Interventions.\n   1.  90% of Hard Intervention is eligible for the  North Eastern Region, UT of Jammu &amp;amp; Kashmir and Hill States, and 75% of Hard Intervention for Others.\n\n**#****Project Intervention****Scheme Funding****Financial Limit** **Financial Limit** **Implementing Agency Share**ACluster InterventionsA1Soft Interventions including skill training, capacity building, and design development 100%Subject to a maximum of 33% of A (Total cost of Cluster Interventions both hard and soft interventions) or ₹25.00 lakh, whichever is less.Maximum ₹8 crores per project (A+B+C)NilA2Hard Interventions including CFCs, RMBs, training Centres, etc.*75%Maximum ₹8 crores per project (A+B+C)25% of Project CostBCost of Technical Agency 100%8% of A1+A2 (Total cost of Cluster Interventions both hard and soft interventions)Maximum ₹8 crores per project (A+B+C)NilC**Cost of IA/SPV including CDE100%Maximum ₹20.00 lakh per project.Maximum ₹8 crores per project (A+B+C)Nil* 90%:10% in the case of the North Eastern Region (NER), UT of J&amp;K and hill states.\n** This may include remuneration of Cluster Development Executive (CDE) and other expenses incidental to the entire 3-year project implementation. \n",
+   "briefDescription": "To make the traditional industries more productive and competitive and facilitating their sustainable development, the Govt. of India announced in 2005-06, setting up of a fund for the regeneration of traditional industries. Pursuant to this announcement, a Central Sector Scheme titled the “SFURTI\".",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Scheme of Fund for Regeneration of Traditional Industries (SFURTI)” is an initiative of the Ministry of Micro, Small, and Medium Enterprises, Government of India, launched in 2005 to strengthen traditional industries by making them competitive, market-driven, and sustainable. The scheme focuses on organizing artisans and rural entrepreneurs into clusters to enhance productivity, income, and employment opportunities. It supports infrastructure development, technology upgradation, skill training, product design, and improved market access. The Coir Board acts as the nodal agency and implements the scheme through designated agencies for each cluster. The scheme also promotes innovation, branding, e-commerce, and sustainable practices to improve the overall value chain of traditional industries."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Scheme of Fund for Regeneration of Traditional Industries (SFURTI)” is an initiative of the Ministry of Micro, Small, and Medium Enterprises, Government of India, launched in 2005 to strengthen traditional industries by making them competitive, market-driven, and sustainable. The scheme focuses on organizing artisans and rural entrepreneurs into clusters to enhance productivity, income, and employment opportunities. It supports infrastructure development, technology upgradation, skill training, product design, and improved market access. The Coir Board acts as the nodal agency and implements the scheme through designated agencies for each cluster. The scheme also promotes innovation, branding, e-commerce, and sustainable practices to improve the overall value chain of traditional industries.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "http://coirboard.gov.in/?page_id=221"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://sfurti.msme.gov.in/WriteReadData/Circular/SFURTI_NEW.pdf"
+    },
+    {
+     "title": "Coir Board",
+     "url": "https://www.coirservices.gov.in/frm_login.aspx"
+    },
+    {
+     "title": "FAQs",
+     "url": "https://www.kviconline.gov.in/sfurti/jsp/FrequentlyAskedQuestions.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sfurti"
+}

@@ -1,0 +1,272 @@
+{
+ "_id": "6522fff09d53ec1d287c22bf",
+ "_slug": "sspsl",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Visit the office of the Assistant Labor Commissioner/Labor Officer of the district."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the application and the required documents."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "The officer will review the application and send it to the divisional office for further action."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Applicant can be submitted by mother, father, wife, husband, minor son, or minor daughter."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "The application should include the following information:"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Name and address of the deceased worker"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Name and address of the dependent"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Occupation of the deceased worker"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Date of death of the deceased worker"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Medical report confirming that the deceased worker had silicosis"
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ol_list"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Visit the office of the Assistant Labor Commissioner/Labor Officer of the district.\n1. Submit the application and the required documents.\n1. The officer will review the application and send it to the divisional office for further action.\n1. Applicant can be submitted by mother, father, wife, husband, minor son, or minor daughter.\n1. The application should include the following information:\n\n   1. Name and address of the deceased worker\n   1. Name and address of the dependent\n   1. Occupation of the deceased worker\n   1. Date of death of the deceased worker\n   1. Medical report confirming that the deceased worker had silicosis\n\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department",
+    "value": 2200018
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Silicosis (Bimari) Se Pidit Shramiko Ke Liye Aarthik Evam Punarvas Sahayata Yojana",
+   "schemeOpenDate": "2018-01-16",
+   "schemeShortTitle": "SSPSL",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Chhattisgarh",
+    "value": 22
+   },
+   "tags": [
+    "Financial Assistance",
+    "Silicosis Disease",
+    "Unorganized Worker"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    },
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Workers registered with the Chhattisgarh Unorganized Workers State Social Security Board."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Workers who claim to be working in the organized sector but cannot prove it, or construction workers who are not eligible for registration with the Chhattisgarh Building and Other Construction Workers Welfare Board, will also get the benefits."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Competent doctors must confirm the Silicosis disease  to the worker. "
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. Workers registered with the Chhattisgarh Unorganized Workers State Social Security Board.\n   1. Workers who claim to be working in the organized sector but cannot prove it, or construction workers who are not eligible for registration with the Chhattisgarh Building and Other Construction Workers Welfare Board, will also get the benefits.\n   1. Competent doctors must confirm the Silicosis disease  to the worker. \n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Unorganized workers with silicosis will get ₹ 300,000. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "If the worker dies, their family will get ₹100,000 and the rest will be paid as a fixed deposit with monthly interest."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Unorganized workers with silicosis will get ₹ 300,000. \n- If the worker dies, their family will get ₹100,000 and the rest will be paid as a fixed deposit with monthly interest.\n\n",
+   "briefDescription": "Chhattisgarh state Government started a scheme \"Silicosis (Bimari) Se Pidit Shramiko Ke Liye Aarthik Evam Punarvas Sahayata Yojana\" for unorganized worker on 16 January 2018.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Labor Department of Chhattisgarh State started this scheme \"Silicosis (Bimari) Se Pidit Shramiko Ke Liye Aarthik Evam Punarvas Sahayata Yojana\" for unorganized worker on 16 April 2018. The main objective of the scheme to provide the financial assistance to the person who are suffering from Silicosis disease. "
+          }
+         ],
+         "type": "paragraph"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "Labor Department of Chhattisgarh State started this scheme &amp;amp;quot;Silicosis (Bimari) Se Pidit Shramiko Ke Liye Aarthik Evam Punarvas Sahayata Yojana&amp;amp;quot; for unorganized worker on 16 April 2018. The main objective of the scheme to provide the financial assistance to the person who are suffering from Silicosis disease. \n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cglabour.nic.in/ShramAyuktNew/silikosis%20%20se%20peedit%20shramikon%20ke%20liye%20aarthik%20aur%20punarvaas%20sahaayata%20yojana.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://cglabour.nic.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sspsl"
+}

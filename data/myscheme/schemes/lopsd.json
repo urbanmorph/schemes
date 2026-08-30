@@ -1,0 +1,423 @@
+{
+ "_id": "684bfc36038554b6f45e1d9e",
+ "_slug": "lopsd",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "bold": true,
+            "italic": true,
+            "text": "Application Process:",
+            "underline": true
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Step 1: "
+             },
+             {
+              "text": "The interested applicant downloads the "
+             },
+             {
+              "children": [
+               {
+                "text": "application form"
+               }
+              ],
+              "link": "http://www.ukbvvn.org.in/Download/ApplicationFormFormatJeevika.pdf",
+              "type": "link"
+             },
+             {
+              "text": " "
+             },
+             {
+              "children": [
+               {
+                "text": ""
+               }
+              ],
+              "link": "https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/OrderEntry/ICOM/2025/Guidelines/O_030325_26f50adb-f7b4-4eb5-b94d-1e5e45451a85.pdf",
+              "type": "link"
+             },
+             {
+              "text": "from the official website. "
+             }
+            ],
+            "type": "paragraph"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Step 2:"
+             },
+             {
+              "text": " In the application form, fill in all the mandatory fields and attach copies of all the mandatory documents (self-attested, if required)."
+             }
+            ],
+            "type": "paragraph"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Step 3:"
+             },
+             {
+              "text": " Submit the duly filled and signed application form along with the documents to the office of the Vikas Khand (Block Development) Office. "
+             }
+            ],
+            "type": "paragraph"
+           },
+           {
+            "children": [
+             {
+              "text": ""
+             }
+            ],
+            "type": "paragraph"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "italic": true,
+              "text": "Selection Process:",
+              "underline": true
+             }
+            ],
+            "type": "paragraph"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Step 1: "
+             },
+             {
+              "text": "The application will be forwarded to the District Social Welfare Officer."
+             }
+            ],
+            "type": "paragraph"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Step 2: "
+             },
+             {
+              "text": "A District-Level Committee, headed by the District Social Welfare Officer, will review the proposals and select beneficiaries."
+             }
+            ],
+            "type": "paragraph"
+           }
+          ],
+          "type": "align_justify"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "***Application Process:***\n**Step 1:** The interested applicant downloads the [application form](http://www.ukbvvn.org.in/Download/ApplicationFormFormatJeevika.pdf) from the official website. \n**Step 2:** In the application form, fill in all the mandatory fields and attach copies of all the mandatory documents (self-attested, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the office of the Vikas Khand (Block Development) Office. \n&amp;amp;lt;br&amp;amp;gt;\n\n***Selection Process:***\n**Step 1:** The application will be forwarded to the District Social Welfare Officer.\n**Step 2:** A District-Level Committee, headed by the District Social Welfare Officer, will review the proposals and select beneficiaries.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Social Welfare",
+    "value": 50000019
+   },
+   "schemeCategory": [
+    {
+     "label": "Banking,Financial Services and Insurance",
+     "value": "628ce7f6d6d1a3bde46852d0"
+    },
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    },
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Livelihood Opportunity Promotion Scheme (Disabled)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "LOPSD",
+   "schemeSubCategory": [
+    {
+     "label": "Banking and money",
+     "value": "Banking and money"
+    },
+    {
+     "label": "Loan",
+     "value": "Loan"
+    },
+    {
+     "label": "Career information",
+     "value": "Career information"
+    },
+    {
+     "label": "Entrepreneurship development",
+     "value": "Entrepreneurship development"
+    },
+    {
+     "label": "Setting up / start-up / entrepreneurship",
+     "value": "Setting up / start-up / entrepreneurship"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Financial Assistance",
+    "Person With Disability",
+    "Self-employment",
+    "Loan",
+    "Margin Money",
+    "Shop"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a permanent resident of Uttarakhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must possess a minimum of 40% disability. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s annual family income must not exceed ₹2,00,000 in urban areas and ₹1,60,000/- in rural areas."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s age must be between 18 and 50 years."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a permanent resident of Uttarakhand.\n1. The applicant must possess a minimum of 40% disability. \n1. The applicant’s annual family income must not exceed ₹2,00,000 in urban areas and ₹1,60,000/- in rural areas.\n1. The applicant’s age must be between 18 and 50 years.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Term Loan Scheme:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Project Cost: ₹75,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Grant: 20% or ₹10,000/-, whichever is less"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Term Loan: ₹65,000/- at 6% annual interest rate"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Shop Construction Scheme:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Project Cost: ₹50,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Grant: 20% or ₹10,000/-, whichever is less"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Margin Money Loan: ₹40,000/- at 4% annual interest rate, repayable in 60 monthly installments"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Margin Money Loan Scheme for Bank Supported Loan:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Project Cost: Up to ₹2,00,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Grant: 20%, maximum of ₹10,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Margin Money: 25% of the project cost at 4% annual interest rate, repayable in 36 monthly installments"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "**Term Loan Scheme:**\n\n\n  - Project Cost: ₹75,000/-\n  - Grant: 20% or ₹10,000/-, whichever is less\n  - Term Loan: ₹65,000/- at 6% annual interest rate\n\n\n**Shop Construction Scheme:**\n\n\n  - Project Cost: ₹50,000/-\n  - Grant: 20% or ₹10,000/-, whichever is less\n  - Margin Money Loan: ₹40,000/- at 4% annual interest rate, repayable in 60 monthly installments\n\n\n**Margin Money Loan Scheme for Bank Supported Loan:**\n\n\n  - Project Cost: Up to ₹2,00,000/-\n  - Grant: 20%, maximum of ₹10,000/-\n  - Margin Money: 25% of the project cost at 4% annual interest rate, repayable in 36 monthly installments\n\n\n",
+   "briefDescription": "The scheme aims to promote self-reliance among persons with disabilities through grants, term loans, and margin money assistance.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Livelihood Opportunity Promotion Scheme (Disabled)\" scheme was launched by the Social Welfare Department, Government of Uttarakhand. It aims to empower persons with disabilities by providing financial assistance for sustainable self-employment and livelihood generation. Under this scheme, the beneficiaries are supported with a mix of grants, subsidized loans, and margin money for term loans, shop construction, and bank-linked enterprises."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Livelihood Opportunity Promotion Scheme (Disabled)&quot; scheme was launched by the Social Welfare Department, Government of Uttarakhand. It aims to empower persons with disabilities by providing financial assistance for sustainable self-employment and livelihood generation. Under this scheme, the beneficiaries are supported with a mix of grants, subsidized loans, and margin money for term loans, shop construction, and bank-linked enterprises.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 34)",
+     "url": "https://uk.gov.in/department92/library_file/file-30-01-2025-04-25-16.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "http://www.ukbvvn.org.in/frmJeevikaAvsarProtsahanYojna.html#"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "lopsd"
+}

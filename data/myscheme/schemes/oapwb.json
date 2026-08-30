@@ -1,0 +1,434 @@
+{
+ "_id": "65925e806093f0fa3310c070",
+ "_slug": "oapwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Obtain the Application Form: "
+           },
+           {
+            "text": "Collect the Pension Application Form free of cost from the appropriate office:"
+           }
+          ],
+          "type": "block_quote"
+         },
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Rural Areas:"
+             },
+             {
+              "text": " BDO Office or the concerned Panchayat Samity Office."
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Municipal/Notified Areas (Outside KMC):"
+             },
+             {
+              "text": " SDO Office."
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "KMC Area: "
+             },
+             {
+              "text": "Office of the Controller of Vagrancy, West Bengal."
+             }
+            ],
+            "type": "list_item"
+           }
+          ],
+          "type": "ul_list"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Submit the Application: "
+           },
+           {
+            "text": "Fill out the application form and submit it to the appropriate authority:"
+           }
+          ],
+          "type": "block_quote"
+         },
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Rural Areas: "
+             },
+             {
+              "text": "Address it to the District Magistrate and submit it to the BDO or Panchayat Samity Office."
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Municipal/Notified Areas (Outside KMC): "
+             },
+             {
+              "text": "Address it to the District Magistrate and submit it to the SDO."
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "KMC Area:"
+             },
+             {
+              "text": " Address and submit it to the Controller of Vagrancy, West Bengal."
+             }
+            ],
+            "type": "list_item"
+           }
+          ],
+          "type": "ul_list"
+         }
+        ],
+        "type": "align_justify"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Track Applicant & View Payment Status: "
+         },
+         {
+          "children": [
+           {
+            "text": "Click here"
+           }
+          ],
+          "link": "https://samarth.wb.gov.in/track-applicant-public",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "block_quote"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "&amp;gt; **Obtain the Application Form:** Collect the Pension Application Form free of cost from the appropriate office:\n\n\n  - **Rural Areas:** BDO Office or the concerned Panchayat Samity Office.  - **Municipal/Notified Areas (Outside KMC):** SDO Office.  - **KMC Area:** Office of the Controller of Vagrancy, West Bengal.\n&amp;gt; **Submit the Application:** Fill out the application form and submit it to the appropriate authority:\n\n\n  - **Rural Areas:** Address it to the District Magistrate and submit it to the BDO or Panchayat Samity Office.  - **Municipal/Notified Areas (Outside KMC):** Address it to the District Magistrate and submit it to the SDO.  - **KMC Area:** Address and submit it to the Controller of Vagrancy, West Bengal.\n&gt; **Track Applicant &amp;amp; View Payment Status:** [Click here](https://samarth.wb.gov.in/track-applicant-public).\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Women and Child Development and Social Welfare Department",
+    "value": 19999951
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Old Age Pension",
+   "schemeOpenDate": "2010-01-01",
+   "schemeShortTitle": "OAPWB",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "West Bengal",
+    "value": 19
+   },
+   "tags": [
+    "Financial Assistance",
+    "Social Welfare",
+    "Pension",
+    "Old Age",
+    "Senior Citizens"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Applicant must be a resident of West Bengal State."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Applicant must be 60 years old or above, but in the case of physically and mentally handicapped individuals, the age limit for eligibility is 55 years."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Applicant should not have any relation capable of providing financial support (here “relation” means: Son/ Grand Son/ Husband/Wife/ Unmarried daughter/ Parents)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The income of the applicant should not exceed ₹ 1,000/- per month."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should not be a recipient of any other Government pension."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be residing in the State for not less than ten years on the date of making the application."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "italic": true,
+         "text": "Note:",
+         "underline": true
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The State Government may relax the residency condition in cases where undue hardship is caused."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "When only the year of birth is known, 1st July of that year or when the month is only known, 16th day of the month is to be taken as the date of birth."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - Applicant must be a resident of West Bengal State.\n  - Applicant must be 60 years old or above, but in the case of physically and mentally handicapped individuals, the age limit for eligibility is 55 years.\n  - Applicant should not have any relation capable of providing financial support (here “relation” means: Son/ Grand Son/ Husband/Wife/ Unmarried daughter/ Parents).\n  - The income of the applicant should not exceed ₹ 1,000/- per month.\n  - The applicant should not be a recipient of any other Government pension.\n  - The applicant should be residing in the State for not less than ten years on the date of making the application.\n\n&gt; ***Note:***\n\n\n  - The State Government may relax the residency condition in cases where undue hardship is caused.\n  - When only the year of birth is known, 1st July of that year or when the month is only known, 16th day of the month is to be taken as the date of birth.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial Assistance: "
+        },
+        {
+         "text": "An amount of ₹1,000/- per Month through DBT mode to the beneficiaries."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n- **Financial Assistance:** An amount of ₹1,000/- per Month through DBT mode to the beneficiaries.\n<br>\n\n",
+   "briefDescription": "In 2010, the Women and Child Development and Social Welfare Department of the West Bengal State Government introduced the \"Old Age Pension\" scheme.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "In 2010, the West Bengal state government, through the Women and Child Development and Social Welfare Department, launched a compassionate initiative called the \"Old Age Pension\" scheme. The West Bengal Disability Pension Scheme provides financial assistance to persons who are above 60 years and unable to work and earn a living. "
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "In 2010, the West Bengal state government, through the Women and Child Development and Social Welfare Department, launched a compassionate initiative called the &amp;quot;Old Age Pension&amp;quot; scheme. The West Bengal Disability Pension Scheme provides financial assistance to persons who are above 60 years and unable to work and earn a living. \n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Professional Beggars and Mendicants:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Professional beggars and mendicants of urban areas (cities and towns) are not eligible for pension under this scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Recipients of Other Pensions:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "Persons receiving “Disability Pension”, “Widow Pension”, “Farmers’ Pension”, “Political Sufferers”, or any other pension of any State Government or the Central Government shall not be eligible for pension under this scheme."
+            }
+           ],
+           "type": "list_item"
+          }
+         ],
+         "type": "ul_list"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "exclusions_md": "&gt; **Professional Beggars and Mendicants:**\n\n\n  - Professional beggars and mendicants of urban areas (cities and towns) are not eligible for pension under this scheme.\n\n&gt; **Recipients of Other Pensions:**\n\n\n  - Persons receiving “Disability Pension”, “Widow Pension”, “Farmers’ Pension”, “Political Sufferers”, or any other pension of any State Government or the Central Government shall not be eligible for pension under this scheme.\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.barrackpore.gov.in/sdobkp_socialwelfare_dept"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://www.barrackpore.gov.in/files/contents/forms/handicapped/sdo_bkp_widow_stipend_application_form_bengali.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "oapwb"
+}

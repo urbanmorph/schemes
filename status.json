@@ -2,20 +2,20 @@
  "api_version": "search/v6 + schemes/v6",
  "attention": [
   [
-   "full census attempted",
+   "budget stat4a rows",
    "2026-08-30",
-   "run was limited to 20 details — smoke test, not a publishable snapshot"
+   "84 of 86 numbered rows — extraction lost [28, 31]"
   ]
  ],
  "checks": [
   {
-   "check": "full census attempted",
-   "detail": "run was limited to 20 details — smoke test, not a publishable snapshot",
-   "ok": false
-  },
-  {
    "check": "list records == census total",
    "detail": "4772 records vs 4772 expected",
+   "ok": true
+  },
+  {
+   "check": "a detail for every slug",
+   "detail": "4771 details vs 4771 distinct slugs",
    "ok": true
   },
   {
@@ -27,16 +27,48 @@
    "check": "no error-shaped bodies",
    "detail": "0 detail + 0 list bodies match a throttle/WAF shape",
    "ok": true
+  },
+  {
+   "check": "archive streams are complete",
+   "detail": "all streams end cleanly",
+   "ok": true
+  },
+  {
+   "check": "budget stat4a money",
+   "detail": "parsed 548,797.73 vs printed 548,797.73 cr",
+   "gating": false,
+   "ok": true
+  },
+  {
+   "check": "budget stat4a rows",
+   "detail": "84 of 86 numbered rows — extraction lost [28, 31]",
+   "gating": false,
+   "ok": false
+  },
+  {
+   "check": "budget stat4b money",
+   "detail": "parsed 1,771,928.28 vs printed 1,771,928.28 cr",
+   "gating": false,
+   "ok": true
+  },
+  {
+   "check": "budget stat4b rows",
+   "detail": "637 of 637 numbered rows",
+   "gating": false,
+   "ok": true
   }
  ],
  "expected_total": 4772,
  "key_event": null,
- "last_complete_run": null,
- "last_run": "2026-08-30T17:59:29Z",
+ "last_complete_run": "2026-08-30T19:57:24Z",
+ "last_run": "2026-08-30T19:57:24Z",
  "pages_expected": 48,
  "pages_written": 48,
- "records_parsed": 20,
+ "records_parsed": 4771,
  "snapshot": "2026-08-30",
  "snapshots": 1,
- "verdict": "INCOMPLETE"
+ "standing_issues": [
+  "budget stat4a rows"
+ ],
+ "verdict": "COMPLETE"
 }

@@ -1,0 +1,485 @@
+{
+ "_id": "6797933ddf7f9829793f03be",
+ "_slug": "vcy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Online Application:",
+        "underline": true
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Visit the official portal managed by "
+         },
+         {
+          "children": [
+           {
+            "text": "Jharkhand Space Applications Center"
+           }
+          ],
+          "link": "https://jsac.jharkhand.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click on \"Register\" to fill mobile number, email ID, and generate a password."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Get the activation link to your registered email ID and click on the link to get confirmation \"Account has been activated successfully\". "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill out the application form and upload the required documents."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the application for verification by the District Social Welfare Officer."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Track the application status through the portal."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Approval and Disbursement:",
+        "underline": true
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Tuition fees are transferred directly to the institution."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Monthly sustenance allowance transferred to student bank account."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Renewal:",
+        "underline": true
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Submit annual renewal requests through the portal with the previous year's mark sheet."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Applicants must be promoted to the next academic year to remain eligible."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     }
+    ],
+    "process_md": "***Online Application:***\n\n- Visit the official portal managed by [Jharkhand Space Applications Center](https://jsac.jharkhand.gov.in/).- Click on &quot;Register&quot; to fill mobile number, email ID, and generate a password.\n- Get the activation link to your registered email ID and click on the link to get confirmation &quot;Account has been activated successfully&quot;. \n- Fill out the application form and upload the required documents.\n- Submit the application for verification by the District Social Welfare Officer.\n- Track the application status through the portal.\n\n***Approval and Disbursement:***\n\n- Tuition fees are transferred directly to the institution.\n- Monthly sustenance allowance transferred to student bank account.\n\n<br>\n\n***Renewal:***\n\n- Submit annual renewal requests through the portal with the previous year&#39;s mark sheet.\n- Applicants must be promoted to the next academic year to remain eligible.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Higher and Techical Education Department",
+    "value": 2000008
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Valmiki Chhatravritti Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "VCY",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Education and training grants, fellowship, stipend",
+     "value": "Education and training grants, fellowship, stipend"
+    },
+    {
+     "label": "Coaching",
+     "value": "Coaching"
+    }
+   ],
+   "state": {
+    "label": "Jharkhand",
+    "value": 20
+   },
+   "tags": [
+    "Financial Assistance",
+    "Free Coaching",
+    "Differently-abled Person",
+    "Orphan Student"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "General Criteria:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a resident of Jharkhand state or must have passed class 10"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " from a recognized school in Jharkhand for diploma courses or should have passed classes 10"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " and 12"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " from recognized schools/colleges in Jharkhand for degree or higher-level courses."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be an orphaned/differently abled student."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's age should not exceed 40 years as of the application deadline."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "Institutional Criteria:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Student enrolled in a recognized higher education institution in Jharkhand state or institutions ranked in the top 200 (overall category) or top 100 in discipline-specific categories in NIRF rankings or institutions with NAAC accreditation of 'A' grade or above or Institutes of National Importance or Institutions of Eminence."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant is not enrolled under the AICTE tuition fee waiver and is not a current beneficiary of similar central/state/institution schemes. Existing tuition fee waiver/assistance recipients can only receive benefits from one source."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "Specific Criteria:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "For Orphan Students:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Defined under Section 2(42) of the Juvenile Justice (Care and Protection of Children) Act, 2015."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Valid death certificates of parents and relationship proof verified by the District Social Welfare Officer (DSWO)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "For Differently-Abled Students:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Benchmark disability as per the Rights of Persons with Disabilities Act, 2016."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Valid Unique Disability ID (UDID) card verified by the DSWO in coordination with the Chief Medical Officer."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "> ***General Criteria:***\n\n\n1. The applicant must be a resident of Jharkhand state or must have passed class 10th from a recognized school in Jharkhand for diploma courses or should have passed classes 10th and 12th from recognized schools/colleges in Jharkhand for degree or higher-level courses.1. The applicant should be an orphaned/differently abled student.\n1. The applicant&#39;s age should not exceed 40 years as of the application deadline.\n\n> ***Institutional Criteria:***\n\n\n1. Student enrolled in a recognized higher education institution in Jharkhand state or institutions ranked in the top 200 (overall category) or top 100 in discipline-specific categories in NIRF rankings or institutions with NAAC accreditation of &#39;A&#39; grade or above or Institutes of National Importance or Institutions of Eminence.\n1. The applicant is not enrolled under the AICTE tuition fee waiver and is not a current beneficiary of similar central/state/institution schemes. Existing tuition fee waiver/assistance recipients can only receive benefits from one source.\n\n<br>\n\n> ***Specific Criteria:***\n\n**For Orphan Students:**\n\n1. Defined under Section 2(42) of the Juvenile Justice (Care and Protection of Children) Act, 2015.\n1. Valid death certificates of parents and relationship proof verified by the District Social Welfare Officer (DSWO).\n\n<br>\n\n**For Differently-Abled Students:**\n\n1. Benchmark disability as per the Rights of Persons with Disabilities Act, 2016.\n1. Valid Unique Disability ID (UDID) card verified by the DSWO in coordination with the Chief Medical Officer.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹4,000/- per month for daily needs and study materials."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- ₹4,000/- per month for daily needs and study materials.\n\n",
+   "briefDescription": "The \"Valmiki Chhatravritti Yojana\" by the Department of Higher and Technical Education, Government of Jharkhand, aims to provide financial assistance and encouragement to orphaned and differently-abled students to pursue higher education and benefits include full tuition fee reimbursement. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Valmiki Chhatravritti Yojana\" by the Department of Higher and Technical Education, Government of Jharkhand, aims to provide financial assistance and encouragement to orphaned and differently-abled students to pursue higher education. Under this scheme, students receive full tuition fee reimbursement up to ₹10,00,000 annually and a monthly sustenance allowance of ₹4,000/- for daily needs and study materials."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Valmiki Chhatravritti Yojana&quot; by the Department of Higher and Technical Education, Government of Jharkhand, aims to provide financial assistance and encouragement to orphaned and differently-abled students to pursue higher education. Under this scheme, students receive full tuition fee reimbursement up to ₹10,00,000 annually and a monthly sustenance allowance of ₹4,000/- for daily needs and study materials.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant already benefiting from tuition fee waivers under AICTE schemes or other central/state government scholarships."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant receiving sustenance allowance from any other scheme must choose a single source of benefit."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "exclusions_md": "\n1. The applicant already benefiting from tuition fee waivers under AICTE schemes or other central/state government scholarships.\n1. The applicant receiving sustenance allowance from any other scheme must choose a single source of benefit.\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.jharkhand.gov.in/PDepartment/ViewDoc?id=D013DO0058SD0013823102024054020877"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "vcy"
+}

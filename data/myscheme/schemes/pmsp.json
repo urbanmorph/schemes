@@ -1,0 +1,299 @@
+{
+ "_id": "670cfff50b69a7abdf74d8bd",
+ "_slug": "pmsp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1: "
+         },
+         {
+          "text": "The interested applicant should collect the application form from their concerned educational institution."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2: "
+         },
+         {
+          "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the duly filled and signed application form along with the documents to the institution."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4: "
+         },
+         {
+          "text": "Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should collect the application form from their concerned educational institution.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the institution.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Backward Classes Most Backward Classes and Minorities Welfare Department",
+    "value": 3333334
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Pre-Matric Scholarship Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PMSP",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Tamil Nadu",
+    "value": 33
+   },
+   "tags": [
+    "Minority Welfare",
+    "Scholarship",
+    "Education",
+    "Pre-Matric"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a resident of Tamil Nadu."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should belong to the Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Parents' income should not exceed ₹1,00,000/- (for Backward Classes (BC) students)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There should be no graduate in the family (for Backward Classes (BC) students)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be studying in 11th or 12th standard in an English medium school."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The beneficiary should be a student.\n  - The beneficiary should be a resident of Tamil Nadu.\n  - The beneficiary should belong to the Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC).\n  - Parents&amp;#39; income should not exceed ₹1,00,000/- (for Backward Classes (BC) students).\n  - There should be no graduate in the family (for Backward Classes (BC) students).\n  - The beneficiary should be studying in 11th or 12th standard in an English medium school.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Tuition Fee for 6th to 8th Standard:"
+          },
+          {
+           "text": " ₹200/- per year (₹20/- per month for 10 months)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Tuition Fee for 9th to 10th Standard:"
+          },
+          {
+           "text": " ₹250/- per year (₹25/- per month for 10 months)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Examination Fee for 10th Standard:"
+          },
+          {
+           "text": " Full coverage of the examination fee."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Tuition Fee for 6th to 8th Standard:** ₹200/- per year (₹20/- per month for 10 months).  - **Tuition Fee for 9th to 10th Standard:** ₹250/- per year (₹25/- per month for 10 months).  - **Examination Fee for 10th Standard:** Full coverage of the examination fee.\n&lt;br&gt;\n\n",
+   "briefDescription": "The scheme offers financial assistance to students from Backward Classes (BC) and Most Backward Classes (MBC) studying in English medium from 6th to 10th standard. It covers tuition and examination fees.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Pre-Matric Scholarship Scheme\" launched by the Backward Classes, Most Backward Classes and Minorities Welfare Department, Tamil Nadu, aimed at supporting students from Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC). It provides tuition fees for students from 6th to 10th standard."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Pre-Matric Scholarship Scheme&amp;quot; launched by the Backward Classes, Most Backward Classes and Minorities Welfare Department, Tamil Nadu, aimed at supporting students from Backward Classes (BC), Most Backward Classes (MBC), and Denotified Communities (DNC). It provides tuition fees for students from 6th to 10th standard.\n&lt;br&gt;\n\n&lt;br&gt;\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines-1",
+     "url": "https://www.tn.gov.in/scheme/data_view/27457"
+    },
+    {
+     "title": "Guidelines-2",
+     "url": "https://cms.tn.gov.in/sites/default/files/schemes/bcmbcmw_2.pdf"
+    },
+    {
+     "title": "Community List",
+     "url": "https://bcmbcmw.tn.gov.in/community_list.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "pmsp"
+}

@@ -1,0 +1,290 @@
+{
+ "_id": "676d033cff1de86fed723e47",
+ "_slug": "jbsyb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the nearest health center or hospital."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Meet with an ASHA or MAMTA worker for guidance and support."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " Submit the necessary documents for verification."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the nearest health center or hospital.\n**Step 2:** Meet with an ASHA or MAMTA worker for guidance and support.\n**Step 3:** Submit the necessary documents for verification.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Health Department",
+    "value": 10111129
+   },
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Janani Bal Suraksha Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "JBSYB",
+   "schemeSubCategory": [
+    {
+     "label": "Children’s health and immunization",
+     "value": "Children’s health and immunization"
+    },
+    {
+     "label": "Pregnancy care",
+     "value": "Pregnancy care"
+    }
+   ],
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Maternal Health",
+    "Pregnancy",
+    "Women And Child",
+    "Immunization"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a pregnant woman or nursing mother residing in Bihar."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be willing to undergo institutional delivery and follow the health protocols set by the health department."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be a member of a marginalized community to receive additional benefits under the scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a pregnant woman or nursing mother residing in Bihar.\n  - The applicant should be willing to undergo institutional delivery and follow the health protocols set by the health department.\n  - The applicant should be a member of a marginalized community to receive additional benefits under the scheme.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Increased Institutional Deliveries: "
+          },
+          {
+           "text": "The percentage of institutional deliveries has risen from 4% in 2006-07 to 47% now, ensuring safer childbirths."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Reduction in Infant Mortality:"
+          },
+          {
+           "text": " Infant mortality rate has decreased from 61 per thousand births in 2005 to 35 per thousand births, contributing to healthier infants."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Higher Immunization Coverage:"
+          },
+          {
+           "text": " Regular immunization rates have increased from 18.6% in 2005 to 84% in 2018-19, surpassing the national average."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Decrease in Maternal Mortality:"
+          },
+          {
+           "text": " Maternal mortality rate has reduced from 312 in 2005 to 165 in 2018-19, promoting safer childbirth for mothers."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Improved Life Expectancy: "
+          },
+          {
+           "text": "The average life expectancy of women in Bihar has increased from 61.6 years in 2006 to 68.5 years in 2016, enhancing overall women's health."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Empowerment of Women:"
+          },
+          {
+           "text": " The scheme supports women’s health and also includes provisions for police recruitment, including 35% reservation for women in police positions."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Support for Marginalized Communities:"
+          },
+          {
+           "text": " Additional benefits for women from Scheduled Castes and Scheduled Tribes to ensure inclusivity and equality in access to healthcare."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Improved Healthcare Access:"
+          },
+          {
+           "text": " Trained health workers like ASHA and MAMTA provide guidance, ensuring pregnant women and nursing mothers receive timely and appropriate care."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Increased Institutional Deliveries:** The percentage of institutional deliveries has risen from 4% in 2006-07 to 47% now, ensuring safer childbirths.  - **Reduction in Infant Mortality:** Infant mortality rate has decreased from 61 per thousand births in 2005 to 35 per thousand births, contributing to healthier infants.  - **Higher Immunization Coverage:** Regular immunization rates have increased from 18.6% in 2005 to 84% in 2018-19, surpassing the national average.  - **Decrease in Maternal Mortality:** Maternal mortality rate has reduced from 312 in 2005 to 165 in 2018-19, promoting safer childbirth for mothers.  - **Improved Life Expectancy:** The average life expectancy of women in Bihar has increased from 61.6 years in 2006 to 68.5 years in 2016, enhancing overall women&amp;#39;s health.  - **Empowerment of Women:** The scheme supports women’s health and also includes provisions for police recruitment, including 35% reservation for women in police positions.  - **Support for Marginalized Communities:** Additional benefits for women from Scheduled Castes and Scheduled Tribes to ensure inclusivity and equality in access to healthcare.  - **Improved Healthcare Access:** Trained health workers like ASHA and MAMTA provide guidance, ensuring pregnant women and nursing mothers receive timely and appropriate care.\n",
+   "briefDescription": "This health initiative aimed at improving maternal and infant health by increasing institutional deliveries, reducing infant and maternal mortality rates, and promoting immunization in Bihar.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Launched as part of efforts towards women's empowerment, \"Janani Bal Suraksha Yojana\" has significantly improved health outcomes for pregnant women and nursing mothers in Bihar. The scheme, through the efforts of trained health workers like ASHA and MAMTA, has contributed to a remarkable rise in institutional deliveries and reductions in both infant and maternal mortality rates."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "Launched as part of efforts towards women&amp;#39;s empowerment, &amp;quot;Janani Bal Suraksha Yojana&amp;quot; has significantly improved health outcomes for pregnant women and nursing mothers in Bihar. The scheme, through the efforts of trained health workers like ASHA and MAMTA, has contributed to a remarkable rise in institutional deliveries and reductions in both infant and maternal mortality rates.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cs.egovbihar.in/gad/Content6e38.html?links&page=leading_empowerment"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "jbsyb"
+}

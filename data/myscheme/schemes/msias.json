@@ -1,0 +1,364 @@
+{
+ "_id": "69d77c702056ef79bf12c117",
+ "_slug": "msias",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " The applicant should obtain the prescribed application form the department."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " The applicant should submit the application through the respective sports association."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " The application must be submitted within 6 months from the date of completion of the championship."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The applicant should obtain the prescribed application form the department.\n**Step 2:** The applicant should submit the application through the respective sports association.\n**Step 3:** The application must be submitted within 6 months from the date of completion of the championship.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Sports and Youth Services Department",
+    "value": 1511149
+   },
+   "schemeCategory": [
+    {
+     "label": "Sports & Culture",
+     "value": "628ce8aad6d1a3bde4685320"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mizoram Sports Incentive Cash Award Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MSIAS",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Mizoram",
+    "value": 15
+   },
+   "tags": [
+    "Sports Incentive",
+    "Cash Award",
+    "Medal Winner",
+    "Sportsperson"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Sportsperson",
+     "value": "sportsperson"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "A person must be a resident of Mizoram, representing any state of the union, the Sports Control Boards, or the Country."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Winner of first, second, or third position in the specified championship as enumerated in column 3 of Annexure."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Any sports-person participating in the International Championship."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Officials, Manager, Coach, Masseur, Physiotherapist, and Doctor will also be entitled to receive 25% of the award applicable to the sports- person."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Any sports person of Mizoram representing the Country in any recognised sports discipline in any international sports or championship will be entitled to receive Rs. 20,000/- as sports kit allowance."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "For the purpose of awarding the incentive cash award, there can be only one award in one sports discipline in a championship or tournament."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - A person must be a resident of Mizoram, representing any state of the union, the Sports Control Boards, or the Country.\n  - Winner of first, second, or third position in the specified championship as enumerated in column 3 of Annexure.\n  - Any sports-person participating in the International Championship.\n  - Officials, Manager, Coach, Masseur, Physiotherapist, and Doctor will also be entitled to receive 25% of the award applicable to the sports- person.\n  - Any sports person of Mizoram representing the Country in any recognised sports discipline in any international sports or championship will be entitled to receive Rs. 20,000/- as sports kit allowance.\n  - For the purpose of awarding the incentive cash award, there can be only one award in one sports discipline in a championship or tournament.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Incentive Cash Award:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Lump sum cash award to Gold, Silver, and Bronze medal winners in recognised sports disciplines."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Applicable for National and International Championships, and Invitation Competitions/Tournaments Organized by the Recognised Federation."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The amount of the incentive cash award will be as per the Annexure in the "
+        },
+        {
+         "children": [
+          {
+           "text": "Official Guidelines"
+          }
+         ],
+         "link": "https://sys.mizoram.gov.in/uploads/attachments/2022/09/4e39860f74233bd0ccfccab9d698a156/incentive-cash-award-scheme-2022.pdf",
+         "type": "link"
+        },
+        {
+         "text": " (Refer page no 3, 4, and 5)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Only one award per sports discipline in a championship or tournament."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Support to Sports Officials:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Officials, Managers, Coaches, Masseurs, Physiotherapists, and Doctors are entitled to 25% of the award amount applicable to the sportsperson."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Sports Kit Allowance:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹20,000/- provided to sports persons of Mizoram representing the country in international competitions."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Additional Service Benefits:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Award of increment, recruitment, or promotion for sports persons under or not under State Government, as per applicable rules."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "> **Incentive Cash Award:**\n\n\n- Lump sum cash award to Gold, Silver, and Bronze medal winners in recognised sports disciplines.\n- Applicable for National and International Championships, and Invitation Competitions/Tournaments Organized by the Recognised Federation.\n\n\n- The amount of the incentive cash award will be as per the Annexure in the [Official Guidelines](https://sys.mizoram.gov.in/uploads/attachments/2022/09/4e39860f74233bd0ccfccab9d698a156/incentive-cash-award-scheme-2022.pdf) (Refer page no 3, 4, and 5).- Only one award per sports discipline in a championship or tournament.\n\n> **Support to Sports Officials:**\n\n\n- Officials, Managers, Coaches, Masseurs, Physiotherapists, and Doctors are entitled to 25% of the award amount applicable to the sportsperson.\n\n> **Sports Kit Allowance:**\n\n\n- ₹20,000/- provided to sports persons of Mizoram representing the country in international competitions.\n\n> **Additional Service Benefits:**\n\n\n- Award of increment, recruitment, or promotion for sports persons under or not under State Government, as per applicable rules.\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide lump sum cash awards and recognition to outstanding sports persons winning medals in national and international competitions. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Mizoram Sports Incentive Cash Award Scheme, 2022\" by the Sports & Youth Services Department, Government of Mizoram, aims to recognize and reward outstanding sports persons through providing cash incentives and allowances to medal winners and participants in national and international competitions. It also encourages discipline, motivation, and participation in sports by offering incentives and support to athletes."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Mizoram Sports Incentive Cash Award Scheme, 2022&amp;quot; by the Sports &amp;amp; Youth Services Department, Government of Mizoram, aims to recognize and reward outstanding sports persons through providing cash incentives and allowances to medal winners and participants in national and international competitions. It also encourages discipline, motivation, and participation in sports by offering incentives and support to athletes.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sys.mizoram.gov.in/uploads/attachments/2022/09/4e39860f74233bd0ccfccab9d698a156/incentive-cash-award-scheme-2022.pdf"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://dipr.mizoram.gov.in/post/mizoram-incentive-cash-award-scheme-2022"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "msias"
+}

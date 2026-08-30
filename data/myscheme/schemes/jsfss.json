@@ -1,0 +1,207 @@
+{
+ "_id": "678fbb22a9fcbe16393dcf4e",
+ "_slug": "jsfss",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Visit the nearest ration shop or designated enrollment center with the required documents."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "If an Aadhaar is not available, apply for Aadhaar enrollment at an authorized center."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the Aadhaar number or Aadhaar Enrolment Identification Slip during registration."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Verify the eligibility and documents with the designated officer."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Collect the food grains from the distribution center as per the monthly schedule."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Visit the nearest ration shop or designated enrollment center with the required documents.\n1. If an Aadhaar is not available, apply for Aadhaar enrollment at an authorized center.\n1. Submit the Aadhaar number or Aadhaar Enrolment Identification Slip during registration.\n1. Verify the eligibility and documents with the designated officer.\n1. Collect the food grains from the distribution center as per the monthly schedule.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Directorate Of Food And Consumer Affairs, Ranchi",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Food, Public Distribution and Consumer affairs Department",
+    "value": 2000007
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Jharkhand State Food Security Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "JSFSS",
+   "schemeSubCategory": [
+    {
+     "label": "Food Security / Public Distribution System",
+     "value": "Food Security / Public Distribution System"
+    }
+   ],
+   "state": {
+    "label": "Jharkhand",
+    "value": 20
+   },
+   "tags": [
+    "Subsidized Rate",
+    "JSFSS",
+    "Food Grain"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a resident of Jharkhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must possess a Green Card issued under JSFSS."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a resident of Jharkhand.\n1. The applicant must possess a Green Card issued under JSFSS.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Subsidized/free rice is provided to Green Card holders beneficiaries under JSFSS."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Benefits are delivered directly through the Directorate of Food and Consumer Affairs."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE",
+       "underline": true
+      },
+      {
+       "bold": true,
+       "text": ": "
+      },
+      {
+       "text": "Priority is given to individuals from economically weaker sections."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n1. Subsidized/free rice is provided to Green Card holders beneficiaries under JSFSS.\n1. Benefits are delivered directly through the Directorate of Food and Consumer Affairs.\n\n<br>\n\n**NOTE****:** Priority is given to individuals from economically weaker sections.\n",
+   "briefDescription": "The \"Jharkhand State Food Security Scheme (JSFSS)\" by the Department of Food, Public Distribution and Consumer Affairs, Government of Jharkhand, aims to ensure food security by providing subsidized/free rice to eligible Green Card holders.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Jharkhand State Food Security Scheme (JSFSS)\" by the Department of Food, Public Distribution and Consumer Affairs, Government of Jharkhand, aims to provide subsidized/free food grains to eligible beneficiaries. Through this scheme, food grain, primarily rice, is provided at a subsidized rate or free of cost to individuals holding a Green Card. The scheme is implemented by the Directorate of Food and Consumer Affairs, Ranchi."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Jharkhand State Food Security Scheme (JSFSS)&quot; by the Department of Food, Public Distribution and Consumer Affairs, Government of Jharkhand, aims to provide subsidized/free food grains to eligible beneficiaries. Through this scheme, food grain, primarily rice, is provided at a subsidized rate or free of cost to individuals holding a Green Card. The scheme is implemented by the Directorate of Food and Consumer Affairs, Ranchi.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.jharkhand.gov.in/PDepartment/ViewDoc?id=D009DO003SD00625102023010457574"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "jsfss"
+}

@@ -1,0 +1,492 @@
+{
+ "_id": "68bd3982ee18ded11a175db7",
+ "_slug": "lfcpt",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Registration Process",
+        "underline": true
+       }
+      ],
+      "type": "heading_five"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Visit the Gujarat Tribal Development Corporation "
+         },
+         {
+          "children": [
+           {
+            "text": "official website"
+           }
+          ],
+          "link": "https://adijatinigam.gujarat.gov.in/home",
+          "type": "link"
+         },
+         {
+          "text": ". "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click on the \""
+         },
+         {
+          "children": [
+           {
+            "text": "APPLY FOR LOAN"
+           }
+          ],
+          "link": "https://adijatinigam.gujarat.gov.in/gtdcloan",
+          "type": "link"
+         },
+         {
+          "text": "\"."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Select the scheme name \"Foreign Study\"."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill the registration form: Full Name (as per Aadhaar Card), Gender, Date of Birth, Aadhaar Number, Mobile Number, Uder name, Password for login, Confirm Password."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click on the \"Sign Up."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "After successful registration, User ID and Password will be generated."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Application Process",
+        "underline": true
+       }
+      ],
+      "type": "heading_five"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Enter User ID, Password, and Captcha Code."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "After login, schemes applicable to your caste will be displayed."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click on the scheme you want to apply for."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill the \"Application Form\" and upload the required documents"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click Save Application. The system will generate an Application Number."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click Print Application."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "##### ***Registration Process***\n\n- Visit the Gujarat Tribal Development Corporation [official website](https://adijatinigam.gujarat.gov.in/home). - Click on the &quot;[APPLY FOR LOAN](https://adijatinigam.gujarat.gov.in/gtdcloan)&quot;.- Select the scheme name &quot;Foreign Study&quot;.\n- Fill the registration form: Full Name (as per Aadhaar Card), Gender, Date of Birth, Aadhaar Number, Mobile Number, Uder name, Password for login, Confirm Password.\n- Click on the &quot;Sign Up.\n- After successful registration, User ID and Password will be generated.\n\n##### ***Application Process***\n\n- Enter User ID, Password, and Captcha Code.\n\n\n- After login, schemes applicable to your caste will be displayed.\n- Click on the scheme you want to apply for.\n- Fill the &quot;Application Form&quot; and upload the required documents\n- Click Save Application. The system will generate an Application Number.\n- Click Print Application.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Tribal Development Department",
+    "value": 2444467
+   },
+   "schemeCategory": [
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Loan For Commercial Pilot Training",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "LFCPT",
+   "schemeSubCategory": [
+    {
+     "label": "Training and Skill Up-gradation",
+     "value": "Training and Skill Up-gradation"
+    },
+    {
+     "label": "Career information",
+     "value": "Career information"
+    },
+    {
+     "label": "Academic qualification Up-Gradation",
+     "value": "Academic qualification Up-Gradation"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Pilot Training",
+    "Opportunity",
+    "Schedule Tribe",
+    "Loan"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a resident of Gujarat."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be a student."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must belong to the Scheduled Tribe (ST) category."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have passed Matriculation, Higher Secondary, Indian School Certificate, or an equivalent examination."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have secured admission to a recognized commercial pilot training institute."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have passed Higher Secondary Certificate (HSC)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a resident of Gujarat.\n1. The applicant must be a student.\n1. The applicant must belong to the Scheduled Tribe (ST) category.\n1. The applicant must have passed Matriculation, Higher Secondary, Indian School Certificate, or an equivalent examination.\n1. The applicant must have secured admission to a recognized commercial pilot training institute.\n1. The applicant should have passed Higher Secondary Certificate (HSC).\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Monetary Benefit",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Loan of up to ₹25,00,000 or the actual cost of training, whichever is lower."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Interest Rate",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "4% per annum."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Penalty Interest",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "2.5% per annum on delayed repayments."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Beneficiary Contribution",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "No contribution is required from the applicant."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Repayment Terms",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Repayment begins 1 year after the loan disbursement date."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Repayment period is 144 monthly installments (12 years)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Includes 10 years for principal repayment and 2 years for interest repayment."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Early repayment is permitted."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Monetary Benefit**\n\n- Loan of up to ₹25,00,000 or the actual cost of training, whichever is lower.\n\n**Interest Rate**\n\n- 4% per annum.\n\n**Penalty Interest**\n\n- 2.5% per annum on delayed repayments.\n\n**Beneficiary Contribution**\n\n- No contribution is required from the applicant.\n\n**Repayment Terms**\n\n- Repayment begins 1 year after the loan disbursement date.\n- Repayment period is 144 monthly installments (12 years).\n- Includes 10 years for principal repayment and 2 years for interest repayment.\n- Early repayment is permitted.\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to offer affordable loans of up to ₹25,00,000 at a 4% annual interest rate to tribal students who want to pursue pilot training.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Loan For Commercial Pilot Training\" scheme was launched by the Tribal Development Department, Government of Gujarat. The scheme aims to support Scheduled Tribe (ST) students in pursuing professional pilot training by providing affordable loans. Under this scheme, tribal students can avail a loan at a concessional interest rate, enabling them to secure high-quality training and good employment opportunities."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Loan For Commercial Pilot Training&quot; scheme was launched by the Tribal Development Department, Government of Gujarat. The scheme aims to support Scheduled Tribe (ST) students in pursuing professional pilot training by providing affordable loans. Under this scheme, tribal students can avail a loan at a concessional interest rate, enabling them to secure high-quality training and good employment opportunities.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 7)",
+     "url": "https://adijatinigam.gujarat.gov.in/assets/downloads/SchemesDetailsofGTDC08102024.pdf"
+    },
+    {
+     "title": "Scheme Details",
+     "url": "https://mariyojana.gujarat.gov.in/MoreDetails.aspx"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://tribal.gujarat.gov.in/home"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "lfcpt"
+}

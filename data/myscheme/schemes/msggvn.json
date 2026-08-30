@@ -1,0 +1,371 @@
+{
+ "_id": "685a6a5055fcecc791eb8b7c",
+ "_slug": "msggvn",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:",
+        "underline": true
+       },
+       {
+        "text": " Visit the official "
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "DAADC"
+         }
+        ],
+        "link": "https://daadconline.gujarat.gov.in/",
+        "type": "link"
+       },
+       {
+        "text": " online portal."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:",
+        "underline": true
+       },
+       {
+        "text": " Register/log in using your credentials."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:",
+        "underline": true
+       },
+       {
+        "text": " Fill out the application form with accurate personal and scheme-specific details."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:",
+        "underline": true
+       },
+       {
+        "text": " Upload the required documents and submit."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the official [**DAADC**](https://daadconline.gujarat.gov.in/) online portal.\n**Step 2:** Register/log in using your credentials.\n**Step 3:** Fill out the application form with accurate personal and scheme-specific details.\n**Step 4:** Upload the required documents and submit.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 2444464
+   },
+   "schemeCategory": [
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeName": "MICRO FINANCE (Gopalak Nigam)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MFGN",
+   "schemeSubCategory": [
+    {
+     "label": "Setting up / start-up / entrepreneurship",
+     "value": "Setting up / start-up / entrepreneurship"
+    },
+    {
+     "label": "Loan",
+     "value": "Loan"
+    },
+    {
+     "label": "Micro finance",
+     "value": "Micro finance"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Microfinance",
+    "Rabari & Bharwad Caste",
+    "Small Businesses",
+    "Loan"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Self Help Groups (SHGS)",
+     "value": "self-help-groups"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a"
+        },
+        {
+         "bold": true,
+         "text": " permanent resident of Gujarat."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be a woman or man belonging to the"
+        },
+        {
+         "bold": true,
+         "text": " Rabari or Bharwad caste."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must belong to a "
+        },
+        {
+         "bold": true,
+         "text": "socially and educationally backward class"
+        },
+        {
+         "text": " as recognized by the Gujarat government."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be between "
+        },
+        {
+         "bold": true,
+         "text": "21 and 45 years of age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s annual family income must "
+        },
+        {
+         "bold": true,
+         "text": "not exceed ₹3.00 lakh."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be planning to"
+        },
+        {
+         "bold": true,
+         "text": " start or expand a small business."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a **permanent resident of Gujarat.**1. The applicant must be a woman or man belonging to the **Rabari or Bharwad caste.**1. The applicant must belong to a **socially and educationally backward class** as recognized by the Gujarat government.1. The applicant must be between **21 and 45 years of age.**1. The applicant’s annual family income must **not exceed ₹3.00 lakh.**1. The applicant must be planning to **start or expand a small business.**\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Loan assistance up to ₹1.25 lakh "
+        },
+        {
+         "text": "for small businesses"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Interest rate fixed at 5% per annum"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "95% loan coverage"
+        },
+        {
+         "text": " by the corporation"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Only 5% contribution"
+        },
+        {
+         "text": " needed from the applicant"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Promotes economic independence and small-scale entrepreneurship"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Loan assistance up to ₹1.25 lakh** for small businesses- **Interest rate fixed at 5% per annum**\n- **95% loan coverage** by the corporation- **Only 5% contribution** needed from the applicant- Promotes economic independence and small-scale entrepreneurship\n\n",
+   "briefDescription": "Micro-loan scheme for Rabari and Bharwad caste entrepreneurs in Gujarat. Provides up to ₹1.25 lakh loan at 5% interest with only 5% beneficiary contribution.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "This "
+      },
+      {
+       "bold": true,
+       "text": "microfinance scheme"
+      },
+      {
+       "text": " aims to empower small entrepreneurs from the "
+      },
+      {
+       "bold": true,
+       "text": "Rabari and Bharwad castes"
+      },
+      {
+       "text": " by offering "
+      },
+      {
+       "bold": true,
+       "text": "affordable loans "
+      },
+      {
+       "text": "with minimal beneficiary contribution. Designed to support income-generating activities, the scheme helps beneficiaries fund small businesses with"
+      },
+      {
+       "bold": true,
+       "text": " 95%"
+      },
+      {
+       "text": " of the project cost covered by the corporation, while only "
+      },
+      {
+       "bold": true,
+       "text": "5%"
+      },
+      {
+       "text": " is required as their own contribution."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The maximum loan offered under the scheme is"
+      },
+      {
+       "bold": true,
+       "text": " ₹1.25 lakh"
+      },
+      {
+       "text": ", with a subsidized interest rate of "
+      },
+      {
+       "bold": true,
+       "text": "5% per annum"
+      },
+      {
+       "text": ". The scheme is intended to improve economic participation and entrepreneurship among socially and educationally backward communities in Gujarat."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "This **microfinance scheme** aims to empower small entrepreneurs from the **Rabari and Bharwad castes** by offering **affordable loans** with minimal beneficiary contribution. Designed to support income-generating activities, the scheme helps beneficiaries fund small businesses with **95%** of the project cost covered by the corporation, while only **5%** is required as their own contribution.\nThe maximum loan offered under the scheme is **₹1.25 lakh**, with a subsidized interest rate of **5% per annum**. The scheme is intended to improve economic participation and entrepreneurship among socially and educationally backward communities in Gujarat.\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines Link",
+     "url": "https://sje.gujarat.gov.in/ggvn/Schemes/1561"
+    },
+    {
+     "title": "Apply Link",
+     "url": "https://daadconline.gujarat.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "msggvn"
+}

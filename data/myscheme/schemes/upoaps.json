@@ -1,0 +1,273 @@
+{
+ "_id": "64267cc5dab6343ea3327c7a",
+ "_slug": "upoaps",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Application Process"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicants need to visit the official "
+         },
+         {
+          "children": [
+           {
+            "text": "website"
+           }
+          ],
+          "link": "https://sspy-up.gov.in/HindiPages/index_h.aspx",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Select the option \"Old Age Pension\"."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Now choose \"Apply Online\"."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Now applicants need to fill out the form and provide the required information."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Upload required documents (Photograph and Age certificate)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "And Submit. "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "url": "https://sspy-up.gov.in/oap/public_new/UserRegistrationForm.aspx?Scheme=OldAgePension"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Social Welfare",
+    "value": 90000049
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Uttar Pradesh Old Age Pension Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "UPOAPS",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "Uttar Pradesh",
+    "value": 9
+   },
+   "tags": [
+    "Uttar Pradesh",
+    "Old Age",
+    "Pension Scheme"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Eligibility "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Age should be between 60 to 150."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Applicant should be below poverty line or his/her annual income should be upto for Rural Areas Rs. 46,080/- and Urban Areas Rs. 56,460/-."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "**Eligibility** \n\n1. Age should be between 60 to 150.\n1. Applicant should be below poverty line or his/her annual income should be upto for Rural Areas Rs. 46,080/- and Urban Areas Rs. 56,460/-.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Benefits"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Monthly pension Rs. 1000/-. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "briefDescription": "The Government of Uttar Pradesh has introduced an old-age pension scheme for the benefit of the senior citizens in the state. Under this scheme, eligible senior citizens will be provided with financial assistance in the form of a monthly pension.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Features "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The government will allow only the senior citizens from the economically weaker sections to avail the benefits under this scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Under this Uttar Pradesh old age pension scheme, the Government will transfer the pension amount to the beneficiaries through their bank account"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "detailedDescription_md": "**Features** \n\n1. The government will allow only the senior citizens from the economically weaker sections to avail the benefits under this scheme.\n1. Under this Uttar Pradesh old age pension scheme, the Government will transfer the pension amount to the beneficiaries through their bank account\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Exclusions"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Not eligible if the applicant is benefited from other pension schemes."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sspy-up.gov.in/docs/oap_yojna_vishya.pdf"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://sspy-up.gov.in/docs/form_oap.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "upoaps"
+}

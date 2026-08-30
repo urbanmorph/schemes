@@ -1,0 +1,278 @@
+{
+ "_id": "68c271fd85a1cbc40080319a",
+ "_slug": "nsvsy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Student Registration: "
+           },
+           {
+            "text": "Schools must register eligible students on the Child Tracking System (CTS) portal of Vidya Samiksha Kendra."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Verification: "
+           },
+           {
+            "text": "The Director of Schools will verify applications with the help of the District Education Officer, and upload the final list of eligible students on the dedicated \"Namo Saraswati\" portal."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Payment:"
+           },
+           {
+            "text": " Assistance is disbursed directly into the beneficiary’s mother’s bank account (or the student’s account, if required) through DBT."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - **Student Registration:** Schools must register eligible students on the Child Tracking System (CTS) portal of Vidya Samiksha Kendra.  - **Verification:** The Director of Schools will verify applications with the help of the District Education Officer, and upload the final list of eligible students on the dedicated &amp;quot;Namo Saraswati&amp;quot; portal.  - **Payment:** Assistance is disbursed directly into the beneficiary’s mother’s bank account (or the student’s account, if required) through DBT.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education Department",
+    "value": 2444444
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Namo Saraswati Vignan Sadhana Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "NSVSY",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Education",
+    "Student",
+    "Science Stream Scholarship"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have studied in a government or grant-in-aid school in Class 9th and 10th."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have scored 50% or more in the Class 10 board examination."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have taken admission in the science stream in a government, grant-in-aid, or self-financed school recognized by GSHSEB (Gujarat Secondary and Higher Secondary Education Board) or CBSE (Central Board of Secondary Education)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "If the applicant has studied in a recognized self-financed school for Class 9 and/or 10, the family’s annual income must be ₹6,00,000/- or less."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a student.\n  - The applicant must have studied in a government or grant-in-aid school in Class 9th and 10th.\n  - The applicant must have scored 50% or more in the Class 10 board examination.\n  - The applicant must have taken admission in the science stream in a government, grant-in-aid, or self-financed school recognized by GSHSEB (Gujarat Secondary and Higher Secondary Education Board) or CBSE (Central Board of Secondary Education).\n  - If the applicant has studied in a recognized self-financed school for Class 9 and/or 10, the family’s annual income must be ₹6,00,000/- or less.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 11th Benefit:"
+          },
+          {
+           "text": " ₹10,000/- per annum, paid as a monthly stipend of ₹1,000/- for 10 months."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 12th Benefit:"
+          },
+          {
+           "text": " ₹15,000/- per annum. Students will receive a monthly stipend of ₹1,000/- for 10 months (₹10,000)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Additional Benefit: "
+          },
+          {
+           "text": "₹5,000/- after passing the Class 12th board examination."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Class 11th Benefit:** ₹10,000/- per annum, paid as a monthly stipend of ₹1,000/- for 10 months.  - **Class 12th Benefit:** ₹15,000/- per annum. Students will receive a monthly stipend of ₹1,000/- for 10 months (₹10,000)  - **Additional Benefit:** ₹5,000/- after passing the Class 12th board examination.\n<br>\n\n",
+   "briefDescription": "The scheme \"Namo Saraswati Vignan Sadhana Yojana (8620)\" by the Education Department, Government of Gujarat, aims to promote science education by providing financial assistance to students enrolling in the science stream in Class 11th and 12th.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Namo Saraswati Vignan Sadhana Yojana\" by the Education Department, Government of Gujarat, aims to create ample opportunities for technologically educated and skilled youth in the state by encouraging students to enter and complete science stream education up to Class 12th. The scheme provides financial assistance of ₹25,000/- over two years to students of Class 11th and 12th to support their education in science and help them complete their board examinations successfully."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Namo Saraswati Vignan Sadhana Yojana&amp;quot; by the Education Department, Government of Gujarat, aims to create ample opportunities for technologically educated and skilled youth in the state by encouraging students to enter and complete science stream education up to Class 12th. The scheme provides financial assistance of ₹25,000/- over two years to students of Class 11th and 12th to support their education in science and help them complete their board examinations successfully.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Scheme No. 330)",
+     "url": "https://mariyojana.gujarat.gov.in/Schemeatoz.aspx"
+    },
+    {
+     "title": "Guidelines 2",
+     "url": "https://financedepartment.gujarat.gov.in/Documents/Bud-Eng_1378_2024-2-2_988.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "nsvsy"
+}

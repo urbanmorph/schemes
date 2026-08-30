@@ -1,0 +1,260 @@
+{
+ "_id": "66b0cee159fc31375dacdd23",
+ "_slug": "mnsvy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " The applicant should gather copies of the necessary documents needed to apply for the concerned scheme."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " The applicant should visit the nearest Common Service Center (CSC) and complete the Biometric Verification Process."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " The applicant should ensure that the CSC agent completes all mandatory fields in the application form and uploads copies of all required documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "NOTE:"
+       },
+       {
+        "text": " Application shall be submitted within 6 months of the marriage."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The applicant should gather copies of the necessary documents needed to apply for the concerned scheme.\n**Step 2:** The applicant should visit the nearest Common Service Center (CSC) and complete the Biometric Verification Process.\n**Step 3:** The applicant should ensure that the CSC agent completes all mandatory fields in the application form and uploads copies of all required documents.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n<br>\n\n**NOTE:** Application shall be submitted within 6 months of the marriage.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department ",
+    "value": 16000031
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mahila Nirman Shramik Vivah Yojana",
+   "schemeOpenDate": "2022-10-20",
+   "schemeShortTitle": "MNSVY",
+   "schemeSubCategory": [
+    {
+     "label": "Marriage",
+     "value": "Marriage"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Tripura",
+    "value": 16
+   },
+   "tags": [
+    "Financial Assistance",
+    "Female",
+    "Construction Workers",
+    "Marriage"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a female registered construction worker. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The female construction worker should have been registered for at least one year continuously."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The family of a registered construction worker can avail of this assistance only twice: however, there shall be only one claim in respect of a given marriage irrespective of the number of registered construction workers in the family."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The registered construction workers should not have any dues payable to the Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The registered construction worker's daughter should have attained the age prescribed by law for marriage for whose marriage the assistance is sought.  "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The registered construction worker's daughter should not be an employee in government or quasi-government. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a female registered construction worker. \n1. The female construction worker should have been registered for at least one year continuously.\n1. The family of a registered construction worker can avail of this assistance only twice: however, there shall be only one claim in respect of a given marriage irrespective of the number of registered construction workers in the family.\n1. The registered construction workers should not have any dues payable to the Board.\n1. The registered construction worker&#39;s daughter should have attained the age prescribed by law for marriage for whose marriage the assistance is sought.  \n1. The registered construction worker&#39;s daughter should not be an employee in government or quasi-government. \n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "A one-time grant of ₹50,000/- is provided to meet the marriage expenses of the female registered construction worker and a maximum of two daughters of a registered construction worker."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **A one-time grant of ₹50,000/- is provided to meet the marriage expenses of the female registered construction worker and a maximum of two daughters of a registered construction worker.**\n\n",
+   "briefDescription": "The \"Mahila Nirman Shramik Vivah Yojana\" was launched by the Tripura Building and Other Construction Workers Welfare Board, under the Labour Department of Tripura. The scheme aims to provide financial assistance to registered female construction workers and maximum of two of their daughters.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Mahila Nirman Shramik Vivah Yojana\" was launched by the Tripura Building and Other Construction Workers Welfare Board, Labour Department Tripura. The scheme aims to provide financial assistance to registered female construction workers and maximum of two daughters of registered construction workers for marriage purposes. The registered beneficiary will apply in the prescribed form through electronically."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Mahila Nirman Shramik Vivah Yojana&quot; was launched by the Tripura Building and Other Construction Workers Welfare Board, Labour Department Tripura. The scheme aims to provide financial assistance to registered female construction workers and maximum of two daughters of registered construction workers for marriage purposes. The registered beneficiary will apply in the prescribed form through electronically.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": "No benefit shall be provided for remarriage."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "No benefit shall be provided for remarriage.\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://tbocwwb.tripura.gov.in/news_announcements/3435175.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://tbocwwb.tripura.gov.in/index.php"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mnsvy"
+}

@@ -1,0 +1,251 @@
+{
+ "_id": "66a1fbd162c12e305cb32a47",
+ "_slug": "gpcs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To avail of the benefits under this scheme, eligible students can contact the Principal of their respective government schools/institutions."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note:"
+         },
+         {
+          "text": " The profile of the students is entered on the education portal "
+         },
+         {
+          "children": [
+           {
+            "text": "https://shikshaportal.mp.gov.in/"
+           }
+          ],
+          "link": "https://shikshaportal.mp.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": " by the teacher of the educational institution as per the record/certificate provided by the student."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - To avail of the benefits under this scheme, eligible students can contact the Principal of their respective government schools/institutions.\n\n**Note:** The profile of the students is entered on the education portal [https://shikshaportal.mp.gov.in/](https://shikshaportal.mp.gov.in/) by the teacher of the educational institution as per the record/certificate provided by the student.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "School Education Department, Government Of Madhya Pradesh",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "School Education Department",
+    "value": 2300039
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "General Poor Class Scholarship (Class 6 to 8)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "GPCS",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Student",
+    "Scholarship",
+    "BPL",
+    "Government School"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a permanent resident of Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be studying in Class 6 to 8."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be studying at a government school."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should belong to the Below Poverty Line (BPL) category."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student's parents' total income from all sources should be less than ₹1,00,000/- per year."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should have passed the previous class."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a permanent resident of Madhya Pradesh.\n   1. The applicant should be studying in Class 6 to 8.\n   1. The student should be studying at a government school.\n   1. The student should belong to the Below Poverty Line (BPL) category.\n   1. The student&amp;#39;s parents&amp;#39; total income from all sources should be less than ₹1,00,000/- per year.\n   1. The student should have passed the previous class.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Girl students will receive a scholarship of ₹300/- per year."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Boy students will receive a scholarship of ₹200/- per year."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note: "
+        },
+        {
+         "text": "The scholarship amount is directly transferred to the student's bank account."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - Girl students will receive a scholarship of ₹300/- per year.\n  - Boy students will receive a scholarship of ₹200/- per year.\n\n**Note:** The scholarship amount is directly transferred to the student&amp;#39;s bank account.\n",
+   "briefDescription": "Under this scheme, scholarships are provided to students studying in Classes 6 to 8 in government schools. Students whose annual family income is less than ₹1,00,000/- and who belong to the Below Poverty Line (BPL) category are eligible for the benefits.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"General Poor Class Scholarship (Class 6 to 8)\" scheme, launched by the School Education Department, Government of Madhya Pradesh, aims to motivate and economically support students from lower economic backgrounds. Under this scheme, scholarships are provided to students studying in Classes 6 to 8 in government schools. Students whose annual family income is less than ₹1,00,000/- and who belong to the Below Poverty Line (BPL) category are eligible for the benefits."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;General Poor Class Scholarship (Class 6 to 8)&amp;quot; scheme, launched by the School Education Department, Government of Madhya Pradesh, aims to motivate and economically support students from lower economic backgrounds. Under this scheme, scholarships are provided to students studying in Classes 6 to 8 in government schools. Students whose annual family income is less than ₹1,00,000/- and who belong to the Below Poverty Line (BPL) category are eligible for the benefits.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=419"
+    },
+    {
+     "title": "Guidelines (Page No. 25)",
+     "url": "https://aiggpa.mp.gov.in/uploads/publication/Social_Protection_Eng.pdf"
+    },
+    {
+     "title": "Online Shiksha Portal",
+     "url": "https://shikshaportal.mp.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "gpcs"
+}

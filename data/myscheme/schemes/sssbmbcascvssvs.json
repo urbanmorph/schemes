@@ -1,0 +1,323 @@
+{
+ "_id": "6606ebd9a8333243438ecd18",
+ "_slug": "sssbmbcascvssvs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To avail the benefits of the scheme, eligible students need to contact the principal of their school."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "The Principal of concerned schools has to submit the online proposal on the Digital Gujarat Portal (Portal: "
+           },
+           {
+            "children": [
+             {
+              "text": "https://www.digitalgujarat.gov.in"
+             }
+            ],
+            "link": "https://www.digitalgujarat.gov.in",
+            "type": "link"
+           },
+           {
+            "text": ")."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - To avail the benefits of the scheme, eligible students need to contact the principal of their school.\n  - The Principal of concerned schools has to submit the online proposal on the Digital Gujarat Portal (Portal: [https://www.digitalgujarat.gov.in](https://www.digitalgujarat.gov.in)).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "District Deputy Director (SCW) Office, Gujarat",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 2444464
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Special Scholarship to Students Belonging to the Most Backward Castes among Scheduled Castes (Vandaniya Sant Shri Vasiyadada Scholarship)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SSSBMBCASC(VSSVS)",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Student",
+    "Scheduled Caste",
+    "Most Backward Caste",
+    "Scholarship"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The student should belong to the most backward castes among the scheduled castes of Gujarat."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be studying in Standard I to X."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There is no income limit."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The most backward castes eligible under the scheme in Gujarat state include Valmiki, Hadi, Nadia, Senva, Turi, Garo, Harijan-Bava, and Vanker-Sadhu, who are granted special scholarships."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The student should belong to the most backward castes among the scheduled castes of Gujarat.\n   1. The student should be studying in Standard I to X.\n   1. There is no income limit.\n   1. The most backward castes eligible under the scheme in Gujarat state include Valmiki, Hadi, Nadia, Senva, Turi, Garo, Harijan-Bava, and Vanker-Sadhu, who are granted special scholarships.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Assistance Details:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Sl. No."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Standard/Class"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Students (Boys & Girls)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Scholarship Rate (Yearly)"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "1"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Standard I to VIII"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Both"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1000/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "2"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Standard IX to X"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Both"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1500/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      }
+     ],
+     "type": "table"
+    }
+   ],
+   "benefits_md": "**Assistance Details:**\n**Sl. No.****Standard/Class****Students (Boys &amp;amp;amp;amp; Girls)****Scholarship Rate (Yearly)**1Standard I to VIIIBoth₹1000/-2Standard IX to XBoth₹1500/-",
+   "briefDescription": "This scheme offers special scholarships to students from the Most Backward Castes among the Scheduled Castes category who are enrolled in Standards I to X.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Special Scholarship to Students Belonging to the Most Backward Castes among Scheduled Castes” is initiated by the Director Scheduled Caste Welfare, Department of Social Justice & Empowerment, Government of Gujarat. This scheme offers special scholarships to students from the Most Backward Castes among the Scheduled Castes category who are studying in Standards I to X. The Most Backward Castes eligible under the scheme in Gujarat state include Valmiki, Hadi, Nadia, Senva, Turi, Garo, Harijan-Bava, and Vanker-Sadhu, who are granted special scholarships."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Special Scholarship to Students Belonging to the Most Backward Castes among Scheduled Castes” is initiated by the Director Scheduled Caste Welfare, Department of Social Justice &amp;amp; Empowerment, Government of Gujarat. This scheme offers special scholarships to students from the Most Backward Castes among the Scheduled Castes category who are studying in Standards I to X. The Most Backward Castes eligible under the scheme in Gujarat state include Valmiki, Hadi, Nadia, Senva, Turi, Garo, Harijan-Bava, and Vanker-Sadhu, who are granted special scholarships.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://sje.gujarat.gov.in/dscw/schemes/1541"
+    },
+    {
+     "title": "Scheme Details (Page No. 84)",
+     "url": "https://sje.gujarat.gov.in/assets/downloads/SCSP_202021_09072021.pdf"
+    },
+    {
+     "title": "Notification",
+     "url": "https://sje.gujarat.gov.in/dscw/assets/downloads/tharav_dscw1_15092022.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sssbmbcascvssvs"
+}

@@ -1,0 +1,371 @@
+{
+ "_id": "65f996a7647a4865ff46fd55",
+ "_slug": "adas-glwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Application Process for Scheme Benefit:",
+          "underline": true
+         }
+        ],
+        "type": "block_quote"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01: "
+         },
+         {
+          "text": "The applicant may visit the Sanman Portal: "
+         },
+         {
+          "children": [
+           {
+            "text": "https://sanman.gujarat.gov.in/"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " On the home page, under the tab ‘Citizen Login’, click on ‘"
+         },
+         {
+          "children": [
+           {
+            "text": "Please Register Here"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/Home/Registration",
+          "type": "link"
+         },
+         {
+          "text": "’."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " Enter your Aadhaar Card Number, select user type and then enter your Labour Welfare Fund Account Number."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " Now, click on ‘Fetch’ & verify the details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " Enter user details and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06: "
+         },
+         {
+          "text": "After successful registration, the applicants can login through their User ID and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 07:"
+         },
+         {
+          "text": " Now, select the scheme and read the instructions carefully for the selected scheme."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 08:"
+         },
+         {
+          "text": " Fill out the application form and upload all the relevant documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 09:"
+         },
+         {
+          "text": " Agree with the Rules & Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note:"
+         },
+         {
+          "text": " The application form submitted except for incomplete details and complete enclosure will be done in the office. No correspondence will be entertained regarding that."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "&gt; **Application Process for Scheme Benefit:**\n\n**Step 01:** The applicant may visit the Sanman Portal: [https://sanman.gujarat.gov.in/](https://sanman.gujarat.gov.in/)\n**Step 02:** On the home page, under the tab ‘Citizen Login’, click on ‘[Please Register Here](https://sanman.gujarat.gov.in/Home/Registration)’.\n**Step 03:** Enter your Aadhaar Card Number, select user type and then enter your Labour Welfare Fund Account Number.\n**Step 04:** Now, click on ‘Fetch’ &amp;amp; verify the details.\n**Step 05:** Enter user details and Password.\n**Step 06:** After successful registration, the applicants can login through their User ID and Password.\n**Step 07:** Now, select the scheme and read the instructions carefully for the selected scheme.\n**Step 08:** Fill out the application form and upload all the relevant documents.\n**Step 09:** Agree with the Rules &amp;amp; Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID.\n**Note:** The application form submitted except for incomplete details and complete enclosure will be done in the office. No correspondence will be entertained regarding that.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Gujarat Labour Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour and Employment Department",
+    "value": 2444454
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Accidental Death Assistance Scheme- Gujarat Labour Welfare Board",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ADAS-GLWB",
+   "schemeSubCategory": [
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Accidental Death",
+    "Industrial Worker",
+    "Organized Worker",
+    "Labour",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "In case of the death of a worker due to an accident, the family of the worker will be eligible for assistance under the scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Only those workers (Shramyogis) whose factory/company/organization has regularly paid their Labour Welfare Fund will be eligible for the benefit of this scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 01:"
+        },
+        {
+         "text": " The benefit of the scheme will be given from the day after the worker joins the job."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 02:"
+        },
+        {
+         "text": " Application should be made within 2 years from the date of death of the worker (Shramyogi). The application received after the time limit will be processed at the office."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 03:"
+        },
+        {
+         "text": " Under this scheme, in case of the death of a worker due to an accident in the factory, the Director, Office of Industrial Safety and Health has to submit an accident report. Also, in case of accidental death outside the factory/company/organization, an affidavit has to be produced from the owner/manager of the factory/company/organization concerned."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 04:"
+        },
+        {
+         "text": " The final decision regarding assistance will be with the Welfare Commissioner, with jurisdiction in Ahmedabad."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. In case of the death of a worker due to an accident, the family of the worker will be eligible for assistance under the scheme.\n   1. Only those workers (Shramyogis) whose factory/company/organization has regularly paid their Labour Welfare Fund will be eligible for the benefit of this scheme.\n\n**Note 01:** The benefit of the scheme will be given from the day after the worker joins the job.\n**Note 02:** Application should be made within 2 years from the date of death of the worker (Shramyogi). The application received after the time limit will be processed at the office.\n**Note 03:** Under this scheme, in case of the death of a worker due to an accident in the factory, the Director, Office of Industrial Safety and Health has to submit an accident report. Also, in case of accidental death outside the factory/company/organization, an affidavit has to be produced from the owner/manager of the factory/company/organization concerned.\n**Note 04:** The final decision regarding assistance will be with the Welfare Commissioner, with jurisdiction in Ahmedabad.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under the scheme, families of workers (Shramyogis) will receive financial assistance of ₹2,00,000/- in the event of the worker's death due to an accident during their course of employment."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - Under the scheme, families of workers (Shramyogis) will receive financial assistance of ₹2,00,000/- in the event of the worker&amp;#39;s death due to an accident during their course of employment.\n\n",
+   "briefDescription": "Under the scheme, financial assistance is provided to the family members of workers (Shramyogis) in the event of their death due to an accident during their course of employment. This assistance aims to help the worker's family cope with the sudden calamity. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Accidental Death Assistance Scheme” is implemented by the Gujarat Labour Welfare Board, Labour, Skill Development & Employment Department, Government of Gujarat. Under the scheme, financial assistance is provided to the family members of workers (Shramyogis) in the event of their death due to an accident during their course of employment. This assistance aims to help the worker's family cope with the sudden calamity. However, post-sickness and natural death of workers will not be admissible under the scheme."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The “Accidental Death Assistance Scheme” is implemented by the Gujarat Labour Welfare Board, Labour, Skill Development &amp;amp; Employment Department, Government of Gujarat. Under the scheme, financial assistance is provided to the family members of workers (Shramyogis) in the event of their death due to an accident during their course of employment. This assistance aims to help the worker&amp;#39;s family cope with the sudden calamity. However, post-sickness and natural death of workers will not be admissible under the scheme.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": "1.\tPost-sickness and natural death of worker will not be admissible."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "1.\tPost-sickness and natural death of worker will not be admissible.\n",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://glwb.gujarat.gov.in/welfare-schemes.htm"
+    },
+    {
+     "title": "Sanman Portal",
+     "url": "https://sanman.gujarat.gov.in/Home/GLWBScheme#"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "adas-glwb"
+}

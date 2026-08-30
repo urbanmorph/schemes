@@ -1,0 +1,699 @@
+{
+ "_id": "65dd8741938a0b13cc977ef9",
+ "_slug": "ds-aandn",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Registration on Portal:",
+          "underline": true
+         }
+        ],
+        "type": "block_quote"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " Visit "
+         },
+         {
+          "children": [
+           {
+            "text": "official Portal"
+           },
+           {
+            "children": [
+             {
+              "text": ""
+             }
+            ],
+            "link": "https://serviceonline.gov.in/login.do",
+            "type": "link"
+           },
+           {
+            "text": "."
+           }
+          ],
+          "link": "https://serviceonline.gov.in/login.do",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " On the home page, click on ‘Register’ and fill in all the mandatory details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " Click on the ‘Submit’ button and validate your Email ID & Mobile Number using OTP received."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " After successful validation, the applicant will be registered."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Registration for Dulari:",
+          "underline": true
+         }
+        ],
+        "type": "block_quote"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " Applicant can login on "
+         },
+         {
+          "children": [
+           {
+            "text": "official portal "
+           }
+          ],
+          "link": "https://serviceonline.gov.in/login.do",
+          "type": "link"
+         },
+         {
+          "text": "through their email ID that is used while registering"
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " Enter Password & Captcha"
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " Click on ‘Login’"
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " After successful login, click on ‘Apply for Services’ and then ‘View all Available Services’"
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05: "
+         },
+         {
+          "text": "Now, search for ‘Dulari’ and click on ‘Dulari Registration’."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06: "
+         },
+         {
+          "text": "Fill in all the mandatory details, preview the form, and click on ‘Submit’."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 07: "
+         },
+         {
+          "text": "After successful registration, the applicant will receive a registration ID. "
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "&gt; **Registration on Portal:**\n\n**Step 01:** Visit [official Portal.](https://serviceonline.gov.in/login.do)\n**Step 02:** On the home page, click on ‘Register’ and fill in all the mandatory details.\n**Step 03:** Click on the ‘Submit’ button and validate your Email ID &amp;amp; Mobile Number using OTP received.\n**Step 04:** After successful validation, the applicant will be registered.\n&lt;br&gt;\n\n&gt; **Registration for Dulari:**\n\n**Step 01:** Applicant can login on [official portal ](https://serviceonline.gov.in/login.do)through their email ID that is used while registering\n**Step 02:** Enter Password &amp;amp; Captcha\n**Step 03:** Click on ‘Login’\n**Step 04:** After successful login, click on ‘Apply for Services’ and then ‘View all Available Services’\n**Step 05:** Now, search for ‘Dulari’ and click on ‘Dulari Registration’.\n**Step 06:** Fill in all the mandatory details, preview the form, and click on ‘Submit’.\n**Step 07:** After successful registration, the applicant will receive a registration ID. \n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Directorate Of Health Services, Andaman & Nicobar Island",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Health Department",
+    "value": 3500015
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Dulari Scheme",
+   "schemeOpenDate": "2013-01-26",
+   "schemeShortTitle": "DS-A&N",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Pregnancy care",
+     "value": "Pregnancy care"
+    }
+   ],
+   "state": {
+    "label": "Andaman and Nicobar Islands",
+    "value": 35
+   },
+   "tags": [
+    "Girl Child",
+    "New Born",
+    "Woman",
+    "Scholarship",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a domicile of the Union Territory of Andaman & Nicobar Islands."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be a woman or a girl child to avail benefits under the scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be born on or after 01.10.2013 to receive full benefits."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Girl children between 0–13 years, born before 01.10.2013 and not covered under the Planned Family Scheme, should be eligible only for educational incentives after passing Class VIII."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a domicile of the Union Territory of Andaman &amp;amp; Nicobar Islands.\n   1. The applicant must be a woman or a girl child to avail benefits under the scheme.\n   1. The applicant must be born on or after 01.10.2013 to receive full benefits.\n   1. Girl children between 0–13 years, born before 01.10.2013 and not covered under the Planned Family Scheme, should be eligible only for educational incentives after passing Class VIII.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "As per the scheme, the following benefits are given to the girl child whose parents are domicile of Andaman & Nicobar Islands:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "bold": true,
+             "text": "Sl. No."
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "bold": true,
+             "text": "Descriptions"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "bold": true,
+             "text": "Amount of Assistance"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        },
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "1"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "Benefits at Birth- Institution deliver"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "₹8,000/-"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        },
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "2"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "Benefits at Birth- Home delivery"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "₹5,000/-"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        },
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "3"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "Benefits on passing VIII Standard"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "₹5,000/-"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        },
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "4"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "Benefits on passing X Standard"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "₹10,000/-"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        },
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "5"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "Benefits on passing XII Standard"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "₹10,000/-"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        },
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "6"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "Benefits on getting married at the age of 21 years"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "₹5,000/-"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        },
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "7"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "Benefits on getting married after age of 25 years"
+            }
+           ],
+           "type": "table_cell"
+          },
+          {
+           "children": [
+            {
+             "text": "₹10,000/-"
+            }
+           ],
+           "type": "table_cell"
+          }
+         ],
+         "type": "table_row"
+        }
+       ],
+       "type": "table"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note"
+        },
+        {
+         "text": "- The incentive amount will be fixed in a bank account and must not be withdrawn before the girl attains 18 years of age, unless permitted by the A&N Administration."
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "As per the scheme, the following benefits are given to the girl child whose parents are domicile of Andaman &amp;amp; Nicobar Islands:\n&lt;br&gt;\n\n**Sl. No.****Descriptions****Amount of Assistance**1Benefits at Birth- Institution deliver₹8,000/-2Benefits at Birth- Home delivery₹5,000/-3Benefits on passing VIII Standard₹5,000/-4Benefits on passing X Standard₹10,000/-5Benefits on passing XII Standard₹10,000/-6Benefits on getting married at the age of 21 years₹5,000/-7Benefits on getting married after age of 25 years₹10,000/-&lt;br&gt;\n\n&gt; **Note**- The incentive amount will be fixed in a bank account and must not be withdrawn before the girl attains 18 years of age, unless permitted by the A&amp;amp;N Administration.\n\n&lt;br&gt;\n\n",
+   "briefDescription": "The DULARI Scheme was implemented by the Directorate of Health Services in the Andaman and Nicobar Islands to provide incentives for newborn baby girls and to the girl children who pass Classes VIII, X, and XII.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Dulari Scheme” was launched by the Health Department, Union Territory of Andaman and Nicobar Islands on 26th January, 2013 to give incentives to newborn baby girls and girl children on passing VIII, X & XII standards. As per the present scheme, the girl child born on or after 26.01.2013 will be eligible to get the benefit under the scheme for birth incentives and the girl children who are below 13 years of age not registered under the Planned family scheme (old scheme) will also get the benefit of this scheme."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The “Dulari Scheme” was launched by the Health Department, Union Territory of Andaman and Nicobar Islands on 26th January, 2013 to give incentives to newborn baby girls and girl children on passing VIII, X &amp;amp; XII standards. As per the present scheme, the girl child born on or after 26.01.2013 will be eligible to get the benefit under the scheme for birth incentives and the girl children who are below 13 years of age not registered under the Planned family scheme (old scheme) will also get the benefit of this scheme.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Benefits will cease if:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant or her parents provide false or concealed information."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The girl gets married before attaining 21 years of age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The girl drops out of school (as further education-based incentives will not be granted)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "In case of the girl’s death before reaching the eligible disbursal age, the Directorate of Health Services may permit premature closure of the deposit, and the applicable amount may be released to the parents."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "exclusions_md": "> **Benefits will cease if:**\n\n\n1. The applicant or her parents provide false or concealed information.\n1. The girl gets married before attaining 21 years of age.\n1. The girl drops out of school (as further education-based incentives will not be granted).\n1. In case of the girl’s death before reaching the eligible disbursal age, the Directorate of Health Services may permit premature closure of the deposit, and the applicable amount may be released to the parents.\n\n",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://anieseva.andaman.gov.in/services_list_depart.php?cateid=MQ%3D%3D&id=MTE%3D&utm_source=chatgpt.com"
+    },
+    {
+     "title": "Application Portal",
+     "url": "https://serviceonline.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ds-aandn"
+}

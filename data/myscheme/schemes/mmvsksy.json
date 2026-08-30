@@ -1,0 +1,235 @@
+{
+ "_id": "677279040c0f73c674c32668",
+ "_slug": "mmvsksy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " Verify your eligibility as a PMAY-G beneficiary."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " Gather all required documents and submit your application through the designated Rural Development Department office."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " The concerned authority will conduct a physical verification of landlessness and eligibility."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Upon approval, the amount will be directly transferred to the bank account."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** Verify your eligibility as a PMAY-G beneficiary.\n**Step 2:** Gather all required documents and submit your application through the designated Rural Development Department office.\n**Step 3:** The concerned authority will conduct a physical verification of landlessness and eligibility.\n**Step 4:** Upon approval, the amount will be directly transferred to the bank account.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Rural Development Department",
+    "value": 10111145
+   },
+   "schemeCategory": [
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhyamantri Vas Sthal Kray Sahayata Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MMVSKSY",
+   "schemeSubCategory": [
+    {
+     "label": "Housing",
+     "value": "Housing"
+    }
+   ],
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Land Purchase",
+    "Housing",
+    "Rural Development",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be listed as a beneficiary under PMAY-G."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be landless and houseless."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must reside in a village where no government land is available for housing allocation."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have a bank account for direct fund transfer."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be listed as a beneficiary under PMAY-G.\n   1. The applicant must be landless and houseless.\n   1. The applicant must reside in a village where no government land is available for housing allocation.\n   1. The applicant must have a bank account for direct fund transfer.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Financial Assistance:"
+          },
+          {
+           "text": " ₹60,000/- for purchasing residential land."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Financial Assistance:** ₹60,000/- for purchasing residential land.\n&lt;br&gt;\n\n",
+   "briefDescription": "This scheme provides financial assistance to landless beneficiaries for purchasing residential land, ensuring housing for the underprivileged in rural Bihar.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Mukhyamantri Vas Sthal Kray Sahayata Yojana\" launched by the Rural Development Department, Bihar, aims to support landless beneficiaries listed under the Pradhan Mantri Awas Yojana–Rural (PMAY-G). The scheme helps those without residential land by offering financial aid directly into their bank accounts to purchase land for housing. "
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Mukhyamantri Vas Sthal Kray Sahayata Yojana&amp;quot; launched by the Rural Development Department, Bihar, aims to support landless beneficiaries listed under the Pradhan Mantri Awas Yojana–Rural (PMAY-G). The scheme helps those without residential land by offering financial aid directly into their bank accounts to purchase land for housing. \n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cdnbbsr.s3waas.gov.in/s31943102704f8f8f3302c2b730728e023/uploads/2022/07/2022072358.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mmvsksy"
+}

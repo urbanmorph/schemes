@@ -1,0 +1,404 @@
+{
+ "_id": "65c9b176ed4030e118d67fc8",
+ "_slug": "mssp-pws",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " The applicant should visit the Office of the Child Development Project Officer, and request a hard copy of the prescribed format of the "
+       },
+       {
+        "children": [
+         {
+          "text": "application form "
+         }
+        ],
+        "link": "https://socialwelfare.tripura.gov.in/sites/default/files/Mukhyamantri%20Samajik%20Sahayata%20Prakalpa%20%28Appendix%20I-VII%29.pdf",
+        "type": "link"
+       },
+       {
+        "text": "free of cost. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "OR"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "The interested applicant should take print of the "
+       },
+       {
+        "children": [
+         {
+          "text": "prescribed format"
+         }
+        ],
+        "link": "https://socialwelfare.tripura.gov.in/sites/default/files/Mukhyamantri%20Samajik%20Sahayata%20Prakalpa%20%28Appendix%20I-VII%29.pdf",
+        "type": "link"
+       },
+       {
+        "text": " of the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the CDPO Office under which the project his/her residence is located. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The applicant should visit the Office of the Child Development Project Officer, and request a hard copy of the prescribed format of the [application form ](https://socialwelfare.tripura.gov.in/sites/default/files/Mukhyamantri%20Samajik%20Sahayata%20Prakalpa%20%28Appendix%20I-VII%29.pdf)free of cost. \nOR\nThe interested applicant should take print of the [prescribed format](https://socialwelfare.tripura.gov.in/sites/default/files/Mukhyamantri%20Samajik%20Sahayata%20Prakalpa%20%28Appendix%20I-VII%29.pdf) of the application form.\n**Step 2:** In the application form, fill in all the mandatory fields (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the CDPO Office under which the project his/her residence is located. \n**Step 4:** Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Directorate Of Social Welfare & Social Education",
+    "value": 1059
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhyamantri Samajik Sahayata Prakalpa - Persons with Disabilities",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MSSP-PWS",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Tripura",
+    "value": 16
+   },
+   "tags": [
+    "Financial Assistance",
+    "Disability",
+    "Pension",
+    "Social Welfare",
+    "PwD"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a resident of Tripura."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a Person with Disability."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The annual income of the family of the applicant should not exceed ₹1,00,000/-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The age of the applicant should be 10 years and above."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "If the family has children in the age group of 6 to 14 years, those children must be enrolled in a school recognized by the Government of Tripura. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The disability of the applicant should be one of the following:"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "italic": true,
+       "text": "Blindness, Low-Vision, Leprosy-cured persons, Hearing Impairment (deaf & Hard of hearing), Locomotor Disability, Dwarfism, Intellectual Disability, Mental Illness, Autism Spectrum Disorder, Cerebral Palsy, Muscular Dystrophy, Chronic Neurological Condition, Specific Learning Disabilities, Multiple Sclerosis, Speech and Language disability, Thalassemia, Hemophilia, Sickle Cell Disease, Multiple Disabilities including deaf-blindness, Acid attack Victim, Parkinson's Disease."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE: "
+      },
+      {
+       "text": "The assistance under this scheme will be stopped immediately in the following cases:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Death of Beneficiary."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Fulfillment of any exclusion criteria during the lifetime of a beneficiary, such as"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Remarriage of a widow."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "A member of the family of the beneficiary getting a Government Job."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The annual family income of the beneficiary exceeds ₹1,00,000/-, etc."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a resident of Tripura.\n1. The applicant should be a Person with Disability.\n1. The annual income of the family of the applicant should not exceed ₹1,00,000/-\n1. The age of the applicant should be 10 years and above.\n1. If the family has children in the age group of 6 to 14 years, those children must be enrolled in a school recognized by the Government of Tripura. \n1. The disability of the applicant should be one of the following:\n\n_Blindness, Low-Vision, Leprosy-cured persons, Hearing Impairment (deaf &amp; Hard of hearing), Locomotor Disability, Dwarfism, Intellectual Disability, Mental Illness, Autism Spectrum Disorder, Cerebral Palsy, Muscular Dystrophy, Chronic Neurological Condition, Specific Learning Disabilities, Multiple Sclerosis, Speech and Language disability, Thalassemia, Hemophilia, Sickle Cell Disease, Multiple Disabilities including deaf-blindness, Acid attack Victim, Parkinson&#39;s Disease._\n<br>\n\n**NOTE:** The assistance under this scheme will be stopped immediately in the following cases:\n\n1. Death of Beneficiary.\n1. Fulfillment of any exclusion criteria during the lifetime of a beneficiary, such as\n\n\n- Remarriage of a widow.\n- A member of the family of the beneficiary getting a Government Job.\n- The annual family income of the beneficiary exceeds ₹1,00,000/-, etc.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "A pension amount of ₹2000/- per month, transferred directly to the bank account of the applicant."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE:"
+      },
+      {
+       "text": " The list of beneficiaries will be made available on the "
+      },
+      {
+       "children": [
+        {
+         "text": "official website"
+        }
+       ],
+       "link": "https://socialwelfare.tripura.gov.in/",
+       "type": "link"
+      },
+      {
+       "text": " of the Social Welfare & Social Education Department, Govt. of Tripura."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "A pension amount of ₹2000/- per month, transferred directly to the bank account of the applicant.\n**NOTE:** The list of beneficiaries will be made available on the [official website](https://socialwelfare.tripura.gov.in/) of the Social Welfare &amp; Social Education Department, Govt. of Tripura.\n",
+   "briefDescription": "The scheme “Mukhyamantri Samajik Sahayata Prakalpa - Persons with Disabilities\" was launched by the Directorate of Social Welfare and Social Education, Government of Tripura to provide financial assistance to Persons with Disabilities in the form of a monthly pension of ₹2,000/-.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme “Mukhyamantri Samajik Sahayata Prakalpa - Persons with Disabilities\" was launched by the Directorate of Social Welfare and Social Education, Government of Tripura to provide financial assistance to Persons with Disabilities in the form of a monthly pension of ₹2,000/-."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Mukhyamantri Samajik Sahayata Prakalpa - Persons with Disabilities&quot; was launched by the Directorate of Social Welfare and Social Education, Government of Tripura to provide financial assistance to Persons with Disabilities in the form of a monthly pension of ₹2,000/-.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Income taxpayers are not eligible."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Government employees are not eligible."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The individuals whose family members are already getting benefits under any of the Category/Sub-Category under ‘Mukhyamantri Samajik Sahayata Prakalpa' (except infirm & PwDs) are not eligible."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Pensioners who are getting benefits under the “National Social Assistance Program (NSAP)” or the 32 State Social Pension Schemes run by the Social Welfare & Social Education Department, Govt. of Tripura are not eligible."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "exclusions_md": "\n- Income taxpayers are not eligible.\n- Government employees are not eligible.\n- The individuals whose family members are already getting benefits under any of the Category/Sub-Category under ‘Mukhyamantri Samajik Sahayata Prakalpa&#39; (except infirm &amp; PwDs) are not eligible.\n- Pensioners who are getting benefits under the “National Social Assistance Program (NSAP)” or the 32 State Social Pension Schemes run by the Social Welfare &amp; Social Education Department, Govt. of Tripura are not eligible.\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://socialwelfare.tripura.gov.in/sites/default/files/Notification%20for%20Mukhyamantri%20Samajik%20Sahayata%20Prakalpa.pdf"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://socialwelfare.tripura.gov.in/sites/default/files/Mukhyamantri%20Samajik%20Sahayata%20Prakalpa%20%28Appendix%20I-VII%29.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mssp-pws"
+}

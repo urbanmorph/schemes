@@ -1,0 +1,304 @@
+{
+ "_id": "65a62825a733b1d732820263",
+ "_slug": "k-pudu",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the "
+       },
+       {
+        "children": [
+         {
+          "text": "Office/ Sub-Office"
+         }
+        ],
+        "link": "https://wcd.py.gov.in/office-locations",
+        "type": "link"
+       },
+       {
+        "text": " of the Department of Women and Child Development, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "OR"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "The interested applicant should take print of the "
+       },
+       {
+        "children": [
+         {
+          "text": "prescribed format"
+         }
+        ],
+        "link": "https://wcd.py.gov.in/sites/default/files/kulavilakku-appl-tamil.pdf",
+        "type": "link"
+       },
+       {
+        "text": " of the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents to the Deputy Director (Women Development) or the Child Development Project Officer (depending on the location), at least 30 days before the proposed marriage date."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the [Office/ Sub-Office](https://wcd.py.gov.in/office-locations) of the Department of Women and Child Development, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\nOR\nThe interested applicant should take print of the [prescribed format](https://wcd.py.gov.in/sites/default/files/kulavilakku-appl-tamil.pdf) of the application form.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the Deputy Director (Women Development) or the Child Development Project Officer (depending on the location), at least 30 days before the proposed marriage date.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Women and Child Development Department, Puducherry",
+    "value": 34000044
+   },
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "KULAVILAKKU",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "K-PUDU",
+   "schemeSubCategory": [
+    {
+     "label": "Pregnancy Care",
+     "value": "Pregnancy Care"
+    },
+    {
+     "label": "Financial Assistance",
+     "value": "Financial Assistance"
+    }
+   ],
+   "state": {
+    "label": "Puducherry",
+    "value": 34
+   },
+   "tags": [
+    "Pregnant",
+    "Woman",
+    "Hospital",
+    "Financial Assistance",
+    "Infant"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a citizen of India."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a native of the Union Territory of Pondicherry by birth or by continuous residence of not less than 5 years."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a woman."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be pregnant."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have attained the age of 18 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have crossed seven months of pregnancy."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The annual income of the applicant should not exceed ₹24,000/- per annum."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The benefit will be provided for upto two pregnancies only."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The applicant should be a citizen of India.\n\n\n- The applicant should be a native of the Union Territory of Pondicherry by birth or by continuous residence of not less than 5 years.\n\n\n- The applicant should be a woman.\n- The applicant should be pregnant.\n- The applicant should have attained the age of 18 years.\n- The applicant should have crossed seven months of pregnancy.\n- The annual income of the applicant should not exceed ₹24,000/- per annum.\n- The benefit will be provided for upto two pregnancies only.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "₹500/- financial assistance during pregnancy."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "* The benefit will be provided for upto two pregnancies only."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "₹500/- financial assistance during pregnancy.\n*** The benefit will be provided for upto two pregnancies only.**\n",
+   "briefDescription": "This scheme aims to enhance the nutritional status of Pregnant Women. ₹500/- assistance is provided to eligible beneficiaries during their pregnancies. The scheme is a crucial step towards ensuring the well-being of both mother and child. The benefit will be provided for upto two pregnancies only.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "\"KULAVILAKKU\" is a scheme for pregnant women by the Department of Women and Child Development, Government of Puducherry. This scheme aims to enhance the nutritional status of Pregnant Women. ₹500/- assistance is provided to eligible beneficiaries during their pregnancies. The scheme is a crucial step towards ensuring the well-being of both mother and child. The benefit will be provided for upto two pregnancies only."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "&quot;KULAVILAKKU&quot; is a scheme for pregnant women by the Department of Women and Child Development, Government of Puducherry. This scheme aims to enhance the nutritional status of Pregnant Women. ₹500/- assistance is provided to eligible beneficiaries during their pregnancies. The scheme is a crucial step towards ensuring the well-being of both mother and child. The benefit will be provided for upto two pregnancies only.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://py.gov.in/sites/default/files/womenrtimanual.pdf"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://wcd.py.gov.in/sites/default/files/kulavilakku-appl-tamil.pdf"
+    },
+    {
+     "title": "Contact Us",
+     "url": "https://wcd.py.gov.in/contact-us"
+    },
+    {
+     "title": "Office Locations",
+     "url": "https://wcd.py.gov.in/office-locations"
+    },
+    {
+     "title": "Grievance Redressal",
+     "url": "https://wcd.py.gov.in/ta/central-public-grievance-redress-and-monitoring-system"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "k-pudu"
+}

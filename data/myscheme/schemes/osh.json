@@ -1,0 +1,285 @@
+{
+ "_id": "682a2a9d6e3fd3b163f1f865",
+ "_slug": "osh",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " The applicant should gather copies of the necessary documents needed to apply for the concerned scheme."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " The applicant should visit the nearest E-Mitra Center and complete the Biometric Verification Process."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " The applicant should ensure that the E-Mitra Center agent completes all mandatory fields in the application form and uploads copies of all required documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " Keep the acknowledgment receipt for future reference."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The applicant should gather copies of the necessary documents needed to apply for the concerned scheme.\n**Step 2:** The applicant should visit the nearest E-Mitra Center and complete the Biometric Verification Process.\n**Step 3:** The applicant should ensure that the E-Mitra Center agent completes all mandatory fields in the application form and uploads copies of all required documents.\n**Step 4:** Keep the acknowledgment receipt for future reference.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Tribal Area Development Department",
+    "value": 8000043
+   },
+   "schemeCategory": [
+    {
+     "label": "Sports & Culture",
+     "value": "628ce8aad6d1a3bde4685320"
+    },
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Operation of Sports Hostels",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "OSH",
+   "schemeSubCategory": [
+    {
+     "label": "Sports",
+     "value": "Sports"
+    },
+    {
+     "label": "Hostel service",
+     "value": "Hostel service"
+    },
+    {
+     "label": "Housing",
+     "value": "Housing"
+    }
+   ],
+   "state": {
+    "label": "Rajasthan",
+    "value": 8
+   },
+   "tags": [
+    "Hostel",
+    "Scheduled Tribe",
+    "Sports Training",
+    "Sports",
+    "Tribal Students"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a resident of Rajasthan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should belong to the Scheduled Tribe community."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be studying in class 6"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " to 12"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": "."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not have any disability or suffering from any serious illness."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s parents/guardians should not be income tax payers."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be a failed student in the last examination."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note: "
+      },
+      {
+       "text": "Only those students who pass the selection test will be admitted to the sports hostel."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a resident of Rajasthan.\n1. The applicant should belong to the Scheduled Tribe community.\n1. The applicant should be studying in class 6th to 12th.1. The applicant should not have any disability or suffering from any serious illness.\n1. The applicant’s parents/guardians should not be income tax payers.\n1. The applicant should not be a failed student in the last examination.\n\n**Note:** Only those students who pass the selection test will be admitted to the sports hostel.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "The following facilities are provided in the sports hostel:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Free residential accommodation in sports hostels."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Nutritious meals, snacks, and special dietary arrangements as per approved pattern."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Sports training with modern equipment by expert coaches (especially in archery and athletics)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free school uniforms and educational materials."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "The following facilities are provided in the sports hostel:\n\n- Free residential accommodation in sports hostels.\n- Nutritious meals, snacks, and special dietary arrangements as per approved pattern.\n- Sports training with modern equipment by expert coaches (especially in archery and athletics).\n- Free school uniforms and educational materials.\n\n",
+   "briefDescription": "The scheme aims to encourage tribal students to participate in sports and prepare them for national & international competitions. Tribal students from Classes 6 to 12 are provided with free accommodation, specialized training, nutritious meals & other necessary facilities in the sports hostels.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Operation of Sports Hostels\" was introduced by the Tribal Area Development Department, Government of Rajasthan. It aims to encourage tribal students in Scheduled Areas to participate in sports and prepare them for national and international competitions. Under this scheme, tribal students from Class 6 to 12 are provided with free residential facilities, training in archery and athletics by skilled coaches, nutritious meals, uniforms, and modern sports equipment. The scheme is implemented in the following District:\tBanswara, Dungarpur, Sirohi, Udaipur & Pratapgarh."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Operation of Sports Hostels&amp;quot; was introduced by the Tribal Area Development Department, Government of Rajasthan. It aims to encourage tribal students in Scheduled Areas to participate in sports and prepare them for national and international competitions. Under this scheme, tribal students from Class 6 to 12 are provided with free residential facilities, training in archery and athletics by skilled coaches, nutritious meals, uniforms, and modern sports equipment. The scheme is implemented in the following District:\tBanswara, Dungarpur, Sirohi, Udaipur &amp;amp; Pratapgarh.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://tad.rajasthan.gov.in/scheme/detail/535"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "osh"
+}

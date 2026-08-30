@@ -1,0 +1,193 @@
+{
+ "_id": "68a5692f78a1ab08837501f1",
+ "_slug": "rimcsms",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "After securing admission in RIMC, the student submits a request letter for the scholarship, along with their Aadhaar card, permanent residence certificate, and Aadhaar-linked bank account certificate, to the college’s administrative office."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "RIMC then forwards the proposals of all eligible students from Uttarakhand to the Secondary Education Department. Based on the proposals received, the department provides funds to the college, which in turn disburses ₹1,000/- per month to the students for the duration of their studies."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - After securing admission in RIMC, the student submits a request letter for the scholarship, along with their Aadhaar card, permanent residence certificate, and Aadhaar-linked bank account certificate, to the college’s administrative office.\n  - RIMC then forwards the proposals of all eligible students from Uttarakhand to the Secondary Education Department. Based on the proposals received, the department provides funds to the college, which in turn disburses ₹1,000/- per month to the students for the duration of their studies.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Secondary Education Department, Government Of Uttarakhand",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Education",
+    "value": 50000009
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "RIMC Scholarship (Military Scholarship)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "RIMCSMS",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Scholarship",
+    "Student",
+    "Rashtriya Indian Military College",
+    "Military"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Uttarakhand."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be studying at the Rashtriya Indian Military College."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a resident of Uttarakhand.\n   1. The applicant must be studying at the Rashtriya Indian Military College.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "The scholarship is payable to students at the rate of ₹1,000/- per month."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "The scholarship is payable to students at the rate of ₹1,000/- per month.\n<br>\n\n",
+   "briefDescription": "The scheme provides financial assistance of ₹1,000/- per month to students from Uttarakhand who are pursuing their education at the Rashtriya Indian Military College (RIMC).",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “RIMC Scholarship (Military Scholarship)” scheme is implemented by the Secondary Education Department under the Department of Education, Government of Uttarakhand. The scheme aims to provide financial assistance to students from Uttarakhand who are pursuing their education at the Rashtriya Indian Military College (RIMC)."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “RIMC Scholarship (Military Scholarship)” scheme is implemented by the Secondary Education Department under the Department of Education, Government of Uttarakhand. The scheme aims to provide financial assistance to students from Uttarakhand who are pursuing their education at the Rashtriya Indian Military College (RIMC).\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 75)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "rimcsms"
+}

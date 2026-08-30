@@ -1,0 +1,291 @@
+{
+ "_id": "68f0a7686e57497683c31c97",
+ "_slug": "bsymp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The child is identified by health workers (ANM/ASHA/AWW) during community surveys or health check-ups."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Eligible children are referred to the nearest Nutrition Rehabilitation Centre (NRC)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "On arrival, the child undergoes medical examination and anthropometric assessment to confirm eligibility."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Upon meeting admission criteria, the child and mother/caregiver are admitted free of cost."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n- The child is identified by health workers (ANM/ASHA/AWW) during community surveys or health check-ups.\n- Eligible children are referred to the nearest Nutrition Rehabilitation Centre (NRC).\n- On arrival, the child undergoes medical examination and anthropometric assessment to confirm eligibility.\n- Upon meeting admission criteria, the child and mother/caregiver are admitted free of cost.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Public Health and Family Welfare Department",
+    "value": 2300035
+   },
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Bal Shakti Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "BSYMP",
+   "schemeSubCategory": [
+    {
+     "label": "Child's Vaccination",
+     "value": "Child's Vaccination"
+    },
+    {
+     "label": "Childcare",
+     "value": "Childcare"
+    },
+    {
+     "label": "Children’s health and immunization",
+     "value": "Children’s health and immunization"
+    },
+    {
+     "label": "Health care providers and access",
+     "value": "Health care providers and access"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Childcare",
+    "Medical",
+    "Diet",
+    "Rehabilitation"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The child should be a resident of Madhya Pradesh."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a child below 5 years of age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The child must be severely malnourished or sick and meet at least one of the following criteria:"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Mid-Upper Arm Circumference (MUAC) less than 11.5 cm."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Weight-for-height Z-score less than -3 SD (standard deviation)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Bilateral pitting oedema (swelling on both feet)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The child should be a resident of Madhya Pradesh.\n1. The applicant should be a child below 5 years of age.\n1. The child must be severely malnourished or sick and meet at least one of the following criteria:\n\n\n- Mid-Upper Arm Circumference (MUAC) less than 11.5 cm.\n- Weight-for-height Z-score less than -3 SD (standard deviation).\n- Bilateral pitting oedema (swelling on both feet).\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Free institutional management and treatment for severely malnourished and sick children at Nutrition Rehabilitation Centres (NRCs)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free balanced diet"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free medical check-up, medicines, and diagnostic services for enrolled children."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free transport facility. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Counselling and training sessions. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Nutritional awareness. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n- Free institutional management and treatment for severely malnourished and sick children at Nutrition Rehabilitation Centres (NRCs).\n- Free balanced diet\n- Free medical check-up, medicines, and diagnostic services for enrolled children.\n- Free transport facility. \n- Counselling and training sessions. \n- Nutritional awareness. \n\n<br>\n\n",
+   "briefDescription": "The scheme aims to reduce severe malnutrition and child mortality by providing free institutional care, diet, and medical treatment to severely malnourished children below 5 years of age.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The “Bal Shakti Yojana” was launched by the Department of Public Health and Medical Education, Government of Madhya Pradesh. It aims to reduce child mortality caused by severe malnutrition among children below 5 years of age. The scheme provides free medical care, nutrition rehabilitation, diet, and transport through 315 Nutrition Rehabilitation Centres (NRCs) across the state."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Bal Shakti Yojana” was launched by the Department of Public Health and Medical Education, Government of Madhya Pradesh. It aims to reduce child mortality caused by severe malnutrition among children below 5 years of age. The scheme provides free medical care, nutrition rehabilitation, diet, and transport through 315 Nutrition Rehabilitation Centres (NRCs) across the state.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?status=ByVibhag&pointvalue=2&Schemeid=285"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "bsymp"
+}

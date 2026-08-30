@@ -1,0 +1,271 @@
+{
+ "_id": "67767d248aa510ca3714486e",
+ "_slug": "vmyg",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " Visit the nearest Anganwadi center or government health facility."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " Submit the required documents, including proof of eligibility."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Complete the registration process with the assistance of Anganwadi staff."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Upon approval, financial assistance will be transferred to your bank account in stages."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the nearest Anganwadi center or government health facility.\n**Step 2:** Submit the required documents, including proof of eligibility.\n**Step 3:** Complete the registration process with the assistance of Anganwadi staff.\n**Step 4:** Upon approval, financial assistance will be transferred to your bank account in stages.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Women and Child Development Department",
+    "value": 2444469
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Vandan Matru Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "VMYG",
+   "schemeSubCategory": [
+    {
+     "label": "Pregnancy care",
+     "value": "Pregnancy care"
+    },
+    {
+     "label": "Children’s health and immunization",
+     "value": "Children’s health and immunization"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Pregnant Women",
+    "Child Healthcare",
+    "Maternity"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Gujarat."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be a pregnant or lactating woman."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must belong to a family with an annual income below ₹2,00,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be registered at an Anganwadi center."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a resident of Gujarat.\n  - The applicant must be a pregnant or lactating woman.\n  - The applicant must belong to a family with an annual income below ₹2,00,000/-.\n  - The applicant must be registered at an Anganwadi center.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial Assistance:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Registration Benefit: "
+          },
+          {
+           "text": "A one-time financial assistance of ₹1000/- is provided."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Additional Benefit: "
+          },
+          {
+           "text": "An additional amount of ₹1000/- is disbursed after institutional delivery."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Further Benefit:"
+          },
+          {
+           "text": " ₹2000/- is given in two installments during the breastfeeding period, promoting continued maternal and child health."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "&gt; **Financial Assistance:**\n\n\n  - **Registration Benefit:** A one-time financial assistance of ₹1000/- is provided.  - **Additional Benefit:** An additional amount of ₹1000/- is disbursed after institutional delivery.  - **Further Benefit:** ₹2000/- is given in two installments during the breastfeeding period, promoting continued maternal and child health.\n",
+   "briefDescription": "This scheme is a Gujarat government initiative providing financial assistance to pregnant and lactating women from economically weaker sections to promote maternal and child health.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Vandan Matru Yojana (VMY)\" is a maternity benefit scheme launched by the Women and Child Development Department, Gujarat, to support pregnant and lactating women from economically weaker sections. The scheme emphasizes maternal nutrition, encourages institutional deliveries, and promotes breastfeeding practices to ensure the well-being of both mother and child. Beneficiaries receive financial assistance in stages during pregnancy, delivery, and the breastfeeding period. The scheme is implemented through Anganwadi centers and government health facilities, with funds transferred directly to the beneficiaries' bank accounts."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Vandan Matru Yojana (VMY)&amp;quot; is a maternity benefit scheme launched by the Women and Child Development Department, Gujarat, to support pregnant and lactating women from economically weaker sections. The scheme emphasizes maternal nutrition, encourages institutional deliveries, and promotes breastfeeding practices to ensure the well-being of both mother and child. Beneficiaries receive financial assistance in stages during pregnancy, delivery, and the breastfeeding period. The scheme is implemented through Anganwadi centers and government health facilities, with funds transferred directly to the beneficiaries&amp;#39; bank accounts.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://ahmedabad.cantt.gov.in/wp-content/uploads/sites/79/2024/09/CSS_SSS_20_09_2024_English_30.09.2024.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "vmyg"
+}

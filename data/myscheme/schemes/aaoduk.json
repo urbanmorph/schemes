@@ -1,0 +1,215 @@
+{
+ "_id": "68c8eeb25dd734f156426019",
+ "_slug": "aaoduk",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Information about the disaster and the resulting damage is received from various sources. The concerned Patwari verifies the damage and records it in the P-20 form. The Patwari’s report is subsequently verified by the Tehsildar and the Sub-Divisional Magistrate. Approval is then obtained from the District Magistrate. Once the District Magistrate’s approval is received, relief funds are disbursed to the concerned beneficiaries at the Tehsil level."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "Information about the disaster and the resulting damage is received from various sources. The concerned Patwari verifies the damage and records it in the P-20 form. The Patwari’s report is subsequently verified by the Tehsildar and the Sub-Divisional Magistrate. Approval is then obtained from the District Magistrate. Once the District Magistrate’s approval is received, relief funds are disbursed to the concerned beneficiaries at the Tehsil level.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand State Disaster Management Authority",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Disaster Management",
+    "value": 50000007
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Assistance for Damage to Agricultural Land and Other Losses",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ADALOL",
+   "schemeSubCategory": [
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Natural Disasters",
+    "Disaster",
+    "Farmer",
+    "Damage Of Agricultural Land",
+    "Disaster-related Losses"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    },
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a resident of Uttarakhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be a farmer/family who has suffered disaster-related losses."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The beneficiary must not be receiving or have received benefits for the same loss under any other scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have suffered damage to land that they legally own, according to revenue records."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a resident of Uttarakhand.\n1. The applicant must be a farmer/family who has suffered disaster-related losses.\n1. The beneficiary must not be receiving or have received benefits for the same loss under any other scheme.\n1. The applicant must have suffered damage to land that they legally own, according to revenue records.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under this scheme, in cases where farmers with agricultural land up to 2 hectares suffer damage and the layer of sand or sediment exceeds 3 inches, financial assistance is provided at the rate of ₹18,000/- per hectare for the removal of debris, leveling of land, or repair and restoration of fisheries reservoirs in hilly areas. A minimum of ₹2,200/- is payable to each beneficiary under this relief."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Farmers are provided ₹47,000/- per hectare for land damaged due to landslides, avalanches, or river diversions, with a minimum assistance of ₹5,000/- payable to each beneficiary."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - Under this scheme, in cases where farmers with agricultural land up to 2 hectares suffer damage and the layer of sand or sediment exceeds 3 inches, financial assistance is provided at the rate of ₹18,000/- per hectare for the removal of debris, leveling of land, or repair and restoration of fisheries reservoirs in hilly areas. A minimum of ₹2,200/- is payable to each beneficiary under this relief.\n  - Farmers are provided ₹47,000/- per hectare for land damaged due to landslides, avalanches, or river diversions, with a minimum assistance of ₹5,000/- payable to each beneficiary.\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide financial relief to farmers whose agricultural land has been damaged due to natural disasters such as floods, landslides, avalanches, or river diversions. Under this scheme, a minimum of ₹5,000/- and a maximum of ₹47,000/- is provided to the beneficiaries.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Assistance for Damage to Agricultural Land and Other Losses” is implemented by the Uttarakhand State Disaster Management Authority under the Department of Disaster Management, Government of Uttarakhand. The scheme aims to provide financial relief to farmers whose agricultural land has been damaged due to natural disasters such as floods, landslides, avalanches, or river diversions."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Assistance for Damage to Agricultural Land and Other Losses” is implemented by the Uttarakhand State Disaster Management Authority under the Department of Disaster Management, Government of Uttarakhand. The scheme aims to provide financial relief to farmers whose agricultural land has been damaged due to natural disasters such as floods, landslides, avalanches, or river diversions.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 305)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "aaoduk"
+}

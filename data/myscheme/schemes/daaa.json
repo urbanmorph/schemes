@@ -1,0 +1,219 @@
+{
+ "_id": "66b9ea970d7fcba784587858",
+ "_slug": "daaa",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1:"
+       },
+       {
+        "text": " The interested applicant visits the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://tbocwwb.telangana.gov.in/index.html",
+        "type": "link"
+       },
+       {
+        "text": " and clicks on \""
+       },
+       {
+        "children": [
+         {
+          "text": "Downloads"
+         }
+        ],
+        "link": "https://tbocwwb.telangana.gov.in/new_downloads.html",
+        "type": "link"
+       },
+       {
+        "text": "\" at the top of menu options."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2: "
+       },
+       {
+        "text": "Now click on the download button corresponding to the scheme name."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3"
+       },
+       {
+        "text": ": In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the concerned Assistant Labour Officer."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-5:"
+       },
+       {
+        "text": " Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant visits the [official website](https://tbocwwb.telangana.gov.in/index.html) and clicks on &quot;[Downloads](https://tbocwwb.telangana.gov.in/new_downloads.html)&quot; at the top of menu options.\n**Step-2:** Now click on the download button corresponding to the scheme name.\n**Step-3**: In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step-4:** Submit the duly filled and signed application form along with the documents to the concerned Assistant Labour Officer.\n**Step-5:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour, Employment Training and Factories Department",
+    "value": 3666676
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Disability Aids and Appliances - Telangana",
+   "schemeOpenDate": "2016-05-01",
+   "schemeShortTitle": "DAAA",
+   "schemeSubCategory": [
+    {
+     "label": "Aids/Appliances",
+     "value": "Aids/Appliances"
+    }
+   ],
+   "state": {
+    "label": "Telangana",
+    "value": 36
+   },
+   "tags": [
+    "Differently Abled Person",
+    "Appliances",
+    "Tricycle",
+    "Artificial Limbs",
+    "Construction Worker"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The worker should be a registered building or construction worker with the Telangana Building and Other Construction Workers Welfare Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The disablement must have occurred due to an accident at the worksite or anywhere."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The worker should be a registered building or construction worker with the Telangana Building and Other Construction Workers Welfare Board.\n1. The disablement must have occurred due to an accident at the worksite or anywhere.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Free distribution of artificial limbs, wheelchairs/tricycles, and fabricated appliances. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Free distribution of artificial limbs, wheelchairs/tricycles, and fabricated appliances.** \n\n",
+   "briefDescription": "The \"Disability Aids and Appliances\" scheme was launched by the Telangana Building & Other Construction Workers Welfare Board, LET&F (Labour) Dept. Telangana to provide artificial limbs, wheelchairs, tricycles, & other fabricated appliances to registered construction workers who have lost their limb",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Disability Aids and Appliances\" scheme was launched by the Telangana Building & Other Construction Workers Welfare Board, LET&F (Labour) Department. Telangana. The scheme aims to provide artificial limbs, wheelchairs, tricycles, and other fabricated appliances to registered construction workers who have lost limbs or sustained disabilities due to accidents. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Disability Aids and Appliances&quot; scheme was launched by the Telangana Building &amp; Other Construction Workers Welfare Board, LET&amp;F (Labour) Department. Telangana. The scheme aims to provide artificial limbs, wheelchairs, tricycles, and other fabricated appliances to registered construction workers who have lost limbs or sustained disabilities due to accidents. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://tbocwwb.telangana.gov.in/newsite/pdf_files/2016LETF_MS30.pdf"
+    },
+    {
+     "title": "List Of Schemes",
+     "url": "https://tbocwwb.telangana.gov.in/new_gos.html"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "daaa"
+}

@@ -1,0 +1,270 @@
+{
+ "_id": "66a8c217ff82e3090fb4da9b",
+ "_slug": "sgbcs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To avail of the benefits under this scheme, eligible students can contact the Principal of their respective schools/institutions."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note:"
+         },
+         {
+          "text": " The profile of the students is entered on the education portal "
+         },
+         {
+          "children": [
+           {
+            "text": "https://shikshaportal.mp.gov.in/"
+           }
+          ],
+          "link": "https://shikshaportal.mp.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": " by the teacher of the educational institution as per the record/certificate provided by the student."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - To avail of the benefits under this scheme, eligible students can contact the Principal of their respective schools/institutions.\n\n**Note:** The profile of the students is entered on the education portal [https://shikshaportal.mp.gov.in/](https://shikshaportal.mp.gov.in/) by the teacher of the educational institution as per the record/certificate provided by the student.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "School Education Department, Government Of Madhya Pradesh",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "School Education Department",
+    "value": 2300039
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "State Government Backward Class Scholarship (Class 6 to 10)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SGBCS",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Backward Class",
+    "Scholarship",
+    "Student"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be a permanent resident of Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should belong to the Backward Classes or Minorities community."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Students from Class 6 to 10 are eligible for the benefits under this scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The parents or guardians should not be income taxpayers or own more than 10 acres of land."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note: "
+        },
+        {
+         "text": "There should not have been any increase in the income of the parents or guardians in the past year."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a student.\n   1. The student should be a permanent resident of Madhya Pradesh.\n   1. The student should belong to the Backward Classes or Minorities community.\n   1. Students from Class 6 to 10 are eligible for the benefits under this scheme.\n   1. The parents or guardians should not be income taxpayers or own more than 10 acres of land.\n\n**Note:** There should not have been any increase in the income of the parents or guardians in the past year.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, scholarships are provided to Backward Classes students at the following rates:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 6 to 8:"
+          },
+          {
+           "text": " ₹200/- per year (for boys) and ₹300/- per year (for girls)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 9 to 10: "
+          },
+          {
+           "text": "₹300/- per year (for boys) and ₹400/- per year (for girls)"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " The scholarship will be transferred directly into the student's bank account."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "Under this scheme, scholarships are provided to Backward Classes students at the following rates:\n\n  - **Class 6 to 8:** ₹200/- per year (for boys) and ₹300/- per year (for girls)  - **Class 9 to 10:** ₹300/- per year (for boys) and ₹400/- per year (for girls)\n**Note:** The scholarship will be transferred directly into the student&amp;#39;s bank account.\n",
+   "briefDescription": "The scheme is implemented by the School Education Department, Govt. of Madhya Pradesh, aims to ensure the continuity of education for students from the Backward Classes. Under this scheme, scholarships are provided to Backward Classes students studying in Classes 6 to 10.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"State Government Backward Class Scholarship (Class 6 to 10)\" scheme, implemented by the School Education Department, Government of Madhya Pradesh, aims to ensure the continuity of education for students from the Backward Classes section of society. This scheme provides scholarships to Backward Classes students studying in Classes 6 to 10. To be eligible, students should be domicile of Madhya Pradesh, and their parents or guardians should not be income taxpayers or own not more than 10 acres of land."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;State Government Backward Class Scholarship (Class 6 to 10)&amp;quot; scheme, implemented by the School Education Department, Government of Madhya Pradesh, aims to ensure the continuity of education for students from the Backward Classes section of society. This scheme provides scholarships to Backward Classes students studying in Classes 6 to 10. To be eligible, students should be domicile of Madhya Pradesh, and their parents or guardians should not be income taxpayers or own not more than 10 acres of land.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=411"
+    },
+    {
+     "title": "Guidelines (Page No. 101)",
+     "url": "https://aiggpa.mp.gov.in/uploads/publication/Social_Protection_Eng.pdf"
+    },
+    {
+     "title": "Online Shiksha Portal",
+     "url": "https://shikshaportal.mp.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sgbcs"
+}

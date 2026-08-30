@@ -1,0 +1,369 @@
+{
+ "_id": "65f93ffde4760d555115915e",
+ "_slug": "sfmcas-glwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Application Process for Scheme Benefit:",
+          "underline": true
+         }
+        ],
+        "type": "block_quote"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The applicant may visit the Sanman Portal: "
+         },
+         {
+          "children": [
+           {
+            "text": "https://sanman.gujarat.gov.in/"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02: "
+         },
+         {
+          "text": "On the home page, under the tab ‘Citizen Login’, click on ‘"
+         },
+         {
+          "children": [
+           {
+            "text": "Please Register Here"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/Home/Registration",
+          "type": "link"
+         },
+         {
+          "text": "’."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " Enter your Aadhaar Card Number, select user type, and then enter your Labour Welfare Fund Account Number."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " Now, click on ‘Fetch’ & verify the details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " Enter user details and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06: "
+         },
+         {
+          "text": "After successful registration, the applicants can login through their User ID and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 07:"
+         },
+         {
+          "text": " Now, select the scheme and read the instructions carefully for the selected scheme."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 08: "
+         },
+         {
+          "text": "Fill out the application form and upload all the relevant documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 09:"
+         },
+         {
+          "text": " Agree with the Rules & Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "&gt; **Application Process for Scheme Benefit:**\n\n**Step 01:** The applicant may visit the Sanman Portal: [https://sanman.gujarat.gov.in/](https://sanman.gujarat.gov.in/)\n**Step 02:** On the home page, under the tab ‘Citizen Login’, click on ‘[Please Register Here](https://sanman.gujarat.gov.in/Home/Registration)’.\n**Step 03:** Enter your Aadhaar Card Number, select user type, and then enter your Labour Welfare Fund Account Number.\n**Step 04:** Now, click on ‘Fetch’ &amp;amp; verify the details.\n**Step 05:** Enter user details and Password.\n**Step 06:** After successful registration, the applicants can login through their User ID and Password.\n**Step 07:** Now, select the scheme and read the instructions carefully for the selected scheme.\n**Step 08:** Fill out the application form and upload all the relevant documents.\n**Step 09:** Agree with the Rules &amp;amp; Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Gujarat Labour Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour and Employment Department",
+    "value": 2444454
+   },
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Full Medical Checkup Assistance Scheme- Gujarat Labour Welfare Board",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FMCAS-GLWB",
+   "schemeSubCategory": [
+    {
+     "label": "Workplace health and safety",
+     "value": "Workplace health and safety"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Shramyogi",
+    "Medical",
+    "Checkup",
+    "Organized Worker",
+    "Labour"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Only those workers (Shramyogis) whose Labour Welfare Fund has been regularly paid by their organization/unit for the last one year will be eligible."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The male Shram Yogis above 45 years of age and female Shram Yogis above 35 years of age working in the organized sector will be eligible to avail of the benefits under the scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The benefit will be given once a year to the labourers."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The Gujarat Labour Welfare Board shall not be responsible for any side effects during/after physical examination."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "After getting in-principle approval from the office here, the medical examination has to be done within 30 days with the mutual agreement of the company and the hospital."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 01:"
+        },
+        {
+         "text": " The company willing to avail the benefits will have to upload the list (Excel Sheet) in the portal."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 02: "
+        },
+        {
+         "text": "Fees paid under this scheme will not be refunded."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 03:"
+        },
+        {
+         "text": " The final decision regarding the scheme will be with the Welfare Commissioner. The jurisdiction will be Ahmedabad."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. Only those workers (Shramyogis) whose Labour Welfare Fund has been regularly paid by their organization/unit for the last one year will be eligible.\n   1. The male Shram Yogis above 45 years of age and female Shram Yogis above 35 years of age working in the organized sector will be eligible to avail of the benefits under the scheme.\n   1. The benefit will be given once a year to the labourers.\n   1. The Gujarat Labour Welfare Board shall not be responsible for any side effects during/after physical examination.\n   1. After getting in-principle approval from the office here, the medical examination has to be done within 30 days with the mutual agreement of the company and the hospital.\n\n**Note 01:** The company willing to avail the benefits will have to upload the list (Excel Sheet) in the portal.\n**Note 02:** Fees paid under this scheme will not be refunded.\n**Note 03:** The final decision regarding the scheme will be with the Welfare Commissioner. The jurisdiction will be Ahmedabad.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The scheme provides health check-ups for male Shramyogi above 45 years of age and female Shramyogi above 35 years of age working in the organized sector in the state of Gujarat."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " A fixed amount of ₹1950/- per worker for complete medical check-ups and 25% of this amount is ₹487.50 to be paid by the organization/company."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. The scheme provides health check-ups for male Shramyogi above 45 years of age and female Shramyogi above 35 years of age working in the organized sector in the state of Gujarat.\n\n**Note:** A fixed amount of ₹1950/- per worker for complete medical check-ups and 25% of this amount is ₹487.50 to be paid by the organization/company.\n",
+   "briefDescription": "The objective of the scheme is to conduct health check-ups for male Shramyogis above 45 years of age and female Shram Yogis above 35 years of age who are working in the organized sector in the state of Gujarat.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Full Medical Checkup Assistance Scheme” is implemented by the Gujarat Labour Welfare Board, Labour, Skill Development & Employment Department, Government of Gujarat. The objective of the scheme is to conduct health check-ups for male Shramyogis above 45 years of age and female Shram Yogis above 35 years of age who are working in the organized sector in the state of Gujarat. Only those workers (Shramyogi) who’s Labour Welfare Fund has been paid regularly by their organization/unit for the last one year will be eligible."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The “Full Medical Checkup Assistance Scheme” is implemented by the Gujarat Labour Welfare Board, Labour, Skill Development &amp;amp; Employment Department, Government of Gujarat. The objective of the scheme is to conduct health check-ups for male Shramyogis above 45 years of age and female Shram Yogis above 35 years of age who are working in the organized sector in the state of Gujarat. Only those workers (Shramyogi) who’s Labour Welfare Fund has been paid regularly by their organization/unit for the last one year will be eligible.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://glwb.gujarat.gov.in/full-body-checkup-scheme.htm"
+    },
+    {
+     "title": "Sanman Portal",
+     "url": "https://sanman.gujarat.gov.in/Home/GLWBScheme#"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sfmcas-glwb"
+}

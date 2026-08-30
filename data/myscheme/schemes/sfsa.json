@@ -1,0 +1,308 @@
+{
+ "_id": "648ae92e481f59106a698336",
+ "_slug": "sfsa",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicants have to visit the "
+         },
+         {
+          "children": [
+           {
+            "text": "web portal"
+           }
+          ],
+          "link": "https://jankalyan.rajasthan.gov.in/#/home",
+          "type": "link"
+         },
+         {
+          "text": "."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Download the "
+         },
+         {
+          "children": [
+           {
+            "text": "application form"
+           }
+          ],
+          "link": "https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/Scheme/Sec__Edu_/SE/DOC_332_af1b8582-edeb-42f1-ac98-f2c60ea4e556.pdf",
+          "type": "link"
+         },
+         {
+          "text": " from page no. 12. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill out the form in the prescribed manner."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the application to District Education Officer.  "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Applicants have to visit the [web portal](https://jankalyan.rajasthan.gov.in/#/home).1. Download the [application form](https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/Scheme/Sec__Edu_/SE/DOC_332_af1b8582-edeb-42f1-ac98-f2c60ea4e556.pdf) from page no. 12. 1. Fill out the form in the prescribed manner.\n1. Submit the application to District Education Officer.  \n\n",
+    "url": "https://jankalyan.rajasthan.gov.in/#/home"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education (Elementary and Secondary) Department",
+    "value": 8000008
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Scheme For Study In Abroad",
+   "schemeOpenDate": "2011-01-01",
+   "schemeShortTitle": "SFSA",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Rajasthan",
+    "value": 8
+   },
+   "tags": [
+    "Financial Assistance",
+    "Higher Education",
+    "Empowerment",
+    "Social Welfare"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant girl should be among the first three girls at the state level studying in class 10th government school of Board of Secondary Education, Rajasthan. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The girl students securing the first three positions are given the opportunity to pursue graduate-level education abroad"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant girl should be among the first three girls at the state level studying in class 10th government school of Board of Secondary Education, Rajasthan. \n1. The girl students securing the first three positions are given the opportunity to pursue graduate-level education abroad\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "A maximum of Rs. 30,000 for coaching and up to Rs.50,000 for registration for SAT (Scholastic Aptitude Test) examination will be borne by the state government per student on the basis of actual expenditure."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "An amount of Rs. 25 thousand will be given to each girl student for submitting an application form for admission to a foreign university. "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "After the acceptance of the application by the foreign university, full accommodation facility of the university will be given and the economy class fare will also be provided to meet the parent once a year "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": " A maximum amount of up to Rs.10.00 lakh per year will be spent on all the items on each student in the 4-year course."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. A maximum of Rs. 30,000 for coaching and up to Rs.50,000 for registration for SAT (Scholastic Aptitude Test) examination will be borne by the state government per student on the basis of actual expenditure.\n   1. An amount of Rs. 25 thousand will be given to each girl student for submitting an application form for admission to a foreign university. \n   1. After the acceptance of the application by the foreign university, full accommodation facility of the university will be given and the economy class fare will also be provided to meet the parent once a year \n   1.  A maximum amount of up to Rs.10.00 lakh per year will be spent on all the items on each student in the 4-year course.\n\n",
+   "briefDescription": "In the year 2010-11, Rajasthan Government has taken the initiative to encourage girl child education by starting a scheme to Study Abroad. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The Rajasthan State government has started a scheme for girls students. Under this scheme, the state provides an opportunity to the girl students, who get the first three positions in the Rajasthan Board of Secondary Education,  to get graduate-level education in abroad for four years. "
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The names of the first 6 girl students studying in government schools have been sent by the Board of Secondary Education to the Director, Department of Secondary Education by July 15."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "In the merit list received by the Director, Secondary Education Department, a consent letter will be obtained from the father/ guardian giving complete information about this scheme to the parents of the first three girl students."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "If consent/agreement is not given by the guardian of any of these selected girl students, then this exercise will be completed one by one by selecting the remaining girl students from the list received from the Board of Secondary Education."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The facility for preparation of pre-admission examination etc. is available in the state capital Jaipur only. For this, the student will have to prepare for SAT (Scholastic Aptitude Test) by taking admission in class 11 in any school located in Jaipur. "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Such talented girl students will be provided a special facility of accommodation in the Girls Hostel of Government Girls Higher Secondary School Malviya Nagar, Jaipur, on the basis of the consent of the students/ parents, by the State Government. "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "If the student does not want to take advantage of this facility and arranges accommodation at her own level, then she will be free to do so."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Expenses on coaching and registration for SAT (Scholastic Aptitude Test) examination will be borne by the state government per student on the basis of actual expenditure."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The Rajasthan State government has started a scheme for girls students. Under this scheme, the state provides an opportunity to the girl students, who get the first three positions in the Rajasthan Board of Secondary Education,  to get graduate-level education in abroad for four years. \n&lt;br&gt;\n\n\n   1. The names of the first 6 girl students studying in government schools have been sent by the Board of Secondary Education to the Director, Department of Secondary Education by July 15.\n   1. In the merit list received by the Director, Secondary Education Department, a consent letter will be obtained from the father/ guardian giving complete information about this scheme to the parents of the first three girl students.\n   1. If consent/agreement is not given by the guardian of any of these selected girl students, then this exercise will be completed one by one by selecting the remaining girl students from the list received from the Board of Secondary Education.\n   1. The facility for preparation of pre-admission examination etc. is available in the state capital Jaipur only. For this, the student will have to prepare for SAT (Scholastic Aptitude Test) by taking admission in class 11 in any school located in Jaipur. \n   1. Such talented girl students will be provided a special facility of accommodation in the Girls Hostel of Government Girls Higher Secondary School Malviya Nagar, Jaipur, on the basis of the consent of the students/ parents, by the State Government. \n   1. If the student does not want to take advantage of this facility and arranges accommodation at her own level, then she will be free to do so.\n   1. Expenses on coaching and registration for SAT (Scholastic Aptitude Test) examination will be borne by the state government per student on the basis of actual expenditure.\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guideline",
+     "url": "https://schemes.rajasthan.gov.in/scheme/detail/332"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sfsa"
+}

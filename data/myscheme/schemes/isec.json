@@ -1,0 +1,298 @@
+{
+ "_id": "6491629e380f8e12354040ec",
+ "_slug": "isec",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The applicant applies to the financing bank for working capital."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "The applicant submits the Interest Subsidy Eligibility Certificate issued by KVIC."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "The bank sanctions working capital loan based on requirement."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " The bank raises reimbursement claim for interest subsidy to the nodal branch."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5: "
+       },
+       {
+        "text": "The subsidy amount is reimbursed through KVIC."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The applicant applies to the financing bank for working capital.\n**Step 2:** The applicant submits the Interest Subsidy Eligibility Certificate issued by KVIC.\n**Step 3:** The bank sanctions working capital loan based on requirement.\n**Step 4:** The bank raises reimbursement claim for interest subsidy to the nodal branch.\n**Step 5:** The subsidy amount is reimbursed through KVIC.\n<br>\n\n",
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": null,
+   "nodalMinistryName": {
+    "label": "Ministry Of Micro, Small and Medium Enterprises",
+    "value": 497
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Interest Subsidy Eligibility Certificate (ISEC) Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ISEC",
+   "schemeSubCategory": null,
+   "schemeType": {
+    "label": "Central Sector Scheme",
+    "value": "central-sector-scheme"
+   },
+   "tags": [
+    "Khadi Institution",
+    "Central Government",
+    "Khadi & Village Industries Boards",
+    "Credit"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Business Entity",
+     "value": "business-entity"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a khadi institution."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have a valid Khadi Certificate."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have a sanctioned khadi programme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be registered with Khadi and Village Industries Commission (KVIC) or State Khadi and Village Industries Boards (KVIBs)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The applicant must be a khadi institution.\n- The applicant must have a valid Khadi Certificate.\n- The applicant must have a sanctioned khadi programme.\n- The applicant must be registered with Khadi and Village Industries Commission (KVIC) or State Khadi and Village Industries Boards (KVIBs).\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Interest Subsidy: "
+          },
+          {
+           "text": "Loans available at a concessional interest rate of 4% per annum for working capital."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Subsidy Support:"
+          },
+          {
+           "text": " The difference between the actual bank interest rate and 4% is paid by the Central Government through the Khadi and Village Industries Commission (KVIC)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Funding Support:"
+          },
+          {
+           "text": " Helps bridge gap between required funds and budgetary allocation."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Sector Coverage:"
+          },
+          {
+           "text": " Applicable for khadi and polyvastra sector only."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Interest Subsidy:** Loans available at a concessional interest rate of 4% per annum for working capital.  - **Subsidy Support:** The difference between the actual bank interest rate and 4% is paid by the Central Government through the Khadi and Village Industries Commission (KVIC).  - **Funding Support:** Helps bridge gap between required funds and budgetary allocation.  - **Sector Coverage:** Applicable for khadi and polyvastra sector only.\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide concessional working capital loans at 4% interest to khadi institutions through interest subsidy support.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Introduced in 1977, the scheme \"Interest Subsidy Eligibility Certificate (ISEC)\" by the Ministry of Micro, Small and Medium Enterprises, Government of India, aims to provide concessional credit at 4% interest through subsidy support to khadi institutions for meeting working capital requirements. The scheme \"Interest Subsidy Eligibility Certificate (ISEC)\" by the Ministry of Micro, Small and Medium Enterprises, Government of India aims to provide concessional credit at 4% interest through subsidy support to khadi institutions for meeting working capital requirements."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "Introduced in 1977, the scheme &amp;quot;Interest Subsidy Eligibility Certificate (ISEC)&amp;quot; by the Ministry of Micro, Small and Medium Enterprises, Government of India, aims to provide concessional credit at 4% interest through subsidy support to khadi institutions for meeting working capital requirements. The scheme &amp;quot;Interest Subsidy Eligibility Certificate (ISEC)&amp;quot; by the Ministry of Micro, Small and Medium Enterprises, Government of India aims to provide concessional credit at 4% interest through subsidy support to khadi institutions for meeting working capital requirements.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://msme.gov.in/1-prime-ministers-employment-generation-programme-pmegp"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://msme.gov.in/sites/default/files/ISEC-Guideline.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "isec"
+}

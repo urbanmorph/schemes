@@ -1,0 +1,346 @@
+{
+ "_id": "67e02c511fcde6ef6988c59a",
+ "_slug": "sapsp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "italic": true,
+          "text": "Application Process:",
+          "underline": true
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " The eligible applicants may collect the application form from the nearest Village (Dweep) Panchayat office."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " Carefully fill out the application form and attach all supporting documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the completed application form along with the required documents to the Executive Officer at the Village (Dweep) Panchayat office."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "italic": true,
+          "text": "Post-Application Process:",
+          "underline": true
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " The application is verified by the members of the Evaluation Committee of the respective Village (Dweep) Panchayat."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2: "
+         },
+         {
+          "text": "After successful verification, the application is forwarded to the Chief Executive Officer, District Panchayat (HQ), Kavaratti, for further processing."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " The forwarded application undergoes re-verification by District Panchayat officials."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Upon successful re-verification at the District Panchayat level, the list of eligible pensioners is prepared through the Public Financial Management System (PFMS) and submitted to the Social Welfare & Tribal Affairs Department for payment processing."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 5:"
+         },
+         {
+          "text": " Payments are made through the Direct Benefit Transfer (DBT) mode, money is paid through Aadhaar-linked bank accounts."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "***Application Process:***\n**Step 1:** The eligible applicants may collect the application form from the nearest Village (Dweep) Panchayat office.\n**Step 2:** Carefully fill out the application form and attach all supporting documents.\n**Step 3:** Submit the completed application form along with the required documents to the Executive Officer at the Village (Dweep) Panchayat office.\n***Post-Application Process:***\n**Step 1:** The application is verified by the members of the Evaluation Committee of the respective Village (Dweep) Panchayat.\n**Step 2:** After successful verification, the application is forwarded to the Chief Executive Officer, District Panchayat (HQ), Kavaratti, for further processing.\n**Step 3:** The forwarded application undergoes re-verification by District Panchayat officials.\n**Step 4:** Upon successful re-verification at the District Panchayat level, the list of eligible pensioners is prepared through the Public Financial Management System (PFMS) and submitted to the Social Welfare &amp;amp; Tribal Affairs Department for payment processing.\n**Step 5:** Payments are made through the Direct Benefit Transfer (DBT) mode, money is paid through Aadhaar-linked bank accounts.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": "District Panchayat/VDPs Of The Union Territory Of Lakshadweep",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare and Tribal Affairs Department, Lakshadweep",
+    "value": 31000024
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Union Territory of Lakshadweep Pension Scheme for Specially Abled Persons",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "UTLPSSAP",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "Lakshadweep",
+    "value": 31
+   },
+   "tags": [
+    "Financial Assistance",
+    "Pension",
+    "PwD",
+    "Person With Disabilities",
+    "Disabled"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of Union Territory of Lakshadweep."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a specially-abled person who is deaf, dumb, blind, mentally retarded, or orthopedically disabled."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have at least 40% disability, certified by a competent authority."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not have a monthly income exceeding ₹1,500/- (₹18,000 per annum)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not have any source of income."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be a recipient of any other similar pension scheme provided by the government."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a permanent resident of Union Territory of Lakshadweep.\n1. The applicant should be a specially-abled person who is deaf, dumb, blind, mentally retarded, or orthopedically disabled.\n1. The applicant should have at least 40% disability, certified by a competent authority.\n1. The applicant should not have a monthly income exceeding ₹1,500/- (₹18,000 per annum).\n1. The applicant should not have any source of income.\n1. The applicant should not be a recipient of any other similar pension scheme provided by the government.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "Under this scheme, eligible individuals receive a monthly pension of ₹1,500/- (₹18,000/- per annum)."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Mode of Disbursement: "
+        },
+        {
+         "text": "The pension is directly transferred to the beneficiary’s bank account."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Frequency of Disbursement:"
+        },
+        {
+         "text": " The pension is disbursed on a monthly basis."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "Under this scheme, eligible individuals receive a monthly pension of ₹1,500/- (₹18,000/- per annum).\n\n- **Mode of Disbursement:** The pension is directly transferred to the beneficiary’s bank account.- **Frequency of Disbursement:** The pension is disbursed on a monthly basis.\n",
+   "briefDescription": "​The scheme aims to provide a monthly financial assistance of ₹1,500 to persons with disabilities, including those who are deaf, mute, blind, intellectually disabled, or orthopedically impaired, with a disability level of 40% or more and without any source of income.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "​The scheme \"Union Territory of Lakshadweep Pension Scheme for Specially Abled Persons\" was introduced by the Social Welfare & Tribal Affairs Department, Union Territory of Lakshadweep, aims to provide monthly financial assistance to Persons with Disabilities who have no source of income. The scheme covers persons with disabilities, including those who are deaf, mute, blind, mentally retarded, or orthopedically disabled, with a disability level of 40% or more. The District Panchayat and Village (Dweep) Panchayats (VDPs) of the Union Territory of Lakshadweep implement the scheme to ensure smooth processing and disbursement. The pension amount is directly transferred to the beneficiary’s bank account."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "​The scheme &amp;quot;Union Territory of Lakshadweep Pension Scheme for Specially Abled Persons&amp;quot; was introduced by the Social Welfare &amp;amp; Tribal Affairs Department, Union Territory of Lakshadweep, aims to provide monthly financial assistance to Persons with Disabilities who have no source of income. The scheme covers persons with disabilities, including those who are deaf, mute, blind, mentally retarded, or orthopedically disabled, with a disability level of 40% or more. The District Panchayat and Village (Dweep) Panchayats (VDPs) of the Union Territory of Lakshadweep implement the scheme to ensure smooth processing and disbursement. The pension amount is directly transferred to the beneficiary’s bank account.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant is not eligible if they receive any other government pension."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant is not eligible if they have an alternative source of stable income exceeding the prescribed limit."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "exclusions_md": "\n1. The applicant is not eligible if they receive any other government pension.\n1. The applicant is not eligible if they have an alternative source of stable income exceeding the prescribed limit.\n\n",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://lakshadweep.gov.in/departments/social-welfare-and-tribal-affairs/"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://cdn.s3waas.gov.in/s358238e9ae2dd305d79c2ebc8c1883422/uploads/2023/07/2023071388.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sapsp"
+}

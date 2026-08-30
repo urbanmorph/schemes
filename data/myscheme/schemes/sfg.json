@@ -1,0 +1,287 @@
+{
+ "_id": "669fdd958c4bd3d405926974",
+ "_slug": "sfg",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To avail of the benefits under this scheme, eligible girl students can contact the Principal of their respective government schools/institutions."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note:"
+         },
+         {
+          "text": " The student's profile is entered on the education portal "
+         },
+         {
+          "children": [
+           {
+            "text": "https://shikshaportal.mp.gov.in/"
+           }
+          ],
+          "link": "https://shikshaportal.mp.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": " by the teacher of the educational institution as per the record/certificate provided by the student."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - To avail of the benefits under this scheme, eligible girl students can contact the Principal of their respective government schools/institutions.\n\n**Note:** The student&amp;#39;s profile is entered on the education portal [https://shikshaportal.mp.gov.in/](https://shikshaportal.mp.gov.in/) by the teacher of the educational institution as per the record/certificate provided by the student.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "School Education Department, Government Of Madhya Pradesh",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "School Education Department",
+    "value": 2300039
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Scholarship for Fatherless Girls",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SFG",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Scholarship",
+    "Girl Student",
+    "Orphan",
+    "Fatherless"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a girl student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The girl student should be a permanent resident of Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The girl student should be studying in Class 1 to 12."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The girl student should be studying at a government school in Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The girl student who has lost her father is eligible for benefits under this scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The girl student should not be a beneficiary of any other scholarship."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The girl student should have passed the previous class."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a girl student.\n   1. The girl student should be a permanent resident of Madhya Pradesh.\n   1. The girl student should be studying in Class 1 to 12.\n   1. The girl student should be studying at a government school in Madhya Pradesh.\n   1. The girl student who has lost her father is eligible for benefits under this scheme.\n   1. The girl student should not be a beneficiary of any other scholarship.\n   1. The girl student should have passed the previous class.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, the scholarships will be given at the following rates:-"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 1 to 5:"
+          },
+          {
+           "text": "    ₹350/- per year"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 6 to 8:"
+          },
+          {
+           "text": "    ₹400/- per year"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 9 to 12:"
+          },
+          {
+           "text": "  ₹450/- per year "
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " The scholarship will be deposited directly into the student's bank account."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "Under this scheme, the scholarships will be given at the following rates:-\n\n  - **Class 1 to 5:**    ₹350/- per year  - **Class 6 to 8:**    ₹400/- per year  - **Class 9 to 12:**  ₹450/- per year \n**Note:** The scholarship will be deposited directly into the student&amp;#39;s bank account.\n",
+   "briefDescription": "The objective of this scheme is to support the education of girls who have lost their fathers and are studying in government schools. Under this scheme, scholarships ranging from ₹350/- to ₹450/- are provided to eligible girls from Class 1 to Class 12.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Scholarship for Fatherless Girls\" scheme was launched by the School Education Department, Government of Madhya Pradesh, to support the education of girls who have lost their fathers and are studying in government schools. Under this scheme, scholarships ranging from ₹350/- to ₹450/- are provided to eligible girls from Class 1 to Class 12. To be eligible, girls students should not be beneficiaries of any other scholarship and must have passed their previous class."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Scholarship for Fatherless Girls&amp;quot; scheme was launched by the School Education Department, Government of Madhya Pradesh, to support the education of girls who have lost their fathers and are studying in government schools. Under this scheme, scholarships ranging from ₹350/- to ₹450/- are provided to eligible girls from Class 1 to Class 12. To be eligible, girls students should not be beneficiaries of any other scholarship and must have passed their previous class.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=391"
+    },
+    {
+     "title": "Guidelines (Page No. 31)",
+     "url": "https://aiggpa.mp.gov.in/uploads/publication/Social_Protection_Eng.pdf"
+    },
+    {
+     "title": "Online Shiksha Portal",
+     "url": "https://shikshaportal.mp.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sfg"
+}

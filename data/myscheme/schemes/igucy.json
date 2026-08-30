@@ -1,0 +1,325 @@
+{
+ "_id": "6572e8a1fb2e1ccc6546df96",
+ "_slug": "igucy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Visit the Official Website of the "
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "National Scholarship Portal"
+             }
+            ],
+            "link": "https://scholarships.gov.in/",
+            "type": "link"
+           },
+           {
+            "text": ". and click “"
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "New Registration"
+             }
+            ],
+            "link": "https://scholarships.gov.in/otrapplication/#/",
+            "type": "link"
+           },
+           {
+            "text": "”. Guidelines for Registration will appear. Read the One Time Registration (OTR) Guidelines. Register using mobile number and complete e-KYC process and submit."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "In case applicant has forgotten his OTR/Reference number, click on the "
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "website"
+             }
+            ],
+            "link": "https://scholarships.gov.in/otrapplication/#/forgototr",
+            "type": "link"
+           },
+           {
+            "text": " to retrieve the same. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Once registered, click on \""
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "Applicant login"
+             }
+            ],
+            "link": "https://scholarships.gov.in/ApplicationForm/#/login",
+            "type": "link"
+           },
+           {
+            "bold": true,
+            "text": "\""
+           },
+           {
+            "text": " on the Scholarship portal. Enter your OTR/Reference number and password. Type the Captcha and click “Login”. On the next screen, provide the OTP received on your registered mobile number. You will be directed to the Password Reset screen. Create a new password and confirm. Click “Submit”. You will be directed to the “Applicant’s Dashboard”."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Click “Application Form”. The fields marked as * are compulsory. Fill in the details and upload the documents. You can either click on “Save as Draft” to complete the application later. Else, click “Final Submit” to submit the application."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ol_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "NOTE: "
+         },
+         {
+          "text": "All the applicants are advised to fill the form correctly, no changes can be made once submitted. The applicants are also advised to fill in only one application as multiple applications will cancel the form."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n   1. Visit the Official Website of the [**National Scholarship Portal**](https://scholarships.gov.in/). and click “[**New Registration**](https://scholarships.gov.in/otrapplication/#/)”. Guidelines for Registration will appear. Read the One Time Registration (OTR) Guidelines. Register using mobile number and complete e-KYC process and submit.   1. In case applicant has forgotten his OTR/Reference number, click on the [**website**](https://scholarships.gov.in/otrapplication/#/forgototr) to retrieve the same.    1. Once registered, click on &amp;quot;[**Applicant login**](https://scholarships.gov.in/ApplicationForm/#/login)**&amp;quot;** on the Scholarship portal. Enter your OTR/Reference number and password. Type the Captcha and click “Login”. On the next screen, provide the OTP received on your registered mobile number. You will be directed to the Password Reset screen. Create a new password and confirm. Click “Submit”. You will be directed to the “Applicant’s Dashboard”.   1. Click “Application Form”. The fields marked as * are compulsory. Fill in the details and upload the documents. You can either click on “Save as Draft” to complete the application later. Else, click “Final Submit” to submit the application.\n\n**NOTE:** All the applicants are advised to fill the form correctly, no changes can be made once submitted. The applicants are also advised to fill in only one application as multiple applications will cancel the form.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": "National Scholarship Portal",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education Department, Himachal Pradesh",
+    "value": 21111117
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Indira Gandhi Utkrisht Chattervriti Yojana",
+   "schemeOpenDate": "2005-10-03",
+   "schemeShortTitle": "IGUCY",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Himachal Pradesh",
+    "value": 2
+   },
+   "tags": [
+    "Education",
+    "Student",
+    "Financial Assistance",
+    "Scholarship"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "To be eligible, "
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "an applicant must"
+          },
+          {
+           "bold": true,
+           "text": " "
+          },
+          {
+           "text": "be a bonafide resident of Himachal Pradesh and fulfil the below academic criteria:"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Class 12:"
+          },
+          {
+           "text": " Students must have secured a minimum of 60% marks in the Himachal Pradesh Board of School Education (HPBOSE) Class 12 examination in any stream (Arts, Science, Commerce)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Graduate Level:"
+          },
+          {
+           "text": " Students must have secured a minimum of 60% marks in the undergraduate degree examination from a recognized university."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "be enrolled in an academic or professional stream at a recognized university or institution within or outside Himachal Pradesh."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "**To be eligible,** \n\n  - an applicant must**** be a bonafide resident of Himachal Pradesh and fulfil the below academic criteria:\n\n   1. **Class 12:** Students must have secured a minimum of 60% marks in the Himachal Pradesh Board of School Education (HPBOSE) Class 12 examination in any stream (Arts, Science, Commerce).   1. **Graduate Level:** Students must have secured a minimum of 60% marks in the undergraduate degree examination from a recognized university.   1. be enrolled in an academic or professional stream at a recognized university or institution within or outside Himachal Pradesh.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "A total of 150 meritorious students will receive ₹18,000 per annum based on merit."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- A total of 150 meritorious students will receive ₹18,000 per annum based on merit.\n\n",
+   "briefDescription": "A merit-based scholarship scheme of ₹18,000 per annum by the Department of Higher Education, Government of Himachal Pradesh will be awarded to 10 toppers each from Class 12 (Arts, Science, and Commerce) and from the merit list of B.A., B.Sc. and B.Com",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The Department of Higher Education, Government of Himachal Pradesh introduced a scheme named \""
+        },
+        {
+         "bold": true,
+         "text": "Indira Gandhi Utkrisht Chattervriti Yojana"
+        },
+        {
+         "text": "\" for post plus two students. Through this scheme, a scholarship of ₹18,000/- per annum will be awarded to 10 meritorious students each from Class 12 (Arts, Science, and Commerce) and from the merit list of B.A., B.Sc. and B.Com. degree. The scholarship will be renewed yearly until they complete the degree/course. This scheme aims to recognize and financially support exceptionally meritorious students pursuing higher education, promoting academic excellence and equal opportunities across the state. "
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The Department of Higher Education, Government of Himachal Pradesh introduced a scheme named &amp;quot;**Indira Gandhi Utkrisht Chattervriti Yojana**&amp;quot; for post plus two students. Through this scheme, a scholarship of ₹18,000/- per annum will be awarded to 10 meritorious students each from Class 12 (Arts, Science, and Commerce) and from the merit list of B.A., B.Sc. and B.Com. degree. The scholarship will be renewed yearly until they complete the degree/course. This scheme aims to recognize and financially support exceptionally meritorious students pursuing higher education, promoting academic excellence and equal opportunities across the state. \n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://scholarships.gov.in/public/schemeGuidelines/HP_state_scheme/Indira_Gandhi_Utkrisht_Chhatravriti_Yojna-merged-202324.pdf"
+    },
+    {
+     "title": "FAQ",
+     "url": "https://scholarships.gov.in/public/FAQ/HP_Queries.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://education.hp.gov.in/?q=regarding-merit-list-indira-gandhi-utkristh-chhatervriti-yojna-2023-24"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "igucy"
+}

@@ -1,0 +1,265 @@
+{
+ "_id": "67d846da5ba8cb935ddbf303",
+ "_slug": "ssfsap",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " The interested applicant should visit the Social Justice and Empowerment Department District Officer and request a copy of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " In the application form, fill in all the mandatory fields and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the duly filled and signed application form along with the documents to the District Officer of the Social Justice and Empowerment Department."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Request a receipt or acknowledgment from the concerned office to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit the Social Justice and Empowerment Department District Officer and request a copy of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step 2:** In the application form, fill in all the mandatory fields and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the District Officer of the Social Justice and Empowerment Department.\n**Step 4:** Request a receipt or acknowledgment from the concerned office to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 8000035
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Vishesh Yogyajan Chhatravriti Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "VYCY",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Rajasthan",
+    "value": 8
+   },
+   "tags": [
+    "PwD",
+    "Scholarship",
+    "Student",
+    "Tuition Fee",
+    "Specially Abled Person"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a native of Rajasthan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a student. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have at least 40% disability. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a regular student in a government or recognized educational institution."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant’s family annual income should not exceed ₹2,00,000/-."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have passed the previous academic year."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be a recipient of any other state government or NGO/trust-provided scholarship or allowance."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a native of Rajasthan.\n1. The applicant should be a student. \n1. The applicant should have at least 40% disability. \n1. The applicant should be a regular student in a government or recognized educational institution.\n1. The applicant’s family annual income should not exceed ₹2,00,000/-.\n1. The applicant should have passed the previous academic year.\n1. The applicant should not be a recipient of any other state government or NGO/trust-provided scholarship or allowance.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Scholarship Grant:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Financial assistance is provided as a scholarship to the students."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Tuition Fee Reimbursement:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme covers the tuition fee expenses for students studying in government-recognized institutions."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "**Scholarship Grant:**\n\n- Financial assistance is provided as a scholarship to the students.\n\n**Tuition Fee Reimbursement:**\n\n- The scheme covers the tuition fee expenses for students studying in government-recognized institutions.\n\n",
+   "briefDescription": "Under this scheme, scholarships and tuition fee reimbursement are provided to specially-abled students belonging to families with an annual income not exceeding ₹2.00 lakh, who are regularly studying in government and recognized educational institutions.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Vishesh Yogyajan Chhatravriti Yojana\" scheme was launched by the Department of Social Justice and Empowerment, Government of Rajasthan. It aims to provide financial assistance to students with disabilities to support their education. Under this scheme, scholarships and tuition fee reimbursement facility are provided to specially-abled students belonging to families with an annual income not exceeding ₹2.00 lakh, who are regularly studying in government and recognized educational institutions."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Vishesh Yogyajan Chhatravriti Yojana&amp;quot; scheme was launched by the Department of Social Justice and Empowerment, Government of Rajasthan. It aims to provide financial assistance to students with disabilities to support their education. Under this scheme, scholarships and tuition fee reimbursement facility are provided to specially-abled students belonging to families with an annual income not exceeding ₹2.00 lakh, who are regularly studying in government and recognized educational institutions.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sje.rajasthan.gov.in/Default.aspx?PageID=124"
+    },
+    {
+     "title": "Scheme Details",
+     "url": "https://dsap.rajasthan.gov.in/scheme/detail/184"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ssfsap"
+}

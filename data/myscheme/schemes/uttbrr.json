@@ -1,0 +1,288 @@
+{
+ "_id": "68fcded16d254a74e0b9b704",
+ "_slug": "uttbrr",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To register a unit, applicants must complete the online registration on the Tourism Department’s website at "
+           },
+           {
+            "children": [
+             {
+              "text": "https://uttarakhandtourism.gov.in"
+             }
+            ],
+            "link": "https://uttarakhandtourism.gov.in/",
+            "type": "link"
+           },
+           {
+            "text": " > Trade > Travel Trade Registration. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "An Aadhaar number and an Aadhaar-linked mobile number are mandatory. During the registration process, applicants are required to submit the company registration details mentioned in the application form, the applicant’s PAN card, the unit’s PAN card, GST registration certificate, a recent photograph of the unit, a balance sheet (in the case of an existing unit), a ₹10 affidavit, a copy of the land ownership document, a list of employees, hotel tariff rates (if applicable), the registration fee of ₹1,000, Fire NOC, Pollution Control Board NOC, and an FSSAI food license (for catering units). "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "After submission, the District Tourism Development Officer (DTDO) of the respective district conducts an inspection. Upon successful verification, the applicant is issued a registration number, after which the unit is authorized to operate legally."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - To register a unit, applicants must complete the online registration on the Tourism Department’s website at [https://uttarakhandtourism.gov.in](https://uttarakhandtourism.gov.in/) &amp;gt; Trade &amp;gt; Travel Trade Registration.   - An Aadhaar number and an Aadhaar-linked mobile number are mandatory. During the registration process, applicants are required to submit the company registration details mentioned in the application form, the applicant’s PAN card, the unit’s PAN card, GST registration certificate, a recent photograph of the unit, a balance sheet (in the case of an existing unit), a ₹10 affidavit, a copy of the land ownership document, a list of employees, hotel tariff rates (if applicable), the registration fee of ₹1,000, Fire NOC, Pollution Control Board NOC, and an FSSAI food license (for catering units). \n  - After submission, the District Tourism Development Officer (DTDO) of the respective district conducts an inspection. Upon successful verification, the applicant is issued a registration number, after which the unit is authorized to operate legally.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Tourism Development Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Tourism Department",
+    "value": 50000050
+   },
+   "schemeCategory": [
+    {
+     "label": "Travel & Tourism",
+     "value": "628ce94cd6d1a3bde468536f"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Uttarakhand Tourism and Travel Business Registration Rules",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "UTTBRR",
+   "schemeSubCategory": [
+    {
+     "label": "Tourism in India",
+     "value": "Tourism in India"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Tourism Business",
+    "Travel Business",
+    "Registration"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Business Entity",
+     "value": "business-entity"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The following units are eligible for registration under the Rules:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Residential Units: "
+          },
+          {
+           "text": "Hotels, motels, resorts, guest houses, dharamshalas, ashrams, etc."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Travel Trade-related Units:"
+          },
+          {
+           "text": " Travel agents, domestic tour operators, excursion agents."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Catering-related Units:"
+          },
+          {
+           "text": " Restaurants, beer bars, fast food centres, food plazas, food courts, etc."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Entertainment-related Units: "
+          },
+          {
+           "text": "Amusement/theme parks, golf courses, ropeways, sound and light shows, angling units, etc."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "A"
+          },
+          {
+           "bold": true,
+           "text": "dventure Tourism-related Units:"
+          },
+          {
+           "text": " Adventure tour operators, kayaking, canoeing, water sports, river rafting, wall climbing, mountaineering, rock climbing, paragliding, etc."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Other Units:"
+          },
+          {
+           "text": " Handicraft/souvenir shops, yoga and meditation centres/sadhana kutirs, tourist information centres, and nature/adventure/wildlife photography units, etc."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "The following units are eligible for registration under the Rules:\n\n  - **Residential Units:** Hotels, motels, resorts, guest houses, dharamshalas, ashrams, etc.  - **Travel Trade-related Units:** Travel agents, domestic tour operators, excursion agents.  - **Catering-related Units:** Restaurants, beer bars, fast food centres, food plazas, food courts, etc.  - **Entertainment-related Units:** Amusement/theme parks, golf courses, ropeways, sound and light shows, angling units, etc.  - A**dventure Tourism-related Units:** Adventure tour operators, kayaking, canoeing, water sports, river rafting, wall climbing, mountaineering, rock climbing, paragliding, etc.  - **Other Units:** Handicraft/souvenir shops, yoga and meditation centres/sadhana kutirs, tourist information centres, and nature/adventure/wildlife photography units, etc.\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this initiative, tourism-related businesses and services within the state are registered online through the Department of Tourism."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Under this initiative, tourism-related businesses and services within the state are registered online through the Department of Tourism.\n<br>\n\n",
+   "briefDescription": "It aims to establish a transparent, efficient, and standardized system for the online registration of tourism-related businesses and service  units across the state.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Uttarakhand Tourism and Travel Business Registration Rules” is implemented by the Uttarakhand Tourism Development Board under the Department of Tourism, Government of Uttarakhand. It aims to establish a transparent, efficient, and standardized system for the online registration of tourism-related businesses and service units across the state."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Uttarakhand Tourism and Travel Business Registration Rules” is implemented by the Uttarakhand Tourism Development Board under the Department of Tourism, Government of Uttarakhand. It aims to establish a transparent, efficient, and standardized system for the online registration of tourism-related businesses and service units across the state.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 120)",
+     "url": "https://uk.gov.in/department92/library_file/file-30-01-2025-04-25-16.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://uttarakhandtourism.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "uttbrr"
+}

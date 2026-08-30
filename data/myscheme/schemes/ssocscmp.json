@@ -1,0 +1,265 @@
+{
+ "_id": "673e1973dcf10d12f5b52a2a",
+ "_slug": "ssocscmp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested student should visit the educational institution during office hours and request a hard copy of the prescribed application form from the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "Fill in all the mandatory fields in the application form, paste a passport-sized photograph (signed across, if required), and attach copies of all the necessary documents (self-attested, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the concerned authority within the prescribed period (if any)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Post-Application:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " After submitting the application, the educational institution authority should visit the Madhya Pradesh "
+       },
+       {
+        "children": [
+         {
+          "text": "Shiksha Portal"
+         }
+        ],
+        "link": "https://shikshaportal.mp.gov.in/",
+        "type": "link"
+       },
+       {
+        "text": " to apply for the scheme benefits on behalf of the student."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "The concerned authority can complete the online registration process and submit the application for scheme benefits through the portal."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested student should visit the educational institution during office hours and request a hard copy of the prescribed application form from the concerned authority.\n**Step 2:** Fill in all the mandatory fields in the application form, paste a passport-sized photograph (signed across, if required), and attach copies of all the necessary documents (self-attested, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the concerned authority within the prescribed period (if any).\n<br>\n\n**Post-Application:**\n**Step 1:** After submitting the application, the educational institution authority should visit the Madhya Pradesh [Shiksha Portal](https://shikshaportal.mp.gov.in/) to apply for the scheme benefits on behalf of the student.\n**Step 2:** The concerned authority can complete the online registration process and submit the application for scheme benefits through the portal.\n<br>\n\n<br>\n\n<br>\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Tribal Welfare and Scheduled Caste (SC) Department",
+    "value": 2300051
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "State Scholarship of Class 6th to 10th (Scheduled Caste)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SSOCSCMP",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Scheduled Castes",
+    "Student",
+    "Scholarships",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The student should be a resident of Madhya Pradesh"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student should belong to the Scheduled Caste (SC) category."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student should be enrolled in classes 6th to 10th in a recognized educational institution.."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student should apply for the scholarship before the 31st of October."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The student should be a resident of Madhya Pradesh\n1. The student should belong to the Scheduled Caste (SC) category.\n1. The student should be enrolled in classes 6th to 10th in a recognized educational institution..\n1. The student should apply for the scholarship before the 31st of October.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Scholarship amount:"
+      },
+      {
+       "text": " Boy - ₹200/- ,Girl -₹600/- (for 10 months)"
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Scholarship amount:** Boy - ₹200/- ,Girl -₹600/- (for 10 months)\n",
+   "briefDescription": "Launched in 1966-67, the \"State Scholarship for Class 6th to 10th\" is a scheme by the Scheduled Caste Welfare Department, Govt of MP. It provides ₹200 per year for boys and ₹600 per year for girls from Scheduled Caste communities, until 31st October.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "Launched in 1966-67, the \"State Scholarship for Class 6th to 10th\" is a welfare scheme by the Scheduled Caste Welfare Department, Government of Madhya Pradesh. This scheme provides financial assistance to Scheduled Caste students, offering ₹200 per year for boys and ₹600 per year for girls, to support their education. The scholarship is provided until 31st October each year. The aim is to encourage students from the Scheduled Caste category to pursue their education and reduce financial barriers."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "Launched in 1966-67, the &quot;State Scholarship for Class 6th to 10th&quot; is a welfare scheme by the Scheduled Caste Welfare Department, Government of Madhya Pradesh. This scheme provides financial assistance to Scheduled Caste students, offering ₹200 per year for boys and ₹600 per year for girls, to support their education. The scholarship is provided until 31st October each year. The aim is to encourage students from the Scheduled Caste category to pursue their education and reduce financial barriers.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?status=ByVibhag&pointvalue=2&Schemeid=9"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ssocscmp"
+}

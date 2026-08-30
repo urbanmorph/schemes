@@ -1,0 +1,323 @@
+{
+ "_id": "68aefd49f65b9f85e61e2c10",
+ "_slug": "svmvc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The student’s application is first forwarded and recommended by the school principal, and then by the Assistant Director of the respective district."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Required documents include the Aadhaar card, bank account details, and the merit list certificate."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "If the student’s name appears in the merit list, they or their guardian can submit the application online through the "
+           },
+           {
+            "children": [
+             {
+              "text": "Apuni Sarkar portal"
+             }
+            ],
+            "link": "https://eservices.uk.gov.in/",
+            "type": "link"
+           },
+           {
+            "text": " during the same session."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The student’s application is first forwarded and recommended by the school principal, and then by the Assistant Director of the respective district.\n  - Required documents include the Aadhaar card, bank account details, and the merit list certificate.\n  - If the student’s name appears in the merit list, they or their guardian can submit the application online through the [Apuni Sarkar portal](https://eservices.uk.gov.in/) during the same session.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Directorate Of Sanskrit Education, Uttarakhand",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Sanskrit Education",
+    "value": 50000017
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Scholarships to Meritorious Students of Sanskrit Schools",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SMSSS",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Scholarship",
+    "Sanskrit",
+    "Meritorious Student",
+    "Sanskrit Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a student of a recognized Sanskrit school under the Uttarakhand Sanskrit Shiksha Parishad."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have secured a place in the top 10 in the class 10"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": " merit list or in the top 3 in the class 12"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": " merit list from the Board Examination of Sanskrit School."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be currently studying in class 11"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": " or 12"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": " after clearing class 10"
+          },
+          {
+           "superscript": true,
+           "text": "th"
+          },
+          {
+           "text": "."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a student of a recognized Sanskrit school under the Uttarakhand Sanskrit Shiksha Parishad.\n   1. The applicant must have secured a place in the top 10 in the class 10th merit list or in the top 3 in the class 12th merit list from the Board Examination of Sanskrit School.   1. The applicant must be currently studying in class 11th or 12th after clearing class 10th.\n&lt;br&gt;\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Meritorious students of Prathmik Madhyama (Class 10) are awarded a scholarship of ₹500 per month for 20 months."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Three meritorious students of Uttar Madhyama (Class 12) are awarded cash prizes:"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "First Position:"
+          },
+          {
+           "text": " ₹20,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Second Position:"
+          },
+          {
+           "text": " ₹15,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Third Position:"
+          },
+          {
+           "text": " ₹10,000/-"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n1. Meritorious students of Prathmik Madhyama (Class 10) are awarded a scholarship of ₹500 per month for 20 months.\n1. Three meritorious students of Uttar Madhyama (Class 12) are awarded cash prizes:\n\n\n- **First Position:** ₹20,000/-- **Second Position:** ₹15,000/-- **Third Position:** ₹10,000/-\n<br>\n\n",
+   "briefDescription": "The scheme aims to promote Sanskrit education by providing scholarships to meritorious students of Prathmik Madhyama (Class 10) and Uttar Madhyama (Class 12) in Sanskrit schools who secure the highest marks.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Scholarships to Meritorious Students of Sanskrit Schools” is implemented by the Directorate of Sanskrit Education under the Department of Sanskrit Education, Government of Uttarakhand. The scheme aims to promote Sanskrit education by providing scholarships to meritorious students of Prathmik Madhyama (Class 10) and Uttar Madhyama (Class 12) in Sanskrit schools who secure the highest marks."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Scholarships to Meritorious Students of Sanskrit Schools” is implemented by the Directorate of Sanskrit Education under the Department of Sanskrit Education, Government of Uttarakhand. The scheme aims to promote Sanskrit education by providing scholarships to meritorious students of Prathmik Madhyama (Class 10) and Uttar Madhyama (Class 12) in Sanskrit schools who secure the highest marks.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 93)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "svmvc"
+}

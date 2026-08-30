@@ -1,0 +1,244 @@
+{
+ "_id": "67f7aa0dca4dbdfd5310ac8d",
+ "_slug": "ndafcwu",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "The online application for the scheme can be submitted through Shramik Suvidha Kendras by the nominated dependent of the registered construction worker, whose name is mentioned in the worker’s Shramik Card."
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "It is mandatory to apply within one year from the date of the worker’s death. "
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "At the time of application, the following documents must be attached: self-declaration certificate, Shramik Card of the deceased worker, Aadhaar Card, death certificate, accident-related proof (in case of accidental death), Aadhaar Card and bank account details of the dependent, along with an affidavit stating that this benefit has not been availed under any other scheme. "
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "After verification and approval through departmental investigation, financial assistance is provided."
+             }
+            ],
+            "type": "list_item"
+           }
+          ],
+          "type": "ul_list"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The online application for the scheme can be submitted through Shramik Suvidha Kendras by the nominated dependent of the registered construction worker, whose name is mentioned in the worker’s Shramik Card.\n  - It is mandatory to apply within one year from the date of the worker’s death. \n  - At the time of application, the following documents must be attached: self-declaration certificate, Shramik Card of the deceased worker, Aadhaar Card, death certificate, accident-related proof (in case of accidental death), Aadhaar Card and bank account details of the dependent, along with an affidavit stating that this benefit has not been availed under any other scheme. \n  - After verification and approval through departmental investigation, financial assistance is provided.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Building And Other Construction Workers Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Labour",
+    "value": 50000014
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Financial Assistance After Death (UKBOCWWB)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FAADUKBOCWWB",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Labour",
+    "Construction Worker",
+    "Death Assistance",
+    "Insurance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a dependent of the deceased construction worker."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The dependent’s name must be mentioned in the labour card as a dependent."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The deceased construction worker must have been registered with the Uttarakhand Building and Other Construction Workers Welfare Board."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a dependent of the deceased construction worker.\n   1. The dependent’s name must be mentioned in the labour card as a dependent.\n   1. The deceased construction worker must have been registered with the Uttarakhand Building and Other Construction Workers Welfare Board.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "₹2,00,000/- will be provided in the event of the natural death."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "₹4,00,000/- will be provided in the event of the accidental death."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - ₹2,00,000/- will be provided in the event of the natural death.\n  - ₹4,00,000/- will be provided in the event of the accidental death.\n\n<br>\n\n",
+   "briefDescription": "The scheme provides financial assistance of ₹2 lakh in case of natural death and ₹4 lakh in case of accidental death to the dependents of registered construction workers.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Financial Assistance After Death” scheme is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide financial support to the dependents of registered construction workers in the event of the worker’s death, whether due to natural causes or an accident."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Financial Assistance After Death” scheme is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide financial support to the dependents of registered construction workers in the event of the worker’s death, whether due to natural causes or an accident.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 56)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://ukbocw.uk.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ndafcwu"
+}

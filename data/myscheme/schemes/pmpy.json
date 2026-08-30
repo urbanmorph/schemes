@@ -1,0 +1,260 @@
+{
+ "_id": "68271136f2de71e7817c1519",
+ "_slug": "pmpy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " Go to the "
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "link": "https://esamajkalyan.gujarat.gov.in/",
+        "type": "link"
+       },
+       {
+        "text": " "
+       },
+       {
+        "children": [
+         {
+          "text": "eSamajKalyan portal"
+         }
+        ],
+        "link": "https://esamajkalyan.gujarat.gov.in/",
+        "type": "link"
+       },
+       {
+        "text": " and Register/Login."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "Fill in the online application form under \"Palak Mata-Pita Yojana\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Upload the required documents and Submit the application."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Go to the  [eSamajKalyan portal](https://esamajkalyan.gujarat.gov.in/) and Register/Login.\n**Step 2:** Fill in the online application form under &quot;Palak Mata-Pita Yojana&quot;.\n**Step 3:** Upload the required documents and Submit the application.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 2444464
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Palak Mata-Pita Yojana",
+   "schemeOpenDate": "2009-08-29",
+   "schemeShortTitle": "PMPY",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Foster Parent",
+    "Orphan",
+    "Child Welfare",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a close relative, guardian, or foster parent taking care of the child."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be caring for a child aged between 0 to 18 years."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be taking care of a child whose both parents are deceased, or whose father is deceased and mother has remarried."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must ensure that the child between 3 to 6 years is enrolled in an Anganwadi center."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must ensure that the child above 6 years is enrolled in a school for compulsory education."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must submit a certificate from the school or institution every year confirming the child’s ongoing education."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have an annual family income not exceeding ₹27,000/- in rural areas."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have an annual family income not exceeding ₹36,000/- in urban areas."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a close relative, guardian, or foster parent taking care of the child.\n  - The applicant must be caring for a child aged between 0 to 18 years.\n  - The applicant must be taking care of a child whose both parents are deceased, or whose father is deceased and mother has remarried.\n  - The applicant must ensure that the child between 3 to 6 years is enrolled in an Anganwadi center.\n  - The applicant must ensure that the child above 6 years is enrolled in a school for compulsory education.\n  - The applicant must submit a certificate from the school or institution every year confirming the child’s ongoing education.\n  - The applicant must have an annual family income not exceeding ₹27,000/- in rural areas.\n  - The applicant must have an annual family income not exceeding ₹36,000/- in urban areas.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Financial Assistance: "
+      },
+      {
+       "text": "₹3,000/- per month."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Financial Assistance:** ₹3,000/- per month.\n",
+   "briefDescription": "The \"Palak Mata-Pita Yojana\" introduced on 29th August, 2009 by the Social Justice and Empowerment Department, Gujarat, provides a monthly assistance of ₹3000 to foster parents raising orphaned children or children whose mother has remarried after the father's death.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Palak Mata-Pita Yojana\" introduced on 29th August, 2009 by the Social Justice and Empowerment Department, Gujarat, aims to provide monthly assistance of Rs. 3000/- is paid to the close relative, guardian or relative who is taking care of the orphaned children who are studying and whose mother and father are both deceased or whose father is deceased and the mother has remarried. This assistance is paid through DBT."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Palak Mata-Pita Yojana&amp;quot; introduced on 29th August, 2009 by the Social Justice and Empowerment Department, Gujarat, aims to provide monthly assistance of Rs. 3000/- is paid to the close relative, guardian or relative who is taking care of the orphaned children who are studying and whose mother and father are both deceased or whose father is deceased and the mother has remarried. This assistance is paid through DBT.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Scheme No. 406)",
+     "url": "https://mariyojana.gujarat.gov.in/Schemeatoz.aspx"
+    },
+    {
+     "title": "Guidelines 2",
+     "url": "https://sje.gujarat.gov.in/dsd/scheme/palak-mata-sccheme"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "pmpy"
+}

@@ -1,0 +1,273 @@
+{
+ "_id": "65aa224130cd9600eb557516",
+ "_slug": "aavy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "How to get register and apply for the scheme",
+        "underline": true
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicant must visit the below offices"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Nearest labor office."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Tehsildar of the concerned tehsil."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Block Development Officer of the concerned development block."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "text": "Get the application form and fill out the completely."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Attach required documents in the prescribed format."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the application form in the same office."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "> **How to get register and apply for the scheme**\n\n\n1. Applicant must visit the below offices\n\n  - Nearest labor office.\n  - Tehsildar of the concerned tehsil.\n  - Block Development Officer of the concerned development block.\n\n1. Get the application form and fill out the completely.\n1. Attach required documents in the prescribed format.\n1. Submit the application form in the same office.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department, Uttar Pradesh",
+    "value": 90000031
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Atal Awasiya Vidyala Yojana",
+   "schemeOpenDate": "2023-04-05",
+   "schemeShortTitle": "AAVY",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Uttar Pradesh",
+    "value": 9
+   },
+   "tags": [
+    "Free Education",
+    "Labor Community",
+    "Life Skill Education"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Children destitute during the Corona period, identified by the Women Welfare Department, Lucknow."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Children for the Chief Minister Child Service Scheme (General) are eligible."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Orphan children and offspring of duly registered construction workers, who have completed at least 01 year (365 days) membership period of the board after registration."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "A maximum of 02 children per registered worker can avail educational benefits."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. Children destitute during the Corona period, identified by the Women Welfare Department, Lucknow.\n1. Children for the Chief Minister Child Service Scheme (General) are eligible.\n1. Orphan children and offspring of duly registered construction workers, who have completed at least 01 year (365 days) membership period of the board after registration.\n1. A maximum of 02 children per registered worker can avail educational benefits.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Free education, accommodation, and meals"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Medical facilities"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Sports and recreational activities"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Access to a nurturing environment that fosters personal growth"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. Free education, accommodation, and meals\n1. Medical facilities\n1. Sports and recreational activities\n1. Access to a nurturing environment that fosters personal growth\n\n",
+   "briefDescription": "The Atal Awasiya Vidyalaya Yojana is an initiative launched by the Uttar Pradesh government to provide free education to children of construction workers employed in the informal sector. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The Atal Awasiya Vidyalaya Yojana is an initiative launched by the Uttar Pradesh government to provide free education to children of construction workers employed in the informal sector. Under this scheme, two children of registered workers between the ages of 6 and 16 receive free residential education in dedicated schools."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The UP Atal Awasiya Vidyalaya Yojana is a scheme that provides free education to poor children of construction workers in Uttar Pradesh. The scheme is currently being implemented in 18 districts of the state. The goal of the scheme is to provide these children with the opportunity to succeed in life and improve their standard of living"
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The Atal Awasiya Vidyalaya Yojana is an initiative launched by the Uttar Pradesh government to provide free education to children of construction workers employed in the informal sector. Under this scheme, two children of registered workers between the ages of 6 and 16 receive free residential education in dedicated schools.\n<br>\n\nThe UP Atal Awasiya Vidyalaya Yojana is a scheme that provides free education to poor children of construction workers in Uttar Pradesh. The scheme is currently being implemented in 18 districts of the state. The goal of the scheme is to provide these children with the opportunity to succeed in life and improve their standard of living\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.upbocw.in/pdf/adhisuchna/atal_awasiya_vidyalaya_scheme_100423.pdf"
+    },
+    {
+     "title": "Details",
+     "url": "https://www.upbocw.in/StaticPages/schemes.aspx#tab3"
+    },
+    {
+     "title": "Labor Department",
+     "url": "https://www.upbocw.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "aavy"
+}

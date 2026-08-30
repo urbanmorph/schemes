@@ -1,0 +1,485 @@
+{
+ "_id": "66ff970b51754aeb8f228e37",
+ "_slug": "iacab",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the Manipur Building and Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "OR"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "The interested applicant visits the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "http://manipurbcwb.in/",
+        "type": "link"
+       },
+       {
+        "text": " and downloads the "
+       },
+       {
+        "children": [
+         {
+          "text": "application form"
+         }
+        ],
+        "link": "http://manipurbcwb.in/files/forms/beneficiaryForm.pdf",
+        "type": "link"
+       },
+       {
+        "text": ". "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the Labour Board Inspector"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgement from the Labour Board Inspector to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant should visit (during office hours) the Manipur Building and Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**OR**\nThe interested applicant visits the [official website](http://manipurbcwb.in/) and downloads the [application form](http://manipurbcwb.in/files/forms/beneficiaryForm.pdf). \n**Step-2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step-3:** Submit the duly filled and signed application form along with the documents to the Labour Board Inspector\n**Step-4:** Request a receipt or acknowledgement from the Labour Board Inspector to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour and Employment Department",
+    "value": 1444463
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Immediate Assistance in Case of Accident to the Beneficiary",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "IACAB",
+   "schemeSubCategory": [
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Manipur",
+    "value": 14
+   },
+   "tags": [
+    "Financial Assistance",
+    "Person With Disability",
+    "Death",
+    "Accident",
+    "Construction Worker"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    },
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "For Accidental Case:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The construction worker should be registered under the Manipur Building and Other Construction Workers' Welfare Board. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The construction worker should not be covered by the Group Insurance Scheme undertaken by the Board."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "For Accidental Death:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be the nominee/dependent of the deceased construction worker."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The deceased construction worker should be registered with the Manipur Building and Other Construction Workers' Welfare Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The deceased construction worker should not be covered by the Group Insurance Scheme undertaken by the Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "For Disability:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The construction worker should be registered under the Manipur Building and Other Construction Workers' Welfare Board. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The construction worker should be disabled due to an accident. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The deceased construction worker should not be covered by the Group Insurance Scheme undertaken by the Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "paragraph"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "> ***For Accidental Case:***\n\n\n1. The construction worker should be registered under the Manipur Building and Other Construction Workers&#39; Welfare Board. \n1. The construction worker should not be covered by the Group Insurance Scheme undertaken by the Board.\n\n<br>\n\n> ***For Accidental Death:***\n\n\n1. The applicant should be the nominee/dependent of the deceased construction worker.\n1. The deceased construction worker should be registered with the Manipur Building and Other Construction Workers&#39; Welfare Board.\n1. The deceased construction worker should not be covered by the Group Insurance Scheme undertaken by the Board.\n\n> ***For Disability:***\n\n\n1. The construction worker should be registered under the Manipur Building and Other Construction Workers&#39; Welfare Board. \n1. The construction worker should be disabled due to an accident. \n1. The deceased construction worker should not be covered by the Group Insurance Scheme undertaken by the Board.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "Financial assistance for hospitalization:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹5,000/- for the first 5 days "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹500/- per day for the remaining days subject to a maximum of ₹15,000/-"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "Financial assistance for disability caused by accident:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹25,000/- for upto 25% disability."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹50,000/- for upto 50% disability."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹1,00,000/- for disability above 50%."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "italic": true,
+       "text": "Financial assistance for Death:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹1,00,000/- is provided to the nominees or dependents of a beneficiary building worker in case of accidental death."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹2,00,000/- is provided to the nominees or dependents of the beneficiary building worker in case of death due to an accident during employment."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹5,000/- provided to the kin of the deceased building worker or to the worker in case of a dependent's death."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "> ***Financial assistance for hospitalization:***\n\n\n- ₹5,000/- for the first 5 days \n- ₹500/- per day for the remaining days subject to a maximum of ₹15,000/-\n\n<br>\n\n> ***Financial assistance for disability caused by accident:***\n\n\n- ₹25,000/- for upto 25% disability.\n\n\n- ₹50,000/- for upto 50% disability.\n- ₹1,00,000/- for disability above 50%.\n\n<br>\n\n> ***Financial assistance for Death:***\n\n\n- ₹1,00,000/- is provided to the nominees or dependents of a beneficiary building worker in case of accidental death.\n- ₹2,00,000/- is provided to the nominees or dependents of the beneficiary building worker in case of death due to an accident during employment.\n- ₹5,000/- provided to the kin of the deceased building worker or to the worker in case of a dependent&#39;s death.\n\n",
+   "briefDescription": "The \"Immediate Assistance in Case of Accident to the Beneficiary\" scheme was launched by the Manipur Building and Other Construction Workers' Welfare Board & aims to provide financial assistance to registered building workers and their families in case of worker accidents, disabilities, or death. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Immediate Assistance in Case of Accident to the Beneficiary\" scheme was launched by the Manipur Building & Other Construction Workers' Welfare Board. The scheme aims to provide financial assistance to registered building workers in cases of accidents, disabilities, or death due to accidents. Workers hospitalized for five or more days due to an accident are given immediate assistance, and further aid is available for those who suffer disabilities or death resulting from such accidents. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Immediate Assistance in Case of Accident to the Beneficiary&quot; scheme was launched by the Manipur Building &amp; Other Construction Workers&#39; Welfare Board. The scheme aims to provide financial assistance to registered building workers in cases of accidents, disabilities, or death due to accidents. Workers hospitalized for five or more days due to an accident are given immediate assistance, and further aid is available for those who suffer disabilities or death resulting from such accidents. \n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "http://manipurbcwb.in/SchemeDetails?title=immediate+assistance+in+case+of+accident+to+the+beneficiary"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "iacab"
+}

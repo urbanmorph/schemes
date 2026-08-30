@@ -1,0 +1,256 @@
+{
+ "_id": "64534b9f9a0bca12ac11add8",
+ "_slug": "faaadp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "District Social Welfare Office"
+         }
+        ],
+        "link": "https://sjsa.maharashtra.gov.in/en/contacts",
+        "type": "link"
+       },
+       {
+        "text": ", and request a hard copy of the format of the application form for the scheme from the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across), and attach all the (self-attested) mandatory documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents to the Assistant Commissioner, District Social Welfare Office."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Acquire the receipt/acknowledgment of the successful submission of the application form from the District Social Welfare Office."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": "District Social Welfare Offices Of The Department Of Social Justice & Special Assistance, Govt. Of Maharashtra",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Special Assistance Department",
+    "value": 27111139
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Financial Assistance For Aids And Appliances For Disabled Persons",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FAAADP",
+   "schemeSubCategory": [
+    {
+     "label": "Aids/Appliances",
+     "value": "Aids/Appliances"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Maharashtra",
+    "value": 27
+   },
+   "tags": [
+    "Aids And Appliances",
+    "Person With Disability",
+    "Financial Assistance",
+    "Social Welfare"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a citizen of India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of Maharashtra State."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a Person with Disability (Visually Handicapped, Low Vision, Hearing Impaired, Orthopedically Handicapped, etc)."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The percentage of the disability should be 40% or above."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "For financial assistance of 100% of the cost of the aids and appliances, the monthly income of the applicant should be less than ₹1,500/-."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "For financial assistance of 50% of the cost of the aids and appliances, the monthly income of the applicant should be between ₹1,500/- to ₹2,000/-."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a citizen of India.\n1. The applicant should be a permanent resident of Maharashtra State.\n1. The applicant should be a Person with Disability (Visually Handicapped, Low Vision, Hearing Impaired, Orthopedically Handicapped, etc).\n1. The percentage of the disability should be 40% or above.\n1. For financial assistance of 100% of the cost of the aids and appliances, the monthly income of the applicant should be less than ₹1,500/-.\n1. For financial assistance of 50% of the cost of the aids and appliances, the monthly income of the applicant should be between ₹1,500/- to ₹2,000/-.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "For Hearing Handicapped:"
+        },
+        {
+         "text": " Hearing Aids."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "For Orthopedically Handicapped:"
+        },
+        {
+         "text": " Crutches, Tricycles, Calipers, Wheel Chair."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "For Visually Handicapped:"
+        },
+        {
+         "text": " Tape Recorders and Blank Cassettes for Education Purposes Up to Cost of ₹3,000/-."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "briefDescription": "The \"Financial Assistance for Aids and Appliances for Disabled Persons\" is a scheme by the Govt. of Maharashtra. The objective of this scheme is to provide assistance to Persons with Disabilities (PwDs) for the purchase of aids and appliances as per their age group and the type of disability.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Financial Assistance for Aids and Appliances for Disabled Persons\" is a scheme by the Department of Social Justice & Special Assistance, Govt. of Maharashtra. The objective of this scheme is to provide assistance to Persons with Disabilities (PwDs) for the purchase of aids and appliances as per their age group and the type of disability. Only citizens who are permanent residents of the state of Maharashtra are eligible to apply for this scheme. This scheme is 100% funded by the Govt. of Maharashtra."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Financial Assistance for Aids and Appliances for Disabled Persons&quot; is a scheme by the Department of Social Justice &amp; Special Assistance, Govt. of Maharashtra. The objective of this scheme is to provide assistance to Persons with Disabilities (PwDs) for the purchase of aids and appliances as per their age group and the type of disability. Only citizens who are permanent residents of the state of Maharashtra are eligible to apply for this scheme. This scheme is 100% funded by the Govt. of Maharashtra.\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sjsa.maharashtra.gov.in/en/scheme-category/disability-welfare"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "faaadp"
+}

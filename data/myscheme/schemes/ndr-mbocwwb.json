@@ -1,0 +1,230 @@
+{
+ "_id": "66ff9ced51754aeb8f2296b0",
+ "_slug": "ndr-mbocwwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the Manipur Building and Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "OR"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "The interested applicant visits the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "http://manipurbcwb.in/",
+        "type": "link"
+       },
+       {
+        "text": " and downloads the "
+       },
+       {
+        "children": [
+         {
+          "text": "application form"
+         }
+        ],
+        "link": "http://manipurbcwb.in/files/forms/beneficiaryForm.pdf",
+        "type": "link"
+       },
+       {
+        "text": ". "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the Labour Board Inspector"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgement from the Labour Board Inspector to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant should visit (during office hours) the Manipur Building and Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**OR**\nThe interested applicant visits the [official website](http://manipurbcwb.in/) and downloads the [application form](http://manipurbcwb.in/files/forms/beneficiaryForm.pdf). \n**Step-2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step-3:** Submit the duly filled and signed application form along with the documents to the Labour Board Inspector\n**Step-4:** Request a receipt or acknowledgement from the Labour Board Inspector to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour and Employment Department",
+    "value": 1444463
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Natural Death Relief (MBOCWWB)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "NDR-MBOCWWB",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    }
+   ],
+   "state": {
+    "label": "Manipur",
+    "value": 14
+   },
+   "tags": [
+    "Financial Assistance",
+    "Death",
+    "Construction Worker",
+    "Kith And Kin"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be the nominee, dependent, or legal heir of the deceased construction worker."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The deceased construction worker should be registered with the Manipur Building and Other Construction Workers' Welfare Board."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The death of the deceased worker must be due to natural death. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be the nominee, dependent, or legal heir of the deceased construction worker.\n1. The deceased construction worker should be registered with the Manipur Building and Other Construction Workers&#39; Welfare Board.\n1. The death of the deceased worker must be due to natural death. \n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Financial assistance of ₹30,000/- is provided for natural death as a free additional benefit (FREE ADD)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Financial assistance of ₹30,000/- is provided for natural death as a free additional benefit (FREE ADD).\n\n",
+   "briefDescription": "The \"Natural Death Relief\" scheme launched by the Manipur Building and Other Construction Workers' Welfare Board provides financial assistance to the kith and kin of a registered building worker in the event of the worker's natural death.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Natural Death Relief\" scheme launched by the Manipur Building and Other Construction Workers' Welfare Board provides financial assistance of ₹30,000/- to the kith and kin of a registered building worker in the event of the worker's natural death. This amount is paid as a one-time relief."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Natural Death Relief&quot; scheme launched by the Manipur Building and Other Construction Workers&#39; Welfare Board provides financial assistance of ₹30,000/- to the kith and kin of a registered building worker in the event of the worker&#39;s natural death. This amount is paid as a one-time relief.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "http://manipurbcwb.in/SchemeDetails?title=natural+death+relief"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ndr-mbocwwb"
+}

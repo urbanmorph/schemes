@@ -1,0 +1,352 @@
+{
+ "_id": "67962c7046318cd7df63188f",
+ "_slug": "epy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Registration Process:",
+        "underline": true
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 01: "
+       },
+       {
+        "text": "Go to the official website of "
+       },
+       {
+        "children": [
+         {
+          "text": "Eklavya Prashikshan Yojna"
+         }
+        ],
+        "link": "https://eklavya.apphost.in/",
+        "type": "link"
+       },
+       {
+        "text": " and click on \"Registration\". "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 02: "
+       },
+       {
+        "text": "Fill the required details name, mobile number email id and complete the process."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 03: "
+       },
+       {
+        "text": "The student will get an confirmation SMS registered mobile number and an email id."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "italic": true,
+        "text": "Application  Process:",
+        "underline": true
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 01: "
+       },
+       {
+        "text": "Fill the application form and upload the required documents."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 02: "
+       },
+       {
+        "text": "Click on \"Submit\" to get application Id. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "NOTE: "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The student must secure at least 75% attendance for the entire duration of the coaching."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Students must pass a screening test conducted by a government-approved agency. Merit lists are prepared based on marks and preferences."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     }
+    ],
+    "process_md": "***Registration Process:***\n**Step 01:** Go to the official website of [Eklavya Prashikshan Yojna](https://eklavya.apphost.in/) and click on &quot;Registration&quot;. \n**Step 02:** Fill the required details name, mobile number email id and complete the process.\n**Step 03:** The student will get an confirmation SMS registered mobile number and an email id.\n<br>\n\n***Application  Process:***\n**Step 01:** Fill the application form and upload the required documents.\n**Step 02:** Click on &quot;Submit&quot; to get application Id. \n<br>\n\n**NOTE:** \n\n- The student must secure at least 75% attendance for the entire duration of the coaching.\n- Students must pass a screening test conducted by a government-approved agency. Merit lists are prepared based on marks and preferences.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Higher and Techical Education Department",
+    "value": 2000008
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Eklavya Prashikshan Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "EPY",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Coaching",
+     "value": "Coaching"
+    },
+    {
+     "label": "Universities and higher education",
+     "value": "Universities and higher education"
+    }
+   ],
+   "state": {
+    "label": "Jharkhand",
+    "value": 20
+   },
+   "tags": [
+    "Free Coaching",
+    "Financial Assistance",
+    "Student",
+    "UPSC",
+    "SSC"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a resident of Jharkhand state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student should have passed 10"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " and 12"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " from any recognized school in the state of Jharkhand or should possess a local residence certificate of Jharkhand. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must know the local customs, language, and culture knowledge."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student's annual family income should be less than ₹8,00,000/- or should be covered under the National/State Food Security Scheme. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must fulfil the eligibility criteria of the examination for which he/she is applying for coaching under the scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant received similar benefits from any other department not be eligible for dual benefit under this scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student can avail the benefit only once under this scheme."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a resident of Jharkhand state.\n1. The student should have passed 10th and 12th from any recognized school in the state of Jharkhand or should possess a local residence certificate of Jharkhand. 1. The applicant must know the local customs, language, and culture knowledge.\n1. The student&#39;s annual family income should be less than ₹8,00,000/- or should be covered under the National/State Food Security Scheme. \n1. The applicant must fulfil the eligibility criteria of the examination for which he/she is applying for coaching under the scheme.\n1. The applicant received similar benefits from any other department not be eligible for dual benefit under this scheme.\n1. The student can avail the benefit only once under this scheme.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹2,500/- monthly stipends per student during the coaching period."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Coaching will be provided by nationally reputed institutions within Jharkhand."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- ₹2,500/- monthly stipends per student during the coaching period.\n- Coaching will be provided by nationally reputed institutions within Jharkhand.\n\n",
+   "briefDescription": "The \"Eklavya Prashikshan Yojana\" by the Directorate of Higher Education, Government of Jharkhand, aims to provide free coaching and financial aid for competitive exam preparation. Eligible students receive free coaching and ₹2,500/- monthly assistance during the coaching period.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Eklavya Prashikshan Yojana\" by the Directorate of Higher Education, Department of Higher and Technical Education, Government of Jharkhand, aims to provide free coaching and financial assistance to students preparing for competitive exams conducted by national and state-level agencies. Under this scheme, students from Jharkhand receive free coaching and a monthly stipend of ₹2,500/- to help them succeed in examinations such as UPSC, JPSC, SSC, Railway Recruitment, and banking exams. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Eklavya Prashikshan Yojana&quot; by the Directorate of Higher Education, Department of Higher and Technical Education, Government of Jharkhand, aims to provide free coaching and financial assistance to students preparing for competitive exams conducted by national and state-level agencies. Under this scheme, students from Jharkhand receive free coaching and a monthly stipend of ₹2,500/- to help them succeed in examinations such as UPSC, JPSC, SSC, Railway Recruitment, and banking exams. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (New)",
+     "url": "https://eklavya.apphost.in/document/eklavya_guideline.pdf"
+    },
+    {
+     "title": "Guidelines (Old)",
+     "url": "https://www.jharkhand.gov.in/PDepartment/ViewDoc?id=D013DO0058SD0013807122023050109959"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://eklavya.apphost.in/"
+    },
+    {
+     "title": "FAQ's",
+     "url": "https://eklavya.apphost.in/Home/FAQ"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "epy"
+}

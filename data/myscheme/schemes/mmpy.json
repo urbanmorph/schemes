@@ -1,0 +1,251 @@
+{
+ "_id": "65670f527e51bbad7a870830",
+ "_slug": "mmpy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The students applying for the scholarship for the first time need to \"Register\" using the icon “New Registration” at the NSP Portal URL - "
+         },
+         {
+          "children": [
+           {
+            "text": "https://scholarships.gov.in/"
+           }
+          ],
+          "link": "https://scholarships.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": ", by providing accurate and correct information as per their documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " After successfully get registration done, students will get their “Student Registration ID”."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " Through “Student Registration ID” students will be able to login into the account using the icon “Fresh Application” at NSP Portal."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " After successful login to the portal, the welcome page appeared. On clicking the “Application Form” icon, students will be directed to the application screen."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " Now, the students may fill out the complete application form and on clicking the “Final Submit” button, the application is finally submitted."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06:"
+         },
+         {
+          "text": " On successful submission of the application, a system-generated registration number is sent to the students which can be used for future reference."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 01:** The students applying for the scholarship for the first time need to &amp;quot;Register&amp;quot; using the icon “New Registration” at the NSP Portal URL - [https://scholarships.gov.in/](https://scholarships.gov.in/), by providing accurate and correct information as per their documents.\n**Step 02:** After successfully get registration done, students will get their “Student Registration ID”.\n**Step 03:** Through “Student Registration ID” students will be able to login into the account using the icon “Fresh Application” at NSP Portal.\n**Step 04:** After successful login to the portal, the welcome page appeared. On clicking the “Application Form” icon, students will be directed to the application screen.\n**Step 05:** Now, the students may fill out the complete application form and on clicking the “Final Submit” button, the application is finally submitted.\n**Step 06:** On successful submission of the application, a system-generated registration number is sent to the students which can be used for future reference.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Department Of Higher Education, Himachal Pradesh",
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education Department, Himachal Pradesh",
+    "value": 21111117
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhiya Mantri Protsahan Yojna",
+   "schemeOpenDate": "2013-04-01",
+   "schemeShortTitle": "MMPY",
+   "schemeSubCategory": [
+    {
+     "label": "Universities and higher education",
+     "value": "Universities and higher education"
+    }
+   ],
+   "state": {
+    "label": "Himachal Pradesh",
+    "value": 2
+   },
+   "tags": [
+    "Student",
+    "IIT",
+    "IIM",
+    "AIIMS",
+    "IISc",
+    "ISM",
+    "Incentive",
+    "Award"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The student should be a native of Himachal Pradesh."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student, who is selected and take admission for a degree course in any Indian Institute of Technology (IIT) or All India Institute of Medical Sciences (AIIMS) or for a Post Graduate Diploma Course in any Indian Institute of Management (IIM) or Indian School of Mines (ISM) Dhanbad or Indian Institute of Science (IISc), is eligible to apply for award under this scheme."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The student should be a native of Himachal Pradesh.\n1. The student, who is selected and take admission for a degree course in any Indian Institute of Technology (IIT) or All India Institute of Medical Sciences (AIIMS) or for a Post Graduate Diploma Course in any Indian Institute of Management (IIM) or Indian School of Mines (ISM) Dhanbad or Indian Institute of Science (IISc), is eligible to apply for award under this scheme.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under this scheme, a one-time incentive/award of ₹75000/- will be given to all the eligible students."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. Under this scheme, a one-time incentive/award of ₹75000/- will be given to all the eligible students.\n\n",
+   "briefDescription": "The scheme “Mukhiya Mantri Protsahan Yojna” was launched by Dept. of Higher Education, H.P. during the year 2013-14. Under the scheme, an Incentive/Award will be given to students of the State who are selected and take admission for a degree course in any IIT/AIIMS/IIM/ISM Dhanbad/IISc Bangalore.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Mukhiya Mantri Protsahan Yojna” was launched by the Department of Higher Education, Himachal Pradesh during the year 2013-14. Under the scheme, an Incentive/Award will be given to all those students of the State who are selected and take admission for a degree course in any Indian Institutes of Technology (IIT) or All India Institute of Medical Sciences (AIIMS) or a post Graduate Diploma Course in any Indian Institute of Management (IIMs). Indian School of Mines (ISM) Dhanbad at Jharkhand & Indian Institute of Science (IISc) at Bangalore, have also been added to the list of institutions eligible for award under this scheme w.e.f. 2014-15."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Mukhiya Mantri Protsahan Yojna” was launched by the Department of Higher Education, Himachal Pradesh during the year 2013-14. Under the scheme, an Incentive/Award will be given to all those students of the State who are selected and take admission for a degree course in any Indian Institutes of Technology (IIT) or All India Institute of Medical Sciences (AIIMS) or a post Graduate Diploma Course in any Indian Institute of Management (IIMs). Indian School of Mines (ISM) Dhanbad at Jharkhand &amp;amp; Indian Institute of Science (IISc) at Bangalore, have also been added to the list of institutions eligible for award under this scheme w.e.f. 2014-15.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Notification",
+     "url": "https://scholarships.gov.in/public/schemeGuidelines/HP_state_scheme/Mukhya%20Mantri%20%20Protsahan%20Yojna.pdf"
+    },
+    {
+     "title": "EPASS Portal",
+     "url": "https://hpepass.cgg.gov.in/NewHomePage.do?actionParameter=stateSchemes"
+    },
+    {
+     "title": "National Scholarship Portal",
+     "url": "https://scholarships.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mmpy"
+}

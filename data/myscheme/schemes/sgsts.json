@@ -1,0 +1,303 @@
+{
+ "_id": "66a8d4e3ff82e3090fb4f074",
+ "_slug": "sgsts",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To avail of the benefits under this scheme, eligible students can contact the Principal of their respective schools/institutions."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note:"
+         },
+         {
+          "text": " The profile of the students is entered on the education portal "
+         },
+         {
+          "children": [
+           {
+            "text": "https://shikshaportal.mp.gov.in/ "
+           }
+          ],
+          "link": "https://shikshaportal.mp.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": "by the teacher of the educational institution as per the record/certificate provided by the student."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - To avail of the benefits under this scheme, eligible students can contact the Principal of their respective schools/institutions.\n\n**Note:** The profile of the students is entered on the education portal [https://shikshaportal.mp.gov.in/ ](https://shikshaportal.mp.gov.in/)by the teacher of the educational institution as per the record/certificate provided by the student.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Tribal Affairs Department, Government Of Madhya Pradesh",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Tribal Welfare and Scheduled Caste (SC) Department",
+    "value": 2300051
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "State Government ST Scholarship (Class 1 to 8)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SGSTS",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Scheduled Tribe",
+    "Scholarship",
+    "Student"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be a native of Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be enrolled in Classes 1 to 8."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should belong to any of the Special Backward Tribes, such as Baiga, Saharia, or Bharia."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There is no restriction on the students' annual family income."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 1: "
+        },
+        {
+         "text": "The students will be eligible for scholarships even if they fail for 1 year."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 2:"
+        },
+        {
+         "text": " Reapplication is not required for the renewal of the scholarship."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a student.\n   1. The student should be a native of Madhya Pradesh.\n   1. The student should be enrolled in Classes 1 to 8.\n   1. The student should belong to any of the Special Backward Tribes, such as Baiga, Saharia, or Bharia.\n   1. There is no restriction on the students&amp;#39; annual family income.\n\n**Note 1:** The students will be eligible for scholarships even if they fail for 1 year.\n**Note 2:** Reapplication is not required for the renewal of the scholarship.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, scholarships will be provided to the students belonging to Scheduled Tribes at the following rates:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "For Classes 1 to 5:",
+         "underline": true
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "₹250/- per year (for 10 months) to all girls and boys belonging to special backward tribes (Baiga, Saharia, and Bharia)."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "For Classes 6 to 8:",
+         "underline": true
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "₹200/- per year (for 10 months) for boys."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "₹600/- per year (for 10 months) for girls."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " The scholarship will be deposited directly into the student's bank account."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "Under this scheme, scholarships will be provided to the students belonging to Scheduled Tribes at the following rates:\n**For Classes 1 to 5:**\n\n  - ₹250/- per year (for 10 months) to all girls and boys belonging to special backward tribes (Baiga, Saharia, and Bharia).\n\n**For Classes 6 to 8:**\n\n  - ₹200/- per year (for 10 months) for boys.\n  - ₹600/- per year (for 10 months) for girls.\n\n**Note:** The scholarship will be deposited directly into the student&amp;#39;s bank account.\n",
+   "briefDescription": "The scheme was launched by the Tribal Affairs Department, Government of Madhya Pradesh, aims to give benefits for improving the educational status of scheduled tribe students. Under this scheme, scholarships are provided to Scheduled Tribe students in Classes 1 to 8.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"State Government ST Scholarship (Class 1 to 8)\" scheme, launched by the Tribal Affairs Department, Government of Madhya Pradesh, aims to give benefits for improving the educational status of scheduled tribe students. Under this scheme, scholarships are provided to Scheduled Tribe students in Classes 1 to 8. To be eligible, students must be native of Madhya Pradesh and belong to the Scheduled tribe category. There is no restriction on the annual family income of the students."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;State Government ST Scholarship (Class 1 to 8)&amp;quot; scheme, launched by the Tribal Affairs Department, Government of Madhya Pradesh, aims to give benefits for improving the educational status of scheduled tribe students. Under this scheme, scholarships are provided to Scheduled Tribe students in Classes 1 to 8. To be eligible, students must be native of Madhya Pradesh and belong to the Scheduled tribe category. There is no restriction on the annual family income of the students.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=889"
+    },
+    {
+     "title": "Guidelines (Page No. 71)",
+     "url": "https://aiggpa.mp.gov.in/uploads/publication/Social_Protection_Eng.pdf"
+    },
+    {
+     "title": "Online Shiksha Portal",
+     "url": "https://shikshaportal.mp.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sgsts"
+}

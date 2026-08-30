@@ -1,0 +1,261 @@
+{
+ "_id": "685b9f1187aa2dcacd08d915",
+ "_slug": "sty",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:",
+        "underline": true
+       },
+       {
+        "text": " The interested applicant should take a printout of the "
+       },
+       {
+        "children": [
+         {
+          "text": "prescribed format"
+         }
+        ],
+        "link": "https://yatradham.gujarat.gov.in/Documents/Scheme_2022-8-23_752.pdf",
+        "type": "link"
+       },
+       {
+        "text": " of the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:",
+        "underline": true
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields (details of the authorized travel agent/organizer, details of the pilgrims), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:",
+        "underline": true
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents, within the prescribed period (if any), to your nearest District Social Welfare Office."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "italic": true,
+        "text": "*Retain a copy of the submitted application for reference."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should take a printout of the [prescribed format](https://yatradham.gujarat.gov.in/Documents/Scheme_2022-8-23_752.pdf) of the application form.\n**Step 2:** In the application form, fill in all the mandatory fields (details of the authorized travel agent/organizer, details of the pilgrims), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents, within the prescribed period (if any), to your nearest District Social Welfare Office.\n_*Retain a copy of the submitted application for reference._\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 2444464
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Travel & Tourism",
+     "value": "628ce94cd6d1a3bde468536f"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Shravan Tirthdarshan Yojna",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "STY",
+   "schemeSubCategory": [
+    {
+     "label": "Tourism in India",
+     "value": "Tourism in India"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Pilgrim",
+    "Travel",
+    "Tourism",
+    "Heritage"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a senior citizen aged 60 years or above."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be a permanent resident of Gujarat."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must not have availed of the benefit previously under this scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be physically fit to undertake the journey."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The pilgrimage must be booked through an authorized travel agent/organizer."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The applicant must be a senior citizen aged 60 years or above.\n- The applicant must be a permanent resident of Gujarat.\n- The applicant must not have availed of the benefit previously under this scheme.\n- The applicant must be physically fit to undertake the journey.\n- The pilgrimage must be booked through an authorized travel agent/organizer.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Financial Assistance for Pilgrimage Travel Expenses",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Upto ₹5,000/- per person for travel by State Transport (ST) buses."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Upto ₹7,000/- per person for travel by Private Buses."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "italic": true,
+       "text": "*The financial assistance provided is subject to actual travel cost or the above-mentioned amount, whichever is lower."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "italic": true,
+       "text": "*Only group travel is allowed (minimum 20 pilgrims required)."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Financial Assistance for Pilgrimage Travel Expenses**\n\n- Upto ₹5,000/- per person for travel by State Transport (ST) buses.\n- Upto ₹7,000/- per person for travel by Private Buses.\n\n_*The financial assistance provided is subject to actual travel cost or the above-mentioned amount, whichever is lower._\n_*Only group travel is allowed (minimum 20 pilgrims required)._\n",
+   "briefDescription": "The scheme aims to facilitate pilgrimage travel for senior citizens of Gujarat by providing financial assistance for travel expenses. It benefits eligible senior citizens through reimbursements or direct arrangements with authorized travel agents.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme \"Shravan Tirthdarshan Yojna\" by the Department of Social Justice and Empowerment, Government of Gujarat, aims to provide financial assistance to senior citizens for pilgrimage travel. The scheme covers travel expenses through authorized agents and ensures comfortable pilgrimage arrangements. To be eligible, the applicant must be a senior citizen of Gujarat and registered under the scheme through an authorized travel agent or organizer. The scheme is implemented by the Government of Gujarat, and applications are accepted offline."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &quot;Shravan Tirthdarshan Yojna&quot; by the Department of Social Justice and Empowerment, Government of Gujarat, aims to provide financial assistance to senior citizens for pilgrimage travel. The scheme covers travel expenses through authorized agents and ensures comfortable pilgrimage arrangements. To be eligible, the applicant must be a senior citizen of Gujarat and registered under the scheme through an authorized travel agent or organizer. The scheme is implemented by the Government of Gujarat, and applications are accepted offline.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines & Application Form",
+     "url": "https://yatradham.gujarat.gov.in/Documents/Scheme_2022-8-23_752.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sty"
+}

@@ -1,0 +1,277 @@
+{
+ "_id": "68247f8b9bea90887cee6232",
+ "_slug": "pdyg",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the official "
+       },
+       {
+        "children": [
+         {
+          "text": "DAADC "
+         }
+        ],
+        "link": "https://daadconline.gujarat.gov.in/",
+        "type": "link"
+       },
+       {
+        "text": "online portal."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Register/log in using your credentials."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " Fill out the application form with accurate personal and scheme-specific details."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " Upload the required documents and submit."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the official [DAADC ](https://daadconline.gujarat.gov.in/)online portal.\n**Step 2:** Register/log in using your credentials.\n**Step 3:** Fill out the application form with accurate personal and scheme-specific details.\n**Step 4:** Upload the required documents and submit.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Dr. Ambedkar Antyoday Devlopment Corporation",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 2444464
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Pashupalan Dhiran Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PDYG",
+   "schemeSubCategory": [
+    {
+     "label": "Loan",
+     "value": "Loan"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Animal Husbandry",
+    "Farmer",
+    "Loan",
+    "Scheduled Caste",
+    "SC"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must belong to the Rabari or Bharwad caste, classified under socially and educationally backward classes (SC)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be between 21 and 45 years of age."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have a family annual income not exceeding ₹3,00,00/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Gujarat."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be engaged in or intending to undertake animal husbandry activities."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must belong to the Rabari or Bharwad caste, classified under socially and educationally backward classes (SC).\n  - The applicant must be between 21 and 45 years of age.\n  - The applicant must have a family annual income not exceeding ₹3,00,00/-.\n  - The applicant must be a resident of Gujarat.\n  - The applicant must be engaged in or intending to undertake animal husbandry activities.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial Assistance:"
+        },
+        {
+         "text": " Loan up to ₹1,30,000/- for animal husbandry."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Loan Amount:"
+        },
+        {
+         "text": " 95%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Beneficiary Contribution: "
+        },
+        {
+         "text": "5%"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Financial Assistance:** Loan up to ₹1,30,000/- for animal husbandry.\n> **Note:**\n\n\n- **Loan Amount:** 95%- **Beneficiary Contribution:** 5%\n",
+   "briefDescription": "\"Pashupalan Dhiran Yojana\" by the Social Justice and Empowerment Department provides loan assistance for animal husbandry to Rabari and Bharwad castes from the socially and educationally backward classes.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "\"Pashupalan Dhiran Yojana\" is a welfare initiative by the Social Justice and Empowerment Department, Gujarat. The scheme aims to support economically disadvantaged individuals from the Rabari and Bharwad communities through financial assistance in the form of low-interest loans up to ₹1,30,000/- for animal husbandry activities."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "&amp;quot;Pashupalan Dhiran Yojana&amp;quot; is a welfare initiative by the Social Justice and Empowerment Department, Gujarat. The scheme aims to support economically disadvantaged individuals from the Rabari and Bharwad communities through financial assistance in the form of low-interest loans up to ₹1,30,000/- for animal husbandry activities.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Scheme No. 43)",
+     "url": "https://mariyojana.gujarat.gov.in/Schemeatoz.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "pdyg"
+}

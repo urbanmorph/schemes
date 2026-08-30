@@ -1,0 +1,231 @@
+{
+ "_id": "6776234209be7bb7df9edb4f",
+ "_slug": "gspsg",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " Obtain the application form from Taluka Mamlatdar’s office."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2: "
+         },
+         {
+          "text": "Fill out the form with accurate details and attach the required documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3: "
+         },
+         {
+          "text": "Submit the form to the Taluka Mamlatdar."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4: "
+         },
+         {
+          "text": "The Mamlatdar will verify the details and approve the assistance if all criteria are met."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Helpdesk: "
+         },
+         {
+          "children": [
+           {
+            "text": "Contact Details."
+           }
+          ],
+          "link": "https://wcd.gujarat.gov.in/general_contact",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "block_quote"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** Obtain the application form from Taluka Mamlatdar’s office.\n**Step 2:** Fill out the form with accurate details and attach the required documents.\n**Step 3:** Submit the form to the Taluka Mamlatdar.\n**Step 4:** The Mamlatdar will verify the details and approve the assistance if all criteria are met.\n&gt; **Helpdesk:** [Contact Details.](https://wcd.gujarat.gov.in/general_contact)\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Women and Child Development Department",
+    "value": 2444469
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Ganga Swarupa Pension Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "GSPSG",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Widow Pension",
+    "Women Empowerment",
+    "Monthly Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Gujarat."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be a widowed woman."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be aged 18 years or above."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant’s annual income must not exceed ₹1,20,000/- in rural areas and ₹1,50,000/- in urban areas."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a resident of Gujarat.\n  - The applicant must be a widowed woman.\n  - The applicant must be aged 18 years or above.\n  - The applicant’s annual income must not exceed ₹1,20,000/- in rural areas and ₹1,50,000/- in urban areas.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Monthly Pension: "
+      },
+      {
+       "text": "Monthly financial assistance of ₹1,250/-."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Monthly Pension:** Monthly financial assistance of ₹1,250/-.\n",
+   "briefDescription": "The scheme provides financial assistance to widowed women, ensuring self-reliance through monthly pensions.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Ganga Swarupa Pension Scheme\" launched by the Women and Child Development Department, Gujarat, aims to empower widowed women by offering financial support, ensuring they achieve self-reliance and dignity. Eligible beneficiaries receive a monthly pension directly deposited into their Post Office accounts. The scheme is managed by the Women and Child Development Office and implemented at the district level by the Mamlatdar."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Ganga Swarupa Pension Scheme&amp;quot; launched by the Women and Child Development Department, Gujarat, aims to empower widowed women by offering financial support, ensuring they achieve self-reliance and dignity. Eligible beneficiaries receive a monthly pension directly deposited into their Post Office accounts. The scheme is managed by the Women and Child Development Office and implemented at the district level by the Mamlatdar.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines 1",
+     "url": "https://wcd.gujarat.gov.in/initiativedetails?id=231"
+    },
+    {
+     "title": "Guidelines 2",
+     "url": "https://wcd.gujarat.gov.in/posts?id=328"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "gspsg"
+}

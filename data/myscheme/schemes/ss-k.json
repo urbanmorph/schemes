@@ -1,0 +1,353 @@
+{
+ "_id": "66d1895c6a1178003d86bdd0",
+ "_slug": "ss-k",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-01: "
+       },
+       {
+        "text": "Applicant need to visits the Karnataka Minorities Development Corporation "
+       },
+       {
+        "children": [
+         {
+          "text": "official website"
+         }
+        ],
+        "link": "https://kmdconline.karnataka.gov.in/Portal/home",
+        "type": "link"
+       },
+       {
+        "text": ".  "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-02: "
+       },
+       {
+        "text": "Click "
+       },
+       {
+        "children": [
+         {
+          "text": "\"Apply Online\""
+         }
+        ],
+        "link": "https://kmdconline.karnataka.gov.in/Portal/login",
+        "type": "link"
+       },
+       {
+        "text": " and Enter \"Mobile Number\" and \"Submit\".   "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-03: "
+       },
+       {
+        "text": "Enter \"Aadhaar Number\" Fill in the \"Captcha\" and Select \"Next\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-04: "
+       },
+       {
+        "text": "Applicant will get OTP in his/her Aadhaar Linked Mobile Number."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-05: "
+       },
+       {
+        "text": "Enter \"OTP\" and select \"Continue\", After that Allow the official notice."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-06: "
+       },
+       {
+        "text": "After verifying the Aadhaar again fill in the \"OTP\" and Submit."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-07: "
+       },
+       {
+        "text": "Select the scheme \"Sikhligar’s Community Development Scheme\" and fill in the basic details father's name, gender, qualification detail"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-08: "
+       },
+       {
+        "text": "Select \"Next\" Fill in the address detail and again select \"Next\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-09: "
+       },
+       {
+        "text": "Upload the required document passport-size photo, educational document, income certificate, etc. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-10: "
+       },
+       {
+        "text": "Click \"Proceed\" and Select \"Submit Application\" and get an Application ID."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-01:** Applicant need to visits the Karnataka Minorities Development Corporation [official website](https://kmdconline.karnataka.gov.in/Portal/home).  \n**Step-02:** Click [&quot;Apply Online&quot;](https://kmdconline.karnataka.gov.in/Portal/login) and Enter &quot;Mobile Number&quot; and &quot;Submit&quot;.   \n**Step-03:** Enter &quot;Aadhaar Number&quot; Fill in the &quot;Captcha&quot; and Select &quot;Next&quot;.\n**Step-04:** Applicant will get OTP in his/her Aadhaar Linked Mobile Number.\n**Step-05:** Enter &quot;OTP&quot; and select &quot;Continue&quot;, After that Allow the official notice.\n**Step-06:** After verifying the Aadhaar again fill in the &quot;OTP&quot; and Submit.\n**Step-07:** Select the scheme &quot;Sikhligar’s Community Development Scheme&quot; and fill in the basic details father&#39;s name, gender, qualification detail\n**Step-08:** Select &quot;Next&quot; Fill in the address detail and again select &quot;Next&quot;.\n**Step-09:** Upload the required document passport-size photo, educational document, income certificate, etc. \n**Step-10:** Click &quot;Proceed&quot; and Select &quot;Submit Application&quot; and get an Application ID.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Minorities Welfare Department",
+    "value": 3000027
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    },
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Santwana Scheme - Karnataka",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SS-K",
+   "schemeSubCategory": [
+    {
+     "label": "Crisis/Disaster/Accident",
+     "value": "Crisis/Disaster/Accident"
+    },
+    {
+     "label": "Loan",
+     "value": "Loan"
+    },
+    {
+     "label": "Shelter",
+     "value": "Shelter"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Food Security / Public Distribution System",
+     "value": "Food Security / Public Distribution System"
+    }
+   ],
+   "state": {
+    "label": "Karnataka",
+    "value": 29
+   },
+   "tags": [
+    "Loan",
+    "Subsidy",
+    "Minority Community",
+    "Natural Calamity"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should belong to the religious minority category of the Karnataka state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of the state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's age should be between 18 to 55 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The family income from all sources should not exceed more than ₹8,00,000/-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's family members should not be employees in the Central or State Government. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant or his/her family should not have availed a loan facility from Karnataka Minorities Development Corporation (EXCEPT ARIVU EDUCATION LOAN SCHEME ) in the last five years."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should belong to the religious minority category of the Karnataka state.\n1. The applicant should be a permanent resident of the state.\n1. The applicant&#39;s age should be between 18 to 55 years.\n1. The family income from all sources should not exceed more than ₹8,00,000/-\n1. The applicant&#39;s family members should not be employees in the Central or State Government. \n1. The applicant or his/her family should not have availed a loan facility from Karnataka Minorities Development Corporation (EXCEPT ARIVU EDUCATION LOAN SCHEME ) in the last five years.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Loan Amount:"
+        },
+        {
+         "text": " Up to ₹5,00,000/- per unit cost."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Subsidy Amount:"
+        },
+        {
+         "text": " 50% of the loan amount is provided as a subsidy, and the remaining 50% is a repayable loan."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Loan Amount:** Up to ₹5,00,000/- per unit cost.- **Subsidy Amount:** 50% of the loan amount is provided as a subsidy, and the remaining 50% is a repayable loan.\n",
+   "briefDescription": "The \"Santwana Scheme\" offers loans to religious minority individuals whose houses or shops have been destroyed by natural calamities or communal violence. The scheme provides up to ₹5,00,000/- per unit, with 50% as a loan and 50% as a subsidy",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Santwana Scheme\" was launched by the Minorities Welfare Department, Government of Karnataka, and implemented by the Karnataka Minorities Development Corporation. The scheme aims to support people belonging to religious minorities whose houses, and shops have been destroyed due to natural calamity and communal violence. Under this scheme, a loan amount of ₹5,00,000/- max per unit cost will be provided of which 50% loan and 50% subsidy."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Santwana Scheme&quot; was launched by the Minorities Welfare Department, Government of Karnataka, and implemented by the Karnataka Minorities Development Corporation. The scheme aims to support people belonging to religious minorities whose houses, and shops have been destroyed due to natural calamity and communal violence. Under this scheme, a loan amount of ₹5,00,000/- max per unit cost will be provided of which 50% loan and 50% subsidy.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://kmdconline.karnataka.gov.in/Portal/home"
+    },
+    {
+     "title": "Login & Apply",
+     "url": "https://kmdconline.karnataka.gov.in/Portal/login"
+    },
+    {
+     "title": "Track Application",
+     "url": "https://kmdconline.karnataka.gov.in/Portal/track"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ss-k"
+}

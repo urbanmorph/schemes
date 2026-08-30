@@ -1,0 +1,550 @@
+{
+ "_id": "6a3b9fd4472b969f5a8768db",
+ "_slug": "ssads-bs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Register on the "
+         },
+         {
+          "children": [
+           {
+            "text": "SUGAM portal"
+           }
+          ],
+          "link": "https://sugam.gshec.edu.in/",
+          "type": "link"
+         },
+         {
+          "text": " and log in using your credentials."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Select the Bursary Scheme from the available schemes on the dashboard."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click “New Application”, choose the applicable academic year, and create a new application."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill in the required personal details and proceed to the next section."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Enter your address details and provide information on past and current academic qualifications. Upload the bonafide certificate."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Enter fee details and upload the fee receipt and textbook fee receipt (if applicable)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Provide parent/guardian details, family annual income information, and upload supporting documents such as income certificates and death certificates (if applicable)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Enter bank account details and upload the required banking and identity documents."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Complete the undertaking by downloading it through the e-sign process using Aadhaar authentication, then upload the signed undertaking."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Preview the application, submit it online, and receive a confirmation email upon successful submission."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "NOTE: "
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Student User Manual"
+         }
+        ],
+        "link": "https://bursary.dhe.goa.gov.in/public/Bursary_Manual.pdf",
+        "type": "link"
+       },
+       {
+        "bold": true,
+        "text": " to know more about the application process. "
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n- Register on the [SUGAM portal](https://sugam.gshec.edu.in/) and log in using your credentials.- Select the Bursary Scheme from the available schemes on the dashboard.\n- Click “New Application”, choose the applicable academic year, and create a new application.\n- Fill in the required personal details and proceed to the next section.\n- Enter your address details and provide information on past and current academic qualifications. Upload the bonafide certificate.\n- Enter fee details and upload the fee receipt and textbook fee receipt (if applicable).\n- Provide parent/guardian details, family annual income information, and upload supporting documents such as income certificates and death certificates (if applicable).\n- Enter bank account details and upload the required banking and identity documents.\n- Complete the undertaking by downloading it through the e-sign process using Aadhaar authentication, then upload the signed undertaking.\n- Preview the application, submit it online, and receive a confirmation email upon successful submission.\n\n> **NOTE:** [**Student User Manual**](https://bursary.dhe.goa.gov.in/public/Bursary_Manual.pdf) **to know more about the application process.** \n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Higher Education Department",
+    "value": 30000022
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Science, IT & Communications",
+     "value": "628ce9ced6d1a3bde46853a4"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Sant Sohirobanath Ambiye Dnyanvruddhi Shishyavrutti- Bursary Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SSADS-BS",
+   "schemeSubCategory": [
+    {
+     "label": "Universities and higher education",
+     "value": "Universities and higher education"
+    },
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Goa",
+    "value": 30
+   },
+   "tags": [
+    "Higher Education",
+    "Financial Assistance",
+    "Graduation",
+    "Post Graduation",
+    "Diploma",
+    "Student",
+    "Technical"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be pursuing a diploma, graduation, or post-graduation in a recognized institution located in Goa."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's institution should be affiliated with Goa University or recognized by the Directorate of Higher Education, Directorate of Technical Education, or any authority approved by the Government of India or Government of Goa."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be enrolled in a full-time course."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's course duration should not exceed 5 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant pursuing a diploma course should have completed standard 10"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " in Goa."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant pursuing a graduation course should have completed Standard 10"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " and Standard 12"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " or a diploma in Goa."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant pursuing a post-graduation course should have completed Standard 10"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": ", Standard 12"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " or a diploma, and graduation in Goa."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The total annual family income (parents/guardian combined) must be less than ₹5,00,000/-."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be receiving similar financial assistance, scholarship, or benefit under any other government scheme."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Relaxation in the qualifying education requirement is applicable for students graduating from premier institutions such as the Indian Institutes of Technology (IITs), National Institutes of Technology (NITs), Indian Institutes of Management (IIMs), and similar institutions, as per scheme norms."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be pursuing a diploma, graduation, or post-graduation in a recognized institution located in Goa.\n1. The applicant&#39;s institution should be affiliated with Goa University or recognized by the Directorate of Higher Education, Directorate of Technical Education, or any authority approved by the Government of India or Government of Goa.\n1. The applicant should be enrolled in a full-time course.\n1. The applicant&#39;s course duration should not exceed 5 years.\n1. The applicant pursuing a diploma course should have completed standard 10th in Goa.1. The applicant pursuing a graduation course should have completed Standard 10th and Standard 12th or a diploma in Goa.1. The applicant pursuing a post-graduation course should have completed Standard 10th, Standard 12th or a diploma, and graduation in Goa.1. The total annual family income (parents/guardian combined) must be less than ₹5,00,000/-.\n1. The applicant should not be receiving similar financial assistance, scholarship, or benefit under any other government scheme.\n\n> **Note:**\n\n\n- Relaxation in the qualifying education requirement is applicable for students graduating from premier institutions such as the Indian Institutes of Technology (IITs), National Institutes of Technology (NITs), Indian Institutes of Management (IIMs), and similar institutions, as per scheme norms.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Fee Reimbursement Assistance",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The scheme provides reimbursement of eligible fees up to:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹40,000 per annum towards course fees"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Additional ₹5,000 per annum for textbooks/reference books"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Eligible fee components include:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Tuition Fees, Registration Fees, Library Fees, Laboratory Fees, Gymkhana Fees, IT Charges, Practical Fees, and other approved charges."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Mode of Disbursement",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Direct Benefit Transfer (DBT) to the student's bank account."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The student must first pay the prescribed fees to the educational institution."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Reimbursement is based on the actual fees paid and eligibility under the scheme."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Fee Reimbursement Assistance**\nThe scheme provides reimbursement of eligible fees up to:\n\n- ₹40,000 per annum towards course fees\n- Additional ₹5,000 per annum for textbooks/reference books\n\n**Eligible fee components include:**\n\n- Tuition Fees, Registration Fees, Library Fees, Laboratory Fees, Gymkhana Fees, IT Charges, Practical Fees, and other approved charges.\n\n**Mode of Disbursement**\n\n- Direct Benefit Transfer (DBT) to the student&#39;s bank account.\n\n> **NOTE:**\n\n\n- The student must first pay the prescribed fees to the educational institution.\n- Reimbursement is based on the actual fees paid and eligibility under the scheme.\n\n<br>\n\n<br>\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to universalize higher and technical education in Goa by improving access and increasing the Gross Enrollment Ratio. It provides financial assistance for eligible course fees and textbooks to support students pursuing higher and technical education in the state.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Sant Sohirobanath Ambiye Dnyanvruddhi Shishyavrutti- Bursary Scheme\" has been launched by the Department of Higher Education, Government of Goa.  The scheme aims to promote higher and technical education in the State by increasing access and improving the Gross Enrollment Ratio. It provides financial assistance towards eligible fees, textbooks, and reference books for students pursuing diploma, graduation, and post-graduation courses in recognized institutions in Goa. The scheme is implemented by the Goa Education Development Corporation (GEDC). "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Objective of the scheme"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "Quality higher education is the area of concern for the state government. The Right to Education (RTE) Act, 2005, implemented countrywide, basically focuses on primary and secondary education. The Government of Goa has a laudable objective of universalizing higher and technical education in the state, thereby raising the Gross Enrollment Ratio (GER) to around 45 from the present 32.2. It is desired that higher and technical education not become the privilege of the selected few. With this sole objective in mind, a scheme for the grant of financial assistance towards the fees paid for various courses under higher and technical education has been formulated."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Sant Sohirobanath Ambiye Dnyanvruddhi Shishyavrutti- Bursary Scheme&quot; has been launched by the Department of Higher Education, Government of Goa.  The scheme aims to promote higher and technical education in the State by increasing access and improving the Gross Enrollment Ratio. It provides financial assistance towards eligible fees, textbooks, and reference books for students pursuing diploma, graduation, and post-graduation courses in recognized institutions in Goa. The scheme is implemented by the Goa Education Development Corporation (GEDC). \n> **Objective of the scheme**\n\nQuality higher education is the area of concern for the state government. The Right to Education (RTE) Act, 2005, implemented countrywide, basically focuses on primary and secondary education. The Government of Goa has a laudable objective of universalizing higher and technical education in the state, thereby raising the Gross Enrollment Ratio (GER) to around 45 from the present 32.2. It is desired that higher and technical education not become the privilege of the selected few. With this sole objective in mind, a scheme for the grant of financial assistance towards the fees paid for various courses under higher and technical education has been formulated.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://bursary.dhe.goa.gov.in/home"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ssads-bs"
+}

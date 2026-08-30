@@ -1,0 +1,487 @@
+{
+ "_id": "6489ae86380f8e12353ece04",
+ "_slug": "sgpd",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Download the "
+         },
+         {
+          "children": [
+           {
+            "text": "application form"
+           }
+          ],
+          "link": "https://uphwd.gov.in/site/writereaddata/siteContent/202103181427562556ShalyaChikitsa-Niymavali-All.pdf",
+          "type": "link"
+         },
+         {
+          "text": " from page no. 18."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill out the application form"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "The following documents shall be attached to the application "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "(a). A certificate of disability granted by a competent medical authority. "
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "text": "(b). Certificate of annual income (from all sources). "
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "text": "(c). Estimated expenditure details of the surgery by the superintendent/in charge of the State Hospital."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the application to the District Disabled Welfare Officer along with the recommendation through whom the application along with its recommendation will be sent to the Director. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "In case of emergency, applications can be sent directly to the Director."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Download the [application form](https://uphwd.gov.in/site/writereaddata/siteContent/202103181427562556ShalyaChikitsa-Niymavali-All.pdf) from page no. 18.1. Fill out the application form\n1. The following documents shall be attached to the application \n(a). A certificate of disability granted by a competent medical authority. \n(b). Certificate of annual income (from all sources). \n(c). Estimated expenditure details of the surgery by the superintendent/in charge of the State Hospital.\n1. Submit the application to the District Disabled Welfare Officer along with the recommendation through whom the application along with its recommendation will be sent to the Director. \n1. In case of emergency, applications can be sent directly to the Director.\n\n",
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Empowerment of Persons With Disabilities Department, Uttar Pradesh",
+    "value": 90000016
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Surgical Grant For The Prevention Of Disability",
+   "schemeOpenDate": "2017-07-06",
+   "schemeShortTitle": "SGPD",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Uttar Pradesh",
+    "value": 9
+   },
+   "tags": [
+    "Financial Assistance",
+    "Empowerment",
+    "Medical Support",
+    "Surgery",
+    "Treatment"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The annual income of the applicant/applicant's guardian should not exceed Rs.60,000/-."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be an Indian citizen."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Applicant should be a permanent resident of Uttar Pradesh or be a resident of the state for at least 5 years"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Should not be guilty in any criminal case."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The annual income of the applicant/applicant&#39;s guardian should not exceed Rs.60,000/-.\n1. The applicant should be an Indian citizen.\n1. Applicant should be a permanent resident of Uttar Pradesh or be a resident of the state for at least 5 years\n1. Should not be guilty in any criminal case.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "A maximum of Rs. 6,00,000/- will be provided to Each disabled person. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- A maximum of Rs. 6,00,000/- will be provided to Each disabled person. \n\n",
+   "briefDescription": "The \"Surgical Grant for the Prevention of Disability\" scheme is started by the Government of Uttar Pradesh and operated by the Department of Empowerment of Persons with Disabilities, Uttar Pradesh.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The main objective of the scheme is to provide surgical assistance for the prevention of disability to poor and helpless disabled persons. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The financial grant will be provided for the following medical treatment. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Surgery for visually handicapped."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "i. Intraocular lens implant."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "ii. Cranioplasty."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "iii. Cranial repair"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Surgery for the hearing impaired."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "i. Cochlear implant."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "ii. Tympanic membrane repair."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "iii. Mastoid surgery."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Surgery for orthopedically handicapped"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "i. S P Nail Operation."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "ii. Orthosis."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "iii. Artificial prosthesis. "
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "iv. External fixation. "
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "v. Replacement implant."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "vi. Surgery for knee, hip and ankle correction."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "vii. Shoulder, elbow and wrist correction surgery."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "viii. Postpolio correction surgery."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "ix. Contracture Repair."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "x. Ligament repair."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "xi. Tendon transplant."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "xii Soft tissue release surgery."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "xiii. Contracture correction surgery."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "xiv. Elizarob Landing and Corrective Surgery."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Post-leprosy-cured disability"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "i. Reconstructive Surgery Hand."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "ii. Reconstructive Surgery Foot."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The main objective of the scheme is to provide surgical assistance for the prevention of disability to poor and helpless disabled persons. \n<br>\n\nThe financial grant will be provided for the following medical treatment. \n\n1. **Surgery for visually handicapped.**\ni. Intraocular lens implant.\nii. Cranioplasty.\niii. Cranial repair\n1. **Surgery for the hearing impaired.**\ni. Cochlear implant.\nii. Tympanic membrane repair.\niii. Mastoid surgery.\n1. **Surgery for orthopedically handicapped**\ni. S P Nail Operation.\nii. Orthosis.\niii. Artificial prosthesis. \niv. External fixation. \nv. Replacement implant.\nvi. Surgery for knee, hip and ankle correction.\nvii. Shoulder, elbow and wrist correction surgery.\nviii. Postpolio correction surgery.\nix. Contracture Repair.\nx. Ligament repair.\nxi. Tendon transplant.\nxii Soft tissue release surgery.\nxiii. Contracture correction surgery.\nxiv. Elizarob Landing and Corrective Surgery.\n1. **Post-leprosy-cured disability**\ni. Reconstructive Surgery Hand.\nii. Reconstructive Surgery Foot.\n\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://uphwd.gov.in/site/writereaddata/siteContent/202103181427562556ShalyaChikitsa-Niymavali-All.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sgpd"
+}

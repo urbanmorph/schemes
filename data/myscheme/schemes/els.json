@@ -1,0 +1,597 @@
+{
+ "_id": "646ef5399062e559675f7033",
+ "_slug": "els",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Click on official "
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "website"
+             }
+            ],
+            "link": "https://nsfdc.nic.in/en/educational-loan-scheme",
+            "type": "link"
+           },
+           {
+            "text": " to apply for the scheme."
+           },
+           {
+            "children": [
+             {
+              "text": ""
+             }
+            ],
+            "link": "https://nbcfdc.gov.in/loanform/en",
+            "type": "link"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": ""
+             }
+            ],
+            "link": "https://nbcfdc.gov.in/loanform/en",
+            "type": "link"
+           },
+           {
+            "text": "Fill the Education Loan Application Form with all the details."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Click on Submit."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ol_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n   1. Click on official [**website**](https://nsfdc.nic.in/en/educational-loan-scheme) to apply for the scheme.   1. Fill the Education Loan Application Form with all the details.   1. Click on Submit.\n\n",
+    "url": "https://nbcfdc.gov.in/loanform/en"
+   },
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Download the"
+           },
+           {
+            "bold": true,
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "bold": true,
+              "text": "application form"
+             }
+            ],
+            "link": "https://nsfdc.nic.in/UploadedFiles/other/2023-10-09/els%20loan%20format.pdf",
+            "type": "link"
+           },
+           {
+            "text": " for this scheme."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Fill out the application form, enclose the documents, and submit them to the nearest bank or in the office of NSFDC."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ol_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n   1. Download the**** [**application form**](https://nsfdc.nic.in/UploadedFiles/other/2023-10-09/els%20loan%20format.pdf) for this scheme.   1. Fill out the application form, enclose the documents, and submit them to the nearest bank or in the office of NSFDC.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": "National Scheduled Castes Finance And Development Corporation (NSFDC)",
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Social Justice & Empowerment",
+    "value": 11112
+   },
+   "nodalMinistryName": {
+    "label": "Ministry Of Social Justice and Empowerment",
+    "value": 712
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Banking,Financial Services and Insurance",
+     "value": "628ce7f6d6d1a3bde46852d0"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Education Loan Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ELS",
+   "schemeSubCategory": [
+    {
+     "label": "Loan",
+     "value": "Loan"
+    },
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "schemeType": {
+    "label": "Centrally Sponsored Scheme",
+    "value": "centrally-sponsored-scheme"
+   },
+   "tags": [
+    "Higher Education",
+    "Loans To Students",
+    "National Scheduled Castes Finance",
+    "Corporation",
+    "Education Loan"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The beneficiary (ies) should be from the Scheduled Caste Community."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Individuals, Partnership Firms, and Co-operative Societies can undertake income-generating activities."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The annual family income of each member/applicant should not exceed Rs.3.00 lakh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Applicants must apply for financial assistance from NSFDC through the concerned State Channelizing Agencies (SCAs)/Channelizing Agencies (CAs). "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Annual family income of the applicants should be within Rs.3.00 lakhs (for both rural and urban areas w.e.f. 08.03.2018) under Credit Based Schemes. "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "There is no income criterion under Skill Development Training Programmes."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The beneficiary (ies) should be from the Scheduled Caste Community.\n   1. Individuals, Partnership Firms, and Co-operative Societies can undertake income-generating activities.\n   1. The annual family income of each member/applicant should not exceed Rs.3.00 lakh.\n   1. Applicants must apply for financial assistance from NSFDC through the concerned State Channelizing Agencies (SCAs)/Channelizing Agencies (CAs). \n   1. Annual family income of the applicants should be within Rs.3.00 lakhs (for both rural and urban areas w.e.f. 08.03.2018) under Credit Based Schemes. \n   1. There is no income criterion under Skill Development Training Programmes.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Maximum Loan Limit:"
+          },
+          {
+           "text": " Up to ₹30 lakhs (for studies in India) and upto ₹40 lakhs (for studies abroad) or 90% of course fee, whichever is less."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Rate of Interest:"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "For studies in India, upto ₹30 lakhs or 90% of course fee, whichever is less. The rate of interest for male candidates is 6% whereas for female candidates it is 5.5%. The repayment period must be within 10 years for loan upto Rs.10 lakh. "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "For studies abroad, upto ₹40 lakhs, or 90% of course fee, whichever is less. The rate of interest for male candidates is 7% whereas for female candidates it is 6.5%. The repayment period must be within 12 years for loan upto ₹10 lakhs. "
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "text": "The Moratorium Period is 6 months after course completion or getting employment, whichever is earlier in both the cases."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. **Maximum Loan Limit:** Up to ₹30 lakhs (for studies in India) and upto ₹40 lakhs (for studies abroad) or 90% of course fee, whichever is less.   1. **Rate of Interest:**\n\n\n  - For studies in India, upto ₹30 lakhs or 90% of course fee, whichever is less. The rate of interest for male candidates is 6% whereas for female candidates it is 5.5%. The repayment period must be within 10 years for loan upto Rs.10 lakh. \n  - For studies abroad, upto ₹40 lakhs, or 90% of course fee, whichever is less. The rate of interest for male candidates is 7% whereas for female candidates it is 6.5%. The repayment period must be within 12 years for loan upto ₹10 lakhs. \n\nThe Moratorium Period is 6 months after course completion or getting employment, whichever is earlier in both the cases.\n",
+   "briefDescription": "A scheme named Education Loan Scheme by National Scheduled Castes Finance and Development Corporation (NSFDC) under the M/o Social Justice and Empowerment provides loans to students from Scheduled Castes who are pursuing full-time professional or technical courses in recognized institutions.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "A scheme named \""
+        },
+        {
+         "bold": true,
+         "text": "Education Loan Scheme"
+        },
+        {
+         "text": "\" by National Scheduled Castes Finance and Development Corporation (NSFDC) under the M/o Social Justice and Empowerment provides loans to students from Scheduled Castes who are pursuing full-time professional or technical courses in recognized institutions. The objective of the scheme is to extend Education Loans to the students of Backward Classes for pursuing professional/technical education at the graduate and higher levels and for pursuing vocational Courses. All professional and technical courses at the graduate and higher levels are approved by the appropriate authority and vocational courses. Educational Loan shall be provided to eligible students for pursuing regular full time Professional / Technical recognized courses approved by the Government in the following fields in India or abroad :"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Engineering (Diploma/ B.Tech /B.E, M.Tech/M.E.)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Architecture (B.Arch/M.Arch)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Medical (MBBS/MD/MS)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Biotechnology/Microbiology/Clinical Technology (Diploma/Degree)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Pharmacy (B.Pharma/M.Pharma)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Dental (BDS/MDS)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Physiotherapy (B.Sc./M.Sc.)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Pathology (B.Sc/M.Sc.)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Nursing (B.Sc./M.Sc.)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Information Technology (BCA/MCA)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Management (BBA/MBA)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Hotel Management & Catering Technology (Diploma /Graduation/Post Graduation)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Law (LLB/LLM)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Education (CT/NTT/B.Ed/M.Ed)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Education (CT/NTT/B.Ed/M.Ed)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Physical Education (C.PEd./B.PEd/ M.PEd)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Journalism & Mass Communication (Graduation/Post Graduation)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Geriatric Care (Diploma/Post Graduate Diploma)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Midwifery (Diploma)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Laboratory Technician (Diploma)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Chartered Accountancy (CA)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Cost Accountancy (ICWA)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Company Secretaryship (CS)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Actuarial Sciences (Graduation/ Post Graduation/FIA)"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Associate Member of Institute of Engineers (AMIE) and Institute of Electronics & Telecommunication"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Higher education like Doctoral Studies leading to M.Phil/PhD from recognized institutions."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "A scheme named &amp;quot;**Education Loan Scheme**&amp;quot; by National Scheduled Castes Finance and Development Corporation (NSFDC) under the M/o Social Justice and Empowerment provides loans to students from Scheduled Castes who are pursuing full-time professional or technical courses in recognized institutions. The objective of the scheme is to extend Education Loans to the students of Backward Classes for pursuing professional/technical education at the graduate and higher levels and for pursuing vocational Courses. All professional and technical courses at the graduate and higher levels are approved by the appropriate authority and vocational courses. Educational Loan shall be provided to eligible students for pursuing regular full time Professional / Technical recognized courses approved by the Government in the following fields in India or abroad :\n\n   1. Engineering (Diploma/ B.Tech /B.E, M.Tech/M.E.)\n   1. Architecture (B.Arch/M.Arch)\n   1. Medical (MBBS/MD/MS)\n   1. Biotechnology/Microbiology/Clinical Technology (Diploma/Degree)\n   1. Pharmacy (B.Pharma/M.Pharma)\n   1. Dental (BDS/MDS)\n   1. Physiotherapy (B.Sc./M.Sc.)\n   1. Pathology (B.Sc/M.Sc.)\n   1. Nursing (B.Sc./M.Sc.)\n   1. Information Technology (BCA/MCA)\n   1. Management (BBA/MBA)\n   1. Hotel Management &amp;amp; Catering Technology (Diploma /Graduation/Post Graduation)\n   1. Law (LLB/LLM)\n   1. Education (CT/NTT/B.Ed/M.Ed)\n   1. Education (CT/NTT/B.Ed/M.Ed)\n   1. Physical Education (C.PEd./B.PEd/ M.PEd)\n   1. Journalism &amp;amp; Mass Communication (Graduation/Post Graduation)\n   1. Geriatric Care (Diploma/Post Graduate Diploma)\n   1. Midwifery (Diploma)\n   1. Laboratory Technician (Diploma)\n   1. Chartered Accountancy (CA)\n   1. Cost Accountancy (ICWA)\n   1. Company Secretaryship (CS)\n   1. Actuarial Sciences (Graduation/ Post Graduation/FIA)\n   1. Associate Member of Institute of Engineers (AMIE) and Institute of Electronics &amp;amp; Telecommunication\n   1. Higher education like Doctoral Studies leading to M.Phil/PhD from recognized institutions.\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The educational loan cannot be provided for the completed course."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "exclusions_md": "\n   1. The educational loan cannot be provided for the completed course.\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://nbcfdc.gov.in/loan-scheme-description/4/en"
+    },
+    {
+     "title": "FAQs",
+     "url": "https://nbcfdc.gov.in/sites/default/files/inline-files/FAQ-28.2.2020.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "els"
+}

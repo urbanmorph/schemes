@@ -1,0 +1,283 @@
+{
+ "_id": "6434680dbd37517394eb15b5",
+ "_slug": "mta",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Application Process"
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Visit the Nearest Health Center: The first step is to visit the nearest healthcare center or hospital that is authorized to provide the benefits and services under the scheme."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Fill the Application Form: The healthcare center will provide an application form for the scheme. The applicant needs to fill the form accurately and completely."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Submit Required Documents: Along with the application form, the applicant needs to submit the required documents such as identification proof, address proof, medical certificate (in case of pregnant women), and income certificate (in case of BPL families)."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Get Enrolled: After submitting the application form and the required documents, the healthcare center will verify the information provided by the applicant. If the applicant is found to be eligible, they will be enrolled in the scheme."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Receive Benefits and Services: Once enrolled, the beneficiary can avail the benefits and services under the scheme, which may include health check-ups, antenatal care, postnatal care, nutritional support, health education, and financial support (in case of pregnant women)."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ol_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Health & Family Welfare Department",
+    "value": 2444450
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Family",
+   "schemeName": "Mamta Taruni Abhiyan",
+   "schemeOpenDate": "2010-01-01",
+   "schemeShortTitle": "MTA",
+   "schemeSubCategory": [],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Mamta",
+    "Taruni",
+    "Abhiyan",
+    "Healthcare"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Eligibility "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Adolescent Girls: The scheme is open to all adolescent girls between the ages of 10 and 19 years who are residents of Gujarat."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Pregnant Women: The scheme is open to all pregnant women who are residents of Gujarat."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "BPL Families: The scheme gives priority to women and girls belonging to Below Poverty Line (BPL) families."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "**Eligibility** \n\n1. Adolescent Girls: The scheme is open to all adolescent girls between the ages of 10 and 19 years who are residents of Gujarat.\n1. Pregnant Women: The scheme is open to all pregnant women who are residents of Gujarat.\n1. BPL Families: The scheme gives priority to women and girls belonging to Below Poverty Line (BPL) families.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Benefits"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Access to Health and Wellness Services: The scheme provides access to various health and wellness services, including health check-ups, antenatal care, postnatal care, and nutritional support."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Improved Maternal and Child Health: The scheme aims to improve maternal and child health outcomes by providing timely and quality healthcare services to pregnant women and young girls."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Health Education: The scheme also provides health education and awareness sessions to beneficiaries, which helps them make informed decisions about their health and well-being."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Empowerment of Women and Girls: The scheme aims to empower women and girls by providing them with knowledge and skills related to health and nutrition, which helps them lead healthy and productive life."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Financial Support: The scheme also provides financial support to pregnant women in the form of a cash incentive, which helps them meet their medical and nutritional needs."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "briefDescription": "\"Mamta Taruni Abhiyan\" was a program launched in Gujarat, India, aimed at providing healthcare facilities to adolescent girls and pregnant women in rural areas. The program was launched by the Gujarat state government in 2010.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Details"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this program, free medical check-ups, iron and folic acid supplements, and deworming medication were provided to adolescent girls between the ages of 10 and 19 years, and pregnant women. The program also aimed to create awareness about menstrual hygiene, family planning, and nutrition among adolescent girls and pregnant women."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "The program was implemented through a network of health workers, including Accredited Social Health Activists (ASHAs), Auxiliary Nurse Midwives (ANMs), and Anganwadi workers. The Mamta Taruni Abhiyan was seen as a significant step towards improving maternal and child health in rural areas of Gujarat."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "**Details**\nUnder this program, free medical check-ups, iron and folic acid supplements, and deworming medication were provided to adolescent girls between the ages of 10 and 19 years, and pregnant women. The program also aimed to create awareness about menstrual hygiene, family planning, and nutrition among adolescent girls and pregnant women.\nThe program was implemented through a network of health workers, including Accredited Social Health Activists (ASHAs), Auxiliary Nurse Midwives (ANMs), and Anganwadi workers. The Mamta Taruni Abhiyan was seen as a significant step towards improving maternal and child health in rural areas of Gujarat.\n&lt;br&gt;\n\n",
+   "references": [
+    {
+     "title": "Details",
+     "url": "https://nhm.gujarat.gov.in/mamta-abhiyan.htm"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mta"
+}

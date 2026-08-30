@@ -1,0 +1,492 @@
+{
+ "_id": "69e8af7eadd8ffad636c599a",
+ "_slug": "wsfc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Identification:"
+           },
+           {
+            "text": " Children identified by NGOs, authorities, or the community"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Verification: "
+           },
+           {
+            "text": "Authorities verify beneficiary eligibility."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Approval: "
+           },
+           {
+            "text": "Project approved based on merit and need."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Implementation: "
+           },
+           {
+            "text": "Services like shelter, education, and healthcare are provided."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - **Identification:** Children identified by NGOs, authorities, or the community  - **Verification:** Authorities verify beneficiary eligibility.  - **Approval:** Project approved based on merit and need.  - **Implementation:** Services like shelter, education, and healthcare are provided.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 1511147
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Welfare Services for Children",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "WSFC",
+   "schemeSubCategory": [
+    {
+     "label": "Child's Vaccination",
+     "value": "Child's Vaccination"
+    },
+    {
+     "label": "Financial Assistance",
+     "value": "Financial Assistance"
+    },
+    {
+     "label": "Childcare",
+     "value": "Childcare"
+    },
+    {
+     "label": "Hospitalization",
+     "value": "Hospitalization"
+    },
+    {
+     "label": "Pregnancy Care",
+     "value": "Pregnancy Care"
+    },
+    {
+     "label": "Legal Assistance",
+     "value": "Legal Assistance"
+    },
+    {
+     "label": "Shelter",
+     "value": "Shelter"
+    },
+    {
+     "label": "Rehabilitation",
+     "value": "Rehabilitation"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Mizoram",
+    "value": 15
+   },
+   "tags": [
+    "Child Welfare Scheme",
+    "Orphan Care",
+    "Street Children Support",
+    "Child Labour Rehabilitation",
+    "Juvenile Justice Support",
+    "Child Protection Services",
+    "Shelter Homes"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "text": "The following individual types of applicants are eligible under this scheme:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Orphans and abandoned children"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Street children"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Children affected by HIV/AIDS"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Child labourers"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Juvenile delinquents"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "The following individual types of applicants are eligible under this scheme:\n\n- Orphans and abandoned children\n- Street children\n- Children affected by HIV/AIDS\n- Child labourers\n- Juvenile delinquents\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Shelter & Care:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Establishment of homes for orphaned and abandoned children."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Provision of food, shelter, and basic amenities."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Education & Training:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Formal and non-formal education support."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Vocational training for skill development."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Health & Nutrition:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Nutritional support through daycare centres."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Health programmes, including maternal and child care."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Child Protection Services:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Helplines and referral services for children at risk."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Preventive measures against child labour."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Rehabilitation Support:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Rehabilitation of juvenile delinquents."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Reintegration of vulnerable children into society."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Special Support:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Services for children affected by HIV/AIDS."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Counselling, care, and medical assistance."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "&gt; **Shelter &amp;amp; Care:**\n\n\n  - Establishment of homes for orphaned and abandoned children.\n  - Provision of food, shelter, and basic amenities.\n\n&gt; **Education &amp;amp; Training:**\n\n\n  - Formal and non-formal education support.\n  - Vocational training for skill development.\n\n&gt; **Health &amp;amp; Nutrition:**\n\n\n  - Nutritional support through daycare centres.\n  - Health programmes, including maternal and child care.\n\n&gt; **Child Protection Services:**\n\n\n  - Helplines and referral services for children at risk.\n  - Preventive measures against child labour.\n\n&gt; **Rehabilitation Support:**\n\n\n  - Rehabilitation of juvenile delinquents.\n  - Reintegration of vulnerable children into society.\n\n&gt; **Special Support:**\n\n\n  - Services for children affected by HIV/AIDS.\n  - Counselling, care, and medical assistance.\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide care, protection, and development support to vulnerable children such as orphans, street children, child labourers, and children affected by HIV/AIDS. It focuses on shelter, education, health, and rehabilitation services.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Welfare Services for Children\" component under the Mizoram Grant-in-Aid framework is designed to ensure the well-being, protection, and holistic development of children in vulnerable situations. The scheme supports voluntary organisations in delivering essential services to children who are deprived of family care, exposed to exploitation, or facing socio-economic hardships."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "Target beneficiaries include orphans, street children, children affected by HIV/AIDS, child labourers, and juvenile delinquents. The scheme provides financial assistance to organizations for setting up and running institutions such as orphanages, daycare centres, and special schools."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "It also supports health and nutrition programmes, educational initiatives, and rehabilitation services aimed at reintegrating children into society. Preventive measures are encouraged to reduce child labour and protect children from exploitation. Special emphasis is given to providing a safe environment, access to education, vocational training, and healthcare services."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Welfare Services for Children&quot; component under the Mizoram Grant-in-Aid framework is designed to ensure the well-being, protection, and holistic development of children in vulnerable situations. The scheme supports voluntary organisations in delivering essential services to children who are deprived of family care, exposed to exploitation, or facing socio-economic hardships.\nTarget beneficiaries include orphans, street children, children affected by HIV/AIDS, child labourers, and juvenile delinquents. The scheme provides financial assistance to organizations for setting up and running institutions such as orphanages, daycare centres, and special schools.\nIt also supports health and nutrition programmes, educational initiatives, and rehabilitation services aimed at reintegrating children into society. Preventive measures are encouraged to reduce child labour and protect children from exploitation. Special emphasis is given to providing a safe environment, access to education, vocational training, and healthcare services.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://socialwelfare.mizoram.gov.in/uploads/attachments/62da7efc0bb51062766aaf1aa4ed2211/pages-94-gia-rules.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "wsfc"
+}

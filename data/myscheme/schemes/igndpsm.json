@@ -1,0 +1,235 @@
+{
+ "_id": "6719d12c4d83876c61b96904",
+ "_slug": "igndpsm",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the Collector Office/Tahsildar/Talathi of your district, and request the hard copy of the prescribed format of the application form from the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents, within the prescribed period (if any), to the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "NOTE: "
+       },
+       {
+        "text": "Ensure that the application is submitted within the prescribed period, if any."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the Collector Office/Tahsildar/Talathi of your district, and request the hard copy of the prescribed format of the application form from the concerned authority.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents, within the prescribed period (if any), to the concerned authority.\n**Step 4:** Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n**NOTE:** Ensure that the application is submitted within the prescribed period, if any.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Special Assistance Department",
+    "value": 27111139
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Indira Gandhi National Disability Pension Scheme (Maharashtra)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "IGNDPSM",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Citizen empowerment",
+     "value": "Citizen empowerment"
+    }
+   ],
+   "state": {
+    "label": "Maharashtra",
+    "value": 27
+   },
+   "tags": [
+    "Disability",
+    "Pension",
+    "PwD",
+    "Handicapped"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a resident of Maharashtra."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be a person with a disability."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The percentage of the disability should be 80% or more."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant’s age should be between 18 and 65 years."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should not be receiving pension benefits under any other social security scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a resident of Maharashtra.\n   1. The applicant should be a person with a disability.\n   1. The percentage of the disability should be 80% or more.\n   1. The applicant’s age should be between 18 and 65 years.\n   1. The applicant should not be receiving pension benefits under any other social security scheme.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "A monthly pension of ₹600/-."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "A monthly pension of ₹600/-.\n",
+   "briefDescription": "The \"Indira Gandhi National Disability Pension Scheme (Maharashtra)\" is implemented by the Social Justice & Special Assistance Dept., Govt. of Maharashtra. The differently-abled individuals aged 18 to 65 years with a disability of 80% and above are eligible to receive a pension of ₹600/- per month.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Indira Gandhi National Disability Pension Scheme (Maharashtra)\" is implemented by the Social Justice & Special Assistance Department, Government of Maharashtra. Under this scheme, differently-abled individuals aged 18 to 65 years with a disability of 80% and above are eligible to receive a pension of ₹600/- per month."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Indira Gandhi National Disability Pension Scheme (Maharashtra)&amp;quot; is implemented by the Social Justice &amp;amp; Special Assistance Department, Government of Maharashtra. Under this scheme, differently-abled individuals aged 18 to 65 years with a disability of 80% and above are eligible to receive a pension of ₹600/- per month.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sjsa.maharashtra.gov.in/en/scheme-category/special-assistance"
+    },
+    {
+     "title": "Scheme Details",
+     "url": "https://pune.gov.in/scheme/indira-gandhi-national-disability-pension-scheme/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "igndpsm"
+}

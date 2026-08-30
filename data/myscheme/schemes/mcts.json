@@ -1,0 +1,601 @@
+{
+ "_id": "69b14e0e56ec2e3a91488157",
+ "_slug": "mcts",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " Visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "official website "
+         }
+        ],
+        "link": "https://meghalayaone.gov.in/meghalaya-one/view-detail?U2FsdGVkX1%20J8QVt8Zufl8EUv%2FZng1y2VeLt%207kxWg55vgfcvX0Y3z%2FIACSCYJ6n7oPcJqr7QQbeld89NoROfsHNfhI9%20cEgiW%20Hg0uVsnPEnfhX2noROt0Nyg5K5iqafvL52A0AkBg2kOoditC%2FHNQ%2Fy0q2SA3uJ56egenMbp%20cNcCvP895A04mygrqti97YRDDiutGYzOjPDUjr5972E9ela7clL8DHhhIEM6rc2YlWIAGb8dGSpKdp%2FPvmg5g=",
+        "type": "link"
+       },
+       {
+        "text": "of the scheme and click on the “Login to Apply” button to start the application process. Carefully read all the instructions provided on the website before proceeding."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " If you are a first-time user, click on “"
+       },
+       {
+        "children": [
+         {
+          "text": "Registration for New User"
+         }
+        ],
+        "link": "https://meghalayaone.gov.in/meghalaya-one/citizen-login?U2FsdGVkX1%2Fj0VpCC5AKaBYOcVsO207ea%20qs40JOarPgwkZtFDg03EVeDNMjhzMNgt66jk7HLKmzLFayU0wTM0EjpeKCRqApCovt2efa%2F0KbydwrFt8QNtiK1L9FEGK0rwHWPMZNxfJ2oG84okmekHM%20w2UWsypPf7HznEGzXJ9yzUevH2GxeNY6GrVN64Nc5vLWhdycsyVT5gxYjOQ7aTLfMjvUcaNNg56%20lFH6Z87ejSfF5hcowpsYT63w1IVyMGXXLjTCwVX1J7zigJST3KvW3SAkeGKZbQ4pl9jSHq16%2FowHqRFwaSZ2hZHgvcAel7SmNx0C4xFN5oap8U%20rLA=%3D",
+        "type": "link"
+       },
+       {
+        "text": "” and complete the registration process to create your account."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Select your Authentication ID from the available options, such as"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "PDS (Ration Card) "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Election Photo ID Card (EPIC)."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Enter your card number, select your name from the displayed list, and click on “Next” to continue."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5: "
+       },
+       {
+        "text": "Your EPIC ID will appear on the screen. If the details are correct, click on “Accept.” If the details are incorrect or rejected, manually enter your EPIC number and proceed."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 6: "
+       },
+       {
+        "text": "Click on “Validate” to verify the entered EPIC number, and then click on “Next” to move to the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 7:"
+       },
+       {
+        "text": " Fill in all required details in the application form, upload the necessary documents, carefully review all the information, and click on “Submit.” After successful submission, you will receive a unique application number for future reference."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Sign In ",
+        "underline": true
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " Click on "
+       },
+       {
+        "children": [
+         {
+          "text": "“Sign In"
+         }
+        ],
+        "link": "https://meghalayaone.gov.in/meghalaya-one/citizen-login?U2FsdGVkX1%2Fdu5Z2a1hGWoNI9swJd%2F0ipy%2F8BIg8oHzgeQ8x8B%206kEL5r6nzjssTJEkSC6a%2FSWz7TWB3omsCH8BvMqNoVkXYB3r12F2IIJu4JPz98fEyQ9bC3ERAjVoMX%2FaXvBWvVd34iUrwhVjn5iB2jCAqiKeCkjFBb9FIzX%203uUzYAhHc35dE4aSDFDctKc13r1MR%2FNuq4idI8ilaZQ5JUjUgutxygxHcnRmHRuYW0dbzfMIpBADd90WhKa76ESANqQ4hUqAzhMpEd1WWAxerZ55GBq1cWB8NmElKfsgqW%20Go8qlNIhySwptuQ1imQF4xKBa437k7OlxbylI9ig=%3D",
+        "type": "link"
+       },
+       {
+        "text": "” and choose your preferred sign-in method from Mobile Number, PDS, EPIC, or Member ID."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Enter your User ID and Password, then click on “Login” to access your account."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " After logging in, click on “Apply for Services/Scheme” to start your application."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " Fill in all the required details in the application form, upload the necessary documents, carefully review the information, and click on “Submit.”"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the [official website ](https://meghalayaone.gov.in/meghalaya-one/view-detail?U2FsdGVkX1%20J8QVt8Zufl8EUv%2FZng1y2VeLt%207kxWg55vgfcvX0Y3z%2FIACSCYJ6n7oPcJqr7QQbeld89NoROfsHNfhI9%20cEgiW%20Hg0uVsnPEnfhX2noROt0Nyg5K5iqafvL52A0AkBg2kOoditC%2FHNQ%2Fy0q2SA3uJ56egenMbp%20cNcCvP895A04mygrqti97YRDDiutGYzOjPDUjr5972E9ela7clL8DHhhIEM6rc2YlWIAGb8dGSpKdp%2FPvmg5g=)of the scheme and click on the “Login to Apply” button to start the application process. Carefully read all the instructions provided on the website before proceeding.\n**Step 2:** If you are a first-time user, click on “[Registration for New User](https://meghalayaone.gov.in/meghalaya-one/citizen-login?U2FsdGVkX1%2Fj0VpCC5AKaBYOcVsO207ea%20qs40JOarPgwkZtFDg03EVeDNMjhzMNgt66jk7HLKmzLFayU0wTM0EjpeKCRqApCovt2efa%2F0KbydwrFt8QNtiK1L9FEGK0rwHWPMZNxfJ2oG84okmekHM%20w2UWsypPf7HznEGzXJ9yzUevH2GxeNY6GrVN64Nc5vLWhdycsyVT5gxYjOQ7aTLfMjvUcaNNg56%20lFH6Z87ejSfF5hcowpsYT63w1IVyMGXXLjTCwVX1J7zigJST3KvW3SAkeGKZbQ4pl9jSHq16%2FowHqRFwaSZ2hZHgvcAel7SmNx0C4xFN5oap8U%20rLA=%3D)” and complete the registration process to create your account.\n**Step 3:** Select your Authentication ID from the available options, such as\n\n- PDS (Ration Card) \n- Election Photo ID Card (EPIC).\n\n**Step 4:** Enter your card number, select your name from the displayed list, and click on “Next” to continue.\n**Step 5:** Your EPIC ID will appear on the screen. If the details are correct, click on “Accept.” If the details are incorrect or rejected, manually enter your EPIC number and proceed.\n**Step 6:** Click on “Validate” to verify the entered EPIC number, and then click on “Next” to move to the application form.\n**Step 7:** Fill in all required details in the application form, upload the necessary documents, carefully review all the information, and click on “Submit.” After successful submission, you will receive a unique application number for future reference.\n**Sign In** \n**Step 1:** Click on [“Sign In](https://meghalayaone.gov.in/meghalaya-one/citizen-login?U2FsdGVkX1%2Fdu5Z2a1hGWoNI9swJd%2F0ipy%2F8BIg8oHzgeQ8x8B%206kEL5r6nzjssTJEkSC6a%2FSWz7TWB3omsCH8BvMqNoVkXYB3r12F2IIJu4JPz98fEyQ9bC3ERAjVoMX%2FaXvBWvVd34iUrwhVjn5iB2jCAqiKeCkjFBb9FIzX%203uUzYAhHc35dE4aSDFDctKc13r1MR%2FNuq4idI8ilaZQ5JUjUgutxygxHcnRmHRuYW0dbzfMIpBADd90WhKa76ESANqQ4hUqAzhMpEd1WWAxerZ55GBq1cWB8NmElKfsgqW%20Go8qlNIhySwptuQ1imQF4xKBa437k7OlxbylI9ig=%3D)” and choose your preferred sign-in method from Mobile Number, PDS, EPIC, or Member ID.\n**Step 2:** Enter your User ID and Password, then click on “Login” to access your account.\n**Step 3:** After logging in, click on “Apply for Services/Scheme” to start your application.\n**Step 4:** Fill in all the required details in the application form, upload the necessary documents, carefully review the information, and click on “Submit.”\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Planning Department",
+    "value": 1777803
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Banking,Financial Services and Insurance",
+     "value": "628ce7f6d6d1a3bde46852d0"
+    },
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Meghalaya Cinema Theatre Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MCTS",
+   "schemeSubCategory": [
+    {
+     "label": "Investment",
+     "value": "Investment"
+    },
+    {
+     "label": "Loan",
+     "value": "Loan"
+    },
+    {
+     "label": "Setting up / start-up / entrepreneurship",
+     "value": "Setting up / start-up / entrepreneurship"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Meghalaya",
+    "value": 17
+   },
+   "tags": [
+    "Cinema",
+    "Theatre",
+    "Gaming Zones",
+    "Movie Watching"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Individual",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicants must be between 18 and 58 years of age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicants must be permanent residents of Meghalaya."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicants must have ownership of the land on which the theatre is proposed or have leased land."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicants shall not be credit defaulters of any bank."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Registered Entity",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must possess land, either self-owned or on lease, duly verified by the competent authority."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant shall not be a credit defaulter of any bank."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "**Individual**\n\n1. The applicants must be between 18 and 58 years of age.\n1. The applicants must be permanent residents of Meghalaya.\n1. The applicants must have ownership of the land on which the theatre is proposed or have leased land.\n1. The applicants shall not be credit defaulters of any bank.\n\n**Registered Entity**\n\n1. The applicant must possess land, either self-owned or on lease, duly verified by the competent authority.\n1. The applicant shall not be a credit defaulter of any bank.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "A maximum project cost of ₹1.5 Crores for a 100-seater cinema theatre and INR 3 Crores for a 200-seater cinema theatre will be accepted under this scheme."
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "> A maximum project cost of ₹1.5 Crores for a 100-seater cinema theatre and INR 3 Crores for a 200-seater cinema theatre will be accepted under this scheme.\n\n<br>\n\n",
+   "briefDescription": "The scheme's objective is to promote youth entrepreneurship and employment in Meghalaya by supporting cinema theatres while preserving the state’s cultural heritage.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The "
+      },
+      {
+       "bold": true,
+       "text": "Meghalaya Cinema Theatre Scheme "
+      },
+      {
+       "text": "is a component of the CM-ELEVATE Program launched by the Planning Department of the Government of Meghalaya. It aims to employ, engage, and empower the youth of Meghalaya by promoting entrepreneurship and providing easy access to credit through partnerships with various banks. The scheme offers financial support for establishing new cinema theatres or upgrading existing ones across the state. This initiative is designed to preserve and promote the cultural heritage of Meghalaya through film and cinema, while also serving as community hubs for artistic expression and entertainment. Additionally, it supports value-added facilities such as food courts, gaming zones, childcare services, and retail spaces to ensure the long-term viability and sustainability of theatre establishments."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The **Meghalaya Cinema Theatre Scheme** is a component of the CM-ELEVATE Program launched by the Planning Department of the Government of Meghalaya. It aims to employ, engage, and empower the youth of Meghalaya by promoting entrepreneurship and providing easy access to credit through partnerships with various banks. The scheme offers financial support for establishing new cinema theatres or upgrading existing ones across the state. This initiative is designed to preserve and promote the cultural heritage of Meghalaya through film and cinema, while also serving as community hubs for artistic expression and entertainment. Additionally, it supports value-added facilities such as food courts, gaming zones, childcare services, and retail spaces to ensure the long-term viability and sustainability of theatre establishments.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Individuals",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Applications shall not be ordinarily considered for the following:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "A. Pressure groups and organizations that are primarily political in nature shall not be ordinarily considered"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "B. Only one member from a family is eligible for the scheme"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "C. Following individuals (currently employed as full-fledged or contractual, or retired and drawing pension) and their immediate family members which includes spouse, parents, and children up to the age of 30:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "i. State and Central Government employees"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "ii. Employees of public sector undertakings, subsidiaries of public sector undertakings, and divisions of public sector undertakings etc."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "iii. Any individual whose job is concerned with politics such as MLAs, MLCs, MPs etc. or seeking to hold a similar position in government"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "iv. Registered class-1 contractors"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "v. Consultants who are currently engaged with state or central government"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Registered Entities",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Applications shall not be ordinarily considered for the following",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "A. State and Central Government employees"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "B. Employees of public sector undertakings, subsidiaries of public sector undertakings and divisions of public sector undertakings etc."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "C. Any individual whose job is concerned with politics such MLAs, MLCs, MPs etc. or seeking to hold a similar position in government"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "D. Registered class-1 contractors"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "E. Pressure groups and organizations that are primarily political in nature shall not be ordinarily considered"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "F. Consultants who are currently engaged with state or central government"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "**Individuals**\n**Applications shall not be ordinarily considered for the following:**\nA. Pressure groups and organizations that are primarily political in nature shall not be ordinarily considered\nB. Only one member from a family is eligible for the scheme\nC. Following individuals (currently employed as full-fledged or contractual, or retired and drawing pension) and their immediate family members which includes spouse, parents, and children up to the age of 30:\ni. State and Central Government employees\nii. Employees of public sector undertakings, subsidiaries of public sector undertakings, and divisions of public sector undertakings etc.\niii. Any individual whose job is concerned with politics such as MLAs, MLCs, MPs etc. or seeking to hold a similar position in government\niv. Registered class-1 contractors\nv. Consultants who are currently engaged with state or central government\n**Registered Entities**\n**Applications shall not be ordinarily considered for the following**\nA. State and Central Government employees\nB. Employees of public sector undertakings, subsidiaries of public sector undertakings and divisions of public sector undertakings etc.\nC. Any individual whose job is concerned with politics such MLAs, MLCs, MPs etc. or seeking to hold a similar position in government\nD. Registered class-1 contractors\nE. Pressure groups and organizations that are primarily political in nature shall not be ordinarily considered\nF. Consultants who are currently engaged with state or central government\n<br>\n\n",
+   "references": [
+    {
+     "title": "Website",
+     "url": "https://meghalayaone.gov.in/meghalaya-one/view-detail?U2FsdGVkX1%20J8QVt8Zufl8EUv%2FZng1y2VeLt%207kxWg55vgfcvX0Y3z%2FIACSCYJ6n7oPcJqr7QQbeld89NoROfsHNfhI9%20cEgiW%20Hg0uVsnPEnfhX2noROt0Nyg5K5iqafvL52A0AkBg2kOoditC%2FHNQ%2Fy0q2SA3uJ56egenMbp%20cNcCvP895A04mygrqti97YRDDiutGYzOjPDUjr5972E9ela7clL8DHhhIEM6rc2YlWIAGb8dGSpKdp%2FPvmg5g="
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://www.primemeghalaya.com/cinema-theatre/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mcts"
+}

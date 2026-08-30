@@ -1,0 +1,227 @@
+{
+ "_id": "64114826d58cf01bf7d0ac0d",
+ "_slug": "dk",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Process for Application:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Application for availing the benefit under the scheme should be applied to the office of the concerned Medical Officer in-charge / Medical Superintendent in the prescribed form."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "The concerned Medical Officer in-charge / Medical Superintendent after verification, shall in turn forward the document to the concerned District Medical Officer. "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Process for Claim of Maturity:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The girl child beneficiary, on attaining the age of 18 years and after passing at least the class-X exam, shall file a maturity claims in the prescribed application form to the concerned DMO. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "The prescribed application form should be duly filled up by the girl child beneficiary herself."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "**Process for Application:**\n\n1. Application for availing the benefit under the scheme should be applied to the office of the concerned Medical Officer in-charge / Medical Superintendent in the prescribed form.\n1. The concerned Medical Officer in-charge / Medical Superintendent after verification, shall in turn forward the document to the concerned District Medical Officer. \n\n<br>\n\n**Process for Claim of Maturity:**\n\n1. The girl child beneficiary, on attaining the age of 18 years and after passing at least the class-X exam, shall file a maturity claims in the prescribed application form to the concerned DMO. \n1. The prescribed application form should be duly filled up by the girl child beneficiary herself.\n\n",
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Health and Family Welfare Department",
+    "value": 12111125
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Dulari Kanya",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DK",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Arunachal Pradesh",
+    "value": 12
+   },
+   "tags": [
+    "Girl Child",
+    "Social Welfare",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The girl child should be born in a Government Hospital or Government recognized private hospital in the state of Arunachal Pradesh."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The father/guardian should belong to a schedule tribe Arunachal Pradesh or a domicile resident of Arunachal Pradesh or possess a household residential certificate."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The scope of the scheme is restricted to a maximum of first two live girl child."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The girl child should be born in a Government Hospital or Government recognized private hospital in the state of Arunachal Pradesh.\n1. The father/guardian should belong to a schedule tribe Arunachal Pradesh or a domicile resident of Arunachal Pradesh or possess a household residential certificate.\n1. The scope of the scheme is restricted to a maximum of first two live girl child.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "An amount of ₹ 20,000/- shall be deposited in the fixed deposit Bank Account (Minor Account) of the girl child born in any Government Hospital or Government recognised private hospital. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Maturity amount can be withdrawn by the beneficiary on attaining the age of 18 years, which would be subject to verification by the concerned DMO of the respective districts."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. An amount of ₹ 20,000/- shall be deposited in the fixed deposit Bank Account (Minor Account) of the girl child born in any Government Hospital or Government recognised private hospital. \n1. Maturity amount can be withdrawn by the beneficiary on attaining the age of 18 years, which would be subject to verification by the concerned DMO of the respective districts.\n\n",
+   "briefDescription": "“Dulari Kanya” is a scheme for the girl child by the Govt. of Arunachal Pradesh. The objective of the scheme is to end the preference between male and female child, encouragement of institutional delivery, immunization of children, to end child marriage and overall empowerment of females.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "Announced on 15th August 2016 by the Hon’ble Chief Minister of Arunachal Pradesh, “Dulari Kanya” is a scheme for the girl child by the Directorate of Family Welfare, Department of Health & Family Welfare of the Govt. of Arunachal Pradesh. The objective of the scheme is to end the preference between male and female child, encouragement of institutional delivery, immunization of children, to end child marriage and overall empowerment of females in all spheres of their life. An amount of ₹ 20,000/- shall be deposited in the fixed deposit Bank Account (Minor Account) of the girl child born in any Government Hospital or Government recognised private hospital. Maturity amount can be withdrawn by the beneficiary on attaining the age of 18 years, which would be subject to verification by the concerned DMO of the respective districts."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "Announced on 15th August 2016 by the Hon’ble Chief Minister of Arunachal Pradesh, “Dulari Kanya” is a scheme for the girl child by the Directorate of Family Welfare, Department of Health &amp; Family Welfare of the Govt. of Arunachal Pradesh. The objective of the scheme is to end the preference between male and female child, encouragement of institutional delivery, immunization of children, to end child marriage and overall empowerment of females in all spheres of their life. An amount of ₹ 20,000/- shall be deposited in the fixed deposit Bank Account (Minor Account) of the girl child born in any Government Hospital or Government recognised private hospital. Maturity amount can be withdrawn by the beneficiary on attaining the age of 18 years, which would be subject to verification by the concerned DMO of the respective districts.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "http://health.arunachal.gov.in/wp-content/uploads/2018/08/Dulari-Kanya.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dk"
+}

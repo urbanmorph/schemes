@@ -1,0 +1,248 @@
+{
+ "_id": "65cef2f9ed4030e118db648f",
+ "_slug": "mmus",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the nearest "
+       },
+       {
+        "children": [
+         {
+          "text": "Anganwadi Center."
+         }
+        ],
+        "link": "https://covidwarriors.gov.in/covid_statewise.aspx?orgid=31",
+        "type": "link"
+       },
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": ""
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": ""
+         }
+        ],
+        "link": "https://covidwarriors.gov.in/covid_statewise.aspx?orgid=31",
+        "type": "link"
+       },
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "Submit the application on plain paper along with copies of the mandatory documents (self-attest, if required) to the Anganwadi Worker or the concerned authority for enrollment/registration into the scheme."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the nearest [Anganwadi Center.](https://covidwarriors.gov.in/covid_statewise.aspx?orgid=31)\n**Step 2:** Submit the application on plain paper along with copies of the mandatory documents (self-attest, if required) to the Anganwadi Worker or the concerned authority for enrollment/registration into the scheme.\n**Step 3:** Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Directorate Of Social Welfare & Social Education",
+    "value": 1059
+   },
+   "schemeCategory": [
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhyamantri Matrupushti Uphar",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MMU",
+   "schemeSubCategory": [
+    {
+     "label": "Pregnancy Care",
+     "value": "Pregnancy Care"
+    },
+    {
+     "label": "Financial Assistance",
+     "value": "Financial Assistance"
+    },
+    {
+     "label": "Health promotion",
+     "value": "Health promotion"
+    },
+    {
+     "label": "Health care providers and access",
+     "value": "Health care providers and access"
+    },
+    {
+     "label": "Pregnancy care",
+     "value": "Pregnancy care"
+    },
+    {
+     "label": "Medicine and health products",
+     "value": "Medicine and health products"
+    }
+   ],
+   "state": {
+    "label": "Tripura",
+    "value": 16
+   },
+   "tags": [
+    "Women",
+    "Pregnant",
+    "Medical",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a pregnant woman."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have undertaken antenatal check-ups at any health facility."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a pregnant woman.\n1. The applicant should have undertaken antenatal check-ups at any health facility.\n\n<br>\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "₹500/- is transferred into the bank account through DBT, after each antenatal check-up, up to four times."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "₹500/- is transferred into the bank account through DBT, after each antenatal check-up, up to four times.\n",
+   "briefDescription": "The scheme “Mukhyamantri Matrupushti Uphar” was launched by the Directorate of Social Welfare and Social Education, Government of Tripura, to provide financial assistance of ₹500/- to pregnant women through Direct Benefit Transfer (DBT) for antenatal checkups at any health facility. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme “Mukhyamantri Matrupushti Uphar” was launched by the Directorate of Social Welfare and Social Education, Government of Tripura, to provide financial assistance of ₹500/- to pregnant women through Direct Benefit Transfer (DBT) for antenatal checkups at any health facility. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Mukhyamantri Matrupushti Uphar” was launched by the Directorate of Social Welfare and Social Education, Government of Tripura, to provide financial assistance of ₹500/- to pregnant women through Direct Benefit Transfer (DBT) for antenatal checkups at any health facility. \n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://socialwelfare.tripura.gov.in/sites/default/files/Mukhamantri%20Matrupushti%20Uphar_0.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mmus"
+}

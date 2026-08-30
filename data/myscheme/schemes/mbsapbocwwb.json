@@ -1,0 +1,235 @@
+{
+ "_id": "66eecfce8738f8968e6e9cef",
+ "_slug": "mbsapbocwwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the A.P. Building & Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-3:"
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the Assistant Labour Officer/Assistant Commissioner of Labour."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-4:"
+       },
+       {
+        "text": " Request a receipt or acknowledgement from the Assistant Labour Officer/Assistant Commissioner of Labour to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "NOTE: "
+       },
+       {
+        "text": "The applicant must submit the claim within 6 months of childbirth."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step-1:** The interested applicant should visit (during office hours) the A.P. Building &amp; Other Construction Workers Welfare Board and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step-2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step-3:** Submit the duly filled and signed application form along with the documents to the Assistant Labour Officer/Assistant Commissioner of Labour.\n**Step-4:** Request a receipt or acknowledgement from the Assistant Labour Officer/Assistant Commissioner of Labour to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n<br>\n\n**NOTE:** The applicant must submit the claim within 6 months of childbirth.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department",
+    "value": 1637
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Maternity Benefit Scheme (APBOCWWB)",
+   "schemeOpenDate": "2016-03-17",
+   "schemeShortTitle": "MBSAPBOCWWB",
+   "schemeSubCategory": [
+    {
+     "label": "Childcare",
+     "value": "Childcare"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Pregnancy Care",
+     "value": "Pregnancy Care"
+    },
+    {
+     "label": "Financial Assistance",
+     "value": "Financial Assistance"
+    }
+   ],
+   "state": {
+    "label": "Andhra Pradesh",
+    "value": 28
+   },
+   "tags": [
+    "Financial Assistance",
+    "Maternity",
+    "Construction Worker",
+    "Wife",
+    "Daughter"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a registered women construction worker under the APBOCWWB, wives of registered male workers, and their daughters."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be Pregnant."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Benefit is available for the first two live births."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The worker should have completed one year of registration with the board before applying."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a registered women construction worker under the APBOCWWB, wives of registered male workers, and their daughters.\n1. The applicant should be Pregnant.\n1. Benefit is available for the first two live births.\n1. The worker should have completed one year of registration with the board before applying.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial assistance for maternity: ₹20,000/-"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Financial assistance for maternity: ₹20,000/-**\n\n",
+   "briefDescription": "The Andhra Pradesh Building & Other Construction Workers have introduced the \"Maternity Benefit Scheme\" to registered construction workers. The scheme aims to support registered women workers, wives of registered male workers, & their daughters during maternity, reducing the financial strain.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Maternity Benefit Scheme\" is a Welfare Scheme by the Andhra Pradesh Building & Other Construction Workers LET&F (Labour) Department. The scheme aims shall be given ₹20,000/- to support registered women workers, wives of registered male workers, and their daughters during maternity, reducing the financial strain faced by workers in the construction sector."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Maternity Benefit Scheme&quot; is a Welfare Scheme by the Andhra Pradesh Building &amp; Other Construction Workers LET&amp;F (Labour) Department. The scheme aims shall be given ₹20,000/- to support registered women workers, wives of registered male workers, and their daughters during maternity, reducing the financial strain faced by workers in the construction sector.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://apbocwwb.ap.nic.in/APBOCWW3/G.O.10_Maternity_benefit.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://apbocwwb.ap.nic.in/apbocwwbhome.jsp"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mbsapbocwwb"
+}

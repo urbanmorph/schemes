@@ -1,0 +1,251 @@
+{
+ "_id": "65dee69b938a0b13cc99b6f6",
+ "_slug": "kdpckv",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicant need to reach the below office:"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Regional Officer (Public Relations Officer, Contribution Collection Officer, Welfare Officer, Welfare Supervisor, Welfare Inspector)"
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "text": "Get the prescribed format, fill out the required details and submit."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Applicant need to deposit the cost of copies with the managing institution."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Upon approval, the copies are distributed to the children through the institution."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n1. Applicant need to reach the below office:\n\n  - Regional Officer (Public Relations Officer, Contribution Collection Officer, Welfare Officer, Welfare Supervisor, Welfare Inspector)\n\n1. Get the prescribed format, fill out the required details and submit.\n1. Applicant need to deposit the cost of copies with the managing institution.\n1. Upon approval, the copies are distributed to the children through the institution.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department",
+    "value": 2300023
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Riyaayati Dar Par Copies Ka Vitaran",
+   "schemeOpenDate": "2018-01-01",
+   "schemeShortTitle": "RDPCKV",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Education Support",
+    "Construction Worker",
+    "Child Development",
+    "Study Material"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Applicant construction workers should be employed in industrial units/establishments falling within the circle's jurisdiction."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The benefit extends to a maximum of two children per worker."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "It is mandatory for the concerned worker to deposit the amount of copies in the board through the institute."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. Applicant construction workers should be employed in industrial units/establishments falling within the circle&#39;s jurisdiction.\n1. The benefit extends to a maximum of two children per worker.\n1. It is mandatory for the concerned worker to deposit the amount of copies in the board through the institute.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "10 Small Copies: ₹10/- per copy"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "10 Registers : ₹14/- per register"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- 10 Small Copies: ₹10/- per copy\n- 10 Registers : ₹14/- per register\n\n",
+   "briefDescription": "The Labor department of Madhya Pradesh state started the scheme \"Riyaayati dar par Copies Ka Vitaran\" for the children of construction worker. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Riyaayati dar par Copies Ka Vitaran\" scheme iniatited by the Labor department of Madhya Pradesh with the aim to provide financial assistance to the children of the construction worker. It will reduce the financial burden and help to educate their children."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Objective:",
+       "underline": true
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Promoting literacy and access to educational materials."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Reducing the financial burden of buying educational supplies for workers' children."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Encouraging school attendance and participation"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Riyaayati dar par Copies Ka Vitaran&quot; scheme iniatited by the Labor department of Madhya Pradesh with the aim to provide financial assistance to the children of the construction worker. It will reduce the financial burden and help to educate their children.\n<br>\n\n> **Objective:**\n\n\n- Promoting literacy and access to educational materials.\n- Reducing the financial burden of buying educational supplies for workers&#39; children.\n- Encouraging school attendance and participation\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=892"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "kdpckv"
+}

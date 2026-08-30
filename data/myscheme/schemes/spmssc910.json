@@ -1,0 +1,228 @@
+{
+ "_id": "669f74a68c4bd3d40591d78a",
+ "_slug": "spmssc910",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To avail of the benefits under this scheme, eligible students can contact the Principal of their respective government schools."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Note: "
+         },
+         {
+          "text": "The student's profile is entered on the education portal "
+         },
+         {
+          "children": [
+           {
+            "text": "https://shikshaportal.mp.gov.in/"
+           }
+          ],
+          "link": "https://shikshaportal.mp.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": " by the teacher of the educational institution as per the record/certificate provided by the student."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - To avail of the benefits under this scheme, eligible students can contact the Principal of their respective government schools.\n\n**Note:** The student&amp;#39;s profile is entered on the education portal [https://shikshaportal.mp.gov.in/](https://shikshaportal.mp.gov.in/) by the teacher of the educational institution as per the record/certificate provided by the student.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "School Education Department, Government Of Madhya Pradesh",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "School Education Department",
+    "value": 2300039
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Sudama Pre-Matric Scholarship Scheme (Class 9th to 10th)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SPMSSC910",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Student",
+    "Scholarship",
+    "BPL",
+    "Pre-Matric",
+    "Sudama"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a resident of Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be studying in Class 9 or Class 10."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be enrolled in a government school."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should belong to the Below Poverty Line (BPL) category."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant's family income from all sources should be less than ₹1,00,000/- per year."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should have passed the previous year's class."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a resident of Madhya Pradesh.\n   1. The applicant should be studying in Class 9 or Class 10.\n   1. The student should be enrolled in a government school.\n   1. The applicant should belong to the Below Poverty Line (BPL) category.\n   1. The applicant&amp;#39;s family income from all sources should be less than ₹1,00,000/- per year.\n   1. The applicant should have passed the previous year&amp;#39;s class.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under this scheme, the girl student will get a scholarship of ₹400/- and boy student will get a scholarship of ₹300/- per year."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - Under this scheme, the girl student will get a scholarship of ₹400/- and boy student will get a scholarship of ₹300/- per year.\n\n",
+   "briefDescription": "Under this scheme, scholarships are provided to students studying in Class 9 and Class 10 in government schools, whose annual family income is less than ₹1,00,000/- and who belong to the Below Poverty Line (BPL) category.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Sudama Pre-Matric Scholarship Scheme\" was launched by the School Education Department, Government of Madhya Pradesh, to motivate students from lower economic backgrounds and support them economically. Under this scheme, scholarships are provided to students studying in Class 9 and Class 10 in government schools, whose annual family income is less than ₹1,00,000/- and who belong to the Below Poverty Line (BPL) category."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Sudama Pre-Matric Scholarship Scheme&amp;quot; was launched by the School Education Department, Government of Madhya Pradesh, to motivate students from lower economic backgrounds and support them economically. Under this scheme, scholarships are provided to students studying in Class 9 and Class 10 in government schools, whose annual family income is less than ₹1,00,000/- and who belong to the Below Poverty Line (BPL) category.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=421"
+    },
+    {
+     "title": "Guidelines (Page No. 26)",
+     "url": "https://aiggpa.mp.gov.in/uploads/publication/Social_Protection_Eng.pdf"
+    },
+    {
+     "title": "Online Shiksha Portal",
+     "url": "https://shikshaportal.mp.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "spmssc910"
+}

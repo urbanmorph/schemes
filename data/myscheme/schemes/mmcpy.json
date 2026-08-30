@@ -1,0 +1,292 @@
+{
+ "_id": "68ac802636ccdda01bd63a3b",
+ "_slug": "mmcpy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The department requests a faculty-wise list of students who have obtained the highest marks in government universities and their affiliated colleges. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "The scholarships are credited directly to the students’ accounts after their data is verified through the Samarth portal. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Students do not need to apply for this themselves."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The department requests a faculty-wise list of students who have obtained the highest marks in government universities and their affiliated colleges. \n  - The scholarships are credited directly to the students’ accounts after their data is verified through the Samarth portal. \n  - Students do not need to apply for this themselves.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Higher Education",
+    "value": 50000013
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhyamantri Medhavi Chhatra Puraskar Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MMCPY",
+   "schemeSubCategory": [
+    {
+     "label": "Universities and higher education",
+     "value": "Universities and higher education"
+    },
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Education and training grants, fellowship, stipend",
+     "value": "Education and training grants, fellowship, stipend"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Scholarship",
+    "Student",
+    "Post-Graduation",
+    "Undergraduate",
+    "Meritorious",
+    "Award"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "This scheme is applicable to the top three students who have obtained the highest marks at the university level after completing their courses in the Arts, Science, and Commerce faculties at the graduate and post-graduate levels in the state’s Shridev Suman University, Kumaon University, Soban Singh Jeena University, and their affiliated colleges."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Students who have obtained less than 60% marks will be ineligible under the scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Students who have appeared in improvement examinations in graduation or post-graduation, backlog examinations, or those who have dropped out in any year and then progressed to the next class will also be ineligible for the scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. This scheme is applicable to the top three students who have obtained the highest marks at the university level after completing their courses in the Arts, Science, and Commerce faculties at the graduate and post-graduate levels in the state’s Shridev Suman University, Kumaon University, Soban Singh Jeena University, and their affiliated colleges.\n   1. Students who have obtained less than 60% marks will be ineligible under the scheme.\n   1. Students who have appeared in improvement examinations in graduation or post-graduation, backlog examinations, or those who have dropped out in any year and then progressed to the next class will also be ineligible for the scheme.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "At the university level, students securing first, second, and third positions in graduation examinations are awarded:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "1st Position: ₹50,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "2nd Position: ₹30,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "3rd Position: ₹15,000/-"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Students securing first, second, and third positions in post-graduation examinations are awarded:"
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "1st Position: ₹75,000/-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "2nd Position: ₹60,000/-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "3rd Position: ₹30,000/-"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**At the university level, students securing first, second, and third positions in graduation examinations are awarded:**\n\n  - 1st Position: ₹50,000/-\n  - 2nd Position: ₹30,000/-\n  - 3rd Position: ₹15,000/-\n\n**Students securing first, second, and third positions in post-graduation examinations are awarded:**\n\n- 1st Position: ₹75,000/-\n- 2nd Position: ₹60,000/-\n- 3rd Position: ₹30,000/-\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to encourage academic excellence among students and provides cash prizes to those who secure first, second, or third positions in their graduation or post-graduation studies at the university level.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Mukhyamantri Medhavi Chhatra Puraskar Yojana” was launched by the Department of Higher Education, Government of Uttarakhand. The scheme aims to encourage academic excellence among students and provides cash prizes to those who secure first, second, or third positions in their graduation or post-graduation studies at the university level."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Mukhyamantri Medhavi Chhatra Puraskar Yojana” was launched by the Department of Higher Education, Government of Uttarakhand. The scheme aims to encourage academic excellence among students and provides cash prizes to those who secure first, second, or third positions in their graduation or post-graduation studies at the university level.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 85)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mmcpy"
+}

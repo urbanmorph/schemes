@@ -1,0 +1,486 @@
+{
+ "_id": "691d96ba227a5cd21f97ce1c",
+ "_slug": "ctsfvip",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Samagra ID Creation:",
+        "underline": true
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The applicant visit the "
+         },
+         {
+          "children": [
+           {
+            "text": "official website"
+           }
+          ],
+          "link": "https://samagra.gov.in/default.aspx",
+          "type": "link"
+         },
+         {
+          "text": " and click on the \""
+         },
+         {
+          "children": [
+           {
+            "text": "Register"
+           }
+          ],
+          "link": "https://samagra.gov.in/Citizen/Pages/AddNewFamilyRegistration.aspx",
+          "type": "link"
+         },
+         {
+          "text": "\"."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "On the new page, enter the Mobile number which was linked with Aadhaar Number and authenticate via OTP."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Now provide the Aadhaar number and enter the new OTP."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "On the new page, provide the basic details, complete address"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Give the consent and submit."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Application Process:",
+        "underline": true
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Joint Director/Deputy Director, Social Justice and Disabled Welfare will upload the data through online application on the departmental portal ("
+         },
+         {
+          "children": [
+           {
+            "text": "http://socialjustice.mp.gov.in"
+           }
+          ],
+          "link": "https://socialjustice.mp.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": "). "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "> **Samagra ID Creation:**\n\n\n- The applicant visit the [official website](https://samagra.gov.in/default.aspx) and click on the &quot;[Register](https://samagra.gov.in/Citizen/Pages/AddNewFamilyRegistration.aspx)&quot;.- On the new page, enter the Mobile number which was linked with Aadhaar Number and authenticate via OTP.\n- Now provide the Aadhaar number and enter the new OTP.\n- On the new page, provide the basic details, complete address\n- Give the consent and submit.\n\n> **Application Process:**\n\n\n- Joint Director/Deputy Director, Social Justice and Disabled Welfare will upload the data through online application on the departmental portal ([http://socialjustice.mp.gov.in](https://socialjustice.mp.gov.in/)). \n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Social Justice and Empowerment of Persons with Disabilities",
+    "value": 2300053
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Computer Training Scheme for Visually Impaired Persons",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "CTSFVIP",
+   "schemeSubCategory": [
+    {
+     "label": "Education and training grants, fellowship, stipend",
+     "value": "Education and training grants, fellowship, stipend"
+    },
+    {
+     "label": "Citizen empowerment",
+     "value": "Citizen empowerment"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Computer",
+    "Training",
+    "Person With Disability",
+    "Visually Impaired"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a permanent resident of Madhya Pradesh."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have 40% or more visual impairment."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must belong to a Below Poverty Line (BPL) household."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have passed class 8"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " with at least 50% marks."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant is eligible to receive training only once under this scheme."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a permanent resident of Madhya Pradesh.\n1. The applicant must have 40% or more visual impairment.\n1. The applicant must belong to a Below Poverty Line (BPL) household.\n1. The applicant must have passed class 8th with at least 50% marks.1. The applicant is eligible to receive training only once under this scheme.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Computer Training with Screen-Reading Software",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Two-month intensive computer training is provided using screen-reading software."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Training is conducted in two batches daily, each of four hours."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Training is delivered in seven divisions: Bhopal, Indore, Jabalpur, Gwalior, Sagar, Rewa, and Ujjain."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Post-Training Laptop Support",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Each beneficiary receives a laptop after successful completion of the two-month training program."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The training and laptop distribution benefits are one-time and non-recurring."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Training Infrastructure Support",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Includes computer systems: Intel i3 or equivalent processor, 4 GB RAM, 250 GB or higher HDD, battery backup, and low-weight design."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Includes NBTR screen-reading software."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Includes instructor support and helper assistance."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Internet connectivity is provided during training."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Free access to an online library (provided at no cost by an external source)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**Computer Training with Screen-Reading Software**\n\n- Two-month intensive computer training is provided using screen-reading software.\n- Training is conducted in two batches daily, each of four hours.\n- Training is delivered in seven divisions: Bhopal, Indore, Jabalpur, Gwalior, Sagar, Rewa, and Ujjain.\n\n**Post-Training Laptop Support**\n\n- Each beneficiary receives a laptop after successful completion of the two-month training program.\n- The training and laptop distribution benefits are one-time and non-recurring.\n\n**Training Infrastructure Support**\n\n- Includes computer systems: Intel i3 or equivalent processor, 4 GB RAM, 250 GB or higher HDD, battery backup, and low-weight design.\n- Includes NBTR screen-reading software.\n- Includes instructor support and helper assistance.\n- Internet connectivity is provided during training.\n- Free access to an online library (provided at no cost by an external source).\n\n<br>\n\n<br>\n\n<br>\n\n",
+   "briefDescription": "The scheme helps visually impaired individuals by giving them computer and screen-reading training and providing a laptop to the beneficiaries.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Computer Training Scheme for Visually Impaired Persons\" scheme was launched by the Department of Social Justice and Empowerment of Persons with Disabilities, Government of Madhya Pradesh. The scheme aims to provide computer-based intensive training, screen-reading software support, and a post-training laptop to visually impaired beneficiaries to enhance their education and livelihood opportunities. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Objectives"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "The scheme provides intensive computer training with screen-reading software to visually impaired persons, improving their digital skills for education and employment. It helps them access information online and supports their goals in higher studies, competitive exams, and self-employment."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Training "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "The program is conducted in two shifts for two months and includes computer hardware, software, trainers, internet connectivity, and study support."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Computer Training Scheme for Visually Impaired Persons&quot; scheme was launched by the Department of Social Justice and Empowerment of Persons with Disabilities, Government of Madhya Pradesh. The scheme aims to provide computer-based intensive training, screen-reading software support, and a post-training laptop to visually impaired beneficiaries to enhance their education and livelihood opportunities. \n> **Objectives**\n\nThe scheme provides intensive computer training with screen-reading software to visually impaired persons, improving their digital skills for education and employment. It helps them access information online and supports their goals in higher studies, competitive exams, and self-employment.\n> **Training** \n\nThe program is conducted in two shifts for two months and includes computer hardware, software, trainers, internet connectivity, and study support.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://socialjustice.mp.gov.in/uploads/schemes/Order__66.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ctsfvip"
+}

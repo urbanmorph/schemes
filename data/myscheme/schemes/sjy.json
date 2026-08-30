@@ -1,0 +1,415 @@
+{
+ "_id": "6773865f5fe21d75995b2b24",
+ "_slug": "sjy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " Eligible ultra-poor households are identified through a participatory process facilitated by Village Organizations (VOs)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2: "
+         },
+         {
+          "text": "Applicants need to provide the required documents to JEEViKA representatives."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3: "
+         },
+         {
+          "text": "The submitted documents and eligibility criteria are verified by program authorities."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4: "
+         },
+         {
+          "text": "Once approved, the beneficiaries are enrolled in the program and assigned to a Master Resource Person (MRP) for guidance. Also, beneficiaries receive other assistance as well."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** Eligible ultra-poor households are identified through a participatory process facilitated by Village Organizations (VOs).\n**Step 2:** Applicants need to provide the required documents to JEEViKA representatives.\n**Step 3:** The submitted documents and eligibility criteria are verified by program authorities.\n**Step 4:** Once approved, the beneficiaries are enrolled in the program and assigned to a Master Resource Person (MRP) for guidance. Also, beneficiaries receive other assistance as well.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Rural Development Department",
+    "value": 10111145
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Satat Jeevikoparjan Yojana (SJY)",
+   "schemeOpenDate": "2018-08-05",
+   "schemeShortTitle": "SJY",
+   "schemeSubCategory": [
+    {
+     "label": "Apprenticeships and training",
+     "value": "Apprenticeships and training"
+    }
+   ],
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Livelihood Support",
+    "Capacity Building",
+    "Rural Development",
+    "Skill Upgradation",
+    "Training"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "The applicant must be a resident of Bihar."
+            }
+           ],
+           "type": "list_item"
+          },
+          {
+           "children": [
+            {
+             "text": "The applicant must belong to an ultra-poor household identified through participatory processes."
+            }
+           ],
+           "type": "list_item"
+          },
+          {
+           "children": [
+            {
+             "text": "The applicant must belong to socially or economically vulnerable groups, such as SC/ST communities."
+            }
+           ],
+           "type": "list_item"
+          },
+          {
+           "children": [
+            {
+             "text": "The applicant should not have significant alternative livelihood sources."
+            }
+           ],
+           "type": "list_item"
+          },
+          {
+           "children": [
+            {
+             "text": ""
+            }
+           ],
+           "type": "paragraph"
+          }
+         ],
+         "type": "ol_list"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a resident of Bihar.\n   1. The applicant must belong to an ultra-poor household identified through participatory processes.\n   1. The applicant must belong to socially or economically vulnerable groups, such as SC/ST communities.\n   1. The applicant should not have significant alternative livelihood sources.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial Assistance:",
+         "underline": true
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Livelihood Gap Assistance: "
+              },
+              {
+               "text": " ₹1,000/- per month for the initial seven months to support basic needs."
+              }
+             ],
+             "type": "list_item"
+            },
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Asset Transfers:"
+              },
+              {
+               "text": "  Productive Asset (micro-enterprise, livestock, agriculture) transfer of an average value of ₹60,000/- is given in 2-3 tranches with a limit of ₹1,00,000/-."
+              }
+             ],
+             "type": "list_item"
+            },
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Insurance Coverage:"
+              },
+              {
+               "text": " Insurance premiums cover for each beneficiary under Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) and the Pradhan Mantri Suraksha Bima Yojana (PMJSBY). "
+              }
+             ],
+             "type": "list_item"
+            }
+           ],
+           "type": "ul_list"
+          }
+         ],
+         "type": "align_justify"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Mentoring and Capacity Building:",
+         "underline": true
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Long-Term Mentorship:"
+              },
+              {
+               "text": " 24 months of personalized guidance by Master Resource Persons (MRPs)."
+              }
+             ],
+             "type": "list_item"
+            },
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Training Programs: "
+              },
+              {
+               "text": "Capacity-building sessions to enhance confidence and entrepreneurial skills."
+              }
+             ],
+             "type": "list_item"
+            },
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Life-Skills Coaching: "
+              },
+              {
+               "text": "General coaching to improve household management and decision-making abilities."
+              }
+             ],
+             "type": "list_item"
+            }
+           ],
+           "type": "ul_list"
+          }
+         ],
+         "type": "align_justify"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Social Empowerment:",
+         "underline": true
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Targeting Ultra-Poor:"
+              },
+              {
+               "text": " Focused support for ultra-poor households, including those traditionally engaged in informal sectors."
+              }
+             ],
+             "type": "list_item"
+            },
+            {
+             "children": [
+              {
+               "bold": true,
+               "text": "Community Inclusion: "
+              },
+              {
+               "text": "Strengthened participation through Village Organizations (VOs) for oversight and support."
+              }
+             ],
+             "type": "list_item"
+            }
+           ],
+           "type": "ul_list"
+          }
+         ],
+         "type": "align_justify"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "&gt; **Financial Assistance:**\n\n\n\n    - **Livelihood Gap Assistance:**  ₹1,000/- per month for the initial seven months to support basic needs.    - **Asset Transfers:**  Productive Asset (micro-enterprise, livestock, agriculture) transfer of an average value of ₹60,000/- is given in 2-3 tranches with a limit of ₹1,00,000/-.    - **Insurance Coverage:** Insurance premiums cover for each beneficiary under Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) and the Pradhan Mantri Suraksha Bima Yojana (PMJSBY). \n\n&gt; **Mentoring and Capacity Building:**\n\n\n\n    - **Long-Term Mentorship:** 24 months of personalized guidance by Master Resource Persons (MRPs).    - **Training Programs:** Capacity-building sessions to enhance confidence and entrepreneurial skills.    - **Life-Skills Coaching:** General coaching to improve household management and decision-making abilities.\n\n&gt; **Social Empowerment:**\n\n\n\n    - **Targeting Ultra-Poor:** Focused support for ultra-poor households, including those traditionally engaged in informal sectors.    - **Community Inclusion:** Strengthened participation through Village Organizations (VOs) for oversight and support.\n\n",
+   "briefDescription": "\"Satat Jeevikoparjan Yojana (SJY)\" is a flagship program launched by the Government of Bihar to uplift ultra-poor households through comprehensive livelihood support, skill-building, and financial inclusion.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "\"Satat Jeevikoparjan Yojana (SJY)\", launched by the Government of Bihar on August 5, 2018, aims to empower approximately 100,000 ultra-poor households by providing sustainable livelihood opportunities. The program, implemented by the Bihar Rural Livelihoods Promotion Society (JEEViKA), employs the globally recognized Graduation Approach. This initiative supports targeted households with asset transfers, capacity-building training, livelihood gap assistance, and mentoring for 24 months, ensuring long-term self-reliance. Beneficiaries also gain access to insurance, public entitlements, and relief support during crises like COVID-19."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "&amp;quot;Satat Jeevikoparjan Yojana (SJY)&amp;quot;, launched by the Government of Bihar on August 5, 2018, aims to empower approximately 100,000 ultra-poor households by providing sustainable livelihood opportunities. The program, implemented by the Bihar Rural Livelihoods Promotion Society (JEEViKA), employs the globally recognized Graduation Approach. This initiative supports targeted households with asset transfers, capacity-building training, livelihood gap assistance, and mentoring for 24 months, ensuring long-term self-reliance. Beneficiaries also gain access to insurance, public entitlements, and relief support during crises like COVID-19.\n&lt;br&gt;\n\n&lt;br&gt;\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://brlps.in/sjywebinar/img/Jeevika-SJY.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sjy"
+}

@@ -1,0 +1,356 @@
+{
+ "_id": "66ab4e200667d47fde89afe3",
+ "_slug": "dbramsas",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Students studying in the school must submit their applications to the head of the institution."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "In the institute or hostel where the student is admitted, the head of the institute or superintendent will complete the necessary formalities upon receiving the application."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - Students studying in the school must submit their applications to the head of the institution.\n  - In the institute or hostel where the student is admitted, the head of the institute or superintendent will complete the necessary formalities upon receiving the application.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Scheduled Caste Welfare Department, Government Of Madhya Pradesh",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Tribal Welfare and Scheduled Caste (SC) Department",
+    "value": 2300051
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Dr. Bhim Rao Ambedkar Meritorious Student Award Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DBRAMSAS",
+   "schemeSubCategory": null,
+   "schemeType": null,
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Bhimrao Ambedkar",
+    "Meritorious Student",
+    "Prize",
+    "Award",
+    "Scheduled Caste"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a native of Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Meritorious students from Scheduled Caste categories who secure the highest marks in the Class 10 and Class 12 board examinations (Board of Secondary Education, CBSE, or ICSE) in the state are eligible for the award."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should belong to the Scheduled Caste category."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a native of Madhya Pradesh.\n   1. Meritorious students from Scheduled Caste categories who secure the highest marks in the Class 10 and Class 12 board examinations (Board of Secondary Education, CBSE, or ICSE) in the state are eligible for the award.\n   1. The student should belong to the Scheduled Caste category.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Awards for securing the highest marks in the Class 10th Board examinations:",
+         "underline": true
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "1st prize (Boy/Girl):"
+          },
+          {
+           "text": " ₹30,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "2nd prize (Boy/Girl):"
+          },
+          {
+           "text": " ₹25,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "3rd prize (Boy/Girl):"
+          },
+          {
+           "text": " ₹20,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "4th prize (Only Girl):"
+          },
+          {
+           "text": " ₹15,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "5th prize (Only Girl):"
+          },
+          {
+           "text": " ₹10,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "6th prize (Only Girl):"
+          },
+          {
+           "text": " ₹5,000/-"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Awards for securing the highest marks in the Class 12th Board examinations:",
+         "underline": true
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "1st prize (Boy/Girl):"
+          },
+          {
+           "text": " ₹51,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "2nd prize (Boy/Girl):"
+          },
+          {
+           "text": " ₹40,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "3rd prize (Boy/Girl):"
+          },
+          {
+           "text": " ₹30,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "4th prize (Only Girl):"
+          },
+          {
+           "text": " ₹20,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "5th prize (Only Girl):"
+          },
+          {
+           "text": " ₹15,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "6th prize (Only Girl):"
+          },
+          {
+           "text": " ₹10,000/-"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note:"
+        },
+        {
+         "text": " Payments are made into the bank accounts of the applicants."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "**Awards for securing the highest marks in the Class 10th Board examinations:**\n\n  - **1st prize (Boy/Girl):** ₹30,000/-  - **2nd prize (Boy/Girl):** ₹25,000/-  - **3rd prize (Boy/Girl):** ₹20,000/-  - **4th prize (Only Girl):** ₹15,000/-  - **5th prize (Only Girl):** ₹10,000/-  - **6th prize (Only Girl):** ₹5,000/-\n**Awards for securing the highest marks in the Class 12th Board examinations:**\n\n  - **1st prize (Boy/Girl):** ₹51,000/-  - **2nd prize (Boy/Girl):** ₹40,000/-  - **3rd prize (Boy/Girl):** ₹30,000/-  - **4th prize (Only Girl):** ₹20,000/-  - **5th prize (Only Girl):** ₹15,000/-  - **6th prize (Only Girl):** ₹10,000/-\n**Note:** Payments are made into the bank accounts of the applicants.\n",
+   "briefDescription": "This scheme awards special prizes to meritorious Scheduled Caste students who secure the highest marks in the Class 10th and 12th board examinations conducted by the Board of Secondary Education, CBSE, and ICSE in the state.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Dr. Bhim Rao Ambedkar Meritorious Student Award Scheme\" was launched by the Scheduled Caste Welfare Department, Government of Madhya Pradesh, to encourage students from the Scheduled Caste category to achieve high academic scores and motivate them to pursue higher education. This scheme awards special prizes to meritorious Scheduled Caste students who secure the highest marks in the Class 10th and 12th board examinations conducted by the Board of Secondary Education, CBSE, and ICSE in the state."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Dr. Bhim Rao Ambedkar Meritorious Student Award Scheme&amp;quot; was launched by the Scheduled Caste Welfare Department, Government of Madhya Pradesh, to encourage students from the Scheduled Caste category to achieve high academic scores and motivate them to pursue higher education. This scheme awards special prizes to meritorious Scheduled Caste students who secure the highest marks in the Class 10th and 12th board examinations conducted by the Board of Secondary Education, CBSE, and ICSE in the state.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=436"
+    },
+    {
+     "title": "Guidelines (Page No. 59)",
+     "url": "https://aiggpa.mp.gov.in/uploads/publication/Social_Protection_Eng.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dbramsas"
+}

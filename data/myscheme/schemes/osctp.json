@@ -1,0 +1,499 @@
+{
+ "_id": "685582a1261391702fad1059",
+ "_slug": "osctp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "The Khel Mahakumbh is usually held between October and December. Newspapers provide information about the competitions at the Gram Panchayat/Nyaya Panchayat level, and interested participants are invited to take part through forms distributed by government schools, the Youth Welfare Department, and the Sports Department."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "To participate, players must possess a photo identity card or birth certificate, a bank account, a permanent residence certificate, and a passport-size photograph. With these documents, players can compete in the Khel Mahakumbh at the village or Nyaya Panchayat level. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Players securing first, second, and third positions at this level advance to the Block Development level. Similarly, the top three players at the Block Development level proceed to the District level, and the top three at the District level qualify for the State level competition."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - The Khel Mahakumbh is usually held between October and December. Newspapers provide information about the competitions at the Gram Panchayat/Nyaya Panchayat level, and interested participants are invited to take part through forms distributed by government schools, the Youth Welfare Department, and the Sports Department.\n  - To participate, players must possess a photo identity card or birth certificate, a bank account, a permanent residence certificate, and a passport-size photograph. With these documents, players can compete in the Khel Mahakumbh at the village or Nyaya Panchayat level. \n  - Players securing first, second, and third positions at this level advance to the Block Development level. Similarly, the top three players at the Block Development level proceed to the District level, and the top three at the District level qualify for the State level competition.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department of Youth Welfare and Provincial Protection Corps",
+    "value": 50000058
+   },
+   "schemeCategory": [
+    {
+     "label": "Sports & Culture",
+     "value": "628ce8aad6d1a3bde4685320"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Organization of Sports Competitions and Training Programs",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "OSCTP",
+   "schemeSubCategory": [
+    {
+     "label": "Sports",
+     "value": "Sports"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Cash Prizes",
+    "Sportsperson",
+    "Sports Competition",
+    "Training Program",
+    "Free Training",
+    "Sports"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Sportsperson",
+     "value": "sportsperson"
+    },
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a permanent resident of Uttarakhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be a youth (boy or girl)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a permanent resident of Uttarakhand.\n1. The applicant must be a youth (boy or girl).\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Organizing Khel Mahakumbh Competitions – Various sports competitions are organized for the age groups Under-14, Under-17, and Under-21."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Prizes are awarded for first, second, and third places as follows:"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Sl. No."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Level"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "1"
+          },
+          {
+           "bold": true,
+           "superscript": true,
+           "text": "st"
+          },
+          {
+           "bold": true,
+           "text": " Rank (Cash Prize ₹)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "2"
+          },
+          {
+           "bold": true,
+           "superscript": true,
+           "text": "nd"
+          },
+          {
+           "bold": true,
+           "text": " Rank (Cash Prize ₹)"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "3"
+          },
+          {
+           "bold": true,
+           "superscript": true,
+           "text": "rd"
+          },
+          {
+           "bold": true,
+           "text": " Rank (Cash Prize ₹)"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "1"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Gram Panchayat"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹300/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹200/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹150/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "2"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Block Development "
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹500/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹400/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹300/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "3"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "District Level"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹800/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹600/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹400/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "4"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "State Level"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1,500/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1,000/-"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹700/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      }
+     ],
+     "type": "table"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "During the competitions, talented players who perform best at the Block Development levels and District levels are identified by the department and provided free training prior to state-level participation."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - Organizing Khel Mahakumbh Competitions – Various sports competitions are organized for the age groups Under-14, Under-17, and Under-21.\n  - Prizes are awarded for first, second, and third places as follows:\n\n**Sl. No.****Level****1****st** **Rank (Cash Prize ₹)****2****nd** **Rank (Cash Prize ₹)****3****rd** **Rank (Cash Prize ₹)**1Gram Panchayat₹300/-₹200/-₹150/-2Block Development ₹500/-₹400/-₹300/-3District Level₹800/-₹600/-₹400/-4State Level₹1,500/-₹1,000/-₹700/-\n  - During the competitions, talented players who perform best at the Block Development levels and District levels are identified by the department and provided free training prior to state-level participation.\n\n<br>\n\n",
+   "briefDescription": "The scheme aims to promote sports & identify grassroots-level talent among youth through structured competitions & training. Players are provided with cash prizes and free training, & participation is encouraged at multiple levels, including Gram Panchayat, Development Block, District, and State.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Organization of Sports Competitions and Training Programs\" was launched by the Department of Youth Welfare and prantiy rakshak dal (PRD), Government of Uttarakhand. The scheme aims to promote sports and identify grassroots-level talent among youth through structured competitions and training. "
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Organization of Sports Competitions and Training Programs&amp;quot; was launched by the Department of Youth Welfare and prantiy rakshak dal (PRD), Government of Uttarakhand. The scheme aims to promote sports and identify grassroots-level talent among youth through structured competitions and training. \n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 104)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "osctp"
+}

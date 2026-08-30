@@ -1,0 +1,283 @@
+{
+ "_id": "65d352e5ed4030e118dfac08",
+ "_slug": "vt-pudu",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should take print of the "
+       },
+       {
+        "children": [
+         {
+          "text": "prescribed format"
+         }
+        ],
+        "link": "https://dic.py.gov.in/sites/default/files/vocational.doc",
+        "type": "link"
+       },
+       {
+        "text": " of the application form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "The interested applicant should visit (on a working day, and during office hours) the General Manager of the District Industries Centre (Thattanchavady, Puducherry - 605 009, 2248391, 2249392, 2248987, dic_pdy@bsnl.in), and submit the duly filled and signed application form and the documents to the concerned authority."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "On receipt of the application, necessary entries will be made in the application receipt register and a unique number is assigned to the applicant for identifying each applicant which shall be used for all further references and also as acknowledgement for the receipt of the application."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": "*The filled applications will be scrutinized and called for an interview once a quarter. The successful candidates' applications will be forwarded to the respective banks for further action."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should take print of the [prescribed format](https://dic.py.gov.in/sites/default/files/vocational.doc) of the application form.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** The interested applicant should visit (on a working day, and during office hours) the General Manager of the District Industries Centre (Thattanchavady, Puducherry - 605 009, 2248391, 2249392, 2248987, dic_pdy@bsnl.in), and submit the duly filled and signed application form and the documents to the concerned authority.\n**Step 4:** On receipt of the application, necessary entries will be made in the application receipt register and a unique number is assigned to the applicant for identifying each applicant which shall be used for all further references and also as acknowledgement for the receipt of the application.\n*The filled applications will be scrutinized and called for an interview once a quarter. The successful candidates&#39; applications will be forwarded to the respective banks for further action.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Industries and Commerce Department, Puducherry",
+    "value": 34000021
+   },
+   "schemeCategory": [
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "\"Vocational Training\" Component of the \"Development of Industries\" Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "VT-PUDU",
+   "schemeSubCategory": [
+    {
+     "label": "Training and Skill Up-gradation",
+     "value": "Training and Skill Up-gradation"
+    },
+    {
+     "label": "Academic qualification Up-Gradation",
+     "value": "Academic qualification Up-Gradation"
+    },
+    {
+     "label": "Voctional education",
+     "value": "Voctional education"
+    }
+   ],
+   "state": {
+    "label": "Puducherry",
+    "value": 34
+   },
+   "tags": [
+    "Vocational",
+    "Training",
+    "Skill",
+    "Stipend",
+    "Unemployed",
+    "Youth"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be between 18 and 35 years of age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be unemployed."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have passed Class 10th (SSLC) passed."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a native of the Union Territory of Puducherry (or) continuous resident of the area for the past three years. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The applicant should be between 18 and 35 years of age.\n- The applicant should be unemployed.\n- The applicant should have passed Class 10th (SSLC) passed.\n- The applicant should be a native of the Union Territory of Puducherry (or) continuous resident of the area for the past three years. \n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Institution-oriented training in trades like Tailoring & Embroidery, Beauty Parlour, Arts & Design."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Stipend to Trainee: ₹1,500/- per month."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Honorarium to the Master Trainer: ₹ 300/- per trainee per month."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "An amount of ₹150/- per trainee per month will be paid to the training institution towards compensation for wastage of raw materials."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Commencement of Training: "
+      },
+      {
+       "text": "In September."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Period of Training: "
+      },
+      {
+       "text": "6 months."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n- Institution-oriented training in trades like Tailoring &amp; Embroidery, Beauty Parlour, Arts &amp; Design.\n- Stipend to Trainee: ₹1,500/- per month.\n- Honorarium to the Master Trainer: ₹ 300/- per trainee per month.\n- An amount of ₹150/- per trainee per month will be paid to the training institution towards compensation for wastage of raw materials.\n\n**Commencement of Training:** In September.\n**Period of Training:** 6 months.\n",
+   "briefDescription": "\"Vocational Training\" by the Department of Industries and Commerce, Union Territory of Puducherry aims to create more employment opportunities broadly for the unemployed youth particularly women to pursue wide career openings besides self-ventures by giving training in trades.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Vocational Training\" Component of the \"Development of Industries\" Scheme by the District Industries Centre, Department of Industries and Commerce, Union Territory of Puducherry aims to create more employment opportunities broadly for the unemployed youth particularly women to pursue wide career openings besides self-ventures by giving training in trades like Tailoring & Embroidery, Beauty Parlour, Arts & Design. The training is institution oriented."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Vocational Training&quot; Component of the &quot;Development of Industries&quot; Scheme by the District Industries Centre, Department of Industries and Commerce, Union Territory of Puducherry aims to create more employment opportunities broadly for the unemployed youth particularly women to pursue wide career openings besides self-ventures by giving training in trades like Tailoring &amp; Embroidery, Beauty Parlour, Arts &amp; Design. The training is institution oriented.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://dic.py.gov.in/training"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://dic.py.gov.in/sites/default/files/vocational.doc"
+    },
+    {
+     "title": "Contact Us",
+     "url": "https://dic.py.gov.in/contact-us"
+    },
+    {
+     "title": "Grievance Redressal",
+     "url": "https://industry.py.gov.in/grievance-redressal-mechanism"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "vt-pudu"
+}

@@ -1,0 +1,366 @@
+{
+ "_id": "65dcb908cd96dc5e076606d1",
+ "_slug": "mkdmaeasybeaskm",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The applicant has to submit the application form in the prescribed format and within the time limit to the office of the designated officer."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Rural Area - Chief Executive Officer, Janpad Panchayat"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Urban Area - Commissioner, Municipal Corporation/Chief Municipal Officer, Municipality/Municipal Council"
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "text": "Apply duration"
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Within 06 months from the death of the construction worker."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "ul_list"
+     }
+    ],
+    "process_md": "\n1. The applicant has to submit the application form in the prescribed format and within the time limit to the office of the designated officer.\n\n  - Rural Area - Chief Executive Officer, Janpad Panchayat\n  - Urban Area - Commissioner, Municipal Corporation/Chief Municipal Officer, Municipality/Municipal Council\n\n1. Apply duration\n\n\n\n  - Within 06 months from the death of the construction worker.\n\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department",
+    "value": 2300023
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mrityu Ki Dasha Me Antyeshti Evam Anugrah Sahayata Yojana",
+   "schemeOpenDate": "2017-01-01",
+   "schemeShortTitle": "MAEAS",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Construction Worker",
+    "Financial Assistance",
+    "Labour"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The worker must have been registered for at least 6 months before their death."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Death can be due to only natural causes or an accident."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The worker must have a valid identity card."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Benefit will only be provided to following successor-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Wife or husband (as the case may be) of a worker holding a valid identity card"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Sons and unmarried and dependent daughters"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Dependent parents"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "If there is none of the above, a family member who is dependent on the deceased worker."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The worker must have been registered for at least 6 months before their death.\n1. Death can be due to only natural causes or an accident.\n1. The worker must have a valid identity card.\n1. Benefit will only be provided to following successor-\n\n  - Wife or husband (as the case may be) of a worker holding a valid identity card\n  - Sons and unmarried and dependent daughters\n  - Dependent parents\n  - If there is none of the above, a family member who is dependent on the deceased worker.\n\n\n<br>\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Funeral assistance- ₹6,000/-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Ex-gratia payment-"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "In case of normal death : ₹2,00,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "In case of death due to accident : ₹4,00,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "In case of permanent disability due to accident : ₹2,00,000/-"
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "In case of partial permanent disability due to accident : ₹1,00,000/-"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. Funeral assistance- ₹6,000/-\n1. Ex-gratia payment-\n\n  - In case of normal death : ₹2,00,000/-\n  - In case of death due to accident : ₹4,00,000/-\n  - In case of permanent disability due to accident : ₹2,00,000/-\n  - In case of partial permanent disability due to accident : ₹1,00,000/-\n\n\n",
+   "briefDescription": "This scheme \"Mrityu ki Dasha Mein Antyeshti Evam Anugrah Sahayata Yojana\"  started by the Labor department of Madhya Pradesh to provide the financial assistance in the case of death. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Mrityu ki Dasha Mein Antyeshti Evam Anugrah Sahayata Yojana\" scheme, implemented by the Madhya Pradesh Labor Department since 2004. The objective of the scheme is to provide financial assistance to the dependents of registered construction workers in Madhya Pradesh in the case of their death."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "The scheme has the following financial assistance aims:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Alleviate the immediate financial burden on the family caused by funeral expenses. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Offer some financial support during a difficult time after the loss of a breadwinner."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Additionally, the scheme offers ex-gratia payments in case of permanent or partial disability due to an accident, further aiming to provide some financial security to registered workers who may face challenges due to an injury sustained while working."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Mrityu ki Dasha Mein Antyeshti Evam Anugrah Sahayata Yojana&quot; scheme, implemented by the Madhya Pradesh Labor Department since 2004. The objective of the scheme is to provide financial assistance to the dependents of registered construction workers in Madhya Pradesh in the case of their death.\nThe scheme has the following financial assistance aims:\n\n- Alleviate the immediate financial burden on the family caused by funeral expenses. \n- Offer some financial support during a difficult time after the loss of a breadwinner.\n\n\n- Additionally, the scheme offers ex-gratia payments in case of permanent or partial disability due to an accident, further aiming to provide some financial security to registered workers who may face challenges due to an injury sustained while working.\n\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/KnowYourEntitleDetail.aspx?Schemeid=336"
+    },
+    {
+     "title": "Details",
+     "url": "https://labour.mp.gov.in/Public/Pages/Schemes/MratyuSahayta.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mkdmaeasybeaskm"
+}

@@ -1,0 +1,207 @@
+{
+ "_id": "680f235f197a2fd77e4efa71",
+ "_slug": "ssbs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should write the application on plain paper. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Attach copies of all the mandatory documents (self-attest, if required) along with the application."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application along with the documents to the Secretary, Culture Department."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should write the application on plain paper. \n**Step 2:** Attach copies of all the mandatory documents (self-attest, if required) along with the application.\n**Step 3:** Submit the duly filled and signed application along with the documents to the Secretary, Culture Department.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Cultural Affairs & Heritage Department",
+    "value": 11111115
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Samajik Sewa Bhatta Scheme",
+   "schemeOpenDate": "2008-09-06",
+   "schemeShortTitle": "SSBS",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    },
+    {
+     "label": "Citizen empowerment",
+     "value": "Citizen empowerment"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Sikkim",
+    "value": 11
+   },
+   "tags": [
+    "Pension",
+    "Traditional Faith Healers",
+    "Financial Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a resident of Sikkim."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be a traditional faith healer such as Dhami, Jhakri, Bijjuwa, Bhungthing, Mangpa, Phedengba, Paw, Baidang, Janapa, Yeba, Yema, Sambas, or Pheriwala."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be a resident of Sikkim.\n   1. The applicant should be a traditional faith healer such as Dhami, Jhakri, Bijjuwa, Bhungthing, Mangpa, Phedengba, Paw, Baidang, Janapa, Yeba, Yema, Sambas, or Pheriwala.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "A monthly pension of ₹1,500/- is provided to traditional faith healers such as Dhami, Jhakri, Bijjuwa, Bhungthing, Mangpa, Phedengba, Paw, Baidang, Janapa, Yeba, Yema, Sambas, and Pheriwala."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - A monthly pension of ₹1,500/- is provided to traditional faith healers such as Dhami, Jhakri, Bijjuwa, Bhungthing, Mangpa, Phedengba, Paw, Baidang, Janapa, Yeba, Yema, Sambas, and Pheriwala.\n\n",
+   "briefDescription": "The scheme aims to support traditional faith healers by providing a monthly pension. Under this scheme, ₹1,500 is provided to each eligible traditional healer across the state.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Samajik Sewa Bhatta Scheme\" was launched by the Culture Department, Government of Sikkim. It aims to provide financial support to traditional faith healers across the state. Under this scheme, traditional faith healers receive a monthly pension to recognize and support their cultural and social contributions. It covers a total of 1,500 beneficiaries and seeks to preserve the traditional healing practices that are integral to the cultural heritage of Sikkim."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Samajik Sewa Bhatta Scheme&amp;quot; was launched by the Culture Department, Government of Sikkim. It aims to provide financial support to traditional faith healers across the state. Under this scheme, traditional faith healers receive a monthly pension to recognize and support their cultural and social contributions. It covers a total of 1,500 beneficiaries and seeks to preserve the traditional healing practices that are integral to the cultural heritage of Sikkim.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Applicants related to Sudeni Bhatta (home delivery childbirth practitioners) are excluded under this scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "exclusions_md": "\n   1. Applicants related to Sudeni Bhatta (home delivery childbirth practitioners) are excluded under this scheme.\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://culture.sikkim.gov.in/storage/notification/notificationdoc-AkSjW3iGha7GGIkWbx8CWsveCAOHR006VDBsWRR2.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ssbs"
+}

@@ -1,0 +1,256 @@
+{
+ "_id": "6777d0cadfe9058f6075be4e",
+ "_slug": "gsrfas",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-1:"
+         },
+         {
+          "text": " Obtain the application form from Taluka Mamlatdar’s office."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-2: "
+         },
+         {
+          "text": "Fill out the form with accurate details and attach the required documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-3: "
+         },
+         {
+          "text": "Submit the form to the Taluka Mamlatdar."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step-4: "
+         },
+         {
+          "text": "The Mamlatdar will verify the details and approve the assistance if all criteria are met."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Helpdesk: "
+         },
+         {
+          "children": [
+           {
+            "text": "Contact Details."
+           }
+          ],
+          "link": "https://wcd.gujarat.gov.in/general_contact",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "block_quote"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step-1:** Obtain the application form from Taluka Mamlatdar’s office.\n**Step-2:** Fill out the form with accurate details and attach the required documents.\n**Step-3:** Submit the form to the Taluka Mamlatdar.\n**Step-4:** The Mamlatdar will verify the details and approve the assistance if all criteria are met.\n&gt; **Helpdesk:** [Contact Details.](https://wcd.gujarat.gov.in/general_contact)\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Women and Child Development Department",
+    "value": 2444469
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Ganga Swarupa Punah Lagna Arthik Sahay Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "GSPLASS",
+   "schemeSubCategory": [
+    {
+     "label": "Marriage",
+     "value": "Marriage"
+    },
+    {
+     "label": "Assistance to Widows",
+     "value": "Assistance to Widows"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Widow",
+    "Women",
+    "Remarriage Assistance"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "The applicant must be a resident of Gujarat."
+            }
+           ],
+           "type": "list_item"
+          },
+          {
+           "children": [
+            {
+             "text": "The applicant must be aged between 18 to 50 years."
+            }
+           ],
+           "type": "list_item"
+          },
+          {
+           "children": [
+            {
+             "text": "The applicant must be a beneficiary of the \"Ganga Swarup Economic Assistance Scheme\"."
+            }
+           ],
+           "type": "list_item"
+          }
+         ],
+         "type": "ol_list"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a resident of Gujarat.\n   1. The applicant must be aged between 18 to 50 years.\n   1. The applicant must be a beneficiary of the &amp;amp;quot;Ganga Swarup Economic Assistance Scheme&amp;amp;quot;.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Assistance through Direct Bank Transfer (DBT): ₹"
+          },
+          {
+           "text": "25,000/- will be credited directly to the beneficiary's savings account through Direct Bank Transfer (DBT)."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Assistance for National Savings Certificates:"
+          },
+          {
+           "text": " "
+          },
+          {
+           "bold": true,
+           "text": "₹"
+          },
+          {
+           "text": "25,000/- will be issued to the beneficiary in the form of National Savings Certificates (NSC), providing a secure and long-term savings option."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Assistance through Direct Bank Transfer (DBT): ₹**25,000/- will be credited directly to the beneficiary&amp;#39;s savings account through Direct Bank Transfer (DBT).  - **Assistance for National Savings Certificates:** **₹**25,000/- will be issued to the beneficiary in the form of National Savings Certificates (NSC), providing a secure and long-term savings option.\n",
+   "briefDescription": "The scheme supports remarried women who are beneficiaries of the Ganga Swarupa Pension Scheme, aiming to reintegrate them into society with financial support.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Ganga Swarupa Punah Lagna Arthik Sahay Scheme\" is designed to bring about a positive change in the social perception of Ganga Swarupa women and provide them with the opportunity to reintegrate into society through financial assistance for remarriage. Women between the ages of 18 and 50 who are already beneficiaries of the \"Ganga Swarupa Pension Scheme\" are eligible for this support. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Ganga Swarupa Punah Lagna Arthik Sahay Scheme&quot; is designed to bring about a positive change in the social perception of Ganga Swarupa women and provide them with the opportunity to reintegrate into society through financial assistance for remarriage. Women between the ages of 18 and 50 who are already beneficiaries of the &quot;Ganga Swarupa Pension Scheme&quot; are eligible for this support. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://wcd.gujarat.gov.in/initiativedetails?id=234"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "gsrfas"
+}

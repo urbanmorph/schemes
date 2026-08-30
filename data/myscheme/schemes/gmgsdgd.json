@@ -1,0 +1,245 @@
+{
+ "_id": "6909e5cb716de521f3baeaac",
+ "_slug": "gmgsdgd",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:",
+        "underline": true
+       },
+       {
+        "bold": true,
+        "text": " "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the District Sainik Welfare Office and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:",
+        "underline": true
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:",
+        "underline": true
+       },
+       {
+        "text": " Submit the duly filled and signed application form along with the documents to the District Sainik Welfare Office."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:****** The interested applicant should visit (during office hours) the District Sainik Welfare Office and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step 2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the District Sainik Welfare Office.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Home Department ",
+    "value": 2300056
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Grants-in-aid and Monthly Grants to Soldiers Decorated With Gallantry Decorations",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "GMGSDGD",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Financial Assistance",
+    "Soldier",
+    "Ex-servicemen",
+    "Gallantry Award"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a permanent resident of Madhya Pradesh."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must be a serving or retired soldier/ex-serviceman who has received a Gallantry Award recognized by the President’s Secretariat."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant must be a permanent resident of Madhya Pradesh.\n1. The applicant must be a serving or retired soldier/ex-serviceman who has received a Gallantry Award recognized by the President’s Secretariat.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "One-Time Grant Assistance:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Depending on the category of the gallantry award, a one-time grant ranging from ₹20,00,000 to ₹12,000 is provided to the awardee."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Monthly Allowance:",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Soldiers or ex-servicemen receive a monthly allowance between ₹5,000 and ₹1,500, based on the class of gallantry decoration received."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "**One-Time Grant Assistance:**\n\n- Depending on the category of the gallantry award, a one-time grant ranging from ₹20,00,000 to ₹12,000 is provided to the awardee.\n\n**Monthly Allowance:**\n\n- Soldiers or ex-servicemen receive a monthly allowance between ₹5,000 and ₹1,500, based on the class of gallantry decoration received.\n\n<br>\n\n",
+   "briefDescription": "The scheme provides a grant of ₹20,00,000–₹12,000 and a monthly allowance of ₹5,000–₹1,500 to gallantry awardees as a mark of honor and recognition for their valor.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The “Grants-in-aid and Monthly Grants to Soldiers Decorated With Gallantry Decorations” scheme was launched by the Home Department, Government of Madhya Pradesh. The scheme aims to honor and support soldiers and ex-servicemen who have been conferred with gallantry awards for their acts of bravery and distinguished service. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The “Grants-in-aid and Monthly Grants to Soldiers Decorated With Gallantry Decorations” scheme was launched by the Home Department, Government of Madhya Pradesh. The scheme aims to honor and support soldiers and ex-servicemen who have been conferred with gallantry awards for their acts of bravery and distinguished service. \n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/schemes.aspx?vID=0"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://sainikkalyan.mp.gov.in/Home.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "gmgsdgd"
+}

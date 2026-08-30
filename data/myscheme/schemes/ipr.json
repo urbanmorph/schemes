@@ -1,0 +1,498 @@
+{
+ "_id": "65a26cf06093f0fa331e839f",
+ "_slug": "ipr",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "After opening the website "
+       },
+       {
+        "children": [
+         {
+          "text": "https://innovative.msme.gov.in/,"
+         }
+        ],
+        "link": "https://innovative.msme.gov.in/",
+        "type": "link"
+       },
+       {
+        "text": " Click on the \"Design\" option."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " On the next window, click on the \" "
+       },
+       {
+        "bold": true,
+        "text": "For registration as IPFC"
+       },
+       {
+        "text": "\" option."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Enter the Udyam Registration Number along with the Registered Mobile Number."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4:"
+       },
+       {
+        "text": " Click on \"Validate\" and then complete further steps to complete the application process."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** After opening the website [https://innovative.msme.gov.in/,](https://innovative.msme.gov.in/) Click on the &quot;Design&quot; option.\n**Step 2:** On the next window, click on the &quot; **For registration as IPFC**&quot; option.\n**Step 3:** Enter the Udyam Registration Number along with the Registered Mobile Number.\n**Step 4:** Click on &quot;Validate&quot; and then complete further steps to complete the application process.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": null,
+   "nodalMinistryName": {
+    "label": "Ministry Of Micro, Small and Medium Enterprises",
+    "value": 497
+   },
+   "schemeCategory": [
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Intellectual Property Right Scheme Under MSME Innovative Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "IPR",
+   "schemeSubCategory": [
+    {
+     "label": "Intellectual property rights and patents",
+     "value": "Intellectual property rights and patents"
+    },
+    {
+     "label": "Setting up / start-up / entrepreneurship",
+     "value": "Setting up / start-up / entrepreneurship"
+    }
+   ],
+   "schemeType": {
+    "label": "Central Sector Scheme",
+    "value": "central-sector-scheme"
+   },
+   "tags": [
+    "Patents",
+    "Trademarks",
+    "Copyrights",
+    "Designs",
+    "Geographical Indications",
+    "Business & Entrepreneurship"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Business Entity",
+     "value": "business-entity"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The beneficiary unit(s) must typically be a registered micro, small or medium enterprises."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Should have a valid Udyog Aadhaar Memorandum (UAM) or Udyam Registration certificate."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The beneficiary unit(s) must typically be a registered micro, small or medium enterprises.\n  - Should have a valid Udyog Aadhaar Memorandum (UAM) or Udyam Registration certificate.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "A Grant of up to ₹ 1,00,00,000/- would be provided to an IPFC in milestone-based (three or more) instalments."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Reimbursement for registration of Patent, Trademark, Geographical Indications (G.I.), and Design:"
+        },
+        {
+         "text": " The maximum financial assistance to the eligible applicants under the IPR component is as follows:"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "S. No."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Item"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Maximum Financial Assistance"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "1."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Foreign Patent"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹5,000,00/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "2."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Domestic Patent"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹1,000,00/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "3."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "GI Registration"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹2,000,00/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "4."
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "Design Registration"
+          }
+         ],
+         "type": "table_cell"
+        },
+        {
+         "children": [
+          {
+           "text": "₹15,000/-"
+          }
+         ],
+         "type": "table_cell"
+        }
+       ],
+       "type": "table_row"
+      }
+     ],
+     "type": "table"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n1. A Grant of up to ₹ 1,00,00,000/- would be provided to an IPFC in milestone-based (three or more) instalments.\n1. **Reimbursement for registration of Patent, Trademark, Geographical Indications (G.I.), and Design:** The maximum financial assistance to the eligible applicants under the IPR component is as follows:\n**S. No.****Item****Maximum Financial Assistance**1.Foreign Patent₹5,000,00/-2.Domestic Patent₹1,000,00/-3.GI Registration₹2,000,00/-4.Design Registration₹15,000/-<br>\n\n",
+   "briefDescription": "Intellectual Property Right Scheme offers legal and intellectual property filing support including patents, trademarks, copyrights, designs, geographical indications (GI) etc.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Intellectual Property Right Scheme\" under the \"MSME Innovative Scheme\" implemented by the Ministry of Micro, Small & Medium Enterprises, offers legal and intellectual property filing support including patents, trademarks, copyrights, designs, geographical indications (GI) etc. The programme also provides IP advisory, consultation, Patentability Searches, Technology Gap Analyses and IP commercialisation through the establishment of Intellectual Property Facilitation Centres (IPFCs) across the country."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Objective:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "The objective of the scheme is to improve the IP culture in India with the following interventions:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "• To enhance the awareness of Intellectual Property Rights (IPRs) amongst the MSMEs and to encourage creative intellectual endeavour in Indian economy;"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "• To take suitable measures for the protection of ideas, technological innovation and knowledge-driven business strategies developed by the MSMEs for their commercialization and effective utilization of IPR tools."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Activities:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "• Establishment of Intellectual Property Facilitation Centres (IPFCs)."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": "• Reimbursement for registration of Patent, Trademark, Geographical Indications (G.I.), Design through IPFCs."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Intellectual Property Right Scheme&amp;quot; under the &amp;quot;MSME Innovative Scheme&amp;quot; implemented by the Ministry of Micro, Small &amp;amp; Medium Enterprises, offers legal and intellectual property filing support including patents, trademarks, copyrights, designs, geographical indications (GI) etc. The programme also provides IP advisory, consultation, Patentability Searches, Technology Gap Analyses and IP commercialisation through the establishment of Intellectual Property Facilitation Centres (IPFCs) across the country.\n**Objective:**\nThe objective of the scheme is to improve the IP culture in India with the following interventions:\n• To enhance the awareness of Intellectual Property Rights (IPRs) amongst the MSMEs and to encourage creative intellectual endeavour in Indian economy;\n• To take suitable measures for the protection of ideas, technological innovation and knowledge-driven business strategies developed by the MSMEs for their commercialization and effective utilization of IPR tools.\n**Activities:**\n• Establishment of Intellectual Property Facilitation Centres (IPFCs).\n• Reimbursement for registration of Patent, Trademark, Geographical Indications (G.I.), Design through IPFCs.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://innovative.msme.gov.in/Home/IprIndex"
+    },
+    {
+     "title": "FAQs",
+     "url": "https://innovative.msme.gov.in/Documents/MSME_InnovativeFAQ.pdf"
+    },
+    {
+     "title": "Reimbursement For Patent",
+     "url": "https://my.msme.gov.in/MyMsme/Reg/COM_IprGopAppForm.aspx"
+    },
+    {
+     "title": "Reimbursement For GI",
+     "url": "https://my.msme.gov.in/MyMsme/COM_GiAppRegistration.aspx"
+    },
+    {
+     "title": "Reimbursement For Trademark",
+     "url": "https://my.msme.gov.in/MyMsme/Reg/COM_IprTradeAppForm.aspx"
+    },
+    {
+     "title": "Reimbursement For Design Patent",
+     "url": "https://my.msme.gov.in/MyMsme/Reg/COM_IprDesignAppForm.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ipr"
+}

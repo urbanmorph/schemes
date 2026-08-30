@@ -1,0 +1,345 @@
+{
+ "_id": "65c33dc6cd96dc5e07484f93",
+ "_slug": "hiai",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The interested applicant should visit (during office hours) the "
+       },
+       {
+        "children": [
+         {
+          "text": "Office/ Sub-Office"
+         }
+        ],
+        "link": "https://socwelfare.py.gov.in/sub--office-social-welfare-department",
+        "type": "link"
+       },
+       {
+        "text": " of the Department of Social Welfare, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Submit the duly filled and signed application form along with the documents to the authority given below - "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Puducherry: "
+         },
+         {
+          "text": "The Deputy Director, Differently Abled Section, Directorate of Social Welfare. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Karaikal: "
+         },
+         {
+          "text": "The Assistant Director, Social Welfare Department (Sub Office)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Mahe / Yanam: "
+         },
+         {
+          "text": "The Welfare Officer (i\\c), Social Welfare Department (Sub Office). "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the [Office/ Sub-Office](https://socwelfare.py.gov.in/sub--office-social-welfare-department) of the Department of Social Welfare, and request the hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the authority given below - \n\n- **Puducherry:** The Deputy Director, Differently Abled Section, Directorate of Social Welfare. - **Karaikal:** The Assistant Director, Social Welfare Department (Sub Office).- **Mahe / Yanam:** The Welfare Officer (i\\c), Social Welfare Department (Sub Office). \n**Step 4:** Request a receipt or acknowledgement from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department, Puducherry",
+    "value": 34000038
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Home for the Aged and Infirm",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "HAI",
+   "schemeSubCategory": null,
+   "state": {
+    "label": "Puducherry",
+    "value": 34
+   },
+   "tags": [
+    "Senior Citizen",
+    "Food",
+    "Lodging",
+    "Medical"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should have no one to look after them."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be above 60 years of age."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be suffering from communicable disease or mental illness is not be admitted to the Home."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should have no one to look after them.\n1. The applicant should be above 60 years of age.\n1. The applicant should not be suffering from communicable disease or mental illness is not be admitted to the Home.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Free Food, Lodging, Medical Facilities."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "In-door Entertainments Such as Television, Radio, Books Etc."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "4 Sets of Clothes Are Provided to Them Every Year."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹ 5/- is Given to Them Daily as Pocket Money."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Annual Tour to Places of Interest is Conducted for the Inmates Subject to Their Health Conditions."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Annual Day Function is Also Celebrated Without Affecting Their Health Conditions. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The Inmates Can Continue to Stay in the Home Till the End of Their Life. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The Last Rites of the Inmates Are Also Carried Out by the Government at Free of Cost.                                                                                         "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE: "
+      },
+      {
+       "text": "Contact the authorities below in case of delay in disbursal of benefits:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "Puducherry: The Director, Directorate of Social Welfare, Saradhambal Nagar, Ellaipillaichavadhy, Puducherry. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "Karaikal: The Collector, Karaikal."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "Mahe/Yanam: The Regional Administrator, Mahe/Yanam."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n1. Free Food, Lodging, Medical Facilities.\n1. In-door Entertainments Such as Television, Radio, Books Etc.\n1. 4 Sets of Clothes Are Provided to Them Every Year.\n1. ₹ 5/- is Given to Them Daily as Pocket Money.\n1. Annual Tour to Places of Interest is Conducted for the Inmates Subject to Their Health Conditions.\n1. Annual Day Function is Also Celebrated Without Affecting Their Health Conditions. \n1. The Inmates Can Continue to Stay in the Home Till the End of Their Life. \n1. The Last Rites of the Inmates Are Also Carried Out by the Government at Free of Cost.                                                                                         \n\n**NOTE:** Contact the authorities below in case of delay in disbursal of benefits:\nPuducherry: The Director, Directorate of Social Welfare, Saradhambal Nagar, Ellaipillaichavadhy, Puducherry. \nKaraikal: The Collector, Karaikal.\nMahe/Yanam: The Regional Administrator, Mahe/Yanam.\n",
+   "briefDescription": "The scheme “Home for the Aged and Infirm\" was launched by the Department of Social Welfare, Government of Puducherry. The objective of this scheme is to cater to the needs of persons who are aged/infirm, i.e. senior citizens, both male and female above the age of 60 years from BPL Family.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme “Home for the Aged and Infirm\" was launched by the Department of Social Welfare, Government of Puducherry. The objective of this scheme is to cater to the needs of persons who are aged/infirm, i.e. senior citizens, both male and female above the age of 60 years from Below Poverty Line (BPL) family."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Home for the Aged and Infirm&quot; was launched by the Department of Social Welfare, Government of Puducherry. The objective of this scheme is to cater to the needs of persons who are aged/infirm, i.e. senior citizens, both male and female above the age of 60 years from Below Poverty Line (BPL) family.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://socwelfare.py.gov.in/home-aged-and-infirm-puducherry-karaikal-mahe "
+    },
+    {
+     "title": "Citizen's Charter",
+     "url": "https://socwelfare.py.gov.in/sites/default/files/citizen-charter.pdf"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://socwelfare.py.gov.in/sites/default/files/old-age-homeadmissionapplications-hai.pdf"
+    },
+    {
+     "title": "Contact Us",
+     "url": "https://socwelfare.py.gov.in/contact-us"
+    },
+    {
+     "title": "Sub Offices",
+     "url": "https://socwelfare.py.gov.in/sub--office-social-welfare-department"
+    },
+    {
+     "title": "Grievance Redressal",
+     "url": "https://pgportal.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "hiai"
+}

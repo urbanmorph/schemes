@@ -1,0 +1,302 @@
+{
+ "_id": "6874e5dd062c3a3afc5b2ddb",
+ "_slug": "kppg",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Registration Process:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the homepage of the "
+       },
+       {
+        "children": [
+         {
+          "text": "Sports Authority of Gujarat"
+         }
+        ],
+        "link": "https://sportsauthority.gujarat.gov.in/",
+        "type": "link"
+       },
+       {
+        "text": "."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Click on the “Registration” button on the upper-right side of the page."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:"
+       },
+       {
+        "text": " Fill in all the required details as per the form and submit it."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Application Process:"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:"
+       },
+       {
+        "text": " After registration, check your registered email for login credentials."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:"
+       },
+       {
+        "text": " Select “Player” as the user type and log in using the credentials received."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Click on the concerned scheme name and proceed with the application."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Registration Process:**\n**Step 1:** Visit the homepage of the [Sports Authority of Gujarat](https://sportsauthority.gujarat.gov.in/).\n**Step 2:** Click on the “Registration” button on the upper-right side of the page.\n**Step 3:** Fill in all the required details as per the form and submit it.\n**Application Process:**\n**Step 1:** After registration, check your registered email for login credentials.\n**Step 2:** Select “Player” as the user type and log in using the credentials received.\n**Step 3:** Click on the concerned scheme name and proceed with the application.\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Sports, Youth and Cultural Activities Department",
+    "value": 2444465
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Sports & Culture",
+     "value": "628ce8aad6d1a3bde4685320"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Khel Pratibha Puraskar",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "KPPG",
+   "schemeSubCategory": [
+    {
+     "label": "Sports",
+     "value": "Sports"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Sports Awards",
+    "Cash Prize",
+    "Athlete"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be a sportsperson."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": " The applicant should have won a medal at a national or international level."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should be a resident of Gujarat or should be representing Gujarat officially in the sporting event."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": ""
+          }
+         ],
+         "type": "paragraph"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant should be a sportsperson.\n  -  The applicant should have won a medal at a national or international level.\n  - The applicant should be a resident of Gujarat or should be representing Gujarat officially in the sporting event.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": " Cash Prize: "
+          },
+          {
+           "text": "An amount ranging from ₹10,000/- to ₹5,00,00,000/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  -  **Cash Prize:** An amount ranging from ₹10,000/- to ₹5,00,00,000/-.\n<br>\n\n",
+   "briefDescription": "The scheme “Khel Pratibha Puraskar” by the Sports, Youth and Cultural Activities Department, Government of Gujarat aims to recognize and encourage sportspersons by providing cash prizes ranging from ₹10,000 to ₹5,00,00,000 to national and international medal winners across the state.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Khel Pratibha Puraskar” by the Sports, Youth and Cultural Activities Department, Government of Gujarat aims to financially support and honour sportspersons from Gujarat who have earned medals at national and international levels by awarding them cash prizes between ₹10,000/- and ₹5,00,00,000/- depending on the level and nature of their sporting achievement. The scheme intends to inspire athletic excellence and acknowledge the hard work and dedication of Gujarat’s athletes on prestigious platforms."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Khel Pratibha Puraskar” by the Sports, Youth and Cultural Activities Department, Government of Gujarat aims to financially support and honour sportspersons from Gujarat who have earned medals at national and international levels by awarding them cash prizes between ₹10,000/- and ₹5,00,00,000/- depending on the level and nature of their sporting achievement. The scheme intends to inspire athletic excellence and acknowledge the hard work and dedication of Gujarat’s athletes on prestigious platforms.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Scheme No. 289)",
+     "url": "https://mariyojana.gujarat.gov.in/Schemeatoz.aspx"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "kppg"
+}

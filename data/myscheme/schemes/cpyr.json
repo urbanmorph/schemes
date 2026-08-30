@@ -1,0 +1,328 @@
+{
+ "_id": "67f37956b4c840dea6658f6c",
+ "_slug": "cpyr",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1: "
+         },
+         {
+          "text": "The applicant must write an application on plain paper mentioning complete personal details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " Attach copies of all the mandatory documents (self-attest if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the duly filled and signed application form along with the documents to the General Manager of the concerned District Industries and Commerce Centre (DIC)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Request a receipt or acknowledgment from the General Manager to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The applicant must write an application on plain paper mentioning complete personal details.\n**Step 2:** Attach copies of all the mandatory documents (self-attest if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the General Manager of the concerned District Industries and Commerce Centre (DIC).\n**Step 4:** Request a receipt or acknowledgment from the General Manager to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "District Industry Centers, Rajasthan",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Industry Department",
+    "value": 8000019
+   },
+   "schemeCategory": [
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Leather Training Scheme - Rajasthan",
+   "schemeOpenDate": "1990-01-01",
+   "schemeShortTitle": "LTSR",
+   "schemeSubCategory": [
+    {
+     "label": "Training and Skill Up-gradation",
+     "value": "Training and Skill Up-gradation"
+    },
+    {
+     "label": "Entrepreneurship development",
+     "value": "Entrepreneurship development"
+    }
+   ],
+   "state": {
+    "label": "Rajasthan",
+    "value": 8
+   },
+   "tags": [
+    "Leather Goods",
+    "Skill Development",
+    "Training",
+    "Leather",
+    "Self-employment",
+    "Stipend"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a native of Rajasthan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant's age should be between 18 to 35 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should belong to the Scheduled Caste (SC), Scheduled Tribe (ST), Other Backward Class (OBC), or General category."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be literate."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note 1: "
+      },
+      {
+       "text": "The Selection Committee has the authority to provide up to 10 years of age relaxation on a case-by-case basis."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Note 2: "
+      },
+      {
+       "text": "Preference will be given to trainees who have passed 8th standard and are more educated."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a native of Rajasthan.\n1. The applicant&#39;s age should be between 18 to 35 years.\n1. The applicant should belong to the Scheduled Caste (SC), Scheduled Tribe (ST), Other Backward Class (OBC), or General category.\n1. The applicant should be literate.\n\n**Note 1:** The Selection Committee has the authority to provide up to 10 years of age relaxation on a case-by-case basis.\n**Note 2:** Preference will be given to trainees who have passed 8th standard and are more educated.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Skill Development Training",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Modern technical training in Nagara Jooti (15 trainees per batch). "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Leather goods training (20 trainees per batch)."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Stipend",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Each trainee receives ₹500/- per month during the training period."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Tool Kits",
+       "underline": true
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Tool kits worth up to ₹1,000/- are provided to each trainee after successful completion of the training."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Training Duration",
+       "underline": true
+      },
+      {
+       "text": " "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Two months."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "**Skill Development Training**\n\n- Modern technical training in Nagara Jooti (15 trainees per batch). \n- Leather goods training (20 trainees per batch).\n\n**Stipend**\n\n- Each trainee receives ₹500/- per month during the training period.\n\n**Tool Kits**\n\n- Tool kits worth up to ₹1,000/- are provided to each trainee after successful completion of the training.\n\n**Training Duration** \n\n- Two months.\n\n",
+   "briefDescription": "The scheme aims to promote leather industry, improve production & quality of leather products, develop new designs, & generate self-employment. Under this scheme, training is provided in latest techniques for leather dyeing, Nagara Jooti, leather goods, etc. through District Industry Centers.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Leather Training Scheme\" was started by the Department of Industries, Government of Rajasthan in the year 1990 with the aim of promoting the leather industry, improving the production and quality of leather products, developing new designs, and generating self-employment. Under this scheme, training in the latest techniques for leather dyeing, Nagara Jooti, leather goods, and leather toys is provided through District Industry Centers. The duration of the training is 2 months. Under the training program, a batch of 15 trainees has been designated for leather dyeing and Nagara Jooti making, while a batch of 20 trainees has been designated for leather goods and leather toy manufacturing."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Leather Training Scheme&amp;quot; was started by the Department of Industries, Government of Rajasthan in the year 1990 with the aim of promoting the leather industry, improving the production and quality of leather products, developing new designs, and generating self-employment. Under this scheme, training in the latest techniques for leather dyeing, Nagara Jooti, leather goods, and leather toys is provided through District Industry Centers. The duration of the training is 2 months. Under the training program, a batch of 15 trainees has been designated for leather dyeing and Nagara Jooti making, while a batch of 20 trainees has been designated for leather goods and leather toy manufacturing.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Scheme Details",
+     "url": "https://industries.rajasthan.gov.in/icom/#/scheme/detail/666"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://istart.rajasthan.gov.in/public/uploads/notifications/1578051347_1344.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "cpyr"
+}

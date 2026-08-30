@@ -1,0 +1,217 @@
+{
+ "_id": "68ff5a281b96d2c6b097ae2a",
+ "_slug": "ots",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The applicant can avail of the scheme benefits through the concerned electricity distribution company."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n- The applicant can avail of the scheme benefits through the concerned electricity distribution company.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Energy Department",
+    "value": 2300010
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Utility & Sanitation",
+     "value": "628ce97ad6d1a3bde468537d"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Own Transformer Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "OTS",
+   "schemeSubCategory": [
+    {
+     "label": "Electricity",
+     "value": "Electricity"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Transformer",
+    "Irrigation Pump Connection",
+    "Transformer Installation",
+    "Agricultural Power Supply"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a farmer."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Madhya Pradesh."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be willing to install the transformer at their own expense."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a farmer.\n  - The applicant must be a resident of Madhya Pradesh.\n\n\n- The applicant should be willing to install the transformer at their own expense.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Provision for Installing Own Transformer:"
+          },
+          {
+           "text": " Farmers can install transformers at their own expense according to prescribed standards."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Group Installation Option: "
+          },
+          {
+           "text": "Farmers have the option to install transformers collectively as a group."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Provision for Installing Own Transformer:** Farmers can install transformers at their own expense according to prescribed standards.  - **Group Installation Option:** Farmers have the option to install transformers collectively as a group.\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide permanent irrigation pump connections to farmers quickly by allowing them to install their own transformers.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme \"Own Transformer Scheme\" launched by the Energy Department, Government of Madhya Pradesh aims to provide quick permanent irrigation pump connections to farmers by allowing them to install transformers at their own cost as per set standards, individually or in groups."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &quot;Own Transformer Scheme&quot; launched by the Energy Department, Government of Madhya Pradesh aims to provide quick permanent irrigation pump connections to farmers by allowing them to install transformers at their own cost as per set standards, individually or in groups.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/schemes.aspx?vID=0"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ots"
+}

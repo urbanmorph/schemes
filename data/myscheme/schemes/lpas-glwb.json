@@ -1,0 +1,332 @@
+{
+ "_id": "65f833c40e25df91fd35ff53",
+ "_slug": "lpas-glwb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Application Process for Scheme Benefit:",
+        "underline": true
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The applicant may visit the Sanman Portal: "
+         },
+         {
+          "children": [
+           {
+            "text": "https://sanman.gujarat.gov.in/"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " On the home page, under the tab ‘Citizen Login’, click on ‘"
+         },
+         {
+          "children": [
+           {
+            "text": "Please Register Here"
+           }
+          ],
+          "link": "https://sanman.gujarat.gov.in/Home/Registration",
+          "type": "link"
+         },
+         {
+          "text": "’."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03: "
+         },
+         {
+          "text": "Enter your Aadhaar Card Number, select user type, and then enter your Labour Welfare Fund Account Number."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " Now, click on ‘Fetch’ & verify the details."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " Enter user details and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06:"
+         },
+         {
+          "text": " After successful registration, the applicants can login through their User ID and Password."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 07:"
+         },
+         {
+          "text": " Now, select the scheme and read the instructions carefully for the selected scheme."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 08:"
+         },
+         {
+          "text": " Fill out the application form and upload all the relevant documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 09:"
+         },
+         {
+          "text": " Agree with the Rules & Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "> **Application Process for Scheme Benefit:**\n\n**Step 01:** The applicant may visit the Sanman Portal: [https://sanman.gujarat.gov.in/](https://sanman.gujarat.gov.in/)\n**Step 02:** On the home page, under the tab ‘Citizen Login’, click on ‘[Please Register Here](https://sanman.gujarat.gov.in/Home/Registration)’.\n**Step 03:** Enter your Aadhaar Card Number, select user type, and then enter your Labour Welfare Fund Account Number.\n**Step 04:** Now, click on ‘Fetch’ &amp;amp; verify the details.\n**Step 05:** Enter user details and Password.\n**Step 06:** After successful registration, the applicants can login through their User ID and Password.\n**Step 07:** Now, select the scheme and read the instructions carefully for the selected scheme.\n**Step 08:** Fill out the application form and upload all the relevant documents.\n**Step 09:** Agree with the Rules &amp;amp; Regulations and submit the application form. A confirmation email with the application Number will be sent on the registered email ID.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Gujarat Labour Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour and Employment Department",
+    "value": 2444454
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Laptop Purchase Assistance Scheme- Gujarat Labour Welfare Board",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "LPAS-GLWB",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Laptop",
+    "Labour",
+    "Industrial Worker",
+    "Student"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Workers who are employed in a factory/institute within the state of Gujarat and have been contributing to the Labour Welfare Fund for at least one year at the local office are eligible to apply for benefits under this scheme for their children."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The benefit of the scheme will be given to children of workers who have passed the class 12th board exam and secured all over 70% or more."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The student should be admitted in any professional or design course."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The laptop should be purchased in the name of the student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Students who have taken admission abroad are not eligible to benefit from this scheme."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "In the year in which the board exam has been given, the application will have to be made within 6 (six) months after purchasing the laptop in the same year."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. Workers who are employed in a factory/institute within the state of Gujarat and have been contributing to the Labour Welfare Fund for at least one year at the local office are eligible to apply for benefits under this scheme for their children.\n   1. The benefit of the scheme will be given to children of workers who have passed the class 12th board exam and secured all over 70% or more.\n   1. The student should be admitted in any professional or design course.\n   1. The laptop should be purchased in the name of the student.\n   1. Students who have taken admission abroad are not eligible to benefit from this scheme.\n   1. In the year in which the board exam has been given, the application will have to be made within 6 (six) months after purchasing the laptop in the same year.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under the scheme, 50% of the amount or ₹25,000/- whichever is less will be given to the student admitted in a professional or designing course, with consideration to the laptop price limit of ₹50,000/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. Under the scheme, 50% of the amount or ₹25,000/- whichever is less will be given to the student admitted in a professional or designing course, with consideration to the laptop price limit of ₹50,000/-.\n\n",
+   "briefDescription": "The objective of the scheme is to encourage the children of laborers who are enrolled in professional or design courses by providing assistance for purchasing laptops, thereby reducing the financial burden of education.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Laptop Purchase Assistance Scheme” is implemented by the Gujarat Labour Welfare Board, Labour, Skill Development & Employment Department, Government of Gujarat. The objective of the scheme is to encourage the children of laborers who are enrolled in professional or design courses by providing assistance for purchasing laptops, thereby reducing the financial burden of education."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The “Laptop Purchase Assistance Scheme” is implemented by the Gujarat Labour Welfare Board, Labour, Skill Development &amp;amp; Employment Department, Government of Gujarat. The objective of the scheme is to encourage the children of laborers who are enrolled in professional or design courses by providing assistance for purchasing laptops, thereby reducing the financial burden of education.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Official Website",
+     "url": "https://glwb.gujarat.gov.in/welfare-schemes.htm"
+    },
+    {
+     "title": "Sanman Portal",
+     "url": "https://sanman.gujarat.gov.in/Home/GLWBScheme#"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://glwb.gujarat.gov.in/images/glwb/pdf/Laptop-Sahay-Yojana.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "lpas-glwb"
+}

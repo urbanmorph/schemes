@@ -1,0 +1,259 @@
+{
+ "_id": "66ffbcd551754aeb8f22c082",
+ "_slug": "atlfstp",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " The interested applicant should collect the application form from the office of the District Adi Dravidar and Tribal Welfare Officer/ Director of Adi Dravidar Welfare (Chennai-5)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2: "
+         },
+         {
+          "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the duly filled and signed application form along with the documents to the concerned office."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should collect the application form from the office of the District Adi Dravidar and Tribal Welfare Officer/ Director of Adi Dravidar Welfare (Chennai-5).\n**Step 2:** In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the concerned office.\n**Step 4:** Request a receipt or acknowledgment from the concerned authority to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n&lt;br&gt;\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Adi Dravidar and Tribal Welfare Department",
+    "value": 3333331
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Assistance to Lawyers for Starting their Practice",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "ATLFSTP",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Tamil Nadu",
+    "value": 33
+   },
+   "tags": [
+    "Tribal Welfare",
+    "Lawyers",
+    "Practice",
+    "Unemployment"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be a resident of Tamil Nadu."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should be an unemployed lawyer."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should have registered their name as a lawyer within 5 years."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should have an interest to start legal practice."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The beneficiary should belong to the Adi Dravidar/Tribal community."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Beneficiary’s annual family income should not exceed ₹1,00,000/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The beneficiary should be a resident of Tamil Nadu.\n  - The beneficiary should be an unemployed lawyer.\n  - The beneficiary should have registered their name as a lawyer within 5 years.\n  - The beneficiary should have an interest to start legal practice.\n  - The beneficiary should belong to the Adi Dravidar/Tribal community.\n  - Beneficiary’s annual family income should not exceed ₹1,00,000/-.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Financial Assistance: "
+          },
+          {
+           "text": "Incentives to unemployed Adi Dravidar/Tribal lawyers to start legal practice."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Financial Assistance:** Incentives to unemployed Adi Dravidar/Tribal lawyers to start legal practice.\n",
+   "briefDescription": "This scheme provides financial assistance to unemployed Adi Dravidar and Tribal lawyers to help them start their legal practice, provided they have registered within the last five years and meet specific income criteria.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The “Assistance to Lawyers for Starting their Practice” scheme by the Adi Dravidar and Tribal Welfare Department, Tamil Nadu, offers financial support to Adi Dravidar and Tribal lawyers who are in the early stages of their career. This scheme aims to provide them with the necessary incentives to establish a successful legal practice."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The “Assistance to Lawyers for Starting their Practice” scheme by the Adi Dravidar and Tribal Welfare Department, Tamil Nadu, offers financial support to Adi Dravidar and Tribal lawyers who are in the early stages of their career. This scheme aims to provide them with the necessary incentives to establish a successful legal practice.\n&lt;br&gt;\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.tn.gov.in/scheme/data_view/83091"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "atlfstp"
+}

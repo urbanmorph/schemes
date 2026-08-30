@@ -1,0 +1,165 @@
+{
+ "_id": "667d50b2425fce9f47c2876a",
+ "_slug": "ooscs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1:",
+        "underline": true
+       },
+       {
+        "text": " A survey is carried out through NGOs for identification of the OoSC."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2:",
+        "underline": true
+       },
+       {
+        "text": " The State Project Office of SSA provides approval of the Special Training Centres."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3:",
+        "underline": true
+       },
+       {
+        "text": " The grant is released to the Special Training Centres after signing the MOU."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** A survey is carried out through NGOs for identification of the OoSC.\n**Step 2:** The State Project Office of SSA provides approval of the Special Training Centres.\n**Step 3:** The grant is released to the Special Training Centres after signing the MOU.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education Department",
+    "value": 30000013
+   },
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Out of School Children scheme under Goa Sarva Shiksha Abhivan ",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "OOSCS",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    }
+   ],
+   "state": {
+    "label": "Goa",
+    "value": 30
+   },
+   "tags": [
+    "Goa",
+    "Dropout",
+    "Student",
+    "Children",
+    "Education",
+    "NGO"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "NGO",
+     "value": "ngo"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The child should not be enrolled in a school."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The child should be in the age group of 6 to 14 years."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The child should not be enrolled in a school.\n- The child should be in the age group of 6 to 14 years.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 3,
+    "label": "Composite",
+    "value": "composite"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "Sanctions are granted to the NGOs for providing special training in the centre as per the norms of Sarva Shiksha Abhiyan (SSA)."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Sanctions are granted to the NGOs for providing special training in the centre as per the norms of Sarva Shiksha Abhiyan (SSA).\n",
+   "briefDescription": "The \"Out of School Children\" scheme is designed to ensure that every child in the 6-14 age group receives a complete elementary education. The primary objective is to identify children who are out of school and to reintegrate them into the educational system through specialized training programs.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The \"Out of School Children\" scheme under the Goa Sarva Shiksha Abhiyan (SSA) is designed to ensure that every child in the 6 to 14 age group receives a complete elementary education. The primary objective is to identify children who are out of school, whether they have never enrolled or have dropped out, and to reintegrate them into the educational system through specialized training programs."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The &quot;Out of School Children&quot; scheme under the Goa Sarva Shiksha Abhiyan (SSA) is designed to ensure that every child in the 6 to 14 age group receives a complete elementary education. The primary objective is to identify children who are out of school, whether they have never enrolled or have dropped out, and to reintegrate them into the educational system through specialized training programs.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://education.goa.gov.in/sites/default/files/2020-11/schemes-gssa.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ooscs"
+}

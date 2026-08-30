@@ -1,0 +1,206 @@
+{
+ "_id": "6504425c7243a4f0303d43de",
+ "_slug": "ltas",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicant have to apply through the labor office of the concerned area. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Applicant will have to obtain the application form and fill out with the required details. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Attach all the necessary documents with application form."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Now application form will have to be submitted."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "After the application is submitted, the application form will be certified by the concerned officer."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Applicant have to apply through the labor office of the concerned area. \n1. Applicant will have to obtain the application form and fill out with the required details. \n1. Attach all the necessary documents with application form.\n1. Now application form will have to be submitted.\n1. After the application is submitted, the application form will be certified by the concerned officer.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department",
+    "value": 2200018
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Labor Tool Assistance Scheme",
+   "schemeOpenDate": "2018-01-01",
+   "schemeShortTitle": "LTAS",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Chhattisgarh",
+    "value": 22
+   },
+   "tags": [
+    "Electrician",
+    "Plumber",
+    "Carpenter",
+    "Coolie",
+    "Painter"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "'This scheme will be provided to construction workers who are registered in any district of the state."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The age of the registered worker should not be less than 18 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "A worker registered under the scheme can avail the help of tools of only one trade."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. &#39;This scheme will be provided to construction workers who are registered in any district of the state.\n1. The age of the registered worker should not be less than 18 years.\n1. A worker registered under the scheme can avail the help of tools of only one trade.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Tool kit"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Tool kit\n\n",
+   "briefDescription": "Chhattisgarh Chief Minister Labor Tools Assistance Scheme has been started by the Government of Chhattisgarh.\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "This scheme has been started by the Government of Chhattisgarh and operated by Labor Department.  The benefit of the scheme will be given to the beneficiaries of trades like construction work like mason, electrician, plumber, carpenter, porter, painter, etc."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "This scheme has been started by the Government of Chhattisgarh and operated by Labor Department.  The benefit of the scheme will be given to the beneficiaries of trades like construction work like mason, electrician, plumber, carpenter, porter, painter, etc.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Details",
+     "url": "https://cglabour.nic.in/BOCW/ApplicationSchemes.aspx"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://cglabour.nic.in/BOCW/BOCADHISUCHNA/193719_10_05_2019.pdf"
+    },
+    {
+     "title": "Application Form.",
+     "url": "https://cdn.s3waas.gov.in/s3d395771085aab05244a4fb8fd91bf4ee/uploads/2018/05/2018051923.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "ltas"
+}

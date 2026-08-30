@@ -1,0 +1,308 @@
+{
+ "_id": "64e49e559a06d82f412c4f05",
+ "_slug": "fasts-gbsy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "Visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "Official Website"
+         }
+        ],
+        "link": "http://schemesdtw.goa.gov.in",
+        "type": "link"
+       },
+       {
+        "text": " of the Goa Scholarship Portal."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "Register yourself on the portal by providing your Name, Email ID, Mobile Number, and other details."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "Sign In to the Portal using the credentials received on your Email ID / Mobile Number."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "In the portal, browse the Online Application Form for \"Gagan Bharari Shiksha Yojana\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5: "
+       },
+       {
+        "text": "In the Online Application Form, fill in all the mandatory details, upload the mandatory documents in the mentioned file type and filesize."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5: "
+       },
+       {
+        "text": "Click the \"Submit\" icon at the bottom to submit the form."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 6: "
+       },
+       {
+        "text": "Upon successful submission of the application, a pop-up box will be displayed showing the Application Reference ID. The same will also be received over the Registered Email ID and the Registered Mobile Number. Save this Reference ID for future reference."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the [Official Website](http://schemesdtw.goa.gov.in) of the Goa Scholarship Portal.\n**Step 2:** Register yourself on the portal by providing your Name, Email ID, Mobile Number, and other details.\n**Step 3:** Sign In to the Portal using the credentials received on your Email ID / Mobile Number.\n**Step 4:** In the portal, browse the Online Application Form for &quot;Gagan Bharari Shiksha Yojana&quot;.\n**Step 5:** In the Online Application Form, fill in all the mandatory details, upload the mandatory documents in the mentioned file type and filesize.\n**Step 5:** Click the &quot;Submit&quot; icon at the bottom to submit the form.\n**Step 6:** Upon successful submission of the application, a pop-up box will be displayed showing the Application Reference ID. The same will also be received over the Registered Email ID and the Registered Mobile Number. Save this Reference ID for future reference.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 30000044
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Financial Assistance to ST Students under \"Gagan Bharari Shiksha Yojana\"",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FASTS-GBSY",
+   "schemeSubCategory": [
+    {
+     "label": "Scholarships and student finance",
+     "value": "Scholarships and student finance"
+    },
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Goa",
+    "value": 30
+   },
+   "tags": [
+    "Financial Asisstance",
+    "Scheduled Tribe",
+    "Student",
+    "Education",
+    "School"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be from a Scheduled Tribe (ST) in the State of Goa."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The student should be a regular, full-time student studying in a recognized Institution / University. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have availed or should be eligible for Centrally Sponsored Post Matric Scholarship during the current Academic Year."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The income of parents/guardians of the applicant should not exceed ₹ 5,00,000 per annum. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE:"
+      },
+      {
+       "text": " If a student has to repeat a class, he/she shall not be eligible to get a scholarship for a second time in the same class."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be from a Scheduled Tribe (ST) in the State of Goa.\n1. The student should be a regular, full-time student studying in a recognized Institution / University. \n1. The applicant should have availed or should be eligible for Centrally Sponsored Post Matric Scholarship during the current Academic Year.\n1. The income of parents/guardians of the applicant should not exceed ₹ 5,00,000 per annum. \n\n**NOTE:** If a student has to repeat a class, he/she shall not be eligible to get a scholarship for a second time in the same class.\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "An Additional Maintenance Allowance of ₹ 7,500/- to Day Scholars for 10 Months."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "An Additional Maintenance Allowance of ₹ 15,000/- to Hostellers for 10 Months."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. An Additional Maintenance Allowance of ₹ 7,500/- to Day Scholars for 10 Months.\n1. An Additional Maintenance Allowance of ₹ 15,000/- to Hostellers for 10 Months.\n\n",
+   "briefDescription": "Under the scheme \"Gagan Bharari Shiksha Yojana\", financial assistance of upto ₹ 15,000/- is provided to the Scheduled Tribe Students as the maintenance allowance given under the Post Matric Scholarship is inadequate to meet the expenses on food & travel. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "\"Gagan Bharari Shiksha Yojana\" is a Financial Assistance Scheme by the Department of Tribal Welfare, Government of Goa. Under this scheme, additional financial assistance of upto ₹ 15,000/- is provided to the Scheduled Tribe Students as the maintenance allowance given under the Post Matric Scholarship is inadequate to meet the expenses on food & travel."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Duration"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "Scholarships for studying in any class will be available for only one year."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "&quot;Gagan Bharari Shiksha Yojana&quot; is a Financial Assistance Scheme by the Department of Tribal Welfare, Government of Goa. Under this scheme, additional financial assistance of upto ₹ 15,000/- is provided to the Scheduled Tribe Students as the maintenance allowance given under the Post Matric Scholarship is inadequate to meet the expenses on food &amp; travel.\n<br>\n\n> **Duration**\n\nScholarships for studying in any class will be available for only one year.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Circular",
+     "url": "https://tribalwelfare.goa.gov.in/images/2022/Circular_Gagan_Bharari.pdf"
+    },
+    {
+     "title": "Amendment",
+     "url": "https://www.goa.gov.in/wp-content/uploads/2022/08/Gagan-Bharari-Amendment.pdf"
+    },
+    {
+     "title": "Citizen's Charter",
+     "url": "https://www.goa.gov.in/wp-content/uploads/2022/05/Citizen-Charter-2022-tribal-welfare.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "fasts-gbsy"
+}

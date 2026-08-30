@@ -1,0 +1,238 @@
+{
+ "_id": "67766d2e8aa510ca37142b8f",
+ "_slug": "psgg",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " Visit the nearest Anganwadi center."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " Register yourself with the Anganwadi center."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Provide the required documents."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Avail of the benefits during scheduled distribution days."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** Visit the nearest Anganwadi center.\n**Step 2:** Register yourself with the Anganwadi center.\n**Step 3:** Provide the required documents.\n**Step 4:** Avail of the benefits during scheduled distribution days.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Women and Child Development Department",
+    "value": 2444469
+   },
+   "schemeCategory": [
+    {
+     "label": "Health & Wellness",
+     "value": "628ce7a2d6d1a3bde46852b1"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Poshan Sudha",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PSGG",
+   "schemeSubCategory": [
+    {
+     "label": "Pregnancy care",
+     "value": "Pregnancy care"
+    },
+    {
+     "label": "Children’s health and immunization",
+     "value": "Children’s health and immunization"
+    }
+   ],
+   "state": {
+    "label": "Gujarat",
+    "value": 24
+   },
+   "tags": [
+    "Pregnant Women",
+    "Child",
+    "Nutritional Support"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "children": [
+            {
+             "text": "The applicant must be a resident of Gujarat."
+            }
+           ],
+           "type": "list_item"
+          }
+         ],
+         "type": "ul_list"
+        }
+       ],
+       "type": "align_justify"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a pregnant or lactating woman residing in one of the tribal districts of Gujarat."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be registered in a local Anganwadi center."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a resident of Gujarat.\n\n\n  - The applicant must be a pregnant or lactating woman residing in one of the tribal districts of Gujarat.\n  - The applicant must be registered in a local Anganwadi center.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Nutritional Support: "
+          },
+          {
+           "text": "Provision of one full nutritious meal daily for pregnant and lactating mothers. Supply of iron and calcium supplements to address nutritional deficiencies."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Health Education: "
+          },
+          {
+           "text": "Awareness sessions on health and nutrition for better maternal and child care."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Nutritional Support:** Provision of one full nutritious meal daily for pregnant and lactating mothers. Supply of iron and calcium supplements to address nutritional deficiencies.  - **Health Education:** Awareness sessions on health and nutrition for better maternal and child care.\n",
+   "briefDescription": "This scheme is a government initiative to provide nutrition and healthcare support to pregnant and lactating mothers in tribal districts of Gujarat.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Poshan Sudha\" scheme launched by the Women and Child Development Department, Gujarat, aimed at providing nutritional support to pregnant and lactating mothers in Gujarat’s tribal districts. This initiative provides registered mothers with one nutritious meal daily, iron and calcium supplements, and health education to improve maternal and child health outcomes. "
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Poshan Sudha&amp;quot; scheme launched by the Women and Child Development Department, Gujarat, aimed at providing nutritional support to pregnant and lactating mothers in Gujarat’s tribal districts. This initiative provides registered mothers with one nutritious meal daily, iron and calcium supplements, and health education to improve maternal and child health outcomes. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://wcd.gujarat.gov.in/initiativedetails?id=294"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "psgg"
+}

@@ -1,0 +1,298 @@
+{
+ "_id": "647ef1ee481f59106a676603",
+ "_slug": "lbsspy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Applicants have to visit the "
+         },
+         {
+          "children": [
+           {
+            "text": "official website"
+           }
+          ],
+          "link": "https://serviceonline.bihar.gov.in/",
+          "type": "link"
+         },
+         {
+          "text": ". "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "On this home page, click on Apply for \""
+         },
+         {
+          "children": [
+           {
+            "text": "Social Security Pension Schemes\"."
+           }
+          ],
+          "link": "https://serviceonline.bihar.gov.in/viewServiceApplicationForm.do?serviceId=4710001&tempId=1353&templStatus=243&state=10&backButtonUrl=&OWASP_CSRFTOKEN=QA2B-0Y09-31ZX-8FV2-R2IJ-7XU9-9BHM-TUTM",
+          "type": "link"
+         },
+         {
+          "text": " "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "On the new page, select the scheme Name."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill out the Applicant's Details, Complete Address of Residence, Bank Details, and accept the Self Declaration and Consent. "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Click on the submit button."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Applicants have to visit the [official website](https://serviceonline.bihar.gov.in/). 1. On this home page, click on Apply for &quot;[Social Security Pension Schemes&quot;.](https://serviceonline.bihar.gov.in/viewServiceApplicationForm.do?serviceId=4710001&tempId=1353&templStatus=243&state=10&backButtonUrl=&OWASP_CSRFTOKEN=QA2B-0Y09-31ZX-8FV2-R2IJ-7XU9-9BHM-TUTM) 1. On the new page, select the scheme Name.\n1. Fill out the Applicant&#39;s Details, Complete Address of Residence, Bank Details, and accept the Self Declaration and Consent. \n1. Click on the submit button.\n\n",
+    "url": "https://serviceonline.bihar.gov.in/"
+   },
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Download the "
+         },
+         {
+          "children": [
+           {
+            "text": "application form."
+           }
+          ],
+          "link": "https://cdn.s3waas.gov.in/s30d0fd7c6e093f7b804fa0150b875b868/uploads/2018/03/2018031763.pdf",
+          "type": "link"
+         },
+         {
+          "text": ""
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Fill out the application form."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Enclose required documents ( three photographs, Age Certificate, Address Proof, B.P.L. Card, and Husband's Death Certificate). "
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit these to District Director or District Social Security cell. "
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Download the [application form.](https://cdn.s3waas.gov.in/s30d0fd7c6e093f7b804fa0150b875b868/uploads/2018/03/2018031763.pdf)1. Fill out the application form.\n1. Enclose required documents ( three photographs, Age Certificate, Address Proof, B.P.L. Card, and Husband&#39;s Death Certificate). \n1. Submit these to District Director or District Social Security cell. \n\n",
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "implementingAgency": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Welfare Department",
+    "value": 10111148
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Women and Child",
+     "value": "64f57d10ffb93104c7006c97"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "Lakshmi Bai Samajik Suraksha Pension Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "LBSSPY",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Financial Assitance",
+    "Women Welfare",
+    "Empowerment",
+    "Widow Pension"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Widow woman must be a resident of Bihar."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The woman should be a widow."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The woman should be living below the poverty line."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The annual income of the woman's family should be Rs. 60,000/- or less."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The age of the woman should be 18 years or more."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. Widow woman must be a resident of Bihar.\n1. The woman should be a widow.\n1. The woman should be living below the poverty line.\n1. The annual income of the woman&#39;s family should be Rs. 60,000/- or less.\n1. The age of the woman should be 18 years or more.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "Financial Assistance of Rs. 300/- per month. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Financial Assistance of Rs. 300/- per month. \n",
+   "briefDescription": "Lakshmi Bai Social Security Scheme has been launched by the Bihar government for the widow women of the state. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "It has been started with the aim of improving the citizens living below the poverty line. Through this scheme, the state government will provide assistance to old women living below the economic poverty line. Recently, a scheme was started by the Government of Bihar, whose name is Laxmi Bai Social Security Pension Scheme."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "It has been started with the aim of improving the citizens living below the poverty line. Through this scheme, the state government will provide assistance to old women living below the economic poverty line. Recently, a scheme was started by the Government of Bihar, whose name is Laxmi Bai Social Security Pension Scheme.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Details",
+     "url": "https://cdn.s3waas.gov.in/s30d0fd7c6e093f7b804fa0150b875b868/uploads/2018/03/2018031763.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "lbsspy"
+}

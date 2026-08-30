@@ -1,0 +1,273 @@
+{
+ "_id": "664de1f802cfbde316499fe8",
+ "_slug": "jfbf",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1:"
+         },
+         {
+          "text": " The interested applicant can download the "
+         },
+         {
+          "children": [
+           {
+            "text": "application form"
+           }
+          ],
+          "link": "https://cms.tn.gov.in/sites/default/files/schemes/journalist_benefit_fund_3.pdf",
+          "type": "link"
+         },
+         {
+          "text": " from the official website. "
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the duly filled and signed application form along with the documents to the Director, News Public Relations Department, Headquarters, Chennai-600 009. "
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Request a receipt or acknowledgment from the Director, News Public Relations Department to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "NOTE: "
+         },
+         {
+          "text": "Two application forms filled by the applicant along with relevant certificates."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant can download the [application form](https://cms.tn.gov.in/sites/default/files/schemes/journalist_benefit_fund_3.pdf) from the official website. \n**Step 2:** In the application form, fill in all the mandatory fields, and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the Director, News Public Relations Department, Headquarters, Chennai-600 009. \n**Step 4:** Request a receipt or acknowledgment from the Director, News Public Relations Department to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission, and a unique identification number (if applicable).\n**NOTE:** Two application forms filled by the applicant along with relevant certificates.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Tamil Development and Information Department",
+    "value": 3333360
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    },
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Journalists’ Family Benefit Fund",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "JFBF",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Tamil Nadu",
+    "value": 33
+   },
+   "tags": [
+    "Financial Assistance",
+    "Journalist",
+    "Death",
+    "Family",
+    "Diseases"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The deceased should have been an editor/sub-editor/reporter/photographer and proofreader."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The benefit of the scheme will be given only on the death of the journalist while working in Journalism."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The editor, sub-editor, journalist, and photographer should have worked full-time in a newspaper or daily periodicals published in Tamil Nadu."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "In case of sudden death due to an accident or fatal disease, five years of service is mandatory."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The deceased should have been an editor/sub-editor/reporter/photographer and proofreader.\n1. The benefit of the scheme will be given only on the death of the journalist while working in Journalism.\n1. The editor, sub-editor, journalist, and photographer should have worked full-time in a newspaper or daily periodicals published in Tamil Nadu.\n1. In case of sudden death due to an accident or fatal disease, five years of service is mandatory.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial Assistance:"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "₹50,000/- for 5 years of service."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹1,00,000/- for 10 years of service. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹1,50,000/- for 15 years of service."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹2,00,000/- for 20 years of service."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Financial Assistance:**\n\n\n- ₹50,000/- for 5 years of service.\n- ₹1,00,000/- for 10 years of service. \n- ₹1,50,000/- for 15 years of service.\n- ₹2,00,000/- for 20 years of service.\n\n",
+   "briefDescription": "The Tamil Development, Religious Endowments, and Information Department scheme was launched by the \"Journalists’ Family Benefit Fund\". The scheme aims to provide financial assistance to families of journalists who died in harness with a minimum of 20 years of service as editor, sub-editor, reporter.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The Tamil Development, Religious Endowments, and Information Department scheme was launched by the \"Journalists’ Family Benefit Fund\". Under this scheme, financial assistance is provided to families of journalists who died in harness with a minimum of twenty years of service as editor, sub-editor, reporter, photographer, and proofreader. This assistance is given from the Hon’ble Chief Minister’s Public Relief Fund."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The Tamil Development, Religious Endowments, and Information Department scheme was launched by the &quot;Journalists’ Family Benefit Fund&quot;. Under this scheme, financial assistance is provided to families of journalists who died in harness with a minimum of twenty years of service as editor, sub-editor, reporter, photographer, and proofreader. This assistance is given from the Hon’ble Chief Minister’s Public Relief Fund.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cms.tn.gov.in/sites/default/files/documents/Information_publicity_1_0.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://www.tn.gov.in/scheme/data_view/6805"
+    },
+    {
+     "title": "Application Form",
+     "url": "https://cms.tn.gov.in/sites/default/files/schemes/journalist_benefit_fund_3.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "jfbf"
+}

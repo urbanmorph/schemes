@@ -1,0 +1,317 @@
+{
+ "_id": "6662f1f202cfbde3165efd3f",
+ "_slug": "fp-hsb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 01:"
+         },
+         {
+          "text": " The applicant may visit the nearest Labour Office and collect the application form. The Application Performa ("
+         },
+         {
+          "children": [
+           {
+            "text": "Annexure IV"
+           }
+          ],
+          "link": "https://hrylabour.gov.in/staticdocs/labourpolicies/Haryana%20Silicosis%20Rehabilitation%20Policy%20(English).pdf",
+          "type": "link"
+         },
+         {
+          "text": ") may also be downloaded from the Official Website of the Labour Department Haryana."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 02:"
+         },
+         {
+          "text": " Fill out the application form with all required details, ensuring accuracy and completeness."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 03:"
+         },
+         {
+          "text": " Attach all necessary documents, including medical certificates, proof of identity, and the certificate of being the widow/widower or nominee, if applicable, etc."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 04:"
+         },
+         {
+          "text": " Submit the completely filled application form along with supporting documents to the Assistant Director, Industrial Health of your concerned jurisdiction."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 05:"
+         },
+         {
+          "text": " The Assistant Director will review the application and then forward it to the Office of the Labour Commissioner-cum-Welfare Commissioner, Haryana."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 06:"
+         },
+         {
+          "text": " Await notification from the Labour Department regarding the approval or any further requirements for your application."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 07:"
+         },
+         {
+          "text": " Upon approval, the financial assistance will be processed and provided to the applicant as per the scheme's guidelines."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 01:** The applicant may visit the nearest Labour Office and collect the application form. The Application Performa ([Annexure IV](https://hrylabour.gov.in/staticdocs/labourpolicies/Haryana%20Silicosis%20Rehabilitation%20Policy%20(English).pdf)) may also be downloaded from the Official Website of the Labour Department Haryana.\n**Step 02:** Fill out the application form with all required details, ensuring accuracy and completeness.\n**Step 03:** Attach all necessary documents, including medical certificates, proof of identity, and the certificate of being the widow/widower or nominee, if applicable, etc.\n**Step 04:** Submit the completely filled application form along with supporting documents to the Assistant Director, Industrial Health of your concerned jurisdiction.\n**Step 05:** The Assistant Director will review the application and then forward it to the Office of the Labour Commissioner-cum-Welfare Commissioner, Haryana.\n**Step 06:** Await notification from the Labour Department regarding the approval or any further requirements for your application.\n**Step 07:** Upon approval, the financial assistance will be processed and provided to the applicant as per the scheme&amp;#39;s guidelines.\n"
+   },
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "To avail of the benefits of the scheme, the eligible applicant may visit the nearest Antyodaya Kendra and fill up the application form."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "To avail of the benefits of the scheme, the eligible applicant may visit the nearest Antyodaya Kendra and fill up the application form.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Haryana Labour Welfare Board, Government Of Haryana",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Labour Department",
+    "value": 666690
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Family Pension- Haryana Silicosis Board",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "FP-HSB",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Haryana",
+    "value": 6
+   },
+   "tags": [
+    "Family",
+    "Pension",
+    "Silicosis",
+    "Worker"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be either the spouse or one of the living parents of the deceased worker."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The deceased worker should have been suffering from silicosis as confirmed by the Silicosis Diagnosis Board, Haryana."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The death of the worker should have been due to silicosis."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The deceased worker should have been employed in a factory or at a construction site."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant should be either the spouse or one of the living parents of the deceased worker.\n   1. The deceased worker should have been suffering from silicosis as confirmed by the Silicosis Diagnosis Board, Haryana.\n   1. The death of the worker should have been due to silicosis.\n   1. The deceased worker should have been employed in a factory or at a construction site.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Under this scheme, financial assistance of ₹3,500/- per month will be given after the death of the worker due to Silicosis."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 1:"
+        },
+        {
+         "text": " If the deceased worker was married, assistance will be given to the widow or widower until he/she remains alive."
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Note 2: "
+        },
+        {
+         "text": "If the deceased worker was unmarried, financial assistance will be given to his/her living parents."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n   1. Under this scheme, financial assistance of ₹3,500/- per month will be given after the death of the worker due to Silicosis.\n\n**Note 1:** If the deceased worker was married, assistance will be given to the widow or widower until he/she remains alive.\n**Note 2:** If the deceased worker was unmarried, financial assistance will be given to his/her living parents.\n",
+   "briefDescription": "Under this scheme, after the death of the worker due to Silicosis, financial assistance of ₹3,500/- per month is provided to the spouse of the worker until he/she remains alive. In the case of an unmarried worker, the financial assistance is provided to his/her living parents.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Family Pension\" scheme is implemented by the Haryana Labour Welfare Board, Government of Haryana. Under this scheme, after the death of the worker due to Silicosis, financial assistance of ₹3,500/- per month is provided to the spouse of the worker until he/she remains alive. In the case of an unmarried worker, the financial assistance is provided to his/her living parents."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Family Pension&amp;quot; scheme is implemented by the Haryana Labour Welfare Board, Government of Haryana. Under this scheme, after the death of the worker due to Silicosis, financial assistance of ₹3,500/- per month is provided to the spouse of the worker until he/she remains alive. In the case of an unmarried worker, the financial assistance is provided to his/her living parents.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Notification- English",
+     "url": "https://hrylabour.gov.in/staticdocs/labourpolicies/Haryana%20Silicosis%20Rehabilitation%20Policy%20(English).pdf"
+    },
+    {
+     "title": "Notification- Hindi",
+     "url": "https://hrylabour.gov.in/uploads/silicosis/Haryana_Silicosis_Rehabilitation_Policy.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://hrylabour.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "fp-hsb"
+}

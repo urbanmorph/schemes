@@ -1,0 +1,226 @@
+{
+ "_id": "67f7746aca4dbdfd53104dfc",
+ "_slug": "oapcwcsf",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online - via CSC",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "Online applications can be submitted through Shramik Suvidha Kendras."
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "Along with the application form, applicants must attach the previous Shramik Card, pension certificate issued by the Board, self-declaration certificate, and an affidavit confirming that they are not availing benefits under any other scheme. "
+             }
+            ],
+            "type": "list_item"
+           },
+           {
+            "children": [
+             {
+              "text": "Upon successful verification during the departmental investigation, the pension will be sanctioned and disbursed."
+             }
+            ],
+            "type": "list_item"
+           }
+          ],
+          "type": "ul_list"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - Online applications can be submitted through Shramik Suvidha Kendras.\n  - Along with the application form, applicants must attach the previous Shramik Card, pension certificate issued by the Board, self-declaration certificate, and an affidavit confirming that they are not availing benefits under any other scheme. \n  - Upon successful verification during the departmental investigation, the pension will be sanctioned and disbursed.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Uttarakhand Building And Other Construction Workers Welfare Board",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Labour",
+    "value": 50000014
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Old Age Pension Scheme- On Completion Of 65 Years (UKBOCWWB)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "OAPSC65YUKBOCWWB",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Labour",
+    "Old Age",
+    "Construction Worker",
+    "Senior Citizen",
+    "Pension"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a registered construction worker with the Uttarakhand Building and Other Construction Workers Welfare Board."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must have attained the age of 65 years."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n   1. The applicant must be a registered construction worker with the Uttarakhand Building and Other Construction Workers Welfare Board.\n   1. The applicant must have attained the age of 65 years.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Pension Amount:"
+          },
+          {
+           "text": "   ₹1,500/- Per Month"
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Pension Amount:**   ₹1,500/- Per Month\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide a monthly pension of ₹1,500/- to construction workers registered with the Uttarakhand Building and Other Construction Workers Welfare Board who have attained the age of 65 years.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Old Age Pension Scheme” is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide a monthly pension to registered construction workers who have completed 65 years of age."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Old Age Pension Scheme” is implemented by the Uttarakhand Building and Other Construction Workers Welfare Board (UKBOCWWB) under the Labour Department, Government of Uttarakhand. The scheme aims to provide a monthly pension to registered construction workers who have completed 65 years of age.\n<br>\n\n",
+   "exclusions": null,
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 56)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://ukbocw.uk.gov.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "oapcwcsf"
+}

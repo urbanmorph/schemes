@@ -1,0 +1,216 @@
+{
+ "_id": "678771bcd667626b5f09163a",
+ "_slug": "dop",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Visit the nearest ration shop or designated enrollment center with the required documents."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "If Aadhaar is not available, apply for Aadhaar enrollment at an authorized center."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the Aadhaar number or Aadhaar Enrolment Identification Slip during registration."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Verify the eligibility and documents with the designated officer."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Collect the pulses from the distribution center as per the monthly schedule."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. Visit the nearest ration shop or designated enrollment center with the required documents.\n1. If Aadhaar is not available, apply for Aadhaar enrollment at an authorized center.\n1. Submit the Aadhaar number or Aadhaar Enrolment Identification Slip during registration.\n1. Verify the eligibility and documents with the designated officer.\n1. Collect the pulses from the distribution center as per the monthly schedule.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "implementingAgency": "Directorate Of Food And Consumer Affairs",
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Food, Public Distribution and Consumer affairs Department",
+    "value": 2000007
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Distribution of Pulses",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DOP",
+   "schemeSubCategory": [
+    {
+     "label": "Food Security / Public Distribution System",
+     "value": "Food Security / Public Distribution System"
+    }
+   ],
+   "state": {
+    "label": "Jharkhand",
+    "value": 20
+   },
+   "tags": [
+    "Pulse",
+    "NFSA",
+    "JSFSS",
+    "Food",
+    "Subsidized Rate"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a resident of Jharkhand."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should hold an Antyodaya Anna Yojana (AAY) or Priority Household (PHH) card under NFSA or a Green Card under JSFSS."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a resident of Jharkhand.\n1. The applicant should hold an Antyodaya Anna Yojana (AAY) or Priority Household (PHH) card under NFSA or a Green Card under JSFSS.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Subsidized pulses are provided to the households."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The scheme supports food security by reducing the cost of essential pulses for low-income families."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Benefits are delivered monthly through designated ration shops."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Households holding AAY and PHH cards under NFSA and Green Cards under JSFSS are given Pulses."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "benefits_md": "\n1. Subsidized pulses are provided to the households.\n1. The scheme supports food security by reducing the cost of essential pulses for low-income families.\n1. Benefits are delivered monthly through designated ration shops.\n1. Households holding AAY and PHH cards under NFSA and Green Cards under JSFSS are given Pulses.\n\n",
+   "briefDescription": "The scheme \"Distribution of Pulses\" by the Department of Food, Public Distribution, and Consumer Affairs, Government of Jharkhand, aims to ensure food security by providing pulses at affordable rates to eligible households under NFSA and JSFSS.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "The scheme \"Distribution of Pulses\" by the Department of Food, Public Distribution, and Consumer Affairs, Government of Jharkhand, aims to provide pulses at affordable rates to eligible households, ensuring nutritional support and food security. Under this scheme, pulses at subsidized rates are made available to beneficiaries holding AAY and PHH cards under NFSA and Green Cards under JSFSS. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &quot;Distribution of Pulses&quot; by the Department of Food, Public Distribution, and Consumer Affairs, Government of Jharkhand, aims to provide pulses at affordable rates to eligible households, ensuring nutritional support and food security. Under this scheme, pulses at subsidized rates are made available to beneficiaries holding AAY and PHH cards under NFSA and Green Cards under JSFSS. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.jharkhand.gov.in/Home/ViewDoc?id=D009DO003SD00625102023010522864"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dop"
+}

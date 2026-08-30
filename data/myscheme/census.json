@@ -1,0 +1,244 @@
+{
+ "facets": {
+  "age-general": {
+   "0": 681,
+   "10": 3873,
+   "20": 3888,
+   "30": 3791,
+   "40": 3624,
+   "50": 3351,
+   "60": 3107,
+   "70": 2052,
+   "80": 1975,
+   "90": 1928,
+   "100": 1845,
+   "110": 1
+  },
+  "applicationMode": {
+   "Offline": 2733,
+   "Online": 2350,
+   "Online - via CSC": 161
+  },
+  "beneficiaryState": {
+   "All": 693,
+   "Andaman and Nicobar Islands": 19,
+   "Andhra Pradesh": 52,
+   "Arunachal Pradesh": 45,
+   "Assam": 87,
+   "Bihar": 114,
+   "Chandigarh": 21,
+   "Chhattisgarh": 108,
+   "Dadra & Nagar Haveli and Daman & Diu": 62,
+   "Delhi": 54,
+   "Goa": 272,
+   "Gujarat": 643,
+   "Haryana": 249,
+   "Himachal Pradesh": 75,
+   "Jammu and Kashmir": 47,
+   "Jharkhand": 97,
+   "Karnataka": 60,
+   "Kerala": 87,
+   "Lakshadweep": 9,
+   "Madhya Pradesh": 290,
+   "Maharashtra": 85,
+   "Manipur": 34,
+   "Meghalaya": 89,
+   "Mizoram": 32,
+   "Nagaland": 22,
+   "Odisha": 85,
+   "Puducherry": 271,
+   "Punjab": 41,
+   "Rajasthan": 159,
+   "Sikkim": 29,
+   "Tamil Nadu": 240,
+   "Telangana": 23,
+   "Tripura": 44,
+   "Uttar Pradesh": 47,
+   "Uttarakhand": 447,
+   "West Bengal": 110
+  },
+  "benefitTypes": {
+   "Cash": 3317,
+   "Composite": 650,
+   "In Kind": 805
+  },
+  "caste": {
+   "All": 4001,
+   "De-Notified, Nomadic, and Semi-Nomadic (DNT) communities": 14,
+   "General": 72,
+   "Other Backward Class (OBC)": 189,
+   "Particularly Vulnerable Tribal Group (PVTG)": 40,
+   "Scheduled Caste (SC)": 394,
+   "Scheduled Tribe (ST)": 341
+  },
+  "dbtScheme": {
+   "No": 4305,
+   "Yes": 467
+  },
+  "disability": {
+   "No": 4469,
+   "Yes": 303
+  },
+  "disabilityPercentage": {
+   "0": 24,
+   "10": 27,
+   "20": 32,
+   "30": 32,
+   "40": 172,
+   "50": 176,
+   "60": 182,
+   "70": 187,
+   "80": 199,
+   "90": 199,
+   "100": 209
+  },
+  "employmentStatus": {
+   "All": 3659,
+   "Employed": 519,
+   "Self-Employed/ Entrepreneur": 423,
+   "Unemployed": 171
+  },
+  "gender": {
+   "All": 3941,
+   "Female": 790,
+   "Male": 348,
+   "Transgender": 32
+  },
+  "isBpl": {
+   "No": 4600,
+   "Yes": 172
+  },
+  "isEconomicDistress": {
+   "No": 4725,
+   "Yes": 47
+  },
+  "isGovEmployee": {
+   "No": 4758,
+   "Yes": 14
+  },
+  "isStudent": {
+   "No": 4414,
+   "Yes": 358
+  },
+  "level": {
+   "Central": 714,
+   "State": 4058
+  },
+  "maritalStatus": {
+   "All": 4467,
+   "Divorced": 48,
+   "Married": 93,
+   "Never Married": 142,
+   "Separated": 47,
+   "Widowed": 107
+  },
+  "minority": {
+   "No": 4704,
+   "Yes": 68
+  },
+  "nodalMinistryName": {
+   "Comptroller And Auditor General Of India": 2,
+   "Ministry Of Agriculture and Farmers Welfare": 41,
+   "Ministry Of Ayush": 10,
+   "Ministry Of Chemicals And Fertilizers": 10,
+   "Ministry Of Commerce And Industry": 56,
+   "Ministry Of Communication": 11,
+   "Ministry Of Consumer Affairs, Food And Public Distribution": 1,
+   "Ministry Of Culture": 20,
+   "Ministry Of Defence": 15,
+   "Ministry Of Development Of North Eastern Region": 1,
+   "Ministry Of Earth Sciences": 1,
+   "Ministry Of Environment,forests and climate change": 4,
+   "Ministry Of External Affairs": 5,
+   "Ministry Of Finance": 19,
+   "Ministry Of Health & Family Welfare": 15,
+   "Ministry Of Home Affairs": 18,
+   "Ministry Of Housing & Urban Affairs": 5,
+   "Ministry Of Information And Broadcasting": 1,
+   "Ministry Of Jal Shakti": 6,
+   "Ministry Of Labour and Employment": 13,
+   "Ministry Of Law and Justice": 5,
+   "Ministry Of Micro, Small and Medium Enterprises": 31,
+   "Ministry Of Mines": 1,
+   "Ministry Of Minority Affairs": 12,
+   "Ministry Of New and Renewable Energy": 7,
+   "Ministry Of Panchayati Raj": 2,
+   "Ministry Of Personnel, Public Grievances And Pensions": 5,
+   "Ministry Of Petroleum and Natural Gas": 3,
+   "Ministry Of Power": 1,
+   "Ministry Of Railways": 1,
+   "Ministry Of Road Transport & Highways": 2,
+   "Ministry Of Rural Development": 10,
+   "Ministry Of Science And Technology": 68,
+   "Ministry Of Skill Development And Entrepreneurship": 11,
+   "Ministry Of Social Justice and Empowerment": 85,
+   "Ministry Of Statistics and Programme Implementation": 3,
+   "Ministry Of Steel": 3,
+   "Ministry Of Textiles": 24,
+   "Ministry Of Tourism": 7,
+   "Ministry Of Tribal Affairs": 10,
+   "Ministry Of Water Resources,River Development & Ganga Rejuvenation": 2,
+   "Ministry Of Youth Affairs & Sports": 22,
+   "Ministry of Corporate Affairs": 3,
+   "Ministry of Education": 85,
+   "Ministry of Electronics and Information Technology": 22,
+   "Ministry of Fisheries,Animal Husbandry and Dairying": 13,
+   "Ministry of Food Processing Industries": 3,
+   "Ministry of Heavy Industries": 4,
+   "Ministry of Ports,Shipping and Waterways": 5,
+   "Ministry of Women and Child Development": 8,
+   "NITI Aayog (National Institution for Transforming India)": 1,
+   "The Lokpal of India": 1
+  },
+  "occupation": {
+   "All": 390,
+   "Artisans, Spinners & Weavers": 80,
+   "Artists": 83,
+   "Coir Worker": 7,
+   "Construction Worker": 270,
+   "Dairy Farmer": 21,
+   "Ex Servicemen": 28,
+   "Farmer": 357,
+   "Fishermen": 114,
+   "Health Worker": 2,
+   "Journalist": 22,
+   "Khadi Artisan": 2,
+   "Lawyer / Law Graduate / Advocate": 2,
+   "Organized Worker": 40,
+   "Safai Karamchari": 18,
+   "Sportsperson": 35,
+   "Street Vendor": 3,
+   "Student": 66,
+   "Teacher / Faculty": 14,
+   "Unorganized Worker": 192
+  },
+  "residence": {
+   "Both": 4537,
+   "Rural": 203,
+   "Urban": 42
+  },
+  "schemeCategory": {
+   "Agriculture,Rural & Environment": 862,
+   "Banking,Financial Services and Insurance": 336,
+   "Business & Entrepreneurship": 772,
+   "Education & Learning": 1110,
+   "Health & Wellness": 286,
+   "Housing & Shelter": 136,
+   "Public Safety,Law & Justice": 34,
+   "Science, IT & Communications": 121,
+   "Skills & Employment": 401,
+   "Social welfare & Empowerment": 1453,
+   "Sports & Culture": 280,
+   "Transport & Infrastructure": 104,
+   "Travel & Tourism": 96,
+   "Utility & Sanitation": 58,
+   "Women and Child": 470
+  },
+  "schemeType": {
+   "Central Sector Scheme": 543,
+   "Centrally Sponsored Scheme": 146
+  }
+ },
+ "snapshot": "2026-08-30",
+ "total": 4772
+}

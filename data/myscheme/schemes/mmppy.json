@@ -1,0 +1,303 @@
+{
+ "_id": "666add0021d7c2ac0d8828a5",
+ "_slug": "mmppy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 01:"
+       },
+       {
+        "text": " The applicant need to visit the Transport Department’s official website for Mukhyamantri Block Transport Yojana "
+       },
+       {
+        "children": [
+         {
+          "text": "registration"
+         }
+        ],
+        "link": "http://appsonline.bih.nic.in/MMGPY/NewRegistrationUser.aspx",
+        "type": "link"
+       },
+       {
+        "text": "."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 02: "
+       },
+       {
+        "text": "The applicant need to fill following details while registering : "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Phone Number"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Password"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Re-password"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Email ID"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Driving Licence Number"
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step-03: "
+       },
+       {
+        "text": "Submit the details"
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 01:** The applicant need to visit the Transport Department’s official website for Mukhyamantri Block Transport Yojana [registration](http://appsonline.bih.nic.in/MMGPY/NewRegistrationUser.aspx).\n**Step 02:** The applicant need to fill following details while registering : \n\n\n  - Phone Number\n  - Password\n  - Re-password\n  - Email ID\n  - Driving Licence Number\n\n\n**Step-03:** Submit the details\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Transport Department",
+    "value": 10111151
+   },
+   "schemeCategory": [
+    {
+     "label": "Transport & Infrastructure",
+     "value": "628ce924d6d1a3bde4685354"
+    },
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhyamantri Prakhand Parivahan Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MMPPY",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    },
+    {
+     "label": "Public transport and private vehicles",
+     "value": "Public transport and private vehicles"
+    },
+    {
+     "label": "Employment services and jobs",
+     "value": "Employment services and jobs"
+    }
+   ],
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Employment",
+    "Transport",
+    "Financial Assistance",
+    "Subsidy"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The beneficiary should be a resident of the block where they apply."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The age of the beneficiary should not be less than 18 years."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The beneficiary must have a driving license. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The beneficiary should not be working/employed in government service."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The beneficiary should belong to the specified categories SC, ST, EBC, BC, Minority, and General."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The beneficiary should be a resident of the block where they apply.\n1. The age of the beneficiary should not be less than 18 years.\n1. The beneficiary must have a driving license. \n1. The beneficiary should not be working/employed in government service.\n1. The beneficiary should belong to the specified categories SC, ST, EBC, BC, Minority, and General.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Subsidy of ₹5,00,000/- per bus to beneficiaries."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- **Subsidy of ₹5,00,000/- per bus to beneficiaries.**\n\n",
+   "briefDescription": "\"Mukhyamantri Prakhand Parivahan Yojana\" to provide transportation facilities connecting blocks & remote Panchayats with district headquarters. This scheme aims to encourage scheduled castes, scheduled tribes, backward classes entrepreneurship by providing financial support to purchase buses.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under the Transport Department of the Bihar Government, has implemented the 'Mukhyamantri Prakhand Parivahan Yojana' to provide transportation facilities connecting blocks and remote Panchayats with district headquarters. This scheme aims to enhance connectivity and facilitate mobility for residents across the state of Bihar. To encourage scheduled castes, scheduled tribes, extremely backward classes, backward classes, and minority communities entrepreneurship by providing financial support to purchase buses."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "Under the Transport Department of the Bihar Government, has implemented the &amp;#39;Mukhyamantri Prakhand Parivahan Yojana&amp;#39; to provide transportation facilities connecting blocks and remote Panchayats with district headquarters. This scheme aims to enhance connectivity and facilitate mobility for residents across the state of Bihar. To encourage scheduled castes, scheduled tribes, extremely backward classes, backward classes, and minority communities entrepreneurship by providing financial support to purchase buses.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://state.bihar.gov.in/cache/16/Smart%20City/Mukhyamantri%20Gram%20Parivahan%20Yojana/8803-23-11-23.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://state.bihar.gov.in/transport/CitizenHome.html"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mmppy"
+}

@@ -1,0 +1,220 @@
+{
+ "_id": "690065cab29d98f5f7baaed9",
+ "_slug": "dugjy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The applicant can avail of the scheme benefits through the concerned electricity distribution company."
+         }
+        ],
+        "type": "list_item"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n- The applicant can avail of the scheme benefits through the concerned electricity distribution company.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Energy Department",
+    "value": 2300010
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Utility & Sanitation",
+     "value": "628ce97ad6d1a3bde468537d"
+    },
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Deendayal Upadhyay Gram Jyoti Yojana",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DUGJY",
+   "schemeSubCategory": null,
+   "schemeType": null,
+   "state": {
+    "label": "Madhya Pradesh",
+    "value": 23
+   },
+   "tags": [
+    "Rural Electrification",
+    "Power Distribution",
+    "Free Connection",
+    "BPL"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant should be residing in a rural area."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should belong to the Below the Poverty Line (BPL) category."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant should be residing in a rural area.\n  - The applicant should belong to the Below the Poverty Line (BPL) category.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Free Electricity Connection:"
+          },
+          {
+           "text": " Free electricity connections are provided to 3,94,741 beneficiaries living below the poverty line."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Intensive Village Electrification:"
+          },
+          {
+           "text": " A total of 17,827 villages are covered under the scheme for comprehensive electrification."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Strengthening of Power Infrastructure: "
+          },
+          {
+           "text": "Feeder separation, metering, and distribution system strengthening works are carried out to ensure a reliable power supply."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "\n  - **Free Electricity Connection:** Free electricity connections are provided to 3,94,741 beneficiaries living below the poverty line.  - **Intensive Village Electrification:** A total of 17,827 villages are covered under the scheme for comprehensive electrification.  - **Strengthening of Power Infrastructure:** Feeder separation, metering, and distribution system strengthening works are carried out to ensure a reliable power supply.\n<br>\n\n",
+   "briefDescription": "The scheme aims to strengthen the rural power infrastructure by implementing feeder separation, metering, distribution system strengthening, and rural electrification works.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme “Deendayal Upadhyay Gram Jyoti Yojana” launched by the Energy Department, Government of Madhya Pradesh, aims to improve rural power supply through feeder separation, metering, system strengthening, and electrification works by providing free electricity connections to below-poverty-line households."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme “Deendayal Upadhyay Gram Jyoti Yojana” launched by the Energy Department, Government of Madhya Pradesh, aims to improve rural power supply through feeder separation, metering, system strengthening, and electrification works by providing free electricity connections to below-poverty-line households.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://cmhelpline.mp.gov.in/schemes.aspx?vID=0"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dugjy"
+}

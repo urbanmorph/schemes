@@ -1,0 +1,243 @@
+{
+ "_id": "65855e32a733b1d73267fc5e",
+ "_slug": "obs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "The interested applicant should request the prescribed format of the application form free of cost from the office of Block Development Officer (BDO) / Sub Divisional Officer (SDO) / Kolkata Municipal Corporation."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": "Submit the duly filled and signed application form along with the documents to the concerned authority at:"
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Office of the BDO in rural areas."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Office of the SDO in Municipalities and notified areas"
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Commissioner Kolkata Municipal Corporation in KMC areas."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "ol_list"
+     }
+    ],
+    "process_md": "\n1. The interested applicant should request the prescribed format of the application form free of cost from the office of Block Development Officer (BDO) / Sub Divisional Officer (SDO) / Kolkata Municipal Corporation.\n1. In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).\n1. Submit the duly filled and signed application form along with the documents to the concerned authority at:\n\n  - Office of the BDO in rural areas.\n  - Office of the SDO in Municipalities and notified areas\n  - Commissioner Kolkata Municipal Corporation in KMC areas.\n\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Backward Classes Welfare Department and Tribal Development Department",
+    "value": 19999952
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Toposili Bandhu (Old Age Pension) Scheme",
+   "schemeOpenDate": "2020-04-01",
+   "schemeShortTitle": "OBS",
+   "schemeSubCategory": [
+    {
+     "label": "Pension",
+     "value": "Pension"
+    }
+   ],
+   "state": {
+    "label": "West Bengal",
+    "value": 19
+   },
+   "tags": [
+    "Pension",
+    "Financial Assistance",
+    "Social Welfare"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a permanent resident of West Bengal."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should belong to the Scheduled Caste (SC) category."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should have attained the age of 60 years or more."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be a beneficiary under any other Social Security pension scheme."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should not be a recipient of Government pension or pension from any other organization."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ol_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a permanent resident of West Bengal.\n1. The applicant should belong to the Scheduled Caste (SC) category.\n1. The applicant should have attained the age of 60 years or more.\n1. The applicant should not be a beneficiary under any other Social Security pension scheme.\n1. The applicant should not be a recipient of Government pension or pension from any other organization.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "Pension : ₹1,000/- per month. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Pension : ₹1,000/- per month. \n",
+   "briefDescription": "\"Toposili Bandhu\" (Old Age Pension) scheme was initiated by the Backward Classes Welfare Department and Tribal Development Department of West Bengal Government. ",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "Launched on 1st April 2020, “Toposili Bandhu (Old Age Pension)” is a Social Security Scheme by the Tribal Development Department, Government of West Bengal. The main objective of the scheme to provide the financial assistance to old age person who are belongs to the scheduled caste category of West Bengal State. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "Launched on 1st April 2020, “Toposili Bandhu (Old Age Pension)” is a Social Security Scheme by the Tribal Development Department, Government of West Bengal. The main objective of the scheme to provide the financial assistance to old age person who are belongs to the scheduled caste category of West Bengal State. \n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Presentation",
+     "url": "https://north24parganas.gov.in/sites/default/files/training_ppt_bsk.pdf"
+    },
+    {
+     "title": "Details",
+     "url": "https://nadia.gov.in/scheme/taposili-bandhu-jai-johar-under-jai-bangla-prakalpa/"
+    },
+    {
+     "title": "FAQ",
+     "url": "https://www.wburbanservices.gov.in/upload_file/file_doc/Topsili_Bandhu_Jai_Johar_FAQ.pdf"
+    },
+    {
+     "title": "Guidelines",
+     "url": "https://govtschemes.in/sites/default/files/2023-06/West%20Bengal%20Taposili%20Bandhu%20Scheme%20Guidelines.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "obs"
+}

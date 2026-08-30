@@ -1,0 +1,336 @@
+{
+ "_id": "673b3349a741096d774e39c9",
+ "_slug": "mgpy",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Registration Process:",
+          "underline": true
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Step-1:"
+           },
+           {
+            "text": " Visit the official "
+           },
+           {
+            "children": [
+             {
+              "text": "Website"
+             }
+            ],
+            "link": "https://state.bihar.gov.in/transport/SectionInformation.html?editForm&rowId=6353",
+            "type": "link"
+           },
+           {
+            "text": ". Click on the \"Registration\" button."
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Step-2:"
+           },
+           {
+            "text": " Enter your Mobile Number, New Password, Email, and Driving License No. "
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Step-3:"
+           },
+           {
+            "text": " Click on \"Register\" to complete the registration process."
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Application Process:",
+            "underline": true
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Step-1: "
+           },
+           {
+            "text": "Login with your registered Mobile Number and Password."
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Step-2:"
+           },
+           {
+            "text": " On the Application page, fill in all the required details and upload the relevant documents."
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Step-3:"
+           },
+           {
+            "text": " Then click on the declaration form and click on \"Submit\"."
+           }
+          ],
+          "type": "paragraph"
+         },
+         {
+          "children": [
+           {
+            "bold": true,
+            "text": "Step-4: "
+           },
+           {
+            "text": "Once all details are filled in correctly, click on \"Print Application\" to get a copy of the application form."
+           }
+          ],
+          "type": "paragraph"
+         }
+        ],
+        "type": "align_justify"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Registration Process:**\n**Step-1:** Visit the official [Website](https://state.bihar.gov.in/transport/SectionInformation.html?editForm&amp;amp;rowId=6353). Click on the &amp;amp;quot;Registration&amp;amp;quot; button.\n**Step-2:** Enter your Mobile Number, New Password, Email, and Driving License No. \n**Step-3:** Click on &amp;amp;quot;Register&amp;amp;quot; to complete the registration process.\n&amp;lt;br&amp;gt;\n\n**Application Process:**\n**Step-1:** Login with your registered Mobile Number and Password.\n**Step-2:** On the Application page, fill in all the required details and upload the relevant documents.\n**Step-3:** Then click on the declaration form and click on &amp;amp;quot;Submit&amp;amp;quot;.\n**Step-4:** Once all details are filled in correctly, click on &amp;amp;quot;Print Application&amp;amp;quot; to get a copy of the application form.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Transport Department",
+    "value": 10111151
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Mukhyamantri Gram Parivahan Yojana",
+   "schemeOpenDate": "2021-08-07",
+   "schemeShortTitle": "MGPY",
+   "schemeSubCategory": [
+    {
+     "label": "Financial assistance",
+     "value": "Financial assistance"
+    }
+   ],
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Vehicle Purchase Grant",
+    "E-Rickshaw Subsidy",
+    "Healthcare Transportation",
+    "E-Mobility Promotion"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of the state."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must belong to a rural area."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should not have benefited from a similar scheme previously."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "For ambulance purchases, applicants must be willing to use it for public health services."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a resident of the state.\n  - The applicant must belong to a rural area.\n  - The applicant should not have benefited from a similar scheme previously.\n  - For ambulance purchases, applicants must be willing to use it for public health services.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Standard vehicles:"
+          },
+          {
+           "text": " 50% of the purchase price or up to ₹1,00,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "E-rickshaws:"
+          },
+          {
+           "text": " 50% of the purchase price or up to ₹70,000/-."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "bold": true,
+           "text": "Ambulances:"
+          },
+          {
+           "text": " 50% of the purchase price or up to ₹2,00,000/-."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "benefits_md": "\n  - **Standard vehicles:** 50% of the purchase price or up to ₹1,00,000/-.  - **E-rickshaws:** 50% of the purchase price or up to ₹70,000/-.  - **Ambulances:** 50% of the purchase price or up to ₹2,00,000/-.\n",
+   "briefDescription": "The Scheme provides financial assistance for purchasing vehicles to enhance transportation facilities in rural areas. It includes grants for regular vehicles, e-rickshaws, and ambulances under specified conditions.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Mukhyamantri Gram Parivahan Yojana\" launched by the Transport Department, Government of Bihar, aimed at improving transportation facilities in all panchayats of the state. It offers financial assistance to beneficiaries for purchasing vehicles."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Mukhyamantri Gram Parivahan Yojana&amp;quot; launched by the Transport Department, Government of Bihar, aimed at improving transportation facilities in all panchayats of the state. It offers financial assistance to beneficiaries for purchasing vehicles.\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://state.bihar.gov.in/cache/16/Smart%20City/Mukhyamantri%20Gram%20Parivahan%20Yojana/9613-7-8-24.pdf"
+    },
+    {
+     "title": "User Manual",
+     "url": "http://mmgpy.bihar.gov.in/attachments/instruction.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mgpy"
+}

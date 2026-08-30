@@ -1,0 +1,213 @@
+{
+ "_id": "67f62be9ca4dbdfd530e9c27",
+ "_slug": "sfyyrc",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "To obtain this type of ration card, the applicant must first collect the application form from the Gram Panchayat Development Officer, Supply Inspector, Regional Food Officer, or District Supply Officer of the respective area. "
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "Along with the application, the applicant is required to submit the Aadhaar cards of all family members, a photograph of the head of the family, a mobile phone number, bank account details, gas connection details, voter ID card, PAN card, income certificate, and electricity bill to the concerned office."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "In rural areas, the Gram Panchayat Development Officer records the applicant’s name and forwards it with a recommendation to the Food Supply Department for further action. In urban areas, the Food Supply Department conducts an investigation, and if the application is found correct, the details are digitized. The applicant can then contact the District Supply Office within ten days to obtain the ration card."
+           }
+          ],
+          "type": "list_item"
+         },
+         {
+          "children": [
+           {
+            "text": "If the income of a ration card holder increases, it is the responsibility of the holder to inform the District Supply Officer. In such cases, the individual is removed from the scheme by the department. The District Supply Officer also conducts inspections from time to time, and action for removal is taken even after a proposal is passed by the Gram Panchayat. Additionally, if any third party provides information regarding ineligibility, the department investigates the matter, and if the information is found correct, the ration card of the concerned holder is cancelled."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n  - To obtain this type of ration card, the applicant must first collect the application form from the Gram Panchayat Development Officer, Supply Inspector, Regional Food Officer, or District Supply Officer of the respective area. \n  - Along with the application, the applicant is required to submit the Aadhaar cards of all family members, a photograph of the head of the family, a mobile phone number, bank account details, gas connection details, voter ID card, PAN card, income certificate, and electricity bill to the concerned office.\n  - In rural areas, the Gram Panchayat Development Officer records the applicant’s name and forwards it with a recommendation to the Food Supply Department for further action. In urban areas, the Food Supply Department conducts an investigation, and if the application is found correct, the details are digitized. The applicant can then contact the District Supply Office within ten days to obtain the ration card.\n  - If the income of a ration card holder increases, it is the responsibility of the holder to inform the District Supply Officer. In such cases, the individual is removed from the scheme by the department. The District Supply Officer also conducts inspections from time to time, and action for removal is taken even after a proposal is passed by the Gram Panchayat. Additionally, if any third party provides information regarding ineligibility, the department investigates the matter, and if the information is found correct, the ration card of the concerned holder is cancelled.\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Food & Civil Supplies",
+    "value": 50000012
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "State Food Scheme (Yellow Ration Card)",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "SFSYRC",
+   "schemeSubCategory": [
+    {
+     "label": "Food Security / Public Distribution System",
+     "value": "Food Security / Public Distribution System"
+    }
+   ],
+   "state": {
+    "label": "Uttarakhand",
+    "value": 5
+   },
+   "tags": [
+    "Ration Card",
+    "Food Distribution",
+    "Yellow Card",
+    "Rice"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Uttarakhand."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The annual family income of the applicant should be ₹5 lakh or less."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "align_justify"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "\n- The applicant must be a resident of Uttarakhand.\n- The annual family income of the applicant should be ₹5 lakh or less.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Under this scheme, each ration card holder receives 7.50 kg of rice per month at the rate of ₹11/- per kg."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "Under this scheme, each ration card holder receives 7.50 kg of rice per month at the rate of ₹11/- per kg.\n<br>\n\n",
+   "briefDescription": "The scheme aims to provide rice at subsidized rates to yellow ration card holders in the state, under which 7.50 kg of rice is distributed to each card holder every month at the rate of ₹11.00 per kg.\n\n",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"State Food Scheme (Yellow Ration Card)\" was launched by the Department of Food, Civil Supplies & Consumer Affairs, Government of Uttarakhand. The scheme aims to provide rice at subsidized rates to yellow ration card holders in the state."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;State Food Scheme (Yellow Ration Card)&amp;quot; was launched by the Department of Food, Civil Supplies &amp;amp; Consumer Affairs, Government of Uttarakhand. The scheme aims to provide rice at subsidized rates to yellow ration card holders in the state.\n<br>\n\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines (Page No. 60)",
+     "url": "https://uk.gov.in/department92/library_file/file-04-12-2023-06-02-23.pdf"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "sfyyrc"
+}

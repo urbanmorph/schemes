@@ -1,0 +1,846 @@
+{
+ "_id": "69e1f8f2f5f31bfc8953f63f",
+ "_slug": "plisfaaci",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "text": "Online application can be submitted through the "
+         },
+         {
+          "children": [
+           {
+            "text": "official website"
+           }
+          ],
+          "link": "https://pliauto.in/login",
+          "type": "link"
+         },
+         {
+          "text": " (Please login with your CIN as user ID)."
+         }
+        ],
+        "type": "list_item"
+       },
+       {
+        "children": [
+         {
+          "text": ""
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "ul_list"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "\n- Online application can be submitted through the [official website](https://pliauto.in/login) (Please login with your CIN as user ID).\n<br>\n\n"
+   },
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The applicant must submit the "
+       },
+       {
+        "children": [
+         {
+          "text": "application form"
+         }
+        ],
+        "link": "https://pliauto.in/docs/app/PLIAuto-ApplicationForm.pdf",
+        "type": "link"
+       },
+       {
+        "text": " through the prescribed process to the nodal agency."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "The applicant must ensure submission before the specified deadline."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "The application will be evaluated for eligibility and completeness."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Acknowledgement will be issued after initial scrutiny."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5: "
+       },
+       {
+        "text": "Final approval will be granted based on compliance with scheme conditions."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 6: "
+       },
+       {
+        "text": "Incentive claims will be submitted annually for disbursement."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Note: "
+       },
+       {
+        "text": "Documents should be uploaded on the portal: "
+       },
+       {
+        "children": [
+         {
+          "text": "pliauto.in"
+         }
+        ],
+        "link": "https://pliauto.in/",
+        "type": "link"
+       },
+       {
+        "text": ""
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": ""
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The applicant must submit the [application form](https://pliauto.in/docs/app/PLIAuto-ApplicationForm.pdf) through the prescribed process to the nodal agency.\n**Step 2:** The applicant must ensure submission before the specified deadline.\n**Step 3:** The application will be evaluated for eligibility and completeness.\n**Step 4:** Acknowledgement will be issued after initial scrutiny.\n**Step 5:** Final approval will be granted based on compliance with scheme conditions.\n**Step 6:** Incentive claims will be submitted annually for disbursement.\n> **Note:** Documents should be uploaded on the portal: [pliauto.in](https://pliauto.in/)\n\n<br>\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Heavy Industry",
+    "value": 1602
+   },
+   "nodalMinistryName": {
+    "label": "Ministry of Heavy Industries",
+    "value": 1573
+   },
+   "schemeCategory": [
+    {
+     "label": "Business & Entrepreneurship",
+     "value": "628ce733d6d1a3bde4685278"
+    }
+   ],
+   "schemeFor": "Infra",
+   "schemeName": "Production Linked Incentive (PLI) Scheme for Automobile and Auto Components Industry",
+   "schemeOpenDate": "2021-09-23",
+   "schemeShortTitle": "PLISFAACI",
+   "schemeSubCategory": [
+    {
+     "label": "Credit Linked Subsidy",
+     "value": "Credit Linked Subsidy"
+    }
+   ],
+   "schemeType": {
+    "label": "Central Sector Scheme",
+    "value": "central-sector-scheme"
+   },
+   "tags": [
+    "Production Linked Incentive",
+    "PLI",
+    "Automobile Industry",
+    "Auto Components",
+    "Advanced Automotive Technology",
+    "Investment Promotion",
+    "Electric Vehicles",
+    "Hydrogen Fuel Cell Vehicles"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Business Entity",
+     "value": "business-entity"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "1. General Eligibility:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must be a company registered in India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must meet all eligibility criteria based on audited financial statements as on 31 March 2021."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "2. Existing Automotive Companies:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must have:"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Minimum global revenue:"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "OEM → ₹10,000 crore"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Component → ₹500 crore"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must have global investment in fixed assets:"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "OEM → ₹3,000 crore"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Component → ₹150 crore"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "3. New Non-Automotive Investor Companies:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must have minimum global net worth of ₹1,000 crore."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must submit a clear business plan for investment in India."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must generate revenue from advanced automotive products."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must not have any revenue from automobile or component manufacturing as on 31 March 2021."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "4. Investment Conditions (All Components):"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must achieve cumulative domestic investment targets starting from 1 April 2021."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must meet yearly investment milestones."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "5. Champion OEM Component Specific Eligibility:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must manufacture advanced automotive technology vehicles."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must ensure minimum 50% domestic value addition."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must obtain product pre-approval from the testing agency."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must achieve minimum sales threshold of ₹125 crore in first year."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must achieve 10% year-on-year growth in sales."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "6. Component Champion Specific Eligibility:"
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant must manufacture advanced automotive components."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must ensure minimum 50% domestic value addition."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must obtain product pre-approval."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must achieve minimum sales threshold of ₹25 crore in first year."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must achieve 10% year-on-year growth."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "> **1. General Eligibility:**\n\n\n- The applicant must be a company registered in India.\n- The applicant must meet all eligibility criteria based on audited financial statements as on 31 March 2021.\n\n> **2. Existing Automotive Companies:**\n\n\n- The applicant must have:\n- Minimum global revenue:\n- OEM → ₹10,000 crore\n- Component → ₹500 crore\n- The applicant must have global investment in fixed assets:\n- OEM → ₹3,000 crore\n- Component → ₹150 crore\n\n**3. New Non-Automotive Investor Companies:**\n\n- The applicant must have minimum global net worth of ₹1,000 crore.\n- The applicant must submit a clear business plan for investment in India.\n- The applicant must generate revenue from advanced automotive products.\n- The applicant must not have any revenue from automobile or component manufacturing as on 31 March 2021.\n\n**4. Investment Conditions (All Components):**\n\n- The applicant must achieve cumulative domestic investment targets starting from 1 April 2021.\n- The applicant must meet yearly investment milestones.\n\n**5. Champion OEM Component Specific Eligibility:**\n\n- The applicant must manufacture advanced automotive technology vehicles.\n- The applicant must ensure minimum 50% domestic value addition.\n- The applicant must obtain product pre-approval from the testing agency.\n- The applicant must achieve minimum sales threshold of ₹125 crore in first year.\n- The applicant must achieve 10% year-on-year growth in sales.\n\n**6. Component Champion Specific Eligibility:**\n\n- The applicant must manufacture advanced automotive components.\n- The applicant must ensure minimum 50% domestic value addition.\n- The applicant must obtain product pre-approval.\n- The applicant must achieve minimum sales threshold of ₹25 crore in first year.\n- The applicant must achieve 10% year-on-year growth.\n\n<br>\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Financial Incentive (General):"
+        }
+       ],
+       "type": "block_quote"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Incentives are provided based on incremental sales (Determined Sales Value) of eligible products."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Total scheme outlay: "
+        },
+        {
+         "text": "₹25,938 crore."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Total Incentive per entire Group company(ies) is capped at:"
+        },
+        {
+         "text": " ₹6,485 crore."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Champion OEM Incentive Scheme:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Incentive rates:"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Up to ₹2,000 crore: 13%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹2,000–₹3,000 crore:14%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹3,000–₹4,000 crore: 15%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Above ₹4,000 crore: 16%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Additional 2% incentive on cumulative sales exceeding ₹10,000 crore."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Applicable to Battery Electric Vehicles and Hydrogen Fuel Cell Vehicles."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Component Champion Incentive Scheme:"
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Incentive rates:"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Up to ₹250 crore: 8%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹250–₹500 crore: 9%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "₹500–₹750 crore: 10%"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Above ₹750 crore: 11%"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Additional 2% incentive on cumulative sales exceeding ₹1,250 crore."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Additional 5% incentive for EV and Hydrogen components."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "&gt; **Financial Incentive (General):**\n\n\n- Incentives are provided based on incremental sales (Determined Sales Value) of eligible products.\n- **Total scheme outlay:** ₹25,938 crore.- **Total Incentive per entire Group company(ies) is capped at:** ₹6,485 crore.\n> **Champion OEM Incentive Scheme:**\n\n\n- **Incentive rates:**\n- Up to ₹2,000 crore: 13%\n- ₹2,000–₹3,000 crore:14%\n- ₹3,000–₹4,000 crore: 15%\n- Above ₹4,000 crore: 16%\n- Additional 2% incentive on cumulative sales exceeding ₹10,000 crore.\n- Applicable to Battery Electric Vehicles and Hydrogen Fuel Cell Vehicles.\n\n> **Component Champion Incentive Scheme:**\n\n\n- **Incentive rates:**\n\n\n- Up to ₹250 crore: 8%\n- ₹250–₹500 crore: 9%\n- ₹500–₹750 crore: 10%\n- Above ₹750 crore: 11%\n\n\n- Additional 2% incentive on cumulative sales exceeding ₹1,250 crore.\n- Additional 5% incentive for EV and Hydrogen components.\n\n<br>\n\n",
+   "briefDescription": "The scheme offers financial incentives to boost domestic manufacturing of Advanced Automotive Technology products and attract investments in the automotive manufacturing value chain.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The scheme \"Production Linked Incentive (PLI) Scheme for Automobile and Auto Components Industry\" by the Ministry of Heavy Industries, Government of India, aims to boost domestic manufacturing of advanced automotive technology products through providing financial incentives to automobile manufacturers and auto component manufacturers. It promotes investment, enhances manufacturing capabilities, and strengthens the automotive value chain. The scheme focuses on overcoming cost disabilities and creating economies of scale. It also aims to generate employment and develop a robust supply chain. The scheme has two components, namely:"
+        }
+       ],
+       "type": "paragraph"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Champion OEM Incentive Scheme and "
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "Component Champion Incentive Scheme."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ol_list"
+      },
+      {
+       "children": [
+        {
+         "bold": true,
+         "text": "Tenure of the Scheme:"
+        }
+       ],
+       "type": "block_quote"
+      },
+      {
+       "children": [
+        {
+         "text": "Incentive will be applicable on Determined Sales Value starting from Financial Year 2023-24 for a total of five consecutive financial years i.e. till FY2027-28."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "The scheme &amp;quot;Production Linked Incentive (PLI) Scheme for Automobile and Auto Components Industry&amp;quot; by the Ministry of Heavy Industries, Government of India, aims to boost domestic manufacturing of advanced automotive technology products through providing financial incentives to automobile manufacturers and auto component manufacturers. It promotes investment, enhances manufacturing capabilities, and strengthens the automotive value chain. The scheme focuses on overcoming cost disabilities and creating economies of scale. It also aims to generate employment and develop a robust supply chain. The scheme has two components, namely:\n\n   1. Champion OEM Incentive Scheme and \n   1. Component Champion Incentive Scheme.\n\n&gt; **Tenure of the Scheme:**\n\nIncentive will be applicable on Determined Sales Value starting from Financial Year 2023-24 for a total of five consecutive financial years i.e. till FY2027-28.\n<br>\n\n",
+   "exclusions": [
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "exclusions_md": "<br>\n\n",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://pliauto.in/docs/guidelines/Notification.pdf"
+    },
+    {
+     "title": "Amendment",
+     "url": "https://pliauto.in/docs/guidelines/269327%20SO%20188(E)%2013-01-2026%20Amendment%20Notification%20Performance%20Criteria%20for%20EVs.pdf"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://pliauto.in/"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "plisfaaci"
+}

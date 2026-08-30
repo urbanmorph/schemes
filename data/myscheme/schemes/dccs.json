@@ -1,0 +1,264 @@
+{
+ "_id": "67b0ae530cc99d069d33edb0",
+ "_slug": "dccs",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 1: "
+         },
+         {
+          "text": "The interested applicant should visit (during office hours) the principal of the respective government school where the student is enrolled and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 2:"
+         },
+         {
+          "text": " In the application form, fill in all the mandatory fields and attach copies of all the mandatory documents (self-attest, if required)."
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 3:"
+         },
+         {
+          "text": " Submit the duly filled and signed application form along with the documents to the principal of the respective government school. "
+         }
+        ],
+        "type": "paragraph"
+       },
+       {
+        "children": [
+         {
+          "bold": true,
+          "text": "Step 4:"
+         },
+         {
+          "text": " Request a receipt or acknowledgment from the principal of the respective government school to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable)."
+         }
+        ],
+        "type": "paragraph"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "**Step 1:** The interested applicant should visit (during office hours) the principal of the respective government school where the student is enrolled and request a hard copy of the prescribed format of the application form from the staff exclusively entrusted to issue and collect filled-in applications.\n**Step 2:** In the application form, fill in all the mandatory fields and attach copies of all the mandatory documents (self-attest, if required).\n**Step 3:** Submit the duly filled and signed application form along with the documents to the principal of the respective government school. \n**Step 4:** Request a receipt or acknowledgment from the principal of the respective government school to whom the application has been submitted. Ensure that the receipt contains essential details such as the date and time of submission and a unique identification number (if applicable).\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Social Justice and Empowerment Department",
+    "value": 8000035
+   },
+   "schemeCategory": [
+    {
+     "label": "Social welfare & Empowerment",
+     "value": "628ce87cd6d1a3bde4685312"
+    }
+   ],
+   "schemeFor": "Individual",
+   "schemeName": "Devnarayan Chhatra Cycle Scheme",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "DCCS",
+   "schemeSubCategory": [
+    {
+     "label": "Aids/Appliances",
+     "value": "Aids/Appliances"
+    }
+   ],
+   "state": {
+    "label": "Rajasthan",
+    "value": 8
+   },
+   "tags": [
+    "Cycle",
+    "Special Backward Classes",
+    "Girl",
+    "Student",
+    "Free Bicycle"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The applicant should be a girl student."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be a native of Rajasthan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant should be enrolled in class 9"
+        },
+        {
+         "superscript": true,
+         "text": "th"
+        },
+        {
+         "text": " in a government school of Rajasthan."
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The applicant must belong to one of the following Special Backward Class (SBC) communities:"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Banjara, Baldia, Labana"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Gadiya Lohar, Gadolia"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Gujar, Gurjar"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Raika, Rebari (Debasi)"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Gadaria (Gadri, Gyari)"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "\n1. The applicant should be a girl student.\n1. The applicant should be a native of Rajasthan.\n1. The applicant should be enrolled in class 9th in a government school of Rajasthan.1. The applicant must belong to one of the following Special Backward Class (SBC) communities:\n\n\n- Banjara, Baldia, Labana\n- Gadiya Lohar, Gadolia\n- Gujar, Gurjar\n- Raika, Rebari (Debasi)\n- Gadaria (Gadri, Gyari)\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Free distribution of cycles to girl students"
+        },
+        {
+         "bold": true,
+         "text": ". "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Free distribution of cycles to girl students**.** \n",
+   "briefDescription": "The scheme provides free bicycles to girl students studying in Class 9 in government schools of Rajasthan who belong to the Special Backward Classes or specific communities such as Banjara, Baldia, Labana-Gadiya Lohar, Gadolia, Gujar Gurjar, Raiko, Rebari (Debasi).",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Devnarayan Chhatra Cycle Scheme\" was launched by the Social Justice and Empowerment Department, Government of Rajasthan, aims to promote education and mobility among girls belonging to the Special Backward Classes (SBC) or specific communities such as Banjara, Baldia, Labana, Gadiya-Lohar, Gadolia, Gujar, Gurjar, Raiko, Rebari (Debasi), and Gadaria (Gadri, Gyari). Under this scheme, free bicycles are provided to girl students studying in 9th Class in government schools of Rajasthan."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Devnarayan Chhatra Cycle Scheme&amp;quot; was launched by the Social Justice and Empowerment Department, Government of Rajasthan, aims to promote education and mobility among girls belonging to the Special Backward Classes (SBC) or specific communities such as Banjara, Baldia, Labana, Gadiya-Lohar, Gadolia, Gujar, Gurjar, Raiko, Rebari (Debasi), and Gadaria (Gadri, Gyari). Under this scheme, free bicycles are provided to girl students studying in 9th Class in government schools of Rajasthan.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://sje.rajasthan.gov.in/Default.aspx?PageID=87"
+    },
+    {
+     "title": "Official Website",
+     "url": "https://jansoochna.rajasthan.gov.in/CMS/EligiblityRules"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "dccs"
+}

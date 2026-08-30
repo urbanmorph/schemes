@@ -1,0 +1,361 @@
+{
+ "_id": "653143fa4c46bfe12b22fd19",
+ "_slug": "nsat",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Online",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: Registration"
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": "Visit the "
+       },
+       {
+        "children": [
+         {
+          "text": "Official Portal"
+         }
+        ],
+        "link": "https://nats.education.gov.in/index.php",
+        "type": "link"
+       },
+       {
+        "text": " of the National Apprenticeship Training Scheme. In the top ribbon, click \"Student\". On the next page, click \"Student Register\". You will be redirected to the "
+       },
+       {
+        "children": [
+         {
+          "text": "Registration Page"
+         }
+        ],
+        "link": "https://nats.education.gov.in/student_register.php",
+        "type": "link"
+       },
+       {
+        "text": "."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: Basic Profile"
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": "In the registration page, fill in the following mandatory fields: Basic Details (Name, Father/mother's Name, Aadhar Number), Educational Details (Course/Institute Details), Communication Information (Address, Mobile Number), Bank Details For Stipend Reception, Training Preferences (Field and Location for Apprenticeship)."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: Review and Submit"
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": "After filling in all the mandatory fields, scroll to the bottom of the page, review the details, and click \"SUBMIT\"."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: Contract Management"
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": "You can find apprenticeship advertisements on the dashboard. The details like title, description, duration, location, skills required, and qualifications needed to apply are visible to the student. Apply for a suitable apprenticeship opportunity."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5: Track the Application Status"
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": "Application status can be checked in the application management section."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 6: Contract Acceptance"
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": "Students must accept the contract request from the establishment before sending a request to BOAT for final confirmation. Once accepted, the contract request is sent to BOAT for approval. Students can download and engage in the apprenticeship program."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 6: Profile Locking"
+       }
+      ],
+      "type": "block_quote"
+     },
+     {
+      "children": [
+       {
+        "text": "Once a student's contract is created, their profile is locked, preventing further applications. Profile changes require a request to BOAT."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "> **Step 1: Registration**\n\nVisit the [Official Portal](https://nats.education.gov.in/index.php) of the National Apprenticeship Training Scheme. In the top ribbon, click &quot;Student&quot;. On the next page, click &quot;Student Register&quot;. You will be redirected to the [Registration Page](https://nats.education.gov.in/student_register.php).\n> **Step 2: Basic Profile**\n\nIn the registration page, fill in the following mandatory fields: Basic Details (Name, Father/mother&#39;s Name, Aadhar Number), Educational Details (Course/Institute Details), Communication Information (Address, Mobile Number), Bank Details For Stipend Reception, Training Preferences (Field and Location for Apprenticeship).\n> **Step 3: Review and Submit**\n\nAfter filling in all the mandatory fields, scroll to the bottom of the page, review the details, and click &quot;SUBMIT&quot;.\n> **Step 4: Contract Management**\n\nYou can find apprenticeship advertisements on the dashboard. The details like title, description, duration, location, skills required, and qualifications needed to apply are visible to the student. Apply for a suitable apprenticeship opportunity.\n> **Step 5: Track the Application Status**\n\nApplication status can be checked in the application management section.\n> **Step 6: Contract Acceptance**\n\nStudents must accept the contract request from the establishment before sending a request to BOAT for final confirmation. Once accepted, the contract request is sent to BOAT for approval. Students can download and engage in the apprenticeship program.\n> **Step 6: Profile Locking**\n\nOnce a student&#39;s contract is created, their profile is locked, preventing further applications. Profile changes require a request to BOAT.\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": true,
+   "implementingAgency": null,
+   "level": {
+    "label": "Central",
+    "value": "central"
+   },
+   "nodalDepartmentName": {
+    "label": "Department Of Higher Education",
+    "value": 1608
+   },
+   "nodalMinistryName": {
+    "label": "Ministry of Education",
+    "value": 488
+   },
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    },
+    {
+     "label": "Skills & Employment",
+     "value": "628ce85cd6d1a3bde4685304"
+    }
+   ],
+   "schemeCloseDate": null,
+   "schemeFor": "Individual",
+   "schemeName": "National Scheme of Apprenticeship Training",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "NSAT",
+   "schemeSubCategory": [
+    {
+     "label": "Apprenticeships and training",
+     "value": "Apprenticeships and training"
+    },
+    {
+     "label": "Apprenticeship",
+     "value": "Apprenticeship"
+    },
+    {
+     "label": "Training and Skill Up-gradation",
+     "value": "Training and Skill Up-gradation"
+    }
+   ],
+   "schemeType": {
+    "label": "Central Sector Scheme",
+    "value": "central-sector-scheme"
+   },
+   "state": null,
+   "tags": [
+    "Skill",
+    "Training",
+    "Apprentice",
+    "Student"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "text": "The applicant should be one of the following - "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Graduate Engineers"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Diploma Holders (Technicians)"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "10+2 Vocational Passouts"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "eligibilityDescription_md": "The applicant should be one of the following - \n\n- Graduate Engineers\n- Diploma Holders (Technicians)\n- 10+2 Vocational Passouts\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 1,
+    "label": "Cash",
+    "value": "cash"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "text": "  1.  The apprentices undergo a one-year Apprenticeship Training period."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "  2.  Apprentices receive a monthly stipend during their training."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Engineering Graduate: ₹4,984 per month"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Technicians: ₹3,542 per month"
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "10+2 Vocational pass-outs: ₹2,758 per month"
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    },
+    {
+     "children": [
+      {
+       "text": "  3.  The stipend is shared equally between the Central Government and the employer, with the employer initially paying the full stipend and later claiming 50% reimbursement from the Central Government through the respective Boards of Apprenticeship/Practical (BOATs/BOPT)."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "  1.  The apprentices undergo a one-year Apprenticeship Training period.\n  2.  Apprentices receive a monthly stipend during their training.\n\n- Engineering Graduate: ₹4,984 per month\n- Technicians: ₹3,542 per month\n- 10+2 Vocational pass-outs: ₹2,758 per month\n\n  3.  The stipend is shared equally between the Central Government and the employer, with the employer initially paying the full stipend and later claiming 50% reimbursement from the Central Government through the respective Boards of Apprenticeship/Practical (BOATs/BOPT).\n",
+   "briefDescription": "The primary goal of this scheme is to bridge the gap in practical experience for fresh Graduate Engineers, Diploma holders, and 10+2 Vocational pass-outs in approximately 10,000 industrial establishments. The apprentices undergo a one-year training period, receiving a monthly stipend.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "text": "\"National Scheme of Apprenticeship Training\" of the Department of Higher Education, Ministry of Education is overseen by four Regional Boards of Apprenticeship/Practical (BOATs/BOPT) in Mumbai, Kanpur, Chennai, and Kolkata. The scheme offers practical training to graduate engineers, diploma holders (Technicians), and 10+2 Vocational pass-outs in approximately 10,000 industrial establishments. This program operates in compliance with guidelines established by the Central Apprenticeship Council (CAC), a statutory body created under the Apprentices Act, 1961. The primary goal is to bridge the gap in practical experience for fresh Graduate Engineers, Diploma holders, and 10+2 Vocational pass-outs. The apprentices undergo a one-year training period, receiving a monthly stipend shared equally between the Central Government and the Employer. "
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "detailedDescription_md": "&quot;National Scheme of Apprenticeship Training&quot; of the Department of Higher Education, Ministry of Education is overseen by four Regional Boards of Apprenticeship/Practical (BOATs/BOPT) in Mumbai, Kanpur, Chennai, and Kolkata. The scheme offers practical training to graduate engineers, diploma holders (Technicians), and 10+2 Vocational pass-outs in approximately 10,000 industrial establishments. This program operates in compliance with guidelines established by the Central Apprenticeship Council (CAC), a statutory body created under the Apprentices Act, 1961. The primary goal is to bridge the gap in practical experience for fresh Graduate Engineers, Diploma holders, and 10+2 Vocational pass-outs. The apprentices undergo a one-year training period, receiving a monthly stipend shared equally between the Central Government and the Employer. \n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://www.education.gov.in/technical-education-13"
+    },
+    {
+     "title": "Documents Required",
+     "url": "https://nats.education.gov.in/student_register.php"
+    },
+    {
+     "title": "User Manual For Online Application",
+     "url": "https://nats.education.gov.in/assets/manual/student_manual.pdf"
+    },
+    {
+     "title": "Contact Us",
+     "url": "https://nats.education.gov.in/contact-us.php"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "nsat"
+}

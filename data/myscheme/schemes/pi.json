@@ -1,0 +1,398 @@
+{
+ "_id": "642673483560043509827bea",
+ "_slug": "pi",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 1: "
+       },
+       {
+        "text": "The Applications shall be invited at Village/Ward Level considering the village/town as a unit respectively."
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 2: "
+       },
+       {
+        "text": "All applications shall be enquired by the Village/Ward Volunteers for adherence to the eligibility conditions. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 3: "
+       },
+       {
+        "text": "The draft List of identified eligible beneficiaries shall be published at Village/Ward Secretariat calling for further claims & objections. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 4: "
+       },
+       {
+        "text": "Grama/Ward Sabha shall be conducted to finalize the list of beneficiaries duly redressing the claims & objections. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 5: "
+       },
+       {
+        "text": "The final list of beneficiaries shall be submitted for approval of the District Collector by the Tahsildars and Municipal Commissioners in the Rural and Urban areas respectively. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 6: "
+       },
+       {
+        "text": "The final list of beneficiaries approved by the District Collector shall be published in the respective Village/Ward Secretariat. "
+       }
+      ],
+      "type": "paragraph"
+     },
+     {
+      "children": [
+       {
+        "bold": true,
+        "text": "Step 7: "
+       },
+       {
+        "text": "In case of any further claims or objections, the Tahsildar/Municipal Commissioner shall function as the redressal officer duly taking approval from the District Collector."
+       }
+      ],
+      "type": "paragraph"
+     }
+    ],
+    "process_md": "**Step 1:** The Applications shall be invited at Village/Ward Level considering the village/town as a unit respectively.\n**Step 2:** All applications shall be enquired by the Village/Ward Volunteers for adherence to the eligibility conditions. \n**Step 3:** The draft List of identified eligible beneficiaries shall be published at Village/Ward Secretariat calling for further claims &amp; objections. \n**Step 4:** Grama/Ward Sabha shall be conducted to finalize the list of beneficiaries duly redressing the claims &amp; objections. \n**Step 5:** The final list of beneficiaries shall be submitted for approval of the District Collector by the Tahsildars and Municipal Commissioners in the Rural and Urban areas respectively. \n**Step 6:** The final list of beneficiaries approved by the District Collector shall be published in the respective Village/Ward Secretariat. \n**Step 7:** In case of any further claims or objections, the Tahsildar/Municipal Commissioner shall function as the redressal officer duly taking approval from the District Collector.\n",
+    "url": ""
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": null,
+   "level": {
+    "label": "State",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Revenue Department",
+    "value": 931
+   },
+   "schemeCategory": [
+    {
+     "label": "Housing & Shelter",
+     "value": "628ce7d2d6d1a3bde46852c2"
+    }
+   ],
+   "schemeFor": "Family",
+   "schemeName": "Pedalandariki Illu",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "PI",
+   "schemeSubCategory": [
+    {
+     "label": "Housing",
+     "value": "Housing"
+    }
+   ],
+   "state": {
+    "label": "Andhra Pradesh",
+    "value": 28
+   },
+   "tags": [
+    "Housing",
+    "Below Poverty Line",
+    "Welfare"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Family",
+     "value": "family"
+    },
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "A) Rural Area: "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "1.\tThe beneficiary shall belong to the identified Below Poverty Line (BPL) category household. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "2.\tThe beneficiary shall not have their own House/House Site anywhere in the State of Andhra Pradesh. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "3.\tThe Beneficiary shall not have been covered in any previous Housing Scheme of the State/Central Government. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "4.\tThe Beneficiary shall not have more than 2.5 acres of Wet Land or 5.00 acres of Dry Land. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "B) Urban Area: "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "text": "1.\tThe beneficiary shall not have an Own House/House Site anywhere in the State of Andhra Pradesh. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "2.\tThe beneficiary shall not have been covered in any previous Housing Scheme of the State/Central Government. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "3.\tThe beneficiary shall not have more than 2.5 acres of Wet Land or 5.00 acres of Dry Land. "
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": "4.\tThe Annual Income (from all the sources) of the Household should not exceed Rs.3,00,000/- (Rupees three lakhs only)."
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "eligibilityDescription_md": "> **A) Rural Area:** \n\n1.\tThe beneficiary shall belong to the identified Below Poverty Line (BPL) category household. \n2.\tThe beneficiary shall not have their own House/House Site anywhere in the State of Andhra Pradesh. \n3.\tThe Beneficiary shall not have been covered in any previous Housing Scheme of the State/Central Government. \n4.\tThe Beneficiary shall not have more than 2.5 acres of Wet Land or 5.00 acres of Dry Land. \n<br>\n\n> **B) Urban Area:** \n\n1.\tThe beneficiary shall not have an Own House/House Site anywhere in the State of Andhra Pradesh. \n2.\tThe beneficiary shall not have been covered in any previous Housing Scheme of the State/Central Government. \n3.\tThe beneficiary shall not have more than 2.5 acres of Wet Land or 5.00 acres of Dry Land. \n4.\tThe Annual Income (from all the sources) of the Household should not exceed Rs.3,00,000/- (Rupees three lakhs only).\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Rural Area: "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "One House Site Patta shall be issued for an extent of 1.5 Cents to an eligible household in the name of the woman beneficiary of the house. The patta shall be handed over to the beneficiary on the day of Ugadi, 2020. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "The Housing Department shall issue sanctions for the construction of Individual Housing Units to the eligible beneficiary under the available schemes in a phased manner. "
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "Urban Area: "
+      }
+     ],
+     "type": "block_quote"
+    },
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Housing Units shall be constructed following the G+3 pattern at the rate of about 100 units in an extent of Ac.1.00cts. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "House Site Patta shall be issued as an Undivided Land Share for an extent of about 1.0 Cent to an eligible beneficiary in the name of the woman of the house. The patta shall be handed over to the beneficiary on the day of Ugadi, 2020. "
+        }
+       ],
+       "type": "list_item"
+      },
+      {
+       "children": [
+        {
+         "text": "Housing Units will be constructed and handed over to the beneficiaries by APTIDCO/ ULB/ other government agencies under available schemes."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ol_list"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE 1: "
+      },
+      {
+       "text": "House Site Pattas shall be issued with the conditions laid down in BSO-21 & in terms of the Andhra Pradesh Assigned Lands (Prohibition of Transfer) Act, 1977 (As amended from time to time)."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "bold": true,
+       "text": "NOTE 2: "
+      },
+      {
+       "text": "All individual plots shall be given a Unique Number similar to the 11-digit Bhoodhar Number."
+      }
+     ],
+     "type": "paragraph"
+    },
+    {
+     "children": [
+      {
+       "text": ""
+      }
+     ],
+     "type": "paragraph"
+    }
+   ],
+   "benefits_md": "> **Rural Area:** \n\n\n1. One House Site Patta shall be issued for an extent of 1.5 Cents to an eligible household in the name of the woman beneficiary of the house. The patta shall be handed over to the beneficiary on the day of Ugadi, 2020. \n1. The Housing Department shall issue sanctions for the construction of Individual Housing Units to the eligible beneficiary under the available schemes in a phased manner. \n\n<br>\n\n> **Urban Area:** \n\n\n1. Housing Units shall be constructed following the G+3 pattern at the rate of about 100 units in an extent of Ac.1.00cts. \n1. House Site Patta shall be issued as an Undivided Land Share for an extent of about 1.0 Cent to an eligible beneficiary in the name of the woman of the house. The patta shall be handed over to the beneficiary on the day of Ugadi, 2020. \n1. Housing Units will be constructed and handed over to the beneficiaries by APTIDCO/ ULB/ other government agencies under available schemes.\n\n<br>\n\n**NOTE 1:** House Site Pattas shall be issued with the conditions laid down in BSO-21 &amp; in terms of the Andhra Pradesh Assigned Lands (Prohibition of Transfer) Act, 1977 (As amended from time to time).\n**NOTE 2:** All individual plots shall be given a Unique Number similar to the 11-digit Bhoodhar Number.\n<br>\n\n",
+   "briefDescription": "\"Pedalandariki Illu\" is a Housing Scheme by the Revenue Department, Govt. of Andhra Pradesh. 25 lakh House Site Pattas have been announced for distribution to all the eligible beneficiaries residing in Rural & Urban areas on Saturation MoSaturation Mode irrespective of Caste, Creed, or Religion.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Launched by the Hon’ble Chief Minister of Andhra Pradesh, the \"Pedalandariki Illu\" is a Housing Scheme by the Revenue Department, Govt. of Andhra Pradesh. 25 lakh House Site Pattas have been announced for distribution to all the eligible beneficiaries residing in Rural & Urban areas on Saturation Mode irrespective of Caste, Creed, or Religion to facilitate the construction of houses for the homeless poor. The process of issue of House Site Pattas will be taken up on mission mode and distribution to all eligible houseless poor will be taken up. This scheme is also known as the \"YSR Housing Scheme\" and \"YSR Awaas Yojana\"."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "Launched by the Hon’ble Chief Minister of Andhra Pradesh, the &amp;quot;Pedalandariki Illu&amp;quot; is a Housing Scheme by the Revenue Department, Govt. of Andhra Pradesh. 25 lakh House Site Pattas have been announced for distribution to all the eligible beneficiaries residing in Rural &amp;amp; Urban areas on Saturation Mode irrespective of Caste, Creed, or Religion to facilitate the construction of houses for the homeless poor. The process of issue of House Site Pattas will be taken up on mission mode and distribution to all eligible houseless poor will be taken up. This scheme is also known as the &amp;quot;YSR Housing Scheme&amp;quot; and &amp;quot;YSR Awaas Yojana&amp;quot;.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Government Order / Guidelines",
+     "url": "https://gsws-nbm.ap.gov.in/NBM/images/GovtSchemesGos/GO%20on%20Housing.pdf"
+    },
+    {
+     "title": "Beneficiary Search",
+     "url": "https://housing.ap.gov.in/BeneficiarySearch"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "pi"
+}

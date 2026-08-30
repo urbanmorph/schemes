@@ -1,0 +1,184 @@
+{
+ "_id": "676a3a77ff1de86fed6dbd2f",
+ "_slug": "mbcyb",
+ "_snapshot": "2026-08-30",
+ "en": {
+  "applicationProcess": [
+   {
+    "mode": "Offline",
+    "process": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "text": "Contact the concerned school Administration to avail the scheme benefits."
+           }
+          ],
+          "type": "list_item"
+         }
+        ],
+        "type": "ul_list"
+       }
+      ],
+      "type": "align_justify"
+     }
+    ],
+    "process_md": "\n  - Contact the concerned school Administration to avail the scheme benefits.\n\n"
+   }
+  ],
+  "basicDetails": {
+   "dbtScheme": false,
+   "level": {
+    "label": "State/ UT",
+    "value": "state"
+   },
+   "nodalDepartmentName": {
+    "label": "Education Department",
+    "value": 10111123
+   },
+   "nodalMinistryName": null,
+   "otherDepartmentNames": null,
+   "otherMinistryName": null,
+   "schemeCategory": [
+    {
+     "label": "Education & Learning",
+     "value": "628ce76cd6d1a3bde4685292"
+    }
+   ],
+   "schemeName": "Mukhyamantri Balika Cycle Yojna",
+   "schemeOpenDate": null,
+   "schemeShortTitle": "MBCYB",
+   "schemeSubCategory": [
+    {
+     "label": "Resources for schools",
+     "value": "Resources for schools"
+    }
+   ],
+   "schemeType": null,
+   "state": {
+    "label": "Bihar",
+    "value": 10
+   },
+   "tags": [
+    "Education",
+    "Girls",
+    "Cycle",
+    "Social Empowerment"
+   ],
+   "targetBeneficiaries": [
+    {
+     "label": "Individual",
+     "value": "individual"
+    }
+   ]
+  },
+  "eligibilityCriteria": {
+   "eligibilityDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "The applicant must be a resident of Bihar."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be a girl student."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant must be enrolled in a government or government-recognized secondary school."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The applicant should have successfully completed Class VIII and be transitioning to Class IX or higher."
+          }
+         ],
+         "type": "list_item"
+        },
+        {
+         "children": [
+          {
+           "text": "The scheme applies only to girls from economically weaker sections or as specified by the government."
+          }
+         ],
+         "type": "list_item"
+        }
+       ],
+       "type": "ul_list"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "eligibilityDescription_md": "\n  - The applicant must be a resident of Bihar.\n  - The applicant must be a girl student.\n  - The applicant must be enrolled in a government or government-recognized secondary school.\n  - The applicant should have successfully completed Class VIII and be transitioning to Class IX or higher.\n  - The scheme applies only to girls from economically weaker sections or as specified by the government.\n\n"
+  },
+  "schemeContent": {
+   "benefitTypes": {
+    "id": 2,
+    "label": "In Kind",
+    "value": "in-kind"
+   },
+   "benefits": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Financial assistance is provided to purchase a bicycle."
+        }
+       ],
+       "type": "list_item"
+      }
+     ],
+     "type": "ul_list"
+    }
+   ],
+   "benefits_md": "\n- Financial assistance is provided to purchase a bicycle.\n\n",
+   "briefDescription": "The \"Mukhyamantri Balika Cycle Yojna\" is a government initiative aimed at reducing the gender gap in secondary school enrollment by providing financial assistance to girls for purchasing bicycles, ensuring improved access to education.",
+   "detailedDescription": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "The \"Mukhyamantri Balika Cycle Yojna\" was introduced to promote girls' education and reduce the dropout rate among female students transitioning to secondary school. Under this scheme, eligible girls are given financial assistance to purchase a bicycle, enabling them to travel to school conveniently and safely. This initiative encourages education, reduces gender disparity, and supports overall empowerment of young girls."
+        }
+       ],
+       "type": "paragraph"
+      }
+     ],
+     "type": "align_justify"
+    }
+   ],
+   "detailedDescription_md": "The &amp;quot;Mukhyamantri Balika Cycle Yojna&amp;quot; was introduced to promote girls&amp;#39; education and reduce the dropout rate among female students transitioning to secondary school. Under this scheme, eligible girls are given financial assistance to purchase a bicycle, enabling them to travel to school conveniently and safely. This initiative encourages education, reduces gender disparity, and supports overall empowerment of young girls.\n",
+   "exclusions_md": "",
+   "references": [
+    {
+     "title": "Guidelines",
+     "url": "https://state.bihar.gov.in/educationbihar/Content.html?links&page=FACTS_SCHEMES"
+    }
+   ],
+   "schemeImageUrl": ""
+  },
+  "schemeDefinitions": []
+ },
+ "slug": "mbcyb"
+}
