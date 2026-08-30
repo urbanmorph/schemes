@@ -103,6 +103,9 @@ def check_scheme(rec):
     bad_urls = [(kind, label, u, why) for kind, label, u in urls
                 if (why := url_defect(u)) is not None]
 
+    app_urls = [u for kind, _lbl, u in urls if kind == "application" and str(u).strip()]
+    has_offline = any(m.lower().startswith("offline") for m in modes)
+
     expired = None
     if close_date:
         try:
@@ -125,10 +128,14 @@ def check_scheme(rec):
         ("implementing_agency_named", bool(agency and str(agency).strip()),
          "named" if agency else "field absent from the record"),
 
-        ("application_path_published",
-         any(u for _, _, u in urls if _ == "application") or
-         any("offline" in m for m in modes),
-         "URL published" if urls else "no URL and no offline mode declared"),
+        # `any(u for _, _, u in urls if _ == "application")` was wrong here: the second
+        # `_` shadows the first, so the filter compared the label rather than the kind and
+        # the check failed on every scheme that had a perfectly good application URL.
+        # Bind the names.
+        ("application_path_published", bool(app_urls) or has_offline,
+         f"{len(app_urls)} URL(s) published" if app_urls
+         else ("offline mode declared, no URL needed" if has_offline
+               else "no URL and no offline mode declared")),
 
         ("start_date_recorded", bool(open_date), open_date or "not published"),
 

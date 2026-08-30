@@ -53,6 +53,58 @@ def headers(key):
     return {"x-api-key": key, "Referer": SITE, "Accept": "application/json"}
 
 
+# ------------------------------------------------------------------ resume support
+
+def _readable_slugs(path):
+    """Slugs already archived, reading only as far as the stream is intact.
+
+    A process killed mid-write leaves a gzip with no end-of-stream marker. The prefix is
+    still valid data — it was fetched and written before the kill — so it is kept and
+    resumed from, not discarded. Only whole, parseable lines count.
+    """
+    if not os.path.exists(path):
+        return set()
+    seen = set()
+    try:
+        with gzip.open(path, "rb") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    seen.add(json.loads(line)["slug"])
+                except Exception:
+                    continue          # a half-written final line; stop counting it
+    except (EOFError, OSError):
+        pass                          # truncated stream: keep whatever parsed
+    return seen
+
+
+def _rewrite_clean(path, keep):
+    """Rewrite the archive containing only whole records, so it can be appended to.
+
+    Appending to a truncated gzip would produce a file no reader can get past. Rewriting
+    the intact prefix first is what makes resume safe.
+    """
+    rows = []
+    try:
+        with gzip.open(path, "rb") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    if json.loads(line)["slug"] in keep:
+                        rows.append(line)
+                except Exception:
+                    continue
+    except (EOFError, OSError):
+        pass
+    with gzip.open(path, "wb") as fh:
+        for r in rows:
+            fh.write(r + b"\n")
+
+
 # ------------------------------------------------------------------ key handling
 
 def extract_key_from_bundle():
@@ -101,7 +153,7 @@ def resolve_key(key):
 
 # ------------------------------------------------------------------ collection
 
-def collect(out_dir, key, pace, limit=None):
+def collect(out_dir, key, pace, limit=None, rel_manifest=None):
     os.makedirs(out_dir, exist_ok=True)
     man = {
         "source": "myscheme",
@@ -188,8 +240,27 @@ def collect(out_dir, key, pace, limit=None):
 
     # ---- 3. details. The rubric's fields live only here — the list endpoint carries
     #         12 fields and none of eligibility/benefits/applicationProcess/references.
-    got = 0
-    with gzip.open(os.path.join(out_dir, "details.ndjson.gz"), "wb") as fh:
+    #
+    # Resumable, because a full census is ~4,800 paced requests and a process that dies at
+    # request 2,883 should not send the first 2,883 again. Resuming reuses the slug list
+    # from this run's own list pages and re-fetches nothing already on disk.
+    #
+    # It does mean a resumed snapshot's fetches span a longer wall-clock window, so the
+    # manifest records each segment. That is a real caveat and it is written down rather
+    # than hidden — but it does not change collection *semantics*: same endpoint, same
+    # stable sort, same slug set. What a record means is identical either way.
+    total_slugs = len(slugs)
+    details_path = os.path.join(out_dir, "details.ndjson.gz")
+    done = _readable_slugs(details_path)
+    if done:
+        _rewrite_clean(details_path, done)
+        man["resumed_from"] = len(done)
+        man.setdefault("segments", []).append({"resumed_at": utcnow(), "had": len(done)})
+        slugs = [s for s in slugs if s not in done]
+        print(f"  resuming: {len(done)} details already archived, {len(slugs)} to go")
+
+    got = len(done)
+    with gzip.open(details_path, "ab") as fh:
         for n, slug in enumerate(slugs, 1):
             r = fetch(f"{API}/schemes/v6/public/schemes?slug={slug}&lang=en",
                       headers=headers(key), pace=pace)
@@ -204,11 +275,21 @@ def collect(out_dir, key, pace, limit=None):
                                 ensure_ascii=False, sort_keys=True).encode() + b"\n")
             got += 1
             if n % 200 == 0:
-                print(f"    detail {n}/{len(slugs)}  ok={got}")
+                print(f"    detail {n}/{len(slugs)}  ok={got}/{total_slugs}")
+                # Flush a progress manifest. A run killed at request 2,883 previously
+                # left the manifest describing an entirely different earlier run, so the
+                # verifier compared new bytes against stale bookkeeping. The manifest
+                # must never be further behind than the archive it describes.
+                fh.flush()
+                man.update(details_expected=total_slugs, details_written=got,
+                           finished=None, in_progress=True,
+                           error_count=len(man["errors"]))
+                write_json(rel_manifest, dict(man, errors=man["errors"][:50]))
 
-    man["details_expected"] = len(slugs)
+    man["details_expected"] = total_slugs
     man["details_written"] = got
     man["finished"] = utcnow()
+    man["in_progress"] = False
     man["error_count"] = len(man["errors"])
     man["errors"] = man["errors"][:50]      # keep the manifest diffable
     return man
@@ -230,7 +311,7 @@ def main():
     key, event = resolve_key(key)
 
     started = time.time()
-    man = collect(out_dir, key, args.pace, args.limit)
+    man = collect(out_dir, key, args.pace, args.limit, rel)
     man["key_event"] = event
     man["duration_s"] = round(time.time() - started)
     write_json(rel, man)

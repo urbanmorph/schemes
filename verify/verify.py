@@ -37,10 +37,28 @@ from common import ROOT, looks_like_error, read_json, utcnow, today, write_json 
 STALE_DAYS = 40      # monthly cadence + a week of slack
 
 
+class Truncated(Exception):
+    """The gzip stream ends without its end-of-stream marker."""
+
+
 def _lines(path):
-    """Yield raw lines from a .ndjson.gz, tolerating a truncated final line."""
+    """Yield raw lines from a .ndjson.gz, surviving a truncated stream.
+
+    A collector killed mid-write leaves a gzip with no end-of-stream marker, and naive
+    iteration raises EOFError partway through. That must not crash the verifier: a
+    truncated archive is precisely the "present file holding the wrong bytes" case this
+    module exists to catch, and it has to be reported as a failed assertion rather than a
+    stack trace. So the readable prefix is yielded, then Truncated is raised so the caller
+    can record how much survived and mark the snapshot INCOMPLETE.
+    """
     with gzip.open(path, "rb") as fh:
-        for line in fh:
+        while True:
+            try:
+                line = fh.readline()
+            except (EOFError, OSError) as exc:
+                raise Truncated(str(exc)) from exc
+            if not line:
+                return
             line = line.strip()
             if line:
                 yield line
@@ -84,31 +102,37 @@ def verify_myscheme(date):
     details_path = os.path.join(d, "details.ndjson.gz")
     list_path = os.path.join(d, "list.ndjson.gz")
 
-    n_details, bad_details = 0, 0
+    n_details, bad_details, truncated = 0, 0, []
     if os.path.exists(details_path):
-        for line in _lines(details_path):
-            n_details += 1
-            if looks_like_error(line):
-                bad_details += 1
+        try:
+            for line in _lines(details_path):
+                n_details += 1
+                if looks_like_error(line):
+                    bad_details += 1
+        except Truncated as exc:
+            truncated.append(f"details.ndjson.gz: {exc}")
     # Recount the list too: pages, the records inside them, and distinct slugs. The
     # completeness question is about *records* (does the crawl account for every row the
     # census promised); duplicate slugs are a separate fact, reported not failed.
     n_pages, bad_pages, n_records = 0, 0, 0
     slugs = set()
     if os.path.exists(list_path):
-        for line in _lines(list_path):
-            n_pages += 1
-            if looks_like_error(line):
-                bad_pages += 1
-                continue
-            try:
-                for it in json.loads(line)["data"]["hits"]["items"]:
-                    n_records += 1
-                    f_ = it.get("fields", it)
-                    if f_.get("slug"):
-                        slugs.add(f_["slug"])
-            except Exception:
-                bad_pages += 1
+        try:
+            for line in _lines(list_path):
+                n_pages += 1
+                if looks_like_error(line):
+                    bad_pages += 1
+                    continue
+                try:
+                    for it in json.loads(line)["data"]["hits"]["items"]:
+                        n_records += 1
+                        f_ = it.get("fields", it)
+                        if f_.get("slug"):
+                            slugs.add(f_["slug"])
+                except Exception:
+                    bad_pages += 1
+        except Truncated as exc:
+            truncated.append(f"list.ndjson.gz: {exc}")
 
     out["records_parsed"] = n_details
     out["list_records"] = n_records
@@ -152,6 +176,12 @@ def verify_myscheme(date):
 
     check("no error-shaped bodies", bad_details == 0 and bad_pages == 0,
           f"{bad_details} detail + {bad_pages} list bodies match a throttle/WAF shape")
+
+    # A truncated stream means the collector died mid-write. The readable prefix is still
+    # good data and is kept — but the snapshot is not a census and must not be published.
+    check("archive streams are complete", not truncated,
+          "; ".join(truncated) if truncated else "all streams end cleanly")
+    out["truncated"] = truncated
 
     return out, checks
 
