@@ -1,0 +1,184 @@
+"""
+Shared HTTP + archive primitives for the collectors.
+
+FROZEN CODE. Read PLAN.md §7 before editing anything in collect/.
+
+The repair agent may edit parse/. It must never edit collect/. The value of this
+project is a *comparable* time series: a collector that breaks leaves a hole you can
+see and date, while a collector that quietly adapts leaves a seam you cannot. Changes
+here alter what every future snapshot means, and cannot be replayed against the
+archive to find out what changed. Parser changes can.
+
+Rules encoded here, each with a reason:
+
+  - Never HEAD. indiabudget.gov.in returns 404 to HEAD and 200 to GET; dbtbharat and
+    myscheme return 403/405. Measured: HEAD misclassifies 18% of live government URLs.
+  - Always send a browser User-Agent, and identify the crawler honestly alongside it.
+  - 401 from myScheme means rate-limited, not rotated. Confirmed 2026-08-30: after ~15
+    rapid requests the API 401s, re-extracting the key from the JS bundle returns a
+    byte-identical key, and the original works again ~3 minutes later. Callers must
+    re-extract and COMPARE before treating a 401 as a key rotation.
+  - Raw bytes are written before anything is parsed, so a parser bug can never cost a
+    snapshot.
+"""
+
+import gzip
+import hashlib
+import json
+import os
+import random
+import ssl
+import time
+import urllib.error
+import urllib.request
+
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/126.0 Safari/537.36 "
+      "(+https://github.com/urbanmorph/schemes; monthly archival crawler)")
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_CTX = ssl.create_default_context()
+
+
+class Fetched:
+    """One HTTP response. `ok` means we got bytes, not that they are meaningful."""
+
+    __slots__ = ("url", "status", "body", "elapsed", "attempts")
+
+    def __init__(self, url, status, body, elapsed, attempts):
+        self.url, self.status, self.body = url, status, body
+        self.elapsed, self.attempts = elapsed, attempts
+
+    @property
+    def ok(self):
+        return isinstance(self.status, int) and 200 <= self.status < 400
+
+    @property
+    def sha256(self):
+        return hashlib.sha256(self.body or b"").hexdigest()
+
+    def json(self):
+        return json.loads(self.body)
+
+
+def fetch(url, headers=None, timeout=45, retries=5, pace=0.0):
+    """GET a URL with backoff. Never HEAD. Returns Fetched; never raises on HTTP status.
+
+    Backs off on 401/429/5xx — for myScheme all three mean "slow down". The caller
+    decides whether a persistent 401 is a rotated key (see myscheme.resolve_key).
+    """
+    h = {"User-Agent": UA}
+    if headers:
+        h.update(headers)
+    started = time.time()
+    last_status = None
+
+    for attempt in range(1, retries + 1):
+        try:
+            req = urllib.request.Request(url, headers=h, method="GET")
+            with urllib.request.urlopen(req, timeout=timeout, context=_CTX) as r:
+                body = r.read()
+                if pace:
+                    time.sleep(pace)
+                return Fetched(url, r.status, body, time.time() - started, attempt)
+        except urllib.error.HTTPError as e:
+            last_status = e.code
+            body = b""
+            try:
+                body = e.read()
+            except Exception:
+                pass
+            if e.code in (401, 403, 429) or e.code >= 500:
+                if attempt < retries:
+                    _backoff(attempt)
+                    continue
+            return Fetched(url, e.code, body, time.time() - started, attempt)
+        except urllib.error.URLError as e:
+            reason = str(getattr(e, "reason", e))
+            low = reason.lower()
+            if "name or service" in low or "not known" in low or "nodename" in low:
+                return Fetched(url, "DNS", b"", time.time() - started, attempt)
+            last_status = "TIMEOUT" if "timed out" in low else "CONN"
+            if attempt < retries:
+                _backoff(attempt)
+                continue
+            return Fetched(url, last_status, b"", time.time() - started, attempt)
+        except Exception:
+            last_status = "ERR"
+            if attempt < retries:
+                _backoff(attempt)
+                continue
+            return Fetched(url, "ERR", b"", time.time() - started, attempt)
+
+    return Fetched(url, last_status or "ERR", b"", time.time() - started, retries)
+
+
+def _backoff(attempt):
+    """Exponential with jitter. myScheme's throttle cleared in ~3 min when measured."""
+    time.sleep(min(90, (2 ** attempt) * 2) + random.uniform(0, 1.5))
+
+
+# --------------------------------------------------------------- error-shape guard
+
+# A 200 is not proof of a real payload: a throttle or a WAF challenge can arrive with
+# any status. Any archived body matching one of these is treated as a failed fetch,
+# so it can never be committed as if it were data. PLAN.md §8, assertion 4.
+ERROR_SHAPES = (
+    b'{"message":"Unauthorized"}',
+    b'{"message":"Forbidden"}',
+    b"Missing Authentication Token",
+    b"<title>Just a moment",          # Cloudflare interstitial
+    b"cf-browser-verification",
+    b"Attention Required! | Cloudflare",
+)
+
+
+def looks_like_error(body):
+    if not body:
+        return "empty body"
+    head = body[:2048]
+    for shape in ERROR_SHAPES:
+        if shape in head:
+            return shape.decode("utf-8", "replace")[:60]
+    return None
+
+
+# --------------------------------------------------------------- archive writing
+
+def write_json(relpath, obj):
+    """Pretty, key-sorted, trailing newline — so git diffs are line-wise and readable.
+
+    Stability matters more than compactness here: /changes is a git diff, and an
+    unstable key order would make every field look changed every month.
+    """
+    path = os.path.join(ROOT, relpath)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(obj, fh, indent=1, sort_keys=True, ensure_ascii=False)
+        fh.write("\n")
+    return path
+
+
+def write_raw_gz(relpath, body):
+    """Immutable raw bytes, gzipped. The audit trail behind every parsed value."""
+    path = os.path.join(ROOT, relpath)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with gzip.open(path, "wb") as fh:
+        fh.write(body)
+    return path
+
+
+def read_json(relpath, default=None):
+    path = os.path.join(ROOT, relpath)
+    if not os.path.exists(path):
+        return default
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def utcnow():
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def today():
+    return time.strftime("%Y-%m-%d", time.gmtime())

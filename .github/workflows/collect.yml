@@ -1,0 +1,115 @@
+name: Monthly collection
+
+# Cadence is monthly on purpose (PLAN.md §6). The Budget is annual, myScheme moves
+# slowly, and weekly was never justified by the data's velocity — it only multiplied the
+# request load against visibly fragile state infrastructure.
+#
+# workflow_dispatch is not just a convenience: in a public repo GitHub disables scheduled
+# workflows after 60 days without repository activity, and a working collector is quiet
+# by construction. A monthly data commit should reset that timer, but the docs do not
+# confirm workflow-generated pushes count, so keep the manual trigger and act on the
+# warning email if it arrives.
+
+on:
+  schedule:
+    - cron: "0 4 3 * *"        # 04:00 UTC on the 3rd
+  workflow_dispatch:
+    inputs:
+      pace:
+        description: "Seconds between API requests"
+        default: "0.7"
+
+concurrency:
+  group: collect
+  cancel-in-progress: false     # never interrupt a run that is mid-archive
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180        # a full census is ~4,820 paced requests, about an hour
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install poppler
+        # pdftotext for the annual Budget statements. It does not exist in a Workers
+        # runtime, which is one of the reasons collection lives here (PLAN.md §6).
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - name: Set snapshot date
+        run: echo "SNAP=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+
+      - name: Collect myScheme
+        env:
+          MYSCHEME_KEY: ${{ secrets.MYSCHEME_KEY }}   # optional; falls back to the bundle key
+        run: python3 collect/myscheme.py --date "$SNAP" --pace "${{ inputs.pace || '0.7' }}"
+
+      - name: Verify
+        id: verify
+        # Writes status.json and exits non-zero when the snapshot is not publishable.
+        # continue-on-error so a failed snapshot is still committed — an INCOMPLETE
+        # archive is evidence, and discarding it would lose the only record of what went
+        # wrong. The run is failed explicitly at the end instead.
+        continue-on-error: true
+        run: python3 verify/verify.py --date "$SNAP"
+
+      - name: Build the current tree
+        # Parsing is downstream of the archive and only runs on a complete snapshot.
+        # This is the step the repair agent is allowed to fix, because it can be replayed
+        # against archive/ to re-derive every past month (PLAN.md §7).
+        if: steps.verify.outcome == 'success'
+        run: python3 parse/explode.py --date "$SNAP"
+
+      - name: Commit
+        run: |
+          git config user.name  "schemes-collector"
+          git config user.email "noreply@users.noreply.github.com"
+          git add -A archive data status.json
+          if git diff --cached --quiet; then
+            echo "nothing changed"; exit 0
+          fi
+          VERDICT=$(python3 -c "import json;print(json.load(open('status.json'))['verdict'])")
+          git commit -m "snapshot $SNAP — $VERDICT"
+          git push
+
+      - name: Fail loudly if the snapshot was incomplete
+        # The alarm has to reach a human without anyone going to look for it. A failed
+        # job emails; a dashboard does not. PLAN.md §8, §9.
+        if: steps.verify.outcome != 'success'
+        run: |
+          echo "::error::Snapshot $SNAP failed verification — see status.json"
+          python3 -c "
+          import json
+          for name, when, why in json.load(open('status.json'))['attention']:
+              print(f'  {name}: {why}')
+          "
+          exit 1
+
+  # Repair runs only when collection failed, and only when a key is configured — so it
+  # is inert until you opt in. It may propose changes to parse/ and open a PR. It must
+  # never touch collect/, and it must never merge: the value of the archive is that
+  # collection semantics do not drift, and a PR is where a human checks that (PLAN.md §7).
+  repair:
+    needs: collect
+    if: failure()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Diagnose and open a PR
+        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        run: |
+          echo "Repair agent not yet wired. See PLAN.md §7 for the contract it must honour:"
+          echo "  - may edit parse/ only; collect/ is frozen"
+          echo "  - opens a PR, never merges"
+          echo "  - a PR touching collect/ must be labelled and never auto-approved"
+          exit 0

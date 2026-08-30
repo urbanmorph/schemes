@@ -1,0 +1,36 @@
+# Working notes, research, and planning docs — not part of the published repo
+supporting-docs/
+
+# archive/ and data/ are DELIBERATELY committed. Git is the archive, not a build
+# artifact store: the monthly commit history is the time series, and /changes is a
+# git diff. Nothing under archive/ or data/ belongs here. See PLAN.md §6.
+
+# Stray PDFs in the working tree. Budget statements are archived gzipped under
+# archive/budget/<year>/ and are not affected by this rule.
+/*.pdf
+*.pdf
+!archive/**/*.pdf.gz
+
+# Local scratch
+scratch/
+*.tmp
+
+# Node / build
+node_modules/
+dist/
+.astro/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated site output — rebuild with ./serve.sh
+site/_out/
