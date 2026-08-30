@@ -1,0 +1,42 @@
+{
+ "api_version": "search/v6 + schemes/v6",
+ "attention": [
+  [
+   "full census attempted",
+   "2026-08-30",
+   "run was limited to 20 details — smoke test, not a publishable snapshot"
+  ]
+ ],
+ "checks": [
+  {
+   "check": "full census attempted",
+   "detail": "run was limited to 20 details — smoke test, not a publishable snapshot",
+   "ok": false
+  },
+  {
+   "check": "list records == census total",
+   "detail": "4772 records vs 4772 expected",
+   "ok": true
+  },
+  {
+   "check": "all list pages written",
+   "detail": "48/48 pages",
+   "ok": true
+  },
+  {
+   "check": "no error-shaped bodies",
+   "detail": "0 detail + 0 list bodies match a throttle/WAF shape",
+   "ok": true
+  }
+ ],
+ "expected_total": 4772,
+ "key_event": null,
+ "last_complete_run": null,
+ "last_run": "2026-08-30T17:59:29Z",
+ "pages_expected": 48,
+ "pages_written": 48,
+ "records_parsed": 20,
+ "snapshot": "2026-08-30",
+ "snapshots": 1,
+ "verdict": "INCOMPLETE"
+}
