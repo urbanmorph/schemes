@@ -39,14 +39,26 @@ def _md(x):
 
 
 def structured_urls(en):
-    """Only fields whose declared purpose is to hold a URL."""
+    """Only fields whose declared purpose is to hold a URL.
+
+    An empty `url` on an Offline application mode is skipped, because it is not a defect:
+    an offline route has nowhere to link to. Measured across a 70-scheme sample, all 11
+    empty application URLs were on Offline modes and none on Online — so flagging them
+    would have made 11 of 17 malformed-URL findings (65%) false. The whole argument for
+    doing Tier-1 checks first is that they have no error bar; a check that fires on a
+    correctly-recorded offline scheme forfeits exactly that.
+    """
     out = []
     for r in en.get("schemeContent", {}).get("references", []) or []:
         if isinstance(r, dict) and r.get("url") is not None:
             out.append(("reference", r.get("title") or "", r["url"]))
     for a in en.get("applicationProcess", []) or []:
-        if isinstance(a, dict) and a.get("url") is not None:
-            out.append(("application", a.get("mode") or "", a["url"]))
+        if not isinstance(a, dict) or a.get("url") is None:
+            continue
+        mode = (a.get("mode") or "").strip()
+        if not str(a["url"]).strip() and mode.lower().startswith("offline"):
+            continue
+        out.append(("application", mode, a["url"]))
     return out
 
 
