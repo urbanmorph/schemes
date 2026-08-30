@@ -175,13 +175,17 @@ def verify_budget():
     checks = []
     for stmt, v in summary.items():
         parsed, printed = v.get("parsed_sum"), v.get("printed_grand_total")
-        if parsed is None or printed is None:
-            continue
-        ok = abs(parsed - printed) < 0.02          # crore, two decimals in the source
-        detail = f"parsed {parsed:,.2f} vs printed {printed:,.2f} cr"
-        if v.get("missing_indices"):
-            detail += f" · extraction lost rows {v['missing_indices']}"
-        checks.append({"check": f"budget {stmt} reconciles", "ok": ok, "detail": detail})
+        if parsed is not None and printed is not None:
+            checks.append({
+                "check": f"budget {stmt} money", "gating": False,
+                "ok": abs(parsed - printed) < 0.02,   # crore, two decimals in the source
+                "detail": f"parsed {parsed:,.2f} vs printed {printed:,.2f} cr"})
+        if v.get("highest_index"):
+            missing = v.get("missing_indices") or []
+            checks.append({
+                "check": f"budget {stmt} rows", "gating": False, "ok": not missing,
+                "detail": f"{v.get('rows')} of {v['highest_index']} numbered rows"
+                          + (f" — extraction lost {missing}" if missing else "")})
     return checks
 
 
@@ -194,8 +198,14 @@ def main():
     ms, checks = verify_myscheme(args.date)
     checks += verify_budget()
 
+    # Only gating checks decide whether *this month's* snapshot is publishable. The
+    # Budget statements are parsed annually and their defects are long-lived: a known row
+    # gap in Statement 4A must stay visible every month without marking an otherwise
+    # sound myScheme snapshot INCOMPLETE and blocking the change feed for a year.
     failed = [c for c in checks if not c["ok"]]
-    verdict = "COMPLETE" if not failed else "INCOMPLETE"
+    gating_failed = [c for c in failed if c.get("gating", True)]
+    advisory = [c for c in failed if not c.get("gating", True)]
+    verdict = "COMPLETE" if not gating_failed else "INCOMPLETE"
 
     snapshots = len(glob.glob(os.path.join(ROOT, "archive", "myscheme", "*", "_manifest.json")))
 
@@ -212,6 +222,7 @@ def main():
         "api_version": ms.get("api_version"),
         "key_event": ms.get("key_event"),
         "checks": checks,
+        "standing_issues": [c["check"] for c in advisory],
         # ops-dashboard reads this directly; each entry is (what, where, why)
         "attention": [[c["check"], args.date, c["detail"]] for c in failed],
     }
@@ -219,11 +230,16 @@ def main():
 
     print(f"snapshot {args.date} — {verdict}")
     for c in checks:
-        print(f"  {'PASS' if c['ok'] else 'FAIL'}  {c['check']:<28} {c['detail']}")
+        tag = "PASS" if c["ok"] else ("FAIL" if c.get("gating", True) else "warn")
+        print(f"  {tag}  {c['check']:<28} {c['detail']}")
 
-    if failed:
-        print(f"\n{len(failed)} assertion(s) failed. Snapshot archived and marked "
-              f"INCOMPLETE; parse/ must not diff against it.")
+    if advisory:
+        print(f"\n{len(advisory)} standing issue(s) carried forward — real defects, but "
+              f"in annually-parsed sources, so they do not gate this month's snapshot.")
+
+    if gating_failed:
+        print(f"\n{len(gating_failed)} gating assertion(s) failed. Snapshot archived and "
+              f"marked INCOMPLETE; parse/ must not diff against it.")
         raise SystemExit(1)
     print("\nsnapshot is complete and fit to publish.")
 

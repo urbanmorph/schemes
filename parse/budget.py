@@ -110,16 +110,33 @@ def parse_year(year):
             "items": rows,
         })
 
-        ok = grand is not None and abs(parsed_sum - grand) < 0.02
+        # TWO independent assertions, because neither is sufficient alone.
+        #
+        # Measured 2026-08-31 on Statement 4A: 84 rows extracted where the document
+        # numbers 86 — rows 28 and 31 are absent from pdftotext's output entirely, in
+        # both -layout and plain mode — and yet the 84 rows sum to the printed Grand
+        # Total exactly. Both lost rows carry a nil BE for this cycle, so the money
+        # reconciles while the scheme list is short by two.
+        #
+        # The money check alone would have passed and we would have published 84
+        # Centrally Sponsored Schemes as though that were the count. This project counts
+        # schemes, not only rupees, so contiguity of the document's own numbering is a
+        # separate and equally hard requirement.
+        reconciles = grand is not None and abs(parsed_sum - grand) < 0.02
+        contiguous = not missing
+        ok = reconciles and contiguous
+
         totals[stmt] = {"parsed_sum": parsed_sum, "printed_grand_total": grand,
                         "rows": len(rows), "highest_index": highest,
-                        "missing_indices": missing, "reconciles": ok}
-        flag = "OK " if ok else "FAIL"
+                        "missing_indices": missing,
+                        "reconciles": reconciles, "contiguous": contiguous, "ok": ok}
+
         printed = "—" if grand is None else f"{grand:,.2f}"
-        print(f"  {flag} {stmt}: {len(rows)} rows (document numbers up to {highest})")
-        print(f"       parsed {parsed_sum:>14,.2f}  vs printed {printed:>14}  cr")
-        if missing:
-            print(f"       rows the extraction lost: {missing}")
+        print(f"  {'OK ' if reconciles else 'FAIL'} {stmt} money: "
+              f"parsed {parsed_sum:,.2f} vs printed {printed} cr")
+        print(f"  {'OK ' if contiguous else 'FAIL'} {stmt} rows:  "
+              f"{len(rows)} extracted, document numbers up to {highest}"
+              + (f" — LOST {missing}" if missing else ""))
         if not ok:
             failures.append(stmt)
 
@@ -134,11 +151,12 @@ def main():
     print(f"Union Budget {args.year}-{str(args.year + 1)[2:]}")
     totals, failures = parse_year(args.year)
     if failures:
-        print(f"\n{len(failures)} statement(s) do not reconcile to their printed Grand "
-              f"Total. The extraction has lost or misread rows — do not publish these "
-              f"figures. See PLAN.md §3.3.")
+        print(f"\n{len(failures)} statement(s) failed a check. A money mismatch means "
+              f"values were misread; a row gap means the extraction lost line items that "
+              f"the document itself numbers. Either way the scheme counts derived from "
+              f"this statement are not publishable as a census. See PLAN.md §3.3.")
         raise SystemExit(1)
-    print("\nall statements reconcile to their printed Grand Total.")
+    print("\nall statements reconcile on money and are contiguous on numbering.")
 
 
 if __name__ == "__main__":

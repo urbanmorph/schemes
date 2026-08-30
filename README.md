@@ -104,7 +104,8 @@ Each of these is encoded in the code, with the measurement in a comment:
 
 ## Status
 
-Phase 1 of [the plan](supporting-docs/PLAN.md): collector, verifier, manifest. The site,
+Phase 1 of the plan (`supporting-docs/PLAN.md`, kept out of the repo as a working
+document): collector, verifier, manifest. The site,
 the quality rubric and the cross-source join are later phases and deliberately not built
 yet — the archive is the part that cannot be backfilled, so it starts first.
 

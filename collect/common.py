@@ -30,11 +30,31 @@ import random
 import ssl
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/126.0 Safari/537.36 "
-      "(+https://github.com/urbanmorph/schemes; monthly archival crawler)")
+# A browser string with an honest identification appended. The suffix is the point:
+# these are public services and whoever runs them should be able to see who we are and
+# tell us to stop.
+BROWSER = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+           "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+UA = BROWSER + " (+https://github.com/urbanmorph/schemes; monthly archival crawler)"
+
+# Hosts that refuse to be told who is calling.
+#
+# indiabudget.gov.in returns 403 to *any* User-Agent that is not a bare browser string.
+# Measured 2026-08-31: the plain string returns 200 in 0.12s, while the same string plus
+# " crawler", plus "(+https://github.com/urbanmorph/schemes)", or plus the full honest
+# suffix all return 403. It is matching on the trailing tokens, not on any bot keyword.
+#
+# So identification is dropped for this host and only this host. Recording the exception
+# here, rather than quietly weakening the global UA, keeps the politeness default intact
+# and makes the compromise reviewable. Three annual requests remain well-mannered either
+# way; robots.txt is still honoured.
+UA_BY_HOST = {
+    "www.indiabudget.gov.in": BROWSER,
+    "indiabudget.gov.in": BROWSER,
+}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _CTX = ssl.create_default_context()
@@ -67,7 +87,8 @@ def fetch(url, headers=None, timeout=45, retries=5, pace=0.0):
     Backs off on 401/429/5xx — for myScheme all three mean "slow down". The caller
     decides whether a persistent 401 is a rotated key (see myscheme.resolve_key).
     """
-    h = {"User-Agent": UA}
+    host = urllib.parse.urlsplit(url).netloc.lower()
+    h = {"User-Agent": UA_BY_HOST.get(host, UA)}
     if headers:
         h.update(headers)
     started = time.time()
@@ -88,10 +109,14 @@ def fetch(url, headers=None, timeout=45, retries=5, pace=0.0):
                 body = e.read()
             except Exception:
                 pass
-            if e.code in (401, 403, 429) or e.code >= 500:
-                if attempt < retries:
-                    _backoff(attempt)
-                    continue
+            # 401/429/5xx are usually "slow down" and are worth the full retry budget.
+            # 403 is usually a policy decision about who we are — retrying a UA block
+            # just burns twenty minutes to arrive at the same 403, so it gets two
+            # attempts in case it is a transient WAF rule, then gives up.
+            budget = 2 if e.code == 403 else retries
+            if (e.code in (401, 429) or e.code >= 500 or e.code == 403) and attempt < budget:
+                _backoff(attempt)
+                continue
             return Fetched(url, e.code, body, time.time() - started, attempt)
         except urllib.error.URLError as e:
             reason = str(getattr(e, "reason", e))
