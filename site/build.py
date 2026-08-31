@@ -357,18 +357,23 @@ def index_section(checks):
         sources = [short, slug] + ([s["name"]] if len(name_n) <= 30 else [])
         squashed = {re.sub(r"[^a-z0-9]", "", x.lower()) for x in sources if x}
         squashed = {x for x in squashed if len(x) > 2 and x not in hay.split()}
-        if squashed:
-            hay = hay + " " + " ".join(sorted(squashed))
+        # Only the part of the haystack the browser cannot rebuild from the row's own
+        # visible text: the slug, and separator-free forms. The name and acronym are
+        # already rendered in the row, so shipping them a second time in an attribute
+        # cost 411 KB to say the same thing twice.
+        extra = sorted(squashed | ({slug} if slug and slug not in hay.split() else set()))
+        xattr = f' data-x="{e(" ".join(extra))}"' if extra else ""
         acr = f'<span class="acr">{e(short)}</span>' if short and short != s["name"] else ""
         org = s.get("org") or ""
         rows += (
-            f'<tr data-n="{e(hay)}" data-p="{s["passed"]}" data-o="{org_ix.get(org, -1)}" '
+            f'<tr{xattr} data-p="{s["passed"]}" data-o="{org_ix.get(org, -1)}" '
             f'data-l="{e(s.get("level_value") or "")}">'
             f'<td><a href="scheme/{e(slug)}.html">{e(s["name"] or slug)}</a>{acr}</td>'
             f'<td class="muted">{e(s.get("level") or "")}</td>'
             f'<td class="muted">{e(org[:46])}</td>'
             f'<td class="num"><b>{s["passed"]}</b>/{s["total"]}</td>'
-            f'<td class="muted" style="font-size:12px">{e(", ".join(failed[:3]))}</td></tr>')
+            f'<td class="muted" style="font-size:12px">'
+            f'{e(" · ".join(CHECK_CODE.get(x, x) for x in failed[:3]))}</td></tr>')
     n = len((checks or {}).get("schemes", []))
     if not n:
         return ('<section class="sec"><h2>Every scheme</h2>'
@@ -408,17 +413,23 @@ def index_section(checks):
       q=document.getElementById('q'),mp=document.getElementById('minp'),
       og=document.getElementById('org'),lv=document.getElementById('lvl'),
       c=document.getElementById('count'),asc=false;
+  // Haystack built here rather than shipped: the name and acronym are already in the
+  // row's text, and data-x carries only the slug and separator-free forms.
+  var norm=function(v){{return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
+  rows.forEach(function(r){{
+    r._h = norm(r.cells[0].textContent + ' ' + (r.dataset.x||''));
+  }});
   function terms(v){{
     // Same normalisation as the haystack, then all-tokens-must-match in any order.
     // Substring-of-the-whole-string would fail on "pm kis" (haystack holds "pm kisan")
     // and on "kisan pm"; requiring each token independently handles both.
-    return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().split(' ').filter(Boolean);
+    return norm(v).split(' ').filter(Boolean);
   }}
   function apply(){{
     var ts=terms(q.value),m=mp.value===''?null:+mp.value,
         o=og.value===''?null:og.value,l=lv.value===''?null:lv.value,shown=0;
     rows.forEach(function(r){{
-      var hay=r.dataset.n, ok=(m===null||+r.dataset.p<=m)
+      var hay=r._h, ok=(m===null||+r.dataset.p<=m)
              &&(o===null||r.dataset.o===o)&&(l===null||r.dataset.l===l);
       if(ok) for(var i=0;i<ts.length;i++) if(hay.indexOf(ts[i])<0){{ok=false;break;}}
       r.hidden=!ok; if(ok)shown++;
@@ -485,6 +496,20 @@ page of results would appear here as dozens of schemes being &ldquo;removed&rdqu
 # fact is unknowable. The real claim is narrower and much stronger: the portal a citizen
 # actually visits does not tell them, even though the government can point at the
 # notification and say it was published. These labels are about the portal.
+# Compact codes for the index's "failing" column. Spelling the check ids out on every
+# one of 4,771 rows cost 496 KB — 21.5% of the page — to repeat nine strings.
+CHECK_CODE = {
+    "eligibility_documented": "eligibility",
+    "benefit_quantified": "benefit",
+    "description_substantive": "description",
+    "implementing_agency_named": "agency",
+    "application_path_published": "how-to-apply",
+    "start_date_recorded": "start",
+    "end_date_recorded": "end",
+    "stored_urls_well_formed": "links",
+    "not_expired_while_listed": "expired",
+}
+
 CHECK_LABEL = {
     "eligibility_documented":     "Eligibility published here",
     "benefit_quantified":         "Benefit amount published here",

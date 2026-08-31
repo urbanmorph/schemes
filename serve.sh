@@ -31,4 +31,4 @@ url="http://127.0.0.1:$port/"
 echo
 echo "serving $url   (ctrl-c to stop)"
 command -v open >/dev/null && (sleep 1 && open "$url" >/dev/null 2>&1 &) || true
-exec python3 -m http.server "$port" --bind 127.0.0.1 --directory site/_out
+exec python3 site/serve.py --port "$port"
