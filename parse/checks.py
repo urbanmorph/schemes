@@ -156,6 +156,11 @@ def check_scheme(rec):
         "name": name,
         "short": basic.get("schemeShortTitle") or "",
         "level": (basic.get("level") or {}).get("label"),
+        # myScheme labels the same level two different ways — "State/ UT" on 3,263
+        # records and "State" on 793 — while both carry the identical machine value
+        # "state". Anything that groups or filters must use the value; the label is
+        # display text and is not consistent enough to group on.
+        "level_value": (basic.get("level") or {}).get("value"),
         "type": (basic.get("schemeType") or {}).get("label"),
         "ministry": (basic.get("nodalMinistryName") or {}).get("label"),
         "department": (basic.get("nodalDepartmentName") or {}).get("label"),

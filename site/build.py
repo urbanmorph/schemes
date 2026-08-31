@@ -295,6 +295,23 @@ def index_section(checks):
     order = sorted(orgs.items(), key=lambda kv: (-kv[1]["n"], kv[0]))
     org_ix = {name: i for i, (name, _) in enumerate(order)}
 
+    # Filter on level_value, never on the label. myScheme prints the same level two ways
+    # — "State/ UT" on 3,263 records and "State" on 793 — while both carry the machine
+    # value "state". Grouping on the label would split one level into two controls that
+    # mean the same thing.
+    lv = {}
+    for s_ in (checks or {}).get("schemes", []):
+        v = s_.get("level_value")
+        if v:
+            lv[v] = lv.get(v, 0) + 1
+    LEVEL_LABEL = {"central": "Central", "state": "State or UT"}
+    level_select = (
+        '<select id="lvl" aria-label="Filter by level">'
+        '<option value="">any level</option>'
+        + "".join(f'<option value="{e(k)}">{e(LEVEL_LABEL.get(k, k))} ({n:,})</option>'
+                  for k, n in sorted(lv.items(), key=lambda kv: -kv[1]))
+        + '</select>')
+
     def opts(kind):
         return "".join(
             f'<option value="{org_ix[name]}">{e(name)} ({v["n"]})</option>'
@@ -320,7 +337,8 @@ def index_section(checks):
         acr = f'<span class="acr">{e(short)}</span>' if short and short != s["name"] else ""
         org = s.get("org") or ""
         rows += (
-            f'<tr data-n="{e(hay)}" data-p="{s["passed"]}" data-o="{org_ix.get(org, -1)}">'
+            f'<tr data-n="{e(hay)}" data-p="{s["passed"]}" data-o="{org_ix.get(org, -1)}" '
+            f'data-l="{e(s.get("level_value") or "")}">'
             f'<td><a href="scheme/{e(slug)}.html">{e(s["name"] or slug)}</a>{acr}</td>'
             f'<td class="muted">{e(s.get("level") or "")}</td>'
             f'<td class="muted">{e(org[:46])}</td>'
@@ -343,6 +361,7 @@ def index_section(checks):
     <option value="">any score</option>
     {''.join(f'<option value="{i}">{i} or fewer passed</option>' for i in range(0, 10))}
   </select>
+  {level_select}
   {org_select}
   <span class="count" id="count">{n:,} schemes</span>
 </div>
@@ -355,20 +374,20 @@ def index_section(checks):
 (function(){{
   var tb=document.querySelector('#tbl tbody'),rows=[].slice.call(tb.rows),
       q=document.getElementById('q'),mp=document.getElementById('minp'),
-      og=document.getElementById('org'),
+      og=document.getElementById('org'),lv=document.getElementById('lvl'),
       c=document.getElementById('count'),asc=false;
   function apply(){{
     var t=q.value.toLowerCase(),m=mp.value===''?null:+mp.value,
-        o=og.value===''?null:og.value,shown=0;
+        o=og.value===''?null:og.value,l=lv.value===''?null:lv.value,shown=0;
     rows.forEach(function(r){{
       var ok=(!t||r.dataset.n.indexOf(t)>-1)&&(m===null||+r.dataset.p<=m)
-             &&(o===null||r.dataset.o===o);
+             &&(o===null||r.dataset.o===o)&&(l===null||r.dataset.l===l);
       r.hidden=!ok; if(ok)shown++;
     }});
     c.textContent=shown.toLocaleString()+' of {n:,} schemes';
   }}
   q.addEventListener('input',apply); mp.addEventListener('change',apply);
-  og.addEventListener('change',apply);
+  og.addEventListener('change',apply); lv.addEventListener('change',apply);
   document.querySelectorAll('th.sortable').forEach(function(th){{
     th.addEventListener('click',function(){{
       var k=th.dataset.k; asc=!asc;
