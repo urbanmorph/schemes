@@ -43,6 +43,31 @@ def e(s):
     return html.escape(str(s if s is not None else ""), quote=True)
 
 
+def inr(x):
+    """Indian digit grouping: last three, then pairs. 1864350 -> 18,64,350.
+
+    A register of Indian government spending should write rupee figures the way the
+    Budget documents it draws from write them. It also stops the number reformatting
+    when the browser recomputes it, since the client already uses en-IN.
+    """
+    try:
+        n = int(round(float(x)))
+    except (TypeError, ValueError):
+        return None
+    sign = "-" if n < 0 else ""
+    d = str(abs(n))
+    if len(d) <= 3:
+        return sign + d
+    head, tail = d[:-3], d[-3:]
+    parts = []
+    while len(head) > 2:
+        parts.insert(0, head[-2:])
+        head = head[:-2]
+    if head:
+        parts.insert(0, head)
+    return sign + ",".join(parts) + "," + tail
+
+
 def num(x):
     return f"{x:,}" if isinstance(x, (int, float)) else '<span class="nil">...</span>'
 
@@ -268,7 +293,7 @@ def page_divergence(census, dbt, reg=None, cls=None):
     if reg and cls:
         rows = "".join(
             f'<tr><td>{e(u["name"])}</td>'
-            f'<td class="num">{u["be_cr"]:,.0f}</td>'
+            f'<td class="num">{inr(u["be_cr"])}</td>'
             f'<td class="num">{u["score"]}</td>'
             f'<td class="muted" style="font-size:12px">'
             f'{e("; ".join(w for _, w in u.get("evidence", []) if not _.startswith("-"))[:96])}</td></tr>'
@@ -499,6 +524,27 @@ def index_section(entries):
                                   if x["checks"] and x["checks"]["passed"] >= 8)),
          ("none", "No record to check", sum(1 for x in entries if not x["checks"]))])
 
+    # Initial rail values, rendered server-side. The rail used to ship "..." for every
+    # figure and only fill in when a filter was touched, so the first thing a reader saw
+    # was a panel of blanks. It is also what a reader without JS sees, and those numbers
+    # are true for the unfiltered page.
+    # Round per row, exactly as data-b does, so the server figure and the one the
+    # browser recomputes on load are identical and the number does not visibly jump.
+    r0_money = sum(round(x["be_cr"]) for x in entries
+                   if isinstance(x.get("be_cr"), (int, float)))
+    r0_scores = sorted(x["checks"]["passed"] for x in entries if x["checks"])
+    r0_med = r0_scores[len(r0_scores) // 2] if r0_scores else None
+    r0_src = {k: sum(1 for x in entries if k in x["sources"])
+              for k in ("myscheme", "budget", "dbt", "outcome")}
+    r0 = {
+        "shown": f"{len(entries):,}",
+        "noms": f"{len(entries) - r0_src['myscheme']:,}",
+        "med": f"{r0_med} of 9" if r0_med is not None else "...",
+        "money": f"&#8377;{inr(r0_money)} cr" if r0_money else "...",
+        "sms": f"{r0_src['myscheme']:,}", "sbu": f"{r0_src['budget']:,}",
+        "sdb": f"{r0_src['dbt']:,}", "soc": f"{r0_src['outcome']:,}",
+    }
+
     rows = ""
     for e_ in entries:
         slug = e_["slug"]
@@ -571,14 +617,14 @@ def index_section(entries):
 <aside class="wrail" aria-label="Statistics for the current selection">
   <div class="railhd">This selection</div>
   <div class="railbig"><span id="rShown">{n:,}</span><span class="railof">of {n:,}</span></div>
-  <div class="railrow"><span>Not on myScheme</span><b id="rNoMs">...</b></div>
-  <div class="railrow"><span>Median checks passed</span><b id="rMed">...</b></div>
-  <div class="railrow"><span>Allocation known</span><b id="rMoney">...</b></div>
+  <div class="railrow"><span>Not on myScheme</span><b id="rNoMs">{r0["noms"]}</b></div>
+  <div class="railrow"><span>Median checks passed</span><b id="rMed">{r0["med"]}</b></div>
+  <div class="railrow"><span>Allocation known</span><b id="rMoney">{r0["money"]}</b></div>
   <div class="railhd" style="margin-top:16px">Listed by</div>
-  <div class="railrow"><span>myScheme</span><b id="rSms">...</b></div>
-  <div class="railrow"><span>Union Budget</span><b id="rSbu">...</b></div>
-  <div class="railrow"><span>DBT Bharat</span><b id="rSdb">...</b></div>
-  <div class="railrow"><span>Outcome Budget</span><b id="rSoc">...</b></div>
+  <div class="railrow"><span>myScheme</span><b id="rSms">{r0["sms"]}</b></div>
+  <div class="railrow"><span>Union Budget</span><b id="rSbu">{r0["sbu"]}</b></div>
+  <div class="railrow"><span>DBT Bharat</span><b id="rSdb">{r0["sdb"]}</b></div>
+  <div class="railrow"><span>Outcome Budget</span><b id="rSoc">{r0["soc"]}</b></div>
   <div class="railnote">Every figure here follows the filters. Allocation is the
     Budget line for the visible schemes where one is joined; most schemes have none
     published anywhere.</div>
@@ -744,6 +790,7 @@ def index_section(entries):
       rows.forEach(function(r){{tb.appendChild(r);}});
     }});
   }});
+  apply();          // rail and pill counts must be live from the first paint
 }})();
 </script>
 </section>
@@ -770,7 +817,7 @@ def page_unlisted(en, status):
         if d.get("statement"):
             bits.append(f'Statement {e(d["statement"][-2:].upper())}')
         if d.get("outlay_cr") is not None:
-            bits.append(f'outlay &#8377;{d["outlay_cr"]:,.2f} cr')
+            bits.append(f'outlay &#8377;{inr(d["outlay_cr"])} cr')
         if d.get("targets"):
             bits.append(f'{d["targets"]} published targets')
         if d.get("page"):
@@ -960,7 +1007,8 @@ def page_scheme(s, status, enrich=None, entry=None):
     b = (enrich or {}).get("budget", {}).get(s["slug"])
     if b or ob:
         amt = (b or {}).get("be_next_year_cr")
-        amt_s = f"&#8377;{amt:,.2f} cr" if isinstance(amt, (int, float)) else '<span class="nil">...</span>'
+        amt_s = (f"&#8377;{inr(amt)} cr" if isinstance(amt, (int, float))
+                 else '<span class="nil">...</span>')
         money_row = f"""
     <tr><td>Budget allocation</td>
       <td><b>{amt_s}</b> for {e((b or {}).get('cycle') or '')}
