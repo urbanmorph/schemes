@@ -233,7 +233,7 @@ def page_index(census, checks, dbt):
 """
 
 
-def page_divergence(census, dbt):
+def page_divergence(census, dbt, reg=None):
     ms = (census or {}).get("facets", {}).get("beneficiaryState", {})
     ds = (dbt or {}).get("states", {})
     names = sorted(set(ms) | set(ds))
@@ -250,6 +250,51 @@ def page_divergence(census, dbt):
                  f'<td class="muted">{direction}</td></tr>')
 
     kar_ms, kar_dbt = ms.get("Karnataka"), ds.get("Karnataka")
+
+    # Funded, monitored, and never announced. The strongest thing the union registry
+    # says: these are named as schemes by at least two government sources and carry a
+    # Budget allocation, and the government's own citizen-facing portal does not list
+    # them at all.
+    unlisted_section = ""
+    if reg:
+        rows = "".join(
+            f'<tr><td>{e(u["name"])}</td>'
+            f'<td class="num">{u["be_cr"]:,.0f}</td>'
+            f'<td class="muted">{e(", ".join(u["also_in"]))}</td>'
+            f'<td class="muted">{e((u.get("statement") or "").replace("stat", "Stmt ").upper())}</td></tr>'
+            for u in reg.get("unlisted_but_funded", []) if u.get("also_in"))
+        total = reg.get("unlisted_but_funded_total", 0)
+        cr = reg.get("unlisted_but_funded_cr", 0)
+        corro = sum(1 for u in reg.get("unlisted_but_funded", []) if u.get("also_in"))
+        unlisted_section = f"""
+<section class="sec">
+  <h2>Funded, monitored, and never announced</h2>
+  <div class="sec-note">Union registry across four government sources &middot;
+    {num(reg.get('total_entries'))} entries against myScheme's {num(reg.get('myscheme_entries'))}</div>
+  <p class="standfirst">A scheme the state funds but never tells citizens about is a
+  harder finding than any missing field &mdash; and it is invisible to anything that
+  treats myScheme&rsquo;s 4,772 as the universe.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Named by other government sources, absent from myScheme</th>
+      <th class="num">BE 2026&ndash;27 (&#8377; cr)</th><th>Also in</th><th>Budget</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>Read the number carefully &mdash; most of the 570 are not welfare schemes</b>
+    {num(total)} Budget lines carrying &#8377;{cr:,.0f} cr have no myScheme entry, but
+    Statement 4B includes infrastructure and subsidy heads &mdash; &ldquo;Road
+    Works&rdquo;, &ldquo;Rolling Stock&rdquo;, &ldquo;Manufacturing Suspense&rdquo;
+    &mdash; that no citizen applies to and that myScheme is right to omit. The
+    {corro} rows above are the narrower claim: named as schemes by at least two
+    government sources. Even here, railway heads appear because railways report
+    outputs. The unarguable cases are the ones you can check by name &mdash; Samagra
+    Shiksha at &#8377;42,100 cr, Saksham Anganwadi and POSHAN 2.0 at &#8377;23,100 cr,
+    Crop Insurance at &#8377;12,200 cr &mdash; each a flagship welfare scheme, each
+    funded and monitored, none of them on the portal built to explain schemes to
+    citizens.
+  </div>
+</section>"""
+
     return f"""
 <div class="eyebrow">Route &middot; /divergence</div>
 <h2 class="pagetitle">Three sources, one question, different answers</h2>
@@ -284,6 +329,8 @@ acknowledges the others exist.</p>
   number is wrong. The finding is that both are published as &ldquo;schemes&rdquo; with
   nothing saying they count different things.
 </div>
+
+{unlisted_section}
 """
 
 
@@ -694,7 +741,8 @@ def build():
             fh.write(s)
 
     w("index.html", shell("The census and the argument", "/", page_index(census, checks, dbt)))
-    w("divergence.html", shell("Divergence", "/divergence", page_divergence(census, dbt)))
+    w("divergence.html", shell("Divergence", "/divergence",
+                               page_divergence(census, dbt, load("data/registry.json", {}))))
     w("changes.html", shell("Changes", "/changes", page_changes(git_log())))
 
     n = 0
