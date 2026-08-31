@@ -1,0 +1,62 @@
+{
+ "caveat": "Secondary source. These values are NOT what the Indian government publishes about these schemes, and are never counted in the documentation checks. Each carries a match score; treat a low score as a claim to verify, not a fact.",
+ "fetched": "2026-08-31T02:46:05Z",
+ "licence": "Wikidata CC0; Wikipedia text CC BY-SA 4.0",
+ "match_floor": 0.86,
+ "schemes": {
+  "aby-mojs": {
+   "description": "national groundwater management scheme in India",
+   "enwiki": "Atal Bhujal Yojana",
+   "india_signal": "P17=Q668",
+   "match_score": 1.0,
+   "official_website": null,
+   "qid": "Q85743485",
+   "source_url": "https://www.wikidata.org/wiki/Q85743485",
+   "start_date": null,
+   "start_date_kind": null,
+   "start_date_property": null,
+   "summary": "Atal Bhujal Yojana is a groundwater management scheme launched by Prime Minister Narendra Modi on the 95th birth anniversary of former Prime Minister Atal Bihari Vajpayee, on 25 December 2019. The purpose of the scheme is to improve groundwater management in seven states of India.",
+   "summary_url": "https://en.wikipedia.org/wiki/Atal_Bhujal_Yojana",
+   "wikidata_label": "Atal Bhujal Yojana"
+  },
+  "pmfds": {
+   "description": "State Award of India",
+   "enwiki": null,
+   "india_signal": "P17=Q668",
+   "match_score": 1.0,
+   "official_website": null,
+   "qid": "Q140442431",
+   "source_url": "https://www.wikidata.org/wiki/Q140442431",
+   "start_date": "2023-10-14",
+   "start_date_kind": "inception",
+   "start_date_property": "P571",
+   "wikidata_label": "President's Medal for Distinguished Service"
+  },
+  "tnnaa": {
+   "description": "Indian adventure sports award",
+   "enwiki": "Tenzing Norgay National Adventure Award",
+   "india_signal": "description mentions India",
+   "match_score": 1.0,
+   "official_website": null,
+   "qid": "Q99539209",
+   "source_url": "https://www.wikidata.org/wiki/Q99539209",
+   "start_date": null,
+   "start_date_kind": null,
+   "start_date_property": null,
+   "summary": "The Tenzing Norgay National Adventure Award, formerly known as the National Adventure Awards is the highest adventure sports honour of the Republic of India. The award is named after Tenzing Norgay, one of the first two individuals to reach the summit of Mount Everest along with Edmund Hillary in 1953. It is awarded annually by the Ministry of Youth Affairs and Sports. The recipients are honoured for their \"outstanding achievement in the field of adventure activities on land, sea and air\" over the last three years. The lifetime achievement is awarded to individuals who have demonstrated excellence and have devoted themselves in the promotion of adventure sports. As of 2020, the award comprises \"a bronze statuette of Tenzing Norgay along with a cash prize of ₹15 lakh (US$16,000).\"",
+   "summary_url": "https://en.wikipedia.org/wiki/Tenzing_Norgay_National_Adventure_Award",
+   "wikidata_label": "Tenzing Norgay National Adventure Award"
+  }
+ },
+ "schemes_attempted": 60,
+ "snapshot": "2026-08-30",
+ "source": "Wikidata + English Wikipedia",
+ "stats": {
+  "below_floor": 0,
+  "matched": 3,
+  "no_india": 1,
+  "no_result": 56,
+  "with_date": 1,
+  "with_summary": 2
+ }
+}

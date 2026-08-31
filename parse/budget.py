@@ -58,6 +58,14 @@ def cells(tail):
     return [None if c == "..." else float(c.replace(",", "")) for c in NUMS.findall(tail)]
 
 
+# A wrapped continuation of a scheme name: indented text, no leading item number, and
+# no numeric columns of its own. The statements set names in a narrow column, so a long
+# name spills onto the next line — "Human Resources for Health and Medical" / "Education".
+# Capturing only the first line truncated 40% of names, which both mangles the published
+# name and depresses every downstream name match against it.
+CONT = re.compile(r"^\s{6,}([A-Za-z(][^\d]*?)\s*$")
+
+
 def parse_statement(text):
     """Rows, the printed grand total, and the gaps in the document's own numbering."""
     rows, demand, grand = [], None, None
@@ -79,6 +87,14 @@ def parse_statement(text):
             c = cells(tail)
             rows.append({"index": idx, "name": name, "demand_no": demand,
                          "be_next_year": c[-1] if c else None})
+            continue
+
+        # Continuation of the row above, if that row is still open for one.
+        m = CONT.match(line)
+        if m and rows:
+            frag = m.group(1).strip()
+            if frag and not frag.lower().startswith(("total", "grand", "ministry", "demand")):
+                rows[-1]["name"] = (rows[-1]["name"] + " " + frag).strip()
 
     seen = {r["index"] for r in rows}
     highest = max(seen) if seen else 0

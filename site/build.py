@@ -440,11 +440,29 @@ page of results would appear here as dozens of schemes being &ldquo;removed&rdqu
 """
 
 
-def page_scheme(s, status):
+# A scheme's launch date exists — it is in the gazette notification or the government
+# order that created it. So "no start date recorded" is a weak claim that sounds like the
+# fact is unknowable. The real claim is narrower and much stronger: the portal a citizen
+# actually visits does not tell them, even though the government can point at the
+# notification and say it was published. These labels are about the portal.
+CHECK_LABEL = {
+    "eligibility_documented":     "Eligibility published here",
+    "benefit_quantified":         "Benefit amount published here",
+    "description_substantive":    "Description more than a name",
+    "implementing_agency_named":  "Implementing agency published here",
+    "application_path_published": "How to apply published here",
+    "start_date_recorded":        "Start date published here",
+    "end_date_recorded":          "End date published here",
+    "stored_urls_well_formed":    "Stored links well-formed",
+    "not_expired_while_listed":   "Not expired while still listed",
+}
+
+
+def page_scheme(s, status, enrich=None):
     checks = "".join(
         f'<div class="chk"><span class="mark {"p" if c["ok"] else "f"}">'
         f'{"&#10003;" if c["ok"] else "&#10007;"}</span>'
-        f'<div>{e(c["id"].replace("_", " ").capitalize())}'
+        f'<div>{e(CHECK_LABEL.get(c["id"], c["id"].replace("_", " ").capitalize()))}'
         f'<span class="why">{e(c["detail"])}</span></div></div>'
         for c in s["checks"])
     segs = "".join(f'<span class="seg {"p" if c["ok"] else "f"}"></span>' for c in s["checks"])
@@ -471,6 +489,39 @@ def page_scheme(s, status):
         return f'<tr><td>{e(field)}</td><td>{v}</td><td class="ts">{e(source)}</td></tr>'
 
     snap = status.get("snapshot", "")
+
+    # Found elsewhere. Deliberately separate from the checks above and never counted in
+    # them: this is what a *different* government document says, not what this portal
+    # publishes. Showing both together is the point — it turns "the portal omits this"
+    # from a shrug into evidence that the omission was avoidable.
+    found_block = ""
+    b = (enrich or {}).get("budget", {}).get(s["slug"])
+    if b:
+        amt = b.get("be_next_year_cr")
+        amt_s = f"&#8377;{amt:,.2f} cr" if isinstance(amt, (int, float)) else '<span class="nil">...</span>'
+        found_block = f"""
+<section class="sec">
+  <h2>Found elsewhere in government</h2>
+  <div class="sec-note">Not published on myScheme &middot; carried from another
+    government source, with the join score shown so it can be disputed</div>
+  <div class="tscroll"><table class="prov">
+    <tr><td>Budget allocation</td>
+      <td><b>{amt_s}</b> for {e(b.get('cycle') or '')}
+        <div class="muted" style="margin-top:3px">{e(b.get('classification') or '')}
+          &middot; Demand No. {e(b.get('demand_no'))}
+          &middot; matched to budget line &ldquo;{e(b.get('budget_line') or '')}&rdquo;
+          at {b.get('match_score')} ({e(b.get('confidence') or '')})</div></td>
+      <td class="ts">{e(b.get('source') or '')}</td></tr>
+  </table></div>
+  <div class="warnbox"><b>Why this is here and not above</b>
+    myScheme publishes no budget figure for any scheme. This one comes from the Union
+    Budget Expenditure Profile and is joined by name, so it is shown apart from the
+    checks and never counted in them. A scheme&rsquo;s launch date, likewise, exists in
+    its gazette notification whether or not the portal repeats it &mdash; the checks
+    above ask only whether <em>this portal</em> tells a citizen, which is a different
+    and narrower question.</div>
+</section>"""
+
     return f"""
 <div class="eyebrow">Route &middot; /scheme/{e(s["slug"])}</div>
 <div class="shead">
@@ -493,6 +544,8 @@ def page_scheme(s, status):
   <div class="checks">{checks}</div>
 </div>
 {bad}
+
+{found_block}
 
 <section class="sec">
   <h2>Provenance</h2>
@@ -536,6 +589,7 @@ def build():
     census = load("data/myscheme/census.json", {})
     checks = load("data/checks.json", {})
     dbt = load("data/dbt/states.json", {})
+    enrich = {"budget": (load("data/enrichment/budget.json", {}) or {}).get("schemes", {})}
 
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
@@ -553,7 +607,7 @@ def build():
     n = 0
     for s in (checks or {}).get("schemes", []):
         w(os.path.join("scheme", f"{s['slug']}.html"),
-          shell(s["short"] or s["name"], "/", page_scheme(s, status), depth=1))
+          shell(s["short"] or s["name"], "/", page_scheme(s, status, enrich), depth=1))
         n += 1
 
     return n
