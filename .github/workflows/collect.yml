@@ -103,10 +103,16 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+    env:
+      # `secrets` is not an available context in an `if:` condition — using it there makes
+      # the whole workflow file invalid, and GitHub then fails it at parse time on every
+      # push, with no jobs and no logs. Map the secret to an env var here (env: CAN read
+      # secrets) and test that instead.
+      HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}
     steps:
       - uses: actions/checkout@v4
       - name: Diagnose and open a PR
-        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        if: env.HAS_KEY == 'true'
         run: |
           echo "Repair agent not yet wired. See PLAN.md §7 for the contract it must honour:"
           echo "  - may edit parse/ only; collect/ is frozen"

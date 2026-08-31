@@ -7,7 +7,13 @@
   --paper:#E9EAE4; --surface:#F4F5F0; --sink:#DFE1D9;
   --ink:#161D19; --muted:#5D6761; --faint:#8A938C;
   --rule:#C7CBC2; --rule-strong:#A9AFA5;
-  --stamp:#4A3E8E; --stamp-soft:#4A3E8E1F;
+  /* Saffron, in two tones. One vivid saffron cannot be both legible at link size and
+     bright at display size on this paper: #D9821F is 3.0:1 here, fine for large marks
+     but under the 4.5:1 body-text floor. --stamp is the accessible tone used for links,
+     the active route and small emphasis; --stamp-bright is the display tone used only
+     for large type and decorative marks, where 3:1 is the applicable threshold.
+     Measured on this paper: --stamp 5.10:1, --stamp-bright 3.14:1. */
+  --stamp:#8F5300; --stamp-bright:#C26E0D; --stamp-soft:#8F53001F;
   --pass:#2E6B4F; --warn:#8A6114; --fail:#A33A2A;
   --nil:#9AA09A;
   --serif:"Spectral",Georgia,"Times New Roman",serif;
@@ -19,7 +25,7 @@
     --paper:#131714; --surface:#1B211D; --sink:#0E120F;
     --ink:#E3E7E0; --muted:#98A19A; --faint:#6E776F;
     --rule:#303833; --rule-strong:#454F48;
-    --stamp:#A79CEC; --stamp-soft:#A79CEC24;
+    --stamp:#F0A94A; --stamp-bright:#FFB65C; --stamp-soft:#F0A94A24;
     --pass:#62B489; --warn:#D5A44E; --fail:#DF7259;
     --nil:#5A635C;
   }
@@ -28,7 +34,7 @@
   --paper:#131714; --surface:#1B211D; --sink:#0E120F;
   --ink:#E3E7E0; --muted:#98A19A; --faint:#6E776F;
   --rule:#303833; --rule-strong:#454F48;
-  --stamp:#A79CEC; --stamp-soft:#A79CEC24;
+  --stamp:#F0A94A; --stamp-bright:#FFB65C; --stamp-soft:#F0A94A24;
   --pass:#62B489; --warn:#D5A44E; --fail:#DF7259;
   --nil:#5A635C;
 }
@@ -50,7 +56,7 @@ a{color:inherit}
 .mast-in{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
   padding:22px 0 16px;flex-wrap:wrap}
 .brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
-.brand .nil{font-family:var(--mono);font-size:34px;color:var(--stamp);letter-spacing:.06em;
+.brand .nil{font-family:var(--mono);font-size:34px;color:var(--stamp-bright);letter-spacing:.06em;
   line-height:.7;opacity:.9}
 .brand h1{font-size:27px;letter-spacing:-.01em}
 .brand .sub{font-family:var(--mono);font-size:11px;color:var(--faint);
@@ -101,8 +107,8 @@ code{font-family:var(--mono);font-size:.88em;background:var(--sink);padding:1px 
 .hero{padding-bottom:34px;border-bottom:1px solid var(--rule)}
 .hero h2{font-size:clamp(30px,4.4vw,46px);line-height:1.1;letter-spacing:-.02em;
   margin-bottom:18px;max-width:none}
-.hero h2 em{font-style:italic;color:var(--stamp)}
-.bignil{font-family:var(--mono);font-size:64px;color:var(--stamp);opacity:.16;
+.hero h2 em{font-style:italic;color:var(--stamp-bright)}
+.bignil{font-family:var(--mono);font-size:64px;color:var(--stamp-bright);opacity:.16;
   line-height:.55;letter-spacing:.05em;user-select:none;margin-bottom:16px}
 
 /* Section and page titles: full container width, never a reading measure. */
@@ -139,7 +145,7 @@ tbody tr:hover{background:var(--stamp-soft)}
 td a{color:var(--stamp);text-decoration:none}
 td a:hover{text-decoration:underline}
 
-.callout{border-left:3px solid var(--stamp);background:var(--surface);padding:18px 22px;margin:26px 0}
+.callout{border-left:3px solid var(--stamp-bright);background:var(--surface);padding:18px 22px;margin:26px 0}
 .callout .big{font-family:var(--serif);font-size:24px;line-height:1.35;margin-bottom:8px}
 .callout .cite{font-family:var(--mono);font-size:11px;color:var(--faint)}
 .warnbox{border:1px solid var(--rule);border-left:3px solid var(--warn);background:var(--surface);
@@ -153,7 +159,7 @@ td a:hover{text-decoration:underline}
 .meter-top .lbl{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;
   letter-spacing:.13em;color:var(--faint)}
 .score{font-family:var(--serif);font-size:26px;font-variant-numeric:tabular-nums}
-.score b{color:var(--stamp);font-weight:600}
+.score b{color:var(--stamp-bright);font-weight:600}
 .bar{display:flex;gap:3px;margin-top:10px}
 .seg{height:6px;flex:1;background:var(--rule-strong)}
 .seg.p{background:var(--pass)} .seg.f{background:var(--fail)}
@@ -187,6 +193,10 @@ td a:hover{text-decoration:underline}
   border:1px solid var(--rule-strong);border-radius:2px;background:var(--surface);color:var(--ink)}
 .filters input{min-width:230px}
 .count{font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+/* Acronyms are how these schemes are actually referred to in the sector — PM-KISAN,
+   MGNREGS, PMAY-G — so they are shown beside the name and are searchable. */
+.acr{font-family:var(--mono);font-size:11px;color:var(--stamp);margin-left:8px;
+  white-space:nowrap}
 th.sortable{cursor:pointer;user-select:none}
 th.sortable:hover{color:var(--ink)}
 

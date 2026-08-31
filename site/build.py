@@ -14,6 +14,7 @@ gets a notation rather than a gap.
 """
 
 import argparse
+import hashlib
 import html
 import json
 import os
@@ -91,7 +92,7 @@ def shell(title, active, body, depth=0):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="{up}theme.css">
+<link rel="stylesheet" href="{up}theme.css?v={CSS_V}">
 </head><body>
 <header class="mast"><div class="wrap mast-in">
   <a class="brand" href="{home}">
@@ -128,6 +129,21 @@ document.getElementById('themeBtn').addEventListener('click',function(){{
 
 
 shell.status = {}
+
+# Content hash in the stylesheet URL. Without it a browser happily pairs freshly built
+# HTML with a cached stylesheet, which is not a cosmetic problem: the hero markup and
+# the hero CSS changed together, and the old grid applied to the new markup laid the
+# title and standfirst out as two columns. Versioning the URL makes that pairing
+# impossible instead of relying on anyone remembering to hard-refresh.
+def _css_version():
+    try:
+        with open(os.path.join(HERE, "theme.css"), "rb") as fh:
+            return hashlib.sha256(fh.read()).hexdigest()[:8]
+    except OSError:
+        return "0"
+
+
+CSS_V = _css_version()
 
 
 # --------------------------------------------------------------------- pages
@@ -269,9 +285,16 @@ def index_section(checks):
     for s in (checks or {}).get("schemes", []):
         slug = s["slug"]
         failed = [c["id"] for c in s["checks"] if not c["ok"]]
+        # The haystack is name + acronym + slug. In the development sector these schemes
+        # are almost always referred to by acronym — nobody searches "Mahatma Gandhi
+        # National Rural Employment Guarantee Scheme" — and the slug is frequently the
+        # acronym too, so it costs nothing to include.
+        short = s.get("short") or ""
+        hay = " ".join(x for x in ((s["name"] or ""), short, slug) if x).lower()
+        acr = f'<span class="acr">{e(short)}</span>' if short and short != s["name"] else ""
         rows += (
-            f'<tr data-n="{e((s["name"] or "").lower())}" data-p="{s["passed"]}">'
-            f'<td><a href="scheme/{e(slug)}.html">{e(s["name"] or slug)}</a></td>'
+            f'<tr data-n="{e(hay)}" data-p="{s["passed"]}">'
+            f'<td><a href="scheme/{e(slug)}.html">{e(s["name"] or slug)}</a>{acr}</td>'
             f'<td class="muted">{e(s.get("level") or "")}</td>'
             f'<td class="muted">{e((s.get("ministry") or "")[:44])}</td>'
             f'<td class="num"><b>{s["passed"]}</b>/{s["total"]}</td>'
@@ -288,7 +311,7 @@ def index_section(checks):
 <div class="sec-note">Sorted by checks passed, never by a grade &mdash; a count can be
   recomputed from the rows, and a letter is what gets screenshotted without its caption</div>
 <div class="filters">
-  <input id="q" type="search" placeholder="Filter by name&hellip;" aria-label="Filter schemes by name">
+  <input id="q" type="search" placeholder="Filter by name or acronym&hellip;" aria-label="Filter schemes by name, acronym or slug">
   <select id="minp" aria-label="Minimum checks passed">
     <option value="">any score</option>
     {''.join(f'<option value="{i}">{i} or fewer passed</option>' for i in range(0, 10))}
