@@ -495,24 +495,51 @@ def page_scheme(s, status, enrich=None):
     # publishes. Showing both together is the point — it turns "the portal omits this"
     # from a shrug into evidence that the omission was avoidable.
     found_block = ""
+    ob = (enrich or {}).get("outcome", {}).get(s["slug"])
+    targets_html = ""
+    if ob:
+        def rows(items, kind):
+            return "".join(
+                f'<tr><td>{e(kind)} {e(i["ref"])}</td>'
+                f'<td>{e(i["indicator"])}</td>'
+                f'<td class="num"><b>{i["target"]:,.2f}</b></td></tr>'
+                if isinstance(i.get("target"), (int, float)) else
+                f'<tr><td>{e(kind)} {e(i["ref"])}</td><td>{e(i["indicator"])}</td>'
+                f'<td class="num"><span class="nil">...</span></td></tr>'
+                for i in items)
+        body = rows(ob.get("outputs", []), "output") + rows(ob.get("outcomes", []), "outcome")
+        targets_html = f"""
+  <h3 style="font-size:17px;margin:26px 0 4px">What it promises to deliver this year</h3>
+  <div class="sec-note">{e(ob.get('source') or '')} &middot; matched at
+    {ob.get('match_score')} ({e(ob.get('confidence') or '')})</div>
+  <div class="tscroll"><table>
+    <thead><tr><th>Indicator</th><th>Measure</th><th class="num">Target {e(ob.get('cycle') or '')}</th></tr></thead>
+    <tbody>{body}</tbody>
+  </table></div>
+  <div class="sec-note" style="margin-top:8px">Indicator wording is the first line of a
+    wrapped cell in the source PDF; target values are complete. The framework carries
+    targets and <b>no achieved-versus-promised column</b> — for this scheme or any
+    other.</div>"""
+
     b = (enrich or {}).get("budget", {}).get(s["slug"])
-    if b:
-        amt = b.get("be_next_year_cr")
+    if b or ob:
+        amt = (b or {}).get("be_next_year_cr")
         amt_s = f"&#8377;{amt:,.2f} cr" if isinstance(amt, (int, float)) else '<span class="nil">...</span>'
+        money_row = f"""
+    <tr><td>Budget allocation</td>
+      <td><b>{amt_s}</b> for {e((b or {}).get('cycle') or '')}
+        <div class="muted" style="margin-top:3px">{e((b or {}).get('classification') or '')}
+          &middot; Demand No. {e((b or {}).get('demand_no'))}
+          &middot; matched to budget line &ldquo;{e((b or {}).get('budget_line') or '')}&rdquo;
+          at {(b or {}).get('match_score')} ({e((b or {}).get('confidence') or '')})</div></td>
+      <td class="ts">{e((b or {}).get('source') or '')}</td></tr>""" if b else ""
         found_block = f"""
 <section class="sec">
   <h2>Found elsewhere in government</h2>
   <div class="sec-note">Not published on myScheme &middot; carried from another
     government source, with the join score shown so it can be disputed</div>
-  <div class="tscroll"><table class="prov">
-    <tr><td>Budget allocation</td>
-      <td><b>{amt_s}</b> for {e(b.get('cycle') or '')}
-        <div class="muted" style="margin-top:3px">{e(b.get('classification') or '')}
-          &middot; Demand No. {e(b.get('demand_no'))}
-          &middot; matched to budget line &ldquo;{e(b.get('budget_line') or '')}&rdquo;
-          at {b.get('match_score')} ({e(b.get('confidence') or '')})</div></td>
-      <td class="ts">{e(b.get('source') or '')}</td></tr>
-  </table></div>
+  <div class="tscroll"><table class="prov">{money_row}</table></div>
+  {targets_html}
   <div class="warnbox"><b>Why this is here and not above</b>
     myScheme publishes no budget figure for any scheme. This one comes from the Union
     Budget Expenditure Profile and is joined by name, so it is shown apart from the
@@ -589,7 +616,8 @@ def build():
     census = load("data/myscheme/census.json", {})
     checks = load("data/checks.json", {})
     dbt = load("data/dbt/states.json", {})
-    enrich = {"budget": (load("data/enrichment/budget.json", {}) or {}).get("schemes", {})}
+    enrich = {"budget": (load("data/enrichment/budget.json", {}) or {}).get("schemes", {}),
+              "outcome": (load("data/enrichment/outcome.json", {}) or {}).get("schemes", {})}
 
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)

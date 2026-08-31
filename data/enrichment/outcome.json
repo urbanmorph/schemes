@@ -1,0 +1,1237 @@
+{
+ "built": "2026-08-31T04:46:56Z",
+ "caveat": "Targets only, never achievements. The framework states what each scheme promises to deliver in the coming year; no source publishes a delivered-versus-promised figure for any central scheme. A scheme absent here has no published target of any kind — a fact about the Outcome Budget's scope, not about the scheme.",
+ "central_schemes": 711,
+ "counts": {
+  "likely": 10,
+  "none": 634,
+  "strong": 19,
+  "weak": 48
+ },
+ "cycle": "2026-27",
+ "frameworks_in_document": 167,
+ "schemes": {
+  "ab-pmjay": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (PMJAY)",
+   "match_score": 1.0,
+   "outcomes": [
+    {
+     "indicator": "% change in number of",
+     "ref": "2.1",
+     "target": 5.0
+    },
+    {
+     "indicator": "% change in the number",
+     "ref": "3.1",
+     "target": 5.0
+    },
+    {
+     "indicator": "% change in the number",
+     "ref": "4.1",
+     "target": 8.0
+    },
+    {
+     "indicator": "Number of",
+     "ref": "5.1",
+     "target": 7.0
+    }
+   ],
+   "outlay_cr": 9500.0,
+   "outputs": [
+    {
+     "indicator": "Estimated number of",
+     "ref": "2.1",
+     "target": 300.0
+    },
+    {
+     "indicator": "Amount of Claims",
+     "ref": "3.1",
+     "target": 36000.0
+    },
+    {
+     "indicator": "Total number of Public",
+     "ref": "4.1",
+     "target": 800.0
+    },
+    {
+     "indicator": "Total number of Private",
+     "ref": "4.2",
+     "target": 1000.0
+    },
+    {
+     "indicator": "% of confirmed fraud",
+     "ref": "5.1",
+     "target": 1.0
+    }
+   ],
+   "page": 148,
+   "scheme_name": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.148"
+  },
+  "amrut": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Atal Mission for Rejuvenation and Urban Transformation (AMRUT 2.0)",
+   "match_score": 1.0,
+   "outcomes": [],
+   "outlay_cr": 8000.0,
+   "outputs": [
+    {
+     "indicator": "Number of households",
+     "ref": "1.1",
+     "target": 30.0
+    },
+    {
+     "indicator": "Additional Sewage",
+     "ref": "2.1",
+     "target": 400.0
+    },
+    {
+     "indicator": "Number of new",
+     "ref": "2.3",
+     "target": 12.0
+    },
+    {
+     "indicator": "Number of new or",
+     "ref": "3.1",
+     "target": 180222.0
+    }
+   ],
+   "page": 174,
+   "scheme_name": "Atal Mission For Rejuvenation And Urban Transformation",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.174"
+  },
+  "bio-ride": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Biotechnology Research Innovation and Entrepreneurship Development (Bio-RIDE)",
+   "match_score": 1.0,
+   "outcomes": [],
+   "outlay_cr": 2300.0,
+   "outputs": [
+    {
+     "indicator": "1. Competitive",
+     "ref": "300.00",
+     "target": 1.1
+    },
+    {
+     "indicator": "Number of Human",
+     "ref": "1.3",
+     "target": 2167.0
+    },
+    {
+     "indicator": "Number of IP (Patents/",
+     "ref": "1.3",
+     "target": 44.0
+    },
+    {
+     "indicator": "Number",
+     "ref": "1.4",
+     "target": 55.0
+    },
+    {
+     "indicator": "Number of Fellowships 2,120 2. Capacity Building 2.1 Number of users availed the",
+     "ref": "2.1",
+     "target": 30000.0
+    },
+    {
+     "indicator": "Number of National",
+     "ref": "2.2",
+     "target": 30.0
+    },
+    {
+     "indicator": "Number of colleges",
+     "ref": "2.3",
+     "target": 130.0
+    },
+    {
+     "indicator": "Number of Bio-Tech",
+     "ref": "2.5",
+     "target": 5.0
+    },
+    {
+     "indicator": "Number of NIDAN",
+     "ref": "3.1",
+     "target": 43.0
+    },
+    {
+     "indicator": "Number of",
+     "ref": "3.2",
+     "target": 13.0
+    },
+    {
+     "indicator": "Number of Biotech",
+     "ref": "3.3",
+     "target": 8.0
+    },
+    {
+     "indicator": "Number of countries",
+     "ref": "4.1",
+     "target": 15.0
+    }
+   ],
+   "page": 258,
+   "scheme_name": "Biotechnology Research Innovation And Entrepreneurship Development (Bio-RIDE)",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.258"
+  },
+  "day-nrlm": {
+   "classification": "CSS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "Deendayal Antyodaya Yojana-National Rural Livelihood Mission (DAY-NRLM)",
+   "match_score": 0.829,
+   "outcomes": [],
+   "outlay_cr": 19200.0,
+   "outputs": [
+    {
+     "indicator": "Number of women farmers trained in",
+     "ref": "2.1",
+     "target": 75.0
+    },
+    {
+     "indicator": "% of enterprises supported by Startup 90",
+     "ref": "3.1",
+     "target": 2.0
+    }
+   ],
+   "page": 242,
+   "scheme_name": "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.242"
+  },
+  "jjm": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Jal Jeevan Mission (JJM)",
+   "match_score": 1.0,
+   "outcomes": [],
+   "outlay_cr": 67670.0,
+   "outputs": [
+    {
+     "indicator": "Number of HGJ265",
+     "ref": "1.1",
+     "target": 170000.0
+    },
+    {
+     "indicator": "Number of HGJ",
+     "ref": "1.2",
+     "target": 130000.0
+    }
+   ],
+   "page": 191,
+   "scheme_name": "Jal Jeevan Mission",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.191"
+  },
+  "jrfbio": {
+   "classification": "CS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "PM Research Fellowship",
+   "match_score": 0.75,
+   "outcomes": [
+    {
+     "indicator": "Number of",
+     "ref": "1.1",
+     "target": 105.0
+    },
+    {
+     "indicator": "Number of",
+     "ref": "1.2",
+     "target": 4524.0
+    },
+    {
+     "indicator": "Number of Patents",
+     "ref": "1.3",
+     "target": 214.0
+    },
+    {
+     "indicator": "Number of fellows",
+     "ref": "2.1",
+     "target": 1444.0
+    },
+    {
+     "indicator": "Average man-hours",
+     "ref": "3.1",
+     "target": 50.0
+    }
+   ],
+   "outlay_cr": 600.0,
+   "outputs": [
+    {
+     "indicator": "Number of continuing",
+     "ref": "1.1",
+     "target": 1445.0
+    }
+   ],
+   "page": 100,
+   "scheme_name": "Junior Research Fellowship",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.100"
+  },
+  "mvcppsacws": {
+   "classification": "CSS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "Mission Vatsalya Scheme (Child Protection Services and Child Welfare Services)",
+   "match_score": 0.821,
+   "outcomes": [
+    {
+     "indicator": "Number of Children",
+     "ref": "1.1",
+     "target": 171000.0
+    },
+    {
+     "indicator": "% change in number of",
+     "ref": "1.2",
+     "target": 5406.0
+    },
+    {
+     "indicator": "% of children provided",
+     "ref": "1.3",
+     "target": 100.0
+    },
+    {
+     "indicator": "Number of SAAs",
+     "ref": "1.4",
+     "target": 531.0
+    },
+    {
+     "indicator": "Number of children",
+     "ref": "1.5",
+     "target": 400.0
+    },
+    {
+     "indicator": "Number of Special",
+     "ref": "1.6",
+     "target": 2000.0
+    },
+    {
+     "indicator": "% change in number of",
+     "ref": "1.7",
+     "target": 2414.0
+    },
+    {
+     "indicator": "% of Children matched",
+     "ref": "2.1",
+     "target": 60.0
+    }
+   ],
+   "outlay_cr": 1550.0,
+   "outputs": [
+    {
+     "indicator": "1. Increasing 1.1. % of Child Care Institutions",
+     "ref": "550.00",
+     "target": 100.0
+    },
+    {
+     "indicator": "Total Number of Police",
+     "ref": "2.1",
+     "target": 15000.0
+    },
+    {
+     "indicator": "Number of Child Helpline",
+     "ref": "2.2",
+     "target": 762.0
+    },
+    {
+     "indicator": "Number of community",
+     "ref": "3.1",
+     "target": 100.0
+    },
+    {
+     "indicator": "Number of capacity",
+     "ref": "4.1",
+     "target": 100.0
+    }
+   ],
+   "page": 290,
+   "scheme_name": "Mission Vatsalya (Child Protection Services and Child Welfare Services)",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.290"
+  },
+  "nmnf": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "National Mission on Natural Farming (NMNF)",
+   "match_score": 1.0,
+   "outcomes": [
+    {
+     "indicator": "Increase in number",
+     "ref": "1.1",
+     "target": 16.25
+    }
+   ],
+   "outlay_cr": 750.0,
+   "outputs": [
+    {
+     "indicator": "Increase in Area",
+     "ref": "1.1",
+     "target": 6.5
+    },
+    {
+     "indicator": "Number of",
+     "ref": "4.1",
+     "target": 2858.0
+    }
+   ],
+   "page": 31,
+   "scheme_name": "National Mission on Natural Farming",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.31"
+  },
+  "nqm": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "National Quantum Mission",
+   "match_score": 1.0,
+   "outcomes": [
+    {
+     "indicator": "Number of Technologies",
+     "ref": "1.1",
+     "target": 87.0
+    },
+    {
+     "indicator": "Number of Patents filed",
+     "ref": "1.2",
+     "target": 34.0
+    },
+    {
+     "indicator": "Number of research",
+     "ref": "1.3",
+     "target": 133.0
+    },
+    {
+     "indicator": "Number of start-ups",
+     "ref": "3.1",
+     "target": 36.0
+    },
+    {
+     "indicator": "Number of International",
+     "ref": "4.1",
+     "target": 39.0
+    }
+   ],
+   "outlay_cr": 900.0,
+   "outputs": [],
+   "page": 257,
+   "scheme_name": "National Quantum Mission (NQM)",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.257"
+  },
+  "nsat": {
+   "classification": "CS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "National Apprenticeship Training Scheme (NATS)",
+   "match_score": 0.79,
+   "outcomes": [
+    {
+     "indicator": "% of apprentices adjudged",
+     "ref": "1.1",
+     "target": 40.0
+    }
+   ],
+   "outlay_cr": 1250.0,
+   "outputs": [
+    {
+     "indicator": "Total Number of students",
+     "ref": "1.1",
+     "target": 6.0
+    }
+   ],
+   "page": 97,
+   "scheme_name": "National Scheme of Apprenticeship Training",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.97"
+  },
+  "plisfaaci": {
+   "classification": "CS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "Production Linked Incentive (PLI) Scheme for Automobiles and Auto Components",
+   "match_score": 0.779,
+   "outcomes": [],
+   "outlay_cr": 5939.87,
+   "outputs": [
+    {
+     "indicator": "1. Building a robust 1.1. Total number of DVA195 certificate received",
+     "ref": "939.87",
+     "target": 40.0
+    },
+    {
+     "indicator": "Cumulative Investment to be made by the",
+     "ref": "2.1",
+     "target": 3744.0
+    },
+    {
+     "indicator": "Cumulative Investment to be made by the",
+     "ref": "2.2",
+     "target": 2392.0
+    },
+    {
+     "indicator": "Total incentives to be disbursed under the",
+     "ref": "2.3",
+     "target": 5922.0
+    }
+   ],
+   "page": 161,
+   "scheme_name": "Production Linked Incentive (PLI) Scheme for Automobile and Auto Components Industry",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.161"
+  },
+  "plisfpi": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Production-Linked Incentive Scheme for Food Processing Industry",
+   "match_score": 1.0,
+   "outcomes": [
+    {
+     "indicator": "% increase in",
+     "ref": "2.1",
+     "target": 4.0
+    }
+   ],
+   "outlay_cr": 1200.0,
+   "outputs": [
+    {
+     "indicator": "Number of",
+     "ref": "1.1",
+     "target": 85.0
+    },
+    {
+     "indicator": "Number of",
+     "ref": "2.1",
+     "target": 40.0
+    }
+   ],
+   "page": 135,
+   "scheme_name": "Production Linked Incentive (PLI) Scheme for Food Processing Industry",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.135"
+  },
+  "pliwg": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Production Linked Incentive (PLI) Scheme for White Goods (AC & LED Lights)",
+   "match_score": 1.0,
+   "outcomes": [],
+   "outlay_cr": 1003.54,
+   "outputs": [
+    {
+     "indicator": "1. Beneficiaries",
+     "ref": "1003.54",
+     "target": 1.1
+    },
+    {
+     "indicator": "Amount of incentive",
+     "ref": "2.1",
+     "target": 1000.0
+    },
+    {
+     "indicator": "Amount of",
+     "ref": "3.1",
+     "target": 1257.0
+    },
+    {
+     "indicator": "% increase in the",
+     "ref": "4.1",
+     "target": 3263.0
+    }
+   ],
+   "page": 53,
+   "scheme_name": "Production Linked Incentive (PLI) Scheme for White Goods (Air Conditioners and LED Lights)",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.53"
+  },
+  "pm-gkay": {
+   "classification": "CS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "Pradhan Mantri Garib Kalyan Ann Yojana (PMGKAY)",
+   "match_score": 0.827,
+   "outcomes": [
+    {
+     "indicator": "Intra-state portability transactions",
+     "ref": "2.1",
+     "target": 20.0
+    },
+    {
+     "indicator": "Interstate portability transaction out",
+     "ref": "2.2",
+     "target": 0.4
+    },
+    {
+     "indicator": "Increase in inter-State portability of",
+     "ref": "2.3",
+     "target": 0.1
+    },
+    {
+     "indicator": "Overhead cost/ Volume of",
+     "ref": "3.1",
+     "target": 151.56
+    },
+    {
+     "indicator": "Overhead cost as % of Total",
+     "ref": "3.2",
+     "target": 18.04
+    },
+    {
+     "indicator": "Farmers, PMGKAY beneficiaries to",
+     "ref": "4.1",
+     "target": 100.0
+    },
+    {
+     "indicator": "Farmers, PMGKAY beneficiaries to",
+     "ref": "5.1",
+     "target": 100.0
+    }
+   ],
+   "outlay_cr": 227429.0,
+   "outputs": [
+    {
+     "indicator": "Quantity of paddy to",
+     "ref": "1.1",
+     "target": 775.0
+    },
+    {
+     "indicator": "Quantity of wheat",
+     "ref": "1.2",
+     "target": 265.0
+    },
+    {
+     "indicator": "Quantity of Coarse",
+     "ref": "1.3",
+     "target": 10.54
+    },
+    {
+     "indicator": "Scientific Steel Silo",
+     "ref": "2.1",
+     "target": 7.87
+    },
+    {
+     "indicator": "Installment of",
+     "ref": "4.1",
+     "target": 400.0
+    },
+    {
+     "indicator": "Vehicles to be",
+     "ref": "4.2",
+     "target": 100.0
+    },
+    {
+     "indicator": "Mills tagged to",
+     "ref": "4.3",
+     "target": 100.0
+    },
+    {
+     "indicator": "Entire Food Subsidy",
+     "ref": "5.1",
+     "target": 135000.0
+    },
+    {
+     "indicator": "Entire Food Subsidy",
+     "ref": "6.1",
+     "target": 75000.0
+    }
+   ],
+   "page": 65,
+   "scheme_name": "Pradhan Mantri Garib Kalyan Anna Yojana",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.65"
+  },
+  "pm-kisan": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Pradhan Mantri Kisan Samman Nidhi (PM – KISAN)",
+   "match_score": 1.0,
+   "outcomes": [
+    {
+     "indicator": "% of farmers utilizing",
+     "ref": "1.1",
+     "target": 100.0
+    },
+    {
+     "indicator": "% of farmers utilizing",
+     "ref": "1.2",
+     "target": 75.0
+    }
+   ],
+   "outlay_cr": 63500.0,
+   "outputs": [
+    {
+     "indicator": "Number of eligible",
+     "ref": "1.1",
+     "target": 9.5
+    },
+    {
+     "indicator": "Total funds released to",
+     "ref": "1.2",
+     "target": 63500.0
+    },
+    {
+     "indicator": "% of grievance redressed",
+     "ref": "2.1",
+     "target": 95.0
+    }
+   ],
+   "page": 12,
+   "scheme_name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.12"
+  },
+  "pmajay-ag": {
+   "classification": "CSS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM AJAY)",
+   "match_score": 0.799,
+   "outcomes": [
+    {
+     "indicator": "Number of selected",
+     "ref": "1.1",
+     "target": 6600.0
+    },
+    {
+     "indicator": "Number of villages",
+     "ref": "1.2",
+     "target": 11000.0
+    },
+    {
+     "indicator": "Increase in inmate",
+     "ref": "2.1",
+     "target": 5500.0
+    },
+    {
+     "indicator": "Total number of SC",
+     "ref": "3.1",
+     "target": 137500.0
+    },
+    {
+     "indicator": "Total number of SC",
+     "ref": "3.2",
+     "target": 66000.0
+    },
+    {
+     "indicator": "Total number of SC",
+     "ref": "3.3",
+     "target": 77000.0
+    },
+    {
+     "indicator": "Number of SC",
+     "ref": "3.4",
+     "target": 66000.0
+    }
+   ],
+   "outlay_cr": 2140.0,
+   "outputs": [
+    {
+     "indicator": "Village Development",
+     "ref": "1.1",
+     "target": 7700.0
+    },
+    {
+     "indicator": "Number of identified",
+     "ref": "1.2",
+     "target": 7700.0
+    },
+    {
+     "indicator": "Number of hostels",
+     "ref": "2.1",
+     "target": 55.0
+    },
+    {
+     "indicator": "Total no. of hostels",
+     "ref": "2.2",
+     "target": 44.0
+    },
+    {
+     "indicator": "Total amount released",
+     "ref": "3.1",
+     "target": 550.0
+    },
+    {
+     "indicator": "Total amount disbursed",
+     "ref": "3.2",
+     "target": 192.5
+    },
+    {
+     "indicator": "Total amount disbursed",
+     "ref": "3.3",
+     "target": 302.5
+    },
+    {
+     "indicator": "Number of projects",
+     "ref": "3.4",
+     "target": 660.0
+    }
+   ],
+   "page": 265,
+   "scheme_name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM-AJAY) - Adarsh Gram",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.265"
+  },
+  "pmay-u": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Pradhan Mantri Awas Yojana-Urban (PMAY-U) 2.0",
+   "match_score": 0.941,
+   "outcomes": [
+    {
+     "indicator": "Number of sanctioned",
+     "ref": "1.4",
+     "target": 1.0
+    },
+    {
+     "indicator": "Total beneficiaries for",
+     "ref": "2.1",
+     "target": 0.1
+    },
+    {
+     "indicator": "Occupancy Rate (%) in",
+     "ref": "1.1",
+     "target": 90.0
+    }
+   ],
+   "outlay_cr": 21625.05,
+   "outputs": [
+    {
+     "indicator": "Number of",
+     "ref": "1.1",
+     "target": 5.0
+    },
+    {
+     "indicator": "Number of EWS",
+     "ref": "2.1",
+     "target": 1.5
+    },
+    {
+     "indicator": "Number of rental Targets not",
+     "ref": "3.1",
+     "target": 1.3
+    },
+    {
+     "indicator": "Total subsidy amount",
+     "ref": "1.3",
+     "target": 1500.0
+    },
+    {
+     "indicator": "Total subsidy amount",
+     "ref": "1.4",
+     "target": 600.0
+    }
+   ],
+   "page": 172,
+   "scheme_name": "Pradhan Mantri Awas Yojana - Urban",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.172"
+  },
+  "pmegp": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Prime Minister Employment Generation Programme (PMEGP)",
+   "match_score": 0.979,
+   "outcomes": [],
+   "outlay_cr": 4500.0,
+   "outputs": [
+    {
+     "indicator": "1. Set up/upgrade",
+     "ref": "500.00",
+     "target": 1.1
+    },
+    {
+     "indicator": "Margin money",
+     "ref": "2.1",
+     "target": 4257.01
+    }
+   ],
+   "page": 196,
+   "scheme_name": "Prime Minister's Employment Generation Programme",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.196"
+  },
+  "pmmsy": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+   "match_score": 1.0,
+   "outcomes": [
+    {
+     "indicator": "% change in forex",
+     "ref": "2.1",
+     "target": 10.0
+    },
+    {
+     "indicator": "Number of direct and",
+     "ref": "2.2",
+     "target": 1100000.0
+    },
+    {
+     "indicator": "Number of new",
+     "ref": "2.3",
+     "target": 250000.0
+    }
+   ],
+   "outlay_cr": 2500.0,
+   "outputs": [
+    {
+     "indicator": "Total additional Area",
+     "ref": "1.1",
+     "target": 180.0
+    },
+    {
+     "indicator": "Number of persons",
+     "ref": "1.2",
+     "target": 80000.0
+    },
+    {
+     "indicator": "Total additional area",
+     "ref": "2.1",
+     "target": 10000.0
+    },
+    {
+     "indicator": "Number of organized fish",
+     "ref": "3.1",
+     "target": 10.0
+    },
+    {
+     "indicator": "Total capacity of post-",
+     "ref": "3.2",
+     "target": 1800.0
+    },
+    {
+     "indicator": "Additional modern",
+     "ref": "4.1",
+     "target": 17025.0
+    },
+    {
+     "indicator": "Number of Fish Farmer",
+     "ref": "4.2",
+     "target": 50.0
+    },
+    {
+     "indicator": "Area insured under",
+     "ref": "1.1",
+     "target": 10000.0
+    },
+    {
+     "indicator": "Total incentive given (Rs",
+     "ref": "1.2",
+     "target": 25.0
+    }
+   ],
+   "page": 125,
+   "scheme_name": "Pradhan Mantri Matsya Sampada Yojana",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.125"
+  },
+  "pmsgmb": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "PM Surya Ghar: Muft Bijli Yojana (PMSG: MBY)",
+   "match_score": 1.0,
+   "outcomes": [
+    {
+     "indicator": "Expected generation",
+     "ref": "1.1",
+     "target": 17.42289
+    }
+   ],
+   "outlay_cr": 22000.0,
+   "outputs": [
+    {
+     "indicator": "Number of RTS",
+     "ref": "1.1",
+     "target": 39.0
+    },
+    {
+     "indicator": "Capacity installation of",
+     "ref": "1.2",
+     "target": 11.7
+    }
+   ],
+   "page": 208,
+   "scheme_name": "PM – Surya Ghar: Muft Bijli Yojana",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.208"
+  },
+  "pmv": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "PM Vishwakarma",
+   "match_score": 1.0,
+   "outcomes": [],
+   "outlay_cr": 3860.89,
+   "outputs": [
+    {
+     "indicator": "1. To enable the",
+     "ref": "860.89",
+     "target": 1.1
+    },
+    {
+     "indicator": "Number of beneficiaries",
+     "ref": "2.1",
+     "target": 600000.0
+    },
+    {
+     "indicator": "Number of Beneficiaries",
+     "ref": "2.2",
+     "target": 150000.0
+    },
+    {
+     "indicator": "Number of artisans /",
+     "ref": "3.1",
+     "target": 1000000.0
+    },
+    {
+     "indicator": "Number of OBC",
+     "ref": "1.4",
+     "target": 300000.0
+    },
+    {
+     "indicator": "Number of",
+     "ref": "1.5",
+     "target": 5000.0
+    },
+    {
+     "indicator": "Number of traditional",
+     "ref": "4.1",
+     "target": 1000000.0
+    },
+    {
+     "indicator": "Number of artisans /",
+     "ref": "5.1",
+     "target": 1000000.0
+    }
+   ],
+   "page": 197,
+   "scheme_name": "PM Vishwakarma",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.197"
+  },
+  "pmvbry": {
+   "classification": "CS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Pradhan Mantri Viksit Bharat Rozgar Yojana (New Employment Generation Scheme)",
+   "match_score": 1.0,
+   "outcomes": [],
+   "outlay_cr": 20082.7,
+   "outputs": [
+    {
+     "indicator": "1. Incentivizing 1.1. Number of First",
+     "ref": "082.70",
+     "target": 8400000.0
+    }
+   ],
+   "page": 192,
+   "scheme_name": "Pradhan Mantri Viksit Bharat Rozgar Yojana",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.192"
+  },
+  "rgsaip": {
+   "classification": "CSS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "Rashtriya Gram Swaraj Abhiyan (RGSA)",
+   "match_score": 0.752,
+   "outcomes": [],
+   "outlay_cr": 1142.31,
+   "outputs": [
+    {
+     "indicator": "1.2. % of PRIs uploading",
+     "ref": "2.7",
+     "target": 100.0
+    },
+    {
+     "indicator": "1.3. % of PRIs using e-",
+     "ref": "2.7",
+     "target": 95.0
+    },
+    {
+     "indicator": "1.4. % of PRIs closing their",
+     "ref": "2.5",
+     "target": 95.0
+    },
+    {
+     "indicator": "1.5. % of Gram Panchayats",
+     "ref": "2.5",
+     "target": 90.0
+    },
+    {
+     "indicator": "1.6. % of PRIs completing",
+     "ref": "2.6",
+     "target": 90.0
+    },
+    {
+     "indicator": "2. Progress in 2.1. % of Gram Panchayats",
+     "ref": "2.5",
+     "target": 100.0
+    },
+    {
+     "indicator": "Number of",
+     "ref": "1.1",
+     "target": 7.0
+    },
+    {
+     "indicator": "Total IEC Audio-",
+     "ref": "1.2",
+     "target": 11.0
+    },
+    {
+     "indicator": "Total number of",
+     "ref": "1.3",
+     "target": 3000.0
+    },
+    {
+     "indicator": "Number of",
+     "ref": "1.4",
+     "target": 5.0
+    }
+   ],
+   "page": 216,
+   "scheme_name": "Rashtriya Gram Swaraj Abhiyan - Internship Program",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.216"
+  },
+  "sbm-g-i": {
+   "classification": "CSS",
+   "confidence": "likely",
+   "cycle": "2026-27",
+   "framework_name": "Swachh Bharat Mission (Grameen) Phase II",
+   "match_score": 0.808,
+   "outcomes": [],
+   "outlay_cr": 7192.0,
+   "outputs": [
+    {
+     "indicator": "Number of villages covered with",
+     "ref": "1.1",
+     "target": 48096.0
+    },
+    {
+     "indicator": "Number of villages covered with",
+     "ref": "1.2",
+     "target": 36119.0
+    },
+    {
+     "indicator": "Number of blocks covered with",
+     "ref": "1.3",
+     "target": 1352.0
+    },
+    {
+     "indicator": "Number of villages covered with",
+     "ref": "1.4",
+     "target": 150000.0
+    },
+    {
+     "indicator": "Number of districts with at-least",
+     "ref": "2.1",
+     "target": 50.0
+    }
+   ],
+   "page": 190,
+   "scheme_name": "Swachh Bharat Mission – Grameen PHASE I",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.190"
+  },
+  "sbm-g-ii": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Swachh Bharat Mission (Grameen) Phase II",
+   "match_score": 1.0,
+   "outcomes": [],
+   "outlay_cr": 7192.0,
+   "outputs": [
+    {
+     "indicator": "Number of villages covered with",
+     "ref": "1.1",
+     "target": 48096.0
+    },
+    {
+     "indicator": "Number of villages covered with",
+     "ref": "1.2",
+     "target": 36119.0
+    },
+    {
+     "indicator": "Number of blocks covered with",
+     "ref": "1.3",
+     "target": 1352.0
+    },
+    {
+     "indicator": "Number of villages covered with",
+     "ref": "1.4",
+     "target": 150000.0
+    },
+    {
+     "indicator": "Number of districts with at-least",
+     "ref": "2.1",
+     "target": 50.0
+    }
+   ],
+   "page": 190,
+   "scheme_name": "Swachh Bharat Mission (Grameen) Phase II",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.190"
+  },
+  "sbm-u": {
+   "classification": "CSS",
+   "confidence": "strong",
+   "cycle": "2026-27",
+   "framework_name": "Swachh Bharat Mission (SBM)- Urban",
+   "match_score": 0.931,
+   "outcomes": [],
+   "outlay_cr": 2500.0,
+   "outputs": [
+    {
+     "indicator": "Total number of",
+     "ref": "1.1",
+     "target": 50000.0
+    },
+    {
+     "indicator": "Total number of",
+     "ref": "2.1",
+     "target": 5000.0
+    },
+    {
+     "indicator": "Total number of",
+     "ref": "2.2",
+     "target": 10000.0
+    },
+    {
+     "indicator": "% of wards with",
+     "ref": "3.1",
+     "target": 99.0
+    },
+    {
+     "indicator": "Installed capacity of",
+     "ref": "4.1",
+     "target": 3000226.0
+    },
+    {
+     "indicator": "Installed capacity of",
+     "ref": "5.1",
+     "target": 1000228.0
+    },
+    {
+     "indicator": "Installed capacity of",
+     "ref": "6.1",
+     "target": 4500229.0
+    },
+    {
+     "indicator": "Installed capacity of",
+     "ref": "7.1",
+     "target": 1000230.0
+    },
+    {
+     "indicator": "Quantity of legacy",
+     "ref": "8.1",
+     "target": 500231.0
+    },
+    {
+     "indicator": "Capacity of Sewage",
+     "ref": "9.1",
+     "target": 500232.0
+    }
+   ],
+   "page": 176,
+   "scheme_name": "Swachh Bharat Mission – Urban 2.0",
+   "source": "Outcome Budget 2026-27, Output Outcome Monitoring Framework, p.176"
+  }
+ },
+ "source": "Union Budget Outcome Budget 2026-27, Output Outcome Monitoring Framework"
+}
