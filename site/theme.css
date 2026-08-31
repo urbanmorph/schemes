@@ -90,7 +90,11 @@ a{color:inherit}
 main{padding:38px 0 76px}
 .eyebrow{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;
   letter-spacing:.15em;color:var(--faint);margin-bottom:10px}
-.measure{max-width:63ch}
+/* The container IS the measure. A second, narrower max-width inside .wrap meant text
+   stopped well short of the edge it was already constrained by — two competing measures,
+   the tighter one always winning and the container doing nothing. .measure is kept as a
+   no-op hook so existing markup stays valid. */
+.measure{max-width:none}
 .lede{font-family:var(--serif);font-size:20px;line-height:1.5;margin:0 0 18px}
 p{margin:0 0 15px}
 .muted{color:var(--muted)}
