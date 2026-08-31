@@ -220,3 +220,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   color:var(--muted);white-space:nowrap;display:inline-block}
 .src.myscheme{color:var(--stamp);border-color:var(--stamp)}
 .src.budget{color:var(--pass);border-color:var(--pass)}
+
+/* Filter pills. Each group is single-choice; the count on every pill is the point —
+   a closed dropdown hides how many schemes each option would select, which is
+   information a reader wants before clicking, not after. */
+.pills{display:flex;flex-direction:column;gap:9px;margin:0 0 20px}
+.pillgroup{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.plabel{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--faint);min-width:104px;flex:none}
+.pill{font-family:var(--sans);font-size:12.5px;line-height:1;padding:7px 11px;
+  border:1px solid var(--rule-strong);border-radius:100px;background:var(--surface);
+  color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.pill:hover{border-color:var(--stamp);color:var(--ink)}
+.pill.on{background:var(--stamp);border-color:var(--stamp);color:var(--paper);font-weight:500}
+.pill .pn{font-family:var(--mono);font-size:10.5px;opacity:.72;font-variant-numeric:tabular-nums}
+.pill.on .pn{opacity:.85}
+@media (max-width:760px){.plabel{min-width:0;width:100%}}
+
+/* The ministry combobox is the widest control and the only one that is a list rather
+   than a set of choices, so it gets room to show what it is. */
+.filters input#org{min-width:340px;flex:1}

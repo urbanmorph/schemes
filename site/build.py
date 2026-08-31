@@ -395,6 +395,27 @@ def unify(checks, registry, classification):
     return out
 
 
+def pill_group(gid, label, options):
+    """A single-choice filter as pills.
+
+    Pills rather than a <select> wherever the axis has a handful of values: the options
+    are the information — how many schemes each source lists, how many are badly
+    documented — and a closed dropdown hides exactly that. Only the
+    ministry/department filter stays a select, because 386 options is a list, not a set
+    of choices.
+    """
+    parts = []
+    for i, (v, lab, n) in enumerate(options):
+        on = " on" if i == 0 else ""
+        pressed = "true" if i == 0 else "false"
+        count = f'<span class="pn">{n:,}</span>' if n is not None else ""
+        parts.append(f'<button type="button" class="pill{on}" data-g="{gid}" '
+                     f'data-v="{e(v)}" aria-pressed="{pressed}">{e(lab)}{count}</button>')
+    btns = "".join(parts)
+    return (f'<div class="pillgroup" role="group" aria-label="{e(label)}">'
+            f'<span class="plabel">{e(label)}</span>{btns}</div>')
+
+
 def index_section(entries):
     orgs = {}
     for e_ in entries:
@@ -405,15 +426,20 @@ def index_section(entries):
     order = sorted(orgs.items(), key=lambda kv: (-kv[1]["n"], kv[0]))
     org_ix = {name: i for i, (name, _) in enumerate(order)}
 
-    def opts(kind):
-        return "".join(f'<option value="{org_ix[nm]}">{e(nm)} ({v["n"]})</option>'
-                       for nm, v in order if v["kind"] == kind)
-
-    org_select = ('<select id="org" aria-label="Filter by ministry or department">'
-                  '<option value="">any ministry or department</option>'
-                  f'<optgroup label="Central ministries">{opts("ministry")}</optgroup>'
-                  f'<optgroup label="State &amp; UT departments">{opts("department")}</optgroup>'
-                  '</select>')
+    # A combobox, not a select. 386 options is too many to scroll and too many to know
+    # by heart, so it has to be both browsable and searchable: <datalist> shows the whole
+    # list on focus like a dropdown, narrows as you type, and typing a partial word that
+    # matches no option still filters the table by substring. Native, so it keeps
+    # keyboard and screen-reader behaviour rather than reimplementing it.
+    org_options = "".join(
+        f'<option value="{e(nm)}">{e("central ministry" if v["kind"] == "ministry" else "state / UT department")} &middot; {v["n"]:,} schemes</option>'
+        for nm, v in order)
+    org_select = (
+        '<input id="org" list="orglist" autocomplete="off" '
+        'placeholder="Any ministry or department &mdash; type to filter, or browse" '
+        'aria-label="Filter by ministry or department">'
+        f'<datalist id="orglist">{org_options}</datalist>'
+        '<button type="button" id="orgclear" class="tbtn" hidden>clear</button>')
 
     lv = {}
     for e_ in entries:
@@ -421,25 +447,38 @@ def index_section(entries):
         if v:
             lv[v] = lv.get(v, 0) + 1
     LEVEL_LABEL = {"central": "Central", "state": "State or UT"}
-    level_select = ('<select id="lvl" aria-label="Filter by level">'
-                    '<option value="">any level</option>'
-                    + "".join(f'<option value="{e(k)}">{e(LEVEL_LABEL.get(k, k))} ({n:,})</option>'
-                              for k, n in sorted(lv.items(), key=lambda kv: -kv[1]))
-                    + '</select>')
+    level_pills = pill_group("lvl", "Level",
+                             [("", "All", len(entries))]
+                             + [(k, LEVEL_LABEL.get(k, k), n)
+                                for k, n in sorted(lv.items(), key=lambda kv: -kv[1])])
 
     src_counts = {}
     for e_ in entries:
         for k in e_["sources"]:
             src_counts[k] = src_counts.get(k, 0) + 1
     not_ms = sum(1 for e_ in entries if not e_["on_myscheme"])
-    src_select = ('<select id="src" aria-label="Filter by listing source">'
-                  '<option value="">any source</option>'
-                  + "".join(f'<option value="{k}">listed by {e(SOURCE_LABEL[k])} '
-                            f'({src_counts[k]:,})</option>'
-                            for k in ("myscheme", "budget", "dbt", "outcome")
-                            if k in src_counts)
-                  + f'<option value="!myscheme">NOT on myScheme ({not_ms:,})</option>'
-                  + '</select>')
+    src_pills = pill_group(
+        "src", "Listed by",
+        [("", "All", len(entries))]
+        + [(k, SOURCE_LABEL[k], src_counts[k])
+           for k in ("myscheme", "budget", "dbt", "outcome") if k in src_counts]
+        + [("!myscheme", "Not on myScheme", not_ms)])
+
+    # Cuts that mean something, not "N or fewer" for every N. Measured: no scheme scores
+    # below 2 or above 9, and the mass sits at 5-7, so most of the old dropdown's
+    # eleven options selected either everything or nothing.
+    def le(nmax):
+        return sum(1 for x in entries
+                   if x["checks"] and x["checks"]["passed"] <= nmax)
+    doc_pills = pill_group(
+        "doc", "Documentation",
+        [("", "All", len(entries)),
+         ("le4", "4 or fewer passed", le(4)),
+         ("le5", "5 or fewer", le(5)),
+         ("le6", "6 or fewer", le(6)),
+         ("ge8", "8 or more", sum(1 for x in entries
+                                  if x["checks"] and x["checks"]["passed"] >= 8)),
+         ("none", "No record to check", sum(1 for x in entries if not x["checks"]))])
 
     rows = ""
     for e_ in entries:
@@ -466,7 +505,7 @@ def index_section(entries):
             score = '<span class="nil">...</span>'
             failing = '<span class="muted">not listed on myScheme</span>'
         rows += (f'<tr{xattr} data-p="{(c or {}).get("passed", -1)}" '
-                 f'data-o="{org_ix.get(e_.get("org"), -1)}" '
+                 f'data-o="{e((e_.get("org") or "").lower()[:46])}" '
                  f'data-l="{e(e_.get("level_value") or "")}" '
                  f'data-s="{e(" ".join(e_["sources"]))}">'
                  f'<td><a href="scheme/{e(slug)}.html">{e(e_["name"])}</a>{acr}</td>'
@@ -490,14 +529,13 @@ def index_section(entries):
 <div class="filters">
   <input id="q" type="search" placeholder="Search name or acronym &mdash; e.g. pm kisan, mgnrega&hellip;"
     aria-label="Search schemes by name, acronym or slug">
-  {level_select}
-  {src_select}
-  <select id="minp" aria-label="Minimum checks passed">
-    <option value="">any score</option>
-    {''.join(f'<option value="{i}">{i} or fewer passed</option>' for i in range(0, 10))}
-  </select>
   {org_select}
   <span class="count" id="count">{n:,} schemes</span>
+</div>
+<div class="pills">
+  {level_pills}
+  {src_pills}
+  {doc_pills}
 </div>
 <div class="tscroll"><table id="tbl">
   <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Level</th>
@@ -515,23 +553,32 @@ def index_section(entries):
 (function(){{
   var tb=document.querySelector('#tbl tbody'),rows=[].slice.call(tb.rows),
       empty=document.getElementById('nomatch'),
-      q=document.getElementById('q'),mp=document.getElementById('minp'),
-      og=document.getElementById('org'),lv=document.getElementById('lvl'),
-      sr=document.getElementById('src'),
-      c=document.getElementById('count'),asc=false;
+      q=document.getElementById('q'),og=document.getElementById('org'),
+      c=document.getElementById('count'),asc=false,
+      state={{lvl:'',src:'',doc:''}};
   var norm=function(v){{return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
   rows.forEach(function(r){{ r._h = norm(r.cells[0].textContent+' '+(r.dataset.x||'')); }});
   function terms(v){{ return norm(v).split(' ').filter(Boolean); }}
+
+  function docOk(r,v){{
+    if(!v) return true;
+    var p=+r.dataset.p;              // -1 means no myScheme record, nothing to check
+    if(v==='none') return p<0;
+    if(p<0) return false;
+    if(v==='ge8') return p>=8;
+    return p<=+v.slice(2);
+  }}
   function apply(){{
-    var ts=terms(q.value),m=mp.value===''?null:+mp.value,
-        o=og.value===''?null:og.value,l=lv.value===''?null:lv.value,
-        sv=sr.value===''?null:sr.value,shown=0;
+    var ts=terms(q.value),o=og.value.trim().toLowerCase(),shown=0;
+    document.getElementById('orgclear').hidden = !o;
     rows.forEach(function(r){{
-      var ok=(m===null||(+r.dataset.p>=0&&+r.dataset.p<=m))
-             &&(o===null||r.dataset.o===o)&&(l===null||r.dataset.l===l);
-      if(ok&&sv!==null){{
+      var ok=(!o||r.dataset.o.indexOf(o)>-1)
+             &&(!state.lvl||r.dataset.l===state.lvl)
+             &&docOk(r,state.doc);
+      if(ok&&state.src){{
         var have=(r.dataset.s||'').split(' ');
-        ok = sv.charAt(0)==='!' ? have.indexOf(sv.slice(1))<0 : have.indexOf(sv)>-1;
+        ok = state.src.charAt(0)==='!' ? have.indexOf(state.src.slice(1))<0
+                                       : have.indexOf(state.src)>-1;
       }}
       if(ok) for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0){{ok=false;break;}}
       r.hidden=!ok; if(ok)shown++;
@@ -539,8 +586,22 @@ def index_section(entries):
     c.textContent=shown.toLocaleString()+' of {n:,} schemes';
     empty.hidden = shown>0;
   }}
-  [q,mp,og,lv,sr].forEach(function(el){{
-    el.addEventListener(el.tagName==='INPUT'?'input':'change',apply);
+
+  document.querySelectorAll('.pill').forEach(function(b){{
+    b.addEventListener('click',function(){{
+      var g=b.dataset.g;
+      document.querySelectorAll('.pill[data-g="'+g+'"]').forEach(function(o){{
+        var on = o===b;
+        o.classList.toggle('on',on);
+        o.setAttribute('aria-pressed',on?'true':'false');
+      }});
+      state[g]=b.dataset.v; apply();
+    }});
+  }});
+  q.addEventListener('input',apply);
+  og.addEventListener('input',apply); og.addEventListener('change',apply);
+  document.getElementById('orgclear').addEventListener('click',function(){{
+    og.value=''; apply(); og.focus();
   }});
   document.querySelectorAll('th.sortable').forEach(function(th){{
     th.addEventListener('click',function(){{
