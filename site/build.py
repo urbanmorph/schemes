@@ -17,6 +17,7 @@ import argparse
 import hashlib
 import html
 import json
+import re
 import os
 import shutil
 import subprocess
@@ -268,6 +269,12 @@ acknowledges the others exist.</p>
     <th class="num">Ratio</th><th>Direction</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
+<div class="empty" id="nomatch" hidden>
+  <span class="big">...</span>
+  <b>Nothing matches those filters.</b><br>
+  Search ignores punctuation, so <code>pm kisan</code> and <code>PM-KISAN</code> are the
+  same. Try fewer words, or clear a filter.
+</div>
 
 <div class="warnbox">
   <b>These are different units &mdash; do not read the ratio as error</b>
@@ -333,7 +340,25 @@ def index_section(checks):
         # National Rural Employment Guarantee Scheme" — and the slug is frequently the
         # acronym too, so it costs nothing to include.
         short = s.get("short") or ""
-        hay = " ".join(x for x in ((s["name"] or ""), short, slug) if x).lower()
+        # Punctuation is normalised out of the haystack, and out of the query in the
+        # browser, so a hyphen is never something a reader has to guess at. Nobody types
+        # "PM-KISAN" with the hyphen in the right place reliably, and "pm kis" returning
+        # nothing is indistinguishable from "no such scheme".
+        hay = re.sub(r"[^a-z0-9]+", " ",
+                     " ".join(x for x in ((s["name"] or ""), short, slug) if x).lower()).strip()
+        # Also index the acronym and slug with separators removed, so "pmkisan" finds
+        # PM-KISAN. Only these two, not the full name: they are short, and squashing a
+        # 90-character scheme title would roughly double the page for no benefit.
+        # Short names get squashed too — "Stand-Up India" is exactly the shape someone
+        # types as "standupindia". Long titles are not: nobody runs a 90-character scheme
+        # name together, and indexing them squashed would add ~430 KB to the page for
+        # queries that never happen.
+        name_n = re.sub(r"[^a-z0-9]+", " ", (s["name"] or "").lower()).strip()
+        sources = [short, slug] + ([s["name"]] if len(name_n) <= 30 else [])
+        squashed = {re.sub(r"[^a-z0-9]", "", x.lower()) for x in sources if x}
+        squashed = {x for x in squashed if len(x) > 2 and x not in hay.split()}
+        if squashed:
+            hay = hay + " " + " ".join(sorted(squashed))
         acr = f'<span class="acr">{e(short)}</span>' if short and short != s["name"] else ""
         org = s.get("org") or ""
         rows += (
@@ -356,7 +381,7 @@ def index_section(checks):
 <div class="sec-note">Sorted by checks passed, never by a grade &mdash; a count can be
   recomputed from the rows, and a letter is what gets screenshotted without its caption</div>
 <div class="filters">
-  <input id="q" type="search" placeholder="Filter by name or acronym&hellip;" aria-label="Filter schemes by name, acronym or slug">
+  <input id="q" type="search" placeholder="Search name or acronym &mdash; e.g. pm kisan, mgnrega&hellip;" aria-label="Filter schemes by name, acronym or slug">
   <select id="minp" aria-label="Minimum checks passed">
     <option value="">any score</option>
     {''.join(f'<option value="{i}">{i} or fewer passed</option>' for i in range(0, 10))}
@@ -370,21 +395,36 @@ def index_section(checks):
     <th class="num sortable" data-k="p">Passed</th><th>Failing</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
+<div class="empty" id="nomatch" hidden>
+  <span class="big">...</span>
+  <b>Nothing matches those filters.</b><br>
+  Search ignores punctuation, so <code>pm kisan</code> and <code>PM-KISAN</code> are the
+  same. Try fewer words, or clear a filter.
+</div>
 <script>
 (function(){{
   var tb=document.querySelector('#tbl tbody'),rows=[].slice.call(tb.rows),
+      empty=document.getElementById('nomatch'),
       q=document.getElementById('q'),mp=document.getElementById('minp'),
       og=document.getElementById('org'),lv=document.getElementById('lvl'),
       c=document.getElementById('count'),asc=false;
+  function terms(v){{
+    // Same normalisation as the haystack, then all-tokens-must-match in any order.
+    // Substring-of-the-whole-string would fail on "pm kis" (haystack holds "pm kisan")
+    // and on "kisan pm"; requiring each token independently handles both.
+    return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().split(' ').filter(Boolean);
+  }}
   function apply(){{
-    var t=q.value.toLowerCase(),m=mp.value===''?null:+mp.value,
+    var ts=terms(q.value),m=mp.value===''?null:+mp.value,
         o=og.value===''?null:og.value,l=lv.value===''?null:lv.value,shown=0;
     rows.forEach(function(r){{
-      var ok=(!t||r.dataset.n.indexOf(t)>-1)&&(m===null||+r.dataset.p<=m)
+      var hay=r.dataset.n, ok=(m===null||+r.dataset.p<=m)
              &&(o===null||r.dataset.o===o)&&(l===null||r.dataset.l===l);
+      if(ok) for(var i=0;i<ts.length;i++) if(hay.indexOf(ts[i])<0){{ok=false;break;}}
       r.hidden=!ok; if(ok)shown++;
     }});
     c.textContent=shown.toLocaleString()+' of {n:,} schemes';
+    empty.hidden = shown>0;
   }}
   q.addEventListener('input',apply); mp.addEventListener('change',apply);
   og.addEventListener('change',apply); lv.addEventListener('change',apply);
