@@ -164,7 +164,7 @@ def run(year):
         "schemes_with_targets": with_targets,
         "caveat": ("Targets only. The framework states what each scheme promises to "
                    "deliver in the coming year and carries no achieved-versus-promised "
-                   "column for any scheme — so nothing here says whether last year's "
+                   "column for any scheme, so nothing here says whether last year's "
                    "targets were met. Indicator text is the first line of a wrapped "
                    "cell; target values are complete."),
         "schemes": schemes,

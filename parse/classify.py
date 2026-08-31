@@ -126,13 +126,13 @@ def score_line(name, statement, demand_no, in_dbt, in_outcome, ministry):
 
     if in_dbt:
         total += 3
-        ev.append(("+3", "named in DBT Bharat's central list — money reaches individuals"))
+        ev.append(("+3", "named in DBT Bharat's central list, so money reaches individuals"))
     if in_outcome:
         total += 1
         ev.append(("+1", "has an Output-Outcome framework"))
     if statement == "stat4a":
         total += 2
-        ev.append(("+2", "Centrally Sponsored — delivered through states to citizens"))
+        ev.append(("+2", "Centrally Sponsored, delivered through states to citizens"))
 
     hits = sorted(tk & SCHEME_WORDS)
     if hits:

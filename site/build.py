@@ -68,7 +68,7 @@ def shell(title, active, body, depth=0):
     else:
         dot, word = " warn", "no run yet"
 
-    days = "&mdash;"
+    days = "..."
     if st.get("last_complete_run"):
         try:
             t = datetime.fromisoformat(st["last_complete_run"].replace("Z", "+00:00"))
@@ -107,7 +107,7 @@ def shell(title, active, body, depth=0):
 <div class="fresh"><div class="wrap">
   <span class="dot{dot}"></span>
   <span>Last complete collection <b>{days}</b></span>
-  <span class="sep">&middot;</span><span>snapshot <b>{e(st.get('snapshot') or '—')}</b></span>
+  <span class="sep">&middot;</span><span>snapshot <b>{e(st.get('snapshot') or '...')}</b></span>
   <span class="sep">&middot;</span>
   <span>{num(st.get('records_parsed'))} of {num(st.get('expected_total'))} records
         &middot; {num(st.get('pages_written'))}/{num(st.get('pages_expected'))} pages</span>
@@ -193,7 +193,7 @@ def page_index(census, checks, dbt, entries):
 <div class="topline">
   <div>
     <div class="eyebrow">The census</div>
-    <h2 class="pagetitle">Every scheme any government source names &mdash;
+    <h2 class="pagetitle">Every scheme any government source names,
       and what each one fails to say</h2>
   </div>
   <a class="jump" href="#argument">Why this exists &darr;</a>
@@ -217,7 +217,7 @@ def page_index(census, checks, dbt, entries):
   <h2>What this is</h2>
   <div class="sec-note">And, more to the point, what it is not</div>
   <div class="measure">
-    <p>This is not a list of schemes you can apply to &mdash; myScheme already does that.
+    <p>This is not a list of schemes you can apply to. myScheme already does that.
     This is a record of <em>the data about</em> those schemes: how completely each one is
     documented, whether the sources contradict one another, and what changed since last
     month.</p>
@@ -236,7 +236,7 @@ def page_index(census, checks, dbt, entries):
     <tbody>{qrows or '<tr><td colspan="3" class="muted">run parse/checks.py</td></tr>'}</tbody>
   </table></div>
   <div class="sec-note" style="margin-top:9px">Link reachability and cross-source joins are
-    deliberately not here yet &mdash; both carry real error bars and belong behind a
+    deliberately not here yet. Both carry real error bars and belong behind a
     methodology page. These do not.</div>
 </section>
 """
@@ -253,7 +253,7 @@ def page_divergence(census, dbt, reg=None, cls=None):
         a, b = ms.get(n), ds.get(n)
         ratio = f"{b / a:.1f}&times;" if a and b else '<span class="nil">...</span>'
         direction = ("DBT higher" if a and b and b > a
-                     else "myScheme higher" if a and b and a > b else "&mdash;")
+                     else "myScheme higher" if a and b and a > b else "not comparable")
         rows += (f'<tr><td>{e(n)}</td><td class="num">{num(a)}</td>'
                  f'<td class="num">{num(b)}</td><td class="num">{ratio}</td>'
                  f'<td class="muted">{direction}</td></tr>')
@@ -284,7 +284,7 @@ def page_divergence(census, dbt, reg=None, cls=None):
     {num(reg.get('total_entries'))} entries against myScheme's
     {num(reg.get('myscheme_entries'))}</div>
   <p class="standfirst">A scheme the state funds but never tells citizens about is a
-  harder finding than any missing field &mdash; and it is invisible to anything that
+  harder finding than any missing field, and it is invisible to anything that
   treats myScheme&rsquo;s 4,772 as the universe.</p>
   <div class="tscroll"><table>
     <thead><tr><th>Funded and classified a scheme, absent from myScheme</th>
@@ -294,9 +294,9 @@ def page_divergence(census, dbt, reg=None, cls=None):
   </table></div>
   <div class="warnbox">
     <b>How these were separated from budget heads, and how often that is wrong</b>
-    Statement 4B mixes welfare schemes with infrastructure and accounting heads &mdash;
+    Statement 4B mixes welfare schemes with infrastructure and accounting heads like
     &ldquo;Road Works&rdquo;, &ldquo;Rolling Stock&rdquo;, &ldquo;Manufacturing
-    Suspense&rdquo; &mdash; that no citizen applies to. A classifier scores each line on
+    Suspense&rdquo;, none of which a citizen applies to. A classifier scores each line on
     independent signals: named in DBT Bharat&rsquo;s list (+3), Centrally Sponsored (+2),
     benefit words in the name (+2), has an outcome framework (+1), asset or accounting
     words (&minus;3), capital-heavy demand (&minus;2). Every line&rsquo;s arithmetic is
@@ -304,11 +304,11 @@ def page_divergence(census, dbt, reg=None, cls=None):
     <p style="margin:8px 0 0">Validated against myScheme membership as ground truth:
     at the F1-optimal threshold of 2 precision is
     {v.get('precision', 0):.0%}; this table runs at the stricter threshold of {thr},
-    where precision is {prec:.0%} &mdash; naming a scheme as missing is an accusation,
+    where precision is {prec:.0%}. Naming a scheme as missing is an accusation,
     so it runs at the high-precision end. Recall is a floor and not a measurement: a
     line called a scheme that myScheme lacks may be the classifier being right and the
     portal being incomplete, which is the thing this page is about. Residual errors are
-    visible above &mdash; &ldquo;Space Technology&rdquo; should not be here.</p>
+    visible above: &ldquo;Space Technology&rdquo; should not be here.</p>
   </div>
 </section>"""
 
@@ -333,7 +333,7 @@ acknowledges the others exist.</p>
 </table></div>
 
 <div class="warnbox">
-  <b>These are different units &mdash; do not read the ratio as error</b>
+  <b>These are different units, so do not read the ratio as error</b>
   {e((dbt or {}).get('caveat', ''))}
   And myScheme's per-state number is a <em>beneficiary</em> tag spanning both central and
   state schemes, which is why the facet does not sum to the published total. Neither
@@ -440,7 +440,7 @@ def index_section(entries):
         for nm, v in order)
     org_select = (
         '<input id="org" list="orglist" autocomplete="off" '
-        'placeholder="Any ministry or department &mdash; type to filter, or browse" '
+        'placeholder="Any ministry or department: type to filter, or browse" '
         'aria-label="Filter by ministry or department">'
         f'<datalist id="orglist">{org_options}</datalist>'
         '<button type="button" id="orgclear" class="tbtn" hidden>clear</button>')
@@ -533,7 +533,7 @@ def index_section(entries):
                  f'<td><a href="scheme/{e(slug)}.html">{e(e_["name"])}</a>{acr}</td>'
                  f'<td>{badges}</td>'
                  f'<td class="muted">{e(e_.get("level") or "")}</td>'
-                 f'<td class="muted">{e((e_.get("org") or "")[:44])}</td>'
+                 f'<td class="muted">{e(e_.get("org") or "")}</td>'
                  f'<td class="num">{score}</td>'
                  f'<td class="muted" style="font-size:12px">{failing}</td></tr>')
 
@@ -544,13 +544,13 @@ def index_section(entries):
                 'Run parse/registry.py.</div></section>')
     return f"""
 <section class="sec schemes" id="schemes">
-<div class="sec-note">{n:,} across four sources &mdash; myScheme, the Union Budget,
+<div class="sec-note">{n:,} across four sources: myScheme, the Union Budget,
   the Outcome Budget and DBT Bharat. Entries with no myScheme record have nothing to
   check, which is itself the finding.</div>
 <div class="workspace">
 <div class="wmain">
 <div class="filters">
-  <input id="q" type="search" placeholder="Search name or acronym &mdash; e.g. pm kisan, mgnrega&hellip;"
+  <input id="q" type="search" placeholder="Search name or acronym, e.g. pm kisan or mgnrega&hellip;"
     aria-label="Search schemes by name, acronym or slug">
   {state_select}
   {org_select}
@@ -571,14 +571,14 @@ def index_section(entries):
 <aside class="wrail" aria-label="Statistics for the current selection">
   <div class="railhd">This selection</div>
   <div class="railbig"><span id="rShown">{n:,}</span><span class="railof">of {n:,}</span></div>
-  <div class="railrow"><span>Not on myScheme</span><b id="rNoMs">&mdash;</b></div>
-  <div class="railrow"><span>Median checks passed</span><b id="rMed">&mdash;</b></div>
-  <div class="railrow"><span>Allocation known</span><b id="rMoney">&mdash;</b></div>
+  <div class="railrow"><span>Not on myScheme</span><b id="rNoMs">...</b></div>
+  <div class="railrow"><span>Median checks passed</span><b id="rMed">...</b></div>
+  <div class="railrow"><span>Allocation known</span><b id="rMoney">...</b></div>
   <div class="railhd" style="margin-top:16px">Listed by</div>
-  <div class="railrow"><span>myScheme</span><b id="rSms">&mdash;</b></div>
-  <div class="railrow"><span>Union Budget</span><b id="rSbu">&mdash;</b></div>
-  <div class="railrow"><span>DBT Bharat</span><b id="rSdb">&mdash;</b></div>
-  <div class="railrow"><span>Outcome Budget</span><b id="rSoc">&mdash;</b></div>
+  <div class="railrow"><span>myScheme</span><b id="rSms">...</b></div>
+  <div class="railrow"><span>Union Budget</span><b id="rSbu">...</b></div>
+  <div class="railrow"><span>DBT Bharat</span><b id="rSdb">...</b></div>
+  <div class="railrow"><span>Outcome Budget</span><b id="rSoc">...</b></div>
   <div class="railnote">Every figure here follows the filters. Allocation is the
     Budget line for the visible schemes where one is joined; most schemes have none
     published anywhere.</div>
@@ -647,7 +647,7 @@ def index_section(entries):
     function set(id,v){{ document.getElementById(id).textContent=v; }}
     set('rShown',shown.toLocaleString());
     set('rNoMs',(shown-src.myscheme).toLocaleString());
-    set('rMed', med===null ? '—' : med+' of 9');
+    set('rMed', med===null ? '...' : med+' of 9');
     set('rMoney', money ? '₹'+Math.round(money).toLocaleString('en-IN')+' cr' : '—');
     set('rSms',src.myscheme.toLocaleString()); set('rSbu',src.budget.toLocaleString());
     set('rSdb',src.dbt.toLocaleString()); set('rSoc',src.outcome.toLocaleString());
@@ -714,7 +714,7 @@ def index_section(entries):
     var el=document.getElementById('whyempty');
     el.innerHTML = bits.length
       ? 'Try one of these: '+bits.join('; ')+'.'
-      : 'No single filter explains it — several are narrowing at once.';
+      : 'No single filter explains it. Several are narrowing at once.';
   }}
 
   document.querySelectorAll('.pill').forEach(function(b){{
@@ -803,7 +803,7 @@ def page_unlisted(en, status):
 <div class="warnbox">
   <b>No documentation checks for this scheme</b>
   The nine checks measure what myScheme publishes about a scheme. There is no myScheme
-  record here to measure, so this page shows none &mdash; a score of nought would read
+  record here to measure, so this page shows none. A score of nought would read
   as a verdict on the scheme when it is a fact about the portal.
   {"This line is classified as a citizen-facing scheme rather than a budget head; the arithmetic is on /divergence." if verdict == "scheme" else "This line was classified as a budget head rather than a citizen-facing scheme, so its absence from a scheme portal may be correct."}
 </div>
@@ -820,7 +820,7 @@ def page_unlisted(en, status):
     <tr><td>myScheme record</td>
       <td><span class="nil">...</span> <span class="muted">no entry found in the
         {e(status.get('snapshot') or '')} snapshot, under a generous name match</span></td>
-      <td class="ts">&mdash;</td></tr>
+      <td class="ts">...</td></tr>
   </table></div>
 </section>
 """
@@ -832,7 +832,7 @@ def page_changes(log):
 <div class="eyebrow">Route &middot; /changes</div>
 <h2 class="pagetitle">What the government changed without saying</h2>
 <p class="standfirst">A diff between consecutive monthly snapshots. Nothing here is an
-opinion &mdash; each row is two archived payloads and the field that differs between them.</p>
+opinion. Each row is two archived payloads and the field that differs between them.</p>
 <div class="empty">
   <span class="big">...</span>
   <b>One snapshot held.</b><br>
@@ -857,7 +857,7 @@ opinion &mdash; each row is two archived payloads and the field that differs bet
 <div class="warnbox"><b>Why this page can be trusted more than the rest of the site</b>
 A diff is not a judgment. Every row is derived from two archived payloads anyone can
 re-fetch and compare. A snapshot that fails its completeness assertion is archived but
-marked INCOMPLETE, and this page refuses to diff against it &mdash; otherwise a dropped
+marked INCOMPLETE, and this page refuses to diff against it. Otherwise a dropped
 page of results would appear here as dozens of schemes being &ldquo;removed&rdquo;.</div>
 """
 
@@ -917,7 +917,7 @@ def page_scheme(s, status, enrich=None, entry=None):
     if s.get("bad_urls"):
         bad = '<div class="warnbox"><b>Malformed URL in a stored field</b>' + "".join(
             f'<div style="margin-top:6px"><code>{e(u["url"][:110])}</code><br>'
-            f'<span class="muted">{e(u["field"])} field &mdash; {e(u["why"])}</span></div>'
+            f'<span class="muted">{e(u["field"])} field: {e(u["why"])}</span></div>'
             for u in s["bad_urls"][:4]) + "</div>"
 
     def prov(field, value, source):
@@ -954,7 +954,7 @@ def page_scheme(s, status, enrich=None, entry=None):
   </table></div>
   <div class="sec-note" style="margin-top:8px">Indicator wording is the first line of a
     wrapped cell in the source PDF; target values are complete. The framework carries
-    targets and <b>no achieved-versus-promised column</b> — for this scheme or any
+    targets and <b>no achieved-versus-promised column</b>, for this scheme or any
     other.</div>"""
 
     b = (enrich or {}).get("budget", {}).get(s["slug"])
@@ -980,7 +980,7 @@ def page_scheme(s, status, enrich=None, entry=None):
     myScheme publishes no budget figure for any scheme. This one comes from the Union
     Budget Expenditure Profile and is joined by name, so it is shown apart from the
     checks and never counted in them. A scheme&rsquo;s launch date, likewise, exists in
-    its gazette notification whether or not the portal repeats it &mdash; the checks
+    its gazette notification whether or not the portal repeats it. The checks
     above ask only whether <em>this portal</em> tells a citizen, which is a different
     and narrower question.</div>
 </section>"""
@@ -1091,11 +1091,43 @@ def build():
     return n
 
 
+def audit_text(out_dir):
+    """Reject em-dashes in anything a reader sees.
+
+    Checked at build time rather than trusted to discipline: page copy is written in a
+    dozen f-strings across this file, and a house rule that is not enforced is a rule
+    that comes back. Script and style bodies are excluded because they are not prose.
+    """
+    bad = []
+    for root, _, files in os.walk(out_dir):
+        for fn in files:
+            if not fn.endswith((".html", ".md")):
+                continue
+            path = os.path.join(root, fn)
+            with open(path, encoding="utf-8") as fh:
+                t = fh.read()
+            t = re.sub(r"<script.*?</script>", "", t, flags=re.S)
+            t = re.sub(r"<style.*?</style>", "", t, flags=re.S)
+            t = html.unescape(t)
+            if "\u2014" in t:
+                n = t.count("\u2014")
+                snippet = t[max(0, t.index("\u2014") - 45): t.index("\u2014") + 45]
+                bad.append((os.path.relpath(path, out_dir), n,
+                            " ".join(snippet.split())))
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Build the static site into site/_out.")
     ap.parse_args()
     n = build()
-    print(f"built site/_out — 4 pages + {n:,} scheme pages")
+    print(f"built site/_out: 4 pages + {n:,} scheme pages")
+    bad = audit_text(OUT)
+    if bad:
+        print(f"\nem-dashes in reader-facing text ({len(bad)} file(s)):")
+        for f, k, snip in bad[:8]:
+            print(f"  {f}  x{k}   ...{snip}...")
+        raise SystemExit(1)
     if n == 0:
         print("  (no scheme pages: run parse/explode.py then parse/checks.py first)")
 

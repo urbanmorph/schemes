@@ -43,7 +43,10 @@
 html{color-scheme:light dark}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
   font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+/* 1080 was set before the table carried six columns and a rail beside it. At that width
+   the rail left the table 754px and it scrolled sideways on a desktop, which is the one
+   place it should not have to. */
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
 /* `text-wrap: balance` was the reason headings broke early: it equalises line lengths,
    so a two-line title is deliberately shortened on BOTH lines rather than filling the
    container. `pretty` keeps normal line filling and only avoids a one-word last line. */
@@ -136,6 +139,17 @@ code{font-family:var(--mono);font-size:.88em;background:var(--sink);padding:1px 
 .cell .n{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:6px}
 
 .tscroll{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
+/* The scheme and ministry columns hold the long strings; letting them wrap keeps the
+   table inside its container instead of pushing every other column off the edge. */
+#tbl{table-layout:fixed;width:100%}
+#tbl th:nth-child(1),#tbl td:nth-child(1){width:31%}
+#tbl th:nth-child(2),#tbl td:nth-child(2){width:15%}
+#tbl th:nth-child(3),#tbl td:nth-child(3){width:9%}
+#tbl th:nth-child(4),#tbl td:nth-child(4){width:23%}
+#tbl th:nth-child(5),#tbl td:nth-child(5){width:8%}
+#tbl th:nth-child(6),#tbl td:nth-child(6){width:14%}
+#tbl td{word-break:break-word;vertical-align:top}
+#tbl td:nth-child(2){white-space:normal}
 table{border-collapse:collapse;width:100%;font-size:14px}
 th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule)}
 thead th{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.11em;
@@ -253,7 +267,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .filters input#org{min-width:300px;flex:1 1 300px}
 
 /* ---- schemes workspace: the table first, stats in a rail beside it ---------------- */
-.workspace{display:grid;grid-template-columns:minmax(0,1fr) 246px;gap:24px;align-items:start}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 232px;gap:22px;align-items:start}
 .wmain{min-width:0}
 .wrail{position:sticky;top:14px;border:1px solid var(--rule);background:var(--surface);
   padding:15px 16px}

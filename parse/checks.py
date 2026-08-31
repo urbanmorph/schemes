@@ -140,7 +140,7 @@ def check_scheme(rec):
         ("start_date_recorded", bool(open_date), open_date or "not published"),
 
         ("end_date_recorded", bool(close_date),
-         close_date or "no end date — indefinite by omission"),
+         close_date or "no end date recorded, so indefinite by omission"),
 
         ("stored_urls_well_formed", not bad_urls,
          "all parse" if not bad_urls else

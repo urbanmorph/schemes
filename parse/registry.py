@@ -172,7 +172,7 @@ def build(snapshot, year):
 
     out = {
         "snapshot": snapshot, "cycle": f"{year}-{str(year+1)[2:]}", "built": utcnow(),
-        "merge_rule": "parse/match.py probably_same — generous, for absence claims",
+        "merge_rule": "parse/match.py probably_same, generous, for absence claims",
         "total_entries": len(entries),
         "myscheme_entries": len(checks),
         "added_by": {"budget": new_budget, "outcome": new_outcome, "dbt": new_dbt},

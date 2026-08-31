@@ -89,7 +89,7 @@ def run(year):
         "caveat": ("Targets only, never achievements. The framework states what each "
                    "scheme promises to deliver in the coming year; no source publishes "
                    "a delivered-versus-promised figure for any central scheme. A scheme "
-                   "absent here has no published target of any kind — a fact about the "
+                   "absent here has no published target of any kind, which is a fact about the "
                    "Outcome Budget's scope, not about the scheme."),
         "schemes": matched,
     })

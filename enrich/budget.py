@@ -136,8 +136,8 @@ def run(year):
         "thresholds": {"strong": STRONG, "likely": LIKELY, "weak": WEAK},
         "caveat": ("Fuzzy name join, published with its score so it can be disputed. "
                    "Only strong and likely matches are carried. The large unmatched "
-                   "majority is a fact about the sources — myScheme lists citizen-facing "
-                   "schemes and the statements list budget lines — not a gap in this "
+                   "majority is a fact about the sources: myScheme lists citizen-facing "
+                   "schemes and the statements list budget lines, not a gap in this "
                    "register."),
         "schemes": matched,
     })
