@@ -158,6 +158,17 @@ def check_scheme(rec):
         "level": (basic.get("level") or {}).get("label"),
         "type": (basic.get("schemeType") or {}).get("label"),
         "ministry": (basic.get("nodalMinistryName") or {}).get("label"),
+        "department": (basic.get("nodalDepartmentName") or {}).get("label"),
+        # Central schemes carry a nodal ministry; state and UT schemes carry a nodal
+        # department and never a ministry. Measured across the full census: all 711
+        # central records have a ministry, all 4,056 state/UT records have a department,
+        # and none has neither. Filtering or displaying on ministry alone would leave 85%
+        # of the register blank, so `org` is the one the interface uses.
+        "org": ((basic.get("nodalMinistryName") or {}).get("label")
+                or (basic.get("nodalDepartmentName") or {}).get("label")),
+        "org_kind": ("ministry" if (basic.get("nodalMinistryName") or {}).get("label")
+                     else "department" if (basic.get("nodalDepartmentName") or {}).get("label")
+                     else None),
         "state": basic.get("beneficiaryState"),
         "dbt": basic.get("dbtScheme"),
         "open_date": open_date,

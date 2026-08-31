@@ -281,6 +281,32 @@ acknowledges the others exist.</p>
 
 
 def index_section(checks):
+    # Central schemes carry a nodal ministry, state and UT schemes a nodal department,
+    # and every record has one or the other. Filtering on ministry alone would apply to
+    # 711 of 4,771 rows and leave the column blank on the rest, so the control covers
+    # both and says so. Grouped by kind and ordered by how many schemes each holds, since
+    # a 387-entry alphabetical list buries the ones anyone actually wants.
+    orgs = {}
+    for s in (checks or {}).get("schemes", []):
+        o = s.get("org")
+        if o:
+            k = orgs.setdefault(o, {"n": 0, "kind": s.get("org_kind") or "department"})
+            k["n"] += 1
+    order = sorted(orgs.items(), key=lambda kv: (-kv[1]["n"], kv[0]))
+    org_ix = {name: i for i, (name, _) in enumerate(order)}
+
+    def opts(kind):
+        return "".join(
+            f'<option value="{org_ix[name]}">{e(name)} ({v["n"]})</option>'
+            for name, v in order if v["kind"] == kind)
+
+    org_select = (
+        '<select id="org" aria-label="Filter by ministry or department">'
+        '<option value="">any ministry or department</option>'
+        f'<optgroup label="Central ministries">{opts("ministry")}</optgroup>'
+        f'<optgroup label="State &amp; UT departments">{opts("department")}</optgroup>'
+        '</select>')
+
     rows = ""
     for s in (checks or {}).get("schemes", []):
         slug = s["slug"]
@@ -292,11 +318,12 @@ def index_section(checks):
         short = s.get("short") or ""
         hay = " ".join(x for x in ((s["name"] or ""), short, slug) if x).lower()
         acr = f'<span class="acr">{e(short)}</span>' if short and short != s["name"] else ""
+        org = s.get("org") or ""
         rows += (
-            f'<tr data-n="{e(hay)}" data-p="{s["passed"]}">'
+            f'<tr data-n="{e(hay)}" data-p="{s["passed"]}" data-o="{org_ix.get(org, -1)}">'
             f'<td><a href="scheme/{e(slug)}.html">{e(s["name"] or slug)}</a>{acr}</td>'
             f'<td class="muted">{e(s.get("level") or "")}</td>'
-            f'<td class="muted">{e((s.get("ministry") or "")[:44])}</td>'
+            f'<td class="muted">{e(org[:46])}</td>'
             f'<td class="num"><b>{s["passed"]}</b>/{s["total"]}</td>'
             f'<td class="muted" style="font-size:12px">{e(", ".join(failed[:3]))}</td></tr>')
     n = len((checks or {}).get("schemes", []))
@@ -316,10 +343,11 @@ def index_section(checks):
     <option value="">any score</option>
     {''.join(f'<option value="{i}">{i} or fewer passed</option>' for i in range(0, 10))}
   </select>
+  {org_select}
   <span class="count" id="count">{n:,} schemes</span>
 </div>
 <div class="tscroll"><table id="tbl">
-  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Level</th><th>Ministry</th>
+  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Level</th><th>Ministry / department</th>
     <th class="num sortable" data-k="p">Passed</th><th>Failing</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
@@ -327,16 +355,20 @@ def index_section(checks):
 (function(){{
   var tb=document.querySelector('#tbl tbody'),rows=[].slice.call(tb.rows),
       q=document.getElementById('q'),mp=document.getElementById('minp'),
+      og=document.getElementById('org'),
       c=document.getElementById('count'),asc=false;
   function apply(){{
-    var t=q.value.toLowerCase(),m=mp.value===''?null:+mp.value,shown=0;
+    var t=q.value.toLowerCase(),m=mp.value===''?null:+mp.value,
+        o=og.value===''?null:og.value,shown=0;
     rows.forEach(function(r){{
-      var ok=(!t||r.dataset.n.indexOf(t)>-1)&&(m===null||+r.dataset.p<=m);
+      var ok=(!t||r.dataset.n.indexOf(t)>-1)&&(m===null||+r.dataset.p<=m)
+             &&(o===null||r.dataset.o===o);
       r.hidden=!ok; if(ok)shown++;
     }});
     c.textContent=shown.toLocaleString()+' of {n:,} schemes';
   }}
   q.addEventListener('input',apply); mp.addEventListener('change',apply);
+  og.addEventListener('change',apply);
   document.querySelectorAll('th.sortable').forEach(function(th){{
     th.addEventListener('click',function(){{
       var k=th.dataset.k; asc=!asc;
