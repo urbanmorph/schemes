@@ -75,8 +75,13 @@ def shell(title, active, body, depth=0):
         except Exception:
             pass
 
+    # `href="{up}"` produced an empty href at depth 0, which resolves to the current
+    # document — so "/" in the nav silently reloaded whatever page you were already on
+    # instead of going home. `up or "./"` gives "./" at the root and "../" one level down.
+    home = up or "./"
     nav = "".join(
-        f'<a class="route{" on" if r == active else ""}" href="{up}{f if f != "index.html" else ""}">{e(r)}</a>'
+        f'<a class="route{" on" if r == active else ""}" '
+        f'href="{home if f == "index.html" else up + f}">{e(r)}</a>'
         for r, f in ROUTES)
 
     return f"""<!doctype html>
@@ -89,7 +94,7 @@ def shell(title, active, body, depth=0):
 <link rel="stylesheet" href="{up}theme.css">
 </head><body>
 <header class="mast"><div class="wrap mast-in">
-  <a class="brand" href="{up}">
+  <a class="brand" href="{home}">
     <span class="nil" aria-hidden="true">...</span>
     <span><h1>The Schemes Register</h1>
     <span class="sub">Indian government scheme data &middot; and what is missing from it</span></span>
@@ -169,15 +174,13 @@ def page_index(census, checks, dbt):
 
     return f"""
 <section class="hero">
-  <div>
-    <div class="eyebrow">The argument</div>
-    <h2>Karnataka runs {num(kar_ms)} welfare schemes.<br>Or {num(kar_dbt)}. It depends which<br>government portal you <em>ask</em>.</h2>
-    <p class="measure muted">Three central government sources publish counts of India's
-    welfare schemes. None of them agree, none reconciles to the others, and none keeps a
-    record of what it said last month. This register keeps that record, and publishes
-    what is missing as carefully as what is there.</p>
-  </div>
   <div class="bignil" aria-hidden="true">...</div>
+  <div class="eyebrow">The argument</div>
+  <h2>Karnataka runs {num(kar_ms)} welfare schemes. Or {num(kar_dbt)}. It depends which government portal you <em>ask</em>.</h2>
+  <p class="standfirst muted">Three central government sources publish counts of India's
+  welfare schemes. None of them agree, none reconciles to the others, and none keeps a
+  record of what it said last month. This register keeps that record, and publishes
+  what is missing as carefully as what is there.</p>
 </section>
 
 <div class="census">{strip}</div>
@@ -232,8 +235,8 @@ def page_divergence(census, dbt):
     kar_ms, kar_dbt = ms.get("Karnataka"), ds.get("Karnataka")
     return f"""
 <div class="eyebrow">Route &middot; /divergence</div>
-<h2 style="font-size:32px;margin-bottom:12px">Three sources, one question,<br>different answers</h2>
-<p class="lede measure">How many welfare schemes does a given state have? Every central
+<h2 class="pagetitle">Three sources, one question, different answers</h2>
+<p class="standfirst">How many welfare schemes does a given state have? Every central
 government portal that answers this question answers it differently, and no portal
 acknowledges the others exist.</p>
 
@@ -331,8 +334,8 @@ def page_changes(log):
     if not log:
         return """
 <div class="eyebrow">Route &middot; /changes</div>
-<h2 style="font-size:32px;margin-bottom:12px">What the government<br>changed without saying</h2>
-<p class="lede measure">A diff between consecutive monthly snapshots. Nothing here is an
+<h2 class="pagetitle">What the government changed without saying</h2>
+<p class="standfirst">A diff between consecutive monthly snapshots. Nothing here is an
 opinion &mdash; each row is two archived payloads and the field that differs between them.</p>
 <div class="empty">
   <span class="big">...</span>
@@ -349,7 +352,7 @@ opinion &mdash; each row is two archived payloads and the field that differs bet
                  f'<div class="det">{c["files"]} file(s) changed</div></div></div>')
     return f"""
 <div class="eyebrow">Route &middot; /changes</div>
-<h2 style="font-size:32px;margin-bottom:12px">What the government<br>changed without saying</h2>
+<h2 class="pagetitle">What the government changed without saying</h2>
 <div class="tscroll"><table><thead><tr><th>Snapshot</th><th>Commit</th>
 <th class="num">Files changed</th></tr></thead><tbody>
 {''.join(f'<tr><td>{e(c["date"])}</td><td>{e(c["subject"])}</td>'

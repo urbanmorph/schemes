@@ -38,7 +38,10 @@ html{color-scheme:light dark}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
   font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-h1,h2,h3{font-family:var(--serif);font-weight:500;text-wrap:balance;margin:0}
+/* `text-wrap: balance` was the reason headings broke early: it equalises line lengths,
+   so a two-line title is deliberately shortened on BOTH lines rather than filling the
+   container. `pretty` keeps normal line filling and only avoids a one-word last line. */
+h1,h2,h3{font-family:var(--serif);font-weight:500;text-wrap:pretty;margin:0}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--stamp);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -58,10 +61,17 @@ a{color:inherit}
 
 .routes{border-bottom:1px solid var(--rule);background:var(--surface);overflow-x:auto}
 .routes .wrap{display:flex;gap:2px}
-.route{font-family:var(--mono);font-size:12.5px;padding:11px 15px;color:var(--muted);
-  text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+/* min-width keeps "/" a real hit target — a single glyph with 15px of padding was a
+   ~24px tap area, well under the 44px guideline, and easy to miss with a mouse too. */
+/* Every route carries the SAME font-weight in every state. Weight was previously 400
+   normally and 500 when active, so the active item rendered wider than the others and
+   the whole row shifted sideways from page to page. The current page is marked by
+   colour and the underline instead — both of which cost no width. */
+.route{font-family:var(--mono);font-size:12.5px;font-weight:500;padding:12px 18px;
+  color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;
+  white-space:nowrap;min-width:52px;text-align:center;display:inline-block}
 .route:hover{color:var(--ink)}
-.route.on{color:var(--stamp);border-bottom-color:var(--stamp);font-weight:500}
+.route.on{color:var(--stamp);border-bottom-color:var(--stamp)}
 
 .fresh{background:var(--sink);border-bottom:1px solid var(--rule)}
 .fresh .wrap{display:flex;align-items:center;gap:10px;padding:9px 28px;
@@ -85,13 +95,27 @@ p{margin:0 0 15px}
 code{font-family:var(--mono);font-size:.88em;background:var(--sink);padding:1px 4px;
   border-radius:2px;color:var(--muted)}
 
-.hero{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;
-  padding-bottom:34px;border-bottom:1px solid var(--rule)}
-.hero h2{font-size:38px;line-height:1.12;letter-spacing:-.018em;margin-bottom:16px}
+/* Single column on purpose. The hero used to be a 1fr/auto grid with the nil-mark in
+   the second track, which stole width from the headline and broke it into short lines
+   well before the container edge. Titles and standfirsts now run the full measure. */
+.hero{padding-bottom:34px;border-bottom:1px solid var(--rule)}
+.hero h2{font-size:clamp(30px,4.4vw,46px);line-height:1.1;letter-spacing:-.02em;
+  margin-bottom:18px;max-width:none}
 .hero h2 em{font-style:italic;color:var(--stamp)}
-.bignil{font-family:var(--mono);font-size:96px;color:var(--stamp);opacity:.16;
-  line-height:.6;letter-spacing:.05em;user-select:none}
-@media (max-width:760px){.hero{grid-template-columns:1fr}.bignil{display:none}}
+.bignil{font-family:var(--mono);font-size:64px;color:var(--stamp);opacity:.16;
+  line-height:.55;letter-spacing:.05em;user-select:none;margin-bottom:16px}
+
+/* Section and page titles: full container width, never a reading measure. */
+.pagetitle{font-size:clamp(27px,3.6vw,38px);line-height:1.14;letter-spacing:-.018em;
+  margin-bottom:14px;max-width:none}
+.sec>h2{max-width:none}
+
+/* The standfirst sits under a title and runs the container, unlike running body copy
+   which keeps a ~63ch measure via .measure. */
+.standfirst{font-family:var(--serif);font-size:clamp(17px,1.7vw,21px);line-height:1.45;
+  margin:0 0 18px;max-width:none;color:var(--ink)}
+.standfirst.muted{color:var(--muted)}
+@media (max-width:760px){.bignil{font-size:48px}}
 
 .census{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
   gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:26px}
