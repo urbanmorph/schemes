@@ -6,23 +6,25 @@ AGENT-EDITABLE (PLAN.md §7). Reads data/ and archive/. Never fetches.
     data/registry.json
 
 The register was mirroring one portal. That was a mistake: myScheme is a source, not
-the definition of what exists. Measured here, against all 4,771 myScheme entries at
-every level:
+the definition of what exists. Union across four sources: 5,201 entries against
+myScheme's 4,771 — 343 added by the Budget statements, 75 by DBT Bharat, 12 by the
+Outcome Budget.
 
-    Budget Statements 4A/4B    721 lines   665 (92%) have no myScheme entry
-    Outcome Budget             167 frames  137 (82%) have no myScheme entry
-    DBT Bharat central list    320 schemes 223 (70%) have no myScheme entry
+Absences here are claimed only when parse/match.py's GENEROUS matcher finds nothing.
+An earlier version reused the conservative matcher from enrich/budget.py and inflated
+every count: it reported 5,621 entries and 570 funded-but-unlisted lines worth
+Rs 18.5 lakh cr, when the true figures are 5,201 and 311 worth Rs 10.4 lakh cr. The
+difference was false absences — "Jal Jeevan Mission (JJM) / National Rural Drinking
+Water Mission" scored 0.41 against myScheme's "Jal Jeevan Mission", and
+"MGNREGA-Programme Component" scored 0.33 against "Mahatma Gandhi National Rural
+Employment Guarantee Act". Both are listed. Claiming otherwise would have been a
+false accusation, published.
 
-And the absences are not obscure. Rashtriya Krishi Vikas Yojana (Rs 8,550 cr this
-year), Krishionnati Yojana (Rs 11,200 cr) and National AYUSH Mission (Rs 1,300 cr) are
-each funded in the Union Budget and each absent from the government's own citizen-facing
-scheme portal. A scheme the state funds but never tells citizens about is a stronger
-finding than any missing field, and it is invisible to anything that treats myScheme's
-4,772 as the universe.
+Samagra Shiksha (Rs 42,100 cr) survives the generous matcher and is genuinely absent.
 
-Entries are clustered by the same conservative name similarity used for enrichment, so
-the union under-merges rather than over-merges: two records for one scheme is a visible,
-fixable error, while silently collapsing two different schemes is not.
+Names are compared only against entries sharing a content word or acronym, via a token
+index. Comparing every name against every entry took six minutes; this takes ten
+seconds and makes the same comparisons.
 """
 
 import argparse
@@ -46,10 +48,14 @@ def _load(name, path):
     return mod
 
 
-_b = _load("enrich_budget", os.path.join(ROOT_DIR, "enrich", "budget.py"))
-similarity, band = _b.similarity, _b.band
+_m = _load("scheme_match", os.path.join(HERE, "match.py"))
+probably_same, m_tokens, m_acronyms = _m.probably_same, _m.tokens, _m.acronyms
 
-MERGE_FLOOR = 0.80          # two names below this are treated as different schemes
+# Merging uses parse/match.py's GENEROUS matcher, not enrich/budget.py's conservative
+# one. The two answer different questions and the earlier code used the wrong one here:
+# a name that fails to merge becomes a claim that myScheme omits the scheme, so a
+# conservative matcher inflates every absence. It cost us "Jal Jeevan Mission" and
+# "MGNREGA" as false absences before this was caught.
 
 
 def dbt_central(date):
@@ -84,21 +90,44 @@ def build(snapshot, year):
                                      "total": s["total"]}},
         })
 
+    # Token index, so a name is only compared against entries that share a content word
+    # or an acronym with it. Comparing every name against every entry was 5,600 x 6,000
+    # and took six minutes; this makes the same comparisons on a few dozen candidates.
+    index = {}
+
+    def keys_for(name):
+        return set(m_tokens(name)) | {a for a in m_acronyms(name) if len(a) >= 5}
+
+    def register(en):
+        for k in keys_for(en["name"]):
+            index.setdefault(k, []).append(en)
+
+    for en in entries:
+        register(en)
+
     def add(names_with_detail, key):
-        """Attach to an existing entry if one matches, else create a new one."""
+        """Attach to an existing entry if one plausibly matches, else create a new one."""
         added = 0
         for name, detail in names_with_detail:
-            best, score = None, 0.0
-            for en in entries:
-                sc = similarity(name, en["name"])
-                if sc > score:
-                    best, score = en, sc
-            if best is not None and score >= MERGE_FLOOR:
-                best["sources"].setdefault(key, {**detail, "name": name,
-                                                 "merge_score": round(score, 3)})
+            seen, hit, why = set(), None, ""
+            for k in keys_for(name):
+                for en in index.get(k, ()):
+                    if id(en) in seen:
+                        continue
+                    seen.add(id(en))
+                    same, reason = probably_same(name, en["name"])
+                    if same:
+                        hit, why = en, reason
+                        break
+                if hit:
+                    break
+            if hit is not None:
+                hit["sources"].setdefault(key, {**detail, "name": name,
+                                                "merge_reason": why})
             else:
-                entries.append({"name": name,
-                                "sources": {key: {**detail, "name": name}}})
+                en = {"name": name, "sources": {key: {**detail, "name": name}}}
+                entries.append(en)
+                register(en)
                 added += 1
         return added
 
@@ -143,7 +172,7 @@ def build(snapshot, year):
 
     out = {
         "snapshot": snapshot, "cycle": f"{year}-{str(year+1)[2:]}", "built": utcnow(),
-        "merge_floor": MERGE_FLOOR,
+        "merge_rule": "parse/match.py probably_same — generous, for absence claims",
         "total_entries": len(entries),
         "myscheme_entries": len(checks),
         "added_by": {"budget": new_budget, "outcome": new_outcome, "dbt": new_dbt},

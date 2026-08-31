@@ -233,7 +233,7 @@ def page_index(census, checks, dbt):
 """
 
 
-def page_divergence(census, dbt, reg=None):
+def page_divergence(census, dbt, reg=None, cls=None):
     ms = (census or {}).get("facets", {}).get("beneficiaryState", {})
     ds = (dbt or {}).get("states", {})
     names = sorted(set(ms) | set(ds))
@@ -256,42 +256,50 @@ def page_divergence(census, dbt, reg=None):
     # Budget allocation, and the government's own citizen-facing portal does not list
     # them at all.
     unlisted_section = ""
-    if reg:
+    if reg and cls:
         rows = "".join(
             f'<tr><td>{e(u["name"])}</td>'
             f'<td class="num">{u["be_cr"]:,.0f}</td>'
-            f'<td class="muted">{e(", ".join(u["also_in"]))}</td>'
-            f'<td class="muted">{e((u.get("statement") or "").replace("stat", "Stmt ").upper())}</td></tr>'
-            for u in reg.get("unlisted_but_funded", []) if u.get("also_in"))
-        total = reg.get("unlisted_but_funded_total", 0)
-        cr = reg.get("unlisted_but_funded_cr", 0)
-        corro = sum(1 for u in reg.get("unlisted_but_funded", []) if u.get("also_in"))
+            f'<td class="num">{u["score"]}</td>'
+            f'<td class="muted" style="font-size:12px">'
+            f'{e("; ".join(w for _, w in u.get("evidence", []) if not _.startswith("-"))[:96])}</td></tr>'
+            for u in cls.get("unlisted_schemes", []))
+        v = cls.get("validation", {})
+        thr = cls.get("publish_threshold", 4)
+        prec = next((r["precision"] for r in cls.get("threshold_sweep", [])
+                     if r["threshold"] == thr), None)
         unlisted_section = f"""
 <section class="sec">
   <h2>Funded, monitored, and never announced</h2>
   <div class="sec-note">Union registry across four government sources &middot;
-    {num(reg.get('total_entries'))} entries against myScheme's {num(reg.get('myscheme_entries'))}</div>
+    {num(reg.get('total_entries'))} entries against myScheme's
+    {num(reg.get('myscheme_entries'))}</div>
   <p class="standfirst">A scheme the state funds but never tells citizens about is a
   harder finding than any missing field &mdash; and it is invisible to anything that
   treats myScheme&rsquo;s 4,772 as the universe.</p>
   <div class="tscroll"><table>
-    <thead><tr><th>Named by other government sources, absent from myScheme</th>
-      <th class="num">BE 2026&ndash;27 (&#8377; cr)</th><th>Also in</th><th>Budget</th></tr></thead>
+    <thead><tr><th>Funded and classified a scheme, absent from myScheme</th>
+      <th class="num">BE 2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
+      <th>Why it scores as a scheme</th></tr></thead>
     <tbody>{rows}</tbody>
   </table></div>
   <div class="warnbox">
-    <b>Read the number carefully &mdash; most of the 570 are not welfare schemes</b>
-    {num(total)} Budget lines carrying &#8377;{cr:,.0f} cr have no myScheme entry, but
-    Statement 4B includes infrastructure and subsidy heads &mdash; &ldquo;Road
-    Works&rdquo;, &ldquo;Rolling Stock&rdquo;, &ldquo;Manufacturing Suspense&rdquo;
-    &mdash; that no citizen applies to and that myScheme is right to omit. The
-    {corro} rows above are the narrower claim: named as schemes by at least two
-    government sources. Even here, railway heads appear because railways report
-    outputs. The unarguable cases are the ones you can check by name &mdash; Samagra
-    Shiksha at &#8377;42,100 cr, Saksham Anganwadi and POSHAN 2.0 at &#8377;23,100 cr,
-    Crop Insurance at &#8377;12,200 cr &mdash; each a flagship welfare scheme, each
-    funded and monitored, none of them on the portal built to explain schemes to
-    citizens.
+    <b>How these were separated from budget heads, and how often that is wrong</b>
+    Statement 4B mixes welfare schemes with infrastructure and accounting heads &mdash;
+    &ldquo;Road Works&rdquo;, &ldquo;Rolling Stock&rdquo;, &ldquo;Manufacturing
+    Suspense&rdquo; &mdash; that no citizen applies to. A classifier scores each line on
+    independent signals: named in DBT Bharat&rsquo;s list (+3), Centrally Sponsored (+2),
+    benefit words in the name (+2), has an outcome framework (+1), asset or accounting
+    words (&minus;3), capital-heavy demand (&minus;2). Every line&rsquo;s arithmetic is
+    published so the verdict can be rechecked.
+    <p style="margin:8px 0 0">Validated against myScheme membership as ground truth:
+    at the F1-optimal threshold of 2 precision is
+    {v.get('precision', 0):.0%}; this table runs at the stricter threshold of {thr},
+    where precision is {prec:.0%} &mdash; naming a scheme as missing is an accusation,
+    so it runs at the high-precision end. Recall is a floor and not a measurement: a
+    line called a scheme that myScheme lacks may be the classifier being right and the
+    portal being incomplete, which is the thing this page is about. Residual errors are
+    visible above &mdash; &ldquo;Space Technology&rdquo; should not be here.</p>
   </div>
 </section>"""
 
@@ -742,7 +750,8 @@ def build():
 
     w("index.html", shell("The census and the argument", "/", page_index(census, checks, dbt)))
     w("divergence.html", shell("Divergence", "/divergence",
-                               page_divergence(census, dbt, load("data/registry.json", {}))))
+                               page_divergence(census, dbt, load("data/registry.json", {}),
+                                               load("data/classification.json", {}))))
     w("changes.html", shell("Changes", "/changes", page_changes(git_log())))
 
     n = 0
