@@ -29,8 +29,12 @@ OUT = os.path.join(HERE, "_out")
 FONTS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400"
          "&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap")
 
+# The scheme index lives on "/" rather than behind its own route. The argument and the
+# evidence for it are the same page: someone who reads that 99% of schemes carry no end
+# date should be able to scroll straight into the list and check it, without treating
+# "see the data" as a separate destination.
 ROUTES = [("/", "index.html"), ("/divergence", "divergence.html"),
-          ("/changes", "changes.html"), ("/schemes", "schemes.html")]
+          ("/changes", "changes.html")]
 
 
 def e(s):
@@ -204,6 +208,8 @@ def page_index(census, checks, dbt):
     deliberately not here yet &mdash; both carry real error bars and belong behind a
     methodology page. These do not.</div>
 </section>
+
+{index_section(checks)}
 """
 
 
@@ -255,7 +261,7 @@ acknowledges the others exist.</p>
 """
 
 
-def page_schemes(checks):
+def index_section(checks):
     rows = ""
     for s in (checks or {}).get("schemes", []):
         slug = s["slug"]
@@ -268,12 +274,16 @@ def page_schemes(checks):
             f'<td class="num"><b>{s["passed"]}</b>/{s["total"]}</td>'
             f'<td class="muted" style="font-size:12px">{e(", ".join(failed[:3]))}</td></tr>')
     n = len((checks or {}).get("schemes", []))
+    if not n:
+        return ('<section class="sec"><h2>Every scheme</h2>'
+                '<div class="empty"><span class="big">...</span>'
+                '<b>No scheme data built yet.</b><br>'
+                'Run parse/explode.py, then parse/checks.py.</div></section>')
     return f"""
-<div class="eyebrow">Route &middot; /schemes</div>
-<h2 style="font-size:32px;margin-bottom:12px">Every scheme, and how<br>completely it is documented</h2>
-<p class="lede measure">Sorted by checks passed, not by a grade. A count can be recomputed
-from the rows; a letter cannot, and a letter is what gets screenshotted without its
-caption.</p>
+<section class="sec">
+<h2>Every scheme, and how completely it is documented</h2>
+<div class="sec-note">Sorted by checks passed, never by a grade &mdash; a count can be
+  recomputed from the rows, and a letter is what gets screenshotted without its caption</div>
 <div class="filters">
   <input id="q" type="search" placeholder="Filter by name&hellip;" aria-label="Filter schemes by name">
   <select id="minp" aria-label="Minimum checks passed">
@@ -313,6 +323,7 @@ caption.</p>
   }});
 }})();
 </script>
+</section>
 """
 
 
@@ -458,15 +469,14 @@ def build():
         with open(os.path.join(OUT, rel), "w", encoding="utf-8") as fh:
             fh.write(s)
 
-    w("index.html", shell("The argument", "/", page_index(census, checks, dbt)))
+    w("index.html", shell("The census and the argument", "/", page_index(census, checks, dbt)))
     w("divergence.html", shell("Divergence", "/divergence", page_divergence(census, dbt)))
     w("changes.html", shell("Changes", "/changes", page_changes(git_log())))
-    w("schemes.html", shell("All schemes", "/schemes", page_schemes(checks)))
 
     n = 0
     for s in (checks or {}).get("schemes", []):
         w(os.path.join("scheme", f"{s['slug']}.html"),
-          shell(s["short"] or s["name"], "/schemes", page_scheme(s, status), depth=1))
+          shell(s["short"] or s["name"], "/", page_scheme(s, status), depth=1))
         n += 1
 
     return n
