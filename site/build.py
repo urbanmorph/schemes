@@ -190,7 +190,18 @@ def page_index(census, checks, dbt, entries):
                   f'<td class="num gap">{v["fail_pct"]}%</td></tr>')
 
     return f"""
-<section class="hero">
+<div class="topline">
+  <div>
+    <div class="eyebrow">The census</div>
+    <h2 class="pagetitle">Every scheme any government source names &mdash;
+      and what each one fails to say</h2>
+  </div>
+  <a class="jump" href="#argument">Why this exists &darr;</a>
+</div>
+
+{index_section(entries)}
+
+<section class="hero" id="argument">
   <div class="bignil" aria-hidden="true">...</div>
   <div class="eyebrow">The argument</div>
   <h2>Karnataka runs {num(kar_ms)} welfare schemes. Or {num(kar_dbt)}. It depends which government portal you <em>ask</em>.</h2>
@@ -228,8 +239,6 @@ def page_index(census, checks, dbt, entries):
     deliberately not here yet &mdash; both carry real error bars and belong behind a
     methodology page. These do not.</div>
 </section>
-
-{index_section(entries)}
 """
 
 
@@ -322,12 +331,6 @@ acknowledges the others exist.</p>
     <th class="num">Ratio</th><th>Direction</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
-<div class="empty" id="nomatch" hidden>
-  <span class="big">...</span>
-  <b>Nothing matches those filters.</b><br>
-  Search ignores punctuation, so <code>pm kisan</code> and <code>PM-KISAN</code> are the
-  same. Try fewer words, or clear a filter.
-</div>
 
 <div class="warnbox">
   <b>These are different units &mdash; do not read the ratio as error</b>
@@ -386,6 +389,7 @@ def unify(checks, registry, classification):
             "level": (base or {}).get("level") or ((ms or {}).get("level")),
             "org": (base or {}).get("org"),
             "level_value": (base or {}).get("level_value"),
+            "state": (base or {}).get("state"),
             "be_cr": bud.get("be_cr"),
             "demand_no": bud.get("demand_no"),
             "statement": bud.get("statement"),
@@ -440,6 +444,21 @@ def index_section(entries):
         'aria-label="Filter by ministry or department">'
         f'<datalist id="orglist">{org_options}</datalist>'
         '<button type="button" id="orgclear" class="tbtn" hidden>clear</button>')
+
+    st = {}
+    for e_ in entries:
+        v = e_.get("state")
+        for x in (v if isinstance(v, list) else [v] if v else []):
+            st[x] = st.get(x, 0) + 1
+    # "All" is myScheme's own label for a nationwide scheme, not a state. Keeping it in
+    # the list but naming it plainly stops it reading as "no filter".
+    state_select = (
+        '<select id="st" aria-label="Filter by state or UT">'
+        '<option value="">Any state or UT</option>'
+        + "".join(f'<option value="{e(k.lower())}">'
+                  f'{e("Nationwide (All)" if k == "All" else k)} ({n:,})</option>'
+                  for k, n in sorted(st.items(), key=lambda kv: (kv[0] == "All", -kv[1])))
+        + '</select>')
 
     lv = {}
     for e_ in entries:
@@ -505,9 +524,12 @@ def index_section(entries):
             score = '<span class="nil">...</span>'
             failing = '<span class="muted">not listed on myScheme</span>'
         rows += (f'<tr{xattr} data-p="{(c or {}).get("passed", -1)}" '
-                 f'data-o="{e((e_.get("org") or "").lower()[:46])}" '
+                 f'data-o="{e((e_.get("org") or "").lower())}" '
                  f'data-l="{e(e_.get("level_value") or "")}" '
-                 f'data-s="{e(" ".join(e_["sources"]))}">'
+                 f'data-st="{e(" ".join(x.lower() for x in ((e_.get("state") if isinstance(e_.get("state"), list) else [e_.get("state")]) if e_.get("state") else [])))}" '
+                 f'data-s="{e(" ".join(e_["sources"]))}"'
+                 + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
+                 + '>'
                  f'<td><a href="scheme/{e(slug)}.html">{e(e_["name"])}</a>{acr}</td>'
                  f'<td>{badges}</td>'
                  f'<td class="muted">{e(e_.get("level") or "")}</td>'
@@ -521,14 +543,16 @@ def index_section(entries):
                 '<span class="big">...</span><b>No registry built yet.</b><br>'
                 'Run parse/registry.py.</div></section>')
     return f"""
-<section class="sec">
-<h2>Every scheme any government source names</h2>
+<section class="sec schemes" id="schemes">
 <div class="sec-note">{n:,} across four sources &mdash; myScheme, the Union Budget,
-  the Outcome Budget and DBT Bharat. Sorted by checks passed where a scheme is on
-  myScheme; the rest have nothing to check, which is itself the finding.</div>
+  the Outcome Budget and DBT Bharat. Entries with no myScheme record have nothing to
+  check, which is itself the finding.</div>
+<div class="workspace">
+<div class="wmain">
 <div class="filters">
   <input id="q" type="search" placeholder="Search name or acronym &mdash; e.g. pm kisan, mgnrega&hellip;"
     aria-label="Search schemes by name, acronym or slug">
+  {state_select}
   {org_select}
   <span class="count" id="count">{n:,} schemes</span>
 </div>
@@ -543,11 +567,29 @@ def index_section(entries):
     <th>Failing</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
+</div>
+<aside class="wrail" aria-label="Statistics for the current selection">
+  <div class="railhd">This selection</div>
+  <div class="railbig"><span id="rShown">{n:,}</span><span class="railof">of {n:,}</span></div>
+  <div class="railrow"><span>Not on myScheme</span><b id="rNoMs">&mdash;</b></div>
+  <div class="railrow"><span>Median checks passed</span><b id="rMed">&mdash;</b></div>
+  <div class="railrow"><span>Allocation known</span><b id="rMoney">&mdash;</b></div>
+  <div class="railhd" style="margin-top:16px">Listed by</div>
+  <div class="railrow"><span>myScheme</span><b id="rSms">&mdash;</b></div>
+  <div class="railrow"><span>Union Budget</span><b id="rSbu">&mdash;</b></div>
+  <div class="railrow"><span>DBT Bharat</span><b id="rSdb">&mdash;</b></div>
+  <div class="railrow"><span>Outcome Budget</span><b id="rSoc">&mdash;</b></div>
+  <div class="railnote">Every figure here follows the filters. Allocation is the
+    Budget line for the visible schemes where one is joined; most schemes have none
+    published anywhere.</div>
+</aside>
+</div>
 <div class="empty" id="nomatch" hidden>
   <span class="big">...</span>
-  <b>Nothing matches those filters.</b><br>
-  Search ignores punctuation, so <code>pm kisan</code> and <code>PM-KISAN</code> are the
-  same. Try fewer words, or clear a filter.
+  <b>Nothing matches those filters.</b>
+  <div id="whyempty" style="margin:10px 0 6px"></div>
+  <span class="muted">Search ignores punctuation, so <code>pm kisan</code> and
+  <code>PM-KISAN</code> are the same.</span>
 </div>
 <script>
 (function(){{
@@ -569,10 +611,12 @@ def index_section(entries):
     return p<=+v.slice(2);
   }}
   function apply(){{
-    var ts=terms(q.value),o=og.value.trim().toLowerCase(),shown=0;
+    var ts=terms(q.value),o=og.value.trim().toLowerCase(),
+        stv=document.getElementById('st').value,shown=0;
     document.getElementById('orgclear').hidden = !o;
     rows.forEach(function(r){{
       var ok=(!o||r.dataset.o.indexOf(o)>-1)
+             &&(!stv||(r.dataset.st||'').indexOf(stv)>-1)
              &&(!state.lvl||r.dataset.l===state.lvl)
              &&docOk(r,state.doc);
       if(ok&&state.src){{
@@ -585,6 +629,92 @@ def index_section(entries):
     }});
     c.textContent=shown.toLocaleString()+' of {n:,} schemes';
     empty.hidden = shown>0;
+    rail(shown);
+    recount(ts,o);
+    if(!shown) explain(ts,o);
+  }}
+
+  function rail(shown){{
+    var vis=rows.filter(function(r){{return !r.hidden;}});
+    var src={{myscheme:0,budget:0,dbt:0,outcome:0}},money=0,scores=[];
+    vis.forEach(function(r){{
+      (r.dataset.s||'').split(' ').forEach(function(k){{ if(k in src) src[k]++; }});
+      if(r.dataset.b) money+=+r.dataset.b;
+      if(+r.dataset.p>=0) scores.push(+r.dataset.p);
+    }});
+    scores.sort(function(a,b){{return a-b;}});
+    var med = scores.length ? scores[Math.floor(scores.length/2)] : null;
+    function set(id,v){{ document.getElementById(id).textContent=v; }}
+    set('rShown',shown.toLocaleString());
+    set('rNoMs',(shown-src.myscheme).toLocaleString());
+    set('rMed', med===null ? '—' : med+' of 9');
+    set('rMoney', money ? '₹'+Math.round(money).toLocaleString('en-IN')+' cr' : '—');
+    set('rSms',src.myscheme.toLocaleString()); set('rSbu',src.budget.toLocaleString());
+    set('rSdb',src.dbt.toLocaleString()); set('rSoc',src.outcome.toLocaleString());
+  }}
+
+  // Every pill shows how many rows it would select GIVEN the other filters, so a
+  // combination that cannot match reads 0 before it is clicked rather than after.
+  // "Central" plus a state department is empty by construction — central schemes carry
+  // ministries, state schemes carry departments — and the old static counts hid that.
+  function passes(r,ts,o,skip){{
+    if(o && skip!=='org' && r.dataset.o.indexOf(o)<0) return false;
+    var sv2=document.getElementById('st').value;
+    if(sv2 && skip!=='st' && (r.dataset.st||'').indexOf(sv2)<0) return false;
+    if(skip!=='lvl' && state.lvl && r.dataset.l!==state.lvl) return false;
+    if(skip!=='doc' && !docOk(r,state.doc)) return false;
+    if(skip!=='src' && state.src){{
+      var have=(r.dataset.s||'').split(' ');
+      if(state.src.charAt(0)==='!' ? have.indexOf(state.src.slice(1))>-1
+                                   : have.indexOf(state.src)<0) return false;
+    }}
+    for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0) return false;
+    return true;
+  }}
+  function matchOne(r,g,v){{
+    if(g==='lvl') return !v||r.dataset.l===v;
+    if(g==='doc') return docOk(r,v);
+    if(!v) return true;
+    var have=(r.dataset.s||'').split(' ');
+    return v.charAt(0)==='!' ? have.indexOf(v.slice(1))<0 : have.indexOf(v)>-1;
+  }}
+  function recount(ts,o){{
+    document.querySelectorAll('.pill').forEach(function(b){{
+      var g=b.dataset.g,v=b.dataset.v,k=0;
+      for(var i=0;i<rows.length;i++){{
+        var r=rows[i];
+        if(passes(r,ts,o,g)&&matchOne(r,g,v)) k++;
+      }}
+      var pn=b.querySelector('.pn');
+      if(pn) pn.textContent=k.toLocaleString();
+      b.classList.toggle('zero',k===0);
+    }});
+  }}
+
+  // When nothing matches, name the filter that emptied it rather than leaving the
+  // reader to guess which of five controls is responsible.
+  function explain(ts,o){{
+    var bits=[],tries=[];
+    if(o) tries.push(['org','ministry or department “'+og.value.trim()+'”']);
+    var stEl=document.getElementById('st');
+    if(stEl.value) tries.push(['st','state '+stEl.options[stEl.selectedIndex].text]);
+    if(state.lvl) tries.push(['lvl','level']);
+    if(state.src) tries.push(['src','listed by']);
+    if(state.doc) tries.push(['doc','documentation']);
+    if(ts.length) tries.push(['q','the search “'+q.value.trim()+'”']);
+    tries.forEach(function(t){{
+      var n=0;
+      for(var i=0;i<rows.length;i++){{
+        var r=rows[i];
+        var ok = t[0]==='q' ? passes(r,[],o,null) : passes(r,ts,t[0]==='org'?'':o,t[0]);
+        if(ok) n++;
+      }}
+      if(n>0) bits.push('drop '+t[1]+' and '+n.toLocaleString()+' match');
+    }});
+    var el=document.getElementById('whyempty');
+    el.innerHTML = bits.length
+      ? 'Try one of these: '+bits.join('; ')+'.'
+      : 'No single filter explains it — several are narrowing at once.';
   }}
 
   document.querySelectorAll('.pill').forEach(function(b){{
@@ -600,6 +730,7 @@ def index_section(entries):
   }});
   q.addEventListener('input',apply);
   og.addEventListener('input',apply); og.addEventListener('change',apply);
+  document.getElementById('st').addEventListener('change',apply);
   document.getElementById('orgclear').addEventListener('click',function(){{
     og.value=''; apply(); og.focus();
   }});

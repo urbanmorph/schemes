@@ -78,6 +78,27 @@ def explode(date):
                        for f in d.get("facets", [])},
         })
 
+    # --- list-only fields. beneficiaryState is returned by the search endpoint and NOT
+    # by the per-scheme detail endpoint, so building records from details alone dropped
+    # the state dimension entirely — a register of Indian schemes with no idea which
+    # state each belongs to. Merge it back in from the same snapshot's list pages.
+    listed = {}
+    lp = os.path.join(src, "list.ndjson.gz")
+    if os.path.exists(lp):
+        with gzip.open(lp, "rb") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    items = json.loads(line)["data"]["hits"]["items"]
+                except Exception:
+                    continue
+                for it in items:
+                    f = it.get("fields", it)
+                    if f.get("slug"):
+                        listed[f["slug"]] = f
+
     # --- schemes. Rebuild the directory so a scheme that vanished upstream disappears
     # from the tree, and shows up as a deletion in the diff rather than lingering.
     out_dir = os.path.join(ROOT, "data", "myscheme", "schemes")
@@ -103,6 +124,12 @@ def explode(date):
                 continue
             rec["_slug"] = row.get("slug")
             rec["_snapshot"] = date
+            lf = listed.get(row.get("slug"))
+            if lf:
+                rec["_list"] = {k: lf[k] for k in
+                                ("beneficiaryState", "schemeCategory", "tags",
+                                 "schemeFor", "level", "nodalMinistryName")
+                                if k in lf}
             write_json(f"data/myscheme/schemes/{safe_name(row['slug'])}.json", rec)
             n += 1
 

@@ -174,7 +174,10 @@ def check_scheme(rec):
         "org_kind": ("ministry" if (basic.get("nodalMinistryName") or {}).get("label")
                      else "department" if (basic.get("nodalDepartmentName") or {}).get("label")
                      else None),
-        "state": basic.get("beneficiaryState"),
+        # beneficiaryState comes from the search endpoint via explode.py's _list merge;
+        # the detail endpoint does not return it.
+        "state": ((rec.get("_list") or {}).get("beneficiaryState")
+                  or basic.get("beneficiaryState")),
         "dbt": basic.get("dbtScheme"),
         "open_date": open_date,
         "close_date": close_date,
