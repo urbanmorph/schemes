@@ -147,9 +147,18 @@ def probably_same(a, b, floor=0.75):
 
     aa, ab = acronyms(a), acronyms(b)
     shared = (aa & set(tokens(b))) | (ab & set(tokens(a))) | (aa & ab)
-    shared = {s for s in shared if len(s) >= 5}
+    shared = {x for x in shared if len(x) >= 5}
     if shared:
         return True, f"acronym match: {sorted(shared)[0]}"
+
+    # One acronym contained in another. "DAY-NRLM" yields NRLM; the expansion
+    # "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission" yields DAYNRLM.
+    # Neither is a token of the other and they are not equal, but one is plainly the
+    # other's tail — which is how these schemes are actually written down.
+    for x in aa:
+        for y in ab:
+            if len(x) >= 4 and len(y) >= 4 and (x in y or y in x):
+                return True, f"acronym containment: {x} / {y}"
 
     return False, "no match"
 
@@ -166,6 +175,9 @@ SELFTEST = [
      "Pradhan Mantri Kisan Samman Nidhi (PM – KISAN)", True),
     ("Crop Insurance Scheme", "Weather Based Crop Insurance Scheme", True),
     ("Urea Subsidy", "Pradhan Mantri Awas Yojana - Urban", False),
+    ("DAY-NRLM",
+     "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission", True),
+    ("NRLM", "National Handloom Development Programme", False),
 ]
 
 

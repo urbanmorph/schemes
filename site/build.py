@@ -149,7 +149,7 @@ CSS_V = _css_version()
 
 # --------------------------------------------------------------------- pages
 
-def page_index(census, checks, dbt):
+def page_index(census, checks, dbt, entries):
     facets = (census or {}).get("facets", {})
     lvl = facets.get("level", {})
     stype = facets.get("schemeType", {})
@@ -229,7 +229,7 @@ def page_index(census, checks, dbt):
     methodology page. These do not.</div>
 </section>
 
-{index_section(checks)}
+{index_section(entries)}
 """
 
 
@@ -342,117 +342,167 @@ acknowledges the others exist.</p>
 """
 
 
-def index_section(checks):
-    # Central schemes carry a nodal ministry, state and UT schemes a nodal department,
-    # and every record has one or the other. Filtering on ministry alone would apply to
-    # 711 of 4,771 rows and leave the column blank on the rest, so the control covers
-    # both and says so. Grouped by kind and ordered by how many schemes each holds, since
-    # a 387-entry alphabetical list buries the ones anyone actually wants.
+SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
+                "outcome": "Outcome Budget", "dbt": "DBT Bharat"}
+
+
+def slug_for(name):
+    return re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")[:80] or "unnamed"
+
+
+def unify(checks, registry, classification):
+    """One row per scheme across every source, not one per myScheme record.
+
+    A scheme present only in the Budget or the DBT list still exists; treating myScheme
+    as the universe was the register mirroring a portal rather than describing a country.
+    Entries with no myScheme record carry no documentation checks, and must not be shown
+    as 0 of 9 — that reads as a verdict on the scheme when it is a statement about which
+    portal lists it.
+    """
+    by_slug = {c["slug"]: c for c in (checks or {}).get("schemes", [])}
+    cls = {c["name"]: c for c in (classification or {}).get("all_lines", [])}
+    out, used = [], set()
+    for en in (registry or {}).get("entries", []):
+        srcs = en.get("sources", {})
+        ms = srcs.get("myscheme")
+        base = by_slug.get((ms or {}).get("slug")) if ms else None
+        bud = srcs.get("budget") or {}
+        verdict = (cls.get(bud.get("name")) or {}).get("verdict")
+        # Slugs must be unique or one page silently overwrites another. Collisions are
+        # rare and usually mean a missed merge, so the suffix is a visible marker.
+        sl = base["slug"] if base else slug_for(en["name"])
+        if sl in used:
+            i = 2
+            while f"{sl}-{i}" in used:
+                i += 1
+            sl = f"{sl}-{i}"
+        used.add(sl)
+        out.append({
+            "name": en["name"],
+            "slug": sl,
+            "on_myscheme": bool(base),
+            "checks": base,
+            "sources": sorted(srcs.keys()),
+            "level": (base or {}).get("level") or ((ms or {}).get("level")),
+            "org": (base or {}).get("org"),
+            "level_value": (base or {}).get("level_value"),
+            "be_cr": bud.get("be_cr"),
+            "demand_no": bud.get("demand_no"),
+            "statement": bud.get("statement"),
+            "classified": verdict,
+            "detail": {k: v for k, v in srcs.items()},
+        })
+    return out
+
+
+def index_section(entries):
     orgs = {}
-    for s in (checks or {}).get("schemes", []):
-        o = s.get("org")
+    for e_ in entries:
+        o = e_.get("org")
         if o:
-            k = orgs.setdefault(o, {"n": 0, "kind": s.get("org_kind") or "department"})
+            k = orgs.setdefault(o, {"n": 0, "kind": "ministry" if str(o).lower().startswith(("ministry", "m/o")) else "department"})
             k["n"] += 1
     order = sorted(orgs.items(), key=lambda kv: (-kv[1]["n"], kv[0]))
     org_ix = {name: i for i, (name, _) in enumerate(order)}
 
-    # Filter on level_value, never on the label. myScheme prints the same level two ways
-    # — "State/ UT" on 3,263 records and "State" on 793 — while both carry the machine
-    # value "state". Grouping on the label would split one level into two controls that
-    # mean the same thing.
+    def opts(kind):
+        return "".join(f'<option value="{org_ix[nm]}">{e(nm)} ({v["n"]})</option>'
+                       for nm, v in order if v["kind"] == kind)
+
+    org_select = ('<select id="org" aria-label="Filter by ministry or department">'
+                  '<option value="">any ministry or department</option>'
+                  f'<optgroup label="Central ministries">{opts("ministry")}</optgroup>'
+                  f'<optgroup label="State &amp; UT departments">{opts("department")}</optgroup>'
+                  '</select>')
+
     lv = {}
-    for s_ in (checks or {}).get("schemes", []):
-        v = s_.get("level_value")
+    for e_ in entries:
+        v = e_.get("level_value")
         if v:
             lv[v] = lv.get(v, 0) + 1
     LEVEL_LABEL = {"central": "Central", "state": "State or UT"}
-    level_select = (
-        '<select id="lvl" aria-label="Filter by level">'
-        '<option value="">any level</option>'
-        + "".join(f'<option value="{e(k)}">{e(LEVEL_LABEL.get(k, k))} ({n:,})</option>'
-                  for k, n in sorted(lv.items(), key=lambda kv: -kv[1]))
-        + '</select>')
+    level_select = ('<select id="lvl" aria-label="Filter by level">'
+                    '<option value="">any level</option>'
+                    + "".join(f'<option value="{e(k)}">{e(LEVEL_LABEL.get(k, k))} ({n:,})</option>'
+                              for k, n in sorted(lv.items(), key=lambda kv: -kv[1]))
+                    + '</select>')
 
-    def opts(kind):
-        return "".join(
-            f'<option value="{org_ix[name]}">{e(name)} ({v["n"]})</option>'
-            for name, v in order if v["kind"] == kind)
-
-    org_select = (
-        '<select id="org" aria-label="Filter by ministry or department">'
-        '<option value="">any ministry or department</option>'
-        f'<optgroup label="Central ministries">{opts("ministry")}</optgroup>'
-        f'<optgroup label="State &amp; UT departments">{opts("department")}</optgroup>'
-        '</select>')
+    src_counts = {}
+    for e_ in entries:
+        for k in e_["sources"]:
+            src_counts[k] = src_counts.get(k, 0) + 1
+    not_ms = sum(1 for e_ in entries if not e_["on_myscheme"])
+    src_select = ('<select id="src" aria-label="Filter by listing source">'
+                  '<option value="">any source</option>'
+                  + "".join(f'<option value="{k}">listed by {e(SOURCE_LABEL[k])} '
+                            f'({src_counts[k]:,})</option>'
+                            for k in ("myscheme", "budget", "dbt", "outcome")
+                            if k in src_counts)
+                  + f'<option value="!myscheme">NOT on myScheme ({not_ms:,})</option>'
+                  + '</select>')
 
     rows = ""
-    for s in (checks or {}).get("schemes", []):
-        slug = s["slug"]
-        failed = [c["id"] for c in s["checks"] if not c["ok"]]
-        # The haystack is name + acronym + slug. In the development sector these schemes
-        # are almost always referred to by acronym — nobody searches "Mahatma Gandhi
-        # National Rural Employment Guarantee Scheme" — and the slug is frequently the
-        # acronym too, so it costs nothing to include.
-        short = s.get("short") or ""
-        # Punctuation is normalised out of the haystack, and out of the query in the
-        # browser, so a hyphen is never something a reader has to guess at. Nobody types
-        # "PM-KISAN" with the hyphen in the right place reliably, and "pm kis" returning
-        # nothing is indistinguishable from "no such scheme".
+    for e_ in entries:
+        slug = e_["slug"]
+        c = e_["checks"]
+        short = (c or {}).get("short") or ""
         hay = re.sub(r"[^a-z0-9]+", " ",
-                     " ".join(x for x in ((s["name"] or ""), short, slug) if x).lower()).strip()
-        # Also index the acronym and slug with separators removed, so "pmkisan" finds
-        # PM-KISAN. Only these two, not the full name: they are short, and squashing a
-        # 90-character scheme title would roughly double the page for no benefit.
-        # Short names get squashed too — "Stand-Up India" is exactly the shape someone
-        # types as "standupindia". Long titles are not: nobody runs a 90-character scheme
-        # name together, and indexing them squashed would add ~430 KB to the page for
-        # queries that never happen.
-        name_n = re.sub(r"[^a-z0-9]+", " ", (s["name"] or "").lower()).strip()
-        sources = [short, slug] + ([s["name"]] if len(name_n) <= 30 else [])
-        squashed = {re.sub(r"[^a-z0-9]", "", x.lower()) for x in sources if x}
-        squashed = {x for x in squashed if len(x) > 2 and x not in hay.split()}
-        # Only the part of the haystack the browser cannot rebuild from the row's own
-        # visible text: the slug, and separator-free forms. The name and acronym are
-        # already rendered in the row, so shipping them a second time in an attribute
-        # cost 411 KB to say the same thing twice.
-        extra = sorted(squashed | ({slug} if slug and slug not in hay.split() else set()))
-        xattr = f' data-x="{e(" ".join(extra))}"' if extra else ""
-        acr = f'<span class="acr">{e(short)}</span>' if short and short != s["name"] else ""
-        org = s.get("org") or ""
-        rows += (
-            f'<tr{xattr} data-p="{s["passed"]}" data-o="{org_ix.get(org, -1)}" '
-            f'data-l="{e(s.get("level_value") or "")}">'
-            f'<td><a href="scheme/{e(slug)}.html">{e(s["name"] or slug)}</a>{acr}</td>'
-            f'<td class="muted">{e(s.get("level") or "")}</td>'
-            f'<td class="muted">{e(org[:46])}</td>'
-            f'<td class="num"><b>{s["passed"]}</b>/{s["total"]}</td>'
-            f'<td class="muted" style="font-size:12px">'
-            f'{e(" · ".join(CHECK_CODE.get(x, x) for x in failed[:3]))}</td></tr>')
-    n = len((checks or {}).get("schemes", []))
+                     " ".join(x for x in (e_["name"], short, slug) if x).lower()).strip()
+        name_n = re.sub(r"[^a-z0-9]+", " ", (e_["name"] or "").lower()).strip()
+        sq = {re.sub(r"[^a-z0-9]", "", x.lower())
+              for x in ([short, slug] + ([e_["name"]] if len(name_n) <= 30 else [])) if x}
+        sq = {x for x in sq if len(x) > 2 and x not in hay.split()}
+        xattr = f' data-x="{e(" ".join(sorted(sq)))}"' if sq else ""
+        acr = f'<span class="acr">{e(short)}</span>' if short and short != e_["name"] else ""
+        badges = "".join(f'<span class="src {k}">{e(SOURCE_LABEL[k])}</span>'
+                         for k in e_["sources"])
+        if c:
+            failed = [c_["id"] for c_ in c["checks"] if not c_["ok"]]
+            score = f'<b>{c["passed"]}</b>/{c["total"]}'
+            failing = e(" · ".join(CHECK_CODE.get(x, x) for x in failed[:3]))
+        else:
+            # Not on myScheme, so there is nothing to check. Showing 0/9 would read as a
+            # verdict on the scheme rather than a fact about which portal lists it.
+            score = '<span class="nil">...</span>'
+            failing = '<span class="muted">not listed on myScheme</span>'
+        rows += (f'<tr{xattr} data-p="{(c or {}).get("passed", -1)}" '
+                 f'data-o="{org_ix.get(e_.get("org"), -1)}" '
+                 f'data-l="{e(e_.get("level_value") or "")}" '
+                 f'data-s="{e(" ".join(e_["sources"]))}">'
+                 f'<td><a href="scheme/{e(slug)}.html">{e(e_["name"])}</a>{acr}</td>'
+                 f'<td>{badges}</td>'
+                 f'<td class="muted">{e(e_.get("level") or "")}</td>'
+                 f'<td class="muted">{e((e_.get("org") or "")[:44])}</td>'
+                 f'<td class="num">{score}</td>'
+                 f'<td class="muted" style="font-size:12px">{failing}</td></tr>')
+
+    n = len(entries)
     if not n:
-        return ('<section class="sec"><h2>Every scheme</h2>'
-                '<div class="empty"><span class="big">...</span>'
-                '<b>No scheme data built yet.</b><br>'
-                'Run parse/explode.py, then parse/checks.py.</div></section>')
+        return ('<section class="sec"><h2>Every scheme</h2><div class="empty">'
+                '<span class="big">...</span><b>No registry built yet.</b><br>'
+                'Run parse/registry.py.</div></section>')
     return f"""
 <section class="sec">
-<h2>Every scheme, and how completely it is documented</h2>
-<div class="sec-note">Sorted by checks passed, never by a grade &mdash; a count can be
-  recomputed from the rows, and a letter is what gets screenshotted without its caption</div>
+<h2>Every scheme any government source names</h2>
+<div class="sec-note">{n:,} across four sources &mdash; myScheme, the Union Budget,
+  the Outcome Budget and DBT Bharat. Sorted by checks passed where a scheme is on
+  myScheme; the rest have nothing to check, which is itself the finding.</div>
 <div class="filters">
-  <input id="q" type="search" placeholder="Search name or acronym &mdash; e.g. pm kisan, mgnrega&hellip;" aria-label="Filter schemes by name, acronym or slug">
+  <input id="q" type="search" placeholder="Search name or acronym &mdash; e.g. pm kisan, mgnrega&hellip;"
+    aria-label="Search schemes by name, acronym or slug">
+  {level_select}
+  {src_select}
   <select id="minp" aria-label="Minimum checks passed">
     <option value="">any score</option>
     {''.join(f'<option value="{i}">{i} or fewer passed</option>' for i in range(0, 10))}
   </select>
-  {level_select}
   {org_select}
   <span class="count" id="count">{n:,} schemes</span>
 </div>
 <div class="tscroll"><table id="tbl">
-  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Level</th><th>Ministry / department</th>
-    <th class="num sortable" data-k="p">Passed</th><th>Failing</th></tr></thead>
+  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Level</th>
+    <th>Ministry / department</th><th class="num sortable" data-k="p">Passed</th>
+    <th>Failing</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
 <div class="empty" id="nomatch" hidden>
@@ -467,38 +517,36 @@ def index_section(checks):
       empty=document.getElementById('nomatch'),
       q=document.getElementById('q'),mp=document.getElementById('minp'),
       og=document.getElementById('org'),lv=document.getElementById('lvl'),
+      sr=document.getElementById('src'),
       c=document.getElementById('count'),asc=false;
-  // Haystack built here rather than shipped: the name and acronym are already in the
-  // row's text, and data-x carries only the slug and separator-free forms.
   var norm=function(v){{return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
-  rows.forEach(function(r){{
-    r._h = norm(r.cells[0].textContent + ' ' + (r.dataset.x||''));
-  }});
-  function terms(v){{
-    // Same normalisation as the haystack, then all-tokens-must-match in any order.
-    // Substring-of-the-whole-string would fail on "pm kis" (haystack holds "pm kisan")
-    // and on "kisan pm"; requiring each token independently handles both.
-    return norm(v).split(' ').filter(Boolean);
-  }}
+  rows.forEach(function(r){{ r._h = norm(r.cells[0].textContent+' '+(r.dataset.x||'')); }});
+  function terms(v){{ return norm(v).split(' ').filter(Boolean); }}
   function apply(){{
     var ts=terms(q.value),m=mp.value===''?null:+mp.value,
-        o=og.value===''?null:og.value,l=lv.value===''?null:lv.value,shown=0;
+        o=og.value===''?null:og.value,l=lv.value===''?null:lv.value,
+        sv=sr.value===''?null:sr.value,shown=0;
     rows.forEach(function(r){{
-      var hay=r._h, ok=(m===null||+r.dataset.p<=m)
+      var ok=(m===null||(+r.dataset.p>=0&&+r.dataset.p<=m))
              &&(o===null||r.dataset.o===o)&&(l===null||r.dataset.l===l);
-      if(ok) for(var i=0;i<ts.length;i++) if(hay.indexOf(ts[i])<0){{ok=false;break;}}
+      if(ok&&sv!==null){{
+        var have=(r.dataset.s||'').split(' ');
+        ok = sv.charAt(0)==='!' ? have.indexOf(sv.slice(1))<0 : have.indexOf(sv)>-1;
+      }}
+      if(ok) for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0){{ok=false;break;}}
       r.hidden=!ok; if(ok)shown++;
     }});
     c.textContent=shown.toLocaleString()+' of {n:,} schemes';
     empty.hidden = shown>0;
   }}
-  q.addEventListener('input',apply); mp.addEventListener('change',apply);
-  og.addEventListener('change',apply); lv.addEventListener('change',apply);
+  [q,mp,og,lv,sr].forEach(function(el){{
+    el.addEventListener(el.tagName==='INPUT'?'input':'change',apply);
+  }});
   document.querySelectorAll('th.sortable').forEach(function(th){{
     th.addEventListener('click',function(){{
       var k=th.dataset.k; asc=!asc;
       rows.sort(function(a,b){{
-        var x=k==='p'?+a.dataset.p:a.dataset.n, y=k==='p'?+b.dataset.p:b.dataset.n;
+        var x=k==='p'?+a.dataset.p:a._h, y=k==='p'?+b.dataset.p:b._h;
         return (x<y?-1:x>y?1:0)*(asc?1:-1);
       }});
       rows.forEach(function(r){{tb.appendChild(r);}});
@@ -506,6 +554,82 @@ def index_section(checks):
   }});
 }})();
 </script>
+</section>
+"""
+
+
+def page_unlisted(en, status):
+    """A scheme other government sources name and myScheme does not list.
+
+    There are no documentation checks here because there is no myScheme record to check.
+    That absence is the subject of the page, and it is stated as a fact about the portal
+    rather than rendered as a failing score against the scheme.
+    """
+    rows = ""
+    for k in ("budget", "outcome", "dbt"):
+        d = en["detail"].get(k)
+        if not d:
+            continue
+        bits = []
+        if d.get("be_cr") is not None:
+            bits.append(f'<b>&#8377;{d["be_cr"]:,.2f} cr</b> for {e(d.get("cycle") or "")}')
+        if d.get("demand_no"):
+            bits.append(f'Demand No. {e(d["demand_no"])}')
+        if d.get("statement"):
+            bits.append(f'Statement {e(d["statement"][-2:].upper())}')
+        if d.get("outlay_cr") is not None:
+            bits.append(f'outlay &#8377;{d["outlay_cr"]:,.2f} cr')
+        if d.get("targets"):
+            bits.append(f'{d["targets"]} published targets')
+        if d.get("page"):
+            bits.append(f'p.{d["page"]}')
+        if d.get("classification"):
+            bits.append(e(d["classification"]))
+        if d.get("list"):
+            bits.append(f'{e(d["list"])} list')
+        why = d.get("merge_reason")
+        rows += (f'<tr><td>{e(SOURCE_LABEL[k])}</td>'
+                 f'<td>{" &middot; ".join(bits) or "named"}'
+                 + (f'<div class="muted" style="margin-top:3px">listed there as '
+                    f'&ldquo;{e(d.get("name") or "")}&rdquo;'
+                    + (f' &middot; matched: {e(why)}' if why else "") + '</div>'
+                    if d.get("name") and d.get("name") != en["name"] else "")
+                 + '</td></tr>')
+
+    chips = "".join(f'<span class="chip">{e(SOURCE_LABEL[k])}</span>' for k in en["sources"])
+    chips += '<span class="chip flag">Not on myScheme</span>'
+    verdict = en.get("classified")
+    return f"""
+<div class="eyebrow">Route &middot; /scheme/{e(en["slug"])}</div>
+<div class="shead">
+  <h2>{e(en["name"])}</h2>
+  <div class="full">Named by {len(en["sources"])} government source(s), and not listed
+    on myScheme</div>
+  <div class="chips">{chips}</div>
+</div>
+
+<div class="warnbox">
+  <b>No documentation checks for this scheme</b>
+  The nine checks measure what myScheme publishes about a scheme. There is no myScheme
+  record here to measure, so this page shows none &mdash; a score of nought would read
+  as a verdict on the scheme when it is a fact about the portal.
+  {"This line is classified as a citizen-facing scheme rather than a budget head; the arithmetic is on /divergence." if verdict == "scheme" else "This line was classified as a budget head rather than a citizen-facing scheme, so its absence from a scheme portal may be correct."}
+</div>
+
+<section class="sec">
+  <h2>What each source says</h2>
+  <div class="sec-note">Every figure below is from a government document, named and dated</div>
+  <div class="tscroll"><table class="prov">{rows}</table></div>
+</section>
+
+<section class="sec">
+  <h2>What myScheme says</h2>
+  <div class="tscroll"><table class="prov">
+    <tr><td>myScheme record</td>
+      <td><span class="nil">...</span> <span class="muted">no entry found in the
+        {e(status.get('snapshot') or '')} snapshot, under a generous name match</span></td>
+      <td class="ts">&mdash;</td></tr>
+  </table></div>
 </section>
 """
 
@@ -578,7 +702,7 @@ CHECK_LABEL = {
 }
 
 
-def page_scheme(s, status, enrich=None):
+def page_scheme(s, status, enrich=None, entry=None):
     checks = "".join(
         f'<div class="chk"><span class="mark {"p" if c["ok"] else "f"}">'
         f'{"&#10003;" if c["ok"] else "&#10007;"}</span>'
@@ -748,16 +872,28 @@ def build():
         with open(os.path.join(OUT, rel), "w", encoding="utf-8") as fh:
             fh.write(s)
 
-    w("index.html", shell("The census and the argument", "/", page_index(census, checks, dbt)))
+    registry = load("data/registry.json", {})
+    classification = load("data/classification.json", {})
+    entries = unify(checks, registry, classification)
+    w("index.html", shell("The census and the argument", "/",
+                          page_index(census, checks, dbt, entries)))
     w("divergence.html", shell("Divergence", "/divergence",
                                page_divergence(census, dbt, load("data/registry.json", {}),
                                                load("data/classification.json", {}))))
     w("changes.html", shell("Changes", "/changes", page_changes(git_log())))
 
     n = 0
-    for s in (checks or {}).get("schemes", []):
-        w(os.path.join("scheme", f"{s['slug']}.html"),
-          shell(s["short"] or s["name"], "/", page_scheme(s, status, enrich), depth=1))
+    seen = set()
+    for en in entries:
+        if en["slug"] in seen:
+            continue
+        seen.add(en["slug"])
+        c = en["checks"]
+        title = (c or {}).get("short") or en["name"]
+        body = (page_scheme(c, status, enrich, en) if c
+                else page_unlisted(en, status))
+        w(os.path.join("scheme", f"{en['slug']}.html"),
+          shell(title, "/", body, depth=1))
         n += 1
 
     return n

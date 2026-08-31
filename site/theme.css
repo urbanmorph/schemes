@@ -212,3 +212,11 @@ th.sortable:hover{color:var(--ink)}
 footer{border-top:1px solid var(--rule-strong);background:var(--surface);padding:26px 0;margin-top:60px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+
+/* Which sources name a scheme. Shown per row because the register is a union now, and
+   "who lists this" is the finding on any row myScheme does not appear in. */
+.src{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;
+  border:1px solid var(--rule-strong);border-radius:2px;padding:1px 5px;margin-right:4px;
+  color:var(--muted);white-space:nowrap;display:inline-block}
+.src.myscheme{color:var(--stamp);border-color:var(--stamp)}
+.src.budget{color:var(--pass);border-color:var(--pass)}
