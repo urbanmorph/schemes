@@ -994,6 +994,27 @@ def index_section(entries):
     rail(shown);
     recount(ts,o);
     if(!shown) explain(ts,o);
+    keepInView();
+  }}
+
+  // Filtering 5,395 rows down to 50 collapses the page, and the browser clamps the
+  // scroll position to the new maximum. Choosing a state from a few screens down
+  // therefore dumped the reader at the footer, looking at the source list, with the
+  // results they had just asked for somewhere above them. Nothing scrolled: the page
+  // shrank underneath them, which is worse, because there is no movement to explain it.
+  //
+  // Only correct it when the reader is actually past the results, so this never fires
+  // while they are reading rows, and never on every keystroke in the search box, which
+  // sits in the sticky bar and is usable from anywhere down the page.
+  function keepInView(){{
+    var tb=document.getElementById('schemes');
+    if(!tb) return;
+    var last=null,vis=rows.filter(function(r){{return !r.hidden;}});
+    if(vis.length) last=vis[vis.length-1];
+    var bottom=(last||tb).getBoundingClientRect().bottom;
+    if(bottom>0) return;                 // still something to look at on screen
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    tb.scrollIntoView({{block:'start',behavior:reduce?'auto':'smooth'}});
   }}
 
   function rail(shown){{
