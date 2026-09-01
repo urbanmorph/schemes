@@ -43,6 +43,93 @@ def e(s):
     return html.escape(str(s if s is not None else ""), quote=True)
 
 
+# Stopwords for the search keyword extract. Kept deliberately blunt: the aim is to drop
+# words that appear in almost every scheme description, not to do linguistics.
+_KW_STOP = set("""a an the of for and or to in on at by with from as is are was were be
+been being this that these those it its their they them he she his her which who whom
+whose what when where why how all any both each few more most other some such no nor not
+only own same so than too very can will just should now under over between into during
+scheme schemes yojana yojna government state central india indian department ministry
+provided provide provides shall may must also been being will benefit benefits
+beneficiary beneficiaries applicant applicants eligible eligibility assistance amount
+rs per year years annum through under given give given""".split())
+
+
+def keywords(text, name, limit=8):
+    """Distinctive words from a description, for search.
+
+    The full description would be the better index and costs far too much: 242 characters
+    on 4,767 rows is about 170 KB gzipped on a page that is already heavy. Words already
+    in the scheme name are dropped too, since the name is indexed separately.
+
+    Eight is where the curve flattens. Measured on the built page, against a baseline of
+    346 KB with no description indexed at all:
+
+        limit  6  ->  418 KB   "widow" finds 100
+        limit  8  ->  444 KB   "widow" finds 109
+        limit 10  ->  468 KB   "widow" finds 125
+        limit 14  ->  516 KB   "widow" finds 134
+
+    Eight buys 81% of the coverage for 58% of the weight.
+    """
+    have = set(re.sub(r"[^a-z0-9]+", " ", (name or "").lower()).split())
+    out, seen = [], set()
+    for w in re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).split():
+        if len(w) < 4 or w in _KW_STOP or w in have or w in seen or w.isdigit():
+            continue
+        seen.add(w)
+        out.append(w)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def md(src, limit=None):
+    """A deliberately small markdown subset: paragraphs, lists, bold, italic, links.
+
+    Escaped before any formatting is applied, because this text comes from an external
+    API and is rendered verbatim on 4,700 pages. Only http and https links are emitted.
+    """
+    if not src:
+        return ""
+    t = src if limit is None else src[:limit]
+    # The source mixes markdown with stray HTML line breaks; escaping first would render
+    # them as visible "<br>" text on the page.
+    t = re.sub(r"<br\s*/?>", "\n", t, flags=re.I)
+    # Source text is reproduced as published, except for dash punctuation: 35 of the
+    # 4,771 descriptions use an em-dash, and the house rule is that none appear in
+    # reader-facing text. The substitution is declared on the page rather than made
+    # silently, because altering a quotation without saying so is not reproduction.
+    t = re.sub(r"\s*\u2014\s*", ", ", t)
+    t = e(t)
+    t = re.sub(r"&amp;quot;", "&quot;", t)
+    t = re.sub(r"\[([^\]]{1,120})\]\((https?://[^\s)]{1,300})\)",
+               r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
+    t = re.sub(r"\*\*([^*]{1,300})\*\*", r"<b>\1</b>", t)
+    t = re.sub(r"(?<![*\w])\*([^*\n]{1,300})\*(?![*\w])", r"<i>\1</i>", t)
+
+    html_out, bullets = [], []
+
+    def flush():
+        if bullets:
+            html_out.append("<ul>" + "".join(f"<li>{b}</li>" for b in bullets) + "</ul>")
+            bullets.clear()
+
+    for raw in t.split("\n"):
+        line = raw.strip()
+        if not line:
+            flush()
+            continue
+        m = re.match(r"^(?:[-*\u2022]|\d+\.)\s+(.*)$", line)
+        if m:
+            bullets.append(m.group(1))
+        else:
+            flush()
+            html_out.append(f"<p>{line}</p>")
+    flush()
+    return "".join(html_out)
+
+
 def inr(x):
     """Indian digit grouping: last three, then pairs. 1864350 -> 18,64,350.
 
@@ -585,6 +672,8 @@ def index_section(entries):
         sq = {re.sub(r"[^a-z0-9]", "", x.lower())
               for x in ([short, slug] + ([e_["name"]] if len(name_n) <= 30 else [])) if x}
         sq |= acronym_keys(e_["name"])
+        if c and c.get("brief"):
+            sq |= set(keywords(c["brief"], e_["name"]))
         sq = {x for x in sq if len(x) > 2 and x not in hay.split()}
         xattr = f' data-x="{e(" ".join(sorted(sq)))}"' if sq else ""
         acr = f'<span class="acr">{e(short)}</span>' if short and short != e_["name"] else ""
@@ -1003,6 +1092,29 @@ def page_scheme(s, status, enrich=None, entry=None):
 
     snap = status.get("snapshot", "")
 
+    # What the scheme actually is. The register was reporting how completely a record
+    # was documented without ever showing the documentation, which made every page a
+    # verdict with no subject.
+    def block(title, body_md, note="", limit=6000):
+        h = md(body_md, limit)
+        if not h:
+            return ""
+        return (f'<section class="sec"><h2>{e(title)}</h2>'
+                + (f'<div class="sec-note">{e(note)}</div>' if note else "")
+                + f'<div class="prose">{h}</div></section>')
+
+    about = "".join([
+        block("What this is", s.get("brief")),
+        block("In detail", s.get("detail_md")),
+        block("Who qualifies", s.get("eligibility_md")),
+        block("What you get", s.get("benefits_md")),
+        block("Who is excluded", s.get("exclusions_md")),
+    ])
+    if about:
+        about = ('<div class="sec-note" style="margin-top:34px">The text below is '
+                 'myScheme&rsquo;s own wording, reproduced as published apart from dash '
+                 'punctuation. Where it is thin, that is the finding.</div>' + about)
+
     # Found elsewhere. Deliberately separate from the checks above and never counted in
     # them: this is what a *different* government document says, not what this portal
     # publishes. Showing both together is the point — it turns "the portal omits this"
@@ -1086,6 +1198,7 @@ def page_scheme(s, status, enrich=None, entry=None):
 </div>
 {bad}
 
+{about}
 {found_block}
 
 <section class="sec">

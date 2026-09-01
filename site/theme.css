@@ -314,3 +314,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .jump:hover{background:var(--stamp);color:var(--paper)}
 .schemes{margin-top:0}
 #argument{margin-top:54px;border-top:1px solid var(--rule-strong);padding-top:34px}
+
+/* Scheme prose, reproduced from the source. Narrower than the tables around it because
+   this is the one thing on the page meant to be read rather than scanned. */
+.prose{max-width:72ch;font-size:14.5px}
+.prose p{margin:0 0 11px}
+.prose ul{margin:0 0 12px;padding-left:20px}
+.prose li{margin:0 0 5px}
+.prose b{color:var(--ink);font-weight:600}
+.prose a{color:var(--stamp)}

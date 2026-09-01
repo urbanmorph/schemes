@@ -181,6 +181,15 @@ def check_scheme(rec):
         "dbt": basic.get("dbtScheme"),
         "open_date": open_date,
         "close_date": close_date,
+        # The text that says what the scheme actually is. Carried through because the
+        # scheme page had none of it: the register could tell you a record was 6 of 9
+        # documented without telling you what the scheme does, which is a strange thing
+        # for a register to do.
+        "brief": brief,
+        "detail_md": _md(content.get("detailedDescription_md")),
+        "benefits_md": benefits,
+        "eligibility_md": eligibility,
+        "exclusions_md": _md(content.get("exclusions_md")),
         "url_count": len(urls),
         "passed": passed,
         "total": len(checks),
