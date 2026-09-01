@@ -800,14 +800,16 @@ def index_section(entries):
 <aside class="wrail" aria-label="Statistics for the current selection">
   <div class="railhd">This selection</div>
   <div class="railbig"><span id="rShown">{n:,}</span><span class="railof">of {n:,}</span></div>
-  <div class="railrow"><span>Not on myScheme</span><b id="rNoMs">{r0["noms"]}</b></div>
-  <div class="railrow"><span>Median checks passed</span><b id="rMed">{r0["med"]}</b></div>
-  <div class="railrow"><span>Allocation known</span><b id="rMoney">{r0["money"]}</b></div>
-  <div class="railhd" style="margin-top:16px">Listed by</div>
-  <div class="railrow"><span>myScheme</span><b id="rSms">{r0["sms"]}</b></div>
-  <div class="railrow"><span>Union Budget</span><b id="rSbu">{r0["sbu"]}</b></div>
-  <div class="railrow"><span>DBT Bharat</span><b id="rSdb">{r0["sdb"]}</b></div>
-  <div class="railrow"><span>Outcome Budget</span><b id="rSoc">{r0["soc"]}</b></div>
+  <div class="railrow"><span><span class="lg">Not on myScheme</span><span class="sm">off-portal</span></span><b id="rNoMs">{r0["noms"]}</b></div>
+  <div class="railrow"><span><span class="lg">Median checks passed</span><span class="sm">median</span></span><b id="rMed">{r0["med"]}</b></div>
+  <div class="railrow"><span><span class="lg">Allocation known</span><span class="sm">allocated</span></span><b id="rMoney">{r0["money"]}</b></div>
+  <div class="railgroup">
+    <div class="railhd" style="margin-top:16px">Listed by</div>
+    <div class="railrow"><span>myScheme</span><b id="rSms">{r0["sms"]}</b></div>
+    <div class="railrow"><span>Union Budget</span><b id="rSbu">{r0["sbu"]}</b></div>
+    <div class="railrow"><span>DBT Bharat</span><b id="rSdb">{r0["sdb"]}</b></div>
+    <div class="railrow"><span>Outcome Budget</span><b id="rSoc">{r0["soc"]}</b></div>
+  </div>
   <div class="railnote">Every figure here follows the filters. Allocation is the
     Budget line for the visible schemes where one is joined; most schemes have none
     published anywhere.</div>
