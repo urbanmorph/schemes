@@ -93,14 +93,33 @@ def acronyms(s):
         big = [w for w in words if w not in STOP]
         if len(big) >= 3:
             out.add("".join(w[0] for w in big))
+    # The caps rule below applies here too. A bracketed word is an acronym when it is
+    # written as one, "(PMAY)", and is a qualifier when it is not, "(Rural)". Taking every
+    # bracketed word made "rural" an acronym of "INDIRAMMA Disabled Pension (Rural)", which
+    # then matched any name containing the word rural. Found while joining Andhra Pradesh,
+    # where it produced 22 of 31 false matches.
     for m in re.findall(r"\(([A-Za-z][A-Za-z0-9\-]{2,12})\)", s or ""):
-        out.add(norm(m).replace(" ", ""))
+        if m == m.upper():
+            out.add(norm(m).replace(" ", ""))
     # Only genuine acronym forms. An earlier version added any word of four or more
     # letters, which made "Shiksha" an acronym and matched "Samagra Shiksha" to the
     # unrelated "Samaaveshit Shiksha". A word counts only if the source writes it in
     # caps — MGNREGA, PMAY, JJM — which is what an acronym actually looks like.
-    for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or ""):
-        out.add(w.lower())
+    # ...and the caps rule needs case to exist before it can read anything from it. Andhra
+    # Pradesh prints many scheme names entirely in capitals, where "NATIONAL RURAL
+    # LIVELIHOOD MISSION" yielded national, rural, livelihood and mission as acronyms and
+    # matched almost anything. When a source shouts every word it has said nothing about
+    # which are acronyms, so this branch stands down and only the initials survive.
+    #
+    # Length is what separates the two cases. An acronym is short by construction, so
+    # "DAY-NRLM" and "PMAY" are upper case BECAUSE they are acronyms and must keep working:
+    # suppressing those broke the DAY-NRLM test below. Three words or more of unbroken
+    # capitals is a title being shouted, not a code.
+    letters = re.sub(r"[^A-Za-z]", "", s or "")
+    shouted = bool(letters) and letters == letters.upper() and len(norm(s).split()) >= 3
+    if not shouted:
+        for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or ""):
+            out.add(w.lower())
     return {a for a in out if len(a) >= 4}
 
 
@@ -218,6 +237,14 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # A bracketed qualifier is not an acronym. This pair matched on "rural".
+    ("INDIRAMMA Disabled Pension (Rural)", "Rural Water Supply Scheme", False),
+    ("National Rural Livelihood Mission", "NATIONAL RURAL EMPLOYMENT GUARANTEE SCHEME", False),
+    # ...while a bracketed acronym still is one.
+    ("Pradhan Mantri Awas Yojana (PMAY)", "PMAY Urban", True),
+]
 
 SELFTEST += [
     # Transliteration. Karnataka's budget writes Gruha; myScheme writes Griha. Reporting
