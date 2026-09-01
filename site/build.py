@@ -605,15 +605,25 @@ def pill_group(gid, label, options):
     of choices.
     """
     parts = []
-    for i, (v, lab, n) in enumerate(options):
+    for i, opt in enumerate(options):
+        v, lab, n = opt[0], opt[1], opt[-1]
+        short = opt[2] if len(opt) == 4 else lab
         on = " on" if i == 0 else ""
         pressed = "true" if i == 0 else "false"
-        count = f'<span class="pn">{n:,}</span>' if n is not None else ""
+        # "All" always selects everything, and the total is already in the count beside
+        # the search box. Repeating it on four pills is width spent saying nothing.
+        count = f'<span class="pn">{n:,}</span>' if n is not None and v != "" else ""
+        text = (f'<span class="lg">{e(lab)}</span><span class="sm">{e(short)}</span>'
+                if short != lab else e(lab))
         parts.append(f'<button type="button" class="pill{on}" data-g="{gid}" '
-                     f'data-v="{e(v)}" aria-pressed="{pressed}">{e(lab)}{count}</button>')
+                     f'data-v="{e(v)}" aria-pressed="{pressed}">{text}{count}</button>')
     btns = "".join(parts)
+    # The buttons get their own wrapper so the label can sit on a line of its own when
+    # the row scrolls. It used to be position:sticky inside the scroller, which put it
+    # on top of the pills as they slid underneath it.
     return (f'<div class="pillgroup" role="group" aria-label="{e(label)}">'
-            f'<span class="plabel">{e(label)}</span>{btns}</div>')
+            f'<span class="plabel">{e(label)}</span>'
+            f'<div class="pillrow">{btns}</div></div>')
 
 
 def index_section(entries):
@@ -662,9 +672,10 @@ def index_section(entries):
         if v:
             lv[v] = lv.get(v, 0) + 1
     LEVEL_LABEL = {"central": "Central", "state": "State or UT"}
+    LEVEL_SHORT = {"central": "Central", "state": "State"}
     level_pills = pill_group("lvl", "Level",
-                             [("", "All", len(entries))]
-                             + [(k, LEVEL_LABEL.get(k, k), n)
+                             [("", "All", None)]
+                             + [(k, LEVEL_LABEL.get(k, k), LEVEL_SHORT.get(k, k), n)
                                 for k, n in sorted(lv.items(), key=lambda kv: -kv[1])])
 
     src_counts = {}
@@ -672,12 +683,14 @@ def index_section(entries):
         for k in e_["sources"]:
             src_counts[k] = src_counts.get(k, 0) + 1
     not_ms = sum(1 for e_ in entries if not e_["on_myscheme"])
+    SRC_SHORT = {"myscheme": "myScheme", "budget": "Budget", "dbt": "DBT",
+                 "outcome": "Outcome"}
     src_pills = pill_group(
         "src", "Listed by",
-        [("", "All", len(entries))]
-        + [(k, SOURCE_LABEL[k], src_counts[k])
+        [("", "All", None)]
+        + [(k, SOURCE_LABEL[k], SRC_SHORT[k], src_counts[k])
            for k in ("myscheme", "budget", "dbt", "outcome") if k in src_counts]
-        + [("!myscheme", "Not on myScheme", not_ms)])
+        + [("!myscheme", "Not on myScheme", "Not listed", not_ms)])
 
     AUD = {"person": "People and families", "institution": "Firms and institutions",
            "mixed": "Both", "unstated": "Not stated"}
@@ -686,10 +699,12 @@ def index_section(entries):
         a = e_.get("audience")
         if a:
             aud[a] = aud.get(a, 0) + 1
+    AUD_SHORT = {"person": "People", "institution": "Firms", "mixed": "Both",
+                 "unstated": "Unstated"}
     aud_pills = pill_group(
         "aud", "Who it is for",
-        [("", "All", len(entries))]
-        + [(k, AUD.get(k, k), aud[k])
+        [("", "All", None)]
+        + [(k, AUD.get(k, k), AUD_SHORT.get(k, k), aud[k])
            for k in ("person", "institution", "mixed", "unstated") if k in aud])
 
     # Cuts that mean something, not "N or fewer" for every N. Measured: no scheme scores
@@ -700,13 +715,14 @@ def index_section(entries):
                    if x["checks"] and x["checks"]["passed"] <= nmax)
     doc_pills = pill_group(
         "doc", "Documentation",
-        [("", "All", len(entries)),
-         ("le4", "4 or fewer passed", le(4)),
-         ("le5", "5 or fewer", le(5)),
-         ("le6", "6 or fewer", le(6)),
-         ("ge8", "8 or more", sum(1 for x in entries
-                                  if x["checks"] and x["checks"]["passed"] >= 8)),
-         ("none", "No record to check", sum(1 for x in entries if not x["checks"]))])
+        [("", "All", None),
+         ("le4", "4 or fewer passed", "4 or fewer", le(4)),
+         ("le5", "5 or fewer", "5 or fewer", le(5)),
+         ("le6", "6 or fewer", "6 or fewer", le(6)),
+         ("ge8", "8 or more", "8 or more",
+          sum(1 for x in entries if x["checks"] and x["checks"]["passed"] >= 8)),
+         ("none", "No record to check", "No record",
+          sum(1 for x in entries if not x["checks"]))])
 
     # Initial rail values, rendered server-side. The rail used to ship "..." for every
     # figure and only fill in when a filter was touched, so the first thing a reader saw
@@ -1096,48 +1112,90 @@ def page_unlisted(en, status):
 """
 
 
-def page_changes(log):
-    if not log:
-        return """
+def page_changes(ch):
+    """What differs between two snapshots of the same source.
+
+    Never the repository's own history. This page previously rendered `git log` over
+    data/, so with one snapshot collected it listed commit subjects from this project
+    under the heading "What the government changed without saying". A page that points
+    at government has to be evidenced by government bytes.
+    """
+    ch = ch or {}
+    if not ch.get("comparable"):
+        held = ch.get("snapshots_held", 0)
+        return f"""
 <div class="eyebrow">Route &middot; /changes</div>
 <h1 class="pagetitle">What the government changed without saying</h1>
 <p class="standfirst">A diff between consecutive monthly snapshots. Nothing here is an
-opinion. Each row is two archived payloads and the field that differs between them.</p>
+opinion: each row is two archived payloads and the field that differs between them.</p>
 <div class="empty">
   <span class="big">...</span>
-  <b>One snapshot held.</b><br>
-  A change feed needs two. The next monthly collection makes this page real; nothing can
-  be backfilled to fill it in, which is the entire reason collection started before the
-  site did.
+  <b>{held} snapshot held.</b><br>
+  A change feed needs two, and it cannot be back-filled. Wayback does not capture API
+  responses and myScheme versions nothing, so the only record of what it said last month
+  is the one collected last month. That is why collection started before this site did.
 </div>"""
 
-    rows = ""
-    for c in log:
-        rows += (f'<div class="ch"><div class="ctype edit">{e(c["date"])}</div>'
-                 f'<div><div class="name">{e(c["subject"])}</div>'
-                 f'<div class="det">{c["files"]} file(s) changed</div></div></div>')
+    def rows_for(items, kind):
+        out = ""
+        for it in items:
+            deltas = "".join(
+                f'<div class="delta"><span class="dfield">{e(d["field"])}</span>'
+                f'<span class="dold">{e(d["from"]) if d["from"] else "not set"}</span>'
+                f'<span class="dnew">{e(d["to"]) if d["to"] else "not set"}</span></div>'
+                for d in it.get("changes", []))
+            out += (f'<div class="ch"><div class="ctype {kind}">{e(kind)}</div>'
+                    f'<div><a class="chname" href="scheme/{e(it["slug"])}.html">'
+                    f'{e(it.get("name") or it["slug"])}</a>{deltas}</div></div>')
+        return out
+
+    byf = "".join(f'<tr><td>{e(k)}</td><td class="num">{v:,}</td></tr>'
+                  for k, v in (ch.get("by_field") or {}).items())
     return f"""
 <div class="eyebrow">Route &middot; /changes</div>
 <h1 class="pagetitle">What the government changed without saying</h1>
-<div class="tscroll"><table><thead><tr><th>Snapshot</th><th>Commit</th>
-<th class="num">Files changed</th></tr></thead><tbody>
-{''.join(f'<tr><td>{e(c["date"])}</td><td>{e(c["subject"])}</td>'
-         f'<td class="num">{c["files"]}</td></tr>' for c in log)}
-</tbody></table></div>
+<p class="standfirst">{e(ch["older"])} to {e(ch["newer"])}. Each row is two archived
+payloads and the field that differs between them, so nothing here is an opinion.</p>
+
+<div class="census">
+  <div class="cell"><div class="k">Schemes added</div><div class="v">{ch["added_total"]:,}</div>
+    <div class="n">not in the previous snapshot</div></div>
+  <div class="cell"><div class="k">Schemes removed</div><div class="v">{ch["removed_total"]:,}</div>
+    <div class="n">present before, gone now</div></div>
+  <div class="cell"><div class="k">Records edited</div><div class="v">{ch["changed_total"]:,}</div>
+    <div class="n">same scheme, different field</div></div>
+</div>
+
+<section class="sec">
+  <h2>Which fields moved</h2>
+  <div class="tscroll"><table>
+    <thead><tr><th>Field</th><th class="num">Records</th></tr></thead>
+    <tbody>{byf or '<tr><td colspan="2" class="muted">none</td></tr>'}</tbody>
+  </table></div>
+</section>
+
+<section class="sec">
+  <h2>Every difference</h2>
+  <div class="sec-note">Edited first, then added and removed</div>
+  {rows_for(ch.get("changed", []), "edited")}
+  {rows_for(ch.get("added", []), "added")}
+  {rows_for(ch.get("removed", []), "removed")}
+</section>
+
 <div class="warnbox"><b>Why this page can be trusted more than the rest of the site</b>
 A diff is not a judgment. Every row is derived from two archived payloads anyone can
-re-fetch and compare. A snapshot that fails its completeness assertion is archived but
-marked INCOMPLETE, and this page refuses to diff against it. Otherwise a dropped
-page of results would appear here as dozens of schemes being &ldquo;removed&rdquo;.</div>
+re-fetch from this repository and compare. A snapshot that fails its completeness
+assertion is archived but marked INCOMPLETE, and this page refuses to diff against it,
+because one dropped page of results would otherwise appear here as dozens of schemes
+being removed.</div>
 """
 
 
-# A scheme's launch date exists — it is in the gazette notification or the government
+# A scheme's launch date exists: it is in the gazette notification or the government
 # order that created it. So "no start date recorded" is a weak claim that sounds like the
 # fact is unknowable. The real claim is narrower and much stronger: the portal a citizen
 # actually visits does not tell them, even though the government can point at the
 # notification and say it was published. These labels are about the portal.
-
 CHECK_LABEL = {
     "eligibility_documented":     "Eligibility published here",
     "benefit_quantified":         "Benefit amount published here",
@@ -1315,23 +1373,6 @@ def page_scheme(s, status, enrich=None, entry=None):
 
 # --------------------------------------------------------------------- git log
 
-def git_log():
-    try:
-        out = subprocess.run(
-            ["git", "log", "--format=%H|%ad|%s", "--date=short", "--", "data/myscheme/schemes"],
-            cwd=ROOT, capture_output=True, text=True, timeout=30).stdout.strip()
-    except Exception:
-        return []
-    entries = []
-    for line in out.splitlines():
-        sha, d, subj = (line.split("|", 2) + ["", ""])[:3]
-        n = subprocess.run(["git", "show", "--stat", "--format=", "--name-only", sha],
-                           cwd=ROOT, capture_output=True, text=True).stdout
-        entries.append({"date": d, "subject": subj,
-                        "files": len([x for x in n.splitlines() if x.strip()])})
-    return entries[:60]
-
-
 # --------------------------------------------------------------------- build
 
 def build():
@@ -1366,7 +1407,7 @@ def build():
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side.")))
     w("changes.html", shell(
-        "Changes", "/changes", page_changes(git_log()),
+        "Changes", "/changes", page_changes(load("data/changes.json", {})),
         desc="What Indian government scheme records changed between monthly snapshots."))
 
     n = 0
