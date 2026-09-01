@@ -990,14 +990,26 @@ def index_section(entries):
   document.getElementById('orgclear').addEventListener('click',function(){{
     og.value=''; apply(); og.focus();
   }});
+  var sortedBy=null;
   document.querySelectorAll('th.sortable').forEach(function(th){{
+    th.setAttribute('aria-sort','none');
     th.addEventListener('click',function(){{
-      var k=th.dataset.k; asc=!asc;
+      var k=th.dataset.k;
+      // Clicking a new column starts ascending rather than inheriting the last
+      // column's direction, which is what a reader expects and what the arrow claims.
+      asc = (sortedBy===k) ? !asc : true;
+      sortedBy=k;
       rows.sort(function(a,b){{
         var x=k==='p'?+a.dataset.p:a._h, y=k==='p'?+b.dataset.p:b._h;
         return (x<y?-1:x>y?1:0)*(asc?1:-1);
       }});
       rows.forEach(function(r){{tb.appendChild(r);}});
+      document.querySelectorAll('th.sortable').forEach(function(o){{
+        var on = o===th;
+        o.classList.toggle('sorted',on);
+        o.classList.toggle('desc',on&&!asc);
+        o.setAttribute('aria-sort', on ? (asc?'ascending':'descending') : 'none');
+      }});
     }});
   }});
   // Publish the sticky filter bar's real height so the table header can sit exactly
@@ -1005,7 +1017,7 @@ def index_section(entries):
   var bar=document.querySelector('.filters');
   function measure(){{
     document.documentElement.style.setProperty(
-      '--filters-h', Math.round(bar.getBoundingClientRect().height)+'px');
+      '--filters-h', Math.ceil(bar.getBoundingClientRect().height)+'px');
   }}
   if(bar){{
     measure();

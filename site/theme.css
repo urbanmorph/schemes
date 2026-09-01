@@ -470,3 +470,15 @@ main{padding:22px 0 64px}
   .railtop{margin:0;padding:5px 10px;border:1px solid var(--stamp);border-radius:100px;
     flex:none;font-size:10.5px;margin-left:auto}
 }
+
+/* The sticky header must be opaque and sit above the pills it slides over, or a saffron
+   selected pill shows through the seam as a stray line. */
+.pills{position:relative;z-index:1}
+#tbl thead th{background:var(--sink);box-shadow:0 -1px 0 var(--sink)}
+#tbl thead th{top:calc(var(--filters-h,57px) - 1px)}
+
+/* Sortable columns say so, and say which way. */
+th.sortable::after{content:"\2195";margin-left:5px;opacity:.42;font-size:11px}
+th.sortable.sorted{color:var(--ink)}
+th.sortable.sorted::after{content:"\2191";opacity:1;color:var(--stamp)}
+th.sortable.sorted.desc::after{content:"\2193"}
