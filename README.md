@@ -5,8 +5,8 @@ official sources, recording what each source publishes and what it leaves out.
 
 > Karnataka runs 60 welfare schemes. Or 501. It depends which government portal you ask.
 
-**5,395 schemes** across myScheme, the Union Budget, the Outcome Budget and DBT Bharat.
-**624 of them appear on no citizen-facing portal at all.**
+**5,417 schemes** across myScheme, the Union Budget, the Outcome Budget and DBT Bharat.
+**646 of them appear on no citizen-facing portal at all.**
 
 Everything here is about *the data about* schemes, never about whether a scheme works.
 "No end date published" is a fact about a database field. It is not a judgment on the
@@ -35,8 +35,8 @@ how much that state has onboarded onto the DBT platform, not how many schemes it
 **Major schemes are funded and monitored but never announced to citizens.** Samagra
 Shiksha (₹42,100 cr), Krishionnati Yojana (₹11,200 cr), Rashtriya Krishi Vikas Yojana,
 National AYUSH Mission and the National Social Assistance Programme each carry a Union
-Budget line and an Outcome Budget framework, and none appears on myScheme. 64 such
-schemes, ₹1,39,009 cr, published at the classifier's high-precision threshold.
+Budget line and an Outcome Budget framework, and none appears on myScheme. 50 such
+schemes, ₹2,01,476 cr, published at the classifier's high-precision threshold.
 
 **Where records are thin, across all 4,771 myScheme entries:**
 

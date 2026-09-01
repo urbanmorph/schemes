@@ -1,0 +1,5422 @@
+{
+ "borderline": 88,
+ "built_from": "data/karnataka/schemes.json",
+ "labelled": 324,
+ "labels": [
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2055-00-108-0-12",
+   "label": "scheme",
+   "name": "Grant to Police Welfare Fund out of Bandobast Receipts",
+   "purpose": "Financial assistance for education of children of policemen died in service.",
+   "reason": "a transfer into a police welfare fund whose stated purpose is educating the children of policemen who died in service",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 36793.08,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2056-00-101-0-01",
+   "label": "not_scheme",
+   "name": "Prisons and Correctional Services",
+   "purpose": "Incentive money for students who passed SSLC, PUC and 1st year degree with 90% or above.",
+   "reason": "the prison establishment head. Its purpose line, incentive money for students, does not belong to a jails head and reads like a mis-attachment",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 159389.93,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-01-196-1-02",
+   "label": "scheme",
+   "name": "State Program for Ksheera Bhagya(MDM)",
+   "purpose": "Subsidy of Milk for school children under Ksheerabhagya Yojana.",
+   "reason": "Ksheera Bhagya supplies milk to school children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 912.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2202-02-107-3-02",
+   "label": "scheme",
+   "name": "Reimbursement of fees to girl students studying in Government PU College",
+   "purpose": "Reimbursement of tuition fee for eligible 1st PU and 2nd PU girls studying in Government Pre -University colleges.",
+   "reason": "tuition fee reimbursement to girl students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 501.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2202-02-110-3-03",
+   "label": "not_scheme",
+   "name": "Kittur Rani Chennamma Residential School for Girls",
+   "purpose": "Scholarships, incentives, food and clothing allowance.",
+   "reason": "a named residential school. Its purpose line lists scholarships and allowances, but the head funds the institution",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4320.13,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-02-196-1-05",
+   "label": "scheme",
+   "name": "Financial Assistance and Reimbursement of Fees to Students",
+   "purpose": "Financial assistance and reimbursement of fees to students in secondary education",
+   "reason": "financial assistance and fee reimbursement paid to students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-107-1-10",
+   "label": "scheme",
+   "name": "Scholarship and Exemption from payment of full fees to all girls students",
+   "purpose": "Scholarships to encourage bright students in name of Sanchi Honnamma and Kitturu Rani Chennamma (for talented girls)",
+   "reason": "scholarship and fee exemption for girl students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2202-80-107-0-06",
+   "label": "scheme",
+   "name": "Mukhya Mantri Raitha Vidyanidhi Programme",
+   "purpose": "Scholarships to farmers’ children.",
+   "reason": "scholarships to farmers' children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 25.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-80-107-0-08",
+   "label": "scheme",
+   "name": "Vidyanidhi Scheme-Scholarship for Higher Education of Fishermen",
+   "purpose": "Scholarship to fishermen’s children to encourage further and higher education",
+   "reason": "scholarship to fishermen's children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2204-00-789-0-01",
+   "label": "not_scheme",
+   "name": "Development Action Plan for Scheduled Castes (DAPSC)",
+   "purpose": "Financial assistance and cash incentives to sports persons belonging to Scheduled Caste including children who have won",
+   "reason": "the Special Component Plan allocation head for the sports department. Its purpose names cash incentives to SC sportspersons, but the head itself is a sub-plan aggregate",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2204-00-796-0-01",
+   "label": "not_scheme",
+   "name": "Development Action Plan for Scheduled Tribes (DAPST)",
+   "purpose": "Financial assistance and cash incentives to sports persons who belong to Scheduled Tribes including children and who won",
+   "reason": "the Tribal Sub Plan allocation head for the sports department, labelled to match the identically named row already in the stratified sample",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4400.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2205-00-102-1-18",
+   "label": "scheme",
+   "name": "Pension to Artists in Indigent Circumstances",
+   "purpose": "Monthly pensions for artists and widow pension to deceased artists’ wives",
+   "reason": "monthly pension to indigent artists and their widows",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-02-101-0-07",
+   "label": "scheme",
+   "name": "Vajpayee Urban Housing Scheme",
+   "purpose": "Houses to houseless families belonging to economically weaker sections in urban areas.",
+   "reason": "houses to houseless families in urban areas",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-02-106-0-05",
+   "label": "scheme",
+   "name": "CSS-Central Share-Beneficiary Led Construction(BLC)- PMAY(U 2.0)",
+   "purpose": "To provide financial assistance to elegible beneficiaries for owning a Pucca house being built in different partnerships by",
+   "reason": "PMAY beneficiary led construction, financial assistance to a family building a house",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 32500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-03-104-0-01",
+   "label": "scheme",
+   "name": "Ashraya-Basava Vasathi",
+   "purpose": "Financial assistance for economically and socially backward and homeless persons in rural areas.",
+   "reason": "Ashraya housing assistance to homeless rural households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-07-800-0-04",
+   "label": "scheme",
+   "name": "D.Devraj Urs Housing Scheme",
+   "purpose": "Housing facilities to HIV-effected, Leprosy-cured, physically challenged, Artisans and Nomadic tribes.",
+   "reason": "housing for HIV affected, leprosy cured, disabled and nomadic households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 19600.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-80-198-6-02",
+   "label": "scheme",
+   "name": "CSS-Central Share-Pradhan Mantri Awas Yojane Grameena",
+   "purpose": "Houses to houseless families of socially and economically weaker sections in rural areas.",
+   "reason": "PMAY Gramin, houses to rural households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 9000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-197-6-07",
+   "label": "scheme",
+   "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
+   "purpose": "Pre-Matric scholarships to students belonging to Scheduled Caste (SC)",
+   "reason": "pre-matric scholarship to SC students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 7000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-197-6-08",
+   "label": "scheme",
+   "name": "CSS-State Share- Pre-Matric Scholarship to SC Students",
+   "purpose": null,
+   "reason": "state share of the pre-matric scholarship to SC students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 27300.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-197-6-09",
+   "label": "scheme",
+   "name": "CSS-State Share- Post-Matric Scholarships to SC Studentss",
+   "purpose": "Financial support for education to post-matric SC students.",
+   "reason": "post-matric scholarship to SC students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6875.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-190-2-07",
+   "label": "scheme",
+   "name": "Micro Credit to S.Ts through Self Help Women Groups (SHG)",
+   "purpose": "Financial assistance to members of women SHGs to start small businesses.",
+   "reason": "micro credit to women in ST self help groups",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5500.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-196-1-03",
+   "label": "scheme",
+   "name": "Prize Money for Post Matric ST Students",
+   "purpose": "Price money to ST students who complete a post matric course in first attempt and first class",
+   "reason": "prize money paid to post-matric ST students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-197-6-04",
+   "label": "scheme",
+   "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
+   "purpose": null,
+   "reason": "state share of post-matric scholarships to ST students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2159.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-197-6-05",
+   "label": "scheme",
+   "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
+   "purpose": "Scholarship to eligible Scheduled Tribe (ST) students in Classes IX and X to attain progression to the post-matric stage.",
+   "reason": "pre-matric scholarship to ST students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 720.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-197-6-06",
+   "label": "scheme",
+   "name": "CSS-State Share- Pre-Matric Scholarship to ST Students",
+   "purpose": null,
+   "reason": "state share of pre-matric scholarship to ST students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1500.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-277-0-36",
+   "label": "scheme",
+   "name": "Upgradation of Merit of ST Students",
+   "purpose": "Prize money to meritorious SSLC students and special coaching to students in reputed institutions at district level.",
+   "reason": "prize money and coaching for meritorious ST students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 43313.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2225-02-794-0-05",
+   "label": "scheme",
+   "name": "Various Development Schemes for Scheduled Tribes",
+   "purpose": "Grants for nutrition, education and marriage for ST community.",
+   "reason": "umbrella name, but the purpose line names nutrition, education and marriage grants to ST households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3373.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-03-102-0-12",
+   "label": "scheme",
+   "name": "Nomadic",
+   "purpose": "Scholarships to tribal students.",
+   "reason": "the name is a one-word fragment the parser cut short, but the row pays scholarships to tribal students. Publishable only with the name repaired",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 82345.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-196-1-03",
+   "label": "scheme",
+   "name": "Grants for Prize Money, Fees Concession and Stipends to OBCs",
+   "purpose": "Grants to give price money to meritorious post matric students and fees consetions to post matric students",
+   "reason": "prize money, fee concession and stipends to OBC students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4500.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-277-2-37",
+   "label": "scheme",
+   "name": "Foreign Study Stipend, Coaching for Competitive Job Exams and PHD Fellowship to BC Students",
+   "purpose": "Training, awareness and incentives to Backward Classes students.",
+   "reason": "foreign study stipend and PhD fellowship to backward class students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 10000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-277-2-51",
+   "label": "scheme",
+   "name": "CSS-State Share-Post-Matric Scholarship to OBC Students",
+   "purpose": "Financial assistance to OBC students studying in post-matric schools.",
+   "reason": "post-matric scholarship to OBC students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-277-2-52",
+   "label": "scheme",
+   "name": "CSS-Central Share-Pre-Matric Scholarship to Backward Classes Students Studying in 9th and 10th Standard",
+   "purpose": "Financial support to students belonging to backward classes to enrol, sustain and pursue education in relevant classes.",
+   "reason": "pre-matric scholarship to backward class students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 15000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-277-2-72",
+   "label": "scheme",
+   "name": "CSS-Central Share-Post-Matric Scholarships to OBC Students",
+   "purpose": null,
+   "reason": "post-matric scholarship to OBC students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-283-0-03",
+   "label": "scheme",
+   "name": "Food and Accomodation Assistance-Vidyasiri",
+   "purpose": "Financial assistance to meritorious students of Backward Classes for food and accommodation.",
+   "reason": "Vidyasiri pays food and accommodation assistance to backward class students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-102-0-05",
+   "label": "scheme",
+   "name": "Development of Jain, Buddist and Sikh Community",
+   "purpose": "Scholarships to students of minority community pursuing post-matriculation, courses (including higher education)",
+   "reason": "scholarships to minority community students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1036.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-196-1-02",
+   "label": "scheme",
+   "name": "Incentive and Stipends to Minorities",
+   "purpose": "Grants for incentives and stipends to post matric students belonging to minorities",
+   "reason": "incentives and stipends to post-matric minority students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-277-0-03",
+   "label": "scheme",
+   "name": "Incentive for Minority Students",
+   "purpose": "Prize money to meritorious minority students",
+   "reason": "prize money to meritorious minority students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-277-0-04",
+   "label": "scheme",
+   "name": "Scholarship for Minorities and Fee Reimbursement",
+   "purpose": "Financial assistance to pre-matric students in Government, private-aided and unaided minority schools.",
+   "reason": "scholarship and fee reimbursement to minority students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4975.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-277-0-05",
+   "label": "scheme",
+   "name": "Vidyasiri Scheme for Minority Students",
+   "purpose": "Scholarships to post-matric minority students.",
+   "reason": "Vidyasiri scholarships to post-matric minority students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2230-01-103-4-00",
+   "label": "scheme",
+   "name": "Karnataka Labour Welfare Fund Contribution",
+   "purpose": "Financial assistance to children of registerd workers through educational scholarships, and medical assistance.",
+   "reason": "a contribution to a labour welfare fund whose stated purpose is scholarships and medical assistance to workers' children. A dedicated welfare fund, not a general purpose devolution",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 60000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2230-02-101-0-17",
+   "label": "scheme",
+   "name": "Yuvanidhi Scheme",
+   "purpose": "Monthly unemployment allowance for elegible graduates and diploma holders",
+   "reason": "Yuvanidhi pays a monthly unemployment allowance to graduates",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 200.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2230-02-102-0-01",
+   "label": "scheme",
+   "name": "CM Swanidhi-Assistance to Street Vendors",
+   "purpose": "Interest subsidy for loans for registered street venders",
+   "reason": "interest subsidy on loans to registered street vendors",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 583.44,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-01-202-3-01",
+   "label": "scheme",
+   "name": "Chetana and Rehabilitation of Devadasi Women",
+   "purpose": "Financial assistance to sex workers to take up alternative livelihood opportunities.",
+   "reason": "financial assistance to devadasi women for alternative livelihoods",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-001-0-10",
+   "label": "scheme",
+   "name": "Interest Subsidy for Women through KSFC",
+   "purpose": "Financial assistance (interest subsidy on loans) to women to start small, medium, and large-scale industries.",
+   "reason": "interest subsidy on loans to women entrepreneurs",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1813.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-101-0-20",
+   "label": "scheme",
+   "name": "CSS-Central Share-Monthly Financial Assistance to the Physically Challenged and the Disabled Poor (NSAP)",
+   "purpose": "Financial assistance to poor disabled persons.",
+   "reason": "monthly financial assistance to poor disabled persons",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 166677.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-101-0-43",
+   "label": "scheme",
+   "name": "CSS-State Share-Monthly Financial Assistance to the Physically Challenged and the Disabled Poor (NSAP)",
+   "purpose": null,
+   "reason": "state share of the monthly assistance to disabled persons",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-101-0-50",
+   "label": "scheme",
+   "name": "Hostels for Disabled Women",
+   "purpose": "Hostel (lodging) facilities for disabled female employees, trainees and girl students from rural areas.",
+   "reason": "hostel accommodation provided to disabled women and girl students, an in-kind benefit. Labelled like Sakhi Nivas in the stratified sample",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 7501.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-101-0-53",
+   "label": "scheme",
+   "name": "NPRPD Programme for the Disabled",
+   "purpose": "To provide education, employment, training, economic rehabilitation, and social security for differently abled persons at",
+   "reason": "education, training and economic rehabilitation for disabled persons",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-101-0-55",
+   "label": "not_scheme",
+   "name": "Placement Cell of the Different Abled",
+   "purpose": "Unemployment allowance to educated unemployed and differently abled persons.",
+   "reason": "the name is a placement cell, an office. Its purpose line says unemployment allowance, so this one is genuinely arguable",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-05",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-Training of Anganwadi Workers & Helpers",
+   "purpose": "Training of Anganwadi workers at all levels of ICDS functionaries.",
+   "reason": "training of Anganwadi workers and ICDS functionaries, departmental staff training",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-19",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Training of Anganwadi Workers & Helpers",
+   "purpose": "For tarining of Anganwadi workers and helpers.",
+   "reason": "state share of the same departmental staff training",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 25.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-102-0-24",
+   "label": "not_scheme",
+   "name": "Prevention of Trafficking in Women & Children",
+   "purpose": "Create awareness for combating trafficking of women and children.",
+   "reason": "the purpose line describes awareness creation, with no benefit reaching a named person",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 8437.55,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-36",
+   "label": "not_scheme",
+   "name": "CSS-Salary-Integrated Child Protection Scheme",
+   "purpose": "Improve well-being of children in difficult circumstances and to reduce vulnerabilities",
+   "reason": "a CSS-Salary head. It pays the child protection staff, not the children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 636.5,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-45",
+   "label": "scheme",
+   "name": "Creche for Children",
+   "purpose": "Day care facilities to children of working mothers in government office.",
+   "reason": "day care for the children of working mothers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4411.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-47",
+   "label": "scheme",
+   "name": "CSS-State Share-Poshan Abhiyan (National Nutrition Mission)",
+   "purpose": null,
+   "reason": "state share of Poshan Abhiyan",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-102-0-48",
+   "label": "scheme",
+   "name": "CSS-Central Share-Integrated Child Protection Scheme (Mission Vaatsalya)",
+   "purpose": "Strengthen child protection by focusing on child rights, advocacy and awareness.",
+   "reason": "Mission Vatsalya delivers care, sponsorship and institutional support to children in difficulty",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-102-0-49",
+   "label": "scheme",
+   "name": "CSS-State Share- Integrated Child Protection Scheme (Mission Vaatsalya)",
+   "purpose": null,
+   "reason": "state share of Mission Vatsalya",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1122.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-102-0-54",
+   "label": "scheme",
+   "name": "CSS-Central Share(100% GoI)-Mission Vaatsalya-Child Help Line",
+   "purpose": "Child Helpline Service to provide emergency and immediate response.",
+   "reason": "a child helpline. A service an individual child receives rather than a transfer",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 375.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-103-0-05",
+   "label": "scheme",
+   "name": "CSS-Central Share-Sakhi Nivas Working Women Hostel (SAMARTHYA)",
+   "purpose": "Women empowerment by providing well-equipped safe accommodation for working women and day care centers for their",
+   "reason": "Sakhi Nivas working women's hostel, matching the stratified label on the same scheme",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1500.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-103-0-38",
+   "label": "scheme",
+   "name": "Udyogini - Women Development Corporation",
+   "purpose": "Financial assistance (loans and subsidy) to women to undertake income-generating activities",
+   "reason": "Udyogini pays loans and subsidy to women. The corporation's name is attached to the head, which is why it nearly failed the institution test",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6108.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-103-0-53",
+   "label": "scheme",
+   "name": "Pension to Devadasis",
+   "purpose": "Monthly pension to ex-devadasis.",
+   "reason": "monthly pension to ex-devadasis",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 16648.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-103-0-61",
+   "label": "scheme",
+   "name": "CSS-Central Share-Pradhana Mantri Maatru Vandana Yojane",
+   "purpose": "Improved health and nutrition of pregnant and lactating mothers by cash incentives.",
+   "reason": "Matru Vandana pays cash to pregnant and lactating mothers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1104.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-103-0-69",
+   "label": "scheme",
+   "name": "CSS-State Share-Scheme for Adolescent Girls (SAG)",
+   "purpose": null,
+   "reason": "state share of the Scheme for Adolescent Girls",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 100.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-103-0-82",
+   "label": "scheme",
+   "name": "CSS-Central Share(100% GoI)- Women Helpline",
+   "purpose": "Implementation of toll-free telephone service (181) to provide emergency help to women who are victims of violence and",
+   "reason": "the 181 women's helpline, an emergency service an individual receives",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2732.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-103-0-99",
+   "label": "scheme",
+   "name": "Welfare Programme for Women",
+   "purpose": "Hostel facilities to pre-matric and post-matric girls’ students in backward taluk and rural areas.",
+   "reason": "umbrella name, but the purpose line names hostel accommodation for girl students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 460.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-104-2-04",
+   "label": "scheme",
+   "name": "Senior Citizen Policy",
+   "purpose": "Senior citizen helplines to resolve harassment, financial exploitation, mental turmoil and emergency assistance",
+   "reason": "a policy head, but the purpose line names senior citizen helplines, the same kind of service as the women's helpline above",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-104-2-06",
+   "label": "not_scheme",
+   "name": "Financial Assistance to Special Schools for Physically Challenaged run by NGO's",
+   "purpose": "Grants-in-aid to NGOs for mentally challenged, visually impaired and hearing impaired children.",
+   "reason": "grant-in-aid to NGOs that run special schools. The children benefit, the money funds institutions",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 450.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-104-2-07",
+   "label": "scheme",
+   "name": "Dhanashree",
+   "purpose": "Financial incentive to HIV-infected women to take up self-employment.",
+   "reason": "Dhanashree pays a financial incentive to HIV infected women",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 30000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-1-01",
+   "label": "scheme",
+   "name": "CSS-Central Share-Old Age Pension (NSAP)",
+   "purpose": "Pension for senior citizens (above 60 years)",
+   "reason": "old age pension under NSAP",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3662.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-1-03",
+   "label": "scheme",
+   "name": "CSS-Central Share-National Family Benefit Scheme (NSAP)",
+   "purpose": "Financial assistance to BPL families, in case of death of primary breadwinner in a family irrespective of cause of the death.",
+   "reason": "National Family Benefit Scheme lump sum to a bereaved BPL family",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3240.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-1-05",
+   "label": "scheme",
+   "name": "Monthly Financial Assistance to Endosulphan Victims",
+   "purpose": "Monthly financial assistence to endosulfan victims",
+   "reason": "monthly financial assistance to Endosulfan victims",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 8597.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-1-08",
+   "label": "scheme",
+   "name": "Widow Pension for Farmers Suicide Cases",
+   "purpose": "Financial assistance to widows of suicide farmers through monthly pension",
+   "reason": "monthly pension to widows in farmer suicide cases",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 72.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-1-09",
+   "label": "scheme",
+   "name": "Pension to Acid Attack Victims",
+   "purpose": "Financial assistance through monthly pension to women victims of acid attacks.",
+   "reason": "monthly pension to acid attack victims",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 19000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-2-01",
+   "label": "scheme",
+   "name": "CSS-Central Share-Destitute Widow Pension (NSAP)",
+   "purpose": "Financial assistance (through monthly pension) to BPL destitute widows.",
+   "reason": "destitute widow pension under NSAP",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4650.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-60-103-0-01",
+   "label": "scheme",
+   "name": "New Pension System for Anganawadi Workers",
+   "purpose": "New Pension Scheme for Anganwadi workers and helpers.",
+   "reason": "a pension for Anganwadi workers and helpers. An honorary worker's pension, so a benefit rather than a payroll head",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3902.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-107-0-01",
+   "label": "scheme",
+   "name": "State Freedom fighters Pensions",
+   "purpose": "Pension for freedom fighters",
+   "reason": "state freedom fighters pension",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 656.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-107-0-08",
+   "label": "scheme",
+   "name": "Goa Freedom Fighters Pension",
+   "purpose": "Pension for persons who participated in Goa Liberation Movement",
+   "reason": "pension to Goa liberation movement participants",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 735.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-60-200-1-99",
+   "label": "scheme",
+   "name": "Sainik Welfare Programmes(Includes assistance to Para Plegic Rehabilitation centre and Ex-gratia to recipients of Gallantry Awards)",
+   "purpose": "Scholarships and incentives for students of indigenous retired army personnel.",
+   "reason": "scholarships, incentives and ex-gratia to ex-servicemen's families, bundled in the same head as a rehabilitation centre",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 80100.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2236-02-197-1-02",
+   "label": "scheme",
+   "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
+   "purpose": "One hot meal on school days and milk to students (three days a week) in government and aided schools up to 10th standard",
+   "reason": "hot meal and milk to school students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2250-00-103-5-08",
+   "label": "scheme",
+   "name": "Assistance to Manasa Sarovar Piligrims",
+   "purpose": "Subsidy to pilgrims undertaking Manasarovar Yatra, Char Dham, and Khashi Yatra",
+   "reason": "travel subsidy to individual pilgrims",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6570.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-102-0-08",
+   "label": "scheme",
+   "name": "CSS-Central Share- National Food Security and Nutrition Mission (NFSNM)",
+   "purpose": "Subsidy to farmers for increasing production, restoring soil fertility, and enhancing farm-level productivity in identified",
+   "reason": "NFSNM pays input subsidy to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 859.67,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-102-0-28",
+   "label": "scheme",
+   "name": "Farmers Incentive and Support Schemes",
+   "purpose": null,
+   "reason": "incentive and support paid to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4800.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-102-0-33",
+   "label": "scheme",
+   "name": "CSS-Central Share-National Mission on Natural Farming (NMNF)",
+   "purpose": "Subsidy to encourage farmers to adopt natural farming based sustainable agriculture through local resources",
+   "reason": "National Mission on Natural Farming subsidy to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-108-1-16",
+   "label": "scheme",
+   "name": "CSS-Central Share- Rainfed Area Development (RAD) - RKVY RAFTAAR",
+   "purpose": "Subsidy for production to make farmers self-sufficient in rainfed areas",
+   "reason": "Rainfed Area Development subsidy to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 240.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-108-1-18",
+   "label": "scheme",
+   "name": "CSS-Central Share-PM-RKVY-Crop Diversification (PM- RKVY-CDP)",
+   "purpose": "To provide incentives for the farmers to shift from water incentive crops to alternative crops such as pulses, oil seeds, and",
+   "reason": "crop diversification incentive to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 480.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-108-2-18",
+   "label": "scheme",
+   "name": "CSS-State Share-National Mission on Edible Oil- Oil Palm (Krishonnati Yojane)",
+   "purpose": "Financial assistance to farmers to increase production of palm oil",
+   "reason": "financial assistance to oil palm growers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 33479.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-108-2-30",
+   "label": "scheme",
+   "name": "CSS-Central Share-Pradhana Mantri Krishi Sinchayee Yojane(RKVY)",
+   "purpose": "Subsidy for farmers to implement micro-irrigation systems.",
+   "reason": "micro irrigation subsidy to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 100.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2403-00-101-0-43",
+   "label": "scheme",
+   "name": "CSS-Central Share-ASCAD Payment of compensation",
+   "purpose": "Compensation to farmer for deathof diseased livestock and destructions of livestick feed",
+   "reason": "compensation to farmers for diseased livestock",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 36.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2403-00-106-0-03",
+   "label": "scheme",
+   "name": "CSS-Central Share- Sub-Mission on Breed Development of Livestock & Poultry and Seminars(NLM)",
+   "purpose": "Insurance to cover loss to farmers due to accidental death of livestock",
+   "reason": "the name is breed development and seminars, but the purpose line is livestock insurance for farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 168700.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2404-00-191-1-17",
+   "label": "scheme",
+   "name": "Incentive to Milk Producers",
+   "purpose": "Incentives for milk producers",
+   "reason": "incentive paid to milk producers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2405-00-103-0-15",
+   "label": "scheme",
+   "name": "Contribution to Distress Relief Fund",
+   "purpose": "Compensation for death or permanent disbility while fishing as well as for damage of boats and nets due to natural",
+   "reason": "a contribution to a fishermen's relief fund that pays compensation for death, disability and gear loss",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2405-00-103-0-17",
+   "label": "scheme",
+   "name": "Supply of Kerosene to Conventional Boats",
+   "purpose": "Subsidy for kerosene used by fishermen in traditional boats",
+   "reason": "kerosene subsidy to traditional boat fishermen",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2405-00-103-0-24",
+   "label": "scheme",
+   "name": "Subsidy for purchase of new engines to Motorboats",
+   "purpose": "Incentive to convert kerosene boats to petrol boats",
+   "reason": "subsidy to fishermen converting boat engines",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 300.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2405-00-120-0-09",
+   "label": "scheme",
+   "name": "Fishermen Welfare State Top-Up (Matsya Ashakirana)",
+   "purpose": "Compensation for registered fishermen during fishing prohibited period",
+   "reason": "relief to registered fishermen during the fishing ban",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 150000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2408-01-102-0-01",
+   "label": "scheme",
+   "name": "Subsidy for Food Grains Distribution for AAY and PHH benficieries under Annabhagya Scheme",
+   "purpose": "Free distribution of fixed amount of food grains to BPL families.",
+   "reason": "free food grains to BPL families under Annabhagya",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 620000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2408-01-196-0-01",
+   "label": "scheme",
+   "name": "DBT Under Annabhagya Scheme",
+   "purpose": "Distributing the Addl 5 KG Rice to AAY Cards Holders",
+   "reason": "additional rice to AAY cardholders under Annabhagya",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 164800.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2425-00-107-2-41",
+   "label": "scheme",
+   "name": "Interest Subsidy for Crop Loan, Pledge Loan, SHGs",
+   "purpose": "Credit facility and interest subsidy to socially and economically backward sections, especially women",
+   "reason": "interest subsidy on crop and pledge loans to individual borrowers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 255.33,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2425-00-197-1-01",
+   "label": "scheme",
+   "name": "Subsidy on Loans Sanctioned by PCARDB for Assets Creation (SCP)",
+   "purpose": "Subsidy for long term loans for asset creation of ST borrowres",
+   "reason": "subsidy on long term loans to ST borrowers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3900.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2851-00-102-0-74",
+   "label": "scheme",
+   "name": "Assistance to Khadi Sector",
+   "purpose": "Wage incentives to improve standard of living of artisans working in Khadi organisations and associations",
+   "reason": "named as assistance to a sector, but the purpose line is wage incentives to individual khadi artisans",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 10000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2851-00-103-0-03",
+   "label": "scheme",
+   "name": "Weavers Package-Power Subsidy",
+   "purpose": "Power subsidy package for waver sector",
+   "reason": "power subsidy to weavers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2851-00-103-0-69",
+   "label": "not_scheme",
+   "name": "Assistance to KHDC",
+   "purpose": "Interest subsidies for purchase of raw material and rebate on handloom products",
+   "reason": "assistance to the Karnataka Handloom Development Corporation. The rebate reaches weavers, the head funds the corporation. The acronym is why the institution test did not fire",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 100.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2851-00-106-0-12",
+   "label": "scheme",
+   "name": "Wage Incentive to Coir Sector",
+   "purpose": "Incentives to workers in micro and small coconut industries",
+   "reason": "wage incentive to coir workers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4860.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2851-00-107-1-51",
+   "label": "scheme",
+   "name": "Programs implemented by Price Stabilization Fund",
+   "purpose": "To give subsidies on raw silk, interest subsidies on loans taken by women in sericulture activities, subsidies on butterfly",
+   "reason": "a fund head, but the purpose line names silk subsidies and interest subsidies to women in sericulture",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 46.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-02",
+   "label": "scheme",
+   "name": "Free Bus Pass Facility to Freedom Fighters",
+   "purpose": "Free bus passes to freedom fighters over 75 years of age with one assistant",
+   "reason": "free bus pass to freedom fighters",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2462.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-07",
+   "label": "scheme",
+   "name": "Free Bus Travel Facility to the Handicapped",
+   "purpose": "Concessional travel facilities for persons with disability including children.",
+   "reason": "free travel for persons with disability",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-08",
+   "label": "scheme",
+   "name": "Free Bus Pass To Widows Of Freedom Fighters",
+   "purpose": "Free bus passes to wives and widows of freedom fighters.",
+   "reason": "free bus pass to freedom fighters' widows",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3824.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-09",
+   "label": "scheme",
+   "name": "Concessional Bus Travel Facility to Senior Citizens",
+   "purpose": "Issue of bus passes to senior citizens at concessional rates.",
+   "reason": "concessional bus pass to senior citizens",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 158.0,
+   "books": [
+    "Child Budget"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-11",
+   "label": "scheme",
+   "name": "Issue of Free Bus Passes to the dependents of Martyrs",
+   "purpose": "Issue of free bus pass to dependent of martyrs.",
+   "reason": "free bus pass to dependents of martyrs",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 530000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-16",
+   "label": "scheme",
+   "name": "Shakthi Scheme",
+   "purpose": "Fare-free bus ride to women (including girl child).",
+   "reason": "Shakthi gives women fare-free bus travel",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 200.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2014-00-102-0-06",
+   "label": "scheme",
+   "name": "Stipend to Law Graduates",
+   "purpose": "Incentives to law graduates before starting their legal careers and support them in early stage",
+   "reason": "stipend paid to individual law graduates",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 2165.61,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2014-00-103-0-03",
+   "label": "not_scheme",
+   "name": "CSS-Salary-Fast Track Special Courts for disposal of cases pending under Rape and POCSO Act",
+   "purpose": null,
+   "reason": "CSS-Salary head funding fast track courts: pays court staff, not a benefit a person receives",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 642.53,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2014-00-105-0-13",
+   "label": "not_scheme",
+   "name": "Karnataka State Law University, Hubballi",
+   "purpose": null,
+   "reason": "a university",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 3362.39,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2014-00-105-0-15",
+   "label": "not_scheme",
+   "name": "Private Aided Law Colleges",
+   "purpose": null,
+   "reason": "grant-in-aid to colleges, an institutional head",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 96.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2014-00-800-5-01",
+   "label": "not_scheme",
+   "name": "Chamarajanagar Government Law College",
+   "purpose": null,
+   "reason": "a government law college",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2041-00-001-0-06",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": "To provide concession bus pass for students, senior citizens, blind and differently abled persons.",
+   "reason": "accounting head for unspent SCSP-TSP money; the purpose line here is a parser mis-attachment",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 10400.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2055-00-113-0-06",
+   "label": "scheme",
+   "name": "Aarogya Bhagya Scheme for Police Forces",
+   "purpose": "Medical allowances for family members (including children) of police personnel.",
+   "reason": "medical allowance to police personnel and their families: an employee benefit, but a benefit an individual receives",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2055-00-116-0-03",
+   "label": "not_scheme",
+   "name": "Setting up of Cyber Forensic Lab cum Training Centre towards implementation of CCPWC and other facilities under Nirbhaya Fund",
+   "purpose": "Establishment of cyber forensic labs cum training centres.",
+   "reason": "sets up a forensic lab and training centre, a facility head",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-01-053-0-02",
+   "label": "not_scheme",
+   "name": "Maintenance of School Buildings",
+   "purpose": "Maintenance of toilets and drinking water facilities in all Government shools.",
+   "reason": "maintenance of school buildings",
+   "sample": "stratified",
+   "stratum": "CB/none",
+   "stratum_sampled": 7,
+   "stratum_size": 30
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2202-01-102-0-05",
+   "label": "scheme",
+   "name": "Reimbursement of fees to Private Schools under RTE",
+   "purpose": "Reimbursement of fees to students enrolled in private schools.",
+   "reason": "RTE fee reimbursement: money is paid to schools but the benefit is a free seat for a child",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 1872.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2202-01-102-0-06",
+   "label": "scheme",
+   "name": "Reimbursement of fees to Private Schools under RTE(9th and 10th SC and ST Students)",
+   "purpose": null,
+   "reason": "RTE fee reimbursement for SC and ST students in classes 9 and 10",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 1758.99,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-01-107-0-06",
+   "label": "not_scheme",
+   "name": "Non-Govt. Teachers' Training Institutions",
+   "purpose": null,
+   "reason": "grant to teacher training institutions",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 3083.2,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-01-107-0-09",
+   "label": "not_scheme",
+   "name": "Teachers Training and Orientation Training Centres",
+   "purpose": null,
+   "reason": "training centres, an institutional head",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 42000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2202-01-109-0-03",
+   "label": "scheme",
+   "name": "Vidya Vikasa Scheme- Incentive for Students",
+   "purpose": "Free bicycles uniforms, shoes, socks, textbooks and activity books for all students from 1st to 10th standard in school",
+   "reason": "free bicycles, uniforms, shoes and textbooks to school students",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 1569272.66,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-01-197-1-01",
+   "label": "not_scheme",
+   "name": "Grants to Government Primary Schools and Taluk BEO",
+   "purpose": null,
+   "reason": "block grants to schools and the Block Education Officer establishment",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 1562.85,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-02-001-0-06",
+   "label": "not_scheme",
+   "name": "Commissionerate of School Education - Dharwad",
+   "purpose": null,
+   "reason": "a commissionerate office",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 168885.4,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-02-109-0-13",
+   "label": "not_scheme",
+   "name": "Government PU Colleges",
+   "purpose": null,
+   "reason": "government PU colleges, institutions",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 711.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2202-02-110-3-11",
+   "label": "not_scheme",
+   "name": "Sainik School Koodige",
+   "purpose": "To prepare boy students for admission to National Defence Academy.",
+   "reason": "a school. It educates children but the head funds an institution, not an application-based benefit",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 555572.32,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-02-197-1-01",
+   "label": "not_scheme",
+   "name": "Grants to Government High Schools and Residential High Schools",
+   "purpose": null,
+   "reason": "grants to run government high schools",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 0.09,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-001-0-02",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": null,
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 22248.18,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-102-0-01",
+   "label": "not_scheme",
+   "name": "Mysore University",
+   "purpose": null,
+   "reason": "a university",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 8020.17,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-102-0-05",
+   "label": "not_scheme",
+   "name": "Mangalore University",
+   "purpose": null,
+   "reason": "a university",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 2667.6,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-102-0-33",
+   "label": "not_scheme",
+   "name": "Vijayanagar Sri Krishnadevararaya University",
+   "purpose": null,
+   "reason": "a university",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 82.82,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-102-0-44",
+   "label": "not_scheme",
+   "name": "Nrupatunga University",
+   "purpose": null,
+   "reason": "a university",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 850.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-102-0-52",
+   "label": "not_scheme",
+   "name": "Development Grants for Universities",
+   "purpose": null,
+   "reason": "development grants to universities, an institutional head",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 3818.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2202-03-103-1-06",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Rashtriya Ucchatar Shiksha Abhiyana",
+   "purpose": null,
+   "reason": "RUSA is a named central scheme but its money is a grant to higher education institutions, not a benefit a person receives",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 300.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-03-112-0-13",
+   "label": "not_scheme",
+   "name": "Assistance to Sanskrit and Vedic Research Institutions",
+   "purpose": null,
+   "reason": "assistance to research institutions",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 393.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-05-103-0-01",
+   "label": "not_scheme",
+   "name": "Government Sanskrit Colleges",
+   "purpose": null,
+   "reason": "government colleges",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 1362.12,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2202-05-103-0-23",
+   "label": "not_scheme",
+   "name": "Sanskrit University",
+   "purpose": null,
+   "reason": "a university",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 850.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2203-00-107-1-01",
+   "label": "scheme",
+   "name": "Scholarship for talented students in Engineering Colleges and Polytechnics",
+   "purpose": "Scholarships to economically weaker and talented students in polytechnics.",
+   "reason": "scholarship paid to individual students",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 12889.57,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2203-00-112-0-07",
+   "label": "not_scheme",
+   "name": "GIA to Engineering Colleges",
+   "purpose": null,
+   "reason": "grant-in-aid to engineering colleges",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 6791.77,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2204-00-102-1-01",
+   "label": "not_scheme",
+   "name": "National Cadet Corps",
+   "purpose": null,
+   "reason": "funds NCC units and their establishment rather than a benefit to a cadet",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 425.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2204-00-103-0-27",
+   "label": "not_scheme",
+   "name": "Implementation of Youth Policy",
+   "purpose": "Development of mental health programmes.",
+   "reason": "a policy implementation head with no identified beneficiary or benefit",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 2728.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2204-00-104-0-02",
+   "label": "scheme",
+   "name": "Promotion of Sports Activities",
+   "purpose": "Incentives for sports activities through awards and cash incentives.",
+   "reason": "generic name, but the book's own purpose line says awards and cash incentives to sportspersons",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 50.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2205-00-101-0-13",
+   "label": "not_scheme",
+   "name": "Financial Assistance to Kuvempu Bhasha Bharathi Authority",
+   "purpose": null,
+   "reason": "financial assistance to an authority",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 2240.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2205-00-102-1-70",
+   "label": "not_scheme",
+   "name": "Celebrating Birth Anniversaries of Great Personalities",
+   "purpose": null,
+   "reason": "event expenditure, no beneficiary",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 500.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2205-00-796-0-01",
+   "label": "not_scheme",
+   "name": "Development Action Plan for Scheduled Tribes (DAPST)",
+   "purpose": null,
+   "reason": "DAPST is an umbrella sub-plan allocation head that aggregates other schemes, not a scheme itself",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2210-01-110-1-13",
+   "label": "not_scheme",
+   "name": "Buildings under Medical Education Department",
+   "purpose": null,
+   "reason": "departmental buildings",
+   "sample": "stratified",
+   "stratum": "CB/none",
+   "stratum_sampled": 7,
+   "stratum_size": 30
+  },
+  {
+   "be_lakh": 193986.24,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2210-01-110-1-22",
+   "label": "not_scheme",
+   "name": "State Level, District and Taluka Hospitals Salary and Non- Salary Expenses",
+   "purpose": null,
+   "reason": "salary and non-salary running costs of hospitals",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 1120.47,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2210-01-200-0-07",
+   "label": "scheme",
+   "name": "Mental Health Programmes",
+   "purpose": "Protection of mental health and to create awareness.",
+   "reason": "mental health programme delivering treatment and awareness to patients; borderline because it also runs facilities",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 3300.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2210-03-110-0-08",
+   "label": "scheme",
+   "name": "Public Private Partnership Programme",
+   "purpose": "Provision for testing and dialysis treatment under PPP models.",
+   "reason": "bland name, but the purpose line names free dialysis and diagnostic tests for patients",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2210-03-796-0-07",
+   "label": "scheme",
+   "name": "CSS-State Share-Darti Aaba Janajatiya Grama Utkarsha Abiyan (DAJGUA) under NHM",
+   "purpose": null,
+   "reason": "DAJGUA delivers health, education and livelihood benefits in tribal villages; borderline because it is area development",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 53333.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2210-03-800-0-20",
+   "label": "scheme",
+   "name": "CSS-State Share-National Health Program",
+   "purpose": null,
+   "reason": "national health programmes deliver free treatment for named diseases; borderline because part of it runs facilities",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 45089.32,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2210-05-105-1-43",
+   "label": "not_scheme",
+   "name": "Bangalore Medical College & Research Institute",
+   "purpose": null,
+   "reason": "a medical college",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 2660.86,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2210-05-105-1-46",
+   "label": "not_scheme",
+   "name": "Karnataka Institute of Mental Health & Neuro Science - Dharwad",
+   "purpose": null,
+   "reason": "an institute",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 12930.05,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2210-05-105-1-52",
+   "label": "not_scheme",
+   "name": "Bidar Institute of Medical Sciences, Bidar",
+   "purpose": null,
+   "reason": "an institute of medical sciences",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 2296.62,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2210-05-105-1-58",
+   "label": "not_scheme",
+   "name": "Institute of Gastroenterology Sciences",
+   "purpose": null,
+   "reason": "an institute",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 13394.18,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2210-05-105-1-59",
+   "label": "not_scheme",
+   "name": "Sri Atal Bihari Vajpayee Medical College and Research Institute",
+   "purpose": null,
+   "reason": "a medical college",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 16534.56,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2210-05-105-1-66",
+   "label": "not_scheme",
+   "name": "Gulbarga Institute of Medical Sciences, Kalaburgi",
+   "purpose": null,
+   "reason": "an institute of medical sciences",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 5431.93,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2210-05-105-1-68",
+   "label": "not_scheme",
+   "name": "Yadgiri Institute of Medical Sciences, Yadgiri",
+   "purpose": null,
+   "reason": "an institute of medical sciences",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 3977.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2210-05-200-0-13",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-National Ayush Mission",
+   "purpose": "Upgradation of AYUSH Hospitals and Dispensaries, and co-location of AYUSH facilities at Primary Health Centres",
+   "reason": "National AYUSH Mission is a named central scheme, but this line's stated purpose is upgradation of hospitals and dispensaries, a facility head",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 600.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2210-06-101-7-19",
+   "label": "scheme",
+   "name": "To improve the health status of Endosulphan affected people",
+   "purpose": "Stipends and free health services to identified victims of Endosulfan.",
+   "reason": "stipends and free health services to identified Endosulfan victims",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 3822.39,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2210-06-104-0-01",
+   "label": "not_scheme",
+   "name": "Drugs Controller",
+   "purpose": null,
+   "reason": "a regulatory office",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2210-06-800-0-17",
+   "label": "not_scheme",
+   "name": "XV FCG- Urban Health and Wellness Centres ಆ 15 ಆ ಆ Primay health care facities in urban areas",
+   "purpose": null,
+   "reason": "Finance Commission grant that establishes and runs urban health centres, a facility head",
+   "sample": "stratified",
+   "stratum": "CB/none",
+   "stratum_sampled": 7,
+   "stratum_size": 30
+  },
+  {
+   "be_lakh": 0.33,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2210-80-001-0-19",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": "Unspent SCSP-TSP amount as per the SCSP-TSP act 2013",
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 581.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2211-00-102-0-01",
+   "label": "not_scheme",
+   "name": "Urban Family Welfare Centres run by State Government",
+   "purpose": null,
+   "reason": "family welfare centres run by the state: a facility head, though citizens use the service",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 25200.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2211-00-103-0-11",
+   "label": "not_scheme",
+   "name": "Honorarium to ASHA Workers",
+   "purpose": "Payment of honorarium to Accredited Social Health Activists (ASHAs)",
+   "reason": "honorarium is remuneration for work performed, a wage head rather than a benefit received",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 400.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2215-01-101-0-01",
+   "label": "not_scheme",
+   "name": "Support to BWSSB to Provide Drinking Water to Slums",
+   "purpose": null,
+   "reason": "support to a water board's operations; households get water but the head funds a utility",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2215-01-198-6-04",
+   "label": "scheme",
+   "name": "CSS-Central Share-Swachha Bharath Mission (Grameena)- TSP",
+   "purpose": null,
+   "reason": "Swachh Bharat Mission Gramin pays household toilet incentives",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-02-106-0-03",
+   "label": "scheme",
+   "name": "CSS-Central Share-Affordable Housing in Partnership(AHP)- PMAY(U 2.0)",
+   "purpose": "To provide financial assistance to individual eligible families belonging to categories to construct Pucca houses",
+   "reason": "PMAY-U housing assistance to eligible families",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 2500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-02-106-0-04",
+   "label": "scheme",
+   "name": "CSS-State Share-Affordable Housing in Partnership(AHP)- PMAY(U 2.0)",
+   "purpose": null,
+   "reason": "state share of the same PMAY-U housing assistance",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 10000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2216-02-800-0-06",
+   "label": "scheme",
+   "name": "CSS-State Contribution under convergence of Vajpayee Housing Scheme with PMAY (U)",
+   "purpose": null,
+   "reason": "state contribution to a housing scheme for beneficiary families",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 12500.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2216-80-103-0-22",
+   "label": "scheme",
+   "name": "Assistance for Beneficiary Contribution",
+   "purpose": "Financial assistance to cover mandatory contribution for housing scheme.",
+   "reason": "pays the beneficiary's mandatory contribution under a housing scheme",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2217-04-191-2-02",
+   "label": "not_scheme",
+   "name": "Improvement of Slums",
+   "purpose": null,
+   "reason": "slum civil works",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 649.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2217-80-800-0-41",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Capacity Building(SBM-U. 2.0)",
+   "purpose": null,
+   "reason": "capacity building, an administrative component",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 77.41,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-001-0-10",
+   "label": "not_scheme",
+   "name": "Dr.Babu Jagjivan Ram Research Institute",
+   "purpose": null,
+   "reason": "a research institute",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q1",
+   "stratum_sampled": 5,
+   "stratum_size": 21
+  },
+  {
+   "be_lakh": 6875.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2225-01-190-3-01",
+   "label": "not_scheme",
+   "name": "Karnataka Adi Jambava Development Corporation",
+   "purpose": "Grants to developmnet programme for SC Adi Jambava Community.",
+   "reason": "a state development corporation. It runs loan schemes, but this head funds the corporation",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 11000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-01-196-1-03",
+   "label": "scheme",
+   "name": "Grants for providing Assistance and Concessions to Meritorious SC Students",
+   "purpose": "Renovation of hostels, educational materials for students, and other, or specific sub-projects",
+   "reason": "named as assistance and concessions to meritorious SC students; the purpose line mixes in hostel renovation",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 8100.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-197-1-04",
+   "label": "scheme",
+   "name": "Grants for Pre-Matric Scholarship and Incentives to Students",
+   "purpose": "Grants to provide pre matric scholorships and incentives to SC students",
+   "reason": "pre-matric scholarship and incentives paid to students",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 100.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-277-0-70",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Conducting Seminars and Workshops",
+   "purpose": null,
+   "reason": "seminars and workshops, an administrative head",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 10000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-793-0-01",
+   "label": "scheme",
+   "name": "CSS-Central (100% GoI)Pradhan Mantri Anusuchit Jaati Abhyuday Yojana-PM AJAY(SCA for SCSP)",
+   "purpose": null,
+   "reason": "PM-AJAY, a named yojana giving income generation grants to SC households",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-01-796-0-01",
+   "label": "scheme",
+   "name": "CSS-Central Share-Compensation to SC",
+   "purpose": "Compensation to victims of atrocities depending upon intensity of loss sustained",
+   "reason": "compensation paid to individual victims of atrocities",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 1983.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-02-102-0-08",
+   "label": "scheme",
+   "name": "CSS-Central Share-(100% GoI)-Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JUGA)",
+   "purpose": "Devlpoment of infrastructure, education, health and livelihood generation for trible community.",
+   "reason": "DA-JGUA delivers education, health and livelihood benefits to tribal households; borderline because it is area development",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 8250.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-190-2-01",
+   "label": "scheme",
+   "name": "Self Employment Scheme & Land Purchase Scheme for Schedule Tribe",
+   "purpose": "Loans to unemployed ST youths to take up self-employment",
+   "reason": "self employment and land purchase loans to individual ST beneficiaries",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 3000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-197-1-01",
+   "label": "scheme",
+   "name": "Pre Matric Scholarship Grants",
+   "purpose": "Scholarships and assistance to extra boarding and lodging charges to ST students",
+   "reason": "pre-matric scholarship grants to ST students",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 15000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-02-197-6-03",
+   "label": "scheme",
+   "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
+   "purpose": "Scholarships to post-matric ST students.",
+   "reason": "post-matric scholarships to ST students",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-02-794-0-03",
+   "label": "not_scheme",
+   "name": "CSS-Central Share(100% GoI)-Schemes Under Article 275 (1) of The Constitution",
+   "purpose": null,
+   "reason": "Article 275(1) is an umbrella constitutional grant for tribal areas, spent on schools and infrastructure, not a benefit in itself",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 873.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-02-794-0-04",
+   "label": "not_scheme",
+   "name": "CSS-Central (100% GoI) -Special Central Assistance For Tribal Sub Plan",
+   "purpose": null,
+   "reason": "Special Central Assistance is an umbrella funding head for the tribal sub-plan",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 467.57,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-102-3-09",
+   "label": "not_scheme",
+   "name": "Karnataka Backward Classes Commission",
+   "purpose": null,
+   "reason": "a commission",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-03-277-2-53",
+   "label": "not_scheme",
+   "name": "Procurement of Materials and Supplies to OBC Hostels",
+   "purpose": "Construction of new hostels and maintenance of existing hostels for backward classes.",
+   "reason": "procurement of materials for hostels, a supplies head",
+   "sample": "stratified",
+   "stratum": "CB/none",
+   "stratum_sampled": 7,
+   "stratum_size": 30
+  },
+  {
+   "be_lakh": 40685.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-03-277-2-62",
+   "label": "not_scheme",
+   "name": "Operational Expenses of Morarji Desai Residential Schools for Backward Classes(KREIS)",
+   "purpose": "Boarding, lodging and maintenance expenses (including academic facilities and expenses towards uniforms, shoes, socks,",
+   "reason": "operational expenses of residential schools. The scheme is the residential school programme; this line is its running cost",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 4000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-03-277-2-83",
+   "label": "scheme",
+   "name": "CSS-State Share-Pre-Matric Scholarship to Backward Classes Students Studying in 9th and 10th Standard",
+   "purpose": null,
+   "reason": "pre-matric scholarship to backward class students",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 2470.5,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-001-0-02",
+   "label": "not_scheme",
+   "name": "Karnataka State Wakf Board",
+   "purpose": null,
+   "reason": "a board",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 9350.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-102-0-04",
+   "label": "not_scheme",
+   "name": "Karnataka Christian Development Corporation",
+   "purpose": null,
+   "reason": "a development corporation",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 20000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-04-102-0-10",
+   "label": "not_scheme",
+   "name": "Various Development Programme for Minorties",
+   "purpose": null,
+   "reason": "an umbrella head, no identifiable benefit or beneficiary named",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 2500.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2225-04-102-0-13",
+   "label": "not_scheme",
+   "name": "Post Matric Hostels for Minorities",
+   "purpose": "Maintenance of post metric hostels for minorities.",
+   "reason": "the purpose line says maintenance of hostels, a running cost head",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 6000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2225-04-277-0-11",
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship to Minority Students Studying in 1st and 8th Standard",
+   "purpose": "Pre-matric scholarships for minority students studying 1st to 8th standard.",
+   "reason": "pre-matric scholarship to minority students",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2230-01-101-0-05",
+   "label": "scheme",
+   "name": "Ashadeep",
+   "purpose": null,
+   "reason": "Ashadeepa is a named Karnataka labour welfare scheme paying assistance to individuals; no purpose line in the book",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 2.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2230-01-111-0-05",
+   "label": "not_scheme",
+   "name": "Karnataka State Unorganised Labour Social Security Board",
+   "purpose": "Implementation of Board’s welfare schemes.",
+   "reason": "a statutory board. Its schemes are separate lines",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 35829.45,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2230-02-001-0-03",
+   "label": "not_scheme",
+   "name": "Commissioner for Employment and Training",
+   "purpose": null,
+   "reason": "a commissioner's office",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 1565.44,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2230-02-101-0-10",
+   "label": "not_scheme",
+   "name": "General Employment Exchanges",
+   "purpose": null,
+   "reason": "employment exchanges, offices that provide a service",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2230-02-101-0-19",
+   "label": "scheme",
+   "name": "CSS-State Share-NRLM",
+   "purpose": null,
+   "reason": "NRLM delivers SHG credit and livelihood support to rural women",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2230-03-101-0-59",
+   "label": "scheme",
+   "name": "CSS-Central Share-Pradhan Manthri Kowshalyavikas Program",
+   "purpose": "Short-term skill-based training to youths",
+   "reason": "PMKVY gives short term skill training to individual youths",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 1734.26,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2230-03-196-1-02",
+   "label": "not_scheme",
+   "name": "Industrial Training Institutes",
+   "purpose": null,
+   "reason": "industrial training institutes, institutions",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 22.63,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-001-0-11",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": "Housing facilities for ex-devadasis through the Rajiv Gandhi Housing Corporation",
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 281.21,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-101-0-02",
+   "label": "not_scheme",
+   "name": "Government Schools for the Deaf and Blind",
+   "purpose": "Free accommodation, meals and education to deaf & dum children",
+   "reason": "schools for deaf and blind children. Real welfare, but the head funds institutions",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 600.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-101-0-05",
+   "label": "scheme",
+   "name": "Scholarship to the Physically Handicapped",
+   "purpose": "Sholarships for disabled students.",
+   "reason": "scholarship paid to disabled students",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-101-0-52",
+   "label": "scheme",
+   "name": "Aids and Appliances for the Disabled",
+   "purpose": "Hearing aids, and other appliances to differently-abled and economically weaker children.",
+   "reason": "aids and appliances given to disabled individuals",
+   "sample": "stratified",
+   "stratum": "CB/none",
+   "stratum_sampled": 7,
+   "stratum_size": 30
+  },
+  {
+   "be_lakh": 4798.03,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-101-0-99",
+   "label": "scheme",
+   "name": "Welfare of Physically & Mentally Challenged",
+   "purpose": "Medical assistance to physically and mentally challenged children.",
+   "reason": "umbrella name, but the purpose line names medical assistance to individuals",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 95.63,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-21",
+   "label": "scheme",
+   "name": "CSS-State Share-Palna",
+   "purpose": null,
+   "reason": "Palna creche scheme, a benefit to working mothers and their children",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 30600.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-25",
+   "label": "scheme",
+   "name": "Bhagya Lakshmi",
+   "purpose": "Promote birth and education of girl children in BPL families through financial incentives.",
+   "reason": "Bhagya Lakshmi pays a cash incentive for a girl child in a BPL family",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 435.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-102-0-41",
+   "label": "scheme",
+   "name": "CSS-Central Share(100% GoI)-Beti Bachao, Beti Padhao",
+   "purpose": "To improve Child Sex Ratio",
+   "reason": "Beti Bachao Beti Padhao is a named national scheme, though its spend is advocacy rather than a transfer",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 6616.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-43",
+   "label": "scheme",
+   "name": "CSS-Central Share- Poshan Abhiyan (National Nutrition Mission)",
+   "purpose": "Prevention and reduction of stunting and under-nutrition (underweight prevalence) in children and adolescent girls.",
+   "reason": "Poshan Abhiyan delivers nutrition to children and mothers",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 28689.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-53",
+   "label": "scheme",
+   "name": "CSS-State Share-Integrated Child Development Service (204 ICDS Projects)",
+   "purpose": null,
+   "reason": "ICDS delivers supplementary nutrition and preschool education to children",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 2660.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-56",
+   "label": "scheme",
+   "name": "CSS-State Share-Non Institutional Care-Sponsorship",
+   "purpose": null,
+   "reason": "sponsorship payments to families caring for a child",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 60.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-58",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Swachata Action Plan",
+   "purpose": null,
+   "reason": "an action plan head, administrative",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 200.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-102-0-61",
+   "label": "scheme",
+   "name": "CSS-Central Share-(100% GoI) Scheme for Care and Support to Victim under Section 4 & 6 of the Protection of Children from Sexual Offences (POCSO) Act, 2012 100% 2012 4 6",
+   "purpose": "Care and support for victims under POSCO Act.",
+   "reason": "care and support paid for POCSO victims",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 1104.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-103-0-46",
+   "label": "scheme",
+   "name": "CSS-Central Share-Scheme for Adolescent Girls (SAG)",
+   "purpose": "Nutritional requirements and rejoining schools by out of school adolescent girls.",
+   "reason": "Scheme for Adolescent Girls, nutrition and schooling support to individual girls",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 1826.24,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-103-0-52",
+   "label": "scheme",
+   "name": "Scheme for Protection of Women against Domestic Violence",
+   "purpose": "Protection, residence, custody of children, financial relief orders, medical aid and legal aid to domestic violence affected",
+   "reason": "protection, relief and legal aid to women facing domestic violence",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 250.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-103-0-62",
+   "label": "scheme",
+   "name": "CSS-State Share-Sakhi Nivas- Working Women Hostel (SAMARTHYA)",
+   "purpose": null,
+   "reason": "Sakhi Nivas working women's hostel, a named central scheme; borderline because it funds a hostel",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-02-103-0-73",
+   "label": "scheme",
+   "name": "Gruha Lakshmi",
+   "purpose": "Economic empowerment of women through cash transfers.",
+   "reason": "Gruha Lakshmi, a monthly cash transfer to women heads of household",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 75.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2235-02-106-0-15",
+   "label": "not_scheme",
+   "name": "Centre of excellence in Sudharane Samsthe Samuchaya in collabration with NIMHANS and NLSUI",
+   "purpose": "Assistance and guidance to women subjected to atrocities.",
+   "reason": "a centre of excellence, an institution, though it assists women",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 15681.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-1-06",
+   "label": "scheme",
+   "name": "Manaswini",
+   "purpose": "Economic empowerment and mainstreaming of women through monthly pension",
+   "reason": "Manaswini pays a monthly pension to single women",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 3600.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-102-1-11",
+   "label": "scheme",
+   "name": "CSS-State Share-National Family Benefit Scheme (NSAP)",
+   "purpose": null,
+   "reason": "National Family Benefit Scheme pays a lump sum to a bereaved family",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 2500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2235-60-200-8-01",
+   "label": "scheme",
+   "name": "Karnataka Victim Compensation Scheme, 2011",
+   "purpose": null,
+   "reason": "victim compensation paid to individuals",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 49903.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2236-02-197-6-02",
+   "label": "scheme",
+   "name": "CSS-State Share-ICDS-(SNP)",
+   "purpose": null,
+   "reason": "ICDS supplementary nutrition programme",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 1.04,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-001-1-75",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": "Grants to promote usage of farm mechanisation and increase farm power availability for farmers.",
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-102-0-31",
+   "label": "scheme",
+   "name": "CSS-State Share-Paramparagat Krishi Vikas Yojane(RKVY)",
+   "purpose": null,
+   "reason": "Paramparagat Krishi Vikas Yojana pays organic farming assistance to farmers",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 3200.62,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-102-0-34",
+   "label": "scheme",
+   "name": "CSS-State Share-National Mission on Natural Farming (NMNF)",
+   "purpose": null,
+   "reason": "National Mission on Natural Farming supports individual farmers",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2401-00-103-0-28",
+   "label": "not_scheme",
+   "name": "CSS-State Share-NFSNM-Seed Components-Assistance for Maintenance of Breeder Seeds",
+   "purpose": null,
+   "reason": "breeder seed maintenance is paid to seed agencies and universities, not to a farmer",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 17001.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-108-1-15",
+   "label": "scheme",
+   "name": "State Additional Topup for CSS PMKSY(Agriculture)",
+   "purpose": "Incentives for farmers for judicious and efficient use of water to enhance production and productivity",
+   "reason": "micro irrigation subsidy to individual farmers",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 15.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2401-00-108-2-23",
+   "label": "scheme",
+   "name": "CSS-Central Share(100% GoI)- National Mission on Edible Oil-Oil Palm-Seed Garden & Viability Gap Price (Krishonnati Yojane)",
+   "purpose": "Finacial assistance to planting materials, seed garden development and deficiancy payment to visibility gap price",
+   "reason": "planting material assistance and price deficiency payment to oil palm growers; part of the head is seed garden development",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 170000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-110-0-07",
+   "label": "scheme",
+   "name": "Pradhan Mantri Fasal Bhima Yojana",
+   "purpose": "To help farmers for crop loss due to floods, droughts or unseasonal rains, and other natural calamities",
+   "reason": "Pradhan Mantri Fasal Bima Yojana, crop insurance for farmers",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 400.11,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-111-0-12",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Digital Crop Survey Programme (Krishionnati)",
+   "purpose": null,
+   "reason": "a crop survey programme, administrative",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q1",
+   "stratum_sampled": 5,
+   "stratum_size": 21
+  },
+  {
+   "be_lakh": 13800.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-113-0-02",
+   "label": "scheme",
+   "name": "CSS-Central Share -PM-RKVY-Submission on Agricultural Mechanisation (PM-RKVY-SMAM)",
+   "purpose": "To promote usage of farm mechanisation and increase power availability by farmers.",
+   "reason": "farm machinery subsidy to farmers",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 9200.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-113-0-03",
+   "label": "scheme",
+   "name": "CSS-State Share - PM-RKVY-Submission on Agricultural Mechanization (PM-RKVY-SMAM)",
+   "purpose": null,
+   "reason": "state share of the same farm machinery subsidy",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 1500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2401-00-119-5-02",
+   "label": "scheme",
+   "name": "Scheme for Integrated Control of Pests & Diseases of Horticultural Crops",
+   "purpose": "Free of cost supply of pesticides to those farmers whose crops are affected by insects",
+   "reason": "free pesticide supply to affected farmers",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2401-00-195-0-01",
+   "label": "scheme",
+   "name": "Supporting Farmer Producer Organisations(FPOs)",
+   "purpose": null,
+   "reason": "support to Farmer Producer Organisations, which are membership bodies of farmers, so the benefit reaches members",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 200.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2403-00-101-0-45",
+   "label": "not_scheme",
+   "name": "CSS-Central Share(100% GoI)-ASCAD Training and Awareness",
+   "purpose": null,
+   "reason": "training and awareness component of an animal disease control programme, departmental spend",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 3400.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2403-00-101-0-46",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-(ESVHD)Mobile Veterinary Units",
+   "purpose": null,
+   "reason": "mobile veterinary units: the head buys and runs vehicles, though livestock keepers get the service",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 2267.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2403-00-101-0-47",
+   "label": "not_scheme",
+   "name": "CSS-State Share-(ESVHD)Mobile Veterinary Units",
+   "purpose": null,
+   "reason": "state share of the same mobile veterinary units",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 2100.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2403-00-104-0-13",
+   "label": "scheme",
+   "name": "Apathu Nidhi for Accidental Death of Cattle",
+   "purpose": "Compensation to owners of cattle, buffaloes, oxen, and bullocks in case of accidental deaths",
+   "reason": "compensation paid to cattle owners for accidental death of animals",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 6300.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2405-00-101-0-58",
+   "label": "scheme",
+   "name": "CSS-Central Share-Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+   "purpose": "Subsidy for installation of necessary equipment for monitoring, surveillance and control in marine fishing boats",
+   "reason": "PMMSY subsidy for equipment to individual fishers",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2405-00-101-0-66",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": null,
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 300.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2405-00-120-0-07",
+   "label": "scheme",
+   "name": "CSS-Central Share-Fishermen Welfare(PMMSY)",
+   "purpose": "Payment of premium for Group Accident Insurance Scheme, and co-contribution to saving-cum-relief scheme for marine",
+   "reason": "accident insurance premium and savings-cum-relief for fishermen",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 463.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2406-01-101-2-31",
+   "label": "scheme",
+   "name": "CSS-State Share-National Bamboo Mission(Krishonnati Yojane)",
+   "purpose": null,
+   "reason": "National Bamboo Mission subsidises planting material for growers; part of it funds nurseries",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q1",
+   "stratum_sampled": 5,
+   "stratum_size": 21
+  },
+  {
+   "be_lakh": 1088.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2406-01-102-2-38",
+   "label": "scheme",
+   "name": "CSS-Central Share-Agro Forestry (RKVY)",
+   "purpose": null,
+   "reason": "agro forestry support to farmers who plant trees on their land",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 28613.03,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2406-01-196-1-01",
+   "label": "not_scheme",
+   "name": "Grants for District Forest Officers' Establishments",
+   "purpose": null,
+   "reason": "grants for a district officer's establishment",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 85.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "2406-02-110-0-53",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-Green India Mission",
+   "purpose": null,
+   "reason": "Green India Mission is afforestation works on public land, not a household benefit",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q1",
+   "stratum_sampled": 5,
+   "stratum_size": 21
+  },
+  {
+   "be_lakh": 5890.31,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2406-02-110-0-54",
+   "label": "not_scheme",
+   "name": "Nature Conservation, Wildlife Habitat Management",
+   "purpose": "Create awareness among high school students for conservation of forests and wildlife.",
+   "reason": "habitat management works",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 0.05,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2408-01-001-0-09",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": "To meet with other incidental expenses under National Food Security Act",
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2408-01-102-0-07",
+   "label": "scheme",
+   "name": "Subsidy for Rice Distribution for NPHH benficieries under Annabhagya Scheme",
+   "purpose": "Food grains at subsidized rates to families of APL ration cardholders.",
+   "reason": "rice subsidy to ration cardholders",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2408-01-102-0-09",
+   "label": "scheme",
+   "name": "DBT under Annabhagya Scheme",
+   "purpose": "DBT to AAY & PHH cards holders",
+   "reason": "direct benefit transfer to Annabhagya cardholders",
+   "sample": "stratified",
+   "stratum": "CB/none",
+   "stratum_sampled": 7,
+   "stratum_size": 30
+  },
+  {
+   "be_lakh": 6624.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2408-01-103-0-02",
+   "label": "scheme",
+   "name": "CSS-State Share-PM Formalisation of Micro food processing Enterprises(PMFME)",
+   "purpose": null,
+   "reason": "PMFME gives credit-linked subsidy to individual micro food processors",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 2468.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2408-01-103-0-03",
+   "label": "scheme",
+   "name": "State Top up for PMFME Scheme",
+   "purpose": null,
+   "reason": "state top-up of the same PMFME subsidy",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 26000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2501-06-198-6-01",
+   "label": "scheme",
+   "name": "CSS-Central Share-National Rural Livelihood Mission (NRLM)",
+   "purpose": "Marketing and branding facilities to products produced by rural women through Sanjeevini women SHGs",
+   "reason": "NRLM support to rural women's self help groups",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 300.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2501-06-198-6-04",
+   "label": "scheme",
+   "name": "CSS-State Share-Start Up Village Entrepreneurship Program -SVEP(NRLM)",
+   "purpose": null,
+   "reason": "SVEP supports individual village entrepreneurs",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 1500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2501-06-198-6-09",
+   "label": "scheme",
+   "name": "CSS-Central Share-Deen Dayal Upadhaya Grameena Kaushalya Yojana -DDUGKY (NRLM)",
+   "purpose": "Transform rural poor youth into economically independent and globally relevant workforce",
+   "reason": "DDUGKY trains and places rural youth",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2505-02-101-0-04",
+   "label": "not_scheme",
+   "name": "CSS-Central Share(100% GoI)- MGNREGA (Cluster Facilitation Program)",
+   "purpose": null,
+   "reason": "the Cluster Facilitation Programme funds facilitating agencies, not the MGNREGA wage benefit",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 362.45,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2515-00-102-0-13",
+   "label": "not_scheme",
+   "name": "Karnataka Panchayat Raj University, Gadag",
+   "purpose": null,
+   "reason": "a university",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 18172.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2515-00-196-1-22",
+   "label": "not_scheme",
+   "name": "SFC Development Grants to ZPs",
+   "purpose": null,
+   "reason": "devolution of funds to Zilla Panchayats",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2515-00-198-6-13",
+   "label": "not_scheme",
+   "name": "XV FCG Grants to GPs (60% Tied : 40% Basic)",
+   "purpose": null,
+   "reason": "Finance Commission devolution to Gram Panchayats",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 1929000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2801-80-101-1-04",
+   "label": "scheme",
+   "name": "Subsidy for Supply of free Power to Irrigation Pumpsets",
+   "purpose": null,
+   "reason": "free power subsidy for farmers' irrigation pumpsets",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 6500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2851-00-103-0-53",
+   "label": "scheme",
+   "name": "Nekaar Samman",
+   "purpose": "Financial assistance to all working handloom and related wavers",
+   "reason": "Nekaar Samman pays financial assistance to handloom weavers",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "2851-00-103-0-62",
+   "label": "scheme",
+   "name": "Weavers Package",
+   "purpose": "Subsidies to weavers for carrying out and sustaining weaving activities",
+   "reason": "subsidy package paid to weavers",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2851-00-103-0-72",
+   "label": "scheme",
+   "name": "Subsidy for Establishment of SME Units under SCSP-TSP",
+   "purpose": "Loans, capital subsidy and interest subsidy for establishment of SME Units under SCSP-TSP",
+   "reason": "loan, capital and interest subsidy to SC and ST entrepreneurs",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 185.2,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2851-00-197-1-01",
+   "label": "scheme",
+   "name": "Silk Production",
+   "purpose": "Subsidy to boost silk production in pre cocon(farming) and post cocon (reeling)",
+   "reason": "generic name, but the purpose line names subsidy to silk farmers and reelers",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 30500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "2852-08-202-7-01",
+   "label": "not_scheme",
+   "name": "Implementation of Textile and Garment Policy",
+   "purpose": "Subsidy and finance incentives to textile and garments as textile and government policy",
+   "reason": "industrial policy incentives to textile firms; the beneficiary is an enterprise, not a person or household",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "3054-80-196-1-01",
+   "label": "not_scheme",
+   "name": "Block Grants",
+   "purpose": null,
+   "reason": "block grants, a devolution head",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 14485.0,
+   "books": [
+    "Child Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "3055-00-190-0-04",
+   "label": "not_scheme",
+   "name": "North West Karnataka Road Transport Corporation (NWKRTC)",
+   "purpose": "Issue of free and concessional student pass.",
+   "reason": "the line names a transport corporation. Its purpose is reimbursement of student concessions, but a reader would not accept the corporation as a scheme",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 2141.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-06",
+   "label": "scheme",
+   "name": "Free Bus Travel Facility to the Blind",
+   "purpose": "Issue of free bus pass to totally blind persons including children t",
+   "reason": "free bus pass issued to blind persons",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 844.0,
+   "books": [
+    "Child Budget"
+   ],
+   "borderline": false,
+   "hoa": "3055-00-190-0-13",
+   "label": "scheme",
+   "name": "Free Bus Travel Facility to Endosulphan affected Victims",
+   "purpose": "Issue of free bus passes to Endosulfan affected persons traveling with their assistants.",
+   "reason": "free bus passes issued to Endosulfan victims",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 8.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "3435-03-003-0-01",
+   "label": "not_scheme",
+   "name": "Environmement Research Education & Innovative Projects",
+   "purpose": null,
+   "reason": "research and education projects",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 2500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "3451-00-090-2-05",
+   "label": "not_scheme",
+   "name": "International Institute for Information Technology",
+   "purpose": null,
+   "reason": "an institute",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 20000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "3451-00-090-2-38",
+   "label": "not_scheme",
+   "name": "Startup Policy",
+   "purpose": null,
+   "reason": "startup policy incentives go to enterprises, not to persons or households",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "3475-00-107-0-20",
+   "label": "scheme",
+   "name": "Minimum Floor Price Scheme",
+   "purpose": null,
+   "reason": "a named price support scheme paying producers; the book gives no purpose line, so the commodity is unstated",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 2000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "3604-00-192-0-10",
+   "label": "scheme",
+   "name": "Poura Karmikara Gruha Bhagya Yojane",
+   "purpose": "Accommodation to houseless permanent Pourakarmikas",
+   "reason": "housing for pourakarmikas, a benefit to a household",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 9211.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "3604-00-192-1-32",
+   "label": "not_scheme",
+   "name": "Assistance to CMC and TMC- SFC General Devolution",
+   "purpose": null,
+   "reason": "devolution to city and town municipal councils",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 476.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "3604-00-192-2-32",
+   "label": "not_scheme",
+   "name": "Assistance to CMC and TMC - SFC Other Devolution",
+   "purpose": null,
+   "reason": "devolution to city and town municipal councils",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q1",
+   "stratum_sampled": 5,
+   "stratum_size": 21
+  },
+  {
+   "be_lakh": 15000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4059-80-051-0-29",
+   "label": "not_scheme",
+   "name": "Departmental Buildings",
+   "purpose": "Construction of departmental buildings",
+   "reason": "departmental buildings",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 12758.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4202-01-202-1-07",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-Samagra Shikshana Karnataka- Infrastructure expenditure",
+   "purpose": "Basic infrastructure facilities to Government Higher Primary and Model High Schools.",
+   "reason": "school infrastructure expenditure",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 8505.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4202-01-202-1-08",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Samagra Shikshana Karnataka- Infrastructure expenditure",
+   "purpose": null,
+   "reason": "school infrastructure expenditure",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4202-01-203-1-11",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-Rashtriya Ucchatar Shiksha Abhiyana (Capital works)",
+   "purpose": null,
+   "reason": "capital works in higher education institutions",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 0.29,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4202-01-600-0-04",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": "Repair and constrution of class rooms in Govt Schools of reserved constituencies.",
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 71000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4210-01-110-1-01",
+   "label": "not_scheme",
+   "name": "Hospital Construction",
+   "purpose": null,
+   "reason": "hospital construction",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 19499.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4210-01-200-0-03",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-PM-ABHIM",
+   "purpose": null,
+   "reason": "PM-ABHIM is a named national mission but this capital line builds health infrastructure",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 4500.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4210-01-200-0-04",
+   "label": "not_scheme",
+   "name": "Grants from Karnataka State Road Safety Fund",
+   "purpose": null,
+   "reason": "a fund transfer for road safety works",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 2440.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4210-01-200-0-06",
+   "label": "not_scheme",
+   "name": "CSS-State Share-NHM Capital Grants",
+   "purpose": null,
+   "reason": "NHM capital grants, infrastructure",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4210-02-796-1-05",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-Darti Aaba Janajatiya Grama Utkarsha Abiyan (DAJGUA) under NHM",
+   "purpose": null,
+   "reason": "capital counterpart of DAJGUA: this line builds facilities",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 856.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4210-03-105-1-22",
+   "label": "not_scheme",
+   "name": "CSS-State Share- Medical PG Seats",
+   "purpose": null,
+   "reason": "funds additional PG seats in medical colleges, institutional capacity",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 25000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4215-01-101-0-01",
+   "label": "not_scheme",
+   "name": "Capital Support to Urban Water Supply Schemes",
+   "purpose": null,
+   "reason": "capital support to a water utility's works",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 5008.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "4215-01-102-2-01",
+   "label": "scheme",
+   "name": "Rural Water Supply Scheme including Jaladhare",
+   "purpose": null,
+   "reason": "rural piped water programme delivering household connections; borderline because the head is capital works",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 30000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4217-60-051-0-04",
+   "label": "not_scheme",
+   "name": "CSS-Central Share: AMRUT 2.0 Project Fund",
+   "purpose": null,
+   "reason": "AMRUT urban infrastructure project fund",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 3750.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4217-60-800-0-07",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Sustainable Solid Waste Management (SBM-U. 2.0)",
+   "purpose": null,
+   "reason": "municipal solid waste infrastructure",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 4468.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4217-60-800-0-11",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Used Water Management(SBM-U. 2.0)",
+   "purpose": null,
+   "reason": "used water management infrastructure",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4225-01-001-0-01",
+   "label": "not_scheme",
+   "name": "Capital Expenses-Directorate of Civil Rights Enforcement",
+   "purpose": null,
+   "reason": "capital expenses of a directorate",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/none",
+   "stratum_sampled": 4,
+   "stratum_size": 4
+  },
+  {
+   "be_lakh": 2005.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4225-01-277-2-07",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Babu Jagajivan Ram Chhatrawas Yojane",
+   "purpose": null,
+   "reason": "Babu Jagjivan Ram Chhatrawas Yojane is a named yojana, but the head builds hostels",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 30000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4225-01-277-2-08",
+   "label": "not_scheme",
+   "name": "Construction of Hostels(State Scheme-Commissionerate)",
+   "purpose": "Construction of hostels in identified Aspirational Taluka.",
+   "reason": "hostel construction",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4225-02-102-0-02",
+   "label": "not_scheme",
+   "name": "ಧ CSS-Central Share-Support to Tribal Research Department(Capital Asset Creation)",
+   "purpose": null,
+   "reason": "capital asset creation for a research department",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/none",
+   "stratum_sampled": 4,
+   "stratum_size": 4
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4225-03-277-2-12",
+   "label": "not_scheme",
+   "name": "Vishwakarma Sculpture Institute at Shivarapatna",
+   "purpose": null,
+   "reason": "an institute",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4225-03-277-7-01",
+   "label": "not_scheme",
+   "name": "CSS-Central Share-Construction of Hostels for OBC Students",
+   "purpose": "Construction of post-matric hostels for OBC students.",
+   "reason": "hostel construction",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 32500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4225-04-102-0-02",
+   "label": "not_scheme",
+   "name": "CM Special Development Programme for Minorities",
+   "purpose": null,
+   "reason": "an umbrella area development programme, no benefit or beneficiary named",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 12319.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4225-04-102-0-05",
+   "label": "not_scheme",
+   "name": "CSS-State Share-Pradhan Mantri Jana Vikas Program",
+   "purpose": null,
+   "reason": "PMJVK builds infrastructure in minority concentration areas",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4235-02-102-0-11",
+   "label": "not_scheme",
+   "name": "Construction of Anganwadi Buildings-UIDF",
+   "purpose": "Construction of Anganwadi Buildings.",
+   "reason": "anganwadi building construction",
+   "sample": "stratified",
+   "stratum": "CB/none",
+   "stratum_sampled": 7,
+   "stratum_size": 30
+  },
+  {
+   "be_lakh": 300.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4235-02-103-1-07",
+   "label": "not_scheme",
+   "name": "CSS-Central Share(100% GoI)-Construction of One Stop Centers",
+   "purpose": null,
+   "reason": "construction of One Stop Centres. The centres serve women, this line builds them",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 50.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4250-00-203-0-14",
+   "label": "not_scheme",
+   "name": "Karnataka-German Multi Skilled Development (KGMSD) Centres",
+   "purpose": "Skill Development, Entrepreneurship and Livelihood 55728.74 63140.70 68250.72 63066.80",
+   "reason": "skill development centres, institutions",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 13,
+   "stratum_size": 58
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "4250-00-203-0-17",
+   "label": "not_scheme",
+   "name": "Karnataka Quality Upgradation for Employment and Skills Transformation (K-QUEST)-EAP",
+   "purpose": "Financial assistance enhance workforce skills and employability through training and other activities (including vocational",
+   "reason": "an externally aided project upgrading training institutions",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 13,
+   "stratum_size": 59
+  },
+  {
+   "be_lakh": 2500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4401-00-102-1-01",
+   "label": "not_scheme",
+   "name": "Building Expenses of Agricultural Universities",
+   "purpose": null,
+   "reason": "building expenses of universities",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 2333.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": true,
+   "hoa": "4402-00-102-0-07",
+   "label": "not_scheme",
+   "name": "CSS-State Share- Watershed Development Component of Pradhana Mantri Krishi Sinchayee Yojana 2.0 (WDC- PMKSY 2.0)",
+   "purpose": null,
+   "reason": "watershed development works on land, not a household benefit",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q2",
+   "stratum_sampled": 11,
+   "stratum_size": 52
+  },
+  {
+   "be_lakh": 7500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4402-00-203-0-01",
+   "label": "not_scheme",
+   "name": "World Bank Assisted REWARD Project-EAP(IND-9314)",
+   "purpose": null,
+   "reason": "an externally aided watershed project",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 900.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4405-00-800-2-03",
+   "label": "not_scheme",
+   "name": "Construction of Fisheries Link Roads, Bridges and Jetties - with NABARD Assistance(RIDF)",
+   "purpose": null,
+   "reason": "roads, bridges and jetties",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 16200.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4406-01-101-0-03",
+   "label": "not_scheme",
+   "name": "Afforestation on Forest Areas",
+   "purpose": null,
+   "reason": "afforestation works",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "4515-00-101-0-02",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": null,
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 500.0,
+   "books": [
+    "Child Budget"
+   ],
+   "borderline": false,
+   "hoa": "4575-60-101-0-02",
+   "label": "not_scheme",
+   "name": "Karnataka Border Area Development Authority",
+   "purpose": null,
+   "reason": "an authority",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 59800.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4575-60-800-0-01",
+   "label": "not_scheme",
+   "name": "Legislator's Constituency Development Fund",
+   "purpose": null,
+   "reason": "a constituency works fund",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4702-00-789-0-01",
+   "label": "not_scheme",
+   "name": "Development Action Plan for Scheduled Castes under Minor Irrigation",
+   "purpose": null,
+   "reason": "a sub-plan allocation head for minor irrigation works",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/none",
+   "stratum_sampled": 4,
+   "stratum_size": 4
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4702-00-796-0-01",
+   "label": "not_scheme",
+   "name": "Development Action Plan for Scheduled Tribes under Minor Irrigation",
+   "purpose": null,
+   "reason": "a sub-plan allocation head for minor irrigation works",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/none",
+   "stratum_sampled": 4,
+   "stratum_size": 4
+  },
+  {
+   "be_lakh": 6139.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "4851-00-107-1-01",
+   "label": "not_scheme",
+   "name": "Construction and Maintenance of Sericulture Buildings",
+   "purpose": null,
+   "reason": "construction and maintenance of buildings",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 73
+  },
+  {
+   "be_lakh": 1300.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "5054-03-337-0-78",
+   "label": "not_scheme",
+   "name": "CSS-State Share-PM-JANMAN(Rural Roads)",
+   "purpose": null,
+   "reason": "rural roads",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 21,
+   "stratum_size": 99
+  },
+  {
+   "be_lakh": 13.43,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "5054-04-337-0-06",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": null,
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 28,
+   "stratum_size": 129
+  },
+  {
+   "be_lakh": 10000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "hoa": "5054-04-337-0-09",
+   "label": "not_scheme",
+   "name": "Namma Grama Namma Raste Scheme (NGNRY)-6th Year Renewal",
+   "purpose": null,
+   "reason": "named a Scheme, but it is a rural road renewal works head. A good example of why the word Scheme in a name proves nothing",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  },
+  {
+   "be_lakh": 9000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "5055-00-001-0-01",
+   "label": "not_scheme",
+   "name": "Grants from Karnataka State Road Safety Fund",
+   "purpose": null,
+   "reason": "a fund transfer head",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 72
+  },
+  {
+   "be_lakh": 0.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "5055-00-102-0-02",
+   "label": "not_scheme",
+   "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+   "purpose": null,
+   "reason": "accounting head for unspent SCSP-TSP money",
+   "sample": "stratified",
+   "stratum": "GB/none",
+   "stratum_sampled": 15,
+   "stratum_size": 70
+  },
+  {
+   "be_lakh": 15000.0,
+   "books": [
+    "Gender Budget",
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "5475-00-115-0-06",
+   "label": "not_scheme",
+   "name": "Infrastructure facilities for Housing Schemes",
+   "purpose": null,
+   "reason": "infrastructure for housing schemes, a works head",
+   "sample": "stratified",
+   "stratum": "SCSPTSP/q4",
+   "stratum_sampled": 16,
+   "stratum_size": 75
+  },
+  {
+   "be_lakh": 50000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "hoa": "6215-01-190-2-86",
+   "label": "not_scheme",
+   "name": "Bengaluru Water Supply and Sewerage Project(BWSSP) Phase III (Cauvery Water Supply Scheme-Stage-V)-EAP (IDP-266",
+   "purpose": null,
+   "reason": "a loan to a water board for a capital project",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 17,
+   "stratum_size": 77
+  }
+ ],
+ "not_scheme": 147,
+ "rule": {
+  "borderline_note": "Rows flagged borderline are the ones where the two readings genuinely compete. Every one carries the reasoning that decided it, so a human can flip it and rerun.",
+  "not_scheme": "the money runs, builds, staffs or maintains an organisation or an asset (college, hospital, directorate, board, corporation, building, vehicle, office), devolves general purpose funds to another tier of government, or is an accounting or adjustment head",
+  "scheme": "the money buys an identifiable benefit received by a person or household: cash, kit, food, scholarship, fee waiver, pension, insurance, subsidy, loan, free travel, a house, treatment for a named beneficiary class, or training given to people"
+ },
+ "sampling": "Stratified by book (SCSP/TSP, else Child, else Gender) crossed with allocation band (none, and quartiles of the 865 rows that carry an allocation), 15 strata. Within a stratum rows are sorted by head of account and picked at even spacing, so the sample is reproducible without a random seed. Allocation is proportional to stratum size with a floor of 4, so the sample is close to self weighting; stratum_size and stratum_sampled are carried on every row so a weighted estimate can be recomputed.",
+ "scheme": 177,
+ "sets": {
+  "audit": {
+   "borderline": 26,
+   "n": 109,
+   "not_scheme": 11,
+   "scheme": 98,
+   "what": "Every row the classifier calls a scheme at score 5 or above that the stratified sample had not already covered. Together the two sets are a census of the published region, so the published list's precision is counted rather than estimated. The audit was made after the weights were fixed and was not fed back into them."
+  },
+  "stratified": {
+   "borderline": 62,
+   "n": 215,
+   "not_scheme": 136,
+   "scheme": 79,
+   "what": "A probability sample of all 969 rows. This is the only set the threshold sweep uses, because precision and recall estimated on anything else would not generalise to the rows the classifier has not seen."
+  }
+ },
+ "snapshot": "2026-09-01",
+ "what": "Hand labels for a stratified sample of Karnataka's scheme-wise budget rows. Ground truth for parse/classify_karnataka.py. Audit and correct these: the classifier is only as good as they are."
+}
