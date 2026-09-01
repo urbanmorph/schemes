@@ -50,6 +50,7 @@ def _load(name, path):
 
 _m = _load("scheme_match", os.path.join(HERE, "match.py"))
 probably_same, m_tokens, m_acronyms = _m.probably_same, _m.tokens, _m.acronyms
+m_skeleton, m_similarity = _m.skeleton, _m.similarity
 
 # Merging uses parse/match.py's GENEROUS matcher, not enrich/budget.py's conservative
 # one. The two answer different questions and the earlier code used the wrong one here:
@@ -96,7 +97,17 @@ def build(snapshot, year):
     index = {}
 
     def keys_for(name):
-        return set(m_tokens(name)) | {a for a in m_acronyms(name) if len(a) >= 5}
+        # Skeletons as well as raw tokens, or the index silently cancels the matcher's
+        # transliteration rule: probably_same knows Gruha and Griha are the same word,
+        # but they are different index keys, so the pair is never made a candidate and
+        # the match never gets the chance to happen. An index that under-retrieves does
+        # not merely slow the join down, it decides it — every pair it fails to offer is
+        # reported as an absence, which here is an accusation. Measured on the Karnataka
+        # join: a skeleton-only index retrieved 504 matches where exhaustive comparison
+        # found 564.
+        t = set(m_tokens(name))
+        return (t | {m_skeleton(x) for x in t}
+                | {a for a in m_acronyms(name) if len(a) >= 5})
 
     def register(en):
         for k in keys_for(en["name"]):
@@ -106,21 +117,40 @@ def build(snapshot, year):
         register(en)
 
     def add(names_with_detail, key):
-        """Attach to an existing entry if one plausibly matches, else create a new one."""
+        """Attach to the BEST matching entry if one plausibly matches, else create one.
+
+        Every candidate is gathered and then ranked. Taking the first match instead made
+        the join depend on set iteration order, which Python varies per process: three
+        identical runs of this file returned 5,438, 5,428 and 5,417 entries, and pinning
+        PYTHONHASHSEED returned 5,429 every time. Nothing upstream had changed.
+
+        For a register whose value is a comparable monthly series, and whose change feed
+        is `git log` over these files, that is worse than being wrong in a fixed way. A
+        rebuild would show schemes merging and splitting with no government having done
+        anything, which is the same failure this repository refuses INCOMPLETE snapshots
+        to avoid. It also meant every count published here carried an undisclosed error
+        bar of about twenty.
+
+        Sorting the keys restores determinism. Ranking by similarity additionally makes
+        the choice the best available one rather than whichever the hash offered first,
+        with the name as tie-breaker so equal scores still resolve the same way.
+        """
         added = 0
         for name, detail in names_with_detail:
-            seen, hit, why = set(), None, ""
-            for k in keys_for(name):
+            seen, cands = set(), []
+            for k in sorted(keys_for(name)):
                 for en in index.get(k, ()):
                     if id(en) in seen:
                         continue
                     seen.add(id(en))
                     same, reason = probably_same(name, en["name"])
                     if same:
-                        hit, why = en, reason
-                        break
-                if hit:
-                    break
+                        cands.append((-m_similarity(name, en["name"]), en["name"],
+                                      en, reason))
+            hit, why = None, ""
+            if cands:
+                cands.sort(key=lambda c: (c[0], c[1]))
+                hit, why = cands[0][2], cands[0][3]
             # setdefault silently discarded a second line matching the same entry, and
             # umbrella schemes routinely have several: 721 budget lines became 493
             # registry sources, losing 228 of them including FAME. If the slot is taken
