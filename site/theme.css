@@ -348,3 +348,89 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   .filters{position:static;border-bottom:none;padding:0}
   #tbl thead th{top:0}
 }
+
+/* ---- vertical budget above the table -------------------------------------------- */
+/* Everything above the search box is chrome. It was costing roughly 320px on a laptop
+   and more than a phone screen on mobile, so the first thing a reader saw was the
+   masthead and the last thing they reached was the register. */
+.mast-in{padding:15px 0 12px}
+.route{padding:10px 18px}
+.fresh .wrap{padding:7px 28px}
+main{padding:22px 0 64px}
+.topline{margin-bottom:16px}
+.filters{padding:9px 0 10px}
+.pills{padding-top:11px;gap:7px}
+
+@media (max-width:760px){
+  /* One horizontally scrolling line per group instead of wrapping to three or four.
+     Four groups that wrap cost ~10 rows; scrolled they cost 4. */
+  .pillgroup{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
+    -webkit-overflow-scrolling:touch}
+  .pillgroup::-webkit-scrollbar{display:none}
+  .plabel{position:sticky;left:0;background:var(--paper);padding-right:6px;z-index:1;
+    width:auto;min-width:0;margin-bottom:0}
+  .pills{gap:5px}
+}
+
+@media (max-width:620px){
+  .mast-in{padding:10px 0 9px;gap:10px}
+  .brand h1{font-size:20px}
+  .brand .nil{font-size:24px}
+  .brand .sub{display:none}          /* the strapline repeats the page title */
+  .route{padding:9px 13px;min-width:44px}
+  /* Keep the two facts that matter on a phone: is it fresh, and did it verify. */
+  .fresh .wrap{padding:6px 16px;gap:7px;font-size:10.5px}
+  .fresh span:nth-child(n+5){display:none}
+  .topline{margin-bottom:11px;gap:8px}
+  .topline .eyebrow{display:none}
+  .topline .pagetitle{font-size:22px;line-height:1.2}
+  .jump{padding:5px 10px;font-size:10.5px}
+  main{padding:12px 0 48px}
+  .schemes .sec-note{font-size:11px;margin-bottom:8px}
+}
+
+/* ---- mobile: rows become cards, not a table ------------------------------------- */
+/* Six columns at 390px wide, with table-layout:fixed percentages, wrapped the ministry
+   and place columns to one character per line. A table that needs horizontal scrolling
+   to read a single row is not a table any more, so on a phone each row is a block:
+   name first, then everything else as one quiet meta line. */
+@media (max-width:760px){
+  .tscroll{border-left:none;border-right:none;overflow-x:visible}
+  #tbl{table-layout:auto}
+  #tbl thead{display:none}
+  #tbl tbody,#tbl tr,#tbl td{display:block;width:auto !important}
+  #tbl tr{padding:12px 2px 13px;border-bottom:1px solid var(--rule)}
+  #tbl tr:hover{background:none}
+  #tbl td{padding:0;border:none;word-break:normal}
+
+  #tbl td:nth-child(1){font-size:15.5px;line-height:1.32;margin-bottom:6px}
+  #tbl td:nth-child(1) .acr{display:block;margin:3px 0 0}
+  #tbl td:nth-child(2){margin-bottom:6px}
+
+  /* place, ministry, score and failures read as one sentence rather than four cells */
+  #tbl td:nth-child(3),#tbl td:nth-child(4),
+  #tbl td:nth-child(5),#tbl td:nth-child(6){display:inline;font-size:12px;color:var(--muted)}
+  #tbl td:nth-child(4)::before,#tbl td:nth-child(5)::before,
+  #tbl td:nth-child(6)::before{content:" · ";color:var(--rule-strong)}
+  #tbl td:nth-child(5){font-family:var(--mono)}
+  #tbl td:nth-child(5)::after{content:" passed";font-family:var(--sans);color:var(--faint)}
+  /* the tier belongs beside the place here, not stacked under it */
+  #tbl .sub2{display:inline;margin:0 0 0 5px;font-size:10px}
+}
+
+/* ---- nav inside the masthead ---------------------------------------------------- */
+/* Three links did not need a band of their own. Folding them into the header removes a
+   whole row from every page, which on a phone is the difference between the search box
+   being on the first screen or the second. */
+.mast-in{align-items:center}
+.routes{border-bottom:none;background:none;overflow:visible;
+  display:flex;gap:2px;margin-left:auto;margin-right:14px}
+.route{padding:7px 12px;border-bottom:2px solid transparent}
+.brand{margin-right:8px}
+
+@media (max-width:760px){
+  .mast-in{flex-wrap:wrap;row-gap:6px}
+  .routes{margin-left:0;margin-right:0;width:100%;order:3}
+  .brand{margin-right:auto}
+  .route{padding:6px 11px;min-width:40px}
+}

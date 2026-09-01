@@ -207,6 +207,7 @@ def shell(title, active, body, depth=0):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
 <link rel="stylesheet" href="{up}theme.css?v={CSS_V}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='6' cy='21' r='3.4' fill='%23C26E0D'/%3E%3Ccircle cx='16' cy='21' r='3.4' fill='%23C26E0D'/%3E%3Ccircle cx='26' cy='21' r='3.4' fill='%23C26E0D'/%3E%3C/svg%3E">
 </head><body>
 <header class="mast"><div class="wrap mast-in">
   <a class="brand" href="{home}">
@@ -214,9 +215,9 @@ def shell(title, active, body, depth=0):
     <span><h1>The Schemes Register</h1>
     <span class="sub">Indian government scheme data &middot; and what is missing from it</span></span>
   </a>
+  <nav class="routes" aria-label="Sections">{nav}</nav>
   <button class="tbtn" id="themeBtn" type="button">&#9686; theme</button>
 </div></header>
-<nav class="routes"><div class="wrap">{nav}</div></nav>
 <div class="fresh"><div class="wrap">
   <span class="dot{dot}"></span>
   <span>Last complete collection <b>{days}</b></span>
@@ -774,8 +775,6 @@ def index_section(entries):
 <div class="sec-note">{n:,} across four sources: myScheme, the Union Budget,
   the Outcome Budget and DBT Bharat. Entries with no myScheme record have nothing to
   check, which is itself the finding.</div>
-<div class="workspace">
-<div class="wmain">
 <div class="filters">
   <input id="q" type="search" placeholder="Search name or acronym, e.g. pm kisan or mgnrega&hellip;"
     aria-label="Search schemes by name, acronym or slug">
@@ -789,6 +788,8 @@ def index_section(entries):
   {src_pills}
   {doc_pills}
 </div>
+<div class="workspace">
+<div class="wmain">
 <div class="tscroll"><table id="tbl">
   <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Where it applies</th>
     <th>Ministry / department</th><th class="num sortable" data-k="p">Passed</th>
