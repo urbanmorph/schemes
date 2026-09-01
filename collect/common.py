@@ -57,7 +57,35 @@ UA_BY_HOST = {
 }
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Some government servers ship a broken certificate chain. finance.karnataka.gov.in
+# serves a leaf issued by "GlobalSign GCC R46 OV TLS CA 2025" and then attaches the 2018
+# intermediate, which signs nothing in that chain. Browsers paper over this by fetching
+# the real intermediate from the leaf's Authority Information Access extension; Python
+# does not do AIA fetching, so a certificate that is perfectly valid fails here with
+# "unable to get local issuer certificate".
+#
+# The fix is to carry the missing link, never to stop checking. The chain still has to
+# reach a root in the system store, so a host listed here is verified exactly as strictly
+# as any other. Turning verification off for a source whose whole value is provenance
+# would be the wrong trade in the wrong direction.
+CA_BY_HOST = {
+    "finance.karnataka.gov.in": "globalsign-gcc-r46-ov-tls-ca-2025.pem",
+}
+
 _CTX = ssl.create_default_context()
+_CTX_BY_HOST = {}
+
+
+def _context(host):
+    if host not in CA_BY_HOST:
+        return _CTX
+    if host not in _CTX_BY_HOST:
+        ctx = ssl.create_default_context()
+        ctx.load_verify_locations(
+            cafile=os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "certs", CA_BY_HOST[host]))
+        _CTX_BY_HOST[host] = ctx
+    return _CTX_BY_HOST[host]
 
 
 class Fetched:
@@ -97,7 +125,8 @@ def fetch(url, headers=None, timeout=45, retries=5, pace=0.0):
     for attempt in range(1, retries + 1):
         try:
             req = urllib.request.Request(url, headers=h, method="GET")
-            with urllib.request.urlopen(req, timeout=timeout, context=_CTX) as r:
+            with urllib.request.urlopen(req, timeout=timeout,
+                                        context=_context(host)) as r:
                 body = r.read()
                 if pace:
                     time.sleep(pace)

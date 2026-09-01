@@ -1,0 +1,40 @@
+{
+ "base": "https://finance.karnataka.gov.in",
+ "books": {
+  "CB": {
+   "bytes": 3317605,
+   "url": "https://finance.karnataka.gov.in/uploads/CB2026-27_1772789054.pdf",
+   "what": "Child Budget, child-oriented schemes with allocations"
+  },
+  "GB": {
+   "bytes": 3854927,
+   "url": "https://finance.karnataka.gov.in/uploads/GB2026-27_1772789013.pdf",
+   "what": "Gender Budget, women-oriented schemes with allocations"
+  },
+  "SCSPTSP": {
+   "bytes": 1621053,
+   "url": "https://finance.karnataka.gov.in/uploads/SCSPTSP2026-27_1772789239.pdf",
+   "what": "Scheduled Caste Sub Plan and Tribal Sub Plan allocations, scheme-wise"
+  }
+ },
+ "books_collected": 3,
+ "books_expected": [
+  "CB",
+  "GB",
+  "SCSPTSP"
+ ],
+ "cycle": "2026-27",
+ "errors": [],
+ "finished": "2026-09-01T08:03:18Z",
+ "index_bytes": 79911,
+ "source": "karnataka",
+ "started": "2026-09-01T08:03:07Z",
+ "status_histogram": {
+  "200": 3
+ },
+ "urls": {
+  "CB": "https://finance.karnataka.gov.in/uploads/CB2026-27_1772789054.pdf",
+  "GB": "https://finance.karnataka.gov.in/uploads/GB2026-27_1772789013.pdf",
+  "SCSPTSP": "https://finance.karnataka.gov.in/uploads/SCSPTSP2026-27_1772789239.pdf"
+ }
+}
