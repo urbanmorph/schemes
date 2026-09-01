@@ -80,6 +80,27 @@ def skeletons(s):
     return {skeleton(t) for t in tokens(s)}
 
 
+# Words that scheme names shout and that are not acronyms. "PMAY-URBAN-BLC Scheme" yields
+# "urban" from the caps rule, which then matches every scheme with the word urban in it,
+# and "Mission Shakti - SAMARTHYA - NATIONAL HUB" yields "national" the same way. Six of
+# the seven false joins found on the Andhra Pradesh corpus came from this one hole, all of
+# them from an ordinary English word that happened to be capitalised.
+#
+# QUALIFIERS already records that urban and rural describe a scheme rather than name it, so
+# the list starts there and adds the descriptive words these books capitalise. It is a
+# judgement list and deliberately visible as one: the alternative is a dictionary, and a
+# dictionary would also throw away SAMARTHYA, POSHAN and VATSALYA, which are exactly the
+# coined words that make good acronyms.
+NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
+                {"national", "state", "central", "centre", "center", "government",
+                 "women", "woman", "child", "children", "girls", "boys", "youth",
+                 "welfare", "development", "empowerment", "assistance", "subsidy",
+                 "pension", "scholarship", "insurance", "housing", "health", "education",
+                 "employment", "training", "mission", "scheme", "schemes", "programme",
+                 "yojana", "hub", "other", "others", "general", "special", "total",
+                 "component", "components", "share", "grant", "grants", "fund", "funds"})
+
+
 def acronyms(s):
     """Acronyms this name could be written as, plus any it already contains.
 
@@ -99,7 +120,7 @@ def acronyms(s):
     # then matched any name containing the word rural. Found while joining Andhra Pradesh,
     # where it produced 22 of 31 false matches.
     for m in re.findall(r"\(([A-Za-z][A-Za-z0-9\-]{2,12})\)", s or ""):
-        if m == m.upper():
+        if m == m.upper() and norm(m).replace(" ", "") not in NOT_ACRONYMS:
             out.add(norm(m).replace(" ", ""))
     # Only genuine acronym forms. An earlier version added any word of four or more
     # letters, which made "Shiksha" an acronym and matched "Samagra Shiksha" to the
@@ -119,7 +140,8 @@ def acronyms(s):
     shouted = bool(letters) and letters == letters.upper() and len(norm(s).split()) >= 3
     if not shouted:
         for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or ""):
-            out.add(w.lower())
+            if w.lower() not in NOT_ACRONYMS:
+                out.add(w.lower())
     return {a for a in out if len(a) >= 4}
 
 
@@ -237,6 +259,17 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # A capitalised ordinary word is not an acronym either. Both of these joined on one
+    # shouted word, and between them they were six of seven false joins on Andhra Pradesh.
+    ("PMAY-URBAN-BLC Scheme [AP345]", "INDIRAMMA Disabled Pension (Urban)", False),
+    ("Mission Shakti - SAMARTHYA - NATIONAL HUB FOR WOMEN EMPOWERMENT",
+     "National Mission on Edible Oils- Oil Palm", False),
+    # ...while a coined caps word still is one, which is why this is a list and not a
+    # dictionary lookup.
+    ("MISSION VATSALYA", "Mission Vatsalya Scheme", True),
+]
 
 SELFTEST += [
     # A bracketed qualifier is not an acronym. This pair matched on "rural".
