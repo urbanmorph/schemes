@@ -324,3 +324,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .prose b{color:var(--ink);font-weight:600}
 .prose a{color:var(--stamp)}
 .chip.place{color:var(--stamp);border-color:var(--stamp)}
+
+/* The place a scheme applies, with its tier beneath it. Block, not inline: without this
+   the two run together as "Gujaratstate or UT". */
+.sub2{display:block;font-family:var(--mono);font-size:10px;color:var(--faint);
+  margin-top:3px;letter-spacing:.04em;line-height:1.3}

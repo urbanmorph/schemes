@@ -1162,9 +1162,8 @@ def page_scheme(s, status, enrich=None, entry=None):
         block("Who is excluded", s.get("exclusions_md")),
     ])
     if about:
-        about = ('<div class="sec-note" style="margin-top:34px">The text below is '
-                 'myScheme&rsquo;s own wording, reproduced as published, with em-dashes '
-                 'shown as en-dashes. Where it is thin, that is the finding.</div>' + about)
+        about = ('<div class="sec-note" style="margin-top:34px">myScheme&rsquo;s own '
+                 'wording. Where it is thin, that is the finding.</div>' + about)
 
     # Found elsewhere. Deliberately separate from the checks above and never counted in
     # them: this is what a *different* government document says, not what this portal
