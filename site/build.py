@@ -370,6 +370,35 @@ acknowledges the others exist.</p>
 """
 
 
+# Only true connectives. "National", "Mission" and "Scheme" stay in, because real
+# acronyms include them: MGNREGA is Mahatma Gandhi NATIONAL Rural Employment...
+_ACR_SKIP = {"of", "and", "for", "the", "a", "an", "in", "to", "&"}
+
+
+def acronym_keys(name):
+    """Searchable acronym forms for a scheme name.
+
+    Bracketed asides are stripped first, which is the whole trick for FAME: the official
+    title is "...Manufacturing of (Hybrid and) Electric Vehicle", and keeping the bracket
+    yields FAMHEV, which nobody types. Initials are then taken from the first few word
+    offsets, because a leading "Scheme"/"National" often is not in the acronym, and every
+    prefix of four or more characters is indexed, because these names are routinely
+    shortened further than their own initials go.
+    """
+    n = re.sub(r"\(.*?\)", " ", name or "")
+    n = re.sub(r"[^A-Za-z0-9\s]", " ", n).lower()
+    words = [w for w in n.split() if w not in _ACR_SKIP and len(w) > 1]
+    # Two offsets and short prefixes only. The full sweep (three offsets, prefixes to
+    # ten characters) added 90 KB gzipped, a third of the page, for coverage nobody had
+    # asked for; acronyms people actually type are four to six letters.
+    keys = set()
+    for start in (0, 1):
+        ini = "".join(w[0] for w in words[start:])
+        for k in range(4, min(len(ini), 6) + 1):
+            keys.add(ini[:k])
+    return keys
+
+
 SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
                 "outcome": "Outcome Budget", "dbt": "DBT Bharat"}
 
@@ -555,6 +584,7 @@ def index_section(entries):
         name_n = re.sub(r"[^a-z0-9]+", " ", (e_["name"] or "").lower()).strip()
         sq = {re.sub(r"[^a-z0-9]", "", x.lower())
               for x in ([short, slug] + ([e_["name"]] if len(name_n) <= 30 else [])) if x}
+        sq |= acronym_keys(e_["name"])
         sq = {x for x in sq if len(x) > 2 and x not in hay.split()}
         xattr = f' data-x="{e(" ".join(sorted(sq)))}"' if sq else ""
         acr = f'<span class="acr">{e(short)}</span>' if short and short != e_["name"] else ""

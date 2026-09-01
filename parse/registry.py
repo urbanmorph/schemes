@@ -121,7 +121,12 @@ def build(snapshot, year):
                         break
                 if hit:
                     break
-            if hit is not None:
+            # setdefault silently discarded a second line matching the same entry, and
+            # umbrella schemes routinely have several: 721 budget lines became 493
+            # registry sources, losing 228 of them including FAME. If the slot is taken
+            # by a DIFFERENT line, this is a distinct thing and gets its own entry.
+            if hit is not None and (key not in hit["sources"]
+                                    or hit["sources"][key].get("name") == name):
                 hit["sources"].setdefault(key, {**detail, "name": name,
                                                 "merge_reason": why})
             else:
