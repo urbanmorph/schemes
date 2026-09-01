@@ -161,6 +161,13 @@ of them silently produced wrong output first.
 | [Union Budget](https://www.indiabudget.gov.in/) Statements 4A/4B | per-scheme allocations | Government of India |
 | Union Budget Outcome Budget | output and outcome targets | Government of India |
 | [DBT Bharat](https://dbtbharat.gov.in/) | DBT scheme lists and state counts | Government of India |
+| [Karnataka Budget](https://finance.karnataka.gov.in/) Gender, Child and SCSP/TSP books | Karnataka's own scheme list, with allocations | Government of Karnataka |
+
+State sources are surveyed one at a time and the results, including the states that do
+not yield a usable list, are recorded in [docs/state-sources.md](docs/state-sources.md).
+There is no generic state parser: Karnataka's books carry an `English / Kannada` separator
+that makes the scheme name unambiguous, and Gujarat's do not, which is the whole
+difference between the two.
 
 Collected monthly and politely: one pass, paced, identified in the User-Agent wherever
 the host permits it. Nothing here is scraped faster than it changes.
