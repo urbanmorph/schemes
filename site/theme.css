@@ -143,12 +143,15 @@ code{font-family:var(--mono);font-size:.88em;background:var(--sink);padding:1px 
 /* The scheme and ministry columns hold the long strings; letting them wrap keeps the
    table inside its container instead of pushing every other column off the edge. */
 #tbl{table-layout:fixed;width:100%}
-#tbl th:nth-child(1),#tbl td:nth-child(1){width:31%}
+/* Five columns, not six. The failing-checks list moved to the scheme page, where each
+   one can say why it failed instead of being three codes in a narrow cell, and the
+   scheme name took the width back: 31% to 42%, which is the difference between a long
+   title wrapping to four lines and to two. */
+#tbl th:nth-child(1),#tbl td:nth-child(1){width:42%}
 #tbl th:nth-child(2),#tbl td:nth-child(2){width:15%}
-#tbl th:nth-child(3),#tbl td:nth-child(3){width:9%}
-#tbl th:nth-child(4),#tbl td:nth-child(4){width:23%}
+#tbl th:nth-child(3),#tbl td:nth-child(3){width:11%}
+#tbl th:nth-child(4),#tbl td:nth-child(4){width:24%}
 #tbl th:nth-child(5),#tbl td:nth-child(5){width:8%}
-#tbl th:nth-child(6),#tbl td:nth-child(6){width:14%}
 #tbl td{word-break:break-word;vertical-align:top}
 #tbl td:nth-child(2){white-space:normal}
 table{border-collapse:collapse;width:100%;font-size:14px}
@@ -410,9 +413,9 @@ main{padding:22px 0 64px}
 
   /* place, ministry, score and failures read as one sentence rather than four cells */
   #tbl td:nth-child(3),#tbl td:nth-child(4),
-  #tbl td:nth-child(5),#tbl td:nth-child(6){display:inline;font-size:12px;color:var(--muted)}
-  #tbl td:nth-child(4)::before,#tbl td:nth-child(5)::before,
-  #tbl td:nth-child(6)::before{content:" · ";color:var(--rule-strong)}
+  #tbl td:nth-child(5){display:inline;font-size:12px;color:var(--muted)}
+  #tbl td:nth-child(4)::before,
+  #tbl td:nth-child(5)::before{content:" · ";color:var(--rule-strong)}
   #tbl td:nth-child(5){font-family:var(--mono)}
   #tbl td:nth-child(5)::after{content:" passed";font-family:var(--sans);color:var(--faint)}
   /* the tier belongs beside the place here, not stacked under it */
@@ -459,4 +462,15 @@ main{padding:22px 0 64px}
 @media (max-width:760px){
   .railrow .lg{display:none}
   .railrow .sm{display:inline}
+}
+
+/* Back to top, in the rail. Appears only once there is something to go back up from. */
+.railtop{display:block;margin-top:12px;padding-top:11px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:11px;color:var(--stamp);text-decoration:none}
+.railtop:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  /* In the sticky footer it is a button at the end of the line, not a row. */
+  .railtop{margin:0;padding:5px 10px;border:1px solid var(--stamp);border-radius:100px;
+    flex:none;font-size:10.5px;margin-left:auto}
 }

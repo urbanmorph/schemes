@@ -747,15 +747,11 @@ def index_section(entries):
         acr = f'<span class="acr">{e(short)}</span>' if short and short != e_["name"] else ""
         badges = "".join(f'<span class="src {k}">{e(SOURCE_LABEL[k])}</span>'
                          for k in e_["sources"])
-        if c:
-            failed = [c_["id"] for c_ in c["checks"] if not c_["ok"]]
-            score = f'<b>{c["passed"]}</b>/{c["total"]}'
-            failing = e(" · ".join(CHECK_CODE.get(x, x) for x in failed[:3]))
-        else:
-            # Not on myScheme, so there is nothing to check. Showing 0/9 would read as a
-            # verdict on the scheme rather than a fact about which portal lists it.
-            score = '<span class="nil">...</span>'
-            failing = '<span class="muted">not listed on myScheme</span>'
+        # Which checks failed lives on the scheme page, where each one has room to say
+        # why. Three abbreviated codes in a narrow cell told a reader less than the count
+        # already does, and cost the scheme name a seventh of the table.
+        score = (f'<b>{c["passed"]}</b>/{c["total"]}' if c
+                 else '<span class="nil">...</span>')
         w_head, w_sub = where(e_)
         where_cell = (f'<td>{e(w_head)}'
                       + (f'<span class="sub2">{e(w_sub)}</span>' if w_sub else "")
@@ -772,8 +768,7 @@ def index_section(entries):
                  f'<td>{badges}</td>'
                  + where_cell
                  + f'<td class="muted">{e(e_.get("org") or "")}</td>'
-                 f'<td class="num">{score}</td>'
-                 f'<td class="muted" style="font-size:12px">{failing}</td></tr>')
+                 f'<td class="num">{score}</td></tr>')
 
     n = len(entries)
     if not n:
@@ -783,8 +778,8 @@ def index_section(entries):
     return f"""
 <section class="sec schemes" id="schemes">
 <div class="sec-note">{n:,} across four sources: myScheme, the Union Budget,
-  the Outcome Budget and DBT Bharat. Entries with no myScheme record have nothing to
-  check, which is itself the finding.</div>
+  the Outcome Budget and DBT Bharat. Open a scheme to see which checks it fails and why.
+  Entries with no myScheme record have nothing to check, which is itself the finding.</div>
 <div class="filters">
   <input id="q" type="search" placeholder="Search name or acronym, e.g. pm kisan or mgnrega&hellip;"
     aria-label="Search schemes by name, acronym or slug">
@@ -802,8 +797,7 @@ def index_section(entries):
 <div class="wmain">
 <div class="tscroll"><table id="tbl">
   <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Where it applies</th>
-    <th>Ministry / department</th><th class="num sortable" data-k="p">Passed</th>
-    <th>Failing</th></tr></thead>
+    <th>Ministry / department</th><th class="num sortable" data-k="p">Passed</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
 </div>
@@ -820,6 +814,7 @@ def index_section(entries):
     <div class="railrow"><span>DBT Bharat</span><b id="rSdb">{r0["sdb"]}</b></div>
     <div class="railrow"><span>Outcome Budget</span><b id="rSoc">{r0["soc"]}</b></div>
   </div>
+  <a class="railtop" id="toTop" href="#schemes" hidden>&uarr; Back to top</a>
   <div class="railnote">Every figure here follows the filters. Allocation is the
     Budget line for the visible schemes where one is joined; most schemes have none
     published anywhere.</div>
@@ -1002,6 +997,22 @@ def index_section(entries):
     else window.addEventListener('resize',measure);
   }}
 
+  // Back to top. Hidden until there is something to go back up from, and it returns
+  // focus to the search box, because wanting the top of a 5,438-row table almost always
+  // means wanting to search again.
+  var top=document.getElementById('toTop');
+  if(top){{
+    var onScroll=function(){{ top.hidden = window.scrollY < 500; }};
+    window.addEventListener('scroll',onScroll,{{passive:true}});
+    onScroll();
+    top.addEventListener('click',function(ev){{
+      ev.preventDefault();
+      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({{top:0,behavior:reduce?'auto':'smooth'}});
+      q.focus({{preventScroll:true}});
+    }});
+  }}
+
   apply();          // rail and pill counts must be live from the first paint
 }})();
 </script>
@@ -1126,19 +1137,6 @@ page of results would appear here as dozens of schemes being &ldquo;removed&rdqu
 # fact is unknowable. The real claim is narrower and much stronger: the portal a citizen
 # actually visits does not tell them, even though the government can point at the
 # notification and say it was published. These labels are about the portal.
-# Compact codes for the index's "failing" column. Spelling the check ids out on every
-# one of 4,771 rows cost 496 KB — 21.5% of the page — to repeat nine strings.
-CHECK_CODE = {
-    "eligibility_documented": "eligibility",
-    "benefit_quantified": "benefit",
-    "description_substantive": "description",
-    "implementing_agency_named": "agency",
-    "application_path_published": "how-to-apply",
-    "start_date_recorded": "start",
-    "end_date_recorded": "end",
-    "stored_urls_well_formed": "links",
-    "not_expired_while_listed": "expired",
-}
 
 CHECK_LABEL = {
     "eligibility_documented":     "Eligibility published here",
