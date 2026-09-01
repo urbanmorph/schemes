@@ -219,6 +219,7 @@ def shell(title, active, body, depth=0, desc="", canon=""):
 <link rel="stylesheet" href="{up}theme.css?v={CSS_V}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='6' cy='21' r='3.4' fill='%23C26E0D'/%3E%3Ccircle cx='16' cy='21' r='3.4' fill='%23C26E0D'/%3E%3Ccircle cx='26' cy='21' r='3.4' fill='%23C26E0D'/%3E%3C/svg%3E">
 </head><body>
+<a class="skip" href="#main">Skip to the register</a>
 <header class="mast"><div class="wrap mast-in">
   <a class="brand" href="{home}">
     <span class="nil" aria-hidden="true">...</span>
@@ -238,7 +239,7 @@ def shell(title, active, body, depth=0, desc="", canon=""):
   <span class="sep">&middot;</span><span>verdict <b>{e(word)}</b></span>
   <span class="sep">&middot;</span><span>{num(st.get('snapshots'))} snapshot(s) held</span>
 </div></div>
-<main><div class="wrap">{body}</div></main>
+<main id="main" tabindex="-1"><div class="wrap">{body}</div></main>
 <footer><div class="wrap">
   <span>The Schemes Register &middot; local build, not deployed</span>
   <span>Built {datetime.now().strftime('%Y-%m-%d %H:%M')} &middot; data CC BY 4.0</span>
