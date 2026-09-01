@@ -526,3 +526,23 @@ main:focus{outline:none}
   border:1px solid var(--stamp);border-radius:100px;padding:8px 14px;text-decoration:none;
   min-height:34px;align-items:center}
 .report a:hover{background:var(--stamp);color:var(--paper)}
+
+/* Sources on every page, not only on the ones that happen to discuss them. A reader who
+   arrives on one scheme page out of 5,438 should not have to go looking for where its
+   numbers came from. */
+footer .srcs{display:grid;grid-template-columns:auto 1fr;gap:5px 16px;align-items:baseline;
+  padding-bottom:16px;margin-bottom:14px;border-bottom:1px solid var(--rule)}
+footer .srcs b{grid-column:1/-1;font-family:var(--mono);font-size:var(--fs-xs);
+  text-transform:uppercase;letter-spacing:.12em;color:var(--faint);font-weight:400;
+  margin-bottom:4px}
+footer .srcs a{color:var(--stamp);text-decoration:none;font-size:var(--fs-sm);
+  white-space:nowrap}
+footer .srcs a:hover{text-decoration:underline}
+footer .srcs span{color:var(--muted);font-size:var(--fs-sm)}
+footer .srcs p{grid-column:1/-1;margin:10px 0 0;color:var(--faint);
+  font-size:var(--fs-sm);max-width:70ch}
+footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:var(--fs-sm);color:var(--faint)}
+footer .foot a{color:var(--stamp)}
+@media (max-width:620px){footer .srcs{grid-template-columns:1fr;gap:2px 0}
+  footer .srcs span{margin-bottom:7px}}

@@ -244,8 +244,25 @@ def shell(title, active, body, depth=0, desc="", canon=""):
 </div></div>
 <main id="main" tabindex="-1"><div class="wrap">{body}</div></main>
 <footer><div class="wrap">
-  <span>The Schemes Register &middot; local build, not deployed</span>
-  <span>Built {datetime.now().strftime('%Y-%m-%d %H:%M')} &middot; data CC BY 4.0</span>
+  <div class="srcs">
+    <b>Every figure on this page comes from one of four government sources</b>
+    <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener">myScheme</a>
+    <span>scheme records, eligibility, benefits</span>
+    <a href="https://www.indiabudget.gov.in/doc/eb/stat4a.pdf" target="_blank" rel="noopener">Union Budget, Statements 4A and 4B</a>
+    <span>per-scheme allocations</span>
+    <a href="https://www.indiabudget.gov.in/" target="_blank" rel="noopener">Outcome Budget, Output Outcome Monitoring Framework</a>
+    <span>output and outcome targets</span>
+    <a href="https://dbtbharat.gov.in/" target="_blank" rel="noopener">DBT Bharat</a>
+    <span>direct benefit transfer listings</span>
+    <p>Collected {e(st.get('snapshot') or '')} and archived byte for byte, so any figure
+    here can be traced to the request that produced it. Nothing on this site is
+    calculated from a source that is not named above.</p>
+  </div>
+  <div class="foot">
+    <span>The Schemes Register &middot; local build, not deployed</span>
+    <span><a href="{ISSUE_URL}?template=missing-figure.yml" target="_blank" rel="noopener">Report a wrong or missing figure</a>
+      &middot; code MIT, data CC BY 4.0</span>
+  </div>
 </div></footer>
 <script>
 document.getElementById('themeBtn').addEventListener('click',function(){{
