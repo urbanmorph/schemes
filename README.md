@@ -38,6 +38,13 @@ National AYUSH Mission and the National Social Assistance Programme each carry a
 Budget line and an Outcome Budget framework, and none appears on myScheme. 50 such
 schemes, ₹2,01,476 cr, published at the classifier's high-precision threshold.
 
+**A state's own budget names schemes its citizens cannot look up.** Karnataka publishes
+Gender, Child and SCSP/TSP budgets naming 969 heads. myScheme lists 56 schemes for
+Karnataka. 72 of the state's own, worth ₹9,453 cr, read as schemes and appear on the
+national portal nowhere, at 97.3% precision counted against hand labels rather than
+estimated. That is a floor: Gruha Lakshmi, the state's largest welfare scheme, is not in
+it, because 580 of the 969 rows carry no purpose line for a classifier to read.
+
 **Where records are thin, across all 4,771 myScheme entries:**
 
 | | | |

@@ -387,7 +387,7 @@ def page_index(census, checks, dbt, entries):
 """
 
 
-def page_divergence(census, dbt, reg=None, cls=None, entries=None):
+def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None):
     """Two questions, kept apart: how many schemes a state has, and which are unlisted.
 
     The per-state table and the unlisted-schemes table were both built into a local named
@@ -447,6 +447,55 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None):
     higher = sum(1 for n in ms if ds.get(n) and ds[n] > ms[n])
 
     kar_ms, kar_dbt = ms.get("Karnataka"), ds.get("Karnataka")
+
+    # A state's own budget against the national portal. The central sections of this page
+    # answer "which funded schemes is the Union not telling citizens about". This answers
+    # the same question one level down, where until now the page could only report a count.
+    ka_section = ""
+    if ka and ka.get("absent_schemes"):
+        v = ka.get("validation", {})
+        cen = v.get("at_publish_threshold_census", {})
+        rows_ka = "".join(
+            f'<tr><td>{e(r["name"])}'
+            + (f'<div class="sub2">{e(r["purpose"])}</div>' if r.get("purpose") else "")
+            + f'</td><td class="num">{inr(round((r["be_lakh"] or 0) / 100))}</td>'
+            f'<td class="num">{r["score"]}</td>'
+            f'<td class="muted" style="font-size:12px">{e("; ".join(w for _, w in r.get("evidence", [])[:2]))}</td></tr>'
+            for r in ka["absent_schemes"])
+        ka_section = f"""
+<section class="sec">
+  <h2>Karnataka&rsquo;s own budget names schemes its citizens cannot look up</h2>
+  <div class="sec-note">Karnataka Budget {e(str(ka.get('cycle') or ''))}, scheme-wise books
+    &middot; {num(ka.get('classified_scheme'))} of {num(ka.get('classified_scheme', 0) + ka.get('classified_not_scheme', 0))}
+    rows survive classification as schemes</div>
+  <p class="standfirst">The state publishes its Gender, Child and SCSP/TSP budgets, and
+  between them they name {num((ka.get('classified_scheme') or 0) + (ka.get('classified_not_scheme') or 0))}
+  budget heads. myScheme lists {num(ka.get('myscheme_karnataka_records'))} schemes for
+  Karnataka. These {num(len(ka['absent_schemes']))} are on the state&rsquo;s books, carry
+  money, read as schemes, and are on the national portal nowhere.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>In Karnataka&rsquo;s budget, absent from myScheme</th>
+      <th class="num">2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
+      <th>Why it scores as a scheme</th></tr></thead>
+    <tbody>{rows_ka}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>This is a floor, and the errors in it are counted rather than estimated</b>
+    A budget book lists colleges, commissionerates and building heads beside schemes, and
+    calling one of those a hidden scheme would be a false accusation. Every row is scored
+    on signals published with the arithmetic, validated against
+    {num((ka.get('ground_truth') or {}).get('labelled'))} hand labels.
+    <p style="margin:8px 0 0">Precision at the published bar is
+    {cen.get('precision', 0):.1%}, and that is a count: every row scoring at or above the
+    coverage threshold carries a hand label, so the errors in this table are
+    {num(cen.get('not_schemes'))} named ones rather than an estimate. Recall is
+    {v.get('at_publish_threshold', {}).get('recall', 0):.0%}, so the table is a floor and
+    never a total. Gruha Lakshmi, Karnataka&rsquo;s largest welfare scheme, is missing from
+    it: 580 of the {num((ka.get('classified_scheme') or 0) + (ka.get('classified_not_scheme') or 0))}
+    rows carry no purpose line, and a real scheme with a plain name and no stated purpose
+    cannot clear a high bar on the evidence the books print.</p>
+  </div>
+</section>"""
 
     # Funded, monitored, and never announced. The strongest thing the union registry
     # says: these are named as schemes by at least two government sources and carry a
@@ -551,20 +600,24 @@ and be done.</p>
   administers, because no plausible policy difference runs an order of magnitude in that
   direction. They describe how much of it each state has loaded onto a central portal.</p>
   <div class="warnbox">
-    <b>What this register cannot yet tell you</b>
+    <b>What this register can and cannot itemise</b>
     For central schemes the Union Budget supplies an independent list of names, so a
     scheme missing from myScheme can be named, and
-    {num(len((cls or {}).get("unlisted_schemes", [])))} of them are named on this page. No
-    equivalent exists for states. DBT Bharat publishes a per-state
-    <em>count</em> and no state scheme list, so the shortfall of
+    {num(len((cls or {}).get("unlisted_schemes", [])))} of them are named on this page.
+    DBT Bharat publishes a per-state <em>count</em> and no state scheme list, so nothing
+    central can itemise the shortfall of
     {num(sum(max(0, (ds.get(n) or 0) - v) for n, v in ms.items() if ds.get(n)))} schemes
-    across the {num(higher)} states where DBT counts more cannot be turned into names
-    from any source held here. Naming them means collecting 36 state budgets and scheme portals,
-    each published in its own format. That work is not done, and until it is, this page
-    reports a gap it cannot itemise.
+    across the {num(higher)} states where DBT counts more.
+    <p style="margin:8px 0 0">The way to name them is to read each state&rsquo;s own
+    budget, which has to be done state by state: there is no common format and no
+    guarantee a state publishes a readable one. Karnataka is done and is below. Andhra
+    Pradesh is collected. Gujarat was attempted and its budget cannot be read by machine,
+    which is a finding about Gujarat rather than a gap here. The survey of what each state
+    publishes, including the failures, is in the repository.</p>
   </div>
 </section>
 
+{ka_section}
 {unlisted_section}
 """
 
@@ -1574,7 +1627,8 @@ def build():
     w("divergence.html", shell(
         "Divergence", "/divergence",
         page_divergence(census, dbt, load("data/registry.json", {}),
-                        load("data/classification.json", {}), entries=entries),
+                        load("data/classification.json", {}), entries=entries,
+                        ka=load("data/karnataka/classification.json", {})),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side.")))
     w("changes.html", shell(

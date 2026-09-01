@@ -1,6 +1,6 @@
 {
  "absent_cr": 9453.08,
- "absent_from_myscheme_all_rows": 951,
+ "absent_from_myscheme_all_rows": 952,
  "absent_from_myscheme_and_classified_scheme": 72,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Karnataka, because claiming absence should require that even a generous matcher finds nothing. The surviving list is a floor: 580 of the 969 rows carry no purpose line, and a real scheme with a plain name and no purpose line cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
@@ -18705,7 +18705,7 @@
    ],
    "hand_label": null,
    "hoa": "2851-00-107-1-49",
-   "in_myscheme_karnataka": true,
+   "in_myscheme_karnataka": false,
    "name": "State Additional Topup for CSS PMKSY(Sericulture)",
    "purpose": "Financial assistance for drip irrigation to grow mulberry plants on horticulture farms.",
    "score": 3,
@@ -24580,7 +24580,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-01T15:15:17Z",
+ "built": "2026-09-01T17:25:26Z",
  "classified_not_scheme": 895,
  "classified_scheme": 74,
  "cycle": "2026-27",
