@@ -31,9 +31,20 @@
    "what": "Scheduled Castes Component, formerly the SC Sub-Plan"
   }
  },
- "built": "2026-09-01T15:15:00Z",
+ "built": "2026-09-01T15:28:19Z",
  "caveat": "These are the scheme-wise cuts of the state budget, so a scheme with no women, child, Backward Classes, Minorities or SC/ST earmark does not appear. The number here is a floor on Andhra Pradesh's schemes, never a total. be_lakh is the largest single-book slice of the provision, not the whole provision: each book reports only the part attributable to its own group, and the books overlap, so they are not added. Some rows are establishment heads the books list alongside schemes (District Offices, Headquarters Office, Buildings); they are kept because the state files them here, and a reader counting schemes should discount them.",
  "cycle": "2026-27",
+ "decisions": [
+  {
+   "affects": "eight absence claims",
+   "decision": "kept distinct",
+   "for_distinct": "no document here says one was renamed to the other, and no head of account is shared, because myScheme publishes none",
+   "for_same": "INDIRAMMA appears nowhere in the budget; NTR Bharosa's sub-heads 901-911 and 940-943 repeat per department, the shape of one provision cut by category, which is INDIRAMMA's own axis",
+   "question": "Are myScheme's eight INDIRAMMA pensions the same provision as the budget's NTR Bharosa Pension Scheme, renamed?",
+   "why_this_way": "merging asserts a renaming this register cannot evidence and erases eight named schemes; keeping them apart risks counting one provision twice, which a reader can see, since both names are published",
+   "would_settle_it": "the sub-head names under 2225-01-102-11-53-900-9xx in Volume-III-12, a government order renaming the scheme, or a start date on the myScheme records, which carry none"
+  }
+ ],
  "entries": [
   {
    "be_lakh": 3000.0,
@@ -42,6 +53,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Administration, State Roads and Road Safety Works (RSW), ENC (Roads and Buildings)",
+   "hoas": [
+    "5054-04-789-11-07-530-531-V",
+    "5054-04-796-11-07-530-531-V"
+   ],
    "name": "District and Other Roads"
   },
   {
@@ -54,6 +69,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2435-60-200-11-04-330-333-V",
+    "2435-60-789-11-04-330-333-V",
+    "2435-60-796-11-04-330-333-V"
+   ],
    "name": "Annadata Sukhibhava"
   },
   {
@@ -62,6 +82,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -73,6 +94,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-109-11-11-300-301-V",
+    "2401-00-789-11-08-300-301-V",
+    "2401-00-796-11-64-300-301-V"
+   ],
    "name": "Extension"
   },
   {
@@ -81,6 +107,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -89,6 +116,9 @@
     "Backward Classes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-800-11-34-210-213-V"
+   ],
    "name": "IT Enabled Programme - Supply of Tabs and Other Equipment to Staff"
   },
   {
@@ -97,6 +127,12 @@
     "Backward Classes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-113-03-06-130-137-V",
+    "4401-00-113-03-06-280-289-V",
+    "4401-00-113-03-06-290-297-V",
+    "4401-00-113-03-06-300-302-V"
+   ],
    "name": "KFW Germany - AP Community Managed Natural Farming (APCNF)"
   },
   {
@@ -105,6 +141,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "KFW Germany - Zero Based Natural Farming (ZBNF)"
   },
   {
@@ -115,6 +152,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana - Agricultural Extension [AP24]"
   },
   {
@@ -125,6 +163,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana - Digital Agriculture [AP314]"
   },
   {
@@ -135,6 +174,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-789-27-15-530-531-V",
+    "4401-00-796-27-15-530-531-V"
+   ],
    "name": "Krishionnati Yojana-Edible Oils (Oilseeds) [AP222]"
   },
   {
@@ -143,6 +186,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana -Food and Nutrition Security [AP17]"
   },
   {
@@ -152,6 +196,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-789-27-48-530-531-V",
+    "4401-00-796-27-48-530-531-V"
+   ],
    "name": "Krishionnati Yojana-Mission for Aatmanirbharta in Pulses"
   },
   {
@@ -161,6 +209,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana - National Food Security and Nutrition Mission [AP17]"
   },
   {
@@ -170,6 +219,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-789-27-68-530-531-V",
+    "4401-00-796-27-68-530-531-V"
+   ],
    "name": "Krishionnati Yojana - National Food Security Mission [AP17]"
   },
   {
@@ -179,6 +232,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-789-27-57-530-531-V",
+    "4401-00-796-27-57-530-531-V"
+   ],
    "name": "Krishionnati Yojana - Oil Palm [AP405]"
   },
   {
@@ -187,6 +244,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana - Seed and Planting Material [AP329]"
   },
   {
@@ -196,6 +254,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-789-27-56-530-531-V",
+    "4401-00-796-27-56-530-531-V"
+   ],
    "name": "Krishionnati Yojana - Seed and Planting Material (Seeds) [AP329]"
   },
   {
@@ -204,6 +266,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana-Strengthening of Seed Quality Control and Seed Testing Laboratory components"
   },
   {
@@ -212,6 +275,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "KVY - National Project on Management of Soil Health and Fertility[AP324]"
   },
   {
@@ -222,6 +286,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "National Mission on Natural Farming (NMNF)"
   },
   {
@@ -230,6 +295,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-27-53-310-312-V"
+   ],
    "name": "PM RKVY - Cimate Resilient Integrated Forming System (erst while RAD) [AP306]"
   },
   {
@@ -239,6 +307,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-796-27-53-310-312-V",
+    "2401-00-800-27-53-310-312-V"
+   ],
    "name": "PM RKVY - Climate Resilient Integrated Forming System (erst while RAD) [AP306]"
   },
   {
@@ -248,6 +320,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-27-60-310-312-V",
+    "2401-00-796-27-60-310-312-V"
+   ],
    "name": "PM RKVY - Crop Diversification Programme [AP478]"
   },
   {
@@ -258,6 +334,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-131-27-51-310-312-V",
+    "2401-00-789-27-51-310-312-V",
+    "2401-00-796-27-51-310-312-V"
+   ],
    "name": "PM RKVY - Digital Agriculture Mission [AP314]"
   },
   {
@@ -268,6 +349,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-113-27-27-310-312-V",
+    "2401-00-789-27-27-310-312-V",
+    "2401-00-796-27-27-310-312-V"
+   ],
    "name": "PM RKVY - DPR [AP81]"
   },
   {
@@ -277,6 +363,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-27-48-310-312-V",
+    "2401-00-796-27-48-310-312-V"
+   ],
    "name": "PM RKVY - Mission for Aatmanirbharta in Pulses [AP502]"
   },
   {
@@ -285,6 +375,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-27-56-310-312-V"
+   ],
    "name": "PM RKVY - National Food Security and Nutriation Mission - Seeds (NFSNM-Seeds) [AP329]"
   },
   {
@@ -294,6 +387,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-27-68-310-312-V",
+    "2401-00-796-27-68-310-312-V"
+   ],
    "name": "PM RKVY - National Food Security and Nutrition Mission [AP17]"
   },
   {
@@ -302,6 +399,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-796-27-56-310-312-V"
+   ],
    "name": "PM RKVY - National Food Security and Nutrition Mission - Seeds (NFSNM-Seeds) [AP329]"
   },
   {
@@ -313,6 +413,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-131-27-46-310-312-V",
+    "2401-00-789-27-46-310-312-V",
+    "2401-00-796-27-46-310-312-V"
+   ],
    "name": "PM RKVY - National Mission on Agriculture Mechanisation [AP283]"
   },
   {
@@ -322,6 +427,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-27-15-310-312-V",
+    "2401-00-796-27-15-310-312-V"
+   ],
    "name": "PM RKVY - National Mission on Edible Oils (Oil seeds) [AP222]"
   },
   {
@@ -331,6 +440,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-27-47-310-312-V",
+    "2401-00-796-27-47-310-312-V"
+   ],
    "name": "PM RKVY - National Mission on Natural Farming (NMNF) [AP471]"
   },
   {
@@ -342,6 +455,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-105-27-52-310-312-V",
+    "2401-00-789-27-52-310-312-V",
+    "2401-00-796-27-52-310-312-V"
+   ],
    "name": "PM RKVY - National Project on Management of Soil Health and Fertility [AP324]"
   },
   {
@@ -352,6 +470,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-131-27-41-310-312-V",
+    "2401-00-789-27-41-310-312-V",
+    "2401-00-796-27-41-310-312-V"
+   ],
    "name": "PM RKVY - PKVY [AP76]"
   },
   {
@@ -361,6 +484,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-22-18-310-312-V",
+    "2401-00-796-22-18-310-312-V",
+    "4401-00-789-22-18-530-531-V",
+    "4401-00-796-22-18-530-531-V"
+   ],
    "name": "PM RKVY - Purchase of Breeder Seeds, Seed Hubs and Storage Units [AP494]"
   },
   {
@@ -370,6 +499,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-22-62-310-312-V",
+    "2401-00-796-22-62-310-312-V",
+    "4401-00-789-22-62-530-531-V",
+    "4401-00-796-22-62-530-531-V"
+   ],
    "name": "PM RKVY - Strengthening of Seed Quality Control and Seed Testing Laboratory components [AP479]"
   },
   {
@@ -380,6 +515,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-109-27-50-310-312-V",
+    "2401-00-789-27-50-310-312-V",
+    "2401-00-796-27-50-310-312-V"
+   ],
    "name": "PM RKVY - Sub Mission on Agricultural Extension [AP24]"
   },
   {
@@ -390,6 +530,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-06-66-320-326-V",
+    "2401-00-796-06-66-320-326-V"
+   ],
    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)"
   },
   {
@@ -398,6 +542,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Rashtriya Krushi Vikasa Yojana (RKVY) [AP81]"
   },
   {
@@ -406,6 +551,7 @@
     "Gender Budget"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Rashtriya Krushi Vikas Yojana (RKVY) [AP81]"
   },
   {
@@ -415,6 +561,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "Rashtriya Krushi Vikas Yojana (RKVY-DPR) [AP81]"
   },
   {
@@ -425,6 +572,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-789-27-52-530-531-V",
+    "4401-00-796-27-52-530-531-V"
+   ],
    "name": "RKVY - National Project on Management of Soil Health and Fertility [AP324]"
   },
   {
@@ -435,6 +586,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "RKVY - PKVY [AP76]"
   },
   {
@@ -445,6 +597,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [],
    "name": "RKVY - Rainfed Area Development (RAD) [AP306]"
   },
   {
@@ -455,6 +608,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "4401-00-796-27-46-530-531-V"
+   ],
    "name": "RKVY - Sub Mission on Agriculture Mechanisation [AP283]"
   },
   {
@@ -463,6 +619,14 @@
     "Backward Classes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2435-60-200-11-05-130-135-V",
+    "2435-60-200-11-05-130-136-V",
+    "2435-60-200-11-05-130-137-V",
+    "2435-60-200-11-05-130-138-V",
+    "2435-60-200-11-05-140-141-V",
+    "2435-60-200-11-05-210-215-V"
+   ],
    "name": "Rythu Seva Kendralu"
   },
   {
@@ -473,6 +637,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2401-00-789-11-33-330-331-V",
+    "2401-00-796-11-33-330-331-V"
+   ],
    "name": "Soil and Water Conservation Programmes"
   },
   {
@@ -481,6 +649,10 @@
     "Backward Classes Component"
    ],
    "department": "Agriculture Department",
+   "hoas": [
+    "2408-02-195-11-06-310-312-V",
+    "2408-02-195-11-06-370-373-V"
+   ],
    "name": "Storage, interest and other related costs of fertilizer buffers"
   },
   {
@@ -489,6 +661,9 @@
     "Backward Classes Component"
    ],
    "department": "Agriculture Marketing and Co-Operation, Secretariat",
+   "hoas": [
+    "4415-01-277-11-04-530-531-V"
+   ],
    "name": "Assistance to Andhra Pradesh Agricultural University"
   },
   {
@@ -497,6 +672,9 @@
     "Backward Classes Component"
    ],
    "department": "Agriculture Marketing and Co-Operation, Secretariat",
+   "hoas": [
+    "4415-01-277-11-05-530-531-V"
+   ],
    "name": "Horticulture University"
   },
   {
@@ -506,6 +684,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Andhra Pradesh Crime Investigation Department",
+   "hoas": [],
    "name": "Training to the Police Personal under Prevention of Atrocity Act Implementation"
   },
   {
@@ -514,6 +693,7 @@
     "Child Budget"
    ],
    "department": "Andhra Pradesh State Legal Services Authority",
+   "hoas": [],
    "name": "Andhra Pradesh Victim Compensation Scheme"
   },
   {
@@ -522,6 +702,13 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry, Dairy Development and Fisheries, Secretariat",
+   "hoas": [
+    "2415-03-120-11-04-310-311-V",
+    "2415-03-120-11-04-370-372-V",
+    "2415-03-120-11-04-370-373-V",
+    "2415-03-120-11-04-380-382-V",
+    "2415-03-120-11-04-380-383-V"
+   ],
    "name": "Assistance for establishment of Centre for Advanced Research on Live Stock at Pulivendula"
   },
   {
@@ -530,6 +717,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry, Dairy Development and Fisheries, Secretariat",
+   "hoas": [
+    "4415-03-277-11-06-530-531-V"
+   ],
    "name": "Construction of Buildings for Andhra Pradesh Fisheries University"
   },
   {
@@ -538,6 +728,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry, Dairy Development and Fisheries, Secretariat",
+   "hoas": [
+    "4415-03-277-11-04-530-531-V"
+   ],
    "name": "Construction of Buildings for Sri Venkateswara Veterinary University"
   },
   {
@@ -546,6 +739,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-107-11-18-300-302-V"
+   ],
    "name": "A.P. Animal Feed Act 2020"
   },
   {
@@ -555,6 +751,10 @@
     "Minorities Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-102-11-06-210-211-V",
+    "2403-00-102-11-06-300-304-V"
+   ],
    "name": "Artificial Insemination Centres"
   },
   {
@@ -563,6 +763,15 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-190-11-04-310-311-V",
+    "2403-00-190-11-04-310-312-V",
+    "2403-00-190-11-04-370-372-V",
+    "2403-00-190-11-04-370-373-V",
+    "2403-00-190-11-04-380-381-V",
+    "2403-00-190-11-04-380-382-V",
+    "2403-00-190-11-04-380-385-V"
+   ],
    "name": "Assistance to Meat Development Corporation of Andhra Pradesh Limited (MDCAP)"
   },
   {
@@ -572,6 +781,9 @@
     "Minorities Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-800-11-18-210-212-V"
+   ],
    "name": "Calf Rearing Programme"
   },
   {
@@ -580,6 +792,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-11-15-310-311-V"
+   ],
    "name": "Establishment of Para Veterinary and Allied Board / Council"
   },
   {
@@ -590,6 +805,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-107-11-04-330-331-V",
+    "2403-00-107-11-04-330-332-V",
+    "2403-00-789-11-04-330-331-V",
+    "2403-00-789-11-04-330-332-V",
+    "2403-00-796-11-04-330-331-V",
+    "2403-00-796-11-04-330-332-V"
+   ],
    "name": "Fodder and Feed Development"
   },
   {
@@ -599,6 +822,21 @@
     "Minorities Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-11-04-130-135-V",
+    "2403-00-101-11-04-130-137-V",
+    "2403-00-101-11-04-130-138-V",
+    "2403-00-101-11-04-130-139-V",
+    "2403-00-101-11-04-170-171-V",
+    "2403-00-101-11-04-170-172-V",
+    "2403-00-101-11-04-170-173-V",
+    "2403-00-101-11-04-170-174-V",
+    "2403-00-101-11-04-170-175-V",
+    "2403-00-101-11-04-170-176-V",
+    "2403-00-101-11-04-170-177-V",
+    "2403-00-101-11-04-210-213-V",
+    "2403-00-101-11-04-210-219-V"
+   ],
    "name": "Hospitals and Dispensaries"
   },
   {
@@ -607,6 +845,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "4403-00-101-11-07-530-531-V"
+   ],
    "name": "Infrastructure support to Field Veterinary Institutions"
   },
   {
@@ -616,6 +857,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-789-11-24-210-212-V"
+   ],
    "name": "Integrated Livestock Management"
   },
   {
@@ -624,6 +868,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-113-22-43-310-312-V"
+   ],
    "name": "Livestock Census and Integrated Sample Survey - INTEGRATED SAMPLE SURVEY OTHER COMPONENTS [AP407]"
   },
   {
@@ -632,6 +879,23 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-113-06-42-010-011-V",
+    "2403-00-113-06-42-010-012-V",
+    "2403-00-113-06-42-010-013-V",
+    "2403-00-113-06-42-010-016-V",
+    "2403-00-113-06-42-010-017-V",
+    "2403-00-113-06-42-010-018-V",
+    "2403-00-113-06-42-010-019-V",
+    "2403-00-113-12-42-010-011-V",
+    "2403-00-113-12-42-010-012-V",
+    "2403-00-113-12-42-010-013-V",
+    "2403-00-113-12-42-010-016-V",
+    "2403-00-113-12-42-010-017-V",
+    "2403-00-113-12-42-010-018-V",
+    "2403-00-113-12-42-010-019-V",
+    "2403-00-113-28-42-310-312-V"
+   ],
    "name": "Livestock Census and Integrated Sample Survey - INTEGRATED SAMPLE SURVEY SALARY COMPONENT [AP408]"
   },
   {
@@ -640,6 +904,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-113-22-44-310-312-V"
+   ],
    "name": "Livestock Census and Integrated Sample Survey - Livestock Census [AP79]"
   },
   {
@@ -650,6 +917,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-27-09-310-312-V",
+    "2403-00-789-27-06-310-312-V",
+    "2403-00-796-27-06-310-312-V"
+   ],
    "name": "Livestock Health and Disease Control Programme [AP397]"
   },
   {
@@ -660,6 +932,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-22-14-310-312-V",
+    "2403-00-789-22-14-310-312-V",
+    "2403-00-796-22-14-310-312-V"
+   ],
    "name": "Livestock Health and Disease Control Programme - ASCAD - Grant for training awareness etc. [AP451]"
   },
   {
@@ -670,6 +947,13 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-27-16-310-312-V",
+    "2403-00-789-27-16-310-312-V",
+    "2403-00-796-27-16-310-312-V",
+    "4403-00-789-27-16-530-531-V",
+    "4403-00-796-27-16-530-531-V"
+   ],
    "name": "Livestock Health and Disease Control Programme - ESVHD-MVU [AP432]"
   },
   {
@@ -680,6 +964,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-28-19-310-312-V",
+    "2403-00-789-28-19-310-312-V",
+    "2403-00-796-28-19-310-312-V"
+   ],
    "name": "Livestock Health and Disease Control Programme - Payment of Compensation [AP466]"
   },
   {
@@ -688,6 +977,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-108-11-05-500-501-V"
+   ],
    "name": "Livestock Loss Compensation"
   },
   {
@@ -697,6 +989,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-789-22-07-310-312-V",
+    "2403-00-796-22-07-310-312-V"
+   ],
    "name": "National Livestock Management Programme (AP80)"
   },
   {
@@ -707,6 +1003,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-22-37-310-312-V",
+    "2403-00-789-22-37-310-312-V",
+    "2403-00-796-22-37-310-312-V"
+   ],
    "name": "National Livestock Mission - Assistance for Quality Fodder Seed Production [AP404]"
   },
   {
@@ -717,6 +1018,13 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-27-36-310-312-V",
+    "2403-00-789-27-36-310-312-V",
+    "2403-00-796-27-36-310-312-V",
+    "4403-00-789-27-36-530-531-V",
+    "4403-00-796-27-36-530-531-V"
+   ],
    "name": "National Livestock Mission - Breed Development of Livestock and Poultry [AP401]"
   },
   {
@@ -727,6 +1035,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-108-27-40-310-312-V",
+    "2403-00-789-27-40-310-312-V",
+    "2403-00-796-27-40-310-312-V"
+   ],
    "name": "National Livestock Mission - Livestock Insurance [AP427]"
   },
   {
@@ -737,6 +1050,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-27-38-310-312-V",
+    "2403-00-789-27-38-310-312-V",
+    "2403-00-796-27-38-310-312-V"
+   ],
    "name": "National Livestock Mission - SEMINARS [AP402]"
   },
   {
@@ -747,6 +1065,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-109-22-41-310-312-V",
+    "2403-00-789-22-41-310-312-V",
+    "2403-00-796-22-41-310-312-V"
+   ],
    "name": "National Livestock Mission - TRAININGS[AP403]"
   },
   {
@@ -755,6 +1078,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-102-06-05-310-312-V"
+   ],
    "name": "National Plan for Dairy Development"
   },
   {
@@ -763,6 +1089,9 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "4403-00-101-11-09-530-531-V"
+   ],
    "name": "Shepherd Training Centre"
   },
   {
@@ -771,6 +1100,15 @@
     "Backward Classes Component"
    ],
    "department": "Animal Husbandry Department",
+   "hoas": [
+    "2403-00-101-11-12-130-135-V",
+    "2403-00-101-11-12-130-138-V",
+    "2403-00-101-11-12-130-139-V",
+    "2403-00-101-11-12-210-211-V",
+    "2403-00-101-11-12-210-212-V",
+    "2403-00-101-11-12-230-231-V",
+    "2403-00-101-11-12-520-523-V"
+   ],
    "name": "Vaccine Production / Purchase / Testing / Diseases Control"
   },
   {
@@ -781,6 +1119,17 @@
     "Scheduled Tribes Component"
    ],
    "department": "Ayurveda, Yoga, Unani, Siddha and Homeopathy (AYUSH) Department",
+   "hoas": [
+    "2210-02-001-27-07-310-312-V",
+    "2210-02-789-27-07-310-312-V",
+    "2210-02-796-27-07-310-312-V",
+    "4210-01-200-27-07-520-521-V",
+    "4210-01-200-27-07-530-531-V",
+    "4210-01-789-27-07-520-521-V",
+    "4210-01-789-27-07-530-531-V",
+    "4210-01-796-27-07-520-521-V",
+    "4210-01-796-27-07-530-531-V"
+   ],
    "name": "National Mission on AYUSH including Mission on Medicinal Plants [AP246]"
   },
   {
@@ -789,6 +1138,9 @@
     "Backward Classes Component"
    ],
    "department": "Ayurveda, Yoga, Unani, Siddha and Homeopathy (AYUSH) Department",
+   "hoas": [
+    "4210-03-200-11-05-530-531-V"
+   ],
    "name": "Strengthening of AYUSH Colleges"
   },
   {
@@ -797,6 +1149,9 @@
     "Backward Classes Component"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-102-11-17-310-312-V"
+   ],
    "name": "Aadarana"
   },
   {
@@ -805,6 +1160,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Ambedkar Overseas Vidya Nidhi (AOVN)"
   },
   {
@@ -813,6 +1169,9 @@
     "Backward Classes Component"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-04-330-332-V"
+   ],
    "name": "Andhra Pradesh State Backward Classes Co-operative Finance Corporation"
   },
   {
@@ -822,6 +1181,17 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-277-11-20-310-312-V",
+    "2225-03-277-11-20-370-371-V",
+    "2225-03-277-11-20-370-372-V",
+    "2225-03-277-11-20-370-373-V",
+    "2225-03-277-11-20-380-381-V",
+    "2225-03-277-11-20-380-382-V",
+    "2225-03-277-11-20-380-383-V",
+    "2225-03-277-11-20-380-384-V",
+    "2225-03-277-11-20-380-386-V"
+   ],
    "name": "Andhra Pradesh Study Circle"
   },
   {
@@ -832,6 +1202,20 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-277-11-21-270-271-V",
+    "2225-03-277-11-21-310-311-V",
+    "2225-03-277-11-21-310-312-V",
+    "2225-03-277-11-21-310-317-V",
+    "2225-03-277-11-21-310-318-V",
+    "2225-03-277-11-21-370-371-V",
+    "2225-03-277-11-21-370-372-V",
+    "2225-03-277-11-21-370-373-V",
+    "2225-03-277-11-21-380-381-V",
+    "2225-03-277-11-21-380-383-V",
+    "2225-03-277-11-21-380-385-V",
+    "2225-03-277-11-21-380-386-V"
+   ],
    "name": "Assistance to MJPAPBCWREIS for Backward Classes"
   },
   {
@@ -840,6 +1224,9 @@
     "Backward Classes Component"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-102-11-14-310-312-V"
+   ],
    "name": "BC Abhyudaya Yojana"
   },
   {
@@ -850,6 +1237,10 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "4225-03-277-11-74-530-531-V",
+    "4225-03-277-12-74-530-531-V"
+   ],
    "name": "Buildings"
   },
   {
@@ -860,6 +1251,34 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-277-11-22-010-011-V",
+    "2225-03-277-11-22-010-012-V",
+    "2225-03-277-11-22-010-013-V",
+    "2225-03-277-11-22-010-016-V",
+    "2225-03-277-11-22-010-017-V",
+    "2225-03-277-11-22-010-018-V",
+    "2225-03-277-11-22-010-019-V",
+    "2225-03-277-11-22-100-101-V",
+    "2225-03-277-11-22-100-102-V",
+    "2225-03-277-11-22-100-103-V",
+    "2225-03-277-11-22-100-105-V",
+    "2225-03-277-11-22-100-106-V",
+    "2225-03-277-11-22-110-111-V",
+    "2225-03-277-11-22-130-131-V",
+    "2225-03-277-11-22-130-135-V",
+    "2225-03-277-11-22-130-136-V",
+    "2225-03-277-11-22-130-137-V",
+    "2225-03-277-11-22-130-138-V",
+    "2225-03-277-11-22-140-141-V",
+    "2225-03-277-11-22-210-211-V",
+    "2225-03-277-11-22-210-213-V",
+    "2225-03-277-11-22-210-215-V",
+    "2225-03-277-11-22-230-231-V",
+    "2225-03-277-11-22-300-302-V",
+    "2225-03-277-11-22-310-318-V",
+    "2225-03-277-11-22-500-504-V"
+   ],
    "name": "College Hostels for Boys and Girls"
   },
   {
@@ -870,6 +1289,9 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "4225-03-277-07-77-530-531-V"
+   ],
    "name": "Construction of Buildings for Mahatma Jyothiba Phule Residential Schools"
   },
   {
@@ -879,6 +1301,9 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "4225-03-051-11-05-530-531-V"
+   ],
    "name": "Construction of Community Halls for BCs"
   },
   {
@@ -888,6 +1313,9 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-53-310-312-V"
+   ],
    "name": "Economic Support Schemes through BC-A Corporation"
   },
   {
@@ -897,6 +1325,9 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-54-310-312-V"
+   ],
    "name": "Economic Support Schemes through BC-B Corporation"
   },
   {
@@ -906,6 +1337,9 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-55-310-312-V"
+   ],
    "name": "Economic Support Schemes through BC-D Corporation"
   },
   {
@@ -915,6 +1349,9 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-56-310-312-V"
+   ],
    "name": "Economic Support Schemes through BC-E Corporation"
   },
   {
@@ -923,6 +1360,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Drivers"
   },
   {
@@ -931,6 +1369,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Fishermen"
   },
   {
@@ -939,6 +1378,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Free power to Barbers"
   },
   {
@@ -947,6 +1387,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Free power to Weavers"
   },
   {
@@ -956,6 +1397,21 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-102-11-53-900-901-V",
+    "2225-03-102-11-53-900-902-V",
+    "2225-03-102-11-53-900-903-V",
+    "2225-03-102-11-53-900-904-V",
+    "2225-03-102-11-53-900-905-V",
+    "2225-03-102-11-53-900-906-V",
+    "2225-03-102-11-53-900-907-V",
+    "2225-03-102-11-53-900-908-V",
+    "2225-03-102-11-53-900-909-V",
+    "2225-03-102-11-53-900-940-V",
+    "2225-03-102-11-53-900-941-V",
+    "2225-03-102-11-53-900-942-V",
+    "2225-03-102-11-53-900-943-V"
+   ],
    "name": "NTR Bharosa Pension Scheme"
   },
   {
@@ -966,6 +1422,10 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-277-14-36-310-312-V",
+    "2225-03-277-27-36-310-312-V"
+   ],
    "name": "PM-YASASVI - Post-Matric Scholarship for OBC, EBC & DNT [AP146]"
   },
   {
@@ -976,6 +1436,10 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-277-14-35-310-312-V",
+    "2225-03-277-27-35-310-312-V"
+   ],
    "name": "PM-YASASVI - Pre-Matric Scholarship for OBC, EBC & DNT [AP144]"
   },
   {
@@ -985,6 +1449,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Post Matric Scholarships (MTF)"
   },
   {
@@ -994,6 +1459,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Post Matric Scholarships (RTF)"
   },
   {
@@ -1002,6 +1468,9 @@
     "Backward Classes Component"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-102-11-22-330-331-V"
+   ],
    "name": "Power Cost subsidy to Saloons"
   },
   {
@@ -1010,6 +1479,9 @@
     "Backward Classes Component"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-102-11-21-330-331-V"
+   ],
    "name": "Power cost subsidy to Weavers"
   },
   {
@@ -1020,6 +1492,23 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-48-310-311-V",
+    "2225-03-190-11-48-310-312-V",
+    "2225-03-190-11-48-370-372-V",
+    "2225-03-190-11-48-370-373-V",
+    "2225-03-190-11-48-380-381-V",
+    "2225-03-190-11-48-380-382-V",
+    "2225-03-190-11-48-380-383-V",
+    "2225-03-190-11-48-900-912-V",
+    "2225-03-190-11-48-900-924-V",
+    "2225-03-190-11-48-900-926-V",
+    "2225-03-190-11-48-900-929-V",
+    "2225-03-190-11-48-900-932-V",
+    "2225-03-190-11-48-900-933-V",
+    "2225-03-190-11-48-900-952-V",
+    "2225-03-190-11-48-900-955-V"
+   ],
    "name": "SU - BC-A Corporations"
   },
   {
@@ -1030,6 +1519,23 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-49-310-311-V",
+    "2225-03-190-11-49-310-312-V",
+    "2225-03-190-11-49-370-372-V",
+    "2225-03-190-11-49-370-373-V",
+    "2225-03-190-11-49-380-381-V",
+    "2225-03-190-11-49-380-382-V",
+    "2225-03-190-11-49-380-383-V",
+    "2225-03-190-11-49-900-912-V",
+    "2225-03-190-11-49-900-924-V",
+    "2225-03-190-11-49-900-926-V",
+    "2225-03-190-11-49-900-929-V",
+    "2225-03-190-11-49-900-932-V",
+    "2225-03-190-11-49-900-933-V",
+    "2225-03-190-11-49-900-952-V",
+    "2225-03-190-11-49-900-955-V"
+   ],
    "name": "SU - BC-B Corporations"
   },
   {
@@ -1040,6 +1546,23 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-50-310-311-V",
+    "2225-03-190-11-50-310-312-V",
+    "2225-03-190-11-50-370-372-V",
+    "2225-03-190-11-50-370-373-V",
+    "2225-03-190-11-50-380-381-V",
+    "2225-03-190-11-50-380-382-V",
+    "2225-03-190-11-50-380-383-V",
+    "2225-03-190-11-50-900-912-V",
+    "2225-03-190-11-50-900-924-V",
+    "2225-03-190-11-50-900-926-V",
+    "2225-03-190-11-50-900-929-V",
+    "2225-03-190-11-50-900-932-V",
+    "2225-03-190-11-50-900-933-V",
+    "2225-03-190-11-50-900-952-V",
+    "2225-03-190-11-50-900-955-V"
+   ],
    "name": "SU - BC-D Corporations"
   },
   {
@@ -1050,6 +1573,23 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-190-11-51-310-311-V",
+    "2225-03-190-11-51-310-312-V",
+    "2225-03-190-11-51-370-372-V",
+    "2225-03-190-11-51-370-373-V",
+    "2225-03-190-11-51-380-381-V",
+    "2225-03-190-11-51-380-382-V",
+    "2225-03-190-11-51-380-383-V",
+    "2225-03-190-11-51-900-912-V",
+    "2225-03-190-11-51-900-924-V",
+    "2225-03-190-11-51-900-926-V",
+    "2225-03-190-11-51-900-929-V",
+    "2225-03-190-11-51-900-932-V",
+    "2225-03-190-11-51-900-933-V",
+    "2225-03-190-11-51-900-952-V",
+    "2225-03-190-11-51-900-955-V"
+   ],
    "name": "SU - BC-E Corporations"
   },
   {
@@ -1058,6 +1598,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Subsidy on Domestic LPG Scheme"
   },
   {
@@ -1066,6 +1607,7 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [],
    "name": "Thallikivandanam"
   },
   {
@@ -1075,6 +1617,9 @@
     "Gender Budget"
    ],
    "department": "Backward Classes Welfare Department",
+   "hoas": [
+    "2225-03-277-11-34-310-312-V"
+   ],
    "name": "Videshi Vidyadharana for Higher Studies in Overseas Universities"
   },
   {
@@ -1084,6 +1629,9 @@
     "Gender Budget"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "4202-01-203-11-04-530-531-V"
+   ],
    "name": "Construction of Buildings for Government Degree Colleges"
   },
   {
@@ -1092,6 +1640,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [],
    "name": "Deduct - Recoveries -1,05.67"
   },
   {
@@ -1101,6 +1650,9 @@
     "Gender Budget"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "4202-01-203-11-12-520-521-V"
+   ],
    "name": "Digital and Virtual Class Rooms"
   },
   {
@@ -1110,6 +1662,9 @@
     "Gender Budget"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "2202-03-103-11-10-130-135-V"
+   ],
    "name": "District Resource Centres"
   },
   {
@@ -1119,6 +1674,9 @@
     "Gender Budget"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "4202-01-205-11-09-520-521-V"
+   ],
    "name": "English Language Laboratories"
   },
   {
@@ -1128,6 +1686,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "4202-01-796-11-11-520-521-V"
+   ],
    "name": "Government Degree Colleges in RIAD Areas"
   },
   {
@@ -1136,6 +1697,7 @@
     "Gender Budget"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -1145,6 +1707,9 @@
     "Gender Budget"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "2202-03-103-11-08-280-287-V"
+   ],
    "name": "Honorarium to Mentors of JKCs"
   },
   {
@@ -1156,6 +1721,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "4202-01-203-27-06-530-531-V",
+    "4202-01-789-27-06-530-531-V",
+    "4202-01-796-27-06-530-531-V"
+   ],
    "name": "Rashtriya Uchhatar Shiksha Abhiyan (RUSA) [AP51]"
   },
   {
@@ -1165,6 +1735,18 @@
     "Scheduled Castes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "2202-03-789-11-46-130-135-V",
+    "2202-03-789-11-46-130-136-V",
+    "2202-03-789-11-46-130-137-V",
+    "2202-03-789-11-46-130-138-V",
+    "2202-03-789-11-46-130-139-V",
+    "2202-03-789-11-46-210-211-V",
+    "2202-03-789-11-46-210-212-V",
+    "2202-03-789-11-46-230-231-V",
+    "2202-03-789-11-46-360-361-V",
+    "4202-03-789-11-46-530-531-V"
+   ],
    "name": "Residential Degree Colleges for SCs"
   },
   {
@@ -1174,6 +1756,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "2202-03-789-22-10-310-312-V",
+    "2202-03-796-22-10-310-312-V"
+   ],
    "name": "RUSA-Management and Monitoring and Evaluation Research component"
   },
   {
@@ -1183,6 +1769,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "4202-03-796-11-47-530-531-V"
+   ],
    "name": "Tribal Degree Colleges"
   },
   {
@@ -1192,6 +1781,10 @@
     "Gender Budget"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "4202-01-203-11-21-520-521-V",
+    "4202-01-203-11-21-530-531-V"
+   ],
    "name": "Upgradation of Government Degree Colleges as Centres of Excellence to achieve National Institutional Ranking Framework (NIRF)"
   },
   {
@@ -1201,6 +1794,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "2202-80-789-11-09-160-162-V"
+   ],
    "name": "Welfare of Scheduled caste Students in Degree Colleges"
   },
   {
@@ -1210,6 +1806,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Collegiate Education Department",
+   "hoas": [
+    "2202-80-796-11-09-160-162-V"
+   ],
    "name": "Welfare of Scheduled Tribe Students in Degree Colleges"
   },
   {
@@ -1218,6 +1817,9 @@
     "Backward Classes Component"
    ],
    "department": "Cultural Affairs Department",
+   "hoas": [
+    "4202-04-051-11-10-530-531-V"
+   ],
    "name": "Construction of Auditoriums"
   },
   {
@@ -1227,6 +1829,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Cultural Affairs Department",
+   "hoas": [
+    "2205-00-789-11-24-200-202-V",
+    "2205-00-796-11-24-200-202-V"
+   ],
    "name": "Cultural Celebrations"
   },
   {
@@ -1236,6 +1842,11 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-39-310-312-V",
+    "2235-02-101-11-39-380-381-V",
+    "2235-02-101-11-39-380-385-V"
+   ],
    "name": "Assistance to Andhra Pradesh Differntly Abled Co-operative Corporation"
   },
   {
@@ -1245,6 +1856,9 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-104-22-11-310-312-V"
+   ],
    "name": "Atal Vayo Abhyuday Yojana (AVYAY) - National Action Plan for Senior Citizens [AP307]"
   },
   {
@@ -1254,6 +1868,9 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "4235-02-101-11-05-530-531-V"
+   ],
    "name": "Construction of Buildings/ Hostels/ Schools/ Homes for Differenlty Abled Persons"
   },
   {
@@ -1265,6 +1882,45 @@
     "Minorities Component"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-03-010-011-V",
+    "2235-02-101-11-03-010-012-V",
+    "2235-02-101-11-03-010-013-V",
+    "2235-02-101-11-03-010-016-V",
+    "2235-02-101-11-03-010-017-V",
+    "2235-02-101-11-03-010-018-V",
+    "2235-02-101-11-03-010-019-V",
+    "2235-02-101-11-03-020-021-V",
+    "2235-02-101-11-03-100-101-V",
+    "2235-02-101-11-03-100-102-V",
+    "2235-02-101-11-03-100-103-V",
+    "2235-02-101-11-03-100-106-V",
+    "2235-02-101-11-03-110-111-V",
+    "2235-02-101-11-03-130-131-V",
+    "2235-02-101-11-03-130-134-V",
+    "2235-02-101-11-03-130-135-V",
+    "2235-02-101-11-03-130-136-V",
+    "2235-02-101-11-03-130-137-V",
+    "2235-02-101-11-03-130-138-V",
+    "2235-02-101-11-03-130-139-V",
+    "2235-02-101-11-03-140-141-V",
+    "2235-02-101-11-03-160-161-V",
+    "2235-02-101-11-03-160-162-V",
+    "2235-02-101-11-03-210-211-V",
+    "2235-02-101-11-03-210-212-V",
+    "2235-02-101-11-03-230-231-V",
+    "2235-02-101-11-03-230-232-V",
+    "2235-02-101-11-03-230-233-V",
+    "2235-02-101-11-03-250-251-V",
+    "2235-02-101-11-03-250-252-V",
+    "2235-02-101-11-03-250-253-V",
+    "2235-02-101-11-03-250-255-V",
+    "2235-02-101-11-03-280-285-V",
+    "2235-02-101-11-03-300-301-V",
+    "2235-02-101-11-03-300-302-V",
+    "2235-02-101-11-03-310-318-V",
+    "2235-02-101-11-03-500-504-V"
+   ],
    "name": "District Offices"
   },
   {
@@ -1274,6 +1930,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [],
    "name": "Economic Rehabilitation and discretionary grants"
   },
   {
@@ -1283,6 +1940,22 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-59-130-131-V",
+    "2235-02-101-11-59-130-135-V",
+    "2235-02-101-11-59-130-136-V",
+    "2235-02-101-11-59-130-137-V",
+    "2235-02-101-11-59-140-141-V",
+    "2235-02-101-11-59-160-161-V",
+    "2235-02-101-11-59-160-162-V",
+    "2235-02-101-11-59-210-211-V",
+    "2235-02-101-11-59-210-212-V",
+    "2235-02-101-11-59-210-218-V",
+    "2235-02-101-11-59-230-231-V",
+    "2235-02-101-11-59-250-251-V",
+    "2235-02-101-11-59-250-253-V",
+    "2235-02-101-11-59-500-504-V"
+   ],
    "name": "Establishment of Homes for Visually Challenged"
   },
   {
@@ -1292,6 +1965,9 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-58-310-312-V"
+   ],
    "name": "Establishment of Study Circles for Differenlty Abled students"
   },
   {
@@ -1301,6 +1977,9 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-62-330-331-V"
+   ],
    "name": "Fuel Subsidy"
   },
   {
@@ -1310,6 +1989,7 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -1319,6 +1999,9 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-53-200-202-V"
+   ],
    "name": "Implementation of National Policy for Older Persons"
   },
   {
@@ -1327,6 +2010,9 @@
     "Backward Classes Component"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-61-310-312-V"
+   ],
    "name": "Implementation of Transgender Welfare Policy"
   },
   {
@@ -1335,6 +2021,11 @@
     "Backward Classes Component"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-40-310-311-V",
+    "2235-02-101-11-40-370-372-V",
+    "2235-02-101-11-40-370-373-V"
+   ],
    "name": "Managerial Subsidy to Andhra Pradesh Differently abled Co-operative Corporation"
   },
   {
@@ -1343,6 +2034,9 @@
     "Backward Classes Component"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-200-22-05-310-312-V"
+   ],
    "name": "National Action Plan for Drug Demand Reduction (NAPDDR) [AP330]"
   },
   {
@@ -1353,6 +2047,18 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-47-110-111-V",
+    "2235-02-101-11-47-130-135-V",
+    "2235-02-101-11-47-130-137-V",
+    "2235-02-101-11-47-210-211-V",
+    "2235-02-101-11-47-210-212-V",
+    "2235-02-101-11-47-230-231-V",
+    "2235-02-101-11-47-250-251-V",
+    "2235-02-101-11-47-250-253-V",
+    "2235-02-101-11-47-300-301-V",
+    "2235-02-101-11-47-300-302-V"
+   ],
    "name": "Opening and Maintenance of Junior Colleges for Hearing Differently Abled"
   },
   {
@@ -1364,6 +2070,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-04-310-312-V",
+    "2235-02-789-11-04-310-312-V",
+    "2235-02-796-11-17-310-312-V"
+   ],
    "name": "Rehabilitation and Supply of Prosthetic Aids to Differently Abled"
   },
   {
@@ -1374,6 +2085,9 @@
     "Gender Budget"
    ],
    "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "hoas": [
+    "2235-02-101-11-54-200-202-V"
+   ],
    "name": "Sports Meet of Persons with Differently Abled"
   },
   {
@@ -1383,6 +2097,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Ambedkar Overseas Vidya Nidhi (AOVN)"
   },
   {
@@ -1392,6 +2107,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Andhra Pradesh Brahmin Welfare and Development Corporation"
   },
   {
@@ -1401,6 +2117,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Andhra Pradesh Kapu Welfare and Development Corporation"
   },
   {
@@ -1409,6 +2126,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Financial Assistance to Drivers"
   },
   {
@@ -1417,6 +2135,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Financial Assistance to Fishermen"
   },
   {
@@ -1425,6 +2144,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "NTR Bharosa Pension Scheme"
   },
   {
@@ -1434,6 +2154,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Post Matric Scholarships (MTF)"
   },
   {
@@ -1443,6 +2164,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Post Matric Scholarships (RTF)"
   },
   {
@@ -1451,6 +2173,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Subsidy on Domestic LPG Scheme"
   },
   {
@@ -1459,6 +2182,7 @@
     "Gender Budget"
    ],
    "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "hoas": [],
    "name": "Thallikivandanam"
   },
   {
@@ -1468,6 +2192,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Department of Skills Development and Training, Secretariat",
+   "hoas": [
+    "2515-00-789-27-09-310-312-V",
+    "2515-00-796-27-09-310-312-V"
+   ],
    "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY) [AP224]"
   },
   {
@@ -1477,6 +2205,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Department of Skills Development and Training, Secretariat",
+   "hoas": [],
    "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana DDUGKY (NRLM)[AP224]"
   },
   {
@@ -1486,6 +2215,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Department of Skills Development and Training, Secretariat",
+   "hoas": [],
    "name": "Skill Development Training Programmes"
   },
   {
@@ -1495,6 +2225,7 @@
     "Gender Budget"
    ],
    "department": "Director General and Inspector General of Police",
+   "hoas": [],
    "name": "Emergency Response Support System"
   },
   {
@@ -1503,6 +2234,12 @@
     "Backward Classes Component"
    ],
    "department": "Director General and Inspector General of Police",
+   "hoas": [
+    "4055-00-001-11-01-220-221-V",
+    "4055-00-001-11-01-520-521-V",
+    "4055-00-001-11-01-520-522-V",
+    "4055-00-001-11-01-520-523-V"
+   ],
    "name": "Headquarters Office"
   },
   {
@@ -1511,6 +2248,7 @@
     "Gender Budget"
    ],
    "department": "Director General and Inspector General of Police",
+   "hoas": [],
    "name": "Women Safety Measures"
   },
   {
@@ -1519,6 +2257,10 @@
     "Backward Classes Component"
    ],
    "department": "Director General of State Disaster Response and Fire Services",
+   "hoas": [
+    "2070-00-108-11-03-210-217-V",
+    "2070-00-108-11-03-210-219-V"
+   ],
    "name": "District Offices"
   },
   {
@@ -1528,6 +2270,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Drugs Control Administration",
+   "hoas": [],
    "name": "Strengthening of State Drug Regulatory Systems[AP218]"
   },
   {
@@ -1537,6 +2280,13 @@
     "Scheduled Tribes Component"
    ],
    "department": "Employment and Training Department",
+   "hoas": [
+    "4250-00-203-07-76-520-521-V",
+    "4250-00-203-07-76-530-531-V",
+    "4250-00-203-11-76-520-521-V",
+    "4250-00-203-11-76-530-531-V",
+    "4250-00-796-11-76-520-521-V"
+   ],
    "name": "Buildings for ITIs"
   },
   {
@@ -1547,6 +2297,32 @@
     "Scheduled Tribes Component"
    ],
    "department": "Employment and Training Department",
+   "hoas": [
+    "2230-03-101-11-04-110-111-V",
+    "2230-03-101-11-04-130-131-V",
+    "2230-03-101-11-04-130-135-V",
+    "2230-03-101-11-04-130-136-V",
+    "2230-03-101-11-04-130-138-V",
+    "2230-03-101-11-04-140-141-V",
+    "2230-03-789-11-04-110-111-V",
+    "2230-03-789-11-04-130-135-V",
+    "2230-03-789-11-04-130-136-V",
+    "2230-03-789-11-04-130-137-V",
+    "2230-03-789-11-04-130-138-V",
+    "2230-03-789-11-04-160-161-V",
+    "2230-03-789-11-04-210-211-V",
+    "2230-03-789-11-04-230-231-V",
+    "2230-03-796-11-04-110-111-V",
+    "2230-03-796-11-04-130-131-V",
+    "2230-03-796-11-04-130-135-V",
+    "2230-03-796-11-04-130-136-V",
+    "2230-03-796-11-04-130-138-V",
+    "2230-03-796-11-04-160-161-V",
+    "2230-03-796-11-04-210-211-V",
+    "2230-03-796-11-04-240-241-V",
+    "2230-03-796-11-04-240-242-V",
+    "2230-03-796-11-04-510-511-V"
+   ],
    "name": "Industrial Training Institutes"
   },
   {
@@ -1556,6 +2332,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Employment and Training Department",
+   "hoas": [],
    "name": "National Apprenticeship Promotion Scheme (NAPS) [AP424]"
   },
   {
@@ -1565,6 +2342,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Employment and Training Department",
+   "hoas": [],
    "name": "NATIONAL CAREER SERVICE [AP132]"
   },
   {
@@ -1574,6 +2352,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Employment and Training Department",
+   "hoas": [],
    "name": "STRIVE [AP335]"
   },
   {
@@ -1585,6 +2364,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Energy ,Secretariat",
+   "hoas": [
+    "2801-05-190-11-06-330-332-V",
+    "2801-05-789-11-06-330-332-V",
+    "2801-05-796-11-06-330-332-V"
+   ],
    "name": "Assistance to Transmission Corporation of Andhra Pradesh Ltd. for Agricultural and allied Subsidy"
   },
   {
@@ -1593,6 +2377,15 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-108-11-05-010-011-V",
+    "2211-00-108-11-05-010-012-V",
+    "2211-00-108-11-05-010-013-V",
+    "2211-00-108-11-05-010-016-V",
+    "2211-00-108-11-05-010-017-V",
+    "2211-00-108-11-05-010-018-V",
+    "2211-00-108-11-05-010-019-V"
+   ],
    "name": "Area Project / Indian Population Project - VI"
   },
   {
@@ -1601,6 +2394,9 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2210-06-101-11-46-310-312-V"
+   ],
    "name": "combating Covid-19"
   },
   {
@@ -1609,6 +2405,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [],
    "name": "Deduct - Recoveries -53.50"
   },
   {
@@ -1617,6 +2414,9 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2210-01-110-04-08-310-312-V"
+   ],
    "name": "Diagnostic Infrastructure facilities in Urban Public HealthCenters"
   },
   {
@@ -1625,6 +2425,9 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-101-11-06-300-301-V"
+   ],
    "name": "Employment of ANMs"
   },
   {
@@ -1633,6 +2436,9 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-105-11-04-500-501-C"
+   ],
    "name": "Ex-gratia Assistance in Cases of Fatality/complication due to Vasectomy/Tubectomy and I.U.D. Insertions"
   },
   {
@@ -1641,6 +2447,18 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-101-11-04-010-011-V",
+    "2211-00-101-11-04-010-012-V",
+    "2211-00-101-11-04-010-013-V",
+    "2211-00-101-11-04-010-016-V",
+    "2211-00-101-11-04-010-017-V",
+    "2211-00-101-11-04-010-018-V",
+    "2211-00-101-11-04-010-019-V",
+    "2211-00-101-11-04-110-111-V",
+    "2211-00-101-11-04-110-114-V",
+    "2211-00-101-11-04-310-318-V"
+   ],
    "name": "Family Welfare Centres"
   },
   {
@@ -1650,6 +2468,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "4211-00-789-27-20-520-521-V",
+    "4211-00-789-27-20-530-531-V",
+    "4211-00-796-27-20-520-521-V",
+    "4211-00-796-27-20-530-531-V"
+   ],
    "name": "Flexible Pool for RCH and Health System Strengthening National Health Programme and national urban health mission"
   },
   {
@@ -1661,6 +2485,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-200-27-20-310-312-V",
+    "2211-00-789-27-20-310-312-V",
+    "2211-00-796-27-20-310-312-V"
+   ],
    "name": "Flexible Pool for RCH & Health System Strengthening National Health Programme and national urban health Mission [AP115]"
   },
   {
@@ -1670,6 +2499,9 @@
     "Gender Budget"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-200-11-09-290-291-V"
+   ],
    "name": "Honorarium to Asha Workers"
   },
   {
@@ -1679,6 +2511,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [],
    "name": "Infrastcture Maintanence[AP390]"
   },
   {
@@ -1688,6 +2521,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-789-35-27-310-312-V",
+    "2211-00-796-35-27-310-312-V"
+   ],
    "name": "Infrastructure maintenance and Kind Grants NHM - Flexible Pool for RCH and Health System [AP500]"
   },
   {
@@ -1697,6 +2534,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [],
    "name": "Mission Shakti - SAMARTHYA -Pradhan Mantri Matru Vandana Yojana [AP285]"
   },
   {
@@ -1705,6 +2543,16 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-200-12-06-010-011-V",
+    "2211-00-200-12-06-010-012-V",
+    "2211-00-200-12-06-010-013-V",
+    "2211-00-200-12-06-010-016-V",
+    "2211-00-200-12-06-010-017-V",
+    "2211-00-200-12-06-010-018-V",
+    "2211-00-200-12-06-010-019-V",
+    "2211-00-200-12-06-300-301-V"
+   ],
    "name": "NHM-Infrastcture Maintanence"
   },
   {
@@ -1713,6 +2561,9 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-103-11-14-210-211-V"
+   ],
    "name": "NTR Baby Kits"
   },
   {
@@ -1721,6 +2572,16 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2211-00-200-11-05-010-011-V",
+    "2211-00-200-11-05-010-012-V",
+    "2211-00-200-11-05-010-013-V",
+    "2211-00-200-11-05-010-016-V",
+    "2211-00-200-11-05-010-017-V",
+    "2211-00-200-11-05-010-018-V",
+    "2211-00-200-11-05-010-019-V",
+    "2211-00-200-11-05-110-114-V"
+   ],
    "name": "Post Partum Schemes: District Hospitals/Teaching Hospitals"
   },
   {
@@ -1731,6 +2592,17 @@
     "Scheduled Tribes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2210-06-200-27-07-310-312-V",
+    "2210-06-789-27-07-310-312-V",
+    "2210-06-796-27-07-310-312-V",
+    "4210-04-200-27-07-520-521-V",
+    "4210-04-200-27-07-530-531-V",
+    "4210-04-789-27-07-520-521-V",
+    "4210-04-789-27-07-530-531-V",
+    "4210-04-796-27-07-520-521-V",
+    "4210-04-796-27-07-530-531-V"
+   ],
    "name": "Pradhan Mantri Ayushman Bharat Health Infrastructure Mission (PM-ABHIM) [AP370]"
   },
   {
@@ -1739,6 +2611,9 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "2210-03-110-04-09-310-312-V"
+   ],
    "name": "Public Health Units"
   },
   {
@@ -1747,6 +2622,9 @@
     "Backward Classes Component"
    ],
    "department": "Family Welfare Department",
+   "hoas": [
+    "4211-00-001-03-09-280-289-V"
+   ],
    "name": "World Bank - Andhra Pradesh Health System Strengthening Project"
   },
   {
@@ -1755,6 +2633,14 @@
     "Backward Classes Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "2405-00-105-11-35-310-311-V",
+    "2405-00-105-11-35-310-312-V",
+    "2405-00-105-11-35-370-372-V",
+    "2405-00-105-11-35-370-373-V",
+    "2405-00-105-11-35-380-382-V",
+    "2405-00-105-11-35-380-385-V"
+   ],
    "name": "Assistance to Andhra Pradesh State Aquaculture Development Authority"
   },
   {
@@ -1763,6 +2649,13 @@
     "Backward Classes Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "2405-00-800-11-25-170-176-V",
+    "2405-00-800-11-25-210-211-V",
+    "2405-00-800-11-25-330-332-V",
+    "2405-00-800-11-25-340-343-V",
+    "2405-00-800-11-25-500-501-V"
+   ],
    "name": "Development of Fisheries"
   },
   {
@@ -1772,6 +2665,10 @@
     "Minorities Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "2405-00-103-11-08-210-211-V",
+    "2405-00-103-11-08-330-331-V"
+   ],
    "name": "Diesel Subsidy to Fishermen Boats"
   },
   {
@@ -1781,6 +2678,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "2405-00-789-11-36-330-331-V",
+    "2405-00-796-11-36-330-331-V"
+   ],
    "name": "Establishment of Pre-Processing and Processing Units"
   },
   {
@@ -1792,6 +2693,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "2405-00-101-27-11-310-312-V",
+    "2405-00-789-27-11-310-312-V",
+    "2405-00-796-27-11-310-312-V"
+   ],
    "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY) [AP346]"
   },
   {
@@ -1803,6 +2709,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "4405-00-104-27-06-530-531-V",
+    "4405-00-789-27-06-530-531-V",
+    "4405-00-796-27-06-530-531-V"
+   ],
    "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY) -Construction of Fish Landing Centers / Jetties [AP346]"
   },
   {
@@ -1811,6 +2722,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "2405-00-789-11-06-210-211-V"
+   ],
    "name": "Scheme for relief and welfare of Fishermen belonging to Scheduled Castes"
   },
   {
@@ -1819,6 +2733,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Fisheries Department",
+   "hoas": [
+    "2405-00-796-11-04-210-211-V"
+   ],
    "name": "Scheme for Relief and Welfare of Tribals"
   },
   {
@@ -1827,6 +2744,9 @@
     "Backward Classes Component"
    ],
    "department": "Food and Civil Supplies Department",
+   "hoas": [
+    "3456-00-104-11-04-320-323-V"
+   ],
    "name": "Andhra Pradesh State Consumer Welfare Fund"
   },
   {
@@ -1837,6 +2757,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Food and Civil Supplies Department",
+   "hoas": [
+    "3456-00-102-28-11-310-312-V",
+    "3456-00-789-28-11-310-312-V",
+    "3456-00-796-28-11-310-312-V"
+   ],
    "name": "Assistance to State Agencies for intra State Movement of foodgrains and FPS dealers Margin under NFSA [AP433]"
   },
   {
@@ -1845,6 +2770,14 @@
     "Backward Classes Component"
    ],
    "department": "Food and Civil Supplies Department",
+   "hoas": [
+    "3456-00-001-11-07-130-138-V",
+    "3456-00-001-11-07-210-211-V",
+    "3456-00-001-11-07-210-213-V",
+    "3456-00-001-11-07-210-214-V",
+    "3456-00-001-11-07-210-215-V",
+    "3456-00-001-11-07-210-216-V"
+   ],
    "name": "Computerisation of PDS Operations"
   },
   {
@@ -1853,6 +2786,12 @@
     "Backward Classes Component"
    ],
    "department": "Food and Civil Supplies Department",
+   "hoas": [
+    "3456-00-103-11-09-200-201-V",
+    "3456-00-103-11-09-200-202-V",
+    "3456-00-103-11-09-210-213-V",
+    "3456-00-103-11-09-210-216-V"
+   ],
    "name": "Consumer Awareness"
   },
   {
@@ -1862,6 +2801,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Food and Civil Supplies Department",
+   "hoas": [],
    "name": "Door Delivery of Rice"
   },
   {
@@ -1875,6 +2815,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Food and Civil Supplies Department",
+   "hoas": [
+    "2236-02-190-11-11-330-332-V",
+    "2236-02-789-11-11-330-332-V",
+    "2236-02-796-11-11-330-332-V"
+   ],
    "name": "Subsidy on Rice (Human Resources Development)"
   },
   {
@@ -1883,6 +2828,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Ground Water Department",
+   "hoas": [
+    "2702-02-789-11-04-270-271-V"
+   ],
    "name": "Survey and Investigation of Ground Water Resources"
   },
   {
@@ -1891,6 +2839,7 @@
     "Gender Budget"
    ],
    "department": "Handlooms and Textiles Department",
+   "hoas": [],
    "name": "Co-operative Handloom Weavers Thrift Fund Scheme"
   },
   {
@@ -1899,6 +2848,7 @@
     "Gender Budget"
    ],
    "department": "Handlooms and Textiles Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -1907,6 +2857,7 @@
     "Gender Budget"
    ],
    "department": "Handlooms and Textiles Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -1915,6 +2866,7 @@
     "Gender Budget"
    ],
    "department": "Handlooms and Textiles Department",
+   "hoas": [],
    "name": "National Institute of Fashion Technology (NIFT)"
   },
   {
@@ -1923,6 +2875,7 @@
     "Gender Budget"
    ],
    "department": "Handlooms and Textiles Department",
+   "hoas": [],
    "name": "Subsidy on Purchase of Raw Materials"
   },
   {
@@ -1931,6 +2884,9 @@
     "Backward Classes Component"
    ],
    "department": "Higher Education, Secretariat",
+   "hoas": [
+    "4202-01-203-11-47-530-531-V"
+   ],
    "name": "Dr. Abdul Haq Urdu University Kurnool"
   },
   {
@@ -1939,6 +2895,21 @@
     "Backward Classes Component"
    ],
    "department": "Higher Education, Secretariat",
+   "hoas": [
+    "2202-03-102-12-07-010-011-V",
+    "2202-03-102-12-07-010-012-V",
+    "2202-03-102-12-07-010-013-V",
+    "2202-03-102-12-07-010-016-V",
+    "2202-03-102-12-07-010-017-V",
+    "2202-03-102-12-07-010-018-V",
+    "2202-03-102-12-07-010-019-V",
+    "2202-03-102-12-07-110-111-V",
+    "2202-03-102-12-07-130-135-V",
+    "2202-03-102-12-07-130-137-V",
+    "2202-03-102-12-07-300-301-V",
+    "2202-03-102-12-07-300-302-V",
+    "2202-03-102-12-07-300-303-V"
+   ],
    "name": "National Service Scheme (NSS)"
   },
   {
@@ -1947,6 +2918,9 @@
     "Backward Classes Component"
    ],
    "department": "Higher Education, Secretariat",
+   "hoas": [
+    "2251-00-090-11-09-280-287-V"
+   ],
    "name": "Sub-Mission on Development of Education"
   },
   {
@@ -1955,6 +2929,9 @@
     "Backward Classes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-108-06-27-310-312-V"
+   ],
    "name": "Coconut Development Board Scheme"
   },
   {
@@ -1963,6 +2940,9 @@
     "Backward Classes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-108-06-26-310-312-V"
+   ],
    "name": "Coconut Palm Insurance Scheme"
   },
   {
@@ -1971,6 +2951,7 @@
     "Gender Budget"
    ],
    "department": "Horticulture Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -1979,6 +2960,7 @@
     "Gender Budget"
    ],
    "department": "Horticulture Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -1988,6 +2970,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana - Integrated Development of Horticulture [AP56]"
   },
   {
@@ -1997,6 +2980,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana - National Bamboo Mission[AP389]"
   },
   {
@@ -2006,6 +2990,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [],
    "name": "Krishionnati Yojana - Oil Palm[AP405]"
   },
   {
@@ -2014,6 +2999,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [],
    "name": "NFSM-Oil Palm"
   },
   {
@@ -2023,6 +3009,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-789-27-13-310-312-V",
+    "2401-00-796-27-13-310-312-V"
+   ],
    "name": "PM RKVY - Agroforestry [AP467]"
   },
   {
@@ -2032,6 +3022,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-789-22-75-310-312-V",
+    "2401-00-796-22-75-310-312-V"
+   ],
    "name": "PM RKVY -Establishment of Seed Garden and Nurseries [AP485]"
   },
   {
@@ -2043,6 +3037,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-119-27-07-310-312-V",
+    "2401-00-789-27-22-310-312-V",
+    "2401-00-796-27-07-310-312-V",
+    "4401-00-119-27-07-530-531-V",
+    "4401-00-789-27-07-530-531-V",
+    "4401-00-796-27-07-530-531-V"
+   ],
    "name": "PM RKVY - Mission for Integrated Development of Horticulture [AP56]"
   },
   {
@@ -2052,6 +3054,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-789-27-74-310-312-V",
+    "2401-00-796-27-74-310-312-V",
+    "4401-00-789-27-74-530-531-V",
+    "4401-00-796-27-74-530-531-V"
+   ],
    "name": "PM RKVY - National Bamboo Mission[AP389]"
   },
   {
@@ -2061,6 +3069,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-789-27-57-310-312-V",
+    "2401-00-796-27-57-310-312-V"
+   ],
    "name": "PM RKVY - National Mission on Edible Oils - Oil Palm [AP405]"
   },
   {
@@ -2072,6 +3084,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-113-27-11-310-312-V",
+    "2401-00-789-27-11-310-312-V",
+    "2401-00-796-27-11-310-312-V"
+   ],
    "name": "PM RKVY - Per Drop More Crop [AP12]"
   },
   {
@@ -2082,6 +3099,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [
+    "2401-00-119-11-57-330-332-V",
+    "2401-00-789-11-25-330-332-V",
+    "2401-00-796-11-19-330-332-V"
+   ],
    "name": "Promotion of Horticulture Activities"
   },
   {
@@ -2091,6 +3113,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Horticulture Department",
+   "hoas": [],
    "name": "RKVY - Per Drop More Crop [AP12]"
   },
   {
@@ -2100,6 +3123,9 @@
     "Minorities Component"
    ],
    "department": "Industries and Commerce, Secretariat",
+   "hoas": [
+    "2408-01-103-11-06-330-331-V"
+   ],
    "name": "Aqua Produce Processing (Fish & Shrimp)"
   },
   {
@@ -2109,6 +3135,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Industries and Commerce, Secretariat",
+   "hoas": [
+    "2408-01-789-22-10-310-312-V",
+    "2408-01-796-22-10-310-312-V"
+   ],
    "name": "PM Formalization of Micro Food Processing Enterprises (PM-FME)"
   },
   {
@@ -2118,6 +3148,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Industries and Commerce, Secretariat",
+   "hoas": [
+    "2408-01-789-27-09-310-312-V",
+    "2408-01-796-27-09-310-312-V"
+   ],
    "name": "PM FORMALIZATION OF MICRO FOOD PROCESSING ENTERPRISES PM-FME [AP343]"
   },
   {
@@ -2126,6 +3160,20 @@
     "Backward Classes Component"
    ],
    "department": "Industries, Commerce and Export Promotion Department",
+   "hoas": [
+    "3453-00-106-11-01-170-171-V",
+    "3453-00-106-11-01-170-172-V",
+    "3453-00-106-11-01-170-173-V",
+    "3453-00-106-11-01-170-174-V",
+    "3453-00-106-11-01-170-175-V",
+    "3453-00-106-11-01-170-176-V",
+    "3453-00-106-11-01-170-177-V",
+    "3453-00-106-11-01-200-201-V",
+    "3453-00-106-11-01-200-202-V",
+    "3453-00-106-11-01-200-204-V",
+    "3453-00-106-11-01-200-205-V",
+    "3453-00-106-11-01-210-215-V"
+   ],
    "name": "Headquarters Office"
   },
   {
@@ -2135,6 +3183,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Industries, Commerce and Export Promotion Department",
+   "hoas": [
+    "2852-80-789-11-04-330-334-V",
+    "2852-80-796-11-04-330-334-V"
+   ],
    "name": "Incentives for Industrial Promotion"
   },
   {
@@ -2143,6 +3195,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Industries, Commerce and Export Promotion Department",
+   "hoas": [
+    "2851-00-789-11-17-330-334-V"
+   ],
    "name": "Incentives to the S.C. Entrepreneurs for Industrial Promotion"
   },
   {
@@ -2152,6 +3207,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Information Technology, Electronics and Communications, Secretariat",
+   "hoas": [
+    "3451-00-789-11-11-280-287-V",
+    "3451-00-796-11-11-280-289-V",
+    "5475-00-789-11-11-520-521-V",
+    "5475-00-796-11-11-520-521-V"
+   ],
    "name": "Information Technology, Electronics & Communications Department"
   },
   {
@@ -2161,6 +3222,7 @@
     "Gender Budget"
    ],
    "department": "Intermediate Education Department",
+   "hoas": [],
    "name": "Assistance to Andhra Pradesh Residential Educational Institutional Societies (I.E)"
   },
   {
@@ -2173,6 +3235,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Intermediate Education Department",
+   "hoas": [
+    "4202-01-203-07-74-530-531-V",
+    "4202-01-796-11-74-530-531-V"
+   ],
    "name": "Buildings"
   },
   {
@@ -2183,6 +3249,9 @@
     "Gender Budget"
    ],
    "department": "Intermediate Education Department",
+   "hoas": [
+    "4202-01-203-11-10-530-531-V"
+   ],
    "name": "Construction of Additional Class Rooms in 9 Government Junior Colleges"
   },
   {
@@ -2192,6 +3261,7 @@
     "Gender Budget"
    ],
    "department": "Intermediate Education Department",
+   "hoas": [],
    "name": "Government Junior Colleges"
   },
   {
@@ -2201,6 +3271,7 @@
     "Gender Budget"
    ],
    "department": "Intermediate Education Department",
+   "hoas": [],
    "name": "Mid-Day Meal programme in Government Junior colleges"
   },
   {
@@ -2210,6 +3281,7 @@
     "Gender Budget"
    ],
    "department": "Intermediate Education Department",
+   "hoas": [],
    "name": "Mid-Day Meal programme in Government Junior colleges-Additional Menu"
   },
   {
@@ -2218,6 +3290,9 @@
     "Backward Classes Component"
    ],
    "department": "Juvenile Welfare Department",
+   "hoas": [
+    "4235-02-106-11-74-530-531-V"
+   ],
    "name": "Buildings"
   },
   {
@@ -2227,6 +3302,7 @@
     "Gender Budget"
    ],
    "department": "Juvenile Welfare Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -2237,6 +3313,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Labour Department",
+   "hoas": [
+    "2230-01-789-11-05-320-325-V",
+    "2230-01-796-11-05-320-325-V"
+   ],
    "name": "Chandranna Bhima"
   },
   {
@@ -2245,6 +3325,7 @@
     "Gender Budget"
    ],
    "department": "Labour Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -2253,6 +3334,7 @@
     "Gender Budget"
    ],
    "department": "Labour Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -2261,6 +3343,7 @@
     "Scheduled Castes Component"
    ],
    "department": "Land Administration Department",
+   "hoas": [],
    "name": "Deduct - Recoveries -5.08"
   },
   {
@@ -2270,6 +3353,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Land Administration Department",
+   "hoas": [],
    "name": "Gruha Vasathi"
   },
   {
@@ -2278,6 +3362,7 @@
     "Gender Budget"
    ],
    "department": "Marketing Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -2286,6 +3371,7 @@
     "Gender Budget"
    ],
    "department": "Marketing Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -2297,6 +3383,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "2211-00-103-11-11-300-304-V",
+    "2211-00-789-11-11-300-304-V",
+    "2211-00-796-11-11-300-304-V"
+   ],
    "name": "Andhra Pradesh Emergency Response Services - 108 Ambulance Services"
   },
   {
@@ -2308,6 +3399,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "2210-01-001-11-09-310-312-V",
+    "2210-01-789-11-09-310-312-V",
+    "2210-01-796-11-09-310-312-V"
+   ],
    "name": "Dr. Nandamuri Taraka Ramarao Vaidya Seva Trust"
   },
   {
@@ -2316,6 +3412,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-796-07-34-520-521-V",
+    "4210-03-796-07-34-530-531-V"
+   ],
    "name": "Establishment of Multi Speciality Hospitals in Tribal Areas"
   },
   {
@@ -2324,6 +3424,10 @@
     "Backward Classes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-105-07-33-520-521-V",
+    "4210-03-105-07-33-530-531-V"
+   ],
    "name": "Establishment of new Medical College along with Hospital in Plain Areas"
   },
   {
@@ -2332,6 +3436,7 @@
     "Gender Budget"
    ],
    "department": "Medical Education Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -2342,6 +3447,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-105-27-31-520-521-V",
+    "4210-03-105-27-31-530-531-V",
+    "4210-03-789-27-31-520-521-V",
+    "4210-03-789-27-31-530-531-V",
+    "4210-03-796-27-31-520-521-V",
+    "4210-03-796-27-31-530-531-V"
+   ],
    "name": "Human Resources for Health and Medical Education - Establishment of New Medical Colleges [AP73]"
   },
   {
@@ -2352,6 +3465,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-01-110-27-37-520-521-V",
+    "4210-01-789-27-37-520-521-V",
+    "4210-01-796-27-37-520-521-V"
+   ],
    "name": "Human Resources for Health and Medical Education - National Mental Health Programme [AP486]"
   },
   {
@@ -2362,6 +3480,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-105-27-08-520-521-V",
+    "4210-03-105-27-08-530-531-V",
+    "4210-03-789-27-08-520-521-V",
+    "4210-03-789-27-08-530-531-V",
+    "4210-03-796-27-08-520-521-V",
+    "4210-03-796-27-08-530-531-V"
+   ],
    "name": "Human Resources for Health and Medical Education-National Programme for Prevention and Management of Trauma and Burn Injuries[AP488]"
   },
   {
@@ -2370,6 +3496,9 @@
     "Backward Classes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-105-11-27-520-521-V"
+   ],
    "name": "Kidney Research Centre superspeciality hospital at Palasa Srikakulam District"
   },
   {
@@ -2378,6 +3507,9 @@
     "Backward Classes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "2210-01-200-11-05-130-134-V"
+   ],
    "name": "Mahaprasthanam"
   },
   {
@@ -2386,6 +3518,10 @@
     "Backward Classes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-105-11-21-520-521-V",
+    "4210-03-105-11-21-530-531-V"
+   ],
    "name": "Medical Buildings"
   },
   {
@@ -2397,6 +3533,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "2211-00-103-11-13-300-304-V",
+    "2211-00-789-11-13-300-304-V",
+    "2211-00-796-11-13-300-304-V"
+   ],
    "name": "Mobile Medical Units (104 Services)"
   },
   {
@@ -2406,6 +3547,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-789-27-36-520-521-V",
+    "4210-03-789-27-36-530-531-V",
+    "4210-03-796-27-36-520-521-V",
+    "4210-03-796-27-36-530-531-V"
+   ],
    "name": "Strengthening and upgradation of State Government Medicalcolleges for starting new PG disciplines and increasing PG seats-(Phase-Il)[AP114]"
   },
   {
@@ -2415,6 +3562,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Medical Education Department",
+   "hoas": [
+    "4210-03-789-27-39-520-521-V",
+    "4210-03-796-27-39-520-521-V"
+   ],
    "name": "Strengthening of Tertiary Care Cancer facilities under NPCDCS [AP487]"
   },
   {
@@ -2424,6 +3575,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Minor Irrigation Department",
+   "hoas": [
+    "4702-00-789-11-23-530-531-V",
+    "4702-00-796-11-23-530-531-V"
+   ],
    "name": "Construction and Restoration of Lift Irrigation Schemes (APSIDC)"
   },
   {
@@ -2433,6 +3588,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Minor Irrigation Department",
+   "hoas": [
+    "4702-00-789-11-12-530-531-V",
+    "4702-00-796-11-12-530-531-V",
+    "4702-00-796-11-12-530-532-V"
+   ],
    "name": "Construction and Restoration of Minor Irrigation Sources"
   },
   {
@@ -2442,6 +3602,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Minor Irrigation Department",
+   "hoas": [
+    "4702-00-789-11-21-530-531-V",
+    "4702-00-796-11-21-530-531-V"
+   ],
    "name": "Restoration of Minor Irrigation Tanks"
   },
   {
@@ -2451,6 +3615,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Ambedkar Overseas Vidya Nidhi (AOVN)"
   },
   {
@@ -2461,6 +3626,25 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-190-11-04-310-312-V",
+    "2225-04-190-11-04-330-332-V",
+    "2225-04-190-11-04-370-371-V",
+    "2225-04-190-11-04-370-372-V",
+    "2225-04-190-11-04-370-373-V",
+    "2225-04-190-11-04-380-381-V",
+    "2225-04-190-11-04-380-383-V",
+    "2225-04-190-11-04-900-912-V",
+    "2225-04-190-11-04-900-916-V",
+    "2225-04-190-11-04-900-917-V",
+    "2225-04-190-11-04-900-924-V",
+    "2225-04-190-11-04-900-926-V",
+    "2225-04-190-11-04-900-929-V",
+    "2225-04-190-11-04-900-932-V",
+    "2225-04-190-11-04-900-933-V",
+    "2225-04-190-11-04-900-952-V",
+    "2225-04-190-11-04-900-955-V"
+   ],
    "name": "Andhra Pradesh State Christian Finance Corporation"
   },
   {
@@ -2471,6 +3655,24 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-190-11-05-310-311-V",
+    "2225-04-190-11-05-310-312-V",
+    "2225-04-190-11-05-370-371-V",
+    "2225-04-190-11-05-370-372-V",
+    "2225-04-190-11-05-370-373-V",
+    "2225-04-190-11-05-380-381-V",
+    "2225-04-190-11-05-380-382-V",
+    "2225-04-190-11-05-380-383-V",
+    "2225-04-190-11-05-900-912-V",
+    "2225-04-190-11-05-900-924-V",
+    "2225-04-190-11-05-900-926-V",
+    "2225-04-190-11-05-900-929-V",
+    "2225-04-190-11-05-900-932-V",
+    "2225-04-190-11-05-900-933-V",
+    "2225-04-190-11-05-900-954-V",
+    "2225-04-190-11-05-900-955-V"
+   ],
    "name": "Andhra Pradesh State Minorities Finance Corporation"
   },
   {
@@ -2481,6 +3683,16 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-190-11-12-310-311-V",
+    "2225-04-190-11-12-310-312-V",
+    "2225-04-190-11-12-370-371-V",
+    "2225-04-190-11-12-370-373-V",
+    "2225-04-190-11-12-380-381-V",
+    "2225-04-190-11-12-380-382-V",
+    "2225-04-190-11-12-380-383-V",
+    "2225-04-190-11-12-380-386-V"
+   ],
    "name": "Andhra Pradesh State Minority Residential Schools"
   },
   {
@@ -2489,6 +3701,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "4225-80-800-11-10-530-531-V"
+   ],
    "name": "Assistance for Construction of Urdu Ghar-cum-Shadikhana"
   },
   {
@@ -2498,6 +3713,14 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-11-24-310-312-V",
+    "2225-04-102-11-24-370-371-V",
+    "2225-04-102-11-24-370-372-V",
+    "2225-04-102-11-24-380-381-V",
+    "2225-04-102-11-24-380-382-V",
+    "2225-04-102-11-24-900-919-V"
+   ],
    "name": "Assistance to Andhra Pradesh Haj Committee"
   },
   {
@@ -2507,6 +3730,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-11-21-310-312-V"
+   ],
    "name": "Assistance to Andhra Pradesh Wakf Board"
   },
   {
@@ -2517,6 +3743,14 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-11-23-310-312-V",
+    "2225-04-102-11-23-370-371-V",
+    "2225-04-102-11-23-370-372-V",
+    "2225-04-102-11-23-370-373-V",
+    "2225-04-102-11-23-380-382-V",
+    "2225-04-102-11-23-380-384-V"
+   ],
    "name": "Assistance to Centre for Education Development of Minorities"
   },
   {
@@ -2525,6 +3759,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-277-11-07-310-312-V"
+   ],
    "name": "Assistance to Urdu Academy"
   },
   {
@@ -2535,6 +3772,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "4225-80-800-11-05-530-531-V"
+   ],
    "name": "Construction of Buildings for Hostels and Residential Schools"
   },
   {
@@ -2544,6 +3784,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Dr. A.P.J. Abdul Kalam Overseas Education Scheme for Minorities"
   },
   {
@@ -2552,6 +3793,15 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-11-26-310-312-V",
+    "2225-04-102-11-26-370-371-V",
+    "2225-04-102-11-26-370-372-V",
+    "2225-04-102-11-26-370-373-V",
+    "2225-04-102-11-26-380-381-V",
+    "2225-04-102-11-26-380-382-V",
+    "2225-04-102-11-26-380-383-V"
+   ],
    "name": "Dudekula Muslim cooperative Society Federation Limited"
   },
   {
@@ -2561,6 +3811,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-190-11-09-310-312-V"
+   ],
    "name": "Economic Support Schemes through AP State Christian Finance Corporation"
   },
   {
@@ -2570,6 +3823,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-190-11-10-310-312-V"
+   ],
    "name": "Economic Support Schemes through AP State Minorities Finance Corporation"
   },
   {
@@ -2578,6 +3834,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Drivers"
   },
   {
@@ -2586,6 +3843,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Fishermen"
   },
   {
@@ -2595,6 +3853,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-11-39-900-918-V"
+   ],
    "name": "Incentives to Imams and Mouzans"
   },
   {
@@ -2603,6 +3864,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Incentives to Pastors"
   },
   {
@@ -2613,6 +3875,15 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-277-11-14-010-011-V",
+    "2225-04-277-11-14-010-012-V",
+    "2225-04-277-11-14-010-013-V",
+    "2225-04-277-11-14-010-016-V",
+    "2225-04-277-11-14-010-017-V",
+    "2225-04-277-11-14-010-018-V",
+    "2225-04-277-11-14-010-019-V"
+   ],
    "name": "Minority Girls Residential Schools"
   },
   {
@@ -2622,6 +3893,21 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-11-53-900-901-V",
+    "2225-04-102-11-53-900-902-V",
+    "2225-04-102-11-53-900-903-V",
+    "2225-04-102-11-53-900-904-V",
+    "2225-04-102-11-53-900-905-V",
+    "2225-04-102-11-53-900-906-V",
+    "2225-04-102-11-53-900-907-V",
+    "2225-04-102-11-53-900-908-V",
+    "2225-04-102-11-53-900-909-V",
+    "2225-04-102-11-53-900-940-V",
+    "2225-04-102-11-53-900-941-V",
+    "2225-04-102-11-53-900-942-V",
+    "2225-04-102-11-53-900-943-V"
+   ],
    "name": "NTR Bharosa Pension Scheme"
   },
   {
@@ -2630,6 +3916,20 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-11-54-900-901-V",
+    "2225-04-102-11-54-900-902-V",
+    "2225-04-102-11-54-900-903-V",
+    "2225-04-102-11-54-900-904-V",
+    "2225-04-102-11-54-900-905-V",
+    "2225-04-102-11-54-900-906-V",
+    "2225-04-102-11-54-900-907-V",
+    "2225-04-102-11-54-900-908-V",
+    "2225-04-102-11-54-900-940-V",
+    "2225-04-102-11-54-900-941-V",
+    "2225-04-102-11-54-900-942-V",
+    "2225-04-102-11-54-900-943-V"
+   ],
    "name": "NTR Bharosa Pension Scheme to Christians"
   },
   {
@@ -2639,6 +3939,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Post Matric Scholarships (MTF)"
   },
   {
@@ -2648,6 +3949,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Post Matric Scholarships (RTF)"
   },
   {
@@ -2657,6 +3959,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "PRADHAN MANTRI JAN VIKAS KARYAKRAM [AP238]"
   },
   {
@@ -2665,6 +3968,9 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-04-102-27-19-310-312-V"
+   ],
    "name": "Pradhan Mantri Jan Vikas Karyakram (PMJVK) [AP238]"
   },
   {
@@ -2673,6 +3979,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Subsidy on Domestic LPG Scheme"
   },
   {
@@ -2681,6 +3988,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Support of Haj Piligrims"
   },
   {
@@ -2689,6 +3997,10 @@
     "Minorities Component"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [
+    "2225-80-800-11-22-310-311-V",
+    "2225-80-800-11-22-310-312-V"
+   ],
    "name": "Survey Commissioner of Wakf"
   },
   {
@@ -2697,6 +4009,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Thallikivandanam"
   },
   {
@@ -2705,6 +4018,7 @@
     "Gender Budget"
    ],
    "department": "Minorities Welfare Department",
+   "hoas": [],
    "name": "Visit to Holy land Jerusalem"
   },
   {
@@ -2713,6 +4027,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "4217-01-051-03-80-530-531-V"
+   ],
    "name": "Amaravati Capital City Development Project"
   },
   {
@@ -2721,6 +4038,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2217-01-191-11-08-310-312-V"
+   ],
    "name": "Capital Region Social Security Fund"
   },
   {
@@ -2732,6 +4052,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2230-02-191-06-05-310-312-V",
+    "2230-02-789-06-05-310-312-V",
+    "2230-02-789-12-05-310-312-V"
+   ],
    "name": "Deendayal Antyodaya Yojana-National Urban Livelihoods Mission (DAY-NULM)[AP239]"
   },
   {
@@ -2741,6 +4066,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2230-02-789-27-05-310-312-V",
+    "2230-02-796-27-05-310-312-V"
+   ],
    "name": "Deen Dayal Upadhyaya Antyodaya Yojana - National Urban Livelihoods Mission (DDU-AY) [AP239]"
   },
   {
@@ -2749,6 +4078,11 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2217-80-191-04-11-310-312-V",
+    "2217-80-192-04-05-310-312-V",
+    "2217-80-193-04-05-310-312-V"
+   ],
    "name": "Finance Commission Grants"
   },
   {
@@ -2758,6 +4092,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [],
    "name": "Interest free loans to urban Self Help Groups"
   },
   {
@@ -2766,6 +4101,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "4217-01-050-11-05-530-532-V"
+   ],
    "name": "Land Pooling for New State Capital"
   },
   {
@@ -2774,6 +4112,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "6217-60-190-11-09-001-000-V"
+   ],
    "name": "Loans to Andhra Pradesh Township & Infrastructure Development Corporation Ltd. (APTIDCO)"
   },
   {
@@ -2782,6 +4123,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "6215-02-191-11-09-001-000-V"
+   ],
    "name": "Loans to Nellore Municipal Corporation"
   },
   {
@@ -2790,6 +4134,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2217-80-191-28-31-310-312-V"
+   ],
    "name": "MISSION FOR DEVELOPMENT OF 100 SMART CITIES -VISAKHAPATNAM[AP372]"
   },
   {
@@ -2799,6 +4146,10 @@
     "Gender Budget"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2217-80-191-11-13-310-311-V",
+    "2217-80-191-11-13-310-312-V"
+   ],
    "name": "Mission for Elimination of Poverty in Municipal Areas (Velugu) - Urban"
   },
   {
@@ -2807,6 +4158,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2217-80-191-27-17-310-312-V"
+   ],
    "name": "NATIONAL RIVER CONSERVATION PLAN-OTHER BASINS -GODAVARI[AP396]"
   },
   {
@@ -2815,6 +4169,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2217-80-191-27-41-310-312-V"
+   ],
    "name": "Swachh Bharat Mission (SBM) - Urban -Capacity Building Skill development & Knowledge Management[AP413]"
   },
   {
@@ -2823,6 +4180,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "2217-80-191-27-40-310-312-V"
+   ],
    "name": "Swachh Bharat Mission (SBM) - Urban -IEC & Behaviour Change (IEC &BC) [AP412]"
   },
   {
@@ -2831,6 +4191,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "4217-60-191-27-39-530-531-V"
+   ],
    "name": "Swachh Bharat Mission (SBM) - Urban - IHHL/CT/PT/ASPIRATIONAL TOILETS [AP409]"
   },
   {
@@ -2839,6 +4202,10 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "4217-60-191-27-88-520-521-V",
+    "4217-60-191-27-88-530-531-V"
+   ],
    "name": "Swachh Bharat Mission (SBM) - Urban - Solid Waste Management (SWM) [AP411]"
   },
   {
@@ -2847,6 +4214,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration and Urban Development, Secretariat",
+   "hoas": [
+    "4217-60-191-27-38-530-531-V"
+   ],
    "name": "Swachh Bharat Mission (SBM) - Urban -USED WATER MANAGEMENT(UWM) [AP410]"
   },
   {
@@ -2855,6 +4225,16 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration Department",
+   "hoas": [
+    "4217-60-051-03-10-130-134-V",
+    "4217-60-051-03-10-130-139-V",
+    "4217-60-051-03-10-140-141-V",
+    "4217-60-051-03-10-280-287-V",
+    "4217-60-051-03-10-280-288-V",
+    "4217-60-051-03-10-300-302-V",
+    "4217-60-051-03-10-310-311-V",
+    "4217-60-051-03-10-530-531-V"
+   ],
    "name": "AIIB (Asian Infrastructure Investment Bank) - Andhra Pradesh Urban Water Supply and Septage Management Improvement Project"
   },
   {
@@ -2864,6 +4244,9 @@
     "Gender Budget"
    ],
    "department": "Municipal Administration Department",
+   "hoas": [
+    "2217-80-191-11-27-310-312-V"
+   ],
    "name": "Anna Canteens"
   },
   {
@@ -2874,6 +4257,9 @@
     "Gender Budget"
    ],
    "department": "Municipal Administration Department",
+   "hoas": [
+    "2217-80-191-11-77-310-312-V"
+   ],
    "name": "Assistance to Municipalities for providing basic facilities in Municipal Schools"
   },
   {
@@ -2883,6 +4269,10 @@
     "Scheduled Castes Component"
    ],
    "department": "Municipal Administration Department",
+   "hoas": [
+    "2217-80-191-11-68-310-312-V",
+    "2217-80-789-11-68-310-319-V"
+   ],
    "name": "Assistance to New Municipalities / Corporations for Developmental Works"
   },
   {
@@ -2891,6 +4281,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration Department",
+   "hoas": [
+    "4217-60-051-11-88-530-531-V"
+   ],
    "name": "Improvement of Solid Waste Management sites under Solid Waste Management in Nagarapanchayats Municipalities/Corporations"
   },
   {
@@ -2899,6 +4292,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Municipal Administration Department",
+   "hoas": [
+    "4217-60-789-11-16-530-531-V"
+   ],
    "name": "Infrastructural Development works in SC Localities of ULBs"
   },
   {
@@ -2907,6 +4303,9 @@
     "Backward Classes Component"
    ],
    "department": "Municipal Administration Department",
+   "hoas": [
+    "2217-05-191-11-08-310-319-V"
+   ],
    "name": "Infrastructure facilities in ULBs under CIIP"
   },
   {
@@ -2915,6 +4314,11 @@
     "Backward Classes Component"
    ],
    "department": "Panchayat Raj Department",
+   "hoas": [
+    "2515-00-196-04-48-310-312-V",
+    "2515-00-197-04-48-310-312-V",
+    "2515-00-198-04-48-310-312-V"
+   ],
    "name": "Finance Commission grants to PR Bodies"
   },
   {
@@ -2925,6 +4329,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Panchayat Raj Department",
+   "hoas": [
+    "2515-00-198-27-17-310-312-V",
+    "2515-00-789-27-17-310-312-V",
+    "2515-00-796-27-17-310-312-V",
+    "4515-00-101-27-17-530-531-V",
+    "4515-00-789-27-17-530-531-V",
+    "4515-00-796-27-17-530-531-V"
+   ],
    "name": "Rashtriya Gram Swaraj Abhiyan (RGSA) [AP289]"
   },
   {
@@ -2935,6 +4347,22 @@
     "Scheduled Tribes Component"
    ],
    "department": "Panchayat Raj Engineering Department",
+   "hoas": [
+    "4515-00-101-03-09-110-111-V",
+    "4515-00-101-03-09-120-121-V",
+    "4515-00-101-03-09-130-134-V",
+    "4515-00-101-03-09-130-137-V",
+    "4515-00-101-03-09-170-171-V",
+    "4515-00-101-03-09-170-172-V",
+    "4515-00-101-03-09-170-174-V",
+    "4515-00-101-03-09-170-175-V",
+    "4515-00-101-03-09-260-261-V",
+    "4515-00-101-03-09-280-289-V",
+    "4515-00-101-03-09-530-531-V",
+    "4515-00-101-03-09-530-532-V",
+    "4515-00-789-03-09-530-531-V",
+    "4515-00-796-03-09-530-531-V"
+   ],
    "name": "AIIB (Asian Infrastructure Investment Bank) - Andhra Pradesh Rural Road Project"
   },
   {
@@ -2943,6 +4371,9 @@
     "Backward Classes Component"
    ],
    "department": "Panchayat Raj Engineering Department",
+   "hoas": [
+    "4515-00-101-11-05-530-531-V"
+   ],
    "name": "Panchayat Raj Buildings"
   },
   {
@@ -2953,6 +4384,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Panchayat Raj Engineering Department",
+   "hoas": [
+    "4515-00-101-11-13-530-531-V",
+    "4515-00-789-11-13-530-531-V",
+    "4515-00-796-11-13-530-531-V"
+   ],
    "name": "Panchayat Raj Roads"
   },
   {
@@ -2963,6 +4399,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Panchayat Raj Engineering Department",
+   "hoas": [
+    "4515-00-101-07-11-530-531-V",
+    "4515-00-789-07-11-530-531-V",
+    "4515-00-796-07-11-530-531-V"
+   ],
    "name": "Panchayat Raj Roads under RIDF Programme"
   },
   {
@@ -2971,6 +4412,10 @@
     "Backward Classes Component"
    ],
    "department": "Panchayat Raj Engineering Department",
+   "hoas": [
+    "4515-00-101-06-11-530-531-V",
+    "4515-00-101-12-11-530-531-V"
+   ],
    "name": "PRADHAN MANTRI GRAM SADAK YOJNA - Construction of Panchayat Raj Roads under PMGSY-Financial Incentive"
   },
   {
@@ -2979,6 +4424,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Panchayat Raj Engineering Department",
+   "hoas": [
+    "2515-00-796-27-27-310-312-V",
+    "4515-00-796-27-27-530-531-V"
+   ],
    "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN) under PMGSY"
   },
   {
@@ -2988,6 +4437,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Panchayat Raj Engineering Department",
+   "hoas": [],
    "name": "Upgradation of NREGP works"
   },
   {
@@ -2996,6 +4446,7 @@
     "Scheduled Castes Component"
    ],
    "department": "Planning, Secretariat",
+   "hoas": [],
    "name": "Deduct - Recoveries -15,92.40"
   },
   {
@@ -3004,6 +4455,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Planning, Secretariat",
+   "hoas": [],
    "name": "Deduct - Recoveries -82.93"
   },
   {
@@ -3012,6 +4464,9 @@
     "Backward Classes Component"
    ],
    "department": "Planning, Secretariat",
+   "hoas": [
+    "5475-00-115-11-12-530-531-V"
+   ],
    "name": "Pulivendula Area Development Agency"
   },
   {
@@ -3021,6 +4476,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Planning, Secretariat",
+   "hoas": [
+    "5475-00-789-11-08-530-531-V",
+    "5475-00-796-11-08-530-531-V"
+   ],
    "name": "Special Development Fund (SDF)"
   },
   {
@@ -3029,6 +4488,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Principal Chief Conservator of Forests",
+   "hoas": [
+    "2406-01-789-27-06-310-312-V"
+   ],
    "name": "Forest Fire Prevention and Management [AP28]"
   },
   {
@@ -3038,6 +4500,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Principal Chief Conservator of Forests",
+   "hoas": [
+    "2402-00-789-27-06-310-312-V",
+    "2402-00-796-27-09-310-312-V"
+   ],
    "name": "Green India Mission-National Afforestation Programme [AP31]"
   },
   {
@@ -3046,6 +4512,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Principal Chief Conservator of Forests",
+   "hoas": [
+    "2406-01-796-11-21-270-271-V"
+   ],
    "name": "Mixed Plantation"
   },
   {
@@ -3055,6 +4524,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Principal Chief Conservator of Forests",
+   "hoas": [
+    "2406-02-789-27-10-310-312-V",
+    "2406-02-796-27-10-310-312-V",
+    "4406-02-789-27-10-530-531-V",
+    "4406-02-796-27-10-530-531-V"
+   ],
    "name": "Project Tiger & Elephant"
   },
   {
@@ -3064,6 +4539,9 @@
     "Gender Budget"
    ],
    "department": "Public Health and Family Welfare Department",
+   "hoas": [
+    "4210-04-107-11-74-520-521-V"
+   ],
    "name": "Buildings"
   },
   {
@@ -3073,6 +4551,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Public Health and Family Welfare Department",
+   "hoas": [
+    "2210-80-789-11-06-210-212-V",
+    "2210-80-796-11-06-210-212-V"
+   ],
    "name": "Centralized Purchase of Drugs and Medicines"
   },
   {
@@ -3081,6 +4563,7 @@
     "Gender Budget"
    ],
    "department": "Public Health and Family Welfare Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -3089,6 +4572,7 @@
     "Gender Budget"
    ],
    "department": "Public Health and Family Welfare Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -3097,6 +4581,9 @@
     "Backward Classes Component"
    ],
    "department": "Public Health and Family Welfare Department",
+   "hoas": [
+    "4210-02-110-11-04-530-531-V"
+   ],
    "name": "Infrastructure facilities for Hospitals"
   },
   {
@@ -3105,6 +4592,7 @@
     "Gender Budget"
    ],
    "department": "Public Transport Department",
+   "hoas": [],
    "name": "Stree Shakti Scheme - providing Free Bus Travel for Women"
   },
   {
@@ -3113,6 +4601,12 @@
     "Backward Classes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2501-02-190-11-08-310-311-V",
+    "2501-02-190-11-08-310-312-V",
+    "2501-02-190-11-08-310-317-V",
+    "2501-02-190-11-08-310-318-V"
+   ],
    "name": "Assistance to District Water Management Agencies"
   },
   {
@@ -3122,6 +4616,16 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2235-02-103-11-15-310-311-V",
+    "2235-02-103-11-15-310-312-V",
+    "2235-02-103-11-15-370-371-V",
+    "2235-02-103-11-15-370-372-V",
+    "2235-02-103-11-15-370-373-V",
+    "2235-02-103-11-15-380-381-V",
+    "2235-02-103-11-15-380-382-V",
+    "2235-02-103-11-15-380-385-V"
+   ],
    "name": "Assistance to Society for Elimination of Rural Poverty (SERP)"
   },
   {
@@ -3130,6 +4634,7 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -3140,6 +4645,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2235-60-200-12-06-310-312-V",
+    "2235-60-200-22-06-310-312-V",
+    "2235-60-789-12-06-310-312-V",
+    "2235-60-789-22-06-310-312-V",
+    "2235-60-796-12-06-310-312-V",
+    "2235-60-796-22-06-310-312-V"
+   ],
    "name": "Indira Gandhi National Disability Pension Scheme (IGNDPS) [AP321]"
   },
   {
@@ -3150,6 +4663,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2235-03-101-12-07-310-312-V",
+    "2235-03-101-22-07-310-312-V",
+    "2235-03-789-12-07-310-312-V",
+    "2235-03-789-22-07-310-312-V",
+    "2235-03-796-12-07-310-312-V",
+    "2235-03-796-22-07-310-312-V"
+   ],
    "name": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS) [AP319]"
   },
   {
@@ -3160,6 +4681,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2235-60-200-12-07-310-312-V",
+    "2235-60-200-22-07-310-312-V",
+    "2235-60-789-12-07-310-312-V",
+    "2235-60-789-22-07-310-312-V",
+    "2235-60-796-12-07-310-312-V",
+    "2235-60-796-22-07-310-312-V"
+   ],
    "name": "INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME(IGNWPS)[AP156]"
   },
   {
@@ -3169,6 +4698,9 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2235-02-103-11-41-330-332-V"
+   ],
    "name": "Interest Free Loans to DWACRA Women (Vaddileni Runalu)"
   },
   {
@@ -3180,6 +4712,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "4515-00-103-25-06-530-531-V"
+   ],
    "name": "Mahatma Gandhi National Rural Employment Guarantee Programme [AP123]"
   },
   {
@@ -3189,6 +4724,9 @@
     "Minorities Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2505-02-101-22-23-310-312-V"
+   ],
    "name": "MAHATMA GANDHI NATIONAL RURAL EMPLOYMENT GURANTEE PROGRAM - SOCIAL AUDIT [AP367]"
   },
   {
@@ -3199,6 +4737,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2515-00-789-27-18-310-312-V",
+    "2515-00-796-27-18-310-312-V"
+   ],
    "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP)"
   },
   {
@@ -3208,6 +4750,9 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2505-02-101-22-26-310-312-V"
+   ],
    "name": "MGNREGA - Admin [AP428]"
   },
   {
@@ -3218,6 +4763,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2235-03-101-22-05-310-312-V",
+    "2235-03-102-12-05-310-312-V",
+    "2235-03-789-12-05-310-312-V",
+    "2235-03-789-22-05-310-312-V",
+    "2235-03-796-12-05-310-312-V",
+    "2235-03-796-22-05-310-312-V"
+   ],
    "name": "National Family Benefit Scheme [AP320]"
   },
   {
@@ -3229,6 +4782,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2515-00-102-27-07-310-312-V",
+    "2515-00-789-27-07-310-312-V",
+    "2515-00-796-27-07-310-312-V"
+   ],
    "name": "NATIONAL RURAL LIVELIHOOD MISSION [AP168]"
   },
   {
@@ -3238,6 +4796,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [],
    "name": "National Rural Livelihood Mission (NRLM)"
   },
   {
@@ -3247,6 +4806,9 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2515-00-102-27-16-310-312-V"
+   ],
    "name": "National Rural Livelihood Mission (NRLM) - SVEP [AP365]"
   },
   {
@@ -3256,6 +4818,9 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2515-00-003-22-11-310-312-V"
+   ],
    "name": "National Rural Livelihood Mission-RSETI [AP255]"
   },
   {
@@ -3264,6 +4829,7 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [],
    "name": "NTR Bharosa Pension Scheme"
   },
   {
@@ -3273,6 +4839,9 @@
     "Gender Budget"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2515-00-103-11-13-270-271-V"
+   ],
    "name": "NTR Jalasiri"
   },
   {
@@ -3283,6 +4852,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Development Department",
+   "hoas": [
+    "2501-05-101-27-08-270-271-V",
+    "2501-05-101-27-08-310-312-V",
+    "2501-05-789-27-08-270-271-V",
+    "2501-05-789-27-08-310-312-V",
+    "2501-05-796-27-08-270-271-V",
+    "2501-05-796-27-08-310-312-V"
+   ],
    "name": "Pradhan Mantri Krishi Sinchayi Yojna-Integrated Watershed Development Program [AP167]"
   },
   {
@@ -3291,6 +4868,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Roads, ENC (Roads and Buildings)",
+   "hoas": [
+    "5054-04-796-11-38-530-531-V"
+   ],
    "name": "Upgradation of NREGP works"
   },
   {
@@ -3301,6 +4881,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Water Supply Department",
+   "hoas": [
+    "4215-01-102-28-14-530-531-V",
+    "4215-01-789-28-14-530-531-V",
+    "4215-01-796-28-14-530-531-V"
+   ],
    "name": "JAL JEEVAN MISSION (JJM)/NRDWM [AP172]"
   },
   {
@@ -3310,6 +4895,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Water Supply Department",
+   "hoas": [],
    "name": "NTR Sujala Sravanthi"
   },
   {
@@ -3320,6 +4906,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Water Supply Department",
+   "hoas": [
+    "4215-01-102-11-30-530-531-V",
+    "4215-01-796-11-30-530-531-V"
+   ],
    "name": "Rural Water Supply Schemes"
   },
   {
@@ -3330,6 +4920,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Water Supply Department",
+   "hoas": [
+    "4215-01-102-07-15-530-531-V",
+    "4215-01-789-07-15-530-531-V",
+    "4215-01-796-07-15-530-531-V"
+   ],
    "name": "Rural Water Supply Schemes under RIDF"
   },
   {
@@ -3340,6 +4935,18 @@
     "Scheduled Tribes Component"
    ],
    "department": "Rural Water Supply Department",
+   "hoas": [
+    "2215-01-102-27-11-310-312-V",
+    "2215-01-102-27-12-310-312-V",
+    "2215-01-789-27-12-310-312-V",
+    "2215-01-796-27-12-310-312-V",
+    "4215-02-102-27-12-520-521-V",
+    "4215-02-102-27-12-530-531-V",
+    "4215-02-789-27-12-520-521-V",
+    "4215-02-789-27-12-530-531-V",
+    "4215-02-796-27-12-520-521-V",
+    "4215-02-796-27-12-530-531-V"
+   ],
    "name": "Swachh Bharat Mission (Grameen DWS) [AP160]"
   },
   {
@@ -3350,6 +4957,11 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-110-11-12-310-312-V",
+    "2202-02-110-11-12-380-383-V",
+    "2202-02-110-11-12-380-384-V"
+   ],
    "name": "Assistance to Sainik School at Kalikiri"
   },
   {
@@ -3360,6 +4972,11 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-110-11-08-310-312-V",
+    "2202-02-110-11-08-380-383-V",
+    "2202-02-110-11-08-380-384-V"
+   ],
    "name": "Assistance to Sainik School Korukonda"
   },
   {
@@ -3369,6 +4986,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Assistance to the Andhra Pradesh Residential Educational Institutions Society"
   },
   {
@@ -3378,6 +4996,9 @@
     "Scheduled Castes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-789-11-23-210-211-V"
+   ],
    "name": "Badikostha"
   },
   {
@@ -3386,6 +5007,9 @@
     "Backward Classes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-202-11-74-530-531-V"
+   ],
    "name": "Buildings (DSE)"
   },
   {
@@ -3394,6 +5018,7 @@
     "Scheduled Castes Component"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Deduct - Recoveries -1,39.29"
   },
   {
@@ -3402,6 +5027,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-796-27-52-530-531-V"
+   ],
    "name": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DAJGUA)"
   },
   {
@@ -3411,6 +5039,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -3420,6 +5049,9 @@
     "Minorities Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-800-11-38-230-231-V"
+   ],
    "name": "Dokka Seethamma Madhyhna Badi Bhojanam - Additional Menu"
   },
   {
@@ -3429,6 +5061,11 @@
     "Minorities Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-800-11-12-210-218-V",
+    "2202-02-800-11-12-230-232-V",
+    "2202-02-800-11-12-230-233-V"
+   ],
    "name": "Dokka Seethamma Madhyhna Badi Bhojanam - Nutritious Meals Programme for IX and X Class"
   },
   {
@@ -3438,6 +5075,9 @@
     "Minorities Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-01-112-11-05-230-234-V"
+   ],
    "name": "Dokka Seethamma Madhyhna Badi Bhojanam - Nutritious Meals Programme (MDM)"
   },
   {
@@ -3447,6 +5087,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Dokka Seethamma Mid day Meal"
   },
   {
@@ -3456,6 +5097,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Dokka Seethamma Mid day Meal - Additional Menu"
   },
   {
@@ -3465,6 +5107,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Dokka Seethamma Mid day Meal- Nutritious Meals Programme for IX and X Class"
   },
   {
@@ -3473,6 +5116,10 @@
     "Backward Classes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-201-11-80-520-521-V",
+    "4202-01-201-11-80-530-531-V"
+   ],
    "name": "Establishment of Sainik School at Kalikiri, Chittoor District"
   },
   {
@@ -3483,6 +5130,9 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-202-11-04-520-521-V"
+   ],
    "name": "Government Secondary Schools"
   },
   {
@@ -3494,6 +5144,9 @@
     "Minorities Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-80-001-11-01-210-211-V"
+   ],
    "name": "Headquarters Office"
   },
   {
@@ -3503,6 +5156,9 @@
     "Minorities Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-202-11-06-530-531-V"
+   ],
    "name": "Mana Badi Mana Bhavishyathu - Infrastructure Facilities in Schools"
   },
   {
@@ -3512,6 +5168,9 @@
     "Minorities Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-202-07-35-530-531-V"
+   ],
    "name": "Mana Badi Mana Bhavishyathu : Upgrading Infrastructure in High Schools"
   },
   {
@@ -3521,6 +5180,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Mana Badi Mana Bhavisyath - Infrastructure Facilities in Schools"
   },
   {
@@ -3530,6 +5190,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Mana Badi Mana Bhavisyath : Upgrading Infrastructure in High Schools"
   },
   {
@@ -3540,6 +5201,19 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-109-11-06-060-061-V",
+    "2202-02-109-11-06-060-062-V",
+    "2202-02-109-11-06-060-063-V",
+    "2202-02-109-11-06-060-066-V",
+    "2202-02-109-11-06-060-067-V",
+    "2202-02-109-11-06-060-068-V",
+    "2202-02-109-11-06-130-134-V",
+    "2202-02-109-11-06-130-135-V",
+    "2202-02-109-11-06-130-137-V",
+    "2202-02-109-11-06-300-301-V",
+    "2202-02-109-11-06-300-302-V"
+   ],
    "name": "Model Schools"
   },
   {
@@ -3552,6 +5226,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-04-200-27-49-310-312-V",
+    "2202-04-789-27-49-310-312-V",
+    "2202-04-796-27-49-310-312-V"
+   ],
    "name": "New India Literacy Programme (NILP)/(ULLAS) [AP394]"
   },
   {
@@ -3560,6 +5239,9 @@
     "Backward Classes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-04-200-06-48-310-312-V"
+   ],
    "name": "Padhna Likhna Abhiyan (PLA)"
   },
   {
@@ -3570,6 +5252,13 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-800-11-05-110-111-V",
+    "2202-02-800-11-05-130-137-V",
+    "2202-02-800-11-05-170-174-V",
+    "2202-02-800-11-05-210-211-V",
+    "2202-02-800-11-05-210-212-V"
+   ],
    "name": "Participation of Andhra Pradesh School Teams in National Games"
   },
   {
@@ -3581,6 +5270,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-789-27-50-310-312-V",
+    "2202-02-796-27-50-310-312-V",
+    "4202-01-789-27-50-530-531-V",
+    "4202-01-796-27-50-530-531-V"
+   ],
    "name": "PM SHRI (PM Schools for Rising India)"
   },
   {
@@ -3591,6 +5286,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-796-27-51-530-531-V"
+   ],
    "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM- JANMAN)-CCA-Construction of Hostel Buildings"
   },
   {
@@ -3604,6 +5302,17 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-01-112-06-19-310-312-V",
+    "2202-01-112-11-19-310-312-V",
+    "2202-01-112-12-19-310-312-V",
+    "2202-01-789-06-19-310-312-V",
+    "2202-01-789-12-19-310-312-V",
+    "2202-01-789-27-19-310-312-V",
+    "2202-01-796-06-19-310-312-V",
+    "2202-01-796-12-19-310-312-V",
+    "2202-01-796-27-19-310-312-V"
+   ],
    "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Cooking Cost [AP70]"
   },
   {
@@ -3617,6 +5326,13 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-01-112-12-16-310-312-V",
+    "2202-01-789-12-16-310-312-V",
+    "2202-01-789-22-16-310-312-V",
+    "2202-01-796-12-16-310-312-V",
+    "2202-01-796-22-16-310-312-V"
+   ],
    "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Cost of Food Grains [AP71]"
   },
   {
@@ -3628,6 +5344,10 @@
     "Minorities Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-01-112-06-20-310-312-V",
+    "2202-01-112-12-20-310-312-V"
+   ],
    "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Honorarium to Cook cum Helpers [AP72]"
   },
   {
@@ -3637,6 +5357,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-01-789-22-18-310-312-V",
+    "2202-01-796-22-18-310-312-V"
+   ],
    "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Management Monitoring & Evaluation [AP74]"
   },
   {
@@ -3650,6 +5374,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-01-112-12-18-310-312-V",
+    "2202-01-789-12-18-310-312-V",
+    "2202-01-796-12-18-310-312-V"
+   ],
    "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Management Monitoring & Evaluation (MME)[AP74]"
   },
   {
@@ -3663,6 +5392,13 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-01-112-12-17-310-312-V",
+    "2202-01-789-12-17-310-312-V",
+    "2202-01-789-22-17-310-312-V",
+    "2202-01-796-12-17-310-312-V",
+    "2202-01-796-22-17-310-312-V"
+   ],
    "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Transportation Assistance [AP75]"
   },
   {
@@ -3673,6 +5409,9 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-201-11-77-530-531-V"
+   ],
    "name": "Protection of High School Buildings"
   },
   {
@@ -3683,6 +5422,9 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "4202-01-202-11-08-530-531-V"
+   ],
    "name": "Sainik School Korukonda"
   },
   {
@@ -3696,6 +5438,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-113-27-47-310-312-V",
+    "2202-02-789-27-47-310-312-V",
+    "2202-02-796-27-47-310-312-V",
+    "4202-01-202-27-11-530-531-V",
+    "4202-01-789-27-47-530-531-V",
+    "4202-01-796-27-42-530-531-V"
+   ],
    "name": "Samagra Shiksha[AP291]"
   },
   {
@@ -3705,6 +5455,7 @@
     "Gender Budget"
    ],
    "department": "School Education Department",
+   "hoas": [],
    "name": "Sarvepalle Radhakrishnan Vidyardhi Mitra"
   },
   {
@@ -3716,6 +5467,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "School Education Department",
+   "hoas": [
+    "2202-02-113-11-35-310-312-V",
+    "2202-02-789-11-35-310-312-V",
+    "2202-02-796-11-35-310-312-V"
+   ],
    "name": "Sarvepalle Radhakrishnan Vidyardhi Mitra - Samagra Shiksha - Student Kit"
   },
   {
@@ -3725,6 +5481,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Sericulture Department",
+   "hoas": [
+    "2851-00-789-11-14-330-331-V"
+   ],
    "name": "Development of Sericulture Industries for the benefit of Scheduled Castes"
   },
   {
@@ -3734,6 +5493,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Sericulture Department",
+   "hoas": [
+    "2851-00-796-11-36-330-331-V"
+   ],
    "name": "Development of Sericulture Industry in Tribal Areas"
   },
   {
@@ -3742,6 +5504,7 @@
     "Gender Budget"
    ],
    "department": "Sericulture Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -3750,6 +5513,7 @@
     "Gender Budget"
    ],
    "department": "Sericulture Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -3761,6 +5525,13 @@
     "Scheduled Tribes Component"
    ],
    "department": "Sericulture Department",
+   "hoas": [
+    "2851-00-107-06-51-310-312-V",
+    "2851-00-107-11-05-330-331-V",
+    "2851-00-107-11-05-330-333-V",
+    "2851-00-789-06-06-310-312-V",
+    "2851-00-796-06-06-310-312-V"
+   ],
    "name": "Implementation of Sericulture Schemes"
   },
   {
@@ -3769,6 +5540,7 @@
     "Gender Budget"
    ],
    "department": "Sericulture Department",
+   "hoas": [],
    "name": "Implementation of Sericulture Schemes[AP438]"
   },
   {
@@ -3778,6 +5550,7 @@
     "Gender Budget"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Ambedkar Overseas Vidya Nidhi (AOVN)"
   },
   {
@@ -3788,6 +5561,20 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-190-11-08-310-311-V",
+    "2225-01-190-11-08-310-312-V",
+    "2225-01-190-11-08-330-332-V",
+    "2225-01-190-11-08-370-372-V",
+    "2225-01-190-11-08-370-373-V",
+    "2225-01-190-11-08-900-912-V",
+    "2225-01-190-11-08-900-924-V",
+    "2225-01-190-11-08-900-926-V",
+    "2225-01-190-11-08-900-929-V",
+    "2225-01-190-11-08-900-933-V",
+    "2225-01-190-11-08-900-952-V",
+    "2225-01-190-11-08-900-955-V"
+   ],
    "name": "Andhra Pradesh Scheduled Castes Corporations"
   },
   {
@@ -3797,6 +5584,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-80-800-11-27-310-312-V"
+   ],
    "name": "Assistance to Andhra Pradesh Study Circle"
   },
   {
@@ -3805,6 +5595,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-001-11-04-310-312-V"
+   ],
    "name": "Assistance to Nodal Agency for Implementing Scheduled Caste Sub Plan - APSCCF Ltd"
   },
   {
@@ -3815,6 +5608,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-277-11-32-340-342-V"
+   ],
    "name": "Best Available Schools"
   },
   {
@@ -3824,6 +5620,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-277-11-08-160-162-V"
+   ],
    "name": "Book Bank"
   },
   {
@@ -3834,6 +5633,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "4225-01-277-11-74-530-531-V"
+   ],
    "name": "Buildings"
   },
   {
@@ -3842,6 +5644,7 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Chandranna Pellikanuka"
   },
   {
@@ -3852,6 +5655,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "4225-01-277-11-31-530-531-V"
+   ],
    "name": "Contsruction of Buildings for Hostels and Colleges in RIAD areas"
   },
   {
@@ -3860,6 +5666,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-283-11-08-500-501-V"
+   ],
    "name": "Decretal charges under land acquisition"
   },
   {
@@ -3869,6 +5678,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-102-11-04-310-312-V"
+   ],
    "name": "Economic Support Schemes"
   },
   {
@@ -3877,6 +5689,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-190-11-11-310-312-V"
+   ],
    "name": "Economic Support Schemes through AP Scheduled Castes Corporation"
   },
   {
@@ -3885,6 +5700,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-102-11-18-310-312-V"
+   ],
    "name": "Economic Support Schemes through LIDCAP"
   },
   {
@@ -3893,6 +5711,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "4225-01-800-11-06-530-531-V"
+   ],
    "name": "Erection of Ambedkar and Jagjeevan Ram Statues"
   },
   {
@@ -3901,6 +5722,7 @@
     "Gender Budget"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Drivers"
   },
   {
@@ -3909,6 +5731,7 @@
     "Gender Budget"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Fishermen"
   },
   {
@@ -3917,6 +5740,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-001-11-01-260-261-V"
+   ],
    "name": "Headquarters Office"
   },
   {
@@ -3926,6 +5752,23 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-102-11-53-900-901-V",
+    "2225-01-102-11-53-900-902-V",
+    "2225-01-102-11-53-900-903-V",
+    "2225-01-102-11-53-900-904-V",
+    "2225-01-102-11-53-900-905-V",
+    "2225-01-102-11-53-900-906-V",
+    "2225-01-102-11-53-900-907-V",
+    "2225-01-102-11-53-900-908-V",
+    "2225-01-102-11-53-900-909-V",
+    "2225-01-102-11-53-900-910-V",
+    "2225-01-102-11-53-900-911-V",
+    "2225-01-102-11-53-900-940-V",
+    "2225-01-102-11-53-900-941-V",
+    "2225-01-102-11-53-900-942-V",
+    "2225-01-102-11-53-900-943-V"
+   ],
    "name": "NTR Bharosa Pension Scheme"
   },
   {
@@ -3935,6 +5778,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-800-11-09-310-312-V"
+   ],
    "name": "NTR Vidyonnathi"
   },
   {
@@ -3943,6 +5789,10 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-102-22-24-310-312-V",
+    "4225-01-102-22-24-530-531-V"
+   ],
    "name": "PM AJAY - Adarsh Gram Yojana [AP304]"
   },
   {
@@ -3951,6 +5801,10 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-102-22-25-310-312-V",
+    "4225-01-277-22-38-530-531-V"
+   ],
    "name": "PM AJAY - BJRCY Hostels [AP450]"
   },
   {
@@ -3960,6 +5814,10 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-102-22-06-310-312-V",
+    "4225-01-277-22-06-530-531-V"
+   ],
    "name": "PM AJAY - SCA to SCSP [AP193]"
   },
   {
@@ -3969,6 +5827,7 @@
     "Gender Budget"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Post Matric Scholarships (MTF)"
   },
   {
@@ -3979,6 +5838,11 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-277-06-06-310-312-V",
+    "2225-01-277-14-06-310-312-V",
+    "2225-01-277-27-06-310-312-V"
+   ],
    "name": "Post-Matric Scholarship to SCs[AP232]"
   },
   {
@@ -3987,6 +5851,7 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Post-Matriculation Scholarships (MTF)"
   },
   {
@@ -3995,6 +5860,7 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Pre-Matric Scholarship to SCs"
   },
   {
@@ -4005,6 +5871,11 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-277-06-09-310-312-V",
+    "2225-01-277-14-09-310-312-V",
+    "2225-01-277-27-09-310-312-V"
+   ],
    "name": "Pre-Matric Scholarship to SCs [AP148]"
   },
   {
@@ -4014,6 +5885,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2801-05-789-11-08-330-331-V"
+   ],
    "name": "Providing free power to SC House holds"
   },
   {
@@ -4023,6 +5897,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2235-02-104-11-08-330-333-V"
+   ],
    "name": "Rehabilitation Economic Development Liberation and Home for Jogin Women"
   },
   {
@@ -4033,6 +5910,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2230-01-112-11-04-330-333-V"
+   ],
    "name": "Rehabilitation Schemes for Bonded Labour and Economic Support Programme"
   },
   {
@@ -4042,6 +5922,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-277-11-36-340-342-V"
+   ],
    "name": "Skill Upgradation for Professional Graduates"
   },
   {
@@ -4051,6 +5934,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-001-28-04-310-312-V"
+   ],
    "name": "SMEPCRA-1995 AND PREVENTION OF ATROCITIES ACT 1989 [AP233]"
   },
   {
@@ -4060,6 +5946,10 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2235-60-200-06-05-310-312-V",
+    "2235-60-200-12-05-310-312-V"
+   ],
    "name": "SMEPCRA-1995 AND PREVENTION OF ATROCITIES ACT 1989 - INTERCASTE MARRIAGES[AP198]"
   },
   {
@@ -4068,6 +5958,10 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Department",
+   "hoas": [
+    "2225-01-800-06-05-310-312-V",
+    "2225-01-800-28-05-310-312-V"
+   ],
    "name": "SMEPCRA-1995 AND PREVENTION OF ATROCITIES ACT 1989 - SPECIAL COURTS[AP152]"
   },
   {
@@ -4076,6 +5970,7 @@
     "Gender Budget"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Subsidy on Domestic LPG Scheme"
   },
   {
@@ -4084,6 +5979,7 @@
     "Gender Budget"
    ],
    "department": "Social Welfare Department",
+   "hoas": [],
    "name": "Thallikivandanam"
   },
   {
@@ -4094,6 +5990,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Residential Educational Institutions Society",
+   "hoas": [
+    "4225-01-277-11-34-530-531-V"
+   ],
    "name": "Construction of Buildings for Residential School Complex"
   },
   {
@@ -4104,6 +6003,17 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Residential Educational Institutions Society",
+   "hoas": [
+    "2225-01-277-11-30-310-311-V",
+    "2225-01-277-11-30-310-312-V",
+    "2225-01-277-11-30-370-371-V",
+    "2225-01-277-11-30-370-372-V",
+    "2225-01-277-11-30-380-381-V",
+    "2225-01-277-11-30-380-382-V",
+    "2225-01-277-11-30-380-383-V",
+    "2225-01-277-11-30-380-385-V",
+    "2225-01-277-11-30-380-386-V"
+   ],
    "name": "Government Residential Centralised Schools"
   },
   {
@@ -4114,6 +6024,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Residential Educational Institutions Society",
+   "hoas": [
+    "4225-01-277-07-32-530-531-V"
+   ],
    "name": "Integrated Residential Schools"
   },
   {
@@ -4124,6 +6037,9 @@
     "Scheduled Castes Component"
    ],
    "department": "Social Welfare Residential Educational Institutions Society",
+   "hoas": [
+    "2225-01-277-11-31-270-272-V"
+   ],
    "name": "Repairs & Maintenance of Residential School Buildings"
   },
   {
@@ -4133,6 +6049,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Sports Authority of Andhra Pradesh (SAAP)",
+   "hoas": [
+    "4202-03-789-11-04-530-531-V",
+    "4202-03-796-11-04-530-531-V"
+   ],
    "name": "Construction of Stadia and Modernization of Sports facilities"
   },
   {
@@ -4141,6 +6061,7 @@
     "Scheduled Castes Component"
    ],
    "department": "State Ports Directorate",
+   "hoas": [],
    "name": "Construction of Fishing Harbors"
   },
   {
@@ -4149,6 +6070,7 @@
     "Child Budget"
    ],
    "department": "Sugar Cane Commissioner",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -4158,6 +6080,10 @@
     "Gender Budget"
    ],
    "department": "Technical Education Department",
+   "hoas": [
+    "4202-02-104-07-74-530-531-V",
+    "4202-02-104-11-74-530-531-V"
+   ],
    "name": "Buildings"
   },
   {
@@ -4167,6 +6093,7 @@
     "Gender Budget"
    ],
    "department": "Technical Education Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -4176,6 +6103,7 @@
     "Gender Budget"
    ],
    "department": "Technical Education Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -4185,6 +6113,30 @@
     "Scheduled Tribes Component"
    ],
    "department": "Technical Education Department",
+   "hoas": [
+    "2203-00-789-11-18-130-135-V",
+    "2203-00-789-11-18-230-231-V",
+    "2203-00-789-11-18-230-234-V",
+    "2203-00-789-11-18-250-251-V",
+    "2203-00-789-11-18-250-252-V",
+    "2203-00-789-11-18-250-253-V",
+    "2203-00-789-11-18-250-254-V",
+    "2203-00-789-11-18-250-256-V",
+    "2203-00-789-11-18-280-287-V",
+    "2203-00-789-11-18-350-355-V",
+    "2203-00-796-11-18-130-135-V",
+    "2203-00-796-11-18-230-231-V",
+    "2203-00-796-11-18-230-234-V",
+    "2203-00-796-11-18-250-251-V",
+    "2203-00-796-11-18-250-252-V",
+    "2203-00-796-11-18-250-254-V",
+    "2203-00-796-11-18-250-256-V",
+    "2203-00-796-11-18-280-287-V",
+    "2203-00-796-11-18-350-355-V",
+    "2203-00-796-11-18-500-504-V",
+    "4202-02-789-11-11-530-531-V",
+    "4202-02-796-11-12-530-531-V"
+   ],
    "name": "Infrastructure facilities in GMR Polytechnics"
   },
   {
@@ -4193,6 +6145,9 @@
     "Backward Classes Component"
    ],
    "department": "Technical Education Department",
+   "hoas": [
+    "4202-02-104-11-12-520-521-V"
+   ],
    "name": "Modernisation of Labs in Government Polytechnics"
   },
   {
@@ -4201,6 +6156,7 @@
     "Child Budget"
    ],
    "department": "Town and Country Planning Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -4210,6 +6166,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-001-22-10-310-312-V"
+   ],
    "name": "Administrative Costs to States/UTs for implementation of the schemes"
   },
   {
@@ -4218,6 +6177,17 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-001-11-06-130-135-V",
+    "2225-02-001-11-06-130-137-V",
+    "2225-02-001-11-06-130-138-V",
+    "2225-02-001-11-06-200-201-V",
+    "2225-02-001-11-06-210-213-V",
+    "2225-02-001-11-06-210-216-V",
+    "2225-02-001-11-06-210-219-V",
+    "2225-02-001-11-06-280-287-V",
+    "2225-02-001-11-06-280-289-V"
+   ],
    "name": "Administrative Support for implementation of TSP"
   },
   {
@@ -4227,6 +6197,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-190-11-07-330-332-V",
+    "2225-02-190-11-07-900-912-V",
+    "2225-02-190-11-07-900-924-V",
+    "2225-02-190-11-07-900-926-V",
+    "2225-02-190-11-07-900-929-V",
+    "2225-02-190-11-07-900-955-V"
+   ],
    "name": "Andhra Pradesh Scheduled Tribes Co-operative Finance Corporation"
   },
   {
@@ -4237,6 +6215,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-11-26-340-342-V"
+   ],
    "name": "Best Available Schools"
   },
   {
@@ -4245,6 +6226,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-051-07-77-530-531-V"
+   ],
    "name": "Construction of Buildings for Integrated Residential Schools"
   },
   {
@@ -4253,6 +6237,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-051-07-76-530-531-V"
+   ],
    "name": "Construction of Roads under NABARD Programmes"
   },
   {
@@ -4262,6 +6249,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-12-16-310-312-V"
+   ],
    "name": "DEVELOPMENT OF PARTICULARLY VULNERABLE TRIBAL GROUPS (PVTGs) [AP300]"
   },
   {
@@ -4270,6 +6260,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-12-28-310-312-V",
+    "2225-02-102-22-28-310-312-V",
+    "4225-02-102-12-28-530-531-V",
+    "4225-02-102-22-28-530-531-V"
+   ],
    "name": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA)"
   },
   {
@@ -4278,6 +6274,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-277-11-21-530-531-V"
+   ],
    "name": "Drinking Water and Sanitation in Tribal Welfare Educational Institutions"
   },
   {
@@ -4286,6 +6285,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-04-310-312-V"
+   ],
    "name": "Economic Support Schemes"
   },
   {
@@ -4294,6 +6296,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-190-11-11-310-312-V"
+   ],
    "name": "Economic Support Schemes through AP Scheduled Tribes Co-operative Finance Corporation"
   },
   {
@@ -4304,6 +6309,21 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-277-11-83-070-071-V",
+    "4225-02-277-11-83-070-072-V",
+    "4225-02-277-11-83-070-073-V",
+    "4225-02-277-11-83-070-076-V",
+    "4225-02-277-11-83-070-077-V",
+    "4225-02-277-11-83-070-078-V",
+    "4225-02-277-11-83-100-101-V",
+    "4225-02-277-11-83-100-102-V",
+    "4225-02-277-11-83-100-103-V",
+    "4225-02-277-11-83-100-106-V",
+    "4225-02-277-11-83-110-116-V",
+    "4225-02-277-11-83-280-289-V",
+    "4225-02-277-11-83-530-531-V"
+   ],
    "name": "Educational Infrastructure"
   },
   {
@@ -4314,6 +6334,27 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-11-05-130-135-V",
+    "2225-02-277-11-05-130-136-V",
+    "2225-02-277-11-05-130-137-V",
+    "2225-02-277-11-05-130-138-V",
+    "2225-02-277-11-05-130-139-V",
+    "2225-02-277-11-05-140-141-V",
+    "2225-02-277-11-05-160-162-V",
+    "2225-02-277-11-05-170-174-V",
+    "2225-02-277-11-05-170-177-V",
+    "2225-02-277-11-05-200-201-V",
+    "2225-02-277-11-05-200-202-V",
+    "2225-02-277-11-05-210-211-V",
+    "2225-02-277-11-05-210-218-V",
+    "2225-02-277-11-05-230-231-V",
+    "2225-02-277-11-05-250-251-V",
+    "2225-02-277-11-05-270-272-V",
+    "2225-02-277-11-05-300-301-V",
+    "2225-02-277-11-05-300-302-V",
+    "2225-02-277-11-05-500-504-V"
+   ],
    "name": "Educational Institutions"
   },
   {
@@ -4322,6 +6363,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-21-330-332-V"
+   ],
    "name": "Electrification of ST Households, Pumpsets and to install Transformers in TW Educational Institutions"
   },
   {
@@ -4330,6 +6374,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-07-310-312-V",
+    "2225-02-102-11-07-370-372-V",
+    "2225-02-102-11-07-370-373-V",
+    "2225-02-102-11-07-380-381-V",
+    "2225-02-102-11-07-380-382-V",
+    "2225-02-102-11-07-380-383-V"
+   ],
    "name": "Establishment of Plain Area Tribal Development Agency"
   },
   {
@@ -4338,6 +6390,7 @@
     "Gender Budget"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Drivers"
   },
   {
@@ -4346,6 +6399,7 @@
     "Gender Budget"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [],
    "name": "Financial Assistance to Fishermen"
   },
   {
@@ -4354,6 +6408,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-190-11-04-310-312-V",
+    "2225-02-190-11-04-380-381-V",
+    "2225-02-190-11-04-380-382-V"
+   ],
    "name": "Financial Assistance to Girijan Co-operative Corporation"
   },
   {
@@ -4364,6 +6423,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-102-22-10-530-531-V"
+   ],
    "name": "Grants under provision to Article 275(1) of the Constitution"
   },
   {
@@ -4372,6 +6434,17 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-08-110-111-V",
+    "2225-02-102-11-08-130-135-V",
+    "2225-02-102-11-08-130-137-V",
+    "2225-02-102-11-08-130-138-V",
+    "2225-02-102-11-08-130-139-V",
+    "2225-02-102-11-08-160-161-V",
+    "2225-02-102-11-08-160-162-V",
+    "2225-02-102-11-08-200-201-V",
+    "2225-02-102-11-08-300-302-V"
+   ],
    "name": "Implementation of the Protection of Forest Right Act"
   },
   {
@@ -4381,6 +6454,21 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-53-900-901-V",
+    "2225-02-102-11-53-900-902-V",
+    "2225-02-102-11-53-900-903-V",
+    "2225-02-102-11-53-900-904-V",
+    "2225-02-102-11-53-900-905-V",
+    "2225-02-102-11-53-900-906-V",
+    "2225-02-102-11-53-900-907-V",
+    "2225-02-102-11-53-900-908-V",
+    "2225-02-102-11-53-900-909-V",
+    "2225-02-102-11-53-900-940-V",
+    "2225-02-102-11-53-900-941-V",
+    "2225-02-102-11-53-900-942-V",
+    "2225-02-102-11-53-900-943-V"
+   ],
    "name": "NTR Bharosa Pension Scheme"
   },
   {
@@ -4390,6 +6478,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-11-13-170-171-V",
+    "2225-02-277-11-13-170-173-V",
+    "2225-02-277-11-13-310-312-V"
+   ],
    "name": "NTR Vidyonnathi"
   },
   {
@@ -4400,6 +6493,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-06-06-310-312-V",
+    "2225-02-277-12-06-310-312-V",
+    "2225-02-277-14-06-310-312-V",
+    "2225-02-277-25-06-310-312-V"
+   ],
    "name": "Post-Matric Scholarship to STs [AP187]"
   },
   {
@@ -4408,6 +6507,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-102-22-20-530-531-V"
+   ],
    "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN) [AP452]"
   },
   {
@@ -4416,6 +6518,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [],
    "name": "Pradhan Mantri Janjati Adviasi Nyaya Maha Abhiyan (PM-JANMAN) -CCA-MPCs-[AP452]"
   },
   {
@@ -4426,6 +6529,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-06-10-340-341-V"
+   ],
    "name": "Pre- Matric Scholarship for STs [AP215]"
   },
   {
@@ -4436,6 +6542,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-14-10-340-341-V",
+    "2225-02-277-25-10-340-341-V"
+   ],
    "name": "Pre-Matric Scholarship to STs [AP215]"
   },
   {
@@ -4445,6 +6555,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-11-330-331-V"
+   ],
    "name": "Reimbursement of Electricity Charges"
   },
   {
@@ -4453,6 +6566,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-18-350-351-V"
+   ],
    "name": "Rejuvenation of Coffee Plantation"
   },
   {
@@ -4462,6 +6578,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-12-09-310-312-V"
+   ],
    "name": "SPECIAL CENTRAL ASSISTANCE TO TRIBAL SUB-SCHEMES[AP180]"
   },
   {
@@ -4470,6 +6589,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-277-11-86-530-531-V"
+   ],
    "name": "Strengthening of Marketing and Storage Infrastructure in ITDAs"
   },
   {
@@ -4479,6 +6601,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-282-11-15-130-138-V",
+    "2225-02-282-11-15-130-139-V",
+    "2225-02-282-11-15-170-174-V",
+    "2225-02-282-11-15-200-207-V",
+    "2225-02-282-11-15-230-231-V",
+    "2225-02-282-11-15-280-287-V"
+   ],
    "name": "Strengthening of Tribal Health"
   },
   {
@@ -4487,6 +6617,7 @@
     "Gender Budget"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [],
    "name": "Subsidy on Domestic LPG Scheme"
   },
   {
@@ -4496,6 +6627,15 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-26-310-312-V",
+    "2225-02-102-11-26-370-371-V",
+    "2225-02-102-11-26-370-372-V",
+    "2225-02-102-11-26-370-373-V",
+    "2225-02-102-11-26-380-381-V",
+    "2225-02-102-11-26-380-382-V",
+    "2225-02-102-11-26-380-386-V"
+   ],
    "name": "Support to ITDA"
   },
   {
@@ -4504,6 +6644,7 @@
     "Gender Budget"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [],
    "name": "Support to ITDAs"
   },
   {
@@ -4512,6 +6653,27 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-11-24-010-011-V",
+    "2225-02-277-11-24-010-012-V",
+    "2225-02-277-11-24-010-013-V",
+    "2225-02-277-11-24-010-016-V",
+    "2225-02-277-11-24-010-017-V",
+    "2225-02-277-11-24-010-018-V",
+    "2225-02-277-11-24-010-019-V",
+    "2225-02-277-11-24-100-101-V",
+    "2225-02-277-11-24-100-102-V",
+    "2225-02-277-11-24-100-103-V",
+    "2225-02-277-11-24-100-106-V",
+    "2225-02-277-11-24-130-131-V",
+    "2225-02-277-11-24-130-135-V",
+    "2225-02-277-11-24-130-136-V",
+    "2225-02-277-11-24-130-137-V",
+    "2225-02-277-11-24-130-138-V",
+    "2225-02-277-11-24-130-139-V",
+    "2225-02-277-11-24-300-301-V",
+    "2225-02-277-11-24-300-302-V"
+   ],
    "name": "Support to Tribal Culture Research and Training Mission"
   },
   {
@@ -4520,6 +6682,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-277-22-24-310-312-V"
+   ],
    "name": "SUPPORT TO TRIBAL RESEARCH INSTITUTES[AP212]"
   },
   {
@@ -4529,6 +6694,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "4225-02-277-22-33-530-531-V"
+   ],
    "name": "SUPPORT TO TRIBAL RESEARCH INSTITUTES- Creation of Capital Assets (CCA) [AP431]"
   },
   {
@@ -4537,6 +6705,7 @@
     "Gender Budget"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [],
    "name": "Thallikivandanam"
   },
   {
@@ -4546,6 +6715,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-282-11-13-290-295-V"
+   ],
    "name": "Tribal Community Health Programme"
   },
   {
@@ -4554,6 +6726,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [],
    "name": "Tribal School Health Programme"
   },
   {
@@ -4562,6 +6735,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-22-130-138-V",
+    "2225-02-102-11-22-310-319-V"
+   ],
    "name": "Viability Gap Assistance (VGA) for Broadband Connectivity in Tribal Areas"
   },
   {
@@ -4571,6 +6748,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Tribal Welfare Department",
+   "hoas": [
+    "2225-02-102-11-17-170-171-V"
+   ],
    "name": "Yuva Kiranalu"
   },
   {
@@ -4579,6 +6759,9 @@
     "Backward Classes Component"
    ],
    "department": "Weaker Section Housing",
+   "hoas": [
+    "6216-03-190-11-09-001-000-V"
+   ],
    "name": "Loans to Andhra Pradesh State Housing Corporation Ltd. (APSHCL)"
   },
   {
@@ -4588,6 +6771,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Weaker Section Housing",
+   "hoas": [
+    "2216-02-789-27-10-310-312-V",
+    "2216-02-796-27-10-310-312-V"
+   ],
    "name": "PMAY-URBAN-BLC 2.0"
   },
   {
@@ -4600,6 +6787,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Weaker Section Housing",
+   "hoas": [
+    "2216-02-190-14-06-310-312-V",
+    "2216-02-190-23-06-310-312-V",
+    "2216-02-789-14-06-310-312-V",
+    "2216-02-789-23-06-310-312-V",
+    "2216-02-796-14-06-310-312-V",
+    "2216-02-796-23-06-310-312-V"
+   ],
    "name": "PMAY-URBAN-BLC Scheme [AP345]"
   },
   {
@@ -4612,6 +6807,14 @@
     "Scheduled Tribes Component"
    ],
    "department": "Weaker Section Housing",
+   "hoas": [
+    "2216-03-104-14-05-310-312-V",
+    "2216-03-104-27-05-310-312-V",
+    "2216-03-789-14-05-310-312-V",
+    "2216-03-789-27-05-310-312-V",
+    "2216-03-796-14-05-310-312-V",
+    "2216-03-796-27-05-310-312-V"
+   ],
    "name": "Pradhan Manthri Awas Yojana (Grameen) [AP259]"
   },
   {
@@ -4621,6 +6824,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Weaker Section Housing",
+   "hoas": [
+    "2216-03-796-14-09-310-312-V",
+    "2216-03-796-27-09-310-312-V"
+   ],
    "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN)"
   },
   {
@@ -4630,6 +6837,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Weaker Section Housing",
+   "hoas": [],
    "name": "Weaker Section Housing under NTR Housing Programme"
   },
   {
@@ -4640,6 +6848,27 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-102-11-25-010-011-V",
+    "2235-02-102-11-25-010-012-V",
+    "2235-02-102-11-25-010-013-V",
+    "2235-02-102-11-25-010-016-V",
+    "2235-02-102-11-25-010-017-V",
+    "2235-02-102-11-25-010-018-V",
+    "2235-02-102-11-25-010-019-V",
+    "2235-02-102-11-25-110-111-V",
+    "2235-02-102-11-25-130-131-V",
+    "2235-02-102-11-25-130-134-V",
+    "2235-02-102-11-25-130-135-V",
+    "2235-02-102-11-25-130-137-V",
+    "2235-02-102-11-25-130-138-V",
+    "2235-02-102-11-25-130-139-V",
+    "2235-02-102-11-25-140-141-V",
+    "2235-02-102-11-25-290-297-V",
+    "2235-02-102-11-25-300-301-V",
+    "2235-02-102-11-25-300-302-V",
+    "2235-02-102-11-25-310-318-V"
+   ],
    "name": "Andhra Pradesh State Commission for Protection of Child Rights"
   },
   {
@@ -4649,6 +6878,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Anganwadi cum Creches under Palna scheme"
   },
   {
@@ -4658,6 +6888,15 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-103-11-23-310-311-V",
+    "2235-02-103-11-23-310-312-V",
+    "2235-02-103-11-23-370-372-V",
+    "2235-02-103-11-23-370-373-V",
+    "2235-02-103-11-23-380-382-V",
+    "2235-02-103-11-23-380-383-V",
+    "4235-02-103-11-23-530-531-V"
+   ],
    "name": "Assistance to A.P. Women Co-operative Finance Corporation"
   },
   {
@@ -4669,6 +6908,10 @@
     "Scheduled Castes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2236-02-101-11-12-230-231-V",
+    "2236-02-789-11-12-230-231-V"
+   ],
    "name": "Bala Sanjeevani"
   },
   {
@@ -4679,6 +6922,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2236-02-796-11-13-230-231-V"
+   ],
    "name": "Bala Sanjeevani Plus"
   },
   {
@@ -4688,6 +6934,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Construction and Upgradation of Anganwadi Centre Buildings under Nadu-Nedu"
   },
   {
@@ -4698,6 +6945,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "4235-02-796-12-20-530-531-V"
+   ],
    "name": "Construction of Anganwadi Centres (AWCs) under PM-JANMAN"
   },
   {
@@ -4706,6 +6956,9 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "4235-02-796-22-20-530-531-V"
+   ],
    "name": "Construction of Anganwadi Centres (AWCs) under PM-JANMAN [AP456]"
   },
   {
@@ -4718,6 +6971,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "4235-02-102-07-04-530-531-V",
+    "4235-02-103-11-04-530-531-V",
+    "4235-02-789-07-04-530-531-V",
+    "4235-02-796-07-04-530-531-V"
+   ],
    "name": "Construction of Buildings for Anganwadi Centres"
   },
   {
@@ -4726,6 +6985,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Construction of working Women's Hostel"
   },
   {
@@ -4735,6 +6995,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "District Offices"
   },
   {
@@ -4744,6 +7005,7 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Girl Child Protection Scheme"
   },
   {
@@ -4753,6 +7015,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Headquarters Office"
   },
   {
@@ -4765,6 +7028,12 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-102-11-09-140-141-V",
+    "2235-02-102-11-09-280-283-V",
+    "2235-02-789-11-08-280-283-V",
+    "2235-02-796-11-05-280-283-V"
+   ],
    "name": "Integrated Child Development Service (ICDS)"
   },
   {
@@ -4774,6 +7043,9 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-103-27-07-310-312-V"
+   ],
    "name": "Mission Shakti - SAMARTHYA - NATIONAL HUB FOR WOMEN EMPOWERMENT [AP359]"
   },
   {
@@ -4784,6 +7056,9 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-102-27-27-310-312-V"
+   ],
    "name": "Mission Shakti - SAMARTHYA - PALNA [AP357]"
   },
   {
@@ -4794,6 +7069,10 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-03-789-27-12-310-312-V",
+    "2235-03-796-27-12-310-312-V"
+   ],
    "name": "Mission Shakti - SAMARTHYA - Pradhan Mantri Matru Vandana Yojana"
   },
   {
@@ -4802,6 +7081,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Shakti -SAMARTHYA - Sakhi Niwas [AP398]"
   },
   {
@@ -4811,6 +7091,9 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-103-27-25-310-312-V"
+   ],
    "name": "Mission Shakti - SAMARTHYA - SHAKTI SADAN [AP406]"
   },
   {
@@ -4820,6 +7103,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "MISSION SHAKTI - SAMBAL - BETI BACAHO BETI PADHAO [AP358]"
   },
   {
@@ -4828,6 +7112,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Shakti - SAMBAL- ONE STOP CENTER [AP391]"
   },
   {
@@ -4836,6 +7121,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Shakti-SAMBAL-One stop Centre (construction grant) [AP455]"
   },
   {
@@ -4844,6 +7130,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Shakti - SAMBAL - WOMEN'S HELPLINE [AP392]"
   },
   {
@@ -4853,6 +7140,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Vatsalya - Child Helpline"
   },
   {
@@ -4863,6 +7151,9 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-102-27-26-310-312-V"
+   ],
    "name": "MISSION VATSALYA (Child Protection Services and Child Welfare Services) [AP353]"
   },
   {
@@ -4872,6 +7163,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Vatsalya-Creation of Capital Assets (Construction of CCIs including JJBs and CWCs)"
   },
   {
@@ -4881,6 +7173,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Vatsalya - Non-Institutional care Sponsorship/ Foster care/ After care"
   },
   {
@@ -4890,6 +7183,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Mission Vatsalya -Swachhta Action Plan (SAP)"
   },
   {
@@ -4902,6 +7196,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2236-02-101-28-12-310-312-V",
+    "2236-02-789-28-12-310-312-V",
+    "2236-02-796-28-12-310-312-V"
+   ],
    "name": "SAKSAM ANGANWADI AND POSHAN 2.0 (Supplementary Nutrition Programme) [AP351]"
   },
   {
@@ -4912,6 +7211,9 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "4235-02-102-27-09-530-531-V"
+   ],
    "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 - CONSTRUCTION OF ANGANWADI CENTER BUILDINGS UNDER ICDS/APIP [AP349"
   },
   {
@@ -4922,6 +7224,9 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "4235-02-102-27-08-530-531-V"
+   ],
    "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 - CONSTRUCTION OF ANGANWADI CENTER BUILDINGS UNDER MGNREGA [AP360]"
   },
   {
@@ -4934,6 +7239,29 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-102-06-09-010-011-V",
+    "2235-02-102-06-09-010-012-V",
+    "2235-02-102-06-09-010-013-V",
+    "2235-02-102-06-09-010-016-V",
+    "2235-02-102-06-09-010-017-V",
+    "2235-02-102-06-09-010-018-V",
+    "2235-02-102-06-09-010-019-V",
+    "2235-02-102-06-09-020-021-V",
+    "2235-02-102-06-09-140-141-V",
+    "2235-02-102-06-09-300-301-V",
+    "2235-02-102-06-09-300-302-V",
+    "2235-02-102-12-09-010-011-V",
+    "2235-02-102-12-09-010-012-V",
+    "2235-02-102-12-09-010-013-V",
+    "2235-02-102-12-09-010-016-V",
+    "2235-02-102-12-09-010-017-V",
+    "2235-02-102-12-09-010-018-V",
+    "2235-02-102-12-09-010-019-V",
+    "2235-02-102-27-09-310-312-V",
+    "2235-02-789-27-08-310-312-V",
+    "2235-02-796-27-05-310-312-V"
+   ],
    "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 (ICDS - Anganwadi Services) [AP347]"
   },
   {
@@ -4944,6 +7272,17 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-102-06-14-300-301-V",
+    "2235-02-102-12-14-010-011-V",
+    "2235-02-102-12-14-010-012-V",
+    "2235-02-102-12-14-010-013-V",
+    "2235-02-102-12-14-010-016-V",
+    "2235-02-102-12-14-010-017-V",
+    "2235-02-102-12-14-010-018-V",
+    "2235-02-102-12-14-010-019-V",
+    "2235-02-102-27-14-310-312-V"
+   ],
    "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 (Poshan Abhiyan) [AP350]"
   },
   {
@@ -4956,6 +7295,11 @@
     "Scheduled Tribes Component"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2236-02-101-28-07-310-312-V",
+    "2236-02-789-28-07-310-312-V",
+    "2236-02-796-28-07-310-312-V"
+   ],
    "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 - Scheme for Adolescent Girls [AP352]"
   },
   {
@@ -4965,6 +7309,7 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [],
    "name": "Saksham Anganwadi and Poshan 2.0 - Swachhata Action Plan [AP462]"
   },
   {
@@ -4974,6 +7319,18 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-103-11-16-110-111-V",
+    "2235-02-103-11-16-130-131-V",
+    "2235-02-103-11-16-130-135-V",
+    "2235-02-103-11-16-130-136-V",
+    "2235-02-103-11-16-130-137-V",
+    "2235-02-103-11-16-280-282-V",
+    "2235-02-103-11-16-300-301-V",
+    "2235-02-103-11-16-300-302-V",
+    "2235-02-103-11-16-300-303-V",
+    "2235-02-103-11-16-310-316-V"
+   ],
    "name": "Schemes for setting up of Womens Training Centres/Institution for Rehabilitation of Women-in-Distress"
   },
   {
@@ -4983,6 +7340,28 @@
     "Gender Budget"
    ],
    "department": "Women Development and Child Welfare Department",
+   "hoas": [
+    "2235-02-103-11-24-010-011-V",
+    "2235-02-103-11-24-010-012-V",
+    "2235-02-103-11-24-010-013-V",
+    "2235-02-103-11-24-010-016-V",
+    "2235-02-103-11-24-010-017-V",
+    "2235-02-103-11-24-010-018-V",
+    "2235-02-103-11-24-010-019-V",
+    "2235-02-103-11-24-110-111-V",
+    "2235-02-103-11-24-130-131-V",
+    "2235-02-103-11-24-130-134-V",
+    "2235-02-103-11-24-130-135-V",
+    "2235-02-103-11-24-130-137-V",
+    "2235-02-103-11-24-130-138-V",
+    "2235-02-103-11-24-130-139-V",
+    "2235-02-103-11-24-140-141-V",
+    "2235-02-103-11-24-290-297-V",
+    "2235-02-103-11-24-300-301-V",
+    "2235-02-103-11-24-300-302-V",
+    "2235-02-103-11-24-300-303-V",
+    "2235-02-103-11-24-310-318-V"
+   ],
    "name": "State Commission for Women"
   },
   {
@@ -4992,6 +7371,18 @@
     "Gender Budget"
    ],
    "department": "Youth Services Department",
+   "hoas": [
+    "2204-00-001-11-06-010-011-V",
+    "2204-00-001-11-06-010-012-V",
+    "2204-00-001-11-06-010-013-V",
+    "2204-00-001-11-06-010-016-V",
+    "2204-00-001-11-06-010-017-V",
+    "2204-00-001-11-06-010-018-V",
+    "2204-00-001-11-06-010-019-V",
+    "2204-00-001-11-06-310-311-V",
+    "2204-00-001-11-06-310-312-V",
+    "2204-00-001-11-06-370-371-V"
+   ],
    "name": "Youth Welfare Schemes"
   }
  ],

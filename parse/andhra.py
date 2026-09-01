@@ -473,10 +473,12 @@ def run(date=None):
             cur = merged.get(k)
             if cur is None:
                 merged[k] = {"name": e["name"], "department": e["department"],
-                             "be_lakh": e["be_lakh"], "books": [label]}
+                             "be_lakh": e["be_lakh"], "books": [label],
+                             "hoas": set(e["hoas"])}
                 continue
             if label not in cur["books"]:
                 cur["books"].append(label)
+            cur["hoas"] |= e["hoas"]
             # The largest slice, never the sum. See the module docstring.
             if e["be_lakh"] is not None:
                 cur["be_lakh"] = (e["be_lakh"] if cur["be_lakh"] is None
@@ -484,10 +486,63 @@ def run(date=None):
 
     out = sorted(merged.values(),
                  key=lambda r: (key(r["department"] or ""), key(r["name"])))
+    # Publish the heads of account. They were collected to decide whether two rows add
+    # and then dropped, which threw away the only evidence that settles whether two
+    # differently branded names are one provision. Andhra Pradesh pays social pensions
+    # under "NTR Bharosa" and myScheme lists eight "INDIRAMMA" pensions; nothing in either
+    # name answers whether those are the same money, and a shared head of account would.
+    # Karnataka keys on the head of account for exactly this reason.
     for r in out:
         r["books"] = sorted(r["books"])
+        r["hoas"] = sorted(r.pop("hoas", ()))
 
+    # A judgement recorded rather than buried, because it decides eight absence claims.
+    #
+    # myScheme lists eight "INDIRAMMA" pensions for Andhra Pradesh, cut by type (old age,
+    # widow, weavers, disabled) crossed with rural and urban. The budget pays social
+    # pensions as "NTR Bharosa Pension Scheme" across five welfare departments plus the
+    # EWS and rural development ones, Rs 27,819 cr in all. Nothing in either name says
+    # whether they are the same money under two political brands.
+    #
+    # What the evidence here shows. INDIRAMMA appears nowhere in the Andhra Pradesh budget,
+    # not once in 552 names. NTR Bharosa's heads of account run 901 to 911 and 940 to 943
+    # under 2225-XX-102-11-53-900, the same block repeated in each department, which is the
+    # shape of one provision subdivided by category and then cross-cut by social group.
+    # Category is the axis INDIRAMMA is cut on, so the two are consistent with being one
+    # scheme renamed.
+    #
+    # Consistent with is not the same as shown to be, so they are kept DISTINCT. Merging
+    # them would erase eight named schemes from the count of what myScheme documents and
+    # would assert a renaming this register cannot evidence. Keeping them apart risks the
+    # milder error, counting one provision twice under two names, which is visible to any
+    # reader because both names are published side by side.
+    #
+    # What would settle it, in order of decisiveness: the sub-head NAMES under
+    # 2225-01-102-11-53-900-9xx, which are in Volume-III-12 and not in these six books, and
+    # which would show whether 901 to 911 really are old age, widow, weavers and disabled;
+    # a government order renaming the scheme; or a start date on the myScheme records,
+    # which carry none. All eight also lack an implementing agency and a benefit amount,
+    # saying only that the scale "will be notified by the Government of Andhra Pradesh",
+    # and one of them describes itself as a different scheme than its own title.
     write_json("data/andhra/schemes.json", {
+        "decisions": [{
+            "question": ("Are myScheme's eight INDIRAMMA pensions the same provision as "
+                         "the budget's NTR Bharosa Pension Scheme, renamed?"),
+            "decision": "kept distinct",
+            "affects": "eight absence claims",
+            "for_same": ("INDIRAMMA appears nowhere in the budget; NTR Bharosa's sub-heads "
+                         "901-911 and 940-943 repeat per department, the shape of one "
+                         "provision cut by category, which is INDIRAMMA's own axis"),
+            "for_distinct": ("no document here says one was renamed to the other, and no "
+                             "head of account is shared, because myScheme publishes none"),
+            "why_this_way": ("merging asserts a renaming this register cannot evidence and "
+                             "erases eight named schemes; keeping them apart risks counting "
+                             "one provision twice, which a reader can see, since both names "
+                             "are published"),
+            "would_settle_it": ("the sub-head names under 2225-01-102-11-53-900-9xx in "
+                                "Volume-III-12, a government order renaming the scheme, or "
+                                "a start date on the myScheme records, which carry none"),
+        }],
         "snapshot": date,
         "built": utcnow(),
         "state": "Andhra Pradesh",
