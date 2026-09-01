@@ -97,10 +97,11 @@ def md(src, limit=None):
     # them as visible "<br>" text on the page.
     t = re.sub(r"<br\s*/?>", "\n", t, flags=re.I)
     # Source text is reproduced as published, except for dash punctuation: 35 of the
-    # 4,771 descriptions use an em-dash, and the house rule is that none appear in
-    # reader-facing text. The substitution is declared on the page rather than made
-    # silently, because altering a quotation without saying so is not reproduction.
-    t = re.sub(r"\s*\u2014\s*", ", ", t)
+    # 4,771 descriptions use an em-dash and the house rule is that none reach the page.
+    # An en-dash rather than a comma, because where the author reached for a dash a dash
+    # is what the sentence wants; swapping in a comma rewrites their punctuation instead
+    # of restyling it. Declared on the page rather than done silently.
+    t = re.sub(r"\u2014", "\u2013", t)
     t = e(t)
     t = re.sub(r"&amp;quot;", "&quot;", t)
     t = re.sub(r"\[([^\]]{1,120})\]\((https?://[^\s)]{1,300})\)",
@@ -486,6 +487,47 @@ def acronym_keys(name):
     return keys
 
 
+def where(entry):
+    """Where a scheme applies, as a place rather than a tier.
+
+    "State or UT" tells a reader nothing they wanted to know. The state is recorded on
+    every myScheme entry and was being thrown away in favour of its level. Central
+    schemes are nationwide except for 21 that name particular states, and 14 entries
+    name several, so both cases are shown rather than flattened.
+    """
+    st = entry.get("state")
+    names = [x for x in (st if isinstance(st, list) else [st] if st else []) if x]
+    named = [x for x in names if x != "All"]
+    lvl = entry.get("level_value")
+
+    if lvl == "central":
+        if not named:
+            return "Central", "nationwide"
+        head = named[0] if len(named) == 1 else f"{len(named)} states"
+        return "Central", head
+    if named:
+        head = named[0] if len(named) == 1 else f"{named[0]} +{len(named)-1}"
+        return head, "state or UT"
+    # Two different silences, and they must not read the same. The Budget and DBT name a
+    # scheme and its money and never where it applies, so those entries have nowhere to
+    # get a state from. Three myScheme records carry no level either, which is a gap in
+    # the portal rather than an absence of a record, and saying "no myScheme record"
+    # about them would have been false.
+    if entry.get("checks"):
+        return entry.get("level") or "not stated", "not recorded on myScheme"
+    return "not stated", "no myScheme record"
+
+
+def where_full(entry):
+    """Every state named, for the scheme page where there is room to list them."""
+    st = entry.get("state")
+    names = [x for x in (st if isinstance(st, list) else [st] if st else []) if x]
+    named = [x for x in names if x != "All"]
+    if not named:
+        return "Nationwide" if entry.get("level_value") == "central" else ""
+    return ", ".join(named)
+
+
 SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
                 "outcome": "Outcome Budget", "dbt": "DBT Bharat"}
 
@@ -688,6 +730,10 @@ def index_section(entries):
             # verdict on the scheme rather than a fact about which portal lists it.
             score = '<span class="nil">...</span>'
             failing = '<span class="muted">not listed on myScheme</span>'
+        w_head, w_sub = where(e_)
+        where_cell = (f'<td>{e(w_head)}'
+                      + (f'<span class="sub2">{e(w_sub)}</span>' if w_sub else "")
+                      + '</td>')
         rows += (f'<tr{xattr} data-p="{(c or {}).get("passed", -1)}" '
                  f'data-o="{e((e_.get("org") or "").lower())}" '
                  f'data-l="{e(e_.get("level_value") or "")}" '
@@ -697,8 +743,8 @@ def index_section(entries):
                  + '>'
                  f'<td><a href="scheme/{e(slug)}.html">{e(e_["name"])}</a>{acr}</td>'
                  f'<td>{badges}</td>'
-                 f'<td class="muted">{e(e_.get("level") or "")}</td>'
-                 f'<td class="muted">{e(e_.get("org") or "")}</td>'
+                 + where_cell
+                 + f'<td class="muted">{e(e_.get("org") or "")}</td>'
                  f'<td class="num">{score}</td>'
                  f'<td class="muted" style="font-size:12px">{failing}</td></tr>')
 
@@ -727,7 +773,7 @@ def index_section(entries):
   {doc_pills}
 </div>
 <div class="tscroll"><table id="tbl">
-  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Level</th>
+  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Where it applies</th>
     <th>Ministry / department</th><th class="num sortable" data-k="p">Passed</th>
     <th>Failing</th></tr></thead>
   <tbody>{rows}</tbody>
@@ -1070,6 +1116,11 @@ def page_scheme(s, status, enrich=None, entry=None):
     segs = "".join(f'<span class="seg {"p" if c["ok"] else "f"}"></span>' for c in s["checks"])
 
     chips = ""
+    # Where it applies, named. The level alone ("State/ UT") is the one fact a reader
+    # already knows from having found the scheme; the state is the one they want.
+    places = where_full(s)
+    if places:
+        chips += f'<span class="chip place">{e(places)}</span>'
     if s.get("level"):
         chips += f'<span class="chip">{e(s["level"])}</span>'
     if s.get("type"):
@@ -1112,8 +1163,8 @@ def page_scheme(s, status, enrich=None, entry=None):
     ])
     if about:
         about = ('<div class="sec-note" style="margin-top:34px">The text below is '
-                 'myScheme&rsquo;s own wording, reproduced as published apart from dash '
-                 'punctuation. Where it is thin, that is the finding.</div>' + about)
+                 'myScheme&rsquo;s own wording, reproduced as published, with em-dashes '
+                 'shown as en-dashes. Where it is thin, that is the finding.</div>' + about)
 
     # Found elsewhere. Deliberately separate from the checks above and never counted in
     # them: this is what a *different* government document says, not what this portal
@@ -1283,7 +1334,7 @@ def build():
 
 
 def audit_text(out_dir):
-    """Reject em-dashes in anything a reader sees.
+    """Reject em-dashes in anything a reader sees. En-dashes are fine.
 
     Checked at build time rather than trusted to discipline: page copy is written in a
     dozen f-strings across this file, and a house rule that is not enforced is a rule
