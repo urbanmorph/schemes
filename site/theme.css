@@ -61,7 +61,8 @@ a{color:inherit}
 .brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
 .brand .nil{font-family:var(--mono);font-size:34px;color:var(--stamp-bright);letter-spacing:.06em;
   line-height:.7;opacity:.9}
-.brand h1{font-size:27px;letter-spacing:-.01em}
+.brandname{font-family:var(--serif);font-weight:500;font-size:27px;
+  letter-spacing:-.01em;display:block}
 .brand .sub{font-family:var(--mono);font-size:11px;color:var(--faint);
   text-transform:uppercase;letter-spacing:.13em;margin-top:3px}
 .tbtn{font-family:var(--mono);font-size:11px;background:none;border:1px solid var(--rule);

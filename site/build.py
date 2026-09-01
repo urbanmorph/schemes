@@ -28,6 +28,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 OUT = os.path.join(HERE, "_out")
 
+# Set this when the site gets a home. Used only for sitemap and canonical URLs.
+SITE_BASE = os.environ.get("SITE_BASE", "https://schemes.pages.dev").rstrip("/")
+
 FONTS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400"
          "&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap")
 
@@ -170,7 +173,10 @@ def load(rel, default=None):
 
 # --------------------------------------------------------------------- chrome
 
-def shell(title, active, body, depth=0):
+def shell(title, active, body, depth=0, desc="", canon=""):
+    # Descriptions are built from source text that has not been through md(), so the
+    # dash rule has to be applied here too or the build guard catches it later.
+    desc = re.sub(r"\u2014", "\u2013", desc or "")
     up = "../" * depth
     st = shell.status or {}
     verdict = st.get("verdict")
@@ -203,6 +209,10 @@ def shell(title, active, body, depth=0):
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)} &middot; The Schemes Register</title>
+<meta name="description" content="{e(desc[:158])}">
+<meta property="og:title" content="{e(title)} &middot; The Schemes Register">
+<meta property="og:description" content="{e(desc[:158])}">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
@@ -212,7 +222,7 @@ def shell(title, active, body, depth=0):
 <header class="mast"><div class="wrap mast-in">
   <a class="brand" href="{home}">
     <span class="nil" aria-hidden="true">...</span>
-    <span><h1>The Schemes Register</h1>
+    <span><span class="brandname">The Schemes Register</span>
     <span class="sub">Indian government scheme data &middot; and what is missing from it</span></span>
   </a>
   <nav class="routes" aria-label="Sections">{nav}</nav>
@@ -307,8 +317,8 @@ def page_index(census, checks, dbt, entries):
 <div class="topline">
   <div>
     <div class="eyebrow">The census</div>
-    <h2 class="pagetitle">Every scheme any government source names,
-      and what each one fails to say</h2>
+    <h1 class="pagetitle">Every scheme any government source names,
+      and what each one fails to say</h1>
   </div>
   <a class="jump" href="#argument">Why this exists &darr;</a>
 </div>
@@ -428,7 +438,7 @@ def page_divergence(census, dbt, reg=None, cls=None):
 
     return f"""
 <div class="eyebrow">Route &middot; /divergence</div>
-<h2 class="pagetitle">Three sources, one question, different answers</h2>
+<h1 class="pagetitle">Three sources, one question, different answers</h1>
 <p class="standfirst">How many welfare schemes does a given state have? Every central
 government portal that answers this question answers it differently, and no portal
 acknowledges the others exist.</p>
@@ -1043,7 +1053,7 @@ def page_unlisted(en, status):
     return f"""
 <div class="eyebrow">Route &middot; /scheme/{e(en["slug"])}</div>
 <div class="shead">
-  <h2>{e(en["name"])}</h2>
+  <h1>{e(en["name"])}</h1>
   <div class="full">Named by {len(en["sources"])} government source(s), and not listed
     on myScheme</div>
   <div class="chips">{chips}</div>
@@ -1079,7 +1089,7 @@ def page_changes(log):
     if not log:
         return """
 <div class="eyebrow">Route &middot; /changes</div>
-<h2 class="pagetitle">What the government changed without saying</h2>
+<h1 class="pagetitle">What the government changed without saying</h1>
 <p class="standfirst">A diff between consecutive monthly snapshots. Nothing here is an
 opinion. Each row is two archived payloads and the field that differs between them.</p>
 <div class="empty">
@@ -1097,7 +1107,7 @@ opinion. Each row is two archived payloads and the field that differs between th
                  f'<div class="det">{c["files"]} file(s) changed</div></div></div>')
     return f"""
 <div class="eyebrow">Route &middot; /changes</div>
-<h2 class="pagetitle">What the government changed without saying</h2>
+<h1 class="pagetitle">What the government changed without saying</h1>
 <div class="tscroll"><table><thead><tr><th>Snapshot</th><th>Commit</th>
 <th class="num">Files changed</th></tr></thead><tbody>
 {''.join(f'<tr><td>{e(c["date"])}</td><td>{e(c["subject"])}</td>'
@@ -1267,7 +1277,7 @@ def page_scheme(s, status, enrich=None, entry=None):
     return f"""
 <div class="eyebrow">Route &middot; /scheme/{e(s["slug"])}</div>
 <div class="shead">
-  <h2>{e(s["short"] or s["name"])}</h2>
+  <h1>{e(s["short"] or s["name"])}</h1>
   <div class="full">{e(s["name"])}</div>
   <div class="chips">{chips}</div>
 </div>
@@ -1347,12 +1357,19 @@ def build():
     registry = load("data/registry.json", {})
     classification = load("data/classification.json", {})
     entries = unify(checks, registry, classification)
-    w("index.html", shell("The census and the argument", "/",
-                          page_index(census, checks, dbt, entries)))
-    w("divergence.html", shell("Divergence", "/divergence",
-                               page_divergence(census, dbt, load("data/registry.json", {}),
-                                               load("data/classification.json", {}))))
-    w("changes.html", shell("Changes", "/changes", page_changes(git_log())))
+    w("index.html", shell(
+        "The census and the argument", "/", page_index(census, checks, dbt, entries),
+        desc=(f"{len(entries):,} Indian government schemes across four official sources, "
+              "with what each source publishes and what it leaves out.")))
+    w("divergence.html", shell(
+        "Divergence", "/divergence",
+        page_divergence(census, dbt, load("data/registry.json", {}),
+                        load("data/classification.json", {})),
+        desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
+              "portal you ask. Three official sources, counted side by side.")))
+    w("changes.html", shell(
+        "Changes", "/changes", page_changes(git_log()),
+        desc="What Indian government scheme records changed between monthly snapshots."))
 
     n = 0
     seen = set()
@@ -1364,9 +1381,37 @@ def build():
         title = (c or {}).get("short") or en["name"]
         body = (page_scheme(c, status, enrich, en) if c
                 else page_unlisted(en, status))
+        # The description is the scheme's own words where it has any, because that is
+        # what a reader searching the scheme's name is looking for. Where there is no
+        # myScheme record, say which sources do name it: that is the finding.
+        if c and c.get("brief"):
+            d = " ".join(c["brief"].split())
+        elif c:
+            d = (f"{en['name']}: {c['passed']} of {c['total']} documentation checks "
+                 f"passed on myScheme.")
+        else:
+            d = (f"{en['name']} is named by "
+                 f"{', '.join(SOURCE_LABEL[k] for k in en['sources'])} and is not "
+                 f"listed on myScheme.")
         w(os.path.join("scheme", f"{en['slug']}.html"),
-          shell(title, "/", body, depth=1))
+          shell(title, "/", body, depth=1, desc=d))
         n += 1
+
+    # A sitemap because 5,438 pages are reachable only through a JS-filtered table, and
+    # a crawler that does not run the filter will never see most of them.
+    urls = ["", "divergence.html", "changes.html"] + [
+        f"scheme/{en['slug']}.html" for en in entries]
+    stamp = datetime.now().strftime("%Y-%m-%d")
+    with open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8") as fh:
+        fh.write('<?xml version="1.0" encoding="UTF-8"?>\n'
+                 '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for u in urls:
+            fh.write(f"<url><loc>{SITE_BASE}/{u}</loc>"
+                     f"<lastmod>{stamp}</lastmod></url>\n")
+        fh.write("</urlset>\n")
+    with open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8") as fh:
+        fh.write("User-agent: *\nAllow: /\n"
+                 f"Sitemap: {SITE_BASE}/sitemap.xml\n")
 
     return n
 
