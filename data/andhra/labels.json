@@ -1,0 +1,5471 @@
+{
+ "borderline": 75,
+ "built_from": "data/andhra/schemes.json",
+ "key_is": "(department, scheme name), written as 'department | name'. Andhra Pradesh prints no scheme code beside the name in four of the six books, and the same name under two departments is two provisions, so the pair is the key. 552 rows carry 484 distinct names.",
+ "labelled": 302,
+ "labels": [
+  {
+   "be_lakh": 3000.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Administration, State Roads and Road Safety Works (RSW), ENC (Roads and Buildings)",
+   "heads_of_account": 2,
+   "key": "Administration, State Roads and Road Safety Works (RSW), ENC (Roads and Buildings) | District and Other Roads",
+   "label": "not_scheme",
+   "name": "District and Other Roads",
+   "reason": "a capital roads head, 5054 District and Other Roads, an asset and not a transfer",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 660000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 3,
+   "key": "Agriculture Department | Annadata Sukhibhava",
+   "label": "scheme",
+   "name": "Annadata Sukhibhava",
+   "reason": "Annadata Sukhibhava pays cash into farmer households' accounts",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 45459.8,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 0,
+   "key": "Agriculture Department | District Offices",
+   "label": "not_scheme",
+   "name": "District Offices",
+   "reason": "the department's district establishment",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 2307.87,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 0,
+   "key": "Agriculture Department | Headquarters Office",
+   "label": "not_scheme",
+   "name": "Headquarters Office",
+   "reason": "the department's headquarters establishment",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 6,
+   "stratum_size": 17
+  },
+  {
+   "be_lakh": 3.75,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 1,
+   "key": "Agriculture Department | IT Enabled Programme - Supply of Tabs and Other Equipment to Staff",
+   "label": "not_scheme",
+   "name": "IT Enabled Programme - Supply of Tabs and Other Equipment to Staff",
+   "reason": "tabs and equipment issued to departmental staff, so the recipients are employees and the goods stay departmental property",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 161.13,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 4,
+   "key": "Agriculture Department | KFW Germany - AP Community Managed Natural Farming (APCNF)",
+   "label": "scheme",
+   "name": "KFW Germany - AP Community Managed Natural Farming (APCNF)",
+   "reason": "APCNF works through farmer groups and pays for their conversion to natural farming; the object heads on this row are all programme management, which is why it is borderline",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 644.45,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 0,
+   "key": "Agriculture Department | KFW Germany - Zero Based Natural Farming (ZBNF)",
+   "label": "scheme",
+   "name": "KFW Germany - Zero Based Natural Farming (ZBNF)",
+   "reason": "the ZBNF predecessor of the same farmer-facing programme, borderline for the same reason",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 7,
+   "stratum_size": 20
+  },
+  {
+   "be_lakh": 4682.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 0,
+   "key": "Agriculture Department | Krishionnati Yojana - Digital Agriculture [AP314]",
+   "label": "not_scheme",
+   "name": "Krishionnati Yojana - Digital Agriculture [AP314]",
+   "reason": "a digital agriculture mission builds a farmer registry and software, which is a system, not a benefit anyone receives",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | Krishionnati Yojana - National Food Security Mission [AP17]",
+   "label": "scheme",
+   "name": "Krishionnati Yojana - National Food Security Mission [AP17]",
+   "reason": "the National Food Security Mission supplies subsidised seed and inputs to farmers",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 0,
+   "key": "Agriculture Department | Krishionnati Yojana - National Food Security and Nutrition Mission [AP17]",
+   "label": "scheme",
+   "name": "Krishionnati Yojana - National Food Security and Nutrition Mission [AP17]",
+   "reason": "the same mission under its longer name",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 4000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 0,
+   "key": "Agriculture Department | Krishionnati Yojana -Food and Nutrition Security [AP17]",
+   "label": "scheme",
+   "name": "Krishionnati Yojana -Food and Nutrition Security [AP17]",
+   "reason": "the same mission again, the Gender Budget's wording",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 6,
+   "stratum_size": 17
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | Krishionnati Yojana-Mission for Aatmanirbharta in Pulses",
+   "label": "scheme",
+   "name": "Krishionnati Yojana-Mission for Aatmanirbharta in Pulses",
+   "reason": "pulses mission, seed minikits and input assistance to farmers",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 584.8,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 1,
+   "key": "Agriculture Department | PM RKVY - Cimate Resilient Integrated Forming System (erst while RAD) [AP306]",
+   "label": "scheme",
+   "name": "PM RKVY - Cimate Resilient Integrated Forming System (erst while RAD) [AP306]",
+   "reason": "integrated farming system assistance paid to farmer beneficiaries",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 1170.5,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 3,
+   "key": "Agriculture Department | PM RKVY - Digital Agriculture Mission [AP314]",
+   "label": "not_scheme",
+   "name": "PM RKVY - Digital Agriculture Mission [AP314]",
+   "reason": "the digital agriculture mission again, a system rather than a benefit",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 530.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | PM RKVY - Mission for Aatmanirbharta in Pulses [AP502]",
+   "label": "scheme",
+   "name": "PM RKVY - Mission for Aatmanirbharta in Pulses [AP502]",
+   "reason": "pulses mission, seed and input assistance to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 283.58,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 1,
+   "key": "Agriculture Department | PM RKVY - National Food Security and Nutriation Mission - Seeds (NFSNM-Seeds) [AP329]",
+   "label": "scheme",
+   "name": "PM RKVY - National Food Security and Nutriation Mission - Seeds (NFSNM-Seeds) [AP329]",
+   "reason": "seed distribution to farmers",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 141.79,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 1,
+   "key": "Agriculture Department | PM RKVY - National Food Security and Nutrition Mission - Seeds (NFSNM-Seeds) [AP329]",
+   "label": "scheme",
+   "name": "PM RKVY - National Food Security and Nutrition Mission - Seeds (NFSNM-Seeds) [AP329]",
+   "reason": "seed distribution to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 700.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | PM RKVY - National Food Security and Nutrition Mission [AP17]",
+   "label": "scheme",
+   "name": "PM RKVY - National Food Security and Nutrition Mission [AP17]",
+   "reason": "the food security and nutrition mission, input assistance to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 3491.25,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 3,
+   "key": "Agriculture Department | PM RKVY - National Mission on Agriculture Mechanisation [AP283]",
+   "label": "scheme",
+   "name": "PM RKVY - National Mission on Agriculture Mechanisation [AP283]",
+   "reason": "farm machinery subsidy paid to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 734.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | PM RKVY - National Mission on Edible Oils (Oil seeds) [AP222]",
+   "label": "scheme",
+   "name": "PM RKVY - National Mission on Edible Oils (Oil seeds) [AP222]",
+   "reason": "oilseeds mission, seed and input assistance to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1557.21,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | PM RKVY - National Mission on Natural Farming (NMNF) [AP471]",
+   "label": "scheme",
+   "name": "PM RKVY - National Mission on Natural Farming (NMNF) [AP471]",
+   "reason": "natural farming mission, conversion assistance paid to farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1058.46,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 3,
+   "key": "Agriculture Department | PM RKVY - National Project on Management of Soil Health and Fertility [AP324]",
+   "label": "scheme",
+   "name": "PM RKVY - National Project on Management of Soil Health and Fertility [AP324]",
+   "reason": "soil health cards are issued to individual farmers, though the head also funds testing laboratories",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 0.02,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 4,
+   "key": "Agriculture Department | PM RKVY - Purchase of Breeder Seeds, Seed Hubs and Storage Units [AP494]",
+   "label": "not_scheme",
+   "name": "PM RKVY - Purchase of Breeder Seeds, Seed Hubs and Storage Units [AP494]",
+   "reason": "seed hubs and storage units are assets the department builds, even though breeder seed ends up with farmers",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 791.6800000000001,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 3,
+   "key": "Agriculture Department | PM RKVY - Sub Mission on Agricultural Extension [AP24]",
+   "label": "not_scheme",
+   "name": "PM RKVY - Sub Mission on Agricultural Extension [AP24]",
+   "reason": "the agricultural extension sub mission funds the extension machinery and its events; the capacity of the delivery system, not a benefit a household receives",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1104.48,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | RKVY - National Project on Management of Soil Health and Fertility [AP324]",
+   "label": "scheme",
+   "name": "RKVY - National Project on Management of Soil Health and Fertility [AP324]",
+   "reason": "the RKVY version of the soil health head, same reading",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 1680.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 0,
+   "key": "Agriculture Department | RKVY - PKVY [AP76]",
+   "label": "scheme",
+   "name": "RKVY - PKVY [AP76]",
+   "reason": "Paramparagat Krishi Vikas Yojana pays organic farming assistance to farmer clusters",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 11275.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Agriculture Department",
+   "heads_of_account": 1,
+   "key": "Agriculture Department | RKVY - Sub Mission on Agriculture Mechanisation [AP283]",
+   "label": "scheme",
+   "name": "RKVY - Sub Mission on Agriculture Mechanisation [AP283]",
+   "reason": "farm machinery subsidy paid to individual farmers",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 10.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Agriculture Department",
+   "heads_of_account": 2,
+   "key": "Agriculture Department | Soil and Water Conservation Programmes",
+   "label": "not_scheme",
+   "name": "Soil and Water Conservation Programmes",
+   "reason": "soil and water conservation is works on land, bunding and check dams, even though part is booked as subsidy",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 200.0,
+   "books": [
+    "Child Budget"
+   ],
+   "borderline": false,
+   "department": "Andhra Pradesh State Legal Services Authority",
+   "heads_of_account": 0,
+   "key": "Andhra Pradesh State Legal Services Authority | Andhra Pradesh Victim Compensation Scheme",
+   "label": "scheme",
+   "name": "Andhra Pradesh Victim Compensation Scheme",
+   "reason": "compensation paid to victims of crime",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 5,
+   "stratum_size": 14
+  },
+  {
+   "be_lakh": 8.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 1,
+   "key": "Animal Husbandry Department | A.P. Animal Feed Act 2020",
+   "label": "not_scheme",
+   "name": "A.P. Animal Feed Act 2020",
+   "reason": "enforcement of a regulatory Act, a departmental function",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 40.0,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 1,
+   "key": "Animal Husbandry Department | Calf Rearing Programme",
+   "label": "scheme",
+   "name": "Calf Rearing Programme",
+   "reason": "calf rearing support paid to livestock owners",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 22.189999999999998,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 13,
+   "key": "Animal Husbandry Department | Hospitals and Dispensaries",
+   "label": "not_scheme",
+   "name": "Hospitals and Dispensaries",
+   "reason": "veterinary hospitals and dispensaries, institutions",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 800.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 1,
+   "key": "Animal Husbandry Department | Infrastructure support to Field Veterinary Institutions",
+   "label": "not_scheme",
+   "name": "Infrastructure support to Field Veterinary Institutions",
+   "reason": "infrastructure for veterinary institutions",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 136.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 3,
+   "key": "Animal Husbandry Department | Livestock Health and Disease Control Programme - Payment of Compensation [AP466]",
+   "label": "scheme",
+   "name": "Livestock Health and Disease Control Programme - Payment of Compensation [AP466]",
+   "reason": "compensation paid to owners whose animals are culled",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 1800.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 3,
+   "key": "Animal Husbandry Department | Livestock Health and Disease Control Programme [AP397]",
+   "label": "scheme",
+   "name": "Livestock Health and Disease Control Programme [AP397]",
+   "reason": "free vaccination and treatment delivered to livestock owners' animals, though the head reads as a departmental disease control function",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 11.2,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 1,
+   "key": "Animal Husbandry Department | Livestock Loss Compensation",
+   "label": "scheme",
+   "name": "Livestock Loss Compensation",
+   "reason": "compensation for livestock loss paid to the owner",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 800.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 3,
+   "key": "Animal Husbandry Department | National Livestock Mission - Assistance for Quality Fodder Seed Production [AP404]",
+   "label": "scheme",
+   "name": "National Livestock Mission - Assistance for Quality Fodder Seed Production [AP404]",
+   "reason": "assistance paid to farmers producing quality fodder seed",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 380.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 3,
+   "key": "Animal Husbandry Department | National Livestock Mission - Livestock Insurance [AP427]",
+   "label": "scheme",
+   "name": "National Livestock Mission - Livestock Insurance [AP427]",
+   "reason": "livestock insurance premium support for owners",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 6.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 3,
+   "key": "Animal Husbandry Department | National Livestock Mission - SEMINARS [AP402]",
+   "label": "not_scheme",
+   "name": "National Livestock Mission - SEMINARS [AP402]",
+   "reason": "departmental seminars, not training delivered to a beneficiary class",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 6.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 3,
+   "key": "Animal Husbandry Department | National Livestock Mission - TRAININGS[AP403]",
+   "label": "not_scheme",
+   "name": "National Livestock Mission - TRAININGS[AP403]",
+   "reason": "the livestock mission's training component, capacity building for the delivery system, read the same way as its seminars component",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1013.8000000000001,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry Department",
+   "heads_of_account": 7,
+   "key": "Animal Husbandry Department | Vaccine Production / Purchase / Testing / Diseases Control",
+   "label": "not_scheme",
+   "name": "Vaccine Production / Purchase / Testing / Diseases Control",
+   "reason": "departmental vaccine production and testing",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 4.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Animal Husbandry, Dairy Development and Fisheries, Secretariat",
+   "heads_of_account": 1,
+   "key": "Animal Husbandry, Dairy Development and Fisheries, Secretariat | Construction of Buildings for Sri Venkateswara Veterinary University",
+   "label": "not_scheme",
+   "name": "Construction of Buildings for Sri Venkateswara Veterinary University",
+   "reason": "buildings for a veterinary university",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 100000.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Aadarana",
+   "label": "scheme",
+   "name": "Aadarana",
+   "reason": "Aadarana gives tools and equipment to Backward Class artisans",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 4069.7,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "label": "scheme",
+   "name": "Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "reason": "overseas study scholarship",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4202.28,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Andhra Pradesh State Backward Classes Co-operative Finance Corporation",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh State Backward Classes Co-operative Finance Corporation",
+   "reason": "assistance to a finance corporation; the corporation on-lends to individuals but the head funds the body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 956.32,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 9,
+   "key": "Backward Classes Welfare Department | Andhra Pradesh Study Circle",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh Study Circle",
+   "reason": "the Study Circle is a coaching institution, though the coaching it gives is free to candidates",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 85.85,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | BC Abhyudaya Yojana",
+   "label": "scheme",
+   "name": "BC Abhyudaya Yojana",
+   "reason": "a Backward Class welfare umbrella under which benefits are paid, though the book prints no component",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5500.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Economic Support Schemes through BC-A Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through BC-A Corporation",
+   "reason": "economic support subsidy and loan paid to BC-A individuals through the corporation",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 5500.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Economic Support Schemes through BC-B Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through BC-B Corporation",
+   "reason": "economic support subsidy and loan paid to individuals through the BC-B corporation",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5500.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Economic Support Schemes through BC-D Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through BC-D Corporation",
+   "reason": "the same through the BC-D corporation",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5500.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Economic Support Schemes through BC-E Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through BC-E Corporation",
+   "reason": "the same economic support scheme routed through the BC-E corporation",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 25041.82,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Financial Assistance to Drivers",
+   "label": "scheme",
+   "name": "Financial Assistance to Drivers",
+   "reason": "financial assistance paid to drivers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 24959.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Financial Assistance to Fishermen",
+   "label": "scheme",
+   "name": "Financial Assistance to Fishermen",
+   "reason": "financial assistance paid to fishermen",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Free power to Barbers",
+   "label": "scheme",
+   "name": "Free power to Barbers",
+   "reason": "free power supplied to barbers, a transfer in kind",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 6,
+   "stratum_size": 17
+  },
+  {
+   "be_lakh": 15000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Free power to Weavers",
+   "label": "scheme",
+   "name": "Free power to Weavers",
+   "reason": "free power supplied to weavers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1191321.1,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 13,
+   "key": "Backward Classes Welfare Department | NTR Bharosa Pension Scheme",
+   "label": "scheme",
+   "name": "NTR Bharosa Pension Scheme",
+   "reason": "NTR Bharosa is the state social security pension",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 111223.0,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 2,
+   "key": "Backward Classes Welfare Department | PM-YASASVI - Post-Matric Scholarship for OBC, EBC & DNT [AP146]",
+   "label": "scheme",
+   "name": "PM-YASASVI - Post-Matric Scholarship for OBC, EBC & DNT [AP146]",
+   "reason": "post matric scholarship for OBC, EBC and DNT students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 78000.0,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 2,
+   "key": "Backward Classes Welfare Department | PM-YASASVI - Pre-Matric Scholarship for OBC, EBC & DNT [AP144]",
+   "label": "scheme",
+   "name": "PM-YASASVI - Pre-Matric Scholarship for OBC, EBC & DNT [AP144]",
+   "reason": "pre matric scholarship for OBC, EBC and DNT students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 42957.95,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Post Matric Scholarships (MTF)",
+   "label": "scheme",
+   "name": "Post Matric Scholarships (MTF)",
+   "reason": "post matric scholarship, mean tested fee reimbursement to students",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 6,
+   "stratum_size": 16
+  },
+  {
+   "be_lakh": 68663.57,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Post Matric Scholarships (RTF)",
+   "label": "scheme",
+   "name": "Post Matric Scholarships (RTF)",
+   "reason": "post matric scholarship, reimbursement of tuition fee",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Power Cost subsidy to Saloons",
+   "label": "scheme",
+   "name": "Power Cost subsidy to Saloons",
+   "reason": "power cost subsidy paid to saloon owners",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 15000.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 1,
+   "key": "Backward Classes Welfare Department | Power cost subsidy to Weavers",
+   "label": "scheme",
+   "name": "Power cost subsidy to Weavers",
+   "reason": "power cost subsidy paid to weavers",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 210157.23000000004,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 15,
+   "key": "Backward Classes Welfare Department | SU - BC-D Corporations",
+   "label": "not_scheme",
+   "name": "SU - BC-D Corporations",
+   "reason": "support to the BC-D corporations names the bodies, not the benefit; the corporations do run economic support schemes, which is why this is close",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 138362.43,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Subsidy on Domestic LPG Scheme",
+   "label": "scheme",
+   "name": "Subsidy on Domestic LPG Scheme",
+   "reason": "domestic LPG subsidy paid to households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 409763.44,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Backward Classes Welfare Department",
+   "heads_of_account": 0,
+   "key": "Backward Classes Welfare Department | Thallikivandanam",
+   "label": "scheme",
+   "name": "Thallikivandanam",
+   "reason": "Thallikivandanam pays mothers for keeping children in school",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 1500.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Collegiate Education Department",
+   "heads_of_account": 1,
+   "key": "Collegiate Education Department | Construction of Buildings for Government Degree Colleges",
+   "label": "not_scheme",
+   "name": "Construction of Buildings for Government Degree Colleges",
+   "reason": "college buildings",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Collegiate Education Department",
+   "heads_of_account": 0,
+   "key": "Collegiate Education Department | Deduct - Recoveries -1,05.67",
+   "label": "not_scheme",
+   "name": "Deduct - Recoveries -1,05.67",
+   "reason": "a deduct recoveries line, an accounting head",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Collegiate Education Department",
+   "heads_of_account": 1,
+   "key": "Collegiate Education Department | District Resource Centres",
+   "label": "not_scheme",
+   "name": "District Resource Centres",
+   "reason": "district resource centres, institutions",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 50.2,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Collegiate Education Department",
+   "heads_of_account": 2,
+   "key": "Collegiate Education Department | RUSA-Management and Monitoring and Evaluation Research component",
+   "label": "not_scheme",
+   "name": "RUSA-Management and Monitoring and Evaluation Research component",
+   "reason": "programme management, monitoring and evaluation",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 957.2,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Collegiate Education Department",
+   "heads_of_account": 2,
+   "key": "Collegiate Education Department | Upgradation of Government Degree Colleges as Centres of Excellence to achieve National Institutional Ranking Framework (NIRF)",
+   "label": "not_scheme",
+   "name": "Upgradation of Government Degree Colleges as Centres of Excellence to achieve National Institutional Ranking Framework (NIRF)",
+   "reason": "upgrading colleges, an institutional head",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 7.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Collegiate Education Department",
+   "heads_of_account": 1,
+   "key": "Collegiate Education Department | Welfare of Scheduled caste Students in Degree Colleges",
+   "label": "scheme",
+   "name": "Welfare of Scheduled caste Students in Degree Colleges",
+   "reason": "welfare provision for Scheduled Caste students in degree colleges",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 30.78,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 3,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Assistance to Andhra Pradesh Differntly Abled Co-operative Corporation",
+   "label": "not_scheme",
+   "name": "Assistance to Andhra Pradesh Differntly Abled Co-operative Corporation",
+   "reason": "assistance to a differently abled co-operative corporation, a body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 400.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 1,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Atal Vayo Abhyuday Yojana (AVYAY) - National Action Plan for Senior Citizens [AP307]",
+   "label": "scheme",
+   "name": "Atal Vayo Abhyuday Yojana (AVYAY) - National Action Plan for Senior Citizens [AP307]",
+   "reason": "AVYAY pays for aids and appliances and maintenance grants for senior citizens, though part of it runs old age homes",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 64.85,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 14,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Establishment of Homes for Visually Challenged",
+   "label": "not_scheme",
+   "name": "Establishment of Homes for Visually Challenged",
+   "reason": "homes for the visually challenged are institutions, even though the residents are beneficiaries; same reading as Karnataka's Government Schools for the Deaf and Blind",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 5.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 1,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Fuel Subsidy",
+   "label": "scheme",
+   "name": "Fuel Subsidy",
+   "reason": "a fuel subsidy paid to beneficiaries",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 44.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 1,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Implementation of National Policy for Older Persons",
+   "label": "not_scheme",
+   "name": "Implementation of National Policy for Older Persons",
+   "reason": "implementing a policy, an administrative head, though it sits under an old age welfare minor head",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 5.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 1,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Implementation of Transgender Welfare Policy",
+   "label": "not_scheme",
+   "name": "Implementation of Transgender Welfare Policy",
+   "reason": "implementing a policy, an administrative head, though the policy itself carries benefits",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 112.5,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 1,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | National Action Plan for Drug Demand Reduction (NAPDDR) [AP330]",
+   "label": "not_scheme",
+   "name": "National Action Plan for Drug Demand Reduction (NAPDDR) [AP330]",
+   "reason": "the drug demand reduction plan funds de-addiction centres and awareness campaigns",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 46.26,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 10,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Opening and Maintenance of Junior Colleges for Hearing Differently Abled",
+   "label": "not_scheme",
+   "name": "Opening and Maintenance of Junior Colleges for Hearing Differently Abled",
+   "reason": "junior colleges for the hearing differently abled, institutions",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 1576.09,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Department for Welfare of Differently Abled, Transgender and Senior Citizens",
+   "heads_of_account": 3,
+   "key": "Department for Welfare of Differently Abled, Transgender and Senior Citizens | Rehabilitation and Supply of Prosthetic Aids to Differently Abled",
+   "label": "scheme",
+   "name": "Rehabilitation and Supply of Prosthetic Aids to Differently Abled",
+   "reason": "prosthetic aids handed to differently abled persons",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 3034.86,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "label": "scheme",
+   "name": "Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "reason": "Ambedkar Overseas Vidya Nidhi pays overseas study costs for students",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 4,
+   "stratum_size": 11
+  },
+  {
+   "be_lakh": 101.97,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Andhra Pradesh Brahmin Welfare and Development Corporation",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh Brahmin Welfare and Development Corporation",
+   "reason": "a welfare and development corporation, a body",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 3,
+   "stratum_size": 3
+  },
+  {
+   "be_lakh": 6313.93,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Financial Assistance to Drivers",
+   "label": "scheme",
+   "name": "Financial Assistance to Drivers",
+   "reason": "financial assistance paid to drivers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 242.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Financial Assistance to Fishermen",
+   "label": "scheme",
+   "name": "Financial Assistance to Fishermen",
+   "reason": "financial assistance paid to fishermen",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 7,
+   "stratum_size": 20
+  },
+  {
+   "be_lakh": 724325.57,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | NTR Bharosa Pension Scheme",
+   "label": "scheme",
+   "name": "NTR Bharosa Pension Scheme",
+   "reason": "the state social security pension",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5192.35,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Post Matric Scholarships (MTF)",
+   "label": "scheme",
+   "name": "Post Matric Scholarships (MTF)",
+   "reason": "post matric scholarship, maintenance to fee students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 61860.45,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Post Matric Scholarships (RTF)",
+   "label": "scheme",
+   "name": "Post Matric Scholarships (RTF)",
+   "reason": "post matric scholarship, reimbursement of tuition fee",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 43754.65,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Subsidy on Domestic LPG Scheme",
+   "label": "scheme",
+   "name": "Subsidy on Domestic LPG Scheme",
+   "reason": "domestic LPG subsidy paid to households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 172407.68,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Department of Economically Weaker Sections (EWS) Welfare",
+   "heads_of_account": 0,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Thallikivandanam",
+   "label": "scheme",
+   "name": "Thallikivandanam",
+   "reason": "Thallikivandanam under the EWS department",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 911.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Department of Skills Development and Training, Secretariat",
+   "heads_of_account": 2,
+   "key": "Department of Skills Development and Training, Secretariat | Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY) [AP224]",
+   "label": "scheme",
+   "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY) [AP224]",
+   "reason": "DDU-GKY trains and places rural youth and pays them a stipend",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Department of Skills Development and Training, Secretariat",
+   "heads_of_account": 0,
+   "key": "Department of Skills Development and Training, Secretariat | Skill Development Training Programmes",
+   "label": "scheme",
+   "name": "Skill Development Training Programmes",
+   "reason": "skill development training given to people, with no other detail printed",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 450.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Director General and Inspector General of Police",
+   "heads_of_account": 0,
+   "key": "Director General and Inspector General of Police | Emergency Response Support System",
+   "label": "not_scheme",
+   "name": "Emergency Response Support System",
+   "reason": "the 112 emergency response system, infrastructure",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 5,
+   "stratum_size": 14
+  },
+  {
+   "be_lakh": 1559.75,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Director General and Inspector General of Police",
+   "heads_of_account": 4,
+   "key": "Director General and Inspector General of Police | Headquarters Office",
+   "label": "not_scheme",
+   "name": "Headquarters Office",
+   "reason": "police headquarters establishment",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 13.760000000000002,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Employment and Training Department",
+   "heads_of_account": 24,
+   "key": "Employment and Training Department | Industrial Training Institutes",
+   "label": "not_scheme",
+   "name": "Industrial Training Institutes",
+   "reason": "industrial training institutes, institutions",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Employment and Training Department",
+   "heads_of_account": 0,
+   "key": "Employment and Training Department | National Apprenticeship Promotion Scheme (NAPS) [AP424]",
+   "label": "scheme",
+   "name": "National Apprenticeship Promotion Scheme (NAPS) [AP424]",
+   "reason": "apprenticeship stipend reimbursement paid to apprentices",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 346.62,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Family Welfare Department",
+   "heads_of_account": 7,
+   "key": "Family Welfare Department | Area Project / Indian Population Project - VI",
+   "label": "not_scheme",
+   "name": "Area Project / Indian Population Project - VI",
+   "reason": "a population project head whose whole provision is salaries",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 62.5,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Family Welfare Department",
+   "heads_of_account": 1,
+   "key": "Family Welfare Department | Employment of ANMs",
+   "label": "not_scheme",
+   "name": "Employment of ANMs",
+   "reason": "employing auxiliary nurse midwives, a staffing head",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 182247.59,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Family Welfare Department",
+   "heads_of_account": 3,
+   "key": "Family Welfare Department | Flexible Pool for RCH & Health System Strengthening National Health Programme and national urban health Mission [AP115]",
+   "label": "not_scheme",
+   "name": "Flexible Pool for RCH & Health System Strengthening National Health Programme and national urban health Mission [AP115]",
+   "reason": "the NHM flexible pool strengthens the health system; services reach women and children but the head funds the system",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Family Welfare Department",
+   "heads_of_account": 0,
+   "key": "Family Welfare Department | Infrastcture Maintanence[AP390]",
+   "label": "not_scheme",
+   "name": "Infrastcture Maintanence[AP390]",
+   "reason": "infrastructure maintenance",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 15285.550000000001,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Family Welfare Department",
+   "heads_of_account": 8,
+   "key": "Family Welfare Department | NHM-Infrastcture Maintanence",
+   "label": "not_scheme",
+   "name": "NHM-Infrastcture Maintanence",
+   "reason": "NHM infrastructure maintenance",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 1278.7,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Family Welfare Department",
+   "heads_of_account": 1,
+   "key": "Family Welfare Department | NTR Baby Kits",
+   "label": "scheme",
+   "name": "NTR Baby Kits",
+   "reason": "a kit handed to the mother of a newborn",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 194.02,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Family Welfare Department",
+   "heads_of_account": 1,
+   "key": "Family Welfare Department | Public Health Units",
+   "label": "not_scheme",
+   "name": "Public Health Units",
+   "reason": "public health units, institutions",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 762.4,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Fisheries Department",
+   "heads_of_account": 5,
+   "key": "Fisheries Department | Development of Fisheries",
+   "label": "not_scheme",
+   "name": "Development of Fisheries",
+   "reason": "a generic departmental development head, though part of it is booked as subsidy and stipend",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 4160.0,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Fisheries Department",
+   "heads_of_account": 2,
+   "key": "Fisheries Department | Diesel Subsidy to Fishermen Boats",
+   "label": "scheme",
+   "name": "Diesel Subsidy to Fishermen Boats",
+   "reason": "diesel subsidy paid to fishermen for their boats",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 10240.0,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Fisheries Department",
+   "heads_of_account": 3,
+   "key": "Fisheries Department | Pradhan Mantri Matsya Sampada Yojana (PMMSY) [AP346]",
+   "label": "scheme",
+   "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY) [AP346]",
+   "reason": "PMMSY pays subsidies to fishers for boats, ponds and equipment",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 115.0,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Fisheries Department",
+   "heads_of_account": 1,
+   "key": "Fisheries Department | Scheme for Relief and Welfare of Tribals",
+   "label": "scheme",
+   "name": "Scheme for Relief and Welfare of Tribals",
+   "reason": "relief and welfare payments to tribal fishers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 86.0,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Fisheries Department",
+   "heads_of_account": 1,
+   "key": "Fisheries Department | Scheme for relief and welfare of Fishermen belonging to Scheduled Castes",
+   "label": "scheme",
+   "name": "Scheme for relief and welfare of Fishermen belonging to Scheduled Castes",
+   "reason": "relief and welfare payments to Scheduled Caste fishermen",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 16.5,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Food and Civil Supplies Department",
+   "heads_of_account": 1,
+   "key": "Food and Civil Supplies Department | Andhra Pradesh State Consumer Welfare Fund",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh State Consumer Welfare Fund",
+   "reason": "a consumer welfare fund, an accounting head with a contribution object head",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 334400.0,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Food and Civil Supplies Department",
+   "heads_of_account": 3,
+   "key": "Food and Civil Supplies Department | Subsidy on Rice (Human Resources Development)",
+   "label": "scheme",
+   "name": "Subsidy on Rice (Human Resources Development)",
+   "reason": "subsidised rice supplied to ration card households",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 500.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Handlooms and Textiles Department",
+   "heads_of_account": 0,
+   "key": "Handlooms and Textiles Department | Co-operative Handloom Weavers Thrift Fund Scheme",
+   "label": "scheme",
+   "name": "Co-operative Handloom Weavers Thrift Fund Scheme",
+   "reason": "the state's matching contribution into individual weavers' thrift accounts",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 525.88,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Handlooms and Textiles Department",
+   "heads_of_account": 0,
+   "key": "Handlooms and Textiles Department | Headquarters Office",
+   "label": "not_scheme",
+   "name": "Headquarters Office",
+   "reason": "the department's headquarters establishment",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 7,
+   "stratum_size": 20
+  },
+  {
+   "be_lakh": 100.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Handlooms and Textiles Department",
+   "heads_of_account": 0,
+   "key": "Handlooms and Textiles Department | National Institute of Fashion Technology (NIFT)",
+   "label": "not_scheme",
+   "name": "National Institute of Fashion Technology (NIFT)",
+   "reason": "NIFT, an institution",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 4,
+   "stratum_size": 5
+  },
+  {
+   "be_lakh": 0.2,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Handlooms and Textiles Department",
+   "heads_of_account": 0,
+   "key": "Handlooms and Textiles Department | Subsidy on Purchase of Raw Materials",
+   "label": "scheme",
+   "name": "Subsidy on Purchase of Raw Materials",
+   "reason": "raw material purchase subsidy paid to weavers",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 4,
+   "stratum_size": 5
+  },
+  {
+   "be_lakh": 30.42,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Higher Education, Secretariat",
+   "heads_of_account": 13,
+   "key": "Higher Education, Secretariat | National Service Scheme (NSS)",
+   "label": "not_scheme",
+   "name": "National Service Scheme (NSS)",
+   "reason": "the National Service Scheme runs through colleges on salaries, travel and office expenses",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 10.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Horticulture Department",
+   "heads_of_account": 1,
+   "key": "Horticulture Department | Coconut Development Board Scheme",
+   "label": "scheme",
+   "name": "Coconut Development Board Scheme",
+   "reason": "the Coconut Development Board's assistance reaches coconut growers, though the name is a board's",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Horticulture Department",
+   "heads_of_account": 1,
+   "key": "Horticulture Department | Coconut Palm Insurance Scheme",
+   "label": "scheme",
+   "name": "Coconut Palm Insurance Scheme",
+   "reason": "insurance premium support for coconut growers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Horticulture Department",
+   "heads_of_account": 0,
+   "key": "Horticulture Department | Krishionnati Yojana - Integrated Development of Horticulture [AP56]",
+   "label": "scheme",
+   "name": "Krishionnati Yojana - Integrated Development of Horticulture [AP56]",
+   "reason": "integrated horticulture development pays planting material and structure subsidies to growers",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Horticulture Department",
+   "heads_of_account": 0,
+   "key": "Horticulture Department | NFSM-Oil Palm",
+   "label": "scheme",
+   "name": "NFSM-Oil Palm",
+   "reason": "oil palm area expansion subsidy paid to growers",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 7060.0,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Horticulture Department",
+   "heads_of_account": 6,
+   "key": "Horticulture Department | PM RKVY - Mission for Integrated Development of Horticulture [AP56]",
+   "label": "scheme",
+   "name": "PM RKVY - Mission for Integrated Development of Horticulture [AP56]",
+   "reason": "the same horticulture mission under PM RKVY",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 3000.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Horticulture Department",
+   "heads_of_account": 2,
+   "key": "Horticulture Department | PM RKVY - National Mission on Edible Oils - Oil Palm [AP405]",
+   "label": "scheme",
+   "name": "PM RKVY - National Mission on Edible Oils - Oil Palm [AP405]",
+   "reason": "oil palm area expansion subsidy paid to growers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 0.1,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Horticulture Department",
+   "heads_of_account": 2,
+   "key": "Horticulture Department | PM RKVY -Establishment of Seed Garden and Nurseries [AP485]",
+   "label": "not_scheme",
+   "name": "PM RKVY -Establishment of Seed Garden and Nurseries [AP485]",
+   "reason": "seed gardens and nurseries are departmental assets",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 750.0,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": true,
+   "department": "Industries and Commerce, Secretariat",
+   "heads_of_account": 1,
+   "key": "Industries and Commerce, Secretariat | Aqua Produce Processing (Fish & Shrimp)",
+   "label": "scheme",
+   "name": "Aqua Produce Processing (Fish & Shrimp)",
+   "reason": "aqua processing subsidy paid to enterprises rather than households, the same shape as an entrepreneur subsidy",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 11638.6,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Industries, Commerce and Export Promotion Department",
+   "heads_of_account": 2,
+   "key": "Industries, Commerce and Export Promotion Department | Incentives for Industrial Promotion",
+   "label": "scheme",
+   "name": "Incentives for Industrial Promotion",
+   "reason": "industrial incentives paid to enterprises rather than households, the same shape as the Scheduled Caste entrepreneur incentive",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 20000.0,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Industries, Commerce and Export Promotion Department",
+   "heads_of_account": 1,
+   "key": "Industries, Commerce and Export Promotion Department | Incentives to the S.C. Entrepreneurs for Industrial Promotion",
+   "label": "scheme",
+   "name": "Incentives to the S.C. Entrepreneurs for Industrial Promotion",
+   "reason": "incentives paid to Scheduled Caste entrepreneurs",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 820.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Information Technology, Electronics and Communications, Secretariat",
+   "heads_of_account": 4,
+   "key": "Information Technology, Electronics and Communications, Secretariat | Information Technology, Electronics & Communications Department",
+   "label": "not_scheme",
+   "name": "Information Technology, Electronics & Communications Department",
+   "reason": "a department named as a head",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 5.01,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Intermediate Education Department",
+   "heads_of_account": 2,
+   "key": "Intermediate Education Department | Buildings",
+   "label": "not_scheme",
+   "name": "Buildings",
+   "reason": "buildings",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 1.0,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Intermediate Education Department",
+   "heads_of_account": 1,
+   "key": "Intermediate Education Department | Construction of Additional Class Rooms in 9 Government Junior Colleges",
+   "label": "not_scheme",
+   "name": "Construction of Additional Class Rooms in 9 Government Junior Colleges",
+   "reason": "classroom construction",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 78761.68,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Intermediate Education Department",
+   "heads_of_account": 0,
+   "key": "Intermediate Education Department | Government Junior Colleges",
+   "label": "not_scheme",
+   "name": "Government Junior Colleges",
+   "reason": "government junior colleges, institutions",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 6,
+   "stratum_size": 16
+  },
+  {
+   "be_lakh": 6745.65,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Intermediate Education Department",
+   "heads_of_account": 0,
+   "key": "Intermediate Education Department | Mid-Day Meal programme in Government Junior colleges",
+   "label": "scheme",
+   "name": "Mid-Day Meal programme in Government Junior colleges",
+   "reason": "mid day meals served to junior college students",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 4,
+   "stratum_size": 11
+  },
+  {
+   "be_lakh": 45.13,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Juvenile Welfare Department",
+   "heads_of_account": 0,
+   "key": "Juvenile Welfare Department | Headquarters Office",
+   "label": "not_scheme",
+   "name": "Headquarters Office",
+   "reason": "headquarters establishment",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 3,
+   "stratum_size": 3
+  },
+  {
+   "be_lakh": 30000.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Labour Department",
+   "heads_of_account": 2,
+   "key": "Labour Department | Chandranna Bhima",
+   "label": "scheme",
+   "name": "Chandranna Bhima",
+   "reason": "Chandranna Bhima insures unorganised workers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4737.95,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Labour Department",
+   "heads_of_account": 0,
+   "key": "Labour Department | District Offices",
+   "label": "not_scheme",
+   "name": "District Offices",
+   "reason": "district establishment",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 6,
+   "stratum_size": 17
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Land Administration Department",
+   "heads_of_account": 0,
+   "key": "Land Administration Department | Gruha Vasathi",
+   "label": "scheme",
+   "name": "Gruha Vasathi",
+   "reason": "Gruha Vasathi provides house sites and housing to poor households, though the book prints nothing beyond the name",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 400000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Medical Education Department",
+   "heads_of_account": 3,
+   "key": "Medical Education Department | Dr. Nandamuri Taraka Ramarao Vaidya Seva Trust",
+   "label": "scheme",
+   "name": "Dr. Nandamuri Taraka Ramarao Vaidya Seva Trust",
+   "reason": "the NTR Vaidya Seva trust runs the state's health insurance cover for households; the name is a trust's, the money buys treatment for named beneficiaries",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 9600.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Medical Education Department",
+   "heads_of_account": 6,
+   "key": "Medical Education Department | Human Resources for Health and Medical Education - Establishment of New Medical Colleges [AP73]",
+   "label": "not_scheme",
+   "name": "Human Resources for Health and Medical Education - Establishment of New Medical Colleges [AP73]",
+   "reason": "establishing new medical colleges",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 750.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Medical Education Department",
+   "heads_of_account": 2,
+   "key": "Medical Education Department | Strengthening of Tertiary Care Cancer facilities under NPCDCS [AP487]",
+   "label": "not_scheme",
+   "name": "Strengthening of Tertiary Care Cancer facilities under NPCDCS [AP487]",
+   "reason": "strengthening cancer care facilities, an asset head",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 80.43,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "label": "scheme",
+   "name": "Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "reason": "overseas study scholarship for minority students",
+   "sample": "stratified",
+   "stratum": "CB/q1",
+   "stratum_sampled": 3,
+   "stratum_size": 3
+  },
+  {
+   "be_lakh": 56137.520000000004,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Minorities Component"
+   ],
+   "borderline": true,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 16,
+   "key": "Minorities Welfare Department | Andhra Pradesh State Minorities Finance Corporation",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh State Minorities Finance Corporation",
+   "reason": "a minorities finance corporation, a body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 285.0,
+   "books": [
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 1,
+   "key": "Minorities Welfare Department | Assistance for Construction of Urdu Ghar-cum-Shadikhana",
+   "label": "not_scheme",
+   "name": "Assistance for Construction of Urdu Ghar-cum-Shadikhana",
+   "reason": "construction of Urdu Ghar buildings",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 100.0,
+   "books": [
+    "Gender Budget",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 1,
+   "key": "Minorities Welfare Department | Assistance to Andhra Pradesh Wakf Board",
+   "label": "not_scheme",
+   "name": "Assistance to Andhra Pradesh Wakf Board",
+   "reason": "the Wakf Board, a statutory body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 366.67,
+   "books": [
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 1,
+   "key": "Minorities Welfare Department | Assistance to Urdu Academy",
+   "label": "not_scheme",
+   "name": "Assistance to Urdu Academy",
+   "reason": "the Urdu Academy, an institution",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 2119.97,
+   "books": [
+    "Gender Budget",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 1,
+   "key": "Minorities Welfare Department | Economic Support Schemes through AP State Christian Finance Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through AP State Christian Finance Corporation",
+   "reason": "economic support subsidy and loan paid to individuals through the Christian finance corporation",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 18398.32,
+   "books": [
+    "Gender Budget",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 1,
+   "key": "Minorities Welfare Department | Economic Support Schemes through AP State Minorities Finance Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through AP State Minorities Finance Corporation",
+   "reason": "economic support subsidy and loan paid to individuals through the minorities corporation",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 775.56,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Financial Assistance to Drivers",
+   "label": "scheme",
+   "name": "Financial Assistance to Drivers",
+   "reason": "financial assistance paid to drivers",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 7,
+   "stratum_size": 20
+  },
+  {
+   "be_lakh": 7.6,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Financial Assistance to Fishermen",
+   "label": "scheme",
+   "name": "Financial Assistance to Fishermen",
+   "reason": "financial assistance paid to fishermen",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 9000.0,
+   "books": [
+    "Gender Budget",
+    "Minorities Component"
+   ],
+   "borderline": true,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 1,
+   "key": "Minorities Welfare Department | Incentives to Imams and Mouzans",
+   "label": "scheme",
+   "name": "Incentives to Imams and Mouzans",
+   "reason": "a monthly honorarium paid to imams and muezzins, a payment to named persons rather than to a mosque",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6741.6,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Incentives to Pastors",
+   "label": "scheme",
+   "name": "Incentives to Pastors",
+   "reason": "a monthly payment to pastors, a transfer to named persons",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 161758.8,
+   "books": [
+    "Gender Budget",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 13,
+   "key": "Minorities Welfare Department | NTR Bharosa Pension Scheme",
+   "label": "scheme",
+   "name": "NTR Bharosa Pension Scheme",
+   "reason": "the state social security pension",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6954.26,
+   "books": [
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 12,
+   "key": "Minorities Welfare Department | NTR Bharosa Pension Scheme to Christians",
+   "label": "scheme",
+   "name": "NTR Bharosa Pension Scheme to Christians",
+   "reason": "the same pension, the Christian minority slice",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6534.49,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Post Matric Scholarships (MTF)",
+   "label": "scheme",
+   "name": "Post Matric Scholarships (MTF)",
+   "reason": "post matric scholarship, maintenance to fee students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 17710.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Post Matric Scholarships (RTF)",
+   "label": "scheme",
+   "name": "Post Matric Scholarships (RTF)",
+   "reason": "post matric scholarship, reimbursement of tuition fee",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 30000.0,
+   "books": [
+    "Minorities Component"
+   ],
+   "borderline": true,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 1,
+   "key": "Minorities Welfare Department | Pradhan Mantri Jan Vikas Karyakram (PMJVK) [AP238]",
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Jan Vikas Karyakram (PMJVK) [AP238]",
+   "reason": "PMJVK builds schools, health centres and hostels in minority concentration areas",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 17362.55,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Subsidy on Domestic LPG Scheme",
+   "label": "scheme",
+   "name": "Subsidy on Domestic LPG Scheme",
+   "reason": "domestic LPG subsidy paid to households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 14998.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Thallikivandanam",
+   "label": "scheme",
+   "name": "Thallikivandanam",
+   "reason": "Thallikivandanam under the minorities department",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 150.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Minorities Welfare Department",
+   "heads_of_account": 0,
+   "key": "Minorities Welfare Department | Visit to Holy land Jerusalem",
+   "label": "scheme",
+   "name": "Visit to Holy land Jerusalem",
+   "reason": "pilgrimage subsidy paid for individual travellers",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 4,
+   "stratum_size": 5
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Municipal Administration Department",
+   "heads_of_account": 1,
+   "key": "Municipal Administration Department | Anna Canteens",
+   "label": "scheme",
+   "name": "Anna Canteens",
+   "reason": "Anna Canteens sell subsidised meals to the poor; the canteen is a facility but the subsidy reaches the eater",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration Department",
+   "heads_of_account": 1,
+   "key": "Municipal Administration Department | Improvement of Solid Waste Management sites under Solid Waste Management in Nagarapanchayats Municipalities/Corporations",
+   "label": "not_scheme",
+   "name": "Improvement of Solid Waste Management sites under Solid Waste Management in Nagarapanchayats Municipalities/Corporations",
+   "reason": "solid waste management sites, assets",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 2000.0,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration Department",
+   "heads_of_account": 1,
+   "key": "Municipal Administration Department | Infrastructural Development works in SC Localities of ULBs",
+   "label": "not_scheme",
+   "name": "Infrastructural Development works in SC Localities of ULBs",
+   "reason": "infrastructure works in localities",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 2,
+   "key": "Municipal Administration and Urban Development, Secretariat | Deen Dayal Upadhyaya Antyodaya Yojana - National Urban Livelihoods Mission (DDU-AY) [AP239]",
+   "label": "scheme",
+   "name": "Deen Dayal Upadhyaya Antyodaya Yojana - National Urban Livelihoods Mission (DDU-AY) [AP239]",
+   "reason": "the urban livelihoods mission funds self help group finance, skilling and self employment loans",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 3,
+   "key": "Municipal Administration and Urban Development, Secretariat | Deendayal Antyodaya Yojana-National Urban Livelihoods Mission (DAY-NULM)[AP239]",
+   "label": "scheme",
+   "name": "Deendayal Antyodaya Yojana-National Urban Livelihoods Mission (DAY-NULM)[AP239]",
+   "reason": "the same urban livelihoods mission under its later name",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 78100.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 3,
+   "key": "Municipal Administration and Urban Development, Secretariat | Finance Commission Grants",
+   "label": "not_scheme",
+   "name": "Finance Commission Grants",
+   "reason": "Finance Commission grants devolved to urban local bodies",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 0,
+   "key": "Municipal Administration and Urban Development, Secretariat | Interest free loans to urban Self Help Groups",
+   "label": "scheme",
+   "name": "Interest free loans to urban Self Help Groups",
+   "reason": "interest free loans to urban self help groups",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2000.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 1,
+   "key": "Municipal Administration and Urban Development, Secretariat | Land Pooling for New State Capital",
+   "label": "not_scheme",
+   "name": "Land Pooling for New State Capital",
+   "reason": "land pooling for the capital",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 40.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 1,
+   "key": "Municipal Administration and Urban Development, Secretariat | MISSION FOR DEVELOPMENT OF 100 SMART CITIES -VISAKHAPATNAM[AP372]",
+   "label": "not_scheme",
+   "name": "MISSION FOR DEVELOPMENT OF 100 SMART CITIES -VISAKHAPATNAM[AP372]",
+   "reason": "smart city works in Visakhapatnam",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1319.9,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 1,
+   "key": "Municipal Administration and Urban Development, Secretariat | NATIONAL RIVER CONSERVATION PLAN-OTHER BASINS -GODAVARI[AP396]",
+   "label": "not_scheme",
+   "name": "NATIONAL RIVER CONSERVATION PLAN-OTHER BASINS -GODAVARI[AP396]",
+   "reason": "river conservation works",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 400.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 1,
+   "key": "Municipal Administration and Urban Development, Secretariat | Swachh Bharat Mission (SBM) - Urban - IHHL/CT/PT/ASPIRATIONAL TOILETS [AP409]",
+   "label": "scheme",
+   "name": "Swachh Bharat Mission (SBM) - Urban - IHHL/CT/PT/ASPIRATIONAL TOILETS [AP409]",
+   "reason": "individual household latrines are built for named households, though the same head also funds community and public toilets",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 1090.13,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Municipal Administration and Urban Development, Secretariat",
+   "heads_of_account": 1,
+   "key": "Municipal Administration and Urban Development, Secretariat | Swachh Bharat Mission (SBM) - Urban -IEC & Behaviour Change (IEC &BC) [AP412]",
+   "label": "not_scheme",
+   "name": "Swachh Bharat Mission (SBM) - Urban -IEC & Behaviour Change (IEC &BC) [AP412]",
+   "reason": "an information, education and communication campaign",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 15111.6,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Panchayat Raj Engineering Department",
+   "heads_of_account": 14,
+   "key": "Panchayat Raj Engineering Department | AIIB (Asian Infrastructure Investment Bank) - Andhra Pradesh Rural Road Project",
+   "label": "not_scheme",
+   "name": "AIIB (Asian Infrastructure Investment Bank) - Andhra Pradesh Rural Road Project",
+   "reason": "a rural road project",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 1146.67,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Panchayat Raj Engineering Department",
+   "heads_of_account": 2,
+   "key": "Panchayat Raj Engineering Department | PRADHAN MANTRI GRAM SADAK YOJNA - Construction of Panchayat Raj Roads under PMGSY-Financial Incentive",
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI GRAM SADAK YOJNA - Construction of Panchayat Raj Roads under PMGSY-Financial Incentive",
+   "reason": "road construction",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 11010.0,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Panchayat Raj Engineering Department",
+   "heads_of_account": 2,
+   "key": "Panchayat Raj Engineering Department | Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN) under PMGSY",
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN) under PMGSY",
+   "reason": "PMGSY roads in tribal habitations",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Planning, Secretariat",
+   "heads_of_account": 0,
+   "key": "Planning, Secretariat | Deduct - Recoveries -15,92.40",
+   "label": "not_scheme",
+   "name": "Deduct - Recoveries -15,92.40",
+   "reason": "a deduct recoveries line, an accounting head",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 25.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Planning, Secretariat",
+   "heads_of_account": 1,
+   "key": "Planning, Secretariat | Pulivendula Area Development Agency",
+   "label": "not_scheme",
+   "name": "Pulivendula Area Development Agency",
+   "reason": "an area development agency's works",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 2508.84,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Planning, Secretariat",
+   "heads_of_account": 2,
+   "key": "Planning, Secretariat | Special Development Fund (SDF)",
+   "label": "not_scheme",
+   "name": "Special Development Fund (SDF)",
+   "reason": "a general purpose development fund spent on works",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 400.0,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Principal Chief Conservator of Forests",
+   "heads_of_account": 1,
+   "key": "Principal Chief Conservator of Forests | Forest Fire Prevention and Management [AP28]",
+   "label": "not_scheme",
+   "name": "Forest Fire Prevention and Management [AP28]",
+   "reason": "forest fire prevention, a departmental function",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 300.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Principal Chief Conservator of Forests",
+   "heads_of_account": 2,
+   "key": "Principal Chief Conservator of Forests | Green India Mission-National Afforestation Programme [AP31]",
+   "label": "not_scheme",
+   "name": "Green India Mission-National Afforestation Programme [AP31]",
+   "reason": "afforestation works",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 42.14,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Principal Chief Conservator of Forests",
+   "heads_of_account": 1,
+   "key": "Principal Chief Conservator of Forests | Mixed Plantation",
+   "label": "not_scheme",
+   "name": "Mixed Plantation",
+   "reason": "plantation works",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 2500.0,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Public Health and Family Welfare Department",
+   "heads_of_account": 1,
+   "key": "Public Health and Family Welfare Department | Infrastructure facilities for Hospitals",
+   "label": "not_scheme",
+   "name": "Infrastructure facilities for Hospitals",
+   "reason": "hospital infrastructure",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 142000.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Public Transport Department",
+   "heads_of_account": 0,
+   "key": "Public Transport Department | Stree Shakti Scheme - providing Free Bus Travel for Women",
+   "label": "scheme",
+   "name": "Stree Shakti Scheme - providing Free Bus Travel for Women",
+   "reason": "free bus travel for women, a benefit each rider receives",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 46499.76,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Rural Development Department",
+   "heads_of_account": 8,
+   "key": "Rural Development Department | Assistance to Society for Elimination of Rural Poverty (SERP)",
+   "label": "not_scheme",
+   "name": "Assistance to Society for Elimination of Rural Poverty (SERP)",
+   "reason": "assistance to SERP, a society; SERP runs the self help group programmes but the head funds the body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 5155.410000000001,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 6,
+   "key": "Rural Development Department | INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME(IGNWPS)[AP156]",
+   "label": "scheme",
+   "name": "INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME(IGNWPS)[AP156]",
+   "reason": "the national widow pension, paid monthly to the widow",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 510.63,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 6,
+   "key": "Rural Development Department | Indira Gandhi National Disability Pension Scheme (IGNDPS) [AP321]",
+   "label": "scheme",
+   "name": "Indira Gandhi National Disability Pension Scheme (IGNDPS) [AP321]",
+   "reason": "the national disability pension",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 11904.460000000001,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 6,
+   "key": "Rural Development Department | Indira Gandhi National Old Age Pension Scheme (IGNOAPS) [AP319]",
+   "label": "scheme",
+   "name": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS) [AP319]",
+   "reason": "the national old age pension",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 10000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 1,
+   "key": "Rural Development Department | Interest Free Loans to DWACRA Women (Vaddileni Runalu)",
+   "label": "scheme",
+   "name": "Interest Free Loans to DWACRA Women (Vaddileni Runalu)",
+   "reason": "interest free loans to women's self help groups",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 50000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 1,
+   "key": "Rural Development Department | Mahatma Gandhi National Rural Employment Guarantee Programme [AP123]",
+   "label": "scheme",
+   "name": "Mahatma Gandhi National Rural Employment Guarantee Programme [AP123]",
+   "reason": "MGNREGS pays wages to rural households that ask for work",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 3000.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 2,
+   "key": "Rural Development Department | Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+   "label": "scheme",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+   "reason": "MKSP funds livelihood support for women farmers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 81800.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Rural Development Department",
+   "heads_of_account": 3,
+   "key": "Rural Development Department | NATIONAL RURAL LIVELIHOOD MISSION [AP168]",
+   "label": "scheme",
+   "name": "NATIONAL RURAL LIVELIHOOD MISSION [AP168]",
+   "reason": "the rural livelihoods mission puts revolving funds and community investment funds into women's self help groups; part of it runs the mission's own machinery",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 37612.09,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 0,
+   "key": "Rural Development Department | NTR Bharosa Pension Scheme",
+   "label": "scheme",
+   "name": "NTR Bharosa Pension Scheme",
+   "reason": "the state social security pension",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1235.69,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 6,
+   "key": "Rural Development Department | National Family Benefit Scheme [AP320]",
+   "label": "scheme",
+   "name": "National Family Benefit Scheme [AP320]",
+   "reason": "a lump sum paid to a family on the death of its breadwinner",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 7212.5,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Rural Development Department",
+   "heads_of_account": 1,
+   "key": "Rural Development Department | National Rural Livelihood Mission (NRLM) - SVEP [AP365]",
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (NRLM) - SVEP [AP365]",
+   "reason": "start up finance for rural entrepreneurs under the livelihoods mission",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1500.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Rural Development Department",
+   "heads_of_account": 1,
+   "key": "Rural Development Department | National Rural Livelihood Mission-RSETI [AP255]",
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission-RSETI [AP255]",
+   "reason": "RSETI trains rural youth for self employment; the training is given to people though it is delivered through institutes",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Rural Water Supply Department",
+   "heads_of_account": 0,
+   "key": "Rural Water Supply Department | NTR Sujala Sravanthi",
+   "label": "not_scheme",
+   "name": "NTR Sujala Sravanthi",
+   "reason": "village drinking water plants, assets, though the water reaches households",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 6.0,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Rural Water Supply Department",
+   "heads_of_account": 3,
+   "key": "Rural Water Supply Department | Rural Water Supply Schemes under RIDF",
+   "label": "not_scheme",
+   "name": "Rural Water Supply Schemes under RIDF",
+   "reason": "rural water supply works",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 28410.8,
+   "books": [
+    "Backward Classes Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Rural Water Supply Department",
+   "heads_of_account": 10,
+   "key": "Rural Water Supply Department | Swachh Bharat Mission (Grameen DWS) [AP160]",
+   "label": "scheme",
+   "name": "Swachh Bharat Mission (Grameen DWS) [AP160]",
+   "reason": "Swachh Bharat Grameen builds individual household latrines, with village sanitation alongside",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 789.29,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 3,
+   "key": "School Education Department | Assistance to Sainik School Korukonda",
+   "label": "not_scheme",
+   "name": "Assistance to Sainik School Korukonda",
+   "reason": "assistance to a school, an institution",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 16272.94,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "School Education Department",
+   "heads_of_account": 0,
+   "key": "School Education Department | Assistance to the Andhra Pradesh Residential Educational Institutions Society",
+   "label": "not_scheme",
+   "name": "Assistance to the Andhra Pradesh Residential Educational Institutions Society",
+   "reason": "assistance to the residential educational institutions society, a body that runs schools",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 6,
+   "stratum_size": 16
+  },
+  {
+   "be_lakh": 0.83,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 1,
+   "key": "School Education Department | Buildings (DSE)",
+   "label": "not_scheme",
+   "name": "Buildings (DSE)",
+   "reason": "buildings",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 500.0,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "School Education Department",
+   "heads_of_account": 1,
+   "key": "School Education Department | Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DAJGUA)",
+   "label": "not_scheme",
+   "name": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DAJGUA)",
+   "reason": "the DAJGUA slice booked here is school infrastructure in tribal villages",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 19492.74,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 1,
+   "key": "School Education Department | Dokka Seethamma Madhyhna Badi Bhojanam - Additional Menu",
+   "label": "scheme",
+   "name": "Dokka Seethamma Madhyhna Badi Bhojanam - Additional Menu",
+   "reason": "an additional mid day meal menu served to school children",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 7063.68,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 1,
+   "key": "School Education Department | Dokka Seethamma Madhyhna Badi Bhojanam - Nutritious Meals Programme (MDM)",
+   "label": "scheme",
+   "name": "Dokka Seethamma Madhyhna Badi Bhojanam - Nutritious Meals Programme (MDM)",
+   "reason": "the mid day meal served to school children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 20098.010000000002,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 3,
+   "key": "School Education Department | Dokka Seethamma Madhyhna Badi Bhojanam - Nutritious Meals Programme for IX and X Class",
+   "label": "scheme",
+   "name": "Dokka Seethamma Madhyhna Badi Bhojanam - Nutritious Meals Programme for IX and X Class",
+   "reason": "the mid day meal for class IX and X children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 17659.2,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 0,
+   "key": "School Education Department | Dokka Seethamma Mid day Meal",
+   "label": "scheme",
+   "name": "Dokka Seethamma Mid day Meal",
+   "reason": "the mid day meal served to school children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 48731.84,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 0,
+   "key": "School Education Department | Dokka Seethamma Mid day Meal - Additional Menu",
+   "label": "scheme",
+   "name": "Dokka Seethamma Mid day Meal - Additional Menu",
+   "reason": "the same additional mid day meal menu",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 6,
+   "stratum_size": 16
+  },
+  {
+   "be_lakh": 50245.01,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 0,
+   "key": "School Education Department | Dokka Seethamma Mid day Meal- Nutritious Meals Programme for IX and X Class",
+   "label": "scheme",
+   "name": "Dokka Seethamma Mid day Meal- Nutritious Meals Programme for IX and X Class",
+   "reason": "the mid day meal for class IX and X children",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1425.78,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 1,
+   "key": "School Education Department | Headquarters Office",
+   "label": "not_scheme",
+   "name": "Headquarters Office",
+   "reason": "headquarters establishment",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 20000.0,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 1,
+   "key": "School Education Department | Mana Badi Mana Bhavishyathu - Infrastructure Facilities in Schools",
+   "label": "not_scheme",
+   "name": "Mana Badi Mana Bhavishyathu - Infrastructure Facilities in Schools",
+   "reason": "school infrastructure",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 100000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 0,
+   "key": "School Education Department | Mana Badi Mana Bhavisyath : Upgrading Infrastructure in High Schools",
+   "label": "not_scheme",
+   "name": "Mana Badi Mana Bhavisyath : Upgrading Infrastructure in High Schools",
+   "reason": "high school infrastructure",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 6,
+   "stratum_size": 16
+  },
+  {
+   "be_lakh": 4295.2,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "School Education Department",
+   "heads_of_account": 3,
+   "key": "School Education Department | New India Literacy Programme (NILP)/(ULLAS) [AP394]",
+   "label": "scheme",
+   "name": "New India Literacy Programme (NILP)/(ULLAS) [AP394]",
+   "reason": "adult literacy teaching given to people, delivered through volunteers rather than as a transfer",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 1.02,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": true,
+   "department": "School Education Department",
+   "heads_of_account": 1,
+   "key": "School Education Department | Padhna Likhna Abhiyan (PLA)",
+   "label": "scheme",
+   "name": "Padhna Likhna Abhiyan (PLA)",
+   "reason": "adult literacy taught to non literate adults, who are themselves the beneficiary class",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 104.1,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "School Education Department",
+   "heads_of_account": 5,
+   "key": "School Education Department | Participation of Andhra Pradesh School Teams in National Games",
+   "label": "not_scheme",
+   "name": "Participation of Andhra Pradesh School Teams in National Games",
+   "reason": "paying for school teams to travel to national games, an event cost",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 41324.03,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 9,
+   "key": "School Education Department | Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Cooking Cost [AP70]",
+   "label": "scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Cooking Cost [AP70]",
+   "reason": "PM POSHAN cooking cost, meals served to school children",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 1428.2,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 3,
+   "key": "School Education Department | Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Management Monitoring & Evaluation (MME)[AP74]",
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Management Monitoring & Evaluation (MME)[AP74]",
+   "reason": "management, monitoring and evaluation, an administrative head",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 2,
+   "key": "School Education Department | Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Management Monitoring & Evaluation [AP74]",
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Management Monitoring & Evaluation [AP74]",
+   "reason": "the same management and monitoring head",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 914.25,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "School Education Department",
+   "heads_of_account": 5,
+   "key": "School Education Department | Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Transportation Assistance [AP75]",
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Transportation Assistance [AP75]",
+   "reason": "transporting foodgrains to schools is a logistics cost of the meal, paid to carriers, not a benefit a child receives",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 26159.999999999996,
+   "books": [
+    "Backward Classes Component",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "School Education Department",
+   "heads_of_account": 3,
+   "key": "School Education Department | Sarvepalle Radhakrishnan Vidyardhi Mitra - Samagra Shiksha - Student Kit",
+   "label": "scheme",
+   "name": "Sarvepalle Radhakrishnan Vidyardhi Mitra - Samagra Shiksha - Student Kit",
+   "reason": "a kit of books and materials handed to each student",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6272.19,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Sericulture Department",
+   "heads_of_account": 0,
+   "key": "Sericulture Department | District Offices",
+   "label": "not_scheme",
+   "name": "District Offices",
+   "reason": "district establishment",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 6,
+   "stratum_size": 17
+  },
+  {
+   "be_lakh": 319.08,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Sericulture Department",
+   "heads_of_account": 0,
+   "key": "Sericulture Department | Headquarters Office",
+   "label": "not_scheme",
+   "name": "Headquarters Office",
+   "reason": "headquarters establishment",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 7,
+   "stratum_size": 20
+  },
+  {
+   "be_lakh": 2074.44,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Sericulture Department",
+   "heads_of_account": 5,
+   "key": "Sericulture Department | Implementation of Sericulture Schemes",
+   "label": "scheme",
+   "name": "Implementation of Sericulture Schemes",
+   "reason": "sericulture assistance paid to rearers and reelers, though the head is named for the schemes rather than the benefit",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2815.01,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "label": "scheme",
+   "name": "Ambedkar Overseas Vidya Nidhi (AOVN)",
+   "reason": "overseas study scholarship for Scheduled Caste students",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 4,
+   "stratum_size": 11
+  },
+  {
+   "be_lakh": 268546.08999999997,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": true,
+   "department": "Social Welfare Department",
+   "heads_of_account": 12,
+   "key": "Social Welfare Department | Andhra Pradesh Scheduled Castes Corporations",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh Scheduled Castes Corporations",
+   "reason": "the Scheduled Castes corporations, bodies, though they route economic support to individuals",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 400.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Best Available Schools",
+   "label": "scheme",
+   "name": "Best Available Schools",
+   "reason": "Best Available Schools pays the fees of Scheduled Caste children in private schools, booked as scholarships and stipends",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Chandranna Pellikanuka",
+   "label": "scheme",
+   "name": "Chandranna Pellikanuka",
+   "reason": "Chandranna Pellikanuka pays a marriage assistance amount to the bride's family",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 100.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Contsruction of Buildings for Hostels and Colleges in RIAD areas",
+   "label": "not_scheme",
+   "name": "Contsruction of Buildings for Hostels and Colleges in RIAD areas",
+   "reason": "hostel and college buildings",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 75.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Economic Support Schemes",
+   "label": "scheme",
+   "name": "Economic Support Schemes",
+   "reason": "economic support subsidy and loan paid to individuals",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 36145.55,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Economic Support Schemes through AP Scheduled Castes Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through AP Scheduled Castes Corporation",
+   "reason": "the same through the Scheduled Castes corporation",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 400.0,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Economic Support Schemes through LIDCAP",
+   "label": "scheme",
+   "name": "Economic Support Schemes through LIDCAP",
+   "reason": "economic support subsidy and loan paid to individuals through LIDCAP",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Erection of Ambedkar and Jagjeevan Ram Statues",
+   "label": "not_scheme",
+   "name": "Erection of Ambedkar and Jagjeevan Ram Statues",
+   "reason": "statues, an asset",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 10812.42,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Financial Assistance to Drivers",
+   "label": "scheme",
+   "name": "Financial Assistance to Drivers",
+   "reason": "financial assistance paid to drivers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 587.8,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Financial Assistance to Fishermen",
+   "label": "scheme",
+   "name": "Financial Assistance to Fishermen",
+   "reason": "financial assistance paid to fishermen",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 497399.07000000007,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 15,
+   "key": "Social Welfare Department | NTR Bharosa Pension Scheme",
+   "label": "scheme",
+   "name": "NTR Bharosa Pension Scheme",
+   "reason": "the state social security pension",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 215.95,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": true,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | NTR Vidyonnathi",
+   "label": "scheme",
+   "name": "NTR Vidyonnathi",
+   "reason": "NTR Vidyonnathi pays for coaching and a stipend for Scheduled Caste candidates sitting competitive examinations",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 4915.72,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": true,
+   "department": "Social Welfare Department",
+   "heads_of_account": 2,
+   "key": "Social Welfare Department | PM AJAY - SCA to SCSP [AP193]",
+   "label": "scheme",
+   "name": "PM AJAY - SCA to SCSP [AP193]",
+   "reason": "PM AJAY special central assistance funds income generating grants to Scheduled Caste families, alongside village works",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 15315.21,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Post Matric Scholarships (MTF)",
+   "label": "scheme",
+   "name": "Post Matric Scholarships (MTF)",
+   "reason": "post matric scholarship, maintenance to fee students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 38335.27,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 3,
+   "key": "Social Welfare Department | Post-Matric Scholarship to SCs[AP232]",
+   "label": "scheme",
+   "name": "Post-Matric Scholarship to SCs[AP232]",
+   "reason": "post matric scholarship paid to Scheduled Caste students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Post-Matriculation Scholarships (MTF)",
+   "label": "scheme",
+   "name": "Post-Matriculation Scholarships (MTF)",
+   "reason": "post matriculation scholarship paid to students",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Pre-Matric Scholarship to SCs",
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship to SCs",
+   "reason": "pre matric scholarship paid to Scheduled Caste students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 38988.01,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 3,
+   "key": "Social Welfare Department | Pre-Matric Scholarship to SCs [AP148]",
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship to SCs [AP148]",
+   "reason": "pre matric scholarship paid to Scheduled Caste students",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 30000.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Providing free power to SC House holds",
+   "label": "scheme",
+   "name": "Providing free power to SC House holds",
+   "reason": "free power supplied to Scheduled Caste households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 10.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": true,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Rehabilitation Economic Development Liberation and Home for Jogin Women",
+   "label": "scheme",
+   "name": "Rehabilitation Economic Development Liberation and Home for Jogin Women",
+   "reason": "rehabilitation and economic support for Jogini women, though the same head funds a home",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 25.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 1,
+   "key": "Social Welfare Department | Rehabilitation Schemes for Bonded Labour and Economic Support Programme",
+   "label": "scheme",
+   "name": "Rehabilitation Schemes for Bonded Labour and Economic Support Programme",
+   "reason": "rehabilitation payments and economic support to released bonded labourers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1392.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 2,
+   "key": "Social Welfare Department | SMEPCRA-1995 AND PREVENTION OF ATROCITIES ACT 1989 - INTERCASTE MARRIAGES[AP198]",
+   "label": "scheme",
+   "name": "SMEPCRA-1995 AND PREVENTION OF ATROCITIES ACT 1989 - INTERCASTE MARRIAGES[AP198]",
+   "reason": "the intercaste marriage incentive, cash paid to the couple",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 351.0,
+   "books": [
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 2,
+   "key": "Social Welfare Department | SMEPCRA-1995 AND PREVENTION OF ATROCITIES ACT 1989 - SPECIAL COURTS[AP152]",
+   "label": "not_scheme",
+   "name": "SMEPCRA-1995 AND PREVENTION OF ATROCITIES ACT 1989 - SPECIAL COURTS[AP152]",
+   "reason": "special courts, an institution",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 49002.5,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Department",
+   "heads_of_account": 0,
+   "key": "Social Welfare Department | Subsidy on Domestic LPG Scheme",
+   "label": "scheme",
+   "name": "Subsidy on Domestic LPG Scheme",
+   "reason": "domestic LPG subsidy paid to households",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Residential Educational Institutions Society",
+   "heads_of_account": 1,
+   "key": "Social Welfare Residential Educational Institutions Society | Construction of Buildings for Residential School Complex",
+   "label": "not_scheme",
+   "name": "Construction of Buildings for Residential School Complex",
+   "reason": "residential school buildings",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 1000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component"
+   ],
+   "borderline": false,
+   "department": "Social Welfare Residential Educational Institutions Society",
+   "heads_of_account": 1,
+   "key": "Social Welfare Residential Educational Institutions Society | Repairs & Maintenance of Residential School Buildings",
+   "label": "not_scheme",
+   "name": "Repairs & Maintenance of Residential School Buildings",
+   "reason": "repairs and maintenance of school buildings",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 424.21,
+   "books": [
+    "Child Budget"
+   ],
+   "borderline": false,
+   "department": "Town and Country Planning Department",
+   "heads_of_account": 0,
+   "key": "Town and Country Planning Department | District Offices",
+   "label": "not_scheme",
+   "name": "District Offices",
+   "reason": "district establishment",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 5,
+   "stratum_size": 14
+  },
+  {
+   "be_lakh": 137.5,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Administrative Costs to States/UTs for implementation of the schemes",
+   "label": "not_scheme",
+   "name": "Administrative Costs to States/UTs for implementation of the schemes",
+   "reason": "administrative costs of implementing schemes",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 170.77,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 9,
+   "key": "Tribal Welfare Department | Administrative Support for implementation of TSP",
+   "label": "not_scheme",
+   "name": "Administrative Support for implementation of TSP",
+   "reason": "administrative support for the tribal sub plan",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 74487.76,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 6,
+   "key": "Tribal Welfare Department | Andhra Pradesh Scheduled Tribes Co-operative Finance Corporation",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh Scheduled Tribes Co-operative Finance Corporation",
+   "reason": "the Scheduled Tribes finance corporation, a body",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 200.0,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Construction of Roads under NABARD Programmes",
+   "label": "not_scheme",
+   "name": "Construction of Roads under NABARD Programmes",
+   "reason": "road construction",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 1150.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | DEVELOPMENT OF PARTICULARLY VULNERABLE TRIBAL GROUPS (PVTGs) [AP300]",
+   "label": "not_scheme",
+   "name": "DEVELOPMENT OF PARTICULARLY VULNERABLE TRIBAL GROUPS (PVTGs) [AP300]",
+   "reason": "the particularly vulnerable tribal group development head funds habitation development and works; a reader who counts its livelihood component would flip this",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 6.63,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Economic Support Schemes",
+   "label": "scheme",
+   "name": "Economic Support Schemes",
+   "reason": "economic support subsidy and loan paid to individuals",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 11823.2,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Economic Support Schemes through AP Scheduled Tribes Co-operative Finance Corporation",
+   "label": "scheme",
+   "name": "Economic Support Schemes through AP Scheduled Tribes Co-operative Finance Corporation",
+   "reason": "economic support through the Scheduled Tribes corporation",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 10005.49,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 13,
+   "key": "Tribal Welfare Department | Educational Infrastructure",
+   "label": "not_scheme",
+   "name": "Educational Infrastructure",
+   "reason": "educational infrastructure",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 143.38,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 6,
+   "key": "Tribal Welfare Department | Establishment of Plain Area Tribal Development Agency",
+   "label": "not_scheme",
+   "name": "Establishment of Plain Area Tribal Development Agency",
+   "reason": "establishing a development agency",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 2056.27,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 0,
+   "key": "Tribal Welfare Department | Financial Assistance to Drivers",
+   "label": "scheme",
+   "name": "Financial Assistance to Drivers",
+   "reason": "financial assistance paid to drivers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 203.6,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 0,
+   "key": "Tribal Welfare Department | Financial Assistance to Fishermen",
+   "label": "scheme",
+   "name": "Financial Assistance to Fishermen",
+   "reason": "financial assistance paid to fishermen",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 14.960000000000003,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 9,
+   "key": "Tribal Welfare Department | Implementation of the Protection of Forest Right Act",
+   "label": "not_scheme",
+   "name": "Implementation of the Protection of Forest Right Act",
+   "reason": "administering the Forest Rights Act; the titles it issues are a real benefit but the provision is travel and office expenses",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 159477.90000000002,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 13,
+   "key": "Tribal Welfare Department | NTR Bharosa Pension Scheme",
+   "label": "scheme",
+   "name": "NTR Bharosa Pension Scheme",
+   "reason": "the state social security pension",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 15822.609999999999,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 4,
+   "key": "Tribal Welfare Department | Post-Matric Scholarship to STs [AP187]",
+   "label": "scheme",
+   "name": "Post-Matric Scholarship to STs [AP187]",
+   "reason": "post matric scholarship paid to Scheduled Tribe students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2751.54,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN) [AP452]",
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN) [AP452]",
+   "reason": "the PM-JANMAN slice booked here is tribal habitation infrastructure",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 0,
+   "key": "Tribal Welfare Department | Pradhan Mantri Janjati Adviasi Nyaya Maha Abhiyan (PM-JANMAN) -CCA-MPCs-[AP452]",
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Janjati Adviasi Nyaya Maha Abhiyan (PM-JANMAN) -CCA-MPCs-[AP452]",
+   "reason": "multipurpose centres, buildings",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 2480.65,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Pre- Matric Scholarship for STs [AP215]",
+   "label": "scheme",
+   "name": "Pre- Matric Scholarship for STs [AP215]",
+   "reason": "pre matric scholarship paid to Scheduled Tribe students",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1731.47,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 2,
+   "key": "Tribal Welfare Department | Pre-Matric Scholarship to STs [AP215]",
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship to STs [AP215]",
+   "reason": "pre matric scholarship paid to Scheduled Tribe students, the second spelling",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 10000.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Reimbursement of Electricity Charges",
+   "label": "scheme",
+   "name": "Reimbursement of Electricity Charges",
+   "reason": "reimbursement of electricity charges, a transfer, though the book does not say to whom",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 1687.5,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | Rejuvenation of Coffee Plantation",
+   "label": "scheme",
+   "name": "Rejuvenation of Coffee Plantation",
+   "reason": "rejuvenating coffee plantations of tribal growers, booked as a grant for capital assets",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 4850.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | SPECIAL CENTRAL ASSISTANCE TO TRIBAL SUB-SCHEMES[AP180]",
+   "label": "scheme",
+   "name": "SPECIAL CENTRAL ASSISTANCE TO TRIBAL SUB-SCHEMES[AP180]",
+   "reason": "special central assistance to the tribal sub scheme funds income generating support for tribal families, alongside habitation works",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 1397.0,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 1,
+   "key": "Tribal Welfare Department | SUPPORT TO TRIBAL RESEARCH INSTITUTES[AP212]",
+   "label": "not_scheme",
+   "name": "SUPPORT TO TRIBAL RESEARCH INSTITUTES[AP212]",
+   "reason": "tribal research institutes, institutions",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 62.96,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 6,
+   "key": "Tribal Welfare Department | Strengthening of Tribal Health",
+   "label": "not_scheme",
+   "name": "Strengthening of Tribal Health",
+   "reason": "strengthening tribal health, a departmental function on office and travel heads",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 11617.87,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 0,
+   "key": "Tribal Welfare Department | Subsidy on Domestic LPG Scheme",
+   "label": "scheme",
+   "name": "Subsidy on Domestic LPG Scheme",
+   "reason": "domestic LPG subsidy paid to households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 663.92,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 7,
+   "key": "Tribal Welfare Department | Support to ITDA",
+   "label": "not_scheme",
+   "name": "Support to ITDA",
+   "reason": "support to the Integrated Tribal Development Agency, a body",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 575.77,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 0,
+   "key": "Tribal Welfare Department | Support to ITDAs",
+   "label": "not_scheme",
+   "name": "Support to ITDAs",
+   "reason": "support to the Integrated Tribal Development Agencies, bodies",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 7,
+   "stratum_size": 20
+  },
+  {
+   "be_lakh": 60277.22,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Tribal Welfare Department",
+   "heads_of_account": 0,
+   "key": "Tribal Welfare Department | Thallikivandanam",
+   "label": "scheme",
+   "name": "Thallikivandanam",
+   "reason": "Thallikivandanam under the tribal welfare department",
+   "sample": "stratified",
+   "stratum": "GB/q4",
+   "stratum_sampled": 8,
+   "stratum_size": 22
+  },
+  {
+   "be_lakh": 24561.22,
+   "books": [
+    "Backward Classes Component"
+   ],
+   "borderline": false,
+   "department": "Weaker Section Housing",
+   "heads_of_account": 1,
+   "key": "Weaker Section Housing | Loans to Andhra Pradesh State Housing Corporation Ltd. (APSHCL)",
+   "label": "not_scheme",
+   "name": "Loans to Andhra Pradesh State Housing Corporation Ltd. (APSHCL)",
+   "reason": "a loan to the state housing corporation, a body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q4",
+   "stratum_sampled": 12,
+   "stratum_size": 34
+  },
+  {
+   "be_lakh": 10063.0,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Weaker Section Housing",
+   "heads_of_account": 2,
+   "key": "Weaker Section Housing | PMAY-URBAN-BLC 2.0",
+   "label": "scheme",
+   "name": "PMAY-URBAN-BLC 2.0",
+   "reason": "beneficiary led house construction for urban households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 130000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Weaker Section Housing",
+   "heads_of_account": 6,
+   "key": "Weaker Section Housing | PMAY-URBAN-BLC Scheme [AP345]",
+   "label": "scheme",
+   "name": "PMAY-URBAN-BLC Scheme [AP345]",
+   "reason": "beneficiary led house construction, the house is built for a named household",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 271000.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget",
+    "Minorities Component",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Weaker Section Housing",
+   "heads_of_account": 6,
+   "key": "Weaker Section Housing | Pradhan Manthri Awas Yojana (Grameen) [AP259]",
+   "label": "scheme",
+   "name": "Pradhan Manthri Awas Yojana (Grameen) [AP259]",
+   "reason": "PMAY Gramin builds a house for a named household",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 68570.0,
+   "books": [
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Weaker Section Housing",
+   "heads_of_account": 2,
+   "key": "Weaker Section Housing | Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN)",
+   "label": "scheme",
+   "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN)",
+   "reason": "the PM-JANMAN slice booked under housing builds houses for particularly vulnerable tribal households",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 113.66,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 19,
+   "key": "Women Development and Child Welfare Department | Andhra Pradesh State Commission for Protection of Child Rights",
+   "label": "not_scheme",
+   "name": "Andhra Pradesh State Commission for Protection of Child Rights",
+   "reason": "a statutory commission",
+   "sample": "stratified",
+   "stratum": "BCMIN/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 1027.5,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 7,
+   "key": "Women Development and Child Welfare Department | Assistance to A.P. Women Co-operative Finance Corporation",
+   "label": "not_scheme",
+   "name": "Assistance to A.P. Women Co-operative Finance Corporation",
+   "reason": "assistance to the women's co-operative finance corporation, a body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 30000.0,
+   "books": [
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 1,
+   "key": "Women Development and Child Welfare Department | Bala Sanjeevani Plus",
+   "label": "scheme",
+   "name": "Bala Sanjeevani Plus",
+   "reason": "Bala Sanjeevani supplies nutrition to children",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 1,
+   "key": "Women Development and Child Welfare Department | Construction of Anganwadi Centres (AWCs) under PM-JANMAN [AP456]",
+   "label": "not_scheme",
+   "name": "Construction of Anganwadi Centres (AWCs) under PM-JANMAN [AP456]",
+   "reason": "anganwadi centre construction",
+   "sample": "stratified",
+   "stratum": "SCST/q1",
+   "stratum_sampled": 22,
+   "stratum_size": 60
+  },
+  {
+   "be_lakh": 334.99,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 4,
+   "key": "Women Development and Child Welfare Department | Construction of Buildings for Anganwadi Centres",
+   "label": "not_scheme",
+   "name": "Construction of Buildings for Anganwadi Centres",
+   "reason": "anganwadi buildings",
+   "sample": "stratified",
+   "stratum": "SCST/q2",
+   "stratum_sampled": 18,
+   "stratum_size": 50
+  },
+  {
+   "be_lakh": 9600.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Construction of working Women's Hostel",
+   "label": "not_scheme",
+   "name": "Construction of working Women's Hostel",
+   "reason": "a working women's hostel building",
+   "sample": "stratified",
+   "stratum": "GB/q3",
+   "stratum_sampled": 6,
+   "stratum_size": 17
+  },
+  {
+   "be_lakh": null,
+   "books": [
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Girl Child Protection Scheme",
+   "label": "scheme",
+   "name": "Girl Child Protection Scheme",
+   "reason": "the Girl Child Protection Scheme pays a deposit and maturity benefit to the girl's family",
+   "sample": "stratified",
+   "stratum": "SCST/none",
+   "stratum_sampled": 13,
+   "stratum_size": 37
+  },
+  {
+   "be_lakh": 259.28,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Headquarters Office",
+   "label": "not_scheme",
+   "name": "Headquarters Office",
+   "reason": "headquarters establishment",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 5,
+   "stratum_size": 14
+  },
+  {
+   "be_lakh": 7379.66,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 1,
+   "key": "Women Development and Child Welfare Department | MISSION VATSALYA (Child Protection Services and Child Welfare Services) [AP353]",
+   "label": "not_scheme",
+   "name": "MISSION VATSALYA (Child Protection Services and Child Welfare Services) [AP353]",
+   "reason": "Mission Vatsalya's main head runs child care institutions and the protection service; the sponsorship transfer is a separate row",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 274.0,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 1,
+   "key": "Women Development and Child Welfare Department | Mission Shakti - SAMARTHYA - NATIONAL HUB FOR WOMEN EMPOWERMENT [AP359]",
+   "label": "not_scheme",
+   "name": "Mission Shakti - SAMARTHYA - NATIONAL HUB FOR WOMEN EMPOWERMENT [AP359]",
+   "reason": "a national hub is a technical support unit, an organisation; no benefit passes to a woman from this head",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 390.72,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 1,
+   "key": "Women Development and Child Welfare Department | Mission Shakti - SAMARTHYA - PALNA [AP357]",
+   "label": "scheme",
+   "name": "Mission Shakti - SAMARTHYA - PALNA [AP357]",
+   "reason": "Palna creche care is delivered to an enrolled working mother's child; Karnataka's label set reads Palna the same way, and a reader who treats a creche as a facility would flip this",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 2771.26,
+   "books": [
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 2,
+   "key": "Women Development and Child Welfare Department | Mission Shakti - SAMARTHYA - Pradhan Mantri Matru Vandana Yojana",
+   "label": "scheme",
+   "name": "Mission Shakti - SAMARTHYA - Pradhan Mantri Matru Vandana Yojana",
+   "reason": "the maternity benefit, cash paid to the mother",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 158.4,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Mission Shakti - SAMBAL - WOMEN'S HELPLINE [AP392]",
+   "label": "not_scheme",
+   "name": "Mission Shakti - SAMBAL - WOMEN'S HELPLINE [AP392]",
+   "reason": "a women's helpline, a service facility",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 143.8,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Mission Shakti - SAMBAL- ONE STOP CENTER [AP391]",
+   "label": "not_scheme",
+   "name": "Mission Shakti - SAMBAL- ONE STOP CENTER [AP391]",
+   "reason": "one stop centres are facilities, though the services in them reach women in distress",
+   "sample": "stratified",
+   "stratum": "GB/q1",
+   "stratum_sampled": 4,
+   "stratum_size": 5
+  },
+  {
+   "be_lakh": 780.0,
+   "books": [
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Mission Shakti-SAMBAL-One stop Centre (construction grant) [AP455]",
+   "label": "not_scheme",
+   "name": "Mission Shakti-SAMBAL-One stop Centre (construction grant) [AP455]",
+   "reason": "a construction grant for one stop centres",
+   "sample": "stratified",
+   "stratum": "GB/q2",
+   "stratum_sampled": 7,
+   "stratum_size": 20
+  },
+  {
+   "be_lakh": 1466.3,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Mission Vatsalya - Child Helpline",
+   "label": "not_scheme",
+   "name": "Mission Vatsalya - Child Helpline",
+   "reason": "a child helpline, a service facility",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 12281.28,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Mission Vatsalya - Non-Institutional care Sponsorship/ Foster care/ After care",
+   "label": "scheme",
+   "name": "Mission Vatsalya - Non-Institutional care Sponsorship/ Foster care/ After care",
+   "reason": "sponsorship, foster care and after care money paid to the family caring for the child",
+   "sample": "stratified",
+   "stratum": "CB/q4",
+   "stratum_sampled": 6,
+   "stratum_size": 16
+  },
+  {
+   "be_lakh": 693.19,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Mission Vatsalya-Creation of Capital Assets (Construction of CCIs including JJBs and CWCs)",
+   "label": "not_scheme",
+   "name": "Mission Vatsalya-Creation of Capital Assets (Construction of CCIs including JJBs and CWCs)",
+   "reason": "construction of child care institutions",
+   "sample": "stratified",
+   "stratum": "CB/q2",
+   "stratum_sampled": 5,
+   "stratum_size": 14
+  },
+  {
+   "be_lakh": 87601.79,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 3,
+   "key": "Women Development and Child Welfare Department | SAKSAM ANGANWADI AND POSHAN 2.0 (Supplementary Nutrition Programme) [AP351]",
+   "label": "scheme",
+   "name": "SAKSAM ANGANWADI AND POSHAN 2.0 (Supplementary Nutrition Programme) [AP351]",
+   "reason": "the supplementary nutrition programme feeds children and pregnant and nursing mothers",
+   "sample": "audit",
+   "stratum": null,
+   "stratum_sampled": null,
+   "stratum_size": null
+  },
+  {
+   "be_lakh": 94114.17,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": true,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 21,
+   "key": "Women Development and Child Welfare Department | SAKSHAM ANGANWADI AND POSHAN 2.0 (ICDS - Anganwadi Services) [AP347]",
+   "label": "scheme",
+   "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 (ICDS - Anganwadi Services) [AP347]",
+   "reason": "Anganwadi Services supplies supplementary nutrition and preschool to children and mothers; the same head also pays anganwadi staff",
+   "sample": "stratified",
+   "stratum": "SCST/q4",
+   "stratum_sampled": 22,
+   "stratum_size": 61
+  },
+  {
+   "be_lakh": 7377.0,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 1,
+   "key": "Women Development and Child Welfare Department | SAKSHAM ANGANWADI AND POSHAN 2.0 - CONSTRUCTION OF ANGANWADI CENTER BUILDINGS UNDER ICDS/APIP [AP349",
+   "label": "not_scheme",
+   "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 - CONSTRUCTION OF ANGANWADI CENTER BUILDINGS UNDER ICDS/APIP [AP349",
+   "reason": "anganwadi building construction",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  },
+  {
+   "be_lakh": 1416.2,
+   "books": [
+    "Backward Classes Component",
+    "Child Budget",
+    "Gender Budget",
+    "Scheduled Castes Component",
+    "Scheduled Tribes Component"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 3,
+   "key": "Women Development and Child Welfare Department | SAKSHAM ANGANWADI AND POSHAN 2.0 - Scheme for Adolescent Girls [AP352]",
+   "label": "scheme",
+   "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 - Scheme for Adolescent Girls [AP352]",
+   "reason": "the adolescent girls scheme supplies nutrition to out of school girls",
+   "sample": "stratified",
+   "stratum": "SCST/q3",
+   "stratum_sampled": 19,
+   "stratum_size": 53
+  },
+  {
+   "be_lakh": 1421.41,
+   "books": [
+    "Child Budget",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 0,
+   "key": "Women Development and Child Welfare Department | Saksham Anganwadi and Poshan 2.0 - Swachhata Action Plan [AP462]",
+   "label": "not_scheme",
+   "name": "Saksham Anganwadi and Poshan 2.0 - Swachhata Action Plan [AP462]",
+   "reason": "a sanitation action plan for anganwadis, a facility head",
+   "sample": "stratified",
+   "stratum": "CB/q3",
+   "stratum_sampled": 4,
+   "stratum_size": 11
+  },
+  {
+   "be_lakh": 295.58,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": false,
+   "department": "Women Development and Child Welfare Department",
+   "heads_of_account": 20,
+   "key": "Women Development and Child Welfare Department | State Commission for Women",
+   "label": "not_scheme",
+   "name": "State Commission for Women",
+   "reason": "the State Commission for Women, a statutory body",
+   "sample": "stratified",
+   "stratum": "BCMIN/q2",
+   "stratum_sampled": 16,
+   "stratum_size": 45
+  },
+  {
+   "be_lakh": 2099.8,
+   "books": [
+    "Backward Classes Component",
+    "Gender Budget"
+   ],
+   "borderline": true,
+   "department": "Youth Services Department",
+   "heads_of_account": 10,
+   "key": "Youth Services Department | Youth Welfare Schemes",
+   "label": "not_scheme",
+   "name": "Youth Welfare Schemes",
+   "reason": "a departmental umbrella head for youth welfare carrying salaries; the book names no benefit under it",
+   "sample": "stratified",
+   "stratum": "BCMIN/q3",
+   "stratum_sampled": 16,
+   "stratum_size": 44
+  }
+ ],
+ "not_scheme": 131,
+ "rule": {
+  "borderline_note": "Rows flagged borderline are the ones where the two readings genuinely compete. Every one carries the reasoning that decided it, so a human can flip it and rerun.",
+  "not_scheme": "the money runs, builds, staffs or maintains an organisation or an asset (college, hostel, hospital, corporation, board, agency, building, road), devolves general purpose funds to another tier of government, pays for the capacity of the delivery system rather than the benefit, or is an accounting or adjustment head",
+  "scheme": "the money buys an identifiable benefit received by a person or household: cash, a kit, food, a scholarship, a fee waiver, a pension, insurance, a subsidy, a loan, free travel, free power, a house, treatment for a named beneficiary class, or training in which the trainee is himself the beneficiary class",
+  "the_line_that_did_the_work": "Training is a scheme when the trainee is the beneficiary class and the training is the benefit: adult literacy under NILP and Padhna Likhna Abhiyan, skilling under DDU-GKY and RSETI. It is not a scheme when it buys the delivery system's capacity: the agricultural extension sub-mission, the livestock mission's seminars and trainings, IEC campaigns. Likewise a facility the public walks into is an institution (a one stop centre, a helpline, a home, a junior college) while an enrolled service delivered to a named beneficiary is a scheme (creche care under Palna, a mid day meal)."
+ },
+ "sampling": "Stratified by book (SC or ST component, else Backward Classes or Minorities, else Child, else Gender) crossed with allocation band (none, and quartiles of the 515 rows that carry an allocation), 17 non-empty strata. Within a stratum rows are sorted by key and picked at even spacing, so the sample is reproducible without a random seed. Allocation is proportional to stratum size with a floor of 4, so the sample is close to self weighting; stratum_size and stratum_sampled are carried on every stratified row so a weighted estimate can be recomputed.",
+ "scheme": 171,
+ "sets": {
+  "audit": {
+   "borderline": 19,
+   "n": 99,
+   "not_scheme": 13,
+   "scheme": 86,
+   "what": "Every row the classifier scores 3 or above that the stratified sample had not already covered. Together the two sets are a census of the published region, so the published list's precision is counted rather than estimated. The audit was made after the weights were fixed and was not fed back into them."
+  },
+  "stratified": {
+   "borderline": 56,
+   "n": 203,
+   "not_scheme": 118,
+   "scheme": 85,
+   "what": "A probability sample of all 552 rows. This is the only set the threshold sweep uses, because precision and recall estimated on anything else would not generalise to the rows the classifier has not seen."
+  }
+ },
+ "snapshot": "2026-09-01",
+ "what": "Hand labels for Andhra Pradesh's scheme-wise budget rows, a stratified probability sample plus an audit census of everything the classifier scores at or above 3. Ground truth for parse/classify_andhra.py. Audit and correct these: the classifier is only as good as they are."
+}

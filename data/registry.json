@@ -1,10 +1,10 @@
 {
  "added_by": {
   "budget": 520,
-  "dbt": 118,
-  "outcome": 8
+  "dbt": 120,
+  "outcome": 9
  },
- "built": "2026-09-01T17:24:46Z",
+ "built": "2026-09-01T17:47:45Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -9557,7 +9557,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: astc / csespatvasastca",
+     "merge_reason": "acronym containment: astc / csfeospatvaasaastca",
      "name": "ATI Scheme (Training Component)"
     },
     "myscheme": {
@@ -24442,7 +24442,7 @@
      "be_cr": 250.0,
      "cycle": "2026-27",
      "demand_no": 78,
-     "merge_reason": "acronym containment: sfccdacrcfsiisdss / isds",
+     "merge_reason": "acronym containment: ccdcrcsisds / isds",
      "name": "Scheme for Capacity & Capability development and credit risk coverage for shipbuilding in India-Shipbuilding Development Scheme (SbDS)",
      "statement": "stat4b"
     },
@@ -35710,33 +35710,12 @@
   {
    "name": "National Handicrafts Development Programme: Infrastructure And Technology Support: URBAN HAAT",
    "sources": {
-    "budget": {
-     "be_cr": 31820.0,
-     "cycle": "2026-27",
-     "demand_no": 46,
-     "merge_reason": "acronym match: urban",
-     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
-     "statement": "stat4a"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: urban",
-     "name": "STATE AND UT GRANTS UNDER PMAY URBAN"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Textiles",
      "passed": 7,
      "slug": "nhdp-iandts-uh",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CSS",
-     "merge_reason": "acronym match: urban",
-     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
-     "outlay_cr": 31820.0,
-     "page": 136,
-     "targets": 43
     }
    }
   },
@@ -36429,7 +36408,7 @@
     },
     "outcome": {
      "classification": "CSS",
-     "merge_reason": "acronym containment: nsap / nsap",
+     "merge_reason": "acronym containment: nsapn / nsap",
      "name": "National Social Assistance Programme (NSAP)",
      "outlay_cr": 9671.0,
      "page": 243,
@@ -39311,7 +39290,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: gpat / gpat",
+     "merge_reason": "acronym containment: gate / gate",
      "name": "P.G. Scholarship For GATE/GPAT Qualified Students For Pursuing M.Tech/ M.E./M.Pharma - AICTE"
     },
     "myscheme": {
@@ -39328,7 +39307,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: spcssc / pgspcssc",
+     "merge_reason": "acronym containment: sfpcfssc / pgsfpcfssc",
      "name": "P. G. Scholarship for Professional Courses for SC/ST candidates"
     },
     "myscheme": {
@@ -40768,7 +40747,7 @@
      "be_cr": 120.0,
      "cycle": "2026-27",
      "demand_no": 1,
-     "merge_reason": "acronym containment: pmkmd / pmkm",
+     "merge_reason": "acronym containment: pmkmdy / pmkm",
      "name": "Pradhan Mantri Kisan Man Dhan Yojna",
      "statement": "stat4b"
     },
@@ -40817,7 +40796,7 @@
      "be_cr": 6587.0,
      "cycle": "2026-27",
      "demand_no": 62,
-     "merge_reason": "acronym containment: pmksy / pmksypdmc",
+     "merge_reason": "acronym containment: pmks / pmksypdmc",
      "name": "Pradhan Mantri Krishi Sinchai Yojna",
      "statement": "stat4a"
     },
@@ -46295,6 +46274,14 @@
   {
    "name": "Scheme for Assistance for Research & Development Activities: Assistance for Contract/Sponsored Research Work",
    "sources": {
+    "budget": {
+     "be_cr": 31820.0,
+     "cycle": "2026-27",
+     "demand_no": 46,
+     "merge_reason": "acronym match: sponsored",
+     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
+     "statement": "stat4a"
+    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Industries and Mines Department",
@@ -47216,7 +47203,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: rtfuscsptsp / scsp",
+     "merge_reason": "acronym containment: rotfuscsptsp / scsp",
      "name": "Reimbursement of training fees under Scheduled Caste Sub Plan Tribal sub Plan"
     },
     "myscheme": {
@@ -55441,7 +55428,7 @@
      "be_cr": 32.0,
      "cycle": "2026-27",
      "demand_no": 70,
-     "merge_reason": "acronym containment: qwbtsaswsvy / swsvy",
+     "merge_reason": "acronym containment: qwbtsaswsvy / swsv",
      "name": "Quami Waqf Board Taraqqiati Scheme and Sahari Waqf Sampati Vikas Yojna",
      "statement": "stat4b"
     },
@@ -61782,11 +61769,6 @@
      "demand_no": 11,
      "name": "Scheme for Investment Promotion CENTRAL SECTOR SCHEMES",
      "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: central",
-     "name": "Central Scheme for Assistance to Civilian Victims (CSACV)"
     }
    }
   },
@@ -65108,7 +65090,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "acronym containment: seipieob / ipieob",
+     "merge_reason": "acronym containment: seipaieotb / ipaieotb",
      "name": "Solar Energy: Interest Payment and Issuing Expenses on the Bond",
      "outlay_cr": 1764.35,
      "page": 215,
@@ -67215,6 +67197,18 @@
    }
   },
   {
+   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
+   "sources": {
+    "outcome": {
+     "classification": "CSS",
+     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
+     "outlay_cr": 31820.0,
+     "page": 136,
+     "targets": 43
+    }
+   }
+  },
+  {
    "name": "Sagarmala",
    "sources": {
     "outcome": {
@@ -67556,6 +67550,15 @@
     "dbt": {
      "list": "central",
      "name": "Enhanced compensation to 1984 Sikh Riots"
+    }
+   }
+  },
+  {
+   "name": "Central Scheme for Assistance to Civilian Victims (CSACV)",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Central Scheme for Assistance to Civilian Victims (CSACV)"
     }
    }
   },
@@ -68001,6 +68004,15 @@
    }
   },
   {
+   "name": "STATE AND UT GRANTS UNDER PMAY URBAN",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "STATE AND UT GRANTS UNDER PMAY URBAN"
+    }
+   }
+  },
+  {
    "name": "Scholarship Scheme Of Satyajit Ray Film And Television Institute Kolkata",
    "sources": {
     "dbt": {
@@ -68326,15 +68338,15 @@
   }
  ],
  "in_n_sources": {
-  "1": 5000,
+  "1": 5004,
   "2": 324,
   "3": 69,
-  "4": 24
+  "4": 23
  },
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
  "snapshot": "2026-08-30",
- "total_entries": 5417,
+ "total_entries": 5420,
  "unlisted_but_funded": [
   {
    "also_in": [],
@@ -70251,9 +70263,7 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
+   "also_in": [],
    "be_cr": 171.0,
    "demand_no": 11,
    "name": "Scheme for Investment Promotion CENTRAL SECTOR SCHEMES",
