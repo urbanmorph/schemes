@@ -33,6 +33,32 @@ from common import ROOT, write_json  # noqa: E402
 
 RUPEE = "₹"
 
+# Beneficiary labels that denote a person or a group of people, as opposed to an
+# organisation. Self-help and joint-liability groups sit here because they are groups of
+# individuals receiving a benefit, not firms.
+PERSON_BENEFICIARIES = {
+    "Individual", "Family", "Artists", "Sportsperson", "Journalist", "Visitor",
+    "Self Help Groups (SHGS)", "Joint Liability Groups (JLGS)",
+}
+
+
+def audience_of(labels):
+    """person, mixed, institution or unstated.
+
+    myScheme is widely assumed to be a citizen portal, and mostly it is: 81% of records
+    reach a person. But 13% reach no individual at all, only firms, industries,
+    societies and universities. A register that flattens that is hiding a real division
+    in what the state calls a "scheme".
+    """
+    labels = [x for x in labels if x]
+    if not labels:
+        return "unstated"
+    has_person = any(x in PERSON_BENEFICIARIES for x in labels)
+    has_org = any(x not in PERSON_BENEFICIARIES for x in labels)
+    if has_person and has_org:
+        return "mixed"
+    return "person" if has_person else "institution"
+
 
 def _md(x):
     return x if isinstance(x, str) else ""
@@ -190,6 +216,11 @@ def check_scheme(rec):
         "benefits_md": benefits,
         "eligibility_md": eligibility,
         "exclusions_md": _md(content.get("exclusions_md")),
+        "beneficiaries": [(t.get("label") if isinstance(t, dict) else t)
+                          for t in (basic.get("targetBeneficiaries") or [])
+                          if (t.get("label") if isinstance(t, dict) else t)],
+        "audience": audience_of([(t.get("label") if isinstance(t, dict) else t)
+                                 for t in (basic.get("targetBeneficiaries") or [])]),
         "url_count": len(urls),
         "passed": passed,
         "total": len(checks),

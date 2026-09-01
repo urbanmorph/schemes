@@ -573,6 +573,8 @@ def unify(checks, registry, classification):
             "org": (base or {}).get("org"),
             "level_value": (base or {}).get("level_value"),
             "state": (base or {}).get("state"),
+            "audience": (base or {}).get("audience"),
+            "beneficiaries": (base or {}).get("beneficiaries") or [],
             "be_cr": bud.get("be_cr"),
             "demand_no": bud.get("demand_no"),
             "statement": bud.get("statement"),
@@ -666,6 +668,19 @@ def index_section(entries):
            for k in ("myscheme", "budget", "dbt", "outcome") if k in src_counts]
         + [("!myscheme", "Not on myScheme", not_ms)])
 
+    AUD = {"person": "People and families", "institution": "Firms and institutions",
+           "mixed": "Both", "unstated": "Not stated"}
+    aud = {}
+    for e_ in entries:
+        a = e_.get("audience")
+        if a:
+            aud[a] = aud.get(a, 0) + 1
+    aud_pills = pill_group(
+        "aud", "Who it is for",
+        [("", "All", len(entries))]
+        + [(k, AUD.get(k, k), aud[k])
+           for k in ("person", "institution", "mixed", "unstated") if k in aud])
+
     # Cuts that mean something, not "N or fewer" for every N. Measured: no scheme scores
     # below 2 or above 9, and the mass sits at 5-7, so most of the old dropdown's
     # eleven options selected either everything or nothing.
@@ -738,6 +753,7 @@ def index_section(entries):
                  f'data-o="{e((e_.get("org") or "").lower())}" '
                  f'data-l="{e(e_.get("level_value") or "")}" '
                  f'data-st="{e(" ".join(x.lower() for x in ((e_.get("state") if isinstance(e_.get("state"), list) else [e_.get("state")]) if e_.get("state") else [])))}" '
+                 f'data-a="{e(e_.get("audience") or "")}" '
                  f'data-s="{e(" ".join(e_["sources"]))}"'
                  + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
                  + '>'
@@ -769,6 +785,7 @@ def index_section(entries):
 </div>
 <div class="pills">
   {level_pills}
+  {aud_pills}
   {src_pills}
   {doc_pills}
 </div>
@@ -808,7 +825,7 @@ def index_section(entries):
       empty=document.getElementById('nomatch'),
       q=document.getElementById('q'),og=document.getElementById('org'),
       c=document.getElementById('count'),asc=false,
-      state={{lvl:'',src:'',doc:''}};
+      state={{lvl:'',src:'',doc:'',aud:''}};
   var norm=function(v){{return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
   rows.forEach(function(r){{ r._h = norm(r.cells[0].textContent+' '+(r.dataset.x||'')); }});
   function terms(v){{ return norm(v).split(' ').filter(Boolean); }}
@@ -829,6 +846,7 @@ def index_section(entries):
       var ok=(!o||r.dataset.o.indexOf(o)>-1)
              &&(!stv||(r.dataset.st||'').indexOf(stv)>-1)
              &&(!state.lvl||r.dataset.l===state.lvl)
+             &&(!state.aud||r.dataset.a===state.aud)
              &&docOk(r,state.doc);
       if(ok&&state.src){{
         var have=(r.dataset.s||'').split(' ');
@@ -873,6 +891,7 @@ def index_section(entries):
     var sv2=document.getElementById('st').value;
     if(sv2 && skip!=='st' && (r.dataset.st||'').indexOf(sv2)<0) return false;
     if(skip!=='lvl' && state.lvl && r.dataset.l!==state.lvl) return false;
+    if(skip!=='aud' && state.aud && r.dataset.a!==state.aud) return false;
     if(skip!=='doc' && !docOk(r,state.doc)) return false;
     if(skip!=='src' && state.src){{
       var have=(r.dataset.s||'').split(' ');
@@ -884,6 +903,7 @@ def index_section(entries):
   }}
   function matchOne(r,g,v){{
     if(g==='lvl') return !v||r.dataset.l===v;
+    if(g==='aud') return !v||r.dataset.a===v;
     if(g==='doc') return docOk(r,v);
     if(!v) return true;
     var have=(r.dataset.s||'').split(' ');
@@ -910,6 +930,7 @@ def index_section(entries):
     var stEl=document.getElementById('st');
     if(stEl.value) tries.push(['st','state '+stEl.options[stEl.selectedIndex].text]);
     if(state.lvl) tries.push(['lvl','level']);
+    if(state.aud) tries.push(['aud','who it is for']);
     if(state.src) tries.push(['src','listed by']);
     if(state.doc) tries.push(['doc','documentation']);
     if(ts.length) tries.push(['q','the search “'+q.value.trim()+'”']);
@@ -955,6 +976,19 @@ def index_section(entries):
       rows.forEach(function(r){{tb.appendChild(r);}});
     }});
   }});
+  // Publish the sticky filter bar's real height so the table header can sit exactly
+  // beneath it at any width, including when the controls wrap.
+  var bar=document.querySelector('.filters');
+  function measure(){{
+    document.documentElement.style.setProperty(
+      '--filters-h', Math.round(bar.getBoundingClientRect().height)+'px');
+  }}
+  if(bar){{
+    measure();
+    if(window.ResizeObserver) new ResizeObserver(measure).observe(bar);
+    else window.addEventListener('resize',measure);
+  }}
+
   apply();          // rail and pill counts must be live from the first paint
 }})();
 </script>
@@ -1121,6 +1155,8 @@ def page_scheme(s, status, enrich=None, entry=None):
     places = where_full(s)
     if places:
         chips += f'<span class="chip place">{e(places)}</span>'
+    for bnf in (s.get("beneficiaries") or [])[:4]:
+        chips += f'<span class="chip">{e(bnf)}</span>'
     if s.get("level"):
         chips += f'<span class="chip">{e(s["level"])}</span>'
     if s.get("type"):
