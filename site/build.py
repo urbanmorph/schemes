@@ -553,7 +553,8 @@ and be done.</p>
   <div class="warnbox">
     <b>What this register cannot yet tell you</b>
     For central schemes the Union Budget supplies an independent list of names, so a
-    scheme missing from myScheme can be named, and 69 of them are named on this page. No
+    scheme missing from myScheme can be named, and
+    {num(len((cls or {}).get("unlisted_schemes", [])))} of them are named on this page. No
     equivalent exists for states. DBT Bharat publishes a per-state
     <em>count</em> and no state scheme list, so the shortfall of
     {num(sum(max(0, (ds.get(n) or 0) - v) for n, v in ms.items() if ds.get(n)))} schemes

@@ -59,6 +59,27 @@ def tokens(s):
     return [t for t in norm(s).split() if t not in STOP and len(t) > 2]
 
 
+# Indic transliteration variance. The same scheme is spelled differently by the office
+# that typed it: Karnataka's Gruha Lakshmi is myScheme's "Griha Lakshmi Scheme", and the
+# state's own books write Shakthi where the portal writes Shakti. Comparing those as
+# plain tokens scores 0.55 and reports the scheme as missing from a portal that lists it.
+# That is the expensive direction of error here, because claiming absence is an
+# accusation, so this folds only in probably_same and never where money is attached.
+#
+# Two steps, both reversible by eye: drop the h of an aspirated consonant (shakthi ->
+# shakti, jyothi -> jyoti), then reduce the token to its consonant skeleton, which is what
+# survives a vowel disagreement (gruha and griha are both grh).
+_ASPIRATE = re.compile(r"(?<=[kgcjtdpbs])h")
+
+
+def skeleton(t):
+    return re.sub(r"[aeiou]", "", _ASPIRATE.sub("", t)) or t
+
+
+def skeletons(s):
+    return {skeleton(t) for t in tokens(s)}
+
+
 def acronyms(s):
     """Acronyms this name could be written as, plus any it already contains.
 
@@ -145,6 +166,23 @@ def probably_same(a, b, floor=0.75):
         if len(small) >= 2 and small <= large:
             return True, f"all {len(small)} content words of the shorter name are present"
 
+    # Same content words once transliteration is folded out. Two or more skeletons must
+    # line up, because a skeleton is lossy enough that one alone proves little: mata,
+    # mati and moti all reduce to mt. The exception is a name whose only content word is
+    # the scheme's name, "Shakthi Scheme" against "Shakti Scheme", where there is no
+    # second word to corroborate with. There the raw tokens must also look alike, which
+    # shakthi/shakti does at 0.92 and mata/moti does not at 0.50.
+    ta_, tb_ = tokens(a), tokens(b)
+    sa, sb = skeletons(a), skeletons(b)
+    if sa and sb:
+        small, large = (sa, sb) if len(sa) <= len(sb) else (sb, sa)
+        if small <= large:
+            if len(small) >= 2:
+                return True, f"transliteration variant: {sorted(small)[:3]}"
+            if len(ta_) == 1 and len(tb_) == 1 and \
+                    difflib.SequenceMatcher(None, ta_[0], tb_[0]).ratio() >= 0.8:
+                return True, f"transliteration variant: {ta_[0]} / {tb_[0]}"
+
     aa, ab = acronyms(a), acronyms(b)
     shared = (aa & set(tokens(b))) | (ab & set(tokens(a))) | (aa & ab)
     shared = {x for x in shared if len(x) >= 5}
@@ -178,6 +216,20 @@ SELFTEST = [
     ("DAY-NRLM",
      "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission", True),
     ("NRLM", "National Handloom Development Programme", False),
+]
+
+
+SELFTEST += [
+    # Transliteration. Karnataka's budget writes Gruha; myScheme writes Griha. Reporting
+    # this pair as absent was the error that prompted the skeleton rule.
+    ("Gruha Lakshmi", "Griha Lakshmi Scheme", True),
+    ("Shakthi Scheme", "Shakti Scheme", True),
+    ("Jyothi Sanjeevini", "Jyoti Sanjeevini", True),
+    # ...and it must not fold two different schemes together just because one word
+    # collapses the same way. Shakthi is free bus travel; Shrama Shakthi is a loan scheme.
+    ("Shakthi Scheme", "Shrama Shakthi Scheme", False),
+    ("Gruha Jyothi", "Griha Lakshmi Scheme", False),
+    ("Anna Bhagya", "Ksheera Bhagya", False),
 ]
 
 

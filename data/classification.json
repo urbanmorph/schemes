@@ -110,6 +110,28 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 375.0,
+   "demand_no": 94,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+2",
+     "benefit words in the name: assistance"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": null,
+   "name": "Assistance to Disabled Persons for Purchase/Fitting of Aids and Appliances",
+   "score": 5,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 150.0,
    "demand_no": 1,
    "evidence": [
@@ -145,8 +167,8 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 18625.05,
-   "demand_no": 60,
+   "be_cr": 31820.0,
+   "demand_no": 46,
    "evidence": [
     [
      "+3",
@@ -159,14 +181,18 @@
     [
      "+2",
      "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: mission"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": true,
    "in_outcome": true,
-   "ministry": "M/o Housing and Urban Affairs",
-   "name": "PMAY-Urban",
-   "score": 6,
+   "ministry": "M/o Health and Family Welfare",
+   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
+   "score": 8,
    "statement": "stat4a",
    "verdict": "scheme"
   },
@@ -240,6 +266,36 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": 2500.0,
+   "demand_no": 43,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: yojana"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
+   "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+   "score": 8,
+   "statement": "stat4a",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 8000.0,
    "demand_no": 60,
    "evidence": [
@@ -270,8 +326,8 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 27.0,
-   "demand_no": 4,
+   "be_cr": 300.0,
+   "demand_no": 26,
    "evidence": [
     [
      "+3",
@@ -280,18 +336,14 @@
     [
      "+1",
      "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "benefit words in the name: yojana"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": true,
    "in_outcome": true,
-   "ministry": "Ministry of Ayush",
-   "name": "AYUSH Oushadhi Gunvatta evum Uttpadan Samvardhan Yojana (AOGUSY)",
-   "score": 6,
+   "ministry": "M/o Education",
+   "name": "Multidisciplinary Education and Research Improvement in Technical Education-EAP (MERITE) CENTRAL SECTOR SCHEMES",
+   "score": 4,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -436,24 +488,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 90.0,
-   "demand_no": 68,
-   "evidence": [
-    [
-     "+2",
-     "benefit words in the name: assistance, training"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Micro, Small and Medium Enterprises",
-   "name": "Assistance to Training Institutions",
-   "score": 2,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 0.03,
    "demand_no": 98,
    "evidence": [
@@ -529,20 +563,28 @@
   },
   {
    "be_cr": null,
-   "demand_no": 11,
+   "demand_no": 92,
    "evidence": [
     [
-     "+1",
-     "has an Output-Outcome framework"
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: livelihood, skill"
+    ],
+    [
+     "-3",
+     "asset or accounting words in the name: acquisition"
     ]
    ],
    "in_dbt": false,
    "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Commerce and Industry",
-   "name": "Package for Special Catagory States for Jammu and Kashmir, Himachal Pradesh and Uttarakhand",
+   "in_outcome": false,
+   "ministry": "M/o Skill Development and Entrepreneurship",
+   "name": "Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP)-EAP",
    "score": 1,
-   "statement": "stat4b",
+   "statement": "stat4a",
    "verdict": "budget head"
   },
   {
@@ -665,14 +707,14 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 410.0,
-   "demand_no": 68,
+   "be_cr": null,
+   "demand_no": 98,
    "evidence": [],
    "in_dbt": false,
    "in_myscheme": true,
    "in_outcome": false,
-   "ministry": "M/o Micro, Small and Medium Enterprises",
-   "name": "Micro and Small Enterprise-Cluster Development Programme (MSE-CDP)",
+   "ministry": "M/o Textiles",
+   "name": "Handicraft Cluster Development Program - Handicraft Mega Cluster",
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
@@ -696,34 +738,44 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 54916.7,
-   "demand_no": 87,
+   "be_cr": 116805.0,
+   "demand_no": 6,
    "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
     [
      "+1",
      "has an Output-Outcome framework"
     ],
     [
      "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: awas, yojna"
+     "benefit words in the name: subsidy"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": true,
    "in_outcome": true,
-   "ministry": "M/o Rural Development",
-   "name": "Pradhan Mantri Awas Yojna (PMAY)- Rural",
-   "score": 8,
-   "statement": "stat4a",
+   "ministry": "M/o Chemicals and Fertilisers",
+   "name": "Urea Subsidy",
+   "score": 3,
+   "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": 63.97,
+   "demand_no": 1,
+   "evidence": [
+    [
+     "-3",
+     "asset or accounting words in the name: capital"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": "M/o Agriculture and Farmers' Welfare",
+   "name": "Blended Capital Support to Finance Startups for Agriculture and Rural Enterprise Relevant for Farm Produce Value Chain",
+   "score": -3,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 0.01,
@@ -750,18 +802,14 @@
     [
      "+3",
      "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": true,
-   "in_outcome": true,
+   "in_outcome": false,
    "ministry": "M/o Education",
    "name": "Prime Minister's Girls' Hostel",
-   "score": 4,
+   "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -799,36 +847,6 @@
    "name": "Grants to NABARD to settle the claims under Indo-Swiss Cooperation-VI",
    "score": 3,
    "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 2500.0,
-   "demand_no": 43,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: yojana"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
-   "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
-   "score": 8,
-   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -955,6 +973,28 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 100.0,
+   "demand_no": 23,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+2",
+     "benefit words in the name: scheme"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": "M/o Development of North Eastern Region",
+   "name": "North East Enterprise Development Scheme (NEEDS) erstwhile Loan to North East Development Finance Corporation",
+   "score": 5,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 344.55,
    "demand_no": 61,
    "evidence": [],
@@ -1046,24 +1086,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 40.0,
-   "demand_no": 65,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Law and Justice",
-   "name": "Designing Innovative Solutions for Holistic Access to Justice in India(DISHA)",
-   "score": 3,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 200.0,
    "demand_no": 94,
    "evidence": [
@@ -1144,6 +1166,24 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": 676.85,
+   "demand_no": 1,
+   "evidence": [
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": "M/o Agriculture and Farmers' Welfare",
+   "name": "NAMO DRONE DIDI",
+   "score": 1,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 155.0,
    "demand_no": 87,
    "evidence": [],
@@ -1157,20 +1197,24 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 500.0,
-   "demand_no": 44,
+   "be_cr": 96.0,
+   "demand_no": 68,
    "evidence": [
     [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
      "+2",
-     "benefit words in the name: scheme"
+     "benefit words in the name: skill"
     ]
    ],
-   "in_dbt": false,
+   "in_dbt": true,
    "in_myscheme": true,
    "in_outcome": false,
-   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
-   "name": "Integrated Scheme for Entrepreneurship Development",
-   "score": 2,
+   "ministry": "M/o Micro, Small and Medium Enterprises",
+   "name": "Entrepreneurship cum Skill Development Programme (ESDP)",
+   "score": 5,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -1321,6 +1365,19 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 15.0,
+   "demand_no": 21,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": null,
+   "name": "Inspection - Director General Quality Audit (DGQA)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 100.0,
    "demand_no": 76,
    "evidence": [
@@ -1433,6 +1490,54 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 570.0,
+   "demand_no": 46,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "benefit words in the name: mission"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": "M/o Health and Family Welfare",
+   "name": "Pradhan Mantri Ayushman Bharat Health Infrastructure Mission (PMABHIM) (Health)",
+   "score": 6,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 1043.15,
+   "demand_no": 44,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
+   "name": "Development Programmes",
+   "score": 5,
+   "statement": "stat4a",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 77.0,
    "demand_no": 15,
    "evidence": [
@@ -1475,36 +1580,6 @@
    "score": 1,
    "statement": "stat4b",
    "verdict": "budget head"
-  },
-  {
-   "be_cr": 12750.0,
-   "demand_no": 25,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: poshan"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Education",
-   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)",
-   "score": 8,
-   "statement": "stat4a",
-   "verdict": "scheme"
   },
   {
    "be_cr": 9671.0,
@@ -1551,6 +1626,28 @@
    "ministry": "M/o Social Justice and Empowerment",
    "name": "Scheme of Residential Education for Students in High School in Targeted Area (SRESHTA) for SCs",
    "score": 5,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 54000.0,
+   "demand_no": 6,
+   "evidence": [
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "benefit words in the name: subsidy"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": "M/o Chemicals and Fertilisers",
+   "name": "Nutrient Based Subsidy",
+   "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -1642,6 +1739,28 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 0.06,
+   "demand_no": 51,
+   "evidence": [
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "-2",
+     "capital-heavy demand: M/o Home Affairs"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": "M/o Home Affairs",
+   "name": "Border Area Development Program",
+   "score": 0,
+   "statement": "stat4a",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 4788.45,
    "demand_no": 17,
    "evidence": [
@@ -1660,20 +1779,24 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 6.75,
-   "demand_no": 33,
+   "be_cr": 10397.06,
+   "demand_no": 95,
    "evidence": [
     [
      "+3",
      "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": true,
-   "in_outcome": false,
+   "in_outcome": true,
    "ministry": null,
-   "name": "Research, Development, Consultancy & Reorientation (RDCR)",
-   "score": 3,
+   "name": "Space Technology",
+   "score": 4,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -1831,38 +1954,16 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 488.28,
-   "demand_no": 85,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "benefit words in the name: training"
-    ],
-    [
-     "-2",
-     "capital-heavy demand: M/o Railways"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Railways",
-   "name": "Training/Human Resource Development",
-   "score": 3,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 4200.0,
    "demand_no": 42,
    "evidence": [
     [
      "+3",
      "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
     ],
     [
      "+2",
@@ -1875,10 +1976,10 @@
    ],
    "in_dbt": true,
    "in_myscheme": true,
-   "in_outcome": false,
+   "in_outcome": true,
    "ministry": null,
    "name": "Assistance to States for Public Health Infrastructure",
-   "score": 7,
+   "score": 8,
    "statement": "stat4a",
    "verdict": "scheme"
   },
@@ -1953,20 +2054,34 @@
      "named in DBT Bharat's central list, so money reaches individuals"
     ],
     [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
      "+2",
      "benefit words in the name: pension, subsidy"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": true,
-   "in_outcome": true,
+   "in_outcome": false,
    "ministry": "M/o Finance",
    "name": "Interest Subsidy to LIC for Pension Plan for Senior Citizens",
-   "score": 6,
+   "score": 5,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 205.0,
+   "demand_no": 98,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": "M/o Textiles",
+   "name": "National Handicrafts Development Programme (NHDP)",
+   "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -2001,34 +2116,17 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 1700.0,
-   "demand_no": 45,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scheme"
-    ]
-   ],
-   "in_dbt": true,
+   "be_cr": 410.0,
+   "demand_no": 68,
+   "evidence": [],
+   "in_dbt": false,
    "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Food Processing Industries",
-   "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
-   "score": 8,
-   "statement": "stat4a",
-   "verdict": "scheme"
+   "in_outcome": false,
+   "ministry": "M/o Micro, Small and Medium Enterprises",
+   "name": "Micro and Small Enterprise-Cluster Development Programme (MSE-CDP)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 1550.0,
@@ -2145,26 +2243,8 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 676.85,
-   "demand_no": 1,
-   "evidence": [
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Agriculture and Farmers' Welfare",
-   "name": "NAMO DRONE DIDI",
-   "score": 1,
-   "statement": "stat4b",
-   "verdict": "budget head"
-  },
-  {
-   "be_cr": 0.01,
-   "demand_no": 32,
+   "be_cr": 300.0,
+   "demand_no": 60,
    "evidence": [
     [
      "+3",
@@ -2172,34 +2252,20 @@
     ],
     [
      "+2",
-     "benefit words in the name: yojana"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Finance",
-   "name": "Pradhan Mantri Mudra Yojana (PMMY)(through NCGTC)",
-   "score": 5,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 205.0,
-   "demand_no": 98,
-   "evidence": [
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
+     "+2",
+     "benefit words in the name: mission"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": true,
    "in_outcome": false,
-   "ministry": "M/o Textiles",
-   "name": "National Handicrafts Development Programme (NHDP)",
-   "score": 3,
-   "statement": "stat4b",
+   "ministry": "M/o Housing and Urban Affairs",
+   "name": "National Urban Digital Mission (NUDM)",
+   "score": 7,
+   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -2537,6 +2603,36 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 12750.0,
+   "demand_no": 25,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: poshan"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": "M/o Education",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)",
+   "score": 8,
+   "statement": "stat4a",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 900.0,
    "demand_no": 60,
    "evidence": [
@@ -2641,6 +2737,66 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 54916.7,
+   "demand_no": 87,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: awas, yojna"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": "M/o Rural Development",
+   "name": "Pradhan Mantri Awas Yojna (PMAY)- Rural",
+   "score": 8,
+   "statement": "stat4a",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 1700.0,
+   "demand_no": 45,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: scheme"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": "M/o Food Processing Industries",
+   "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
+   "score": 8,
+   "statement": "stat4a",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": null,
    "demand_no": 46,
    "evidence": [
@@ -2736,16 +2892,12 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 915.0,
-   "demand_no": 45,
+   "be_cr": 0.01,
+   "demand_no": 32,
    "evidence": [
     [
      "+3",
      "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
     ],
     [
      "+2",
@@ -2754,10 +2906,10 @@
    ],
    "in_dbt": true,
    "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Food Processing Industries",
-   "name": "Pradhan Mantri Kisan Sampada Yojana",
-   "score": 6,
+   "in_outcome": false,
+   "ministry": "M/o Finance",
+   "name": "Pradhan Mantri Mudra Yojana (PMMY)(through NCGTC)",
+   "score": 5,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -2932,32 +3084,6 @@
   },
   {
    "be_cr": null,
-   "demand_no": 92,
-   "evidence": [
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: livelihood, skill"
-    ],
-    [
-     "-3",
-     "asset or accounting words in the name: acquisition"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Skill Development and Entrepreneurship",
-   "name": "Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP)-EAP",
-   "score": 1,
-   "statement": "stat4a",
-   "verdict": "budget head"
-  },
-  {
-   "be_cr": null,
    "demand_no": 1,
    "evidence": [
     [
@@ -3010,16 +3136,20 @@
    "demand_no": 89,
    "evidence": [
     [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
      "+2",
      "benefit words in the name: scheme"
     ]
    ],
    "in_dbt": false,
    "in_myscheme": true,
-   "in_outcome": false,
+   "in_outcome": true,
    "ministry": "M/o Science and Technology",
    "name": "Research, Development and Innovation (RDI) scheme",
-   "score": 2,
+   "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -3063,25 +3193,33 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 375.0,
-   "demand_no": 94,
+   "be_cr": 23100.0,
+   "demand_no": 101,
    "evidence": [
     [
      "+3",
      "named in DBT Bharat's central list, so money reaches individuals"
     ],
     [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
      "+2",
-     "benefit words in the name: assistance"
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: abhiyan, anganwadi, poshan, scheme"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": null,
-   "name": "Assistance to Disabled Persons for Purchase/Fitting of Aids and Appliances",
-   "score": 5,
-   "statement": "stat4b",
+   "in_outcome": true,
+   "ministry": "M/o Women and Child Development",
+   "name": "Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS - Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)",
+   "score": 8,
+   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -3113,36 +3251,6 @@
    "name": "Scheme for Administrative Reforms",
    "score": 2,
    "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 23100.0,
-   "demand_no": 101,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: abhiyan, anganwadi, poshan, scheme"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Women and Child Development",
-   "name": "Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS - Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)",
-   "score": 8,
-   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -3216,28 +3324,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 1500.0,
-   "demand_no": 98,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Textiles",
-   "name": "Integrated Textile Program CENTRAL SECTOR SCHEMES",
-   "score": 4,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 0.01,
    "demand_no": 68,
    "evidence": [
@@ -3300,6 +3386,24 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 5.0,
+   "demand_no": 70,
+   "evidence": [
+    [
+     "+2",
+     "benefit words in the name: skill"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": true,
+   "in_outcome": false,
+   "ministry": "M/o Minority Affairs",
+   "name": "Skill Development and Livelihoods",
+   "score": 2,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 2500.0,
    "demand_no": 3,
    "evidence": [
@@ -3316,6 +3420,28 @@
    "score": 1,
    "statement": "stat4b",
    "verdict": "budget head"
+  },
+  {
+   "be_cr": 405.0,
+   "demand_no": 77,
+   "evidence": [
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "benefit words in the name: employment, mission"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": true,
+   "in_outcome": true,
+   "ministry": null,
+   "name": "Atal Innovation Mission(AIM) including Self Employment and Talent Utilization (SETU)",
+   "score": 3,
+   "statement": "stat4b",
+   "verdict": "scheme"
   },
   {
    "be_cr": 45.0,
@@ -3539,28 +3665,6 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 100.0,
-   "demand_no": 26,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "-3",
-     "asset or accounting words in the name: establishment"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Education",
-   "name": "Establishment of Centre of Excellence (CoEs) in Artificial Intelligence (AI) for Education",
-   "score": 0,
-   "statement": "stat4b",
-   "verdict": "budget head"
-  },
-  {
    "be_cr": 7350.0,
    "demand_no": 46,
    "evidence": [
@@ -3673,36 +3777,6 @@
    "name": "Vanchit Ikai Samooh aur Vargon ki Arthik Sahayata (VISVAS) Yojana",
    "score": 5,
    "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 5700.01,
-   "demand_no": 100,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: kalyan, yojna"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "M/o Tribal Affairs",
-   "name": "Programme for Development of Scheduled Tribes (PM Vanbandhu Kalyan Yojna) CENTRALLY SPONSORED SCHEMES",
-   "score": 8,
-   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -3846,58 +3920,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 1043.15,
-   "demand_no": 44,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
-   "name": "Development Programmes",
-   "score": 5,
-   "statement": "stat4a",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 31820.0,
-   "demand_no": 46,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: mission"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": "M/o Health and Family Welfare",
-   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
-   "score": 8,
-   "statement": "stat4a",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": null,
    "demand_no": 46,
    "evidence": [
@@ -4034,28 +4056,6 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 0.06,
-   "demand_no": 51,
-   "evidence": [
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "-2",
-     "capital-heavy demand: M/o Home Affairs"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Home Affairs",
-   "name": "Border Area Development Program",
-   "score": 0,
-   "statement": "stat4a",
-   "verdict": "budget head"
-  },
-  {
    "be_cr": 125.0,
    "demand_no": 51,
    "evidence": [
@@ -4106,6 +4106,32 @@
    "score": 0,
    "statement": "stat4a",
    "verdict": "budget head"
+  },
+  {
+   "be_cr": 18625.05,
+   "demand_no": 60,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "M/o Housing and Urban Affairs",
+   "name": "PMAY-Urban",
+   "score": 6,
+   "statement": "stat4a",
+   "verdict": "scheme"
   },
   {
    "be_cr": 3000.0,
@@ -4210,32 +4236,6 @@
    "score": -1,
    "statement": "stat4a",
    "verdict": "budget head"
-  },
-  {
-   "be_cr": 300.0,
-   "demand_no": 60,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: mission"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Housing and Urban Affairs",
-   "name": "National Urban Digital Mission (NUDM)",
-   "score": 7,
-   "statement": "stat4a",
-   "verdict": "scheme"
   },
   {
    "be_cr": 500.0,
@@ -4620,6 +4620,36 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 5700.01,
+   "demand_no": 100,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: kalyan, yojna"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "M/o Tribal Affairs",
+   "name": "Programme for Development of Scheduled Tribes (PM Vanbandhu Kalyan Yojna) CENTRALLY SPONSORED SCHEMES",
+   "score": 8,
+   "statement": "stat4a",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 3605.0,
    "demand_no": 101,
    "evidence": [
@@ -4785,24 +4815,6 @@
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
-  },
-  {
-   "be_cr": 63.97,
-   "demand_no": 1,
-   "evidence": [
-    [
-     "-3",
-     "asset or accounting words in the name: capital"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Agriculture and Farmers' Welfare",
-   "name": "Blended Capital Support to Finance Startups for Agriculture and Rural Enterprise Relevant for Farm Produce Value Chain",
-   "score": -3,
-   "statement": "stat4b",
-   "verdict": "budget head"
   },
   {
    "be_cr": null,
@@ -5383,6 +5395,32 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 27.0,
+   "demand_no": 4,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "benefit words in the name: yojana"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "Ministry of Ayush",
+   "name": "AYUSH Oushadhi Gunvatta evum Uttpadan Samvardhan Yojana (AOGUSY)",
+   "score": 6,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 65.0,
    "demand_no": 4,
    "evidence": [
@@ -5412,50 +5450,6 @@
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
-  },
-  {
-   "be_cr": 116805.0,
-   "demand_no": 6,
-   "evidence": [
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "benefit words in the name: subsidy"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": "M/o Chemicals and Fertilisers",
-   "name": "Urea Subsidy",
-   "score": 3,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 54000.0,
-   "demand_no": 6,
-   "evidence": [
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "benefit words in the name: subsidy"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": "M/o Chemicals and Fertilisers",
-   "name": "Nutrient Based Subsidy",
-   "score": 3,
-   "statement": "stat4b",
-   "verdict": "scheme"
   },
   {
    "be_cr": 1.0,
@@ -6196,6 +6190,19 @@
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 11,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Commerce and Industry",
+   "name": "Package for Special Catagory States for Jammu and Kashmir, Himachal Pradesh and Uttarakhand",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 14.92,
@@ -7087,19 +7094,6 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 15.0,
-   "demand_no": 21,
-   "evidence": [],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": null,
-   "name": "Inspection - Director General Quality Audit (DGQA)",
-   "score": 0,
-   "statement": "stat4b",
-   "verdict": "budget head"
-  },
-  {
    "be_cr": 1237.91,
    "demand_no": 21,
    "evidence": [],
@@ -7373,28 +7367,6 @@
    "ministry": "M/o Development of North Eastern Region",
    "name": "North East Special Infrastructure Development Scheme (NESIDS)",
    "score": 3,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 100.0,
-   "demand_no": 23,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scheme"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Development of North Eastern Region",
-   "name": "North East Enterprise Development Scheme (NEEDS) erstwhile Loan to North East Development Finance Corporation",
-   "score": 5,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -7813,28 +7785,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 300.0,
-   "demand_no": 26,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": "M/o Education",
-   "name": "Multidisciplinary Education and Research Improvement in Technical Education-EAP (MERITE) CENTRAL SECTOR SCHEMES",
-   "score": 4,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 70.0,
    "demand_no": 26,
    "evidence": [
@@ -7917,6 +7867,28 @@
    "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": 100.0,
+   "demand_no": 26,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "-3",
+     "asset or accounting words in the name: establishment"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Education",
+   "name": "Establishment of Centre of Excellence (CoEs) in Artificial Intelligence (AI) for Education",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 2200.0,
@@ -8736,6 +8708,24 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 6.75,
+   "demand_no": 33,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": null,
+   "name": "Research, Development, Consultancy & Reorientation (RDCR)",
+   "score": 3,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 600.0,
    "demand_no": 37,
    "evidence": [],
@@ -8832,6 +8822,24 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 500.0,
+   "demand_no": 44,
+   "evidence": [
+    [
+     "+2",
+     "benefit words in the name: scheme"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
+   "name": "Integrated Scheme for Entrepreneurship Development",
+   "score": 2,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": null,
    "demand_no": 44,
    "evidence": [
@@ -8850,6 +8858,32 @@
    "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
    "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
    "score": 4,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 915.0,
+   "demand_no": 45,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "benefit words in the name: yojana"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "M/o Food Processing Industries",
+   "name": "Pradhan Mantri Kisan Sampada Yojana",
+   "score": 6,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -8970,32 +9004,6 @@
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
-  },
-  {
-   "be_cr": 570.0,
-   "demand_no": 46,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "benefit words in the name: mission"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": "M/o Health and Family Welfare",
-   "name": "Pradhan Mantri Ayushman Bharat Health Infrastructure Mission (PMABHIM) (Health)",
-   "score": 6,
-   "statement": "stat4b",
-   "verdict": "scheme"
   },
   {
    "be_cr": 51.14,
@@ -10090,6 +10098,24 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": 40.0,
+   "demand_no": 65,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Law and Justice",
+   "name": "Designing Innovative Solutions for Holistic Access to Justice in India(DISHA)",
+   "score": 3,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 1200.0,
    "demand_no": 65,
    "evidence": [
@@ -10249,24 +10275,20 @@
    "verdict": "budget head"
   },
   {
-   "be_cr": 96.0,
+   "be_cr": 90.0,
    "demand_no": 68,
    "evidence": [
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
      "+2",
-     "benefit words in the name: skill"
+     "benefit words in the name: assistance, training"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": false,
    "in_outcome": false,
    "ministry": "M/o Micro, Small and Medium Enterprises",
-   "name": "Entrepreneurship cum Skill Development Programme (ESDP)",
-   "score": 5,
+   "name": "Assistance to Training Institutions",
+   "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -10421,24 +10443,6 @@
    "ministry": "M/o Minority Affairs",
    "name": "Education Empowerment",
    "score": 5,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 5.0,
-   "demand_no": 70,
-   "evidence": [
-    [
-     "+2",
-     "benefit words in the name: skill"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Minority Affairs",
-   "name": "Skill Development and Livelihoods",
-   "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -11173,28 +11177,6 @@
    "score": 1,
    "statement": "stat4b",
    "verdict": "budget head"
-  },
-  {
-   "be_cr": 405.0,
-   "demand_no": 77,
-   "evidence": [
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "benefit words in the name: employment, mission"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": null,
-   "name": "Atal Innovation Mission(AIM) including Self Employment and Talent Utilization (SETU)",
-   "score": 3,
-   "statement": "stat4b",
-   "verdict": "scheme"
   },
   {
    "be_cr": 4.0,
@@ -12070,6 +12052,32 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": 488.28,
+   "demand_no": 85,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+2",
+     "benefit words in the name: training"
+    ],
+    [
+     "-2",
+     "capital-heavy demand: M/o Railways"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Railways",
+   "name": "Training/Human Resource Development",
+   "score": 3,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 27833.84,
    "demand_no": 85,
    "evidence": [
@@ -12645,28 +12653,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 10397.06,
-   "demand_no": 95,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": null,
-   "name": "Space Technology",
-   "score": 4,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 1725.06,
    "demand_no": 95,
    "evidence": [
@@ -12851,19 +12837,6 @@
    "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
-  },
-  {
-   "be_cr": null,
-   "demand_no": 98,
-   "evidence": [],
-   "in_dbt": false,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Textiles",
-   "name": "Handicraft Cluster Development Program - Handicraft Mega Cluster",
-   "score": 0,
-   "statement": "stat4b",
-   "verdict": "budget head"
   },
   {
    "be_cr": 20.0,
@@ -13076,6 +13049,28 @@
    "ministry": "M/o Textiles",
    "name": "Textiles Focused Research, Assessment, Monitoring and Promotion Scheme (Tex-RAMPS)",
    "score": 3,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 1500.0,
+   "demand_no": 98,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "M/o Textiles",
+   "name": "Integrated Textile Program CENTRAL SECTOR SCHEMES",
+   "score": 4,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -13433,7 +13428,7 @@
    "verdict": "budget head"
   }
  ],
- "built": "2026-09-01T02:01:00Z",
+ "built": "2026-09-01T07:58:18Z",
  "classified_head": 355,
  "classified_scheme": 347,
  "cycle": "2026-27",
@@ -13451,45 +13446,45 @@
  "threshold": 2,
  "threshold_sweep": [
   {
-   "f1": 0.429,
-   "precision": 0.275,
-   "recall_floor": 0.977,
+   "f1": 0.434,
+   "precision": 0.279,
+   "recall_floor": 0.972,
    "threshold": 0
   },
   {
-   "f1": 0.498,
-   "precision": 0.352,
-   "recall_floor": 0.855,
+   "f1": 0.499,
+   "precision": 0.355,
+   "recall_floor": 0.841,
    "threshold": 1
   },
   {
-   "f1": 0.505,
-   "precision": 0.378,
-   "recall_floor": 0.762,
+   "f1": 0.509,
+   "precision": 0.383,
+   "recall_floor": 0.756,
    "threshold": 2
   },
   {
-   "f1": 0.484,
-   "precision": 0.412,
-   "recall_floor": 0.587,
+   "f1": 0.498,
+   "precision": 0.427,
+   "recall_floor": 0.597,
    "threshold": 3
   },
   {
-   "f1": 0.461,
-   "precision": 0.481,
-   "recall_floor": 0.442,
+   "f1": 0.468,
+   "precision": 0.497,
+   "recall_floor": 0.443,
    "threshold": 4
   },
   {
-   "f1": 0.452,
-   "precision": 0.55,
-   "recall_floor": 0.384,
+   "f1": 0.459,
+   "precision": 0.567,
+   "recall_floor": 0.386,
    "threshold": 5
   },
   {
-   "f1": 0.362,
-   "precision": 0.62,
-   "recall_floor": 0.256,
+   "f1": 0.341,
+   "precision": 0.6,
+   "recall_floor": 0.239,
    "threshold": 6
   }
  ],
@@ -13551,8 +13546,8 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 31820.0,
-   "demand_no": 46,
+   "be_cr": 18625.05,
+   "demand_no": 60,
    "evidence": [
     [
      "+3",
@@ -13565,18 +13560,14 @@
     [
      "+2",
      "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: mission"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": false,
    "in_outcome": true,
-   "ministry": "M/o Health and Family Welfare",
-   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
-   "score": 8,
+   "ministry": "M/o Housing and Urban Affairs",
+   "name": "PMAY-Urban",
+   "score": 6,
    "statement": "stat4a",
    "verdict": "scheme"
   },
@@ -13629,28 +13620,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 10397.06,
-   "demand_no": 95,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": null,
-   "name": "Space Technology",
-   "score": 4,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 10000.0,
    "demand_no": 60,
    "evidence": [
@@ -13692,6 +13661,36 @@
    "name": "Pradhan Mantri Annadata Aay Sanrakshan Yojna (PM- AASHA)",
    "score": 5,
    "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 5700.01,
+   "demand_no": 100,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: kalyan, yojna"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "M/o Tribal Affairs",
+   "name": "Programme for Development of Scheduled Tribes (PM Vanbandhu Kalyan Yojna) CENTRALLY SPONSORED SCHEMES",
+   "score": 8,
+   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -14029,6 +14028,28 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 1500.0,
+   "demand_no": 98,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "M/o Textiles",
+   "name": "Integrated Textile Program CENTRAL SECTOR SCHEMES",
+   "score": 4,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 1425.0,
    "demand_no": 89,
    "evidence": [
@@ -14103,25 +14124,29 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 1043.15,
-   "demand_no": 44,
+   "be_cr": 915.0,
+   "demand_no": 45,
    "evidence": [
     [
      "+3",
      "named in DBT Bharat's central list, so money reaches individuals"
     ],
     [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
      "+2",
-     "Centrally Sponsored, delivered through states to citizens"
+     "benefit words in the name: yojana"
     ]
    ],
    "in_dbt": true,
    "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
-   "name": "Development Programmes",
-   "score": 5,
-   "statement": "stat4a",
+   "in_outcome": true,
+   "ministry": "M/o Food Processing Industries",
+   "name": "Pradhan Mantri Kisan Sampada Yojana",
+   "score": 6,
+   "statement": "stat4b",
    "verdict": "scheme"
   },
   {
@@ -14261,32 +14286,6 @@
    "ministry": "M/o Finance",
    "name": "Pradhan Mantri Vaya Vandana Yojana (PMVVY)",
    "score": 5,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 570.0,
-   "demand_no": 46,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "benefit words in the name: mission"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": "M/o Health and Family Welfare",
-   "name": "Pradhan Mantri Ayushman Bharat Health Infrastructure Mission (PMABHIM) (Health)",
-   "score": 6,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -14482,54 +14481,6 @@
    "in_outcome": true,
    "ministry": "M/o Communications",
    "name": "Postal Operation CENTRAL SECTOR SCHEMES",
-   "score": 4,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 300.0,
-   "demand_no": 60,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: mission"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Housing and Urban Affairs",
-   "name": "National Urban Digital Mission (NUDM)",
-   "score": 7,
-   "statement": "stat4a",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 300.0,
-   "demand_no": 26,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": true,
-   "ministry": "M/o Education",
-   "name": "Multidisciplinary Education and Research Improvement in Technical Education-EAP (MERITE) CENTRAL SECTOR SCHEMES",
    "score": 4,
    "statement": "stat4b",
    "verdict": "scheme"
@@ -14772,28 +14723,6 @@
   },
   {
    "be_cr": 100.0,
-   "demand_no": 23,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scheme"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Development of North Eastern Region",
-   "name": "North East Enterprise Development Scheme (NEEDS) erstwhile Loan to North East Development Finance Corporation",
-   "score": 5,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 100.0,
    "demand_no": 65,
    "evidence": [
     [
@@ -14832,28 +14761,6 @@
    "in_outcome": false,
    "ministry": "M/o Health and Family Welfare",
    "name": "Global Fund Grant under Covid 19 Response Mechanism",
-   "score": 5,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 96.0,
-   "demand_no": 68,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "benefit words in the name: skill"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": false,
-   "in_outcome": false,
-   "ministry": "M/o Micro, Small and Medium Enterprises",
-   "name": "Entrepreneurship cum Skill Development Programme (ESDP)",
    "score": 5,
    "statement": "stat4b",
    "verdict": "scheme"
@@ -14943,6 +14850,32 @@
    "ministry": null,
    "name": "Improvement/Modifications of Heavy water projects CENTRAL SECTOR SCHEMES",
    "score": 4,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 27.0,
+   "demand_no": 4,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "benefit words in the name: yojana"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "Ministry of Ayush",
+   "name": "AYUSH Oushadhi Gunvatta evum Uttpadan Samvardhan Yojana (AOGUSY)",
+   "score": 6,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -15157,16 +15090,16 @@
    "verdict": "scheme"
   }
  ],
- "unlisted_schemes_cr": 246142.84,
- "unlisted_schemes_total": 69,
+ "unlisted_schemes_cr": 228283.69,
+ "unlisted_schemes_total": 66,
  "validation": {
-  "false_negative": 41,
-  "false_positive": 216,
+  "false_negative": 43,
+  "false_positive": 214,
   "ground_truth": "myScheme membership",
   "note": "Recall is a floor, not a measurement: a line called a scheme that myScheme lacks may be the classifier being right and the portal being incomplete, which is the thing this project documents. Precision is the metric worth reading.",
-  "precision": 0.378,
-  "recall_floor": 0.762,
-  "true_negative": 314,
-  "true_positive": 131
+  "precision": 0.383,
+  "recall_floor": 0.756,
+  "true_negative": 312,
+  "true_positive": 133
  }
 }
