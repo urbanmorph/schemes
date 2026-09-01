@@ -756,14 +756,31 @@ def index_section(entries):
         v = e_.get("state")
         for x in (v if isinstance(v, list) else [v] if v else []):
             st[x] = st.get(x, 0) + 1
-    # "All" is myScheme's own label for a nationwide scheme, not a state. Keeping it in
-    # the list but naming it plainly stops it reading as "no filter".
+    # Alphabetical, with the nationwide bucket pinned last because it is not a state.
+    #
+    # This list was ordered by descending scheme count, which was wrong three times over.
+    # A reader arrives knowing which state they want, so frequency order makes them read
+    # 31 entries to reach Telangana. Ties had no name tie-break, so Assam and Kerala at 87
+    # each, and Jammu and Kashmir and Uttar Pradesh at 47, fell in whatever order the
+    # counting dict happened to hold, the same latent non-determinism that made the union
+    # registry return a different answer on every run.
+    #
+    # The third reason is the real one. Putting Gujarat at the top asserts that Gujarat
+    # has the most schemes. It has the most myScheme RECORDS, and /divergence exists to
+    # argue that this is an artefact of what each state has loaded onto a central portal
+    # rather than a fact about the state: Gujarat lists 641 and Karnataka 56, which no
+    # policy difference explains. The control was quietly making the claim the rest of the
+    # site spends a page disproving. The counts stay in the labels, where they are a
+    # figure the reader can weigh, instead of an unlabelled ranking.
+    #
+    # "All" is myScheme's own label for a nationwide scheme, not a state, so it is named
+    # plainly here to stop it reading as "no filter".
     state_select = (
         '<select id="st" aria-label="Filter by state or UT">'
         '<option value="">Any state or UT</option>'
         + "".join(f'<option value="{e(k.lower())}">'
-                  f'{e("Nationwide (All)" if k == "All" else k)} ({n:,})</option>'
-                  for k, n in sorted(st.items(), key=lambda kv: (kv[0] == "All", -kv[1])))
+                  f'{e("Nationwide" if k == "All" else k)} ({n:,})</option>'
+                  for k, n in sorted(st.items(), key=lambda kv: (kv[0] == "All", kv[0])))
         + '</select>')
 
     lv = {}
