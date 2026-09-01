@@ -387,21 +387,64 @@ def page_index(census, checks, dbt, entries):
 """
 
 
-def page_divergence(census, dbt, reg=None, cls=None):
-    ms = (census or {}).get("facets", {}).get("beneficiaryState", {})
+def page_divergence(census, dbt, reg=None, cls=None, entries=None):
+    """Two questions, kept apart: how many schemes a state has, and which are unlisted.
+
+    The per-state table and the unlisted-schemes table were both built into a local named
+    `rows`, and the second assignment won. For every build until this was caught, the
+    table headed "State | myScheme | DBT Bharat" rendered 69 Union Budget lines: PM-KISAN
+    appeared under a column headed State. The page's own thesis was the thing missing
+    from it. Both tables now carry distinct names.
+    """
     ds = (dbt or {}).get("states", {})
-    names = sorted(set(ms) | set(ds))
-    rows = ""
-    for n in names:
+
+    # Count state schemes, not state TAGS. The census facet is a beneficiary tag and all
+    # 711 central schemes carry one, so reading it as a per-state scheme count folds
+    # central schemes into every state's number. Almost all are tagged "All" and drop out
+    # here, but a few are pinned to named states: Karnataka's facet of 60 is 56 state
+    # schemes plus 4 central ones. Comparing a mixed number against DBT's state-scheme
+    # count compares different things while claiming to expose exactly that error.
+    ms = {}
+    for en in (entries or []):
+        if en.get("level_value") == "central" or not en.get("on_myscheme"):
+            continue
+        st = en.get("state")
+        for n in (st if isinstance(st, list) else [st] if st else []):
+            if n and n != "All":
+                ms[n] = ms.get(n, 0) + 1
+    if not ms:   # no unified entries passed; fall back to the facet rather than blank
+        ms = {k: v for k, v in
+              (census or {}).get("facets", {}).get("beneficiaryState", {}).items()}
+
+    state_rows = ""
+    for n in sorted(set(ms) | set(ds)):
         if n == "All":
             continue
         a, b = ms.get(n), ds.get(n)
-        ratio = f"{b / a:.1f}&times;" if a and b else '<span class="nil">...</span>'
+        gap = f"{b - a:+,}" if a is not None and b is not None else '<span class="nil">...</span>'
         direction = ("DBT higher" if a and b and b > a
                      else "myScheme higher" if a and b and a > b else "not comparable")
-        rows += (f'<tr><td>{e(n)}</td><td class="num">{num(a)}</td>'
-                 f'<td class="num">{num(b)}</td><td class="num">{ratio}</td>'
-                 f'<td class="muted">{direction}</td></tr>')
+        state_rows += (f'<tr><td>{e(n)}</td><td class="num">{num(a)}</td>'
+                       f'<td class="num">{num(b)}</td><td class="num">{gap}</td>'
+                       f'<td class="muted">{e(direction)}</td></tr>')
+
+    # The variance finding. A count gap between two portals can always be argued away as
+    # different units. A gap WITHIN one portal cannot: these are all myScheme's own
+    # numbers, counted the same way on the same day.
+    def pair(a, b):
+        x, y = ms.get(a, 0), ms.get(b, 0)
+        return (a, x, b, y, x / y) if y else (a, x, b, y, None)
+    pairs = [pair(*p) for p in (("Gujarat", "Karnataka"),
+                                ("Uttarakhand", "Uttar Pradesh"),
+                                ("Goa", "Telangana"),
+                                ("Haryana", "Punjab"))]
+    pair_rows = "".join(
+        f'<tr><td>{e(a)}</td><td class="num">{num(x)}</td><td>{e(b)}</td>'
+        f'<td class="num">{num(y)}</td>'
+        f'<td class="num">{f"{r:.1f}&times;" if r else "..."}</td></tr>'
+        for a, x, b, y, r in pairs)
+    total_ms, total_ds = sum(ms.values()), sum(v for v in ds.values() if v)
+    higher = sum(1 for n in ms if ds.get(n) and ds[n] > ms[n])
 
     kar_ms, kar_dbt = ms.get("Karnataka"), ds.get("Karnataka")
 
@@ -411,7 +454,7 @@ def page_divergence(census, dbt, reg=None, cls=None):
     # them at all.
     unlisted_section = ""
     if reg and cls:
-        rows = "".join(
+        unlisted_rows = "".join(
             f'<tr><td>{e(u["name"])}</td>'
             f'<td class="num">{inr(u["be_cr"])}</td>'
             f'<td class="num">{u["score"]}</td>'
@@ -435,7 +478,7 @@ def page_divergence(census, dbt, reg=None, cls=None):
     <thead><tr><th>Funded and classified a scheme, absent from myScheme</th>
       <th class="num">BE 2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
       <th>Why it scores as a scheme</th></tr></thead>
-    <tbody>{rows}</tbody>
+    <tbody>{unlisted_rows}</tbody>
   </table></div>
   <div class="warnbox">
     <b>How these were separated from budget heads, and how often that is wrong</b>
@@ -465,26 +508,61 @@ government portal that answers this question answers it differently, and no port
 acknowledges the others exist.</p>
 
 <div class="callout">
-  <div class="big">Karnataka is {num(kar_ms)} schemes or {num(kar_dbt)}, depending on which
-  government portal you ask.</div>
-  <div class="cite">myScheme beneficiaryState facet &middot; DBT Bharat state dashboard
-  scode=Mjk &middot; both from the same snapshot</div>
+  <div class="big">Karnataka lists {num(ms.get("Karnataka"))} state schemes on one
+  government portal and {num(ds.get("Karnataka"))} on another.</div>
+  <div class="cite">myScheme state-level records tagged Karnataka &middot; DBT Bharat
+  state dashboard scode=Mjk &middot; both from the same snapshot</div>
 </div>
 
+<p>Across {num(len([n for n in ms if ds.get(n)]))} states and union territories, DBT
+Bharat names more schemes than myScheme in {num(higher)} of them, and myScheme names
+more in the rest. Neither portal is a superset of the other, so a reader cannot pick one
+and be done.</p>
+
 <div class="tscroll"><table>
-  <thead><tr><th>State</th><th class="num">myScheme</th><th class="num">DBT Bharat</th>
-    <th class="num">Ratio</th><th>Direction</th></tr></thead>
-  <tbody>{rows}</tbody>
+  <thead><tr><th>State or UT</th><th class="num">myScheme</th><th class="num">DBT Bharat</th>
+    <th class="num">Gap</th><th>Direction</th></tr></thead>
+  <tbody>{state_rows}</tbody>
+  <tfoot><tr><td>All states and UTs</td><td class="num">{num(total_ms)}</td>
+    <td class="num">{num(total_ds)}</td>
+    <td class="num">{total_ds - total_ms:+,}</td><td class="muted"></td></tr></tfoot>
 </table></div>
 
 <div class="warnbox">
-  <b>These are different units, so do not read the ratio as error</b>
+  <b>These are different units, so do not read the gap as error</b>
   {e((dbt or {}).get('caveat', ''))}
-  And myScheme's per-state number is a <em>beneficiary</em> tag spanning both central and
-  state schemes, which is why the facet does not sum to the published total. Neither
-  number is wrong. The finding is that both are published as &ldquo;schemes&rdquo; with
-  nothing saying they count different things.
+  Neither number is wrong. The finding is that both are published as
+  &ldquo;schemes&rdquo; with nothing saying they count different things.
 </div>
+
+<section class="sec">
+  <h2>The same portal, counted the same way, disagreeing with itself</h2>
+  <div class="sec-note">myScheme state-level records only &middot; one snapshot</div>
+  <p class="standfirst">A gap between two portals can always be explained away as
+  different units. A gap <em>inside</em> one portal cannot. Every number below is
+  myScheme&rsquo;s own, counted the same way on the same day.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>State</th><th class="num">Schemes</th><th>Compared with</th>
+      <th class="num">Schemes</th><th class="num">Ratio</th></tr></thead>
+    <tbody>{pair_rows}</tbody>
+  </table></div>
+  <p>Uttarakhand is a tenth of Uttar Pradesh by population. Goa is smaller than most
+  Indian cities. These ratios are not descriptions of how much welfare a state
+  administers, because no plausible policy difference runs an order of magnitude in that
+  direction. They describe how much of it each state has loaded onto a central portal.</p>
+  <div class="warnbox">
+    <b>What this register cannot yet tell you</b>
+    For central schemes the Union Budget supplies an independent list of names, so a
+    scheme missing from myScheme can be named, and 69 of them are named on this page. No
+    equivalent exists for states. DBT Bharat publishes a per-state
+    <em>count</em> and no state scheme list, so the shortfall of
+    {num(sum(max(0, (ds.get(n) or 0) - v) for n, v in ms.items() if ds.get(n)))} schemes
+    across the {num(higher)} states where DBT counts more cannot be turned into names
+    from any source held here. Naming them means collecting 36 state budgets and scheme portals,
+    each published in its own format. That work is not done, and until it is, this page
+    reports a gap it cannot itemise.
+  </div>
+</section>
 
 {unlisted_section}
 """
@@ -1457,7 +1535,7 @@ def build():
     w("divergence.html", shell(
         "Divergence", "/divergence",
         page_divergence(census, dbt, load("data/registry.json", {}),
-                        load("data/classification.json", {})),
+                        load("data/classification.json", {}), entries=entries),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side.")))
     w("changes.html", shell(
