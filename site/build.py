@@ -21,6 +21,7 @@ import re
 import os
 import shutil
 import subprocess
+import urllib.parse
 import sys
 from datetime import datetime, timezone
 
@@ -30,6 +31,8 @@ OUT = os.path.join(HERE, "_out")
 
 # Set this when the site gets a home. Used only for sitemap and canonical URLs.
 SITE_BASE = os.environ.get("SITE_BASE", "https://schemes.pages.dev").rstrip("/")
+
+ISSUE_URL = "https://github.com/urbanmorph/schemes/issues/new"
 
 FONTS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400"
          "&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap")
@@ -769,6 +772,10 @@ def index_section(entries):
         # already does, and cost the scheme name a seventh of the table.
         score = (f'<b>{c["passed"]}</b>/{c["total"]}' if c
                  else '<span class="nil">...</span>')
+        # Allocation, blank where none is joined. Showing the gap is the point: a reader
+        # who knows a figure exists can then tell us where it is.
+        alloc = (f'&#8377;{inr(e_["be_cr"])}' if isinstance(e_.get("be_cr"), (int, float))
+                 else '<span class="nil">...</span>')
         w_head, w_sub = where(e_)
         where_cell = (f'<td>{e(w_head)}'
                       + (f'<span class="sub2">{e(w_sub)}</span>' if w_sub else "")
@@ -785,6 +792,7 @@ def index_section(entries):
                  f'<td>{badges}</td>'
                  + where_cell
                  + f'<td class="muted">{e(e_.get("org") or "")}</td>'
+                 f'<td class="num alloc">{alloc}</td>'
                  f'<td class="num">{score}</td></tr>')
 
     n = len(entries)
@@ -814,7 +822,9 @@ def index_section(entries):
 <div class="wmain">
 <div class="tscroll"><table id="tbl">
   <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Where it applies</th>
-    <th>Ministry / department</th><th class="num sortable" data-k="p">Passed</th></tr></thead>
+    <th>Ministry / department</th>
+    <th class="num sortable" data-k="b">Allocation</th>
+    <th class="num sortable" data-k="p">Passed</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
 </div>
@@ -832,6 +842,8 @@ def index_section(entries):
     <div class="railrow"><span>Outcome Budget</span><b id="rSoc">{r0["soc"]}</b></div>
   </div>
   <a class="railtop" id="toTop" href="#schemes" hidden>&uarr; Back to top</a>
+  <a class="railtop" href="{ISSUE_URL}?template=missing-figure.yml"
+     target="_blank" rel="noopener">Report a missing or wrong figure</a>
   <div class="railnote">Every figure here follows the filters. Allocation is the
     Budget line for the visible schemes where one is joined; most schemes have none
     published anywhere.</div>
@@ -1001,7 +1013,10 @@ def index_section(entries):
       asc = (sortedBy===k) ? !asc : true;
       sortedBy=k;
       rows.sort(function(a,b){{
-        var x=k==='p'?+a.dataset.p:a._h, y=k==='p'?+b.dataset.p:b._h;
+        var g=function(r){{return k==='p'?+r.dataset.p
+                              :k==='b'?(r.dataset.b?+r.dataset.b:-Infinity)
+                              :r._h;}};
+        var x=g(a), y=g(b);
         return (x<y?-1:x>y?1:0)*(asc?1:-1);
       }});
       rows.forEach(function(r){{tb.appendChild(r);}});
@@ -1260,6 +1275,7 @@ def page_scheme(s, status, enrich=None, entry=None):
         return f'<tr><td>{e(field)}</td><td>{v}</td><td class="ts">{e(source)}</td></tr>'
 
     snap = status.get("snapshot", "")
+    rep_title = urllib.parse.quote(f"Missing or wrong: {s.get('name') or s['slug']}"[:90])
 
     # What the scheme actually is. The register was reporting how completely a record
     # was documented without ever showing the documentation, which made every page a
@@ -1368,6 +1384,14 @@ def page_scheme(s, status, enrich=None, entry=None):
 
 {about}
 {found_block}
+
+<div class="report">
+  <b>Something missing or wrong on this page?</b>
+  This register only knows what four government sources publish. If you know where the
+  real figure lives, a link to the notification or order is what lets us publish it.
+  <a href="{ISSUE_URL}?template=missing-figure.yml&title={rep_title}"
+     target="_blank" rel="noopener">Tell us on GitHub</a>
+</div>
 
 <section class="sec">
   <h2>Provenance</h2>

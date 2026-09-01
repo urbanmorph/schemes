@@ -1,0 +1,46 @@
+name: A figure or detail is missing or wrong
+description: Tell us where the real number is, and we will cite it.
+title: "Missing or wrong: "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This register only knows what four government sources publish. If a figure is
+        missing here it usually means no source we read publishes it, and if it is wrong
+        it usually means a name matched the wrong budget line. Both are worth reporting,
+        and a link to where the real figure lives is the most useful thing you can add.
+  - type: input
+    id: scheme
+    attributes:
+      label: Which scheme
+      description: The name as it appears here, or the page URL.
+      placeholder: PM-KISAN, or /scheme/pm-kisan
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - An allocation is missing
+        - An allocation is wrong or matched to the wrong scheme
+        - A start or end date is missing
+        - The implementing agency is missing
+        - The scheme is missing from the register entirely
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Where is the real figure
+      description: >
+        A link to a gazette notification, a government order, a ministry page or a
+        budget document. A citation is what lets us publish it; without one we can
+        record that it exists but not what it says.
+      placeholder: https://...
+  - type: textarea
+    id: detail
+    attributes:
+      label: Anything else
