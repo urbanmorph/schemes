@@ -505,3 +505,11 @@ th.sortable.sorted.desc::after{content:"\2193"}
   text-decoration:none}
 .skip:focus{left:0}
 main:focus{outline:none}
+
+/* The index table must not sit in its own scroll container. .tscroll sets
+   overflow-x:auto, which makes it the scrolling ancestor for anything sticky inside it,
+   so the sticky header positioned itself --filters-h down from the top of the TABLE
+   instead of the viewport and floated in the middle of the rows. The index table is
+   table-layout:fixed with percentage columns, so it never needs to scroll sideways and
+   can give the overflow up; the other tables on the site keep theirs. */
+@media (min-width:901px){ .schemes .tscroll{overflow:visible} }
