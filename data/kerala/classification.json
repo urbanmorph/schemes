@@ -1218,7 +1218,7 @@
   }
  ],
  "absent_distinct_names": 37,
- "absent_from_myscheme_all_rows": 2608,
+ "absent_from_myscheme_all_rows": 2610,
  "absent_from_myscheme_and_classified_scheme": 37,
  "absent_lakh": 38831.0,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Kerala, because claiming absence should require that even a generous matcher finds nothing. The list is a floor twice over. Once because the matcher over-joins: 8 of its 21 joins are wrong, so a row counted present may not be. And once because recall at the published bar is 12%: a real scheme with a Malayalam name, no benefit word and a head of account outside 2225 and 2235 cannot clear a high bar on the evidence the Annual Plan prints.",
@@ -44947,7 +44947,7 @@
    "hoas": [
     "2210-05-105-18"
    ],
-   "in_myscheme_kerala": true,
+   "in_myscheme_kerala": false,
    "key": "code:MPS 199",
    "major_heads": [
     "2210"
@@ -44955,9 +44955,7 @@
    "minor_heads": [
     "105"
    ],
-   "myscheme_match": [
-    "Financial Assistance To Ex-Convicts"
-   ],
+   "myscheme_match": null,
    "name": "Financial Assistance to SI-MET",
    "score": 0,
    "sector": "Medical & Public Health",
@@ -96619,7 +96617,7 @@
    "hoas": [
     "2225-03-277-98"
    ],
-   "in_myscheme_kerala": true,
+   "in_myscheme_kerala": false,
    "key": "code:WBC 061",
    "major_heads": [
     "2225"
@@ -96627,9 +96625,7 @@
    "minor_heads": [
     "277"
    ],
-   "myscheme_match": [
-    "OEC Pre-matric Educational Assistance"
-   ],
+   "myscheme_match": null,
    "name": "Pre Matric Assistance for OECs",
    "score": 6,
    "sector": "Welfare of SCs, STs, OBCs, Minorities and Forward",
@@ -106298,7 +106294,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-02T07:17:30Z",
+ "built": "2026-09-02T15:17:51Z",
  "classified_not_scheme": 2591,
  "classified_scheme": 38,
  "classified_scheme_distinct_names": 38,
@@ -118423,13 +118419,6 @@
    ]
   },
   {
-   "code": "MPS 199",
-   "kerala": "Financial Assistance to SI-MET",
-   "myscheme": [
-    "Financial Assistance To Ex-Convicts"
-   ]
-  },
-  {
    "code": "NRE 003",
    "kerala": "Kerala (Training to Kudumbashree workers) MINERALS & SMALL INDUSTRIES",
    "myscheme": [
@@ -118519,13 +118508,6 @@
    ]
   },
   {
-   "code": "WBC 061",
-   "kerala": "Pre Matric Assistance for OECs",
-   "myscheme": [
-    "OEC Pre-matric Educational Assistance"
-   ]
-  },
-  {
    "code": "WBC 262",
    "kerala": "Assistance to Traditional Pottery Workers",
    "myscheme": [
@@ -118540,10 +118522,10 @@
    ]
   }
  ],
- "myscheme_join_defects_note": "All 21 joins, listed so a reader can check them rather than take the absence count on trust. Eight are wrong: the four Kerala State Council for Science, Technology and Environment rows join three KSCSTE fellowships on the shared acronym, 'Financial Assistance to SI-MET' joins 'Financial Assistance To Ex-Convicts' on two content words, and the garbled row 'Kerala (Training to Kudumbashree workers) MINERALS & SMALL I...' joins five cardamom schemes. parse/kerala.py records one of these in its own known_bad_joins and argues there, correctly, that the direction of the error is the safe one: a false match means a Kerala scheme is treated as PRESENT on myScheme and is therefore not claimed absent, so it costs an under-reported absence rather than a false accusation.",
- "myscheme_joins": 21,
+ "myscheme_join_defects_note": "All 19 joins, listed so a reader can check them rather than take the absence count on trust. Eight are wrong: the four Kerala State Council for Science, Technology and Environment rows join three KSCSTE fellowships on the shared acronym, 'Financial Assistance to SI-MET' joins 'Financial Assistance To Ex-Convicts' on two content words, and the garbled row 'Kerala (Training to Kudumbashree workers) MINERALS & SMALL I...' joins five cardamom schemes. parse/kerala.py records one of these in its own known_bad_joins and argues there, correctly, that the direction of the error is the safe one: a false match means a Kerala scheme is treated as PRESENT on myScheme and is therefore not claimed absent, so it costs an under-reported absence rather than a false accusation.",
+ "myscheme_joins": 19,
  "myscheme_kerala_records": 87,
- "myscheme_record_count_note": "Counted live off data/myscheme/schemes/, every record whose beneficiaryState list mentions Kerala. parse/kerala.py's own run over the same directory found eleven joins where this one finds 21, because the myScheme snapshot has grown since. Both numbers are reported rather than reconciled, because a silently moving denominator is exactly the kind of thing a register should show rather than smooth over.",
+ "myscheme_record_count_note": "Counted live off data/myscheme/schemes/, every record whose beneficiaryState list mentions Kerala. parse/kerala.py's own run over the same directory found eleven joins where this one finds 19, because the myScheme snapshot has grown since. Both numbers are reported rather than reconciled, because a silently moving denominator is exactly the kind of thing a register should show rather than smooth over.",
  "no_figure_at_all": 3,
  "publish_threshold": 9,
  "question": "Which of Kerala's 2,629 Annual Plan rows are welfare schemes, and which are institutions, works heads, departmental programmes or accounting heads?",

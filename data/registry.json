@@ -4,7 +4,7 @@
   "dbt": 135,
   "outcome": 10
  },
- "built": "2026-09-02T14:00:32Z",
+ "built": "2026-09-02T15:16:36Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -39062,7 +39062,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: gpat / gpat",
+     "merge_reason": "acronym containment: gate / gate",
      "name": "P.G. Scholarship For GATE/GPAT Qualified Students For Pursuing M.Tech/ M.E./M.Pharma - AICTE"
     },
     "myscheme": {
@@ -49738,7 +49738,7 @@
      "be_cr": 500.0,
      "cycle": "2026-27",
      "demand_no": 16,
-     "merge_reason": "acronym containment: ncdc / ncdc",
+     "merge_reason": "acronym containment: giatncdc / ncdc",
      "name": "Grant-in-aid to National Cooperative Development Corporation (NCDC)",
      "statement": "stat4b"
     },

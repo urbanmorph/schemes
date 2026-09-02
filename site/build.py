@@ -901,7 +901,9 @@ _m_skeleton, _m_acronyms = _M.skeleton, _M.acronyms
 SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
                 "outcome": "Outcome Budget", "dbt": "DBT Bharat",
                 "karnataka": "Karnataka Budget", "andhra": "Andhra Pradesh Budget",
-                "kerala": "Kerala Budget", "tamilnadu": "Tamil Nadu Budget"}
+                "kerala": "Kerala Budget", "tamilnadu": "Tamil Nadu Budget",
+                "maharashtra": "Maharashtra Budget", "odisha": "Odisha Budget",
+                "westbengal": "West Bengal Budget"}
 
 
 def slug_for(name):
@@ -973,9 +975,12 @@ def unify(checks, registry, classification):
 # cleared.
 #
 # Rows already matched to a myScheme record are skipped, because those schemes have a page.
-LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5}
+LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
+               "maharashtra": 2, "odisha": 4, "westbengal": 3}
 STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
-            "kerala": "Kerala", "tamilnadu": "Tamil Nadu"}
+            "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
+            "maharashtra": "Maharashtra", "odisha": "Odisha",
+            "westbengal": "West Bengal"}
 
 
 # What a state writes when it is paying its share of a CENTRAL scheme. "(60% Swachh Bharat

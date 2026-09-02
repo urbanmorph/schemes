@@ -1,5 +1,5 @@
 {
- "absent_cr": 20089.63,
+ "absent_cr": 19289.86,
  "absent_distinct": [
   {
    "be_lakh": 461120.0,
@@ -161,44 +161,6 @@
     "2401 00 102 JE"
    ],
    "name": "Payment of Production Incentive to the Farmers for supply of Paddy to Tamil Nadu Civil Supplies Corporation",
-   "score": 11
-  },
-  {
-   "be_lakh": 68966.32,
-   "departments": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "sub-head code JO, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: destitute, widows"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ]
-   ],
-   "heads": [
-    "2235 60 102 JE",
-    "2235 60 796 JO"
-   ],
-   "name": "Destitute Widows Pension",
    "score": 11
   },
   {
@@ -673,43 +635,6 @@
    ],
    "name": "Payment of Cash Relief to Traffic Accident Victims",
    "score": 12
-  },
-  {
-   "be_lakh": 19995.97,
-   "departments": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "sub-head code JT, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: destitute, widows"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ]
-   ],
-   "heads": [
-    "2235 60 789 JT"
-   ],
-   "name": "Destitute Widows Pension under Special Component Plan",
-   "score": 11
   },
   {
    "be_lakh": 17884.65,
@@ -1416,6 +1341,39 @@
    ],
    "name": "Annal Ambedkar Abroad Higher Education Scholarship Scheme",
    "score": 10
+  },
+  {
+   "be_lakh": 6104.44,
+   "departments": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UD, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "heads": [
+    "2225 01 277 UD"
+   ],
+   "name": "Pre - Matric Scholarship to Scheduled Caste Students - State Share",
+   "score": 13
   },
   {
    "be_lakh": 6070.53,
@@ -2364,6 +2322,35 @@
    "score": 10
   },
   {
+   "be_lakh": 1216.98,
+   "departments": [
+    "BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+   ],
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: girls, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "heads": [
+    "2225 04 277 AE"
+   ],
+   "name": "Pre Matric Scholarship to Islamic Girls Students",
+   "score": 12
+  },
+  {
    "be_lakh": 1200.0,
    "departments": [
     "SOCIAL JUSTICE DEPARTMENT"
@@ -2553,6 +2540,39 @@
    ],
    "name": "Assistance to Post Graduate Students",
    "score": 10
+  },
+  {
+   "be_lakh": 862.91,
+   "departments": [
+    "MICRO, SMALL AND MEDIUM ENTERPRISES DEPARTMENT"
+   ],
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 311"
+    ],
+    [
+     "+1",
+     "sub-plan minor head 789"
+    ],
+    [
+     "+1",
+     "sub-head code JD, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, unemployed, youth"
+    ],
+    [
+     "+1",
+     "scheme marker word in the name: programme, scheme"
+    ]
+   ],
+   "heads": [
+    "2851 00 789 JD"
+   ],
+   "name": "Scheme for implementation of Unemployed Youth Employment Generation Programme under Scheduled Caste Component Plan",
+   "score": 11
   },
   {
    "be_lakh": 787.66,
@@ -2891,6 +2911,39 @@
    ],
    "name": "Assistance to Co-operative Institution in Tribal areas",
    "score": 12
+  },
+  {
+   "be_lakh": 590.0,
+   "departments": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UC, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "heads": [
+    "2225 02 277 UC"
+   ],
+   "name": "Pre - Matric Scholarship to Scheduled Tribe Students",
+   "score": 13
   },
   {
    "be_lakh": 569.12,
@@ -3409,6 +3462,43 @@
    ],
    "name": "Special incentive scheme to promote literacy among Tribal caste girls studying VI standard to VIII standard",
    "score": 13
+  },
+  {
+   "be_lakh": 275.6,
+   "departments": [
+    "BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+   ],
+   "evidence": [
+    [
+     "-1",
+     "establishment or works minor head 001"
+    ],
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 339"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: girls, minority, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: incentive"
+    ],
+    [
+     "+1",
+     "scheme marker word in the name: scheme"
+    ]
+   ],
+   "heads": [
+    "2225 04 001 AD"
+   ],
+   "name": "Rewards - Incentive Scheme for Rural Minority Girls Students of Std. III to VI",
+   "score": 12
   },
   {
    "be_lakh": 249.66,
@@ -3951,35 +4041,6 @@
    ],
    "name": "Free Education to Students of Scheduled Caste/Scheduled Caste Converts to Christianity studying in B.A., B.Sc.,.B.Com., Courses Scholarships and Stipends",
    "score": 13
-  },
-  {
-   "be_lakh": 64.62,
-   "departments": [
-    "INFORMATION AND PUBLICITY (Tamil Development and Information Department)"
-   ],
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 327"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: family"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ]
-   ],
-   "heads": [
-    "2235 60 102 AM"
-   ],
-   "name": "Family Pension to the Journalist in the State of Tamil Nadu",
-   "score": 12
   },
   {
    "be_lakh": 62.65,
@@ -6040,6 +6101,72 @@
   {
    "be_lakh": 0.01,
    "departments": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UD, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "heads": [
+    "2225 02 277 UD"
+   ],
+   "name": "Pre - Matric Scholarship to Scheduled Tribe Students - State Share",
+   "score": 13
+  },
+  {
+   "be_lakh": 0.01,
+   "departments": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UG, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "heads": [
+    "2225 01 277 UG"
+   ],
+   "name": "Pre-Matric Scholarship to Scheduled Caste Students",
+   "score": 13
+  },
+  {
+   "be_lakh": 0.01,
+   "departments": [
     "LAW DEPARTMENT"
    ],
    "evidence": [
@@ -7776,9 +7903,9 @@
    "score": 10
   }
  ],
- "absent_distinct_names": 231,
- "absent_from_myscheme_all_rows": 6100,
- "absent_from_myscheme_and_classified_scheme": 297,
+ "absent_distinct_names": 235,
+ "absent_from_myscheme_all_rows": 6115,
+ "absent_from_myscheme_and_classified_scheme": 300,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Tamil Nadu, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 201 joins over the whole corpus and 118 of them are wrong, so a row counted present may not be, and the absent count here is if anything an understatement. The surviving list is a floor for the opposite reason too: no book prints a purpose line, recall at the published bar is 41%, and a real scheme booked as a plain grant-in-aid with a Tamil name cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
   {
@@ -7981,49 +8108,6 @@
     "311"
    ],
    "score": 11,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 67720.56,
-   "books": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "code": "JE",
-   "department": "REVENUE AND DISASTER MANAGEMENT DEPARTMENT",
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-head code JE, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: destitute, widows"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2235 60 102 JE",
-   "in_myscheme_tamilnadu": false,
-   "key": "2235 60 102 JE",
-   "major_head": "2235",
-   "myscheme_match": null,
-   "name": "Destitute Widows Pension",
-   "object_heads": [
-    "327",
-    "377"
-   ],
-   "score": 10,
    "verdict": "scheme"
   },
   {
@@ -8609,53 +8693,6 @@
     "351"
    ],
    "score": 12,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 19995.97,
-   "books": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "code": "JT",
-   "department": "REVENUE AND DISASTER MANAGEMENT DEPARTMENT",
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "sub-head code JT, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: destitute, widows"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2235 60 789 JT",
-   "in_myscheme_tamilnadu": false,
-   "key": "2235 60 789 JT",
-   "major_head": "2235",
-   "myscheme_match": null,
-   "name": "Destitute Widows Pension under Special Component Plan",
-   "object_heads": [
-    "327",
-    "377"
-   ],
-   "score": 11,
    "verdict": "scheme"
   },
   {
@@ -9598,6 +9635,48 @@
     "312"
    ],
    "score": 10,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 6104.44,
+   "books": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
+   "code": "UD",
+   "department": "SOCIAL JUSTICE DEPARTMENT",
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UD, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "hand_label": "scheme",
+   "hoa": "2225 01 277 UD",
+   "in_myscheme_tamilnadu": false,
+   "key": "2225 01 277 UD",
+   "major_head": "2225",
+   "myscheme_match": null,
+   "name": "Pre - Matric Scholarship to Scheduled Caste Students - State Share",
+   "object_heads": [
+    "312"
+   ],
+   "score": 13,
    "verdict": "scheme"
   },
   {
@@ -10879,53 +10958,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 1245.76,
-   "books": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "code": "JO",
-   "department": "REVENUE AND DISASTER MANAGEMENT DEPARTMENT",
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "sub-head code JO, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: destitute, widows"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2235 60 796 JO",
-   "in_myscheme_tamilnadu": false,
-   "key": "2235 60 796 JO",
-   "major_head": "2235",
-   "myscheme_match": null,
-   "name": "Destitute Widows Pension",
-   "object_heads": [
-    "327",
-    "377"
-   ],
-   "score": 11,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 1236.17,
    "books": [
     "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
@@ -11011,6 +11043,44 @@
     "311"
    ],
    "score": 10,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 1216.98,
+   "books": [
+    "BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+   ],
+   "code": "AE",
+   "department": "BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT",
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: girls, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "hand_label": "scheme",
+   "hoa": "2225 04 277 AE",
+   "in_myscheme_tamilnadu": false,
+   "key": "2225 04 277 AE",
+   "major_head": "2225",
+   "myscheme_match": null,
+   "name": "Pre Matric Scholarship to Islamic Girls Students",
+   "object_heads": [
+    "312"
+   ],
+   "score": 12,
    "verdict": "scheme"
   },
   {
@@ -11382,6 +11452,48 @@
     "312"
    ],
    "score": 10,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 862.91,
+   "books": [
+    "MICRO, SMALL AND MEDIUM ENTERPRISES DEPARTMENT"
+   ],
+   "code": "JD",
+   "department": "MICRO, SMALL AND MEDIUM ENTERPRISES DEPARTMENT",
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 311"
+    ],
+    [
+     "+1",
+     "sub-plan minor head 789"
+    ],
+    [
+     "+1",
+     "sub-head code JD, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, unemployed, youth"
+    ],
+    [
+     "+1",
+     "scheme marker word in the name: programme, scheme"
+    ]
+   ],
+   "hand_label": "scheme",
+   "hoa": "2851 00 789 JD",
+   "in_myscheme_tamilnadu": false,
+   "key": "2851 00 789 JD",
+   "major_head": "2851",
+   "myscheme_match": null,
+   "name": "Scheme for implementation of Unemployed Youth Employment Generation Programme under Scheduled Caste Component Plan",
+   "object_heads": [
+    "311"
+   ],
+   "score": 11,
    "verdict": "scheme"
   },
   {
@@ -11853,6 +11965,48 @@
     "368"
    ],
    "score": 12,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 590.0,
+   "books": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
+   "code": "UC",
+   "department": "SOCIAL JUSTICE DEPARTMENT",
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UC, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "hand_label": "scheme",
+   "hoa": "2225 02 277 UC",
+   "in_myscheme_tamilnadu": false,
+   "key": "2225 02 277 UC",
+   "major_head": "2225",
+   "myscheme_match": null,
+   "name": "Pre - Matric Scholarship to Scheduled Tribe Students",
+   "object_heads": [
+    "312"
+   ],
+   "score": 13,
    "verdict": "scheme"
   },
   {
@@ -12639,6 +12793,52 @@
     "339"
    ],
    "score": 13,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 275.6,
+   "books": [
+    "BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+   ],
+   "code": "AD",
+   "department": "BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT",
+   "evidence": [
+    [
+     "-1",
+     "establishment or works minor head 001"
+    ],
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 339"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: girls, minority, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: incentive"
+    ],
+    [
+     "+1",
+     "scheme marker word in the name: scheme"
+    ]
+   ],
+   "hand_label": "scheme",
+   "hoa": "2225 04 001 AD",
+   "in_myscheme_tamilnadu": false,
+   "key": "2225 04 001 AD",
+   "major_head": "2225",
+   "myscheme_match": null,
+   "name": "Rewards - Incentive Scheme for Rural Minority Girls Students of Std. III to VI",
+   "object_heads": [
+    "339"
+   ],
+   "score": 12,
    "verdict": "scheme"
   },
   {
@@ -13737,44 +13937,6 @@
     "311"
    ],
    "score": 10,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 64.62,
-   "books": [
-    "INFORMATION AND PUBLICITY (Tamil Development and Information Department)"
-   ],
-   "code": "AM",
-   "department": "INFORMATION AND PUBLICITY (Tamil Development and Information Department)",
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 327"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: family"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2235 60 102 AM",
-   "in_myscheme_tamilnadu": false,
-   "key": "2235 60 102 AM",
-   "major_head": "2235",
-   "myscheme_match": null,
-   "name": "Family Pension to the Journalist in the State of Tamil Nadu",
-   "object_heads": [
-    "327"
-   ],
-   "score": 12,
    "verdict": "scheme"
   },
   {
@@ -15660,6 +15822,48 @@
    "books": [
     "SOCIAL JUSTICE DEPARTMENT"
    ],
+   "code": "UG",
+   "department": "SOCIAL JUSTICE DEPARTMENT",
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UG, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "hand_label": "scheme",
+   "hoa": "2225 01 277 UG",
+   "in_myscheme_tamilnadu": false,
+   "key": "2225 01 277 UG",
+   "major_head": "2225",
+   "myscheme_match": null,
+   "name": "Pre-Matric Scholarship to Scheduled Caste Students",
+   "object_heads": [
+    "312"
+   ],
+   "score": 13,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
    "code": "BR",
    "department": "SOCIAL JUSTICE DEPARTMENT",
    "evidence": [
@@ -15725,6 +15929,48 @@
    "major_head": "2225",
    "myscheme_match": null,
    "name": "Post - Matric Scholarship to Scheduled Tribe Students - State Share",
+   "object_heads": [
+    "312"
+   ],
+   "score": 13,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 0.01,
+   "books": [
+    "SOCIAL JUSTICE DEPARTMENT"
+   ],
+   "code": "UD",
+   "department": "SOCIAL JUSTICE DEPARTMENT",
+   "evidence": [
+    [
+     "+5",
+     "every object head on this row is a benefit transfer head: 312"
+    ],
+    [
+     "+2",
+     "welfare function major head 2225"
+    ],
+    [
+     "+1",
+     "sub-head code UD, one of the scheme blocks"
+    ],
+    [
+     "+3",
+     "named beneficiary class in the name: scheduled, students"
+    ],
+    [
+     "+2",
+     "benefit word in the name: scholarship"
+    ]
+   ],
+   "hand_label": "scheme",
+   "hoa": "2225 02 277 UD",
+   "in_myscheme_tamilnadu": false,
+   "key": "2225 02 277 UD",
+   "major_head": "2225",
+   "myscheme_match": null,
+   "name": "Pre - Matric Scholarship to Scheduled Tribe Students - State Share",
    "object_heads": [
     "312"
    ],
@@ -42701,13 +42947,10 @@
    ],
    "hand_label": null,
    "hoa": "2059 80 001 AQ",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2059 80 001 AQ",
    "major_head": "2059",
-   "myscheme_match": [
-    "Training of Farmers on Pulses Production Technologies",
-    "Training to Farmers"
-   ],
+   "myscheme_match": null,
    "name": "Training",
    "object_heads": [
     "301",
@@ -47305,10 +47548,12 @@
    ],
    "hand_label": null,
    "hoa": "2071 01 109 AD",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2071 01 109 AD",
    "major_head": "2071",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Pension for Journalists’ Family"
+   ],
    "name": "Family pensions",
    "object_heads": [
     "303",
@@ -86389,7 +86634,8 @@
    "key": "2210 80 911 JJ",
    "major_head": "2210",
    "myscheme_match": [
-    "Chief Minister's Comprehensive Health Insurance Scheme"
+    "Chief Minister's Comprehensive Health Insurance Scheme",
+    "Chief Minister’s Comprehensive Health Insurance Scheme - Tamil Nadu"
    ],
    "name": "Chief ministers comprehensive health insurance scheme",
    "object_heads": [
@@ -97135,10 +97381,12 @@
    ],
    "hand_label": null,
    "hoa": "2220 01 105 AE",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2220 01 105 AE",
    "major_head": "2220",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Poompuhar State Award"
+   ],
    "name": "State Awards",
    "object_heads": [
     "305",
@@ -99998,12 +100246,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2225 01 277 UD",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2225 01 277 UD",
    "major_head": "2225",
-   "myscheme_match": [
-    "Pre-Matric Scholarship Scheme"
-   ],
+   "myscheme_match": null,
    "name": "Pre - Matric Scholarship to Scheduled Caste Students - State Share",
    "object_heads": [
     "312"
@@ -100128,12 +100374,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2225 01 277 UG",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2225 01 277 UG",
    "major_head": "2225",
-   "myscheme_match": [
-    "Pre-Matric Scholarship Scheme"
-   ],
+   "myscheme_match": null,
    "name": "Pre-Matric Scholarship to Scheduled Caste Students",
    "object_heads": [
     "312"
@@ -100362,10 +100606,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 01 789 AY",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 01 789 AY",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Burial Ground-Provision of Burial Grounds and Pathway to Burial Grounds"
+   ],
    "name": "Scheme for provision of Pathways and Burial grounds",
    "object_heads": [
     "309",
@@ -100892,10 +101138,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 01 800 JI",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 01 800 JI",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Burial Ground-Provision of Burial Grounds and Pathway to Burial Grounds"
+   ],
    "name": "Scheme for provision of Pathways and Burial grounds",
    "object_heads": [
     "317",
@@ -103691,10 +103939,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 02 277 KB",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 02 277 KB",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Financial Assistance to Non Governmental Organisations"
+   ],
    "name": "Assistance to Non Governmental Organisation",
    "object_heads": [
     "301",
@@ -103951,12 +104201,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2225 02 277 UC",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2225 02 277 UC",
    "major_head": "2225",
-   "myscheme_match": [
-    "Pre-Matric Scholarship Scheme"
-   ],
+   "myscheme_match": null,
    "name": "Pre - Matric Scholarship to Scheduled Tribe Students",
    "object_heads": [
     "312"
@@ -103995,12 +104243,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2225 02 277 UD",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2225 02 277 UD",
    "major_head": "2225",
-   "myscheme_match": [
-    "Pre-Matric Scholarship Scheme"
-   ],
+   "myscheme_match": null,
    "name": "Pre - Matric Scholarship to Scheduled Tribe Students - State Share",
    "object_heads": [
     "312"
@@ -106299,10 +106545,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 03 277 BP",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 03 277 BP",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Awards to Bright Students"
+   ],
    "name": "Thanthai Periyar Memorial Award to Bright students -Backward classes Welfare",
    "object_heads": [
     "359"
@@ -106371,10 +106619,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 03 277 BT",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 03 277 BT",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Awards to Bright Students"
+   ],
    "name": "Thanthai Periyar Memorial Award to Bright students for Most Backward classes and Denotified Communities Welfare",
    "object_heads": [
     "359"
@@ -106670,6 +106920,7 @@
    "key": "2225 03 277 JL",
    "major_head": "2225",
    "myscheme_match": [
+    "Awards to Bright Students",
     "Perarignar Anna Memorial Award"
    ],
    "name": "Perarignar Anna Memorial Award to bright students",
@@ -106834,10 +107085,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 03 277 KE",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 03 277 KE",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Pre-Matric Scholarship Scheme"
+   ],
    "name": "Pre-Matric Scholarships to Most Backward Classes",
    "object_heads": [
     "305",
@@ -107391,7 +107644,8 @@
    "key": "2225 03 277 KZ",
    "major_head": "2225",
    "myscheme_match": [
-    "Awards to Bright Students"
+    "Awards to Bright Students",
+    "Perarignar Anna Memorial Award"
    ],
    "name": "Perarignar Anna Memorial Awards to Most Backward Classes and Denotified Community Bright Students",
    "object_heads": [
@@ -108860,10 +109114,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 03 911 KE",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 03 911 KE",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Pre-Matric Scholarship Scheme"
+   ],
    "name": "Pre-Matric Scholarships to Most Backward Classes",
    "object_heads": [
     "377"
@@ -109426,12 +109682,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2225 04 001 AD",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2225 04 001 AD",
    "major_head": "2225",
-   "myscheme_match": [
-    "Rural Girls’ Incentive Scheme"
-   ],
+   "myscheme_match": null,
    "name": "Rewards - Incentive Scheme for Rural Minority Girls Students of Std. III to VI",
    "object_heads": [
     "339"
@@ -109741,12 +109995,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2225 04 277 AE",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2225 04 277 AE",
    "major_head": "2225",
-   "myscheme_match": [
-    "Pre-Matric Scholarship Scheme"
-   ],
+   "myscheme_match": null,
    "name": "Pre Matric Scholarship to Islamic Girls Students",
    "object_heads": [
     "312"
@@ -110072,10 +110324,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 04 800 AE",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 04 800 AE",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Burial Ground-Provision of Burial Grounds and Pathway to Burial Grounds"
+   ],
    "name": "Scheme for Provision of Pathways and Burial Grounds",
    "object_heads": [
     "317"
@@ -110156,12 +110410,10 @@
    ],
    "hand_label": null,
    "hoa": "2225 04 911 AD",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2225 04 911 AD",
    "major_head": "2225",
-   "myscheme_match": [
-    "Rural Girls’ Incentive Scheme"
-   ],
+   "myscheme_match": null,
    "name": "Rewards - Incentive Scheme for Rural Minority Girls Students of Std.III to VI (001)",
    "object_heads": [
     "377"
@@ -120382,10 +120634,12 @@
    ],
    "hand_label": null,
    "hoa": "2235 02 103 BQ",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 02 103 BQ",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Sathiyavanimuthu Ammaiyar Ninaivu Free Supply of Sewing Machine Scheme"
+   ],
    "name": "Scheme for Supply of Sewing Machines",
    "object_heads": [
     "309"
@@ -121082,7 +121336,8 @@
    "key": "2235 02 103 KC",
    "major_head": "2235",
    "myscheme_match": [
-    "Marriage Assistance"
+    "E.V.R. Maniammaiyar Ninaivu Marriage Assistance Scheme for Daughter’s of Poor Widows: Scheme-I",
+    "E.V.R. Maniammaiyar Ninaivu Marriage Assistance Scheme for Daughter’s of Poor Widows: Scheme-II"
    ],
    "name": "Marriage Assistance for the marriage of daughters of poor widows",
    "object_heads": [
@@ -121119,9 +121374,7 @@
    "major_head": "2235",
    "myscheme_match": [
     "Annai Teresa Ninaivu Marriage Assistance Scheme for Orphan Girls-I",
-    "Annai Teresa Ninaivu Marriage Assistance Scheme for Orphan Girls-II",
-    "Assistance for Marriage",
-    "Marriage Assistance"
+    "Annai Teresa Ninaivu Marriage Assistance Scheme for Orphan Girls-II"
    ],
    "name": "Marriage Assistance for Orphan girls",
    "object_heads": [
@@ -124638,12 +124891,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 02 789 JH",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2235 02 789 JH",
    "major_head": "2235",
-   "myscheme_match": [
-    "Marriage Assistance"
-   ],
+   "myscheme_match": null,
    "name": "Marriage Assistance for the marriage of daughters of poor widows under Special Component Plan",
    "object_heads": [
     "309"
@@ -124682,12 +124933,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 02 789 JL",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2235 02 789 JL",
    "major_head": "2235",
-   "myscheme_match": [
-    "Marriage Assistance"
-   ],
+   "myscheme_match": null,
    "name": "Marriage Assistance for Orphan Girls under Special Component Plan",
    "object_heads": [
     "309"
@@ -126511,12 +126760,10 @@
    ],
    "hand_label": null,
    "hoa": "2235 02 911 JH",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2235 02 911 JH",
    "major_head": "2235",
-   "myscheme_match": [
-    "Marriage Assistance"
-   ],
+   "myscheme_match": null,
    "name": "Marriage Assistance for the marriage of daughters of poor widows under Special Component Plan",
    "object_heads": [
     "377"
@@ -126772,13 +127019,10 @@
    ],
    "hand_label": null,
    "hoa": "2235 02 911 LT",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2235 02 911 LT",
    "major_head": "2235",
-   "myscheme_match": [
-    "Moovalur Ramamirtham Ammaiyar Ninaivu Marriage Assistance Scheme - II",
-    "Moovalur Ramamirtham Ammaiyar Ninaivu Marriage Assistance Scheme-1"
-   ],
+   "myscheme_match": null,
    "name": "Financial Assistance for Marriage of Girls Below Poverty Line under \"Moovalur Ramamirtham Ammaiyar Ninaivu Thirumana Thittam\"",
    "object_heads": [
     "377"
@@ -127510,10 +127754,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 60 102 AM",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 102 AM",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Pension for Journalists’ Family"
+   ],
    "name": "Family Pension to the Journalist in the State of Tamil Nadu",
    "object_heads": [
     "327"
@@ -127788,10 +128034,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 60 102 JE",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 102 JE",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Destitute Widow Pension Scheme"
+   ],
    "name": "Destitute Widows Pension",
    "object_heads": [
     "327",
@@ -130552,10 +130800,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 60 789 JT",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 789 JT",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Destitute Widow Pension Scheme"
+   ],
    "name": "Destitute Widows Pension under Special Component Plan",
    "object_heads": [
     "327",
@@ -131770,10 +132020,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 60 796 JO",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 796 JO",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Destitute Widow Pension Scheme"
+   ],
    "name": "Destitute Widows Pension",
    "object_heads": [
     "327",
@@ -167645,12 +167897,10 @@
    ],
    "hand_label": null,
    "hoa": "2403 00 106 AO",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2403 00 106 AO",
    "major_head": "2403",
-   "myscheme_match": [
-    "Animal Husbandry"
-   ],
+   "myscheme_match": null,
    "name": "Animal Husbandry Infrastructure Development Fund (AHIDF)",
    "object_heads": [
     "308",
@@ -169335,12 +169585,10 @@
    ],
    "hand_label": null,
    "hoa": "2403 00 800 BA",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2403 00 800 BA",
    "major_head": "2403",
-   "myscheme_match": [
-    "Animal Husbandry"
-   ],
+   "myscheme_match": null,
    "name": "Animal Husbandry Infrastructure Development Fund (AHIDF)",
    "object_heads": [
     "308"
@@ -178633,12 +178881,10 @@
    ],
    "hand_label": null,
    "hoa": "2415 01 120 AK",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2415 01 120 AK",
    "major_head": "2415",
-   "myscheme_match": [
-    "Organizing Block Demonstration Through Department And Also Through TNAU"
-   ],
+   "myscheme_match": null,
    "name": "Grants to Tamil Nadu Agricultural University to establish Agricultural / Horticultural Colleges and Research Institutions",
    "object_heads": [
     "309"
@@ -178778,12 +179024,10 @@
    ],
    "hand_label": null,
    "hoa": "2415 01 120 PF",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2415 01 120 PF",
    "major_head": "2415",
-   "myscheme_match": [
-    "Organizing Block Demonstration Through Department And Also Through TNAU"
-   ],
+   "myscheme_match": null,
    "name": "Grants to Tamil Nadu Agricultural University under Tamil Nadu Irrigated Agriculture Modernisation Project-II (TNIAM-II)",
    "object_heads": [
     "309"
@@ -183752,10 +183996,12 @@
    ],
    "hand_label": null,
    "hoa": "2505 02 101 SA",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2505 02 101 SA",
    "major_head": "2505",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Scholarship (Above VIII Standard) - Tamil Nadu"
+   ],
    "name": "Social Audit Society of Tamil Nadu",
    "object_heads": [
     "309"
@@ -192046,12 +192292,10 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 102 LN",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2851 00 102 LN",
    "major_head": "2851",
-   "myscheme_match": [
-    "Back Ended Interest Subsidy (BEIS)"
-   ],
+   "myscheme_match": null,
    "name": "Back Ended Interest Subsidy to Micro and Small Enterprises towards term loan obtained for Technology Upgradation / Modernisation",
    "object_heads": [
     "311"
@@ -192082,12 +192326,10 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 102 LP",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2851 00 102 LP",
    "major_head": "2851",
-   "myscheme_match": [
-    "Back Ended Interest Subsidy (BEIS)"
-   ],
+   "myscheme_match": null,
    "name": "Back Ended Interest Subsidy to Micro and Small Enterprises towards term loan obtained under credit Guarantee Fund Trust for Micro and Small Enterprises",
    "object_heads": [
     "311"
@@ -192140,12 +192382,10 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 102 LZ",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2851 00 102 LZ",
    "major_head": "2851",
-   "myscheme_match": [
-    "Capital Subsidy"
-   ],
+   "myscheme_match": null,
    "name": "Capital subsidy to Micro , Small, Medium and Agro-based Industries",
    "object_heads": [
     "311"
@@ -194937,12 +195177,10 @@
    ],
    "hand_label": "scheme",
    "hoa": "2851 00 789 JD",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2851 00 789 JD",
    "major_head": "2851",
-   "myscheme_match": [
-    "Unemployed Youth Employment Generation Programme"
-   ],
+   "myscheme_match": null,
    "name": "Scheme for implementation of Unemployed Youth Employment Generation Programme under Scheduled Caste Component Plan",
    "object_heads": [
     "311"
@@ -196266,12 +196504,10 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 911 LP",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2851 00 911 LP",
    "major_head": "2851",
-   "myscheme_match": [
-    "Back Ended Interest Subsidy (BEIS)"
-   ],
+   "myscheme_match": null,
    "name": "Back Ended Interest Subsidy to Micro and Small Enterprises towards term loan obtained under credit Guarantee Fund Trust for Micro and Small Enterprises",
    "object_heads": [
     "377"
@@ -196302,12 +196538,10 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 911 LZ",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2851 00 911 LZ",
    "major_head": "2851",
-   "myscheme_match": [
-    "Capital Subsidy"
-   ],
+   "myscheme_match": null,
    "name": "Capital Subsidy to Micro, Small, Medium and Agro-based Industries",
    "object_heads": [
     "377"
@@ -197398,12 +197632,10 @@
    ],
    "hand_label": null,
    "hoa": "2852 08 202 AL",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2852 08 202 AL",
    "major_head": "2852",
-   "myscheme_match": [
-    "Capital Subsidy"
-   ],
+   "myscheme_match": null,
    "name": "Capital Subsidy for purchase of Wider Width Fabric Printing Machine under New integrated Textile Policy, 2019",
    "object_heads": [
     "311"
@@ -200585,12 +200817,10 @@
    ],
    "hand_label": null,
    "hoa": "3054 03 337 AL",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3054 03 337 AL",
    "major_head": "3054",
-   "myscheme_match": [
-    "Construction of Free Houses for Tribals"
-   ],
+   "myscheme_match": null,
    "name": "Construction",
    "object_heads": [
     "317"
@@ -200755,12 +200985,10 @@
    ],
    "hand_label": null,
    "hoa": "3054 03 800 JA",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3054 03 800 JA",
    "major_head": "3054",
-   "myscheme_match": [
-    "Construction of Free Houses for Tribals"
-   ],
+   "myscheme_match": null,
    "name": "Construction",
    "object_heads": [
     "317"
@@ -204568,12 +204796,10 @@
    ],
    "hand_label": null,
    "hoa": "3451 00 090 AK",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3451 00 090 AK",
    "major_head": "3451",
-   "myscheme_match": [
-    "Animal Husbandry"
-   ],
+   "myscheme_match": null,
    "name": "Animal Husbandry, Dairying, Fisheries and Fishermen Welfare Department",
    "object_heads": [
     "301",
@@ -205491,12 +205717,10 @@
    ],
    "hand_label": null,
    "hoa": "3451 00 911 AK",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3451 00 911 AK",
    "major_head": "3451",
-   "myscheme_match": [
-    "Animal Husbandry"
-   ],
+   "myscheme_match": null,
    "name": "Animal Husbandry, Dairying/ Fisheries and Fishermen Department",
    "object_heads": [
     "377"
@@ -207996,12 +208220,10 @@
    ],
    "hand_label": null,
    "hoa": "3456 00 102 UE",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3456 00 102 UE",
    "major_head": "3456",
-   "myscheme_match": [
-    "Primary Cooperative Agriculture and Rural Development Bank: For Handloom and Other Non Farm Sector Activities"
-   ],
+   "myscheme_match": null,
    "name": "Intra - State movement of food grains and Fair Price Shop Dealers margin under NFSA 2013",
    "object_heads": [
     "311"
@@ -208028,12 +208250,10 @@
    ],
    "hand_label": null,
    "hoa": "3456 00 102 UF",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3456 00 102 UF",
    "major_head": "3456",
-   "myscheme_match": [
-    "Primary Cooperative Agriculture and Rural Development Bank: For Handloom and Other Non Farm Sector Activities"
-   ],
+   "myscheme_match": null,
    "name": "Intra - State movement of food grains and Fair price shop Dealers margin under NFSA 2013 - State Share",
    "object_heads": [
     "311"
@@ -208734,12 +208954,10 @@
    ],
    "hand_label": null,
    "hoa": "3456 00 911 UF",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3456 00 911 UF",
    "major_head": "3456",
-   "myscheme_match": [
-    "Primary Cooperative Agriculture and Rural Development Bank: For Handloom and Other Non Farm Sector Activities"
-   ],
+   "myscheme_match": null,
    "name": "Intra - State movement of food grains and Fair price shop Dealers margin under NFSA 2013 - State Share",
    "object_heads": [
     "377"
@@ -235641,12 +235859,10 @@
    ],
    "hand_label": null,
    "hoa": "4415 80 277 AA",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "4415 80 277 AA",
    "major_head": "4415",
-   "myscheme_match": [
-    "Organizing Block Demonstration Through Department And Also Through TNAU"
-   ],
+   "myscheme_match": null,
    "name": "Establishment of Agriculture / Horticultural Colleges and Research Institutions for Tamil Nadu Agriculture University",
    "object_heads": [
     "416"
@@ -255720,7 +255936,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-02T06:44:21Z",
+ "built": "2026-09-02T15:18:21Z",
  "classified_not_scheme": 5894,
  "classified_scheme": 326,
  "classified_scheme_distinct_names": 258,

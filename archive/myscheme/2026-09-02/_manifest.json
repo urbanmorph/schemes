@@ -1,0 +1,30 @@
+{
+ "api_base": "https://api.myscheme.gov.in",
+ "api_version": "search/v6 + schemes/v6",
+ "census_sha256": "bb50b43cbdc4b8154a04223e9410ac896e643aa0f7841056683038cec392b2db",
+ "details_expected": 4771,
+ "details_written": 4771,
+ "duplicate_slugs": [
+  "tufs"
+ ],
+ "duration_s": 4776,
+ "error_count": 0,
+ "errors": [],
+ "expected_total": 4772,
+ "finished": "2026-09-02T13:57:37Z",
+ "in_progress": false,
+ "key_event": null,
+ "key_fingerprint": "tYTy…HTDc",
+ "list_records": 4772,
+ "page_size": 100,
+ "pages_expected": 48,
+ "pages_written": 48,
+ "slugs_missing": 0,
+ "sort": "schemename-asc",
+ "source": "myscheme",
+ "started": "2026-09-02T12:38:02Z",
+ "status_histogram": {
+  "200": 4820
+ },
+ "unique_slugs": 4771
+}

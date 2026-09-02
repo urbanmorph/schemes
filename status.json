@@ -1,22 +1,37 @@
 {
- "api_version": null,
+ "api_version": "search/v6 + schemes/v6",
  "attention": [
   [
-   "archive present",
-   "2026-09-01",
-   "no archive at archive/myscheme/2026-09-01"
-  ],
-  [
    "budget stat4a rows",
-   "2026-09-01",
+   "2026-09-02",
    "84 of 86 numbered rows — extraction lost [28, 31]"
   ]
  ],
  "checks": [
   {
-   "check": "archive present",
-   "detail": "no archive at archive/myscheme/2026-09-01",
-   "ok": false
+   "check": "list records == census total",
+   "detail": "4772 records vs 4772 expected",
+   "ok": true
+  },
+  {
+   "check": "a detail for every slug",
+   "detail": "4771 details vs 4771 distinct slugs",
+   "ok": true
+  },
+  {
+   "check": "all list pages written",
+   "detail": "48/48 pages",
+   "ok": true
+  },
+  {
+   "check": "no error-shaped bodies",
+   "detail": "0 detail + 0 list bodies match a throttle/WAF shape",
+   "ok": true
+  },
+  {
+   "check": "archive streams are complete",
+   "detail": "all streams end cleanly",
+   "ok": true
   },
   {
    "check": "budget stat4a money",
@@ -43,17 +58,17 @@
    "ok": true
   }
  ],
- "expected_total": null,
+ "expected_total": 4772,
  "key_event": null,
- "last_complete_run": "2026-08-30T19:57:24Z",
- "last_run": "2026-09-01T07:58:25Z",
- "pages_expected": null,
- "pages_written": null,
- "records_parsed": null,
- "snapshot": "2026-09-01",
- "snapshots": 1,
+ "last_complete_run": "2026-09-02T15:14:22Z",
+ "last_run": "2026-09-02T15:14:22Z",
+ "pages_expected": 48,
+ "pages_written": 48,
+ "records_parsed": 4771,
+ "snapshot": "2026-09-02",
+ "snapshots": 2,
  "standing_issues": [
   "budget stat4a rows"
  ],
- "verdict": "INCOMPLETE"
+ "verdict": "COMPLETE"
 }
