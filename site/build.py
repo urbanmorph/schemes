@@ -2150,23 +2150,49 @@ def build():
     # right trade for a monthly snapshot.
     with open(os.path.join(OUT, "_headers"), "w", encoding="utf-8") as fh:
         fh.write(
+            # Cloudflare Pages MERGES rules rather than letting the most specific win, so
+            # a Cache-Control on /* arrives alongside every specific one and the response
+            # carries two contradictory values. Only /* sets the headers that are the same
+            # everywhere; caching is set per path and never here.
+            "/*\n"
+            "  X-Content-Type-Options: nosniff\n"
+            "  Referrer-Policy: strict-origin-when-cross-origin\n"
+            "\n"
+            # "/" and "/index.html" are different keys to Pages even though one serves the
+            # other, so the root needs its own rule or it keeps the max-age=0 default.
+            "/\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
+            "/index.html\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
+            "/divergence.html\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
+            "/changes.html\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
             "/theme.css\n"
             "  Cache-Control: public, max-age=31536000, immutable\n"
+            "\n"
+            "/filters.json\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
             "\n"
             "/scheme/*\n"
             "  Cache-Control: public, max-age=600, stale-while-revalidate=86400\n"
             "\n"
+            # Cloudflare compresses by content type and text/csv is not on its list, so
+            # this file shipped as 2.4 MB where it gzips to about 400 KB. Declaring it
+            # text/plain puts it on the list; Content-Disposition keeps it a download
+            # rather than a wall of text, and no CSV reader consults the content type.
             "/schemes.csv\n"
+            "  Content-Type: text/plain; charset=utf-8\n"
+            "  Content-Disposition: attachment; filename=\"schemes.csv\"\n"
             "  Cache-Control: public, max-age=3600, stale-while-revalidate=86400\n"
             "  Access-Control-Allow-Origin: *\n"
             "\n"
             "/sitemap.xml\n"
-            "  Cache-Control: public, max-age=86400\n"
-            "\n"
-            "/*\n"
-            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
-            "  X-Content-Type-Options: nosniff\n"
-            "  Referrer-Policy: strict-origin-when-cross-origin\n")
+            "  Cache-Control: public, max-age=86400\n")
 
     def w(rel, s):
         with open(os.path.join(OUT, rel), "w", encoding="utf-8") as fh:
