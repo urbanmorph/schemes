@@ -304,7 +304,7 @@ def shell(title, active, body, depth=0, desc="", canon=""):
 <script>
 document.getElementById('themeBtn').addEventListener('click',function(){{
   var r=document.documentElement,c=r.getAttribute('data-theme');
-  if(!c)c=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  if(!c)c=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
   r.setAttribute('data-theme',c==='dark'?'light':'dark');
 }});
 </script>
@@ -1298,6 +1298,8 @@ def index_section(entries):
     }
 
     rows = ""
+    findex = []
+    page_index.findex = findex          # read by build(), as shell.status is
     for e_ in entries:
         slug = e_["slug"]
         c = e_["checks"]
@@ -1323,7 +1325,6 @@ def index_section(entries):
         if c and c.get("brief"):
             sq |= set(keywords(c["brief"], e_["name"]))
         sq = {x for x in sq if len(x) > 2 and x not in hay.split()}
-        xattr = f' data-x="{e(" ".join(sorted(sq)))}"' if sq else ""
         acr = f'<span class="acr">{e(short)}</span>' if short and short != e_["name"] else ""
         badges = "".join(f'<span class="src {k}">{e(SOURCE_LABEL[k])}</span>'
                          for k in e_["sources"])
@@ -1348,13 +1349,26 @@ def index_section(entries):
         # because the denominator is nine for all 4,771 records that have one, verified
         # rather than assumed. If a check is ever added or removed for some records only,
         # this must become the percentage or the column will sort against what it shows.
-        rows += (f'<tr{xattr} data-p="{(c or {}).get("passed", -1)}" '
-                 f'data-o="{e((e_.get("org") or "").lower())}" '
-                 f'data-l="{e(e_.get("level_value") or "")}" '
-                 f'data-st="{e(" ".join(x.lower() for x in ((e_.get("state") if isinstance(e_.get("state"), list) else [e_.get("state")]) if e_.get("state") else [])))}" '
-                 f'data-a="{e(e_.get("audience") or "")}" '
-                 f'data-cat="{e((e_.get("category") or "").lower())}" '
-                 f'data-s="{e(" ".join(e_["sources"]))}"'
+        # The filter index is NOT in the DOM. It used to be seven data- attributes a row,
+        # 1.8 MB of the 5.5 MB page and 36% of its bytes, on a table the browser already
+        # builds 99,000 elements for. It is now one fetched JSON array, aligned to row
+        # order and attached to each element once on load, so it travels with the row when
+        # sorting reorders the DOM.
+        #
+        # data-p and data-b stay inline: 139 KB together, and they are what the sortable
+        # columns read, so sorting works on the first click rather than after a fetch.
+        findex.append([
+            " ".join(sorted(sq)),
+            " ".join(e_["sources"]),
+            (e_.get("org") or "").lower(),
+            " ".join(x.lower() for x in ((e_.get("state")
+                                          if isinstance(e_.get("state"), list)
+                                          else [e_.get("state")]) if e_.get("state") else [])),
+            e_.get("audience") or "",
+            (e_.get("category") or "").lower(),
+            e_.get("level_value") or "",
+        ])
+        rows += (f'<tr data-p="{(c or {}).get("passed", -1)}"'
                  + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
                  + '>'
                  f'<td><a href="scheme/{e(slug)}">{e(e_["name"])}</a>{acr}</td>'
@@ -1441,7 +1455,39 @@ def index_section(entries):
       c=document.getElementById('count'),asc=false,
       state={{lvl:'',src:'',doc:'',aud:''}};
   var norm=function(v){{return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
-  rows.forEach(function(r){{ r._h = norm(r.cells[0].textContent+' '+(r.dataset.x||'')); }});
+
+  // The filter index arrives as one fetch instead of seven attributes on each of 8,748
+  // rows. Until it lands the table is fully rendered and readable and the controls are
+  // disabled, which is honest: they cannot answer yet. Attaching it to the element rather
+  // than keeping an array means it survives the DOM reordering that sorting does.
+  var FIDX=null;
+  rows.forEach(function(r){{ r._f={{x:'',s:'',o:'',st:'',a:'',cat:'',l:''}};
+                             r._h = norm(r.cells[0].textContent); }});
+  var ctl=document.querySelectorAll('.pill,#q,#st,#org');
+  [].forEach.call(ctl,function(el){{ el.disabled=true; }});
+  fetch('filters.json').then(function(res){{ return res.json(); }}).then(function(d){{
+    var C=d.cols;
+    d.rows.forEach(function(v,i){{
+      var r=rows[i]; if(!r) return;
+      for(var k=0;k<C.length;k++) r._f[C[k]]=v[k]||'';
+      r._h = norm(r.cells[0].textContent+' '+r._f.x);
+    }});
+    FIDX=true;
+    [].forEach.call(ctl,function(el){{ el.disabled=false; }});
+    // apply() is called OUTSIDE the promise chain. Called inside it, any error it threw
+    // would be caught by the handler below and reported as "the filter index did not
+    // load", which would be a lie about a file that had loaded perfectly: a jsdom run
+    // without matchMedia produced exactly that, disabling every control after a
+    // successful fetch. A failure to fetch and a failure to render are different faults
+    // and must not share a message.
+    setTimeout(apply, 0);
+  }}).catch(function(){{
+    // A filter that cannot filter must not look like one that found nothing.
+    [].forEach.call(ctl,function(el){{ el.disabled=true; }});
+    var w=document.getElementById('whyempty');
+    if(w) w.textContent='The filter index did not load, so filtering is unavailable. '
+                       +'The full table is below and the CSV has every row.';
+  }});
   function terms(v){{ return norm(v).split(' ').filter(Boolean); }}
 
   function docOk(r,v){{
@@ -1457,11 +1503,11 @@ def index_section(entries):
         stv=document.getElementById('st').value,shown=0;
     document.getElementById('orgclear').hidden = !o;
     rows.forEach(function(r){{
-      var ok=(!o||r.dataset.o.indexOf(o)>-1)
-             &&(!stv||(r.dataset.st||'').indexOf(stv)>-1)
-             &&(!state.lvl||r.dataset.l===state.lvl)
-             &&(!state.aud||r.dataset.a===state.aud)
-             &&(!state.cat||(state.cat==='!'?!r.dataset.cat:r.dataset.cat===state.cat))
+      var ok=(!o||r._f.o.indexOf(o)>-1)
+             &&(!stv||(r._f.st||'').indexOf(stv)>-1)
+             &&(!state.lvl||r._f.l===state.lvl)
+             &&(!state.aud||r._f.a===state.aud)
+             &&(!state.cat||(state.cat==='!'?!r._f.cat:r._f.cat===state.cat))
              &&docOk(r,state.doc);
       if(ok) for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0){{ok=false;break;}}
       r.hidden=!ok; if(ok)shown++;
@@ -1490,7 +1536,8 @@ def index_section(entries):
     if(vis.length) last=vis[vis.length-1];
     var bottom=(last||tb).getBoundingClientRect().bottom;
     if(bottom>0) return;                 // still something to look at on screen
-    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var reduce=!window.matchMedia
+               || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     tb.scrollIntoView({{block:'start',behavior:reduce?'auto':'smooth'}});
   }}
 
@@ -1498,7 +1545,7 @@ def index_section(entries):
     var vis=rows.filter(function(r){{return !r.hidden;}});
     var src={{myscheme:0,budget:0,dbt:0,outcome:0}},money=0,scores=[];
     vis.forEach(function(r){{
-      (r.dataset.s||'').split(' ').forEach(function(k){{ if(k in src) src[k]++; }});
+      (r._f.s||'').split(' ').forEach(function(k){{ if(k in src) src[k]++; }});
       if(r.dataset.b) money+=+r.dataset.b;
       if(+r.dataset.p>=0) scores.push(+r.dataset.p);
     }});
@@ -1518,25 +1565,25 @@ def index_section(entries):
   // "Central" plus a state department is empty by construction — central schemes carry
   // ministries, state schemes carry departments — and the old static counts hid that.
   function passes(r,ts,o,skip){{
-    if(o && skip!=='org' && r.dataset.o.indexOf(o)<0) return false;
+    if(o && skip!=='org' && r._f.o.indexOf(o)<0) return false;
     var sv2=document.getElementById('st').value;
-    if(sv2 && skip!=='st' && (r.dataset.st||'').indexOf(sv2)<0) return false;
-    if(skip!=='lvl' && state.lvl && r.dataset.l!==state.lvl) return false;
-    if(skip!=='aud' && state.aud && r.dataset.a!==state.aud) return false;
+    if(sv2 && skip!=='st' && (r._f.st||'').indexOf(sv2)<0) return false;
+    if(skip!=='lvl' && state.lvl && r._f.l!==state.lvl) return false;
+    if(skip!=='aud' && state.aud && r._f.a!==state.aud) return false;
     if(skip!=='doc' && !docOk(r,state.doc)) return false;
     for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0) return false;
     return true;
   }}
   function matchOne(r,g,v){{
-    if(g==='lvl') return !v||r.dataset.l===v;
-    if(g==='aud') return !v||r.dataset.a===v;
+    if(g==='lvl') return !v||r._f.l===v;
+    if(g==='aud') return !v||r._f.a===v;
     if(g==='doc') return docOk(r,v);
-    if(g==='cat') return v==='!' ? !r.dataset.cat : (!v || r.dataset.cat===v);
+    if(g==='cat') return v==='!' ? !r._f.cat : (!v || r._f.cat===v);
     // data-s survives without a filter of its own: the rail still counts how many of the
     // current selection are on no citizen-facing portal, which was the one thing the
     // listed-by pills were really for.
     if(!v) return true;
-    var have=(r.dataset.s||'').split(' ');
+    var have=(r._f.s||'').split(' ');
     return v.charAt(0)==='!' ? have.indexOf(v.slice(1))<0 : have.indexOf(v)>-1;
   }}
   function recount(ts,o){{
@@ -1644,7 +1691,8 @@ def index_section(entries):
     onScroll();
     top.addEventListener('click',function(ev){{
       ev.preventDefault();
-      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var reduce=!window.matchMedia
+                 || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({{top:0,behavior:reduce?'auto':'smooth'}});
       q.focus({{preventScroll:true}});
     }});
@@ -2092,6 +2140,34 @@ def build():
     os.makedirs(os.path.join(OUT, "scheme"), exist_ok=True)
     shutil.copy(os.path.join(HERE, "theme.css"), os.path.join(OUT, "theme.css"))
 
+    # Cloudflare Pages defaults every response to max-age=0, must-revalidate, so a reader
+    # moving between scheme pages re-validates the stylesheet on every one. This register
+    # changes once a month, so that default is three orders of magnitude too cautious.
+    #
+    # theme.css is safe to pin for a year because its URL already carries a content hash:
+    # a changed stylesheet is a changed URL, so a stale copy can never be served. Pages are
+    # revalidated but may be served stale for a minute while that happens, which is the
+    # right trade for a monthly snapshot.
+    with open(os.path.join(OUT, "_headers"), "w", encoding="utf-8") as fh:
+        fh.write(
+            "/theme.css\n"
+            "  Cache-Control: public, max-age=31536000, immutable\n"
+            "\n"
+            "/scheme/*\n"
+            "  Cache-Control: public, max-age=600, stale-while-revalidate=86400\n"
+            "\n"
+            "/schemes.csv\n"
+            "  Cache-Control: public, max-age=3600, stale-while-revalidate=86400\n"
+            "  Access-Control-Allow-Origin: *\n"
+            "\n"
+            "/sitemap.xml\n"
+            "  Cache-Control: public, max-age=86400\n"
+            "\n"
+            "/*\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "  X-Content-Type-Options: nosniff\n"
+            "  Referrer-Policy: strict-origin-when-cross-origin\n")
+
     def w(rel, s):
         with open(os.path.join(OUT, rel), "w", encoding="utf-8") as fh:
             fh.write(s)
@@ -2155,6 +2231,14 @@ def build():
         "The census and the argument", "/", page_index(census, checks, dbt, entries),
         desc=(f"{len(entries):,} Indian government schemes across four official sources, "
               "with what each source publishes and what it leaves out.")))
+    # Compact on purpose: no indentation and no spaces after separators. The index is
+    # 1.8 MB of strings and pretty-printing it would add a fifth again for a file no
+    # person reads.
+    with open(os.path.join(OUT, "filters.json"), "w", encoding="utf-8") as fh:
+        json.dump({"cols": ["x", "s", "o", "st", "a", "cat", "l"],
+                   "rows": getattr(page_index, "findex", [])},
+                  fh, separators=(",", ":"), ensure_ascii=False)
+
     w("divergence.html", shell(
         "Divergence", "/divergence",
         page_divergence(census, dbt, load("data/registry.json", {}),

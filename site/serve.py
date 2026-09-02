@@ -37,9 +37,16 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # site's links are written that way. Without this the local preview 404s on every
         # link the deployed site resolves, which is the worst kind of difference between
         # development and production: the one that only shows up in production.
+        #
+        # self.path is rewritten, not just the local variable: every fall-through below
+        # calls super().send_head(), which re-derives the path from self.path and would
+        # hand back the 404 this is meant to avoid. Rewriting a local looked correct and
+        # 404ed on every scheme page.
         if not os.path.exists(path) and not path.endswith("/"):
             if os.path.isfile(path + ".html"):
                 path += ".html"
+                head, sep, tail = self.path.partition("?")
+                self.path = head + ".html" + sep + tail
         if os.path.isdir(path):
             # Resolve the directory index BEFORE deciding on compression. Falling through
             # to the parent handler here meant "/" — the single heaviest page on the
