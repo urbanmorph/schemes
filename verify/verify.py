@@ -239,8 +239,21 @@ def main():
 
     snapshots = len(glob.glob(os.path.join(ROOT, "archive", "myscheme", "*", "_manifest.json")))
 
+    # When the BYTES were fetched, read from the snapshot's own manifest, not when this
+    # verification ran. The site labels it "Last complete collection" and was showing the
+    # verify time, which is the same day on a normal run and days out whenever an archived
+    # snapshot is re-verified. A register whose subject is stale government data should not
+    # be careless about the age of its own.
+    collected = None
+    try:
+        mp = os.path.join(ROOT, "archive", "myscheme", args.date, "_manifest.json")
+        collected = json.load(open(mp, encoding="utf-8")).get("finished")
+    except Exception:
+        pass
+
     status = {
         "last_run": utcnow(),
+        "collection_finished": collected,
         "last_complete_run": utcnow() if verdict == "COMPLETE" else prev.get("last_complete_run"),
         "verdict": verdict,
         "snapshot": args.date,

@@ -33,6 +33,13 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def send_head(self):
         path = self.translate_path(self.path)
+        # Extensionless URLs, because Cloudflare Pages serves foo.html at /foo and the
+        # site's links are written that way. Without this the local preview 404s on every
+        # link the deployed site resolves, which is the worst kind of difference between
+        # development and production: the one that only shows up in production.
+        if not os.path.exists(path) and not path.endswith("/"):
+            if os.path.isfile(path + ".html"):
+                path += ".html"
         if os.path.isdir(path):
             # Resolve the directory index BEFORE deciding on compression. Falling through
             # to the parent handler here meant "/" — the single heaviest page on the

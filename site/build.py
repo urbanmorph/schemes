@@ -45,6 +45,18 @@ ROUTES = [("/", "index.html"), ("/divergence", "divergence.html"),
           ("/changes", "changes.html")]
 
 
+def link(file):
+    """The URL for a built file. Files keep their .html; links drop it.
+
+    Cloudflare Pages serves foo.html at /foo and 308-redirects /foo.html to it, so every
+    link written with the extension costs a redirect and every URL published in the CSV
+    is a hop away from the page it names. A think tank citing a row should get the page,
+    not a redirect to it. site/serve.py resolves extensionless paths the same way, so the
+    local preview and the deployed site agree rather than diverging.
+    """
+    return file[:-5] if file.endswith(".html") else file
+
+
 def e(s):
     return html.escape(str(s if s is not None else ""), quote=True)
 
@@ -212,10 +224,13 @@ def shell(title, active, body, depth=0, desc="", canon=""):
     else:
         dot, word = " warn", "no run yet"
 
+    # The collection's own finish time where the snapshot records it, falling back to the
+    # verify time for snapshots archived before that field existed.
     days = "..."
-    if st.get("last_complete_run"):
+    stamp = st.get("collection_finished") or st.get("last_complete_run")
+    if stamp:
         try:
-            t = datetime.fromisoformat(st["last_complete_run"].replace("Z", "+00:00"))
+            t = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
             d = (datetime.now(timezone.utc) - t).days
             days = "today" if d == 0 else f"{d} day{'s' if d != 1 else ''} ago"
         except Exception:
@@ -227,7 +242,7 @@ def shell(title, active, body, depth=0, desc="", canon=""):
     home = up or "./"
     nav = "".join(
         f'<a class="route{" on" if r == active else ""}" '
-        f'href="{home if f == "index.html" else up + f}">{e(r)}</a>'
+        f'href="{home if f == "index.html" else up + link(f)}">{e(r)}</a>'
         for r, f in ROUTES)
 
     return f"""<!doctype html>
@@ -1241,18 +1256,21 @@ def index_section(entries):
     # Cuts that mean something, not "N or fewer" for every N. Measured: no scheme scores
     # below 2 or above 9, and the mass sits at 5-7, so most of the old dropdown's
     # eleven options selected either everything or nothing.
-    def le(nmax):
-        return sum(1 for x in entries
-                   if x["checks"] and x["checks"]["passed"] <= nmax)
+    # Bands on the same 0 to 100 score the table shows, because a filter that counts
+    # checks while the column beside it shows a score asks the reader to hold two scales
+    # at once. The boundaries are the old check counts converted, so the populations are
+    # unchanged: 4 of 9 is 44, 6 of 9 is 67, 8 of 9 is 89.
+    def band(lo, hi):
+        return sum(1 for x in entries if x["checks"]
+                   and lo <= round(x["checks"]["passed"] * 100 / x["checks"]["total"]) <= hi)
     doc_pills = pill_group(
-        "doc", "Documentation",
+        "doc", "Score",
         [("", "All", None),
-         ("le4", "4 or fewer passed", "4 or fewer", le(4)),
-         ("le5", "5 or fewer", "5 or fewer", le(5)),
-         ("le6", "6 or fewer", "6 or fewer", le(6)),
-         ("ge8", "8 or more", "8 or more",
-          sum(1 for x in entries if x["checks"] and x["checks"]["passed"] >= 8)),
-         ("none", "No record to check", "No record",
+         ("0-44", "44 or below", "under 45", band(0, 44)),
+         ("45-66", "45 to 66", "45 to 66", band(45, 66)),
+         ("67-88", "67 to 88", "67 to 88", band(67, 88)),
+         ("89-100", "89 and above", "89 and up", band(89, 100)),
+         ("none", "No record to score", "No record",
           sum(1 for x in entries if not x["checks"]))])
 
     # Initial rail values, rendered server-side. The rail used to ship "..." for every
@@ -1339,7 +1357,7 @@ def index_section(entries):
                  f'data-s="{e(" ".join(e_["sources"]))}"'
                  + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
                  + '>'
-                 f'<td><a href="scheme/{e(slug)}.html">{e(e_["name"])}</a>{acr}</td>'
+                 f'<td><a href="scheme/{e(slug)}">{e(e_["name"])}</a>{acr}</td>'
                  # Sector where the source badges used to be. Which sources name a scheme is
                  # audit metadata and belongs on its page; what the scheme is FOR is what a
                  # reader scanning 7,370 rows is looking for. The badges still drive the
@@ -1428,11 +1446,11 @@ def index_section(entries):
 
   function docOk(r,v){{
     if(!v) return true;
-    var p=+r.dataset.p;              // -1 means no myScheme record, nothing to check
+    var p=+r.dataset.p;              // -1 means no myScheme record, nothing to score
     if(v==='none') return p<0;
     if(p<0) return false;
-    if(v==='ge8') return p>=8;
-    return p<=+v.slice(2);
+    var s=Math.round(p*100/9), b=v.split('-');
+    return s>=+b[0] && s<=+b[1];
   }}
   function apply(){{
     var ts=terms(q.value),o=og.value.trim().toLowerCase(),
@@ -1544,7 +1562,7 @@ def index_section(entries):
     if(state.lvl) tries.push(['lvl','level']);
     if(state.aud) tries.push(['aud','who it is for']);
     if(state.cat) tries.push(['cat','sector']);
-    if(state.doc) tries.push(['doc','documentation']);
+    if(state.doc) tries.push(['doc','score']);
     if(ts.length) tries.push(['q','the search “'+q.value.trim()+'”']);
     tries.forEach(function(t){{
       var n=0;
@@ -1749,7 +1767,7 @@ opinion: each row is two archived payloads and the field that differs between th
                 f'<span class="dnew">{e(d["to"]) if d["to"] else "not set"}</span></div>'
                 for d in it.get("changes", []))
             out += (f'<div class="ch"><div class="ctype {kind}">{e(kind)}</div>'
-                    f'<div><a class="chname" href="scheme/{e(it["slug"])}.html">'
+                    f'<div><a class="chname" href="scheme/{e(it["slug"])}">'
                     f'{e(it.get("name") or it["slug"])}</a>{deltas}</div></div>')
         return out
 
@@ -2130,7 +2148,7 @@ def build():
                 " ".join(en.get("sources") or []),
                 "yes" if en.get("on_myscheme") else "no",
                 ck.get("passed", ""), ck.get("total", ""),
-                SITE_BASE + "/scheme/" + str(en["slug"]) + ".html",
+                SITE_BASE + "/scheme/" + str(en["slug"]),
             ])
 
     w("index.html", shell(
@@ -2179,8 +2197,8 @@ def build():
 
     # A sitemap because 5,438 pages are reachable only through a JS-filtered table, and
     # a crawler that does not run the filter will never see most of them.
-    urls = ["", "divergence.html", "changes.html"] + [
-        f"scheme/{en['slug']}.html" for en in entries]
+    urls = ["", "divergence", "changes"] + [
+        f"scheme/{en['slug']}" for en in entries]
     stamp = datetime.now().strftime("%Y-%m-%d")
     with open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8") as fh:
         fh.write('<?xml version="1.0" encoding="UTF-8"?>\n'
