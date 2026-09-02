@@ -5,9 +5,10 @@
   "Ex- Servicemen Contributory Health Scheme",
   "Member of Parliament Local Area Development Scheme (MPLAD)",
   "National Mission for a Green India",
+  "Pradhan Mantri Swasthya Suraksha Yojana",
+  "Rashtriya Krishi Vikas Yojna",
   "Samagra Shiksha",
   "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).",
-  "Scheme of Development of Particularly Vulnerable Tribal Groups",
   "Tea Board"
  ],
  "absent_from_myscheme_after_known_errors": [
@@ -15,10 +16,142 @@
   "Ex- Servicemen Contributory Health Scheme",
   "Member of Parliament Local Area Development Scheme (MPLAD)",
   "National Mission for a Green India",
+  "Pradhan Mantri Swasthya Suraksha Yojana",
+  "Rashtriya Krishi Vikas Yojna",
   "Samagra Shiksha",
-  "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).",
-  "Scheme of Development of Particularly Vulnerable Tribal Groups"
+  "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India)."
  ],
+ "absent_from_myscheme_not_reaching_individuals": [
+  {
+   "audits": 1,
+   "borderline": true,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ]
+   ],
+   "hand_label": "budget_line",
+   "hand_reason": "a refund of customs and excise duty to the exporter who paid it; the claimant is a firm acting as a firm. myScheme does list exporter schemes, EPCG among them, so this is not a claim that a citizen portal has no business listing it",
+   "scheme": "Duty Drawback Scheme",
+   "score": -1,
+   "the_rule_disagrees": false
+  },
+  {
+   "audits": 1,
+   "borderline": true,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [
+    [
+     "+3",
+     "a person or household named in the name"
+    ],
+    [
+     "veto",
+     "an employer obligation to the government's own staff"
+    ]
+   ],
+   "hand_label": "budget_line",
+   "hand_reason": "the Union's contributory health scheme for its own retired soldiers and their dependants, paid as an employer. myScheme lists neither this nor CGHS, and all six of its central records for ex-servicemen are discretionary grants from the Armed Forces Flag Day Fund and the Raksha Mantri's Ex-Servicemen Welfare Fund, one of them explicitly for non-pensioner ex-servicemen. An ex-serviceman is a person and does receive treatment, which is the argument the other way",
+   "scheme": "Ex- Servicemen Contributory Health Scheme",
+   "score": 3,
+   "the_rule_disagrees": false
+  },
+  {
+   "audits": 1,
+   "borderline": true,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ]
+   ],
+   "hand_label": "budget_line",
+   "hand_reason": "released to a district authority for works a Member of Parliament recommends; the unit of spending is a work in a constituency and there is no list of individual beneficiaries. Citizens use what the works build, which is the argument the other way",
+   "scheme": "Member of Parliament Local Area Development Scheme (MPLAD)",
+   "score": -1,
+   "the_rule_disagrees": false
+  },
+  {
+   "audits": 1,
+   "borderline": false,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [],
+   "hand_label": "budget_line",
+   "hand_reason": "new medical colleges and upgrades to existing ones",
+   "scheme": "Pradhan Mantri Swasthya Suraksha Yojana",
+   "score": 0,
+   "the_rule_disagrees": false
+  }
+ ],
+ "absent_from_myscheme_reaching_individuals": [
+  {
+   "audits": 1,
+   "borderline": true,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ]
+   ],
+   "hand_label": "citizen_scheme",
+   "hand_reason": "afforestation on public land, so most of the money buys an asset, but DBT Bharat lists it and the mission's own design pays forest-dependent households for plantation and protection work. The closest call among the audited schemes",
+   "scheme": "National Mission for a Green India",
+   "score": 3,
+   "the_rule_disagrees": false
+  },
+  {
+   "audits": 1,
+   "borderline": true,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [],
+   "hand_label": "citizen_scheme",
+   "hand_reason": "a flexible fund released to states, so the recipient of record is a state government, but its named components pay farm mechanisation and horticulture subsidies to identified farmers and DBT Bharat lists it",
+   "scheme": "Rashtriya Krishi Vikas Yojna",
+   "score": 0,
+   "the_rule_disagrees": true
+  },
+  {
+   "audits": 1,
+   "borderline": true,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ]
+   ],
+   "hand_label": "citizen_scheme",
+   "hand_reason": "most of the money is teacher salaries and school infrastructure, but DBT Bharat lists its textbook intervention and the Outcome Budget counts students given free textbooks, children given transport and children given escorts. The union's largest school education programme and the closest call at the top of the money",
+   "scheme": "Samagra Shiksha",
+   "score": 3,
+   "the_rule_disagrees": false
+  },
+  {
+   "audits": 1,
+   "borderline": true,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ],
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ]
+   ],
+   "hand_label": "citizen_scheme",
+   "hand_reason": "a demand incentive that lowers the price an identified buyer pays for an electric vehicle, with the buyer verified before it is paid; it is routed through the manufacturer, which is the argument the other way",
+   "scheme": "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).",
+   "score": 2,
+   "the_rule_disagrees": false
+  }
+ ],
+ "absent_split_note": "the same 20 audits and the same absence claim, divided by who the money reaches. The first list is the one that says something about myScheme: a programme that pays identified people, audited by the CAG, and not on the portal built for citizens to find schemes. The second is not a lighter version of the first, it is a different statement: these are audited and funded, and a citizen portal is not where they belong. Every row carries its arithmetic, and the cases where a reader could reasonably disagree are in citizen_test.contested with the argument both ways.",
  "audited": [
   {
    "audits": [
@@ -35,7 +168,18 @@
      "title": "Report No. 7 - Implementation of Atal Mission for Rejuvenation and Urban Transformation in Kerala"
     }
    ],
+   "by_the_rule": false,
+   "citizen_evidence": [
+    [
+     "-3",
+     "myScheme's own record tags only an institutional beneficiary"
+    ]
+   ],
+   "citizen_score": -3,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "budget_line",
    "on_myscheme": true,
+   "reaches_individuals": false,
    "scheme": "Atal Mission For Rejuvenation And Urban Transformation",
    "sources": [
     "budget",
@@ -70,7 +214,22 @@
      "title": "Report No. 4 of the year 2025: Report of the Comptroller and Auditor General of India on Ayushman Bharat- Pradhan Mantri Jan Arogya Yojana and Pradhan Mantri Awaas Yojana- Gramin."
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ],
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ]
+   ],
+   "citizen_score": 6,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana",
    "sources": [
     "budget",
@@ -94,7 +253,18 @@
      "title": "Report No. 04 of the year 2024, Performance Audit on Implementation of Deendayal Upadhyaya Gram Jyoti Yojana and Pradhan Mantri Sahaj Bijli Har Ghar Yojana by Electricity Distribution Companies of Madhya Pradesh for the year ended 31 March 2022"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ]
+   ],
+   "citizen_score": 3,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Deendayal Upadhyay Gram Jyoti Yojana",
    "sources": [
     "myscheme"
@@ -115,7 +285,18 @@
      "title": "Report of the Comptroller and Auditor General of India on Duty Drawback Scheme Government Department of Revenue (Indirect Taxes -Customs) Report No. 33 of 2025 (Performance Audit-Civil)"
     }
    ],
+   "by_the_rule": false,
+   "citizen_evidence": [
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ]
+   ],
+   "citizen_score": -1,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "budget_line",
    "on_myscheme": false,
+   "reaches_individuals": false,
    "scheme": "Duty Drawback Scheme",
    "sources": [
     "budget"
@@ -136,7 +317,22 @@
      "title": "Report No. 51 of 2015 - Performance Audit on Implementation of Ex-servicemen Contributory Health Scheme, Union Government, Defence Services - Army"
     }
    ],
+   "by_the_rule": false,
+   "citizen_evidence": [
+    [
+     "+3",
+     "a person or household named in the name"
+    ],
+    [
+     "veto",
+     "an employer obligation to the government's own staff"
+    ]
+   ],
+   "citizen_score": 3,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "budget_line",
    "on_myscheme": false,
+   "reaches_individuals": false,
    "scheme": "Ex- Servicemen Contributory Health Scheme",
    "sources": [
     "budget"
@@ -169,7 +365,22 @@
      "title": "Report No. 17 of 2024 - Performance Audit on Export Promotion Capital Goods (EPCG) Scheme, Union Government (Department of Revenue – Indirect Taxes -Customs)"
     }
    ],
+   "by_the_rule": false,
+   "citizen_evidence": [
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ],
+    [
+     "-3",
+     "myScheme's own record tags only an institutional beneficiary"
+    ]
+   ],
+   "citizen_score": -4,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "budget_line",
    "on_myscheme": true,
+   "reaches_individuals": false,
    "scheme": "Export Promotion Capital Goods Scheme",
    "sources": [
     "budget",
@@ -239,7 +450,18 @@
      "title": "Report of the Comptroller and Auditor General of India on Performance Audit on “Implementation of Jal Jeevan Mission in Rajasthan” for the year ended March 2024- Government of Rajasthan (Report No. 4 of 2026)"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ]
+   ],
+   "citizen_score": 3,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Jal Jeevan Mission",
    "sources": [
     "budget",
@@ -335,66 +557,6 @@
     },
     {
      "audit_type": "Performance",
-     "cag_id": 123873,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/123873",
-     "government": "Karnataka",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf",
-     "report_no": null,
-     "report_year": null,
-     "subject": "No.13 of the Comptroller and Auditor General of India on Mahatma Gandhi National Rural Employment Guarantee Scheme",
-     "tabled": "24 March 2026",
-     "title": "Report No.13 of the Comptroller and Auditor General of India on Mahatma Gandhi National Rural Employment Guarantee Scheme for the year ended March 2024"
-    },
-    {
-     "audit_type": "Performance",
-     "cag_id": 124454,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/124454",
-     "government": "Uttarakhand",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/Report-No.-6-of-2025_PA-on-MGNAREGS_UK_English_signed-21-11-2025-069b03389eefe86.70319852.pdf",
-     "report_no": "6",
-     "report_year": 2025,
-     "subject": "Mahatma Gandhi National Rural Employment Guarantee Scheme (Report No. 6 of 2025)",
-     "tabled": "10 March 2026",
-     "title": "Report of the Comptroller and Auditor General of India on Mahatma Gandhi National Rural Employment Guarantee Scheme (Report No. 6 of 2025)"
-    },
-    {
-     "audit_type": "Performance",
-     "cag_id": 124883,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/124883",
-     "government": "Maharashtra",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/Mumbai_Report-No.-7-of-2025_(PA-MGNREGS)-Marathi-&amp;amp;-English_hyperlinked-1-069c3ced1124400.79074042.pdf",
-     "report_no": "7",
-     "report_year": 2025,
-     "subject": "Mahatma Gandhi National Rural Employment Guarantee Scheme, Government of Maharashtra (Report No. 7 of 2025)",
-     "tabled": "25 March 2026",
-     "title": "Report of the Comptroller and Auditor General of India on Mahatma Gandhi National Rural Employment Guarantee Scheme, Government of Maharashtra (Report No. 7 of 2025)"
-    },
-    {
-     "audit_type": "Performance",
-     "cag_id": 125076,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/125076",
-     "government": "Odisha",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/Report-8-of-2025-English-version-069cbab30942897.72780755.pdf",
-     "report_no": "8",
-     "report_year": 2025,
-     "subject": "Functioning of Micro Project Agencies for development of Particularly Vulnerable Tribal Groups in the State and Implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme in the State, Government of Odisha Report No.8 of 2025",
-     "tabled": "31 March 2026",
-     "title": "Report of the Comptroller and Auditor General of India on Functioning of Micro Project Agencies for development of Particularly Vulnerable Tribal Groups in the State and Implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme in the State, Government of Odisha Report No.8 of 2025"
-    },
-    {
-     "audit_type": "Performance",
-     "cag_id": 126028,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/126028",
-     "government": "Jharkhand",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2026/JHR-Report-No.-5-of-2026---English-06a7d9dac5c2060.62464848.pdf",
-     "report_no": "5",
-     "report_year": 2026,
-     "subject": "of the CAG on Implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme in Jharkhand and Implementation of Jal Jeevan Mission",
-     "tabled": "11 August 2026",
-     "title": "Report No. 5 of 2026 : Report of the CAG on Implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme in Jharkhand and Implementation of Jal Jeevan Mission in Jharkhand"
-    },
-    {
-     "audit_type": "Performance",
      "cag_id": 126077,
      "detail_url": "https://cag.gov.in/en/audit-report/details/126077",
      "government": "Rajasthan",
@@ -406,7 +568,26 @@
      "title": "Report of the Comptroller and Auditor General of India on Implementation of Mahatma Gandhi National Rural Employment Guarantee Act in Rajasthan (Report No.2 of the year 2026)"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ],
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ],
+    [
+     "+2",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "citizen_score": 8,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Mahatma Gandhi National Rural Employment Guarantee Act",
    "sources": [
     "dbt",
@@ -428,7 +609,18 @@
      "title": "Report No. 31 of 2010 - Performance Audit of Civil on Member of Parliament Local area Development Scheme"
     }
    ],
+   "by_the_rule": false,
+   "citizen_evidence": [
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ]
+   ],
+   "citizen_score": -1,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "budget_line",
    "on_myscheme": false,
+   "reaches_individuals": false,
    "scheme": "Member of Parliament Local Area Development Scheme (MPLAD)",
    "sources": [
     "budget"
@@ -449,7 +641,18 @@
      "title": "Report of the Comptroller and Auditor General of India on Implementation of the Namami Gange Programme by Uttarakhand (Report No. 2 of 2025)"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ]
+   ],
+   "citizen_score": 3,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Namami Gange Yojana- Uttarakhand",
    "sources": [
     "myscheme"
@@ -470,56 +673,22 @@
      "title": "Report of the Comptroller and Auditor General of India on Green India Mission Union Government Ministry of Environment, Forest and Climate Change Report No. 4 of 2026 (Performance Audit)"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ]
+   ],
+   "citizen_score": 3,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": false,
+   "reaches_individuals": true,
    "scheme": "National Mission for a Green India",
    "sources": [
     "budget",
     "dbt"
-   ]
-  },
-  {
-   "audits": [
-    {
-     "audit_type": "Performance",
-     "cag_id": 46238,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/46238",
-     "government": "Union",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2018/Report_No_12_of_2018_-_Performance_Audit_on_Post_Matric_Scholarships_to_the_Students_belonging_to_Scheduled_Castes_for_studies_in_India_in_Ministry_of_Social_Justice_and_Empo.pdf",
-     "report_no": "12",
-     "report_year": 2018,
-     "subject": "Post Matric Scholarships to the Students belonging to Scheduled Castes for studies in India in Ministry of Social Justice and Empowerment",
-     "tabled": "07 August 2018",
-     "title": "Report No.12 of 2018 - Performance Audit on Post Matric Scholarships to the Students belonging to Scheduled Castes for studies in India in Ministry of Social Justice and Empowerment"
-    },
-    {
-     "audit_type": "Performance",
-     "cag_id": 119419,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/119419",
-     "government": "Odisha",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2023/Consolidated-Audit-Report_DBT-0651c1cabe41487.56534472.pdf",
-     "report_no": null,
-     "report_year": null,
-     "subject": "Direct Benefit Transfer in payment of Post Matric Scholarship to eligible students in the State",
-     "tabled": "03 October 2023",
-     "title": "Report of the Comptroller and Auditor General of India on Performance Audit of Implementation of Direct Benefit Transfer in payment of Post Matric Scholarship to eligible students in the State"
-    },
-    {
-     "audit_type": "Performance",
-     "cag_id": 119775,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/119775",
-     "government": "Kerala",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2022/Report-No.3-of-2024---Performance-Audit-on-Pre-and-Post-Matric-Scholarship-Schemes-for-Scheduled-Caste,-Scheduled-Tribe-and-Minority-Students-0668f9da678b7c7.26879741.pdf",
-     "report_no": "3",
-     "report_year": 2024,
-     "subject": "Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students",
-     "tabled": "11 July 2024",
-     "title": "Report No. 3 of the year 2024 - Performance Audit on Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students"
-    }
-   ],
-   "on_myscheme": true,
-   "scheme": "Post-Matric Scholarship for SC students",
-   "sources": [
-    "myscheme"
    ]
   },
   {
@@ -585,7 +754,26 @@
      "title": "Report No. 2 of 2026 : Report of the Comptroller and Auditor General of India on Implementation of Pradhan Mantri Awaas Yojana-Gramin in Jharkhand"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ],
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ],
+    [
+     "+2",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "citizen_score": 8,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Pradhan Mantri Awaas Yojana - Gramin",
    "sources": [
     "budget",
@@ -609,11 +797,16 @@
      "title": "Report No.10 of 2018 - Performance Audit on Pradhan Mantri Swasthya Suraksha Yojana in Ministry of Health and Family Welfare"
     }
    ],
-   "on_myscheme": true,
-   "scheme": "Pradhan Mantri Suraksha Bima Yojana",
+   "by_the_rule": false,
+   "citizen_evidence": [],
+   "citizen_score": 0,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "budget_line",
+   "on_myscheme": false,
+   "reaches_individuals": false,
+   "scheme": "Pradhan Mantri Swasthya Suraksha Yojana",
    "sources": [
     "budget",
-    "myscheme",
     "outcome"
    ]
   },
@@ -632,7 +825,26 @@
      "title": "Report No.14 of 2019 - Performance Audit of Pradhan Mantri Ujjwala Yojana, Ministry of Petroleum and Natural Gas"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ],
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ],
+    [
+     "+2",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "citizen_score": 8,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Pradhan Mantri Ujjwala Yojana",
    "sources": [
     "dbt",
@@ -654,10 +866,53 @@
      "title": "Report No.14 of 2019 - Performance Audit of Pradhan Mantri Ujjwala Yojana, Ministry of Petroleum and Natural Gas"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "myScheme's own record tags a person or household beneficiary"
+    ],
+    [
+     "+2",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "citizen_score": 5,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": true,
+   "reaches_individuals": true,
    "scheme": "Pradhan Mantri Ujjwala Yojana 2.0",
    "sources": [
     "myscheme"
+   ]
+  },
+  {
+   "audits": [
+    {
+     "audit_type": "Performance",
+     "cag_id": 1641,
+     "detail_url": "https://cag.gov.in/en/audit-report/details/1641",
+     "government": "Union",
+     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2015/Union_Performance_Civil_RKVY_Ministry_Agriculture_11_2015.pdf",
+     "report_no": "11",
+     "report_year": 2015,
+     "subject": "Rashtriya Krishi Vikas Yojana RKVY",
+     "tabled": "05 May 2015",
+     "title": "Report No. 11 of 2015 - Performance Audit of Rashtriya Krishi Vikas Yojana RKVY, Union Government, Ministry of Agriculture"
+    }
+   ],
+   "by_the_rule": false,
+   "citizen_evidence": [],
+   "citizen_score": 0,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
+   "on_myscheme": false,
+   "reaches_individuals": true,
+   "scheme": "Rashtriya Krishi Vikas Yojna",
+   "sources": [
+    "budget",
+    "outcome"
    ]
   },
   {
@@ -675,7 +930,18 @@
      "title": "Report No. 03 of 2026- Performance Audit Report on Implementation of Samagra Shiksha in West Bengal for the year ended March 2024"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ]
+   ],
+   "citizen_score": 3,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": false,
+   "reaches_individuals": true,
    "scheme": "Samagra Shiksha",
    "sources": [
     "budget",
@@ -698,31 +964,25 @@
      "title": "Report of the Comptroller and Auditor General of India on Scheme for Faster Adoption and Manufacturing of (Hybrid &) Electric Vehicles in India Union Government Ministry of Heavy Industries Report No. 10 of 2026 (Performance Audit - Civil)"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ],
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ]
+   ],
+   "citizen_score": 2,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "citizen_scheme",
    "on_myscheme": false,
+   "reaches_individuals": true,
    "scheme": "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).",
    "sources": [
     "budget",
-    "dbt"
-   ]
-  },
-  {
-   "audits": [
-    {
-     "audit_type": "Performance",
-     "cag_id": 125076,
-     "detail_url": "https://cag.gov.in/en/audit-report/details/125076",
-     "government": "Odisha",
-     "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/Report-8-of-2025-English-version-069cbab30942897.72780755.pdf",
-     "report_no": "8",
-     "report_year": 2025,
-     "subject": "Functioning of Micro Project Agencies for development of Particularly Vulnerable Tribal Groups in the State and Implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme in the State, Government of Odisha Report No.8 of 2025",
-     "tabled": "31 March 2026",
-     "title": "Report of the Comptroller and Auditor General of India on Functioning of Micro Project Agencies for development of Particularly Vulnerable Tribal Groups in the State and Implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme in the State, Government of Odisha Report No.8 of 2025"
-    }
-   ],
-   "on_myscheme": false,
-   "scheme": "Scheme of Development of Particularly Vulnerable Tribal Groups",
-   "sources": [
     "dbt"
    ]
   },
@@ -741,7 +1001,22 @@
      "title": "Report No. 10 of 2011 - Performance Audit on Role of Tea Board in Tea Development in India"
     }
    ],
+   "by_the_rule": true,
+   "citizen_evidence": [
+    [
+     "+3",
+     "DBT Bharat lists it, so the government says money reaches individuals"
+    ],
+    [
+     "-1",
+     "the sector is one myScheme fills with firms and assets"
+    ]
+   ],
+   "citizen_score": 2,
+   "decided_by": "the hand label in data/cag/citizen_labels.json",
+   "hand_label": "budget_line",
    "on_myscheme": false,
+   "reaches_individuals": false,
    "scheme": "Tea Board",
    "sources": [
     "budget",
@@ -749,18 +1024,562 @@
    ]
   }
  ],
- "audited_schemes": 20,
- "audited_schemes_absent_from_myscheme": 8,
- "audited_schemes_absent_from_myscheme_after_known_errors": 7,
- "built": "2026-09-02T07:05:31Z",
+ "audited_schemes": 19,
+ "audited_schemes_absent_from_myscheme": 9,
+ "audited_schemes_absent_from_myscheme_after_known_errors": 8,
+ "built": "2026-09-02T17:16:40Z",
+ "citizen_test": {
+  "contested": [
+   {
+    "labelled": "budget_line",
+    "name": "Ex- Servicemen Contributory Health Scheme",
+    "the_argument_against": "an ex-serviceman and his dependants are people, they enrol, they hold a card, and they receive treatment. myScheme lists 52 ex-servicemen schemes, so it plainly serves this population.",
+    "the_argument_for_the_label": "the Union pays it as an employer to its own retired soldiers, which parse/classify_tamilnadu.py established over 829 labels is not a welfare scheme. myScheme has no record for this or for CGHS, and its six central records for ex-servicemen are all discretionary welfare-fund grants, one explicitly for non-pensioner ex-servicemen.",
+    "what_would_flip_it": "myScheme listing CGHS or any other health scheme whose eligibility is government service. It lists none today."
+   },
+   {
+    "labelled": "budget_line",
+    "name": "Duty Drawback Scheme",
+    "the_argument_against": "myScheme does list exporter schemes, the Export Promotion Capital Goods Scheme among them, and the CAG audited that one too. So the portal has a place for a scheme of this shape, and its absence is not nothing.",
+    "the_argument_for_the_label": "the claimant is a firm and the payment is a refund of customs and excise duty the firm itself paid, not a benefit conferred on a beneficiary.",
+    "what_would_flip_it": "treating a firm as a citizen for this purpose. The register does not, and neither does myScheme's own beneficiary vocabulary, which separates Individual and Family from Business Entity and Industries."
+   },
+   {
+    "labelled": "budget_line",
+    "name": "Member of Parliament Local Area Development Scheme (MPLAD)",
+    "the_argument_against": "the money reaches individuals through what the works build, and a citizen can ask an MP for a work.",
+    "the_argument_for_the_label": "released to a district authority for works a Member of Parliament recommends. The unit of spending is a work in a constituency and no list of individual beneficiaries exists. myScheme lists no constituency development scheme of any kind, at the union or in any state.",
+    "what_would_flip_it": "a beneficiary list. Asking an MP is not an application and produces no record a register could read."
+   },
+   {
+    "labelled": "citizen_scheme",
+    "name": "National Mission for a Green India",
+    "the_argument_against": "most of the money buys forest cover on public land, which is an asset, and the recipient of record is a state forest department.",
+    "the_argument_for_the_label": "DBT Bharat lists it and the mission's own design pays forest-dependent households for plantation and protection work.",
+    "what_would_flip_it": "dropping the DBT listing as evidence. It is the strongest government-supplied signal in this file at 0.820 over 50, and this is the row where it is doing the most work."
+   },
+   {
+    "labelled": "citizen_scheme",
+    "name": "Samagra Shiksha",
+    "the_argument_against": "most of the Rs 42,100 crore is teacher salaries and school infrastructure, and no parent applies to Samagra Shiksha.",
+    "the_argument_for_the_label": "DBT Bharat lists its textbook intervention and the Outcome Budget counts students given free textbooks, children given transport and children given escorts. A child is the beneficiary of record for those.",
+    "what_would_flip_it": "labelling umbrella programmes by where most of the money goes rather than by whether a person is a beneficiary of record anywhere in them. That rule would also move Rashtriya Krishi Vikas Yojna and Pradhan Mantri Krishi Sinchai Yojna, and it is stated as the tie-break in data/cag/citizen_labels.json so it can be reversed in one place."
+   },
+   {
+    "labelled": "citizen_scheme",
+    "name": "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).",
+    "the_argument_against": "it is routed through the manufacturer, who is reimbursed, and the buyer never handles the money.",
+    "the_argument_for_the_label": "the demand incentive lowers the price an identified buyer pays and the buyer is verified before it is paid. DBT Bharat lists the delivery mechanism by name.",
+    "what_would_flip_it": "requiring the payment to land in the beneficiary's own hands. That would also move the free textbooks under Samagra Shiksha and every in-kind transfer DBT Bharat lists."
+   }
+  ],
+  "ground_truth": {
+   "base_rate": 0.3922,
+   "borderline": 36,
+   "budget_line": 93,
+   "citizen_scheme": 60,
+   "file": "data/cag/citizen_labels.json",
+   "labelled": 153,
+   "labels_with_no_register_row": [],
+   "population": {
+    "how_chosen": "a census of the schemes the CAG join published as audited at the time of labelling, 20 of them, plus a stratified sample of the 701 registry entries that myScheme does not list, which is the population the distinction is applied to. The strata and the steps are fixed and published so the sample can be rebuilt: sorted by name within each stratum, take every k-th.",
+    "note": "134 drawn, 20 audited, 153 distinct after the overlap. The audited set moves whenever parse/match.py or the register moves, so parse/cag_join.py reads it live rather than from the audited_when_labelled flag below, and prints a warning if an audited scheme has no label here.",
+    "strata": [
+     {
+      "drawn": 42,
+      "population": 167,
+      "step": 4,
+      "stratum": "listed by DBT Bharat"
+     },
+     {
+      "drawn": 23,
+      "population": 46,
+      "step": 2,
+      "stratum": "union budget Statement 4A, not DBT"
+     },
+     {
+      "drawn": 60,
+      "population": 479,
+      "step": 8,
+      "stratum": "union budget Statement 4B, not DBT"
+     },
+     {
+      "drawn": 9,
+      "population": 9,
+      "step": 1,
+      "stratum": "outcome statement only"
+     }
+    ]
+   },
+   "rule": {
+    "borderline": "marked where a reader could reasonably flip the label, and the reason on the row carries the argument the other way.",
+    "budget_line": "the recipient of record is a government, a public body, an institution, a firm acting as a firm, an asset or a work. Citizens may benefit from what it buys, and often do, but no individual is a beneficiary of record and no list of individuals exists.",
+    "citizen_scheme": "the benefit reaches an identified person or household, or a group of individuals such as a self-help group: cash, an in-kind good, a scholarship or stipend, a pension, an insurance cover, a subsidy on something they buy, a treatment, a house, a connection, a wage, a training place, a loan or a fee waiver. Somebody could produce the list of who received it.",
+    "not_a_verdict_on_the_spending": "a budget_line label says nothing against the spending. Roads, courts, research and rolling stock are what a state is for. The label says only that a citizen scheme portal is not where you would look for them.",
+    "the_one_exclusion": "an employer obligation is not a citizen scheme. The government pays it as an employer to its own serving or retired staff and their families. This line is not invented here: parse/classify_tamilnadu.py established it over 829 hand labels and this register already publishes it, so applying it at the union is consistency rather than a new judgement.",
+    "the_tie_break": "an umbrella programme is labelled by its principal deliverable, not by the existence of one individual-facing component. Where the principal deliverable is contested the row is labelled on the government's own evidence, which is a DBT Bharat listing or an Outcome Budget target counted in people, and marked borderline.",
+    "what_is_NOT_the_test": "whether an application exists. That is the intuitive test and it does not survive measurement: see signals_rejected in data/cag/join.json. It is also not computable for the 701 register rows myScheme does not list, which is the population the distinction is for."
+   }
+  },
+  "known_errors": [
+   {
+    "hand_label": "budget_line",
+    "name": "Indian Knowledge Systems",
+    "rule_says": "citizen_scheme",
+    "why": "DBT Bharat lists it for the fellowships inside it and the name carries no other signal at all. Research and curriculum work in institutions."
+   },
+   {
+    "hand_label": "budget_line",
+    "name": "Prime Minister School for Rising India",
+    "rule_says": "citizen_scheme",
+    "why": "DBT Bharat lists it and the name says nothing. It upgrades existing schools; the recipient of record is the school and the child is already enrolled in it. The label is marked borderline for that reason."
+   },
+   {
+    "hand_label": "budget_line",
+    "name": "Schemes for Safety of Women",
+    "rule_says": "citizen_scheme",
+    "why": "a beneficiary class is named in the name and the money buys safe city projects, forensic capacity and cyber crime systems. The one case in the census where naming a person in the name is not evidence that a person receives anything."
+   },
+   {
+    "hand_label": "budget_line",
+    "name": "Tea Board",
+    "rule_says": "citizen_scheme",
+    "why": "a statutory commodity board that DBT Bharat lists. It is already a known error of the join rule above and is already removed from the absent list before this test runs, so it does not reach a published list twice."
+   },
+   {
+    "hand_label": "budget_line",
+    "name": "Vigyan Dhara",
+    "rule_says": "citizen_scheme",
+    "why": "DBT Bharat lists it for the INSPIRE fellowship inside it; the money is science and technology research grants to institutions."
+   },
+   {
+    "hand_label": "citizen_scheme",
+    "name": "Legal Aid Defense Counsel System (LADCS)",
+    "rule_says": "budget_line",
+    "why": "a brand and an acronym. It pays salaried defence counsel so that an identified accused who cannot afford a lawyer gets one, which the name does not say and no source records. Marked borderline in the labels."
+   },
+   {
+    "hand_label": "citizen_scheme",
+    "name": "Pradhan Mantri Krishi Sinchai Yojna",
+    "rule_says": "budget_line",
+    "why": "sinchai is an irrigation word and scores as an asset, correctly for the accelerated irrigation component and wrongly for Per Drop More Crop, which pays a micro-irrigation subsidy to an identified farmer."
+   },
+   {
+    "hand_label": "citizen_scheme",
+    "name": "Rashtriya Krishi Vikas Yojna",
+    "rule_says": "budget_line",
+    "why": "a brand name. A flexible fund released to states whose named components pay farm mechanisation and horticulture subsidies to identified farmers."
+   },
+   {
+    "hand_label": "citizen_scheme",
+    "name": "SBM-Grameen",
+    "rule_says": "budget_line",
+    "why": "an acronym. The scheme pays an incentive to an identified household that builds a toilet, and the four letters say none of it."
+   },
+   {
+    "hand_label": "citizen_scheme",
+    "name": "Skill India Programme.",
+    "rule_says": "budget_line",
+    "why": "a brand name. Training in which the identified trainee is the beneficiary, which is Tamil Nadu's rule applied at the union."
+   },
+   {
+    "hand_label": "citizen_scheme",
+    "name": "VB-G-RAM-G",
+    "rule_says": "budget_line",
+    "why": "an acronym, and the largest one: guaranteed wage employment paid to an identified rural household. The same programme appears in data/registry.json at Rs 95,692 crore under its full name, and the outcome statement prints only the initials."
+   }
+  ],
+  "question": "Of the things a government funds, which reach an identified person or household, so that a portal built for citizens to look schemes up would have a page for them? This decides whether 'absent from myScheme' is a criticism of the portal or a fact about the spending, and it is why the absent list below is two lists.",
+  "rule": [
+   {
+    "clause": "an employer obligation is never a citizen scheme",
+    "detail": "the government pays it as an employer to its own serving or retired staff and their families. Not invented here: parse/classify_tamilnadu.py established this over 829 hand labels and the register already publishes it, so applying it at the union is consistency rather than a fresh judgement.",
+    "measured": "P(citizen scheme) 0.000 over the 3 labelled rows it fires on, which is a small number and is stated as one. The weight of the evidence is Tamil Nadu's 829 labels and myScheme's own catalogue: the portal lists neither ECHS nor CGHS, and all six of its central records for ex-servicemen are discretionary grants from the Armed Forces Flag Day Fund and the Raksha Mantri's Ex-Servicemen Welfare Fund, one of them explicitly for non-pensioner ex-servicemen."
+   },
+   {
+    "clause": "a grant to a body is not a benefit to a person, even when a payment sits inside it",
+    "detail": "the name has to say so with a preposition: assistance, grants, support, compensation, payments or reimbursement TO a board, council, institute, federation, agency, state, school, company or industry.",
+    "measured": "P(citizen scheme) 0.000 over 4. It is what separates Assistance to National Sports Federations and Grants to VV Giri National Labour Institute, both of which DBT Bharat lists because a stipend is paid inside them, from the schemes that pay a person directly."
+   },
+   {
+    "clause": "otherwise the signals score and the total decides",
+    "detail": "weights are the measurements rounded, not a feeling: the three signals above 0.82 are worth 3, the benefit phrase at 0.865 is worth 2 because it overlaps the beneficiary word, the two name signals near 0.11 are worth -2, and the sector at 0.053 is worth -1 because it fires on more rows than any of them and should not decide a row alone.",
+    "measured": "threshold 2. On the 153 hand labels precision 0.915, recall 0.900, accuracy 0.928, counted and not estimated."
+   },
+   {
+    "clause": "the threshold is the accuracy-maximising one, not the precision-buying one",
+    "detail": "every other classifier in this repository trades recall away for precision, because each of them decides an absence claim and one wrong accusation costs more than ten missing ones. This test decides no absence: both sides of the split are published, each under its own heading, so a row on the wrong side is miscategorised rather than accused. The cost is symmetric and the operating point follows.",
+    "measured": "accuracy 0.908 at threshold 1, 0.928 at 2, 0.915 at 3. Threshold 3 would move FAME to the wrong side of the published split."
+   }
+  ],
+  "signals": [
+   {
+    "lift": 0.655,
+    "n_with": 11,
+    "n_without": 142,
+    "p_citizen_with": 1.0,
+    "p_citizen_without": 0.345,
+    "signal": "myScheme's own record tags a person or household beneficiary"
+   },
+   {
+    "lift": -0.397,
+    "n_with": 2,
+    "n_without": 151,
+    "p_citizen_with": 0.0,
+    "p_citizen_without": 0.397,
+    "signal": "myScheme's own record tags only an institutional beneficiary"
+   },
+   {
+    "lift": 0.636,
+    "n_with": 50,
+    "n_without": 103,
+    "p_citizen_with": 0.82,
+    "p_citizen_without": 0.184,
+    "signal": "DBT Bharat lists it"
+   },
+   {
+    "lift": 0.573,
+    "n_with": 24,
+    "n_without": 129,
+    "p_citizen_with": 0.875,
+    "p_citizen_without": 0.302,
+    "signal": "a person or household named in the name"
+   },
+   {
+    "lift": 0.623,
+    "n_with": 37,
+    "n_without": 116,
+    "p_citizen_with": 0.865,
+    "p_citizen_without": 0.241,
+    "signal": "a benefit phrase in the name"
+   },
+   {
+    "lift": -0.333,
+    "n_with": 26,
+    "n_without": 127,
+    "p_citizen_with": 0.115,
+    "p_citizen_without": 0.449,
+    "signal": "an asset or works word in the name"
+   },
+   {
+    "lift": -0.349,
+    "n_with": 28,
+    "n_without": 125,
+    "p_citizen_with": 0.107,
+    "p_citizen_without": 0.456,
+    "signal": "a research or capacity word in the name"
+   },
+   {
+    "lift": -0.452,
+    "n_with": 38,
+    "n_without": 115,
+    "p_citizen_with": 0.053,
+    "p_citizen_without": 0.504,
+    "signal": "the sector is Business, Science and IT, Transport or Banking"
+   },
+   {
+    "lift": -0.403,
+    "n_with": 4,
+    "n_without": 149,
+    "p_citizen_with": 0.0,
+    "p_citizen_without": 0.403,
+    "signal": "the name says the money goes to a body"
+   },
+   {
+    "lift": -0.4,
+    "n_with": 3,
+    "n_without": 150,
+    "p_citizen_with": 0.0,
+    "p_citizen_without": 0.4,
+    "signal": "an employer obligation"
+   }
+  ],
+  "signals_rejected": [
+   {
+    "lift": -0.061,
+    "measured_over": "the schemes the join listed as audited when these labels were made, hand read one by one as a census of that list. It is the only signal here that no source in the register carries.",
+    "n_with": 9,
+    "n_without": 11,
+    "p_citizen_with": 0.667,
+    "p_citizen_without": 0.727,
+    "signal": "whether a citizen can apply for it",
+    "why_not": "no signal and slightly the wrong sign. The schemes that reach the most people select beneficiaries from a list rather than take applications, and PMAY-Gramin, Ayushman Bharat and Jal Jeevan Mission all fall on the no-application side while the Duty Drawback Scheme and the Ex-Servicemen Contributory Health Scheme both have a form. It is also not computable for the 701 rows myScheme does not list, which is the population the test is for."
+   },
+   {
+    "lift": -0.058,
+    "n_with": 29,
+    "n_without": 124,
+    "p_citizen_with": 0.345,
+    "p_citizen_without": 0.403,
+    "signal": "the union budget's own Statement 4A against Statement 4B",
+    "why_not": "no signal. Centrally Sponsored against Central Sector says who delivers the money, states or the union directly, and nothing about who receives it. Statement 4B holds Pradhan Mantri Ujjwala Yojana and Rolling Stock alike."
+   },
+   {
+    "lift": 0.008,
+    "n_with": 10,
+    "n_without": 143,
+    "p_citizen_with": 0.4,
+    "p_citizen_without": 0.392,
+    "signal": "an Outcome Budget target counted in people",
+    "why_not": "no signal, and it fires on 10 of 153 rows because only 111 register entries carry an outcome framework at all. The indicator text in data/outcome/2026.json is also the first line of a wrapped cell, so 'Number of children provided Transport' and 'Number of schools covered under' are both truncated mid-phrase and the unit is often the part that was cut."
+   },
+   {
+    "lift": 0.001,
+    "n_with": 28,
+    "n_without": 125,
+    "p_citizen_with": 0.393,
+    "p_citizen_without": 0.392,
+    "signal": "the size of the budget line, Rs 1,000 crore or more",
+    "why_not": "no signal at any threshold, which is worth publishing because it is the assumption a reader brings. Rolling Stock is Rs 52,109 crore and reaches nobody as a beneficiary; the Sugar Subsidy under the Public Distribution System is Rs 200 crore and reaches Antyodaya households."
+   },
+   {
+    "lift": 0.179,
+    "n_with": 22,
+    "n_without": 131,
+    "p_citizen_with": 0.545,
+    "p_citizen_without": 0.366,
+    "signal": "data/classification.json's own scheme-versus-budget-head score, 4 or more",
+    "why_not": "weak, and circular for this question. parse/classify.py states in its own docstring that it is validated against myScheme membership as the proxy for citizen-facing. Scoring a row on a classifier trained to agree with myScheme, in order to decide whether myScheme should have listed it, answers the question with itself. The same reasoning is set out in parse/classify_andhra.py's why_not_myscheme and in signals_rejected above."
+   },
+   {
+    "lift": 0.496,
+    "n_with": 13,
+    "n_without": 140,
+    "p_citizen_with": 0.846,
+    "p_citizen_without": 0.35,
+    "signal": "whether myScheme lists the row at all",
+    "why_not": "the strongest circular signal there is. The finding this file exists to publish is which audited schemes are ABSENT from myScheme, so scoring myScheme presence would push down exactly the rows the answer is made of. What IS used is different and is stated as such: myScheme's own targetBeneficiaries tag on the rows it does list, which disagrees with myScheme's inclusion decision twice among the audited schemes it does list, at AMRUT and at the Export Promotion Capital Goods Scheme."
+   },
+   {
+    "lift": -0.043,
+    "n_with": 28,
+    "n_without": 125,
+    "p_citizen_with": 0.357,
+    "p_citizen_without": 0.4,
+    "signal": "a body word anywhere in the name",
+    "why_not": "no signal in either direction, because board, centre, institute and school appear inside the names of schemes that pay people: the Master Control Facility scholarships, the residential education scheme for Scheduled Caste students, the stipend paid through Vocational Rehabilitation Centres. The narrower pattern that does work needs the preposition and is the second clause of the rule."
+   }
+  ],
+  "threshold": 2,
+  "threshold_sweep": [
+   {
+    "accuracy": 0.7059,
+    "called_citizen_schemes": 103,
+    "false_negative": 1,
+    "false_positive": 44,
+    "precision": 0.5728,
+    "recall": 0.9833,
+    "threshold": -1,
+    "true_negative": 49,
+    "true_positive": 59
+   },
+   {
+    "accuracy": 0.7974,
+    "called_citizen_schemes": 89,
+    "false_negative": 1,
+    "false_positive": 30,
+    "precision": 0.6629,
+    "recall": 0.9833,
+    "threshold": 0,
+    "true_negative": 63,
+    "true_positive": 59
+   },
+   {
+    "accuracy": 0.9085,
+    "called_citizen_schemes": 62,
+    "false_negative": 6,
+    "false_positive": 8,
+    "precision": 0.871,
+    "recall": 0.9,
+    "threshold": 1,
+    "true_negative": 85,
+    "true_positive": 54
+   },
+   {
+    "accuracy": 0.9281,
+    "called_citizen_schemes": 59,
+    "false_negative": 6,
+    "false_positive": 5,
+    "precision": 0.9153,
+    "recall": 0.9,
+    "threshold": 2,
+    "true_negative": 88,
+    "true_positive": 54
+   },
+   {
+    "accuracy": 0.915,
+    "called_citizen_schemes": 53,
+    "false_negative": 10,
+    "false_positive": 3,
+    "precision": 0.9434,
+    "recall": 0.8333,
+    "threshold": 3,
+    "true_negative": 90,
+    "true_positive": 50
+   },
+   {
+    "accuracy": 0.8366,
+    "called_citizen_schemes": 35,
+    "false_negative": 25,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.5833,
+    "threshold": 4,
+    "true_negative": 93,
+    "true_positive": 35
+   },
+   {
+    "accuracy": 0.8235,
+    "called_citizen_schemes": 33,
+    "false_negative": 27,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.55,
+    "threshold": 5,
+    "true_negative": 93,
+    "true_positive": 33
+   },
+   {
+    "accuracy": 0.7451,
+    "called_citizen_schemes": 21,
+    "false_negative": 39,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 0.35,
+    "threshold": 6,
+    "true_negative": 93,
+    "true_positive": 21
+   }
+  ],
+  "validation": {
+   "accuracy": 0.9281,
+   "called_citizen_schemes": 59,
+   "disagreements": [
+    {
+     "audited": false,
+     "borderline": true,
+     "hand_label": "budget_line",
+     "name": "Indian Knowledge Systems",
+     "rule_says": "citizen_scheme",
+     "score": 3
+    },
+    {
+     "audited": false,
+     "borderline": true,
+     "hand_label": "citizen_scheme",
+     "name": "Legal Aid Defense Counsel System (LADCS)",
+     "rule_says": "budget_line",
+     "score": 0
+    },
+    {
+     "audited": false,
+     "borderline": true,
+     "hand_label": "citizen_scheme",
+     "name": "Pradhan Mantri Krishi Sinchai Yojna",
+     "rule_says": "budget_line",
+     "score": -2
+    },
+    {
+     "audited": false,
+     "borderline": true,
+     "hand_label": "budget_line",
+     "name": "Prime Minister School for Rising India",
+     "rule_says": "citizen_scheme",
+     "score": 3
+    },
+    {
+     "audited": true,
+     "borderline": true,
+     "hand_label": "citizen_scheme",
+     "name": "Rashtriya Krishi Vikas Yojna",
+     "rule_says": "budget_line",
+     "score": 0
+    },
+    {
+     "audited": false,
+     "borderline": false,
+     "hand_label": "citizen_scheme",
+     "name": "SBM-Grameen",
+     "rule_says": "budget_line",
+     "score": 0
+    },
+    {
+     "audited": false,
+     "borderline": true,
+     "hand_label": "budget_line",
+     "name": "Schemes for Safety of Women",
+     "rule_says": "citizen_scheme",
+     "score": 3
+    },
+    {
+     "audited": false,
+     "borderline": false,
+     "hand_label": "citizen_scheme",
+     "name": "Skill India Programme.",
+     "rule_says": "budget_line",
+     "score": 0
+    },
+    {
+     "audited": true,
+     "borderline": false,
+     "hand_label": "budget_line",
+     "name": "Tea Board",
+     "rule_says": "citizen_scheme",
+     "score": 2
+    },
+    {
+     "audited": false,
+     "borderline": false,
+     "hand_label": "citizen_scheme",
+     "name": "VB-G-RAM-G",
+     "rule_says": "budget_line",
+     "score": 0
+    },
+    {
+     "audited": false,
+     "borderline": true,
+     "hand_label": "budget_line",
+     "name": "Vigyan Dhara",
+     "rule_says": "citizen_scheme",
+     "score": 2
+    }
+   ],
+   "false_negative": 6,
+   "false_positive": 5,
+   "on_the_audited_census": {
+    "audited_schemes_with_no_hand_label": [],
+    "n": 19,
+    "note": "the audited schemes are a census of what this file publishes and every one of them is hand labelled, so the published split below is the hand labels themselves and the rule's job here is to show that a mechanical test reconstructs them from published evidence. Where the two disagree the hand label is published and the disagreement is named on the row, which is how KNOWN_ERRORS is already treated by absent_from_myscheme_after_known_errors.",
+    "rule_agrees_with_the_hand_label": 17
+   },
+   "precision": 0.9153,
+   "recall": 0.9,
+   "threshold": 2,
+   "true_negative": 88,
+   "true_positive": 54
+  },
+  "weights": {
+   "a_benefit_phrase_in_the_name": 2,
+   "a_firm_or_asset_sector": -1,
+   "a_person_or_household_in_the_name": 3,
+   "a_research_or_capacity_word_in_the_name": -2,
+   "an_asset_or_works_word_in_the_name": -2,
+   "listed_by_dbt_bharat": 3,
+   "myscheme_tags_a_person": 3,
+   "myscheme_tags_only_an_institution": -3
+  },
+  "what_a_budget_line_label_does_not_say": "nothing against the spending. Roads, courts, research and rolling stock are what a state is for. The label says only that a citizen scheme portal is not where you would look for them.",
+  "why_it_is_here": "publishing Samagra Shiksha, a Rs 42,100 crore school education programme, under the same heading as the Duty Drawback Scheme, which refunds customs duty to the exporter who paid it, would overstate the second and weaken the first by sitting next to it."
+ },
  "corpus": {
-  "distinct_registry_names": 5447,
-  "registry_entries": 5451,
-  "reports_catalogued": 2798,
-  "reports_with_a_subject": 2260
+  "distinct_registry_names": 5469,
+  "registry_entries": 5472,
+  "reports_catalogued": 2804,
+  "reports_with_a_subject": 2265
  },
  "ground_truth": {
-  "census_note": "every join is hand labelled, so precision below is counted and not estimated. Recall is counted too, against the same census; what cannot be counted is recall against schemes the matcher never joined at all, which is measured separately in matcher_recall_check.",
+  "census_holds": false,
+  "census_note": "the labels are a census of the joins ONLY while unlabelled_joins is empty, and precision below is a count rather than an estimate only then. Recall is counted against the same census; what cannot be counted is recall against schemes the matcher never joined at all, which is measured separately in matcher_recall_check. IT DOES NOT HOLD ON THIS SNAPSHOT: parse/match.py has been changed since these labels were made, so 10 joins carry no label and 196 labels no longer correspond to a join. The numbers below are measured on the labels that still apply and the census claim is not true again until the new joins are labelled.",
   "file": "data/cag/join_labels.json",
   "labelled": 398,
   "labels_with_no_join": [
@@ -791,10 +1610,6 @@
    [
     986,
     "SERB - POWER Research Grants"
-   ],
-   [
-    1641,
-    "Rashtriya Krishi Vikas Yojna"
    ],
    [
     1819,
@@ -961,10 +1776,6 @@
     "SERB - POWER Research Grants"
    ],
    [
-    46225,
-    "Pradhan Mantri Swasthya Suraksha Yojana"
-   ],
-   [
     111250,
     "SERB - POWER Fellowship"
    ],
@@ -998,11 +1809,27 @@
    ],
    [
     115561,
+    "Direct Loan Scheme Karnataka"
+   ],
+   [
+    115561,
     "Free Legal Aid under the Legal Services Authority Act 1987"
    ],
    [
     115561,
+    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom: \\Small Cardamom Replanting/New Planting: Karnataka (Ha.) and other States"
+   ],
+   [
+    115561,
     "Internship Scheme By The Unique Identification Authority Of India (UIDAI)"
+   ],
+   [
+    115561,
+    "Kaimagga Vikasa Yojana - Karnataka"
+   ],
+   [
+    115561,
+    "Kayaka Spoorthi Scheme Karnataka "
    ],
    [
     115561,
@@ -1018,11 +1845,31 @@
    ],
    [
     115561,
+    "Padhuke Kuteera Scheme Karnataka"
+   ],
+   [
+    115561,
+    "Santwana Scheme - Karnataka"
+   ],
+   [
+    115561,
+    "Skill Development Training Karnataka"
+   ],
+   [
+    115561,
+    "Skill Upgradation Program Karnataka"
+   ],
+   [
+    115561,
     "Sports Authority of India"
    ],
    [
     115561,
     "The Inland Waterways Authority of India Internship Scheme"
+   ],
+   [
+    115561,
+    "Visit of Contract Farming Farmers to the Research Stations in Karnataka"
    ],
    [
     116197,
@@ -1142,14 +1989,6 @@
    ],
    [
     119137,
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Energy Efficiency (EES)"
-   ],
-   [
-    119137,
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Patent Registration (PRS)"
-   ],
-   [
-    119137,
     "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)"
    ],
    [
@@ -1173,8 +2012,24 @@
     "MRTS (Mass Rapid Transit System) and Metro Projects"
    ],
    [
+    119419,
+    "Post-Matric Scholarship for SC students"
+   ],
+   [
     119516,
     "Direct Benefit Transfer - LPG"
+   ],
+   [
+    119775,
+    "Post Matric Scholarship For Scheduled Caste"
+   ],
+   [
+    119775,
+    "Post-Matric Scholarship for SC students"
+   ],
+   [
+    119775,
+    "Pre-Matric & Post-Matric Scholarship"
    ],
    [
     119775,
@@ -1235,6 +2090,10 @@
    [
     123465,
     "SERB - POWER Research Grants"
+   ],
+   [
+    123475,
+    "R&D projects of Indira Gandhi Centre of Atomic Research (IGCAR)"
    ],
    [
     123475,
@@ -1353,8 +2212,8 @@
     "Netaji Subhas - ICAR International Fellowship"
    ],
    [
-    125073,
-    "State Award To Two Anganwadi Workers Under Integrated Child Development Services (ICDS) Schemes"
+    125076,
+    "Scheme of Development of Particularly Vulnerable Tribal Groups"
    ],
    [
     125652,
@@ -1518,28 +2377,12 @@
   "sound": 50,
   "unlabelled_joins": [
    [
-    2240,
-    "Sub-mission on Breed Development of Livestock and Poultry"
-   ],
-   [
-    2240,
-    "Tea Tourism - Uttarakhand Tea Development Board"
-   ],
-   [
-    2508,
-    "Distribution of Pulses"
+    4204,
+    "Cultivation of Aromatic Plants under MGNREGA - Centre for Aromatic Plants"
    ],
    [
     15371,
     "Mid Day Meals Scheme"
-   ],
-   [
-    21368,
-    "Mahatma Gandhi National Rural Employment Guarantee Act"
-   ],
-   [
-    21453,
-    "Financial Loan for Training of Commercial Pilot"
    ],
    [
     34743,
@@ -1550,26 +2393,6 @@
     "Research and Development Projects"
    ],
    [
-    46225,
-    "Pradhan Mantri Suraksha Bima Yojana"
-   ],
-   [
-    46238,
-    "Post Matric Scholarship For Scheduled Caste"
-   ],
-   [
-    46238,
-    "Post Metric Scholarship For OBC Students"
-   ],
-   [
-    46238,
-    "Post-Matric Scholarship for SC students"
-   ],
-   [
-    46238,
-    "Pre-Matric & Post-Matric Scholarship"
-   ],
-   [
     117169,
     "Pratyaksh Hanstantrit Labh / Direct Benefits Transfer For LPG"
    ],
@@ -1578,64 +2401,20 @@
     "Pratyaksh Hanstantrit Labh / Direct Benefits Transfer For LPG"
    ],
    [
-    118797,
-    "Pradhan Mantri Jan Dhan Yojana"
-   ],
-   [
-    118805,
-    "Pradhan Mantri Jan Dhan Yojana"
-   ],
-   [
-    119419,
-    "Post Metric Scholarship For OBC Students"
-   ],
-   [
-    119419,
-    "Pre-Matric & Post-Matric Scholarship"
+    119137,
+    "Award For Meritorious Students Of Meghalaya In The HSSLC Examination (Science Stream)"
    ],
    [
     119516,
     "Pratyaksh Hanstantrit Labh / Direct Benefits Transfer For LPG"
    ],
    [
-    119664,
-    "Pension Benefit"
-   ],
-   [
-    119775,
-    "The Post-Matric Scholarship For Scheduled Tribes Students"
-   ],
-   [
-    123873,
-    "Mahatma Gandhi National Rural Employment Guarantee Act"
-   ],
-   [
-    124454,
-    "Mahatma Gandhi National Rural Employment Guarantee Act"
-   ],
-   [
-    124883,
-    "Mahatma Gandhi National Rural Employment Guarantee Act"
-   ],
-   [
     125073,
     "Mid Day Meals Scheme"
    ],
    [
-    125076,
-    "Mahatma Gandhi National Rural Employment Guarantee Act"
-   ],
-   [
     125966,
     "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India)."
-   ],
-   [
-    126002,
-    "Pradhan Mantri Jan Dhan Yojana"
-   ],
-   [
-    126028,
-    "Mahatma Gandhi National Rural Employment Guarantee Act"
    ]
   ],
   "wrong": 348
@@ -1772,13 +2551,49 @@
   }
  ],
  "matcher_recall_check": {
-  "n": 6,
+  "n": 14,
   "note": "this is the sixth defect in matcher_defects, counted. It is not a full recall measurement: it finds only the misses a plural causes, and says nothing about the ones caused by abbreviation, word order or an audit title that never names its scheme.",
   "pairs": [
+   {
+    "cag_id": 46238,
+    "registry_name": "Post Matric Scholarship For Scheduled Caste",
+    "returned": "no match",
+    "subject": "Post Matric Scholarships to the Students belonging to Scheduled Castes for studies in India in Ministry of Social Justice and Empowerment"
+   },
+   {
+    "cag_id": 46238,
+    "registry_name": "Post-Matric Scholarship for SC students",
+    "returned": "no match",
+    "subject": "Post Matric Scholarships to the Students belonging to Scheduled Castes for studies in India in Ministry of Social Justice and Empowerment"
+   },
+   {
+    "cag_id": 119419,
+    "registry_name": "Post-Matric Scholarship for SC students",
+    "returned": "no match",
+    "subject": "Direct Benefit Transfer in payment of Post Matric Scholarship to eligible students in the State"
+   },
+   {
+    "cag_id": 119775,
+    "registry_name": "Post Matric Scholarship For Scheduled Caste",
+    "returned": "no match",
+    "subject": "Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students"
+   },
+   {
+    "cag_id": 119775,
+    "registry_name": "Post-Matric Scholarship for SC students",
+    "returned": "no match",
+    "subject": "Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students"
+   },
    {
     "cag_id": 119775,
     "registry_name": "Pre Matric Scholarship For Scheduled Tribe Students",
     "returned": "qualifier conflict",
+    "subject": "Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students"
+   },
+   {
+    "cag_id": 119775,
+    "registry_name": "Pre-Matric & Post-Matric Scholarship",
+    "returned": "no match",
     "subject": "Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students"
    },
    {
@@ -1810,18 +2625,30 @@
     "registry_name": "Pre-Matric Scholarship for the Students of Minority Castes",
     "returned": "qualifier conflict",
     "subject": "Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students"
+   },
+   {
+    "cag_id": 119775,
+    "registry_name": "The Post-Matric Scholarship For Scheduled Tribes Students",
+    "returned": "no match",
+    "subject": "Pre and Post-Matric Scholarship Schemes for Scheduled Caste, Scheduled Tribe and Minority Students"
+   },
+   {
+    "cag_id": 125076,
+    "registry_name": "Scheme of Development of Particularly Vulnerable Tribal Groups",
+    "returned": "no match",
+    "subject": "Functioning of Micro Project Agencies for development of Particularly Vulnerable Tribal Groups in the State and Implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme in the State, Government of Odisha Report No.8 of 2025"
    }
   ],
   "what": "pairs whose content words agree once a crude English plural is folded, and which probably_same still rejects. A rejection is an absence claim, so these are the expensive misses."
  },
  "raw_join": {
-  "distinct_reports": 107,
-  "distinct_schemes": 171,
-  "labelled": 212,
-  "note": "12.6 per cent. Not a publishable number and not a matcher failure: probably_same is generous by design because it decides absence claims, and an audit title is a sentence about government rather than the name of a programme.",
-  "pairs": 242,
-  "precision": 0.2217,
-  "sound": 47
+  "distinct_reports": 94,
+  "distinct_schemes": 153,
+  "labelled": 202,
+  "note": "not a publishable number and not a matcher failure: probably_same is generous by design because it decides absence claims, and an audit title is a sentence about government rather than the name of a programme. It was 0.126 when this file was written and rises as parse/match.py's defects are closed, because the joins that go are the wrong ones.",
+  "pairs": 212,
+  "precision": 0.2277,
+  "sound": 46
  },
  "recall_lost": [
   {
@@ -1933,107 +2760,107 @@
  "scope_note": "A pointer, not a verdict. This says an audit exists on a scheme and where to find it. It says nothing about what the audit found, whether the scheme works, or whether the auditor was satisfied, and nothing in this pipeline reads an audit report body.",
  "signals": [
   {
-   "lift": 0.469,
-   "n_with": 74,
-   "n_without": 138,
-   "p_sound_with": 0.527,
-   "p_sound_without": 0.058,
+   "lift": 0.46,
+   "n_with": 70,
+   "n_without": 132,
+   "p_sound_with": 0.529,
+   "p_sound_without": 0.068,
    "signal": "the matcher's reason is name evidence"
   },
   {
-   "lift": -0.494,
-   "n_with": 133,
-   "n_without": 79,
-   "p_sound_with": 0.038,
-   "p_sound_without": 0.532,
+   "lift": -0.5,
+   "n_with": 126,
+   "n_without": 76,
+   "p_sound_with": 0.04,
+   "p_sound_without": 0.539,
    "signal": "the matcher's reason is one of the two acronym rules"
   },
   {
-   "lift": 0.387,
-   "n_with": 5,
-   "n_without": 207,
-   "p_sound_with": 0.6,
-   "p_sound_without": 0.213,
+   "lift": 0.452,
+   "n_with": 6,
+   "n_without": 196,
+   "p_sound_with": 0.667,
+   "p_sound_without": 0.214,
    "signal": "the matcher's reason is the prefix rule"
   },
   {
-   "lift": 0.26,
-   "n_with": 153,
-   "n_without": 59,
-   "p_sound_with": 0.294,
-   "p_sound_without": 0.034,
+   "lift": 0.277,
+   "n_with": 142,
+   "n_without": 60,
+   "p_sound_with": 0.31,
+   "p_sound_without": 0.033,
    "signal": "the report is a Performance audit"
   },
   {
-   "lift": -0.258,
-   "n_with": 58,
-   "n_without": 154,
+   "lift": -0.274,
+   "n_with": 59,
+   "n_without": 143,
    "p_sound_with": 0.034,
-   "p_sound_without": 0.292,
+   "p_sound_without": 0.308,
    "signal": "the report is a Compliance audit"
   },
   {
-   "lift": -0.2,
-   "n_with": 23,
-   "n_without": 189,
-   "p_sound_with": 0.043,
-   "p_sound_without": 0.243,
+   "lift": -0.205,
+   "n_with": 22,
+   "n_without": 180,
+   "p_sound_with": 0.045,
+   "p_sound_without": 0.25,
    "signal": "the entry is a union budget line classified a budget head"
   },
   {
-   "lift": 0.272,
-   "n_with": 46,
-   "n_without": 166,
-   "p_sound_with": 0.435,
-   "p_sound_without": 0.163,
+   "lift": 0.313,
+   "n_with": 47,
+   "n_without": 155,
+   "p_sound_with": 0.468,
+   "p_sound_without": 0.155,
    "signal": "the entry is a union budget line classified a scheme"
   },
   {
-   "lift": 0.31,
-   "n_with": 61,
-   "n_without": 151,
-   "p_sound_with": 0.443,
-   "p_sound_without": 0.132,
+   "lift": 0.285,
+   "n_with": 58,
+   "n_without": 144,
+   "p_sound_with": 0.431,
+   "p_sound_without": 0.146,
    "signal": "the entry is a Central myScheme record"
   },
   {
-   "lift": -0.243,
-   "n_with": 112,
-   "n_without": 100,
-   "p_sound_with": 0.107,
-   "p_sound_without": 0.35,
+   "lift": -0.236,
+   "n_with": 105,
+   "n_without": 97,
+   "p_sound_with": 0.114,
+   "p_sound_without": 0.351,
    "signal": "the entry is a state myScheme record"
   },
   {
-   "lift": -0.215,
+   "lift": -0.235,
    "n_with": 96,
-   "n_without": 116,
+   "n_without": 106,
    "p_sound_with": 0.104,
-   "p_sound_without": 0.319,
+   "p_sound_without": 0.34,
    "signal": "the entry is a state record for a different government"
   },
   {
-   "lift": 0.069,
+   "lift": 0.062,
    "n_with": 14,
-   "n_without": 198,
+   "n_without": 188,
    "p_sound_with": 0.286,
-   "p_sound_without": 0.217,
+   "p_sound_without": 0.223,
    "signal": "the CAG subject has two content words or fewer"
   },
   {
-   "lift": -0.014,
-   "n_with": 98,
-   "n_without": 114,
-   "p_sound_with": 0.214,
-   "p_sound_without": 0.228,
+   "lift": 0.03,
+   "n_with": 90,
+   "n_without": 112,
+   "p_sound_with": 0.244,
+   "p_sound_without": 0.214,
    "signal": "the CAG subject is 60 characters or fewer"
   },
   {
-   "lift": 0.578,
-   "n_with": 46,
-   "n_without": 166,
-   "p_sound_with": 0.674,
-   "p_sound_without": 0.096,
+   "lift": 0.597,
+   "n_with": 43,
+   "n_without": 159,
+   "p_sound_with": 0.698,
+   "p_sound_without": 0.101,
    "signal": "the registry name lies wholly inside the subject"
   }
  ],
@@ -2057,15 +2884,21 @@
  "snapshot": "2026-09-02",
  "source": "Comptroller and Auditor General of India, audit report index, joined to data/registry.json",
  "validation": {
-  "distinct_reports": 41,
-  "distinct_schemes": 20,
+  "distinct_reports": 34,
+  "distinct_schemes": 19,
   "false_negative": 13,
   "false_positive": 2,
-  "kept": 44,
-  "note": "precision is a count over a census of all 212 joins, not an estimate from a sample. The two joins it gets wrong are named in known_errors and the sound joins it drops are named in recall_lost.",
-  "precision": 0.7727,
-  "recall": 0.7234,
-  "true_positive": 34
+  "kept": 36,
+  "note": "precision is counted over the 202 labelled joins rather than estimated from a sample. The joins it gets wrong are named in known_errors and the sound joins it drops are named in recall_lost. Any kept join with no hand label is listed above and is counted in neither.",
+  "precision": 0.9167,
+  "recall": 0.7174,
+  "true_positive": 33,
+  "unlabelled_among_the_kept": [
+   [
+    125966,
+    "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India)."
+   ]
+  ]
  },
  "what": "Which schemes the CAG has audited. A pointer and nothing more: that a report exists on this scheme, its number, the date it was tabled and where to read it. No audit finding is read, quoted or characterised anywhere in this file. Those are the CAG's to publish."
 }

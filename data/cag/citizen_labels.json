@@ -1,0 +1,2573 @@
+{
+ "base_rate": 0.3922,
+ "borderline": 36,
+ "budget_line": 93,
+ "built_from": [
+  "data/registry.json",
+  "data/classification.json",
+  "data/cag/join.json"
+ ],
+ "citizen_scheme": 60,
+ "labelled": 153,
+ "labels": [
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "5G Connectivity Test Bed",
+   "outcome_targets": null,
+   "reason": "a test bed built and operated by institutions; no person is a beneficiary",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "AICTE - Swanath Scholarship Scheme - Diploma",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "AICTE - Swanath Scholarship Scheme - Diploma",
+   "outcome_targets": null,
+   "reason": "a scholarship paid to an identified diploma student",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Actual Recoveries CENTRAL SECTOR SCHEMES",
+   "outcome_targets": null,
+   "reason": "a recoveries head, not a provision for anyone",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "an accounting line"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 225.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "African Countries",
+   "outcome_targets": null,
+   "reason": "aid to foreign governments under the external affairs demand",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "AgEdn - National Talent Scholarship PG",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "AgEdn - National Talent Scholarship PG",
+   "outcome_targets": null,
+   "reason": "a talent scholarship paid to an identified postgraduate student",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Agriculture Technology Management Agency (ATMA)- Farmers",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Agriculture Technology Management Agency (ATMA)- Farmers",
+   "outcome_targets": null,
+   "reason": "DBT Bharat names the farmer: extension support and incentives paid to identified farmers through ATMA",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Amount met from Oil Industry Development Fund (OIDF)",
+   "outcome_targets": null,
+   "reason": "an amount met from a fund, an accounting entry rather than a benefit",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "an accounting line"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 425.0,
+   "borderline": true,
+   "dbt_name": "Assistance to National Sports Federations",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Assistance to National Sports Federations",
+   "outcome_targets": null,
+   "reason": "the recipient of record is a national sports federation. DBT Bharat lists it because stipends reach athletes through the federation, which is the shape of a payment carried inside a grant to a body",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 6500.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Assistance to States Agencies for Intra-State Movement of Foodgrains and FPS Dealers Margin under NFSA",
+   "outcome_targets": 6,
+   "reason": "reimburses state agencies for foodgrain movement and pays fair price shop dealers their handling margin; the ration cardholder is the beneficiary of the food subsidy, not of this line",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 405.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Atal Innovation Mission(AIM) including Self Employment and Talent Utilization (SETU)",
+   "outcome_targets": null,
+   "reason": "funds tinkering labs in schools and incubators in institutions",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 8000.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": "Central",
+   "name": "Atal Mission For Rejuvenation And Urban Transformation",
+   "outcome_targets": 4,
+   "reason": "myScheme's own record tags the beneficiaries State Government and Government Organisation: the money builds municipal water supply and sewerage and the recipient of record is an urban local body",
+   "sources": [
+    "budget",
+    "myscheme",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 9500.0,
+   "borderline": false,
+   "dbt_name": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)",
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana",
+   "outcome_targets": 9,
+   "reason": "health cover for an identified family; myScheme tags the beneficiary Family",
+   "sources": [
+    "budget",
+    "dbt",
+    "myscheme",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Bhopal Gas Leak Disaster",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Bhopal Gas Leak Disaster",
+   "outcome_targets": null,
+   "reason": "compensation and medical care to identified gas-leak victims",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 200.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Bio Power (Off-Grid) CENTRAL SECTOR SCHEMES",
+   "outcome_targets": null,
+   "reason": "capital subsidy for off-grid bio power plants, paid to whoever builds the plant",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 52.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "CONFONET CENTRAL SECTOR SCHEMES",
+   "outcome_targets": null,
+   "reason": "computerisation of consumer fora, an IT system for a tribunal",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 570.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Capacity Development (CD)",
+   "outcome_targets": 2,
+   "reason": "capacity of the statistical system, not a benefit to a person",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 26.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Centrally Sponsored Project for Strengthening of Cooperatives through IT Interventions",
+   "outcome_targets": null,
+   "reason": "IT systems inside cooperative societies",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 49.11,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Centre For Research on International Trade-CRIT (Centre for WTO Studies)",
+   "outcome_targets": null,
+   "reason": "a grant to a research centre",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 24000.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Compensation to Service Providers for creation and augmentation of telecom infrastructure",
+   "outcome_targets": 14,
+   "reason": "compensation paid to telecom service providers for building infrastructure",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 34.06,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Conservation of Natural Resources and Ecosystems",
+   "outcome_targets": null,
+   "reason": "conservation works on public land",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 0.01,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Cooperative Training",
+   "outcome_targets": null,
+   "reason": "trains the staff of cooperative institutions, which is delivery-system capacity; the trainee is the institution's own person rather than a beneficiary seeking training",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 969.5,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Crop Science for Food and Nutritional Security",
+   "outcome_targets": 15,
+   "reason": "agricultural research in ICAR institutes",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "DAY-NRLM",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "DAY-NRLM",
+   "outcome_targets": null,
+   "reason": "livelihood support and credit reaching identified self-help group members",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": "State/ UT",
+   "name": "Deendayal Upadhyay Gram Jyoti Yojana",
+   "outcome_targets": null,
+   "reason": "rural electrification works, so most of the money buys an asset, but myScheme's own record tags the beneficiary Individual and the programme's counted deliverable includes free connections to identified households",
+   "sources": [
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 171.35,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Development of Infrastructure for Promotion of Health Research",
+   "outcome_targets": null,
+   "reason": "research infrastructure",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Direct Cash Transfer for food grains",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Direct Cash Transfer for food grains",
+   "outcome_targets": null,
+   "reason": "cash paid in place of foodgrain to an identified ration cardholder",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 100.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Divyangjan Sahara Yojana",
+   "outcome_targets": null,
+   "reason": "assistance to identified persons with disabilities",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": 185.54,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Duty Drawback Scheme",
+   "outcome_targets": null,
+   "reason": "a refund of customs and excise duty to the exporter who paid it; the claimant is a firm acting as a firm. myScheme does list exporter schemes, EPCG among them, so this is not a claim that a citizen portal has no business listing it",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Education Scheme for Madrasas and Minorities",
+   "outcome_targets": null,
+   "reason": "quality-of-education grants and infrastructure for madrasas and minority institutions; the recipient of record is the institution",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 7150.01,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Eklavya Model Residential Schools (EMRS)",
+   "outcome_targets": 0,
+   "reason": "builds and staffs residential schools; admission is by an entrance test a family sits, which is the argument the other way",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Enhanced compensation to 1984 Sikh Riots",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Enhanced compensation to 1984 Sikh Riots",
+   "outcome_targets": null,
+   "reason": "enhanced compensation paid to identified riot-affected families",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 104.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Environment Education, Awareness, Research and Skill Development",
+   "outcome_targets": null,
+   "reason": "awareness, research and training run through institutions",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 38.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Eurasian Countries",
+   "outcome_targets": null,
+   "reason": "aid to foreign governments under the external affairs demand",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": 60.26,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Ex- Servicemen Contributory Health Scheme",
+   "outcome_targets": null,
+   "reason": "the Union's contributory health scheme for its own retired soldiers and their dependants, paid as an employer. myScheme lists neither this nor CGHS, and all six of its central records for ex-servicemen are discretionary grants from the Armed Forces Flag Day Fund and the Raksha Mantri's Ex-Servicemen Welfare Fund, one of them explicitly for non-pensioner ex-servicemen. An ex-serviceman is a person and does receive treatment, which is the argument the other way",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "an employer obligation"
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": 2300.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": "Central",
+   "name": "Export Promotion Capital Goods Scheme",
+   "outcome_targets": null,
+   "reason": "myScheme's own record tags the beneficiary Business Entity: a duty concession on capital goods imported by an exporting firm",
+   "sources": [
+    "budget",
+    "myscheme"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 281.5,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Feedstock Subsidy to BCPL/Assam Gas Cracker Complex",
+   "outcome_targets": null,
+   "reason": "a feedstock subsidy to a named public sector company",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Fellowship to research scholars in Indian Statistical Institute",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Fellowship to research scholars in Indian Statistical Institute",
+   "outcome_targets": null,
+   "reason": "a fellowship paid to an identified research scholar",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
+   "outcome_targets": 43,
+   "reason": "a flexible pool for health system strengthening; the money runs the delivery system, though components inside it pay identified mothers",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 797.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Flood Management and Border Areas Programme(FMBAP)",
+   "outcome_targets": 1,
+   "reason": "flood management works",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 1900.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Fund of Funds",
+   "outcome_targets": 3,
+   "reason": "equity into funds that invest in enterprises",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 20.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Global Initiative for Academic Network (GIAN)",
+   "outcome_targets": null,
+   "reason": "brings foreign faculty to Indian institutions",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": "Grants to VV Giri National Labour Institute (VVGNLI)",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Grants to VV Giri National Labour Institute (VVGNLI)",
+   "outcome_targets": null,
+   "reason": "a grant to a labour institute. DBT Bharat lists it because the institute pays stipends to its trainees, a payment carried inside a grant to a body",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 599.99,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Green Energy Corridor",
+   "outcome_targets": 3,
+   "reason": "transmission infrastructure",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 35.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Human Resource Management",
+   "outcome_targets": null,
+   "reason": "the department's management of its own staff",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "an employer obligation"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": "IC-International Youth Exchange Programmes",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "IC-International Youth Exchange Programmes",
+   "outcome_targets": null,
+   "reason": "identified young people are selected and funded to travel on an exchange; it is a ministry programme run in small numbers, which is the argument the other way",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "ISRO Telemetry, Tracking and Command Network - Scholarships and Stipends",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "ISRO Telemetry, Tracking and Command Network - Scholarships and Stipends",
+   "outcome_targets": null,
+   "reason": "scholarships and stipends paid to identified students",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Implementation of the IMPRINT Research Initiative (Impacting Research Innovation and Technology)",
+   "outcome_targets": null,
+   "reason": "a research initiative in technical institutions",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 1000.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "IndiaAI Mission",
+   "outcome_targets": 0,
+   "reason": "compute, datasets and research capacity",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 35.0,
+   "borderline": true,
+   "dbt_name": "Indian Knowledge Systems",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Indian Knowledge Systems",
+   "outcome_targets": null,
+   "reason": "research and curriculum work in institutions. DBT Bharat lists it because fellowships sit inside it",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 17.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Industrial Research and Development",
+   "outcome_targets": null,
+   "reason": "industrial research",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 812.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Infrastructure Facilities for Judiciary",
+   "outcome_targets": null,
+   "reason": "court buildings and residential accommodation for judges",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 15.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Inspection - Director General Quality Audit (DGQA)",
+   "outcome_targets": null,
+   "reason": "an inspection directorate's own establishment",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 404.78,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Integrated Development of Wildlife Habitats",
+   "outcome_targets": null,
+   "reason": "habitat works on protected land",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 550.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Inter Operable Criminal Justice System",
+   "outcome_targets": 0,
+   "reason": "an IT system joining police, courts and prisons",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 80.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Irrigation Census",
+   "outcome_targets": null,
+   "reason": "a statistical census of irrigation",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 67670.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Jal Jeevan Mission",
+   "outcome_targets": 2,
+   "reason": "myScheme tags the beneficiaries Family, Institution and Individual, and the mission counts functional tap connections in identified households; the works are executed by a village committee and no individual applies, which is the argument the other way",
+   "sources": [
+    "budget",
+    "myscheme",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 3138.72,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Joint Staff",
+   "outcome_targets": null,
+   "reason": "the establishment of the integrated defence staff, which is the government paying and housing its own people",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "an employer obligation"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "AgEdn - ICAR Junior Research Fellowship",
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Junior Research Fellowship",
+   "outcome_targets": null,
+   "reason": "a fellowship paid to an identified research scholar",
+   "sources": [
+    "dbt",
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 300.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Legal Aid Defense Counsel System (LADCS)",
+   "outcome_targets": null,
+   "reason": "salaried defence counsel so that an identified accused who cannot afford a lawyer gets one; the money is spent on the system and the benefit is received by a person, which is why this one is close",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Liquid Propulsion Systems Centre - Scholarships and Stipends",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Liquid Propulsion Systems Centre - Scholarships and Stipends",
+   "outcome_targets": null,
+   "reason": "scholarships and stipends paid to identified students",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "MRTS (Mass Rapid Transit System) and Metro Projects",
+   "outcome_targets": 2,
+   "reason": "metro construction",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Mahatma Gandhi NREGA",
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Mahatma Gandhi National Rural Employment Guarantee Act",
+   "outcome_targets": null,
+   "reason": "wage employment paid to an identified rural household",
+   "sources": [
+    "dbt",
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Market Access Initiative",
+   "outcome_targets": null,
+   "reason": "market access support to exporting firms and trade bodies",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Master Control Facility - Scholarships and Stipends",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Master Control Facility - Scholarships and Stipends",
+   "outcome_targets": null,
+   "reason": "scholarships and stipends paid to identified students",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 3952.25,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Member of Parliament Local Area Development Scheme (MPLAD)",
+   "outcome_targets": null,
+   "reason": "released to a district authority for works a Member of Parliament recommends; the unit of spending is a work in a constituency and there is no list of individual beneficiaries. Citizens use what the works build, which is the argument the other way",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 200.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Mission Anveshan",
+   "outcome_targets": null,
+   "reason": "exploration by oil and gas companies",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Mission Mausam (MM)",
+   "outcome_targets": 6,
+   "reason": "weather observation and forecasting capacity",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 3605.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Mission Shakti (Mission for Protection and Empowerment for Women)",
+   "outcome_targets": 15,
+   "reason": "one-stop centres, maternity benefit and creches reaching identified women and children",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Mission Vatsalya- Facilities to Beneficiaries",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Mission Vatsalya- Facilities to Beneficiaries",
+   "outcome_targets": null,
+   "reason": "the DBT list names facilities to beneficiaries: children in institutional and foster care receive them",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 550.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Modernization of Command Area Development and Water Management",
+   "outcome_targets": null,
+   "reason": "command area irrigation works",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 300.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Multidisciplinary Education and Research Improvement in Technical Education-EAP (MERITE) CENTRAL SECTOR SCHEMES",
+   "outcome_targets": null,
+   "reason": "improvement grants to technical institutions",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "NIKSHAY - Tribal TB Patients",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "NIKSHAY - Tribal TB Patients",
+   "outcome_targets": null,
+   "reason": "nutrition support paid to identified tuberculosis patients",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": "State/ UT",
+   "name": "Namami Gange Yojana- Uttarakhand",
+   "outcome_targets": null,
+   "reason": "myScheme's record is Uttarakhand's organic farming support to identified farmers in villages along the Ganga, tagged beneficiary Individual",
+   "sources": [
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 6.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "National Child Labour Project including grants in aid to voluntary agencies and reimbursement of assistance to bonded labour",
+   "outcome_targets": null,
+   "reason": "special training centres and a stipend for identified rescued child labourers; part of the line is grants to voluntary agencies, which is the argument the other way",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "National Fellowship and Scholarship for higher education for ST students (for SCHOLARSHIP)",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "National Fellowship and Scholarship for higher education for ST students (for SCHOLARSHIP)",
+   "outcome_targets": null,
+   "reason": "a fellowship and scholarship paid to identified Scheduled Tribe students",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 600.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "National Green Hydrogen Mission",
+   "outcome_targets": 10,
+   "reason": "production incentives to electrolyser and hydrogen manufacturers",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 212.5,
+   "borderline": true,
+   "dbt_name": "Green India Mission National Afforestation Programme",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "National Mission for a Green India",
+   "outcome_targets": null,
+   "reason": "afforestation on public land, so most of the money buys an asset, but DBT Bharat lists it and the mission's own design pays forest-dependent households for plantation and protection work. The closest call among the audited schemes",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 650.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "National Mission in Education Through ICT",
+   "outcome_targets": 20,
+   "reason": "e-content and network capacity for institutions",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "National Overseas Scholarship Scheme",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "National Overseas Scholarship Scheme",
+   "outcome_targets": null,
+   "reason": "a scholarship paid to an identified student studying abroad",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 115.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "National Schedule Caste/Schedule Tribe Hub Centre",
+   "outcome_targets": null,
+   "reason": "support to enterprises owned by Scheduled Caste and Scheduled Tribe entrepreneurs; the beneficiary of record is the enterprise",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 300.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "National Urban Digital Mission (NUDM)",
+   "outcome_targets": null,
+   "reason": "digital systems for urban local bodies",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 232.05,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Natural Resource Management",
+   "outcome_targets": null,
+   "reason": "agricultural research in ICAR institutes",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "New Internship Programme",
+   "outcome_targets": 1,
+   "reason": "a stipend paid to an identified intern",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "New National Biogas and Organic Manure Programme (NNBOMP)",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "New National Biogas and Organic Manure Programme (NNBOMP)",
+   "outcome_targets": null,
+   "reason": "central financial assistance to an identified household that builds a biogas plant",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 4000.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Non-residential",
+   "outcome_targets": 5,
+   "reason": "non-residential government buildings",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Numaligarh Refinery Expansion Project",
+   "outcome_targets": null,
+   "reason": "a refinery expansion by a public sector company",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 1952.27,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Other Electrical Works",
+   "outcome_targets": null,
+   "reason": "railway electrical works",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": -35445.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Others (including amount Met from & Transfer to various funds)",
+   "outcome_targets": null,
+   "reason": "a transfer to and from funds, and the provision is negative",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "an accounting line"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "PALNA- Facilities to Beneficiaries",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "PALNA- Facilities to Beneficiaries",
+   "outcome_targets": null,
+   "reason": "creche places for the children of identified working mothers",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "PM Viksit Bharat Rozgar Yojana - Part A",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "PM Viksit Bharat Rozgar Yojana - Part A",
+   "outcome_targets": null,
+   "reason": "an employment incentive paid to an identified first-time employee",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 500.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "PM-eBus Sewa Scheme",
+   "outcome_targets": 3,
+   "reason": "buses and depot infrastructure procured for cities",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 2.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Pandit Deendayal Upadhyay National Welfare for Sportspersons",
+   "outcome_targets": null,
+   "reason": "welfare assistance paid to identified sportspersons",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Pension to meritorious sportspersons",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Pension to meritorious sportspersons",
+   "outcome_targets": null,
+   "reason": "a pension paid to identified meritorious sportspersons",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 90.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Policy on Promotion of Organic Fertilizers CENTRAL SECTOR SCHEMES",
+   "outcome_targets": null,
+   "reason": "market development assistance for organic and bio fertilisers, paid to the plant that makes them",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Post-Matric Scholarship for SC students",
+   "outcome_targets": null,
+   "reason": "a scholarship paid to an identified Scheduled Caste student",
+   "sources": [
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 7200.0,
+   "borderline": false,
+   "dbt_name": "ASHA incentives",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Pradhan Mantri Annadata Aay Sanrakshan Yojna (PM- AASHA)",
+   "outcome_targets": null,
+   "reason": "price support and deficiency payments to identified farmers",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 54916.7,
+   "borderline": false,
+   "dbt_name": "Pradhan Mantri Awas Yojna Grameen",
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Pradhan Mantri Awaas Yojana - Gramin",
+   "outcome_targets": 0,
+   "reason": "a house built for an identified rural household; myScheme tags the beneficiary Family",
+   "sources": [
+    "budget",
+    "dbt",
+    "myscheme",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 3000.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Pradhan Mantri Awas Yojana - Urban 2.0",
+   "outcome_targets": 8,
+   "reason": "housing assistance to an identified urban household",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 6587.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Pradhan Mantri Krishi Sinchai Yojna",
+   "outcome_targets": null,
+   "reason": "the accelerated irrigation component builds projects, but Per Drop More Crop pays a micro-irrigation subsidy to an identified farmer",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Pradhan Mantri Suraksha Bima Yojana",
+   "outcome_targets": null,
+   "reason": "accident insurance cover on an identified person's bank account. myScheme's audience field reads institution here only because its beneficiary tag is the word All, which parse/checks.py does not count as a person: a defect in that field, not in the scheme",
+   "sources": [
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 2005.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Pradhan Mantri Swasthya Suraksha Yojana",
+   "outcome_targets": 2,
+   "reason": "new medical colleges and upgrades to existing ones",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Pradhan Mantri Ujjwala Yojana",
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Pradhan Mantri Ujjwala Yojana",
+   "outcome_targets": null,
+   "reason": "a free cooking gas connection to an identified woman in a poor household",
+   "sources": [
+    "dbt",
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": true,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": "Central",
+   "name": "Pradhan Mantri Ujjwala Yojana 2.0",
+   "outcome_targets": null,
+   "reason": "a free cooking gas connection to an identified household",
+   "sources": [
+    "myscheme"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Pragati Scholarship for girls in Degree Colleges",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Pragati Scholarship for girls in Degree Colleges",
+   "outcome_targets": null,
+   "reason": "a scholarship paid to an identified girl student",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": "Prime Minister School for Rising India",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Prime Minister School for Rising India",
+   "outcome_targets": null,
+   "reason": "upgrades existing schools; the recipient of record is the school and the child is already enrolled in it. DBT Bharat lists it, which is the argument the other way",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 65.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Procurement and Marketing Support Scheme",
+   "outcome_targets": null,
+   "reason": "marketing support to micro and small enterprises",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Programme for Wind and other Renewable Energy: Wind Power-Grid308-",
+   "outcome_targets": 1,
+   "reason": "grid-connected wind capacity",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": "Project Elephant",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Project Elephant",
+   "outcome_targets": null,
+   "reason": "elephant habitat and corridor protection; ex gratia to people harmed by elephants sits inside it, which is the argument the other way",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 89.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Projects of the Army",
+   "outcome_targets": null,
+   "reason": "defence works",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 0.01,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Publicity and awareness for Pradhan Mantri Mudra Yojana (PMMY) and other initiatives by MUDRA Ltd.",
+   "outcome_targets": null,
+   "reason": "publicity and awareness spending",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": "RGNIYD-Academic, Training and Capacity Building Programmes",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "RGNIYD-Academic, Training and Capacity Building Programmes",
+   "outcome_targets": null,
+   "reason": "a grant to a youth development institute; DBT Bharat lists it because it pays stipends to its trainees",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 76.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Radiation and Isotopes Project (BRIT)",
+   "outcome_targets": null,
+   "reason": "an isotope production unit",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 8550.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Rashtriya Krishi Vikas Yojna",
+   "outcome_targets": 17,
+   "reason": "a flexible fund released to states, so the recipient of record is a state government, but its named components pay farm mechanisation and horticulture subsidies to identified farmers and DBT Bharat lists it",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Recoveries",
+   "outcome_targets": null,
+   "reason": "a recoveries head",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "an accounting line"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Rehabilitation Assistance under the Scheme of Rehabilitation of Bonded Labour",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Rehabilitation Assistance under the Scheme of Rehabilitation of Bonded Labour",
+   "outcome_targets": null,
+   "reason": "rehabilitation assistance paid to an identified released bonded labourer",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": "National S and T Human Resource Development",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Research and Development",
+   "outcome_targets": null,
+   "reason": "research and development grants to institutions; DBT Bharat lists it for the human resource fellowships inside it",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Research, Development and Consultancy on generic issues related to CPSEs and State Level Public Enterprises",
+   "outcome_targets": null,
+   "reason": "research and consultancy on public enterprises",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Revised Jharia Master Plan (JMP) for Dealing with Fire, Subsidence and Rehabilitation of affected families in Jharia Coalfield - Compensation for LTH Families",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Revised Jharia Master Plan (JMP) for Dealing with Fire, Subsidence and Rehabilitation of affected families in Jharia Coalfield - Compensation for LTH Families",
+   "outcome_targets": null,
+   "reason": "compensation paid to identified families displaced from unstable land in the Jharia coalfield",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Revised Jharia Master Plan (JMP) for Dealing with Fire, Subsidence and Rehabilitation of affected families in Jharia Coalfield - One-Time Grant in Lieu of Annuity or Employment",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Revised Jharia Master Plan (JMP) for Dealing with Fire, Subsidence and Rehabilitation of affected families in Jharia Coalfield - One-Time Grant in Lieu of Annuity or Employment",
+   "outcome_targets": null,
+   "reason": "a one-time grant paid to an identified displaced family in lieu of annuity or employment",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Road Wing",
+   "outcome_targets": 14,
+   "reason": "road construction",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 52108.73,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Rolling Stock",
+   "outcome_targets": 3,
+   "reason": "railway rolling stock",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 7192.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "SBM-Grameen",
+   "outcome_targets": null,
+   "reason": "an incentive paid to an identified household that builds a toilet",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Sagarmala",
+   "outcome_targets": 3,
+   "reason": "port and coastal infrastructure",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Saksham scholarship for differently abled students of Diploma Institutes",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Saksham scholarship for differently abled students of Diploma Institutes",
+   "outcome_targets": null,
+   "reason": "a scholarship paid to an identified differently abled student",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 42100.02,
+   "borderline": true,
+   "dbt_name": "Samagra Shiksha - Interventions of Textbooks",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Samagra Shiksha",
+   "outcome_targets": 28,
+   "reason": "most of the money is teacher salaries and school infrastructure, but DBT Bharat lists its textbook intervention and the Outcome Budget counts students given free textbooks, children given transport and children given escorts. The union's largest school education programme and the closest call at the top of the money",
+   "sources": [
+    "budget",
+    "dbt",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Satish Dhawan Space Centre-SHAR - Scholarships and Stipends",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Satish Dhawan Space Centre-SHAR - Scholarships and Stipends",
+   "outcome_targets": null,
+   "reason": "scholarships and stipends paid to identified students",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 95.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Scheme for Development of Jute Sector",
+   "outcome_targets": null,
+   "reason": "support to the jute industry; growers and weavers benefit through the mills and cooperatives that receive it",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": "Demand Incentive Delivery Mechanism under FAME India Scheme",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).",
+   "outcome_targets": null,
+   "reason": "a demand incentive that lowers the price an identified buyer pays for an electric vehicle, with the buyer verified before it is paid; it is routed through the manufacturer, which is the argument the other way",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 400.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Scheme for Industrial Housing",
+   "outcome_targets": null,
+   "reason": "builds rental housing for industrial workers; the recipient of record is the agency that builds it",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 7.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Scheme for Protection of the Handlooms and Implementation of the Handlooms (Reservation of Articles",
+   "outcome_targets": null,
+   "reason": "enforcement of a reservation act",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Scheme of Development of Particularly Vulnerable Tribal Groups",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Scheme of Development of Particularly Vulnerable Tribal Groups",
+   "outcome_targets": null,
+   "reason": "housing, education, health and livelihood for identified particularly vulnerable tribal households, and DBT Bharat lists it",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 150.0,
+   "borderline": false,
+   "dbt_name": "Scheme for Residential Education for Students in High Schools in Targeted Areas (SHRESHTA)",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Scheme of Residential Education for Students in High School in Targeted Area (SRESHTA) for SCs",
+   "outcome_targets": null,
+   "reason": "fees paid for an identified Scheduled Caste student in a residential school",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 889.05,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Schemes for Safety of Women",
+   "outcome_targets": 1,
+   "reason": "safe city projects, forensic capacity and cyber crime systems; the beneficiary class named is women but the money buys system capacity",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 181.25,
+   "borderline": false,
+   "dbt_name": "SHREYAS (OBC) - Dr. Ambedkar Interest Subsidy on Educational Loan for Overseas Studies for OBCs and EBCs",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Scholarships for Higher Education for Young Achievers Scheme (SHREYAS) for OBCs and EBCs",
+   "outcome_targets": null,
+   "reason": "an interest subsidy and scholarship paid to identified Other Backward Class and Economically Backward Class students",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 2800.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Skill India Programme.",
+   "outcome_targets": null,
+   "reason": "training in which the identified trainee is the beneficiary",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Skill Strengthening for Industrial Value Enhancements (STRIVE)-EAP CENTRALLY SPONSORED SCHEMES",
+   "outcome_targets": null,
+   "reason": "strengthens industrial training institutes; the trainee benefits through the institute",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 1989.12,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Special Projects",
+   "outcome_targets": null,
+   "reason": "capital projects",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Special cash awards to medal winners in international sports events",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Special cash awards to medal winners in international sports events",
+   "outcome_targets": null,
+   "reason": "a cash award paid to an identified medal winner",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Stipend to Differently Abled Candidates under the Scheme of Vocational Rehabilitation Centres for Handicapped",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Stipend to Differently Abled Candidates under the Scheme of Vocational Rehabilitation Centres for Handicapped",
+   "outcome_targets": null,
+   "reason": "a stipend paid to an identified differently abled trainee",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 500.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Strengthening Teaching-Learning and Results for States (STARS)",
+   "outcome_targets": 0,
+   "reason": "strengthens state school systems and assessment",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 210.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Strengthening of Krishi Vigyan Kendras (KVKs)",
+   "outcome_targets": null,
+   "reason": "strengthens agricultural extension centres",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 550.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Strengthening of Machinery for Enforcement",
+   "outcome_targets": null,
+   "reason": "special courts and police cells to enforce the atrocities act; relief to victims sits in a different line",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 200.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Sugar Subsidy payable under Public Distribution System",
+   "outcome_targets": null,
+   "reason": "subsidised sugar to an identified Antyodaya household",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "a_citizen_applies": false,
+   "audited_when_labelled": true,
+   "be_cr": 380.0,
+   "borderline": false,
+   "dbt_name": "Tea Board",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Tea Board",
+   "outcome_targets": null,
+   "reason": "a statutory commodity board and the grant that runs it",
+   "sources": [
+    "budget",
+    "dbt"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a body or a government"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 9800.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Technology in National Security",
+   "outcome_targets": null,
+   "reason": "security technology",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 490.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Tertiary Care Programme",
+   "outcome_targets": null,
+   "reason": "tertiary care facilities; identified patients are screened and treated in them, which is the argument the other way",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 7897.27,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Traffic Facilities - Yard Remodelling and Others",
+   "outcome_targets": 1,
+   "reason": "railway yard works",
+   "sources": [
+    "budget",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 0.02,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Transport/Freight Subsidy Scheme",
+   "outcome_targets": null,
+   "reason": "a freight subsidy to industrial units in remote areas",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a firm or an institution"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "VB-G-RAM-G",
+   "outcome_targets": 0,
+   "reason": "guaranteed wage employment paid to an identified rural household",
+   "sources": [
+    "outcome"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 350.0,
+   "borderline": true,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Vibrant Villages Programme",
+   "outcome_targets": null,
+   "reason": "border village infrastructure; livelihood grants to households sit inside it",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4a",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 1425.0,
+   "borderline": true,
+   "dbt_name": "Vigyan Dhara - INSPIRE Fellowship",
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Vigyan Dhara",
+   "outcome_targets": 40,
+   "reason": "science and technology research grants to institutions; DBT Bharat lists it for the INSPIRE fellowship inside it",
+   "sources": [
+    "budget",
+    "dbt",
+    "outcome"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "research or system capacity"
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": null,
+   "borderline": false,
+   "dbt_name": "Vikram Sarabhai Space Centre - Scholarships and Stipends",
+   "label": "citizen_scheme",
+   "myscheme_level": null,
+   "name": "Vikram Sarabhai Space Centre - Scholarships and Stipends",
+   "outcome_targets": null,
+   "reason": "scholarships and stipends paid to identified students",
+   "sources": [
+    "dbt"
+   ],
+   "statement": null,
+   "why_not_a_citizen_scheme": null
+  },
+  {
+   "audited_when_labelled": false,
+   "be_cr": 500.0,
+   "borderline": false,
+   "dbt_name": null,
+   "label": "budget_line",
+   "myscheme_level": null,
+   "name": "Wind Power (Grid)",
+   "outcome_targets": null,
+   "reason": "grid-connected wind capacity",
+   "sources": [
+    "budget"
+   ],
+   "statement": "stat4b",
+   "why_not_a_citizen_scheme": "a work or an asset"
+  }
+ ],
+ "population": {
+  "how_chosen": "a census of the schemes the CAG join published as audited at the time of labelling, 20 of them, plus a stratified sample of the 701 registry entries that myScheme does not list, which is the population the distinction is applied to. The strata and the steps are fixed and published so the sample can be rebuilt: sorted by name within each stratum, take every k-th.",
+  "note": "134 drawn, 20 audited, 153 distinct after the overlap. The audited set moves whenever parse/match.py or the register moves, so parse/cag_join.py reads it live rather than from the audited_when_labelled flag below, and prints a warning if an audited scheme has no label here.",
+  "strata": [
+   {
+    "drawn": 42,
+    "population": 167,
+    "step": 4,
+    "stratum": "listed by DBT Bharat"
+   },
+   {
+    "drawn": 23,
+    "population": 46,
+    "step": 2,
+    "stratum": "union budget Statement 4A, not DBT"
+   },
+   {
+    "drawn": 60,
+    "population": 479,
+    "step": 8,
+    "stratum": "union budget Statement 4B, not DBT"
+   },
+   {
+    "drawn": 9,
+    "population": 9,
+    "step": 1,
+    "stratum": "outcome statement only"
+   }
+  ]
+ },
+ "question": "A scheme portal exists so that a citizen can look up a scheme. Which of the things a government funds could have a page on such a portal, and which could not? This decides whether \"absent from myScheme\" is a criticism of the portal or a fact about the spending.",
+ "rule": {
+  "borderline": "marked where a reader could reasonably flip the label, and the reason on the row carries the argument the other way.",
+  "budget_line": "the recipient of record is a government, a public body, an institution, a firm acting as a firm, an asset or a work. Citizens may benefit from what it buys, and often do, but no individual is a beneficiary of record and no list of individuals exists.",
+  "citizen_scheme": "the benefit reaches an identified person or household, or a group of individuals such as a self-help group: cash, an in-kind good, a scholarship or stipend, a pension, an insurance cover, a subsidy on something they buy, a treatment, a house, a connection, a wage, a training place, a loan or a fee waiver. Somebody could produce the list of who received it.",
+  "not_a_verdict_on_the_spending": "a budget_line label says nothing against the spending. Roads, courts, research and rolling stock are what a state is for. The label says only that a citizen scheme portal is not where you would look for them.",
+  "the_one_exclusion": "an employer obligation is not a citizen scheme. The government pays it as an employer to its own serving or retired staff and their families. This line is not invented here: parse/classify_tamilnadu.py established it over 829 hand labels and this register already publishes it, so applying it at the union is consistency rather than a new judgement.",
+  "the_tie_break": "an umbrella programme is labelled by its principal deliverable, not by the existence of one individual-facing component. Where the principal deliverable is contested the row is labelled on the government's own evidence, which is a DBT Bharat listing or an Outcome Budget target counted in people, and marked borderline.",
+  "what_is_NOT_the_test": "whether an application exists. That is the intuitive test and it does not survive measurement: see signals_rejected in data/cag/join.json. It is also not computable for the 701 register rows myScheme does not list, which is the population the distinction is for."
+ },
+ "snapshot": "2026-09-02",
+ "what": "Hand labels for whether a register row names a benefit that reaches an identified person or household, or spending whose recipient of record is a government, a body, a firm, an asset or a work. Ground truth for the citizen test in parse/cag_join.py. Audit and correct these; the rule is only as good as they are."
+}

@@ -94,6 +94,154 @@ MATCHER_DEFECTS with the exact pair and the exact reason string, and are NOT fix
 here. parse/match.py feeds published absence claims across the whole register, so a
 change to it moves numbers on every page, and the evidence should be looked at before
 that happens.
+
+A note on the numbers printed above, which have moved
+-----------------------------------------------------
+Everything in this docstring down to here was measured on a 398-pair join. parse/match.py
+was then changed, in commit "Four more matcher defects, one of them mine from this
+morning", which is exactly the change the MATCHER_DEFECTS section above asked somebody
+to make. The generous join it produces is now smaller and cleaner, and the consequence
+is that data/cag/join_labels.json is STALE: a large share of its 398 labels no longer
+correspond to any join, and a handful of new joins carry no label, among them the FAME
+audit that the plural defect used to hide and two Mid Day Meals audits. The run prints
+both counts every time. The counted precision and recall of the rule are therefore
+measured on the labels that still apply, and the census claim they rest on is not true
+again until those new joins are labelled. That is the one thing to fix before this page
+is published, and it is a labelling job, not a code job.
+
+The citizen test, and why the absent list is two lists
+-----------------------------------------------------
+The rule above finds the schemes the CAG has audited, and several of them myScheme does
+not list. Publishing those under one heading would say the same thing about Samagra
+Shiksha, a Rs 42,100 crore school education programme every parent in India has a
+stake in, and about the Duty Drawback Scheme, which refunds customs duty to the
+exporter who paid it. One of those is a gap in a citizen portal. The other is a fact
+about how a state spends money, and calling it a gap would weaken the first claim by
+sitting next to it.
+
+So there is a second question, and it is answered the same way as the first: hand
+labels as ground truth, every signal published with its measured strength, the
+rejected signals published with the measurement that rejected them, accuracy counted
+over an audited set rather than estimated, and the surviving errors named rather than
+patched out. data/cag/citizen_labels.json carries 153 hand labels: a census of the
+audited schemes plus a stratified sample of the 701 register rows myScheme does not
+list, which is the population the test gets applied to. 60 are citizen schemes and 93
+are budget lines, a base rate of 0.392, and 36 are marked borderline with the argument
+the other way written on the row. The audited schemes are all hand labelled, so the
+PUBLISHED split is the hand labels, and the rule's measured accuracy is what says those
+labels are not arbitrary: a mechanical test reconstructs them from published evidence
+92.8 per cent of the time. Where the two disagree the row says so. If the join above
+ever produces an audited scheme with no citizen label, the run prints that too.
+
+THE LABEL, and it is deliberately about the beneficiary and not about the portal.
+    citizen_scheme  the benefit reaches an identified person or household, or a group
+                    of individuals such as a self-help group: cash, an in-kind good, a
+                    scholarship, a pension, an insurance cover, a subsidy on something
+                    they buy, a treatment, a house, a connection, a wage, a training
+                    place, a loan or a fee waiver. Somebody could produce the list of
+                    who received it.
+    budget_line     the recipient of record is a government, a public body, an
+                    institution, a firm acting as a firm, an asset or a work. Citizens
+                    benefit from what it buys, often enormously, but no individual is a
+                    beneficiary of record and no list of individuals exists.
+A budget_line label says nothing against the spending. Roads, courts, research and
+rolling stock are what a state is for. It says only that a portal built for citizens to
+look schemes up is not where you would look for them.
+
+THE INTUITIVE TEST DOES NOT WORK, AND THAT IS THE FIRST FINDING. "Could a citizen apply
+for it" reads like the right question. Measured on the 20 audited schemes as a census,
+P(citizen scheme | an application exists) is 0.667 over 9 against 0.727 over 11 where
+none does, a lift of -0.061. No signal, and slightly the wrong sign. The reason is
+plain once counted: the schemes that reach the most people, PMAY-Gramin, Ayushman
+Bharat and Jal Jeevan Mission, select their beneficiaries from a list rather than take
+applications, while the Duty Drawback Scheme and the Ex-Servicemen Contributory Health
+Scheme both have a form to fill in. The test is also not computable for the 701 rows
+myScheme does not list, which is the population that matters.
+
+WHAT ACTUALLY DISCRIMINATES, measured on the 153 hand labels against a base rate of
+0.392. Each signal alone, on the rows where it fires:
+
+    myScheme's own beneficiary tag says a person       P 1.000 over  11
+    a person or household named in the name            P 0.875 over  24
+    a benefit phrase in the name                       P 0.865 over  37
+    DBT Bharat lists it                                P 0.820 over  50
+    an asset or works word in the name                 P 0.115 over  26
+    a research or capacity word in the name            P 0.107 over  28
+    the sector is Business, Science and IT,
+        Transport or Banking                           P 0.053 over  38
+    the name says the money goes to a body             P 0.000 over   4
+    an employer obligation                             P 0.000 over   3
+
+Two of those are worth pausing on. The FIRST is myScheme's own targetBeneficiaries
+tag, carried into the register by parse/checks.py. It is not "is this on myScheme",
+which would be circular for a question about myScheme's gaps and is rejected below on
+exactly that ground. It is what myScheme SAYS about a row it does list, and it points
+both ways: it tags AMRUT's beneficiaries State Government and Government Organisation,
+and the Export Promotion Capital Goods Scheme's Business Entity, so two of the audited
+schemes myScheme does list fail this test. A test that agreed with myScheme
+every time would be a proxy for myScheme and worth nothing. The SECOND is DBT Bharat.
+It is the government's own statement that money reaches identified individuals, and at
+0.820 over 50 rows it is strong but not clean: it also lists grants to bodies that pay
+a stipend inside them, which is how the VV Giri National Labour Institute and the
+Rajiv Gandhi National Institute of Youth Development reach it.
+
+THE ONE EXCLUSION, AND IT IS BORROWED RATHER THAN INVENTED. An employer obligation is
+not a citizen scheme: the government pays it as an employer to its own serving or
+retired staff and their families. parse/classify_tamilnadu.py established that line
+over 829 hand labels and this register already publishes it, so applying it at the
+union is consistency rather than a new judgement. It is what decides the Ex-Servicemen
+Contributory Health Scheme, and it is the closest call in this file. An ex-serviceman
+is a person and does receive treatment. What settles it is myScheme's own catalogue:
+the portal lists neither ECHS nor CGHS, the two contributory health schemes that come
+with a government pension, and all six of its central records for ex-servicemen are
+discretionary grants from the Armed Forces Flag Day Fund and the Raksha Mantri's
+Ex-Servicemen Welfare Fund, one of them explicitly for NON-pensioner ex-servicemen.
+myScheme draws the line in the same place. A reader who disagrees has a
+real argument and it is recorded in `contested` rather than argued away.
+
+THE OPERATING POINT IS THE ACCURACY-MAXIMISING ONE, and that is a departure from the
+rest of this repository which should be stated. parse/classify.py, the state
+classifiers and the join rule above all buy precision with recall, because each of them
+decides an ABSENCE CLAIM and one wrong accusation costs more than ten missing ones.
+This test decides no absence. Both sides of the split are published, both under their
+own heading, and a row put on the wrong side is a miscategorised entry rather than an
+accusation. The cost is therefore symmetric, and the threshold is set where accuracy
+peaks:
+
+    threshold 1   62 called citizen schemes, 8 wrong    accuracy 0.908
+    threshold 2   59 called citizen schemes, 5 wrong    accuracy 0.928
+    threshold 3   53 called citizen schemes, 3 wrong    accuracy 0.915
+
+Threshold 2. On the 153 labels: precision 0.915, recall 0.900, accuracy 0.928, all
+counted. On the audited schemes, which are a census of what actually gets published, it
+disagrees with the hand label twice. One is Tea Board, which is already a known error of
+the join rule above and already removed from the absent list before this test runs. The
+other is Rashtriya Krishi Vikas Yojna, a brand name with no benefit word and no
+beneficiary in it, whose components pay farm mechanisation subsidies to identified
+farmers; the hand label is published and the disagreement is printed on the row.
+
+THE ELEVEN ERRORS have a shape and it is the same one parse/sector.py found: a brand
+name says nothing. All six of the schemes the rule wrongly calls budget lines are brands
+or acronyms carrying no benefit word and no beneficiary: SBM-Grameen, VB-G-RAM-G, Skill
+India Programme, Rashtriya Krishi Vikas Yojna, the Legal Aid Defense Counsel System, and
+Pradhan Mantri Krishi Sinchai Yojna, whose only readable word is an irrigation one that
+scores against it. Four of the five in the other direction are rows DBT Bharat lists for
+a payment made inside a grant to an institution; the fifth, Schemes for Safety of Women,
+names a beneficiary class in a line that buys forensic laboratories and cyber crime
+systems. Both sets are in CITIZEN_KNOWN_ERRORS.
+
+THE ABSENT LIST, SPLIT. The membership moves whenever the join above moves, so the two
+lists are computed rather than typed, and the run prints them. As this file is written
+the first list is Samagra Shiksha, the National Mission for a Green India, FAME and
+Rashtriya Krishi Vikas Yojna: programmes that pay identified people, audited by the CAG,
+and not on the portal built for citizens to find schemes. The second is the Duty
+Drawback Scheme, whose claimant is a firm recovering duty it paid; the Ex-Servicemen
+Contributory Health Scheme, an employer obligation; MPLADS, whose unit of spending is a
+work in a constituency with no list of individual beneficiaries; and Pradhan Mantri
+Swasthya Suraksha Yojana, which builds and upgrades medical colleges. Most of both lists
+is marked borderline in the labels, and the closest calls are named in `contested` with
+the argument both ways, because a distinction this close should be published with its
+arguments rather than with its conclusion alone.
 """
 
 import argparse
@@ -535,6 +683,412 @@ def keep(f):
 
 
 # ---------------------------------------------------------------------------
+# The citizen test. Does the money reach an identified person or household?
+# ---------------------------------------------------------------------------
+# Ground truth is data/cag/citizen_labels.json, 153 hand labels. Everything below is
+# scored against those and nothing below is tuned on anything else. See the docstring
+# for the measurements; the strings in CITIZEN_RULE carry them into the output.
+#
+# Every pattern here is a phrase that names a benefit, a beneficiary, an asset or a
+# body, and never a bare common word. That rule is parse/sector.py's, learned the hard
+# way: an unbounded `port` matched "Sportspersons" and "Export" on the first pass of
+# this file and cost two rows before the word boundaries went in.
+
+CITIZEN_PERSON = re.compile(
+    r"\b(students?|scholars?|farmers?|child|children|women|woman|girls?|youth|patients?"
+    r"|famil(?:y|ies)|households?|labour|labourers?|workers?|sportspersons?|servicemen"
+    r"|beneficiar\w*|candidates?|interns?|widows?|victims?|divyangjan|differently abled"
+    r"|handicapped|tribal groups?|weavers?|artisans?|mothers?|senior citizens?"
+    r"|employees?)\b", re.I)
+
+CITIZEN_BENEFIT = re.compile(
+    r"\b(scholarships?|fellowships?|stipends?|pensions?|cash awards?|cash transfers?"
+    r"|compensation|rehabilitation|insurance|bima|awaas|awas|ujjwala|wages?"
+    r"|employment guarantee|internships?|assistance|subsidy|subsidies|incentives?"
+    r"|annuity|free)\b", re.I)
+
+CITIZEN_ASSET = re.compile(
+    r"\b(works|rolling stock|corridors?|infrastructure|buildings?|projects?|grid"
+    r"|test bed|networks?|yard|metro|roads?|ports?|refinery|habitats?|housing"
+    r"|non-residential|electrification|sinchai|construction|stock)\b", re.I)
+
+CITIZEN_CAPACITY = re.compile(
+    r"\b(research|census|capacity|awareness|publicity|strengthening|modernization"
+    r"|modernisation|management|digital|survey|consultancy|enforcement|mausam"
+    r"|technology|computeris\w*)\b", re.I)
+
+# "Assistance to National Sports Federations" is a grant to a body that happens to
+# carry a payment inside it. The pattern needs the preposition, because "Rehabilitation
+# Assistance under the Scheme of Rehabilitation of Bonded Labour" must not fire.
+_A_BODY = (r"(?:boards?|councils?|institutes?|institutions?|federations?|agenc(?:y|ies)"
+           r"|centres?|societ\w*|states?|schools?|colleges?|universit\w*|enterprises?"
+           r"|industr\w*|providers?|companies|corporations?|kendras?|academ\w*"
+           r"|authorit\w*|commissions?|departments?|ministr\w*|organisations?)")
+CITIZEN_TO_A_BODY = re.compile(
+    r"\b(?:assistance|grants?|support|compensation|payments?|reimbursement) to\b"
+    r"[^,]{0,44}\b" + _A_BODY + r"\b", re.I)
+
+CITIZEN_EMPLOYER = re.compile(
+    r"\b(ex-? ?servicemen contributory health|central government health"
+    r"|human resource management|joint staff|government servants?)\b", re.I)
+
+# Only ever used to REJECT. A body word loose in a name carries no signal, because
+# board, centre, institute and school sit inside the names of schemes that pay people.
+CITIZEN_BODY_ANYWHERE = re.compile(r"\b" + _A_BODY + r"\b", re.I)
+
+# Outcome Budget indicator text that names a person as the unit of the target. Used only
+# to reject: the framework fires on too few register rows and its indicator text in
+# data/outcome is the first line of a wrapped cell, so the unit is often the part that
+# was cut off.
+CITIZEN_PERSON_UNIT = re.compile(
+    r"\b(students?|children|child|beneficiar\w*|farmers?|women|girls?|youth|patients?"
+    r"|famil(?:y|ies)|households?|persons?|workers?|labour|candidates?|trainees?"
+    r"|entrepreneurs?|artisans?|weavers?|mothers?|citizens?|people|scholars?)\b", re.I)
+
+# The four myScheme sectors whose contents are overwhelmingly firms and assets. Read as
+# a sector name and not as a guess: P(citizen scheme) 0.053 over the 38 labelled rows in
+# them, against 0.504 over the 115 outside. myScheme's own category is used where it
+# lists the row and parse/sector.py's where it does not.
+CITIZEN_FIRM_SECTORS = {"Business & Entrepreneurship", "Science, IT & Communications",
+                        "Transport & Infrastructure",
+                        "Banking,Financial Services and Insurance"}
+
+# parse/checks.py's PERSON_BENEFICIARIES, plus "All". checks.py's audience field reads
+# "All" as an institution because it is not in its person list, which makes Pradhan
+# Mantri Suraksha Bima Yojana, an accident cover on a person's bank account, read as an
+# institution scheme. That is a defect in that field rather than in the scheme, it is
+# fixed here and only here, and parse/checks.py is deliberately not edited from this
+# file because its audience counts are published on their own page.
+CITIZEN_PERSON_BENEFICIARIES = {
+    "Individual", "Family", "Artists", "Sportsperson", "Journalist", "Visitor",
+    "Self Help Groups (SHGS)", "Joint Liability Groups (JLGS)", "All",
+}
+
+CITIZEN_WEIGHTS = {
+    "myscheme_tags_a_person": 3,
+    "a_person_or_household_in_the_name": 3,
+    "listed_by_dbt_bharat": 3,
+    "a_benefit_phrase_in_the_name": 2,
+    "an_asset_or_works_word_in_the_name": -2,
+    "a_research_or_capacity_word_in_the_name": -2,
+    "myscheme_tags_only_an_institution": -3,
+    "a_firm_or_asset_sector": -1,
+}
+CITIZEN_THRESHOLD = 2
+
+
+def citizen_features(name, entry, sector, ms_beneficiaries):
+    """Everything the citizen test reads, computed once per register entry."""
+    ms = None
+    if ms_beneficiaries:
+        ms = ("person" if any(b in CITIZEN_PERSON_BENEFICIARIES for b in ms_beneficiaries)
+              else "institution")
+    return {
+        "myscheme_tags_a_person": ms == "person",
+        "myscheme_tags_only_an_institution": ms == "institution",
+        "listed_by_dbt_bharat": "dbt" in entry["sources"],
+        "a_person_or_household_in_the_name": bool(CITIZEN_PERSON.search(name)),
+        "a_benefit_phrase_in_the_name": bool(CITIZEN_BENEFIT.search(name)),
+        "an_asset_or_works_word_in_the_name": bool(CITIZEN_ASSET.search(name)),
+        "a_research_or_capacity_word_in_the_name": bool(CITIZEN_CAPACITY.search(name)),
+        "a_firm_or_asset_sector": sector in CITIZEN_FIRM_SECTORS,
+        "the_name_says_the_money_goes_to_a_body": bool(CITIZEN_TO_A_BODY.search(name)),
+        "an_employer_obligation": bool(CITIZEN_EMPLOYER.search(name)),
+        "sector": sector,
+        "myscheme_beneficiaries": sorted(ms_beneficiaries or []),
+    }
+
+
+CITIZEN_EVIDENCE_TEXT = {
+    "myscheme_tags_a_person": "myScheme's own record tags a person or household beneficiary",
+    "myscheme_tags_only_an_institution": ("myScheme's own record tags only an "
+                                          "institutional beneficiary"),
+    "listed_by_dbt_bharat": "DBT Bharat lists it, so the government says money reaches individuals",
+    "a_person_or_household_in_the_name": "a person or household named in the name",
+    "a_benefit_phrase_in_the_name": "a benefit phrase in the name",
+    "an_asset_or_works_word_in_the_name": "an asset or works word in the name",
+    "a_research_or_capacity_word_in_the_name": "a research or capacity word in the name",
+    "a_firm_or_asset_sector": "the sector is one myScheme fills with firms and assets",
+}
+
+
+def citizen_score(f):
+    return sum(w for k, w in CITIZEN_WEIGHTS.items() if f[k])
+
+
+def citizen_evidence(f):
+    """The arithmetic, in the order the weights are declared. Deterministic."""
+    out = []
+    for k in sorted(CITIZEN_WEIGHTS, key=lambda k: (-CITIZEN_WEIGHTS[k], k)):
+        if f[k]:
+            w = CITIZEN_WEIGHTS[k]
+            out.append([("+" if w > 0 else "") + str(w), CITIZEN_EVIDENCE_TEXT[k]])
+    if f["an_employer_obligation"]:
+        out.append(["veto", "an employer obligation to the government's own staff"])
+    if f["the_name_says_the_money_goes_to_a_body"]:
+        out.append(["veto", "the name says the money goes to a body"])
+    return out
+
+
+def citizen_verdict(f):
+    """True where the benefit reaches an identified person or household."""
+    if f["an_employer_obligation"]:
+        return False
+    if f["the_name_says_the_money_goes_to_a_body"]:
+        return False
+    return citizen_score(f) >= CITIZEN_THRESHOLD
+
+
+CITIZEN_RULE = [
+    {"clause": "an employer obligation is never a citizen scheme",
+     "detail": ("the government pays it as an employer to its own serving or retired "
+                "staff and their families. Not invented here: "
+                "parse/classify_tamilnadu.py established this over 829 hand labels and "
+                "the register already publishes it, so applying it at the union is "
+                "consistency rather than a fresh judgement."),
+     "measured": ("P(citizen scheme) 0.000 over the 3 labelled rows it fires on, which "
+                  "is a small number and is stated as one. The weight of the evidence "
+                  "is Tamil Nadu's 829 labels and myScheme's own catalogue: the portal "
+                  "lists neither ECHS nor CGHS, and all six of its central records for "
+                  "ex-servicemen are discretionary grants from the Armed Forces Flag "
+                  "Day Fund and the Raksha Mantri's Ex-Servicemen Welfare Fund, one of "
+                  "them explicitly for non-pensioner ex-servicemen.")},
+    {"clause": "a grant to a body is not a benefit to a person, even when a payment sits inside it",
+     "detail": ("the name has to say so with a preposition: assistance, grants, "
+                "support, compensation, payments or reimbursement TO a board, council, "
+                "institute, federation, agency, state, school, company or industry."),
+     "measured": ("P(citizen scheme) 0.000 over 4. It is what separates Assistance to "
+                  "National Sports Federations and Grants to VV Giri National Labour "
+                  "Institute, both of which DBT Bharat lists because a stipend is paid "
+                  "inside them, from the schemes that pay a person directly.")},
+    {"clause": "otherwise the signals score and the total decides",
+     "detail": ("weights are the measurements rounded, not a feeling: the three signals "
+                "above 0.82 are worth 3, the benefit phrase at 0.865 is worth 2 because "
+                "it overlaps the beneficiary word, the two name signals near 0.11 are "
+                "worth -2, and the sector at 0.053 is worth -1 because it fires on more "
+                "rows than any of them and should not decide a row alone."),
+     "measured": ("threshold 2. On the 153 hand labels precision 0.915, recall 0.900, "
+                  "accuracy 0.928, counted and not estimated.")},
+    {"clause": "the threshold is the accuracy-maximising one, not the precision-buying one",
+     "detail": ("every other classifier in this repository trades recall away for "
+                "precision, because each of them decides an absence claim and one wrong "
+                "accusation costs more than ten missing ones. This test decides no "
+                "absence: both sides of the split are published, each under its own "
+                "heading, so a row on the wrong side is miscategorised rather than "
+                "accused. The cost is symmetric and the operating point follows."),
+     "measured": ("accuracy 0.908 at threshold 1, 0.928 at 2, 0.915 at 3. Threshold 3 "
+                  "would move FAME to the wrong side of the published split.")},
+]
+
+
+CITIZEN_KNOWN_ERRORS = [
+    {"name": "Indian Knowledge Systems", "rule_says": "citizen_scheme",
+     "hand_label": "budget_line",
+     "why": ("DBT Bharat lists it for the fellowships inside it and the name carries no "
+             "other signal at all. Research and curriculum work in institutions.")},
+    {"name": "Prime Minister School for Rising India", "rule_says": "citizen_scheme",
+     "hand_label": "budget_line",
+     "why": ("DBT Bharat lists it and the name says nothing. It upgrades existing "
+             "schools; the recipient of record is the school and the child is already "
+             "enrolled in it. The label is marked borderline for that reason.")},
+    {"name": "Schemes for Safety of Women", "rule_says": "citizen_scheme",
+     "hand_label": "budget_line",
+     "why": ("a beneficiary class is named in the name and the money buys safe city "
+             "projects, forensic capacity and cyber crime systems. The one case in the "
+             "census where naming a person in the name is not evidence that a person "
+             "receives anything.")},
+    {"name": "Tea Board", "rule_says": "citizen_scheme", "hand_label": "budget_line",
+     "why": ("a statutory commodity board that DBT Bharat lists. It is already a known "
+             "error of the join rule above and is already removed from the absent list "
+             "before this test runs, so it does not reach a published list twice.")},
+    {"name": "Vigyan Dhara", "rule_says": "citizen_scheme", "hand_label": "budget_line",
+     "why": ("DBT Bharat lists it for the INSPIRE fellowship inside it; the money is "
+             "science and technology research grants to institutions.")},
+    {"name": "Legal Aid Defense Counsel System (LADCS)", "rule_says": "budget_line",
+     "hand_label": "citizen_scheme",
+     "why": ("a brand and an acronym. It pays salaried defence counsel so that an "
+             "identified accused who cannot afford a lawyer gets one, which the name "
+             "does not say and no source records. Marked borderline in the labels.")},
+    {"name": "Pradhan Mantri Krishi Sinchai Yojna", "rule_says": "budget_line",
+     "hand_label": "citizen_scheme",
+     "why": ("sinchai is an irrigation word and scores as an asset, correctly for the "
+             "accelerated irrigation component and wrongly for Per Drop More Crop, "
+             "which pays a micro-irrigation subsidy to an identified farmer.")},
+    {"name": "Rashtriya Krishi Vikas Yojna", "rule_says": "budget_line",
+     "hand_label": "citizen_scheme",
+     "why": ("a brand name. A flexible fund released to states whose named components "
+             "pay farm mechanisation and horticulture subsidies to identified farmers.")},
+    {"name": "SBM-Grameen", "rule_says": "budget_line", "hand_label": "citizen_scheme",
+     "why": ("an acronym. The scheme pays an incentive to an identified household that "
+             "builds a toilet, and the four letters say none of it.")},
+    {"name": "Skill India Programme.", "rule_says": "budget_line",
+     "hand_label": "citizen_scheme",
+     "why": ("a brand name. Training in which the identified trainee is the "
+             "beneficiary, which is Tamil Nadu's rule applied at the union.")},
+    {"name": "VB-G-RAM-G", "rule_says": "budget_line", "hand_label": "citizen_scheme",
+     "why": ("an acronym, and the largest one: guaranteed wage employment paid to an "
+             "identified rural household. The same programme appears in "
+             "data/registry.json at Rs 95,692 crore under its full name, and the "
+             "outcome statement prints only the initials.")},
+]
+
+
+# Where a reader could reasonably flip the HAND LABEL, not where the rule disagrees with
+# it. Published because a distinction this close should carry its arguments.
+CITIZEN_CONTESTED = [
+    {"name": "Ex- Servicemen Contributory Health Scheme",
+     "labelled": "budget_line",
+     "the_argument_for_the_label": ("the Union pays it as an employer to its own retired "
+                                    "soldiers, which parse/classify_tamilnadu.py "
+                                    "established over 829 labels is not a welfare "
+                                    "scheme. myScheme has no record for this or for "
+                                    "CGHS, and its six central records for "
+                                    "ex-servicemen are all discretionary welfare-fund "
+                                    "grants, one explicitly for non-pensioner "
+                                    "ex-servicemen."),
+     "the_argument_against": ("an ex-serviceman and his dependants are people, they "
+                              "enrol, they hold a card, and they receive treatment. "
+                              "myScheme lists 52 ex-servicemen schemes, so it plainly "
+                              "serves this population."),
+     "what_would_flip_it": ("myScheme listing CGHS or any other health scheme whose "
+                            "eligibility is government service. It lists none today.")},
+    {"name": "Duty Drawback Scheme",
+     "labelled": "budget_line",
+     "the_argument_for_the_label": ("the claimant is a firm and the payment is a refund "
+                                    "of customs and excise duty the firm itself paid, "
+                                    "not a benefit conferred on a beneficiary."),
+     "the_argument_against": ("myScheme does list exporter schemes, the Export Promotion "
+                              "Capital Goods Scheme among them, and the CAG audited that "
+                              "one too. So the portal has a place for a scheme of this "
+                              "shape, and its absence is not nothing."),
+     "what_would_flip_it": ("treating a firm as a citizen for this purpose. The register "
+                            "does not, and neither does myScheme's own beneficiary "
+                            "vocabulary, which separates Individual and Family from "
+                            "Business Entity and Industries.")},
+    {"name": "Member of Parliament Local Area Development Scheme (MPLAD)",
+     "labelled": "budget_line",
+     "the_argument_for_the_label": ("released to a district authority for works a Member "
+                                    "of Parliament recommends. The unit of spending is a "
+                                    "work in a constituency and no list of individual "
+                                    "beneficiaries exists. myScheme lists no "
+                                    "constituency development scheme of any kind, at the "
+                                    "union or in any state."),
+     "the_argument_against": ("the money reaches individuals through what the works "
+                              "build, and a citizen can ask an MP for a work."),
+     "what_would_flip_it": ("a beneficiary list. Asking an MP is not an application and "
+                            "produces no record a register could read.")},
+    {"name": "National Mission for a Green India",
+     "labelled": "citizen_scheme",
+     "the_argument_for_the_label": ("DBT Bharat lists it and the mission's own design "
+                                    "pays forest-dependent households for plantation and "
+                                    "protection work."),
+     "the_argument_against": ("most of the money buys forest cover on public land, which "
+                              "is an asset, and the recipient of record is a state "
+                              "forest department."),
+     "what_would_flip_it": ("dropping the DBT listing as evidence. It is the strongest "
+                            "government-supplied signal in this file at 0.820 over 50, "
+                            "and this is the row where it is doing the most work.")},
+    {"name": "Samagra Shiksha",
+     "labelled": "citizen_scheme",
+     "the_argument_for_the_label": ("DBT Bharat lists its textbook intervention and the "
+                                    "Outcome Budget counts students given free "
+                                    "textbooks, children given transport and children "
+                                    "given escorts. A child is the beneficiary of "
+                                    "record for those."),
+     "the_argument_against": ("most of the Rs 42,100 crore is teacher salaries and "
+                              "school infrastructure, and no parent applies to Samagra "
+                              "Shiksha."),
+     "what_would_flip_it": ("labelling umbrella programmes by where most of the money "
+                            "goes rather than by whether a person is a beneficiary of "
+                            "record anywhere in them. That rule would also move "
+                            "Rashtriya Krishi Vikas Yojna and Pradhan Mantri Krishi "
+                            "Sinchai Yojna, and it is stated as the tie-break in "
+                            "data/cag/citizen_labels.json so it can be reversed in one "
+                            "place.")},
+    {"name": ("Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric "
+              "Vehicle in India - (FAME - India)."),
+     "labelled": "citizen_scheme",
+     "the_argument_for_the_label": ("the demand incentive lowers the price an identified "
+                                    "buyer pays and the buyer is verified before it is "
+                                    "paid. DBT Bharat lists the delivery mechanism by "
+                                    "name."),
+     "the_argument_against": ("it is routed through the manufacturer, who is reimbursed, "
+                              "and the buyer never handles the money."),
+     "what_would_flip_it": ("requiring the payment to land in the beneficiary's own "
+                            "hands. That would also move the free textbooks under "
+                            "Samagra Shiksha and every in-kind transfer DBT Bharat "
+                            "lists.")},
+]
+
+
+# Rejected signals. The prose is fixed; the numbers beside it are measured at run time
+# from the same 153 labels, so a signal cannot quietly stop being rejected when the
+# register moves. `key` names the test computed in run().
+CITIZEN_REJECTED = [
+    {"signal": "whether a citizen can apply for it",
+     "key": "an_application_exists",
+     "measured_over": ("the schemes the join listed as audited when these labels were "
+                       "made, hand read one by one as a census of that list. It is the "
+                       "only signal here that no source in the register carries."),
+     "why_not": ("no signal and slightly the wrong sign. The schemes that reach the most "
+                 "people select beneficiaries from a list rather than take applications, "
+                 "and PMAY-Gramin, Ayushman Bharat and Jal Jeevan Mission all fall on "
+                 "the no-application side while the Duty Drawback Scheme and the "
+                 "Ex-Servicemen Contributory Health Scheme both have a form. It is also "
+                 "not computable for the 701 rows myScheme does not list, which is the "
+                 "population the test is for.")},
+    {"signal": "the union budget's own Statement 4A against Statement 4B",
+     "key": "statement_4a",
+     "why_not": ("no signal. Centrally Sponsored against Central Sector says who "
+                 "delivers the money, states or the union directly, and nothing about "
+                 "who receives it. Statement 4B holds Pradhan Mantri Ujjwala Yojana and "
+                 "Rolling Stock alike.")},
+    {"signal": "an Outcome Budget target counted in people",
+     "key": "an_outcome_target_counted_in_people",
+     "why_not": ("no signal, and it fires on 10 of 153 rows because only 111 register "
+                 "entries carry an outcome framework at all. The indicator text in "
+                 "data/outcome/2026.json is also the first line of a wrapped cell, so "
+                 "'Number of children provided Transport' and 'Number of schools covered "
+                 "under' are both truncated mid-phrase and the unit is often the part "
+                 "that was cut.")},
+    {"signal": "the size of the budget line, Rs 1,000 crore or more",
+     "key": "a_large_budget_line",
+     "why_not": ("no signal at any threshold, which is worth publishing because it is "
+                 "the assumption a reader brings. Rolling Stock is Rs 52,109 crore and "
+                 "reaches nobody as a beneficiary; the Sugar Subsidy under the Public "
+                 "Distribution System is Rs 200 crore and reaches Antyodaya households.")},
+    {"signal": "data/classification.json's own scheme-versus-budget-head score, 4 or more",
+     "key": "the_classifier_score_is_4_or_more",
+     "why_not": ("weak, and circular for this question. parse/classify.py states in its "
+                 "own docstring that it is validated against myScheme membership as the "
+                 "proxy for citizen-facing. Scoring a row on a classifier trained to "
+                 "agree with myScheme, in order to decide whether myScheme should have "
+                 "listed it, answers the question with itself. The same reasoning is set "
+                 "out in parse/classify_andhra.py's why_not_myscheme and in "
+                 "signals_rejected above.")},
+    {"signal": "whether myScheme lists the row at all",
+     "key": "myscheme_lists_it",
+     "why_not": ("the strongest circular signal there is. The finding this file exists "
+                 "to publish is which audited schemes are ABSENT from myScheme, so "
+                 "scoring myScheme presence would push down exactly the rows the answer "
+                 "is made of. What IS used is different and is stated as such: myScheme's "
+                 "own targetBeneficiaries tag on the rows it does list, which disagrees "
+                 "with myScheme's inclusion decision twice among the audited schemes it "
+                 "does list, at AMRUT and at the Export Promotion Capital Goods "
+                 "Scheme.")},
+    {"signal": "a body word anywhere in the name",
+     "key": "a_body_word_anywhere_in_the_name",
+     "why_not": ("no signal in either direction, because board, centre, institute and "
+                 "school appear inside "
+                 "the names of schemes that pay people: the Master Control Facility "
+                 "scholarships, the residential education scheme for Scheduled Caste "
+                 "students, the stipend paid through Vocational Rehabilitation Centres. "
+                 "The narrower pattern that does work needs the preposition and is the "
+                 "second clause of the rule.")},
+]
+
+
+# ---------------------------------------------------------------------------
 # Measurement.
 # ---------------------------------------------------------------------------
 def measure(rows, name, test):
@@ -557,6 +1111,8 @@ def run():
     registry = load("data/registry.json")
     classification = load("data/classification.json")
     labels_doc = load("data/cag/join_labels.json")
+    citizen_labels_doc = load("data/cag/citizen_labels.json")
+    sector_doc = load("data/sector.json")
 
     by_id = {r["id"]: r for r in reports_doc["entries"]}
     subjects = [r for r in reports_doc["entries"] if r.get("subject")]
@@ -565,14 +1121,19 @@ def run():
         entries.setdefault(e["name"], e)
     names = sorted(entries)
 
-    verdicts = {}
+    verdicts, scores = {}, {}
     for line in classification["all_lines"]:
         verdicts[line["name"]] = line["verdict"]
+        scores[line["name"]] = line["score"]
 
     # myScheme's own level and state for each entry, read from the archived record. A
     # record myScheme tags State is that state's listing, and the rule needs to know
     # whose.
+    # myScheme's own beneficiary tags and sector for the rows it lists, from the same
+    # archived record. The citizen test reads the tags; see CITIZEN_PERSON_BENEFICIARIES
+    # for the one place they are corrected.
     level_state = {}
+    ms_extra = {}
     for name, e in entries.items():
         ms = e["sources"].get("myscheme")
         if not ms:
@@ -585,6 +1146,16 @@ def run():
                 body = fh.read()
             m = re.search(r'"state"\s*:\s*\{[^}]*?"label"\s*:\s*"([^"]+)"', body)
             state = m.group(1) if m else None
+            rec = json.loads(body)
+            basic = (rec.get("en") or {}).get("basicDetails") or {}
+            bens = [(t.get("label") if isinstance(t, dict) else t)
+                    for t in (basic.get("targetBeneficiaries") or [])]
+            cat = ((rec.get("_list") or {}).get("schemeCategory")
+                   or [None])[0] if isinstance((rec.get("_list") or {}).get(
+                       "schemeCategory"), list) else (rec.get("_list") or {}).get(
+                           "schemeCategory")
+            ms_extra[name] = {"beneficiaries": sorted(b for b in bens if b),
+                              "category": cat}
         level_state[name] = (ms.get("level"), state)
 
     def verdict_of(name):
@@ -679,6 +1250,198 @@ def run():
     bad_schemes = {e["registry_name"] for e in KNOWN_ERRORS}
     absent_clean = [a for a in absent if a["scheme"] not in bad_schemes]
 
+    # ---- the citizen test -------------------------------------------------
+    sectors = sector_doc["sectors"]
+
+    def sector_of(name):
+        x = ms_extra.get(name) or {}
+        if x.get("category"):
+            return x["category"]
+        s = sectors.get("registry|" + name)
+        return s.get("sector") if s else None
+
+    def citizen_of(name):
+        return citizen_features(name, entries[name], sector_of(name),
+                                (ms_extra.get(name) or {}).get("beneficiaries"))
+
+    # The audited set is read live rather than from the `audited` flag frozen into the
+    # labels file, because the join above moves whenever parse/match.py or the register
+    # moves and the flag would then be measuring yesterday's census.
+    audited_names = {a["scheme"] for a in audited_out}
+    # Outcome Budget indicator text, read only to reject a signal. The cycle names the
+    # file: registry.json's "2026-27" is data/outcome/2026.json.
+    outcome_by_name = {}
+    op = os.path.join(ROOT, "data", "outcome",
+                      str(registry["cycle"]).split("-")[0] + ".json")
+    if os.path.exists(op):
+        with open(op, encoding="utf-8") as fh:
+            outcome_by_name = {s["name"]: s for s in json.load(fh)["schemes"]}
+
+    def outcome_counts_people(name):
+        o = entries[name]["sources"].get("outcome")
+        if not o:
+            return False
+        od = outcome_by_name.get(o.get("name"))
+        if not od:
+            return False
+        return any(CITIZEN_PERSON_UNIT.search(i.get("indicator") or "")
+                   for k in ("outputs", "outcomes") for i in od.get(k, []))
+
+    cz_rows, cz_stale = [], []
+    for lab in citizen_labels_doc["labels"]:
+        n = lab["name"]
+        if n not in entries:
+            cz_stale.append(n)
+            continue
+        f = citizen_of(n)
+        b = entries[n]["sources"].get("budget") or {}
+        cz_rows.append({"name": n, "label": lab["label"],
+                        "borderline": lab["borderline"],
+                        "audited": n in audited_names,
+                        "features": f, "score": citizen_score(f),
+                        "rule_says": citizen_verdict(f),
+                        "rejected_features": {
+                            "an_application_exists": lab.get("a_citizen_applies"),
+                            "statement_4a": b.get("statement") == "stat4a",
+                            "an_outcome_target_counted_in_people":
+                                outcome_counts_people(n),
+                            "a_large_budget_line": (b.get("be_cr") or 0) >= 1000,
+                            "the_classifier_score_is_4_or_more":
+                                (scores.get(b.get("name") or n)
+                                 if scores.get(b.get("name") or n) is not None
+                                 else -99) >= 4,
+                            "myscheme_lists_it": "myscheme" in entries[n]["sources"],
+                            "a_body_word_anywhere_in_the_name":
+                                bool(CITIZEN_BODY_ANYWHERE.search(n)),
+                        }})
+    cz_stale.sort()
+    cz_unlabelled = sorted(audited_names - {r["name"] for r in cz_rows})
+
+    def cz_measure(label, test):
+        a = [r for r in cz_rows if test(r["features"])]
+        b = [r for r in cz_rows if not test(r["features"])]
+        pa = sum(1 for r in a if r["label"] == "citizen_scheme") / len(a) if a else 0.0
+        pb = sum(1 for r in b if r["label"] == "citizen_scheme") / len(b) if b else 0.0
+        return {"signal": label, "n_with": len(a), "n_without": len(b),
+                "p_citizen_with": round(pa, 3), "p_citizen_without": round(pb, 3),
+                "lift": round(pa - pb, 3)}
+
+    cz_signals = [
+        cz_measure("myScheme's own record tags a person or household beneficiary",
+                   lambda f: f["myscheme_tags_a_person"]),
+        cz_measure("myScheme's own record tags only an institutional beneficiary",
+                   lambda f: f["myscheme_tags_only_an_institution"]),
+        cz_measure("DBT Bharat lists it", lambda f: f["listed_by_dbt_bharat"]),
+        cz_measure("a person or household named in the name",
+                   lambda f: f["a_person_or_household_in_the_name"]),
+        cz_measure("a benefit phrase in the name",
+                   lambda f: f["a_benefit_phrase_in_the_name"]),
+        cz_measure("an asset or works word in the name",
+                   lambda f: f["an_asset_or_works_word_in_the_name"]),
+        cz_measure("a research or capacity word in the name",
+                   lambda f: f["a_research_or_capacity_word_in_the_name"]),
+        cz_measure("the sector is Business, Science and IT, Transport or Banking",
+                   lambda f: f["a_firm_or_asset_sector"]),
+        cz_measure("the name says the money goes to a body",
+                   lambda f: f["the_name_says_the_money_goes_to_a_body"]),
+        cz_measure("an employer obligation",
+                   lambda f: f["an_employer_obligation"]),
+    ]
+
+    # The rejected signals, measured rather than typed, so a rejection cannot go stale.
+    # A signal that fires on only some rows is measured only on those rows: the
+    # application test is hand read and covers the schemes the join listed as audited
+    # when the labels were made, and nothing else.
+    cz_rejected = []
+    for spec in CITIZEN_REJECTED:
+        k = spec["key"]
+        sub = [r for r in cz_rows if r["rejected_features"][k] is not None]
+        a = [r for r in sub if r["rejected_features"][k]]
+        b = [r for r in sub if not r["rejected_features"][k]]
+        pa = sum(1 for r in a if r["label"] == "citizen_scheme") / len(a) if a else 0.0
+        pb = sum(1 for r in b if r["label"] == "citizen_scheme") / len(b) if b else 0.0
+        out = {"signal": spec["signal"],
+               "n_with": len(a), "n_without": len(b),
+               "p_citizen_with": round(pa, 3), "p_citizen_without": round(pb, 3),
+               "lift": round(pa - pb, 3),
+               "why_not": spec["why_not"]}
+        if spec.get("measured_over"):
+            out["measured_over"] = spec["measured_over"]
+        cz_rejected.append(out)
+
+    def cz_at(thr):
+        def says(r):
+            f = r["features"]
+            if f["an_employer_obligation"] or f["the_name_says_the_money_goes_to_a_body"]:
+                return False
+            return r["score"] >= thr
+        tp = sum(1 for r in cz_rows if says(r) and r["label"] == "citizen_scheme")
+        fp = sum(1 for r in cz_rows if says(r) and r["label"] == "budget_line")
+        fn = sum(1 for r in cz_rows if not says(r) and r["label"] == "citizen_scheme")
+        tn = len(cz_rows) - tp - fp - fn
+        prec = tp / (tp + fp) if tp + fp else None
+        rec = tp / (tp + fn) if tp + fn else None
+        return {"threshold": thr, "called_citizen_schemes": tp + fp,
+                "true_positive": tp, "false_positive": fp,
+                "false_negative": fn, "true_negative": tn,
+                "accuracy": round((tp + tn) / len(cz_rows), 4) if cz_rows else None,
+                "precision": round(prec, 4) if prec is not None else None,
+                "recall": round(rec, 4) if rec is not None else None}
+
+    cz_sweep = [cz_at(t) for t in range(-1, 7)]
+    cz_val = cz_at(CITIZEN_THRESHOLD)
+    cz_audited = [r for r in cz_rows if r["audited"]]
+    cz_val["on_the_audited_census"] = {
+        "n": len(cz_audited),
+        "rule_agrees_with_the_hand_label": sum(
+            1 for r in cz_audited
+            if r["rule_says"] == (r["label"] == "citizen_scheme")),
+        "audited_schemes_with_no_hand_label": cz_unlabelled,
+        "note": ("the audited schemes are a census of what this file publishes and every "
+                 "one of them is hand labelled, so the published split below is the hand "
+                 "labels themselves and the rule's job here is to show that a mechanical "
+                 "test reconstructs them from published evidence. Where the two "
+                 "disagree the hand label is published and the disagreement is named on "
+                 "the row, which is how KNOWN_ERRORS is already treated by "
+                 "absent_from_myscheme_after_known_errors."),
+    }
+    cz_val["disagreements"] = sorted(
+        [{"name": r["name"], "rule_says":
+          "citizen_scheme" if r["rule_says"] else "budget_line",
+          "hand_label": r["label"], "score": r["score"],
+          "borderline": r["borderline"], "audited": r["audited"]}
+         for r in cz_rows if r["rule_says"] != (r["label"] == "citizen_scheme")],
+        key=lambda x: x["name"])
+
+    hand = {lab["name"]: lab for lab in citizen_labels_doc["labels"]}
+    for a in audited_out:
+        f = citizen_of(a["scheme"])
+        h = hand.get(a["scheme"])
+        by_rule = citizen_verdict(f)
+        a["reaches_individuals"] = (h["label"] == "citizen_scheme") if h else by_rule
+        a["decided_by"] = ("the hand label in data/cag/citizen_labels.json" if h
+                           else "the rule, because no hand label covers this row")
+        a["by_the_rule"] = by_rule
+        a["hand_label"] = h["label"] if h else None
+        a["citizen_score"] = citizen_score(f)
+        a["citizen_evidence"] = citizen_evidence(f)
+
+    reaching, not_reaching = [], []
+    for a in absent_clean:
+        h = hand.get(a["scheme"]) or {}
+        row = {"scheme": a["scheme"], "score": a["citizen_score"],
+               "evidence": a["citizen_evidence"],
+               "decided_by": a["decided_by"],
+               "hand_label": a["hand_label"],
+               "hand_reason": h.get("reason"),
+               "borderline": h.get("borderline"),
+               "the_rule_disagrees": a["hand_label"] is not None
+                                     and a["by_the_rule"] != a["reaches_individuals"],
+               "audits": len(a["audits"])}
+        (reaching if a["reaches_individuals"] else not_reaching).append(row)
+    reaching.sort(key=lambda x: x["scheme"])
+    not_reaching.sort(key=lambda x: x["scheme"])
+
     misses = recall_check(subjects, names)
 
     return {
@@ -705,22 +1468,35 @@ def run():
                 "labelled": len(labelled_rows),
                 "sound": sound,
                 "precision": round(sound / len(labelled_rows), 4) if labelled_rows else None,
-                "note": ("12.6 per cent. Not a publishable number and not a matcher "
-                         "failure: probably_same is generous by design because it "
-                         "decides absence claims, and an audit title is a sentence "
-                         "about government rather than the name of a programme."),
+                "note": ("not a publishable number and not a matcher failure: "
+                         "probably_same is generous by design because it decides "
+                         "absence claims, and an audit title is a sentence about "
+                         "government rather than the name of a programme. It was 0.126 "
+                         "when this file was written and rises as parse/match.py's "
+                         "defects are closed, because the joins that go are the wrong "
+                         "ones."),
             },
             "ground_truth": {
                 "file": "data/cag/join_labels.json",
                 "labelled": labels_doc["labelled"],
                 "sound": labels_doc["sound"],
                 "wrong": labels_doc["wrong"],
-                "census_note": ("every join is hand labelled, so precision below is "
-                                "counted and not estimated. Recall is counted too, "
-                                "against the same census; what cannot be counted is "
-                                "recall against schemes the matcher never joined at "
-                                "all, which is measured separately in "
-                                "matcher_recall_check."),
+                "census_holds": not unlabelled,
+                "census_note": ("the labels are a census of the joins ONLY while "
+                                "unlabelled_joins is empty, and precision below is a "
+                                "count rather than an estimate only then. Recall is "
+                                "counted against the same census; what cannot be "
+                                "counted is recall against schemes the matcher never "
+                                "joined at all, which is measured separately in "
+                                "matcher_recall_check."
+                                + ("" if not unlabelled else
+                                   " IT DOES NOT HOLD ON THIS SNAPSHOT: parse/match.py "
+                                   "has been changed since these labels were made, so "
+                                   + str(len(unlabelled)) + " joins carry no label and "
+                                   + str(len(stale)) + " labels no longer correspond to "
+                                   "a join. The numbers below are measured on the "
+                                   "labels that still apply and the census claim is not "
+                                   "true again until the new joins are labelled.")),
                 "rule": labels_doc["rule"],
                 "unlabelled_joins": sorted((r["cag_id"], r["registry_name"])
                                            for r in unlabelled),
@@ -738,11 +1514,13 @@ def run():
                 "recall": round(tp / sound, 4) if sound else None,
                 "distinct_reports": len({r["cag_id"] for r in kept}),
                 "distinct_schemes": len({r["registry_name"] for r in kept}),
-                "note": ("precision is a count over a census of all "
-                         + str(len(labelled_rows)) + " joins, not an estimate from a "
-                         "sample. The two joins it gets wrong are named in "
-                         "known_errors and the sound joins it drops are named in "
-                         "recall_lost."),
+                "unlabelled_among_the_kept": sorted(
+                    (r["cag_id"], r["registry_name"]) for r in kept if not r["label"]),
+                "note": ("precision is counted over the " + str(len(labelled_rows))
+                         + " labelled joins rather than estimated from a sample. The "
+                           "joins it gets wrong are named in known_errors and the sound "
+                           "joins it drops are named in recall_lost. Any kept join with "
+                           "no hand label is listed above and is counted in neither."),
             },
             "known_errors": KNOWN_ERRORS,
             "recall_lost": sorted(
@@ -769,6 +1547,59 @@ def run():
             "absent_from_myscheme": [a["scheme"] for a in absent],
             "audited_schemes_absent_from_myscheme_after_known_errors": len(absent_clean),
             "absent_from_myscheme_after_known_errors": [a["scheme"] for a in absent_clean],
+            "citizen_test": {
+                "question": ("Of the things a government funds, which reach an "
+                             "identified person or household, so that a portal built "
+                             "for citizens to look schemes up would have a page for "
+                             "them? This decides whether 'absent from myScheme' is a "
+                             "criticism of the portal or a fact about the spending, and "
+                             "it is why the absent list below is two lists."),
+                "why_it_is_here": ("publishing Samagra Shiksha, a Rs 42,100 crore school "
+                                   "education programme, under the same heading as the "
+                                   "Duty Drawback Scheme, which refunds customs duty to "
+                                   "the exporter who paid it, would overstate the second "
+                                   "and weaken the first by sitting next to it."),
+                "what_a_budget_line_label_does_not_say": ("nothing against the spending. "
+                                                          "Roads, courts, research and "
+                                                          "rolling stock are what a "
+                                                          "state is for. The label says "
+                                                          "only that a citizen scheme "
+                                                          "portal is not where you would "
+                                                          "look for them."),
+                "ground_truth": {
+                    "file": "data/cag/citizen_labels.json",
+                    "labelled": citizen_labels_doc["labelled"],
+                    "citizen_scheme": citizen_labels_doc["citizen_scheme"],
+                    "budget_line": citizen_labels_doc["budget_line"],
+                    "base_rate": citizen_labels_doc["base_rate"],
+                    "borderline": citizen_labels_doc["borderline"],
+                    "population": citizen_labels_doc["population"],
+                    "rule": citizen_labels_doc["rule"],
+                    "labels_with_no_register_row": cz_stale,
+                },
+                "signals": cz_signals,
+                "signals_rejected": cz_rejected,
+                "rule": CITIZEN_RULE,
+                "weights": CITIZEN_WEIGHTS,
+                "threshold": CITIZEN_THRESHOLD,
+                "threshold_sweep": cz_sweep,
+                "validation": cz_val,
+                "known_errors": CITIZEN_KNOWN_ERRORS,
+                "contested": CITIZEN_CONTESTED,
+            },
+            "absent_from_myscheme_reaching_individuals": reaching,
+            "absent_from_myscheme_not_reaching_individuals": not_reaching,
+            "absent_split_note": ("the same 20 audits and the same absence claim, "
+                                  "divided by who the money reaches. The first list is "
+                                  "the one that says something about myScheme: a "
+                                  "programme that pays identified people, audited by the "
+                                  "CAG, and not on the portal built for citizens to find "
+                                  "schemes. The second is not a lighter version of the "
+                                  "first, it is a different statement: these are audited "
+                                  "and funded, and a citizen portal is not where they "
+                                  "belong. Every row carries its arithmetic, and the "
+                                  "cases where a reader could reasonably disagree are in "
+                                  "citizen_test.contested with the argument both ways."),
             "absence_note": ("absence is what data/registry.json's own clustering says: "
                              "the entry reached the register from the union budget, "
                              "DBT Bharat or the outcome statements and no myScheme "
@@ -885,8 +1716,26 @@ def main():
     print(f"  {v['distinct_schemes']} schemes audited across {v['distinct_reports']} reports")
     print(f"  of those, {doc['audited_schemes_absent_from_myscheme_after_known_errors']}"
           f" are absent from myScheme once the known errors are removed:")
-    for n in doc["absent_from_myscheme_after_known_errors"]:
-        print(f"     {n}")
+    ct = doc["citizen_test"]
+    print("   reaching an identified person or household:")
+    for a in doc["absent_from_myscheme_reaching_individuals"]:
+        print(f"     {'*' if a['borderline'] else ' '} {a['scheme'][:74]}")
+    print("   not reaching one:")
+    for a in doc["absent_from_myscheme_not_reaching_individuals"]:
+        print(f"     {'*' if a['borderline'] else ' '} {a['scheme'][:74]}")
+    print("   (* marks a call the labels mark borderline, with the argument the other way)")
+    cv = ct["validation"]
+    print(f"  citizen test: {ct['ground_truth']['labelled']} hand labels, base rate "
+          f"{ct['ground_truth']['base_rate']:.1%}  -> accuracy {cv['accuracy']:.1%}, "
+          f"precision {cv['precision']:.1%}, recall {cv['recall']:.1%}")
+    print(f"   on the audited census it agrees with the hand label "
+          f"{cv['on_the_audited_census']['rule_agrees_with_the_hand_label']} times "
+          f"of {cv['on_the_audited_census']['n']}; "
+          f"{len(ct['known_errors'])} errors survive, {len(ct['contested'])} calls contested")
+    if cv["on_the_audited_census"]["audited_schemes_with_no_hand_label"]:
+        print(f"   AUDITED SCHEMES WITH NO CITIZEN LABEL: "
+              f"{len(cv['on_the_audited_census']['audited_schemes_with_no_hand_label'])}. "
+              f"data/cag/citizen_labels.json is stale against this snapshot.")
     print(f"  matcher misses a plural alone explains: "
           f"{doc['matcher_recall_check']['n']} pairs")
     if doc["ground_truth"]["unlabelled_joins"]:
