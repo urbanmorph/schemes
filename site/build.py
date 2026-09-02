@@ -1147,6 +1147,7 @@ def index_section(entries):
   {state_select}
   {org_select}
   <span class="count" id="count">{n:,} schemes</span>
+  <a class="dl" href="schemes.csv" download>Download all {n:,} as CSV</a>
 </div>
 <div class="pills">
   {level_pills}
@@ -1653,8 +1654,9 @@ def page_scheme(s, status, enrich=None, entry=None):
         block("Who is excluded", s.get("exclusions_md")),
     ])
     if about:
-        about = ('<div class="sec-note" style="margin-top:34px">myScheme&rsquo;s own '
-                 'wording. Where it is thin, that is the finding.</div>' + about)
+        about = ('<div class="sec-note" style="margin-top:26px">myScheme&rsquo;s own '
+                 'wording, reproduced in full. Where it is thin, that is the finding, and '
+                 'the completeness checks are below.</div>' + about)
 
     # Found elsewhere. Deliberately separate from the checks above and never counted in
     # them: this is what a *different* government document says, not what this portal
@@ -1724,6 +1726,21 @@ def page_scheme(s, status, enrich=None, entry=None):
   <div class="chips">{chips}</div>
 </div>
 
+{about}
+{found_block}
+
+<!--
+  The audit sits BELOW the substance, which is a reversal.
+
+  This page used to open with nine documentation checks and put "an amount of Rs 6,000 per
+  year in three instalments" thirty lines further down. That order suited one reader, the
+  one auditing the portal, and it is not the only reader. A citizen wants to know what a
+  scheme offers, and someone at a non-profit or a think tank wants a reckoner across the
+  schemes they do not already work on. Both of those want the benefit, the eligibility and
+  the exclusions first. The completeness score is information about the RECORD, and a
+  reader who wants it will scroll; a reader who wants to know what the scheme gives them
+  should not have to.
+-->
 <div class="meter">
   <div class="meter-top">
     <div>
@@ -1738,9 +1755,6 @@ def page_scheme(s, status, enrich=None, entry=None):
   <div class="checks">{checks}</div>
 </div>
 {bad}
-
-{about}
-{found_block}
 
 <div class="report">
   <b>Something missing or wrong on this page?</b>
@@ -1790,6 +1804,38 @@ def build():
     registry = load("data/registry.json", {})
     classification = load("data/classification.json", {})
     entries = unify(checks, registry, classification)
+
+    # A downloadable table, because half the audience does not want pages at all.
+    #
+    # Someone at a non-profit or a think tank wants a reckoner across the schemes they do
+    # not already work on: what exists, who it is for, what it gives, what it costs, and
+    # which government source says so. That is a spreadsheet, not 5,451 HTML pages, and
+    # until now the site offered no way to get one. The derived data is CC BY 4.0 and this
+    # is the form most of its readers can actually open.
+    #
+    # One row per scheme in the union registry, not per myScheme record, so the schemes no
+    # citizen-facing portal lists are in the file too. Those are the rows a reckoner cannot
+    # get anywhere else.
+    import csv as _csv
+    with open(os.path.join(OUT, "schemes.csv"), "w", encoding="utf-8", newline="") as fh:
+        wr = _csv.writer(fh)
+        wr.writerow(["name", "slug", "level", "state", "ministry_or_department",
+                     "audience", "beneficiaries", "budget_2026_27_cr", "sources",
+                     "on_myscheme", "documentation_checks_passed",
+                     "documentation_checks_total", "url"])
+        for en in sorted(entries, key=lambda x: (x["name"] or "").lower()):
+            ck = en.get("checks") or {}
+            wr.writerow([
+                en.get("name"), en.get("slug"), en.get("level") or "",
+                where_full(en), en.get("org") or "", en.get("audience") or "",
+                "; ".join(en.get("beneficiaries") or []),
+                en.get("be_cr") if en.get("be_cr") is not None else "",
+                " ".join(en.get("sources") or []),
+                "yes" if en.get("on_myscheme") else "no",
+                ck.get("passed", ""), ck.get("total", ""),
+                SITE_BASE + "/scheme/" + str(en["slug"]) + ".html",
+            ])
+
     w("index.html", shell(
         "The census and the argument", "/", page_index(census, checks, dbt, entries),
         desc=(f"{len(entries):,} Indian government schemes across four official sources, "

@@ -8,6 +8,12 @@ official sources, recording what each source publishes and what it leaves out.
 **5,451 schemes** across myScheme, the Union Budget, the Outcome Budget and DBT Bharat.
 **680 of them appear on no citizen-facing portal at all.**
 
+It is meant to be read two ways. As a **reckoner**: what schemes exist, who they are for,
+what they give, what they cost, and which government source says so, including the ones no
+citizen-facing portal lists. And as an **audit**: what each source publishes about them and
+what it leaves out. Every scheme page leads with the first and carries the second below it,
+and the whole register downloads as one CSV.
+
 Everything here is about *the data about* schemes, never about whether a scheme works.
 "No end date published" is a fact about a database field. It is not a judgment on the
 scheme, and every flag is worded so that distinction survives being screenshotted
