@@ -387,7 +387,7 @@ def page_index(census, checks, dbt, entries):
 """
 
 
-def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None):
+def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=None):
     """Two questions, kept apart: how many schemes a state has, and which are unlisted.
 
     The per-state table and the unlisted-schemes table were both built into a local named
@@ -494,6 +494,67 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None):
     it: 580 of the {num((ka.get('classified_scheme') or 0) + (ka.get('classified_not_scheme') or 0))}
     rows carry no purpose line, and a real scheme with a plain name and no stated purpose
     cannot clear a high bar on the evidence the books print.</p>
+  </div>
+</section>"""
+
+    # Andhra Pradesh. Written parallel to the Karnataka block above rather than sharing a
+    # helper with it, because the two states publish different evidence: Karnataka prints a
+    # purpose line and Andhra Pradesh prints a head of account and a department. When a
+    # third state lands, the chrome is worth factoring out and the row builders are not.
+    ap_section = ""
+    if ap and ap.get("absent_distinct"):
+        v2 = ap.get("validation", {})
+        cen2 = v2.get("at_publish_threshold_census", {})
+        rows_ap = "".join(
+            f'<tr><td>{e(r["name"])}'
+            + (f'<div class="sub2">funded by {num(len(r["departments"]))} departments: '
+               f'{e(", ".join(d.replace(" Department", "") for d in r["departments"]))}</div>'
+               if len(r["departments"]) > 1 else "")
+            + f'</td><td class="num">{inr(round((r["be_lakh"] or 0) / 100))}</td>'
+            f'<td class="num">{r["score"]}</td>'
+            f'<td class="muted" style="font-size:12px">{e("; ".join(w for _, w in r.get("evidence", [])[:2]))}</td></tr>'
+            for r in ap["absent_distinct"])
+        tot_ap = sum(r["be_lakh"] or 0 for r in ap["absent_distinct"]) / 100
+        # Read from the data, never typed in. A hardcoded 69 on this page had already
+        # drifted once while the number behind it moved.
+        top_ap = max(ap["absent_distinct"], key=lambda r: r["be_lakh"] or 0)
+        miss_ap = max((x for x in (ap.get("all_entries") or [])
+                       if x.get("verdict") != "scheme"),
+                      key=lambda x: x.get("be_lakh") or 0, default=None)
+        ap_section = f"""
+<section class="sec">
+  <h2>Andhra Pradesh, where the portal and the budget describe different countries</h2>
+  <div class="sec-note">Andhra Pradesh Budget {e(str(ap.get('cycle') or ''))}, six
+    scheme-wise books &middot; {num(len(ap['absent_distinct']))} schemes,
+    {inr(round(tot_ap))} crore</div>
+  <p class="standfirst">myScheme lists {num(ap.get('myscheme_andhra_records'))} schemes for
+  Andhra Pradesh: corporation and welfare-board items, tricycles, spectacles, pensions. The
+  state&rsquo;s own budget names its largest programmes, and not one of them reaches the
+  portal. {e(top_ap["name"])} alone is {inr(round((top_ap["be_lakh"] or 0) / 100))}
+  crore.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>In Andhra Pradesh&rsquo;s budget, absent from myScheme</th>
+      <th class="num">2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
+      <th>Why it scores as a scheme</th></tr></thead>
+    <tbody>{rows_ap}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>One row per scheme, not per departmental share, and a floor again</b>
+    Andhra Pradesh funds a scheme separately out of each social-category department, so NTR
+    Bharosa Pension is six budget lines. They are added rather than listed six times,
+    because the departments are distinct and the shares are of one provision. That is the
+    opposite of the rule used across the six books, where the publications report
+    overlapping slices and the largest is taken.
+    <p style="margin:8px 0 0">Precision at the published bar is
+    {cen2.get('precision', 0):.1%}, counted over {num(cen2.get('published'))} hand-labelled
+    rows rather than estimated, with {num(cen2.get('not_schemes'))} errors named in the
+    data. Recall is {v2.get('at_publish_threshold', {}).get('recall', 0):.0%}, lower than it
+    should be for a reason that belongs to the state: no Andhra Pradesh book prints a
+    purpose line, and 150 rows print no head of account either, so the classifier reads a
+    name and nothing else. The largest thing this classifier rejects is
+    {e((miss_ap or {}).get("name", ""))} at
+    {inr(round(((miss_ap or {}).get("be_lakh") or 0) / 100))} crore, on a score of
+    {(miss_ap or {}).get("score", 0)}.</p>
   </div>
 </section>"""
 
@@ -618,6 +679,7 @@ and be done.</p>
 </section>
 
 {ka_section}
+{ap_section}
 {unlisted_section}
 """
 
@@ -1628,7 +1690,8 @@ def build():
         "Divergence", "/divergence",
         page_divergence(census, dbt, load("data/registry.json", {}),
                         load("data/classification.json", {}), entries=entries,
-                        ka=load("data/karnataka/classification.json", {})),
+                        ka=load("data/karnataka/classification.json", {}),
+                        ap=load("data/andhra/classification.json", {})),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side.")))
     w("changes.html", shell(

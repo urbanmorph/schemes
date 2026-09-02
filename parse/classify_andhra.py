@@ -731,6 +731,38 @@ def run(threshold=PUBLISH_THRESHOLD):
     absent = sorted((x for x in schemes if not x["in_myscheme_andhra"]),
                     key=lambda x: (-(x["be_lakh"] or 0), x["key"]))
 
+    # One row per SCHEME, not per departmental share of one. Andhra Pradesh funds a scheme
+    # separately out of each social-category department, so NTR Bharosa Pension appears six
+    # times, once for Backward Classes, once for Scheduled Castes and so on. Publishing the
+    # rows would print that scheme six times down a page and read as six findings.
+    #
+    # The departments are distinct within every name here, checked rather than assumed, so
+    # the shares add: NTR Bharosa is Rs 27,719 cr across six departments and not the
+    # Rs 11,913 cr of its largest one. This is the opposite of the rule for BOOKS, where the
+    # six publications report overlapping slices of the same provision and the largest is
+    # taken, and the two rules are different because the underlying facts are.
+    #
+    # The score is the best any share achieved, because the evidence for a scheme being a
+    # scheme does not weaken by being funded twice.
+    by_name = {}
+    for x in absent:
+        e = by_name.get(x["name"])
+        if e is None:
+            e = by_name[x["name"]] = {"name": x["name"], "departments": [],
+                                      "be_lakh": 0.0, "score": x["score"],
+                                      "evidence": x["evidence"], "books": set()}
+        if x.get("department") and x["department"] not in e["departments"]:
+            e["departments"].append(x["department"])
+        e["be_lakh"] += x["be_lakh"] or 0.0
+        if x["score"] > e["score"]:
+            e["score"], e["evidence"] = x["score"], x["evidence"]
+        e["books"] |= set(x.get("books") or ())
+    distinct = sorted(by_name.values(), key=lambda r: (-(r["be_lakh"] or 0), r["name"]))
+    for r in distinct:
+        r["departments"] = sorted(r["departments"])
+        r["books"] = sorted(r["books"])
+        r["be_lakh"] = round(r["be_lakh"], 2)
+
     out = {
         "built": utcnow(),
         "snapshot": ap.get("snapshot"),
@@ -852,6 +884,7 @@ def run(threshold=PUBLISH_THRESHOLD):
                         "be_lakh is itself a floor, the largest single-book slice of the "
                         "provision, so absent_cr understates too."),
         "absent_schemes": absent,
+        "absent_distinct": distinct,
         "all_entries": rows,
     }
     write_json("data/andhra/classification.json", out)
