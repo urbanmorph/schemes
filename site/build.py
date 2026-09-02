@@ -1270,7 +1270,10 @@ def index_section(entries):
     r0 = {
         "shown": f"{len(entries):,}",
         "noms": f"{len(entries) - r0_src['myscheme']:,}",
-        "med": f"{r0_med} of 9" if r0_med is not None else "...",
+        # Expressed the same way as the table's Score column beside it. A rail reading
+        # "6 of 9" next to a column reading 67 makes a reader work out that they are the
+        # same measure.
+        "med": f"{round(r0_med * 100 / 9)}" if r0_med is not None else "...",
         "money": f"&#8377;{inr(r0_money)} cr" if r0_money else "...",
         "sms": f"{r0_src['myscheme']:,}", "sbu": f"{r0_src['budget']:,}",
         "sdb": f"{r0_src['dbt']:,}", "soc": f"{r0_src['outcome']:,}",
@@ -1297,7 +1300,11 @@ def index_section(entries):
         # Which checks failed lives on the scheme page, where each one has room to say
         # why. Three abbreviated codes in a narrow cell told a reader less than the count
         # already does, and cost the scheme name a seventh of the table.
-        score = (f'<b>{c["passed"]}</b>/{c["total"]}' if c
+        # A score out of 100, not "6/9". Two numbers in a narrow cell make a reader do
+        # arithmetic on every row to compare two schemes, and the denominator is the same
+        # nine checks for every record that has one, so it carries no information per row.
+        # It is stated once in the column header and in full on the scheme page.
+        score = (f'<b>{round(c["passed"] * 100 / c["total"])}</b>' if c and c.get("total")
                  else '<span class="nil">...</span>')
         # Allocation, blank where none is joined. Showing the gap is the point: a reader
         # who knows a figure exists can then tell us where it is.
@@ -1307,6 +1314,10 @@ def index_section(entries):
         where_cell = (f'<td>{e(w_head)}'
                       + (f'<span class="sub2">{e(w_sub)}</span>' if w_sub else "")
                       + '</td>')
+        # Sorts on the raw pass count, which orders identically to the displayed score
+        # because the denominator is nine for all 4,771 records that have one, verified
+        # rather than assumed. If a check is ever added or removed for some records only,
+        # this must become the percentage or the column will sort against what it shows.
         rows += (f'<tr{xattr} data-p="{(c or {}).get("passed", -1)}" '
                  f'data-o="{e((e_.get("org") or "").lower())}" '
                  f'data-l="{e(e_.get("level_value") or "")}" '
@@ -1359,7 +1370,8 @@ def index_section(entries):
   <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Sector</th><th>Where it applies</th>
     <th>Ministry / department</th>
     <th class="num sortable" data-k="b">Allocation</th>
-    <th class="num sortable" data-k="p">Passed</th></tr></thead>
+    <th class="num sortable" data-k="p" title="Percentage of the nine documentation checks
+      this record passes">Score</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
 </div>
@@ -1367,7 +1379,7 @@ def index_section(entries):
   <div class="railhd">This selection</div>
   <div class="railbig"><span id="rShown">{n:,}</span><span class="railof">of {n:,}</span></div>
   <div class="railrow"><span><span class="lg">Not on myScheme</span><span class="sm">off-portal</span></span><b id="rNoMs">{r0["noms"]}</b></div>
-  <div class="railrow"><span><span class="lg">Median checks passed</span><span class="sm">median</span></span><b id="rMed">{r0["med"]}</b></div>
+  <div class="railrow"><span><span class="lg">Median score</span><span class="sm">median</span></span><b id="rMed">{r0["med"]}</b></div>
   <div class="railrow"><span><span class="lg">Allocation known</span><span class="sm">allocated</span></span><b id="rMoney">{r0["money"]}</b></div>
   <div class="railgroup">
     <div class="railhd" style="margin-top:16px">Listed by</div>
@@ -1465,7 +1477,7 @@ def index_section(entries):
     function set(id,v){{ document.getElementById(id).textContent=v; }}
     set('rShown',shown.toLocaleString());
     set('rNoMs',(shown-src.myscheme).toLocaleString());
-    set('rMed', med===null ? '...' : med+' of 9');
+    set('rMed', med===null ? '...' : Math.round(med*100/9));
     set('rMoney', money ? '₹'+Math.round(money).toLocaleString('en-IN')+' cr' : '—');
     set('rSms',src.myscheme.toLocaleString()); set('rSbu',src.budget.toLocaleString());
     set('rSdb',src.dbt.toLocaleString()); set('rSoc',src.outcome.toLocaleString());

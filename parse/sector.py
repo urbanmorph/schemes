@@ -233,9 +233,17 @@ from common import ROOT, read_json, utcnow, write_json  # noqa: E402
 # The listing bars are site/build.py's, mirrored rather than imported so that parse/ does
 # not depend on site/. They decide which state rows the register shows at all, and the
 # accuracy below is quoted on that population because that is what a reader filters.
-LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5}
+# Must match site/build.py's own LISTING_BAR and STATE_OF. Three states were added there
+# and not here, which left 1,974 of 8,748 site rows unfilterable by the register's primary
+# filter: the classifier had simply never been shown them. Duplicated rather than imported
+# because parse/ does not import from site/, and a mismatch is now a visible regression in
+# the not-stated count rather than a silent one.
+LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
+               "maharashtra": 2, "odisha": 4, "westbengal": 3}
 STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
-            "kerala": "Kerala", "tamilnadu": "Tamil Nadu"}
+            "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
+            "maharashtra": "Maharashtra", "odisha": "Odisha",
+            "westbengal": "West Bengal"}
 
 # Scoring. A benefit phrase in the name is worth more than everything else put together,
 # because it measured 0.865 alone against 0.659 for the department and 0.652 for the head.
