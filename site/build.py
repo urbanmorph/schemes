@@ -862,6 +862,20 @@ def where_full(entry):
     return ", ".join(named)
 
 
+def _load_match():
+    """The project's own matcher, loaded by path because parse/ is not a package."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "scheme_match", os.path.join(os.path.dirname(HERE), "parse", "match.py"))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+_M = _load_match()
+probably_same, _m_tokens = _M.probably_same, _M.tokens
+_m_skeleton, _m_acronyms = _M.skeleton, _M.acronyms
+
 SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
                 "outcome": "Outcome Budget", "dbt": "DBT Bharat",
                 "karnataka": "Karnataka Budget", "andhra": "Andhra Pradesh Budget",
@@ -942,7 +956,43 @@ STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
             "kerala": "Kerala", "tamilnadu": "Tamil Nadu"}
 
 
-def state_entries(load):
+# What a state writes when it is paying its share of a CENTRAL scheme. "(60% Swachh Bharat
+# Mission (Gramin))" and "CSS-State Share-NRLM" are not Kerala schemes and Karnataka schemes;
+# they are those states' slices of one national scheme that already has a page here. Left in,
+# they gave the register 554 duplicate pages and a reader searching Swachh Bharat four results
+# for one scheme.
+#
+# The marker is the state's own, not a guess: it prints the funding split because it has to.
+CSS_MARK = re.compile(r"\bCSS\b|central\s*share|state\s*share|\(\s*\d{2,3}\s*%|"
+                      r"\d{2,3}\s*%\s*(?:css|centrally|central|state)", re.I)
+
+
+def strip_css(name):
+    n = re.sub(r"\(?\s*\d{2,3}\s*%[^)]*\)?", " ", name or "")
+    n = re.sub(r"\bCSS\s*[-:]?\s*(?:central|state)?\s*share\s*[-:]?\s*", " ", n, flags=re.I)
+    n = re.sub(r"\bCSS\b\s*[-:]?\s*", " ", n, flags=re.I)
+    return re.sub(r"\s+", " ", n).strip(" -:()")
+
+
+def state_entries(load, known_names=()):
+    # A token index, because 554 centrally sponsored shares against 5,451 held schemes is
+    # 3 million comparisons and the same index that makes parse/registry.py finish in
+    # seconds makes this finish at all. Keyed on skeletons and acronyms as well as tokens,
+    # because an index that under-retrieves silently decides the answer.
+    known = list(known_names)
+    idx = {}
+    for i, nm in enumerate(known):
+        for k in (set(_m_tokens(nm)) | {_m_skeleton(t) for t in _m_tokens(nm)}
+                  | {a for a in _m_acronyms(nm) if len(a) >= 5}):
+            idx.setdefault(k, set()).add(i)
+
+    def already_held(name):
+        cand = set()
+        for k in (set(_m_tokens(name)) | {_m_skeleton(t) for t in _m_tokens(name)}
+                  | {a for a in _m_acronyms(name) if len(a) >= 5}):
+            cand |= idx.get(k, set())
+        return any(probably_same(name, known[i])[0] for i in sorted(cand))
+
     out = []
     for key, state in sorted(STATE_OF.items()):
         cls = load(f"data/{key}/classification.json", {}) or {}
@@ -951,6 +1001,13 @@ def state_entries(load):
         for r in sorted(cls.get("all_entries") or [], key=lambda x: str(x.get("key") or x.get("hoa") or x.get("name"))):
             if r.get("score", -99) < bar or r.get(matched_flag):
                 continue
+            # A centrally sponsored share whose parent scheme this register already holds is
+            # that scheme, and gets no second page. One whose parent is NOT held is kept,
+            # because then the state's books are the only place it appears at all.
+            if CSS_MARK.search(r["name"] or ""):
+                bare = strip_css(r["name"])
+                if not bare or already_held(bare):
+                    continue
             ident = r.get("code") or r.get("hoa") or (r.get("hoas") or [None])[0]
             out.append({
                 "name": r["name"],
@@ -961,10 +1018,13 @@ def state_entries(load):
                 "level": "State or UT",
                 "level_value": "state",
                 "org": r.get("department") or "",
-                # Kerala files a sector against each plan scheme and the others do not, so
-                # this is populated where the state itself says so and left blank rather
-                # than guessed everywhere else. A ministry is not a sector.
-                "category": (r.get("sector") or None) if key == "kerala" else None,
+                # Left blank on purpose, though Kerala files a sector of its own. Mixing
+                # Kerala's 36 values with myScheme's 13 gave the filter 49 options that do
+                # not describe one taxonomy: "Social Justice Programme" and "Social welfare
+                # & Empowerment" are different vocabularies, and a reader picking one would
+                # silently exclude the other's schemes. Kerala's own sector is on its scheme
+                # pages, labelled as the state's filing rather than a shared axis.
+                "category": None,
                 "state": [state],
                 "audience": None,
                 "beneficiaries": [],
@@ -1096,12 +1156,40 @@ def index_section(entries):
     not_ms = sum(1 for e_ in entries if not e_["on_myscheme"])
     SRC_SHORT = {"myscheme": "myScheme", "budget": "Budget", "dbt": "DBT",
                  "outcome": "Outcome"}
+    # Sector where the listed-by pills used to be. Which sources name a scheme is a question
+    # about this register; what a scheme is FOR is a question about the country, and it is
+    # the one a person browsing 6,996 schemes actually has. The long names are shortened for
+    # the pill because "Banking,Financial Services and Insurance" is a column heading, not a
+    # button.
+    SECTOR_SHORT = {
+        "Social welfare & Empowerment": "Social welfare",
+        "Education & Learning": "Education",
+        "Agriculture,Rural & Environment": "Agriculture",
+        "Business & Entrepreneurship": "Business",
+        "Banking,Financial Services and Insurance": "Banking",
+        "Skills & Employment": "Skills",
+        "Health & Wellness": "Health",
+        "Sports & Culture": "Sports",
+        "Women and Child": "Women and child",
+        "Housing & Shelter": "Housing",
+        "Travel & Tourism": "Travel",
+        "Science, IT & Communications": "Science and IT",
+        "Transport & Infrastructure": "Transport",
+        "Public Safety,Law & Justice": "Law and safety",
+        "Utility & Sanitation": "Utilities",
+    }
+    cat = {}
+    for e_ in entries:
+        c_ = e_.get("category")
+        if c_:
+            cat[c_] = cat.get(c_, 0) + 1
+    no_cat = sum(1 for e_ in entries if not e_.get("category"))
     src_pills = pill_group(
-        "src", "Listed by",
+        "cat", "Sector",
         [("", "All", None)]
-        + [(k, SOURCE_LABEL[k], SRC_SHORT[k], src_counts[k])
-           for k in ("myscheme", "budget", "dbt", "outcome") if k in src_counts]
-        + [("!myscheme", "Not on myScheme", "Not listed", not_ms)])
+        + [(k.lower(), k, SECTOR_SHORT.get(k, k), n)
+           for k, n in sorted(cat.items(), key=lambda kv: (-kv[1], kv[0]))]
+        + ([("!", "Not stated", "Not stated", no_cat)] if no_cat else []))
 
     AUD = {"person": "People and families", "institution": "Firms and institutions",
            "mixed": "Both", "unstated": "Not stated"}
@@ -1192,6 +1280,7 @@ def index_section(entries):
                  f'data-l="{e(e_.get("level_value") or "")}" '
                  f'data-st="{e(" ".join(x.lower() for x in ((e_.get("state") if isinstance(e_.get("state"), list) else [e_.get("state")]) if e_.get("state") else [])))}" '
                  f'data-a="{e(e_.get("audience") or "")}" '
+                 f'data-cat="{e((e_.get("category") or "").lower())}" '
                  f'data-s="{e(" ".join(e_["sources"]))}"'
                  + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
                  + '>'
@@ -1298,12 +1387,8 @@ def index_section(entries):
              &&(!stv||(r.dataset.st||'').indexOf(stv)>-1)
              &&(!state.lvl||r.dataset.l===state.lvl)
              &&(!state.aud||r.dataset.a===state.aud)
+             &&(!state.cat||(state.cat==='!'?!r.dataset.cat:r.dataset.cat===state.cat))
              &&docOk(r,state.doc);
-      if(ok&&state.src){{
-        var have=(r.dataset.s||'').split(' ');
-        ok = state.src.charAt(0)==='!' ? have.indexOf(state.src.slice(1))<0
-                                       : have.indexOf(state.src)>-1;
-      }}
       if(ok) for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0){{ok=false;break;}}
       r.hidden=!ok; if(ok)shown++;
     }});
@@ -1365,11 +1450,6 @@ def index_section(entries):
     if(skip!=='lvl' && state.lvl && r.dataset.l!==state.lvl) return false;
     if(skip!=='aud' && state.aud && r.dataset.a!==state.aud) return false;
     if(skip!=='doc' && !docOk(r,state.doc)) return false;
-    if(skip!=='src' && state.src){{
-      var have=(r.dataset.s||'').split(' ');
-      if(state.src.charAt(0)==='!' ? have.indexOf(state.src.slice(1))>-1
-                                   : have.indexOf(state.src)<0) return false;
-    }}
     for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0) return false;
     return true;
   }}
@@ -1377,6 +1457,10 @@ def index_section(entries):
     if(g==='lvl') return !v||r.dataset.l===v;
     if(g==='aud') return !v||r.dataset.a===v;
     if(g==='doc') return docOk(r,v);
+    if(g==='cat') return v==='!' ? !r.dataset.cat : (!v || r.dataset.cat===v);
+    // data-s survives without a filter of its own: the rail still counts how many of the
+    // current selection are on no citizen-facing portal, which was the one thing the
+    // listed-by pills were really for.
     if(!v) return true;
     var have=(r.dataset.s||'').split(' ');
     return v.charAt(0)==='!' ? have.indexOf(v.slice(1))<0 : have.indexOf(v)>-1;
@@ -1403,7 +1487,7 @@ def index_section(entries):
     if(stEl.value) tries.push(['st','state '+stEl.options[stEl.selectedIndex].text]);
     if(state.lvl) tries.push(['lvl','level']);
     if(state.aud) tries.push(['aud','who it is for']);
-    if(state.src) tries.push(['src','listed by']);
+    if(state.cat) tries.push(['cat','sector']);
     if(state.doc) tries.push(['doc','documentation']);
     if(ts.length) tries.push(['q','the search “'+q.value.trim()+'”']);
     tries.forEach(function(t){{
@@ -1941,7 +2025,7 @@ def build():
     registry = load("data/registry.json", {})
     classification = load("data/classification.json", {})
     entries = unify(checks, registry, classification)
-    entries += state_entries(load)
+    entries += state_entries(load, [x["name"] for x in entries])
     seen_slugs = set()
     for en in entries:                       # slugs must be unique or pages overwrite
         sl, i = en["slug"], 2
