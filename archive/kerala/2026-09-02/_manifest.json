@@ -1,0 +1,56 @@
+{
+ "base": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20doc%202026.htm",
+ "books": {
+  "annual-plan": {
+   "bytes": 3802743,
+   "sha256": "89216e5d5c798a52c5e468c025bc9039ebec4fdee2fdb67f536236331c03f7db",
+   "url": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/8.%20Annual%20Plan_2026-27%20(Statements)%20(Vol%20I).pdf",
+   "what": "Annual Plan Statements Vol I, every plan scheme with code, head of account and six years of figures"
+  },
+  "elderly": {
+   "bytes": 10181724,
+   "sha256": "671e2eccd435eb610885beab9be1767dceec736959f6eb59ebcde132a64afa09",
+   "url": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/27.%20Elderly%20Budget%202026-27.pdf",
+   "what": "Elderly Budget, scheme-wise elderly share of outlay with an Objectives column"
+  },
+  "environment": {
+   "bytes": 27035039,
+   "sha256": "a984a5d9c89f9c00fcbed2aecadc193d811b1b622b8deb02d575e09ed1343493",
+   "url": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/24.%20Environment%20Budget%202026-27.pdf",
+   "what": "Environment Budget, scheme-wise environment share of outlay with a justification paragraph"
+  },
+  "gender-child": {
+   "bytes": 12138480,
+   "sha256": "a523bc1a2b565a283a7c926b6d00fafe217a3536b163835d29fbf1f5532a66a5",
+   "url": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/22.%20Gender%20&%20Child%20Budget_2026-27.pdf",
+   "what": "Gender & Child Budget: Gender Part A and Part B, Transgender and Child statements, each with an Objectives column"
+  }
+ },
+ "books_collected": 4,
+ "books_expected": [
+  "annual-plan",
+  "elderly",
+  "environment",
+  "gender-child"
+ ],
+ "cycle": "2026-27",
+ "errors": [],
+ "finished": "2026-09-02T02:07:01Z",
+ "index_bytes": 22077,
+ "pdfs_on_index": 36,
+ "skipped": {
+  "R & D Budget": "prose and sector-level aggregates; no scheme code anywhere, so there is nothing to key a scheme register on",
+  "SDG 2026": "the link says SDG but the file is the Supplementary Demands for Grants 2025-26, organised by head of account with no scheme names"
+ },
+ "source": "kerala",
+ "started": "2026-09-02T02:06:37Z",
+ "status_histogram": {
+  "200": 4
+ },
+ "urls": {
+  "annual-plan": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/8.%20Annual%20Plan_2026-27%20(Statements)%20(Vol%20I).pdf",
+  "elderly": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/27.%20Elderly%20Budget%202026-27.pdf",
+  "environment": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/24.%20Environment%20Budget%202026-27.pdf",
+  "gender-child": "http://www.niyamasabha.org/codes/15kla/Session_16/Budget%20Documents/22.%20Gender%20&%20Child%20Budget_2026-27.pdf"
+ }
+}

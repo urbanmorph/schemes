@@ -151,6 +151,22 @@ def fetch(url, headers=None, timeout=45, retries=5, pace=0.0):
             reason = str(getattr(e, "reason", e))
             low = reason.lower()
             if "name or service" in low or "not known" in low or "nodename" in low:
+                # A resolver saying "name not known" usually means the host does not
+                # exist, which is why this used to give up at once. Under a long paced
+                # walk it means something else: a resolver under sustained sequential
+                # queries returns transient failures, and cag.gov.in produced 394 of them
+                # in a row on a catalogue walk that had just fetched six pages fine and
+                # answered every request normally a minute later.
+                #
+                # Giving up without a retry turned that into a whole source recorded as
+                # dead, which for an unattended monthly job is the difference between a
+                # blip and a missing month. Retried like any other transient failure, and
+                # only reported as DNS once the budget is spent, so a host that really has
+                # gone away still resolves to the same verdict a little more slowly.
+                last_status = "DNS"
+                if attempt < retries:
+                    _backoff(attempt)
+                    continue
                 return Fetched(url, "DNS", b"", time.time() - started, attempt)
             last_status = "TIMEOUT" if "timed out" in low else "CONN"
             if attempt < retries:
