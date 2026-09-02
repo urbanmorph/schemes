@@ -1287,8 +1287,20 @@ def index_section(entries):
         hay = re.sub(r"[^a-z0-9]+", " ",
                      " ".join(x for x in (e_["name"], short, slug) if x).lower()).strip()
         name_n = re.sub(r"[^a-z0-9]+", " ", (e_["name"] or "").lower()).strip()
+        # Squashed forms let someone type "pmkisan" and find "PM-KISAN". They also let a
+        # substring match run straight across word boundaries, and on a long name that
+        # manufactures words nobody wrote: searching "fame" returned an amenities grant and
+        # a welfare-board payment, because "of amenities" squashes to "ofamenities" and "of
+        # a member" to "ofamember", and both contain it.
+        #
+        # The name was already capped at 30 characters for this reason and the SLUG was not,
+        # which is where the two got in: a state scheme's slug carries its state and its
+        # whole name. Same cap on both. Above it the acronym keys still do the work, and
+        # nobody types a fifteen-word name with the spaces removed.
         sq = {re.sub(r"[^a-z0-9]", "", x.lower())
-              for x in ([short, slug] + ([e_["name"]] if len(name_n) <= 30 else [])) if x}
+              for x in ([short]
+                        + ([slug] if len(slug) <= 30 else [])
+                        + ([e_["name"]] if len(name_n) <= 30 else [])) if x}
         sq |= acronym_keys(e_["name"])
         if c and c.get("brief"):
             sq |= set(keywords(c["brief"], e_["name"]))
