@@ -1,6 +1,6 @@
 {
  "absent_cr": 9453.08,
- "absent_from_myscheme_all_rows": 962,
+ "absent_from_myscheme_all_rows": 958,
  "absent_from_myscheme_and_classified_scheme": 72,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Karnataka, because claiming absence should require that even a generous matcher finds nothing. The surviving list is a floor: 580 of the 969 rows carry no purpose line, and a real scheme with a plain name and no purpose line cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
@@ -15383,7 +15383,7 @@
    ],
    "hand_label": "scheme",
    "hoa": "2401-00-108-2-18",
-   "in_myscheme_karnataka": false,
+   "in_myscheme_karnataka": true,
    "name": "CSS-State Share-National Mission on Edible Oil- Oil Palm (Krishonnati Yojane)",
    "purpose": "Financial assistance to farmers to increase production of palm oil",
    "score": 6,
@@ -15402,7 +15402,7 @@
    ],
    "hand_label": null,
    "hoa": "2401-00-108-2-20",
-   "in_myscheme_karnataka": false,
+   "in_myscheme_karnataka": true,
    "name": "CSS-Central Share-National Mission on Edible Oil- Oil Palm (Krishonnati Yojane)",
    "purpose": null,
    "score": 1,
@@ -15425,7 +15425,7 @@
    ],
    "hand_label": "scheme",
    "hoa": "2401-00-108-2-23",
-   "in_myscheme_karnataka": false,
+   "in_myscheme_karnataka": true,
    "name": "CSS-Central Share(100% GoI)- National Mission on Edible Oil-Oil Palm-Seed Garden & Viability Gap Price (Krishonnati Yojane)",
    "purpose": "Finacial assistance to planting materials, seed garden development and deficiancy payment to visibility gap price",
    "score": 4,
@@ -23282,7 +23282,7 @@
    ],
    "hand_label": "not_scheme",
    "hoa": "4250-00-203-0-17",
-   "in_myscheme_karnataka": false,
+   "in_myscheme_karnataka": true,
    "name": "Karnataka Quality Upgradation for Employment and Skills Transformation (K-QUEST)-EAP",
    "purpose": "Financial assistance enhance workforce skills and employability through training and other activities (including vocational",
    "score": -1,
@@ -24580,7 +24580,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-02T04:50:09Z",
+ "built": "2026-09-02T07:02:53Z",
  "classified_not_scheme": 895,
  "classified_scheme": 74,
  "cycle": "2026-27",

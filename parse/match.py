@@ -55,8 +55,19 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def _singular(t):
+    """Crude but safe: a trailing s on a long word carries no meaning here.
+
+    "Electric Vehicles" against "Electric Vehicle in India" scored no match at all, so FAME
+    failed to join its own expansion and was reported absent from a portal that lists it.
+    That is the expensive direction, because an absence claim is an accusation. Guarded to
+    words over four letters and not ending in ss, so "less", "gross" and "PACS" survive.
+    """
+    return t[:-1] if len(t) > 4 and t.endswith("s") and not t.endswith("ss") else t
+
+
 def tokens(s):
-    return [t for t in norm(s).split() if t not in STOP and len(t) > 2]
+    return [_singular(t) for t in norm(s).split() if t not in STOP and len(t) > 2]
 
 
 # Indic transliteration variance. The same scheme is spelled differently by the office
@@ -77,7 +88,9 @@ def skeleton(t):
 
 
 def skeletons(s):
-    return {skeleton(t) for t in tokens(s)}
+    # A two-character skeleton is noise: "MEIS and SEIS" against "Scheme for SSI / MSI
+    # Sector" agreed on ['ms', 'ss'] and matched.
+    return {k for k in (skeleton(t) for t in tokens(s)) if len(k) >= 3}
 
 
 # Words that scheme names shout and that are not acronyms. "PMAY-URBAN-BLC Scheme" yields
@@ -114,7 +127,14 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                 # Roman numerals. Indian budget documents are full of them, standards VI to
                 # VIII and Chapter XVII, and every one was being read as a written acronym.
                 | {"i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi",
-                   "xii", "xiii", "xiv", "xv", "xvi", "xvii", "xviii", "xix", "xx"})
+                   "xii", "xiii", "xiv", "xv", "xvi", "xvii", "xviii", "xix", "xx"}
+                # Eighth and ninth instances, and these two were already corrupting the
+                # registry rather than merely inflating a join. "Solar Power (Grid)" was
+                # merged into "SERB - POWER Fellowship" and its Rs 1,775 cr published under
+                # that name; "e-Courts Phase II" was merged into "Swachh Bharat Mission
+                # Grameen PHASE I".
+                | {"power", "phase", "grid", "energy", "solar", "wind", "water",
+                   "health", "roads", "authority", "council", "committee", "society"})
 
 
 def written_acronyms(s):
@@ -270,8 +290,16 @@ def probably_same(a, b, floor=0.75):
     na, nb = norm(a), norm(b)
     if na and nb and na != nb:
         shortn, longn = (na, nb) if len(na) <= len(nb) else (nb, na)
+        # Three words at least, counting the connectives. Asking only for eight characters
+        # let a bare place name prefix anything: "West Bengal" against "West Bengal Student
+        # Credit Card Scheme", 49 joins from two subjects.
+        #
+        # Three RAW words rather than two content words, because that is what separates the
+        # two cases: "Jal Jeevan Mission" is three words of which Mission is a stop word, and
+        # "West Bengal" is two. A state name is short and a scheme name says what it does.
         if len(shortn) >= 8 and longn.startswith(shortn) and \
-                longn[len(shortn):len(shortn) + 1] in ("", " "):
+                longn[len(shortn):len(shortn) + 1] in ("", " ") and \
+                len(shortn.split()) >= 3:
             return True, "one name begins with the whole of the other"
 
     ta_, tb_ = tokens(a), tokens(b)
@@ -306,9 +334,18 @@ def probably_same(a, b, floor=0.75):
     wa, wb = written_acronyms(a), written_acronyms(b)
     for x in aa:
         for y in ab:
-            if len(x) >= 4 and len(y) >= 4 and (x in y or y in x) \
-                    and (x in wa or y in wb):
-                return True, f"acronym containment: {x} / {y}"
+            if len(x) < 4 or len(y) < 4 or not (x in y or y in x):
+                continue
+            if not (x in wa or y in wb):
+                continue
+            # ...and the shorter must account for most of the longer. NRLM is the tail of
+            # DAYNRLM and covers 4 of its 7 letters, which is why that pair is evidence.
+            # SMAM sits inside SMAMOFGIFCOI covering 4 of 13, PACS inside PPPPACSIAM, and
+            # "ubha" inside the ordinary word SAUBHAGYA: those are coincidences of spelling,
+            # and they produced 150 wrong joins on the CAG corpus.
+            if min(len(x), len(y)) / max(len(x), len(y)) < 0.5:
+                continue
+            return True, f"acronym containment: {x} / {y}"
 
     return False, "no match"
 
@@ -330,6 +367,23 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # A trailing s must not defeat a match. FAME failed to join its own expansion.
+    ("Scheme for Faster Adoption and Manufacturing of (Hybrid &) Electric Vehicles",
+     "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).", True),
+    ("Mid Day Meal", "Mid Day Meals Scheme", True),
+    # An acronym buried in a long initialism is a coincidence of spelling.
+    ("Storage Management and Movement of Food Grains in Food Coporation of India",
+     "Sub-Mission on Agricultural Mechanization (SMAM) under Krishonnati Yojana", False),
+    # A bare place name prefixes anything.
+    ("West Bengal", "West Bengal Student Credit Card Scheme", False),
+    # Two-character skeletons are not transliteration evidence.
+    ("MEIS and SEIS", "Scheme for SSI / MSI Sector (PIPDIC)", False),
+    # The live corruption: a shouted ordinary word merged a budget line into a fellowship.
+    ("Solar Power (Grid)", "SERB - POWER Fellowship", False),
+    ("e-Courts Phase II", "Swachh Bharat Mission - Grameen PHASE I", False),
+]
 
 SELFTEST += [
     # A short generic phrase inside a long specific name is not a match. 63 of Tamil Nadu's
