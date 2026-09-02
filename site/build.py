@@ -441,7 +441,8 @@ def classifier_note(cls, floor_sentence):
             f'a floor and never a total. {floor_sentence}')
 
 
-def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=None):
+def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=None,
+                    kl=None, tn=None):
     """Two questions, kept apart: how many schemes a state has, and which are unlisted.
 
     The per-state table and the unlisted-schemes table were both built into a local named
@@ -589,6 +590,70 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=N
                 f"{inr(round(((miss_ap or {}).get('be_lakh') or 0) / 100))} crore, on a score "
                 f"of {(miss_ap or {}).get('score', 0)}.") + "</p>")
 
+    def simple_state(cfg, state, title, note, standfirst, floor, warn_title, warn_body):
+        """A state whose rows carry a name, an allocation and a score, and nothing else."""
+        rows = "".join(
+            f'<tr><td>{e(r["name"])}</td>'
+            f'<td class="num">{inr(round((r["be_lakh"] or 0) / 100))}</td>'
+            f'<td class="num">{r["score"]}</td>'
+            f'<td class="muted" style="font-size:12px">'
+            f'{e("; ".join(w for _, w in r.get("evidence", [])[:2]))}</td></tr>'
+            for r in cfg["absent_distinct"])
+        # The state is passed, not carved out of the title. Deriving it by splitting on an
+        # apostrophe worked for Kerala and produced a table headed "In Tamil Nadu books a
+        # transfer and its advertising in one place's budget".
+        return state_section(state, title, note, standfirst, rows, warn_title,
+                             warn_body + '<p style="margin:8px 0 0">'
+                             + classifier_note(cfg, floor) + "</p>")
+
+    kl_section = ""
+    if kl and kl.get("absent_distinct"):
+        kl_section = simple_state(
+            kl, "Kerala", "Kerala&rsquo;s plan names 2,629 schemes and the portal lists 87",
+            f"Kerala Annual Plan statements &middot; {num(len(kl['absent_distinct']))} named "
+            f"at high confidence out of {num(kl.get('classified_scheme'))} that clear the bar",
+            f"The count is the finding here and it needs no classifier: Kerala&rsquo;s Annual "
+            f"Plan carries 2,629 scheme rows and myScheme lists "
+            f"{num(kl.get('myscheme_kerala_records') or 87)} for Kerala. Naming which of them "
+            f"are hidden schemes is harder in Kerala than anywhere else, and these "
+            f"{num(len(kl['absent_distinct']))} are the ones this register will stand behind.",
+            "The National Old Age Pension, PMAY-Gramin, PMMVY and DDUGKY are all absent from "
+            "this table, each one point below the bar. Kerala&rsquo;s schemes are named "
+            "Deendayal Antyodaya Yojana or PM KUSUM, and 28 of 50 sampled carry no English "
+            "benefit or beneficiary word at all, so a classifier reading English for evidence "
+            "of a benefit finds none in a name that is simply a name.",
+            "This table is the smallest and least complete on the page",
+            "Kerala&rsquo;s Annual Plan is a plan document, so most of its rows are "
+            "institutions and establishment heads rather than schemes: an academy, a "
+            "university, a directorate. Every row is scored on signals published with the "
+            "arithmetic.")
+
+    tn_section = ""
+    if tn and tn.get("absent_distinct"):
+        tn_section = simple_state(
+            tn, "Tamil Nadu", "Tamil Nadu books a transfer and its advertising in one place",
+            f"Tamil Nadu Revised Budget Estimates, 55 demand books &middot; "
+            f"{num(len(tn['absent_distinct']))} schemes, "
+            f"{inr(round(sum(r['be_lakh'] or 0 for r in tn['absent_distinct']) / 100))} crore",
+            f"myScheme lists {num(tn.get('myscheme_tamil_nadu_records') or 240)} schemes for "
+            f"Tamil Nadu, the second highest of any state, so this was the place the portal "
+            f"might not be behind. The demand books carry 6,220 heads of account, and these "
+            f"{num(len(tn['absent_distinct']))} read as schemes and reach the portal nowhere.",
+            "Magalir Urimai Thogai, the state&rsquo;s largest cash transfer at "
+            "&#8377;14,414 crore, is missing from this table for &#8377;9,803 crore of its "
+            "value. Its two sub-plan heads carry a benefit object head alone and are here; "
+            "its general head books "
+            "<em>Advertising and Publicity</em> under the same sub-head as the transfer, "
+            "which costs it exactly the margin. The Breakfast Scheme fails the same way. That "
+            "is not a classifier failing to read, it is a state booking a benefit and its "
+            "marketing in one place with no line saying which is which.",
+            "Tamil Nadu prints object heads, which is why this is the best measured state",
+            "These are the full detailed estimates rather than a welfare-only cut, so five "
+            "rows in six are establishment, works or accounting heads. What separates them is "
+            "the object head: a row whose every object head is a benefit transfer is a scheme "
+            "89.5% of the time, and one whose every object head is an accounting head never "
+            "is.")
+
     # Funded, monitored, and never announced. The strongest thing the union registry
     # says: these are named as schemes by at least two government sources and carry a
     # Budget allocation, and the government's own citizen-facing portal does not list
@@ -711,6 +776,18 @@ and be done.</p>
 
 {ka_section}
 {ap_section}
+{kl_section}
+{tn_section}
+<div class="warnbox">
+  <b>Do not add these four tables together, and do not rank the states by them</b>
+  Each state's table is a floor set by how much evidence that state prints, not a measure of
+  how much it hides. Recall is 41% in Tamil Nadu, 37% in Andhra Pradesh, 32% in Karnataka and
+  12% in Kerala, so Kerala's short table says that Kerala's plan document is hard to read and
+  says nothing at all about Kerala. Reading these as comparable would repeat exactly the
+  mistake this page opens by documenting: four government sources publishing numbers that
+  look like each other and count different things.
+</div>
+
 {unlisted_section}
 """
 
@@ -1722,7 +1799,9 @@ def build():
         page_divergence(census, dbt, load("data/registry.json", {}),
                         load("data/classification.json", {}), entries=entries,
                         ka=load("data/karnataka/classification.json", {}),
-                        ap=load("data/andhra/classification.json", {})),
+                        ap=load("data/andhra/classification.json", {}),
+                        kl=load("data/kerala/classification.json", {}),
+                        tn=load("data/tamilnadu/classification.json", {})),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side.")))
     w("changes.html", shell(

@@ -45,6 +45,11 @@ national portal nowhere, at 97.3% precision counted against hand labels rather t
 estimated. That is a floor: Gruha Lakshmi, the state's largest welfare scheme, is not in
 it, because 580 of the 969 rows carry no purpose line for a classifier to read.
 
+Four states now have their own budgets read against the portal: Karnataka 72 schemes,
+Andhra Pradesh 71, Kerala 37, Tamil Nadu 231. Those four numbers are floors set by how much
+evidence each state prints and must not be added or ranked against each other, which the
+site says where it shows them.
+
 In Andhra Pradesh the two sources describe different countries. myScheme lists 52 AP
 schemes, all of them corporation and welfare-board items. The state's budget names 71 the
 portal does not, ₹47,677 cr, including NTR Bharosa Pension at ₹27,719 cr.
