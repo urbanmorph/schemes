@@ -108,6 +108,13 @@ def md(src, limit=None):
     # is what the sentence wants; swapping in a comma rewrites their punctuation instead
     # of restyling it. Declared on the page rather than done silently.
     t = re.sub(r"\u2014", "\u2013", t)
+    # The source is ALREADY html-escaped by myScheme: its text carries "&amp;" where the
+    # scheme name has an ampersand. Escaping that again produced "&amp;amp;", which renders
+    # on the page as a literal "&amp;" in the middle of a sentence. Decoding first and then
+    # escaping is still safe, and is the only way to get one level of encoding out of text
+    # that arrives with an unknown number of them: "&lt;script&gt;" decodes to "<script>"
+    # and re-escapes to exactly what it started as.
+    t = html.unescape(t)
     t = e(t)
     t = re.sub(r"&amp;quot;", "&quot;", t)
     t = re.sub(r"\[([^\]]{1,120})\]\((https?://[^\s)]{1,300})\)",

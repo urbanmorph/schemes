@@ -325,7 +325,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 
 /* Scheme prose, reproduced from the source. Narrower than the tables around it because
    this is the one thing on the page meant to be read rather than scanned. */
-.prose{max-width:72ch;font-size:var(--fs-base)}
+/* No second measure. The comment above about .wrap applies here too and this was the last
+   place still carrying one: 72ch stopped body text at about 55% of a 1280px container and
+   left half the page empty beside every scheme description. The container is the measure. */
+.prose{max-width:none;font-size:var(--fs-base)}
 .prose p{margin:0 0 11px}
 .prose ul{margin:0 0 12px;padding-left:20px}
 .prose li{margin:0 0 5px}
