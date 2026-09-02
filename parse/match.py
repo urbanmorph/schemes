@@ -110,7 +110,11 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                  # produced 297 false joins against audit titles.
                  "sector", "sectors", "finance", "financial", "micro", "macro",
                  "economic", "social", "revenue", "civil", "defence", "railway",
-                 "railways", "works", "public", "sanction", "sanctions"})
+                 "railways", "works", "public", "sanction", "sanctions"}
+                # Roman numerals. Indian budget documents are full of them, standards VI to
+                # VIII and Chapter XVII, and every one was being read as a written acronym.
+                | {"i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi",
+                   "xii", "xiii", "xiv", "xv", "xvi", "xvii", "xviii", "xix", "xx"})
 
 
 def written_acronyms(s):
@@ -237,7 +241,18 @@ def probably_same(a, b, floor=0.75):
     ta, tb = set(tokens(a)), set(tokens(b))
     if ta and tb:
         small, large = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
-        if len(small) >= 2 and small <= large:
+        # Containment needs the two names to be comparable, not merely overlapping. A
+        # two-word name is often a generic domain phrase that any long name in that domain
+        # contains: "Animal Husbandry" sits inside "Buildings- Animal Husbandry
+        # (Administered by Chief Engineer (Buildings))", which is a works head and not that
+        # scheme. On the Tamil Nadu demand books this rule alone produced 63 of 118 wrong
+        # joins, every one of them a short generic phrase swallowed by a long specific name.
+        #
+        # Three or more content words is specific enough to stand on its own. Two is only
+        # evidence when the longer name is not much longer, so the pair has to be within a
+        # factor of two.
+        if small <= large and (len(small) >= 3 or
+                               (len(small) >= 2 and len(large) <= 2 * len(small))):
             return True, f"all {len(small)} content words of the shorter name are present"
 
     # Same content words once transliteration is folded out. Two or more skeletons must
@@ -246,12 +261,28 @@ def probably_same(a, b, floor=0.75):
     # the scheme's name, "Shakthi Scheme" against "Shakti Scheme", where there is no
     # second word to corroborate with. There the raw tokens must also look alike, which
     # shakthi/shakti does at 0.92 and mata/moti does not at 0.50.
+    # A name that BEGINS with the whole of the other is a much stronger signal than one
+    # that merely contains its words somewhere. "Jal Jeevan Mission (JJM) / National Rural
+    # Drinking Water Mission" opens with "Jal Jeevan Mission" and is that scheme; "Buildings-
+    # Animal Husbandry (Administered by Chief Engineer)" opens with Buildings and is a works
+    # head that happens to mention the department. Word boundary enforced, so "Jal Jeevan"
+    # does not prefix-match "Jal Jeevandhara".
+    na, nb = norm(a), norm(b)
+    if na and nb and na != nb:
+        shortn, longn = (na, nb) if len(na) <= len(nb) else (nb, na)
+        if len(shortn) >= 8 and longn.startswith(shortn) and \
+                longn[len(shortn):len(shortn) + 1] in ("", " "):
+            return True, "one name begins with the whole of the other"
+
     ta_, tb_ = tokens(a), tokens(b)
     sa, sb = skeletons(a), skeletons(b)
     if sa and sb:
         small, large = (sa, sb) if len(sa) <= len(sb) else (sb, sa)
+        # Same comparability guard as the content-word rule below it. Folding
+        # transliteration does not make a short generic phrase any more specific, so
+        # without this the skeleton rule simply catches what containment now rejects.
         if small <= large:
-            if len(small) >= 2:
+            if len(small) >= 3 or (len(small) >= 2 and len(large) <= 2 * len(small)):
                 return True, f"transliteration variant: {sorted(small)[:3]}"
             if len(ta_) == 1 and len(tb_) == 1 and \
                     difflib.SequenceMatcher(None, ta_[0], tb_[0]).ratio() >= 0.8:
@@ -299,6 +330,18 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # A short generic phrase inside a long specific name is not a match. 63 of Tamil Nadu's
+    # 118 wrong joins were this shape.
+    ("Buildings- Animal Husbandry (Administered by Chief Engineer (Buildings))",
+     "Animal Husbandry", False),
+    # ...while two comparable names still match on containment.
+    ("Thalolam Scheme", "Thalolam", True),
+    # A Roman numeral is not an acronym.
+    ("Special incentive to scheduled caste girls studying VI standard to VIII standard",
+     "Scholarship VIII", False),
+]
 
 SELFTEST += [
     # Capitalised geography is not an acronym. "Competitive Exams of ALL INDIA level" made

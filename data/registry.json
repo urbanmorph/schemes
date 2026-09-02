@@ -1,10 +1,10 @@
 {
  "added_by": {
-  "budget": 539,
-  "dbt": 133,
-  "outcome": 12
+  "budget": 555,
+  "dbt": 141,
+  "outcome": 11
  },
- "built": "2026-09-02T01:55:18Z",
+ "built": "2026-09-02T04:49:23Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -2063,7 +2063,7 @@
      "be_cr": 2.18,
      "cycle": "2026-27",
      "demand_no": 26,
-     "merge_reason": "all 2 content words of the shorter name are present",
+     "merge_reason": "acronym match: asean",
      "name": "ASEAN Fellowship",
      "statement": "stat4b"
     },
@@ -2091,14 +2091,6 @@
   {
    "name": "Artificial Intelligence",
    "sources": {
-    "budget": {
-     "be_cr": 250.0,
-     "cycle": "2026-27",
-     "demand_no": 26,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Centres of Excellence (CoE) in Artificial Intelligence (AI)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Science And Technology",
@@ -2360,6 +2352,14 @@
   {
    "name": "Aaloo Ke Kufri Chipsona-1 Prabhed Ke Kshetra Vistaar Yojana",
    "sources": {
+    "budget": {
+     "be_cr": 150.0,
+     "cycle": "2026-27",
+     "demand_no": 1,
+     "merge_reason": "acronym match: vistaar",
+     "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Agriculture Department",
@@ -7254,11 +7254,11 @@
    "name": "Cluster Development Scheme",
    "sources": {
     "budget": {
-     "be_cr": 410.0,
+     "be_cr": null,
      "cycle": "2026-27",
-     "demand_no": 68,
+     "demand_no": 98,
      "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Micro and Small Enterprise-Cluster Development Programme (MSE-CDP)",
+     "name": "Handicraft Cluster Development Program - Handicraft Mega Cluster",
      "statement": "stat4b"
     },
     "myscheme": {
@@ -7361,7 +7361,7 @@
      "be_cr": 364.0,
      "cycle": "2026-27",
      "demand_no": 16,
-     "merge_reason": "acronym containment: copacs / pacs",
+     "merge_reason": "acronym containment: cpacs / pacs",
      "name": "Computerization of Primary Agricultural Credit Societies",
      "statement": "stat4a"
     },
@@ -9428,14 +9428,6 @@
   {
    "name": "Capital Subsidy",
    "sources": {
-    "budget": {
-     "be_cr": 0.01,
-     "cycle": "2026-27",
-     "demand_no": 68,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Credit Linked Capital Subsidy (CLCS)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Micro Small and Medium Enterprises Department",
@@ -9957,13 +9949,13 @@
      "be_cr": 106.0,
      "cycle": "2026-27",
      "demand_no": 68,
-     "merge_reason": "all 2 content words of the shorter name are present",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "Coir Vikas Yojana",
      "statement": "stat4b"
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "Coir Vikas Yojana"
     },
     "myscheme": {
@@ -11824,7 +11816,7 @@
      "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 1,
-     "merge_reason": "all 2 content words of the shorter name are present",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "Distribution of Pulses to State / Union Territories for Welfare Schemes",
      "statement": "stat4b"
     },
@@ -13276,14 +13268,6 @@
   {
    "name": "Electronics Component Manufacturing Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 720.0,
-     "cycle": "2026-27",
-     "demand_no": 27,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Electronics and Information Technology",
@@ -15755,11 +15739,6 @@
   {
    "name": "Financial Assistance For Promotion Of Guru-Shishya Parampara (Repertory Grant)",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Repertory Grant"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Culture",
@@ -16924,28 +16903,12 @@
   {
    "name": "“Family Counseling\" under Grant-in-Aid to Pondicherry State Social Welfare Board",
    "sources": {
-    "budget": {
-     "be_cr": 643.46,
-     "cycle": "2026-27",
-     "demand_no": 46,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Family Welfare Schemes",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Social Welfare Department, Puducherry",
      "passed": 5,
      "slug": "fc-giapswb",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Family Welfare Scheme",
-     "outlay_cr": 643.46,
-     "page": 159,
-     "targets": 0
     }
    }
   },
@@ -17799,11 +17762,6 @@
   {
    "name": "Free Coaching Scheme",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Free Coaching for SC, OBC and PM Care Students"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Social Justice and Empowerment",
@@ -18133,14 +18091,6 @@
   {
    "name": "Financial Support Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 100.0,
-     "cycle": "2026-27",
-     "demand_no": 76,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Scheme for providing financial support for collection of biomass",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Education",
@@ -18753,28 +18703,12 @@
   {
    "name": "Grant of Fuel Subsidy to Differently Abled Persons Who Are Owning Motorised Vehicles",
    "sources": {
-    "budget": {
-     "be_cr": 116805.0,
-     "cycle": "2026-27",
-     "demand_no": 6,
-     "merge_reason": "transliteration variant: ['r', 'sbsdy']",
-     "name": "Urea Subsidy",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Social Welfare Department, Puducherry",
      "passed": 6,
      "slug": "gfsdapomv",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "transliteration variant: ['r', 'sbsdy']",
-     "name": "Urea Subsidy",
-     "outlay_cr": 116805.0,
-     "page": 41,
-     "targets": 0
     }
    }
   },
@@ -19033,19 +18967,6 @@
   {
    "name": "Grant-in-aid (TB)",
    "sources": {
-    "budget": {
-     "be_cr": 500.0,
-     "cycle": "2026-27",
-     "demand_no": 16,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Grant-in-aid to National Cooperative Development Corporation (NCDC)",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Grant in aid to Tripura and Mizoram for Rehabilitation of Bru migrants"
-    },
     "myscheme": {
      "level": "State",
      "org": "Health and Family Welfare Department",
@@ -19058,28 +18979,12 @@
   {
    "name": "Grant-in-Aid to Non-governmental Organisations Running Residential Homes for the Children, Aged, and Vulnerable Persons Under Social Defence",
    "sources": {
-    "budget": {
-     "be_cr": 4000.0,
-     "cycle": "2026-27",
-     "demand_no": 60,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Non-residential",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Social Welfare Department, Puducherry",
      "passed": 6,
      "slug": "giatngorhcavpusd",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Non- Residential",
-     "outlay_cr": 4000.0,
-     "page": 180,
-     "targets": 5
     }
    }
   },
@@ -21493,12 +21398,12 @@
    "name": "Scheme of Human Resources Development in Sports- Exchange of Knowledge / Research / Ideas for Holding Training Programmes, Seminars, Workshops, Clinics and Conferences Within the Country",
    "sources": {
     "budget": {
-     "be_cr": 1043.15,
+     "be_cr": 40.0,
      "cycle": "2026-27",
-     "demand_no": 44,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Development Programmes",
-     "statement": "stat4a"
+     "demand_no": 71,
+     "merge_reason": "all 4 content words of the shorter name are present",
+     "name": "Human Resources Development and Training",
+     "statement": "stat4b"
     },
     "myscheme": {
      "level": "Central",
@@ -23637,7 +23542,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: iccr / iccr",
+     "merge_reason": "acronym containment: iccr / ipiccri",
      "name": "ICCR Scholarship"
     },
     "myscheme": {
@@ -24133,14 +24038,6 @@
   {
    "name": "Interim Relief to the Beneficiaries Affected by Disaster (GBOCWWB)",
    "sources": {
-    "budget": {
-     "be_cr": 80.0,
-     "cycle": "2026-27",
-     "demand_no": 29,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Disaster Relief",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Labour and Employment Department",
@@ -24590,28 +24487,12 @@
   {
    "name": "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom: New Subcomponents:FRESH-IT (Farmer’s Research & Enterprise in Spice Holdings for Innovative Technology)",
    "sources": {
-    "budget": {
-     "be_cr": 10397.06,
-     "cycle": "2026-27",
-     "demand_no": 95,
-     "merge_reason": "transliteration variant: ['spc', 'tcnlgy']",
-     "name": "Space Technology",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Commerce And Industry",
      "passed": 5,
      "slug": "isfepqisaradocnsffreishfit",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "transliteration variant: ['spc', 'tcnlgy']",
-     "name": "Space Technology",
-     "outlay_cr": 10397.06,
-     "page": 269,
-     "targets": 19
     }
    }
   },
@@ -25551,7 +25432,7 @@
      "be_cr": 67670.0,
      "cycle": "2026-27",
      "demand_no": 63,
-     "merge_reason": "all 2 content words of the shorter name are present",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "Jal Jeevan Mission (JJM) / National Rural Drinking Water Mission",
      "statement": "stat4a"
     },
@@ -28349,6 +28230,14 @@
   {
    "name": "Loktantra Senani Samman Pension Scheme for Widowed Wife or Widower Husband of Democracy Fighters of the State Imprisoned under MISA/DIR during Emergency Period (from 25.06.1975 to 21.03.1977)",
    "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 1,
+     "merge_reason": "acronym containment: misapssmp / misa",
+     "name": "Market Intervention Scheme and Price Support Scheme (MIS- PSS)",
+     "statement": "stat4b"
+    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Department of Home",
@@ -33369,28 +33258,12 @@
   {
    "name": "MICRO FINANCE (Gopalak Nigam)",
    "sources": {
-    "budget": {
-     "be_cr": 1700.0,
-     "cycle": "2026-27",
-     "demand_no": 45,
-     "merge_reason": "acronym match: micro",
-     "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Social Justice and Empowerment Department",
      "passed": 5,
      "slug": "msggvn",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CSS",
-     "merge_reason": "acronym match: micro",
-     "name": "Prime Minister Formalisation of Micro Food Processing Enterprises Scheme (PM FME)",
-     "outlay_cr": 1700.0,
-     "page": 134,
-     "targets": 0
     }
    }
   },
@@ -35740,6 +35613,11 @@
   {
    "name": "NEET/JEE Coaching For Tribal Students",
    "sources": {
+    "dbt": {
+     "list": "central",
+     "merge_reason": "acronym containment: neet / neet",
+     "name": "SECL ke Sushrut (Free residential Coaching for NEET Examination) at Bilaspur, Chhattisgarh"
+    },
     "myscheme": {
      "level": "State",
      "org": "Tribal Area Development Department",
@@ -37461,11 +37339,6 @@
   {
    "name": "Organic Manure Scheme",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "New National Biogas and Organic Manure Programme (NNBOMP)"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Agriculture Department",
@@ -37670,11 +37543,6 @@
   {
    "name": "One Time Cash Incentive towards Completing ITI, Typewriting, Accountancy, Bookkeeping, Tailoring, Computer Training (Sainik Welfare)",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "transliteration variant: ['t', 'trnng']",
-     "name": "ATI Scheme (Training Component)"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Sainik Welfare Department, Puducherry",
@@ -40005,7 +39873,7 @@
      "be_cr": 1560.0,
      "cycle": "2026-27",
      "demand_no": 26,
-     "merge_reason": "acronym containment: pmusp / pmuspycsiss",
+     "merge_reason": "acronym containment: pmusp / pmuspcsis",
      "name": "PM Uchchatar Shiksha Protsahan (PM-USP) Yojna",
      "statement": "stat4b"
     },
@@ -40023,7 +39891,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "acronym containment: pmusp / pmuspycsiss",
+     "merge_reason": "acronym containment: pmusp / pmuspcsis",
      "name": "PM Uchchatar Shiksha Protsahan (PM-USP) Yojna",
      "outlay_cr": 1560.0,
      "page": 101,
@@ -40654,14 +40522,6 @@
   {
    "name": "Pradhan Mantri Kaushal Vikas Yojana 4.0- Special Projects",
    "sources": {
-    "budget": {
-     "be_cr": 1989.12,
-     "cycle": "2026-27",
-     "demand_no": 21,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Special Projects",
-     "statement": "stat4b"
-    },
     "dbt": {
      "list": "central",
      "merge_reason": "all 4 content words of the shorter name are present",
@@ -41872,7 +41732,7 @@
      "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 72,
-     "merge_reason": "acronym match: svamitva",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "Svamitva",
      "statement": "stat4b"
     },
@@ -42389,11 +42249,6 @@
   {
    "name": "Padho Pardesh",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "transliteration variant: ['pd', 'prds']",
-     "name": "Padho Predesh - Interest subsidy on educational loans for Overseas Studies"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Minority Affairs",
@@ -42904,6 +42759,19 @@
   {
    "name": "Prime Small Enterprise Empowerment and Development(SEED) Scheme",
    "sources": {
+    "budget": {
+     "be_cr": 101.0,
+     "cycle": "2026-27",
+     "demand_no": 93,
+     "merge_reason": "acronym containment: seed / pseeds",
+     "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "acronym containment: seed / pseeds",
+     "name": "Scheme for Economic Empowerment of DNTs (SEED)"
+    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Planning Department",
@@ -43161,19 +43029,6 @@
   {
    "name": "Price Support Scheme",
    "sources": {
-    "budget": {
-     "be_cr": null,
-     "cycle": "2026-27",
-     "demand_no": 1,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Market Intervention Scheme and Price Support Scheme (MIS- PSS)",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Price Support Operation for Cotton Procurement by CCI"
-    },
     "myscheme": {
      "level": "State",
      "org": "Food, Civil Supplies and Consumer Affairs Department",
@@ -44949,12 +44804,28 @@
   {
    "name": "Residential School For Blinds",
    "sources": {
+    "budget": {
+     "be_cr": 1150.0,
+     "cycle": "2026-27",
+     "demand_no": 60,
+     "merge_reason": "one name begins with the whole of the other",
+     "name": "Residential",
+     "statement": "stat4b"
+    },
     "myscheme": {
      "level": "State",
      "org": "Department Of Social Welfare J and K",
      "passed": 5,
      "slug": "rsb",
      "total": 9
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "one name begins with the whole of the other",
+     "name": "Residential",
+     "outlay_cr": 1150.0,
+     "page": 179,
+     "targets": 5
     }
    }
   },
@@ -46176,11 +46047,6 @@
   {
    "name": "Scholarships and Stipends",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Indian Institute of Remote Sensing - Scholarships and Stipends"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Sports, Youth and Cultural Activities Department",
@@ -46835,6 +46701,14 @@
   {
    "name": "Special Credit Linked Capital Subsidy Scheme (SCLCSS) for Scheduled Caste/Scheduled Tribe",
    "sources": {
+    "budget": {
+     "be_cr": 0.01,
+     "cycle": "2026-27",
+     "demand_no": 68,
+     "merge_reason": "acronym containment: clcs / sclcsssfscst",
+     "name": "Credit Linked Capital Subsidy (CLCS)",
+     "statement": "stat4b"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Micro, Small and Medium Enterprises",
@@ -47301,14 +47175,6 @@
   {
    "name": "Scheme for ‘Skill Development in ESDM for Digital India’",
    "sources": {
-    "budget": {
-     "be_cr": 2800.0,
-     "cycle": "2026-27",
-     "demand_no": 92,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Skill India Programme.",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Electronics and Information Technology",
@@ -47465,14 +47331,6 @@
   {
    "name": "Sugar Distribution Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 200.0,
-     "cycle": "2026-27",
-     "demand_no": 15,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Sugar Subsidy payable under Public Distribution System",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Food, Public Distribution and Consumer affairs Department",
@@ -47961,14 +47819,6 @@
   {
    "name": "Self Employment Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 405.0,
-     "cycle": "2026-27",
-     "demand_no": 77,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Atal Innovation Mission(AIM) including Self Employment and Talent Utilization (SETU)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State",
      "org": "Minorities Welfare Department",
@@ -49881,11 +49731,11 @@
    "name": "SAHAKAR MITRA: NCDC’s Scheme on Internship Programme",
    "sources": {
     "budget": {
-     "be_cr": 60.0,
+     "be_cr": 500.0,
      "cycle": "2026-27",
-     "demand_no": 46,
-     "merge_reason": "acronym containment: ncdc / ncdc",
-     "name": "Establishment and strengthening of NCDC Branches and Health Initiatives Inter Sectoral coordination for preparation and control of Zoonotic Diseases and other neglected tropical diseases surveillance of Viral Hepatitis Anti Microbial Resistance",
+     "demand_no": 16,
+     "merge_reason": "acronym containment: giatncdcn / ncdc",
+     "name": "Grant-in-aid to National Cooperative Development Corporation (NCDC)",
      "statement": "stat4b"
     },
     "myscheme": {
@@ -50525,11 +50375,6 @@
   {
    "name": "Scheme for Loan and Subsidy for Manure and Fertilizer-DNH&DD",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Fertilizer Subsidy Scheme"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Agriculture Department",
@@ -50546,7 +50391,7 @@
      "be_cr": 400.0,
      "cycle": "2026-27",
      "demand_no": 29,
-     "merge_reason": "all 2 content words of the shorter name are present",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "Sri Lanka",
      "statement": "stat4b"
     },
@@ -51405,28 +51250,12 @@
   {
    "name": "\"Subsidy for Orthodox & Speciality Tea Unit for Plant & Machinery\" under the \"Assam Tea Industries Special Incentives Scheme\"",
    "sources": {
-    "budget": {
-     "be_cr": 649.49,
-     "cycle": "2026-27",
-     "demand_no": 85,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Machinery and Plant",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Finance Department",
      "passed": 5,
      "slug": "sostupm-atisis",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Machinery & Plant",
-     "outlay_cr": 649.49,
-     "page": 237,
-     "targets": 5
     }
    }
   },
@@ -51553,14 +51382,6 @@
   {
    "name": "Scheme to Provide Assistance for Setting Up Farmer Support Centers in State Market Committees and for Computerization of All Market Committees",
    "sources": {
-    "budget": {
-     "be_cr": 100.0,
-     "cycle": "2026-27",
-     "demand_no": 77,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "State Support Mission",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Agriculture, Farmers Welfare and Cooperation Department",
@@ -51689,28 +51510,12 @@
   {
    "name": "\"Subsidy to Pollution Control Equipment\" under \"Motivation of Entrepreneurs to Start Industries and Fiscal Assistance to Capital Intensive Industries\"",
    "sources": {
-    "budget": {
-     "be_cr": 1091.0,
-     "cycle": "2026-27",
-     "demand_no": 28,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Control of Pollution",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Industries and Commerce Department, Puducherry",
      "passed": 6,
      "slug": "spce-mesifa-cii",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Control of Pollution",
-     "outlay_cr": 1091.0,
-     "page": 119,
-     "targets": 6
     }
    }
   },
@@ -53455,14 +53260,6 @@
   {
    "name": "Scheme For Soft Loan To The Grant-in-aid/ Non-grant In Aid Institutions For Maintenance And Upgradation Of Infrastructure Facilities",
    "sources": {
-    "budget": {
-     "be_cr": 7350.0,
-     "cycle": "2026-27",
-     "demand_no": 46,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Infrastructure Maintenance",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "State",
      "org": "Higher Education Department",
@@ -56857,19 +56654,6 @@
   {
    "name": "Tea Tourism - Uttarakhand Tea Development Board",
    "sources": {
-    "budget": {
-     "be_cr": 380.0,
-     "cycle": "2026-27",
-     "demand_no": 10,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Tea Board",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Tea Board"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Horticulture Department",
@@ -59850,7 +59634,7 @@
     "dbt": {
      "list": "central",
      "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Kind Benefit under IEDSS component of Samagra Shiksha"
+     "name": "Samagra Shiksha - Interventions of Textbooks"
     },
     "outcome": {
      "classification": "CSS",
@@ -59951,6 +59735,50 @@
      "cycle": "2026-27",
      "demand_no": 42,
      "name": "Assistance to States for Public Health Infrastructure",
+     "statement": "stat4a"
+    }
+   }
+  },
+  {
+   "name": "Development Programmes",
+   "sources": {
+    "budget": {
+     "be_cr": 1043.15,
+     "cycle": "2026-27",
+     "demand_no": 44,
+     "name": "Development Programmes",
+     "statement": "stat4a"
+    }
+   }
+  },
+  {
+   "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
+   "sources": {
+    "budget": {
+     "be_cr": 1700.0,
+     "cycle": "2026-27",
+     "demand_no": 45,
+     "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
+     "statement": "stat4a"
+    },
+    "outcome": {
+     "classification": "CSS",
+     "merge_reason": "similarity 0.88",
+     "name": "Prime Minister Formalisation of Micro Food Processing Enterprises Scheme (PM FME)",
+     "outlay_cr": 1700.0,
+     "page": 134,
+     "targets": 0
+    }
+   }
+  },
+  {
+   "name": "Infrastructure Maintenance",
+   "sources": {
+    "budget": {
+     "be_cr": 7350.0,
+     "cycle": "2026-27",
+     "demand_no": 46,
+     "name": "Infrastructure Maintenance",
      "statement": "stat4a"
     }
    }
@@ -60745,18 +60573,6 @@
    }
   },
   {
-   "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
-   "sources": {
-    "budget": {
-     "be_cr": 150.0,
-     "cycle": "2026-27",
-     "demand_no": 1,
-     "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
-    }
-   }
-  },
-  {
    "name": "Support for High Value Agriculture",
    "sources": {
     "budget": {
@@ -61174,6 +60990,26 @@
    }
   },
   {
+   "name": "Urea Subsidy",
+   "sources": {
+    "budget": {
+     "be_cr": 116805.0,
+     "cycle": "2026-27",
+     "demand_no": 6,
+     "name": "Urea Subsidy",
+     "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 1.00",
+     "name": "Urea Subsidy",
+     "outlay_cr": 116805.0,
+     "page": 41,
+     "targets": 0
+    }
+   }
+  },
+  {
    "name": "Scheme for promotion of flagging of merchant ships in India",
    "sources": {
     "budget": {
@@ -61467,6 +61303,23 @@
      "demand_no": 10,
      "name": "Duty Drawback Scheme",
      "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Tea Board",
+   "sources": {
+    "budget": {
+     "be_cr": 380.0,
+     "cycle": "2026-27",
+     "demand_no": 10,
+     "name": "Tea Board",
+     "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "similarity 1.00",
+     "name": "Tea Board"
     }
    }
   },
@@ -61865,11 +61718,6 @@
      "demand_no": 12,
      "name": "Postal Operation CENTRAL SECTOR SCHEMES",
      "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: sector",
-     "name": "NIKSHAY - TB Notification incentive for Private Sector"
     }
    }
   },
@@ -62241,6 +62089,18 @@
      "cycle": "2026-27",
      "demand_no": 14,
      "name": "Strengthening of Weights and Measures Infrastructure and Strengthening of Regional Reference Standard Laboratories and Indian Institute of Legal Metrology",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Sugar Subsidy payable under Public Distribution System",
+   "sources": {
+    "budget": {
+     "be_cr": 200.0,
+     "cycle": "2026-27",
+     "demand_no": 15,
+     "name": "Sugar Subsidy payable under Public Distribution System",
      "statement": "stat4b"
     }
    }
@@ -62650,6 +62510,18 @@
      "cycle": "2026-27",
      "demand_no": 21,
      "name": "Naval Dockyard/ Projects",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Special Projects",
+   "sources": {
+    "budget": {
+     "be_cr": 1989.12,
+     "cycle": "2026-27",
+     "demand_no": 21,
+     "name": "Special Projects",
      "statement": "stat4b"
     }
    }
@@ -63074,6 +62946,18 @@
    }
   },
   {
+   "name": "Centres of Excellence (CoE) in Artificial Intelligence (AI)",
+   "sources": {
+    "budget": {
+     "be_cr": 250.0,
+     "cycle": "2026-27",
+     "demand_no": 26,
+     "name": "Centres of Excellence (CoE) in Artificial Intelligence (AI)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Education Services-Internationalization of Higher Education",
    "sources": {
     "budget": {
@@ -63146,6 +63030,26 @@
      "outlay_cr": 665.0,
      "page": 118,
      "targets": 0
+    }
+   }
+  },
+  {
+   "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
+   "sources": {
+    "budget": {
+     "be_cr": 720.0,
+     "cycle": "2026-27",
+     "demand_no": 27,
+     "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
+     "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 1.00",
+     "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
+     "outlay_cr": 720.0,
+     "page": 110,
+     "targets": 10
     }
    }
   },
@@ -63302,6 +63206,26 @@
    }
   },
   {
+   "name": "Control of Pollution",
+   "sources": {
+    "budget": {
+     "be_cr": 1091.0,
+     "cycle": "2026-27",
+     "demand_no": 28,
+     "name": "Control of Pollution",
+     "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 1.00",
+     "name": "Control of Pollution",
+     "outlay_cr": 1091.0,
+     "page": 119,
+     "targets": 6
+    }
+   }
+  },
+  {
    "name": "Bhutan",
    "sources": {
     "budget": {
@@ -63429,6 +63353,18 @@
      "cycle": "2026-27",
      "demand_no": 29,
      "name": "Other Developing Countries",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Disaster Relief",
+   "sources": {
+    "budget": {
+     "be_cr": 80.0,
+     "cycle": "2026-27",
+     "demand_no": 29,
+     "name": "Disaster Relief",
      "statement": "stat4b"
     }
    }
@@ -63858,6 +63794,38 @@
      "cycle": "2026-27",
      "demand_no": 46,
      "name": "Global Fund Grant under Covid 19 Response Mechanism",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Family Welfare Schemes",
+   "sources": {
+    "budget": {
+     "be_cr": 643.46,
+     "cycle": "2026-27",
+     "demand_no": 46,
+     "name": "Family Welfare Schemes",
+     "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 0.98",
+     "name": "Family Welfare Scheme",
+     "outlay_cr": 643.46,
+     "page": 159,
+     "targets": 0
+    }
+   }
+  },
+  {
+   "name": "Establishment and strengthening of NCDC Branches and Health Initiatives Inter Sectoral coordination for preparation and control of Zoonotic Diseases and other neglected tropical diseases surveillance of Viral Hepatitis Anti Microbial Resistance",
+   "sources": {
+    "budget": {
+     "be_cr": 60.0,
+     "cycle": "2026-27",
+     "demand_no": 46,
+     "name": "Establishment and strengthening of NCDC Branches and Health Initiatives Inter Sectoral coordination for preparation and control of Zoonotic Diseases and other neglected tropical diseases surveillance of Viral Hepatitis Anti Microbial Resistance",
      "statement": "stat4b"
     }
    }
@@ -64357,14 +64325,6 @@
      "demand_no": 60,
      "name": "Metro Projects",
      "statement": "stat4b"
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "MRTS (Mass Rapid Transit System) and Metro Projects",
-     "outlay_cr": 30940.0,
-     "page": 171,
-     "targets": 2
     }
    }
   },
@@ -64393,21 +64353,21 @@
    }
   },
   {
-   "name": "Residential",
+   "name": "Non-residential",
    "sources": {
     "budget": {
-     "be_cr": 1150.0,
+     "be_cr": 4000.0,
      "cycle": "2026-27",
      "demand_no": 60,
-     "name": "Residential",
+     "name": "Non-residential",
      "statement": "stat4b"
     },
     "outcome": {
      "classification": "CS",
      "merge_reason": "similarity 1.00",
-     "name": "Residential",
-     "outlay_cr": 1150.0,
-     "page": 179,
+     "name": "Non- Residential",
+     "outlay_cr": 4000.0,
+     "page": 180,
      "targets": 5
     }
    }
@@ -64854,6 +64814,18 @@
    }
   },
   {
+   "name": "Micro and Small Enterprise-Cluster Development Programme (MSE-CDP)",
+   "sources": {
+    "budget": {
+     "be_cr": 410.0,
+     "cycle": "2026-27",
+     "demand_no": 68,
+     "name": "Micro and Small Enterprise-Cluster Development Programme (MSE-CDP)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Tool Rooms & Technical Institutions (TR/TIs)",
    "sources": {
     "budget": {
@@ -65101,18 +65073,6 @@
      "cycle": "2026-27",
      "demand_no": 71,
      "name": "Biogas Programme (Off-Grid)",
-     "statement": "stat4b"
-    }
-   }
-  },
-  {
-   "name": "Human Resources Development and Training",
-   "sources": {
-    "budget": {
-     "be_cr": 40.0,
-     "cycle": "2026-27",
-     "demand_no": 71,
-     "name": "Human Resources Development and Training",
      "statement": "stat4b"
     }
    }
@@ -65474,6 +65434,18 @@
    }
   },
   {
+   "name": "Scheme for providing financial support for collection of biomass",
+   "sources": {
+    "budget": {
+     "be_cr": 100.0,
+     "cycle": "2026-27",
+     "demand_no": 76,
+     "name": "Scheme for providing financial support for collection of biomass",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Payment to ISPRL for purchase of land",
    "sources": {
     "budget": {
@@ -65522,6 +65494,18 @@
    }
   },
   {
+   "name": "Atal Innovation Mission(AIM) including Self Employment and Talent Utilization (SETU)",
+   "sources": {
+    "budget": {
+     "be_cr": 405.0,
+     "cycle": "2026-27",
+     "demand_no": 77,
+     "name": "Atal Innovation Mission(AIM) including Self Employment and Talent Utilization (SETU)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Ongoing Programme and Schemes",
    "sources": {
     "budget": {
@@ -65541,6 +65525,18 @@
      "cycle": "2026-27",
      "demand_no": 77,
      "name": "Official Development Assistance for Sustainable Development Goals (EAP Component) CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "State Support Mission",
+   "sources": {
+    "budget": {
+     "be_cr": 100.0,
+     "cycle": "2026-27",
+     "demand_no": 77,
+     "name": "State Support Mission",
      "statement": "stat4b"
     }
    }
@@ -65590,6 +65586,14 @@
      "demand_no": 78,
      "name": "Sagarmala Schemes and Projects",
      "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "one name begins with the whole of the other",
+     "name": "Sagarmala",
+     "outlay_cr": 616.88,
+     "page": 226,
+     "targets": 3
     }
    }
   },
@@ -66066,6 +66070,26 @@
    }
   },
   {
+   "name": "Machinery and Plant",
+   "sources": {
+    "budget": {
+     "be_cr": 649.49,
+     "cycle": "2026-27",
+     "demand_no": 85,
+     "name": "Machinery and Plant",
+     "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 0.88",
+     "name": "Machinery & Plant",
+     "outlay_cr": 649.49,
+     "page": 237,
+     "targets": 5
+    }
+   }
+  },
+  {
    "name": "Workshop Including Production Units",
    "sources": {
     "budget": {
@@ -66395,7 +66419,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "all 2 content words of the shorter name are present",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "Vigyan Dhara - INSPIRE Faculty Award"
     },
     "outcome": {
@@ -66469,6 +66493,18 @@
    }
   },
   {
+   "name": "Skill India Programme.",
+   "sources": {
+    "budget": {
+     "be_cr": 2800.0,
+     "cycle": "2026-27",
+     "demand_no": 92,
+     "name": "Skill India Programme.",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Integrated Scheme in Skilling Architecture",
    "sources": {
     "budget": {
@@ -66522,23 +66558,6 @@
    }
   },
   {
-   "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
-   "sources": {
-    "budget": {
-     "be_cr": 101.0,
-     "cycle": "2026-27",
-     "demand_no": 93,
-     "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: seed / seed",
-     "name": "Scheme for Economic Empowerment of DNTs (SEED)"
-    }
-   }
-  },
-  {
    "name": "Deendayal Disabled Rehabilitation Scheme",
    "sources": {
     "budget": {
@@ -66575,6 +66594,26 @@
    }
   },
   {
+   "name": "Space Technology",
+   "sources": {
+    "budget": {
+     "be_cr": 10397.06,
+     "cycle": "2026-27",
+     "demand_no": 95,
+     "name": "Space Technology",
+     "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 1.00",
+     "name": "Space Technology",
+     "outlay_cr": 10397.06,
+     "page": 269,
+     "targets": 19
+    }
+   }
+  },
+  {
    "name": "Space Applications",
    "sources": {
     "budget": {
@@ -66583,6 +66622,11 @@
      "demand_no": 95,
      "name": "Space Applications",
      "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "one name begins with the whole of the other",
+     "name": "Space Applications Centre - Scholarships and Stipends"
     },
     "outcome": {
      "classification": "CS",
@@ -66702,18 +66746,6 @@
      "cycle": "2026-27",
      "demand_no": 98,
      "name": "Procurement of Cotton by Cotton Corporation under Price Support Scheme",
-     "statement": "stat4b"
-    }
-   }
-  },
-  {
-   "name": "Handicraft Cluster Development Program - Handicraft Mega Cluster",
-   "sources": {
-    "budget": {
-     "be_cr": null,
-     "cycle": "2026-27",
-     "demand_no": 98,
-     "name": "Handicraft Cluster Development Program - Handicraft Mega Cluster",
      "statement": "stat4b"
     }
    }
@@ -67184,18 +67216,6 @@
    }
   },
   {
-   "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
-   "sources": {
-    "outcome": {
-     "classification": "CS",
-     "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
-     "outlay_cr": 720.0,
-     "page": 110,
-     "targets": 10
-    }
-   }
-  },
-  {
    "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
    "sources": {
     "outcome": {
@@ -67208,6 +67228,18 @@
    }
   },
   {
+   "name": "MRTS (Mass Rapid Transit System) and Metro Projects",
+   "sources": {
+    "outcome": {
+     "classification": "CS",
+     "name": "MRTS (Mass Rapid Transit System) and Metro Projects",
+     "outlay_cr": 30940.0,
+     "page": 171,
+     "targets": 2
+    }
+   }
+  },
+  {
    "name": "Solar Energy: Interest Payment and Issuing Expenses on the Bond",
    "sources": {
     "outcome": {
@@ -67216,18 +67248,6 @@
      "outlay_cr": 1764.35,
      "page": 215,
      "targets": 0
-    }
-   }
-  },
-  {
-   "name": "Sagarmala",
-   "sources": {
-    "outcome": {
-     "classification": "CS",
-     "name": "Sagarmala",
-     "outlay_cr": 616.88,
-     "page": 226,
-     "targets": 3
     }
    }
   },
@@ -67424,6 +67444,15 @@
    }
   },
   {
+   "name": "Fertilizer Subsidy Scheme",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Fertilizer Subsidy Scheme"
+    }
+   }
+  },
+  {
    "name": "Varishtha Pension Bima Yojana",
    "sources": {
     "dbt": {
@@ -67456,6 +67485,15 @@
     "dbt": {
      "list": "central",
      "name": "Family Planning Compensation schemes"
+    }
+   }
+  },
+  {
+   "name": "NIKSHAY - TB Notification incentive for Private Sector",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "NIKSHAY - TB Notification incentive for Private Sector"
     }
    }
   },
@@ -67622,6 +67660,15 @@
    }
   },
   {
+   "name": "Grant in aid to Tripura and Mizoram for Rehabilitation of Bru migrants",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Grant in aid to Tripura and Mizoram for Rehabilitation of Bru migrants"
+    }
+   }
+  },
+  {
    "name": "Central Scheme for Assistance to Civilian Victims (CSACV)",
    "sources": {
     "dbt": {
@@ -67667,20 +67714,20 @@
    }
   },
   {
+   "name": "Kind Benefit under IEDSS component of Samagra Shiksha",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Kind Benefit under IEDSS component of Samagra Shiksha"
+    }
+   }
+  },
+  {
    "name": "Prime Minister School for Rising India",
    "sources": {
     "dbt": {
      "list": "central",
      "name": "Prime Minister School for Rising India"
-    }
-   }
-  },
-  {
-   "name": "Samagra Shiksha - Interventions of Textbooks",
-   "sources": {
-    "dbt": {
-     "list": "central",
-     "name": "Samagra Shiksha - Interventions of Textbooks"
     }
    }
   },
@@ -67757,6 +67804,15 @@
    }
   },
   {
+   "name": "Free Coaching for SC, OBC and PM Care Students",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Free Coaching for SC, OBC and PM Care Students"
+    }
+   }
+  },
+  {
    "name": "Implementation of the Protection of Civil Rights Act, 1955 and the SCs and the STs (Prevention of Atrocities) Act, 1989",
    "sources": {
     "dbt": {
@@ -67771,6 +67827,15 @@
     "dbt": {
      "list": "central",
      "name": "National Overseas Scholarship (NOS)"
+    }
+   }
+  },
+  {
+   "name": "Indian Institute of Remote Sensing - Scholarships and Stipends",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Indian Institute of Remote Sensing - Scholarships and Stipends"
     }
    }
   },
@@ -67843,15 +67908,6 @@
     "dbt": {
      "list": "central",
      "name": "Satish Dhawan Space Centre-SHAR - Scholarships and Stipends"
-    }
-   }
-  },
-  {
-   "name": "Space Applications Centre - Scholarships and Stipends",
-   "sources": {
-    "dbt": {
-     "list": "central",
-     "name": "Space Applications Centre - Scholarships and Stipends"
     }
    }
   },
@@ -68036,15 +68092,6 @@
    }
   },
   {
-   "name": "SECL ke Sushrut (Free residential Coaching for NEET Examination) at Bilaspur, Chhattisgarh",
-   "sources": {
-    "dbt": {
-     "list": "central",
-     "name": "SECL ke Sushrut (Free residential Coaching for NEET Examination) at Bilaspur, Chhattisgarh"
-    }
-   }
-  },
-  {
    "name": "Award of Junior Fellowship to Outstanding Artistes/Persons in the Field of Culture",
    "sources": {
     "dbt": {
@@ -68059,6 +68106,15 @@
     "dbt": {
      "list": "central",
      "name": "Award of Senior Fellowship to Outstanding Artistes/Persons in the field of Culture"
+    }
+   }
+  },
+  {
+   "name": "Repertory Grant",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Repertory Grant"
     }
    }
   },
@@ -68225,6 +68281,15 @@
    }
   },
   {
+   "name": "ATI Scheme (Training Component)",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "ATI Scheme (Training Component)"
+    }
+   }
+  },
+  {
    "name": "IC Schemes",
    "sources": {
     "dbt": {
@@ -68252,6 +68317,15 @@
    }
   },
   {
+   "name": "Padho Predesh - Interest subsidy on educational loans for Overseas Studies",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Padho Predesh - Interest subsidy on educational loans for Overseas Studies"
+    }
+   }
+  },
+  {
    "name": "PMVIKAS Committed Liabilities",
    "sources": {
     "dbt": {
@@ -68266,6 +68340,15 @@
     "dbt": {
      "list": "central",
      "name": "Post-Matric Scholarship for Minorities"
+    }
+   }
+  },
+  {
+   "name": "New National Biogas and Organic Manure Programme (NNBOMP)",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "New National Biogas and Organic Manure Programme (NNBOMP)"
     }
    }
   },
@@ -68311,6 +68394,15 @@
     "dbt": {
      "list": "central",
      "name": "Pradhan Mantri Credit Scheme for Powerloom Weavers"
+    }
+   }
+  },
+  {
+   "name": "Price Support Operation for Cotton Procurement by CCI",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Price Support Operation for Cotton Procurement by CCI"
     }
    }
   },
@@ -68478,15 +68570,15 @@
   }
  ],
  "in_n_sources": {
-  "1": 5063,
-  "2": 310,
-  "3": 60,
+  "1": 5100,
+  "2": 305,
+  "3": 51,
   "4": 22
  },
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
  "snapshot": "2026-08-30",
- "total_entries": 5455,
+ "total_entries": 5478,
  "unlisted_but_funded": [
   {
    "also_in": [],
@@ -68500,6 +68592,15 @@
    "be_cr": 121998.61,
    "demand_no": 86,
    "name": "Road Works",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 116805.0,
+   "demand_no": 6,
+   "name": "Urea Subsidy",
    "statement": "stat4b"
   },
   {
@@ -68591,9 +68692,7 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [
-    "outcome"
-   ],
+   "also_in": [],
    "be_cr": 28740.0,
    "demand_no": 60,
    "name": "Metro Projects",
@@ -68694,6 +68793,15 @@
    "statement": "stat4a"
   },
   {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 10397.06,
+   "demand_no": 95,
+   "name": "Space Technology",
+   "statement": "stat4b"
+  },
+  {
    "also_in": [],
    "be_cr": 10000.0,
    "demand_no": 60,
@@ -68790,6 +68898,13 @@
    "demand_no": 19,
    "name": "Works under Border Roads Development Board",
    "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 7350.0,
+   "demand_no": 46,
+   "name": "Infrastructure Maintenance",
+   "statement": "stat4a"
   },
   {
    "also_in": [
@@ -68942,6 +69057,15 @@
    "statement": "stat4a"
   },
   {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 4000.0,
+   "demand_no": 60,
+   "name": "Non-residential",
+   "statement": "stat4b"
+  },
+  {
    "also_in": [],
    "be_cr": 3952.25,
    "demand_no": 96,
@@ -69047,6 +69171,13 @@
    "statement": "stat4b"
   },
   {
+   "also_in": [],
+   "be_cr": 2800.0,
+   "demand_no": 92,
+   "name": "Skill India Programme.",
+   "statement": "stat4b"
+  },
+  {
    "also_in": [
     "outcome"
    ],
@@ -69141,6 +69272,13 @@
   },
   {
    "also_in": [],
+   "be_cr": 1989.12,
+   "demand_no": 21,
+   "name": "Special Projects",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
    "be_cr": 1952.27,
    "demand_no": 85,
    "name": "Other Electrical Works",
@@ -69189,7 +69327,8 @@
   },
   {
    "also_in": [
-    "outcome"
+    "outcome",
+    "dbt"
    ],
    "be_cr": 1725.06,
    "demand_no": 95,
@@ -69203,6 +69342,15 @@
    "be_cr": 1725.0,
    "demand_no": 46,
    "name": "Human Resources for Health and Medical Education",
+   "statement": "stat4a"
+  },
+  {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 1700.0,
+   "demand_no": 45,
+   "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
    "statement": "stat4a"
   },
   {
@@ -69316,15 +69464,6 @@
    "also_in": [
     "outcome"
    ],
-   "be_cr": 1150.0,
-   "demand_no": 60,
-   "name": "Residential",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [
-    "outcome"
-   ],
    "be_cr": 1103.0,
    "demand_no": 76,
    "name": "Other subsidy payable including for North Eastern Region",
@@ -69340,11 +69479,27 @@
    "statement": "stat4b"
   },
   {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 1091.0,
+   "demand_no": 28,
+   "name": "Control of Pollution",
+   "statement": "stat4b"
+  },
+  {
    "also_in": [],
    "be_cr": 1046.0,
    "demand_no": 23,
    "name": "Special Development Packages",
    "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 1043.15,
+   "demand_no": 44,
+   "name": "Development Programmes",
+   "statement": "stat4a"
   },
   {
    "also_in": [
@@ -69613,6 +69768,15 @@
    "also_in": [
     "outcome"
    ],
+   "be_cr": 720.0,
+   "demand_no": 27,
+   "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "outcome"
+   ],
    "be_cr": 700.0,
    "demand_no": 76,
    "name": "Indradhanush Gas Grid Limited(IGGL)-part of the North East Natural Gas Pipeline Grid",
@@ -69665,6 +69829,24 @@
    "also_in": [
     "outcome"
    ],
+   "be_cr": 649.49,
+   "demand_no": 85,
+   "name": "Machinery and Plant",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 643.46,
+   "demand_no": 46,
+   "name": "Family Welfare Schemes",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "outcome"
+   ],
    "be_cr": 628.18,
    "demand_no": 27,
    "name": "Electronic Governance",
@@ -69680,7 +69862,9 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [],
+   "also_in": [
+    "outcome"
+   ],
    "be_cr": 616.88,
    "demand_no": 78,
    "name": "Sagarmala Schemes and Projects",
@@ -70043,6 +70227,20 @@
   },
   {
    "also_in": [],
+   "be_cr": 410.0,
+   "demand_no": 68,
+   "name": "Micro and Small Enterprise-Cluster Development Programme (MSE-CDP)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 405.0,
+   "demand_no": 77,
+   "name": "Atal Innovation Mission(AIM) including Self Employment and Talent Utilization (SETU)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
    "be_cr": 404.78,
    "demand_no": 28,
    "name": "Integrated Development of Wildlife Habitats",
@@ -70067,6 +70265,15 @@
    "be_cr": 400.0,
    "demand_no": 86,
    "name": "Research, Training, Studies and Other Road Safety Schemes",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "dbt"
+   ],
+   "be_cr": 380.0,
+   "demand_no": 10,
+   "name": "Tea Board",
    "statement": "stat4b"
   },
   {
@@ -70137,9 +70344,7 @@
    "statement": "stat4a"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
+   "also_in": [],
    "be_cr": 324.99,
    "demand_no": 12,
    "name": "Postal Operation CENTRAL SECTOR SCHEMES",
@@ -70257,6 +70462,13 @@
    "be_cr": 255.0,
    "demand_no": 21,
    "name": "Rashtriya Rifles",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 250.0,
+   "demand_no": 26,
+   "name": "Centres of Excellence (CoE) in Artificial Intelligence (AI)",
    "statement": "stat4b"
   },
   {
@@ -70399,6 +70611,13 @@
    "be_cr": 200.0,
    "demand_no": 1,
    "name": "Fund for Innovation and Adoption of Technology (FIAT)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 200.0,
+   "demand_no": 15,
+   "name": "Sugar Subsidy payable under Public Distribution System",
    "statement": "stat4b"
   },
   {
@@ -70555,13 +70774,6 @@
   {
    "also_in": [],
    "be_cr": 150.0,
-   "demand_no": 1,
-   "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 150.0,
    "demand_no": 3,
    "name": "Housing Projects",
    "statement": "stat4b"
@@ -70711,15 +70923,6 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
-   "be_cr": 101.0,
-   "demand_no": 93,
-   "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
-   "statement": "stat4b"
-  },
-  {
    "also_in": [],
    "be_cr": 100.01,
    "demand_no": 30,
@@ -70766,6 +70969,20 @@
    "be_cr": 100.0,
    "demand_no": 65,
    "name": "Expansion of Supreme Court Building CENTRAL SECTOR SCHEMES",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 100.0,
+   "demand_no": 76,
+   "name": "Scheme for providing financial support for collection of biomass",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 100.0,
+   "demand_no": 77,
+   "name": "State Support Mission",
    "statement": "stat4b"
   },
   {
@@ -70929,6 +71146,13 @@
   {
    "also_in": [],
    "be_cr": 80.0,
+   "demand_no": 29,
+   "name": "Disaster Relief",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 80.0,
    "demand_no": 64,
    "name": "National Career Services",
    "statement": "stat4b"
@@ -71036,6 +71260,13 @@
    "be_cr": 60.0,
    "demand_no": 29,
    "name": "Bangladesh",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 60.0,
+   "demand_no": 46,
+   "name": "Establishment and strengthening of NCDC Branches and Health Initiatives Inter Sectoral coordination for preparation and control of Zoonotic Diseases and other neglected tropical diseases surveillance of Viral Hepatitis Anti Microbial Resistance",
    "statement": "stat4b"
   },
   {
@@ -71251,13 +71482,6 @@
   {
    "also_in": [],
    "be_cr": 40.0,
-   "demand_no": 71,
-   "name": "Human Resources Development and Training",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 40.0,
    "demand_no": 74,
    "name": "Integrated Building for Institute of Secretariat Training and Management (ISTM) and other Institute of Department of Personnel and Training (DoPT)",
    "statement": "stat4b"
@@ -71396,127 +71620,8 @@
    "demand_no": 64,
    "name": "Coaching and Guidance for SC,ST and Other Backward Classes",
    "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 11,
-   "name": "Price and Production Statistics",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 21,
-   "name": "National Cadet Corps",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 26,
-   "name": "Global Initiative for Academic Network (GIAN)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 29,
-   "name": "Aid for Cultural & Heritage Project CENTRAL SECTOR SCHEMES",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 49,
-   "name": "Civic Action Programme and Media Plan",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 76,
-   "name": "Indian Strategic Petroleum Reserve Limited (ISPRL) Phase II (Construction of Cavems)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 76,
-   "name": "Scheme for Development of Pipeline infrastructure for injection of Compressed Bio Gas (CBG) in City Gas Distribution (CGD) Network",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 98,
-   "name": "Integrated Wool Development Programme",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 19.0,
-   "demand_no": 29,
-   "name": "Seychelles",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 18.0,
-   "demand_no": 14,
-   "name": "Consumer Awareness (Advertising and Publicity)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 17.0,
-   "demand_no": 91,
-   "name": "Industrial Research and Development",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 16.0,
-   "demand_no": 98,
-   "name": "Integrated Processing Development Scheme",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 15.31,
-   "demand_no": 74,
-   "name": "Improving Pensioners' Welfare",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 15.0,
-   "demand_no": 15,
-   "name": "Credit Guarantee Scheme for electronic Negotiable Warehouse Receipts (e-NWR) based Pledge Financing ( CGS- NPF)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 15.0,
-   "demand_no": 21,
-   "name": "Inspection - Director General Quality Audit (DGQA)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 15.0,
-   "demand_no": 26,
-   "name": "Unnat Bharat Abhiyan",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 15.0,
-   "demand_no": 46,
-   "name": "National Organ Transplant Programme",
-   "statement": "stat4b"
   }
  ],
- "unlisted_but_funded_cr": 1293470.98,
- "unlisted_but_funded_total": 481
+ "unlisted_but_funded_cr": 1443203.26,
+ "unlisted_but_funded_total": 498
 }
