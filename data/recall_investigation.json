@@ -1,0 +1,6096 @@
+{
+ "answer": "No. Nothing here is wired into any classifier and no state was changed. The department-rank signal is real and far too weak. Pooled over all seven states its top decile carries P(scheme) 0.302 against an expected 0.216 on the development half and 0.246 against 0.209 on the held-out half, a lift of nine points and then four. Per state the two halves disagree in SIGN in three of the seven for the top decile and in five of the seven for the largest row in a department. On the rows where the recall is actually lost, those the English cannot read at all, it carries nothing: P(scheme | largest in its department) among rows scoring 0 or less is 0.000 on the development half in ALL SEVEN states. Against the control that matters, simply lowering the publishing bar by the same number of points, it is worse in Maharashtra at every weight tried, a tie in Andhra Pradesh, and better elsewhere only on increments of 2 to 20 hand labelled rows. And at +1, the most any of these measurements would buy on this repository's scale, not one of the seven named schemes clears its bar: Mukhyamantri Mazi Ladaki Bahin goes 5 to 6 against a bar of 8, Subhadra 7 to 8 against 9, Samrudha Krushaka 5 to 6 against 9, Lakshmir Bhandar 3 to 4 against 10, Magalir Urimai Thogai's general head 4 to 5 against 10, Gruha Lakshmi 2 to 3 against 7 and Thallikivandanam 0 to 1 against 4.",
+ "built": "2026-09-02T16:43:11Z",
+ "did_the_signal_survive_the_circularity_check": "The question does not arise on the merits, because the signal fails on strength long before its provenance matters. It was tested anyway, three ways. FIRST, the reason string every hand label carries was read for any sign that the labeller reasoned from how big the head is. Of 4,159 labelled rows across the seven states, 39 reasons mention magnitude at all and exactly TWO cite the size of the head, both of them describing the row rather than grounding the label, and both labelled not_scheme: 'the district police establishment, the largest salary head in the book' in Tamil Nadu and 'a recovery mirror carrying the name of Lakshmir Bhandar, the state's largest cash transfer' in West Bengal. The reasons that do quote a rupee figure quote the BENEFIT, 'Ladki Bahin pays Rs 1,500 a month to a woman', which is what a person receives and not what the head costs. SECOND, P(scheme) by raw allocation quartile on the probability sample: a labeller biased by size would have made raw size work, and it is non-monotone in six of the seven states, which is the same rejection Kerala, Maharashtra, Odisha and Tamil Nadu already wrote into their own signals_rejected. Andhra Pradesh is the exception, running 0.234, 0.312, 0.447 and 0.625 across quartiles, and that is a fact about its corpus rather than about its labeller: those six books are the Gender, Child, Scheduled Caste, Scheduled Tribe, Backward Class and Minority annexures, already filtered to beneficiary-facing rows, where the base rate is 41% and the big rows really are the big schemes. THIRD, and this is the test with teeth, the marginal table: if size drove the labels then within a fixed score band a larger row would be labelled scheme more often. It is not. Restricted to rows below the publishing bar the excess is a row or two on n of 1 to 22, and restricted to rows scoring 0 or less it is zero everywhere. The same measurement says the signal is not circular and that it is not useful, and those are not two findings.",
+ "method": "Every P(scheme) is measured on the DEVELOPMENT half of each state's existing stratified sample, the same half every weight in every classifier was fitted on: sample rows sorted by key, even index. The held-out half is reported beside it. Three tests, declared before the numbers were read: (a) the candidate must lift P(scheme) above the state's base rate on BOTH halves; (b) its n must be at least as large as the thinnest signal the state already weights; (c) it must beat the control of simply lowering the publishing bar by the same number of points. Test (c) is the one that is easy to skip and it is the one that decides this: the band just below every one of these bars is already 70% to 87% schemes, so any positive weight publishes more schemes and the increment always looks good.",
+ "pooled": {
+  "signals": [
+   {
+    "development": {
+     "excess_schemes": 3.5,
+     "expected_from_state_base_rates": 12.5,
+     "n": 46,
+     "observed_schemes": 16,
+     "p": 0.348
+    },
+    "held_out": {
+     "excess_schemes": 1.0,
+     "expected_from_state_base_rates": 10.0,
+     "n": 33,
+     "observed_schemes": 11,
+     "p": 0.333
+    },
+    "signal": "largest allocation in its own department"
+   },
+   {
+    "development": {
+     "excess_schemes": 2.2,
+     "expected_from_state_base_rates": 27.8,
+     "n": 102,
+     "observed_schemes": 30,
+     "p": 0.294
+    },
+    "held_out": {
+     "excess_schemes": -2.7,
+     "expected_from_state_base_rates": 29.7,
+     "n": 103,
+     "observed_schemes": 27,
+     "p": 0.262
+    },
+    "signal": "top 3 allocations in its own department"
+   },
+   {
+    "development": {
+     "excess_schemes": 10.8,
+     "expected_from_state_base_rates": 27.2,
+     "n": 126,
+     "observed_schemes": 38,
+     "p": 0.302
+    },
+    "held_out": {
+     "excess_schemes": 5.3,
+     "expected_from_state_base_rates": 29.7,
+     "n": 142,
+     "observed_schemes": 35,
+     "p": 0.246
+    },
+    "signal": "top decile of allocations in its own department"
+   },
+   {
+    "development": {
+     "excess_schemes": 3.1,
+     "expected_from_state_base_rates": 12.9,
+     "n": 45,
+     "observed_schemes": 16,
+     "p": 0.356
+    },
+    "held_out": {
+     "excess_schemes": 2.0,
+     "expected_from_state_base_rates": 11.0,
+     "n": 36,
+     "observed_schemes": 13,
+     "p": 0.361
+    },
+    "signal": "the row takes a quarter or more of its department's whole provision"
+   },
+   {
+    "development": {
+     "excess_schemes": 10.5,
+     "expected_from_state_base_rates": 4.5,
+     "n": 20,
+     "observed_schemes": 15,
+     "p": 0.75
+    },
+    "held_out": {
+     "excess_schemes": 9.7,
+     "expected_from_state_base_rates": 6.3,
+     "n": 25,
+     "observed_schemes": 16,
+     "p": 0.64
+    },
+    "signal": "top decile of its department, among rows on a welfare function major head only"
+   },
+   {
+    "development": {
+     "excess_schemes": 40.3,
+     "expected_from_state_base_rates": 37.7,
+     "n": 183,
+     "observed_schemes": 78,
+     "p": 0.426
+    },
+    "held_out": {
+     "excess_schemes": 42.6,
+     "expected_from_state_base_rates": 39.4,
+     "n": 184,
+     "observed_schemes": 82,
+     "p": 0.446
+    },
+    "signal": "on a welfare function major head and NOT in the top decile, the control for the clause above"
+   },
+   {
+    "development": {
+     "excess_schemes": 6.0,
+     "expected_from_state_base_rates": 76.0,
+     "n": 355,
+     "observed_schemes": 82,
+     "p": 0.231
+    },
+    "held_out": {
+     "excess_schemes": 12.4,
+     "expected_from_state_base_rates": 69.6,
+     "n": 336,
+     "observed_schemes": 82,
+     "p": 0.244
+    },
+    "signal": "the allocation is a round number, at most two significant digits"
+   },
+   {
+    "development": {
+     "excess_schemes": 11.7,
+     "expected_from_state_base_rates": 21.3,
+     "n": 123,
+     "observed_schemes": 33,
+     "p": 0.268
+    },
+    "held_out": {
+     "excess_schemes": 8.4,
+     "expected_from_state_base_rates": 17.6,
+     "n": 123,
+     "observed_schemes": 26,
+     "p": 0.211
+    },
+    "signal": "the same NAME is printed on three or more rows of the corpus"
+   }
+  ],
+  "what": "Candidates that fire on about one row per department are too thin to measure in any one state. Pooling all seven is the best powered test available. Observed is the count of rows the hand labels call schemes; expected is what the base rate of each contributing state predicts for the same rows, so a state with a 41% base rate cannot carry the answer for a state with 8%."
+ },
+ "question": "All seven state classifiers read English and all seven miss the state's own largest schemes, because a Bengali, Telugu, Tamil, Odia, Marathi or Kannada brand name says nothing to a vocabulary of English benefit words. Is there a LANGUAGE-INDEPENDENT signal in what these states print that would recover them? The candidate named for testing was allocation rank within the row's own department, on the argument that a state's largest provisions inside a welfare department are overwhelmingly schemes and its smallest are establishment and works heads.",
+ "signals_rejected": [
+  {
+   "measured": "Top decile, development half then held out, against each state's base rate: Andhra Pradesh 0.444 over 18 and 0.500 over 22 against 0.412 and 0.426; Karnataka 0.467 over 15 and 0.267 over 15 against 0.370 and 0.364; Kerala 0.250 over 16 and 0.158 over 19 against 0.174 and 0.137; Maharashtra 0.318 over 22 and 0.200 over 20 against 0.240 and 0.231; Odisha 0.167 over 18 and 0.273 over 22 against 0.092 and 0.113; Tamil Nadu 0.350 over 20 and 0.143 over 21 against 0.160 and 0.146; West Bengal 0.118 over 17 and 0.174 over 23 against 0.080 and 0.089. Pooled over all seven, 38 schemes observed against 27.2 expected on 126 development rows and 35 against 29.7 on 142 held-out rows. LARGEST IN ITS DEPARTMENT is thinner and worse: 46 development rows across all seven states, 16 schemes against 12.5 expected.",
+   "signal": "ALLOCATION RANK WITHIN ITS OWN DEPARTMENT, the candidate this investigation was opened to test: largest in its department, top 3, top 5, top decile, top quartile",
+   "why": "Three reasons, and the third is the one that settles it. First, the two halves disagree in SIGN in three of the seven states for the top decile and in five of the seven for the largest row, which is what a signal fitted on a handful of rows looks like; the candidate fires on about one row per department, so no state's probability sample holds enough of them to measure. Second, it carries nothing where the recall is actually lost: among rows the classifier scores 0 or less, where the English says nothing at all, P(scheme | largest in its department) is 0.000 on the development half in ALL SEVEN states, on 1 to 7 rows each. Third and decisive, it does not beat the control. Adding +k publishes rows that already scored bar-k, and the band just below every one of these bars is already 73% to 88% schemes, so any positive weight publishes more schemes. Set against simply lowering the bar by the same k, at +1 the signal is WORSE in Maharashtra, 0.714 over 7 rows against 0.868 over 53, a tie in Andhra Pradesh at 0.750 against 0.745, and better in the other five only on increments of 2 to 15 hand labelled rows. What the candidate actually selects is visible in circularity_check.top_of_department_rows_and_the_reason_each_was_given: the largest provision in a department is the establishment block. Odisha's 44 are led by Loans at Rs 14,911 crore, General Primary Schools at Rs 9,498 crore, Construction of Buildings, District Establishment and Emoluments of Members of Legislative Assembly. West Bengal's largest row in any demand is Secondary Schools for Boys and Girls at Rs 19,438 crore, larger than Lakshmir Bhandar, with West Bengal Police third. Maharashtra's include District and Other Roads at Rs 6,600 crore and 'Office Building.'. Being big inside a department is a fact about payroll and public works before it is a fact about schemes."
+  },
+  {
+   "measured": "Development half then held out against base: Andhra Pradesh 0.343 over 67 and 0.319 over 47; Karnataka 0.259 over 58 and 0.327 over 55; Kerala 0.221 over 86 and 0.133 over 75; Maharashtra 0.224 over 98 and 0.188 over 101; Odisha 0.055 over 91 and 0.100 over 110; Tamil Nadu 0.125 over 104 and 0.113 over 97; West Bengal 0.078 over 116 and 0.065 over 107.",
+   "signal": "the bottom half of its department's allocations, read as a NEGATIVE rather than the top read as a positive",
+   "why": "The n is finally large, and the effect is gone. The lift is within two points of the base rate in five of the seven states and points the wrong way in Kerala. A small provision is not evidence of an establishment head: the grazing subsidy to shepherd families is Rs 5 crore and the pension to indigent sportsmen is a few lakh. This is the same finding the raw-size rejection already carries in four of these files, restated on a normalised axis."
+  },
+  {
+   "measured": "At 10 times the department median, development then held out against base: Andhra Pradesh 0.545 over 11 and 0.565 over 23 against 0.412 and 0.426; Karnataka 0.444 over 9 and 0.500 over 6 against 0.370 and 0.364; Kerala 0.300 over 10 and 0.200 over 10 against 0.174 and 0.137; Maharashtra 0.400 over 35 and 0.216 over 37 against 0.240 and 0.231; Odisha 0.182 over 33 and 0.269 over 26 against 0.092 and 0.113; Tamil Nadu 0.243 over 37 and 0.152 over 33 against 0.160 and 0.146; West Bengal 0.143 over 14 and 0.125 over 16 against 0.080 and 0.089.",
+   "signal": "the allocation as a multiple of the department's median row, at 10x, 3x and 1x",
+   "why": "The best behaved member of the family and still not enough. It is the only variant that lifts on both halves in six of the seven states, and the lift is between +0.01 and +0.16, which on this repository's scale is worth +1 and no more: Karnataka gives +4 to a purpose line measuring 0.947 and Odisha +1 to a sub-plan head measuring 0.145. At +1 it beats the control of lowering the bar in five states by between 3 and 9 points of precision on 2 to 13 newly published rows, ties in Andhra Pradesh and loses in Maharashtra. And at +1 it moves NONE of the seven named schemes: Mukhyamantri Mazi Ladaki Bahin would go from 5 to 6 against a bar of 8, Lakshmir Bhandar from 3 to 4 against 10, Subhadra from 7 to 8 against 9, Magalir Urimai Thogai's general head from 4 to 5 against 10, Gruha Lakshmi from 2 to 3 against 7 and Thallikivandanam from 0 to 1 against 4. It would buy a few rows per state, cost seven censuses their coverage, and leave the stated problem exactly where it is."
+  },
+  {
+   "measured": "At a quarter, development then held out: Andhra Pradesh 0.467 over 15 and 0.600 over 10; Karnataka 0.444 over 9 and 0.250 over 12; Kerala 0.000 over 4 and 0.600 over 5; Maharashtra 0.429 over 7 and 0.000 over 5; Odisha 0.167 over 6 and 1.000 over 1; Tamil Nadu 0.000 over 2 and 0.000 over 3; West Bengal 0.500 over 2 and no held-out row at all.",
+   "signal": "the row takes a quarter or a tenth of its whole department's provision",
+   "why": "Unmeasurable. Four states put fewer than eight development rows on it and three of those flip sign between the halves. Pooled it is 16 schemes against 12.9 expected on 45 rows, the same weak excess as the rank family it belongs to."
+  },
+  {
+   "measured": "Development then held out against base: Andhra Pradesh 0.407 over 54 and 0.515 over 66 against 0.412 and 0.426; Karnataka 0.462 over 52 and 0.411 over 56 against 0.370 and 0.364; Kerala 0.286 over 14 and 0.217 over 23 against 0.174 and 0.137; Odisha 0.100 over 10 and 0.091 over 11 against 0.092 and 0.113; West Bengal 0.091 over 11 and 0.111 over 9 against 0.080 and 0.089. Tamil Nadu prints one departmental volume per row and Maharashtra one statement, so it fires on nothing in either.",
+   "signal": "the row appears in more than one of the state's books",
+   "why": "Flat. It is within two points of the base rate in Andhra Pradesh, Odisha and West Bengal, and where it lifts, in Karnataka and Kerala, the lift is +0.05 to +0.11 on 14 to 56 rows. It also measures the wrong thing: a row is in the Gender Budget and the Scheduled Caste annexure because the state cross-tabs the same provision, which is a fact about how many annexures the state publishes and not about what the money buys."
+  },
+  {
+   "measured": "Only Maharashtra, Odisha and West Bengal print a prior-year actual. NO prior actual, so the head is new, development then held out against base: Maharashtra 0.300 over 80 and 0.263 over 95 against 0.240 and 0.231; Odisha 0.111 over 45 and 0.167 over 48 against 0.092 and 0.113; West Bengal 0.109 over 119 and 0.065 over 123 against 0.080 and 0.089. The converse, a prior actual present, runs at or below the base rate in all three.",
+   "signal": "whether the same head carried a provision in an earlier year, where the parsers captured prior-year columns",
+   "why": "The direction is right and the size is nothing: a new head is very slightly more likely to be a scheme, by 2 to 6 points, and West Bengal's halves disagree. The reason it is weak is visible in the corpus: a state opens new heads for offices, works and centrally sponsored components as readily as for schemes, and the schemes that matter here are not new. Lakshmir Bhandar, Kanyashree and Magalir Urimai Thogai all carry last year's actual."
+  },
+  {
+   "measured": "A whole number of lakh with at most two significant digits. Development then held out against base: Andhra Pradesh 0.500 over 28 and 0.406 over 32 against 0.412 and 0.426; Karnataka 0.429 over 42 and 0.600 over 40 against 0.370 and 0.364; Kerala 0.157 over 89 and 0.163 over 86 against 0.174 and 0.137; Maharashtra 0.232 over 99 and 0.232 over 82 against 0.240 and 0.231; Odisha 0.214 over 42 and 0.171 over 35 against 0.092 and 0.113; Tamil Nadu 0.056 over 18 and 0.136 over 22 against 0.160 and 0.146; West Bengal 0.081 over 37 and 0.077 over 39 against 0.080 and 0.089. Pooled, 82 schemes against 76.0 expected on 355 development rows.",
+   "signal": "the allocation is a round number, which might mark a policy provision rather than an establishment estimate",
+   "why": "Flat in five states and pointing the wrong way in Tamil Nadu. It lifts in Odisha, by +0.12 and +0.06 on 42 and 35 rows, and in Karnataka, and that is the whole of it. Even in Odisha it is useless for the problem at hand: Subhadra Yojana is Rs 1,014,520 lakh and Samrudha Krushaka Rs 608,840 lakh, neither of them round, while AAHAAR is round at Rs 9,000 lakh and would go from 6 to 7 against a bar of 9. The premise is wrong in a way worth recording: a state rounds a WORKS provision as readily as a scheme, and it does not round a cash transfer at all, because that figure is a beneficiary count times a rate."
+  },
+  {
+   "measured": "At three or more, development then held out against base: Andhra Pradesh 0.611 over 18 and 0.444 over 9 against 0.412 and 0.426; Karnataka 0.000 over 7 and 0.000 over 6; Maharashtra 0.429 over 7 and 0.333 over 3 against 0.240 and 0.231; Tamil Nadu 0.345 over 29 and 0.333 over 27 against 0.160 and 0.146; West Bengal 0.145 over 62 and 0.156 over 77 against 0.080 and 0.089. Kerala and Odisha collapse repeated names in the parser, so it fires on 3 rows and 0 rows there.",
+   "signal": "the same NAME is printed on two or three or more rows of the corpus",
+   "why": "The strongest of the structural candidates and still not enough, and most of it is already counted. A name recurs because the state votes the provision again under its Scheduled Caste and Tribal sub-plan heads, which is the sub-plan minor head signal that Tamil Nadu, West Bengal, Odisha and Kerala already weight at +1. Its lift over the base rate is +0.19 in Tamil Nadu and +0.07 in West Bengal, which buys +1 at most on this repository's scale, and at +1 Magalir Urimai Thogai's general head goes from 4 to 5 against a bar of 10 and Lakshmir Bhandar from 3 to 4 against 10. It also points the wrong way in Karnataka, where the recurring names are the Development Action Plan sub-plan allocation heads."
+  },
+  {
+   "measured": "Development then held out against base: Odisha 0.155 over 58 and 0.246 over 61 against 0.092 and 0.113; Tamil Nadu 0.600 over 20 and 0.667 over 15 against 0.160 and 0.146; West Bengal 0.156 over 64 and 0.159 over 69 against 0.080 and 0.089. The part that is NOT already counted, rows not themselves on a sub-plan head, measures 0.500 over 8 and 0.429 over 7 in Tamil Nadu and 0.038 over 26 and 0.192 over 26 in West Bengal.",
+   "signal": "the state books this NAME under a Scheduled Caste or Tribal sub-plan minor head AND under a general one, so the general head is an earmarked provision",
+   "why": "This was the best idea in the investigation and it is nearly all redundant. In Odisha it measures 0.155 and 0.246 where the plain sub-plan head the file already weights measures 0.145 and 0.242, which is the same signal counted twice. The genuinely new part, giving the GENERAL head of a provision credit for having sub-plan twins, is the exact defect West Bengal records in known_errors, where the Jai Bangla pensions' Scheduled Caste and Tribal twins clear the bar and the general head does not. It fails anyway: 8 development rows in Tamil Nadu, and in West Bengal it points the WRONG WAY on the development half, 0.038 against a base of 0.080, which is the half every weight in that file was fitted on."
+  },
+  {
+   "measured": "Only Andhra Pradesh, Kerala and Odisha print a list of heads per row. Andhra Pradesh 0.192 over 26 and 0.472 over 36 against 0.412 and 0.426; Kerala 0.200 over 10 and 0.286 over 14 against 0.174 and 0.137; Odisha 0.115 over 52 and 0.200 over 60 against 0.092 and 0.113.",
+   "signal": "the row spans three or more heads of account",
+   "why": "Points the wrong way on the development half in Andhra Pradesh and lifts by +0.03 to +0.11 elsewhere. It is the same sub-plan fact as the clause above, counted less precisely: a row spans several heads because the state votes it under the general, Scheduled Caste and Tribal heads."
+  },
+  {
+   "measured": "Pooled over all seven states it is P(scheme) 0.750 on 20 development rows and 0.640 on 25 held-out rows, against a control of 0.426 and 0.446 for welfare-major rows NOT in the top decile. Per state the development n is 1 to 5: Andhra Pradesh 1.000 over 3, Karnataka 0.500 over 2, Kerala 0.667 over 3, Maharashtra 0.800 over 5, Odisha 0.000 over 1, Tamil Nadu 1.000 over 3, West Bengal 0.667 over 3.",
+   "signal": "top decile of its department AND on a welfare function major head, the interaction, which is the strongest looking number in this file",
+   "why": "Published here because it is the one number in the investigation that looks spectacular, and it must not be read as a finding. It can only be stated pooled, and a weight cannot be pooled: each classifier is fitted on its own state, against its own base rate, and no state here puts more than five development rows on it. Against the control of lowering the bar it fails outright in Maharashtra, where at +1 the rows it newly publishes are 0.500 precise against 0.868 for the band, and in Kerala and Tamil Nadu, and it passes on 1 to 9 rows in the other three. A rule fitted on five rows that publishes 52 in Maharashtra and 129 in Tamil Nadu is not a measurement."
+  }
+ ],
+ "states": {
+  "andhra": {
+   "base_rate_development": 0.412,
+   "base_rate_held_out": 0.426,
+   "candidates": [
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 14,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 61,
+     "held_out": {
+      "n": 10,
+      "p": 0.6
+     },
+     "lift_development": 0.017,
+     "lift_held_out": 0.174,
+     "note": "",
+     "signal": "largest allocation in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 27,
+      "p": 0.407
+     },
+     "fires_on_rows_in_corpus": 146,
+     "held_out": {
+      "n": 32,
+      "p": 0.5
+     },
+     "lift_development": -0.005,
+     "lift_held_out": 0.074,
+     "note": "",
+     "signal": "top 3 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 38,
+      "p": 0.342
+     },
+     "fires_on_rows_in_corpus": 205,
+     "held_out": {
+      "n": 42,
+      "p": 0.452
+     },
+     "lift_development": -0.07,
+     "lift_held_out": 0.026,
+     "note": "",
+     "signal": "top 5 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 18,
+      "p": 0.444
+     },
+     "fires_on_rows_in_corpus": 92,
+     "held_out": {
+      "n": 22,
+      "p": 0.5
+     },
+     "lift_development": 0.032,
+     "lift_held_out": 0.074,
+     "note": "",
+     "signal": "top decile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 28,
+      "p": 0.464
+     },
+     "fires_on_rows_in_corpus": 166,
+     "held_out": {
+      "n": 39,
+      "p": 0.538
+     },
+     "lift_development": 0.052,
+     "lift_held_out": 0.112,
+     "note": "",
+     "signal": "top quartile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 67,
+      "p": 0.343
+     },
+     "fires_on_rows_in_corpus": 294,
+     "held_out": {
+      "n": 47,
+      "p": 0.319
+     },
+     "lift_development": -0.069,
+     "lift_held_out": -0.107,
+     "note": "",
+     "signal": "bottom half of allocations in its own department, read as a NEGATIVE"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 15,
+      "p": 0.467
+     },
+     "fires_on_rows_in_corpus": 66,
+     "held_out": {
+      "n": 10,
+      "p": 0.6
+     },
+     "lift_development": 0.055,
+     "lift_held_out": 0.174,
+     "note": "",
+     "signal": "the row takes a quarter or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 21,
+      "p": 0.476
+     },
+     "fires_on_rows_in_corpus": 107,
+     "held_out": {
+      "n": 25,
+      "p": 0.56
+     },
+     "lift_development": 0.064,
+     "lift_held_out": 0.134,
+     "note": "",
+     "signal": "the row takes a tenth or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 11,
+      "p": 0.545
+     },
+     "fires_on_rows_in_corpus": 75,
+     "held_out": {
+      "n": 23,
+      "p": 0.565
+     },
+     "lift_development": 0.133,
+     "lift_held_out": 0.139,
+     "note": "",
+     "signal": "allocation at least 10 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 17,
+      "p": 0.529
+     },
+     "fires_on_rows_in_corpus": 146,
+     "held_out": {
+      "n": 34,
+      "p": 0.588
+     },
+     "lift_development": 0.117,
+     "lift_held_out": 0.162,
+     "note": "",
+     "signal": "allocation at least 3 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 39,
+      "p": 0.513
+     },
+     "fires_on_rows_in_corpus": 277,
+     "held_out": {
+      "n": 59,
+      "p": 0.508
+     },
+     "lift_development": 0.101,
+     "lift_held_out": 0.082,
+     "note": "",
+     "signal": "allocation at least the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 3,
+      "p": 1.0
+     },
+     "fires_on_rows_in_corpus": 9,
+     "held_out": {
+      "n": 3,
+      "p": 1.0
+     },
+     "lift_development": 0.588,
+     "lift_held_out": 0.574,
+     "note": "",
+     "signal": "largest in its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 3,
+      "p": 1.0
+     },
+     "fires_on_rows_in_corpus": 20,
+     "held_out": {
+      "n": 8,
+      "p": 0.5
+     },
+     "lift_development": 0.588,
+     "lift_held_out": 0.074,
+     "note": "",
+     "signal": "top decile of its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 54,
+      "p": 0.407
+     },
+     "fires_on_rows_in_corpus": 339,
+     "held_out": {
+      "n": 66,
+      "p": 0.515
+     },
+     "lift_development": -0.005,
+     "lift_held_out": 0.089,
+     "note": "",
+     "signal": "the row appears in more than one of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 23,
+      "p": 0.261
+     },
+     "fires_on_rows_in_corpus": 142,
+     "held_out": {
+      "n": 28,
+      "p": 0.643
+     },
+     "lift_development": -0.151,
+     "lift_held_out": 0.217,
+     "note": "",
+     "signal": "the row appears in three or more of the state's books"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 19,
+      "p": 0.632
+     },
+     "fires_on_rows_in_corpus": 83,
+     "held_out": {
+      "n": 9,
+      "p": 0.444
+     },
+     "lift_development": 0.22,
+     "lift_held_out": 0.018,
+     "note": "",
+     "signal": "the same NAME is printed on two or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 18,
+      "p": 0.611
+     },
+     "fires_on_rows_in_corpus": 75,
+     "held_out": {
+      "n": 9,
+      "p": 0.444
+     },
+     "lift_development": 0.199,
+     "lift_held_out": 0.018,
+     "note": "",
+     "signal": "the same NAME is printed on three or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 10,
+      "p": 0.2
+     },
+     "fires_on_rows_in_corpus": 78,
+     "held_out": {
+      "n": 17,
+      "p": 0.882
+     },
+     "lift_development": -0.212,
+     "lift_held_out": 0.456,
+     "note": "",
+     "signal": "the state books this NAME under a sub-plan minor head AND under a general one"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 25,
+      "p": 0.36
+     },
+     "fires_on_rows_in_corpus": 152,
+     "held_out": {
+      "n": 28,
+      "p": 0.679
+     },
+     "lift_development": -0.052,
+     "lift_held_out": 0.253,
+     "note": "carried only as the redundancy check for the clause above",
+     "signal": "the row is itself on a sub-plan minor head, which four of the seven classifiers already weight at +1"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 5,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "the only part of the sub-plan clause above that four classifiers do not already have",
+     "signal": "the row is NOT on a sub-plan minor head but the state books the same NAME on one, so this row is the general head of an earmarked provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 26,
+      "p": 0.192
+     },
+     "fires_on_rows_in_corpus": 154,
+     "held_out": {
+      "n": 36,
+      "p": 0.472
+     },
+     "lift_development": -0.22,
+     "lift_held_out": 0.046,
+     "note": "",
+     "signal": "the row spans three or more heads of account"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 28,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 161,
+     "held_out": {
+      "n": 32,
+      "p": 0.406
+     },
+     "lift_development": 0.088,
+     "lift_held_out": -0.02,
+     "note": "",
+     "signal": "the allocation is a round number, at most two significant digits"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.412,
+     "base_rate_held_out": 0.426,
+     "development": {
+      "n": 4,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 25,
+     "held_out": {
+      "n": 7,
+      "p": 0.571
+     },
+     "lift_development": 0.088,
+     "lift_held_out": 0.145,
+     "note": "",
+     "signal": "the allocation is a round number AND in the top decile of its department"
+    }
+   ],
+   "circularity_check": {
+    "p_scheme_by_raw_allocation_quartile_on_the_probability_sample": {
+     "nil": {
+      "n": 13,
+      "p": 0.615
+     },
+     "q1": {
+      "n": 47,
+      "p": 0.234
+     },
+     "q2": {
+      "n": 48,
+      "p": 0.312
+     },
+     "q3": {
+      "n": 47,
+      "p": 0.447
+     },
+     "q4": {
+      "n": 48,
+      "p": 0.625
+     }
+    },
+    "reason_strings_citing_magnitude_at_all": {
+     "every_other_labelled_row": {
+      "citing": 1,
+      "n": 274
+     },
+     "top_of_department": {
+      "citing": 0,
+      "n": 28
+     }
+    },
+    "reason_strings_citing_the_size_of_the_head_AS_THE_GROUND": {
+     "every_other_labelled_row": 0,
+     "top_of_department": 0
+    },
+    "top_of_department_rows_and_the_reason_each_was_given": [
+     {
+      "be_lakh": 3000.0,
+      "key": "Administration, State Roads and Road Safety Works (RSW), ENC (Roads and Buildings) | District and Other Roads",
+      "label": "not_scheme",
+      "name": "District and Other Roads",
+      "reason": "a capital roads head, 5054 District and Other Roads, an asset and not a transfer"
+     },
+     {
+      "be_lakh": 660000.0,
+      "key": "Agriculture Department | Annadata Sukhibhava",
+      "label": "scheme",
+      "name": "Annadata Sukhibhava",
+      "reason": "Annadata Sukhibhava pays cash into farmer households' accounts"
+     },
+     {
+      "be_lakh": 200.0,
+      "key": "Andhra Pradesh State Legal Services Authority | Andhra Pradesh Victim Compensation Scheme",
+      "label": "scheme",
+      "name": "Andhra Pradesh Victim Compensation Scheme",
+      "reason": "compensation paid to victims of crime"
+     },
+     {
+      "be_lakh": 1191321.1,
+      "key": "Backward Classes Welfare Department | NTR Bharosa Pension Scheme",
+      "label": "scheme",
+      "name": "NTR Bharosa Pension Scheme",
+      "reason": "NTR Bharosa is the state social security pension"
+     },
+     {
+      "be_lakh": 724325.57,
+      "key": "Department of Economically Weaker Sections (EWS) Welfare | NTR Bharosa Pension Scheme",
+      "label": "scheme",
+      "name": "NTR Bharosa Pension Scheme",
+      "reason": "the state social security pension"
+     },
+     {
+      "be_lakh": 911.0,
+      "key": "Department of Skills Development and Training, Secretariat | Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY) [AP224]",
+      "label": "scheme",
+      "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY) [AP224]",
+      "reason": "DDU-GKY trains and places rural youth and pays them a stipend"
+     },
+     {
+      "be_lakh": 1559.75,
+      "key": "Director General and Inspector General of Police | Headquarters Office",
+      "label": "not_scheme",
+      "name": "Headquarters Office",
+      "reason": "police headquarters establishment"
+     },
+     {
+      "be_lakh": 182247.59,
+      "key": "Family Welfare Department | Flexible Pool for RCH & Health System Strengthening National Health Programme and national urban health Mission [AP115]",
+      "label": "not_scheme",
+      "name": "Flexible Pool for RCH & Health System Strengthening National Health Programme and national urban health Mission [AP115]",
+      "reason": "the NHM flexible pool strengthens the health system; services reach women and children but the head funds the system"
+     },
+     {
+      "be_lakh": 334400.0,
+      "key": "Food and Civil Supplies Department | Subsidy on Rice (Human Resources Development)",
+      "label": "scheme",
+      "name": "Subsidy on Rice (Human Resources Development)",
+      "reason": "subsidised rice supplied to ration card households"
+     },
+     {
+      "be_lakh": 20000.0,
+      "key": "Industries, Commerce and Export Promotion Department | Incentives to the S.C. Entrepreneurs for Industrial Promotion",
+      "label": "scheme",
+      "name": "Incentives to the S.C. Entrepreneurs for Industrial Promotion",
+      "reason": "incentives paid to Scheduled Caste entrepreneurs"
+     },
+     {
+      "be_lakh": 820.0,
+      "key": "Information Technology, Electronics and Communications, Secretariat | Information Technology, Electronics & Communications Department",
+      "label": "not_scheme",
+      "name": "Information Technology, Electronics & Communications Department",
+      "reason": "a department named as a head"
+     },
+     {
+      "be_lakh": 78761.68,
+      "key": "Intermediate Education Department | Government Junior Colleges",
+      "label": "not_scheme",
+      "name": "Government Junior Colleges",
+      "reason": "government junior colleges, institutions"
+     },
+     {
+      "be_lakh": 45.13,
+      "key": "Juvenile Welfare Department | Headquarters Office",
+      "label": "not_scheme",
+      "name": "Headquarters Office",
+      "reason": "headquarters establishment"
+     },
+     {
+      "be_lakh": 30000.0,
+      "key": "Labour Department | Chandranna Bhima",
+      "label": "scheme",
+      "name": "Chandranna Bhima",
+      "reason": "Chandranna Bhima insures unorganised workers"
+     },
+     {
+      "be_lakh": 400000.0,
+      "key": "Medical Education Department | Dr. Nandamuri Taraka Ramarao Vaidya Seva Trust",
+      "label": "scheme",
+      "name": "Dr. Nandamuri Taraka Ramarao Vaidya Seva Trust",
+      "reason": "the NTR Vaidya Seva trust runs the state's health insurance cover for households; the name is a trust's, the money buys treatment for named beneficiaries"
+     },
+     {
+      "be_lakh": 161758.8,
+      "key": "Minorities Welfare Department | NTR Bharosa Pension Scheme",
+      "label": "scheme",
+      "name": "NTR Bharosa Pension Scheme",
+      "reason": "the state social security pension"
+     },
+     {
+      "be_lakh": 15111.6,
+      "key": "Panchayat Raj Engineering Department | AIIB (Asian Infrastructure Investment Bank) - Andhra Pradesh Rural Road Project",
+      "label": "not_scheme",
+      "name": "AIIB (Asian Infrastructure Investment Bank) - Andhra Pradesh Rural Road Project",
+      "reason": "a rural road project"
+     },
+     {
+      "be_lakh": 2508.84,
+      "key": "Planning, Secretariat | Special Development Fund (SDF)",
+      "label": "not_scheme",
+      "name": "Special Development Fund (SDF)",
+      "reason": "a general purpose development fund spent on works"
+     },
+     {
+      "be_lakh": 400.0,
+      "key": "Principal Chief Conservator of Forests | Forest Fire Prevention and Management [AP28]",
+      "label": "not_scheme",
+      "name": "Forest Fire Prevention and Management [AP28]",
+      "reason": "forest fire prevention, a departmental function"
+     },
+     {
+      "be_lakh": 142000.0,
+      "key": "Public Transport Department | Stree Shakti Scheme - providing Free Bus Travel for Women",
+      "label": "scheme",
+      "name": "Stree Shakti Scheme - providing Free Bus Travel for Women",
+      "reason": "free bus travel for women, a benefit each rider receives"
+     },
+     {
+      "be_lakh": 81800.0,
+      "key": "Rural Development Department | NATIONAL RURAL LIVELIHOOD MISSION [AP168]",
+      "label": "scheme",
+      "name": "NATIONAL RURAL LIVELIHOOD MISSION [AP168]",
+      "reason": "the rural livelihoods mission puts revolving funds and community investment funds into women's self help groups; part of it runs the mission's own machinery"
+     },
+     {
+      "be_lakh": 6272.19,
+      "key": "Sericulture Department | District Offices",
+      "label": "not_scheme",
+      "name": "District Offices",
+      "reason": "district establishment"
+     },
+     {
+      "be_lakh": 497399.07,
+      "key": "Social Welfare Department | NTR Bharosa Pension Scheme",
+      "label": "scheme",
+      "name": "NTR Bharosa Pension Scheme",
+      "reason": "the state social security pension"
+     },
+     {
+      "be_lakh": 424.21,
+      "key": "Town and Country Planning Department | District Offices",
+      "label": "not_scheme",
+      "name": "District Offices",
+      "reason": "district establishment"
+     },
+     {
+      "be_lakh": 159477.9,
+      "key": "Tribal Welfare Department | NTR Bharosa Pension Scheme",
+      "label": "scheme",
+      "name": "NTR Bharosa Pension Scheme",
+      "reason": "the state social security pension"
+     },
+     {
+      "be_lakh": 271000.0,
+      "key": "Weaker Section Housing | Pradhan Manthri Awas Yojana (Grameen) [AP259]",
+      "label": "scheme",
+      "name": "Pradhan Manthri Awas Yojana (Grameen) [AP259]",
+      "reason": "PMAY Gramin builds a house for a named household"
+     },
+     {
+      "be_lakh": 94114.17,
+      "key": "Women Development and Child Welfare Department | SAKSHAM ANGANWADI AND POSHAN 2.0 (ICDS - Anganwadi Services) [AP347]",
+      "label": "scheme",
+      "name": "SAKSHAM ANGANWADI AND POSHAN 2.0 (ICDS - Anganwadi Services) [AP347]",
+      "reason": "Anganwadi Services supplies supplementary nutrition and preschool to children and mothers; the same head also pays anganwadi staff"
+     },
+     {
+      "be_lakh": 2099.8,
+      "key": "Youth Services Department | Youth Welfare Schemes",
+      "label": "not_scheme",
+      "name": "Youth Welfare Schemes",
+      "reason": "a departmental umbrella head for youth welfare carrying salaries; the book names no benefit under it"
+     }
+    ]
+   },
+   "control_does_it_beat_lowering_the_bar": {
+    "top_decile_of_its_department": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 55,
+       "precision_of_the_increment": 0.745,
+       "rows": 55,
+       "schemes": 41
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 4,
+       "precision_of_the_increment": 0.75,
+       "rows": 4,
+       "schemes": 3
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 65,
+       "precision_of_the_increment": 0.738,
+       "rows": 87,
+       "schemes": 48
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 6,
+       "precision_of_the_increment": 0.833,
+       "rows": 8,
+       "schemes": 5
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 69,
+       "precision_of_the_increment": 0.725,
+       "rows": 113,
+       "schemes": 50
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 6,
+       "precision_of_the_increment": 0.833,
+       "rows": 13,
+       "schemes": 5
+      },
+      "weight": 3
+     }
+    ],
+    "top_decile_of_its_department_AND_a_welfare_major_head": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 55,
+       "precision_of_the_increment": 0.745,
+       "rows": 55,
+       "schemes": 41
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 0,
+       "precision_of_the_increment": null,
+       "rows": 0,
+       "schemes": 0
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 65,
+       "precision_of_the_increment": 0.738,
+       "rows": 87,
+       "schemes": 48
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 0,
+       "precision_of_the_increment": null,
+       "rows": 0,
+       "schemes": 0
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 69,
+       "precision_of_the_increment": 0.725,
+       "rows": 113,
+       "schemes": 50
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 0,
+       "precision_of_the_increment": null,
+       "rows": 1,
+       "schemes": 0
+      },
+      "weight": 3
+     }
+    ]
+   },
+   "corpus_rows": 552,
+   "department_grouping": "the department name printed on the row",
+   "departments": 61,
+   "labelled_rows": 302,
+   "marginal_on_the_rows_the_language_misses": [
+    {
+     "base_rate_development": 0.306,
+     "base_rate_held_out": 0.329,
+     "development": {
+      "n": 9,
+      "p": 0.111
+     },
+     "fires_on_rows_in_corpus": 51,
+     "held_out": {
+      "n": 7,
+      "p": 0.429
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.306,
+     "base_rate_held_out": 0.329,
+     "development": {
+      "n": 22,
+      "p": 0.273
+     },
+     "fires_on_rows_in_corpus": 128,
+     "held_out": {
+      "n": 27,
+      "p": 0.407
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.306,
+     "base_rate_held_out": 0.329,
+     "development": {
+      "n": 13,
+      "p": 0.231
+     },
+     "fires_on_rows_in_corpus": 78,
+     "held_out": {
+      "n": 17,
+      "p": 0.353
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top decile of its department"
+    },
+    {
+     "base_rate_development": 0.229,
+     "base_rate_held_out": 0.239,
+     "development": {
+      "n": 7,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 44,
+     "held_out": {
+      "n": 6,
+      "p": 0.333
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.229,
+     "base_rate_held_out": 0.239,
+     "development": {
+      "n": 19,
+      "p": 0.211
+     },
+     "fires_on_rows_in_corpus": 108,
+     "held_out": {
+      "n": 24,
+      "p": 0.333
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.229,
+     "base_rate_held_out": 0.239,
+     "development": {
+      "n": 11,
+      "p": 0.182
+     },
+     "fires_on_rows_in_corpus": 65,
+     "held_out": {
+      "n": 15,
+      "p": 0.267
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top decile of its department"
+    }
+   ],
+   "n_development": 102,
+   "n_held_out": 101,
+   "publish_threshold": 4
+  },
+  "karnataka": {
+   "base_rate_development": 0.37,
+   "base_rate_held_out": 0.364,
+   "candidates": [
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 8,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 73,
+     "held_out": {
+      "n": 9,
+      "p": 0.222
+     },
+     "lift_development": 0.13,
+     "lift_held_out": -0.142,
+     "note": "",
+     "signal": "largest allocation in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 21,
+      "p": 0.19
+     },
+     "fires_on_rows_in_corpus": 190,
+     "held_out": {
+      "n": 24,
+      "p": 0.167
+     },
+     "lift_development": -0.18,
+     "lift_held_out": -0.197,
+     "note": "",
+     "signal": "top 3 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 31,
+      "p": 0.29
+     },
+     "fires_on_rows_in_corpus": 276,
+     "held_out": {
+      "n": 32,
+      "p": 0.25
+     },
+     "lift_development": -0.08,
+     "lift_held_out": -0.114,
+     "note": "",
+     "signal": "top 5 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 15,
+      "p": 0.467
+     },
+     "fires_on_rows_in_corpus": 140,
+     "held_out": {
+      "n": 15,
+      "p": 0.267
+     },
+     "lift_development": 0.097,
+     "lift_held_out": -0.097,
+     "note": "",
+     "signal": "top decile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 30,
+      "p": 0.433
+     },
+     "fires_on_rows_in_corpus": 274,
+     "held_out": {
+      "n": 28,
+      "p": 0.321
+     },
+     "lift_development": 0.063,
+     "lift_held_out": -0.043,
+     "note": "",
+     "signal": "top quartile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 58,
+      "p": 0.259
+     },
+     "fires_on_rows_in_corpus": 503,
+     "held_out": {
+      "n": 55,
+      "p": 0.327
+     },
+     "lift_development": -0.111,
+     "lift_held_out": -0.037,
+     "note": "",
+     "signal": "bottom half of allocations in its own department, read as a NEGATIVE"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 9,
+      "p": 0.444
+     },
+     "fires_on_rows_in_corpus": 88,
+     "held_out": {
+      "n": 12,
+      "p": 0.25
+     },
+     "lift_development": 0.074,
+     "lift_held_out": -0.114,
+     "note": "",
+     "signal": "the row takes a quarter or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 18,
+      "p": 0.222
+     },
+     "fires_on_rows_in_corpus": 147,
+     "held_out": {
+      "n": 19,
+      "p": 0.316
+     },
+     "lift_development": -0.148,
+     "lift_held_out": -0.048,
+     "note": "",
+     "signal": "the row takes a tenth or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 9,
+      "p": 0.444
+     },
+     "fires_on_rows_in_corpus": 83,
+     "held_out": {
+      "n": 6,
+      "p": 0.5
+     },
+     "lift_development": 0.074,
+     "lift_held_out": 0.136,
+     "note": "",
+     "signal": "allocation at least 10 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 24,
+      "p": 0.458
+     },
+     "fires_on_rows_in_corpus": 210,
+     "held_out": {
+      "n": 19,
+      "p": 0.421
+     },
+     "lift_development": 0.088,
+     "lift_held_out": 0.057,
+     "note": "",
+     "signal": "allocation at least 3 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 50,
+      "p": 0.46
+     },
+     "fires_on_rows_in_corpus": 456,
+     "held_out": {
+      "n": 50,
+      "p": 0.44
+     },
+     "lift_development": 0.09,
+     "lift_held_out": 0.076,
+     "note": "",
+     "signal": "allocation at least the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 6,
+     "held_out": {
+      "n": 1,
+      "p": 1.0
+     },
+     "lift_development": null,
+     "lift_held_out": 0.636,
+     "note": "",
+     "signal": "largest in its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 2,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 27,
+     "held_out": {
+      "n": 2,
+      "p": 1.0
+     },
+     "lift_development": 0.13,
+     "lift_held_out": 0.636,
+     "note": "",
+     "signal": "top decile of its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 52,
+      "p": 0.462
+     },
+     "fires_on_rows_in_corpus": 495,
+     "held_out": {
+      "n": 56,
+      "p": 0.411
+     },
+     "lift_development": 0.092,
+     "lift_held_out": 0.047,
+     "note": "",
+     "signal": "the row appears in more than one of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 12,
+      "p": 0.583
+     },
+     "fires_on_rows_in_corpus": 94,
+     "held_out": {
+      "n": 9,
+      "p": 0.333
+     },
+     "lift_development": 0.213,
+     "lift_held_out": -0.031,
+     "note": "",
+     "signal": "the row appears in three or more of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 15,
+      "p": 0.133
+     },
+     "fires_on_rows_in_corpus": 102,
+     "held_out": {
+      "n": 12,
+      "p": 0.167
+     },
+     "lift_development": -0.237,
+     "lift_held_out": -0.197,
+     "note": "",
+     "signal": "the same NAME is printed on two or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 7,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 40,
+     "held_out": {
+      "n": 6,
+      "p": 0.0
+     },
+     "lift_development": -0.37,
+     "lift_held_out": -0.364,
+     "note": "",
+     "signal": "the same NAME is printed on three or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 2,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the state books this NAME under a sub-plan minor head AND under a general one"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 5,
+      "p": 0.2
+     },
+     "fires_on_rows_in_corpus": 37,
+     "held_out": {
+      "n": 4,
+      "p": 0.5
+     },
+     "lift_development": -0.17,
+     "lift_held_out": 0.136,
+     "note": "carried only as the redundancy check for the clause above",
+     "signal": "the row is itself on a sub-plan minor head, which four of the seven classifiers already weight at +1"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 1,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "the only part of the sub-plan clause above that four classifiers do not already have",
+     "signal": "the row is NOT on a sub-plan minor head but the state books the same NAME on one, so this row is the general head of an earmarked provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the row spans three or more heads of account"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 42,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 361,
+     "held_out": {
+      "n": 40,
+      "p": 0.6
+     },
+     "lift_development": 0.059,
+     "lift_held_out": 0.236,
+     "note": "",
+     "signal": "the allocation is a round number, at most two significant digits"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.37,
+     "base_rate_held_out": 0.364,
+     "development": {
+      "n": 5,
+      "p": 0.4
+     },
+     "fires_on_rows_in_corpus": 50,
+     "held_out": {
+      "n": 5,
+      "p": 0.6
+     },
+     "lift_development": 0.03,
+     "lift_held_out": 0.236,
+     "note": "",
+     "signal": "the allocation is a round number AND in the top decile of its department"
+    }
+   ],
+   "circularity_check": {
+    "p_scheme_by_raw_allocation_quartile_on_the_probability_sample": {
+     "nil": {
+      "n": 26,
+      "p": 0.231
+     },
+     "q1": {
+      "n": 46,
+      "p": 0.283
+     },
+     "q2": {
+      "n": 48,
+      "p": 0.438
+     },
+     "q3": {
+      "n": 45,
+      "p": 0.489
+     },
+     "q4": {
+      "n": 50,
+      "p": 0.34
+     }
+    },
+    "reason_strings_citing_magnitude_at_all": {
+     "every_other_labelled_row": {
+      "citing": 5,
+      "n": 298
+     },
+     "top_of_department": {
+      "citing": 0,
+      "n": 26
+     }
+    },
+    "reason_strings_citing_the_size_of_the_head_AS_THE_GROUND": {
+     "every_other_labelled_row": 0,
+     "top_of_department": 0
+    },
+    "top_of_department_rows_and_the_reason_each_was_given": [
+     {
+      "be_lakh": 0.0,
+      "key": "2041-00-001-0-06",
+      "label": "not_scheme",
+      "name": "Unspent SCSP-TSP Amount as per the SCSP-TSPAct 2013",
+      "reason": "accounting head for unspent SCSP-TSP money; the purpose line here is a parser mis-attachment"
+     },
+     {
+      "be_lakh": 10400.0,
+      "key": "2055-00-113-0-06",
+      "label": "scheme",
+      "name": "Aarogya Bhagya Scheme for Police Forces",
+      "reason": "medical allowance to police personnel and their families: an employee benefit, but a benefit an individual receives"
+     },
+     {
+      "be_lakh": 36793.08,
+      "key": "2056-00-101-0-01",
+      "label": "not_scheme",
+      "name": "Prisons and Correctional Services",
+      "reason": "the prison establishment head. Its purpose line, incentive money for students, does not belong to a jails head and reads like a mis-attachment"
+     },
+     {
+      "be_lakh": 1569272.66,
+      "key": "2202-01-197-1-01",
+      "label": "not_scheme",
+      "name": "Grants to Government Primary Schools and Taluk BEO",
+      "reason": "block grants to schools and the Block Education Officer establishment"
+     },
+     {
+      "be_lakh": 6791.77,
+      "key": "2204-00-102-1-01",
+      "label": "not_scheme",
+      "name": "National Cadet Corps",
+      "reason": "funds NCC units and their establishment rather than a benefit to a cadet"
+     },
+     {
+      "be_lakh": 60000.0,
+      "key": "2230-02-101-0-17",
+      "label": "scheme",
+      "name": "Yuvanidhi Scheme",
+      "reason": "Yuvanidhi pays a monthly unemployment allowance to graduates"
+     },
+     {
+      "be_lakh": 80100.0,
+      "key": "2236-02-197-1-02",
+      "label": "scheme",
+      "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
+      "reason": "hot meal and milk to school students"
+     },
+     {
+      "be_lakh": 2000.0,
+      "key": "2250-00-103-5-08",
+      "label": "scheme",
+      "name": "Assistance to Manasa Sarovar Piligrims",
+      "reason": "travel subsidy to individual pilgrims"
+     },
+     {
+      "be_lakh": 170000.0,
+      "key": "2401-00-110-0-07",
+      "label": "scheme",
+      "name": "Pradhan Mantri Fasal Bhima Yojana",
+      "reason": "Pradhan Mantri Fasal Bima Yojana, crop insurance for farmers"
+     },
+     {
+      "be_lakh": 168700.0,
+      "key": "2404-00-191-1-17",
+      "label": "scheme",
+      "name": "Incentive to Milk Producers",
+      "reason": "incentive paid to milk producers"
+     },
+     {
+      "be_lakh": 6300.0,
+      "key": "2405-00-101-0-58",
+      "label": "scheme",
+      "name": "CSS-Central Share-Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+      "reason": "PMMSY subsidy for equipment to individual fishers"
+     },
+     {
+      "be_lakh": 28613.03,
+      "key": "2406-01-196-1-01",
+      "label": "not_scheme",
+      "name": "Grants for District Forest Officers' Establishments",
+      "reason": "grants for a district officer's establishment"
+     },
+     {
+      "be_lakh": 620000.0,
+      "key": "2408-01-196-0-01",
+      "label": "scheme",
+      "name": "DBT Under Annabhagya Scheme",
+      "reason": "additional rice to AAY cardholders under Annabhagya"
+     },
+     {
+      "be_lakh": 164800.0,
+      "key": "2425-00-107-2-41",
+      "label": "scheme",
+      "name": "Interest Subsidy for Crop Loan, Pledge Loan, SHGs",
+      "reason": "interest subsidy on crop and pledge loans to individual borrowers"
+     },
+     {
+      "be_lakh": 26000.0,
+      "key": "2501-06-198-6-01",
+      "label": "scheme",
+      "name": "CSS-Central Share-National Rural Livelihood Mission (NRLM)",
+      "reason": "NRLM support to rural women's self help groups"
+     },
+     {
+      "be_lakh": 1929000.0,
+      "key": "2801-80-101-1-04",
+      "label": "scheme",
+      "name": "Subsidy for Supply of free Power to Irrigation Pumpsets",
+      "reason": "free power subsidy for farmers' irrigation pumpsets"
+     },
+     {
+      "be_lakh": 10000.0,
+      "key": "2851-00-103-0-03",
+      "label": "scheme",
+      "name": "Weavers Package-Power Subsidy",
+      "reason": "power subsidy to weavers"
+     },
+     {
+      "be_lakh": 30500.0,
+      "key": "2852-08-202-7-01",
+      "label": "not_scheme",
+      "name": "Implementation of Textile and Garment Policy",
+      "reason": "industrial policy incentives to textile firms; the beneficiary is an enterprise, not a person or household"
+     },
+     {
+      "be_lakh": 530000.0,
+      "key": "3055-00-190-0-16",
+      "label": "scheme",
+      "name": "Shakthi Scheme",
+      "reason": "Shakthi gives women fare-free bus travel"
+     },
+     {
+      "be_lakh": 8.0,
+      "key": "3435-03-003-0-01",
+      "label": "not_scheme",
+      "name": "Environmement Research Education & Innovative Projects",
+      "reason": "research and education projects"
+     },
+     {
+      "be_lakh": 5000.0,
+      "key": "3475-00-107-0-20",
+      "label": "scheme",
+      "name": "Minimum Floor Price Scheme",
+      "reason": "a named price support scheme paying producers; the book gives no purpose line, so the commodity is unstated"
+     },
+     {
+      "be_lakh": 71000.0,
+      "key": "4210-01-110-1-01",
+      "label": "not_scheme",
+      "name": "Hospital Construction",
+      "reason": "hospital construction"
+     },
+     {
+      "be_lakh": 7500.0,
+      "key": "4402-00-203-0-01",
+      "label": "not_scheme",
+      "name": "World Bank Assisted REWARD Project-EAP(IND-9314)",
+      "reason": "an externally aided watershed project"
+     },
+     {
+      "be_lakh": 16200.0,
+      "key": "4406-01-101-0-03",
+      "label": "not_scheme",
+      "name": "Afforestation on Forest Areas",
+      "reason": "afforestation works"
+     },
+     {
+      "be_lakh": 15000.0,
+      "key": "5475-00-115-0-06",
+      "label": "not_scheme",
+      "name": "Infrastructure facilities for Housing Schemes",
+      "reason": "infrastructure for housing schemes, a works head"
+     },
+     {
+      "be_lakh": 50000.0,
+      "key": "6215-01-190-2-86",
+      "label": "not_scheme",
+      "name": "Bengaluru Water Supply and Sewerage Project(BWSSP) Phase III (Cauvery Water Supply Scheme-Stage-V)-EAP (IDP-266",
+      "reason": "a loan to a water board for a capital project"
+     }
+    ]
+   },
+   "control_does_it_beat_lowering_the_bar": {
+    "top_decile_of_its_department": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 32,
+       "precision_of_the_increment": 0.875,
+       "rows": 32,
+       "schemes": 28
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 7,
+       "precision_of_the_increment": 1.0,
+       "rows": 7,
+       "schemes": 7
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 75,
+       "precision_of_the_increment": 0.867,
+       "rows": 75,
+       "schemes": 65
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 14,
+       "precision_of_the_increment": 0.929,
+       "rows": 14,
+       "schemes": 13
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 83,
+       "precision_of_the_increment": 0.867,
+       "rows": 127,
+       "schemes": 72
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 16,
+       "precision_of_the_increment": 0.938,
+       "rows": 25,
+       "schemes": 15
+      },
+      "weight": 3
+     }
+    ],
+    "top_decile_of_its_department_AND_a_welfare_major_head": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 32,
+       "precision_of_the_increment": 0.875,
+       "rows": 32,
+       "schemes": 28
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 3,
+       "precision_of_the_increment": 1.0,
+       "rows": 3,
+       "schemes": 3
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 75,
+       "precision_of_the_increment": 0.867,
+       "rows": 75,
+       "schemes": 65
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 4,
+       "precision_of_the_increment": 1.0,
+       "rows": 4,
+       "schemes": 4
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 83,
+       "precision_of_the_increment": 0.867,
+       "rows": 127,
+       "schemes": 72
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 5,
+       "precision_of_the_increment": 1.0,
+       "rows": 14,
+       "schemes": 5
+      },
+      "weight": 3
+     }
+    ]
+   },
+   "corpus_rows": 969,
+   "department_grouping": "the major head, because the Gender, Child and SCSP/TSP annexures print no department",
+   "departments": 73,
+   "labelled_rows": 324,
+   "marginal_on_the_rows_the_language_misses": [
+    {
+     "base_rate_development": 0.261,
+     "base_rate_held_out": 0.309,
+     "development": {
+      "n": 8,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 70,
+     "held_out": {
+      "n": 9,
+      "p": 0.222
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.261,
+     "base_rate_held_out": 0.309,
+     "development": {
+      "n": 21,
+      "p": 0.19
+     },
+     "fires_on_rows_in_corpus": 185,
+     "held_out": {
+      "n": 24,
+      "p": 0.167
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.261,
+     "base_rate_held_out": 0.309,
+     "development": {
+      "n": 14,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 132,
+     "held_out": {
+      "n": 15,
+      "p": 0.267
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top decile of its department"
+    },
+    {
+     "base_rate_development": 0.045,
+     "base_rate_held_out": 0.092,
+     "development": {
+      "n": 4,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 49,
+     "held_out": {
+      "n": 6,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.045,
+     "base_rate_held_out": 0.092,
+     "development": {
+      "n": 17,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 134,
+     "held_out": {
+      "n": 18,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.045,
+     "base_rate_held_out": 0.092,
+     "development": {
+      "n": 9,
+      "p": 0.111
+     },
+     "fires_on_rows_in_corpus": 85,
+     "held_out": {
+      "n": 9,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top decile of its department"
+    }
+   ],
+   "n_development": 108,
+   "n_held_out": 107,
+   "publish_threshold": 7
+  },
+  "kerala": {
+   "base_rate_development": 0.174,
+   "base_rate_held_out": 0.137,
+   "candidates": [
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 6,
+      "p": 0.167
+     },
+     "fires_on_rows_in_corpus": 84,
+     "held_out": {
+      "n": 2,
+      "p": 0.5
+     },
+     "lift_development": -0.007,
+     "lift_held_out": 0.363,
+     "note": "",
+     "signal": "largest allocation in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 11,
+      "p": 0.273
+     },
+     "fires_on_rows_in_corpus": 207,
+     "held_out": {
+      "n": 14,
+      "p": 0.214
+     },
+     "lift_development": 0.099,
+     "lift_held_out": 0.077,
+     "note": "",
+     "signal": "top 3 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 14,
+      "p": 0.286
+     },
+     "fires_on_rows_in_corpus": 315,
+     "held_out": {
+      "n": 24,
+      "p": 0.125
+     },
+     "lift_development": 0.112,
+     "lift_held_out": -0.012,
+     "note": "",
+     "signal": "top 5 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 16,
+      "p": 0.25
+     },
+     "fires_on_rows_in_corpus": 314,
+     "held_out": {
+      "n": 19,
+      "p": 0.158
+     },
+     "lift_development": 0.076,
+     "lift_held_out": 0.021,
+     "note": "",
+     "signal": "top decile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 37,
+      "p": 0.162
+     },
+     "fires_on_rows_in_corpus": 697,
+     "held_out": {
+      "n": 47,
+      "p": 0.128
+     },
+     "lift_development": -0.012,
+     "lift_held_out": -0.009,
+     "note": "",
+     "signal": "top quartile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 86,
+      "p": 0.221
+     },
+     "fires_on_rows_in_corpus": 1338,
+     "held_out": {
+      "n": 75,
+      "p": 0.133
+     },
+     "lift_development": 0.047,
+     "lift_held_out": -0.004,
+     "note": "",
+     "signal": "bottom half of allocations in its own department, read as a NEGATIVE"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 4,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 75,
+     "held_out": {
+      "n": 5,
+      "p": 0.6
+     },
+     "lift_development": -0.174,
+     "lift_held_out": 0.463,
+     "note": "",
+     "signal": "the row takes a quarter or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 9,
+      "p": 0.111
+     },
+     "fires_on_rows_in_corpus": 178,
+     "held_out": {
+      "n": 12,
+      "p": 0.25
+     },
+     "lift_development": -0.063,
+     "lift_held_out": 0.113,
+     "note": "",
+     "signal": "the row takes a tenth or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 10,
+      "p": 0.3
+     },
+     "fires_on_rows_in_corpus": 170,
+     "held_out": {
+      "n": 10,
+      "p": 0.2
+     },
+     "lift_development": 0.126,
+     "lift_held_out": 0.063,
+     "note": "",
+     "signal": "allocation at least 10 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 26,
+      "p": 0.192
+     },
+     "fires_on_rows_in_corpus": 489,
+     "held_out": {
+      "n": 34,
+      "p": 0.147
+     },
+     "lift_development": 0.018,
+     "lift_held_out": 0.01,
+     "note": "",
+     "signal": "allocation at least 3 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 51,
+      "p": 0.118
+     },
+     "fires_on_rows_in_corpus": 1002,
+     "held_out": {
+      "n": 68,
+      "p": 0.147
+     },
+     "lift_development": -0.056,
+     "lift_held_out": 0.01,
+     "note": "",
+     "signal": "allocation at least the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 2,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 16,
+     "held_out": {
+      "n": 1,
+      "p": 1.0
+     },
+     "lift_development": 0.326,
+     "lift_held_out": 0.863,
+     "note": "",
+     "signal": "largest in its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 3,
+      "p": 0.667
+     },
+     "fires_on_rows_in_corpus": 52,
+     "held_out": {
+      "n": 4,
+      "p": 0.75
+     },
+     "lift_development": 0.493,
+     "lift_held_out": 0.613,
+     "note": "",
+     "signal": "top decile of its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 14,
+      "p": 0.286
+     },
+     "fires_on_rows_in_corpus": 303,
+     "held_out": {
+      "n": 23,
+      "p": 0.217
+     },
+     "lift_development": 0.112,
+     "lift_held_out": 0.08,
+     "note": "",
+     "signal": "the row appears in more than one of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 1,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 21,
+     "held_out": {
+      "n": 1,
+      "p": 0.0
+     },
+     "lift_development": -0.174,
+     "lift_held_out": -0.137,
+     "note": "",
+     "signal": "the row appears in three or more of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 5,
+      "p": 0.8
+     },
+     "fires_on_rows_in_corpus": 35,
+     "held_out": {
+      "n": 3,
+      "p": 0.0
+     },
+     "lift_development": 0.626,
+     "lift_held_out": -0.137,
+     "note": "",
+     "signal": "the same NAME is printed on two or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 3,
+     "held_out": {
+      "n": 1,
+      "p": 0.0
+     },
+     "lift_development": null,
+     "lift_held_out": -0.137,
+     "note": "",
+     "signal": "the same NAME is printed on three or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 2,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 67,
+     "held_out": {
+      "n": 6,
+      "p": 0.5
+     },
+     "lift_development": -0.174,
+     "lift_held_out": 0.363,
+     "note": "",
+     "signal": "the state books this NAME under a sub-plan minor head AND under a general one"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 7,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 150,
+     "held_out": {
+      "n": 9,
+      "p": 0.667
+     },
+     "lift_development": 0.255,
+     "lift_held_out": 0.53,
+     "note": "carried only as the redundancy check for the clause above",
+     "signal": "the row is itself on a sub-plan minor head, which four of the seven classifiers already weight at +1"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "the only part of the sub-plan clause above that four classifiers do not already have",
+     "signal": "the row is NOT on a sub-plan minor head but the state books the same NAME on one, so this row is the general head of an earmarked provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 10,
+      "p": 0.2
+     },
+     "fires_on_rows_in_corpus": 186,
+     "held_out": {
+      "n": 14,
+      "p": 0.286
+     },
+     "lift_development": 0.026,
+     "lift_held_out": 0.149,
+     "note": "",
+     "signal": "the row spans three or more heads of account"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 89,
+      "p": 0.157
+     },
+     "fires_on_rows_in_corpus": 1351,
+     "held_out": {
+      "n": 86,
+      "p": 0.163
+     },
+     "lift_development": -0.017,
+     "lift_held_out": 0.026,
+     "note": "",
+     "signal": "the allocation is a round number, at most two significant digits"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.174,
+     "base_rate_held_out": 0.137,
+     "development": {
+      "n": 9,
+      "p": 0.333
+     },
+     "fires_on_rows_in_corpus": 168,
+     "held_out": {
+      "n": 14,
+      "p": 0.214
+     },
+     "lift_development": 0.159,
+     "lift_held_out": 0.077,
+     "note": "",
+     "signal": "the allocation is a round number AND in the top decile of its department"
+    }
+   ],
+   "circularity_check": {
+    "p_scheme_by_raw_allocation_quartile_on_the_probability_sample": {
+     "nil": {
+      "n": 91,
+      "p": 0.176
+     },
+     "q1": {
+      "n": 57,
+      "p": 0.211
+     },
+     "q2": {
+      "n": 56,
+      "p": 0.089
+     },
+     "q3": {
+      "n": 60,
+      "p": 0.1
+     },
+     "q4": {
+      "n": 58,
+      "p": 0.19
+     }
+    },
+    "reason_strings_citing_magnitude_at_all": {
+     "every_other_labelled_row": {
+      "citing": 2,
+      "n": 562
+     },
+     "top_of_department": {
+      "citing": 1,
+      "n": 22
+     }
+    },
+    "reason_strings_citing_the_size_of_the_head_AS_THE_GROUND": {
+     "every_other_labelled_row": 0,
+     "top_of_department": 0
+    },
+    "top_of_department_rows_and_the_reason_each_was_given": [
+     {
+      "be_lakh": 150.0,
+      "key": "code:CAD 014 (1)",
+      "label": "not_scheme",
+      "name": "CADA for MVIP- (50% Centre Share)",
+      "reason": "command area development works for an irrigation project"
+     },
+     {
+      "be_lakh": 1845.0,
+      "key": "code:CDT 026",
+      "label": "scheme",
+      "name": "(60% Swachh Bharat Mission (Gramin)-Nirmal Bharat Abhiyan - 60% CSS - General-Central Share Community Development and",
+      "reason": "the rural sanitation mission pays a household latrine incentive, central share"
+     },
+     {
+      "be_lakh": 1.0,
+      "key": "code:CS 033",
+      "label": "scheme",
+      "name": "Annapoorna Food Security Scheme the Aged Destitute (20% State Share) TOTAL",
+      "reason": "free foodgrains to aged destitute persons"
+     },
+     {
+      "be_lakh": 7044.12,
+      "key": "code:EAS 014",
+      "label": "not_scheme",
+      "name": "Timely Reporting Survey of Agricultural Statistics Scheme-EARAS (100% CSS)",
+      "reason": "a reporting survey; the word Scheme in the name is the survey's title, not a benefit"
+     },
+     {
+      "be_lakh": 10000.0,
+      "key": "code:FOR 064",
+      "label": "not_scheme",
+      "name": "Measures to reduce Man-Animal Conflict",
+      "reason": "man-animal conflict mitigation, fencing and rapid response rather than a payment"
+     },
+     {
+      "be_lakh": 15000.0,
+      "key": "code:GEN 277",
+      "label": "scheme",
+      "name": "Meal(60 % CSS) -PM POSHAN Supplementary nutrition & Additional to mid day meal (NEW)",
+      "reason": "the noon meal and additional supplementary nutrition served to school children"
+     },
+     {
+      "be_lakh": 2400.0,
+      "key": "code:HSG 044",
+      "label": "scheme",
+      "name": "Grihasree- Subsidy",
+      "reason": "Grihasree pays a housing subsidy to the household that builds the house"
+     },
+     {
+      "be_lakh": 300.0,
+      "key": "code:MNG 001",
+      "label": "not_scheme",
+      "name": "Mineral Investigation",
+      "reason": "mineral investigation"
+     },
+     {
+      "be_lakh": 46520.0,
+      "key": "code:MPS 454",
+      "label": "not_scheme",
+      "name": "NHM ( NRHM / RCH flexi pool )",
+      "reason": "the National Health Mission flexible pool, which funds the health system"
+     },
+     {
+      "be_lakh": 20700.0,
+      "key": "code:NUT 014 (1)",
+      "label": "not_scheme",
+      "name": "ICDS - Central Share",
+      "reason": "the integrated child development services system, its anganwadis and functionaries; the food is voted under the supplementary nutrition heads"
+     },
+     {
+      "be_lakh": 1.0,
+      "key": "code:NUT 016",
+      "label": "scheme",
+      "name": "Supplementary Nutrition Programme (50% State Share) ECONOMIC SERVICE ECONOMIC SERVICE",
+      "reason": "supplementary nutrition fed to children and mothers"
+     },
+     {
+      "be_lakh": 6500.0,
+      "key": "code:RDT 073",
+      "label": "scheme",
+      "name": "PMAY -Gramin (rural ) 40 Share including General Pradhan Mantri Janjati Adivasi Maha Abhiyan (PMAY-JANMAN) (New Scheme)",
+      "reason": "a pucca house for a rural houseless household"
+     },
+     {
+      "be_lakh": 1321.46,
+      "key": "code:SJP 001 (1)",
+      "label": "scheme",
+      "name": "National Social Assistance Programme-National Old Age Pension Scheme (100% CSS)-Central Share",
+      "reason": "the national old age pension, central share"
+     },
+     {
+      "be_lakh": 3.0,
+      "key": "code:SJP 004",
+      "label": "scheme",
+      "name": "Barrier Free Kerala Scheme State support for National Social Assistance Programme - National Old Age Scheme (State)",
+      "reason": "the printed name merges a barrier-free access head with the state's support to the national old age pension; the provision is the pension support"
+     },
+     {
+      "be_lakh": 3.0,
+      "key": "code:SJP 005",
+      "label": "scheme",
+      "name": "PROGRAMME NSAP-National Social Assistance Programme - National Widow Pension Scheme",
+      "reason": "the national widow pension, cash to a widow"
+     },
+     {
+      "be_lakh": 1650.0,
+      "key": "code:SWE 178",
+      "label": "not_scheme",
+      "name": "State Innovative Programme for Children including ORC",
+      "reason": "a programme of services for children; financial assistance is one component among awareness and psycho-social care"
+     },
+     {
+      "be_lakh": 2700.0,
+      "key": "code:UDT 185",
+      "label": "scheme",
+      "name": "Pradan Mantri Awas Yojana - Urban (PMAY - Urban) (25% State Share)",
+      "reason": "the urban housing mission, state share"
+     },
+     {
+      "be_lakh": 11000.0,
+      "key": "code:VSI 008",
+      "label": "not_scheme",
+      "name": "Entrepreneur Support Scheme/State Investment Subsidy",
+      "reason": "an investment subsidy paid to a micro or small enterprise, a firm rather than a person"
+     },
+     {
+      "be_lakh": 192.0,
+      "key": "code:WBC 288",
+      "label": "not_scheme",
+      "name": "Engaging social workers in tribal welfare",
+      "reason": "engaging social workers, staff"
+     },
+     {
+      "be_lakh": 600.0,
+      "key": "code:WBC 320",
+      "label": "scheme",
+      "name": "Assistance to Marriage of ST Girls",
+      "reason": "marriage assistance paid to the parents of Scheduled Tribe girls"
+     },
+     {
+      "be_lakh": 3600.0,
+      "key": "code:WBC 382 (1)",
+      "label": "scheme",
+      "name": "Post matric Scholarship for Scheduled Tribe Students (75 % CSS) - 75% Central Share Welfare of SCs, STs, OBCs, Welfare of Scheduled Tribes",
+      "reason": "post-matric scholarship to Scheduled Tribe students, central share"
+     },
+     {
+      "be_lakh": 30000.0,
+      "key": "code:WBC 394",
+      "label": "scheme",
+      "name": "Housing Scheme for Homeless SCs under Life Mission",
+      "reason": "a house for a homeless Scheduled Caste household"
+     }
+    ]
+   },
+   "control_does_it_beat_lowering_the_bar": {
+    "top_decile_of_its_department": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 17,
+       "precision_of_the_increment": 0.824,
+       "rows": 17,
+       "schemes": 14
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 3,
+       "precision_of_the_increment": 1.0,
+       "rows": 3,
+       "schemes": 3
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 64,
+       "precision_of_the_increment": 0.875,
+       "rows": 64,
+       "schemes": 56
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 8,
+       "precision_of_the_increment": 0.875,
+       "rows": 8,
+       "schemes": 7
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 110,
+       "precision_of_the_increment": 0.845,
+       "rows": 110,
+       "schemes": 93
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 13,
+       "precision_of_the_increment": 0.846,
+       "rows": 13,
+       "schemes": 11
+      },
+      "weight": 3
+     }
+    ],
+    "top_decile_of_its_department_AND_a_welfare_major_head": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 17,
+       "precision_of_the_increment": 0.824,
+       "rows": 17,
+       "schemes": 14
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 3,
+       "precision_of_the_increment": 1.0,
+       "rows": 3,
+       "schemes": 3
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 64,
+       "precision_of_the_increment": 0.875,
+       "rows": 64,
+       "schemes": 56
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 8,
+       "precision_of_the_increment": 0.875,
+       "rows": 8,
+       "schemes": 7
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 110,
+       "precision_of_the_increment": 0.845,
+       "rows": 110,
+       "schemes": 93
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 11,
+       "precision_of_the_increment": 0.818,
+       "rows": 11,
+       "schemes": 9
+      },
+      "weight": 3
+     }
+    ]
+   },
+   "corpus_rows": 2629,
+   "department_grouping": "the sector printed on the row",
+   "departments": 84,
+   "labelled_rows": 584,
+   "marginal_on_the_rows_the_language_misses": [
+    {
+     "base_rate_development": 0.153,
+     "base_rate_held_out": 0.126,
+     "development": {
+      "n": 6,
+      "p": 0.167
+     },
+     "fires_on_rows_in_corpus": 81,
+     "held_out": {
+      "n": 2,
+      "p": 0.5
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.153,
+     "base_rate_held_out": 0.126,
+     "development": {
+      "n": 11,
+      "p": 0.273
+     },
+     "fires_on_rows_in_corpus": 202,
+     "held_out": {
+      "n": 14,
+      "p": 0.214
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.153,
+     "base_rate_held_out": 0.126,
+     "development": {
+      "n": 16,
+      "p": 0.25
+     },
+     "fires_on_rows_in_corpus": 307,
+     "held_out": {
+      "n": 18,
+      "p": 0.111
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top decile of its department"
+    },
+    {
+     "base_rate_development": 0.065,
+     "base_rate_held_out": 0.016,
+     "development": {
+      "n": 4,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 57,
+     "held_out": {
+      "n": 1,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.065,
+     "base_rate_held_out": 0.016,
+     "development": {
+      "n": 9,
+      "p": 0.222
+     },
+     "fires_on_rows_in_corpus": 147,
+     "held_out": {
+      "n": 10,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.065,
+     "base_rate_held_out": 0.016,
+     "development": {
+      "n": 12,
+      "p": 0.167
+     },
+     "fires_on_rows_in_corpus": 226,
+     "held_out": {
+      "n": 14,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top decile of its department"
+    }
+   ],
+   "n_development": 161,
+   "n_held_out": 161,
+   "publish_threshold": 9
+  },
+  "maharashtra": {
+   "base_rate_development": 0.24,
+   "base_rate_held_out": 0.231,
+   "candidates": [
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 7,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 56,
+     "held_out": {
+      "n": 7,
+      "p": 0.0
+     },
+     "lift_development": 0.189,
+     "lift_held_out": -0.231,
+     "note": "",
+     "signal": "largest allocation in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 19,
+      "p": 0.421
+     },
+     "fires_on_rows_in_corpus": 164,
+     "held_out": {
+      "n": 13,
+      "p": 0.0
+     },
+     "lift_development": 0.181,
+     "lift_held_out": -0.231,
+     "note": "",
+     "signal": "top 3 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 26,
+      "p": 0.308
+     },
+     "fires_on_rows_in_corpus": 267,
+     "held_out": {
+      "n": 22,
+      "p": 0.182
+     },
+     "lift_development": 0.068,
+     "lift_held_out": -0.049,
+     "note": "",
+     "signal": "top 5 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 22,
+      "p": 0.318
+     },
+     "fires_on_rows_in_corpus": 221,
+     "held_out": {
+      "n": 20,
+      "p": 0.2
+     },
+     "lift_development": 0.078,
+     "lift_held_out": -0.031,
+     "note": "",
+     "signal": "top decile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 50,
+      "p": 0.32
+     },
+     "fires_on_rows_in_corpus": 510,
+     "held_out": {
+      "n": 55,
+      "p": 0.2
+     },
+     "lift_development": 0.08,
+     "lift_held_out": -0.031,
+     "note": "",
+     "signal": "top quartile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 98,
+      "p": 0.224
+     },
+     "fires_on_rows_in_corpus": 992,
+     "held_out": {
+      "n": 101,
+      "p": 0.188
+     },
+     "lift_development": -0.016,
+     "lift_held_out": -0.043,
+     "note": "",
+     "signal": "bottom half of allocations in its own department, read as a NEGATIVE"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 7,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 46,
+     "held_out": {
+      "n": 5,
+      "p": 0.0
+     },
+     "lift_development": 0.189,
+     "lift_held_out": -0.231,
+     "note": "",
+     "signal": "the row takes a quarter or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 16,
+      "p": 0.438
+     },
+     "fires_on_rows_in_corpus": 142,
+     "held_out": {
+      "n": 12,
+      "p": 0.0
+     },
+     "lift_development": 0.198,
+     "lift_held_out": -0.231,
+     "note": "",
+     "signal": "the row takes a tenth or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 35,
+      "p": 0.4
+     },
+     "fires_on_rows_in_corpus": 368,
+     "held_out": {
+      "n": 37,
+      "p": 0.216
+     },
+     "lift_development": 0.16,
+     "lift_held_out": -0.015,
+     "note": "",
+     "signal": "allocation at least 10 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 59,
+      "p": 0.305
+     },
+     "fires_on_rows_in_corpus": 598,
+     "held_out": {
+      "n": 62,
+      "p": 0.274
+     },
+     "lift_development": 0.065,
+     "lift_held_out": 0.043,
+     "note": "",
+     "signal": "allocation at least 3 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 100,
+      "p": 0.26
+     },
+     "fires_on_rows_in_corpus": 980,
+     "held_out": {
+      "n": 97,
+      "p": 0.278
+     },
+     "lift_development": 0.02,
+     "lift_held_out": 0.047,
+     "note": "",
+     "signal": "allocation at least the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 3,
+      "p": 0.667
+     },
+     "fires_on_rows_in_corpus": 9,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": 0.427,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "largest in its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 5,
+      "p": 0.8
+     },
+     "fires_on_rows_in_corpus": 52,
+     "held_out": {
+      "n": 2,
+      "p": 1.0
+     },
+     "lift_development": 0.56,
+     "lift_held_out": 0.769,
+     "note": "",
+     "signal": "top decile of its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 116,
+      "p": 0.198
+     },
+     "fires_on_rows_in_corpus": 1112,
+     "held_out": {
+      "n": 100,
+      "p": 0.2
+     },
+     "lift_development": -0.042,
+     "lift_held_out": -0.031,
+     "note": "",
+     "signal": "the head carried an actual provision in the previous year"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 80,
+      "p": 0.3
+     },
+     "fires_on_rows_in_corpus": 844,
+     "held_out": {
+      "n": 95,
+      "p": 0.263
+     },
+     "lift_development": 0.06,
+     "lift_held_out": 0.032,
+     "note": "",
+     "signal": "the head carried NO actual provision in the previous year, so it is new"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 14,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 116,
+     "held_out": {
+      "n": 8,
+      "p": 0.625
+     },
+     "lift_development": 0.189,
+     "lift_held_out": 0.394,
+     "note": "",
+     "signal": "the same NAME is printed on two or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 7,
+      "p": 0.429
+     },
+     "fires_on_rows_in_corpus": 50,
+     "held_out": {
+      "n": 3,
+      "p": 0.333
+     },
+     "lift_development": 0.189,
+     "lift_held_out": 0.102,
+     "note": "",
+     "signal": "the same NAME is printed on three or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the state books this NAME under a sub-plan minor head AND under a general one"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "carried only as the redundancy check for the clause above",
+     "signal": "the row is itself on a sub-plan minor head, which four of the seven classifiers already weight at +1"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "the only part of the sub-plan clause above that four classifiers do not already have",
+     "signal": "the row is NOT on a sub-plan minor head but the state books the same NAME on one, so this row is the general head of an earmarked provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the row spans three or more heads of account"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 37,
+      "p": 0.432
+     },
+     "fires_on_rows_in_corpus": 383,
+     "held_out": {
+      "n": 38,
+      "p": 0.289
+     },
+     "lift_development": 0.192,
+     "lift_held_out": 0.058,
+     "note": "",
+     "signal": "the row is a Scheduled Caste or Tribal component row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 99,
+      "p": 0.232
+     },
+     "fires_on_rows_in_corpus": 931,
+     "held_out": {
+      "n": 82,
+      "p": 0.232
+     },
+     "lift_development": -0.008,
+     "lift_held_out": 0.001,
+     "note": "",
+     "signal": "the allocation is a round number, at most two significant digits"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.24,
+     "base_rate_held_out": 0.231,
+     "development": {
+      "n": 9,
+      "p": 0.222
+     },
+     "fires_on_rows_in_corpus": 85,
+     "held_out": {
+      "n": 6,
+      "p": 0.167
+     },
+     "lift_development": -0.018,
+     "lift_held_out": -0.064,
+     "note": "",
+     "signal": "the allocation is a round number AND in the top decile of its department"
+    }
+   ],
+   "circularity_check": {
+    "p_scheme_by_raw_allocation_quartile_on_the_probability_sample": {
+     "nil": {
+      "n": 30,
+      "p": 0.267
+     },
+     "q1": {
+      "n": 89,
+      "p": 0.213
+     },
+     "q2": {
+      "n": 88,
+      "p": 0.182
+     },
+     "q3": {
+      "n": 93,
+      "p": 0.258
+     },
+     "q4": {
+      "n": 91,
+      "p": 0.275
+     }
+    },
+    "reason_strings_citing_magnitude_at_all": {
+     "every_other_labelled_row": {
+      "citing": 2,
+      "n": 611
+     },
+     "top_of_department": {
+      "citing": 2,
+      "n": 20
+     }
+    },
+    "reason_strings_citing_the_size_of_the_head_AS_THE_GROUND": {
+     "every_other_labelled_row": 0,
+     "top_of_department": 0
+    },
+    "top_of_department_rows_and_the_reason_each_was_given": [
+     {
+      "be_lakh": 478740.0,
+      "key": "1101010312",
+      "label": "scheme",
+      "name": "Namo Shetakari Mahasanmaan Nidhi Yojana (100% State Scheme)",
+      "reason": "Namo Shetkari Mahasanman Nidhi pays Rs 6,000 a year into a farmer's account"
+     },
+     {
+      "be_lakh": 11752.0,
+      "key": "1101030009",
+      "label": "not_scheme",
+      "name": "Kharland Development Scheme",
+      "reason": "saline land reclamation works"
+     },
+     {
+      "be_lakh": 7167.0,
+      "key": "1101040001",
+      "label": "not_scheme",
+      "name": "Strengthening of Office of Commissioner Animal Husbandry Pune.",
+      "reason": "strengthening a Commissioner's office"
+     },
+     {
+      "be_lakh": 50000.0,
+      "key": "1101070001",
+      "label": "not_scheme",
+      "name": "Massive Afforestation Program",
+      "reason": "afforestation works"
+     },
+     {
+      "be_lakh": 100000.0,
+      "key": "1102010067",
+      "label": "not_scheme",
+      "name": "Chief Minister Baliraja Farm and Panand Road Scheme",
+      "reason": "farm approach roads"
+     },
+     {
+      "be_lakh": 19868.98,
+      "key": "1104040004",
+      "label": "not_scheme",
+      "name": "4705-Capital Outlay on Command Area Development(Others 67)",
+      "reason": "a capital outlay head on command area development"
+     },
+     {
+      "be_lakh": 119028.0,
+      "key": "1107020024",
+      "label": "not_scheme",
+      "name": "Financial assistance for the project undertaken by Maharashtra State Road Development Corporation Limited (Scheme)",
+      "reason": "assistance to a road development corporation's project"
+     },
+     {
+      "be_lakh": 45393.0,
+      "key": "1111020051",
+      "label": "scheme",
+      "name": "Free Professional Education Scheme for Girls-Technical Education (Scheme)",
+      "reason": "free professional education for girls"
+     },
+     {
+      "be_lakh": 2250.0,
+      "key": "1111050142",
+      "label": "not_scheme",
+      "name": "Strengthening of States Drug Regulatory System(Others 67)",
+      "reason": "strengthening the drug regulatory system"
+     },
+     {
+      "be_lakh": 215320.0,
+      "key": "1111090024",
+      "label": "scheme",
+      "name": "Pradhan Mantri Awas Yojna (urban 2.0)(Others 67)",
+      "reason": "PMAY Urban, a house to a beneficiary household"
+     },
+     {
+      "be_lakh": 2100000.0,
+      "key": "1111170117",
+      "label": "scheme",
+      "name": "Mukhyamantri Mazi Ladaki Bahin",
+      "reason": "Mukhyamantri Majhi Ladki Bahin pays Rs 1,500 a month to a woman"
+     },
+     {
+      "be_lakh": 20000.0,
+      "key": "1111190026",
+      "label": "not_scheme",
+      "name": "Pradhan Mantri Jan Vikas Karyakram for Minority Concentrated Areas (PMJVK)(Umbrella 32)",
+      "reason": "PMJVK builds infrastructure in minority concentrated areas"
+     },
+     {
+      "be_lakh": 208500.0,
+      "key": "1111210106",
+      "label": "scheme",
+      "name": "Shravan Bal Seva Rajya Nivruti Vetan Yojana",
+      "reason": "Shravan Bal pays a monthly pension to an individual"
+     },
+     {
+      "be_lakh": 54992.96,
+      "key": "1111210139",
+      "label": "scheme",
+      "name": "Sanjay Gandhi Niradhar Anudan Yojana for persons with disabilities (Scheme)",
+      "reason": "Sanjay Gandhi Niradhar pays a monthly pension to a person with a disability"
+     },
+     {
+      "be_lakh": 117100.0,
+      "key": "1111290003",
+      "label": "not_scheme",
+      "name": "Grant In Aid To Voluntary Agency For Running Ashram Shala And Post Basic Asharam Shala For VJNT",
+      "reason": "grant to a voluntary agency for running a residential school"
+     },
+     {
+      "be_lakh": 49500.0,
+      "key": "1112010045",
+      "label": "not_scheme",
+      "name": "Construction of Court Building and office building under Scheme Construction of office buildings of law and judiciary department and Infrastructure facilities for the Judiciary",
+      "reason": "construction of court and office buildings"
+     },
+     {
+      "be_lakh": 35000.0,
+      "key": "1206010051",
+      "label": "scheme",
+      "name": "Bharatratna Dr. Babasaheb Ambedkar Special Scheme of Incentives for Scheduled Caste and Scheduled Tribes Entrepreneurs",
+      "reason": "a capital incentive paid to a scheduled caste or scheduled tribe entrepreneur"
+     },
+     {
+      "be_lakh": 16000.0,
+      "key": "1211210001",
+      "label": "scheme",
+      "name": "Mukhya Mantri Annapurna Yojana (Schemes under Schedule Caste Component Scheme)",
+      "reason": "Annapurna gives free cooking gas cylinders to an eligible household"
+     },
+     {
+      "be_lakh": 130000.0,
+      "key": "1607070003",
+      "label": "not_scheme",
+      "name": "Grant-in-aid to Maharashtra Airport Development Company for development for airports. (Scheme)",
+      "reason": "grant-in-aid to an airport development company"
+     },
+     {
+      "be_lakh": 130000.0,
+      "key": "1610060007",
+      "label": "not_scheme",
+      "name": "Grant For Basic Facilities For Tourism Development at Various Places",
+      "reason": "grants for tourism facilities"
+     }
+    ]
+   },
+   "control_does_it_beat_lowering_the_bar": {
+    "top_decile_of_its_department": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 53,
+       "precision_of_the_increment": 0.868,
+       "rows": 53,
+       "schemes": 46
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 7,
+       "precision_of_the_increment": 0.714,
+       "rows": 7,
+       "schemes": 5
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 115,
+       "precision_of_the_increment": 0.843,
+       "rows": 115,
+       "schemes": 97
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 16,
+       "precision_of_the_increment": 0.812,
+       "rows": 16,
+       "schemes": 13
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 204,
+       "precision_of_the_increment": 0.706,
+       "rows": 204,
+       "schemes": 144
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 21,
+       "precision_of_the_increment": 0.714,
+       "rows": 21,
+       "schemes": 15
+      },
+      "weight": 3
+     }
+    ],
+    "top_decile_of_its_department_AND_a_welfare_major_head": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 53,
+       "precision_of_the_increment": 0.868,
+       "rows": 53,
+       "schemes": 46
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 4,
+       "precision_of_the_increment": 0.5,
+       "rows": 4,
+       "schemes": 2
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 115,
+       "precision_of_the_increment": 0.843,
+       "rows": 115,
+       "schemes": 97
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 8,
+       "precision_of_the_increment": 0.625,
+       "rows": 8,
+       "schemes": 5
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 204,
+       "precision_of_the_increment": 0.706,
+       "rows": 204,
+       "schemes": 144
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 12,
+       "precision_of_the_increment": 0.5,
+       "rows": 12,
+       "schemes": 6
+      },
+      "weight": 3
+     }
+    ]
+   },
+   "corpus_rows": 1956,
+   "department_grouping": "the department name printed on the row",
+   "departments": 56,
+   "labelled_rows": 631,
+   "marginal_on_the_rows_the_language_misses": [
+    {
+     "base_rate_development": 0.199,
+     "base_rate_held_out": 0.162,
+     "development": {
+      "n": 6,
+      "p": 0.333
+     },
+     "fires_on_rows_in_corpus": 53,
+     "held_out": {
+      "n": 7,
+      "p": 0.0
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.199,
+     "base_rate_held_out": 0.162,
+     "development": {
+      "n": 17,
+      "p": 0.353
+     },
+     "fires_on_rows_in_corpus": 157,
+     "held_out": {
+      "n": 13,
+      "p": 0.0
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.199,
+     "base_rate_held_out": 0.162,
+     "development": {
+      "n": 20,
+      "p": 0.25
+     },
+     "fires_on_rows_in_corpus": 206,
+     "held_out": {
+      "n": 20,
+      "p": 0.2
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top decile of its department"
+    },
+    {
+     "base_rate_development": 0.037,
+     "base_rate_held_out": 0.054,
+     "development": {
+      "n": 4,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 36,
+     "held_out": {
+      "n": 7,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.037,
+     "base_rate_held_out": 0.054,
+     "development": {
+      "n": 11,
+      "p": 0.091
+     },
+     "fires_on_rows_in_corpus": 115,
+     "held_out": {
+      "n": 13,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.037,
+     "base_rate_held_out": 0.054,
+     "development": {
+      "n": 14,
+      "p": 0.071
+     },
+     "fires_on_rows_in_corpus": 137,
+     "held_out": {
+      "n": 15,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top decile of its department"
+    }
+   ],
+   "n_development": 196,
+   "n_held_out": 195,
+   "publish_threshold": 8
+  },
+  "odisha": {
+   "base_rate_development": 0.092,
+   "base_rate_held_out": 0.113,
+   "candidates": [
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 7,
+      "p": 0.143
+     },
+     "fires_on_rows_in_corpus": 44,
+     "held_out": {
+      "n": 4,
+      "p": 0.5
+     },
+     "lift_development": 0.051,
+     "lift_held_out": 0.387,
+     "note": "",
+     "signal": "largest allocation in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 13,
+      "p": 0.154
+     },
+     "fires_on_rows_in_corpus": 129,
+     "held_out": {
+      "n": 12,
+      "p": 0.25
+     },
+     "lift_development": 0.062,
+     "lift_held_out": 0.137,
+     "note": "",
+     "signal": "top 3 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 22,
+      "p": 0.182
+     },
+     "fires_on_rows_in_corpus": 213,
+     "held_out": {
+      "n": 23,
+      "p": 0.261
+     },
+     "lift_development": 0.09,
+     "lift_held_out": 0.148,
+     "note": "",
+     "signal": "top 5 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 18,
+      "p": 0.167
+     },
+     "fires_on_rows_in_corpus": 185,
+     "held_out": {
+      "n": 22,
+      "p": 0.273
+     },
+     "lift_development": 0.075,
+     "lift_held_out": 0.16,
+     "note": "",
+     "signal": "top decile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 52,
+      "p": 0.154
+     },
+     "fires_on_rows_in_corpus": 424,
+     "held_out": {
+      "n": 42,
+      "p": 0.214
+     },
+     "lift_development": 0.062,
+     "lift_held_out": 0.101,
+     "note": "",
+     "signal": "top quartile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 91,
+      "p": 0.055
+     },
+     "fires_on_rows_in_corpus": 826,
+     "held_out": {
+      "n": 110,
+      "p": 0.1
+     },
+     "lift_development": -0.037,
+     "lift_held_out": -0.013,
+     "note": "",
+     "signal": "bottom half of allocations in its own department, read as a NEGATIVE"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 6,
+      "p": 0.167
+     },
+     "fires_on_rows_in_corpus": 44,
+     "held_out": {
+      "n": 1,
+      "p": 1.0
+     },
+     "lift_development": 0.075,
+     "lift_held_out": 0.887,
+     "note": "",
+     "signal": "the row takes a quarter or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 13,
+      "p": 0.231
+     },
+     "fires_on_rows_in_corpus": 108,
+     "held_out": {
+      "n": 12,
+      "p": 0.25
+     },
+     "lift_development": 0.139,
+     "lift_held_out": 0.137,
+     "note": "",
+     "signal": "the row takes a tenth or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 33,
+      "p": 0.182
+     },
+     "fires_on_rows_in_corpus": 272,
+     "held_out": {
+      "n": 26,
+      "p": 0.269
+     },
+     "lift_development": 0.09,
+     "lift_held_out": 0.156,
+     "note": "",
+     "signal": "allocation at least 10 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 62,
+      "p": 0.177
+     },
+     "fires_on_rows_in_corpus": 480,
+     "held_out": {
+      "n": 51,
+      "p": 0.176
+     },
+     "lift_development": 0.085,
+     "lift_held_out": 0.063,
+     "note": "",
+     "signal": "allocation at least 3 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 96,
+      "p": 0.135
+     },
+     "fires_on_rows_in_corpus": 758,
+     "held_out": {
+      "n": 80,
+      "p": 0.138
+     },
+     "lift_development": 0.043,
+     "lift_held_out": 0.025,
+     "note": "",
+     "signal": "allocation at least the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 5,
+     "held_out": {
+      "n": 1,
+      "p": 1.0
+     },
+     "lift_development": null,
+     "lift_held_out": 0.887,
+     "note": "",
+     "signal": "largest in its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 1,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 30,
+     "held_out": {
+      "n": 4,
+      "p": 0.75
+     },
+     "lift_development": -0.092,
+     "lift_held_out": 0.637,
+     "note": "",
+     "signal": "top decile of its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 10,
+      "p": 0.1
+     },
+     "fires_on_rows_in_corpus": 83,
+     "held_out": {
+      "n": 11,
+      "p": 0.091
+     },
+     "lift_development": 0.008,
+     "lift_held_out": -0.022,
+     "note": "",
+     "signal": "the row appears in more than one of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 5,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 42,
+     "held_out": {
+      "n": 5,
+      "p": 0.0
+     },
+     "lift_development": -0.092,
+     "lift_held_out": -0.113,
+     "note": "",
+     "signal": "the row appears in three or more of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 150,
+      "p": 0.087
+     },
+     "fires_on_rows_in_corpus": 1230,
+     "held_out": {
+      "n": 146,
+      "p": 0.096
+     },
+     "lift_development": -0.005,
+     "lift_held_out": -0.017,
+     "note": "",
+     "signal": "the head carried an actual provision in the previous year"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 45,
+      "p": 0.111
+     },
+     "fires_on_rows_in_corpus": 394,
+     "held_out": {
+      "n": 48,
+      "p": 0.167
+     },
+     "lift_development": 0.019,
+     "lift_held_out": 0.054,
+     "note": "",
+     "signal": "the head carried NO actual provision in the previous year, so it is new"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 2,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the same NAME is printed on two or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the same NAME is printed on three or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 58,
+      "p": 0.155
+     },
+     "fires_on_rows_in_corpus": 477,
+     "held_out": {
+      "n": 61,
+      "p": 0.246
+     },
+     "lift_development": 0.063,
+     "lift_held_out": 0.133,
+     "note": "",
+     "signal": "the state books this NAME under a sub-plan minor head AND under a general one"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 62,
+      "p": 0.145
+     },
+     "fires_on_rows_in_corpus": 511,
+     "held_out": {
+      "n": 62,
+      "p": 0.242
+     },
+     "lift_development": 0.053,
+     "lift_held_out": 0.129,
+     "note": "carried only as the redundancy check for the clause above",
+     "signal": "the row is itself on a sub-plan minor head, which four of the seven classifiers already weight at +1"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "the only part of the sub-plan clause above that four classifiers do not already have",
+     "signal": "the row is NOT on a sub-plan minor head but the state books the same NAME on one, so this row is the general head of an earmarked provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 52,
+      "p": 0.115
+     },
+     "fires_on_rows_in_corpus": 454,
+     "held_out": {
+      "n": 60,
+      "p": 0.2
+     },
+     "lift_development": 0.023,
+     "lift_held_out": 0.087,
+     "note": "",
+     "signal": "the row spans three or more heads of account"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 42,
+      "p": 0.214
+     },
+     "fires_on_rows_in_corpus": 343,
+     "held_out": {
+      "n": 35,
+      "p": 0.171
+     },
+     "lift_development": 0.122,
+     "lift_held_out": 0.058,
+     "note": "",
+     "signal": "the allocation is a round number, at most two significant digits"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.092,
+     "base_rate_held_out": 0.113,
+     "development": {
+      "n": 3,
+      "p": 0.333
+     },
+     "fires_on_rows_in_corpus": 34,
+     "held_out": {
+      "n": 3,
+      "p": 0.333
+     },
+     "lift_development": 0.241,
+     "lift_held_out": 0.22,
+     "note": "",
+     "signal": "the allocation is a round number AND in the top decile of its department"
+    }
+   ],
+   "circularity_check": {
+    "p_scheme_by_raw_allocation_quartile_on_the_probability_sample": {
+     "nil": {
+      "n": 37,
+      "p": 0.054
+     },
+     "q1": {
+      "n": 88,
+      "p": 0.102
+     },
+     "q2": {
+      "n": 88,
+      "p": 0.068
+     },
+     "q3": {
+      "n": 88,
+      "p": 0.08
+     },
+     "q4": {
+      "n": 89,
+      "p": 0.18
+     }
+    },
+    "reason_strings_citing_magnitude_at_all": {
+     "every_other_labelled_row": {
+      "citing": 7,
+      "n": 514
+     },
+     "top_of_department": {
+      "citing": 0,
+      "n": 17
+     }
+    },
+    "reason_strings_citing_the_size_of_the_head_AS_THE_GROUND": {
+     "every_other_labelled_row": 0,
+     "top_of_department": 0
+    },
+    "top_of_department_rows_and_the_reason_each_was_given": [
+     {
+      "be_lakh": 73359.48,
+      "key": "0145",
+      "label": "not_scheme",
+      "name": "Civil and Session Court",
+      "reason": "a civil and sessions court"
+     },
+     {
+      "be_lakh": 3236.63,
+      "key": "0705",
+      "label": "not_scheme",
+      "name": "Information and Public Relation Department",
+      "reason": "the department's own secretariat head"
+     },
+     {
+      "be_lakh": 85823.2,
+      "key": "0973",
+      "label": "not_scheme",
+      "name": "Non-Govt. Colleges",
+      "reason": "grants to non-government colleges"
+     },
+     {
+      "be_lakh": 1491055.89,
+      "key": "1195",
+      "label": "not_scheme",
+      "name": "Loans",
+      "reason": "loans and power bonds, a debt head"
+     },
+     {
+      "be_lakh": 583675.01,
+      "key": "2097",
+      "label": "scheme",
+      "name": "Madhubabu Pension for Destitute",
+      "reason": "Madhu Babu Pension pays a monthly pension to a destitute person"
+     },
+     {
+      "be_lakh": 230677.4,
+      "key": "2160",
+      "label": "not_scheme",
+      "name": "Accelerated Irrigation Benefit Programme (AIBP)",
+      "reason": "an irrigation project"
+     },
+     {
+      "be_lakh": 106999.69,
+      "key": "2383",
+      "label": "scheme",
+      "name": "Interest Subvention to the Co-op. Banks/ PACs for providing Crop Loan to the Farmers",
+      "reason": "interest subvention that reduces what the borrowing farmer pays on a crop loan"
+     },
+     {
+      "be_lakh": 133278.0,
+      "key": "2950",
+      "label": "not_scheme",
+      "name": "National Rural Livelihood Mission (NRLM)",
+      "reason": "the rural livelihood mission builds self help group institutions"
+     },
+     {
+      "be_lakh": 12000.0,
+      "key": "3107",
+      "label": "not_scheme",
+      "name": "I.T/Tech. Tower under E & IT Department",
+      "reason": "an IT tower"
+     },
+     {
+      "be_lakh": 15000.0,
+      "key": "3325",
+      "label": "scheme",
+      "name": "Mukhya Mantri Kalakara Sahayata Yojana",
+      "reason": "Kalakara Sahayata pays an assistance to an aged artist"
+     },
+     {
+      "be_lakh": 6833.85,
+      "key": "3413",
+      "label": "not_scheme",
+      "name": "Directorate of Minor Mineral Sairat Source (MMS)",
+      "reason": "a directorate"
+     },
+     {
+      "be_lakh": 700000.0,
+      "key": "3438",
+      "label": "not_scheme",
+      "name": "Jal Jeevan Mission",
+      "reason": "Jal Jeevan Mission is rural piped water infrastructure"
+     },
+     {
+      "be_lakh": 24500.0,
+      "key": "3601",
+      "label": "scheme",
+      "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY) PMMSY)",
+      "reason": "the fisheries mission pays assets and inputs to individual fishers"
+     },
+     {
+      "be_lakh": 608840.0,
+      "key": "3851",
+      "label": "scheme",
+      "name": "Samrudha Krushaka Yojana",
+      "reason": "Samrudha Krushaka pays a price assistance to the paddy grower"
+     },
+     {
+      "be_lakh": 1014520.0,
+      "key": "3862",
+      "label": "scheme",
+      "name": "Subhadra Yojana",
+      "reason": "Subhadra pays cash into a woman's account"
+     },
+     {
+      "be_lakh": 110300.0,
+      "key": "3930",
+      "label": "not_scheme",
+      "name": "Atal Bus Stand",
+      "reason": "construction of a bus stand"
+     },
+     {
+      "be_lakh": 10241.82,
+      "key": "3984",
+      "label": "not_scheme",
+      "name": "Mukhyamantri Hastatanta Bikash Yojana",
+      "reason": "brand building, incubation and infrastructure for the handloom sector"
+     }
+    ]
+   },
+   "control_does_it_beat_lowering_the_bar": {
+    "top_decile_of_its_department": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 15,
+       "precision_of_the_increment": 0.733,
+       "rows": 15,
+       "schemes": 11
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 2,
+       "precision_of_the_increment": 1.0,
+       "rows": 2,
+       "schemes": 2
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 39,
+       "precision_of_the_increment": 0.513,
+       "rows": 39,
+       "schemes": 20
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 6,
+       "precision_of_the_increment": 0.833,
+       "rows": 6,
+       "schemes": 5
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 62,
+       "precision_of_the_increment": 0.435,
+       "rows": 62,
+       "schemes": 27
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 8,
+       "precision_of_the_increment": 0.625,
+       "rows": 8,
+       "schemes": 5
+      },
+      "weight": 3
+     }
+    ],
+    "top_decile_of_its_department_AND_a_welfare_major_head": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 15,
+       "precision_of_the_increment": 0.733,
+       "rows": 15,
+       "schemes": 11
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 1,
+       "precision_of_the_increment": 1.0,
+       "rows": 1,
+       "schemes": 1
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 39,
+       "precision_of_the_increment": 0.513,
+       "rows": 39,
+       "schemes": 20
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 5,
+       "precision_of_the_increment": 0.8,
+       "rows": 5,
+       "schemes": 4
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 62,
+       "precision_of_the_increment": 0.435,
+       "rows": 62,
+       "schemes": 27
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 5,
+       "precision_of_the_increment": 0.8,
+       "rows": 5,
+       "schemes": 4
+      },
+      "weight": 3
+     }
+    ]
+   },
+   "corpus_rows": 1628,
+   "department_grouping": "the lowest-numbered department funding the code, the same rule parse/classify_odisha.py uses to stratify",
+   "departments": 44,
+   "labelled_rows": 531,
+   "marginal_on_the_rows_the_language_misses": [
+    {
+     "base_rate_development": 0.069,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 7,
+      "p": 0.143
+     },
+     "fires_on_rows_in_corpus": 42,
+     "held_out": {
+      "n": 3,
+      "p": 0.333
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.069,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 13,
+      "p": 0.154
+     },
+     "fires_on_rows_in_corpus": 124,
+     "held_out": {
+      "n": 10,
+      "p": 0.1
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.069,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 17,
+      "p": 0.118
+     },
+     "fires_on_rows_in_corpus": 177,
+     "held_out": {
+      "n": 19,
+      "p": 0.158
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top decile of its department"
+    },
+    {
+     "base_rate_development": 0.007,
+     "base_rate_held_out": 0.022,
+     "development": {
+      "n": 6,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 30,
+     "held_out": {
+      "n": 2,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.007,
+     "base_rate_held_out": 0.022,
+     "development": {
+      "n": 10,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 83,
+     "held_out": {
+      "n": 5,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.007,
+     "base_rate_held_out": 0.022,
+     "development": {
+      "n": 13,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 119,
+     "held_out": {
+      "n": 9,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top decile of its department"
+    }
+   ],
+   "n_development": 195,
+   "n_held_out": 195,
+   "publish_threshold": 9
+  },
+  "tamilnadu": {
+   "base_rate_development": 0.16,
+   "base_rate_held_out": 0.146,
+   "candidates": [
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 1,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 55,
+     "held_out": {
+      "n": 1,
+      "p": 0.0
+     },
+     "lift_development": -0.16,
+     "lift_held_out": -0.146,
+     "note": "",
+     "signal": "largest allocation in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 4,
+      "p": 0.25
+     },
+     "fires_on_rows_in_corpus": 165,
+     "held_out": {
+      "n": 6,
+      "p": 0.0
+     },
+     "lift_development": 0.09,
+     "lift_held_out": -0.146,
+     "note": "",
+     "signal": "top 3 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 9,
+      "p": 0.111
+     },
+     "fires_on_rows_in_corpus": 275,
+     "held_out": {
+      "n": 8,
+      "p": 0.0
+     },
+     "lift_development": -0.049,
+     "lift_held_out": -0.146,
+     "note": "",
+     "signal": "top 5 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 20,
+      "p": 0.35
+     },
+     "fires_on_rows_in_corpus": 648,
+     "held_out": {
+      "n": 21,
+      "p": 0.143
+     },
+     "lift_development": 0.19,
+     "lift_held_out": -0.003,
+     "note": "",
+     "signal": "top decile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 48,
+      "p": 0.208
+     },
+     "fires_on_rows_in_corpus": 1573,
+     "held_out": {
+      "n": 53,
+      "p": 0.151
+     },
+     "lift_development": 0.048,
+     "lift_held_out": 0.005,
+     "note": "",
+     "signal": "top quartile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 104,
+      "p": 0.125
+     },
+     "fires_on_rows_in_corpus": 3120,
+     "held_out": {
+      "n": 97,
+      "p": 0.113
+     },
+     "lift_development": -0.035,
+     "lift_held_out": -0.033,
+     "note": "",
+     "signal": "bottom half of allocations in its own department, read as a NEGATIVE"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 2,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 49,
+     "held_out": {
+      "n": 3,
+      "p": 0.0
+     },
+     "lift_development": -0.16,
+     "lift_held_out": -0.146,
+     "note": "",
+     "signal": "the row takes a quarter or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 3,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 129,
+     "held_out": {
+      "n": 4,
+      "p": 0.0
+     },
+     "lift_development": -0.16,
+     "lift_held_out": -0.146,
+     "note": "",
+     "signal": "the row takes a tenth or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 37,
+      "p": 0.243
+     },
+     "fires_on_rows_in_corpus": 1057,
+     "held_out": {
+      "n": 33,
+      "p": 0.152
+     },
+     "lift_development": 0.083,
+     "lift_held_out": 0.006,
+     "note": "",
+     "signal": "allocation at least 10 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 53,
+      "p": 0.189
+     },
+     "fires_on_rows_in_corpus": 1671,
+     "held_out": {
+      "n": 53,
+      "p": 0.17
+     },
+     "lift_development": 0.029,
+     "lift_held_out": 0.024,
+     "note": "",
+     "signal": "allocation at least 3 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 75,
+      "p": 0.24
+     },
+     "fires_on_rows_in_corpus": 2453,
+     "held_out": {
+      "n": 77,
+      "p": 0.143
+     },
+     "lift_development": 0.08,
+     "lift_held_out": -0.003,
+     "note": "",
+     "signal": "allocation at least the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 8,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "largest in its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 3,
+      "p": 1.0
+     },
+     "fires_on_rows_in_corpus": 129,
+     "held_out": {
+      "n": 4,
+      "p": 0.25
+     },
+     "lift_development": 0.84,
+     "lift_held_out": 0.104,
+     "note": "",
+     "signal": "top decile of its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the row appears in more than one of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the row appears in three or more of the state's books"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 82,
+      "p": 0.195
+     },
+     "fires_on_rows_in_corpus": 2319,
+     "held_out": {
+      "n": 66,
+      "p": 0.212
+     },
+     "lift_development": 0.035,
+     "lift_held_out": 0.066,
+     "note": "",
+     "signal": "the same NAME is printed on two or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 29,
+      "p": 0.345
+     },
+     "fires_on_rows_in_corpus": 1045,
+     "held_out": {
+      "n": 27,
+      "p": 0.333
+     },
+     "lift_development": 0.185,
+     "lift_held_out": 0.187,
+     "note": "",
+     "signal": "the same NAME is printed on three or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 20,
+      "p": 0.6
+     },
+     "fires_on_rows_in_corpus": 551,
+     "held_out": {
+      "n": 15,
+      "p": 0.667
+     },
+     "lift_development": 0.44,
+     "lift_held_out": 0.521,
+     "note": "",
+     "signal": "the state books this NAME under a sub-plan minor head AND under a general one"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 19,
+      "p": 0.526
+     },
+     "fires_on_rows_in_corpus": 606,
+     "held_out": {
+      "n": 21,
+      "p": 0.619
+     },
+     "lift_development": 0.366,
+     "lift_held_out": 0.473,
+     "note": "carried only as the redundancy check for the clause above",
+     "signal": "the row is itself on a sub-plan minor head, which four of the seven classifiers already weight at +1"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 8,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 222,
+     "held_out": {
+      "n": 7,
+      "p": 0.429
+     },
+     "lift_development": 0.34,
+     "lift_held_out": 0.283,
+     "note": "the only part of the sub-plan clause above that four classifiers do not already have",
+     "signal": "the row is NOT on a sub-plan minor head but the state books the same NAME on one, so this row is the general head of an earmarked provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the row spans three or more heads of account"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 18,
+      "p": 0.056
+     },
+     "fires_on_rows_in_corpus": 661,
+     "held_out": {
+      "n": 22,
+      "p": 0.136
+     },
+     "lift_development": -0.104,
+     "lift_held_out": -0.01,
+     "note": "",
+     "signal": "the allocation is a round number, at most two significant digits"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.16,
+     "base_rate_held_out": 0.146,
+     "development": {
+      "n": 1,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 91,
+     "held_out": {
+      "n": 3,
+      "p": 0.0
+     },
+     "lift_development": -0.16,
+     "lift_held_out": -0.146,
+     "note": "",
+     "signal": "the allocation is a round number AND in the top decile of its department"
+    }
+   ],
+   "circularity_check": {
+    "p_scheme_by_raw_allocation_quartile_on_the_probability_sample": {
+     "nil": {
+      "n": 103,
+      "p": 0.058
+     },
+     "q1": {
+      "n": 73,
+      "p": 0.26
+     },
+     "q2": {
+      "n": 75,
+      "p": 0.16
+     },
+     "q3": {
+      "n": 74,
+      "p": 0.162
+     },
+     "q4": {
+      "n": 74,
+      "p": 0.162
+     }
+    },
+    "reason_strings_citing_magnitude_at_all": {
+     "every_other_labelled_row": {
+      "citing": 4,
+      "n": 825
+     },
+     "top_of_department": {
+      "citing": 1,
+      "n": 4
+     }
+    },
+    "reason_strings_citing_the_size_of_the_head_AS_THE_GROUND": {
+     "every_other_labelled_row": 0,
+     "top_of_department": 1
+    },
+    "top_of_department_rows_and_the_reason_each_was_given": [
+     {
+      "be_lakh": 566796.88,
+      "key": "2055 00 109 AA",
+      "label": "not_scheme",
+      "name": "District Police",
+      "reason": "the district police establishment, the largest salary head in the book"
+     },
+     {
+      "be_lakh": 6534.28,
+      "key": "2202 03 103 AE",
+      "label": "not_scheme",
+      "name": "Law Colleges",
+      "reason": "government law colleges, institutions"
+     },
+     {
+      "be_lakh": 243939.0,
+      "key": "2235 02 190 AC",
+      "label": "scheme",
+      "name": "Reimbursement of loss due to issue of free bus tickets to women",
+      "reason": "the head of account books this money as a benefit transfer and the name says who receives it"
+     },
+     {
+      "be_lakh": 733763.0,
+      "key": "2401 00 102 AH",
+      "label": "scheme",
+      "name": "Payment to Tamil Nadu Electricity Board on behalf of farmers using farm pump sets",
+      "reason": "the head of account books this money as a benefit transfer and the name says who receives it"
+     }
+    ]
+   },
+   "control_does_it_beat_lowering_the_bar": {
+    "top_decile_of_its_department": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 50,
+       "precision_of_the_increment": 0.84,
+       "rows": 50,
+       "schemes": 42
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 7,
+       "precision_of_the_increment": 0.857,
+       "rows": 7,
+       "schemes": 6
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 136,
+       "precision_of_the_increment": 0.699,
+       "rows": 136,
+       "schemes": 95
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 20,
+       "precision_of_the_increment": 0.85,
+       "rows": 20,
+       "schemes": 17
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 147,
+       "precision_of_the_increment": 0.701,
+       "rows": 314,
+       "schemes": 103
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 22,
+       "precision_of_the_increment": 0.864,
+       "rows": 49,
+       "schemes": 19
+      },
+      "weight": 3
+     }
+    ],
+    "top_decile_of_its_department_AND_a_welfare_major_head": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 50,
+       "precision_of_the_increment": 0.84,
+       "rows": 50,
+       "schemes": 42
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 2,
+       "precision_of_the_increment": 0.5,
+       "rows": 2,
+       "schemes": 1
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 136,
+       "precision_of_the_increment": 0.699,
+       "rows": 136,
+       "schemes": 95
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 9,
+       "precision_of_the_increment": 0.778,
+       "rows": 9,
+       "schemes": 7
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 147,
+       "precision_of_the_increment": 0.701,
+       "rows": 314,
+       "schemes": 103
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 11,
+       "precision_of_the_increment": 0.818,
+       "rows": 27,
+       "schemes": 9
+      },
+      "weight": 3
+     }
+    ]
+   },
+   "corpus_rows": 6220,
+   "department_grouping": "the department name printed on the row",
+   "departments": 55,
+   "labelled_rows": 829,
+   "marginal_on_the_rows_the_language_misses": [
+    {
+     "base_rate_development": 0.106,
+     "base_rate_held_out": 0.086,
+     "development": {
+      "n": 1,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 54,
+     "held_out": {
+      "n": 1,
+      "p": 0.0
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.106,
+     "base_rate_held_out": 0.086,
+     "development": {
+      "n": 3,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 158,
+     "held_out": {
+      "n": 6,
+      "p": 0.0
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.106,
+     "base_rate_held_out": 0.086,
+     "development": {
+      "n": 17,
+      "p": 0.235
+     },
+     "fires_on_rows_in_corpus": 593,
+     "held_out": {
+      "n": 20,
+      "p": 0.1
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top decile of its department"
+    },
+    {
+     "base_rate_development": 0.014,
+     "base_rate_held_out": 0.007,
+     "development": {
+      "n": 1,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 34,
+     "held_out": {
+      "n": 1,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.014,
+     "base_rate_held_out": 0.007,
+     "development": {
+      "n": 3,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 106,
+     "held_out": {
+      "n": 6,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.014,
+     "base_rate_held_out": 0.007,
+     "development": {
+      "n": 12,
+      "p": 0.083
+     },
+     "fires_on_rows_in_corpus": 398,
+     "held_out": {
+      "n": 16,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top decile of its department"
+    }
+   ],
+   "n_development": 200,
+   "n_held_out": 199,
+   "publish_threshold": 10
+  },
+  "westbengal": {
+   "base_rate_development": 0.08,
+   "base_rate_held_out": 0.089,
+   "candidates": [
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 3,
+      "p": 0.333
+     },
+     "fires_on_rows_in_corpus": 57,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": 0.253,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "largest allocation in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 7,
+      "p": 0.143
+     },
+     "fires_on_rows_in_corpus": 171,
+     "held_out": {
+      "n": 2,
+      "p": 0.5
+     },
+     "lift_development": 0.063,
+     "lift_held_out": 0.411,
+     "note": "",
+     "signal": "top 3 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 9,
+      "p": 0.111
+     },
+     "fires_on_rows_in_corpus": 279,
+     "held_out": {
+      "n": 6,
+      "p": 0.167
+     },
+     "lift_development": 0.031,
+     "lift_held_out": 0.078,
+     "note": "",
+     "signal": "top 5 allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 17,
+      "p": 0.118
+     },
+     "fires_on_rows_in_corpus": 931,
+     "held_out": {
+      "n": 23,
+      "p": 0.174
+     },
+     "lift_development": 0.038,
+     "lift_held_out": 0.085,
+     "note": "",
+     "signal": "top decile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 54,
+      "p": 0.074
+     },
+     "fires_on_rows_in_corpus": 2279,
+     "held_out": {
+      "n": 61,
+      "p": 0.115
+     },
+     "lift_development": -0.006,
+     "lift_held_out": 0.026,
+     "note": "",
+     "signal": "top quartile of allocations in its own department"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 116,
+      "p": 0.078
+     },
+     "fires_on_rows_in_corpus": 4529,
+     "held_out": {
+      "n": 107,
+      "p": 0.065
+     },
+     "lift_development": -0.002,
+     "lift_held_out": -0.024,
+     "note": "",
+     "signal": "bottom half of allocations in its own department, read as a NEGATIVE"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 2,
+      "p": 0.5
+     },
+     "fires_on_rows_in_corpus": 40,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": 0.42,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the row takes a quarter or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 5,
+      "p": 0.2
+     },
+     "fires_on_rows_in_corpus": 125,
+     "held_out": {
+      "n": 1,
+      "p": 1.0
+     },
+     "lift_development": 0.12,
+     "lift_held_out": 0.911,
+     "note": "",
+     "signal": "the row takes a tenth or more of its department's whole provision"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 14,
+      "p": 0.143
+     },
+     "fires_on_rows_in_corpus": 682,
+     "held_out": {
+      "n": 16,
+      "p": 0.125
+     },
+     "lift_development": 0.063,
+     "lift_held_out": 0.036,
+     "note": "",
+     "signal": "allocation at least 10 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 32,
+      "p": 0.125
+     },
+     "fires_on_rows_in_corpus": 1309,
+     "held_out": {
+      "n": 37,
+      "p": 0.135
+     },
+     "lift_development": 0.045,
+     "lift_held_out": 0.046,
+     "note": "",
+     "signal": "allocation at least 3 times the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 56,
+      "p": 0.071
+     },
+     "fires_on_rows_in_corpus": 2265,
+     "held_out": {
+      "n": 55,
+      "p": 0.091
+     },
+     "lift_development": -0.009,
+     "lift_held_out": 0.002,
+     "note": "",
+     "signal": "allocation at least the department median row"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 1,
+      "p": 1.0
+     },
+     "fires_on_rows_in_corpus": 8,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": 0.92,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "largest in its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 3,
+      "p": 0.667
+     },
+     "fires_on_rows_in_corpus": 111,
+     "held_out": {
+      "n": 1,
+      "p": 1.0
+     },
+     "lift_development": 0.587,
+     "lift_held_out": 0.911,
+     "note": "",
+     "signal": "top decile of its department AND on a welfare function major head"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 11,
+      "p": 0.091
+     },
+     "fires_on_rows_in_corpus": 293,
+     "held_out": {
+      "n": 9,
+      "p": 0.111
+     },
+     "lift_development": 0.011,
+     "lift_held_out": 0.022,
+     "note": "",
+     "signal": "the row appears in more than one of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 1,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 37,
+     "held_out": {
+      "n": 2,
+      "p": 0.0
+     },
+     "lift_development": -0.08,
+     "lift_held_out": -0.089,
+     "note": "",
+     "signal": "the row appears in three or more of the state's books"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 93,
+      "p": 0.054
+     },
+     "fires_on_rows_in_corpus": 3695,
+     "held_out": {
+      "n": 93,
+      "p": 0.097
+     },
+     "lift_development": -0.026,
+     "lift_held_out": 0.008,
+     "note": "",
+     "signal": "the head carried an actual provision in the previous year"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 119,
+      "p": 0.109
+     },
+     "fires_on_rows_in_corpus": 4882,
+     "held_out": {
+      "n": 123,
+      "p": 0.065
+     },
+     "lift_development": 0.029,
+     "lift_held_out": -0.024,
+     "note": "",
+     "signal": "the head carried NO actual provision in the previous year, so it is new"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 106,
+      "p": 0.094
+     },
+     "fires_on_rows_in_corpus": 4155,
+     "held_out": {
+      "n": 114,
+      "p": 0.114
+     },
+     "lift_development": 0.014,
+     "lift_held_out": 0.025,
+     "note": "",
+     "signal": "the same NAME is printed on two or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 62,
+      "p": 0.145
+     },
+     "fires_on_rows_in_corpus": 2459,
+     "held_out": {
+      "n": 77,
+      "p": 0.156
+     },
+     "lift_development": 0.065,
+     "lift_held_out": 0.067,
+     "note": "",
+     "signal": "the same NAME is printed on three or more rows of the corpus"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 64,
+      "p": 0.156
+     },
+     "fires_on_rows_in_corpus": 2446,
+     "held_out": {
+      "n": 69,
+      "p": 0.159
+     },
+     "lift_development": 0.076,
+     "lift_held_out": 0.07,
+     "note": "",
+     "signal": "the state books this NAME under a sub-plan minor head AND under a general one"
+    },
+    {
+     "agrees_on_both_halves": true,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 47,
+      "p": 0.255
+     },
+     "fires_on_rows_in_corpus": 1981,
+     "held_out": {
+      "n": 55,
+      "p": 0.127
+     },
+     "lift_development": 0.175,
+     "lift_held_out": 0.038,
+     "note": "carried only as the redundancy check for the clause above",
+     "signal": "the row is itself on a sub-plan minor head, which four of the seven classifiers already weight at +1"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 26,
+      "p": 0.038
+     },
+     "fires_on_rows_in_corpus": 1100,
+     "held_out": {
+      "n": 26,
+      "p": 0.192
+     },
+     "lift_development": -0.042,
+     "lift_held_out": 0.103,
+     "note": "the only part of the sub-plan clause above that four classifiers do not already have",
+     "signal": "the row is NOT on a sub-plan minor head but the state books the same NAME on one, so this row is the general head of an earmarked provision"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 0,
+      "p": null
+     },
+     "fires_on_rows_in_corpus": 0,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "lift_development": null,
+     "lift_held_out": null,
+     "note": "",
+     "signal": "the row spans three or more heads of account"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 37,
+      "p": 0.081
+     },
+     "fires_on_rows_in_corpus": 1630,
+     "held_out": {
+      "n": 39,
+      "p": 0.077
+     },
+     "lift_development": 0.001,
+     "lift_held_out": -0.012,
+     "note": "",
+     "signal": "the allocation is a round number, at most two significant digits"
+    },
+    {
+     "agrees_on_both_halves": false,
+     "base_rate_development": 0.08,
+     "base_rate_held_out": 0.089,
+     "development": {
+      "n": 5,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 277,
+     "held_out": {
+      "n": 7,
+      "p": 0.143
+     },
+     "lift_development": -0.08,
+     "lift_held_out": 0.054,
+     "note": "",
+     "signal": "the allocation is a round number AND in the top decile of its department"
+    }
+   ],
+   "circularity_check": {
+    "p_scheme_by_raw_allocation_quartile_on_the_probability_sample": {
+     "nil": {
+      "n": 220,
+      "p": 0.086
+     },
+     "q1": {
+      "n": 57,
+      "p": 0.105
+     },
+     "q2": {
+      "n": 57,
+      "p": 0.053
+     },
+     "q3": {
+      "n": 58,
+      "p": 0.034
+     },
+     "q4": {
+      "n": 58,
+      "p": 0.138
+     }
+    },
+    "reason_strings_citing_magnitude_at_all": {
+     "every_other_labelled_row": {
+      "citing": 14,
+      "n": 948
+     },
+     "top_of_department": {
+      "citing": 0,
+      "n": 10
+     }
+    },
+    "reason_strings_citing_the_size_of_the_head_AS_THE_GROUND": {
+     "every_other_labelled_row": 1,
+     "top_of_department": 0
+    },
+    "top_of_department_rows_and_the_reason_each_was_given": [
+     {
+      "be_lakh": 624503.9,
+      "key": "2216-03-105-003",
+      "label": "scheme",
+      "name": "Pradhan Mantri Awas Yojna - Rural (Erstwhile Indira Awaas Yojana) (SNA-SPARSH) (SPARSH) [PN]",
+      "reason": "a house built for or by an identified household"
+     },
+     {
+      "be_lakh": 86444.15,
+      "key": "2225-04-277-010",
+      "label": "not_scheme",
+      "name": "Assistance to Non Government Madrasah [MD]",
+      "reason": "assistance to non-government madrasahs, an institution grant"
+     },
+     {
+      "be_lakh": 40150.0,
+      "key": "2235-02-104-036",
+      "label": "scheme",
+      "name": "Jai Johar-Old Age Pension to Scheduled Tribes under Jai Bangla (JAIBANGLA) [TW]",
+      "reason": "an old age pension, cash to an aged person"
+     },
+     {
+      "be_lakh": 201000.0,
+      "key": "2235-02-200-052",
+      "label": "scheme",
+      "name": "Social Welfare Scheme for the Unemployed Persons including Yuvashree (YUVA) [LB]",
+      "reason": "Yuvashree, a monthly allowance paid to unemployed persons"
+     },
+     {
+      "be_lakh": 167300.0,
+      "key": "2235-60-102-022",
+      "label": "scheme",
+      "name": "Taposili Bandhu-Old Age Pensin to Scheduled Castes under Jai Bangla (JAIBANGLA) (JAIBANGLA) [SC]",
+      "reason": "an old age pension, cash to an aged person"
+     },
+     {
+      "be_lakh": 468337.0,
+      "key": "2408-01-102-006",
+      "label": "not_scheme",
+      "name": "State Subsidy for purchase of paddy for distribution of Rice in PDS [FS]",
+      "reason": "the cost of procuring paddy for the public distribution system, paid to the mill and the grower at the support price rather than to a household"
+     },
+     {
+      "be_lakh": 25000.0,
+      "key": "2435-01-101-008",
+      "label": "scheme",
+      "name": "West Bengal Swanirbhar Sahayak Prakalpa (WBSSP) (SSP) [SH]",
+      "reason": "a credit-linked subsidy to a self-help group member"
+     },
+     {
+      "be_lakh": 165000.0,
+      "key": "2801-80-101-003",
+      "label": "scheme",
+      "name": "Subsidy to WBSEDCL for subsidization in power tariff to its Consumers [PO]",
+      "reason": "a power tariff subsidy that lowers the bill the consumer pays"
+     },
+     {
+      "be_lakh": 294499.88,
+      "key": "4215-01-789-023",
+      "label": "not_scheme",
+      "name": "Piped Water Supply Schemes for Rural Areas under Jal Jeevan Mission (JJM) (SNA-SPARSH) (SPARSH) [PH]",
+      "reason": "piped water supply works under Jal Jeevan Mission; the provision builds the distribution network"
+     },
+     {
+      "be_lakh": 6000.0,
+      "key": "7465-00-102-001",
+      "label": "not_scheme",
+      "name": "Loans to West Bengal Mineral Development and Trading Corporation [IN]",
+      "reason": "a loan to a state trading corporation"
+     }
+    ]
+   },
+   "control_does_it_beat_lowering_the_bar": {
+    "top_decile_of_its_department": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 87,
+       "precision_of_the_increment": 0.828,
+       "rows": 87,
+       "schemes": 72
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 15,
+       "precision_of_the_increment": 0.933,
+       "rows": 15,
+       "schemes": 14
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 107,
+       "precision_of_the_increment": 0.832,
+       "rows": 107,
+       "schemes": 89
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 17,
+       "precision_of_the_increment": 0.941,
+       "rows": 17,
+       "schemes": 16
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 231,
+       "precision_of_the_increment": 0.732,
+       "rows": 231,
+       "schemes": 169
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 30,
+       "precision_of_the_increment": 0.833,
+       "rows": 30,
+       "schemes": 25
+      },
+      "weight": 3
+     }
+    ],
+    "top_decile_of_its_department_AND_a_welfare_major_head": [
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 87,
+       "precision_of_the_increment": 0.828,
+       "rows": 87,
+       "schemes": 72
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 9,
+       "precision_of_the_increment": 1.0,
+       "rows": 9,
+       "schemes": 9
+      },
+      "weight": 1
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 107,
+       "precision_of_the_increment": 0.832,
+       "rows": 107,
+       "schemes": 89
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 11,
+       "precision_of_the_increment": 1.0,
+       "rows": 11,
+       "schemes": 11
+      },
+      "weight": 2
+     },
+     {
+      "control_lower_the_bar_by_the_same_amount": {
+       "hand_labelled": 231,
+       "precision_of_the_increment": 0.732,
+       "rows": 231,
+       "schemes": 169
+      },
+      "rows_the_signal_would_newly_publish": {
+       "hand_labelled": 19,
+       "precision_of_the_increment": 0.895,
+       "rows": 19,
+       "schemes": 17
+      },
+      "weight": 3
+     }
+    ]
+   },
+   "corpus_rows": 9024,
+   "department_grouping": "the lowest-numbered demand, which is the department",
+   "departments": 57,
+   "labelled_rows": 958,
+   "marginal_on_the_rows_the_language_misses": [
+    {
+     "base_rate_development": 0.055,
+     "base_rate_held_out": 0.081,
+     "development": {
+      "n": 3,
+      "p": 0.333
+     },
+     "fires_on_rows_in_corpus": 57,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.055,
+     "base_rate_held_out": 0.081,
+     "development": {
+      "n": 7,
+      "p": 0.143
+     },
+     "fires_on_rows_in_corpus": 170,
+     "held_out": {
+      "n": 2,
+      "p": 0.5
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.055,
+     "base_rate_held_out": 0.081,
+     "development": {
+      "n": 17,
+      "p": 0.118
+     },
+     "fires_on_rows_in_corpus": 911,
+     "held_out": {
+      "n": 23,
+      "p": 0.174
+     },
+     "restricted_to": "rows below the publishing bar",
+     "signal": "top decile of its department"
+    },
+    {
+     "base_rate_development": 0.005,
+     "base_rate_held_out": 0.0,
+     "development": {
+      "n": 2,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 39,
+     "held_out": {
+      "n": 0,
+      "p": null
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "largest in its department"
+    },
+    {
+     "base_rate_development": 0.005,
+     "base_rate_held_out": 0.0,
+     "development": {
+      "n": 6,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 125,
+     "held_out": {
+      "n": 1,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top 3 in its department"
+    },
+    {
+     "base_rate_development": 0.005,
+     "base_rate_held_out": 0.0,
+     "development": {
+      "n": 12,
+      "p": 0.0
+     },
+     "fires_on_rows_in_corpus": 657,
+     "held_out": {
+      "n": 19,
+      "p": 0.0
+     },
+     "restricted_to": "rows scoring 0 or less, where the name says nothing",
+     "signal": "top decile of its department"
+    }
+   ],
+   "n_development": 225,
+   "n_held_out": 225,
+   "publish_threshold": 10
+  }
+ },
+ "states_changed": [],
+ "states_left_alone": [
+  {
+   "state": "andhra",
+   "why": "Top decile of department measures 0.444 over 18 development rows and 0.500 over 22 held out, against base rates of 0.412 and 0.426: a lift of three and seven points on a corpus that is already six welfare annexures filtered to beneficiary-facing rows. Against the control it is a dead heat, 0.750 over 4 rows against 0.745 over 55. Thallikivandanam scores 0 against a bar of 4 and is rank 2, 2, 3, 3 and 8 in its five departments, so even the largest-in-department form does not fire on four of its five heads."
+  },
+  {
+   "state": "karnataka",
+   "why": "The halves disagree: 0.467 over 15 development rows against a base of 0.370, and 0.267 over 15 held out against 0.364. Gruha Lakshmi is rank 1 of 108 on major head 2235 and scores 2 against a bar of 7, so it needs +5 from a signal whose held-out half points the wrong way. Karnataka's real recall problem is also not this: 580 of its 969 rows carry no purpose line, and the purpose line is the signal that measures 0.947 in that file."
+  },
+  {
+   "state": "kerala",
+   "why": "0.250 over 16 development rows and 0.158 over 19 held out, against 0.174 and 0.137. Both halves lift, by eight points and two. Against the control it wins at +1 on three rows and ties exactly at +2, 0.875 against 0.875 over 64. Kerala has no scheme in the named seven and its recall is the second best in the register, so there is nothing here worth the cost of voiding a 97.4% counted precision."
+  },
+  {
+   "state": "maharashtra",
+   "why": "The clearest failure. 0.318 over 22 development rows against a base of 0.240, and 0.200 over 20 held out against 0.231, so the held-out half points the wrong way. Against the control it is WORSE at every weight tried: at +1 the rows it newly publishes are 0.714 precise against 0.868 for the band it comes from. Mukhyamantri Mazi Ladaki Bahin is rank 1 of 86 and needs +3, on a signal that in this state is worse than moving the bar."
+  },
+  {
+   "state": "odisha",
+   "why": "One of the two states where both halves lift: 0.167 over 18 development rows and 0.273 over 22 held out, against 0.092 and 0.113. It beats the control at +2, 0.833 over 6 rows against 0.513 over 39. It is left alone because that is 6 rows, because +2 is what this file pays for a welfare major head measured at 0.233 over 30 rows, and because at the +1 the development half supports Subhadra Yojana goes from 7 to 8 against a bar of 9 and Samrudha Krushaka from 5 to 6. The state's two largest schemes stay out either way."
+  },
+  {
+   "state": "tamilnadu",
+   "why": "The halves disagree: 0.350 over 20 development rows against a base of 0.160, and 0.143 over 21 held out against 0.146, which is the base rate to within a rounding error. Magalir Urimai Thogai is already published on two of its three heads at scores 11 and 12; the head that is missed is the Rs 9,803 crore general head at score 4, which needs +6."
+  },
+  {
+   "state": "westbengal",
+   "why": "The other state where both halves lift, and the closest call in the register: 0.118 over 17 development rows and 0.174 over 23 held out, against 0.080 and 0.089. See why_the_control_table_can_reject_a_weight_and_can_never_justify_one for why the 14-of-15 audit result is not the argument it looks like. On the development half the lift is under four points on 17 rows, below the weakest positive this file already weights, and it fires on 931 of 9,024 rows. Lakshmir Bhandar would go from 3 to 4 against a bar of 10."
+  }
+ ],
+ "the_census_was_not_extended_and_did_not_need_to_be": "Adding a signal moves rows above the publishing bar that were never hand labelled, so the audit census would no longer cover the published set and the counted precision in each classification.json would no longer apply. No state was changed here, so every published set is exactly what it was and every counted precision still stands. The seven files are untouched.",
+ "the_seven_named_schemes": [
+  {
+   "allocation_as_a_multiple_of_the_department_median": 1944.4,
+   "be_lakh": 2100000.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "1111170117",
+   "largest_in_its_department": true,
+   "name_as_printed": "Mukhyamantri Mazi Ladaki Bahin",
+   "points_short": 3,
+   "publish_threshold": 8,
+   "published_today": false,
+   "rank_in_its_department": 1,
+   "rows_in_that_department": 86,
+   "scheme": "Mukhyamantri Mazi Ladaki Bahin",
+   "score": 5,
+   "state": "maharashtra"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 16654.5,
+   "be_lakh": 1249090.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "2235-02-103-076",
+   "largest_in_its_department": true,
+   "name_as_printed": "Lakshmir Bhandar (LAXMI) [WC]",
+   "points_short": 7,
+   "publish_threshold": 10,
+   "published_today": false,
+   "rank_in_its_department": 1,
+   "rows_in_that_department": 408,
+   "scheme": "Lakshmir Bhandar",
+   "score": 3,
+   "state": "westbengal"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 8944.1,
+   "be_lakh": 670810.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "2235-02-789-078",
+   "largest_in_its_department": false,
+   "name_as_printed": "Lakshmir Bhandar (LAXMI) [WC]",
+   "points_short": 6,
+   "publish_threshold": 10,
+   "published_today": false,
+   "rank_in_its_department": 3,
+   "rows_in_that_department": 408,
+   "scheme": "Lakshmir Bhandar",
+   "score": 4,
+   "state": "westbengal"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 1601.3,
+   "be_lakh": 120100.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "2235-02-796-078",
+   "largest_in_its_department": false,
+   "name_as_printed": "Lakshmir Bhandar (LAXMI) [WC]",
+   "points_short": 6,
+   "publish_threshold": 10,
+   "published_today": false,
+   "rank_in_its_department": 8,
+   "rows_in_that_department": 408,
+   "scheme": "Lakshmir Bhandar",
+   "score": 4,
+   "state": "westbengal"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": null,
+   "be_lakh": 0.0,
+   "in_the_top_decile_of_its_department": false,
+   "key": "2235-60-800-091",
+   "largest_in_its_department": false,
+   "name_as_printed": "Lakshmir Bhandar (LAXMI) [WC]",
+   "points_short": 14,
+   "publish_threshold": 10,
+   "published_today": false,
+   "rank_in_its_department": 315,
+   "rows_in_that_department": 408,
+   "scheme": "Lakshmir Bhandar",
+   "score": -4,
+   "state": "westbengal"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": -0.0,
+   "be_lakh": -0.01,
+   "in_the_top_decile_of_its_department": false,
+   "key": "2235-60-800-078",
+   "largest_in_its_department": false,
+   "name_as_printed": "Lakshmir Bhandar (LAXMI) [WC]",
+   "points_short": 14,
+   "publish_threshold": 10,
+   "published_today": false,
+   "rank_in_its_department": 390,
+   "rows_in_that_department": 408,
+   "scheme": "Lakshmir Bhandar",
+   "score": -4,
+   "state": "westbengal"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 990.9,
+   "be_lakh": 1014520.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "3862",
+   "largest_in_its_department": true,
+   "name_as_printed": "Subhadra Yojana",
+   "points_short": 2,
+   "publish_threshold": 9,
+   "published_today": false,
+   "rank_in_its_department": 1,
+   "rows_in_that_department": 74,
+   "scheme": "Subhadra Yojana",
+   "score": 7,
+   "state": "odisha"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 6535.1,
+   "be_lakh": 980260.01,
+   "in_the_top_decile_of_its_department": true,
+   "key": "2235 02 103 CD",
+   "largest_in_its_department": true,
+   "name_as_printed": "Magalir Urimai Thogai",
+   "points_short": 6,
+   "publish_threshold": 10,
+   "published_today": false,
+   "rank_in_its_department": 1,
+   "rows_in_that_department": 31,
+   "scheme": "Magalir Urimai Thogai",
+   "score": 4,
+   "state": "tamilnadu"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 2882.0,
+   "be_lakh": 432300.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "2235 02 789 AB",
+   "largest_in_its_department": false,
+   "name_as_printed": "Magalir Urimai Thogai",
+   "points_short": -1,
+   "publish_threshold": 10,
+   "published_today": true,
+   "rank_in_its_department": 2,
+   "rows_in_that_department": 31,
+   "scheme": "Magalir Urimai Thogai",
+   "score": 11,
+   "state": "tamilnadu"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 192.1,
+   "be_lakh": 28820.0,
+   "in_the_top_decile_of_its_department": false,
+   "key": "2235 02 796 JH",
+   "largest_in_its_department": false,
+   "name_as_printed": "Magalir Urimai Thogai",
+   "points_short": -2,
+   "publish_threshold": 10,
+   "published_today": true,
+   "rank_in_its_department": 5,
+   "rows_in_that_department": 31,
+   "scheme": "Magalir Urimai Thogai",
+   "score": 12,
+   "state": "tamilnadu"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 121.8,
+   "be_lakh": 608840.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "3851",
+   "largest_in_its_department": true,
+   "name_as_printed": "Samrudha Krushaka Yojana",
+   "points_short": 4,
+   "publish_threshold": 9,
+   "published_today": false,
+   "rank_in_its_department": 1,
+   "rows_in_that_department": 66,
+   "scheme": "Samrudha Krushaka Yojana",
+   "score": 5,
+   "state": "odisha"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 3463.9,
+   "be_lakh": 2860800.0,
+   "in_the_top_decile_of_its_department": true,
+   "key": "2235-02-197-1-02",
+   "largest_in_its_department": true,
+   "name_as_printed": "Gruha Lakshmi",
+   "points_short": 5,
+   "publish_threshold": 7,
+   "published_today": false,
+   "rank_in_its_department": 1,
+   "rows_in_that_department": 108,
+   "scheme": "Gruha Lakshmi",
+   "score": 2,
+   "state": "karnataka"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": null,
+   "be_lakh": 0.0,
+   "in_the_top_decile_of_its_department": false,
+   "key": "2235-02-103-0-73",
+   "largest_in_its_department": false,
+   "name_as_printed": "Gruha Lakshmi",
+   "points_short": 3,
+   "publish_threshold": 7,
+   "published_today": false,
+   "rank_in_its_department": 106,
+   "rows_in_that_department": 108,
+   "scheme": "Gruha Lakshmi",
+   "score": 4,
+   "state": "karnataka"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 27.3,
+   "be_lakh": 409763.44,
+   "in_the_top_decile_of_its_department": true,
+   "key": "Backward Classes Welfare Department | Thallikivandanam",
+   "largest_in_its_department": false,
+   "name_as_printed": "Thallikivandanam",
+   "points_short": 4,
+   "publish_threshold": 4,
+   "published_today": false,
+   "rank_in_its_department": 2,
+   "rows_in_that_department": 32,
+   "scheme": "Thallikivandanam",
+   "score": 0,
+   "state": "andhra"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 66.9,
+   "be_lakh": 188201.59,
+   "in_the_top_decile_of_its_department": true,
+   "key": "Social Welfare Department | Thallikivandanam",
+   "largest_in_its_department": false,
+   "name_as_printed": "Thallikivandanam",
+   "points_short": 4,
+   "publish_threshold": 4,
+   "published_today": false,
+   "rank_in_its_department": 3,
+   "rows_in_that_department": 36,
+   "scheme": "Thallikivandanam",
+   "score": 0,
+   "state": "andhra"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 27.3,
+   "be_lakh": 172407.68,
+   "in_the_top_decile_of_its_department": false,
+   "key": "Department of Economically Weaker Sections (EWS) Welfare | Thallikivandanam",
+   "largest_in_its_department": false,
+   "name_as_printed": "Thallikivandanam",
+   "points_short": 4,
+   "publish_threshold": 4,
+   "published_today": false,
+   "rank_in_its_department": 2,
+   "rows_in_that_department": 10,
+   "scheme": "Thallikivandanam",
+   "score": 0,
+   "state": "andhra"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 52.4,
+   "be_lakh": 60277.22,
+   "in_the_top_decile_of_its_department": true,
+   "key": "Tribal Welfare Department | Thallikivandanam",
+   "largest_in_its_department": false,
+   "name_as_printed": "Thallikivandanam",
+   "points_short": 4,
+   "publish_threshold": 4,
+   "published_today": false,
+   "rank_in_its_department": 3,
+   "rows_in_that_department": 43,
+   "scheme": "Thallikivandanam",
+   "score": 0,
+   "state": "andhra"
+  },
+  {
+   "allocation_as_a_multiple_of_the_department_median": 7.5,
+   "be_lakh": 14998.0,
+   "in_the_top_decile_of_its_department": false,
+   "key": "Minorities Welfare Department | Thallikivandanam",
+   "largest_in_its_department": false,
+   "name_as_printed": "Thallikivandanam",
+   "points_short": 4,
+   "publish_threshold": 4,
+   "published_today": false,
+   "rank_in_its_department": 8,
+   "rows_in_that_department": 30,
+   "scheme": "Thallikivandanam",
+   "score": 0,
+   "state": "andhra"
+  }
+ ],
+ "what_would_have_been_needed": "The gap is not one signal wide. Lakshmir Bhandar scores 3 against a bar of 10, Magalir Urimai Thogai's general head 4 against 10, Gruha Lakshmi 2 against 7, Thallikivandanam 0 against 4, Mukhyamantri Mazi Ladaki Bahin 5 against 8, Samrudha Krushaka 5 against 9 and Subhadra 7 against 9. Recovering them needs +2 to +7 from a signal measuring P(scheme) 0.15 to 0.35, where these files give +4 to a benefit word measuring 0.947 in Karnataka and 0.389 in Odisha. A weight of that size on evidence of that strength would not be a classifier, it would be a decision to publish the biggest rows in the book and call it a measurement.",
+ "why_the_control_table_can_reject_a_weight_and_can_never_justify_one": "The control table below is counted on the hand labels, and in every state most of those labels are the AUDIT set, a census of the rows the classifier already scores highly, made after the weights were fixed and deliberately not fed back into them. Maharashtra's known_errors states the rule plainly for a different fix: it would be principled, and it is not done, because it was found by reading the audit and refitting on the audit would destroy the one measurement in the file that counts errors rather than estimating them. So the control is used here in one direction only. Where it says the signal is no better than lowering the bar, that is a rejection and it stands. Where it says the signal looks good, that is not a justification. West Bengal is the case that makes the distinction concrete and it is the closest any state came to a change: +1 on the top decile there would newly publish 15 rows, 14 of them schemes, taking counted precision from 92.5% to 92.6% with no new hand labelling needed at all, because the census already covers them. And of those 15 rows exactly ONE is in the probability sample. Choosing the weight on the strength of the other 14 would be fitting on the audit, and the development half, which is the only half any weight in that file was fitted on, puts the signal at 0.118 over 17 rows against a base of 0.080. West Bengal's own file refuses to give more than +1 to a sub-plan head measuring 0.255 over 47. This one does not earn the point.",
+ "why_the_signal_looked_good_and_is_not": "The reason is visible by listing the rows it fires on, which is done per state under circularity_check.top_of_department_rows_and_the_reason_each_was_given. The largest provision inside a department is usually the establishment block. In Odisha the 44 largest-in-department rows are led by 'Loans' at Rs 14,911 crore, 'General Primary Schools' at Rs 9,498 crore, 'Construction of Buildings', 'District Establishment', 'Tahasil Establishment' and 'Emoluments of Members of Legislative Assembly'. In West Bengal the largest row in any demand is 'Secondary Schools for Boys and Girls' at Rs 19,438 crore, larger than Lakshmir Bhandar, and 'West Bengal Police' is third. In Maharashtra they include 'District and Other Roads' at Rs 6,600 crore, 'Capital Outlay on Major Irrigation' and 'Office Building.'. Being big inside a department is a fact about payroll and public works before it is a fact about schemes, and the classifiers already reject those rows at scores of -7 to -15, which is why adding the signal does not publish them and also why it adds no information."
+}
