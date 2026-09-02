@@ -1943,7 +1943,7 @@
   }
  ],
  "absent_distinct_names": 71,
- "absent_from_myscheme_all_rows": 550,
+ "absent_from_myscheme_all_rows": 551,
  "absent_from_myscheme_and_classified_scheme": 92,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Andhra Pradesh, because claiming absence should require that even a generous matcher finds nothing. Here the matcher is too generous rather than too strict: 5 of 552 rows join and four of the five joins are wrong, listed in known_false_matches. Two of those false joins sit inside the published list, so the count above says 90 where reading the joins says 92, and the one real join, an oil palm mission row, scores 3 and is not published anyway. The surviving list is a floor: no book prints a purpose line, 150 of the 552 rows print no head of account either, and a real scheme with a Telugu name and neither cannot clear a high bar on the evidence the books print. be_lakh is itself a floor, the largest single-book slice of the provision, so absent_cr understates too.",
  "absent_schemes": [
@@ -6724,11 +6724,9 @@
     "2403-00-113-12-42-010-019-V",
     "2403-00-113-28-42-310-312-V"
    ],
-   "in_myscheme_andhra": true,
+   "in_myscheme_andhra": false,
    "key": "Animal Husbandry Department | Livestock Census and Integrated Sample Survey - INTEGRATED SAMPLE SURVEY SALARY COMPONENT [AP408]",
-   "myscheme_match": [
-    "Sanctioning Spectacles to Senior Citizens"
-   ],
+   "myscheme_match": null,
    "name": "Livestock Census and Integrated Sample Survey - INTEGRATED SAMPLE SURVEY SALARY COMPONENT [AP408]",
    "score": -6,
    "verdict": "not a scheme"
@@ -21954,7 +21952,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-02T01:39:56Z",
+ "built": "2026-09-02T01:56:05Z",
  "classified_not_scheme": 460,
  "classified_scheme": 92,
  "classified_scheme_distinct_names": 71,

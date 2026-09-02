@@ -98,7 +98,33 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                  "pension", "scholarship", "insurance", "housing", "health", "education",
                  "employment", "training", "mission", "scheme", "schemes", "programme",
                  "yojana", "hub", "other", "others", "general", "special", "total",
-                 "component", "components", "share", "grant", "grants", "fund", "funds"})
+                 "component", "components", "share", "grant", "grants", "fund", "funds",
+                 # Geography and filler, from "Competitive Exams of ALL INDIA level",
+                 # which made "india" an acronym and matched Green India Mission.
+                 "india", "indian", "bharat", "level", "exams", "examination",
+                 "examinations", "college", "school", "schools", "district", "districts",
+                 "rural", "urban", "board", "corporation", "department", "ministry"})
+
+
+def written_acronyms(s):
+    """Only acronyms the source actually WRITES as one: bracketed, or in capitals.
+
+    Separate from the initials this project derives, because the two are not equally good
+    evidence. An initialism computed from a long name collides constantly: "Faster Adoption
+    and Manufacturing of Hybrid and Electric Vehicles" gives famhev and "Financial
+    Assistance for Marriage" gives famh, and one contains the other. Neither name was
+    written that way by anybody.
+    """
+    out = set()
+    for m in re.findall(r"\(([A-Za-z][A-Za-z0-9\-]{2,12})\)", s or ""):
+        if m == m.upper() and norm(m).replace(" ", "") not in NOT_ACRONYMS:
+            out.add(norm(m).replace(" ", ""))
+    letters = re.sub(r"[^A-Za-z]", "", s or "")
+    if not (letters and letters == letters.upper() and len(norm(s).split()) >= 3):
+        for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or ""):
+            if w.lower() not in NOT_ACRONYMS:
+                out.add(w.lower())
+    return {a for a in out if len(a) >= 4}
 
 
 def acronyms(s):
@@ -234,9 +260,16 @@ def probably_same(a, b, floor=0.75):
     # "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission" yields DAYNRLM.
     # Neither is a token of the other and they are not equal, but one is plainly the
     # other's tail — which is how these schemes are actually written down.
+    # Containment needs at least one side to be an acronym somebody actually wrote. The
+    # rule exists for DAY-NRLM against its expansion, where NRLM is written in capitals and
+    # DAYNRLM is derived, and that still fires. Two DERIVED initialisms containing one
+    # another is not evidence: famhev from the FAME expansion contains famh from "Financial
+    # Assistance for Marriage (HPBOCWWB)", and no human ever wrote either.
+    wa, wb = written_acronyms(a), written_acronyms(b)
     for x in aa:
         for y in ab:
-            if len(x) >= 4 and len(y) >= 4 and (x in y or y in x):
+            if len(x) >= 4 and len(y) >= 4 and (x in y or y in x) \
+                    and (x in wa or y in wb):
                 return True, f"acronym containment: {x} / {y}"
 
     return False, "no match"
@@ -259,6 +292,17 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # Capitalised geography is not an acronym. "Competitive Exams of ALL INDIA level" made
+    # "india" one, which then matched Green India Mission.
+    ("Green India Mission",
+     "Coaching Assistance for Pre-preparation for Competitive Exams of ALL INDIA level", False),
+    # Two DERIVED initialisms containing one another is not evidence. Neither of these was
+    # written as an acronym by anybody.
+    ("Faster Adoption and Manufacturing of Hybrid and Electric Vehicles",
+     "Financial Assistance for Marriage (HPBOCWWB)", False),
+]
 
 SELFTEST += [
     # A capitalised ordinary word is not an acronym either. Both of these joined on one
