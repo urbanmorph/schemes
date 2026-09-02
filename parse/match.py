@@ -202,6 +202,16 @@ def acronyms(s):
     return {a for a in out if len(a) >= 4}
 
 
+def qualifier_groups(s):
+    """Which qualifier axes a name actually names."""
+    n = norm(s)
+    out = set()
+    for i, group in enumerate(QUALIFIERS):
+        if any(re.search(rf"\b{re.escape(w)}\b", n) for w in group):
+            out.add(i)
+    return out
+
+
 def qualifier_conflict(a, b):
     """True when the two names commit to different sides of a sibling distinction."""
     na, nb = " " + norm(a) + " ", " " + norm(b) + " "
@@ -271,8 +281,20 @@ def probably_same(a, b, floor=0.75):
         # Three or more content words is specific enough to stand on its own. Two is only
         # evidence when the longer name is not much longer, so the pair has to be within a
         # factor of two.
-        if small <= large and (len(small) >= 3 or
-                               (len(small) >= 2 and len(large) <= 2 * len(small))):
+        # A name that adds a community, a stage or a sex to another name is a VARIANT of
+        # it, not the same scheme. qualifier_conflict above only fires when both names take
+        # a side, so "Pre-Matric Scholarship Scheme" against "Pre-Matric Scholarship to
+        # Scheduled Caste Students" slipped through and the generic name then matched the
+        # SC, ST and OBC siblings alike, counting three schemes as one. Found on the Tamil
+        # Nadu demand books, 9 joins.
+        #
+        # Containment is the rule that needs this guard, because it is satisfied by
+        # definition when the longer name is the shorter plus a qualifier. A pair like Jal
+        # Jeevan Mission against its own longer title is unaffected: it matches on the
+        # prefix rule above, which fires first.
+        adds_qualifier = bool(qualifier_groups(a) ^ qualifier_groups(b))
+        if small <= large and not adds_qualifier and (
+                len(small) >= 3 or (len(small) >= 2 and len(large) <= 2 * len(small))):
             return True, f"all {len(small)} content words of the shorter name are present"
 
     # Same content words once transliteration is folded out. Two or more skeletons must
@@ -309,7 +331,10 @@ def probably_same(a, b, floor=0.75):
         # Same comparability guard as the content-word rule below it. Folding
         # transliteration does not make a short generic phrase any more specific, so
         # without this the skeleton rule simply catches what containment now rejects.
-        if small <= large:
+        # The same variant guard as the content-word rule below. Folding transliteration
+        # does not make a Scheduled Tribe scholarship into its parent scheme, and without
+        # this the skeleton rule simply catches what containment now rejects.
+        if small <= large and not qualifier_groups(a) ^ qualifier_groups(b):
             if len(small) >= 3 or (len(small) >= 2 and len(large) <= 2 * len(small)):
                 return True, f"transliteration variant: {sorted(small)[:3]}"
             if len(ta_) == 1 and len(tb_) == 1 and \
@@ -367,6 +392,18 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # A community variant is not the parent scheme. The generic name used to match all three
+    # siblings, counting three schemes as one.
+    ("Pre - Matric Scholarship to Scheduled Caste Students - State Share",
+     "Pre-Matric Scholarship Scheme", False),
+    ("Post Matric Scholarship to Scheduled Tribe Students",
+     "Post Matric Scholarship Scheme", False),
+    # ...and a longer title that adds no qualifier still matches.
+    ("Jal Jeevan Mission (JJM) / National Rural Drinking Water Mission",
+     "Jal Jeevan Mission", True),
+]
 
 SELFTEST += [
     # A trailing s must not defeat a match. FAME failed to join its own expansion.
