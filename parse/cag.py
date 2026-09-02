@@ -141,6 +141,14 @@ def run(date=None):
                    if os.path.isdir(p))
     if not dates:
         raise SystemExit("no archive at archive/cag/: run collect/cag.py first")
+    # An explicit date that was never collected is an error, not an empty result. run.sh
+    # passed it the myScheme snapshot date, the CAG archive is stamped with its own crawl
+    # date, and this quietly wrote a catalogue of zero reports over a good one. A parser
+    # that answers "nothing" when asked about a day it has no bytes for is indistinguishable
+    # from a source that published nothing that day, which is exactly the confusion this
+    # project exists to remove.
+    if date and date not in dates:
+        raise SystemExit(f"no CAG archive for {date}. Held: {', '.join(dates)}")
     date = date or dates[-1]
     src = os.path.join(ROOT, "archive", "cag", date)
     # A manifest is written when the crawl finishes, so a crawl still running or killed

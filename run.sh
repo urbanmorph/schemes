@@ -87,7 +87,9 @@ say "parse · sources"
 python3 parse/dbt.py --date "$DATE" || true
 python3 parse/budget.py --year "$CYCLE_YEAR" || true
 python3 parse/outcome.py --year "$CYCLE_YEAR" || true
-python3 parse/cag.py --date "$DATE" || true
+# No --date: the CAG crawl is stamped with its own date and is not tied to the myScheme
+# snapshot, so passing this run's date asks it for an archive that does not exist.
+python3 parse/cag.py || true
 
 # States are parsed whether or not the myScheme snapshot verified, because they are
 # derived from their own archives and nothing about a throttled myScheme crawl makes the
