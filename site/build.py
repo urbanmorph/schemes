@@ -387,6 +387,60 @@ def page_index(census, checks, dbt, entries):
 """
 
 
+def state_section(state, title, note, standfirst, rows, warn_title, warn_body):
+    """Chrome shared by every state's absence table.
+
+    The row builders are NOT shared and should not be. Each state publishes different
+    evidence, so Karnataka's rows carry a purpose line, Andhra Pradesh's carry the
+    departments that fund a scheme, and the next one will carry something else again.
+    Forcing those into one builder would mean rendering the poorest common denominator of
+    what the states publish, which is the opposite of the point.
+
+    What every section does share is the shape of the claim: name the state's own source,
+    say how many rows survived classification, show the table, and then state the floor and
+    the counted error rate before the reader has scrolled past. That last part is the reason
+    this is a function rather than a copied block. A precision figure and a recall figure
+    belong together, and the moment they are three copies of the same paragraph, one of them
+    drifts.
+    """
+    return f"""
+<section class="sec">
+  <h2>{title}</h2>
+  <div class="sec-note">{note}</div>
+  <p class="standfirst">{standfirst}</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>In {e(state)}&rsquo;s budget, absent from myScheme</th>
+      <th class="num">2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
+      <th>Why it scores as a scheme</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>{warn_title}</b>
+    {warn_body}
+  </div>
+</section>"""
+
+
+def classifier_note(cls, floor_sentence):
+    """The precision-and-recall paragraph, in the words the project has settled on.
+
+    Precision here is a COUNT and the wording has to keep saying so, because every reader's
+    prior is that a percentage on a page like this is an estimate. Recall goes in the same
+    breath as precision, and the floor is illustrated with the largest scheme the classifier
+    THREW AWAY rather than a small one, because every incentive in a project like this pulls
+    toward quoting the flattering number.
+    """
+    v = cls.get("validation", {})
+    cen = v.get("at_publish_threshold_census", {})
+    return (f'Precision at the published bar is {cen.get("precision", 0):.1%}, and that is a '
+            f'count rather than an estimate: every row scoring at or above the coverage '
+            f'threshold carries a hand label, so the errors in this table are '
+            f'{num(cen.get("not_schemes"))} named ones. Validated against '
+            f'{num((cls.get("ground_truth") or {}).get("labelled"))} hand labels in all. '
+            f'Recall is {v.get("at_publish_threshold", {}).get("recall", 0):.0%}, so this is '
+            f'a floor and never a total. {floor_sentence}')
+
+
 def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=None):
     """Two questions, kept apart: how many schemes a state has, and which are unlisted.
 
@@ -462,40 +516,29 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=N
             f'<td class="num">{r["score"]}</td>'
             f'<td class="muted" style="font-size:12px">{e("; ".join(w for _, w in r.get("evidence", [])[:2]))}</td></tr>'
             for r in ka["absent_schemes"])
-        ka_section = f"""
-<section class="sec">
-  <h2>Karnataka&rsquo;s own budget names schemes its citizens cannot look up</h2>
-  <div class="sec-note">Karnataka Budget {e(str(ka.get('cycle') or ''))}, scheme-wise books
-    &middot; {num(ka.get('classified_scheme'))} of {num(ka.get('classified_scheme', 0) + ka.get('classified_not_scheme', 0))}
-    rows survive classification as schemes</div>
-  <p class="standfirst">The state publishes its Gender, Child and SCSP/TSP budgets, and
-  between them they name {num((ka.get('classified_scheme') or 0) + (ka.get('classified_not_scheme') or 0))}
-  budget heads. myScheme lists {num(ka.get('myscheme_karnataka_records'))} schemes for
-  Karnataka. These {num(len(ka['absent_schemes']))} are on the state&rsquo;s books, carry
-  money, read as schemes, and are on the national portal nowhere.</p>
-  <div class="tscroll"><table>
-    <thead><tr><th>In Karnataka&rsquo;s budget, absent from myScheme</th>
-      <th class="num">2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
-      <th>Why it scores as a scheme</th></tr></thead>
-    <tbody>{rows_ka}</tbody>
-  </table></div>
-  <div class="warnbox">
-    <b>This is a floor, and the errors in it are counted rather than estimated</b>
-    A budget book lists colleges, commissionerates and building heads beside schemes, and
-    calling one of those a hidden scheme would be a false accusation. Every row is scored
-    on signals published with the arithmetic, validated against
-    {num((ka.get('ground_truth') or {}).get('labelled'))} hand labels.
-    <p style="margin:8px 0 0">Precision at the published bar is
-    {cen.get('precision', 0):.1%}, and that is a count: every row scoring at or above the
-    coverage threshold carries a hand label, so the errors in this table are
-    {num(cen.get('not_schemes'))} named ones rather than an estimate. Recall is
-    {v.get('at_publish_threshold', {}).get('recall', 0):.0%}, so the table is a floor and
-    never a total. Gruha Lakshmi, Karnataka&rsquo;s largest welfare scheme, is missing from
-    it: 580 of the {num((ka.get('classified_scheme') or 0) + (ka.get('classified_not_scheme') or 0))}
-    rows carry no purpose line, and a real scheme with a plain name and no stated purpose
-    cannot clear a high bar on the evidence the books print.</p>
-  </div>
-</section>"""
+        total_rows = (ka.get("classified_scheme") or 0) + (ka.get("classified_not_scheme") or 0)
+        ka_section = state_section(
+            "Karnataka",
+            "Karnataka&rsquo;s own budget names schemes its citizens cannot look up",
+            f"Karnataka Budget {e(str(ka.get('cycle') or ''))}, scheme-wise books &middot; "
+            f"{num(ka.get('classified_scheme'))} of {num(total_rows)} rows survive "
+            f"classification as schemes",
+            f"The state publishes its Gender, Child and SCSP/TSP budgets, and between them "
+            f"they name {num(total_rows)} budget heads. myScheme lists "
+            f"{num(ka.get('myscheme_karnataka_records'))} schemes for Karnataka. These "
+            f"{num(len(ka['absent_schemes']))} are on the state&rsquo;s books, carry money, "
+            f"read as schemes, and are on the national portal nowhere.",
+            rows_ka,
+            "This is a floor, and the errors in it are counted rather than estimated",
+            "A budget book lists colleges, commissionerates and building heads beside "
+            "schemes, and calling one of those a hidden scheme would be a false accusation. "
+            "Every row is scored on signals published with the arithmetic."
+            '<p style="margin:8px 0 0">' + classifier_note(
+                ka,
+                f"Gruha Lakshmi, Karnataka&rsquo;s largest welfare scheme, is missing from "
+                f"this table: 580 of the {num(total_rows)} rows carry no purpose line, and a "
+                f"real scheme with a plain name and no stated purpose cannot clear a high "
+                f"bar on the evidence the books print.") + "</p>")
 
     # Andhra Pradesh. Written parallel to the Karnataka block above rather than sharing a
     # helper with it, because the two states publish different evidence: Karnataka prints a
@@ -521,42 +564,30 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=N
         miss_ap = max((x for x in (ap.get("all_entries") or [])
                        if x.get("verdict") != "scheme"),
                       key=lambda x: x.get("be_lakh") or 0, default=None)
-        ap_section = f"""
-<section class="sec">
-  <h2>Andhra Pradesh, where the portal and the budget describe different countries</h2>
-  <div class="sec-note">Andhra Pradesh Budget {e(str(ap.get('cycle') or ''))}, six
-    scheme-wise books &middot; {num(len(ap['absent_distinct']))} schemes,
-    {inr(round(tot_ap))} crore</div>
-  <p class="standfirst">myScheme lists {num(ap.get('myscheme_andhra_records'))} schemes for
-  Andhra Pradesh: corporation and welfare-board items, tricycles, spectacles, pensions. The
-  state&rsquo;s own budget names its largest programmes, and not one of them reaches the
-  portal. {e(top_ap["name"])} alone is {inr(round((top_ap["be_lakh"] or 0) / 100))}
-  crore.</p>
-  <div class="tscroll"><table>
-    <thead><tr><th>In Andhra Pradesh&rsquo;s budget, absent from myScheme</th>
-      <th class="num">2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
-      <th>Why it scores as a scheme</th></tr></thead>
-    <tbody>{rows_ap}</tbody>
-  </table></div>
-  <div class="warnbox">
-    <b>One row per scheme, not per departmental share, and a floor again</b>
-    Andhra Pradesh funds a scheme separately out of each social-category department, so NTR
-    Bharosa Pension is six budget lines. They are added rather than listed six times,
-    because the departments are distinct and the shares are of one provision. That is the
-    opposite of the rule used across the six books, where the publications report
-    overlapping slices and the largest is taken.
-    <p style="margin:8px 0 0">Precision at the published bar is
-    {cen2.get('precision', 0):.1%}, counted over {num(cen2.get('published'))} hand-labelled
-    rows rather than estimated, with {num(cen2.get('not_schemes'))} errors named in the
-    data. Recall is {v2.get('at_publish_threshold', {}).get('recall', 0):.0%}, lower than it
-    should be for a reason that belongs to the state: no Andhra Pradesh book prints a
-    purpose line, and 150 rows print no head of account either, so the classifier reads a
-    name and nothing else. The largest thing this classifier rejects is
-    {e((miss_ap or {}).get("name", ""))} at
-    {inr(round(((miss_ap or {}).get("be_lakh") or 0) / 100))} crore, on a score of
-    {(miss_ap or {}).get("score", 0)}.</p>
-  </div>
-</section>"""
+        ap_section = state_section(
+            "Andhra Pradesh",
+            "Andhra Pradesh, where the portal and the budget describe different countries",
+            f"Andhra Pradesh Budget {e(str(ap.get('cycle') or ''))}, six scheme-wise books "
+            f"&middot; {num(len(ap['absent_distinct']))} schemes, {inr(round(tot_ap))} crore",
+            f"myScheme lists {num(ap.get('myscheme_andhra_records'))} schemes for Andhra "
+            f"Pradesh: corporation and welfare-board items, tricycles, spectacles, pensions. "
+            f"The state&rsquo;s own budget names its largest programmes, and not one of them "
+            f"reaches the portal. {e(top_ap['name'])} alone is "
+            f"{inr(round((top_ap['be_lakh'] or 0) / 100))} crore.",
+            rows_ap,
+            "One row per scheme, not per departmental share, and a floor again",
+            "Andhra Pradesh funds a scheme separately out of each social-category "
+            "department, so NTR Bharosa Pension is six budget lines. They are added rather "
+            "than listed six times, because the departments are distinct and the shares are "
+            "of one provision. That is the opposite of the rule used across the six books, "
+            "where the publications report overlapping slices and the largest is taken."
+            '<p style="margin:8px 0 0">' + classifier_note(
+                ap,
+                f"No Andhra Pradesh book prints a purpose line and 150 rows print no head of "
+                f"account either, so the classifier reads a name and nothing else. The "
+                f"largest thing it rejects is {e((miss_ap or {}).get('name', ''))} at "
+                f"{inr(round(((miss_ap or {}).get('be_lakh') or 0) / 100))} crore, on a score "
+                f"of {(miss_ap or {}).get('score', 0)}.") + "</p>")
 
     # Funded, monitored, and never announced. The strongest thing the union registry
     # says: these are named as schemes by at least two government sources and carry a
