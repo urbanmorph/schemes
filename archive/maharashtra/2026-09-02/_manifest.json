@@ -1,0 +1,103 @@
+{
+ "base": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/HomePage2021.html",
+ "books": {
+  "annual-scheme-en": {
+   "bytes": 13024166,
+   "cycle": "2026-2027",
+   "sha256": "beae80cd8b2d80170b7b938d5272f322b9deff3e1fbbfd796f71d3df41b20ec9",
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/ANNUAL%20SCHEME%20-%20Deptwise%20English.pdf",
+   "what": "ANNUAL SCHEME 2026-2027 (Departmentwise), English: one row per scheme with a 10-digit scheme code, an 8-character budget code, source of fund and four years of figures, in statements GN2 to GN8"
+  },
+  "errata": {
+   "bytes": 143662,
+   "cycle": "2026-2027",
+   "sha256": "b8a727a9c3e9598d3344c84de788fd5c1dde8b27a7f279f7f998f9255fbeadae",
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/Errata.pdf",
+   "what": "Budget Errata 2026-2027, the second errata file the index lists"
+  },
+  "errata-be": {
+   "bytes": 1089599,
+   "cycle": "2026-2027",
+   "sha256": "09582055c801c3c7a591e110a27e075058fff3f8b66e3242d827de0be3f604a9",
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/Errata_BE.pdf",
+   "what": "Budget Errata 2026-2027, corrections to the budget estimates"
+  },
+  "gender-child": {
+   "bytes": 13354737,
+   "cycle": "2026-2027",
+   "sha256": "6426519733d8cc0ff876ce46f850e5bbfafd6cd36269c7432378cfd3a7c73ad7",
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/GenderBudget2026-2027.pdf",
+   "what": "Gender Budget and Child Budget statements, with the head of account inline beside the English scheme name"
+  },
+  "summary-en": {
+   "bytes": 5359816,
+   "cycle": "2026-2027",
+   "sha256": "f1403dfa638f21877421752e3f5ad27bc7fa347ebc48d01e9af094b459dfbc83",
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/ANNUAL%20SCHEME%20-%20Summary%20English.pdf",
+   "what": "ANNUAL SCHEME summary statement, English: department and sector totals, used to reconcile the detailed book against a figure printed elsewhere"
+  }
+ },
+ "books_collected": 5,
+ "books_expected": [
+  "annual-scheme-en",
+  "errata",
+  "errata-be",
+  "gender-child",
+  "summary-en"
+ ],
+ "cycle": "2026-2027",
+ "errors": [],
+ "finished": "2026-09-02T13:02:51Z",
+ "index_pages": {
+  "index-Anuual_DeptPublication.html": {
+   "bytes": 2365,
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/Anuual_DeptPublication.html"
+  },
+  "index-Anuual_RegionPublication.html": {
+   "bytes": 2566,
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/Anuual_RegionPublication.html"
+  },
+  "index-Anuual_SummeryPublication.html": {
+   "bytes": 2473,
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/Anuual_SummeryPublication.html"
+  },
+  "index-appendix.html": {
+   "bytes": 5863,
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/appendix.html"
+  },
+  "index-dept.html": {
+   "bytes": 13405,
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/dept.html"
+  },
+  "index-dist.html": {
+   "bytes": 9677,
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/dist.html"
+  },
+  "index.html": {
+   "bytes": 20910,
+   "url": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/HomePage2021.html"
+  }
+ },
+ "pdfs_on_index": 105,
+ "skipped": {
+  "34 Departmentwise Publication volumes": "the Demand for Grants books, bilingual, with the full head of account rather than the 8-character budget code. Richer per line and 34 files; the Annual Scheme book already names every scheme, so these are a second phase, not a substitute",
+  "36 Districtwise volumes": "the same provisions cut by district. A district cut of a scheme is not another scheme, and summing them would double-count",
+  "ANNUAL SCHEME - Deptwise/Summary Marathi": "the same two books in Marathi. Same rows, same codes, same figures; collecting both would double the bytes and add nothing a register can key on",
+  "Budget speeches and highlights": "prose",
+  "Financial Statement (Green Book), Budget in Brief (Pink Book), Med Term Fiscal Policy (Yellow Book), Receipts, Schedule of Appropriations": "aggregate and receipts documents with no scheme-level rows",
+  "Part-III Appendices A to I": "works lists, road and bridge and building schedules. Works, not schemes",
+  "Supplementary demands (June 2026, December 2025, February 2025)": "linked from the BEAMS front page, not the budget index. They amend the year in progress; adding them would turn a Budget Estimate into a part-year revised figure and break comparability with the other states here"
+ },
+ "source": "maharashtra",
+ "started": "2026-09-02T13:00:28Z",
+ "status_histogram": {
+  "200": 5
+ },
+ "urls": {
+  "annual-scheme-en": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/ANNUAL%20SCHEME%20-%20Deptwise%20English.pdf",
+  "errata": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/Errata.pdf",
+  "errata-be": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/Errata_BE.pdf",
+  "gender-child": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/GenderBudget2026-2027.pdf",
+  "summary-en": "https://beams.mahakosh.gov.in/Beams5/BudgetMVC/BudgetBooksPDF1/2026-2027/ANNUAL%20SCHEME%20-%20Summary%20English.pdf"
+ }
+}

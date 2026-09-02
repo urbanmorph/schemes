@@ -1,0 +1,475 @@
+{
+ "alternates": [
+  {
+   "demand": 15,
+   "label": "15. SPORTS & YOUTH SERVICES DEPARTMENT",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2026-02/D-15.pdf",
+   "why_not_taken": "a second link to the same demand"
+  },
+  {
+   "demand": 28,
+   "label": "28. RURAL DEVELOPMENT DEPARTMENT",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2026-02/D-28.pdf",
+   "why_not_taken": "a second link to the same demand"
+  }
+ ],
+ "base": "https://finance.odisha.gov.in/en/publication/finance-budget",
+ "books": {
+  "agriculture": {
+   "bytes": 2893037,
+   "sha256": "7b48a1cb352c82e05b82625214e97b6eaa3344b45f7e19346412b8f3d3e953b3",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/13-AGRICULTURE_BUDGET.pdf",
+   "what": "Agriculture Budget, scheme-wise"
+  },
+  "child": {
+   "bytes": 606394,
+   "sha256": "15ccd81b0e568a985d46244da27126521bece7557859dac574a94ffb4bb74489",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/Odisha%20Child%20Budget%202026-27.pdf",
+   "what": "Child Budget, scheme-wise, the Gender Budget's layout"
+  },
+  "demand-01": {
+   "bytes": 1022418,
+   "demand": 1,
+   "department": "HOME DEPARTMENT",
+   "sha256": "f3eecbe36693fb4ddacd002792dbc2ed81702988eda096839cfa0aed8480bb5f",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-01.pdf",
+   "what": "Demand for Grants, demand 1, HOME DEPARTMENT"
+  },
+  "demand-02": {
+   "bytes": 353547,
+   "demand": 2,
+   "department": "GENERAL ADMINISTRATION AND PUBLIC GRIEVANCE DEPARTMENT",
+   "sha256": "8329e464d3964557100de350278ab6630705b736d57752d6854d6930eaf3c292",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-02.pdf",
+   "what": "Demand for Grants, demand 2, GENERAL ADMINISTRATION AND PUBLIC GRIEVANCE DEPARTMENT"
+  },
+  "demand-03": {
+   "bytes": 393077,
+   "demand": 3,
+   "department": "REVENUE AND DISASTER MANAGEMENT DEPARTMENT",
+   "sha256": "f9f6222cb4e5e28262ffc5425ff15cfe922ca13b2d4aa882e5ce13a248693755",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-03.pdf",
+   "what": "Demand for Grants, demand 3, REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
+  },
+  "demand-04": {
+   "bytes": 265387,
+   "demand": 4,
+   "department": "LAW DEPARTMENT",
+   "sha256": "52d2ea1d5c4087ff670e73218428fe79a3a219dd1891a06bb264b220fa99c155",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-04.pdf",
+   "what": "Demand for Grants, demand 4, LAW DEPARTMENT"
+  },
+  "demand-05": {
+   "bytes": 1056623,
+   "demand": 5,
+   "department": "FINANCE DEPARTMENT",
+   "sha256": "f4edeb6bf8bbbaddab9eb3c4adf76e59b3830eeb5a790f9f41036bc91b0255b7",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-05_1.pdf",
+   "what": "Demand for Grants, demand 5, FINANCE DEPARTMENT"
+  },
+  "demand-06": {
+   "bytes": 265181,
+   "demand": 6,
+   "department": "COMMERCE DEPARTMENT",
+   "sha256": "089190329d11b16cf26421b94f5f62a2b7f27d7f9c01e44fa97dffa4ed719095",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-06.pdf",
+   "what": "Demand for Grants, demand 6, COMMERCE DEPARTMENT"
+  },
+  "demand-07": {
+   "bytes": 642559,
+   "demand": 7,
+   "department": "WORKS DEPARTMENT",
+   "sha256": "f80dd193c71a5a05c16e60ec9d797f61e13046710088c81ebe18a202bbc19ba4",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-07.pdf",
+   "what": "Demand for Grants, demand 7, WORKS DEPARTMENT"
+  },
+  "demand-08": {
+   "bytes": 120832,
+   "demand": 8,
+   "department": "ODISHA LEGISLATIVE ASSEMBLY",
+   "sha256": "e3bac4570ac43b86b873528d36224eb5b287ef6098972a24f1457adc19494f49",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-08.pdf",
+   "what": "Demand for Grants, demand 8, ODISHA LEGISLATIVE ASSEMBLY"
+  },
+  "demand-09": {
+   "bytes": 273568,
+   "demand": 9,
+   "department": "FOOD SUPPLIES AND CONSUMER WELFARE DEPARTMENT",
+   "sha256": "5437ef5204a5df240e9b91e93f2e13bee18150450b262661e1fa984e09aee707",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-09.pdf",
+   "what": "Demand for Grants, demand 9, FOOD SUPPLIES AND CONSUMER WELFARE DEPARTMENT"
+  },
+  "demand-10": {
+   "bytes": 560682,
+   "demand": 10,
+   "department": "SCHOOL AND MASS EDUCATION DEPARTMENT",
+   "sha256": "faa725e684f615469a2d2b5a23dce779e59a6e471570c1df8da496ea51f54877",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-10.pdf",
+   "what": "Demand for Grants, demand 10, SCHOOL AND MASS EDUCATION DEPARTMENT"
+  },
+  "demand-11": {
+   "bytes": 590431,
+   "demand": 11,
+   "department": "SCHEDULED TRIBES & SCHEDULED CASTES DEVELOPMENT, MINORITIES & BACKWARD CLASSES WELFARE DEPARTMENT",
+   "sha256": "c26cea9bdb7e8c3e491e774840eea755bcbf0ca4c3ea60cab09706cccdb9b702",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-11.pdf",
+   "what": "Demand for Grants, demand 11, SCHEDULED TRIBES & SCHEDULED CASTES DEVELOPMENT, MINORITIES & BACKWARD CLASSES WELFARE DEPARTMENT"
+  },
+  "demand-12": {
+   "bytes": 1100490,
+   "demand": 12,
+   "department": "HEALTH AND FAMILY WELFARE DEPARTMENT",
+   "sha256": "1b931a48d60a2fe9c30b03c49c4b12654eaa35c2515ff1c31bc8c88e8d79c218",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-12.pdf",
+   "what": "Demand for Grants, demand 12, HEALTH AND FAMILY WELFARE DEPARTMENT"
+  },
+  "demand-13": {
+   "bytes": 1030099,
+   "demand": 13,
+   "department": "HOUSING AND URBAN DEVELOPMENT DEPARTMENT",
+   "sha256": "0b6f027a8aa36be5e449cfb4a5cca6c7226d0c363af1f79c4d96c28d236fcce8",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-13.pdf",
+   "what": "Demand for Grants, demand 13, HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+  },
+  "demand-14": {
+   "bytes": 274039,
+   "demand": 14,
+   "department": "LABOUR & EMPLOYEES' STATE INSURANCE DEPARTMENT",
+   "sha256": "202bd2bbb3eb4a6e416112fa0f9e2cc7f765d20139aec74d25d8a5b5d4fe1ebe",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-14.pdf",
+   "what": "Demand for Grants, demand 14, LABOUR & EMPLOYEES' STATE INSURANCE DEPARTMENT"
+  },
+  "demand-15": {
+   "bytes": 176572,
+   "demand": 15,
+   "department": "SPORTS & YOUTH SERVICES DEPARTMENT",
+   "sha256": "829a1c20c5e9ae7843218f5a94a98b63b95ce3ed78a6d5c5a0d42e5c614b9b29",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-15.pdf",
+   "what": "Demand for Grants, demand 15, SPORTS & YOUTH SERVICES DEPARTMENT"
+  },
+  "demand-16": {
+   "bytes": 350556,
+   "demand": 16,
+   "department": "PLANNING AND CONVERGENCE DEPARTMENT",
+   "sha256": "15a7ee7a4119271554e40ffa9238ec7600e757bfb9c240a03c6dfe88b13336a3",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-16.pdf",
+   "what": "Demand for Grants, demand 16, PLANNING AND CONVERGENCE DEPARTMENT"
+  },
+  "demand-17": {
+   "bytes": 632484,
+   "demand": 17,
+   "department": "PANCHAYATI RAJ AND DRINKING WATER DEPARTMENT",
+   "sha256": "7107519383c505127174102e8a25c3f313add2c1c9cfa99712c28b9d2164c9c4",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-17.pdf",
+   "what": "Demand for Grants, demand 17, PANCHAYATI RAJ AND DRINKING WATER DEPARTMENT"
+  },
+  "demand-18": {
+   "bytes": 95708,
+   "demand": 18,
+   "department": "PUBLIC GRIEVANCES AND PENSION ADMINISTRATION DEPARTMENT",
+   "sha256": "9f1b242d1b5205b7265d9c2a2754346fbd38252e003cf5c284be686bd47b71f5",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-18.pdf",
+   "what": "Demand for Grants, demand 18, PUBLIC GRIEVANCES AND PENSION ADMINISTRATION DEPARTMENT"
+  },
+  "demand-19": {
+   "bytes": 193843,
+   "demand": 19,
+   "department": "INDUSTRIES DEPARTMENT",
+   "sha256": "bf24ff3e248d49ec7ae70338ed88e6e26611e292f759fae746a171c675abfdfe",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-19.pdf",
+   "what": "Demand for Grants, demand 19, INDUSTRIES DEPARTMENT"
+  },
+  "demand-20": {
+   "bytes": 2312262,
+   "demand": 20,
+   "department": "WATER RESOURCES DEPARTMENT",
+   "sha256": "e0633ba91e99749c84484c8add258785bd9dea39092d6a6c18ce12a21b07a9ba",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-20.pdf",
+   "what": "Demand for Grants, demand 20, WATER RESOURCES DEPARTMENT"
+  },
+  "demand-21": {
+   "bytes": 347257,
+   "demand": 21,
+   "department": "TRANSPORT DEPARTMENT",
+   "sha256": "5ebc7ae63287d3dadc427c15a1cc1972eaea1a1500337852b1e7605d5bf86eee",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-21.pdf",
+   "what": "Demand for Grants, demand 21, TRANSPORT DEPARTMENT"
+  },
+  "demand-22": {
+   "bytes": 510708,
+   "demand": 22,
+   "department": "FOREST, ENVIRONMENT AND CLIMATE CHANGE DEPARTMENT",
+   "sha256": "45402e90f2882ed370fc998d81d8dd3fc74ef8836abc83c166074dbff58bdf8e",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-22.pdf",
+   "what": "Demand for Grants, demand 22, FOREST, ENVIRONMENT AND CLIMATE CHANGE DEPARTMENT"
+  },
+  "demand-23": {
+   "bytes": 697459,
+   "demand": 23,
+   "department": "DEPARTMENT OF AGRICULTURE AND FARMERS' EMPOWERMENT",
+   "sha256": "1618f2cea87666af7a6b939e522bc0bdfe8ae8d92b0985061113a152ca0f6dd4",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-23.pdf",
+   "what": "Demand for Grants, demand 23, DEPARTMENT OF AGRICULTURE AND FARMERS' EMPOWERMENT"
+  },
+  "demand-24": {
+   "bytes": 223146,
+   "demand": 24,
+   "department": "STEEL & MINES DEPARTMENT",
+   "sha256": "58e35ef4a706c517e846c4aaab19b443a80063247965a3108f4f3a0ede494824",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-24.pdf",
+   "what": "Demand for Grants, demand 24, STEEL & MINES DEPARTMENT"
+  },
+  "demand-25": {
+   "bytes": 205470,
+   "demand": 25,
+   "department": "INFORMATION & PUBLIC RELATIONS DEPARTMENT",
+   "sha256": "da3540996a2f86ffa9ad2783401a8ee5f4ca2c696f00886c1aae6d926d51073c",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-25.pdf",
+   "what": "Demand for Grants, demand 25, INFORMATION & PUBLIC RELATIONS DEPARTMENT"
+  },
+  "demand-26": {
+   "bytes": 161253,
+   "demand": 26,
+   "department": "EXCISE DEPARTMENT",
+   "sha256": "c3bbb401524d5c8e3a9c26b49e6cbb6dd2f9e5b250f87375b8d547d02d54e9de",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-26.pdf",
+   "what": "Demand for Grants, demand 26, EXCISE DEPARTMENT"
+  },
+  "demand-27": {
+   "bytes": 148403,
+   "demand": 27,
+   "department": "SCIENCE & TECHNOLOGY DEPARTMENT",
+   "sha256": "7162dce376e2a4741737bb399fd0bc4845c2efc86cab28b72ab6ebe470c38af4",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-27.pdf",
+   "what": "Demand for Grants, demand 27, SCIENCE & TECHNOLOGY DEPARTMENT"
+  },
+  "demand-28": {
+   "bytes": 490056,
+   "demand": 28,
+   "department": "RURAL DEVELOPMENT DEPARTMENT",
+   "sha256": "d44bca9b74ff452a72871168d1091ab9a99f7a1dd41a6719ae10b0275d21ebc4",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-28.pdf",
+   "what": "Demand for Grants, demand 28, RURAL DEVELOPMENT DEPARTMENT"
+  },
+  "demand-29": {
+   "bytes": 173222,
+   "demand": 29,
+   "department": "PARLIAMENTARY AFFAIRS DEPARTMENT",
+   "sha256": "89562647444af5a18a85b1d610d06ed072819020b642eb162f7d404319a8a678",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-29.pdf",
+   "what": "Demand for Grants, demand 29, PARLIAMENTARY AFFAIRS DEPARTMENT"
+  },
+  "demand-30": {
+   "bytes": 313794,
+   "demand": 30,
+   "department": "ENERGY DEPARTMENT",
+   "sha256": "7179e1920f2aa49639faecfca0075551c8a31d31e919a7497b6b9a7b36a78939",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-30.pdf",
+   "what": "Demand for Grants, demand 30, ENERGY DEPARTMENT"
+  },
+  "demand-31": {
+   "bytes": 345304,
+   "demand": 31,
+   "department": "HANDLOOMS, TEXTILES & HANDICRAFTS DEPARTMENT",
+   "sha256": "9648e5afbdbcd0107cb40ee136726622b77571fefddd9b36725959f5bb1ca276",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-31.pdf",
+   "what": "Demand for Grants, demand 31, HANDLOOMS, TEXTILES & HANDICRAFTS DEPARTMENT"
+  },
+  "demand-32": {
+   "bytes": 156405,
+   "demand": 32,
+   "department": "TOURISM DEPARTMENT",
+   "sha256": "e93a32957ca680c9ff9c3b73e8cfd5a1ac9b2282c925060775fb7dd9a450c209",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-32.pdf",
+   "what": "Demand for Grants, demand 32, TOURISM DEPARTMENT"
+  },
+  "demand-33": {
+   "bytes": 567653,
+   "demand": 33,
+   "department": "FISHERIES & ANIMAL RESOURCES DEVELOPMENT DEPARTMENT",
+   "sha256": "7aff248d2368562d5bf81177d0dacd9346831fa3989dba87e3b897a165065261",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-33.pdf",
+   "what": "Demand for Grants, demand 33, FISHERIES & ANIMAL RESOURCES DEVELOPMENT DEPARTMENT"
+  },
+  "demand-34": {
+   "bytes": 378600,
+   "demand": 34,
+   "department": "CO-OPERATION DEPARTMENT",
+   "sha256": "343df44979559fedf35a3f1248317a71359002dfb3c51cf0634a07032da06fdf",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-34.pdf",
+   "what": "Demand for Grants, demand 34, CO-OPERATION DEPARTMENT"
+  },
+  "demand-35": {
+   "bytes": 110955,
+   "demand": 35,
+   "department": "PUBLIC ENTERPRISES DEPARTMENT",
+   "sha256": "e04d07e01a5fd3764ac56e6b3836fc7fb124de3180d3e7eed92fdcab887c456e",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-35.pdf",
+   "what": "Demand for Grants, demand 35, PUBLIC ENTERPRISES DEPARTMENT"
+  },
+  "demand-36": {
+   "bytes": 416170,
+   "demand": 36,
+   "department": "DEPARTMENT OF WOMEN & CHILD DEVELOPMENT",
+   "sha256": "64236d658d5ae02a1ae282ac1ef1c9b386982a3cddf67eab5cdceb7f10b259a6",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-36.pdf",
+   "what": "Demand for Grants, demand 36, DEPARTMENT OF WOMEN & CHILD DEVELOPMENT"
+  },
+  "demand-37": {
+   "bytes": 177692,
+   "demand": 37,
+   "department": "ELECTRONICS & INFORMATION TECHNOLOGY DEPARTMENT",
+   "sha256": "fc03ee8e2e3cb2fa9c0de43ff173695913688b679df38ea012c77b8821319069",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-37.pdf",
+   "what": "Demand for Grants, demand 37, ELECTRONICS & INFORMATION TECHNOLOGY DEPARTMENT"
+  },
+  "demand-38": {
+   "bytes": 362033,
+   "demand": 38,
+   "department": "HIGHER EDUCATION DEPARTMENT",
+   "sha256": "852799ed6dd08fd62249826fef200cb8f27416e2b8d8ef09532bfd5def2237c5",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-38.pdf",
+   "what": "Demand for Grants, demand 38, HIGHER EDUCATION DEPARTMENT"
+  },
+  "demand-39": {
+   "bytes": 464093,
+   "demand": 39,
+   "department": "SKILL DEVELOPMENT & TECHNICAL EDUCATION DEPARTMENT",
+   "sha256": "0e175cadc730de3e517458aecbfa74a8da15decc83ae147ca52b6a37f23c80e7",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-39.pdf",
+   "what": "Demand for Grants, demand 39, SKILL DEVELOPMENT & TECHNICAL EDUCATION DEPARTMENT"
+  },
+  "demand-40": {
+   "bytes": 286904,
+   "demand": 40,
+   "department": "MICRO, SMALL & MEDIUM ENTERPRISES DEPARTMENT",
+   "sha256": "7d4d7b673b3f0b97ed37936bda7487fc9fd02c3ddec9b408ec71e8191689a178",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-40.pdf",
+   "what": "Demand for Grants, demand 40, MICRO, SMALL & MEDIUM ENTERPRISES DEPARTMENT"
+  },
+  "demand-41": {
+   "bytes": 262661,
+   "demand": 41,
+   "department": "DEPARTMENT OF SOCIAL SECURITY & EMPOWERMENT OF PERSONS WITH DISABILITY",
+   "sha256": "23a0e92412c25ebbe422ab00d7438485b53f0269ae65a22f2b57a665780d71b9",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-41.pdf",
+   "what": "Demand for Grants, demand 41, DEPARTMENT OF SOCIAL SECURITY & EMPOWERMENT OF PERSONS WITH DISABILITY"
+  },
+  "demand-42": {
+   "bytes": 340604,
+   "demand": 42,
+   "department": "DISASTER MANAGEMENT",
+   "sha256": "ae9666e9ceea04fbd323bdf0a04595a23e18c7ae8f084732f69e2cc1a391f98e",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-42.pdf",
+   "what": "Demand for Grants, demand 42, DISASTER MANAGEMENT"
+  },
+  "demand-43": {
+   "bytes": 338132,
+   "demand": 43,
+   "department": "ODIA LANGUAGE, LITERATURE AND CULTURE DEPARTMENT",
+   "sha256": "09075730f38c21a0b2221c574c26590e15a061f250d837a4f08ea9f603e42783",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-43.pdf",
+   "what": "Demand for Grants, demand 43, ODIA LANGUAGE, LITERATURE AND CULTURE DEPARTMENT"
+  },
+  "demand-44": {
+   "bytes": 168926,
+   "demand": 44,
+   "department": "MISSION SHAKTI DEPARTMENT",
+   "sha256": "8761b8d55b64cb06eeb5008033bc122188afbb51c46ab3a133355b0a78c5c36b",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/D-44.pdf",
+   "what": "Demand for Grants, demand 44, MISSION SHAKTI DEPARTMENT"
+  },
+  "gender": {
+   "bytes": 1208212,
+   "sha256": "28107693a88fdeb2e493fb909e6602267a6ab5bd8c38ef70ae3581ef82596081",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/Gender%20Budget.pdf",
+   "what": "Gender Budget: Part A (100% women-specific) and Part B (30 to 99%) scheme-wise tables in Rs crore, each row carrying the state's own 4-digit scheme code beside the English name"
+  },
+  "nutrition": {
+   "bytes": 840212,
+   "sha256": "2afc0ca8b6cce2a785f2b5eead74de1f44ddf58f316d094703326ba58e0ae59a",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/Nutrition%20Budget.pdf",
+   "what": "Nutrition Budget, scheme-wise"
+  },
+  "outlay-link": {
+   "bytes": 1953242,
+   "sha256": "a083e11d72756e7d47b72a013eb28b7816aa33a6f252cb4dedfaf5c19cd0d2d5",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/Budget%20Head%20Programme%20Outlay%20Link%202026-27.pdf",
+   "what": "Budget Head Programme Outlay Link, which maps each budget head to the programme it funds"
+  },
+  "sdg": {
+   "bytes": 5935034,
+   "sha256": "6c8d229283be308399097b7e40bd0c93e80a28f2de3820b235b12c93be7bdf1e",
+   "url": "https://finance.odisha.gov.in/sites/default/files/2025-08/SDG%20BAG%202026-27.pdf",
+   "what": "SDG Budget at a Glance"
+  }
+ },
+ "books_collected": 50,
+ "books_expected": [
+  "agriculture",
+  "child",
+  "demand-01",
+  "demand-02",
+  "demand-03",
+  "demand-04",
+  "demand-05",
+  "demand-06",
+  "demand-07",
+  "demand-08",
+  "demand-09",
+  "demand-10",
+  "demand-11",
+  "demand-12",
+  "demand-13",
+  "demand-14",
+  "demand-15",
+  "demand-16",
+  "demand-17",
+  "demand-18",
+  "demand-19",
+  "demand-20",
+  "demand-21",
+  "demand-22",
+  "demand-23",
+  "demand-24",
+  "demand-25",
+  "demand-26",
+  "demand-27",
+  "demand-28",
+  "demand-29",
+  "demand-30",
+  "demand-31",
+  "demand-32",
+  "demand-33",
+  "demand-34",
+  "demand-35",
+  "demand-36",
+  "demand-37",
+  "demand-38",
+  "demand-39",
+  "demand-40",
+  "demand-41",
+  "demand-42",
+  "demand-43",
+  "demand-44",
+  "gender",
+  "nutrition",
+  "outlay-link",
+  "sdg"
+ ],
+ "errors": [],
+ "finished": "2026-09-02T13:28:39Z",
+ "index_bytes": 105737,
+ "pdfs_on_index": 67,
+ "skipped": {
+  "Annual Financial Statement, Budget at a Glance, Revenue Receipts, Explanatory Memorandum, Demand for Grants (summary), FRBM, Fiscal Strategy, Fiscal Risk, Status Paper on Public Debt": "aggregate and receipts documents. The summary Demand for Grants is a one-line -per-demand abstract; the 44 per-department books carry the scheme rows",
+  "Budget Speech, People Guide, Economic Survey": "prose",
+  "Climate Budget": "an appended statement of the climate share of provisions already counted in the demand books, so it names no scheme the demands do not",
+  "budget.odisha.gov.in/budget-details": "the state's dedicated budget portal, not used: broken TLS chain for a non-AIA-fetching client, a duplicate listing of last year's Volume-II, and a stale link for Demand 34. See the module docstring"
+ },
+ "source": "odisha",
+ "started": "2026-09-02T13:26:30Z",
+ "status_histogram": {
+  "200": 50
+ }
+}

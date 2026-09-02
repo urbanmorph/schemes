@@ -68,7 +68,7 @@ if [ "$SKIP_COLLECT" = "0" ]; then
   else
     python3 collect/budget.py --year "$CYCLE_YEAR"
   fi
-  for st in karnataka andhra; do
+  for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal; do
     if have_annual "archive/$st/*"; then
       echo "  $st budget already archived, skipping"
     else
@@ -98,6 +98,10 @@ say "parse · states"
 python3 parse/karnataka.py || true
 python3 parse/andhra.py || true
 python3 parse/kerala.py || true
+python3 parse/tamilnadu.py || true
+python3 parse/maharashtra.py || true
+python3 parse/odisha.py || true
+python3 parse/westbengal.py || true
 
 if [ "$VERIFY_OK" = "1" ]; then
   say "parse · myScheme"
@@ -111,7 +115,12 @@ if [ "$VERIFY_OK" = "1" ]; then
   python3 parse/registry.py
   python3 parse/classify.py
   python3 parse/classify_karnataka.py || true
-  [ -f parse/classify_andhra.py ] && python3 parse/classify_andhra.py || true
+  for st in andhra kerala tamilnadu maharashtra odisha westbengal; do
+    [ -f "parse/classify_$st.py" ] && python3 "parse/classify_$st.py" || true
+  done
+  # Sector runs after the state parsers and before the site, because it classifies exactly
+  # the rows those produce and the ones the union registry holds with no myScheme record.
+  python3 parse/sector.py || true
 
   say "enrich"
   python3 enrich/budget.py --year "$CYCLE_YEAR" || true
