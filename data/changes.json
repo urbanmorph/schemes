@@ -1,14 +1,18 @@
 {
  "added": [],
- "built": "2026-09-02T07:03:35Z",
+ "added_total": 0,
+ "built": "2026-09-02T14:02:22Z",
+ "by_field": {},
  "changed": [],
- "comparable": false,
- "newer": null,
- "note": "A change feed needs two snapshots. Only one has been collected.",
- "older": null,
+ "changed_total": 0,
+ "comparable": true,
+ "newer": "2026-09-02",
+ "older": "2026-08-30",
  "removed": [],
+ "removed_total": 0,
  "snapshots": [
-  "2026-08-30"
+  "2026-08-30",
+  "2026-09-02"
  ],
- "snapshots_held": 1
+ "snapshots_held": 2
 }

@@ -89,8 +89,13 @@ def skeleton(t):
 
 def skeletons(s):
     # A two-character skeleton is noise: "MEIS and SEIS" against "Scheme for SSI / MSI
-    # Sector" agreed on ['ms', 'ss'] and matched.
-    return {k for k in (skeleton(t) for t in tokens(s)) if len(k) >= 3}
+    # Sector" agreed on ['ms', 'ss'] and matched. But DROPPING those, which is what this
+    # did first, deletes the word instead of the noise: "old" de-vowels to "ld" and "age"
+    # to "g", so National Old Age Pension reduced to {ntnl, pnsn}, a strict subset of
+    # National Widow Pension, and the two matched on brand words alone. Falling back to the
+    # raw token keeps the word distinguishing while still refusing the vowel-less pair.
+    return {k if len(k) >= 3 else t for t, k in
+            ((t, skeleton(t)) for t in tokens(s))}
 
 
 # Words that scheme names shout and that are not acronyms. "PMAY-URBAN-BLC Scheme" yields
@@ -128,6 +133,21 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                 # VIII and Chapter XVII, and every one was being read as a written acronym.
                 | {"i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi",
                    "xii", "xiii", "xiv", "xv", "xvi", "xvii", "xviii", "xix", "xx"}
+                # Community abbreviations. The same axis QUALIFIERS already knows as sc, st
+                # and obc, but written as initials, so they read as acronyms and carried
+                # matches on their own: VJNT alone produced 125 wrong joins on Maharashtra,
+                # the largest single hole found. A community is who a scheme is for and
+                # never which scheme it is.
+                | {"vjnt", "sbc", "sbs", "dnt", "ebc", "nt", "obc", "sebc", "bpl", "apl"}
+                # State and city names, for the same reason india and bharat are here.
+                # "SWACHHA ODISHA" made odisha an acronym and matched six unrelated rows.
+                | {"odisha", "orissa", "bengal", "maharashtra", "karnataka", "kerala",
+                   "gujarat", "rajasthan", "punjab", "haryana", "assam", "bihar",
+                   "telangana", "andhra", "tamil", "nadu", "pradesh", "delhi", "goa",
+                   "sikkim", "manipur", "mizoram", "tripura", "meghalaya", "nagaland",
+                   "jharkhand", "chhattisgarh", "uttarakhand", "ladakh", "kashmir"}
+                # Tax and fund abbreviations that are not schemes.
+                | {"sgst", "cgst", "igst", "gst", "sdrf", "ndrf", "cess"}
                 # Eighth and ninth instances, and these two were already corrupting the
                 # registry rather than merely inflating a join. "Solar Power (Grid)" was
                 # merged into "SERB - POWER Fellowship" and its Rs 1,775 cr published under
@@ -165,7 +185,17 @@ def acronyms(s):
     bracketed "(PMAY)" is picked up directly.
     """
     out = set()
-    words = [w for w in norm(s).split() if len(w) > 1]
+    # Initials are taken from the WORDS, never from an acronym the name already prints.
+    # "State Disaster Response Fund (SDRF)" was yielding sdrfs, its own initials with its
+    # own acronym appended, which then equalled the real acronym of "Stamp Duty and
+    # Registration Fee Subsidy (SDRFS)". An acronym counted as a letter of itself.
+    # The RAW extraction, not written_acronyms(), which filters through NOT_ACRONYMS and so
+    # returns nothing for an abbreviation listed there: sdrf is on that list as a fund name,
+    # which left it in the word list and rebuilt the very initialism this excludes.
+    printed = {norm(m).replace(" ", "") for m in
+               re.findall(r"\(([A-Za-z][A-Za-z0-9\-]{2,12})\)", s or "") if m == m.upper()}
+    printed |= {w.lower() for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or "")}
+    words = [w for w in norm(s).split() if len(w) > 1 and w not in printed]
     if len(words) >= 3:
         out.add("".join(w[0] for w in words))
         big = [w for w in words if w not in STOP]
@@ -392,6 +422,21 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # A community abbreviation is who a scheme is for, never which scheme it is. VJNT alone
+    # produced 125 wrong joins on Maharashtra, the largest single hole found.
+    ("Training Of Motor Driving To VJNT, SBS & OBC",
+     "Tanda Vasti Sudhar Yojana For VJNT And SBC", False),
+    # A skeleton must not delete the word that distinguishes. "old" de-vowels to "ld" and
+    # "age" to "g", and dropping both made Old Age Pension a subset of Widow Pension.
+    ("National Old Age Pension", "National Widow Pension", False),
+    # A state's own name is not an acronym.
+    ("SWACHHA ODISHA", "Odisha Cycle Scheme", False),
+    # An acronym is not a letter of itself: "State Disaster Response Fund (SDRF)" was
+    # yielding sdrfs, its initials with its own acronym appended.
+    ("State Disaster Response Fund (SDRF)", "State Disaster Response Fund", True),
+]
 
 SELFTEST += [
     # A community variant is not the parent scheme. The generic name used to match all three
