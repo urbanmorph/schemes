@@ -550,3 +550,6 @@ footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 footer .foot a{color:var(--stamp)}
 @media (max-width:620px){footer .srcs{grid-template-columns:1fr;gap:2px 0}
   footer .srcs span{margin-bottom:7px}}
+
+.listedby{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 0}
+.listedby .lbl{font:500 var(--fs-xs)/1 var(--sans);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}

@@ -221,6 +221,13 @@ def check_scheme(rec):
                           if (t.get("label") if isinstance(t, dict) else t)],
         "audience": audience_of([(t.get("label") if isinstance(t, dict) else t)
                                  for t in (basic.get("targetBeneficiaries") or [])]),
+        # Sector, from the search endpoint via explode.py's _list merge. myScheme sets one
+        # of 13 clean values on every record, which is the axis a policy reader slices by
+        # and the one thing the table could not show. The ministry is close but not the
+        # same: Women and Child schemes are run by six different ministries.
+        "category": ((rec.get("_list") or {}).get("schemeCategory") or [None])[0]
+                    if isinstance((rec.get("_list") or {}).get("schemeCategory"), list)
+                    else (rec.get("_list") or {}).get("schemeCategory"),
         "url_count": len(urls),
         "passed": passed,
         "total": len(checks),

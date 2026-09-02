@@ -863,7 +863,9 @@ def where_full(entry):
 
 
 SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
-                "outcome": "Outcome Budget", "dbt": "DBT Bharat"}
+                "outcome": "Outcome Budget", "dbt": "DBT Bharat",
+                "karnataka": "Karnataka Budget", "andhra": "Andhra Pradesh Budget",
+                "kerala": "Kerala Budget", "tamilnadu": "Tamil Nadu Budget"}
 
 
 def slug_for(name):
@@ -905,6 +907,7 @@ def unify(checks, registry, classification):
             "sources": sorted(srcs.keys()),
             "level": (base or {}).get("level") or ((ms or {}).get("level")),
             "org": (base or {}).get("org"),
+            "category": (base or {}).get("category"),
             "level_value": (base or {}).get("level_value"),
             "state": (base or {}).get("state"),
             "audience": (base or {}).get("audience"),
@@ -915,6 +918,74 @@ def unify(checks, registry, classification):
             "classified": verdict,
             "detail": {k: v for k, v in srcs.items()},
         })
+    return out
+
+
+# Schemes a state's own budget names, promoted to first-class entries.
+#
+# They used to exist only as rows inside a table on /divergence, which meant Gruha Jyothi had
+# no URL: it could not be linked, bookmarked, searched or found by anyone who knew its name.
+# A register whose stated purpose is surfacing what is hard to find cannot hold 2,000 schemes
+# that have no address.
+#
+# THE BAR HERE IS NOT THE BAR ON /divergence, and the difference is the point. That page says
+# "this scheme is funded and no citizen-facing portal lists it", which is an accusation, so it
+# runs at a threshold bought with heavy loss of recall: 38 of Kerala's 2,629 rows. This says
+# "the state's budget names this as a scheme", which is a weaker claim with a different cost
+# of error. Listing a directorate here is an annoyance; naming one as hidden is a false
+# accusation. So the listing bar is the F1 optimum and the page says which bar a scheme
+# cleared.
+#
+# Rows already matched to a myScheme record are skipped, because those schemes have a page.
+LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5}
+STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
+            "kerala": "Kerala", "tamilnadu": "Tamil Nadu"}
+
+
+def state_entries(load):
+    out = []
+    for key, state in sorted(STATE_OF.items()):
+        cls = load(f"data/{key}/classification.json", {}) or {}
+        bar = LISTING_BAR[key]
+        matched_flag = f"in_myscheme_{key}"
+        for r in sorted(cls.get("all_entries") or [], key=lambda x: str(x.get("key") or x.get("hoa") or x.get("name"))):
+            if r.get("score", -99) < bar or r.get(matched_flag):
+                continue
+            ident = r.get("code") or r.get("hoa") or (r.get("hoas") or [None])[0]
+            out.append({
+                "name": r["name"],
+                "slug": slug_for(f"{state} {r['name']} {ident or ''}"),
+                "on_myscheme": False,
+                "checks": None,
+                "sources": [key],
+                "level": "State or UT",
+                "level_value": "state",
+                "org": r.get("department") or "",
+                # Kerala files a sector against each plan scheme and the others do not, so
+                # this is populated where the state itself says so and left blank rather
+                # than guessed everywhere else. A ministry is not a sector.
+                "category": (r.get("sector") or None) if key == "kerala" else None,
+                "state": [state],
+                "audience": None,
+                "beneficiaries": [],
+                "be_cr": round(r["be_lakh"] / 100, 2) if r.get("be_lakh") else None,
+                "demand_no": None,
+                "statement": None,
+                # Deliberately NOT r["verdict"]. That field is the ACCUSATION bar's answer,
+                # and a row here may sit above the listing bar and below it, at which point
+                # labelling the page "classified as a budget head" contradicts the page's
+                # own existence. The two bars are explained in the state block instead.
+                "classified": None,
+                "state_source": {
+                    "state": state, "code": r.get("code"), "purpose": r.get("purpose"),
+                    "sector": r.get("sector"), "books": r.get("books") or [],
+                    "heads": r.get("hoas") or ([r["hoa"]] if r.get("hoa") else []),
+                    "score": r.get("score"), "evidence": r.get("evidence") or [],
+                    "publishable": r.get("verdict") == "scheme",
+                    "bar": bar,
+                },
+                "detail": {},
+            })
     return out
 
 
@@ -1125,7 +1196,13 @@ def index_section(entries):
                  + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
                  + '>'
                  f'<td><a href="scheme/{e(slug)}.html">{e(e_["name"])}</a>{acr}</td>'
-                 f'<td>{badges}</td>'
+                 # Sector where the source badges used to be. Which sources name a scheme is
+                 # audit metadata and belongs on its page; what the scheme is FOR is what a
+                 # reader scanning 7,370 rows is looking for. The badges still drive the
+                 # "Listed by" filter pills, they just no longer take a column.
+                 f'<td class="muted">{e(e_.get("category") or "")}'
+                 + ('' if e_.get("category") else '<span class="nil">not stated</span>')
+                 + '</td>'
                  + where_cell
                  + f'<td class="muted">{e(e_.get("org") or "")}</td>'
                  f'<td class="num alloc">{alloc}</td>'
@@ -1158,7 +1235,7 @@ def index_section(entries):
 <div class="workspace">
 <div class="wmain">
 <div class="tscroll"><table id="tbl">
-  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Listed by</th><th>Where it applies</th>
+  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Sector</th><th>Where it applies</th>
     <th>Ministry / department</th>
     <th class="num sortable" data-k="b">Allocation</th>
     <th class="num sortable" data-k="p">Passed</th></tr></thead>
@@ -1477,8 +1554,9 @@ def page_unlisted(en, status):
   The nine checks measure what myScheme publishes about a scheme. There is no myScheme
   record here to measure, so this page shows none. A score of nought would read
   as a verdict on the scheme when it is a fact about the portal.
-  {"This line is classified as a citizen-facing scheme rather than a budget head; the arithmetic is on /divergence." if verdict == "scheme" else "This line was classified as a budget head rather than a citizen-facing scheme, so its absence from a scheme portal may be correct."}
+  {"This line is classified as a citizen-facing scheme rather than a budget head; the arithmetic is on /divergence." if verdict == "scheme" else "This line was classified as a budget head rather than a citizen-facing scheme, so its absence from a scheme portal may be correct." if verdict else ""}
 </div>
+{state_block_for(en)}
 
 <section class="sec">
   <h2>What each source says</h2>
@@ -1595,6 +1673,54 @@ CHECK_LABEL = {
 }
 
 
+def state_block_for(entry):
+    """What a state's own budget publishes about a scheme, for pages that have no
+    myScheme record to show. Used by both page builders: a state scheme reaches
+    page_unlisted because it has no checks, and that is exactly the page that most needs
+    this block."""
+    st = (entry or {}).get("state_source")
+    if not st:
+        return ""
+    if True:
+        bits = []
+        if st.get("code"):
+            bits.append(f'<tr><td>Scheme code</td><td><code>{e(st["code"])}</code></td>'
+                        f'<td class="muted">the state&rsquo;s own identifier</td></tr>')
+        if st.get("heads"):
+            bits.append(f'<tr><td>Head of account</td><td><code>'
+                        f'{e(", ".join(str(h) for h in st["heads"][:4]))}</code></td>'
+                        f'<td class="muted">where the money is voted</td></tr>')
+        if st.get("sector"):
+            bits.append(f'<tr><td>Sector</td><td>{e(st["sector"])}</td>'
+                        f'<td class="muted">as the state files it</td></tr>')
+        if st.get("books"):
+            bits.append(f'<tr><td>Named in</td><td>{e(", ".join(st["books"]))}</td>'
+                        f'<td class="muted">which of the state&rsquo;s books list it</td></tr>')
+        why = "; ".join(w for _, w in (st.get("evidence") or [])[:3])
+        strength = ("It also clears the higher bar this register uses before saying a scheme "
+                    "is hidden from citizens, and it is named on /divergence."
+                    if st.get("publishable") else
+                    "It does NOT clear the higher bar this register uses before saying a "
+                    "scheme is hidden from citizens, so it is listed here and not named "
+                    "there. Listing a budget head as a scheme is an annoyance; naming one as "
+                    "hidden would be a false accusation, and the two are not the same claim.")
+        state_block = f"""
+<section class="sec">
+  <h2>What {e(st["state"])} publishes about this</h2>
+  <div class="sec-note">From the state&rsquo;s own budget books &middot; myScheme has no
+    record of it</div>
+  {'<p class="prose">' + e(st["purpose"]) + '</p>' if st.get("purpose") else ''}
+  <div class="tscroll"><table class="prov">{''.join(bits)}</table></div>
+  <div class="warnbox">
+    <b>How this was judged a scheme rather than a budget head</b>
+    A state budget book lists colleges, directorates and building heads beside schemes.
+    This row scored {st.get("score")} on published signals: {e(why) or "see the data"}.
+    {strength}
+  </div>
+</section>"""
+    return state_block
+
+
 def page_scheme(s, status, enrich=None, entry=None):
     checks = "".join(
         f'<div class="chk"><span class="mark {"p" if c["ok"] else "f"}">'
@@ -1646,6 +1772,10 @@ def page_scheme(s, status, enrich=None, entry=None):
                 + (f'<div class="sec-note">{e(note)}</div>' if note else "")
                 + f'<div class="prose">{h}</div></section>')
 
+    srcs = (entry or {}).get("sources") or (["myscheme"] if s.get("slug") else [])
+    chips_src = "".join(f'<span class="src {k}">{e(SOURCE_LABEL.get(k, k))}</span>'
+                        for k in sorted(srcs)) or '<span class="nil">not stated</span>'
+
     about = "".join([
         block("What this is", s.get("brief")),
         block("In detail", s.get("detail_md")),
@@ -1657,6 +1787,8 @@ def page_scheme(s, status, enrich=None, entry=None):
         about = ('<div class="sec-note" style="margin-top:26px">myScheme&rsquo;s own '
                  'wording, reproduced in full. Where it is thin, that is the finding, and '
                  'the completeness checks are below.</div>' + about)
+
+    state_block = state_block_for(entry)
 
     # Found elsewhere. Deliberately separate from the checks above and never counted in
     # them: this is what a *different* government document says, not what this portal
@@ -1727,6 +1859,7 @@ def page_scheme(s, status, enrich=None, entry=None):
 </div>
 
 {about}
+{state_block}
 {found_block}
 
 <!--
@@ -1741,6 +1874,10 @@ def page_scheme(s, status, enrich=None, entry=None):
   reader who wants it will scroll; a reader who wants to know what the scheme gives them
   should not have to.
 -->
+<div class="listedby">
+  <span class="lbl">Listed by</span> {chips_src}
+</div>
+
 <div class="meter">
   <div class="meter-top">
     <div>
@@ -1804,6 +1941,14 @@ def build():
     registry = load("data/registry.json", {})
     classification = load("data/classification.json", {})
     entries = unify(checks, registry, classification)
+    entries += state_entries(load)
+    seen_slugs = set()
+    for en in entries:                       # slugs must be unique or pages overwrite
+        sl, i = en["slug"], 2
+        while sl in seen_slugs:
+            sl, i = f"{en['slug']}-{i}", i + 1
+        en["slug"] = sl
+        seen_slugs.add(sl)
 
     # A downloadable table, because half the audience does not want pages at all.
     #
@@ -1819,7 +1964,7 @@ def build():
     import csv as _csv
     with open(os.path.join(OUT, "schemes.csv"), "w", encoding="utf-8", newline="") as fh:
         wr = _csv.writer(fh)
-        wr.writerow(["name", "slug", "level", "state", "ministry_or_department",
+        wr.writerow(["name", "slug", "level", "state", "sector", "ministry_or_department",
                      "audience", "beneficiaries", "budget_2026_27_cr", "sources",
                      "on_myscheme", "documentation_checks_passed",
                      "documentation_checks_total", "url"])
@@ -1827,7 +1972,8 @@ def build():
             ck = en.get("checks") or {}
             wr.writerow([
                 en.get("name"), en.get("slug"), en.get("level") or "",
-                where_full(en), en.get("org") or "", en.get("audience") or "",
+                where_full(en), en.get("category") or "", en.get("org") or "",
+                en.get("audience") or "",
                 "; ".join(en.get("beneficiaries") or []),
                 en.get("be_cr") if en.get("be_cr") is not None else "",
                 " ".join(en.get("sources") or []),
