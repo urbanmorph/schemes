@@ -974,7 +974,8 @@ def strip_css(name):
     return re.sub(r"\s+", " ", n).strip(" -:()")
 
 
-def state_entries(load, known_names=()):
+def state_entries(load, known_names=(), sectors=None):
+    sectors = sectors or {}
     # A token index, because 554 centrally sponsored shares against 5,451 held schemes is
     # 3 million comparisons and the same index that makes parse/registry.py finish in
     # seconds makes this finish at all. Keyed on skeletons and acronyms as well as tokens,
@@ -1018,13 +1019,17 @@ def state_entries(load, known_names=()):
                 "level": "State or UT",
                 "level_value": "state",
                 "org": r.get("department") or "",
-                # Left blank on purpose, though Kerala files a sector of its own. Mixing
+                # Derived by parse/sector.py where it could decide, and left blank where it
+                # could not. Kerala's own sector is still NOT used as the value: measured at
+                # 0.444, because Kerala's axis is who the money is for and myScheme's is what
+                # it buys, so Kerala's biggest bucket is mostly scholarships the shared
+                # vocabulary calls Education. Mixing
                 # Kerala's 36 values with myScheme's 13 gave the filter 49 options that do
                 # not describe one taxonomy: "Social Justice Programme" and "Social welfare
                 # & Empowerment" are different vocabularies, and a reader picking one would
                 # silently exclude the other's schemes. Kerala's own sector is on its scheme
                 # pages, labelled as the state's filing rather than a shared axis.
-                "category": None,
+                "category": sectors.get(f"{key}|{r.get('key') or r.get('hoa')}"),
                 "state": [state],
                 "audience": None,
                 "beneficiaries": [],
@@ -2025,7 +2030,18 @@ def build():
     registry = load("data/registry.json", {})
     classification = load("data/classification.json", {})
     entries = unify(checks, registry, classification)
-    entries += state_entries(load, [x["name"] for x in entries])
+    # Values carry their evidence; the site wants the verdict. Keeping the evidence out of
+    # the entry deliberately: a derived sector is a convenience for filtering and should not
+    # look like something the government published, which is what a provenance row implies.
+    sector_map = {k: v.get("sector") for k, v in
+                  ((load("data/sector.json", {}) or {}).get("sectors") or {}).items()
+                  if isinstance(v, dict) and v.get("sector")}
+    entries += state_entries(load, [x["name"] for x in entries], sector_map)
+    # Central entries with no myScheme record get theirs the same way, keyed on the name
+    # because that is the only identity a budget-only line has.
+    for en in entries:
+        if not en.get("category") and not en.get("on_myscheme"):
+            en["category"] = sector_map.get("registry|" + (en.get("name") or ""))
     seen_slugs = set()
     for en in entries:                       # slugs must be unique or pages overwrite
         sl, i = en["slug"], 2
