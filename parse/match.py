@@ -103,7 +103,14 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                  # which made "india" an acronym and matched Green India Mission.
                  "india", "indian", "bharat", "level", "exams", "examination",
                  "examinations", "college", "school", "schools", "district", "districts",
-                 "rural", "urban", "board", "corporation", "department", "ministry"})
+                 "rural", "urban", "board", "corporation", "department", "ministry",
+                 # Seventh instance, from the CAG catalogue. Budget statements append a
+                 # shouted category to a scheme name, "Bharat-VISTAAR CENTRAL SECTOR
+                 # SCHEMES", and every word of it became an acronym: "sector" alone
+                 # produced 297 false joins against audit titles.
+                 "sector", "sectors", "finance", "financial", "micro", "macro",
+                 "economic", "social", "revenue", "civil", "defence", "railway",
+                 "railways", "works", "public", "sanction", "sanctions"})
 
 
 def written_acronyms(s):

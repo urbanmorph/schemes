@@ -55,6 +55,13 @@ if [ "$SKIP_COLLECT" = "0" ]; then
   say "collect · DBT Bharat"
   python3 collect/dbt.py --date "$DATE"
 
+  # The audit catalogue is append-mostly and grows a few reports a month, so unlike the
+  # budgets it is collected every run. 281 paced requests, about nine minutes, and the
+  # walk checks its own distinct-id count against the total the site prints, which is a
+  # checksum an incremental crawl could not do.
+  say "collect · CAG catalogue"
+  python3 collect/cag.py --date "$DATE" || true
+
   say "collect · annual sources"
   if have_annual "archive/budget/$CYCLE_YEAR"; then
     echo "  Union Budget $CYCLE_YEAR already archived, skipping"
@@ -80,6 +87,7 @@ say "parse · sources"
 python3 parse/dbt.py --date "$DATE" || true
 python3 parse/budget.py --year "$CYCLE_YEAR" || true
 python3 parse/outcome.py --year "$CYCLE_YEAR" || true
+python3 parse/cag.py --date "$DATE" || true
 
 # States are parsed whether or not the myScheme snapshot verified, because they are
 # derived from their own archives and nothing about a throttled myScheme crawl makes the
@@ -87,6 +95,7 @@ python3 parse/outcome.py --year "$CYCLE_YEAR" || true
 say "parse · states"
 python3 parse/karnataka.py || true
 python3 parse/andhra.py || true
+python3 parse/kerala.py || true
 
 if [ "$VERIFY_OK" = "1" ]; then
   say "parse · myScheme"
