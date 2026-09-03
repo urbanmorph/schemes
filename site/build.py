@@ -567,7 +567,7 @@ def legibility_section(leg, ms=None):
   in this register, it is a fact about that state, and it belongs on the page beside the
   states that yielded.</p>
 
-  <div class="tscroll"><table id="legib">
+  <div class="tscroll"><table id="legib" aria-label="Every state surveyed, against five tests">
     <thead><tr><th>State</th>{heads}<th class="num">Cleared</th>
       <th class="num">Schemes named</th><th>What decides it</th></tr></thead>
     <tbody>{"".join(row(r) for r in built)}
@@ -792,7 +792,7 @@ hidden anywhere on this site.</p>
 <section class="sec">
   <h2>Every line, as published</h2>
   <div class="sec-note">{e(d.get("source") or "")}</div>
-  <div class="tscroll"><table id="stbl">
+  <div class="tscroll"><table id="stbl" aria-label="Every line in this state's budget book">
     <thead><tr><th>Name</th><th>Code</th><th>Filed under</th>
       <th class="num">2026&ndash;27 (&#8377; cr)</th></tr></thead>
     <tbody>{body}</tbody>
@@ -884,7 +884,7 @@ which of them are about a scheme, and there is no way to ask it. This page is th
   <p class="standfirst">This is the short list, and it is short on purpose. An audit
   attached to the wrong scheme is a factual error on that scheme&rsquo;s page; a missing
   one is a gap the next pass can close.</p>
-  <div class="tscroll"><table id="audsch">
+  <div class="tscroll"><table id="audsch" aria-label="Schemes in this register the CAG has audited">
     <thead><tr><th>Scheme</th><th class="num">Reports</th><th>Type, government, tabled</th>
       <th>Read it</th></tr></thead>
     <tbody>{audited_rows}</tbody>
@@ -927,7 +927,7 @@ which of them are about a scheme, and there is no way to ask it. This page is th
   <h2>Every report in the catalogue</h2>
   <div class="sec-note">As the CAG publishes it &middot; title, government, kind, sector,
     the date it was tabled, and where to read it</div>
-  <div class="tscroll"><table id="audall">
+  <div class="tscroll"><table id="audall" aria-label="Every audit report in the CAG catalogue">
     <thead><tr><th>Report</th><th>Government</th><th>Kind</th><th>Sector</th>
       <th>Tabled</th><th>Read</th></tr></thead>
     <tbody>{rows}</tbody>
@@ -2033,7 +2033,7 @@ def index_section(entries):
     aria-label="Search schemes by name, acronym or slug">
   {state_select}
   {org_select}
-  <span class="count" id="count">{n:,} schemes</span>
+  <span class="count" id="count" role="status" aria-live="polite" aria-atomic="true">{n:,} schemes</span>
   <a class="dl" href="schemes.csv" download>Download all {n:,} as CSV</a>
 </div>
 <div class="pills">
@@ -2044,7 +2044,7 @@ def index_section(entries):
 </div>
 <div class="workspace">
 <div class="wmain">
-<div class="tscroll"><table id="tbl">
+<div class="tscroll"><table id="tbl" aria-label="Every scheme in the register, filterable">
   <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Sector</th><th>Where it applies</th>
     <th>Ministry / department</th>
     <th class="num sortable" data-k="b">Allocation</th>
