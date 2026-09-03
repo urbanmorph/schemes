@@ -34,8 +34,19 @@ SITE_BASE = os.environ.get("SITE_BASE", "https://schemes.pages.dev").rstrip("/")
 
 ISSUE_URL = "https://github.com/urbanmorph/schemes/issues/new"
 
+# display=optional, not swap. With swap the browser paints in the fallback and then
+# re-lays-out the page when each webfont arrives, and a trace named exactly that as the
+# cause of a 0.32 layout shift: Spectral and IBM Plex Mono landing at 1.7s moved the pill
+# group, the ministry input and the state select under a reader's cursor. optional gives
+# the fonts a short window to arrive and otherwise keeps the fallback for that page view,
+# so the layout is decided once and never moves.
+#
+# The cost is real and is the right way round: a first-time visitor on a slow connection
+# reads the register in a system font, and sees the intended one on their next page,
+# because by then it is cached. Nobody has the page rearrange itself while they read.
 FONTS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400"
-         "&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap")
+         "&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500"
+         "&display=optional")
 
 # The scheme index lives on "/" rather than behind its own route. The argument and the
 # evidence for it are the same page: someone who reads that 99% of schemes carry no end
@@ -1698,7 +1709,18 @@ def index_section(entries):
     }});
   }}
 
-  apply();          // rail and pill counts must be live from the first paint
+  // NO apply() here any more, and this was worth a measured 0.235 of CLS.
+  //
+  // It used to run on the last line so the rail and the pill counts were live from first
+  // paint. With the filter index moved off the DOM it ran BEFORE that index arrived, when
+  // every row's fields are empty, so it counted zero against every pill, shrank all of
+  // them, and then grew them back when the fetch landed 3.8 seconds later. The whole
+  // workspace below jumped. A trace put the shift on .pillgroup and .workspace at exactly
+  // the moment the data arrives.
+  //
+  // The server already renders the correct unfiltered counts, so there is nothing for a
+  // first-paint apply() to fix and the fetch handler calls it once the numbers can be
+  // right.
 }})();
 </script>
 </section>
