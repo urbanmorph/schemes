@@ -1,0 +1,1962 @@
+{
+ "state": "Haryana",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, farmer, student, worker or firm receive a benefit, service, subsidy, scholarship, pension, insurance, training or grant from this line? A budget head for construction, an office or post, share capital to a corporation, an institution's own buildings or running costs, administration, research, publicity or a survey is not_scheme, however worthwhile it is.",
+ "labelled": 390,
+ "scheme": 156,
+ "not_scheme": 234,
+ "sampling": "Stratified on (works money vs establishment money vs neither) x (Part-I state / Part-II shared / Part-III central), 28% of each stratum with a floor of 12, seed 20260903. The strata are the two things Haryana's own book publishes that could separate a scheme from a works line.",
+ "labels": {
+  "P-01-01-4059-01-051-57-51": {
+   "label": "not_scheme",
+   "name": "Purchase of Land/Construction of Building for Haryana Vidhan Sabha",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-03-2852-07-202-91-51": {
+   "label": "not_scheme",
+   "name": "IT Plan for Haryana",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-03-4047-51-190-99-51": {
+   "label": "not_scheme",
+   "name": "Equity Capital to Drone Imaging & Information Services of Haryana Ltd. (DRIISHYA)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-03-4059-01-051-69-51": {
+   "label": "not_scheme",
+   "name": "Construction of office building for State Vigilance Bureau.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-03-4059-01-051-70-51": {
+   "label": "not_scheme",
+   "name": "Construction of Office Building Haryana State Information Commission.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-04-2705-51-789-99-51": {
+   "label": "not_scheme",
+   "name": "Grant in Aid for the Integrated Development of Scheduled Castes of Mewat Area",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-05-2056-51-800-99-51": {
+   "label": "not_scheme",
+   "name": "Modernisation of Prisons- N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-05-4055-51-207-99-51": {
+   "label": "not_scheme",
+   "name": "Office Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-06-3451-51-102-97-98": {
+   "label": "not_scheme",
+   "name": "Strengthening of Planning Machinery at State Level- Establishment Expenses",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-06-3454-02-001-95-51": {
+   "label": "not_scheme",
+   "name": "Modernisation and Strengthening of State Statistical System",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-06-4059-80-001-97-51": {
+   "label": "not_scheme",
+   "name": "Scheme for Creation/Purchase of Capital assets for Directorate of State Audit",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-07-6401-51-190-96-51": {
+   "label": "not_scheme",
+   "name": "Scheme for providing Loan to Haryana State Agricultural Marketing Board (HSAMB) Panchkula for the Establishment of Apple Fruit and Vegetable Market at Pinjore",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-07-6401-51-190-99-51": {
+   "label": "not_scheme",
+   "name": "Scheme for loan to Haryana Agro Industries Corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-07-6425-51-108-83-51": {
+   "label": "not_scheme",
+   "name": "Loan to Cooperative Labour & Construction Societies",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-07-6515-51-102-99-51": {
+   "label": "not_scheme",
+   "name": "Loans to village Panchayat for Revenue Earnings",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-07-6860-04-101-95-51": {
+   "label": "not_scheme",
+   "name": "Setting up of power cogeneration and ethanol Plant in Cooperative Sugar Mills.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-07-6860-04-101-99-51": {
+   "label": "not_scheme",
+   "name": "Loans to all Co-operative Sugar Mills",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2401-51-109-93-51": {
+   "label": "not_scheme",
+   "name": "Scheme for strengthening of Agriculture Extension infrastructure.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2401-51-113-81-51": {
+   "label": "scheme",
+   "name": "Crop residue management under Clean Air Project for sustainable Development - SPV ARJUN",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2401-51-119-54-51": {
+   "label": "scheme",
+   "name": "On-Farm & Marketing Support to Horticulture Farmers",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2401-51-119-65-51": {
+   "label": "scheme",
+   "name": "Scheme for Integrated Horticulture Development in Haryana State",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2401-51-789-98-51": {
+   "label": "scheme",
+   "name": "Integrated Horticulture Development Plan Scheme for Scheduled Caste Families",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2403-51-102-66-51": {
+   "label": "scheme",
+   "name": "Scheme for Conservation and Development of Indigenous cattle and Murrah development",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2403-51-102-72-51": {
+   "label": "not_scheme",
+   "name": "Scheme for Setting up of Pet Clinic",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2405-51-789-99-51": {
+   "label": "scheme",
+   "name": "Scheme for welfare of Schedule caste families under Fisheries Sector-N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2406-01-070-97-51": {
+   "label": "not_scheme",
+   "name": "Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2406-01-102-88-51": {
+   "label": "not_scheme",
+   "name": "Afforestation Waste land and Agro Forestry Project",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-3435-03-003-98-51": {
+   "label": "not_scheme",
+   "name": "Environmental Training Education and Awareness Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-3435-03-102-97-99": {
+   "label": "not_scheme",
+   "name": "State Environment Impact Assessment Authority- Establishment Expenses",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-3435-60-001-99-51": {
+   "label": "not_scheme",
+   "name": "Establish a Command & Control Centre (CCC) under for Data Backed Decision- making (DSS), under Clean Air Project for sustainable Development-SPV ARJUN",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-4059-01-051-58-51": {
+   "label": "not_scheme",
+   "name": "Purchase of land and construction of Building for Directorate Mines and Geology",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-4401-51-113-97-99": {
+   "label": "not_scheme",
+   "name": "Scheme for creation/ Purchase of Capital Assets - Scheme for creation/ Purchase of Capital Assets for Agriculture Department",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-4403-51-101-99-98": {
+   "label": "not_scheme",
+   "name": "Construction of Veterinary Infrastructure in the State- NABARD Assistance",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-4403-51-101-99-99": {
+   "label": "not_scheme",
+   "name": "Construction of Veterinary Infrastructure in the State- State Assistance",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-4405-51-001-99-51": {
+   "label": "not_scheme",
+   "name": "Scheme for creation/ Purchase of Capital Assets for Fisheries Department",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-5425-51-208-98-51": {
+   "label": "not_scheme",
+   "name": "Pollution Abatement Initiatives and strengthening institutional structure as procurement of Ambient Air Quality Monitoring Stations under Clean Air Project for sustainable Development- SVP ARJUN-N A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-6401-51-195-99-51": {
+   "label": "not_scheme",
+   "name": "The Japan International Cooperation Agency (JICA) Project for Promoting Sustainable Horticulture in Haryana – Providing loan to Producer Groups for establishment of Post- Harvesting Infrastructure",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-6403-51-190-99-51": {
+   "label": "not_scheme",
+   "name": "Loan to the Lala Lajpat Rai University of Veterinary and Animal Science, Hisar (State)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-2425-51-107-89-51": {
+   "label": "scheme",
+   "name": "Rebate on rate of interest regarding short term Crop loans advanced by Co- operative Banks renamed as Rebate on rate of interest regarding short term Crop loans advanced by all Scheduled banks",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-2425-51-107-93-51": {
+   "label": "not_scheme",
+   "name": "Assistance for contribution to guarantee fees for deposit of guarantee Scheme for PACS",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-2425-51-107-94-51": {
+   "label": "scheme",
+   "name": "Assistance to Women Cooperatives",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-2425-51-108-96-51": {
+   "label": "not_scheme",
+   "name": "Strengthening of Procurement and Marketing Infrastructure in Milk Cooperatives in Haryana",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-2425-51-277-98-51": {
+   "label": "not_scheme",
+   "name": "Member,Education and Leadership",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-4250-51-201-98-51": {
+   "label": "not_scheme",
+   "name": "Share Capital to Co- Operative Labour and Construction Federation-N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-4250-51-789-97-51": {
+   "label": "not_scheme",
+   "name": "Share captial to Schedule castes Labour and construction societies",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-4425-51-107-84-51": {
+   "label": "not_scheme",
+   "name": "Share Capital to Harco Fed",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-4425-51-107-99-51": {
+   "label": "not_scheme",
+   "name": "Share Capital to Central Co-operatives Banks",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-11-4860-04-190-87-51": {
+   "label": "not_scheme",
+   "name": "Share Capital to Co- operative Sugar Federation",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-01-101-95-51": {
+   "label": "not_scheme",
+   "name": "Expansion of Facilities Classes VI-VIII (Full time)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-01-101-97-51": {
+   "label": "not_scheme",
+   "name": "Expansion of facilities Classes I-V (Full time)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-01-109-85-51": {
+   "label": "scheme",
+   "name": "Monthly Stipend to BPL strudents in classes I-VIII",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-01-112-99-51": {
+   "label": "scheme",
+   "name": "Mid Day Meal For Primary School Children Share Basis 60:40-N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-01-789-98-51": {
+   "label": "scheme",
+   "name": "Cash Award and monthly Stipends to all Scheduled caste students in classes I- VIII",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-107-83-51": {
+   "label": "not_scheme",
+   "name": "Book Bank/Library",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-107-86-51": {
+   "label": "scheme",
+   "name": "Monthly Stipend to BC-A students in Classes IX-XII",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-107-87-51": {
+   "label": "scheme",
+   "name": "Monthly Stipend to BPL students in Classes IX-XII",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-107-90-51": {
+   "label": "scheme",
+   "name": "Students Safety Insurance Policy",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-109-85-51": {
+   "label": "not_scheme",
+   "name": "Opening of Model School in Educationally Backward Blocks",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-110-94-51": {
+   "label": "scheme",
+   "name": "Chief Minister Policy for Equal Education Relief",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-188-99-51": {
+   "label": "scheme",
+   "name": "Samagra Shiksha",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-789-95-51": {
+   "label": "scheme",
+   "name": "Reimbursement of examination fees of SC students in the Board of School Education Bhiwani",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-789-99-51": {
+   "label": "scheme",
+   "name": "Providing of free bicycle to Scheduled Caste Students in Classes 9th & 11th",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-02-800-97-96": {
+   "label": "not_scheme",
+   "name": "Swaran Jayanti Programme- Cultural Programme for Students",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-03-001-99-96": {
+   "label": "not_scheme",
+   "name": "Administrative staff-Haryana State Higher Education Council",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-03-105-90-51": {
+   "label": "not_scheme",
+   "name": "Sports Activities in Govt.College.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2202-03-105-99-51": {
+   "label": "not_scheme",
+   "name": "Setting up of Women cell at College Level & Directorate level",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2203-51-112-91-51": {
+   "label": "not_scheme",
+   "name": "Setting up of Indian Institute of Information Technology (IIIT), Kilohard, Sonepat.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2203-51-112-95-51": {
+   "label": "not_scheme",
+   "name": "Establishment of Govt. Engineering College Jhajjar",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2203-51-789-92-51": {
+   "label": "scheme",
+   "name": "Reimbursement of State Transpport facility/Train Pass to SC Students Renamed as Reimbursement of fee and Transport facility to Scheduled Caste Students",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-2203-51-789-93-51": {
+   "label": "not_scheme",
+   "name": "For establishing computer lab exclusively for SC students in each Government Aided Polytechnics and Govt. Technical Universities",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-4202-01-201-99-51": {
+   "label": "not_scheme",
+   "name": "Construction of School Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-4202-02-105-98-51": {
+   "label": "not_scheme",
+   "name": "Scheme for creation/purchase of Capital assets of Technical Education",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-4235-02-102-99-98": {
+   "label": "not_scheme",
+   "name": "Construction of Anganwadi Centres-State Contribution",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-4235-02-102-99-99": {
+   "label": "not_scheme",
+   "name": "Construction of Anganwadi Centres-NABARD Contribution",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-4235-02-103-99-51": {
+   "label": "scheme",
+   "name": "Home-cum-Vocational Training production Centres for Young Girls/Women & Destitute Women and Widows",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-4235-02-789-99-51": {
+   "label": "not_scheme",
+   "name": "Construction of Anganwari Centre",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-6202-01-203-90-51": {
+   "label": "not_scheme",
+   "name": "Loans to Chaudhary Ranbir Singh University Jind",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-6202-01-203-93-51": {
+   "label": "not_scheme",
+   "name": "Loans to Dr. Bhim Rao Ambedkar National Law University Sonepat",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-12-6202-01-203-97-51": {
+   "label": "not_scheme",
+   "name": "Loans to Kurukshetra University",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2204-51-104-56-51": {
+   "label": "not_scheme",
+   "name": "Human Resource Development Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2204-51-190-99-51": {
+   "label": "not_scheme",
+   "name": "Sports University of Haryana, Rai Sonipat",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2204-51-800-96-51": {
+   "label": "not_scheme",
+   "name": "Provision of Sports & Equipments & development of playgrounds in Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2204-51-800-97-51": {
+   "label": "not_scheme",
+   "name": "Scouting & Guiding Assistance",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2205-51-102-97-51": {
+   "label": "not_scheme",
+   "name": "Publicity programme of Archives",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2205-51-103-95-51": {
+   "label": "not_scheme",
+   "name": "Preparation of Plaster Casts of Ancient Sculptures and Antiquities",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2205-51-103-96-51": {
+   "label": "not_scheme",
+   "name": "Protection/Preservation Development of Ancient Monuments Sites",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-2205-51-103-98-51": {
+   "label": "not_scheme",
+   "name": "Archaeological Excavation Exploration programme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-3452-80-190-99-51": {
+   "label": "not_scheme",
+   "name": "Haryana Tourism Corporation Limited",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-4202-03-101-99-51": {
+   "label": "not_scheme",
+   "name": "Buildings(Youth Hostels)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-5452-01-101-87-51": {
+   "label": "not_scheme",
+   "name": "Facilities at SurajKund",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-5452-01-102-99-51": {
+   "label": "not_scheme",
+   "name": "Holiday & Recreation Resort at Badkhal Lake",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-5452-80-104-98-51": {
+   "label": "not_scheme",
+   "name": "Development of sites for Promotion of tourism activities like festivals/fairs/shows and other related activities",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-13-5452-80-104-99-51": {
+   "label": "not_scheme",
+   "name": "Development of Wild Life Tourism in Haryana Under Swaran Jayanti Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-01-110-38-51": {
+   "label": "scheme",
+   "name": "Mukhyamantri Muft Ilaaj Yojna",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-01-110-46-51": {
+   "label": "not_scheme",
+   "name": "Out Sourcing of Support Services",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-01-110-64-51": {
+   "label": "not_scheme",
+   "name": "Grant-in-aid to Haryana Blood Transfusing Council Renamed as Grant-in-aid to various Health Institutions- N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-01-110-96-51": {
+   "label": "not_scheme",
+   "name": "Improvement and Expansion of Hospital Renamed as Improvement and Expansion of various Health Institutions",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-04-101-90-51": {
+   "label": "not_scheme",
+   "name": "Health Awareness through ISM & H through fairs with Medical Camps-N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-05-105-76-99": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Muft Ilaj Yojana for Medical Education & Research- Kalpana Chawla Govt. Medical College, Karnal",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-05-105-81-51": {
+   "label": "not_scheme",
+   "name": "Establishment of Mewat Medical College at Nalhar",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-05-105-82-51": {
+   "label": "not_scheme",
+   "name": "Establishment of BPS Woman Medical College Khanpur Kalan (Sonepat)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-2210-05-105-83-51": {
+   "label": "not_scheme",
+   "name": "Establishment Office of the Director, Research and Medical Education, Haryana.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-4210-01-102-98-51": {
+   "label": "not_scheme",
+   "name": "Scheme for creation of Capital assests for ESI Health Care",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-4210-01-110-99-51": {
+   "label": "not_scheme",
+   "name": "Buildings Renamed as Infrastructure/Administrative Expenses",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-4210-03-105-83-51": {
+   "label": "not_scheme",
+   "name": "Construction of Government Medical College, Kaithal",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-4210-03-105-85-51": {
+   "label": "not_scheme",
+   "name": "Establishment of Government Medical College, Chhainsa (Faridabad)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-4210-03-105-94-51": {
+   "label": "not_scheme",
+   "name": "Construction works of New Government Medical College at Jind",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-14-4210-03-105-95-51": {
+   "label": "not_scheme",
+   "name": "Construction works of New Government Medical College at Panchkula",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-15-2230-01-113-98-98": {
+   "label": "not_scheme",
+   "name": "Setting up Child Labour Cell for implementation of National Programme for Elimination of Child Labour- Establishment Expenses",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-15-2230-02-101-97-51": {
+   "label": "not_scheme",
+   "name": "Computerisation of Employment Exchange Operations",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-15-2230-03-003-59-51": {
+   "label": "scheme",
+   "name": "Drone Didi Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-15-4250-51-201-94-51": {
+   "label": "not_scheme",
+   "name": "Creation of Infrastructure for Development of Industrial Training and Modernisation of Machinery & Equipment",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-15-6202-02-105-93-51": {
+   "label": "not_scheme",
+   "name": "Loans to Shri Vishwakarma Skill University at village Dudhola District Palwal",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2225-01-190-97-51": {
+   "label": "not_scheme",
+   "name": "Establishment of Haryana State Commission for Safai Karamcharis",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2225-01-277-72-51": {
+   "label": "not_scheme",
+   "name": "Research and Studies",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2225-01-277-77-51": {
+   "label": "scheme",
+   "name": "Dr.Ambedkar Medhavi Chhatar Yojna",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2225-01-800-82-51": {
+   "label": "scheme",
+   "name": "Mukhyamantri Vivah Shagun Yojana--NA-",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-02-101-64-51": {
+   "label": "not_scheme",
+   "name": "Control of Drug Trafficking and setting up de-addiction centre in Haryana.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-02-102-99-51": {
+   "label": "scheme",
+   "name": "Financial Assistance to Destitute Children",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-02-190-97-51": {
+   "label": "scheme",
+   "name": "Mukhyamantri Antyodaya Parivar Utthan Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-02-199-97-51": {
+   "label": "scheme",
+   "name": "Grant-in-aid to NGOs/VOs/Trust/Societies/ Corporates of Senior Citizen Welfare",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-60-102-92-51": {
+   "label": "scheme",
+   "name": "Pension to Eunucns",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-60-102-98-51": {
+   "label": "scheme",
+   "name": "Old Age Samman Allowance Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-60-200-75-51": {
+   "label": "scheme",
+   "name": "Dr.Shyama Prasad Mukherjee Durghatna Sahayta Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-60-789-97-51": {
+   "label": "scheme",
+   "name": "Pension to Differently abled Persons for (Scheduled Castes)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-2235-60-789-98-51": {
+   "label": "scheme",
+   "name": "Financial assistance to Destitute Women and Widows (Scheduled Castes)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-4235-02-101-93-51": {
+   "label": "not_scheme",
+   "name": "Purchase of Institutional plot for construction of building of Directorate (Swaran Jayanti)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-16-4235-02-101-98-51": {
+   "label": "not_scheme",
+   "name": "G.I.B Panipat (Boys/Girls)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-2216-02-192-98-51": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Shehri Awas Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-2216-03-196-98-51": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Gramin Awas Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-3055-51-001-95-51": {
+   "label": "not_scheme",
+   "name": "Adoption of Automated Testing Stations to identify and scrap end-of-life vehicles",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-4059-60-051-64-51": {
+   "label": "not_scheme",
+   "name": "Construction of MLA Flats",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-4059-60-051-99-51": {
+   "label": "not_scheme",
+   "name": "Public Works",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-4216-01-106-76-51": {
+   "label": "not_scheme",
+   "name": "Swaran Jayanti scheme for residential complex/Transit flats at sub division level",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-4216-01-106-96-51": {
+   "label": "not_scheme",
+   "name": "Public Works",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-5053-60-052-99-51": {
+   "label": "not_scheme",
+   "name": "Purchase of Spare Parts,Air Crafts & Other Equipments",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-5053-60-102-99-51": {
+   "label": "not_scheme",
+   "name": "Maintenance of Aerodromes",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-5054-04-337-99-98": {
+   "label": "not_scheme",
+   "name": "Distt.Roads-Construction strengthening /widening under National Capital Region Scheme.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-5054-80-800-98-51": {
+   "label": "not_scheme",
+   "name": "Providing State Share for construction of New Railway Lines in Haryana State",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-5055-51-050-77-51": {
+   "label": "not_scheme",
+   "name": "Purchase of land and Consturction of building for Regulatory wing",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-5055-51-102-76-51": {
+   "label": "not_scheme",
+   "name": "Air Pollution Abatement Initiatives and Strengthening Institutional Structure as Purchase of EV Buses and Charging Stations under Clean Air Project for Sustainable Development- SPV Arjun",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-17-7055-51-190-99-51": {
+   "label": "not_scheme",
+   "name": "Loan to Haryana Rail Infrastructure Development Corporation (HRIDC)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-18-4220-60-101-97-51": {
+   "label": "not_scheme",
+   "name": "Payment of Plot alloted for the construction of Suchna Bhawan at Panchkula",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-18-4220-60-101-98-51": {
+   "label": "not_scheme",
+   "name": "Construction of War Memorial at Ambala Cantt Renamed as Construction of Azadi Ki Pratham Ladai Ka Shaheed Smarak at Ambala Cantt.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-18-4220-60-101-99-51": {
+   "label": "not_scheme",
+   "name": "Construction of Memorial at Kurukshetra in the memory of Late Sh. Guljari Lal Nanda",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2700-18-001-92-51": {
+   "label": "not_scheme",
+   "name": "Superintending Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2700-80-800-98-51": {
+   "label": "not_scheme",
+   "name": "Improvement,upgradation, operation and maintenance",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2810-51-101-98-51": {
+   "label": "scheme",
+   "name": "Installation of Solar Water Pumping System in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2810-51-104-99-51": {
+   "label": "not_scheme",
+   "name": "Research Design & Development in Renewable Energy",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2851-51-190-98-51": {
+   "label": "not_scheme",
+   "name": "Grant-in-aid to MEANS Council",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2851-51-190-99-51": {
+   "label": "not_scheme",
+   "name": "Grant-in-aid to Haryana Enterprises Promotion Centre (HEPC)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2852-07-202-87-51": {
+   "label": "scheme",
+   "name": "Subsidies/Incentives for the units set-up under Haryana Startup, Data Centre and IT and ESDM Policy",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2852-07-202-98-51": {
+   "label": "not_scheme",
+   "name": "Setting up of instrument Design Dev.and Facility Centre,Ambala Under UNDP",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2852-80-101-99-51": {
+   "label": "scheme",
+   "name": "Incentive for purchase and replacement of new three wheelers-electric vehicle under Clean Air Project for Sustainable Development- SPV ARJUN-N A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-2852-80-187-99-51": {
+   "label": "scheme",
+   "name": "Incetive for setting up charging station, promote use of DG sets across industries under Clean Air Project for sustainable Development-SPV ARJUN- NA",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-05-001-93-51": {
+   "label": "not_scheme",
+   "name": "Chief Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-07-001-93-51": {
+   "label": "not_scheme",
+   "name": "Chief Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-13-001-92-51": {
+   "label": "not_scheme",
+   "name": "Superintending Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-13-800-98-51": {
+   "label": "not_scheme",
+   "name": "Construction of Canal - Rehabilitation of Canal Network",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-15-001-88-51": {
+   "label": "not_scheme",
+   "name": "Pensionary Charges",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-15-001-92-51": {
+   "label": "not_scheme",
+   "name": "Superintending Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-16-001-88-51": {
+   "label": "not_scheme",
+   "name": "Pensionary Charges",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-16-001-91-51": {
+   "label": "not_scheme",
+   "name": "Executive Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-16-001-92-51": {
+   "label": "not_scheme",
+   "name": "Superintending Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-16-789-99-51": {
+   "label": "not_scheme",
+   "name": "Improvement in construction works and rehabilitation of Water Courses in Scheduled Castes Population in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-26-001-92-51": {
+   "label": "not_scheme",
+   "name": "Superintending Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4700-80-001-92-51": {
+   "label": "not_scheme",
+   "name": "Superintending Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-06-001-93-51": {
+   "label": "not_scheme",
+   "name": "Chief Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-07-001-89-51": {
+   "label": "not_scheme",
+   "name": "Special Revenue",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-07-001-91-51": {
+   "label": "not_scheme",
+   "name": "Executive Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-07-001-92-51": {
+   "label": "not_scheme",
+   "name": "Superintending Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-19-800-98-51": {
+   "label": "not_scheme",
+   "name": "Construction of Canals - Kaushalya Dam",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-22-001-89-51": {
+   "label": "not_scheme",
+   "name": "Speical Revenue",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-23-001-91-51": {
+   "label": "not_scheme",
+   "name": "Executive Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-25-001-88-51": {
+   "label": "not_scheme",
+   "name": "Pensionary Charges",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-25-001-89-51": {
+   "label": "not_scheme",
+   "name": "Special Revenue",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4701-26-101-99-51": {
+   "label": "not_scheme",
+   "name": "Water Secure Haryana (With World Bank Assistance Capital Works- N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4702-51-001-88-51": {
+   "label": "not_scheme",
+   "name": "Pensionary Charges",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4702-51-001-91-51": {
+   "label": "not_scheme",
+   "name": "Executive Engineer",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4711-01-201-99-51": {
+   "label": "not_scheme",
+   "name": "Flood Protection and Disaster Preparedness",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4711-01-789-99-51": {
+   "label": "not_scheme",
+   "name": "Flood Protection, Restoration and Disaster Management in Scheduled Castes population area in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4851-51-102-92-51": {
+   "label": "not_scheme",
+   "name": "Scheme for Small Industries Cluster Development",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-19-4851-51-102-94-51": {
+   "label": "scheme",
+   "name": "Performance Linked Outlay (PLO) for Industries (IND- PLO-CAP)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2215-01-003-99-51": {
+   "label": "not_scheme",
+   "name": "Information Education Communication Activities",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2217-80-001-88-51": {
+   "label": "not_scheme",
+   "name": "Build Capacity within ULBs for dust and waste management under Clean Air Project for sustainable Development_SPV ARJUN",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2217-80-191-94-51": {
+   "label": "not_scheme",
+   "name": "Grant in Aid to Haryana Shehri Vikas Pradhikaran for NCR satellite around Delhi.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2217-80-789-94-51": {
+   "label": "scheme",
+   "name": "Deen Dayal Upadhyaya Sewa Basti Utthaan",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2501-06-102-98-51": {
+   "label": "scheme",
+   "name": "Scheme for Grant Award to Best Performance self Help Groups (SHGs) promoted under Deen Dayal Antyodaya Yojana National Rural Livelihoods Mission ( DAY NRLM)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2505-02-101-94-51": {
+   "label": "scheme",
+   "name": "Scheme for delayed compensation and unemployment allowance under Mahatma Gandhi NREGA",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2505-60-188-99-51": {
+   "label": "not_scheme",
+   "name": "Development of Village Ponds renamed as Development/Restoration of Ponds",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2515-51-102-79-51": {
+   "label": "not_scheme",
+   "name": "Livestock waste Management through implementation of clean manure management practices under SPV ARJUN",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2515-51-102-83-51": {
+   "label": "not_scheme",
+   "name": "Awareness amongst village Youth Volunteers for Rural Development and remuneration to CPLOs",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2515-51-198-96-51": {
+   "label": "not_scheme",
+   "name": "Rural Infrastructure Development under State Finance Commission (SFC)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-2515-51-789-88-51": {
+   "label": "scheme",
+   "name": "Mahatma Gandhi Gramin Basti Yojna",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4059-01-051-54-51": {
+   "label": "not_scheme",
+   "name": "Purchase of Land and Construction office Building of Direcorate of ULB",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4215-01-102-86-51": {
+   "label": "scheme",
+   "name": "Compensation for Acquired Land for Rural and Urban Water Supply and Sewerage works",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4215-01-789-98-51": {
+   "label": "not_scheme",
+   "name": "Water supply to Scheduled Caste dominated habitation in Rural Area-N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4215-02-101-88-51": {
+   "label": "not_scheme",
+   "name": "Creation of Urban Infrastructure under Urban Infrastructure Development Fund (UIDF) of National Housing Bank.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4217-60-001-99-51": {
+   "label": "not_scheme",
+   "name": "Scheme for Creation/Purchase of Capital assets for Urban Local Bodies Department",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4217-60-051-87-51": {
+   "label": "not_scheme",
+   "name": "Grant in aid to Municipalities on the recommendation of State Finance Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4217-60-052-99-51": {
+   "label": "not_scheme",
+   "name": "Scheme for creation/purchase of Capital assets for Urban Local Bodies Department",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4217-60-789-99-51": {
+   "label": "not_scheme",
+   "name": "Grant in aid to Municipalities for SC Component for State Finance Commission Devolution",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4515-51-101-99-51": {
+   "label": "not_scheme",
+   "name": "Deen bandhu Haryana Gram Uday Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4515-51-102-98-51": {
+   "label": "not_scheme",
+   "name": "Live Stock waste Management through implementation of clean manure management practices under SPV ARJUN",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-4515-51-103-99-51": {
+   "label": "not_scheme",
+   "name": "Vidhayak Adarsh Nagar Evam Gram Yojana (VANEGY)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-20-6217-60-190-99-51": {
+   "label": "not_scheme",
+   "name": "Loans to Metroppolitan Development Authorities for deployment of e-buses under project for sustainable Development-SPV ARJUN",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-04-2506-51-103-99-97": {
+   "label": "not_scheme",
+   "name": "National Land Records Modernization Programme- Computerization of Registration",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-05-2055-51-115-99-51": {
+   "label": "not_scheme",
+   "name": "ASUMP(Main Plan)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2401-51-109-72-51": {
+   "label": "scheme",
+   "name": "National Mission on Natural Farming (NMNF)(60:40)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2401-51-109-77-51": {
+   "label": "scheme",
+   "name": "National Food Security Mission renamed as Food and Nutrition Security (FNS)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2401-51-109-77-98": {
+   "label": "scheme",
+   "name": "National Food Security Mission renamed as Food and Nutrition Security (FNS)-Oilseeds and Oil Palm",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2401-51-119-50-51": {
+   "label": "scheme",
+   "name": "Scheme for \"Silk Samagra\" integrated scheme for Development of Silk Industry (ISDSI)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2401-51-789-88-51": {
+   "label": "scheme",
+   "name": "Scheme for National Horticulture Mission for Scheduled Caste Farmers.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2403-51-101-60-51": {
+   "label": "scheme",
+   "name": "Scheme for Compensation against culling in notifiable diseases of animals under Livestock Health and Diseases Control (50:50)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2403-51-101-63-51": {
+   "label": "scheme",
+   "name": "Livestock health and disease control Renamed as Grant for vaccination livestock under Livestock health and disease control",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2403-51-102-65-51": {
+   "label": "scheme",
+   "name": "National Plan for Dairy Development",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2403-51-195-99-51": {
+   "label": "scheme",
+   "name": "National Livestock Mission Breed Development of Livestock & Poultry and Seminar (60:40)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2403-51-789-83-51": {
+   "label": "scheme",
+   "name": "National Livestock Mission Breed Development of Livestock & Poultry and Seminar for Scheduled Castes (SCSP) (60:40)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2403-51-789-85-51": {
+   "label": "scheme",
+   "name": "Scheme for compensation against culling in notifiable diseases of animals under Livestock Health and Disease Control (50:50)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2406-02-110-88-51": {
+   "label": "not_scheme",
+   "name": "Integrated Development of Wild Life Habitats",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-10-2406-02-110-91-51": {
+   "label": "not_scheme",
+   "name": "Strengthening, Expansion and Improvement of Sanctuaries",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-2202-02-107-89-51": {
+   "label": "scheme",
+   "name": "National Merits Scholarship",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-2202-02-789-94-51": {
+   "label": "not_scheme",
+   "name": "PM SHRI (PM Schools for Rising India) Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-2202-02-793-98-51": {
+   "label": "not_scheme",
+   "name": "Rashtriya Madhyamik Shiksha Abhiyan (RMSA)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-2235-02-102-61-51": {
+   "label": "scheme",
+   "name": "Anganwadi-cum-creche (Palna)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-2235-02-102-66-51": {
+   "label": "not_scheme",
+   "name": "Swachhata Action Plan (SAP) (60:40)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-2235-02-102-92-51": {
+   "label": "scheme",
+   "name": "Integrated Child Development Services Schemes (WCD)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-2236-02-101-89-51": {
+   "label": "scheme",
+   "name": "Scheme for Adolescent Girls",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-12-4235-02-102-99-51": {
+   "label": "not_scheme",
+   "name": "Construction of Anganwadi Centres",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-14-4210-03-105-93-51": {
+   "label": "not_scheme",
+   "name": "Construction works of New Government Medical College at Bhiwani",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-14-4210-04-107-99-51": {
+   "label": "not_scheme",
+   "name": "Strengthening of State Drug Requlatory System",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-01-102-96-51": {
+   "label": "scheme",
+   "name": "Monetary relief to the victims of Atrocities",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-01-277-68-51": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship to Scheduled Castes students and other-Component-I",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-01-277-99-51": {
+   "label": "scheme",
+   "name": "Post-Matric Scholarships to Scheduled Castes",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-01-800-84-51": {
+   "label": "not_scheme",
+   "name": "Publicity Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-01-800-88-51": {
+   "label": "not_scheme",
+   "name": "Encouragement awards to Panchayat for their outstanding work",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-01-800-89-51": {
+   "label": "scheme",
+   "name": "Mukhyamantri Samajik Samrasta Antarjatiya Vivah Shagun Yojna",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-03-277-90-51": {
+   "label": "not_scheme",
+   "name": "Construction of Hostel for OBC Girls(90:10)-N A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-2225-03-277-93-51": {
+   "label": "scheme",
+   "name": "Post Matric Scholarship for OBC, EBC and DNT Students (Component -II of PM-YASASVI)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-16-4225-01-190-99-51": {
+   "label": "not_scheme",
+   "name": "Share Capital & Matching assistance @ 1% & 3% for promotional activities recov. and eval. to Har. S/C Fin.Dev.Corp.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-17-2216-02-001-97-51": {
+   "label": "not_scheme",
+   "name": "Pardhan Mantri Awas Yojana-Urban 2.0 Capacity Building",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-17-2216-03-789-99-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (Rural SC)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-17-3055-51-001-96-51": {
+   "label": "not_scheme",
+   "name": "PM-Ebus Seva",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-17-4059-60-051-98-51": {
+   "label": "not_scheme",
+   "name": "Administration of Justice",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-17-4216-01-106-99-51": {
+   "label": "not_scheme",
+   "name": "Administration of Justice",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-19-2851-51-102-63-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Formalisation of Micro Food Processing Enterprises (PMFME)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-19-2851-51-102-71-51": {
+   "label": "not_scheme",
+   "name": "MSME Cluster Development",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2217-80-190-99-51": {
+   "label": "not_scheme",
+   "name": "Faridabad Smart City Limited",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2217-80-192-88-97": {
+   "label": "not_scheme",
+   "name": "Swachh Bharat Mission- Swachh Bharat Mission Solid Waste Management (SWM)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2217-80-192-88-98": {
+   "label": "not_scheme",
+   "name": "Swachh Bharat Mission- Swachh Bharat Mission Used Water Management (UWM)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2501-05-101-99-51": {
+   "label": "not_scheme",
+   "name": "Batch VI projects under Integrated Wasteland Development/Management Project under Watershed Component of Pradhan Mantri Krishi Sinchayee Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2501-06-101-99-99": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (N R L M / Aajeevika)-Normal Plan",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2501-06-789-99-51": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (N R L M/ Aajeevika)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2505-02-101-92-51": {
+   "label": "scheme",
+   "name": "Vikshit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin) (VB- G RAM G) Material & Administrative Compomemt- Normal",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2505-02-101-93-51": {
+   "label": "scheme",
+   "name": "Vikshit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin) (VB- G RAM G) Wage Component- Normal",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2505-02-789-98-51": {
+   "label": "scheme",
+   "name": "Vikshit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin) (VB- G RAM G) Wage Component- SCSP",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2515-51-101-81-51": {
+   "label": "not_scheme",
+   "name": "Rashtriya Gram Swaraj Abhiyan (R G S A)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-2515-51-106-96-51": {
+   "label": "not_scheme",
+   "name": "Scheme for Development of Minority under Pradhan Mantri Jan Vikas Karyakram (PMJVK)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-4215-01-101-91-51": {
+   "label": "not_scheme",
+   "name": "Implementation of AMRUT-II for water supply for Tier-2 Towns (The towns with population more than 1 lacs upto 10 lacs)-N A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-4215-01-101-93-51": {
+   "label": "not_scheme",
+   "name": "Implementation of AMRUT-II for Water Supply",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-4215-01-102-98-93": {
+   "label": "not_scheme",
+   "name": "Accelerated Rural Water Supply-NRDWP (Water Quality Monitoring & Surveillance WQMS) Renamed Jal Jeevan Mission (J J M) -WQMS",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-4215-01-102-98-94": {
+   "label": "not_scheme",
+   "name": "Accelerated Rural Water Supply-NRDWP-(Support Activities) Renamed Jal Jeevan Mission (JJM) - Support Activities",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-4215-01-102-98-99": {
+   "label": "scheme",
+   "name": "Accelerated Rural Water Supply-NRDWP- Coverage Central Renamed Jal Jeevan Mission (JJM) Coverage",
+   "how": "stratified sample, read by eye"
+  },
+  "P-02-20-4215-02-101-89-51": {
+   "label": "not_scheme",
+   "name": "Implementation of AMRUT-II for Sewerage",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-04-2245-80-102-93-51": {
+   "label": "not_scheme",
+   "name": "Capacity Building to Emergency Operations Center (EOC)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-04-2245-80-102-95-51": {
+   "label": "not_scheme",
+   "name": "Implementation of the Sandai Framework for Disaster risk Reduction (DRR)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-04-2506-51-103-99-99": {
+   "label": "not_scheme",
+   "name": "National Land Records Modernization Programme- Computerization of Land Records",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-04-5475-51-107-99-51": {
+   "label": "not_scheme",
+   "name": "Special Assistance to State for Capital Investment-N A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-05-2055-51-115-98-51": {
+   "label": "not_scheme",
+   "name": "ASUMP (HM Continggency)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-05-2070-51-106-98-51": {
+   "label": "not_scheme",
+   "name": "Revamping of Civil Defence",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-05-4055-51-207-94-51": {
+   "label": "not_scheme",
+   "name": "Improve infrastructure and equipment for Police",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-10-2403-51-102-76-51": {
+   "label": "not_scheme",
+   "name": "Scheme for Assistance to States for Conduct of Livestock Census-N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-10-2403-51-113-94-51": {
+   "label": "not_scheme",
+   "name": "Scheme for sample survey estimation of production of milk, wool, eggs and meat, fodder and grasses/assessment of development project (100%CSS)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-10-2403-51-195-98-51": {
+   "label": "scheme",
+   "name": "National Livestock Mission- Training & Assistance for Quality Fodder Seed Production (100%)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-10-2403-51-789-82-51": {
+   "label": "scheme",
+   "name": "National Livestock Mission- Training & Assistance for Quality Fodder for Scheduled Castes (SCSP) (100%)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-11-4425-51-108-74-51": {
+   "label": "not_scheme",
+   "name": "Share Capital to Primary Agriculture Cooperative Societies from National Cooperative Development Corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-11-4425-51-108-79-51": {
+   "label": "not_scheme",
+   "name": "Share Capital to Fruit & Vegetable Societies",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-11-4425-51-108-88-51": {
+   "label": "not_scheme",
+   "name": "Government contribution to the Share Capital of Marketing Co-operatives",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-12-2202-03-103-95-51": {
+   "label": "not_scheme",
+   "name": "Management, Monitoring, Evaluation and Research (MMER) Grant of RUSA (100:0)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-12-2235-02-102-60-51": {
+   "label": "scheme",
+   "name": "Scheme for care and support to victims under section 4&6 of the protection of children from sexual offences POCSO Act, 2012",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-12-2235-02-102-62-51": {
+   "label": "scheme",
+   "name": "Child Helpline",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-12-2235-02-102-70-51": {
+   "label": "scheme",
+   "name": "Scheme for Beti Bachao Beti Padhao",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-12-4235-02-103-94-51": {
+   "label": "not_scheme",
+   "name": "Construction of Working Women Hostels.",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-12-4235-02-103-96-51": {
+   "label": "not_scheme",
+   "name": "Construction of building setting up One Stop Crisis Centre for women Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-14-2211-51-003-95-51": {
+   "label": "not_scheme",
+   "name": "MPW Training School (Male), Rohtak",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-14-2211-51-101-98-51": {
+   "label": "not_scheme",
+   "name": "Sub Centres",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-14-2211-51-102-99-51": {
+   "label": "scheme",
+   "name": "Urban Family Welfare Services",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-15-2230-01-112-98-51": {
+   "label": "not_scheme",
+   "name": "Survey of Bonded Labour",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-15-2230-01-190-98-51": {
+   "label": "not_scheme",
+   "name": "(Grant-in-Aid)for registration of Unorganized workers on E-Shram Portal a National Database made by GOI",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-16-2235-03-102-99-51": {
+   "label": "scheme",
+   "name": "Family benefit scheme-N.A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-16-2235-60-102-95-51": {
+   "label": "scheme",
+   "name": "Pension to Differently Able Person",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-16-4235-02-101-92-51": {
+   "label": "not_scheme",
+   "name": "Accessible India Campaign sugamya Bharat Abhiyan (SIPDA)",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-17-2216-02-192-97-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana-Urban Beneficiary Led Construction- Enhancement (General)-N A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-17-5054-03-337-87-51": {
+   "label": "not_scheme",
+   "name": "Construction Stregthening/widening and Upgradation of roads under CRF",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-17-5054-03-902-51-51": {
+   "label": "not_scheme",
+   "name": "Deduct amount met out from CRF",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-20-2217-80-191-97-51": {
+   "label": "not_scheme",
+   "name": "Grant-in-Aid to Municipal Corporations on the recommendation of Central Finance Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-20-2217-80-192-93-51": {
+   "label": "not_scheme",
+   "name": "Grant-in-Aid to Muncipalities/Municipal Councils on the recommendation of Central Finance Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-20-2505-02-101-96-51": {
+   "label": "scheme",
+   "name": "Project UNNATI (MGNREGA) -Normal",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-20-4215-01-101-92-51": {
+   "label": "not_scheme",
+   "name": "Implementation of AMRUT-II for Water Supply - To meet out the cost of CWBPs, PMUs, DPRs, PIUs, PDMCs, IRMAs Capacity building",
+   "how": "stratified sample, read by eye"
+  },
+  "P-03-20-4215-02-101-87-51": {
+   "label": "scheme",
+   "name": "National Action for Mechanized Sanitation Ecosystem (NAMASTE) Scheme (100:0)-N A",
+   "how": "stratified sample, read by eye"
+  },
+  "P-01-10-2401-51-108-79-51": {
+   "label": "not_scheme",
+   "name": "Reimbursement of Market fee Plus GST under Price Support System to HAFED",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2401-51-108-81-51": {
+   "label": "scheme",
+   "name": "Scheme for Technology Mission on Sugarcane",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2401-51-111-88-51": {
+   "label": "scheme",
+   "name": "Haryana Fasal Suraksha Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2401-51-111-90-51": {
+   "label": "scheme",
+   "name": "Pradhan mantri Fasal Bima Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2401-51-119-63-51": {
+   "label": "scheme",
+   "name": "Scheme for Horticulture Crops Insurance in Haryana renamed as Mukhyamantri Bagwani Bima Yojana (MBBY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2401-51-190-96-51": {
+   "label": "scheme",
+   "name": "National Horticulture Mission (NHM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2401-51-190-99-51": {
+   "label": "scheme",
+   "name": "Bhavantar Bharpayee Yojana in Haryana State",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2401-51-789-89-51": {
+   "label": "scheme",
+   "name": "Scheme for providing implements/machinery on subsidy to the group of farmers and SC farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2403-51-104-86-51": {
+   "label": "scheme",
+   "name": "Bhed/Bakri (Sheep/Goat) Palak Utthan Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-10-2403-51-789-96-51": {
+   "label": "scheme",
+   "name": "Scheme for Special Livestock Insurance for schedule castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-11-2408-01-001-86-51": {
+   "label": "scheme",
+   "name": "Har Ghar, Har Grihni Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-11-2408-01-001-93-51": {
+   "label": "scheme",
+   "name": "Antyodaya Aahar Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-11-2425-51-107-76-51": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Dugdh Utpadak Protsahan Yojna in Haryana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-11-2425-51-108-97-51": {
+   "label": "scheme",
+   "name": "Subsidy to vegetable & fruit growers Cooperative Socities",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-11-2425-51-789-99-51": {
+   "label": "scheme",
+   "name": "Interest subsidy on loan advances to Scheduled Caste Memebers of Primary credit and Industrial Labour and Constuction Socities",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2202-01-109-84-51": {
+   "label": "scheme",
+   "name": "Monthly Stipend to BC-A students in Classes I-VIII",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2202-01-789-99-51": {
+   "label": "scheme",
+   "name": "Providing of free bicycle to SC boy Students in class VI",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2202-02-107-80-51": {
+   "label": "scheme",
+   "name": "Reimbursement of examination fees of BC students in the Board of School Education Bhiwani",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2202-02-107-82-51": {
+   "label": "scheme",
+   "name": "Monthly stipends for the welfare of grandson and granddaughters of freedom fighters",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2202-02-789-97-51": {
+   "label": "scheme",
+   "name": "Cash Award and Monthly Stipends to All Scheduled Caste Students in Classes 9th to 12th",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2202-03-789-97-51": {
+   "label": "scheme",
+   "name": "Providing of free Books to Scheduled Caste Students in Govt. Colleges",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2203-51-789-97-51": {
+   "label": "scheme",
+   "name": "Supply of Free Books for Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-12-2235-02-102-79-51": {
+   "label": "scheme",
+   "name": "Swarna Jayanti Puraskar Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-13-2204-51-104-52-99": {
+   "label": "scheme",
+   "name": "Sports Awards and Incentive Scheme-Normal Plan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-14-2210-01-110-65-51": {
+   "label": "scheme",
+   "name": "Devi Rupak Rashtriya Utthan Evam Parivar Kalyan Yojna-N.A",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-14-2210-03-789-99-51": {
+   "label": "scheme",
+   "name": "Jananee Suraksha Yojna for Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-14-2210-80-199-98-99": {
+   "label": "scheme",
+   "name": "National Health Mission- Assuring Total Anaemia Limit (ATAL) Abhiyaan Renamed as ATAL Swasthya Abhiyaan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-15-2230-03-190-97-51": {
+   "label": "scheme",
+   "name": "Guru Shishya Kaushal Samman Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2225-01-190-94-51": {
+   "label": "scheme",
+   "name": "Provision of Subsidy under National Safai Karmacharis Finance Development Coroperation (NSKFDC) assisted Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2225-01-190-96-51": {
+   "label": "not_scheme",
+   "name": "Administrative Subsidy to Haryana Scheduled Castes Finance and Development Corporation",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2225-01-283-99-51": {
+   "label": "scheme",
+   "name": "Dr.B.R Ambedkar Housing Navinikaran Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2225-03-190-99-51": {
+   "label": "not_scheme",
+   "name": "Subsidy for administrative expenditure to Haryana Backward Classes Kalyan Nigam",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2235-60-102-86-51": {
+   "label": "scheme",
+   "name": "Deen Dayal Lado Lakshmi Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2235-60-102-93-51": {
+   "label": "scheme",
+   "name": "Ladli (Social Security Pension Scheme )",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2235-60-102-94-51": {
+   "label": "scheme",
+   "name": "Rajiv Gandhi Pariwar Bima Yojna-N.A",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2235-60-102-95-51": {
+   "label": "scheme",
+   "name": "Pension to Differently Able Person",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2235-60-789-95-51": {
+   "label": "scheme",
+   "name": "Ladli (Social Security Pension Scheme) for scheduled castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-16-2235-60-789-99-51": {
+   "label": "scheme",
+   "name": "Old age Samman Allowance for Scheduled Caste",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-19-2851-51-102-64-51": {
+   "label": "scheme",
+   "name": "Incentive for Development of Industries under New Enterprises Promotion Policy 2015 (MSME)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2217-03-191-99-51": {
+   "label": "not_scheme",
+   "name": "Mukhyamantri Samagra Shahari Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2217-80-192-84-51": {
+   "label": "not_scheme",
+   "name": "Divya Nagar Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2217-80-192-90-51": {
+   "label": "scheme",
+   "name": "Scheme for Compensation of loss of commercial property of small shopkeepers because of any disasters",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2501-06-102-99-51": {
+   "label": "scheme",
+   "name": "Scheme for providing interest Subvention by Government of Haryana (IS GoH) to Support SHGs Promoted under DAY NRLM",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2505-01-702-88-99": {
+   "label": "not_scheme",
+   "name": "Swaran jayanti khand utthan Yojana-Normal Plan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2505-01-789-99-51": {
+   "label": "not_scheme",
+   "name": "Swaran jayanti khand utthan Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2515-51-102-80-51": {
+   "label": "not_scheme",
+   "name": "Scheme for State level Task Force under Swachh Bharat Mission Gramin",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2515-51-102-96-99": {
+   "label": "not_scheme",
+   "name": "Scheme for Swaran Jayanti Maha Gram Vikas Yojna (SMAGY)-Normal Plan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-01-20-2515-51-106-99-51": {
+   "label": "not_scheme",
+   "name": "Vidhayak Adarsh Nagar Evam Gram Yojana (SAGY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-109-73-51": {
+   "label": "scheme",
+   "name": "Paramparagat Krishi Vikas Yojana (PKVY) (60:40)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-109-78-51": {
+   "label": "scheme",
+   "name": "Sub-Mission on Agriculture Mechanization",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-109-80-51": {
+   "label": "scheme",
+   "name": "Scheme for Rashtriya Krishi Vikas Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-119-69-51": {
+   "label": "scheme",
+   "name": "Scheme for National Horticulture Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-789-82-51": {
+   "label": "scheme",
+   "name": "National Mission on Natural Farming for Scheduled castes (NMNF) (60:40)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-789-85-51": {
+   "label": "scheme",
+   "name": "National Food Security Mission for Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-789-85-98": {
+   "label": "scheme",
+   "name": "National Food Security Mission for Scheduled Castes-Oilseeds and Oil Palm",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2401-51-789-97-51": {
+   "label": "scheme",
+   "name": "Scheme for Rashtriya Krishi Vikas Yojna for Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2403-51-102-67-51": {
+   "label": "scheme",
+   "name": "Scheme for implementation of National Livestock Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2403-51-789-89-51": {
+   "label": "scheme",
+   "name": "Scheme for implementation of National Livestock Mission for SCs",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2405-51-101-72-51": {
+   "label": "scheme",
+   "name": "Development of Fresh Water Aquaculture Renamed as Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2406-01-101-96-51": {
+   "label": "scheme",
+   "name": "Agro- Forestry under National Mission for sustainable Agriculture (NMSA) Centrally Sponsored Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-10-2406-01-102-64-51": {
+   "label": "not_scheme",
+   "name": "National Afforestation Progamme (National Mission for a green India)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-12-2235-02-102-63-51": {
+   "label": "not_scheme",
+   "name": "Swachhta Action Plan (SAP) under Mission Vatsalya only",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-12-2235-02-102-73-51": {
+   "label": "scheme",
+   "name": "Integrated Child Protection Scheme (ICPS) Renamed as Mission Vatsalya",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-12-2236-02-101-88-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matru Vandana Yojana (P M M V Y)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-12-2236-02-789-96-51": {
+   "label": "scheme",
+   "name": "Financial Assistance To Scheduled Caste Women (Pradhan Mantri Matru Vandana Yojna)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-14-2210-04-101-81-51": {
+   "label": "not_scheme",
+   "name": "GIA to State Ayush Society, Haryana for National Ayush Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-14-2210-80-199-99-51": {
+   "label": "scheme",
+   "name": "Ayushman Bharat Haryana Health Protection Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-16-2225-03-277-95-51": {
+   "label": "scheme",
+   "name": "Pre-matric scholarship for OBC, EBC and DNT Students (Component -I of PM-YASASVI)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-17-2216-02-192-95-51": {
+   "label": "scheme",
+   "name": "Pardhan Mantri Awas Yojana-Urban 2.0 Affordable Housing in Partnership (General)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-17-2216-02-192-99-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (Urban Normal)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-17-2216-02-789-96-51": {
+   "label": "scheme",
+   "name": "Pardhan Mantri Awas Yojana-Urban 2.0 Affordable Housing in Partnership (SC)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-17-2216-02-789-99-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (Urban SC)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-17-2216-03-196-99-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (Rural Normal)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-19-2705-51-190-94-51": {
+   "label": "scheme",
+   "name": "Implementation of Pradhan Mantri Krishi Sinchayee Yojana-Per Drop More Crop",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-19-2705-51-789-97-51": {
+   "label": "scheme",
+   "name": "Implementation of Pradhan Mantri Krishi Sinchayee Yojana \"Per Drop More Crop\"",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2217-80-004-99-51": {
+   "label": "not_scheme",
+   "name": "Atal Mission for Rejuvenation and Urban Transformation 2.0 (AMRUT-2.0)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2217-80-192-82-51": {
+   "label": "scheme",
+   "name": "Deendayal Jan Aajeevika Yojana (Shehari)-N A",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2217-80-192-86-51": {
+   "label": "not_scheme",
+   "name": "New Urban Renewal Mission (AMRUT)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2217-80-192-88-96": {
+   "label": "not_scheme",
+   "name": "Swachh Bharat Mission- Swachh Bharat Mission IEC & Behaviour Change (IEC&BC)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2217-80-192-88-99": {
+   "label": "scheme",
+   "name": "Swachh Bharat Mission- Swachh Bharat Mission (IHHL/CT/PT/ Aspirational toilets)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2501-06-101-97-51": {
+   "label": "scheme",
+   "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (NRLM, DDU-GKY) (Project, Admn.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2501-06-789-98-51": {
+   "label": "scheme",
+   "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (NRLM, DDU-GKY) (Project, Admn.) for SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2515-51-102-93-99": {
+   "label": "scheme",
+   "name": "Scheme for Sanitation under Swachh Bharat Mission (Gramin)-Normal Plan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-02-20-2515-51-789-98-51": {
+   "label": "scheme",
+   "name": "Scheme for Sanitation under Swachh Bharat Mission (Gramin)- for Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-03-10-2401-51-190-98-51": {
+   "label": "scheme",
+   "name": "Sub-Mission on Seed & Planting Material (SMSP) under National Mission on Agriculture extension and Technology (NMAET)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-03-12-2202-02-109-94-51": {
+   "label": "not_scheme",
+   "name": "Area Incentive Programme for Educationaly Backward Minority",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-03-15-2230-03-190-99-51": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Kaushal Vikas Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-03-16-2225-01-793-77-97": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM- AJAY)-Adarsh Gram",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-03-16-2225-01-793-77-99": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM- AJAY)-Grant in Aid Component",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "P-03-16-2235-60-102-98-51": {
+   "label": "scheme",
+   "name": "Old Age Samman Allowance Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  }
+ },
+ "census": "Every row scoring 4 or more carries a hand label, so precision at the publishing bar is a COUNT and not an estimate."
+}

@@ -682,7 +682,7 @@ def classifier_note(cls, floor_sentence):
             f'a floor and never a total. {floor_sentence}')
 
 
-def page_state(key, state, d, leg_row):
+def page_state(key, state, d, leg_row, cls=None):
     """One state's budget book as published, for a state with no classifier yet.
 
     This is the register's weaker claim rendered in full: these are the lines the state
@@ -728,6 +728,27 @@ def page_state(key, state, d, leg_row):
 
     body = "".join(line(r) for r in rows)
 
+    # A classified state says how its lines were judged; an unclassified one says that they
+    # were not. Both are on the same page because the page is the state's book either way.
+    scored = bool((cls or {}).get("all_entries"))
+    if scored:
+        v = ((cls or {}).get("validation") or {}).get("at_publish_threshold_census") or {}
+        scored_note = (
+            f'{num(cls.get("classified_scheme"))} of these {num(len(rows))} lines clear the '
+            f'bar this register uses before it will call a line a scheme, and every one at '
+            f'or above that bar carries a hand label, so its precision is a count rather '
+            f'than an estimate: {v.get("precision", 0):.1%} on '
+            f'{num(v.get("rows"))} rows, with {num(v.get("not_schemes"))} named errors. '
+            f'The rest of the book is on this page because {e(state)} published it, not '
+            f'because this register calls it anything.')
+    else:
+        scored_note = (
+            "A classifier separates a scheme from a budget head, and it is built per state "
+            "and validated against hand labels, because every state publishes different "
+            f"evidence. {e(state)} does not have one yet. Until it does, this register will "
+            "list what the state names and will not say of any row that a portal is hiding "
+            "it: that is an accusation and it needs counted precision behind it.")
+
     checks = ""
     if checked:
         checks = (f"The book prints its own totals and this reading agrees with "
@@ -763,12 +784,8 @@ hidden anywhere on this site.</p>
 </div>
 
 <div class="warnbox">
-  <b>Why there is no score against any of these</b>
-  A classifier separates a scheme from a budget head, and it is built per state and
-  validated against hand labels, because every state publishes different evidence.
-  {e(state)} does not have one yet. Until it does, this register will list what the state
-  names and will not say of any row that a portal is hiding it: that is an accusation and
-  it needs counted precision behind it.
+  <b>{"How these lines are judged" if scored else "Why there is no score against any of these"}</b>
+  {scored_note}
   {'<p style="margin:8px 0 0">' + e(leg_row.get("why") or "") + '</p>' if leg_row else ''}
 </div>
 
@@ -1435,7 +1452,7 @@ def unify(checks, registry, classification):
 #
 # Rows already matched to a myScheme record are skipped, because those schemes have a page.
 LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
-               "maharashtra": 2, "odisha": 4, "westbengal": 3}
+               "maharashtra": 2, "odisha": 4, "westbengal": 3, "haryana": 3}
 STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
             "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
             "maharashtra": "Maharashtra", "odisha": "Odisha",
@@ -3013,15 +3030,18 @@ def build():
     # and are shown inside it.
     os.makedirs(os.path.join(OUT, "state"), exist_ok=True)
     leg_by_state = {r["state"]: r for r in (load("data/legibility.json", {}) or {}).get("states", [])}
+    # EVERY state gets one, not only the unclassified ones. A classifier decides which
+    # lines this register will call schemes; it does not make the rest of the state's book
+    # stop existing. Haryana's Plan Memo names 970 lines and 184 clear the listing bar, and
+    # the other 786 are still what Haryana published.
     for key, st_name in sorted(STATE_OF.items()):
-        if (load(f"data/{key}/classification.json", {}) or {}).get("all_entries"):
-            continue
         sd = load(f"data/{key}/schemes.json", {}) or {}
         if not sd.get("entries"):
             continue
         w(os.path.join("state", f"{key}.html"), shell(
             f"{st_name}'s budget", f"/state/{key}",
-            page_state(key, st_name, sd, leg_by_state.get(st_name) or {}),
+            page_state(key, st_name, sd, leg_by_state.get(st_name) or {},
+                       load(f"data/{key}/classification.json", {}) or {}),
             desc=(f"{len(sd['entries']):,} lines from {st_name}'s own budget, at the level "
                   f"the state files schemes at, with its codes, heads of account and "
                   f"provisions."),
