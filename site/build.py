@@ -270,7 +270,11 @@ def shell(title, active, body, depth=0, desc="", canon=""):
 <meta property="og:description" content="{e(desc[:158])}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Schemes Register">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{SITE_BASE}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Schemes Register: every scheme any government source names, and what each one fails to say">
+<meta name="twitter:card" content="summary_large_image">
 {f'<link rel="canonical" href="{e(canon)}">' if canon else ""}
 {f'<meta property="og:url" content="{e(canon)}">' if canon else ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2943,6 +2947,10 @@ def build():
         shutil.rmtree(OUT)
     os.makedirs(os.path.join(OUT, "scheme"), exist_ok=True)
     shutil.copy(os.path.join(HERE, "theme.css"), os.path.join(OUT, "theme.css"))
+    # The link-preview card. Generated once with PIL and committed rather than built here,
+    # because the site otherwise needs nothing but the standard library and pdftotext, and
+    # a card that carries no changing numbers does not need rebuilding every month.
+    shutil.copy(os.path.join(HERE, "og.png"), os.path.join(OUT, "og.png"))
 
     # Cloudflare Pages defaults every response to max-age=0, must-revalidate, so a reader
     # moving between scheme pages re-validates the stylesheet on every one. This register
@@ -2978,6 +2986,9 @@ def build():
                              else ("/" + f[:-5], "/" + f)))
             +             "/theme.css\n"
             "  Cache-Control: public, max-age=31536000, immutable\n"
+            "\n"
+            "/og.png\n"
+            "  Cache-Control: public, max-age=604800\n"
             "\n"
             "/rows.json\n"
             "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"

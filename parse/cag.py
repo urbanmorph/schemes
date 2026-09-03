@@ -70,31 +70,42 @@ BOILER = [
     r"^\d{1,3}\s+(?=[A-Za-z])",                       # a leading serial number
     r"^audit\s+report\s*(?:\([a-z ]+\))?\s*",        # "Audit Report (Civil) ..."
     r"^the\s+",
-    r"^(?:no\.?\s*)?[\dIVXL]+\s+of\s+(?:the\s+year\s+)?\d{4}\s*[:\-]?\s*",
+    # "No. 24 Part 1 of 2015" as well as "No. 24 of 2015".
+    r"^(?:no\.?\s*)?[\dIVXL]+(?:\s+part\s+[\dIVXL]+)?\s+of\s+(?:the\s+year\s+)?\d{4}"
+    r"\s*[:\-]?\s*",
     r"^of\s+(?:the\s+year\s+)?\d{4}\s*[:\-]?\s*",
     # "andd" is the catalogue's own typo and it defeated the whole clause.
-    r"^(?:of\s+)?the\s+comptroller\s+an[d]{1,3}\s+auditor\s+general\s+of\s+india\s*",
+    # "andd" is the catalogue's own typo and "&" its own abbreviation; both defeated the
+    # clause when it spelled out "and".
+    r"^(?:of\s+)?(?:the\s+)?comptroller\s+(?:an[d]{1,3}|&)\s+auditor\s+general\s+of\s+india"
+    r"(?:\s*[,\-]?\s*(?:on|for))?\s*",
     r"^(?:\(c\s*&\s*ag\)|c\s*&\s*ag)(?:\s+of\s+india)?\s*(?:on|for)?\s*",
     r"^(?:on|for|regarding|of)\s+",
     # Compound audit types: "Performance and Compliance Audit on", "Performance and
     # Financial Audit on". One type at a time left "Performance and Financial Audit on
     # Civil of" as a scheme name.
-    r"^(?:(?:performan?ce|compliance|financial|thematic)\s*(?:,|and|&)?\s*)+audit\s+"
+    r"^(?:(?:performan?ce|compl[ai]{2}nce|financial|thematic)\s*(?:,|and|&)?\s*)+audit\s+"
     r"(?:report\s+)?(?:on|of)?\s*",
     r"^(?:union|state)\s+government\s*[,\-]?\s*",
+    # "Union Revenue Performance Audit Indirect Taxes Customs" puts the government and the
+    # sector in front of the audit type, so neither anchored rule above reaches it.
+    r"^(?:union|state)\s+\w+\s+(?:performan?ce|compl[ai]{2}nce|financial|thematic)\s+"
+    r"audit\s*(?:report\s+)?(?:on|of)?\s*",
     r"\s*(?:for\s+)?the\s+(?:year|period)\s+ended\s+.*$",
     # A trailing report number is the catalogue's filing, never part of a subject.
     r"\s*[,\.]?\s*report\s+no\.?\s*[\dIVXL]+\s+of\s+\d{4}.*$",
     r"\s*[,\-]?\s*government\s+of\s+[a-z &]+$",
     r"\s+reports?\s+of\s+.*$",
     r"\s+union\s+government\s*.*$",
+    # The audit type also comes LAST: "Public Debt Management Performance Audit".
+    r"\s+(?:performan?ce|compl[ai]{2}nce|financial|thematic|social)\s+audit\s*$",
     # A dangling preposition is what is left when the government name after it was
     # stripped: "Ordnance Equipment Group of Factories of".
     r"\s+(?:of|on|for|in|and|the)\s*$",
     # An audit type can sit after a parenthetical or a dash rather than at the front:
     # "(Ministry of X), Performance Audit on Functioning of ...". Anchored to a separator
     # so it cannot eat the word Performance out of a scheme's own name.
-    r"^.*?[\),\u2013\u2014\-]\s*(?:(?:performan?ce|compliance|financial|thematic)\s*"
+    r"^.*?[\),\u2013\u2014\-]\s*(?:(?:performan?ce|compl[ai]{2}nce|financial|thematic)\s*"
     r"(?:,|and|&)?\s*)+audit\s+(?:report\s+)?(?:on|of)?\s*",
 ]
 NOT_A_SUBJECT = re.compile(
@@ -103,7 +114,8 @@ NOT_A_SUBJECT = re.compile(
     r"|autonomous\s+bodies?|psus?|performance|compliance|direct\s+taxes?"
     r"|indirect\s+taxes?|goods\s+and\s+services\s+tax|gst"
     r"|state\s+finances?|general\s+purpose\s+financial|railways?\s+finances?"
-    r"|revenue\s+receipts?|appropriation|audit\s+report(?:\s*\([a-z ]+\))?)"
+    r"|revenue\s+receipts?|appropriation|audit\s+report(?:\s*\([a-z ]+\))?"
+    r"|state\s+finances?\s+audit\s+report[\s\d\-]*[a-z ]*)"
     r"(?:\s*(?:and|,|&)\s*)?)+"
     r"(?:\s*(?:sector|sectors|finances?|undertakings?|departments?|institutions?|"
     r"bodies|accounts?|audit|receipts?|expenditure)s?)*\s*$", re.I)
