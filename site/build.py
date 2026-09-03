@@ -14,6 +14,7 @@ gets a notation rather than a gap.
 """
 
 import argparse
+import collections
 import hashlib
 import html
 import json
@@ -1106,12 +1107,12 @@ _M = _load_match()
 probably_same, _m_tokens = _M.probably_same, _M.tokens
 _m_skeleton, _m_acronyms = _M.skeleton, _M.acronyms
 
+# The four national sources. Every state is added to this from STATE_OF below, so a state
+# cannot be listed on the site and missing from the badge that says where its row came
+# from: keeping two hand-written lists is how Delhi reached the register and crashed the
+# build on a KeyError.
 SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
-                "outcome": "Outcome Budget", "dbt": "DBT Bharat",
-                "karnataka": "Karnataka Budget", "andhra": "Andhra Pradesh Budget",
-                "kerala": "Kerala Budget", "tamilnadu": "Tamil Nadu Budget",
-                "maharashtra": "Maharashtra Budget", "odisha": "Odisha Budget",
-                "westbengal": "West Bengal Budget"}
+                "outcome": "Outcome Budget", "dbt": "DBT Bharat"}
 
 
 def slug_for(name):
@@ -1188,7 +1189,63 @@ LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
 STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
             "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
             "maharashtra": "Maharashtra", "odisha": "Odisha",
-            "westbengal": "West Bengal"}
+            "westbengal": "West Bengal", "telangana": "Telangana",
+            "punjab": "Punjab", "jharkhand": "Jharkhand", "tripura": "Tripura",
+            "delhi": "Delhi", "haryana": "Haryana", "uttarakhand": "Uttarakhand",
+            "uttarpradesh": "Uttar Pradesh"}
+
+SOURCE_LABEL.update({k: f"{v} Budget" for k, v in STATE_OF.items()})
+
+
+# A state with no classifier is listed from its own budget book and makes NO claim about
+# which of its rows are schemes. That is the two-bar principle applied to the code rather
+# than only described in the prose: for eight states this file required a classifier before
+# it would list anything at all, which gated the weak claim behind the strong claim's
+# machinery and left 16,689 reconciled budget lines invisible.
+#
+# The claims are genuinely different sizes. "Punjab's budget names this" needs Punjab's
+# budget and nothing else. "Punjab funds this and no portal lists it" is an accusation and
+# needs a classifier with counted precision. The first is publishable today and the second
+# is not, and conflating them cost the register two thirds of what it had read.
+#
+# What an unclassified row must therefore never do is call itself a scheme. Every one of
+# these states files establishment heads at the same level as schemes and every one of
+# their parsers says so in its own caveat; that caveat is carried onto the page.
+#
+# One field name per state, because the states publish different things and a common
+# schema would mean publishing the poorest common denominator. The fallbacks are in the
+# order the states are most specific: a named department beats a demand number.
+FIELD = {
+    "ident": ("key", "code", "hoa", "narrative_code"),
+    # Deliberately NOT demand or part. Those are numbers, and a column headed Department
+    # showing "1" is worse than one showing nothing: it looks like data. Uttarakhand
+    # publishes no department against a scheme at all and gets a blank, which is true.
+    "department": ("department", "departments", "group", "minor_head_name"),
+    "purpose": ("purpose",),
+    "sector": ("sector",),
+    "heads": ("hoas", "head_of_account", "hoa", "major_head"),
+    "books": ("books", "statements", "grants", "demands"),
+}
+
+
+def field(row, which):
+    """First populated field from the fallback list, as a scalar or a list."""
+    for k in FIELD[which]:
+        v = row.get(k)
+        if v in (None, "", [], {}):
+            continue
+        if isinstance(v, (list, tuple)):
+            return [str(x) for x in v if x not in (None, "")]
+        # Always a string. A state that files its schemes under a numbered demand hands
+        # back an int here, and one int among several thousand strings sorts the whole
+        # organisation index into a TypeError at build time.
+        return str(v)
+    return None
+
+
+def one(row, which):
+    v = field(row, which)
+    return (v[0] if v else None) if isinstance(v, list) else v
 
 
 # What a state writes when it is paying its share of a CENTRAL scheme. "(60% Swachh Bharat
@@ -1209,6 +1266,77 @@ def strip_css(name):
     return re.sub(r"\s+", " ", n).strip(" -:()")
 
 
+# How many ranked candidates a name is compared against before the register decides it is
+# new. Measured, not guessed: at 40 the whole build takes about as long as it did before
+# any of this, and raising it to 200 changed no verdict on the 16,689 rows the eight
+# unclassified states add.
+CAND_CAP = 40
+
+
+def unclassified_state(load, key, state, already_held, sectors):
+    """A state read but not yet classified, listed straight from its own budget book.
+
+    No score, no verdict, and no claim that a row is a scheme: `classified` stays None and
+    the page carries the state's own caveat instead of a classifier's arithmetic. What IS
+    claimed is exactly what the state published, which is the whole of the listing bar.
+
+    Rows the register already holds are still dropped, by the same matcher the classified
+    states use. A row matching a myScheme record is that scheme and gets no second page,
+    and this is the only place the two paths must agree: a state where dedup ran on a
+    classifier flag and one where it ran on the matcher would double-count schemes across
+    the register's own total.
+    """
+    d = load(f"data/{key}/schemes.json", {}) or {}
+    rows = d.get("entries") or []
+    caveat = d.get("caveat")
+    out = []
+    for r in sorted(rows, key=lambda x: str(x.get("key") or x.get("code") or x.get("name"))):
+        name = (r.get("name") or "").strip()
+        if len(name) < 5:
+            continue
+        if CSS_MARK.search(name):
+            bare = strip_css(name)
+            if not bare or already_held(bare):
+                continue
+        elif already_held(name):
+            continue
+        ident = one(r, "ident")
+        heads = field(r, "heads")
+        out.append({
+            "name": name,
+            "slug": slug_for(f"{state} {name} {ident or ''}"),
+            "on_myscheme": False,
+            "checks": None,
+            "sources": [key],
+            "level": "State or UT",
+            "level_value": "state",
+            "org": one(r, "department") or "",
+            "category": sectors.get(f"{key}|{r.get('key') or r.get('code')}"),
+            "state": [state],
+            "audience": None,
+            "beneficiaries": [],
+            "be_cr": round(r["be_lakh"] / 100, 2) if r.get("be_lakh") else None,
+            "demand_no": None,
+            "statement": None,
+            "classified": None,
+            "state_source": {
+                "state": state, "code": ident, "purpose": one(r, "purpose"),
+                "sector": one(r, "sector"),
+                "books": field(r, "books") or [],
+                "heads": heads if isinstance(heads, list) else ([heads] if heads else []),
+                "score": None, "evidence": [], "publishable": False, "bar": None,
+                # The two fields that make this row honest about what it is.
+                "unclassified": True,
+                "caveat": caveat,
+                # Uttar Pradesh publishes in Hindi and in nothing else, so its name is
+                # Devanagari and the romanisation is what an English reader can search.
+                "name_latin": r.get("name_latin"),
+            },
+            "detail": {},
+        })
+    return out
+
+
 def state_entries(load, known_names=(), sectors=None):
     sectors = sectors or {}
     # A token index, because 554 centrally sponsored shares against 5,451 held schemes is
@@ -1223,15 +1351,35 @@ def state_entries(load, known_names=(), sectors=None):
             idx.setdefault(k, set()).add(i)
 
     def already_held(name):
-        cand = set()
-        for k in (set(_m_tokens(name)) | {_m_skeleton(t) for t in _m_tokens(name)}
-                  | {a for a in _m_acronyms(name) if len(a) >= 5}):
-            cand |= idx.get(k, set())
-        return any(probably_same(name, known[i])[0] for i in sorted(cand))
+        """Is this state row a scheme the register already holds under another name?
+
+        Candidates are RANKED by how many index keys they share and then capped, which is
+        the difference between this finishing and not. A word like development or scheme or
+        yojana is in thousands of names, so a bare union of the index buckets hands back
+        several thousand candidates for an ordinary row, and 16,689 rows against that is
+        tens of millions of calls to a string-similarity function. The build did not finish
+        in ten minutes.
+        
+        The cap is safe in the direction that matters. Every rule in probably_same that can
+        fire needs more than one word in common: containment needs all the content words of
+        the shorter name, the skeleton rule needs two skeletons to line up, and the acronym
+        rules need a written acronym, which is itself an index key. A pair sharing exactly
+        one common key is a pair the comparator was going to reject.
+        """
+        keys = (set(_m_tokens(name)) | {_m_skeleton(t) for t in _m_tokens(name)}
+                | {a for a in _m_acronyms(name) if len(a) >= 5})
+        hits = collections.Counter()
+        for k in keys:
+            hits.update(idx.get(k, ()))
+        ranked = [i for i, n in hits.most_common(CAND_CAP) if n >= 2]
+        return any(probably_same(name, known[i])[0] for i in ranked)
 
     out = []
     for key, state in sorted(STATE_OF.items()):
         cls = load(f"data/{key}/classification.json", {}) or {}
+        if not cls.get("all_entries"):
+            out += unclassified_state(load, key, state, already_held, sectors)
+            continue
         bar = LISTING_BAR[key]
         matched_flag = f"in_myscheme_{key}"
         for r in sorted(cls.get("all_entries") or [], key=lambda x: str(x.get("key") or x.get("hoa") or x.get("name"))):
@@ -2106,14 +2254,39 @@ def state_block_for(entry):
         if st.get("books"):
             bits.append(f'<tr><td>Named in</td><td>{e(", ".join(st["books"]))}</td>'
                         f'<td class="muted">which of the state&rsquo;s books list it</td></tr>')
+        if st.get("name_latin"):
+            bits.insert(0, f'<tr><td>Romanised</td><td>{e(st["name_latin"])}</td>'
+                           f'<td class="muted">derived by transliteration, not translation: '
+                           f'a change of script that makes no claim about meaning</td></tr>')
         why = "; ".join(w for _, w in (st.get("evidence") or [])[:3])
-        strength = ("It also clears the higher bar this register uses before saying a scheme "
-                    "is hidden from citizens, and it is named on /divergence."
-                    if st.get("publishable") else
-                    "It does NOT clear the higher bar this register uses before saying a "
-                    "scheme is hidden from citizens, so it is listed here and not named "
-                    "there. Listing a budget head as a scheme is an annoyance; naming one as "
-                    "hidden would be a false accusation, and the two are not the same claim.")
+        if st.get("unclassified"):
+            # No classifier has run on this state, so there is no score and no verdict, and
+            # the page must not imply either. What the row asserts is the whole of what can
+            # be asserted: the state's budget names this, at the level the state files
+            # schemes. The caveat is the state parser's own words, not a paraphrase.
+            judged = f"""
+    <b>This is a budget line the state names, and nothing here calls it a scheme</b>
+    No classifier has been built for {e(st["state"])} yet, so this register makes the
+    weaker of its two claims about this row: {e(st["state"])}&rsquo;s own budget names it,
+    at the level that state files schemes at. It does not say the row is a scheme a citizen
+    can apply to, and it does not appear among the schemes named as hidden on
+    /divergence. Naming a directorate as a hidden scheme would be a false accusation and
+    that bar is not this one.
+    {'<p style="margin:8px 0 0">' + e(st["caveat"]) + '</p>' if st.get("caveat") else ''}"""
+        else:
+            strength = ("It also clears the higher bar this register uses before saying a "
+                        "scheme is hidden from citizens, and it is named on /divergence."
+                        if st.get("publishable") else
+                        "It does NOT clear the higher bar this register uses before saying a "
+                        "scheme is hidden from citizens, so it is listed here and not named "
+                        "there. Listing a budget head as a scheme is an annoyance; naming one "
+                        "as hidden would be a false accusation, and the two are not the same "
+                        "claim.")
+            judged = f"""
+    <b>How this was judged a scheme rather than a budget head</b>
+    A state budget book lists colleges, directorates and building heads beside schemes.
+    This row scored {st.get("score")} on published signals: {e(why) or "see the data"}.
+    {strength}"""
         state_block = f"""
 <section class="sec">
   <h2>What {e(st["state"])} publishes about this</h2>
@@ -2121,11 +2294,7 @@ def state_block_for(entry):
     record of it</div>
   {'<p class="prose">' + e(st["purpose"]) + '</p>' if st.get("purpose") else ''}
   <div class="tscroll"><table class="prov">{''.join(bits)}</table></div>
-  <div class="warnbox">
-    <b>How this was judged a scheme rather than a budget head</b>
-    A state budget book lists colleges, directorates and building heads beside schemes.
-    This row scored {st.get("score")} on published signals: {e(why) or "see the data"}.
-    {strength}
+  <div class="warnbox">{judged}
   </div>
 </section>"""
     return state_block

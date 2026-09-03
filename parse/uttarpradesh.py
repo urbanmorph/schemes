@@ -539,6 +539,15 @@ def run(date=None):
                 "names, 'Marriage Grant Scheme' and 'Widow Pension', and no transliteration "
                 "reaches those; matching them would be translation, which this register "
                 "does not do. A third of myScheme's Uttar Pradesh list is one or the other."),
+            "english_written_in_devanagari": (
+                "A limitation with no fix inside transliteration. Uttar Pradesh writes "
+                "English loanwords in Devanagari, and they come back romanised rather than "
+                "restored: प्रोजेक्ट टाइगर is projekt taigar, not Project Tiger. The "
+                "skeleton folds vowels, so taigar and tiger agree, but projekt and project "
+                "do not: Devanagari क is k and English spells the same sound c. Restoring "
+                "the English spelling would be translation, or a loanword dictionary, and "
+                "this register does neither. Names of this shape will not join, and the "
+                "romanisation printed beside them is honest about what it is."),
             "defeated_by_a_typo_in_the_portal": (
                 "उत्तर प्रदेश मुख्यमंत्री बाल सेवा योजना matches 'Uttar Pradesh "
                 "Mukhyamantri Bal Seva Yojana' on all five content words and does NOT match "
