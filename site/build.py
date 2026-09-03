@@ -31,7 +31,11 @@ ROOT = os.path.dirname(HERE)
 OUT = os.path.join(HERE, "_out")
 
 # Set this when the site gets a home. Used only for sitemap and canonical URLs.
-SITE_BASE = os.environ.get("SITE_BASE", "https://schemes.pages.dev").rstrip("/")
+# The host this register is actually served from. It was schemes.pages.dev, which is not
+# this site: every one of the 23,958 URLs in sitemap.xml, the Sitemap line in robots.txt
+# and the url column of schemes.csv pointed at a domain that does not serve this register.
+# A sitemap is an instruction to a crawler and that one sent it somewhere else entirely.
+SITE_BASE = os.environ.get("SITE_BASE", "https://india-schemes.pages.dev").rstrip("/")
 
 ISSUE_URL = "https://github.com/urbanmorph/schemes/issues/new"
 
@@ -265,6 +269,10 @@ def shell(title, active, body, depth=0, desc="", canon=""):
 <meta property="og:title" content="{e(title)} &middot; The Schemes Register">
 <meta property="og:description" content="{e(desc[:158])}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="The Schemes Register">
+<meta name="twitter:card" content="summary">
+{f'<link rel="canonical" href="{e(canon)}">' if canon else ""}
+{f'<meta property="og:url" content="{e(canon)}">' if canon else ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
@@ -1885,6 +1893,7 @@ def index_section(entries):
     r0 = {
         "shown": f"{len(entries):,}",
         "noms": f"{len(entries) - r0_src['myscheme']:,}",
+        "unjudged": f"{sum(1 for x in entries if x.get('href')):,}",
         # Expressed the same way as the table's Score column beside it. A rail reading
         # "6 of 9" next to a column reading 67 makes a reader work out that they are the
         # same measure.
@@ -1967,8 +1976,19 @@ def index_section(entries):
         ])
         rows += (f'<tr data-p="{(c or {}).get("passed", -1)}"'
                  + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
+                 # A row from a state with no classifier. Marked in the DOM so the rail
+                 # can say how much of "not on myScheme" is a budget line carrying no
+                 # verdict rather than a scheme this register says is hidden.
+                 + (' data-u="1"' if e_.get("href") else "")
                  + '>'
-                 f'<td><a href="scheme/{e(slug)}">{e(e_["name"])}</a>{acr}</td>'
+                 # Rows that live on a state register page link there. This link used to be
+                 # scheme/<slug> for every row, and once those rows stopped getting a page
+                 # of their own that was 15,108 links to nothing. Cloudflare Pages answers a
+                 # missing path with the index page and HTTP 200, so nothing 404s and every
+                 # one of them silently served a reader the whole 10 MB register instead of
+                 # the row they clicked.
+                 f'<td><a href="{e(e_.get("href") or ("scheme/" + str(slug)))}">'
+                 f'{e(e_["name"])}</a>{acr}</td>'
                  # Sector where the source badges used to be. Which sources name a scheme is
                  # audit metadata and belongs on its page; what the scheme is FOR is what a
                  # reader scanning 7,370 rows is looking for. The badges still drive the
@@ -2019,7 +2039,13 @@ def index_section(entries):
 <aside class="wrail" aria-label="Statistics for the current selection">
   <div class="railhd">This selection</div>
   <div class="railbig"><span id="rShown">{n:,}</span><span class="railof">of {n:,}</span></div>
-  <div class="railrow"><span><span class="lg">Not on myScheme</span><span class="sm">off-portal</span></span><b id="rNoMs">{r0["noms"]}</b></div>
+  <div class="railrow" title="These rows are absent from myScheme. That is not the same as
+    this register saying a portal hides them: see the row below."><span><span class="lg">Not on
+    myScheme</span><span class="sm">not listed</span></span><b id="rNoMs">{r0["noms"]}</b></div>
+  <div class="railrow" title="Budget lines from states with no classifier yet. This register
+    lists what the state names and makes no claim that any of them is a scheme a citizen can
+    apply to."><span><span class="lg">Of those, carrying no verdict</span><span class="sm">no
+    verdict</span></span><b id="rUnj">{r0["unjudged"]}</b></div>
   <div class="railrow"><span><span class="lg">Median score</span><span class="sm">median</span></span><b id="rMed">{r0["med"]}</b></div>
   <div class="railrow"><span><span class="lg">Allocation known</span><span class="sm">allocated</span></span><b id="rMoney">{r0["money"]}</b></div>
   <div class="railgroup">
@@ -2140,10 +2166,11 @@ def index_section(entries):
 
   function rail(shown){{
     var vis=rows.filter(function(r){{return !r.hidden;}});
-    var src={{myscheme:0,budget:0,dbt:0,outcome:0}},money=0,scores=[];
+    var src={{myscheme:0,budget:0,dbt:0,outcome:0}},money=0,scores=[],unjudged=0;
     vis.forEach(function(r){{
       (r._f.s||'').split(' ').forEach(function(k){{ if(k in src) src[k]++; }});
       if(r.dataset.b) money+=+r.dataset.b;
+      if(r.dataset.u) unjudged++;
       if(+r.dataset.p>=0) scores.push(+r.dataset.p);
     }});
     scores.sort(function(a,b){{return a-b;}});
@@ -2151,6 +2178,7 @@ def index_section(entries):
     function set(id,v){{ document.getElementById(id).textContent=v; }}
     set('rShown',shown.toLocaleString());
     set('rNoMs',(shown-src.myscheme).toLocaleString());
+    set('rUnj',unjudged.toLocaleString());
     set('rMed', med===null ? '...' : Math.round(med*100/9));
     set('rMoney', money ? '₹'+Math.round(money).toLocaleString('en-IN')+' cr' : '—');
     set('rSms',src.myscheme.toLocaleString()); set('rSbu',src.budget.toLocaleString());
@@ -2268,9 +2296,16 @@ def index_section(entries):
   // Publish the sticky filter bar's real height so the table header can sit exactly
   // beneath it at any width, including when the controls wrap.
   var bar=document.querySelector('.filters');
+  // Only write when the value actually changed. --filters-h is set on documentElement, so
+  // every write invalidates style for the whole document, and the document is 270,000
+  // elements. A ResizeObserver fires on load and on every width change, and the unguarded
+  // write cost 2,451 ms of forced layout in a trace.
+  var lastH=null;
   function measure(){{
-    document.documentElement.style.setProperty(
-      '--filters-h', Math.ceil(bar.getBoundingClientRect().height)+'px');
+    var h=Math.ceil(bar.getBoundingClientRect().height)+'px';
+    if(h===lastH) return;
+    lastH=h;
+    document.documentElement.style.setProperty('--filters-h', h);
   }}
   if(bar){{
     measure();
@@ -2283,7 +2318,14 @@ def index_section(entries):
   // means wanting to search again.
   var top=document.getElementById('toTop');
   if(top){{
-    var onScroll=function(){{ top.hidden = window.scrollY < 500; }};
+    // Same guard, same reason: assigning .hidden invalidates style even when the value
+    // is unchanged, and this runs on every scroll event over a 270,000-element document.
+    var hid=null;
+    var onScroll=function(){{
+      var h = window.scrollY < 500;
+      if(h===hid) return;
+      hid=h; top.hidden=h;
+    }};
     window.addEventListener('scroll',onScroll,{{passive:true}});
     onScroll();
     top.addEventListener('click',function(ev){{
@@ -2836,23 +2878,20 @@ def build():
             "  Referrer-Policy: strict-origin-when-cross-origin\n"
             "\n"
             # "/" and "/index.html" are different keys to Pages even though one serves the
-            # other, so the root needs its own rule or it keeps the max-age=0 default.
-            "/\n"
-            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
-            "\n"
-            "/index.html\n"
-            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
-            "\n"
-            "/divergence.html\n"
-            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
-            "\n"
-            "/changes.html\n"
-            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
-            "\n"
-            "/audit.html\n"
-            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
-            "\n"
-            "/theme.css\n"
+            # other, so the root needs its own rule or it keeps the max-age=0 default. The
+            # same is true of EVERY route, and writing them out by hand got it wrong the
+            # moment the links went extensionless: /divergence.html had a rule and
+            # /divergence, which is what the site actually links to and what a browser
+            # requests, had none. Both routes were served max-age=0, must-revalidate. They
+            # are generated from ROUTES now, in both spellings, so the two cannot drift.
+            + "".join(
+                f"{path}\n"
+                "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+                "\n"
+                for route, f in ROUTES
+                for path in (("/", "/index.html") if f == "index.html"
+                             else ("/" + f[:-5], "/" + f)))
+            +             "/theme.css\n"
             "  Cache-Control: public, max-age=31536000, immutable\n"
             "\n"
             "/filters.json\n"
@@ -2941,7 +2980,8 @@ def build():
     w("index.html", shell(
         "The census and the argument", "/", page_index(census, checks, dbt, entries),
         desc=(f"{len(entries):,} Indian government schemes across four official sources, "
-              "with what each source publishes and what it leaves out.")))
+              "with what each source publishes and what it leaves out."),
+        canon=SITE_BASE + "/"))
     # Compact on purpose: no indentation and no spaces after separators. The index is
     # 1.8 MB of strings and pretty-printing it would add a fifth again for a file no
     # person reads.
@@ -2960,12 +3000,14 @@ def build():
                         tn=load("data/tamilnadu/classification.json", {}),
                         leg=load("data/legibility.json", {})),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
-              "portal you ask. Three official sources, counted side by side.")))
+              "portal you ask. Three official sources, counted side by side."),
+        canon=SITE_BASE + "/divergence"))
     w("audit.html", shell(
         "Audit", "/audit",
         page_audit(load("data/cag/reports.json", {}), load("data/cag/audited.json", {})),
         desc=("Every audit report the Comptroller and Auditor General of India has tabled, "
-              "and which government schemes have been audited at all.")))
+              "and which government schemes have been audited at all."),
+        canon=SITE_BASE + "/audit"))
     # A register page for every state listed without a classifier. Fifteen files rather
     # than 16,689, and the right shape for the claim: these rows belong to a state's book
     # and are shown inside it.
@@ -2982,11 +3024,28 @@ def build():
             page_state(key, st_name, sd, leg_by_state.get(st_name) or {}),
             desc=(f"{len(sd['entries']):,} lines from {st_name}'s own budget, at the level "
                   f"the state files schemes at, with its codes, heads of account and "
-                  f"provisions.")))
+                  f"provisions."),
+            canon=f"{SITE_BASE}/state/{key}"))
+
+    # Cloudflare Pages answers an unknown path with 404.html when one exists, and with the
+    # INDEX PAGE and HTTP 200 when one does not. That is how 15,108 dead links stayed
+    # invisible: every one of them served a reader the whole 10 MB register, and a crawler
+    # 23,955 copies of the same page under different URLs.
+    w("404.html", shell(
+        "Not found", "/",
+        '<div class="eyebrow">404</div>'
+        '<h1 class="pagetitle">There is nothing at this address</h1>'
+        '<p class="standfirst">A scheme page may have moved: rows from a state with no '
+        'classifier are listed on that state&rsquo;s own register page rather than one '
+        'page each. The register is searchable from the front page.</p>'
+        '<p><a class="dl" href="/">Go to the register</a> '
+        '<a class="dl" href="/divergence">See the divergence page</a></p>',
+        desc="No page at this address in the Schemes Register."))
 
     w("changes.html", shell(
         "Changes", "/changes", page_changes(load("data/changes.json", {})),
-        desc="What Indian government scheme records changed between monthly snapshots."))
+        desc="What Indian government scheme records changed between monthly snapshots.",
+        canon=SITE_BASE + "/changes"))
 
     n = 0
     seen = set()
@@ -3014,13 +3073,23 @@ def build():
                  f"{', '.join(SOURCE_LABEL[k] for k in en['sources'])} and is not "
                  f"listed on myScheme.")
         w(os.path.join("scheme", f"{en['slug']}.html"),
-          shell(title, "/", body, depth=1, desc=d))
+          shell(title, "/", body, depth=1, desc=d,
+                canon=f"{SITE_BASE}/scheme/{en['slug']}"))
         n += 1
 
-    # A sitemap because 5,438 pages are reachable only through a JS-filtered table, and
-    # a crawler that does not run the filter will never see most of them.
-    urls = ["", "divergence", "changes"] + [
-        f"scheme/{en['slug']}" for en in entries]
+    # A sitemap because most pages are reachable only through a JS-filtered table, and a
+    # crawler that does not run the filter will never see them.
+    #
+    # Built from the pages actually WRITTEN, not from the entries. It used to list one URL
+    # per entry, and once rows that live on a state register page stopped getting a page of
+    # their own that was 15,108 URLs pointing at nothing. A sitemap of 404s is worse than no
+    # sitemap: it is a list this register hands a crawler saying these exist.
+    urls = [f.replace(".html", "") if f != "index.html" else ""
+            for _, f in ROUTES]
+    urls += sorted(f"state/{n[:-5]}" for n in os.listdir(os.path.join(OUT, "state"))
+                   if n.endswith(".html"))
+    urls += sorted(f"scheme/{n[:-5]}" for n in os.listdir(os.path.join(OUT, "scheme"))
+                   if n.endswith(".html"))
     stamp = datetime.now().strftime("%Y-%m-%d")
     with open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8") as fh:
         fh.write('<?xml version="1.0" encoding="UTF-8"?>\n'
