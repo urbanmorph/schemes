@@ -1,0 +1,624 @@
+{
+ "built_at": "2026-09-03T04:43:20Z",
+ "method_note": "Verdicts are hand-entered from reading each state's documents, which is the only way this survey has ever been done. Every verdict for a state that was built is then checked against that state's own parser output, and a disagreement stops the build rather than publishing. The refusals have no output to check against, which is what a refusal is, so each carries the measurement that decided it instead.",
+ "schemes_named": 33836,
+ "schemes_named_on_site": 22978,
+ "states": [
+  {
+   "built": true,
+   "cleared": 4,
+   "failed_at": "closes",
+   "key": "karnataka",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 969,
+    "names_in_latin_script": 965,
+    "on_site": true,
+    "rows": 969,
+    "says": {
+     "closes": false,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Karnataka Budget, scheme-wise books (Gender, Child, SCSP/TSP)",
+    "totals_checked": 0,
+    "totals_failed": 0
+   },
+   "state": "Karnataka",
+   "tests": {
+    "bounded": true,
+    "closes": false,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "The Gender, Child and SCSP/TSP books print no totals at any level, so the reading has nothing to check itself against."
+  },
+  {
+   "built": true,
+   "cleared": 4,
+   "failed_at": "closes",
+   "key": "andhra",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 552,
+    "names_in_latin_script": 552,
+    "on_site": true,
+    "rows": 552,
+    "says": {
+     "closes": false,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Andhra Pradesh Budget, scheme-wise books (Gender, Child, Backward Classes, Minorities, SC Component, ST Component)",
+    "totals_checked": 0,
+    "totals_failed": 0
+   },
+   "state": "Andhra Pradesh",
+   "tests": {
+    "bounded": true,
+    "closes": false,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "Plain English and a single script, and the Gender Budget prints no totals to check a reading against."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "kerala",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 2629,
+    "names_in_latin_script": 2627,
+    "on_site": true,
+    "rows": 2629,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Kerala Budget, Annual Plan statements and the Gender & Child and Elderly budgets",
+    "totals_checked": 91,
+    "totals_failed": 0
+   },
+   "state": "Kerala",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "The Annual Plan statements carry a scheme code, an English column and Unicode Malayalam."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "tamilnadu",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 6220,
+    "names_in_latin_script": 6128,
+    "on_site": true,
+    "rows": 6220,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Tamil Nadu Budget, the 55 per-department Demand Books of the Revised Budget Estimate 2026-2027",
+    "totals_checked": 6728,
+    "totals_failed": 0
+   },
+   "state": "Tamil Nadu",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "Fifty-five bilingual demand books with English in its own column and object heads against every line."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "telangana",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 2039,
+    "names_in_latin_script": 2038,
+    "on_site": false,
+    "rows": 2039,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Telangana Budget Volume VII: the Pragathi Paddu (Scheme Expenditure) and the Scheduled Castes and Scheduled Tribes Special Development Fund volumes",
+    "totals_checked": 320,
+    "totals_failed": 0
+   },
+   "state": "Telangana",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "The Pragathi Paddu is a plain English scheme table; the current cycle is on the IFMIS portal and not on the Finance Department's own budget page."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "maharashtra",
+   "measured": {
+    "cycle": "2026-2027",
+    "names": 1956,
+    "names_in_latin_script": 1944,
+    "on_site": true,
+    "rows": 1956,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Maharashtra Budget, ANNUAL SCHEME 2026-2027 (Departmentwise), English edition, statements GN2 and GN4",
+    "totals_checked": 869,
+    "totals_failed": 0
+   },
+   "state": "Maharashtra",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "It publishes an English EDITION of a Marathi book rather than a bilingual one, which is the single most useful thing a state does for anyone reading it."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "odisha",
+   "measured": {
+    "cycle": "2026-2027",
+    "names": 1628,
+    "names_in_latin_script": 1625,
+    "on_site": true,
+    "rows": 1628,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Odisha Budget, the 44 per-department Demand for Grants books 2026-2027",
+    "totals_checked": 17859,
+    "totals_failed": 0
+   },
+   "state": "Odisha",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "Forty-four demand books with English above Unicode Odia and a printed total at every level."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "westbengal",
+   "measured": {
+    "cycle": "2026-2027",
+    "names": 9024,
+    "names_in_latin_script": 8981,
+    "on_site": true,
+    "rows": 9024,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "West Bengal Budget, Budget Publications 11 to 26, the Detailed Demands for Grants for 2026-2027",
+    "totals_checked": 7289,
+    "totals_failed": 0
+   },
+   "state": "West Bengal",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "English throughout the detailed demands, keyed on the head of account."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "punjab",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 2961,
+    "names_in_latin_script": 2948,
+    "on_site": false,
+    "rows": 2961,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Punjab Budget: the three Demand for Grants volumes, the Central Sponsored Scheme Budget Book and the Gender Budget",
+    "totals_checked": 6234,
+    "totals_failed": 0
+   },
+   "state": "Punjab",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "Gurmukhi cannot share a codepoint with Latin, and the books check their own arithmetic at every level of the head of account."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "jharkhand",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 852,
+    "names_in_latin_script": 844,
+    "on_site": false,
+    "rows": 852,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Jharkhand Budget, the per-department Detailed Demands for Grants books 2026-27",
+    "totals_checked": 2970,
+    "totals_failed": 0
+   },
+   "state": "Jharkhand",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "It prints STATE SCHEME &lt;name&gt;(&lt;code&gt;) in English capitals, and the Hindi and English are separated by a slash."
+  },
+  {
+   "built": true,
+   "cleared": 4,
+   "failed_at": "closes",
+   "key": "delhi",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 1578,
+    "names_in_latin_script": 1577,
+    "on_site": false,
+    "rows": 1578,
+    "says": {
+     "closes": false,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Delhi Scheme-wise Budget 2026-27, SCHEME/PROGRAMME/PROJECTS WISE OUTLAY, published by the Planning Department",
+    "totals_checked": 7774,
+    "totals_failed": 20
+   },
+   "state": "Delhi",
+   "tests": {
+    "bounded": true,
+    "closes": false,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "The whole scheme budget is one plain English file, and its Grand Total does not close: 62,55,000 lakh printed against 64,55,956 summed, 3.2 per cent over."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "haryana",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 970,
+    "names_in_latin_script": 969,
+    "on_site": false,
+    "rows": 970,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Haryana Budget 2026-27, Explanatory Memorandum on Welfare & Development Schemes (Plan Memo)",
+    "totals_checked": 1279,
+    "totals_failed": 0
+   },
+   "state": "Haryana",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "The Plan Memorandum names 970 schemes where the national portal lists 249."
+  },
+  {
+   "built": true,
+   "cleared": 4,
+   "failed_at": "closes",
+   "key": "uttarakhand",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 2324,
+    "names_in_latin_script": 2305,
+    "on_site": false,
+    "rows": 2324,
+    "says": {
+     "closes": false,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Uttarakhand Budget 2026-27, Volume 5 (Head wise details of accounts), Parts 1 to 4",
+    "totals_checked": 4505,
+    "totals_failed": 806
+   },
+   "state": "Uttarakhand",
+   "tests": {
+    "bounded": true,
+    "closes": false,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "Volume 5 names 2,302 schemes against the portal's 446, and 806 of its 4,492 printed totals do not reconcile against the rows beneath them."
+  },
+  {
+   "built": true,
+   "cleared": 5,
+   "failed_at": null,
+   "key": "tripura",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 134,
+    "names_in_latin_script": 133,
+    "on_site": false,
+    "rows": 134,
+    "says": {
+     "closes": true,
+     "english": true,
+     "list": true,
+     "text": true
+    },
+    "source": "Tripura Budget 2026-27, CSS & SLS Budget Overview: Details of Centrally Sponsored Schemes onboarded on SNS SPARSH, with the State Level Schemes under each",
+    "totals_checked": 240,
+    "totals_failed": 0
+   },
+   "state": "Tripura",
+   "tests": {
+    "bounded": true,
+    "closes": true,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "These 134 state schemes and the 74 centrally sponsored ones printed beside them come to 208 against DBT Bharat's 209, the closest any state document here has come to reproducing a national count."
+  },
+  {
+   "built": false,
+   "cleared": 2,
+   "failed_at": "bounded",
+   "key": null,
+   "measured": null,
+   "state": "Gujarat",
+   "tests": {
+    "bounded": false,
+    "closes": null,
+    "english": null,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 3,
+   "why": "The Outcome Budget puts the name, the head of account and sometimes the target in one column with no separator, and the column boundaries move between pages. There is no rule that finds the end of a name."
+  },
+  {
+   "built": false,
+   "cleared": 3,
+   "failed_at": "english",
+   "key": null,
+   "measured": null,
+   "state": "Uttar Pradesh",
+   "tests": {
+    "bounded": true,
+    "closes": null,
+    "english": false,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 4,
+   "why": "It is better bounded than most states here, 5,853 rows tested with zero column collisions, and there is no English anywhere in it: 65 Latin tokens across four volumes and not one an English word."
+  },
+  {
+   "built": false,
+   "cleared": 1,
+   "failed_at": "text",
+   "key": null,
+   "measured": null,
+   "state": "Madhya Pradesh",
+   "tests": {
+    "bounded": null,
+    "closes": null,
+    "english": null,
+    "list": true,
+    "text": false
+   },
+   "tests_run": 2,
+   "why": "The Gender Budget is set in KrutiDev, a legacy 8-bit font whose ToUnicode map points back at 8-bit codepoints, so the extracted characters are not the characters on the page."
+  },
+  {
+   "built": false,
+   "cleared": 1,
+   "failed_at": "text",
+   "key": null,
+   "measured": null,
+   "state": "Bihar",
+   "tests": {
+    "bounded": null,
+    "closes": null,
+    "english": null,
+    "list": true,
+    "text": false
+   },
+   "tests_run": 2,
+   "why": "It converts its budget to vector curves before publishing it. Its own file is called Demands For Grants Curve.pdf, and 108 pages of it yield 108 extractable characters."
+  },
+  {
+   "built": false,
+   "cleared": 1,
+   "failed_at": "text",
+   "key": null,
+   "measured": null,
+   "state": "Chhattisgarh",
+   "tests": {
+    "bounded": null,
+    "closes": null,
+    "english": null,
+    "list": true,
+    "text": false
+   },
+   "tests_run": 2,
+   "why": "Its 44 department books extract 2,429 scheme rows perfectly and 0 of 2,429 readable names, in the Krishna and Chanakya legacy fonts; all twelve English editions it links return 404 while the Hindi twins work."
+  },
+  {
+   "built": false,
+   "cleared": 3,
+   "failed_at": "bounded",
+   "key": null,
+   "measured": null,
+   "state": "Rajasthan",
+   "tests": {
+    "bounded": false,
+    "closes": null,
+    "english": true,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 4,
+   "why": "The Output-Outcome Budget is in English and breaks names across lines mid-word with no hyphen, which cannot be undone from geometry alone, and prints no totals to check a guess against."
+  },
+  {
+   "built": false,
+   "cleared": 0,
+   "failed_at": "list",
+   "key": null,
+   "measured": null,
+   "state": "Assam",
+   "tests": {
+    "bounded": null,
+    "closes": null,
+    "english": null,
+    "list": false,
+    "text": null
+   },
+   "tests_run": 1,
+   "why": "Its seven documents for this cycle include no scheme list. The FY 2024-25 Gender Budget is a good table and is two cycles behind what this register publishes."
+  },
+  {
+   "built": false,
+   "cleared": 0,
+   "failed_at": "list",
+   "key": null,
+   "measured": null,
+   "state": "Himachal Pradesh",
+   "tests": {
+    "bounded": null,
+    "closes": null,
+    "english": null,
+    "list": false,
+    "text": null
+   },
+   "tests_run": 1,
+   "why": "It publishes thirty documents and serves none of them: every link is a __doPostBack that 302s back to the portal home."
+  }
+ ],
+ "states_built": 14,
+ "states_on_site": 7,
+ "states_refused": 8,
+ "states_surveyed": 22,
+ "tests": [
+  {
+   "key": "list",
+   "label": "Publishes a scheme list",
+   "what": "A document that names schemes one at a time, for this cycle, and serves it."
+  },
+  {
+   "key": "text",
+   "label": "The names are text",
+   "what": "pdftotext returns them. Not drawings, not a legacy 8-bit font."
+  },
+  {
+   "key": "bounded",
+   "label": "A name has an end",
+   "what": "A machine can find where the name stops: a column, a separator, a code."
+  },
+  {
+   "key": "english",
+   "label": "Named in English",
+   "what": "So the name can be joined to a national portal that lists in English."
+  },
+  {
+   "key": "closes",
+   "label": "The book proves itself",
+   "what": "It prints its own totals, and a parse of it agrees with them."
+  }
+ ],
+ "unreached_note": "A test with no verdict was never reached, because an earlier test decided the state first. It is not scored as a failure: nobody knows whether Bihar's scheme names are bounded, because Bihar's scheme names are drawings."
+}

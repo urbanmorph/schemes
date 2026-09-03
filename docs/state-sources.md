@@ -15,6 +15,50 @@ before being measured properly.
 
 ---
 
+## Scoreboard, every state surveyed
+
+**This table is generated from `data/legibility.json` by `parse/legibility.py`; do not edit
+it by hand.** The per-round scoreboards further down are the record of what each round
+found and are left as they were written. This one is the current answer, and the parser
+that writes it refuses to run if a verdict here disagrees with that state's own output.
+
+The five tests are asked in order and a state that fails one is never asked the rest, so
+&middot; means *never reached* and is not counted as a failure. That is why the scores are
+out of different numbers.
+
+| State | Publishes a scheme list | The names are text | A name has an end | Named in English | The book proves itself | Cleared | Schemes named |
+|---|---|---|---|---|---|---|---|
+| West Bengal | yes | yes | yes | yes | yes | 5 of 5 | 9,024 |
+| Tamil Nadu | yes | yes | yes | yes | yes | 5 of 5 | 6,220 |
+| Punjab | yes | yes | yes | yes | yes | 5 of 5 | 2,961 (not yet on the site) |
+| Kerala | yes | yes | yes | yes | yes | 5 of 5 | 2,629 |
+| Telangana | yes | yes | yes | yes | yes | 5 of 5 | 2,039 (not yet on the site) |
+| Maharashtra | yes | yes | yes | yes | yes | 5 of 5 | 1,956 |
+| Odisha | yes | yes | yes | yes | yes | 5 of 5 | 1,628 |
+| Haryana | yes | yes | yes | yes | yes | 5 of 5 | 970 (not yet on the site) |
+| Jharkhand | yes | yes | yes | yes | yes | 5 of 5 | 852 (not yet on the site) |
+| Tripura | yes | yes | yes | yes | yes | 5 of 5 | 134 (not yet on the site) |
+| Uttarakhand | yes | yes | yes | yes | **no** | 4 of 5 | 2,324 (not yet on the site) |
+| Delhi | yes | yes | yes | yes | **no** | 4 of 5 | 1,578 (not yet on the site) |
+| Karnataka | yes | yes | yes | yes | **no** | 4 of 5 | 969 |
+| Andhra Pradesh | yes | yes | yes | yes | **no** | 4 of 5 | 552 |
+| *Surveyed, does not yield* | | | | | | | |
+| Uttar Pradesh | yes | yes | yes | **no** | &middot; | 3 of 4 | &middot; |
+| Gujarat | yes | yes | **no** | &middot; | &middot; | 2 of 3 | &middot; |
+| Rajasthan | yes | yes | **no** | yes | &middot; | 3 of 4 | &middot; |
+| Bihar | yes | **no** | &middot; | &middot; | &middot; | 1 of 2 | &middot; |
+| Chhattisgarh | yes | **no** | &middot; | &middot; | &middot; | 1 of 2 | &middot; |
+| Madhya Pradesh | yes | **no** | &middot; | &middot; | &middot; | 1 of 2 | &middot; |
+| Assam | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
+| Himachal Pradesh | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
+
+14 of 22 states surveyed yield a machine-readable scheme list, between them naming
+33,836 schemes. 7 of those 14 are published on the site, covering 22,978 schemes; the
+other 7 are read, reconciled against their own books and committed, and each still needs
+a classifier with hand-counted precision before its absence claims can be published.
+
+---
+
 ## Karnataka — WORKS
 
 `collect/karnataka.py`, `parse/karnataka.py`. 969 heads of account, 865 with an
@@ -643,7 +687,8 @@ how well it renders Hindi. It is whether anything in the row says where the name
 | Assam | **no, for now** | Gender Budget FY 2024-25 | passes the field test and stops: the 2026-27 set is seven documents and none is a scheme list |
 | Himachal Pradesh | **no** | Detail of Estimates, FY 2023-24 zip | passes the field test and cannot be fetched: every document link 302s back to the portal home |
 
-Eight of twelve states surveyed yield a machine-readable scheme list. The four that do not
+As of the second round, eight of twelve states surveyed yielded a machine-readable
+scheme list. The four that did not
 fail in four different ways, and only one of them is a layout problem:
 
 - **Gujarat** cannot say where a name ends.

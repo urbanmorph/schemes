@@ -435,6 +435,158 @@ def page_index(census, checks, dbt, entries):
 """
 
 
+# How a state's refusal is grouped for the callout. The point of grouping is that "eight
+# states cannot be read" is one fact and eight separate excuses; "three of them draw their
+# names instead of writing them" is a pattern, and a pattern is what a reader can act on.
+REFUSAL_GROUP = {
+    "list": ("serves", "serve", "no scheme list at all",
+             "Assam publishes none for this cycle; Himachal Pradesh publishes thirty "
+             "documents and serves none of them"),
+    "text": ("publishes", "publish", "names as pictures rather than as text",
+             "Madhya Pradesh and Chhattisgarh in legacy 8-bit fonts, Bihar by converting "
+             "the page to vector curves"),
+    "bounded": ("publishes", "publish", "names a machine cannot find the end of",
+                "Gujarat runs the name, the code and the target into one column; "
+                "Rajasthan breaks names across lines mid-word"),
+    "english": ("publishes", "publish", "no English at all",
+                "well-bounded Hindi names, and a national portal that lists in English"),
+}
+
+
+NIL = '<span class="nil">&middot;&middot;&middot;</span>'
+
+
+def legibility_section(leg, ms=None):
+    """The state scoreboard, and the eight refusals named on the same page as the wins.
+
+    This page could name Karnataka's hidden schemes and could not name Gujarat's, and it
+    used to report the first and say nothing about the second. Silence there reads as
+    "nothing to find in Gujarat", when Gujarat publishes a great deal and publishes it in a
+    shape no machine can read. So the refusals are on the page, and they are not a
+    footnote: they get the same columns as the states that yielded.
+
+    The five tests are SEQUENTIAL, and the display has to carry that or it lies. A state
+    that fails the second test was never given the third, so its third cell is the nil-mark
+    this register already uses for absent-at-source, never a cross. Bihar draws its scheme
+    names as curves; nobody knows whether those names are bounded, and printing three
+    crosses under Bihar would be manufacturing two extra failures out of one real one.
+    """
+    if not leg or not leg.get("states"):
+        return ""
+    tests = leg["tests"]
+    built = [r for r in leg["states"] if r["built"]]
+    refused = [r for r in leg["states"] if not r["built"]]
+
+    def cells(r):
+        out = ""
+        for t in tests:
+            v = r["tests"].get(t["key"])
+            out += ('<td class="t">' + (
+                '<span class="mark p">&#10003;</span>' if v is True else
+                '<span class="mark f">&#10007;</span>' if v is False else
+                '<span class="nil" title="never reached: an earlier test decided this '
+                'state">&middot;&middot;&middot;</span>') + "</td>")
+        return out
+
+    def row(r):
+        # The scheme count is the state's own claim about itself and belongs beside its
+        # score: a state that clears five tests and names 134 schemes and one that clears
+        # five and names 9,024 are not the same result.
+        m = r.get("measured") or {}
+        n = m.get("rows")
+        named = num(n) if n else NIL
+        # A state that is read and not yet on the site says so in the cell that would
+        # otherwise imply a reader can go and look at those schemes.
+        if n and not m.get("on_site"):
+            named += '<span class="of" title="read and reconciled; not yet searchable '\
+                     'on this site"><br>not yet listed</span>' 
+        return (f'<tr class="{"" if r["built"] else "refused"}">'
+                f'<td>{e(r["state"])}</td>{cells(r)}'
+                f'<td class="num">{r["cleared"]}<span class="of"> of '
+                f'{r["tests_run"]}</span></td>'
+                f'<td class="num">{named}</td>'
+                f'<td class="muted lg-why">{r["why"]}</td></tr>')
+
+    # Ordered by what the reader is being told: the states that yielded, best first and
+    # largest first within a score, then the states that did not, in the order they gave up.
+    order = {t["key"]: i for i, t in enumerate(tests)}
+    built.sort(key=lambda r: (-r["cleared"], -((r.get("measured") or {}).get("rows") or 0)))
+    refused.sort(key=lambda r: (-order.get(r["failed_at"], 9), r["state"]))
+
+    heads = "".join(f'<th class="t" title="{e(t["what"])}">{e(t["label"])}</th>' for t in tests)
+    named = num(leg.get("schemes_named"))
+
+    groups = ""
+    for key, _, _ in [(t["key"], 0, 0) for t in tests]:
+        hit = [r for r in refused if r["failed_at"] == key]
+        if not hit or key not in REFUSAL_GROUP:
+            continue
+        vs, vp, what, detail = REFUSAL_GROUP[key]
+        groups += (f'<li><b>{e(", ".join(r["state"] for r in hit))}</b> '
+                   f'{vs if len(hit) == 1 else vp} {what}: {detail}.</li>')
+
+    return f"""
+<section class="sec" id="legibility">
+  <h2>Fourteen states can be read by a machine. Eight cannot, and that is a finding
+    about those eight.</h2>
+  <div class="sec-note">{num(leg.get("states_surveyed"))} states surveyed against their own
+    budget documents &middot; five tests each &middot; {named} schemes named in the
+    {num(leg.get("states_built"))} that yield</div>
+  <p class="standfirst">Every number further down this page comes from a state whose budget
+  a machine could read. That is not the same as a state that publishes one. Gujarat
+  publishes more than most states here and cannot be read at all; Bihar publishes more than
+  Gujarat and converts it to drawings first. A state that refuses to be read is not a gap
+  in this register, it is a fact about that state, and it belongs on the page beside the
+  states that yielded.</p>
+
+  <div class="tscroll"><table id="legib">
+    <thead><tr><th>State</th>{heads}<th class="num">Cleared</th>
+      <th class="num">Schemes named</th><th>What decides it</th></tr></thead>
+    <tbody>{"".join(row(r) for r in built)}
+      <tr class="lg-sep"><td colspan="{len(tests) + 4}">Surveyed, and does not yield a
+        machine-readable scheme list</td></tr>
+      {"".join(row(r) for r in refused)}</tbody>
+  </table></div>
+
+  <div class="warnbox">
+    <b>What the eight refusals have in common, which is less than it looks</b>
+    <ul class="lg-list">{groups}</ul>
+    <p style="margin:8px 0 0">Only one of the eight is a layout problem. The rest are
+    decisions: to set a budget in a legacy font, to convert it to curves before publishing
+    it, to publish the English edition and serve a 404 for it, to publish nothing for the
+    current cycle. Each is reversible by the state and by nobody else.</p>
+  </div>
+
+  <div class="warnbox">
+    <b>How to read a score, and how not to</b>
+    The five tests are asked in order and a state that fails one is never asked the rest,
+    so an unasked test shows as {"&middot;&middot;&middot;"} and is never counted as a
+    failure. That is why the scores are out of different numbers: Gujarat is 2 of 3 and not
+    2 of 5, because nobody knows whether Gujarat's names are English: the question
+    stopped being answerable one test earlier. <b>Do not read the count as a ranking of
+    transparency.</b> It measures one thing, whether a machine can read what a state
+    publishes, and a state can publish a great deal that a machine cannot read.
+    <p style="margin:8px 0 0"><b style="display:inline;color:var(--ink);font-family:inherit;
+    font-size:inherit;text-transform:none;letter-spacing:0">Reading a state and accusing a
+    portal are different things, and only the first is done for all fourteen.</b>
+    {num(leg.get("states_on_site"))} of the {num(leg.get("states_built"))} are searchable
+    on this site today, covering {num(leg.get("schemes_named_on_site"))} of the
+    {named} schemes. The other {num(leg.get("states_built") - leg.get("states_on_site"))}
+    are read, reconciled against their own books and committed, and each still needs a
+    classifier with hand-counted precision before this register will say of any of its
+    rows that a portal is hiding it. Naming a directorate as a hidden scheme is a false
+    accusation, and the bar for making one is not the bar for counting a budget line.</p>
+    <p style="margin:8px 0 0">The last test is the one that separates the states that
+    yielded, and it is the strictest thing here: the book prints its own totals and a parse
+    of it agrees with <em>all</em> of them. Karnataka and Andhra Pradesh fail it because
+    their books print no totals at all, so their readings cannot be checked against the
+    source. Delhi and Uttarakhand fail it because the totals are printed and do not close.
+    Those are different failures and the table cannot tell them apart; the sentence beside
+    each one can.</p>
+  </div>
+</section>"""
+
+
 def state_section(state, title, note, standfirst, rows, warn_title, warn_body):
     """Chrome shared by every state's absence table.
 
@@ -490,7 +642,7 @@ def classifier_note(cls, floor_sentence):
 
 
 def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=None,
-                    kl=None, tn=None):
+                    kl=None, tn=None, leg=None):
     """Two questions, kept apart: how many schemes a state has, and which are unlisted.
 
     The per-state table and the unlisted-schemes table were both built into a local named
@@ -759,7 +911,10 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=N
 <h1 class="pagetitle">Three sources, one question, different answers</h1>
 <p class="standfirst">How many welfare schemes does a given state have? Every central
 government portal that answers this question answers it differently, and no portal
-acknowledges the others exist.</p>
+acknowledges the others exist. The prior question is whether the state's own answer can be
+read at all, and for eight states in twenty-two it cannot.</p>
+
+{legibility_section(leg)}
 
 <div class="callout">
   <div class="big">Karnataka lists {num(ms.get("Karnataka"))} state schemes on one
@@ -2294,7 +2449,8 @@ def build():
                         ka=load("data/karnataka/classification.json", {}),
                         ap=load("data/andhra/classification.json", {}),
                         kl=load("data/kerala/classification.json", {}),
-                        tn=load("data/tamilnadu/classification.json", {})),
+                        tn=load("data/tamilnadu/classification.json", {}),
+                        leg=load("data/legibility.json", {})),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side.")))
     w("changes.html", shell(

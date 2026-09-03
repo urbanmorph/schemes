@@ -556,3 +556,31 @@ footer .foot a{color:var(--stamp)}
 
 .listedby{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 0}
 .listedby .lbl{font:500 var(--fs-xs)/1 var(--sans);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+
+/* The state legibility scoreboard on /divergence. Five narrow verdict columns, a count,
+   and a sentence. The verdict columns are fixed and equal so the ticks line up as a
+   column a reader can scan down, which is the whole reason this is a table and not five
+   paragraphs. */
+#legib{table-layout:fixed;width:100%;min-width:940px}
+#legib th:nth-child(1),#legib td:nth-child(1){width:13%}
+#legib th.t,#legib td.t{width:7.4%;text-align:center}
+#legib th:nth-child(7),#legib td:nth-child(7),
+#legib th:nth-child(8),#legib td:nth-child(8){width:8%}
+#legib td{vertical-align:top}
+#legib .mark{width:auto;display:inline}
+#legib .of{color:var(--faint);font-size:var(--fs-xs)}
+.lg-why{font-size:var(--fs-sm);line-height:1.45;word-break:break-word}
+/* A refusal is not an error state and must not be painted as one. The row is tinted, not
+   reddened: the finding is about the state's publishing, and shouting it in fail-red
+   would read as this register marking its own failure to parse. */
+#legib tr.refused td:first-child{color:var(--ink);font-weight:500}
+#legib tr.refused{background:var(--sink)}
+#legib tr.lg-sep td{font-family:var(--mono);font-size:var(--fs-xs);text-transform:uppercase;
+  letter-spacing:.11em;color:var(--faint);background:var(--sink);
+  border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);
+  padding:9px 14px}
+#legib tr.lg-sep:hover{background:var(--sink)}
+.lg-list{margin:6px 0 0;padding-left:18px}
+.lg-list li{margin-bottom:5px;line-height:1.5}
+.lg-list b{font-family:inherit;font-size:inherit;text-transform:none;letter-spacing:0;
+  color:var(--ink);display:inline;margin:0;font-weight:500}

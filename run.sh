@@ -68,11 +68,20 @@ if [ "$SKIP_COLLECT" = "0" ]; then
   else
     python3 collect/budget.py --year "$CYCLE_YEAR"
   fi
-  for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal; do
+  for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
+            telangana punjab jharkhand tripura delhi haryana uttarakhand; do
     if have_annual "archive/$st/*"; then
       echo "  $st budget already archived, skipping"
-    else
+    # Not every collector takes --cycle, and passing it to one that does not aborts the
+    # whole run under `set -e`. A state takes it when the cycle is part of the ADDRESS of
+    # its documents (Karnataka's index URL carries the financial year); a state that omits
+    # it discovers the cycle from the page and asserts it, which is the same guarantee
+    # reached the other way round. Asking the collector rather than keeping a second list
+    # here means the two cannot drift.
+    elif python3 "collect/$st.py" --help 2>/dev/null | grep -q -- "--cycle"; then
       python3 "collect/$st.py" --cycle "$STATE_CYCLE" --date "$DATE"
+    else
+      python3 "collect/$st.py" --date "$DATE"
     fi
   done
 fi
@@ -95,13 +104,17 @@ python3 parse/cag.py || true
 # derived from their own archives and nothing about a throttled myScheme crawl makes the
 # Karnataka budget less true. Their absence claims are not, and those wait below.
 say "parse · states"
-python3 parse/karnataka.py || true
-python3 parse/andhra.py || true
-python3 parse/kerala.py || true
-python3 parse/tamilnadu.py || true
-python3 parse/maharashtra.py || true
-python3 parse/odisha.py || true
-python3 parse/westbengal.py || true
+for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
+          telangana punjab jharkhand tripura delhi haryana uttarakhand; do
+  python3 "parse/$st.py" || true
+done
+
+# The legibility scoreboard, which is the only thing here that reads EVERY state at once.
+# It runs after the state parsers because it checks each state's hand-entered verdicts
+# against that state's own output, and it is NOT wrapped in `|| true`: a disagreement
+# between the survey table and the parsed data means one of them is wrong, and publishing
+# either as fact before a person has decided which is the failure mode it exists to stop.
+python3 parse/legibility.py
 
 if [ "$VERIFY_OK" = "1" ]; then
   say "parse · myScheme"
@@ -115,7 +128,8 @@ if [ "$VERIFY_OK" = "1" ]; then
   python3 parse/registry.py
   python3 parse/classify.py
   python3 parse/classify_karnataka.py || true
-  for st in andhra kerala tamilnadu maharashtra odisha westbengal; do
+  for st in andhra kerala tamilnadu maharashtra odisha westbengal \
+            telangana punjab jharkhand tripura delhi haryana uttarakhand; do
     [ -f "parse/classify_$st.py" ] && python3 "parse/classify_$st.py" || true
   done
   # Sector runs after the state parsers and before the site, because it classifies exactly
