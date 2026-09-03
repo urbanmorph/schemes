@@ -54,7 +54,7 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,50
 # date should be able to scroll straight into the list and check it, without treating
 # "see the data" as a separate destination.
 ROUTES = [("/", "index.html"), ("/divergence", "divergence.html"),
-          ("/changes", "changes.html")]
+          ("/audit", "audit.html"), ("/changes", "changes.html")]
 
 
 def link(file):
@@ -667,6 +667,141 @@ def classifier_note(cls, floor_sentence):
             f'{num((cls.get("ground_truth") or {}).get("labelled"))} hand labels in all. '
             f'Recall is {v.get("at_publish_threshold", {}).get("recall", 0):.0%}, so this is '
             f'a floor and never a total. {floor_sentence}')
+
+
+def page_audit(cag, audited):
+    """The CAG's audit catalogue, and which schemes in this register it has audited.
+
+    A catalogue and never a finding. What a report CONCLUDED is the CAG's to publish and
+    nothing here reads, quotes or characterises it. What this adds is the list of what has
+    been audited, which the CAG does not publish as a list and which today means paging
+    through 2,804 entries by hand.
+    """
+    if not cag or not cag.get("entries"):
+        return ('<div class="eyebrow">Route &middot; /audit</div>'
+                '<h1 class="pagetitle">The audit catalogue is not built yet</h1>'
+                '<p class="standfirst">Run <code>collect/cag.py</code> then '
+                '<code>parse/cag.py</code>.</p>')
+    reports = cag["entries"]
+    total = cag.get("reports") or len(reports)
+
+    def tally(field, top=None):
+        t = collections.Counter(str(r.get(field) or "not stated") for r in reports)
+        items = t.most_common(top) if top else sorted(t.items(), key=lambda kv: (-kv[1], kv[0]))
+        return items
+
+    def bars(items, n):
+        top = max((v for _, v in items), default=1)
+        return "".join(
+            f'<tr><td>{e(k)}</td><td class="num">{num(v)}</td>'
+            f'<td><span class="barfill" style="width:{max(2, round(v * 100 / top))}%"></span></td>'
+            f'</tr>' for k, v in items[:n])
+
+    years = collections.Counter()
+    for r in reports:
+        m = re.search(r"\b(19|20)\d{2}\b", str(r.get("tabled") or ""))
+        if m:
+            years[m.group(0)] += 1
+    recent = [(y, years[y]) for y in sorted(years)[-14:]]
+
+    sch = (audited or {}).get("schemes") or {}
+    audited_rows = "".join(
+        f'<tr><td>{e(name)}</td><td class="num">{len(v)}</td>'
+        f'<td class="muted lg-why">'
+        + "; ".join(f'{e(x["audit_type"] or "audit")} &middot; {e(x["government"] or "")}'
+                    f' &middot; {e(x["tabled"] or "")}' for x in v[:4])
+        + '</td><td>' + " ".join(
+            f'<a href="{e(x["detail_url"])}" rel="noopener">report</a>' for x in v[:4])
+        + "</td></tr>"
+        for name, v in sorted(sch.items(), key=lambda kv: (-len(kv[1]), kv[0])))
+
+    rows = "".join(
+        f'<tr><td>{e(r["title"])[:220]}</td>'
+        f'<td>{e(r.get("government") or "")}</td>'
+        f'<td>{e(r.get("audit_type") or "")}</td>'
+        f'<td>{e(r.get("sector") or "")}</td>'
+        f'<td class="nowrap">{e(r.get("tabled") or "")}</td>'
+        f'<td>{f"""<a href="{e(r["pdf_url"])}" rel="noopener">PDF</a>""" if r.get("pdf_url") else NIL}</td>'
+        f'</tr>' for r in reports)
+
+    return f"""
+<div class="eyebrow">Route &middot; /audit</div>
+<h1 class="pagetitle">What the CAG has audited, which is not published as a list anywhere</h1>
+<p class="standfirst">The Comptroller and Auditor General of India has tabled
+{num(total)} audit reports. The catalogue says what each one is about; it does not say
+which of them are about a scheme, and there is no way to ask it. This page is that list.</p>
+
+<div class="callout">
+  <div class="big">{num((audited or {}).get("schemes_audited"))} schemes in this register
+  have been audited by the CAG, across {num((audited or {}).get("joins_published"))}
+  reports.</div>
+  <div class="cite">{e((audited or {}).get("rule", ""))} &middot; every join read by eye
+  &middot; the catalogue&rsquo;s row count reconciles against the total the CAG&rsquo;s own
+  site prints</div>
+</div>
+
+<div class="warnbox">
+  <b>A catalogue, and never a finding</b>
+  {e(cag.get("scope_note", ""))}
+</div>
+
+<section class="sec">
+  <h2>Schemes this register holds that the CAG has audited</h2>
+  <div class="sec-note">{num((audited or {}).get("joins_published"))} of
+    {num((audited or {}).get("joins_considered"))} joins any rule produced &middot; the
+    rest were measured and rejected</div>
+  <p class="standfirst">This is the short list, and it is short on purpose. An audit
+  attached to the wrong scheme is a factual error on that scheme&rsquo;s page; a missing
+  one is a gap the next pass can close.</p>
+  <div class="tscroll"><table id="audsch">
+    <thead><tr><th>Scheme</th><th class="num">Reports</th><th>Type, government, tabled</th>
+      <th>Read it</th></tr></thead>
+    <tbody>{audited_rows}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>Why so few, and which rules were thrown away to get here</b>
+    {e((audited or {}).get("method_note", ""))}
+  </div>
+</section>
+
+<section class="sec">
+  <h2>What the catalogue is made of</h2>
+  <div class="sec-note">{num(total)} reports &middot; the crawl&rsquo;s own count checks
+    against the total the CAG&rsquo;s site prints on every page</div>
+  <div class="census">
+    <div class="cell"><div class="k">Reports</div><div class="v">{num(total)}</div>
+      <div class="n">tabled, all years</div></div>
+    <div class="cell"><div class="k">With a PDF</div>
+      <div class="v">{num(cag.get("with_a_pdf"))}</div><div class="n">linked to read</div></div>
+    <div class="cell"><div class="k">Could name a scheme</div>
+      <div class="v">{num(cag.get("with_a_subject"))}</div>
+      <div class="n">title minus its boilerplate</div></div>
+    <div class="cell"><div class="k">Governments</div>
+      <div class="v">{num(len(cag.get("by_government") or {}))}</div>
+      <div class="n">Union and states</div></div>
+  </div>
+  <div class="twocol">
+    <div><h3 class="subh">By kind of audit</h3>
+      <div class="tscroll"><table class="mini"><tbody>{bars(tally("audit_type"), 8)}</tbody></table></div></div>
+    <div><h3 class="subh">By government, ten most audited</h3>
+      <div class="tscroll"><table class="mini"><tbody>{bars(tally("government", 10), 10)}</tbody></table></div></div>
+    <div><h3 class="subh">By sector</h3>
+      <div class="tscroll"><table class="mini"><tbody>{bars(tally("sector", 10), 10)}</tbody></table></div></div>
+    <div><h3 class="subh">Tabled, by year</h3>
+      <div class="tscroll"><table class="mini"><tbody>{bars(recent, 14)}</tbody></table></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Every report in the catalogue</h2>
+  <div class="sec-note">As the CAG publishes it &middot; title, government, kind, sector,
+    the date it was tabled, and where to read it</div>
+  <div class="tscroll"><table id="audall">
+    <thead><tr><th>Report</th><th>Government</th><th>Kind</th><th>Sector</th>
+      <th>Tabled</th><th>Read</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table></div>
+</section>"""
 
 
 def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=None,
@@ -1370,10 +1505,16 @@ def state_entries(load, known_names=(), sectors=None):
         keys = (set(_m_tokens(name)) | {_m_skeleton(t) for t in _m_tokens(name)}
                 | {a for a in _m_acronyms(name) if len(a) >= 5})
         hits = collections.Counter()
-        for k in keys:
+        for k in sorted(keys):
             hits.update(idx.get(k, ()))
-        ranked = [i for i, n in hits.most_common(CAND_CAP) if n >= 2]
-        return any(probably_same(name, known[i])[0] for i in ranked)
+        # Ranked on (shared keys, index) and NEVER on Counter.most_common. Ties there are
+        # broken by insertion order, insertion order comes from iterating a set of strings,
+        # and string set order changes between runs with hash randomisation. That made the
+        # cap keep a different 40 candidates each build: the site went 23,916 pages, then
+        # 23,900, then 23,799, from identical data. parse/registry.py had the same bug and
+        # the same cause, and this is the same fix: sort by something total.
+        ranked = sorted(hits.items(), key=lambda kv: (-kv[1], kv[0]))[:CAND_CAP]
+        return any(probably_same(name, known[i])[0] for i, n in ranked if n >= 2)
 
     out = []
     for key, state in sorted(STATE_OF.items()):
@@ -2116,6 +2257,7 @@ def page_unlisted(en, status):
   {"This line is classified as a citizen-facing scheme rather than a budget head; the arithmetic is on /divergence." if verdict == "scheme" else "This line was classified as a budget head rather than a citizen-facing scheme, so its absence from a scheme portal may be correct." if verdict else ""}
 </div>
 {state_block_for(en)}
+{audit_block(en.get("name"))}
 
 <section class="sec">
   <h2>What each source says</h2>
@@ -2230,6 +2372,53 @@ CHECK_LABEL = {
     "stored_urls_well_formed":    "Stored links well-formed",
     "not_expired_while_listed":   "Not expired while still listed",
 }
+
+
+# Filled in by build() from data/cag/audited.json. A module attribute rather than a
+# parameter threaded through two page builders, matching how shell.status is already
+# carried; the scheme pages are generated in one loop and nothing else reads it.
+AUDITED = {}
+
+
+def audit_block(name):
+    """Reports the CAG has tabled on this scheme. Never what any of them found.
+
+    That distinction is the whole scope of this register's use of the CAG: it records that
+    an audit exists, on what, when, of what kind and where to read it. What an audit
+    CONCLUDED is the CAG's to publish, and paraphrasing a conclusion here would be this
+    project doing the one thing it tells every source not to do.
+    """
+    rows = AUDITED.get(name or "")
+    if not rows:
+        return ""
+    body = "".join(
+        f'<tr><td>{e(r["title"])[:260]}</td>'
+        f'<td class="nowrap">{e(r.get("audit_type") or "")}</td>'
+        f'<td class="nowrap">{e(r.get("government") or "")}</td>'
+        f'<td class="nowrap">{e(r.get("tabled") or "")}</td>'
+        f'<td><a href="{e(r["detail_url"])}" rel="noopener">CAG</a>'
+        + (f' &middot; <a href="{e(r["pdf_url"])}" rel="noopener">PDF</a>'
+           if r.get("pdf_url") else "")
+        + "</td></tr>" for r in rows)
+    return f"""
+<section class="sec">
+  <h2>The CAG has audited this</h2>
+  <div class="sec-note">{num(len(rows))} report{"" if len(rows) == 1 else "s"} tabled
+    &middot; Comptroller and Auditor General of India</div>
+  <div class="tscroll"><table id="audsch">
+    <thead><tr><th>Report</th><th>Kind</th><th>Government</th><th>Tabled</th>
+      <th>Read it</th></tr></thead>
+    <tbody>{body}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>That a report exists, and nothing about what it found</b>
+    This register records which schemes have been audited, which the CAG does not publish
+    as a list. It does not read, quote or summarise an audit&rsquo;s conclusions: those are
+    the CAG&rsquo;s to publish and the reports are linked above. The match is on the
+    report&rsquo;s subject at high similarity and every one was read by eye; the rules that
+    were tried and rejected are named on <a href="/audit">/audit</a>.
+  </div>
+</section>"""
 
 
 def state_block_for(entry):
@@ -2368,7 +2557,7 @@ def page_scheme(s, status, enrich=None, entry=None):
                  'wording, reproduced in full. Where it is thin, that is the finding, and '
                  'the completeness checks are below.</div>' + about)
 
-    state_block = state_block_for(entry)
+    state_block = state_block_for(entry) + audit_block((entry or {}).get("name") or s.get("name"))
 
     # Found elsewhere. Deliberately separate from the checks above and never counted in
     # them: this is what a *different* government document says, not what this portal
@@ -2546,6 +2735,9 @@ def build():
             "/changes.html\n"
             "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
             "\n"
+            "/audit.html\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
             "/theme.css\n"
             "  Cache-Control: public, max-age=31536000, immutable\n"
             "\n"
@@ -2574,6 +2766,7 @@ def build():
 
     registry = load("data/registry.json", {})
     classification = load("data/classification.json", {})
+    AUDITED.update((load("data/cag/audited.json", {}) or {}).get("schemes") or {})
     entries = unify(checks, registry, classification)
     # Values carry their evidence; the site wants the verdict. Keeping the evidence out of
     # the entry deliberately: a derived sector is a convenience for filtering and should not
@@ -2650,6 +2843,11 @@ def build():
                         leg=load("data/legibility.json", {})),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side.")))
+    w("audit.html", shell(
+        "Audit", "/audit",
+        page_audit(load("data/cag/reports.json", {}), load("data/cag/audited.json", {})),
+        desc=("Every audit report the Comptroller and Auditor General of India has tabled, "
+              "and which government schemes have been audited at all.")))
     w("changes.html", shell(
         "Changes", "/changes", page_changes(load("data/changes.json", {})),
         desc="What Indian government scheme records changed between monthly snapshots."))
@@ -2729,7 +2927,7 @@ def main():
     ap = argparse.ArgumentParser(description="Build the static site into site/_out.")
     ap.parse_args()
     n = build()
-    print(f"built site/_out: 4 pages + {n:,} scheme pages")
+    print(f"built site/_out: {len(ROUTES)} pages + {n:,} scheme pages")
     bad = audit_text(OUT)
     if bad:
         print(f"\nem-dashes in reader-facing text ({len(bad)} file(s)):")

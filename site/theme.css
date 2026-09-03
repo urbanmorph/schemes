@@ -588,3 +588,30 @@ footer .foot a{color:var(--stamp)}
    hover rule and left a third of the scoreboard with no hover feedback at all. On a table
    this wide, the row highlight is how a reader keeps their place across nine columns. */
 #legib tr.refused:hover{background:var(--stamp-soft)}
+
+/* /audit. The catalogue is 2,804 rows, so the report title takes the width and everything
+   else is fixed; the summary tables above it are small enough to sit two or four across. */
+#audall{table-layout:fixed;width:100%;min-width:900px}
+#audall th:nth-child(1),#audall td:nth-child(1){width:44%}
+#audall th:nth-child(2),#audall td:nth-child(2){width:12%}
+#audall th:nth-child(3),#audall td:nth-child(3){width:10%}
+#audall th:nth-child(4),#audall td:nth-child(4){width:14%}
+#audall th:nth-child(5),#audall td:nth-child(5){width:13%}
+#audall td{vertical-align:top;word-break:break-word;font-size:var(--fs-sm);line-height:1.45}
+#audsch{table-layout:fixed;width:100%;min-width:760px}
+#audsch th:nth-child(1),#audsch td:nth-child(1){width:34%}
+#audsch th:nth-child(2),#audsch td:nth-child(2){width:9%}
+#audsch th:nth-child(4),#audsch td:nth-child(4){width:14%}
+#audsch td{vertical-align:top}
+.nowrap{white-space:nowrap}
+.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px 34px;
+  margin-top:26px}
+.subh{font-family:var(--mono);font-size:var(--fs-xs);text-transform:uppercase;
+  letter-spacing:.11em;color:var(--faint);font-weight:500;margin:0 0 8px}
+table.mini{font-size:var(--fs-sm)}
+table.mini td{padding:6px 10px}
+table.mini td:nth-child(1){width:52%;word-break:break-word}
+table.mini td:nth-child(2){width:18%}
+/* The bar is a length, not a chart: it makes the shape of a distribution readable at a
+   glance without implying a precision the counts do not have. */
+.barfill{display:block;height:7px;background:var(--stamp);opacity:.5;min-width:2px}

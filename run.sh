@@ -126,6 +126,10 @@ if [ "$VERIFY_OK" = "1" ]; then
   # decide absence against the myScheme records explode has just written.
   say "parse · union registry"
   python3 parse/registry.py
+  # The CAG join needs the registry, which is why it is here and not in the sources stage
+  # beside parse/cag.py. Reading last month's registry.json would publish a join that looks
+  # current and is not.
+  python3 parse/cag_join.py || true
   python3 parse/classify.py
   python3 parse/classify_karnataka.py || true
   for st in andhra kerala tamilnadu maharashtra odisha westbengal \

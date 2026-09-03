@@ -43,36 +43,70 @@ BLOCK = re.compile(r'<div class="AuditReportlisting">(.*?)(?=<div class="AuditRe
 # the subject, which is the only part a scheme name can be matched against. "Report of the
 # Comptroller and Auditor General of India on Performance Audit on 'Implementation of Jal
 # Jeevan Mission in Rajasthan'" is 84 characters of which 34 are the subject.
+# Boilerplate that wraps every title and names no scheme. Stripped so that what remains is
+# the subject, which is the only part a scheme name can be matched against. "Report of the
+# Comptroller and Auditor General of India on Performance Audit on 'Implementation of Jal
+# Jeevan Mission in Rajasthan'" is 84 characters of which 34 are the subject.
+#
+# Two things about this list that are not obvious and cost a rewrite to find.
+#
+# The catalogue misspells its own audit type. "Performace Audit of National Rural Health
+# Mission" appears in HUNDREDS of titles, and an audit-type rule spelling it correctly left
+# every one of them with "Performace Audit of" glued to the front of the scheme name. The
+# patterns tolerate it, and tolerate "andd" in "Comptroller andd Auditor General" the same
+# way. A source's typos are part of its shape.
+#
+# A report number is optional AND the year clause can stand alone. "Report No. 5 of 2017",
+# "Report No.5 of 2017", "Report 5 of 2017" and plain "Report of 2013" all occur, and only
+# the first three were handled: 641 subjects read "of 2013" or "of 2014 - Financial Audit
+# on State Finance of", which is a filing reference published as if it were a scheme name.
 BOILER = [
-    # "No." is optional: the catalogue writes "Report No. 5 of 2017", "Report No.5 of
-    # 2017" and plain "Report 5 of 2017". Requiring it left 17 titles reduced to "5 of
-    # 2017", a report number published as if it were a scheme name.
-    r"^report\s+(?:(?:no\.?\s*)?[\dIVXL]+\s+of\s+(?:the\s+year\s+)?\d{4}\s*[:\-]?\s*)?",
-    r"^(?:of\s+)?the\s+comptroller\s+and\s+auditor\s+general\s+of\s+india\s*",
-    r"^(?:\(c\s*&\s*ag\)|c\s*&\s*ag)\s*",
-    r"^(?:on|for|regarding)\s+",
-    r"^(?:performance|compliance|financial|thematic)\s+audit\s+(?:report\s+)?(?:on|of)?\s*",
+    # "Report No. 5 of 2017", "Report No.5 of 2017", "Report 5 of 2017", "Report of 2013".
+    # The number is optional AND the whole "of YYYY" clause can stand alone, which is what
+    # left 641 subjects reading "of 2013".
+    r"^[\u2010-\u2015\-]+\s*",          # a leading dash, left when a prefix was stripped
+    r"^cag\s+report\s+(?:on|of)?\s*",
+    r"^report\s+",
+    r"^\d{1,3}\s+(?=[A-Za-z])",                       # a leading serial number
+    r"^audit\s+report\s*(?:\([a-z ]+\))?\s*",        # "Audit Report (Civil) ..."
+    r"^the\s+",
+    r"^(?:no\.?\s*)?[\dIVXL]+\s+of\s+(?:the\s+year\s+)?\d{4}\s*[:\-]?\s*",
+    r"^of\s+(?:the\s+year\s+)?\d{4}\s*[:\-]?\s*",
+    # "andd" is the catalogue's own typo and it defeated the whole clause.
+    r"^(?:of\s+)?the\s+comptroller\s+an[d]{1,3}\s+auditor\s+general\s+of\s+india\s*",
+    r"^(?:\(c\s*&\s*ag\)|c\s*&\s*ag)(?:\s+of\s+india)?\s*(?:on|for)?\s*",
+    r"^(?:on|for|regarding|of)\s+",
+    # Compound audit types: "Performance and Compliance Audit on", "Performance and
+    # Financial Audit on". One type at a time left "Performance and Financial Audit on
+    # Civil of" as a scheme name.
+    r"^(?:(?:performan?ce|compliance|financial|thematic)\s*(?:,|and|&)?\s*)+audit\s+"
+    r"(?:report\s+)?(?:on|of)?\s*",
     r"^(?:union|state)\s+government\s*[,\-]?\s*",
-    r"\s+for\s+the\s+year\s+ended\s+.*$",
+    r"\s*(?:for\s+)?the\s+(?:year|period)\s+ended\s+.*$",
+    # A trailing report number is the catalogue's filing, never part of a subject.
+    r"\s*[,\.]?\s*report\s+no\.?\s*[\dIVXL]+\s+of\s+\d{4}.*$",
     r"\s*[,\-]?\s*government\s+of\s+[a-z &]+$",
-    # A trailing "Reports of the Department of X" is the series the report belongs to, not
-    # part of the subject. Without this, "Disbursement of Defence Pension" arrives as
-    # "Disbursement of Defence Pension Reports of Defence Services".
     r"\s+reports?\s+of\s+.*$",
     r"\s+union\s+government\s*.*$",
+    # A dangling preposition is what is left when the government name after it was
+    # stripped: "Ordnance Equipment Group of Factories of".
+    r"\s+(?:of|on|for|in|and|the)\s*$",
+    # An audit type can sit after a parenthetical or a dash rather than at the front:
+    # "(Ministry of X), Performance Audit on Functioning of ...". Anchored to a separator
+    # so it cannot eat the word Performance out of a scheme's own name.
+    r"^.*?[\),\u2013\u2014\-]\s*(?:(?:performan?ce|compliance|financial|thematic)\s*"
+    r"(?:,|and|&)?\s*)+audit\s+(?:report\s+)?(?:on|of)?\s*",
 ]
-
-# Subjects that name a sector or a class of audit rather than a scheme. Any title reducing
-# to one of these is reporting on a slice of government, not on a programme, and offering
-# it to a scheme matcher would manufacture findings out of the CAG's own filing system.
 NOT_A_SUBJECT = re.compile(
     r"^(?:(?:general|social|economic|revenue|civil|commercial|financial|public\s+sector"
     r"|local\s+bodies?|state|union\s+government|panchayati\s+raj|urban\s+local"
-    r"|autonomous\s+bodies?|psus?)"
+    r"|autonomous\s+bodies?|psus?|performance|compliance|direct\s+taxes?"
+    r"|indirect\s+taxes?|goods\s+and\s+services\s+tax|gst"
+    r"|state\s+finances?|general\s+purpose\s+financial|railways?\s+finances?"
+    r"|revenue\s+receipts?|appropriation|audit\s+report(?:\s*\([a-z ]+\))?)"
     r"(?:\s*(?:and|,|&)\s*)?)+"
     r"(?:\s*(?:sector|sectors|finances?|undertakings?|departments?|institutions?|"
-    r"bodies|accounts?|audit))*\s*$", re.I)
-
+    r"bodies|accounts?|audit|receipts?|expenditure)s?)*\s*$", re.I)
 
 def text(s):
     s = re.sub(r"<[^>]+>", " ", s or "")
@@ -101,7 +135,9 @@ def subject(title):
             s = re.sub(pat, "", s, flags=re.I).strip().strip("“”\"'").strip(",-: ")
     s = re.sub(r"^implementation\s+of\s+", "", s, flags=re.I).strip()
     s = re.sub(r"\s+in\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?$", "", s).strip()
-    if len(s) < 6:
+    # Two words minimum. A one-word subject is a sector or a department every time, and
+    # offering it to a scheme matcher is how "Civil" becomes a finding.
+    if len(s) < 6 or len(s.split()) < 2:
         return None
     if NOT_A_SUBJECT.match(s):
         return None
