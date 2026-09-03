@@ -455,6 +455,18 @@ REFUSAL_GROUP = {
 
 NIL = '<span class="nil">&middot;&middot;&middot;</span>'
 
+# Small counts read better as words in a headline, and a headline that hardcodes them goes
+# stale the first time a state moves. This one already did: Uttar Pradesh moved from the
+# refusals to the built states and the heading still said fourteen and eight.
+WORDS = {0: "No", 1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six",
+         7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten", 11: "Eleven", 12: "Twelve",
+         13: "Thirteen", 14: "Fourteen", 15: "Fifteen", 16: "Sixteen", 17: "Seventeen",
+         18: "Eighteen", 19: "Nineteen", 20: "Twenty"}
+
+
+def word(n):
+    return WORDS.get(n, f"{n:,}")
+
 
 def legibility_section(leg, ms=None):
     """The state scoreboard, and the eight refusals named on the same page as the wins.
@@ -527,8 +539,9 @@ def legibility_section(leg, ms=None):
 
     return f"""
 <section class="sec" id="legibility">
-  <h2>Fourteen states can be read by a machine. Eight cannot, and that is a finding
-    about those eight.</h2>
+  <h2>{word(leg.get("states_built"))} states can be read by a machine.
+    {word(leg.get("states_refused"))} cannot, and that is a finding about those
+    {word(leg.get("states_refused")).lower()}.</h2>
   <div class="sec-note">{num(leg.get("states_surveyed"))} states surveyed against their own
     budget documents &middot; five tests each &middot; {named} schemes named in the
     {num(leg.get("states_built"))} that yield</div>
@@ -549,9 +562,11 @@ def legibility_section(leg, ms=None):
   </table></div>
 
   <div class="warnbox">
-    <b>What the eight refusals have in common, which is less than it looks</b>
+    <b>What the {word(leg.get("states_refused")).lower()} refusals have in common, which is
+      less than it looks</b>
     <ul class="lg-list">{groups}</ul>
-    <p style="margin:8px 0 0">Only one of the eight is a layout problem. The rest are
+    <p style="margin:8px 0 0">Only one of the {word(leg.get("states_refused")).lower()} is a
+    layout problem. The rest are
     decisions: to set a budget in a legacy font, to convert it to curves before publishing
     it, to publish the English edition and serve a 404 for it, to publish nothing for the
     current cycle. Each is reversible by the state and by nobody else.</p>
@@ -923,7 +938,8 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=N
 <p class="standfirst">How many welfare schemes does a given state have? Every central
 government portal that answers this question answers it differently, and no portal
 acknowledges the others exist. The prior question is whether the state's own answer can be
-read at all, and for eight states in twenty-two it cannot.</p>
+read at all, and for {word((leg or {}).get("states_refused", 0)).lower()} states in
+{num((leg or {}).get("states_surveyed"))} it cannot.</p>
 
 {legibility_section(leg)}
 
