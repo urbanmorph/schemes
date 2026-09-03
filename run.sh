@@ -69,7 +69,7 @@ if [ "$SKIP_COLLECT" = "0" ]; then
     python3 collect/budget.py --year "$CYCLE_YEAR"
   fi
   for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
-            telangana punjab jharkhand tripura delhi haryana uttarakhand; do
+            telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
     if have_annual "archive/$st/*"; then
       echo "  $st budget already archived, skipping"
     # Not every collector takes --cycle, and passing it to one that does not aborts the
@@ -105,7 +105,7 @@ python3 parse/cag.py || true
 # Karnataka budget less true. Their absence claims are not, and those wait below.
 say "parse · states"
 for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
-          telangana punjab jharkhand tripura delhi haryana uttarakhand; do
+          telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
   python3 "parse/$st.py" || true
 done
 
@@ -129,7 +129,7 @@ if [ "$VERIFY_OK" = "1" ]; then
   python3 parse/classify.py
   python3 parse/classify_karnataka.py || true
   for st in andhra kerala tamilnadu maharashtra odisha westbengal \
-            telangana punjab jharkhand tripura delhi haryana uttarakhand; do
+            telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
     [ -f "parse/classify_$st.py" ] && python3 "parse/classify_$st.py" || true
   done
   # Sector runs after the state parsers and before the site, because it classifies exactly

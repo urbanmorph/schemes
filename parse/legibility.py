@@ -104,6 +104,12 @@ SURVEY = [
     ("Uttarakhand", "uttarakhand", dict(list=True, text=True, bounded=True, english=True, closes=False),
      "Volume 5 names 2,302 schemes against the portal's 446, and 806 of its 4,492 "
      "printed totals do not reconcile against the rows beneath them."),
+    ("Uttar Pradesh", "uttarpradesh",
+     dict(list=True, text=True, bounded=True, english=False, closes=False),
+     "The only state here built WITHOUT clearing the English test: there is no English "
+     "anywhere in its budget, and myScheme lists its schemes in romanised Hindi rather "
+     "than in English, so the join is a change of script. 111 of its 4,198 printed totals "
+     "do not reconcile."),
     ("Tripura", "tripura", dict(list=True, text=True, bounded=True, english=True, closes=True),
      "These 134 state schemes and the 74 centrally sponsored ones printed beside them "
      "come to 208 against DBT Bharat's 209, the closest any state document here has come "
@@ -114,10 +120,6 @@ SURVEY = [
      "The Outcome Budget puts the name, the head of account and sometimes the target in "
      "one column with no separator, and the column boundaries move between pages. There "
      "is no rule that finds the end of a name."),
-    ("Uttar Pradesh", None, dict(list=True, text=True, bounded=True, english=False, closes=None),
-     "It is better bounded than most states here, 5,853 rows tested with zero column "
-     "collisions, and there is no English anywhere in it: 65 Latin tokens across four "
-     "volumes and not one an English word."),
     ("Madhya Pradesh", None, dict(list=True, text=False, bounded=None, english=None, closes=None),
      "The Gender Budget is set in KrutiDev, a legacy 8-bit font whose ToUnicode map "
      "points back at 8-bit codepoints, so the extracted characters are not the "

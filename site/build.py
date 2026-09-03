@@ -449,7 +449,7 @@ REFUSAL_GROUP = {
                 "Gujarat runs the name, the code and the target into one column; "
                 "Rajasthan breaks names across lines mid-word"),
     "english": ("publishes", "publish", "no English at all",
-                "well-bounded Hindi names, and a national portal that lists in English"),
+                "names a machine can read perfectly and cannot join to a list in English"),
 }
 
 
@@ -576,6 +576,17 @@ def legibility_section(leg, ms=None):
     classifier with hand-counted precision before this register will say of any of its
     rows that a portal is hiding it. Naming a directorate as a hidden scheme is a false
     accusation, and the bar for making one is not the bar for counting a budget line.</p>
+    <p style="margin:8px 0 0"><b style="display:inline;color:var(--ink);font-family:inherit;
+    font-size:inherit;text-transform:none;letter-spacing:0">Uttar Pradesh is here without
+    clearing the English test, and it is the only one.</b> The largest state in India
+    publishes its budget in Hindi and in nothing else. It was a refusal for that reason
+    until the reason was checked, and the check went the other way: myScheme does not list
+    Uttar Pradesh&rsquo;s schemes in English either. It lists them in romanised Hindi:
+    Kanya Sumangala Yojana, Berojgari Bhatta Yojna. So what stood between the two lists was
+    a change of SCRIPT, which is deterministic, and not a translation, which would be this
+    register making a claim about meaning. Its 5,831 names are
+    published as the state wrote them, with a romanisation beside each one, labelled as
+    derived.
     <p style="margin:8px 0 0">The last test is the one that separates the states that
     yielded, and it is the strictest thing here: the book prints its own totals and a parse
     of it agrees with <em>all</em> of them. Karnataka and Andhra Pradesh fail it because

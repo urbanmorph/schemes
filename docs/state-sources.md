@@ -42,8 +42,8 @@ out of different numbers.
 | Delhi | yes | yes | yes | yes | **no** | 4 of 5 | 1,578 (not yet on the site) |
 | Karnataka | yes | yes | yes | yes | **no** | 4 of 5 | 969 |
 | Andhra Pradesh | yes | yes | yes | yes | **no** | 4 of 5 | 552 |
+| Uttar Pradesh | yes | yes | yes | **no** | **no** | 3 of 5 | 5,831 (not yet on the site) |
 | *Surveyed, does not yield* | | | | | | | |
-| Uttar Pradesh | yes | yes | yes | **no** | &middot; | 3 of 4 | &middot; |
 | Gujarat | yes | yes | **no** | &middot; | &middot; | 2 of 3 | &middot; |
 | Rajasthan | yes | yes | **no** | yes | &middot; | 3 of 4 | &middot; |
 | Bihar | yes | **no** | &middot; | &middot; | &middot; | 1 of 2 | &middot; |
@@ -52,9 +52,9 @@ out of different numbers.
 | Assam | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
 | Himachal Pradesh | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
 
-14 of 22 states surveyed yield a machine-readable scheme list, between them naming
-33,836 schemes. 7 of those 14 are published on the site, covering 22,978 schemes; the
-other 7 are read, reconciled against their own books and committed, and each still needs
+15 of 22 states surveyed yield a machine-readable scheme list, between them naming
+39,667 schemes. 7 of those 15 are published on the site, covering 22,978 schemes; the
+other 8 are read, reconciled against their own books and committed, and each still needs
 a classifier with hand-counted precision before its absence claims can be published.
 
 ---
@@ -1077,7 +1077,11 @@ break.
 
 ---
 
-## Uttar Pradesh: DOES NOT WORK, and it is the first state to fail on language alone
+## Uttar Pradesh: recorded as DOES NOT WORK, and revisited. It is built.
+
+**The verdict below was reversed on 2026-09-03 and the reasoning is kept as it was written, because the survey's mistake is the useful part. What it got right is that Uttar Pradesh publishes no English. What it got wrong is the assumption that myScheme does. See 'The reversal' at the end of this section.**
+
+### The original finding, as recorded
 
 This is the largest state in India, and its portal listing is smaller than Kerala's:
 myScheme lists **46** schemes for Uttar Pradesh against DBT Bharat's **193**.
@@ -1141,6 +1145,65 @@ names and myScheme's English ones. That is a real deliverable and a different jo
 this one; the state's own English document shows it is not consistent even when a
 government does it by hand.
 
+### The reversal
+
+The line above says "myScheme's English ones", and that is the assumption that was never
+checked. myScheme does not list Uttar Pradesh's schemes in English. Of its 47 records,
+roughly two thirds are a Hindi name written in Latin letters:
+
+    Kanya Sumangala Yojana          Berojgari Bhatta Yojna
+    Gambhir Bimari Sahayata Yojana  Mukhyamantri Samuhik Vivah Yojana
+    Jyotiba Phule Shramik Kanyadan Yojana
+
+So the two lists are in the same LANGUAGE and different SCRIPTS, and what stands between
+them is a transliteration. That matters for whether this register may do it at all:
+transliteration is deterministic and checkable, कन्या is kanya whatever the word means,
+while translation is a claim about meaning that a register built on publishing only what
+it can check has no business making in its own voice.
+
+`parse/devanagari.py` does the conversion and `collect/uttarpradesh.py` and
+`parse/uttarpradesh.py` build the state: **5,831 scheme-level nodes across 91 grant
+volumes**, with 4,087 of 4,198 printed totals reconciling. The names are published in
+Hindi, which is what the state wrote, with the romanisation beside each one and labelled
+as derived.
+
+**How much of the transliteration has to be right, which was the surprise.**
+`match.probably_same` already strips every vowel and folds aspiration, so for a word of
+any length the vowels do not matter, which is lucky: every axis on which two offices
+disagree when romanising is a vowel or aspiration axis, and myScheme alone writes Yojana
+and Yojna, Sahayta and Sahayata, Ravidas and Ravidaas, in one file. SHORT words are the
+exception, because `skeletons()` falls back to the raw token under three characters, so
+"baala" and "bal" do not match. Three conventions close it: long vowels written short, the
+word-final inherent vowel dropped, and the anusvara written m before a labial so गंभीर is
+gambhir and not ganbhir. A nasal, unlike a vowel, survives the skeleton.
+
+**The join is 5 pairs, 2 of them sound, and the script was never the reason it is small.**
+कन्या सुमंगला योजना to Kanya Sumangala Yojana and मुख्यमंत्री सामूहिक विवाह योजना to
+Mukhyamantri Samuhik Vivah Yojana, both at similarity 1.00, neither reachable before.
+Against that, Berojgari Bhatta, Gambhir Bimari Sahayata, Kanya Vivah Sahayta and Panchayat
+Kalyan Kosh return **zero rows on a plain substring search of the Hindi**: they are not in
+the grant volumes under those names at all, and like Tripura's several are welfare-board
+benefits paid from a board's own fund rather than from a demand. Others are English
+descriptions rather than names, "Marriage Grant Scheme" and "Widow Pension", which no
+transliteration reaches and which only translation would.
+
+**One join is defeated by a typo in the portal.** उत्तर प्रदेश मुख्यमंत्री बाल सेवा योजना
+matches "Uttar Pradesh Mukhyamantri Bal Seva Yojana" on all five content words. myScheme's
+actual record is spelled **"Uttar Pradesh Mukhyamantri Bal Seva Yojana (Genearal)"**, and
+Genearal is a content word no state book can contain. The scheme is in both lists and this
+register cannot say so.
+
+**What the parser had to learn, none of it about language.** The money renders on a
+different baseline from the Devanagari, about 4pt below and up to 6.7 where a figure is too
+wide for its column, so rows are grouped with a swept tolerance rather than by exact y. The
+text stream splits words inside a syllable, `केन्द्र` as `के` + `न्द्र`, repaired by
+geometry with a virama guard because a word ending in an explicit halant is complete. The
+tree is read from the ACCOUNT-CODE GRAMMAR and not from the indent: Gr49 sets its minor
+heads at x 244 and its schemes at 254, Gr40 sets a minor head at 254, and a threshold tuned
+on one volume reparents subtrees in another. And मतदेय / भारित, Voted and Charged, sit in
+the left margin at x 229, inside the name band and to the left of the code, so every voted
+object head was dropped for not starting with a code.
+
 ---
 
 ## Scoreboard, Punjab and Uttar Pradesh
@@ -1149,7 +1212,7 @@ government does it by hand.
 |---|---|---|---|---|
 | Telangana | **built** | Pragathi Paddu VII/1, 117pp, plus the SC and ST fund volumes | 2,039 vs 22 vs 152 | 320 of 320 printed totals |
 | Punjab | **built** | 3 Demand for Grants volumes + CSS book + Gender Budget, 2,540pp | 2,961 vs 41 vs 128 | 6,234 of 6,234 printed totals |
-| Uttar Pradesh | **no** | 91 grant-wise volumes at `budget.up.nic.in/PDF26_27/Gr{NN}.pdf` | would be ~8,000 vs 46 vs 193 | not attempted |
+| Uttar Pradesh | **no**, and REVERSED the same day: see 'The reversal' above. Built, 5,831 schemes | 91 grant-wise volumes at `budget.up.nic.in/PDF26_27/Gr{NN}.pdf` | 5,831 vs 47 vs 193 | transliteration, not translation |
 
 Uttar Pradesh adds a fifth way for a state to fail, and it is the only one that is not a
 defect in the publishing. Gujarat cannot say where a name ends. Madhya Pradesh and Bihar

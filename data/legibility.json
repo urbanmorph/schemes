@@ -1,7 +1,7 @@
 {
- "built_at": "2026-09-03T04:43:20Z",
+ "built_at": "2026-09-03T05:22:43Z",
  "method_note": "Verdicts are hand-entered from reading each state's documents, which is the only way this survey has ever been done. Every verdict for a state that was built is then checked against that state's own parser output, and a disagreement stops the build rather than publishing. The refusals have no output to check against, which is what a refusal is, so each carries the measurement that decided it instead.",
- "schemes_named": 33836,
+ "schemes_named": 39667,
  "schemes_named_on_site": 22978,
  "states": [
   {
@@ -422,6 +422,38 @@
   },
   {
    "built": true,
+   "cleared": 3,
+   "failed_at": "english",
+   "key": "uttarpradesh",
+   "measured": {
+    "cycle": "2026-27",
+    "names": 5831,
+    "names_in_latin_script": 0,
+    "on_site": false,
+    "rows": 5831,
+    "says": {
+     "closes": false,
+     "english": false,
+     "list": true,
+     "text": true
+    },
+    "source": "Uttar Pradesh Budget, Khand-5 grant-wise volumes",
+    "totals_checked": 8396,
+    "totals_failed": 222
+   },
+   "state": "Uttar Pradesh",
+   "tests": {
+    "bounded": true,
+    "closes": false,
+    "english": false,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "The only state here built WITHOUT clearing the English test: there is no English anywhere in its budget, and myScheme lists its schemes in romanised Hindi rather than in English, so the join is a change of script. 111 of its 4,198 printed totals do not reconcile."
+  },
+  {
+   "built": true,
    "cleared": 5,
    "failed_at": null,
    "key": "tripura",
@@ -468,23 +500,6 @@
    },
    "tests_run": 3,
    "why": "The Outcome Budget puts the name, the head of account and sometimes the target in one column with no separator, and the column boundaries move between pages. There is no rule that finds the end of a name."
-  },
-  {
-   "built": false,
-   "cleared": 3,
-   "failed_at": "english",
-   "key": null,
-   "measured": null,
-   "state": "Uttar Pradesh",
-   "tests": {
-    "bounded": true,
-    "closes": null,
-    "english": false,
-    "list": true,
-    "text": true
-   },
-   "tests_run": 4,
-   "why": "It is better bounded than most states here, 5,853 rows tested with zero column collisions, and there is no English anywhere in it: 65 Latin tokens across four volumes and not one an English word."
   },
   {
    "built": false,
@@ -589,9 +604,9 @@
    "why": "It publishes thirty documents and serves none of them: every link is a __doPostBack that 302s back to the portal home."
   }
  ],
- "states_built": 14,
+ "states_built": 15,
  "states_on_site": 7,
- "states_refused": 8,
+ "states_refused": 7,
  "states_surveyed": 22,
  "tests": [
   {
