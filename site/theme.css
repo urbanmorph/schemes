@@ -629,3 +629,7 @@ table.mini td:nth-child(2){width:18%}
 #stbl code{font-size:var(--fs-xs);word-break:break-all}
 /* The row a reader arrived at by following an anchor from the register. */
 #stbl tr:target{background:var(--stamp-soft);box-shadow:inset 3px 0 0 var(--stamp-bright)}
+
+/* The sentinel the table appends its next window from. It carries no text and no height
+   of its own; the IntersectionObserver watches it 600px before it arrives. */
+.more{height:1px}

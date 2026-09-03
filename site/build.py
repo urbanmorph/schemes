@@ -351,6 +351,14 @@ CSS_V = _css_version()
 
 # --------------------------------------------------------------------- pages
 
+# How many rows ship as HTML. Enough to fill a screen and to give a crawler and a no-JS
+# reader a real table; the rest arrive as data and are rendered in windows.
+SEED_ROWS = 60
+# How many rows the browser renders at once, and how many it appends when the reader
+# reaches the end of them.
+WINDOW = 300
+
+
 def page_index(census, checks, dbt, entries):
     facets = (census or {}).get("facets", {})
     lvl = facets.get("level", {})
@@ -1921,8 +1929,8 @@ def index_section(entries):
     }
 
     rows = ""
-    findex = []
-    page_index.findex = findex          # read by build(), as shell.status is
+    rowdata = []
+    page_index.rowdata = rowdata        # read by build(), as shell.status is
     for e_ in entries:
         slug = e_["slug"]
         c = e_["checks"]
@@ -1980,43 +1988,58 @@ def index_section(entries):
         #
         # data-p and data-b stay inline: 139 KB together, and they are what the sortable
         # columns read, so sorting works on the first click rather than after a fetch.
-        findex.append([
+        # ONE COMPACT ARRAY PER ROW, AND NO <tr> FOR MOST OF THEM. The table used to ship
+        # every row as HTML: 23,955 rows, 413 bytes each, 9.9 MB of a 10.1 MB page and 98%
+        # of its bytes, and 270,443 DOM elements. A trace measured layout updates of
+        # 2,094 ms, 1,360 ms and 1,343 ms on UNTHROTTLED desktop for that one table.
+        #
+        # The rows are now data. The browser renders a window of them and appends more as
+        # the reader scrolls, so the DOM holds hundreds of elements instead of a quarter of
+        # a million. This also replaces filters.json outright: the filter fields and the
+        # display fields were two payloads describing the same rows, and they are one now.
+        #
+        # Positional, not keyed, because 23,955 copies of seventeen field names is 4 MB of
+        # the same words. The order is the contract and `cols` in the JSON records it.
+        rowdata.append([
+            e_["name"],
+            short if short and short != e_["name"] else "",
+            e_.get("href") or ("scheme/" + str(slug)),
+            e_.get("category") or "",
+            w_head, w_sub,
+            e_.get("org") or "",
+            round(e_["be_cr"]) if isinstance(e_.get("be_cr"), (int, float)) else None,
+            (c or {}).get("passed", -1),
+            1 if e_.get("href") else 0,
             " ".join(sorted(sq)),
             " ".join(e_["sources"]),
-            (e_.get("org") or "").lower(),
+            # NOT the lower-cased org and sector. They were two more copies of two strings
+            # already in this row, 824 KB of the payload to save one toLowerCase() call
+            # each on load.
             " ".join(x.lower() for x in ((e_.get("state")
                                           if isinstance(e_.get("state"), list)
                                           else [e_.get("state")]) if e_.get("state") else [])),
             e_.get("audience") or "",
-            (e_.get("category") or "").lower(),
             e_.get("level_value") or "",
         ])
-        rows += (f'<tr data-p="{(c or {}).get("passed", -1)}"'
-                 + (f' data-b="{e_["be_cr"]:.0f}"' if isinstance(e_.get("be_cr"), (int, float)) else "")
-                 # A row from a state with no classifier. Marked in the DOM so the rail
-                 # can say how much of "not on myScheme" is a budget line carrying no
-                 # verdict rather than a scheme this register says is hidden.
-                 + (' data-u="1"' if e_.get("href") else "")
-                 + '>'
-                 # Rows that live on a state register page link there. This link used to be
-                 # scheme/<slug> for every row, and once those rows stopped getting a page
-                 # of their own that was 15,108 links to nothing. Cloudflare Pages answers a
-                 # missing path with the index page and HTTP 200, so nothing 404s and every
-                 # one of them silently served a reader the whole 10 MB register instead of
-                 # the row they clicked.
-                 f'<td><a href="{e(e_.get("href") or ("scheme/" + str(slug)))}">'
-                 f'{e(e_["name"])}</a>{acr}</td>'
-                 # Sector where the source badges used to be. Which sources name a scheme is
-                 # audit metadata and belongs on its page; what the scheme is FOR is what a
-                 # reader scanning 7,370 rows is looking for. The badges still drive the
-                 # "Listed by" filter pills, they just no longer take a column.
-                 f'<td class="muted">{e(e_.get("category") or "")}'
-                 + ('' if e_.get("category") else '<span class="nil">not stated</span>')
-                 + '</td>'
-                 + where_cell
-                 + f'<td class="muted">{e(e_.get("org") or "")}</td>'
-                 f'<td class="num alloc">{alloc}</td>'
-                 f'<td class="num">{score}</td></tr>')
+        # A seed of real rows so the page is readable before the data lands, so a crawler
+        # that runs no JavaScript sees a table rather than an empty one, and so no-JS
+        # readers get something instead of nothing. Everything is in the CSV and every
+        # scheme has its own page, both linked from the note under the table.
+        if len(rowdata) <= SEED_ROWS:
+            rows += (f'<tr data-p="{(c or {}).get("passed", -1)}"'
+                     + (f' data-b="{e_["be_cr"]:.0f}"'
+                        if isinstance(e_.get("be_cr"), (int, float)) else "")
+                     + (' data-u="1"' if e_.get("href") else "")
+                     + '>'
+                     f'<td><a href="{e(e_.get("href") or ("scheme/" + str(slug)))}">'
+                     f'{e(e_["name"])}</a>{acr}</td>'
+                     f'<td class="muted">{e(e_.get("category") or "")}'
+                     + ('' if e_.get("category") else '<span class="nil">not stated</span>')
+                     + '</td>'
+                     + where_cell
+                     + f'<td class="muted">{e(e_.get("org") or "")}</td>'
+                     f'<td class="num alloc">{alloc}</td>'
+                     f'<td class="num">{score}</td></tr>')
 
     n = len(entries)
     if not n:
@@ -2052,6 +2075,12 @@ def index_section(entries):
       this record passes">Score</th></tr></thead>
   <tbody>{rows}</tbody>
 </table></div>
+<div id="more" class="more" hidden aria-hidden="true"></div>
+<noscript><div class="warnbox"><b>This table needs JavaScript to show all
+  {n:,} rows</b>The {SEED_ROWS} above are the first of them. Every row is in
+  <a href="schemes.csv">the CSV</a>, every scheme has its own page, and each state&rsquo;s
+  full budget book is linked from <a href="{link("divergence.html")}">the divergence
+  page</a>.</div></noscript>
 </div>
 <aside class="wrail" aria-label="Statistics for the current selection">
   <div class="railhd">This selection</div>
@@ -2089,50 +2118,88 @@ def index_section(entries):
 </div>
 <script>
 (function(){{
-  var tb=document.querySelector('#tbl tbody'),rows=[].slice.call(tb.rows),
+  var tb=document.querySelector('#tbl tbody'),
       empty=document.getElementById('nomatch'),
       q=document.getElementById('q'),og=document.getElementById('org'),
       c=document.getElementById('count'),asc=false,
       state={{lvl:'',src:'',doc:'',aud:''}};
   var norm=function(v){{return v.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
+  var esc=function(v){{return String(v==null?'':v)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}};
+  var inr=function(v){{return v.toLocaleString('en-IN');}};
 
-  // The filter index arrives as one fetch instead of seven attributes on each of 8,748
-  // rows. Until it lands the table is fully rendered and readable and the controls are
-  // disabled, which is honest: they cannot answer yet. Attaching it to the element rather
-  // than keeping an array means it survives the DOM reordering that sorting does.
-  var FIDX=null;
-  rows.forEach(function(r){{ r._f={{x:'',s:'',o:'',st:'',a:'',cat:'',l:''}};
-                             r._h = norm(r.cells[0].textContent); }});
+  // ROWS ARE DATA, NOT DOM. The table shipped 23,955 <tr> and cost 270,443 elements and
+  // several seconds of layout; it now ships {SEED_ROWS} of them and the rest arrive here.
+  // Everything below filters and sorts plain objects and renders a window of the result,
+  // appending more as the reader reaches the end.
+  var rows=[],FIDX=null,vis=[],drawn=0;
   var ctl=document.querySelectorAll('.pill,#q,#st,#org');
   [].forEach.call(ctl,function(el){{ el.disabled=true; }});
-  fetch('filters.json').then(function(res){{ return res.json(); }}).then(function(d){{
-    var C=d.cols;
-    d.rows.forEach(function(v,i){{
-      var r=rows[i]; if(!r) return;
-      for(var k=0;k<C.length;k++) r._f[C[k]]=v[k]||'';
-      r._h = norm(r.cells[0].textContent+' '+r._f.x);
+
+  function rowHtml(r){{
+    var money = r.b==null ? '<span class="nil">...</span>' : '&#8377;'+inr(r.b);
+    var score = r.p>=0 ? '<b>'+Math.round(r.p*100/9)+'</b>'
+                       : '<span class="nil">...</span>';
+    return '<tr><td><a href="'+esc(r.href)+'">'+esc(r.n)+'</a>'
+      + (r.acr ? '<span class="acr">'+esc(r.acr)+'</span>' : '') + '</td>'
+      + '<td class="muted">'+esc(r.cat0)
+      + (r.cat0 ? '' : '<span class="nil">not stated</span>') + '</td>'
+      + '<td>'+esc(r.wh)+(r.ws ? '<span class="sub2">'+esc(r.ws)+'</span>' : '')+'</td>'
+      + '<td class="muted">'+esc(r.o0)+'</td>'
+      + '<td class="num alloc">'+money+'</td>'
+      + '<td class="num">'+score+'</td></tr>';
+  }}
+
+  // Render the first WINDOW of the current selection, then extend on demand. Replacing
+  // innerHTML in one assignment rather than appending row by row keeps this to a single
+  // layout instead of one per row.
+  function draw(reset){{
+    if(reset){{ drawn=0; tb.innerHTML=''; }}
+    var next=Math.min(vis.length, drawn+{WINDOW});
+    if(next<=drawn) return;
+    var h='';
+    for(var i=drawn;i<next;i++) h+=rowHtml(vis[i]);
+    tb.insertAdjacentHTML('beforeend',h);
+    drawn=next;
+    var s=document.getElementById('more');
+    if(s) s.hidden = drawn>=vis.length;
+  }}
+
+  fetch('rows.json').then(function(res){{ return res.json(); }}).then(function(d){{
+    rows=d.rows.map(function(v){{
+      return {{n:v[0],acr:v[1],href:v[2],cat0:v[3],wh:v[4],ws:v[5],o0:v[6],
+              b:v[7],p:v[8],u:v[9],
+              _f:{{x:v[10],s:v[11],o:(v[6]||'').toLowerCase(),st:v[12],a:v[13],
+                   cat:(v[3]||'').toLowerCase(),l:v[14]}},
+              _h:norm(v[0]+' '+v[1]+' '+v[10])}};
     }});
     FIDX=true;
     [].forEach.call(ctl,function(el){{ el.disabled=false; }});
     // apply() is called OUTSIDE the promise chain. Called inside it, any error it threw
-    // would be caught by the handler below and reported as "the filter index did not
-    // load", which would be a lie about a file that had loaded perfectly: a jsdom run
-    // without matchMedia produced exactly that, disabling every control after a
-    // successful fetch. A failure to fetch and a failure to render are different faults
-    // and must not share a message.
-    setTimeout(apply, 0);
+    // would be caught by the handler below and reported as "the table did not load",
+    // which would be a lie about a file that had loaded perfectly. A failure to fetch and
+    // a failure to render are different faults and must not share a message.
+    setTimeout(function(){{ apply(); }}, 0);
   }}).catch(function(){{
-    // A filter that cannot filter must not look like one that found nothing.
     [].forEach.call(ctl,function(el){{ el.disabled=true; }});
     var w=document.getElementById('whyempty');
-    if(w) w.textContent='The filter index did not load, so filtering is unavailable. '
-                       +'The full table is below and the CSV has every row.';
+    if(w) w.textContent='The table data did not load, so filtering is unavailable. '
+                       +'The first rows are below and the CSV has every row.';
   }});
+
+  // Append the next window when the sentinel under the table comes into view.
+  var sent=document.getElementById('more');
+  if(sent && window.IntersectionObserver){{
+    new IntersectionObserver(function(es){{
+      if(es[0].isIntersecting) draw(false);
+    }},{{rootMargin:'600px'}}).observe(sent);
+  }}
+
   function terms(v){{ return norm(v).split(' ').filter(Boolean); }}
 
   function docOk(r,v){{
     if(!v) return true;
-    var p=+r.dataset.p;              // -1 means no myScheme record, nothing to score
+    var p=r.p;                       // -1 means no myScheme record, nothing to score
     if(v==='none') return p<0;
     if(p<0) return false;
     var s=Math.round(p*100/9), b=v.split('-');
@@ -2142,6 +2209,7 @@ def index_section(entries):
     var ts=terms(q.value),o=og.value.trim().toLowerCase(),
         stv=document.getElementById('st').value,shown=0;
     document.getElementById('orgclear').hidden = !o;
+    vis=[];
     rows.forEach(function(r){{
       var ok=(!o||r._f.o.indexOf(o)>-1)
              &&(!stv||(r._f.st||'').indexOf(stv)>-1)
@@ -2150,8 +2218,10 @@ def index_section(entries):
              &&(!state.cat||(state.cat==='!'?!r._f.cat:r._f.cat===state.cat))
              &&docOk(r,state.doc);
       if(ok) for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0){{ok=false;break;}}
-      r.hidden=!ok; if(ok)shown++;
+      if(ok) vis.push(r);
     }});
+    shown=vis.length;
+    draw(true);
     c.textContent=shown.toLocaleString()+' of {n:,} schemes';
     empty.hidden = shown>0;
     rail(shown);
@@ -2172,9 +2242,8 @@ def index_section(entries):
   function keepInView(){{
     var tb=document.getElementById('schemes');
     if(!tb) return;
-    var last=null,vis=rows.filter(function(r){{return !r.hidden;}});
-    if(vis.length) last=vis[vis.length-1];
-    var bottom=(last||tb).getBoundingClientRect().bottom;
+    // The last matching row may not be rendered yet, so this measures the table itself.
+    var bottom=(document.getElementById('tbl')||tb).getBoundingClientRect().bottom;
     if(bottom>0) return;                 // still something to look at on screen
     var reduce=!window.matchMedia
                || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2182,13 +2251,12 @@ def index_section(entries):
   }}
 
   function rail(shown){{
-    var vis=rows.filter(function(r){{return !r.hidden;}});
     var src={{myscheme:0,budget:0,dbt:0,outcome:0}},money=0,scores=[],unjudged=0;
     vis.forEach(function(r){{
       (r._f.s||'').split(' ').forEach(function(k){{ if(k in src) src[k]++; }});
-      if(r.dataset.b) money+=+r.dataset.b;
-      if(r.dataset.u) unjudged++;
-      if(+r.dataset.p>=0) scores.push(+r.dataset.p);
+      if(r.b!=null) money+=r.b;
+      if(r.u) unjudged++;
+      if(r.p>=0) scores.push(r.p);
     }});
     scores.sort(function(a,b){{return a-b;}});
     var med = scores.length ? scores[Math.floor(scores.length/2)] : null;
@@ -2294,14 +2362,14 @@ def index_section(entries):
       // column's direction, which is what a reader expects and what the arrow claims.
       asc = (sortedBy===k) ? !asc : true;
       sortedBy=k;
-      rows.sort(function(a,b){{
-        var g=function(r){{return k==='p'?+r.dataset.p
-                              :k==='b'?(r.dataset.b?+r.dataset.b:-Infinity)
-                              :r._h;}};
-        var x=g(a), y=g(b);
-        return (x<y?-1:x>y?1:0)*(asc?1:-1);
-      }});
-      rows.forEach(function(r){{tb.appendChild(r);}});
+      var g=function(r){{return k==='p'?r.p
+                            :k==='b'?(r.b==null?-Infinity:r.b)
+                            :r._h;}};
+      var cmp=function(a,b){{ var x=g(a),y=g(b);
+                             return (x<y?-1:x>y?1:0)*(asc?1:-1); }};
+      // Both lists: `rows` so a later filter keeps the order, `vis` so the redraw shows it.
+      rows.sort(cmp); vis.sort(cmp);
+      draw(true);
       document.querySelectorAll('th.sortable').forEach(function(o){{
         var on = o===th;
         o.classList.toggle('sorted',on);
@@ -2911,7 +2979,7 @@ def build():
             +             "/theme.css\n"
             "  Cache-Control: public, max-age=31536000, immutable\n"
             "\n"
-            "/filters.json\n"
+            "/rows.json\n"
             "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
             "\n"
             "/scheme/*\n"
@@ -2999,12 +3067,15 @@ def build():
         desc=(f"{len(entries):,} Indian government schemes across four official sources, "
               "with what each source publishes and what it leaves out."),
         canon=SITE_BASE + "/"))
-    # Compact on purpose: no indentation and no spaces after separators. The index is
-    # 1.8 MB of strings and pretty-printing it would add a fifth again for a file no
-    # person reads.
-    with open(os.path.join(OUT, "filters.json"), "w", encoding="utf-8") as fh:
-        json.dump({"cols": ["x", "s", "o", "st", "a", "cat", "l"],
-                   "rows": getattr(page_index, "findex", [])},
+    # Every row the table can show, as data. This replaced filters.json, which carried the
+    # filter fields for rows whose display fields were in the HTML: two payloads describing
+    # the same 23,955 rows. Compact on purpose, no indentation and no spaces after
+    # separators, because no person reads it.
+    with open(os.path.join(OUT, "rows.json"), "w", encoding="utf-8") as fh:
+        json.dump({"cols": ["name", "acr", "href", "sector", "where", "where_sub", "org",
+                            "be_cr", "checks_passed", "unjudged",
+                            "x", "s", "o", "st", "a", "cat", "l"],
+                   "rows": getattr(page_index, "rowdata", [])},
                   fh, separators=(",", ":"), ensure_ascii=False)
 
     w("divergence.html", shell(
