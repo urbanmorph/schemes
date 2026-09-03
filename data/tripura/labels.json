@@ -1,0 +1,681 @@
+{
+ "state": "Tripura",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, pension, insurance or training from this line? A line for construction, an institution's running costs, administration, a census or survey, area development, or a named cost component of another scheme is not_scheme.",
+ "labelled": 134,
+ "scheme": 62,
+ "not_scheme": 72,
+ "sampling": "THE WHOLE CORPUS, not a sample. Tripura's book names 134 state schemes and labelling all of them costs less than designing a stratum for them, so there is no sampling error here at any threshold.",
+ "labels": {
+  "TR1": {
+   "label": "not_scheme",
+   "name": "TR- RASTRIYA UCHCHATAR SHIKSHA ABHIYAN",
+   "how": "whole corpus, read by eye"
+  },
+  "TR10": {
+   "label": "not_scheme",
+   "name": "TRIPURA_NATIONAL HEALTH MISSION",
+   "how": "whole corpus, read by eye"
+  },
+  "TR101": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF STATE DRUG REGULATORY SYSTEM TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR102": {
+   "label": "not_scheme",
+   "name": "BORDER AREA DEVELOPMENT PROGRAMME TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR103": {
+   "label": "not_scheme",
+   "name": "ISS SALARY TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR105": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matru Vandana Yojana Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR109": {
+   "label": "not_scheme",
+   "name": "Digital Agriculture Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR11": {
+   "label": "not_scheme",
+   "name": "TR PRADHAN MANTRI GRAM SADAK YOJANA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR110": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF MACHINERY FOR ENFORCEMENT OF PROTECTION OF",
+   "how": "whole corpus, read by eye"
+  },
+  "TR111": {
+   "label": "scheme",
+   "name": "POSHAN ABHIYAAN TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR12": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security (Krishionnati Yojana) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR120": {
+   "label": "scheme",
+   "name": "NATIONAL BAMBOO MISSION-TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR121": {
+   "label": "not_scheme",
+   "name": "RASHTRIYA GRAM SWARAJ ABHIYAN (RGSA)-TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR122": {
+   "label": "not_scheme",
+   "name": "Infrastructure Facilities for Judiciary Tripura(9174)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR123": {
+   "label": "scheme",
+   "name": "ONE STOP CENTRE TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR128": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Adarsh Gram Yojana (PMAGY)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR13": {
+   "label": "scheme",
+   "name": "TRIPURA NATIONAL RURAL DRINKING WATER PROGRAMME (NRDWP)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR133": {
+   "label": "not_scheme",
+   "name": "ASSISTANCE TO STATE AGENCIES FOR INTRA-STATE MOVEMENT OF",
+   "how": "whole corpus, read by eye"
+  },
+  "TR14": {
+   "label": "scheme",
+   "name": "TRIPURA SWATCH BHARAT ABHIYAN",
+   "how": "whole corpus, read by eye"
+  },
+  "TR144": {
+   "label": "scheme",
+   "name": "SAMAGRA SIKSHA ABHIYAN",
+   "how": "whole corpus, read by eye"
+  },
+  "TR153": {
+   "label": "not_scheme",
+   "name": "TRIPURA CONSERVATION OF AQUATIC ECO SYSTEMS",
+   "how": "whole corpus, read by eye"
+  },
+  "TR156": {
+   "label": "not_scheme",
+   "name": "Tripura Integrated Development of Wildlife Habits",
+   "how": "whole corpus, read by eye"
+  },
+  "TR157": {
+   "label": "not_scheme",
+   "name": "Tripura Fastrack Special Code/National Mission Safety of Women",
+   "how": "whole corpus, read by eye"
+  },
+  "TR16": {
+   "label": "not_scheme",
+   "name": "TRIPURA NATIONAL AYUSH MISSION (NAM)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR162": {
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI JAN VIKAS KARYAKARAM TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR163": {
+   "label": "not_scheme",
+   "name": "BJRCY, BOYS AND GIRLS HOSTELS (SCs) TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR164": {
+   "label": "scheme",
+   "name": "NATIONAL ACTION PLAN FOR SENIOR CITIZENS TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR165": {
+   "label": "not_scheme",
+   "name": "HAR KHET KO PANI TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR166": {
+   "label": "not_scheme",
+   "name": "DRUG DEMAND REDUCTION TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR17": {
+   "label": "scheme",
+   "name": "TRIPURA PRADHAN MANTRI AWAS YOJNA (PMAY) (RURAL)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR172": {
+   "label": "not_scheme",
+   "name": "Strengthening of Infrastructure for Institutional Training Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR175": {
+   "label": "scheme",
+   "name": "TRIPURA PM FORMALIZATION OF MICRO FOOD PROCESSING ENTERPRISES",
+   "how": "whole corpus, read by eye"
+  },
+  "TR176": {
+   "label": "scheme",
+   "name": "NEW INDIA LITERACY PROGRAMME (NILP) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR178": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR181": {
+   "label": "scheme",
+   "name": "Deendayal Upadhyaya Grameen Kaushalya Yojana (DDUGKY) (Project & Support",
+   "how": "whole corpus, read by eye"
+  },
+  "TR182": {
+   "label": "scheme",
+   "name": "The Start-up Village Entrepreneurship Programme (SVEP)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR183": {
+   "label": "not_scheme",
+   "name": "Rural Self Employment Training Institutes (RSETIs)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR186": {
+   "label": "scheme",
+   "name": "WOMEN HELP LINE TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR19": {
+   "label": "not_scheme",
+   "name": "MGNREGA Material",
+   "how": "whole corpus, read by eye"
+  },
+  "TR192": {
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION",
+   "how": "whole corpus, read by eye"
+  },
+  "TR198": {
+   "label": "not_scheme",
+   "name": "IRRIGATION CENSUS TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR199": {
+   "label": "scheme",
+   "name": "Beti Bachao Beti Padhao Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR2": {
+   "label": "scheme",
+   "name": "Agriculture Extension (Krishionnati Yojana )Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR200": {
+   "label": "scheme",
+   "name": "Livestock Health and Disease Control Programme Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR203": {
+   "label": "not_scheme",
+   "name": "Livestock Census Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR204": {
+   "label": "not_scheme",
+   "name": "ISS Other Components Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR205": {
+   "label": "scheme",
+   "name": "ICDS Supplementary Nutrition Programme Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR206": {
+   "label": "scheme",
+   "name": "ICDS Anganwadi Services General Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR207": {
+   "label": "not_scheme",
+   "name": "ICDS Construction and Up-gradation of AWCs Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR208": {
+   "label": "scheme",
+   "name": "Nari Adalat Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR209": {
+   "label": "scheme",
+   "name": "Hub for Empowerment of Women Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR21": {
+   "label": "scheme",
+   "name": "MID-DAY MEALS",
+   "how": "whole corpus, read by eye"
+  },
+  "TR210": {
+   "label": "not_scheme",
+   "name": "Sakhi Niwas Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR212": {
+   "label": "not_scheme",
+   "name": "MGNREGA Admin",
+   "how": "whole corpus, read by eye"
+  },
+  "TR214": {
+   "label": "scheme",
+   "name": "MGNREGA Project Unnati",
+   "how": "whole corpus, read by eye"
+  },
+  "TR215": {
+   "label": "not_scheme",
+   "name": "ASCAD for training awareness etc",
+   "how": "whole corpus, read by eye"
+  },
+  "TR216": {
+   "label": "scheme",
+   "name": "ASCAD for payment of compensation",
+   "how": "whole corpus, read by eye"
+  },
+  "TR217": {
+   "label": "not_scheme",
+   "name": "ESVHD MVU recurring expenditure for operating MVUs",
+   "how": "whole corpus, read by eye"
+  },
+  "TR218": {
+   "label": "scheme",
+   "name": "IHHL CT PT Aspirational Toilets SBM-U Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR219": {
+   "label": "not_scheme",
+   "name": "Used Water Management UWM SBM-U Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR220": {
+   "label": "not_scheme",
+   "name": "Solid Waste Management SWM SBM-U Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR221": {
+   "label": "not_scheme",
+   "name": "IEC & Behaviour Change IEC&BC SBM-U Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR222": {
+   "label": "not_scheme",
+   "name": "Capacity Building Skill Development and Knowledge Management SBM-U",
+   "how": "whole corpus, read by eye"
+  },
+  "TR223": {
+   "label": "not_scheme",
+   "name": "Capital Assets (Construction of One Stop Centres)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR225": {
+   "label": "not_scheme",
+   "name": "Administrative Costs to States/UTs-Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR228": {
+   "label": "scheme",
+   "name": "Non-Institutional Care-Sponsorship/ Foster Care/ After Care Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR229": {
+   "label": "not_scheme",
+   "name": "Creation of Capital Assets (Construction of CCIs including JJBs and CWCs)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR230": {
+   "label": "not_scheme",
+   "name": "Swachhata Action Plan (SAP) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR231": {
+   "label": "scheme",
+   "name": "Child Helpline Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR232": {
+   "label": "not_scheme",
+   "name": "AMRUT2.0 Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR233": {
+   "label": "not_scheme",
+   "name": "Recurring non shareable component-Cost of Food grains, Transportation",
+   "how": "whole corpus, read by eye"
+  },
+  "TR234": {
+   "label": "not_scheme",
+   "name": "Non recurring shareable component-Kitchen cum stores, Kitchen devices and",
+   "how": "whole corpus, read by eye"
+  },
+  "TR238": {
+   "label": "not_scheme",
+   "name": "PM SHRI Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR241": {
+   "label": "not_scheme",
+   "name": "Seminars NLM Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR243": {
+   "label": "scheme",
+   "name": "LiveStock Insurance NLM Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR246": {
+   "label": "not_scheme",
+   "name": "Support to Tribal research Institutes-General Scheme-Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR247": {
+   "label": "scheme",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana-MKSP Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR248": {
+   "label": "not_scheme",
+   "name": "AMRUT 2.0 (A&OE fund) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR25": {
+   "label": "scheme",
+   "name": "MISSION VATSALYA TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR250": {
+   "label": "scheme",
+   "name": "PM JANMAN Tripura under Saksham Anganwadi and POSHAN 2",
+   "how": "whole corpus, read by eye"
+  },
+  "TR251": {
+   "label": "not_scheme",
+   "name": "PM JANMAN Tripura under PMGSY",
+   "how": "whole corpus, read by eye"
+  },
+  "TR252": {
+   "label": "scheme",
+   "name": "PM JANMAN under PMAYG",
+   "how": "whole corpus, read by eye"
+  },
+  "TR253": {
+   "label": "not_scheme",
+   "name": "Computerization of the Offices of Registrar of Cooperatives of States and UTs",
+   "how": "whole corpus, read by eye"
+  },
+  "TR254": {
+   "label": "not_scheme",
+   "name": "Computerization of Tripura Co-operative Agriculture and Rural Development",
+   "how": "whole corpus, read by eye"
+  },
+  "TR255": {
+   "label": "scheme",
+   "name": "PM JANMAN PTG TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR259": {
+   "label": "not_scheme",
+   "name": "Scheme for Modernization and Reforms through Technology in Public",
+   "how": "whole corpus, read by eye"
+  },
+  "TR261": {
+   "label": "scheme",
+   "name": "PM JANMAN under Samagra Shiksha Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR263": {
+   "label": "scheme",
+   "name": "PALNA AWCCs Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR272": {
+   "label": "scheme",
+   "name": "National Mission on Natural Farming (NMNF) - Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR275": {
+   "label": "not_scheme",
+   "name": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan Tripura (TW)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR276": {
+   "label": "not_scheme",
+   "name": "Tripura CITIIS 2.0",
+   "how": "whole corpus, read by eye"
+  },
+  "TR277": {
+   "label": "not_scheme",
+   "name": "DAJGUA Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR278": {
+   "label": "not_scheme",
+   "name": "Construction of Hostels for OBC Boys and Girls Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR28": {
+   "label": "scheme",
+   "name": "TRIPURA PRADHAN MANTRI AWAS YOJNA (PMAY) (URBAN)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR281": {
+   "label": "scheme",
+   "name": "Tripura Deendayal Jan Aajeevika Yojana (Shehari)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR282": {
+   "label": "scheme",
+   "name": "Beneficiary Led Construction (PMAY-U 2.0) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR284": {
+   "label": "not_scheme",
+   "name": "Other Component (PMAY-U 2.0) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR285": {
+   "label": "not_scheme",
+   "name": "Dharti Abha Janjati Gram Utkarsh Abhiyan (DAJGUA) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR288": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oil - Oil Palm - Tripura (100 Percent Central Share)",
+   "how": "whole corpus, read by eye"
+  },
+  "TR3": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI KRISHI SINCHAI YOJNA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR301": {
+   "label": "not_scheme",
+   "name": "Modernization of Command Area Development and Water Management",
+   "how": "whole corpus, read by eye"
+  },
+  "TR302": {
+   "label": "scheme",
+   "name": "Mission for Aatmanirbharta in Pulses Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR33": {
+   "label": "scheme",
+   "name": "Edible Oil – Oilseeds (Krishionnati Yojna) Agri Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR34": {
+   "label": "not_scheme",
+   "name": "RAINFED AREA DEVELOPMENT PROGRAMME TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR38": {
+   "label": "scheme",
+   "name": "TRIPURA SCHEME FOR ADOLESCENT GIRLS-SAG",
+   "how": "whole corpus, read by eye"
+  },
+  "TR4": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR43": {
+   "label": "scheme",
+   "name": "Tripura- Post Matric Scholarship for ST students Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR44": {
+   "label": "scheme",
+   "name": "TRIPURA- SUBMISSION ON AGRICULTURAL MECHANIZATION",
+   "how": "whole corpus, read by eye"
+  },
+  "TR46": {
+   "label": "not_scheme",
+   "name": "Project Tiger and Elephant Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR48": {
+   "label": "not_scheme",
+   "name": "TRIPURA HUMAN RESOURCES FOR HEALTH AND MEDICAL EDUCATION",
+   "how": "whole corpus, read by eye"
+  },
+  "TR54": {
+   "label": "not_scheme",
+   "name": "GRANTS UNDER PROVISO TO ARTICLE 275 (1) OF THE CONSTITUTION",
+   "how": "whole corpus, read by eye"
+  },
+  "TR55": {
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI ADI ADARSH GRAM YOJANA TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR57": {
+   "label": "scheme",
+   "name": "POST-MATRIC SCHOLARSHIP OBC TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR58": {
+   "label": "scheme",
+   "name": "PRE-MATRIC SCHOLARSHIP OBC TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR65": {
+   "label": "not_scheme",
+   "name": "Social Audit Unit, Tripura, Part of Administrative Expenses of MGNREG Scheme",
+   "how": "whole corpus, read by eye"
+  },
+  "TR66": {
+   "label": "not_scheme",
+   "name": "FOREST FIRE PREVENTION AND MANAGEMENT SCHEME TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR68": {
+   "label": "scheme",
+   "name": "RASHTRIYA KRISHI VIKAS YOJANA TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR7": {
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI KRISHI SINCHAI YOJANA(WATERSHED DEVELOPMENT",
+   "how": "whole corpus, read by eye"
+  },
+  "TR70": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oil - Oil Palm. (Krishionnati Yojana) Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR71": {
+   "label": "not_scheme",
+   "name": "TRIBAL FESTIVAL RESEARCH ,INFORMATION AND MASS EDUCATION",
+   "how": "whole corpus, read by eye"
+  },
+  "TR73": {
+   "label": "scheme",
+   "name": "PRE MATRIC SCHOLARSHIP FOR TRIBAL TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR75": {
+   "label": "scheme",
+   "name": "POST MATRIC SCHOLARSHIP FOR SC TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR76": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship for SCs",
+   "how": "whole corpus, read by eye"
+  },
+  "TR79": {
+   "label": "not_scheme",
+   "name": "NATIONAL PROJECT ON SOIL AND HEALTH FERTILITY TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR81": {
+   "label": "not_scheme",
+   "name": "Shakti Sadan Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR82": {
+   "label": "not_scheme",
+   "name": "TERTIARY CARE PROGRAMS TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR84": {
+   "label": "scheme",
+   "name": "Education Scheme For Madrasas and Minorities",
+   "how": "whole corpus, read by eye"
+  },
+  "TR87": {
+   "label": "scheme",
+   "name": "NATIONAL MISSION ON HORTICULTURE TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR89": {
+   "label": "not_scheme",
+   "name": "ASUMP Main Plan Tripura",
+   "how": "whole corpus, read by eye"
+  },
+  "TR94": {
+   "label": "not_scheme",
+   "name": "SPECIAL CENTRAL ASSISTANCE TO SCHEDULE CASTE SUB PLAN TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR95": {
+   "label": "scheme",
+   "name": "INDIRA GANDHI NATIONAL OLD AGE PENSION SCHEME(IGNOAPS) TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR96": {
+   "label": "scheme",
+   "name": "NATIONAL FAMILY BENEFIT SCHEME TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR97": {
+   "label": "scheme",
+   "name": "INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME(IGNWPS)TRIPURA",
+   "how": "whole corpus, read by eye"
+  },
+  "TR98": {
+   "label": "scheme",
+   "name": "INDIRA GANDHI NATIONAL DISABILITY PENSION SCHEME(IGNDPS)TRIPURA",
+   "how": "whole corpus, read by eye"
+  }
+ }
+}

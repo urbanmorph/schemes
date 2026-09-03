@@ -1,0 +1,1877 @@
+{
+ "state": "Delhi",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, student, patient or worker receive a benefit, service, scholarship, subsidy, pension or reimbursement from this line? An institution's grant-in-aid, machinery, a building, a department heading, a commission or an academy is not_scheme.",
+ "labelled": 373,
+ "scheme": 115,
+ "not_scheme": 258,
+ "sampling": "Stratified on whether the provision is revenue money, capital or loan money, both or neither, 17% of each with a floor of 17, seed 20260903.",
+ "labels": {
+  "unsectored |  | OAS(Other than Minorities)": {
+   "label": "scheme",
+   "name": "OAS(Other than Minorities)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Grand Total [Water Supply & Sanitation] | GIA to DJB for Capital Sewer Project Funded by GoI through National Mission for Clean Ganga(NMCG)": {
+   "label": "not_scheme",
+   "name": "GIA to DJB for Capital Sewer Project Funded by GoI through National Mission for Clean Ganga(NMCG)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Grand Total [Water Supply & Sanitation] | GIA to DJB for Capital projects GIA-Capital": {
+   "label": "not_scheme",
+   "name": "GIA to DJB for Capital projects GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | SUB-TOTAL (URBAN SANITATION) | Sewerage Facilities in Unauthorized Colonies GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Sewerage Facilities in Unauthorized Colonies GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | SUB-TOTAL (URBAN SANITATION) | Sewerage Facility in Resettlement Colonies": {
+   "label": "not_scheme",
+   "name": "Sewerage Facility in Resettlement Colonies",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Computerization of Targetted Public Distribution System R (TPDS) CSS": {
+   "label": "not_scheme",
+   "name": "Computerization of Targetted Public Distribution System R (TPDS) CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Consumer Awareness Programme CSS": {
+   "label": "not_scheme",
+   "name": "Consumer Awareness Programme CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub - Total [DHS] | Vector Borne Disease": {
+   "label": "not_scheme",
+   "name": "Vector Borne Disease",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub - Total [Drug Control Department] | Strengthening of State Drug Regulatory System CSS": {
+   "label": "not_scheme",
+   "name": "Strengthening of State Drug Regulatory System CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub - Total [Drug Control Department] | Strengthening of State Drug Regulatory System SS": {
+   "label": "not_scheme",
+   "name": "Strengthening of State Drug Regulatory System SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub -Total (GIA General to Degree College) | B.R.Ambedkar College GIA-Salary": {
+   "label": "not_scheme",
+   "name": "B.R.Ambedkar College GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub -Total (GIA General to Degree College) | Bhaskaracharya College of Applied Sciences GIA- General": {
+   "label": "not_scheme",
+   "name": "Bhaskaracharya College of Applied Sciences GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub -Total (GIA General to Degree College) | C/o AUD Capmus , Dheerpur": {
+   "label": "not_scheme",
+   "name": "C/o AUD Capmus , Dheerpur",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub -Total (GIA General to Degree College) | HIGHER EDUCATION": {
+   "label": "not_scheme",
+   "name": "HIGHER EDUCATION",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (2) | Procurement of Heavy Machinery such as Bulldozers, Hydraulic Excavators, Dredger, Draglines": {
+   "label": "not_scheme",
+   "name": "Procurement of Heavy Machinery such as Bulldozers, Hydraulic Excavators, Dredger, Draglines",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (Directorate of Economic & Statistics) | Directorate of Economic & Statistics": {
+   "label": "not_scheme",
+   "name": "Directorate of Economic & Statistics",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (I&FC ) | MINOR IRRIGATION": {
+   "label": "not_scheme",
+   "name": "MINOR IRRIGATION",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (I&FC ) | Remodelling of Drains for Flood Control": {
+   "label": "not_scheme",
+   "name": "Remodelling of Drains for Flood Control",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (III) | MCD for Indigenous System of Medicine [AYUSH] GIA- General": {
+   "label": "not_scheme",
+   "name": "MCD for Indigenous System of Medicine [AYUSH] GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (Planning Department) | Chief Minister Development Fund R/": {
+   "label": "not_scheme",
+   "name": "Chief Minister Development Fund R/",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (Planning Department) | Programme for Evidence Based Policy, Artificial Intelligence, Big Data and Other M&E Activities": {
+   "label": "not_scheme",
+   "name": "Programme for Evidence Based Policy, Artificial Intelligence, Big Data and Other M&E Activities",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (Planning Department) | Special Assistance to States for Capital Investment (SASCI)": {
+   "label": "not_scheme",
+   "name": "Special Assistance to States for Capital Investment (SASCI)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total (V) | Delhi Fire Service- PWD (from 2025-26, scheme is under": {
+   "label": "not_scheme",
+   "name": "Delhi Fire Service- PWD (from 2025-26, scheme is under",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total - PM SHRI CSS | PM SHRI (Secondary) for ST Students CSS GIA-General": {
+   "label": "not_scheme",
+   "name": "PM SHRI (Secondary) for ST Students CSS GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total - PM SHRI SS | PM SHRI (Elementary) SS GIA-General": {
+   "label": "not_scheme",
+   "name": "PM SHRI (Elementary) SS GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total - PM SHRI SS | PM SHRI (Elementary) for SC Students SS GIA-Capital": {
+   "label": "not_scheme",
+   "name": "PM SHRI (Elementary) for SC Students SS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total - PM SHRI SS | PM SHRI (Elementary) for ST Students SS GIA-Capital": {
+   "label": "not_scheme",
+   "name": "PM SHRI (Elementary) for ST Students SS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total - PM SHRI SS | PM SHRI (Elementary) for ST Students SS GIA-General": {
+   "label": "not_scheme",
+   "name": "PM SHRI (Elementary) for ST Students SS GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total - PM SHRI SS | PM SHRI (Secondary) SS GIA-Capital": {
+   "label": "not_scheme",
+   "name": "PM SHRI (Secondary) SS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [C] | National Action Plan for Drug Demand Reduction (NAPDDR) CSS GIA-General": {
+   "label": "not_scheme",
+   "name": "National Action Plan for Drug Demand Reduction (NAPDDR) CSS GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [C] | POSHAN Abhiyan (POSHAN Mission) SS": {
+   "label": "scheme",
+   "name": "POSHAN Abhiyan (POSHAN Mission) SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [C] | Stand alone Creches CSS": {
+   "label": "scheme",
+   "name": "Stand alone Creches CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [Civil Defence] | REVENUE DEPTT": {
+   "label": "not_scheme",
+   "name": "REVENUE DEPTT",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [Development / Rural Development Department] | Integrated Development of Rural & Urban Villages (IDRUV) Works including Water Bodies through Delhi": {
+   "label": "not_scheme",
+   "name": "Integrated Development of Rural & Urban Villages (IDRUV) Works including Water Bodies through Delhi",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [Development / Rural Development Department] | Integrated Development of Rural & Urban Villages (IDRUV) Works including Water Bodies through Delhi Village Development Board [DVDB] including 5% revenue outlay for repair & maintence of IDRUV capital works. (earlier named as IDRV,DRDB) SCSP": {
+   "label": "not_scheme",
+   "name": "Integrated Development of Rural & Urban Villages (IDRUV) Works including Water Bodies through Delhi Village Development Board [DVDB] including 5% revenue outlay for repair & maintence of IDRUV capital works. (earlier named as IDRV,DRDB) SCSP",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [MRTS] | Act LandtoAcquisition": {
+   "label": "not_scheme",
+   "name": "Act LandtoAcquisition",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total [Tourism Department] | Delhi Sadan": {
+   "label": "not_scheme",
+   "name": "Delhi Sadan",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | C/o Pay & Use Jansuvidha Complexes SCSP GIA-Capital": {
+   "label": "not_scheme",
+   "name": "C/o Pay & Use Jansuvidha Complexes SCSP GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | C/o School Buildings (including Rain Water Harvesting) -": {
+   "label": "not_scheme",
+   "name": "C/o School Buildings (including Rain Water Harvesting) -",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | CM SHRI to provide English-medium education & world-": {
+   "label": "not_scheme",
+   "name": "CM SHRI to provide English-medium education & world-",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Computer Education in Govt. Schools (wages and others)": {
+   "label": "not_scheme",
+   "name": "Computer Education in Govt. Schools (wages and others)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | DKVIB": {
+   "label": "not_scheme",
+   "name": "DKVIB",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | DTTDC for Running of Tourist Information Centres": {
+   "label": "not_scheme",
+   "name": "DTTDC for Running of Tourist Information Centres",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | DUSIB": {
+   "label": "not_scheme",
+   "name": "DUSIB",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Delhi Board of School Education (DBSE) (earlier Setting": {
+   "label": "not_scheme",
+   "name": "Delhi Board of School Education (DBSE) (earlier Setting",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Delhi Parks and Gardens Society-General": {
+   "label": "not_scheme",
+   "name": "Delhi Parks and Gardens Society-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | EVGC Programme (Inlude Project Smile Programme)": {
+   "label": "not_scheme",
+   "name": "EVGC Programme (Inlude Project Smile Programme)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Entrepreneurship Development programme for Students (School Students)": {
+   "label": "scheme",
+   "name": "Entrepreneurship Development programme for Students (School Students)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Environmental Improvement in Urban Slums SCSP GIA- Capital": {
+   "label": "not_scheme",
+   "name": "Environmental Improvement in Urban Slums SCSP GIA- Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | GIA to SCERT GIA-Capital": {
+   "label": "not_scheme",
+   "name": "GIA to SCERT GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | GIA to SCERT GIA-Salary": {
+   "label": "not_scheme",
+   "name": "GIA to SCERT GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | GIA-General": {
+   "label": "not_scheme",
+   "name": "GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP": {
+   "label": "scheme",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Infrastructural facilities for judiciary (Scheme shifted from C Public works sector w.e.f. BE 2022-23) CSS": {
+   "label": "not_scheme",
+   "name": "Infrastructural facilities for judiciary (Scheme shifted from C Public works sector w.e.f. BE 2022-23) CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Infrastructure Project and Purchase of Land for National Law University": {
+   "label": "not_scheme",
+   "name": "Infrastructure Project and Purchase of Land for National Law University",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Lal Bahadur Shastri Scholarship for meritorious students (eraliar Chief Minister's Scholarship for meritorious": {
+   "label": "scheme",
+   "name": "Lal Bahadur Shastri Scholarship for meritorious students (eraliar Chief Minister's Scholarship for meritorious",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | New India Literacy Programme (NILP) SS": {
+   "label": "scheme",
+   "name": "New India Literacy Programme (NILP) SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Opening of Pratibha Vikas Vidyalayas": {
+   "label": "not_scheme",
+   "name": "Opening of Pratibha Vikas Vidyalayas",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Operation and Maintenance to Outsource Company": {
+   "label": "not_scheme",
+   "name": "Operation and Maintenance to Outsource Company",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Promotion of Tourism - Delhi as a Destination (Media Publicity / Tourism Literature / Fairs and Festivals etc.)": {
+   "label": "not_scheme",
+   "name": "Promotion of Tourism - Delhi as a Destination (Media Publicity / Tourism Literature / Fairs and Festivals etc.)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | R/ up of State Education Board ) GIA-General": {
+   "label": "not_scheme",
+   "name": "R/ up of State Education Board ) GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Renovation, Addition & Alterartion of Judicial Staff Quarters": {
+   "label": "not_scheme",
+   "name": "Renovation, Addition & Alterartion of Judicial Staff Quarters",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Renovation, Addition & Alterartion of North District Court at Rohini": {
+   "label": "not_scheme",
+   "name": "Renovation, Addition & Alterartion of North District Court at Rohini",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Renovation, Addition & Alterartion of South District Court at Saket": {
+   "label": "not_scheme",
+   "name": "Renovation, Addition & Alterartion of South District Court at Saket",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Samagra Shiksha (Elementary) for ST Students CSS GIA- Capital": {
+   "label": "not_scheme",
+   "name": "Samagra Shiksha (Elementary) for ST Students CSS GIA- Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Samagra Shiksha (Secondary)for SC students CSS GIA- Capital": {
+   "label": "not_scheme",
+   "name": "Samagra Shiksha (Secondary)for SC students CSS GIA- Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Samagra Shiksha Teacher Education-Elementary CSS GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Samagra Shiksha Teacher Education-Elementary CSS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Samagra Shiksha Teacher Education-Elementary for ST students CSS GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Samagra Shiksha Teacher Education-Elementary for ST students CSS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Setting up of Fast Track Special Courts (FTSC's) for R expeditious disposal of cases of rape & POCSO Act": {
+   "label": "not_scheme",
+   "name": "Setting up of Fast Track Special Courts (FTSC's) for R expeditious disposal of cases of rape & POCSO Act",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | State Awards to Teachers": {
+   "label": "scheme",
+   "name": "State Awards to Teachers",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Strengthening of Transport Deptt.": {
+   "label": "not_scheme",
+   "name": "Strengthening of Transport Deptt.",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Subsidies for GPS Tracking Charges and Sim Card Cost in Light Motor Vehicles": {
+   "label": "scheme",
+   "name": "Subsidies for GPS Tracking Charges and Sim Card Cost in Light Motor Vehicles",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Subsidy to Cluster for Transgender Commuters": {
+   "label": "scheme",
+   "name": "Subsidy to Cluster for Transgender Commuters",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | Upgaradtion of IT services including AI, ML, Deep-learning C computer vision": {
+   "label": "not_scheme",
+   "name": "Upgaradtion of IT services including AI, ML, Deep-learning C computer vision",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total | to all the District Courts of Delhi at Tikri Khurd, Narela": {
+   "label": "not_scheme",
+   "name": "to all the District Courts of Delhi at Tikri Khurd, Narela",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total- Legislative Assembly | LEGISLATIVE ASSEMBLY": {
+   "label": "not_scheme",
+   "name": "LEGISLATIVE ASSEMBLY",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub Total- RCS | CSS": {
+   "label": "not_scheme",
+   "name": "CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub total GIA for Stg. & Upgradation of Registration of Birth & Death | GIA for Malaria & Dengue Control Programme GIA- Capital": {
+   "label": "not_scheme",
+   "name": "GIA for Malaria & Dengue Control Programme GIA- Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub total GIA for other Public Health Programme | GIA for Stg. & Upgradation of Registration of Birth & Death GIA-Salary": {
+   "label": "not_scheme",
+   "name": "GIA for Stg. & Upgradation of Registration of Birth & Death GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub total | Night Shelters GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Night Shelters GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub total | Samagra Shiksha (Elementary) for SC students SS GIA- General": {
+   "label": "scheme",
+   "name": "Samagra Shiksha (Elementary) for SC students SS GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub total | Samagra Shiksha (Elementary) for ST Students SS GIA- General": {
+   "label": "scheme",
+   "name": "Samagra Shiksha (Elementary) for ST Students SS GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub total | Samagra Shiksha (Secondary)for SC students SS GIA- Capital": {
+   "label": "not_scheme",
+   "name": "Samagra Shiksha (Secondary)for SC students SS GIA- Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub total | Samagra Shiksha (Secondary)for SC students SS GIA- General": {
+   "label": "scheme",
+   "name": "Samagra Shiksha (Secondary)for SC students SS GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total (DFW) | Spl. Immunisation programme including MMR & Pentavalent": {
+   "label": "scheme",
+   "name": "Spl. Immunisation programme including MMR & Pentavalent",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total (DSHM)-(New Scheme) GIA-General | Rogi kalyan Samiti (RKS) GIA-General": {
+   "label": "not_scheme",
+   "name": "Rogi kalyan Samiti (RKS) GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total (Election) | Election Department (Capital by PWD)": {
+   "label": "not_scheme",
+   "name": "Election Department (Capital by PWD)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total CSS | CSS Schemes": {
+   "label": "not_scheme",
+   "name": "CSS Schemes",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total CSS | Pre-matric Scholarship for SC students CSS SCSP": {
+   "label": "scheme",
+   "name": "Pre-matric Scholarship for SC students CSS SCSP",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total CSS | Pre-matric Scholarship to OBC Students CSS": {
+   "label": "scheme",
+   "name": "Pre-matric Scholarship to OBC Students CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Merit Scholarship for College & University students for SC/ST/OBC": {
+   "label": "scheme",
+   "name": "Merit Scholarship for College & University students for SC/ST/OBC",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Pre Matric Scholarship Scheme for OBC students SS": {
+   "label": "scheme",
+   "name": "Pre Matric Scholarship Scheme for OBC students SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Reimbursement of Tution Fee in Public Schools to SC/ST/OBC Students": {
+   "label": "scheme",
+   "name": "Reimbursement of Tution Fee in Public Schools to SC/ST/OBC Students",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Reimbursement of Tution Fee in Public Schools to SC/ST/OBC Students SCSP": {
+   "label": "scheme",
+   "name": "Reimbursement of Tution Fee in Public Schools to SC/ST/OBC Students SCSP",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [23 - 24] | HEALTH, HOUSING AND OTHERS": {
+   "label": "not_scheme",
+   "name": "HEALTH, HOUSING AND OTHERS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [A] | Financial Assistance for Persons with Benchmark": {
+   "label": "scheme",
+   "name": "Financial Assistance for Persons with Benchmark",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [A] | Scheme for skill development and rehabilitaion of beggers, R diffferently abled persons & economically weaker sections": {
+   "label": "scheme",
+   "name": "Scheme for skill development and rehabilitaion of beggers, R diffferently abled persons & economically weaker sections",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [B] | Construction of Old Age Homes [through Other Agencies]": {
+   "label": "not_scheme",
+   "name": "Construction of Old Age Homes [through Other Agencies]",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [B] | Financial Assistance to Senior Citizen": {
+   "label": "scheme",
+   "name": "Financial Assistance to Senior Citizen",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [B] | Recreation Facilities for Senior Citizens GIA-General": {
+   "label": "not_scheme",
+   "name": "Recreation Facilities for Senior Citizens GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [C] | National Action Plan for Drug Demand Reduction R (NAPDDR) CSS GIA-General": {
+   "label": "not_scheme",
+   "name": "National Action Plan for Drug Demand Reduction R (NAPDDR) CSS GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Implementation of Juvenile Justice [Care and Protection of R Children] Act 2000": {
+   "label": "not_scheme",
+   "name": "Implementation of Juvenile Justice [Care and Protection of R Children] Act 2000",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line CSS GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Mission Vatsalaya- Child Help Line CSS GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line SS": {
+   "label": "scheme",
+   "name": "Mission Vatsalaya- Child Help Line SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Sakhi Niwas-Mission Shakti SS": {
+   "label": "not_scheme",
+   "name": "Sakhi Niwas-Mission Shakti SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Dr. B.R.AMBEDKAR HOSPITAL AT ROHINIl] | DBRAH Machinery and Equipment": {
+   "label": "not_scheme",
+   "name": "DBRAH Machinery and Equipment",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Financial Assistance to Poor Widows for performing Marriage of their Daughter and marriage of orphan Girls": {
+   "label": "scheme",
+   "name": "Financial Assistance to Poor Widows for performing Marriage of their Daughter and marriage of orphan Girls",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Financial Assistance to Women in Distress SCSP": {
+   "label": "scheme",
+   "name": "Financial Assistance to Women in Distress SCSP",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Incentivised Anganwari Upgradation Scheme": {
+   "label": "not_scheme",
+   "name": "Incentivised Anganwari Upgradation Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Mahila Samridhi Yojana": {
+   "label": "scheme",
+   "name": "Mahila Samridhi Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | R/ Top up SS": {
+   "label": "not_scheme",
+   "name": "R/ Top up SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Saheli Samanvey": {
+   "label": "not_scheme",
+   "name": "Saheli Samanvey",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Samarthya Hub for Empowerment for Women-Mission Shakti CSS": {
+   "label": "scheme",
+   "name": "Samarthya Hub for Empowerment for Women-Mission Shakti CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Strengthening of One Stop Centre in each Districts - State Top up SS GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Strengthening of One Stop Centre in each Districts - State Top up SS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Assamese Academy GIA-General": {
+   "label": "not_scheme",
+   "name": "Assamese Academy GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Conservation of monuments": {
+   "label": "not_scheme",
+   "name": "Conservation of monuments",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Cultural Institutions GIA-General": {
+   "label": "not_scheme",
+   "name": "Cultural Institutions GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Delhi Commission for Safai Karamchari GIA-General": {
+   "label": "not_scheme",
+   "name": "Delhi Commission for Safai Karamchari GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Dr. Goswami Girdhari Lal Shastri Prachya Vidya Pratisthan": {
+   "label": "not_scheme",
+   "name": "Dr. Goswami Girdhari Lal Shastri Prachya Vidya Pratisthan",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Garhwali, Kumaoni & Jaunsari Academy GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Garhwali, Kumaoni & Jaunsari Academy GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Handicrafts": {
+   "label": "not_scheme",
+   "name": "Handicrafts",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Haryanvi Academy": {
+   "label": "not_scheme",
+   "name": "Haryanvi Academy",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Hindi Academy": {
+   "label": "not_scheme",
+   "name": "Hindi Academy",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Hindi Academy GIA-General": {
+   "label": "not_scheme",
+   "name": "Hindi Academy GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Implementation of Prohibition of employment as Mannual Scavengers and their Rehabilitation Act 2013": {
+   "label": "scheme",
+   "name": "Implementation of Prohibition of employment as Mannual Scavengers and their Rehabilitation Act 2013",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Industrial Estate": {
+   "label": "not_scheme",
+   "name": "Industrial Estate",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | International Academy": {
+   "label": "not_scheme",
+   "name": "International Academy",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Kashmiri Academy": {
+   "label": "not_scheme",
+   "name": "Kashmiri Academy",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Malayalam Academy": {
+   "label": "not_scheme",
+   "name": "Malayalam Academy",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Odia Academy GIA-General": {
+   "label": "not_scheme",
+   "name": "Odia Academy GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Sahitya Kala Parishad GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Sahitya Kala Parishad GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Sanskrit Academy GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Sanskrit Academy GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Small Scale Industries": {
+   "label": "not_scheme",
+   "name": "Small Scale Industries",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Telugu Academy GIA-General": {
+   "label": "not_scheme",
+   "name": "Telugu Academy GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Telugu Academy GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Telugu Academy GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-Total | Trust/NGO/Foundation/Institutions for conservation, restroration & development works of monuments of GNCTD GIA-General": {
+   "label": "not_scheme",
+   "name": "Trust/NGO/Foundation/Institutions for conservation, restroration & development works of monuments of GNCTD GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-total (A&U Tibbia) | Development / strengthening of Ayurvedic and Unani R Tibbia College and Hospital -PWD": {
+   "label": "not_scheme",
+   "name": "Development / strengthening of Ayurvedic and Unani R Tibbia College and Hospital -PWD",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Sub-total (BRSur) | BRSur Machinery & Equipments/ MV": {
+   "label": "not_scheme",
+   "name": "BRSur Machinery & Equipments/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL (JAIL) | Construction of Central Jail Building at Narela-PWD": {
+   "label": "not_scheme",
+   "name": "Construction of Central Jail Building at Narela-PWD",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL (JAIL) | Developmental Works in Central Jail Tihar & Rohini": {
+   "label": "not_scheme",
+   "name": "Developmental Works in Central Jail Tihar & Rohini",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL (JAIL) | Installation/ O & M of CCTV Surveillance System in all Jails": {
+   "label": "not_scheme",
+   "name": "Installation/ O & M of CCTV Surveillance System in all Jails",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL (JAIL) | Machinery & Equipments": {
+   "label": "not_scheme",
+   "name": "Machinery & Equipments",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL - UCMS | UCMS Direction & Administration": {
+   "label": "not_scheme",
+   "name": "UCMS Direction & Administration",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL - UCMS | UCMS Office Expenses": {
+   "label": "not_scheme",
+   "name": "UCMS Office Expenses",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [CIVIL SUPPLIES] | WEIGHTS & MEASURES DEPTT.": {
+   "label": "not_scheme",
+   "name": "WEIGHTS & MEASURES DEPTT.",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DELHI GOVT.] | Additiona/Alteration in Hospitals (Deptt Capital)": {
+   "label": "not_scheme",
+   "name": "Additiona/Alteration in Hospitals (Deptt Capital)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DFS] | Strengthening of Food Safety eco-systems SS": {
+   "label": "not_scheme",
+   "name": "Strengthening of Food Safety eco-systems SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | (ABDM) CSS GIA- R General": {
+   "label": "not_scheme",
+   "name": "(ABDM) CSS GIA- R General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Construction of two Hostel Buildings (Boys & Girls) at MAMC Campus": {
+   "label": "not_scheme",
+   "name": "Construction of two Hostel Buildings (Boys & Girls) at MAMC Campus",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Financial incentive to good Samaritians": {
+   "label": "scheme",
+   "name": "Financial incentive to good Samaritians",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Health Card": {
+   "label": "scheme",
+   "name": "Health Card",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Health Helpline": {
+   "label": "scheme",
+   "name": "Health Helpline",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Information Computer telecommunication equipment (ICT)": {
+   "label": "not_scheme",
+   "name": "Information Computer telecommunication equipment (ICT)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Opening of new Primary Health Centres/AAM Aadmi Mohalla Clinic": {
+   "label": "not_scheme",
+   "name": "Opening of new Primary Health Centres/AAM Aadmi Mohalla Clinic",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | PPP(Dialisis)": {
+   "label": "not_scheme",
+   "name": "PPP(Dialisis)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Payment of land for C/o Hospitals": {
+   "label": "not_scheme",
+   "name": "Payment of land for C/o Hospitals",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Public Health Campaign (Special Cell)": {
+   "label": "not_scheme",
+   "name": "Public Health Campaign (Special Cell)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Remodelling of existing Hospitals": {
+   "label": "not_scheme",
+   "name": "Remodelling of existing Hospitals",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | State Health Agency -Reimbursement of Delhi Aarogya Kosh (DAK)- Accidents, CT Scan, MRI, Surgery and Rare": {
+   "label": "scheme",
+   "name": "State Health Agency -Reimbursement of Delhi Aarogya Kosh (DAK)- Accidents, CT Scan, MRI, Surgery and Rare",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Tobacco Control Programme (Cell for prevention of smoking)": {
+   "label": "not_scheme",
+   "name": "Tobacco Control Programme (Cell for prevention of smoking)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DT&TE] | DTE. OF TRG. & TECH. EDUCATION": {
+   "label": "not_scheme",
+   "name": "DTE. OF TRG. & TECH. EDUCATION",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DT&TE] | Prime Minister Skilling & Employability Transformation through upgarded ITIs (PM- SETU) CSS": {
+   "label": "not_scheme",
+   "name": "Prime Minister Skilling & Employability Transformation through upgarded ITIs (PM- SETU) CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DT&TE] | Upgradation of Govt ITIs into Model ITIs CSS": {
+   "label": "not_scheme",
+   "name": "Upgradation of Govt ITIs into Model ITIs CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DT&TE] | Upgradation of Govt ITIs into Model ITIs SS": {
+   "label": "not_scheme",
+   "name": "Upgradation of Govt ITIs into Model ITIs SS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DTU] | Technical Education Quality Improvement Programme (TEQIP) GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Technical Education Quality Improvement Programme (TEQIP) GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [DTU] | Technical Education Quality Improvement Programme (TEQIP) GIA-General": {
+   "label": "not_scheme",
+   "name": "Technical Education Quality Improvement Programme (TEQIP) GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [ENVIRONMENT DEPTT.] | Delhi Parks and Gardens Society SCSP GIA-General": {
+   "label": "not_scheme",
+   "name": "Delhi Parks and Gardens Society SCSP GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [ENVIRONMENT DEPTT.] | GIA to DPCC for Implementation of Enviornment Improvement Measures GIA-General": {
+   "label": "not_scheme",
+   "name": "GIA to DPCC for Implementation of Enviornment Improvement Measures GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [ENVIRONMENT DEPTT.] | General": {
+   "label": "not_scheme",
+   "name": "General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [ENVIRONMENT DEPTT.] | Pollution Control & Emergency measures": {
+   "label": "not_scheme",
+   "name": "Pollution Control & Emergency measures",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [ENVIRONMENT DEPTT.] | Pollution Control and Environmental Management": {
+   "label": "not_scheme",
+   "name": "Pollution Control and Environmental Management",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [ENVIRONMENT DEPTT.] | financial assistance for installation of STPs GIA-General": {
+   "label": "not_scheme",
+   "name": "financial assistance for installation of STPs GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [G.B. PANT HOSPITAL] | GB PANT 24 hrs. emergency services": {
+   "label": "not_scheme",
+   "name": "GB PANT 24 hrs. emergency services",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [G.B. PANT HOSPITAL] | GB PANT Purchase of machinary & equipments": {
+   "label": "not_scheme",
+   "name": "GB PANT Purchase of machinary & equipments",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [GURU NANAK EYE CENTRE] | GNEC Amblyopia free delhi": {
+   "label": "not_scheme",
+   "name": "GNEC Amblyopia free delhi",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [GURU NANAK EYE CENTRE] | GURU NANAK EYE CENTRE": {
+   "label": "not_scheme",
+   "name": "GURU NANAK EYE CENTRE",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [HIGHER EDUCATION] | C/o New Building in NLU Delhi": {
+   "label": "not_scheme",
+   "name": "C/o New Building in NLU Delhi",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [HIGHER EDUCATION] | Delhi Teacher's University GIA-General": {
+   "label": "not_scheme",
+   "name": "Delhi Teacher's University GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [HIGHER EDUCATION] | Special Grants to Colleges and Universities GIA-General": {
+   "label": "not_scheme",
+   "name": "Special Grants to Colleges and Universities GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [LNJP] | LNJP Project for waste management": {
+   "label": "not_scheme",
+   "name": "LNJP Project for waste management",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [LNJP] | LNJP Purchase of Machinary & Equipment": {
+   "label": "not_scheme",
+   "name": "LNJP Purchase of Machinary & Equipment",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [NSUT] | Centre for Nano Technology GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Centre for Nano Technology GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [PUBLIC WORKS] OTHER ADMINISTRATIVE SERVICES | Delhi Archives": {
+   "label": "not_scheme",
+   "name": "Delhi Archives",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [PUBLIC WORKS] OTHER ADMINISTRATIVE SERVICES | Delhi Govt. - Office Accommodation": {
+   "label": "not_scheme",
+   "name": "Delhi Govt. - Office Accommodation",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL [PUBLIC WORKS] OTHER ADMINISTRATIVE SERVICES | Weight & Measures": {
+   "label": "not_scheme",
+   "name": "Weight & Measures",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL | Award & Incentives for Sports Activities": {
+   "label": "scheme",
+   "name": "Award & Incentives for Sports Activities",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL | Self Defence for Girl Students in Schools": {
+   "label": "scheme",
+   "name": "Self Defence for Girl Students in Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL | Youth Welfare Programmes": {
+   "label": "not_scheme",
+   "name": "Youth Welfare Programmes",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | TOTAL-MCD | MCD GIA-Salary": {
+   "label": "not_scheme",
+   "name": "MCD GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total (Dte. of Panchayat) | Dte. of Panchayat": {
+   "label": "not_scheme",
+   "name": "Dte. of Panchayat",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total (Forest Department) | Dev. of Wild Life Sanctuary & Stg. of Wild Life Section": {
+   "label": "not_scheme",
+   "name": "Dev. of Wild Life Sanctuary & Stg. of Wild Life Section",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total (Forest Department) | Development of Forest including Consolidation": {
+   "label": "not_scheme",
+   "name": "Development of Forest including Consolidation",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total (Horticulture Deptt.) | Urban farming & Terrace Gardening in Delhi": {
+   "label": "not_scheme",
+   "name": "Urban farming & Terrace Gardening in Delhi",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total - Ambedkar Nagar | Ambedkar Nagar Bio Medical Waste Management": {
+   "label": "not_scheme",
+   "name": "Ambedkar Nagar Bio Medical Waste Management",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total -DSSSB | (PWD Capital budget converted to Revenue section from FY 2017-18 onwards.)": {
+   "label": "not_scheme",
+   "name": "(PWD Capital budget converted to Revenue section from FY 2017-18 onwards.)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total AAAH | AAAH Machinery & Equipment/ MV": {
+   "label": "not_scheme",
+   "name": "AAAH Machinery & Equipment/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total ABH | ABH Machinery & Equipment/ MV": {
+   "label": "not_scheme",
+   "name": "ABH Machinery & Equipment/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total ASJH | ASJH Machinery & Equipment/ MV": {
+   "label": "not_scheme",
+   "name": "ASJH Machinery & Equipment/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total DUSIB | DUSIB GIA-Salary": {
+   "label": "not_scheme",
+   "name": "DUSIB GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total DUSIB | GIA to DUSIB for Atal Canteen in JJ cluster to provide Meal GIA-General": {
+   "label": "scheme",
+   "name": "GIA to DUSIB for Atal Canteen in JJ cluster to provide Meal GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total Dte. of FAMILY WELFARE | Rural Family welfare centres GIA-General": {
+   "label": "not_scheme",
+   "name": "Rural Family welfare centres GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total FSL | HOME DEPARTMENT": {
+   "label": "not_scheme",
+   "name": "HOME DEPARTMENT",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total GGSH | GGSH Machinery & Equipment/ MV": {
+   "label": "not_scheme",
+   "name": "GGSH Machinery & Equipment/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total LBSH | LBSH Bio-Medical Waste Management Cell": {
+   "label": "not_scheme",
+   "name": "LBSH Bio-Medical Waste Management Cell",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total Language Department | Infrastructure development through Outsourcing": {
+   "label": "not_scheme",
+   "name": "Infrastructure development through Outsourcing",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total Language Department | Language Department": {
+   "label": "not_scheme",
+   "name": "Language Department",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total NCJH | NCJH Machinery & Equipments/ MV": {
+   "label": "not_scheme",
+   "name": "NCJH Machinery & Equipments/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total RTRMH | RTRMH Machinery & Equipments/ MV": {
+   "label": "not_scheme",
+   "name": "RTRMH Machinery & Equipments/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Animal Husbandry] | Development Department": {
+   "label": "not_scheme",
+   "name": "Development Department",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Animal Husbandry] | Improvement of Veterinary Services and Control of Contagious Diseases": {
+   "label": "not_scheme",
+   "name": "Improvement of Veterinary Services and Control of Contagious Diseases",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Animal Husbandry] | Live Stock Health & Disease Control (LH & DC) CSS": {
+   "label": "scheme",
+   "name": "Live Stock Health & Disease Control (LH & DC) CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Animal Husbandry] | National Livestock Health & Disease Control Programme": {
+   "label": "not_scheme",
+   "name": "National Livestock Health & Disease Control Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Animal Husbandry] | Rationalisation of minor irrigation schemes CSS": {
+   "label": "not_scheme",
+   "name": "Rationalisation of minor irrigation schemes CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [DTE. OF TECHNICAL EDUCATION] | Infrastructure Projects of Autonomous Institutions / Universities": {
+   "label": "not_scheme",
+   "name": "Infrastructure Projects of Autonomous Institutions / Universities",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [DTE. OF TECHNICAL EDUCATION] | Setting up of new Polytechnics and Renovation / Addl. / Alteration in the Existing Institutional Buildings -PWD": {
+   "label": "not_scheme",
+   "name": "Setting up of new Polytechnics and Renovation / Addl. / Alteration in the Existing Institutional Buildings -PWD",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Delhi Govt.] | Delhi Govt. Staff Quarters": {
+   "label": "not_scheme",
+   "name": "Delhi Govt. Staff Quarters",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Delhi Govt.] | General Pool Accommodation (Repair & Maintenance)": {
+   "label": "not_scheme",
+   "name": "General Pool Accommodation (Repair & Maintenance)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Delhi Govt.] | General Pool Accommodation- Capital PWD": {
+   "label": "not_scheme",
+   "name": "General Pool Accommodation- Capital PWD",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Delhi Govt.] | PWD": {
+   "label": "not_scheme",
+   "name": "PWD",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Deptt. of Information Technology] | Delhi Government Readiness Websites]various Govt. of India's ICT": {
+   "label": "not_scheme",
+   "name": "Delhi Government Readiness Websites]various Govt. of India's ICT",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Deptt. of Information Technology] | Employees R Hardware & Software": {
+   "label": "not_scheme",
+   "name": "Employees R Hardware & Software",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Deptt. of Information Technology] | GIA to GSDL": {
+   "label": "not_scheme",
+   "name": "GIA to GSDL",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Deptt. of Information Technology] | GSDL GIA-Capital": {
+   "label": "not_scheme",
+   "name": "GSDL GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Deptt. of Information Technology] | Maintenance of LAN in Delhi Sectt and Setting up WAN in Delhi (Delhi Metro E-Network [Local Area Network LAN /": {
+   "label": "not_scheme",
+   "name": "Maintenance of LAN in Delhi Sectt and Setting up WAN in Delhi (Delhi Metro E-Network [Local Area Network LAN /",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Deptt. of Information Technology] | Unified Data Hub": {
+   "label": "not_scheme",
+   "name": "Unified Data Hub",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Economic Development] | to DSCFDC Buses and General Buses, General": {
+   "label": "not_scheme",
+   "name": "to DSCFDC Buses and General Buses, General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Labour Deptt.] | LABOUR DEPARTMENT": {
+   "label": "not_scheme",
+   "name": "LABOUR DEPARTMENT",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Labour Deptt.] | Labour welfare Board for construction/renovation of Labour welfare centres GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Labour welfare Board for construction/renovation of Labour welfare centres GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Labour Deptt.] | Rescue, Repatriation & Rehabilitation of Child Labour": {
+   "label": "scheme",
+   "name": "Rescue, Repatriation & Rehabilitation of Child Labour",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Ongoing Schemes] | Augmentation of Water Supply in JJ Clusters GIA- General": {
+   "label": "not_scheme",
+   "name": "Augmentation of Water Supply in JJ Clusters GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Ongoing Schemes] | Environmental Greenery and LandScaping GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Environmental Greenery and LandScaping GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Ongoing Schemes] | Water Supply for Urban Villages": {
+   "label": "not_scheme",
+   "name": "Water Supply for Urban Villages",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Power Deptt.] | Installation of 10 MW Rooftop Solar PV systems under CAPEX mode on Buildings of Govt. Dept/PSUs/Govt. Institutions in the state of Delhi": {
+   "label": "not_scheme",
+   "name": "Installation of 10 MW Rooftop Solar PV systems under CAPEX mode on Buildings of Govt. Dept/PSUs/Govt. Institutions in the state of Delhi",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Power Deptt.] | Payment towards Land Premium / Acquistion": {
+   "label": "not_scheme",
+   "name": "Payment towards Land Premium / Acquistion",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Power Deptt.] | Solar Electricity Charges of RESCO modal solar plants": {
+   "label": "not_scheme",
+   "name": "Solar Electricity Charges of RESCO modal solar plants",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | Construction of District Mini Secretariat (South West) at C Sector 10 Dwarka": {
+   "label": "not_scheme",
+   "name": "Construction of District Mini Secretariat (South West) at C Sector 10 Dwarka",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | Delhi Minorities Commission GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Delhi Minorities Commission GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | Delhi Wakf Board GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Delhi Wakf Board GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | Disaster Management": {
+   "label": "not_scheme",
+   "name": "Disaster Management",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | District Project fund- South East District": {
+   "label": "not_scheme",
+   "name": "District Project fund- South East District",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | Strengthening of DDMA including Command Control Centre, HRA & Training": {
+   "label": "not_scheme",
+   "name": "Strengthening of DDMA including Command Control Centre, HRA & Training",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [UD Deptt.] | Pradhan Mantri Awas Yojana CSS GIA-Capital": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana CSS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [UD Deptt.] | Provision of Essential Services in Unauthoried Colonies": {
+   "label": "not_scheme",
+   "name": "Provision of Essential Services in Unauthoried Colonies",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [UD Deptt.] | R/ UD Department": {
+   "label": "not_scheme",
+   "name": "R/ UD Department",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [UD Deptt.] | Redevlopment of Dilli's Food Hubs (Shifted from Tourism R Deptt.)": {
+   "label": "not_scheme",
+   "name": "Redevlopment of Dilli's Food Hubs (Shifted from Tourism R Deptt.)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [WATER SUPPLY] * | Consultancy for Water Sector Projects": {
+   "label": "not_scheme",
+   "name": "Consultancy for Water Sector Projects",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [WATER SUPPLY] * | Providing 24x7 Water supply Network improvement with Long Term Opaeration & Maint. In Trans Yamuna Area": {
+   "label": "not_scheme",
+   "name": "Providing 24x7 Water supply Network improvement with Long Term Opaeration & Maint. In Trans Yamuna Area",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [WATER SUPPLY] * | RURAL WATER SUPPLY": {
+   "label": "not_scheme",
+   "name": "RURAL WATER SUPPLY",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total [WATER SUPPLY] * | Rural Water Supply (earlier Rajiv Gandhi National R Drinking water Mission) GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Rural Water Supply (earlier Rajiv Gandhi National R Drinking water Mission) GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total | DEPTT. OF DELHI ARCHIVES": {
+   "label": "not_scheme",
+   "name": "DEPTT. OF DELHI ARCHIVES",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total | Delhi Skill & Entrepreneurship UniversityMachinery & Equipment GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Delhi Skill & Entrepreneurship UniversityMachinery & Equipment GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total | GAD-GENERAL ADMINISTRATIVE DEPTT": {
+   "label": "not_scheme",
+   "name": "GAD-GENERAL ADMINISTRATIVE DEPTT",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total | Machinery & Equipment": {
+   "label": "not_scheme",
+   "name": "Machinery & Equipment",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- CATS | CATS GIA-Salary": {
+   "label": "not_scheme",
+   "name": "CATS GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- CATS | CENTRALISED ACCIDENT TRAUMA SERVICES [CATS]": {
+   "label": "not_scheme",
+   "name": "CENTRALISED ACCIDENT TRAUMA SERVICES [CATS]",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- CNBC | Chacha Nehru Bal Chikitsalaya (CNBC) GIA-General": {
+   "label": "not_scheme",
+   "name": "Chacha Nehru Bal Chikitsalaya (CNBC) GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- DCBH | DCBH Machinery & Equipments/ MV": {
+   "label": "not_scheme",
+   "name": "DCBH Machinery & Equipments/ MV",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- PWD Roads & Bridges C | Construction of underpass by Jack pushing pre-cast RCC box at ORR near Mukarba Chowk": {
+   "label": "not_scheme",
+   "name": "Construction of underpass by Jack pushing pre-cast RCC box at ORR near Mukarba Chowk",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- PWD Roads & Bridges C | Delhi Flyovers/Bridges -Integrated Corridor (i) Ring road from": {
+   "label": "not_scheme",
+   "name": "Delhi Flyovers/Bridges -Integrated Corridor (i) Ring road from",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- PWD Roads & Bridges C | Raja Garden Flyover. Flyovers/Bridges -Construction of ROB/RUB on Railway C Crossing No. LC-12 on Khera Kalan to Khera Khurd Road.": {
+   "label": "not_scheme",
+   "name": "Raja Garden Flyover. Flyovers/Bridges -Construction of ROB/RUB on Railway C Crossing No. LC-12 on Khera Kalan to Khera Khurd Road.",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total- PWD Roads & Bridges C | Road under Division South Road-1 & South East Road 2": {
+   "label": "not_scheme",
+   "name": "Road under Division South Road-1 & South East Road 2",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total-IHBAS | GIA General (Maintenance & Repair) GIA-General": {
+   "label": "not_scheme",
+   "name": "GIA General (Maintenance & Repair) GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total-ILBS | Institue of liver & Biliary Sciences at Vasant Kunj": {
+   "label": "not_scheme",
+   "name": "Institue of liver & Biliary Sciences at Vasant Kunj",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total-ILBS | Institue of liver & Biliary Sciences at Vasant Kunj GIA- C Capital": {
+   "label": "not_scheme",
+   "name": "Institue of liver & Biliary Sciences at Vasant Kunj GIA- C Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total-ILBS | Institue of liver & Biliary Sciences at Vasant Kunj GIA- General": {
+   "label": "not_scheme",
+   "name": "Institue of liver & Biliary Sciences at Vasant Kunj GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total-MAIDS | GIA General (Maintenance & Repair) GIA-General": {
+   "label": "not_scheme",
+   "name": "GIA General (Maintenance & Repair) GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total-MAIDS | Maulana Azad Institute of Dental Sciences (MAIDS)": {
+   "label": "not_scheme",
+   "name": "Maulana Azad Institute of Dental Sciences (MAIDS)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | Total-MAIDS | Maulana Azad Institute of Dental Sciences (MAIDS) GIA- General": {
+   "label": "not_scheme",
+   "name": "Maulana Azad Institute of Dental Sciences (MAIDS) GIA- General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub Total | Swachh Bharat Mission SS GIA-Capital": {
+   "label": "not_scheme",
+   "name": "Swachh Bharat Mission SS GIA-Capital",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub Total | Swachh Bharat MissionUrban Development for Public Awareness and IEC activities SS GIA-General": {
+   "label": "not_scheme",
+   "name": "Swachh Bharat MissionUrban Development for Public Awareness and IEC activities SS GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub Total | Swachh Bharat MissionUrban Development for capacity Building, Skill Development and Knowledge Management": {
+   "label": "not_scheme",
+   "name": "Swachh Bharat MissionUrban Development for capacity Building, Skill Development and Knowledge Management",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total (DSACS) R | Financial Assistance to affected / Infected persons from AIDS / HIV and Double Orphan Children (DSACS) GIA-": {
+   "label": "scheme",
+   "name": "Financial Assistance to affected / Infected persons from AIDS / HIV and Double Orphan Children (DSACS) GIA-",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total (GIA to DTC) | DTC for working deficit GIA-General": {
+   "label": "not_scheme",
+   "name": "DTC for working deficit GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total (Subsidies) | Subsidy to Consumer through NDMC (Water)- (Shifted From FD)": {
+   "label": "scheme",
+   "name": "Subsidy to Consumer through NDMC (Water)- (Shifted From FD)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total R | GIA to IVPSS": {
+   "label": "not_scheme",
+   "name": "GIA to IVPSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total | Chaudhary Braham Prakash Ayurvedic Charak Sansthan at Khera Dabur GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Chaudhary Braham Prakash Ayurvedic Charak Sansthan at Khera Dabur GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total | DERC (Shifted from FD)": {
+   "label": "not_scheme",
+   "name": "DERC (Shifted from FD)",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total | Delhi Commission for Women GIA-General": {
+   "label": "not_scheme",
+   "name": "Delhi Commission for Women GIA-General",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total | Delhi Commission for Women GIA-Salary": {
+   "label": "not_scheme",
+   "name": "Delhi Commission for Women GIA-Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total | Essential Medicines to AYUSH Dispensaries- other components CSS": {
+   "label": "not_scheme",
+   "name": "Essential Medicines to AYUSH Dispensaries- other components CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total | State Child Protection Society - (earlier Setting up of R Juvenile Shelter Homes) (Mission Vatsalaya) SS GIA- Salary": {
+   "label": "not_scheme",
+   "name": "State Child Protection Society - (earlier Setting up of R Juvenile Shelter Homes) (Mission Vatsalaya) SS GIA- Salary",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | sub total | Urban Family Welfare Centre CSS": {
+   "label": "not_scheme",
+   "name": "Urban Family Welfare Centre CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "unsectored | SUB-TOTAL (URBAN SANITATION) | Subsidy to Mukhyamantri Muft sewer connection Yojana R (Shifted from FD)": {
+   "label": "scheme",
+   "name": "Subsidy to Mukhyamantri Muft sewer connection Yojana R (Shifted from FD)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Assistance to State Agencies for Inter-state movement of foodgrains and FPS Dealers Margin Under NFSA CSS": {
+   "label": "not_scheme",
+   "name": "Assistance to State Agencies for Inter-state movement of foodgrains and FPS Dealers Margin Under NFSA CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Assistance to State Agencies for Inter-state movement of foodgrains and FPS Dealers Margin Under NFSA SS": {
+   "label": "not_scheme",
+   "name": "Assistance to State Agencies for Inter-state movement of foodgrains and FPS Dealers Margin Under NFSA SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Mukhya Mantri Corona Sahayta Yojana (Non-PDS Beneficiaries)": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Corona Sahayta Yojana (Non-PDS Beneficiaries)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Mukhya Mantri Ghar-Ghar Ration Yojana": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Ghar-Ghar Ration Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Subsidy to Consumer for Sugar": {
+   "label": "scheme",
+   "name": "Subsidy to Consumer for Sugar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | SUB-TOTAL | Subsidy to Women LPG Consumers of Poor Family": {
+   "label": "scheme",
+   "name": "Subsidy to Women LPG Consumers of Poor Family",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total [C] | Assistance to Voluntary Organisations": {
+   "label": "not_scheme",
+   "name": "Assistance to Voluntary Organisations",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total [C] | Assistance to Voluntary Organisations GIA-General": {
+   "label": "not_scheme",
+   "name": "Assistance to Voluntary Organisations GIA-General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS": {
+   "label": "not_scheme",
+   "name": "Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS SCSP": {
+   "label": "not_scheme",
+   "name": "Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS": {
+   "label": "scheme",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS": {
+   "label": "scheme",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Inclusive Education (earlier IEDSS- State Share) - Scholarship and Stipend SS": {
+   "label": "scheme",
+   "name": "Inclusive Education (earlier IEDSS- State Share) - Scholarship and Stipend SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | PM Kisan Samman Nidhi Yojana- State Top Up": {
+   "label": "scheme",
+   "name": "PM Kisan Samman Nidhi Yojana- State Top Up",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Paramparagat Krishi Vikas Yojana (PKVY) CSS": {
+   "label": "scheme",
+   "name": "Paramparagat Krishi Vikas Yojana (PKVY) CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Reimbursement of Tuition Fee under Right to Education Act for EWS Students": {
+   "label": "scheme",
+   "name": "Reimbursement of Tuition Fee under Right to Education Act for EWS Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Reimbursement of Tuition Fee under Right to Education Act for EWS Students SCSP": {
+   "label": "scheme",
+   "name": "Reimbursement of Tuition Fee under Right to Education Act for EWS Students SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Scholarship of Educationally Backward / Minority students": {
+   "label": "scheme",
+   "name": "Scholarship of Educationally Backward / Minority students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Subsidies for GPS Tracking Charges and Sim Card Cost in Auto Rikshaws)": {
+   "label": "scheme",
+   "name": "Subsidies for GPS Tracking Charges and Sim Card Cost in Auto Rikshaws)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Subsidy for Electric Vehicles for 579 e- buses": {
+   "label": "not_scheme",
+   "name": "Subsidy for Electric Vehicles for 579 e- buses",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Subsidy for School Uniforms to the Students of Govt. Schools": {
+   "label": "scheme",
+   "name": "Subsidy for School Uniforms to the Students of Govt. Schools",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Subsidy for School Uniforms to the Students of Govt. Schools SCSP": {
+   "label": "scheme",
+   "name": "Subsidy for School Uniforms to the Students of Govt. Schools SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Subsidy to DTC for Transgender Commuters": {
+   "label": "scheme",
+   "name": "Subsidy to DTC for Transgender Commuters",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Subsidy towards Tuition Fee to Delhi Cadets Studying in RIMC, Dehradun - Subsidy": {
+   "label": "scheme",
+   "name": "Subsidy towards Tuition Fee to Delhi Cadets Studying in RIMC, Dehradun - Subsidy",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub Total | Subsidy/Incentive for implementation of Delhi Electrical Vehicle Policy": {
+   "label": "scheme",
+   "name": "Subsidy/Incentive for implementation of Delhi Electrical Vehicle Policy",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub total -(PMKVY) | PM Kaushal Vikas Yojana CSS GIA-General": {
+   "label": "scheme",
+   "name": "PM Kaushal Vikas Yojana CSS GIA-General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub total -(PMKVY) | PM Kaushal Vikas Yojana CSS SCSP GIA-General": {
+   "label": "scheme",
+   "name": "PM Kaushal Vikas Yojana CSS SCSP GIA-General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total CSS | Assistance to State Scheduled Castes Development Corporations(SCDCs) CSS": {
+   "label": "not_scheme",
+   "name": "Assistance to State Scheduled Castes Development Corporations(SCDCs) CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total CSS | Post-matric Scholarship for OBC students CSS": {
+   "label": "scheme",
+   "name": "Post-matric Scholarship for OBC students CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total CSS | Post-matric Scholarship for SC students CSS": {
+   "label": "scheme",
+   "name": "Post-matric Scholarship for SC students CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &": {
+   "label": "scheme",
+   "name": "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Chief Minister Junior Scholarship Scheme for students upto middle classes": {
+   "label": "scheme",
+   "name": "Chief Minister Junior Scholarship Scheme for students upto middle classes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Mukhyamantri Vidhyarathi Pratibha Yojana": {
+   "label": "scheme",
+   "name": "Mukhyamantri Vidhyarathi Pratibha Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Mukhyamantri Vidhyarathi Pratibha Yojana SCSP": {
+   "label": "scheme",
+   "name": "Mukhyamantri Vidhyarathi Pratibha Yojana SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Post Matric Scholarship Scheme": {
+   "label": "scheme",
+   "name": "Post Matric Scholarship Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Post Matric Scholarship Scheme for OBC students SS": {
+   "label": "scheme",
+   "name": "Post Matric Scholarship Scheme for OBC students SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Post Matric Scholarship Scheme for SC students SS": {
+   "label": "scheme",
+   "name": "Post Matric Scholarship Scheme for SC students SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Pre-Matric Scholarshiop Scheme-Scholarship & Stipend SS SCSP": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarshiop Scheme-Scholarship & Stipend SS SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Scholarship to SC/ST/OBC Students ( Class I to XII)": {
+   "label": "scheme",
+   "name": "Scholarship to SC/ST/OBC Students ( Class I to XII)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Scholarship to SC/ST/OBCStudents ( Class I to XII) SCSP": {
+   "label": "scheme",
+   "name": "Scholarship to SC/ST/OBCStudents ( Class I to XII) SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Vocational & Tech. Scholarship to SC/ST/OBC students": {
+   "label": "scheme",
+   "name": "Vocational & Tech. Scholarship to SC/ST/OBC students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [1 - 13] | Vocational & Tech. Scholarship to SC/ST/OBC students SCSP": {
+   "label": "scheme",
+   "name": "Vocational & Tech. Scholarship to SC/ST/OBC students SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [23 - 24] | Institution of Dr. Ambedkar Ratana Award SCSP": {
+   "label": "scheme",
+   "name": "Institution of Dr. Ambedkar Ratana Award SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [A] | Financial Assistance to Differently Abled Persons": {
+   "label": "scheme",
+   "name": "Financial Assistance to Differently Abled Persons",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [A] | Financial Assistance to Differently Abled Persons SCSP": {
+   "label": "scheme",
+   "name": "Financial Assistance to Differently Abled Persons SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [A] | Indira Gandhi National Disability Pension Scheme (IGNDPS) NSAP CSS": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Disability Pension Scheme (IGNDPS) NSAP CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [A] | Mukhyamantari Divyangjan Punarvas Sewa Yojana": {
+   "label": "scheme",
+   "name": "Mukhyamantari Divyangjan Punarvas Sewa Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [B] | Financial Assistance to Senior Citizen SCSP": {
+   "label": "scheme",
+   "name": "Financial Assistance to Senior Citizen SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [B] | Indira Gandhi National Old Age Pension Scheme (IGNOAPS) (NSAP) CSS": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS) (NSAP) CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [C] | Assistance to voluntary organisation": {
+   "label": "not_scheme",
+   "name": "Assistance to voluntary organisation",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [C] | Assistance to voluntary organisation GIA-General": {
+   "label": "not_scheme",
+   "name": "Assistance to voluntary organisation GIA-General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [C] | Mukhyamantri Covid-19 Pariwar Aarthik Sahayata yojana": {
+   "label": "scheme",
+   "name": "Mukhyamantri Covid-19 Pariwar Aarthik Sahayata yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Financial assistance to children of prisoners for sustenance, education & welfare": {
+   "label": "scheme",
+   "name": "Financial assistance to children of prisoners for sustenance, education & welfare",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Laadli Yojana": {
+   "label": "scheme",
+   "name": "Laadli Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Laadli Yojana SCSP": {
+   "label": "scheme",
+   "name": "Laadli Yojana SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line CSS GIA-General": {
+   "label": "scheme",
+   "name": "Mission Vatsalaya- Child Help Line CSS GIA-General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | DSEU for Project Samridhi GIA-General": {
+   "label": "not_scheme",
+   "name": "DSEU for Project Samridhi GIA-General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Financial Assistance to Women in Distress": {
+   "label": "scheme",
+   "name": "Financial Assistance to Women in Distress",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Indira Gandhi National Widow Pension Scheme (IGNWPS) under NSAP CSS": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Widow Pension Scheme (IGNWPS) under NSAP CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Mukhya Mantri Matru Vandana Yojana (MMMVY)": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Matru Vandana Yojana (MMMVY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Mukhyamantri Mahila Samman Yojana": {
+   "label": "scheme",
+   "name": "Mukhyamantri Mahila Samman Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Pradhan Mantri Matru Vandana Yojana (PMMVY) (Samarthya) (Mission Shakti) CSS": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY) (Samarthya) (Mission Shakti) CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Sub-Total [Women Welfare] | Pradhan Mantri Matru Vandana Yojana (PMMVY) (Samarthya) (Mission Shakti) SS": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY) (Samarthya) (Mission Shakti) SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Ayushman Bharat Yojana /PM-JAY, Top-up and Senior": {
+   "label": "scheme",
+   "name": "Ayushman Bharat Yojana /PM-JAY, Top-up and Senior",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Pradhan Mantri Jan Arogya Yojana (PM-JAY) CSS GIA- General": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Jan Arogya Yojana (PM-JAY) CSS GIA- General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | Pradhan Mantri Jan Arogya Yojana (PM-JAY) SS GIA- General": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Jan Arogya Yojana (PM-JAY) SS GIA- General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | TOTAL [DGHS] | State Award to service doctors working in Delhi Govt. Hospitals": {
+   "label": "not_scheme",
+   "name": "State Award to service doctors working in Delhi Govt. Hospitals",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | TOTAL [HIGHER EDUCATION] | Award for Meritorious Students Studying in Govt. Colleges": {
+   "label": "scheme",
+   "name": "Award for Meritorious Students Studying in Govt. Colleges",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | TOTAL | Mission Excellence - Financial Assistance to Sports Persons": {
+   "label": "scheme",
+   "name": "Mission Excellence - Financial Assistance to Sports Persons",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | TOTAL | Play & Progress- Financial Assistance to School students for excellence in sports": {
+   "label": "scheme",
+   "name": "Play & Progress- Financial Assistance to School students for excellence in sports",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total Language Department | Financial Assistance for Promotion of poetry, Literature, Art & Cultre GIA-General": {
+   "label": "not_scheme",
+   "name": "Financial Assistance for Promotion of poetry, Literature, Art & Cultre GIA-General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Animal Husbandry] | Assistance to States for Control of Animal Diseases (Animal Disease Control) CSS": {
+   "label": "not_scheme",
+   "name": "Assistance to States for Control of Animal Diseases (Animal Disease Control) CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Economic Development] | Employment through DSCFDC includes Financial Assistance for": {
+   "label": "scheme",
+   "name": "Employment through DSCFDC includes Financial Assistance for",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Economic Development] | Financial Assistance to SC/ST for Self Employment through DSCFDC includes Financial Assistance for": {
+   "label": "scheme",
+   "name": "Financial Assistance to SC/ST for Self Employment through DSCFDC includes Financial Assistance for",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Educational Development] | Jai Bhim Mukhyamantri Vikas Yojana SCSP": {
+   "label": "scheme",
+   "name": "Jai Bhim Mukhyamantri Vikas Yojana SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Educational Development] | Mukhyamantri Vikas Yojana": {
+   "label": "scheme",
+   "name": "Mukhyamantri Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Educational Development] | upto secondary Scholarship level": {
+   "label": "not_scheme",
+   "name": "upto secondary Scholarship level",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Power Deptt.] | Generation based incentive scheme for solar Energy (Shifted from FD)": {
+   "label": "scheme",
+   "name": "Generation based incentive scheme for solar Energy (Shifted from FD)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Power Deptt.] | Subsidy to Consumers through DISCOM (Shifted from FD)": {
+   "label": "scheme",
+   "name": "Subsidy to Consumers through DISCOM (Shifted from FD)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | Award to Minority students (Statefunded Scheme)": {
+   "label": "scheme",
+   "name": "Award to Minority students (Statefunded Scheme)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [Revenue Department] | Reimbursement of Tution Fees to the Minority Student of Class I to XII(State funded scheme)": {
+   "label": "scheme",
+   "name": "Reimbursement of Tution Fees to the Minority Student of Class I to XII(State funded scheme)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [UD Deptt.] | Mukhyamantri Sadak Punrothhon Yojana (Financial Assistance to Local Bodies)": {
+   "label": "not_scheme",
+   "name": "Mukhyamantri Sadak Punrothhon Yojana (Financial Assistance to Local Bodies)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [UD Deptt.] | Pradhan Mantri Awas Yojana AHP/BLC CSS": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana AHP/BLC CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | Total [UD Deptt.] | Pradhan Mantri Awas Yojana AHP/BLC SS": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana AHP/BLC SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | sub total (DSACS) R | Financial Assistance to affected / Infected persons from AIDS / HIV and Double Orphan Children (DSACS)": {
+   "label": "scheme",
+   "name": "Financial Assistance to affected / Infected persons from AIDS / HIV and Double Orphan Children (DSACS)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | sub total (Subsidies to DTC & Cluster Buses) | Subsidy to Cluster buses for female Commuters": {
+   "label": "scheme",
+   "name": "Subsidy to Cluster buses for female Commuters",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | sub total (Subsidies to DTC & Cluster Buses) | Subsidy to DTC for concessional passes": {
+   "label": "scheme",
+   "name": "Subsidy to DTC for concessional passes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | sub total (Subsidies to DTC & Cluster Buses) | Subsidy to DTC for female Commuters": {
+   "label": "scheme",
+   "name": "Subsidy to DTC for female Commuters",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | sub total (Subsidies) | SUBSIDIES": {
+   "label": "not_scheme",
+   "name": "SUBSIDIES",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "unsectored | sub total (Subsidies) | Subsidy to Consumer through DJB (Water)- (Shifted From R FD)": {
+   "label": "scheme",
+   "name": "Subsidy to Consumer through DJB (Water)- (Shifted From R FD)",
+   "how": "audit census at the publishing bar, read by eye"
+  }
+ },
+ "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT."
+}

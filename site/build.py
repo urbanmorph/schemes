@@ -1464,7 +1464,8 @@ def unify(checks, registry, classification):
 #
 # Rows already matched to a myScheme record are skipped, because those schemes have a page.
 LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
-               "maharashtra": 2, "odisha": 4, "westbengal": 3, "haryana": 3}
+               "maharashtra": 2, "odisha": 4, "westbengal": 3, "haryana": 3,
+               "tripura": 1, "jharkhand": 1, "delhi": 1, "telangana": 1}
 STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
             "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
             "maharashtra": "Maharashtra", "odisha": "Odisha",

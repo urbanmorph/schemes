@@ -1,0 +1,1882 @@
+{
+ "state": "Jharkhand",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, pension, insurance, subsidy or training from this line? Construction, an office or institution, share capital, a loan to a corporation, administration, research, a survey, area development or a monitoring component is not_scheme.",
+ "labelled": 374,
+ "scheme": 166,
+ "not_scheme": 208,
+ "sampling": "Stratified on the statement the line appears under (State Schemes, Central Assistance, Central Sector), 28% of each with a floor of 20, seed 20260903.",
+ "labels": {
+  "0017": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF MACHINERY FOR ENFORCEMENT OF PROTECTION OF CIVIL RIGHTS ACT 1995 AND PREVENTION OF ATROCITIES ACT 1989 (DAMA)",
+   "how": "stratified sample, read by eye"
+  },
+  "0022": {
+   "label": "not_scheme",
+   "name": "HOSTEL FOR SC BOYS - GIRLS MAJOR WORK",
+   "how": "stratified sample, read by eye"
+  },
+  "0027": {
+   "label": "not_scheme",
+   "name": "RANCHI INSTITUTE OF NEURO - PSYCHIATRY AND ALLIED SCIENCES (RINPAS)",
+   "how": "stratified sample, read by eye"
+  },
+  "0031": {
+   "label": "not_scheme",
+   "name": "EXTENSION OF EMPLOYMENT SERVICES",
+   "how": "stratified sample, read by eye"
+  },
+  "0038": {
+   "label": "not_scheme",
+   "name": "SEMINAR, EXHIBITION ETC.",
+   "how": "stratified sample, read by eye"
+  },
+  "0048": {
+   "label": "not_scheme",
+   "name": "TRAINING",
+   "how": "stratified sample, read by eye"
+  },
+  "0073": {
+   "label": "scheme",
+   "name": "INCOME GENERATION AND LIVELIHOOD DEVELOPMENT",
+   "how": "stratified sample, read by eye"
+  },
+  "0115": {
+   "label": "not_scheme",
+   "name": "BACKWARD CLASS DEVELOPMENT CORPORATION ASSISTANCE GRANTS",
+   "how": "stratified sample, read by eye"
+  },
+  "0127": {
+   "label": "scheme",
+   "name": "INTEGRATED CHILD PROTECTION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "0145": {
+   "label": "not_scheme",
+   "name": "RENOVATION & RE-ORGANIZATION OF AYURVEDIC MEDICAL CENTRES",
+   "how": "stratified sample, read by eye"
+  },
+  "0152": {
+   "label": "scheme",
+   "name": "SPECIAL HEALTH SCHEME FOR PAHARIA",
+   "how": "stratified sample, read by eye"
+  },
+  "0154": {
+   "label": "scheme",
+   "name": "PAHARIA DAY SCHOOL-MID DAY MEAL",
+   "how": "stratified sample, read by eye"
+  },
+  "0182": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF BUILDINGS OF LABOUR OFFICES",
+   "how": "stratified sample, read by eye"
+  },
+  "0210": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION - RENOVATION OF RAJYA SUCHANA BHAWAN/DISTRICT SUCHANA BHAWANS",
+   "how": "stratified sample, read by eye"
+  },
+  "0214": {
+   "label": "not_scheme",
+   "name": "PRODUCTION OF FILMS DOCUMENTARIES, DEVELOPMENT ORIENTED INFORMATIVE ADVERTISEMENT, AND DISPLAY THROUGH ELECTRONIC CHANNELS",
+   "how": "stratified sample, read by eye"
+  },
+  "0219": {
+   "label": "not_scheme",
+   "name": "ESTABLISHMENT OF PRESS CLUB",
+   "how": "stratified sample, read by eye"
+  },
+  "0233": {
+   "label": "not_scheme",
+   "name": "RURAL WATER SUPPLY (DRILLED TUBE WELL/WELL)",
+   "how": "stratified sample, read by eye"
+  },
+  "0236": {
+   "label": "not_scheme",
+   "name": "LEGAL METROLOGY AND QUALITY ASSURANCE WEIGHTS AND MEASURES",
+   "how": "stratified sample, read by eye"
+  },
+  "0238": {
+   "label": "not_scheme",
+   "name": "GRANT TO JAP-IT (ESTABLISHMENT OF GOVT. OFFICIALS)",
+   "how": "stratified sample, read by eye"
+  },
+  "0240": {
+   "label": "not_scheme",
+   "name": "ESTABLISHMENT OF IT PARK",
+   "how": "stratified sample, read by eye"
+  },
+  "0260": {
+   "label": "not_scheme",
+   "name": "CAPITAL MAINTENANCE WORK UNDER ELECTRIC WORKS DIVISION",
+   "how": "stratified sample, read by eye"
+  },
+  "0280": {
+   "label": "scheme",
+   "name": "ANNAPURNA YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "0285": {
+   "label": "not_scheme",
+   "name": "GODOWN CONSTRUCTION / RENOVATION",
+   "how": "stratified sample, read by eye"
+  },
+  "0296": {
+   "label": "not_scheme",
+   "name": "MINORITY WELFARE DEVELOPMENT DEPARTMENT-CONSTRUCTION OF HOSTEL FOR MINORITY GIRLS AND BOYS STUDENT",
+   "how": "stratified sample, read by eye"
+  },
+  "0297": {
+   "label": "scheme",
+   "name": "CYCLE SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "0302": {
+   "label": "not_scheme",
+   "name": "SHARE CAPITAL TO MINORITY DEVELOPMENT FINANCE CORPORATION",
+   "how": "stratified sample, read by eye"
+  },
+  "0308": {
+   "label": "not_scheme",
+   "name": "GODDA-HANSDIHA RAIL LINK",
+   "how": "stratified sample, read by eye"
+  },
+  "0321": {
+   "label": "not_scheme",
+   "name": "MANAGEMENT INFORMATION SYSTEM",
+   "how": "stratified sample, read by eye"
+  },
+  "0327": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF CRAFTSMAN / APPRENTICESHIP TRAINING SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "0330": {
+   "label": "not_scheme",
+   "name": "COMMUNICABLE DISEASES (TB AND MALARIA) OFFICES (CAPITAL)",
+   "how": "stratified sample, read by eye"
+  },
+  "0341": {
+   "label": "not_scheme",
+   "name": "WILD LIFE CONSERVATION",
+   "how": "stratified sample, read by eye"
+  },
+  "0342": {
+   "label": "not_scheme",
+   "name": "FOREST MANAGEMENT FACILITIES",
+   "how": "stratified sample, read by eye"
+  },
+  "0343": {
+   "label": "not_scheme",
+   "name": "TRAINING FACILITIES",
+   "how": "stratified sample, read by eye"
+  },
+  "0347": {
+   "label": "scheme",
+   "name": "SPORTS WELFARE FUND/STIPEND/HONOUR/EX SPORTS PERSON PENSION/INSURANCE",
+   "how": "stratified sample, read by eye"
+  },
+  "0414": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING, MAINTENANCE, RUNNING ETC. OF TOURIST INFORMATION CENTRE",
+   "how": "stratified sample, read by eye"
+  },
+  "0417": {
+   "label": "not_scheme",
+   "name": "CONSULTANCY, SECURITY AND OTHER SERVICES",
+   "how": "stratified sample, read by eye"
+  },
+  "0420": {
+   "label": "not_scheme",
+   "name": "EXTENSION OF EMPLOYMENT SERVICES (CAPITAL)",
+   "how": "stratified sample, read by eye"
+  },
+  "0427": {
+   "label": "not_scheme",
+   "name": "NATIONAL MISSION ON AGRICULTURE EXTENSION AND TECHNOLOGY",
+   "how": "stratified sample, read by eye"
+  },
+  "0440": {
+   "label": "not_scheme",
+   "name": "ROADS",
+   "how": "stratified sample, read by eye"
+  },
+  "0444": {
+   "label": "not_scheme",
+   "name": "BRIDGES",
+   "how": "stratified sample, read by eye"
+  },
+  "0447": {
+   "label": "not_scheme",
+   "name": "GRANT FOR INFORMATION, SEMINAR, MONITORING, EVALUATION AND DOCUMENTATION ETC. FOR PROMOTION OF CO-OPERATIVE RELATED ACTIVITIES AND GRANT FOR SKILL DEVELOPMENT AND TRAINING IN COOPERATIVE SECTOR",
+   "how": "stratified sample, read by eye"
+  },
+  "0450": {
+   "label": "not_scheme",
+   "name": "SHARE CAPITAL CONTRIBUTION TO APEX AND OTHER CO-OPERATIVES SOCIETIES",
+   "how": "stratified sample, read by eye"
+  },
+  "0470": {
+   "label": "not_scheme",
+   "name": "CREATION OF INFRASTRUCTURE FOR CIVIL SERVICES OFFICERS INSTITUTE, JHARKHAND",
+   "how": "stratified sample, read by eye"
+  },
+  "0490": {
+   "label": "scheme",
+   "name": "FREE CYCLE DISTRIBUTION",
+   "how": "stratified sample, read by eye"
+  },
+  "0503": {
+   "label": "not_scheme",
+   "name": "TECHNICAL INPUT PROGRAMME",
+   "how": "stratified sample, read by eye"
+  },
+  "0518": {
+   "label": "not_scheme",
+   "name": "CAPACITY BUILDING / SEMINAR SYMPOSIUM / DECENTRALIZED PLANNING / INNOVATION/ PPP WORKSHOP/START UP/INCUBATION CENTRE INNOVATIVE JHARKHAND INC. DIGITAL PROGRAMME",
+   "how": "stratified sample, read by eye"
+  },
+  "0568": {
+   "label": "not_scheme",
+   "name": "GRANTS-IN-AID TO JHASCOFISH",
+   "how": "stratified sample, read by eye"
+  },
+  "0577": {
+   "label": "not_scheme",
+   "name": "BLOCK BUILDINGS RENOVATION (MINOR WORK)",
+   "how": "stratified sample, read by eye"
+  },
+  "0582": {
+   "label": "scheme",
+   "name": "MGNREGA (GENERAL ASSISTANCE GRANT)",
+   "how": "stratified sample, read by eye"
+  },
+  "0596": {
+   "label": "scheme",
+   "name": "FREE DISTRIBUTION OF TEXT-BOOKS",
+   "how": "stratified sample, read by eye"
+  },
+  "0620": {
+   "label": "not_scheme",
+   "name": "SUPPORT FOR STATISTICAL STRENGTHING",
+   "how": "stratified sample, read by eye"
+  },
+  "0635": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF YOJANA BHAWAN",
+   "how": "stratified sample, read by eye"
+  },
+  "0714": {
+   "label": "not_scheme",
+   "name": "URBAN LAND MANAGEMENT & ACQUISITION",
+   "how": "stratified sample, read by eye"
+  },
+  "0715": {
+   "label": "not_scheme",
+   "name": "GRANTS TO INSTITUTIONS FOR SHARE CAPITAL",
+   "how": "stratified sample, read by eye"
+  },
+  "0720": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF NEW JAILS/ COMPLETION OF UNDER CONSTRUCTION PRISONER’S WARDS (INCLUDING PERIMETER WALL)",
+   "how": "stratified sample, read by eye"
+  },
+  "0721": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION/STRENGTHENING OF JAIL HOSPITALS/ EXTENSION AND UPGRADATION OF MEDICAL FACILITIES",
+   "how": "stratified sample, read by eye"
+  },
+  "0749": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF OFFICE BUILDINGS/CIRCUIT HOUSES",
+   "how": "stratified sample, read by eye"
+  },
+  "0789": {
+   "label": "not_scheme",
+   "name": "STRENGHTHENING OF STATE RUN FARMS (CATTLE, BUFFALO, SHEEP, GOAT, PIG - POULTRY)",
+   "how": "stratified sample, read by eye"
+  },
+  "0791": {
+   "label": "scheme",
+   "name": "CONTROL OF NATIONALLY IMPORTANT LIVESTOCK DISEASES",
+   "how": "stratified sample, read by eye"
+  },
+  "0792": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF JHARKHAND STATE IMPLIMENTING AGENCY",
+   "how": "stratified sample, read by eye"
+  },
+  "0793": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF GO SEVA AYOG",
+   "how": "stratified sample, read by eye"
+  },
+  "0794": {
+   "label": "not_scheme",
+   "name": "DIRECTION - ADMINISTRATION",
+   "how": "stratified sample, read by eye"
+  },
+  "0795": {
+   "label": "not_scheme",
+   "name": "VET POLYCLINIC - REFERRAL - MODERNIZATION OF HOSPITAL DISPENSARIES",
+   "how": "stratified sample, read by eye"
+  },
+  "0799": {
+   "label": "not_scheme",
+   "name": "PARAVET TRAINING",
+   "how": "stratified sample, read by eye"
+  },
+  "0818": {
+   "label": "not_scheme",
+   "name": "GEOLOGICAL EXPLORATION",
+   "how": "stratified sample, read by eye"
+  },
+  "0855": {
+   "label": "not_scheme",
+   "name": "EXTERNALLY AIDED PROJECTS (EAP)",
+   "how": "stratified sample, read by eye"
+  },
+  "0856": {
+   "label": "not_scheme",
+   "name": "CONSULTANCY SERVICES - AH",
+   "how": "stratified sample, read by eye"
+  },
+  "0906": {
+   "label": "not_scheme",
+   "name": "DISTRICT INDUSTRIES CENTRE",
+   "how": "stratified sample, read by eye"
+  },
+  "0926": {
+   "label": "not_scheme",
+   "name": "RENOVATION AND CONSTRUCTION OF RESIDENTIAL SCHOOL",
+   "how": "stratified sample, read by eye"
+  },
+  "0927": {
+   "label": "scheme",
+   "name": "BIRSA AWAS YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "0928": {
+   "label": "not_scheme",
+   "name": "JTDP/JTELP (EAP-STATE SHARE)",
+   "how": "stratified sample, read by eye"
+  },
+  "0935": {
+   "label": "not_scheme",
+   "name": "RASHTRIYA UCHCHATAR SHIKSHA ABHIYAN (RUSA)",
+   "how": "stratified sample, read by eye"
+  },
+  "0938": {
+   "label": "scheme",
+   "name": "NUTRITIONAL SUPPORT TO PRIMARY EDUCATION (MDM)",
+   "how": "stratified sample, read by eye"
+  },
+  "0942": {
+   "label": "not_scheme",
+   "name": "CONSERVATION AND DEVELOPMENT OF SARNA/JAHEERSTHAN/HARGANDI & MASNA",
+   "how": "stratified sample, read by eye"
+  },
+  "0947": {
+   "label": "scheme",
+   "name": "NATIONAL MISSION FOR SUSTAINABLE AGRICULTURE",
+   "how": "stratified sample, read by eye"
+  },
+  "0953": {
+   "label": "scheme",
+   "name": "NATIONAL FOOD SECURITY MISSION",
+   "how": "stratified sample, read by eye"
+  },
+  "0961": {
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI GRAM SADAK YOJANA (PMGSY)",
+   "how": "stratified sample, read by eye"
+  },
+  "0970": {
+   "label": "scheme",
+   "name": "SCHEMES FOR DIFFERENTLY ABLED PERSONS",
+   "how": "stratified sample, read by eye"
+  },
+  "0989": {
+   "label": "not_scheme",
+   "name": "ECO - TOURISM",
+   "how": "stratified sample, read by eye"
+  },
+  "1012": {
+   "label": "scheme",
+   "name": "PREMIUM SUBSIDY AND OTHER EXPENDITURE FOR CROP INSURANCE SCHEME AND SUBSIDY FOR COMPENSATION OF FARMERS CROPS",
+   "how": "stratified sample, read by eye"
+  },
+  "1013": {
+   "label": "scheme",
+   "name": "SUBSIDY FOR CROP INSURANCE COMPENSATION TO FARMERS",
+   "how": "stratified sample, read by eye"
+  },
+  "1026": {
+   "label": "not_scheme",
+   "name": "COMPUTERISATION OF DEPARTMENT",
+   "how": "stratified sample, read by eye"
+  },
+  "1031": {
+   "label": "scheme",
+   "name": "FREE DISTRIBUTION OF SCHOOL KIT TO CHILDREN",
+   "how": "stratified sample, read by eye"
+  },
+  "1061": {
+   "label": "not_scheme",
+   "name": "PROJECT OF GIS AND REMOTE SENSING",
+   "how": "stratified sample, read by eye"
+  },
+  "1078": {
+   "label": "scheme",
+   "name": "SWACHH BHARAT MISSION (INCLUDING SOLID WASTE MANAGEMENT)",
+   "how": "stratified sample, read by eye"
+  },
+  "1093": {
+   "label": "not_scheme",
+   "name": "PURCHASE OF NEW VEHICLES",
+   "how": "stratified sample, read by eye"
+  },
+  "1107": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF LS/US QUARTERS/JAP-7, HAZARIBAGH, COURT HAZAT, KOTE, BOUNDARY WALL, BARRACK, BATHROOMS, KITCHEN, GARAGE, WATER STORAGE SYSTEM",
+   "how": "stratified sample, read by eye"
+  },
+  "1140": {
+   "label": "not_scheme",
+   "name": "WIDENING AND STRENGTHENING TO 2 LANES FOR ROADS AROUND 310 KMS OF GOVINDPUR-JAMTARA-DUMKA-SAHEBGANJ ROAD AND PROJECT UNDER ADB-II (335.08 KMS)",
+   "how": "stratified sample, read by eye"
+  },
+  "1151": {
+   "label": "not_scheme",
+   "name": "SUBARNA REKHA MULTIPURPOSR PROJECT (CSS)",
+   "how": "stratified sample, read by eye"
+  },
+  "1163": {
+   "label": "not_scheme",
+   "name": "NATIONAL HYDROLOGY PROJECT",
+   "how": "stratified sample, read by eye"
+  },
+  "1195": {
+   "label": "not_scheme",
+   "name": "LAND ACQUISITION FOR EXTENSION OF AIRPORTS",
+   "how": "stratified sample, read by eye"
+  },
+  "1196": {
+   "label": "scheme",
+   "name": "NSAP PROGRAMME INDIRA GANDHI NATIONAL OLD AGE PENSION SCHEME 33:67 (FOR THE PENSIONERS OF THE AGE OF 60-79 YEARS)",
+   "how": "stratified sample, read by eye"
+  },
+  "1202": {
+   "label": "scheme",
+   "name": "NSAP PROGRAMME INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1204": {
+   "label": "scheme",
+   "name": "NATIONAL FAMILY BENEFIT SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1244": {
+   "label": "not_scheme",
+   "name": "MILK PROCUREMENT, PROCESSING & MARKETING",
+   "how": "stratified sample, read by eye"
+  },
+  "1256": {
+   "label": "scheme",
+   "name": "VED VYAS AAWAS YOJNA (CAPITAL)",
+   "how": "stratified sample, read by eye"
+  },
+  "1258": {
+   "label": "not_scheme",
+   "name": "CREATION OF INFRASTRUCTURE OF SRI KRISHNA INSTITUTE OF PUBLIC ADMINISTRATION",
+   "how": "stratified sample, read by eye"
+  },
+  "1280": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF OFFICE-CUM-SAINIK REST HOUSE/SAINIK KALYAN NIDESHALAYE",
+   "how": "stratified sample, read by eye"
+  },
+  "1284": {
+   "label": "not_scheme",
+   "name": "LED VANS FOR GOVERNMENT PROGRAMME",
+   "how": "stratified sample, read by eye"
+  },
+  "1287": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF DIRECTORATE",
+   "how": "stratified sample, read by eye"
+  },
+  "1300": {
+   "label": "not_scheme",
+   "name": "GRANTS TO SPORTS & YOUTH PROMOTION ACTIVITIES",
+   "how": "stratified sample, read by eye"
+  },
+  "1349": {
+   "label": "not_scheme",
+   "name": "PRICE STABILISATION FUND",
+   "how": "stratified sample, read by eye"
+  },
+  "1386": {
+   "label": "not_scheme",
+   "name": "INFRASTRUCTURE DEVELOPMENT & GOKUL GRAM WITH KHATAL REHABILITATION",
+   "how": "stratified sample, read by eye"
+  },
+  "1414": {
+   "label": "scheme",
+   "name": "MUKHYA MANTRI GAMBHIR BIMARI UPCHAR YOJANA, MUKHYA MANTRI NISHULK DIOGNOSTIC AND RADIOLOGY TESTS SCHEME AND MUKHYA MANTRI NISHULK BREAST & CERVICAL CANCER SCREENING SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1451": {
+   "label": "scheme",
+   "name": "SUB MISSION ON AGRICULTURAL MECHANISATION",
+   "how": "stratified sample, read by eye"
+  },
+  "1452": {
+   "label": "scheme",
+   "name": "PARAMPARAGAT KRISHI VIKAS YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "1468": {
+   "label": "scheme",
+   "name": "INTEGRATED POULTRY DEVELOPMENT SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1542": {
+   "label": "not_scheme",
+   "name": "SHAHEED GRAM VIKAS YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "1594": {
+   "label": "scheme",
+   "name": "NATIONAL CRECHE SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1598": {
+   "label": "not_scheme",
+   "name": "TRAUMA CARE FACILITIES",
+   "how": "stratified sample, read by eye"
+  },
+  "1616": {
+   "label": "not_scheme",
+   "name": "CAPACITY BUILDING & TRAINING",
+   "how": "stratified sample, read by eye"
+  },
+  "1618": {
+   "label": "not_scheme",
+   "name": "RASTRIYA GRAM SWARAJ ABHIYAN",
+   "how": "stratified sample, read by eye"
+  },
+  "1621": {
+   "label": "scheme",
+   "name": "SPECIAL ANIMAL HEALTH CAMP",
+   "how": "stratified sample, read by eye"
+  },
+  "1625": {
+   "label": "not_scheme",
+   "name": "URBAN PROJECTS IN WATER SUPPLY, SOLID WASTE MANAGEMENT, SEWERAGE & DRAINAGE, CIVIC INFRASTRUCTURE HOUSING ETC",
+   "how": "stratified sample, read by eye"
+  },
+  "1637": {
+   "label": "scheme",
+   "name": "SCHME FOR ADOLESCENT GIRLS (SAG)",
+   "how": "stratified sample, read by eye"
+  },
+  "1638": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION/MAINTENANCE UP-GRADATION OF AWCS UNDER ICDS",
+   "how": "stratified sample, read by eye"
+  },
+  "1644": {
+   "label": "not_scheme",
+   "name": "SALARY FOR UPGRADED HIGH SCHOOL",
+   "how": "stratified sample, read by eye"
+  },
+  "1645": {
+   "label": "not_scheme",
+   "name": "SALARY FOR 280 UPGRADED +2 SCHOOLS",
+   "how": "stratified sample, read by eye"
+  },
+  "1646": {
+   "label": "not_scheme",
+   "name": "GRANT IN AID TO RECOGNISED SECONDARY AND SENIOR SECONDARY NON-GOVERNMENT SCHOOLS",
+   "how": "stratified sample, read by eye"
+  },
+  "1649": {
+   "label": "not_scheme",
+   "name": "GYANODAY YOJNA (SEMINAR AND SYMPOSIUM, TEACHER AWARD, STRENGTHENING OF FIELD EDUCATION OFFICES AND AKANSHA)",
+   "how": "stratified sample, read by eye"
+  },
+  "1650": {
+   "label": "scheme",
+   "name": "SCHOLARSHIP TO THE STUDENT ENROLLED IN RIMC, DEHRADUN",
+   "how": "stratified sample, read by eye"
+  },
+  "1660": {
+   "label": "scheme",
+   "name": "AGRICULTURE EQUIPMENTS TO FARMERS, WOMEN SHGS ETC",
+   "how": "stratified sample, read by eye"
+  },
+  "1666": {
+   "label": "not_scheme",
+   "name": "GRANTS TO SCHEDULE TRIBE RESIDENTIAL SCHOOLS RUN BY NGO’S",
+   "how": "stratified sample, read by eye"
+  },
+  "1668": {
+   "label": "not_scheme",
+   "name": "EXPANSION AND DEVELOPMENT OF DEOGHAR AIRPORT",
+   "how": "stratified sample, read by eye"
+  },
+  "1669": {
+   "label": "not_scheme",
+   "name": "REGIONAL CONNECTIVITY SCHEME (RCS) AND DEVELOPMENT OF AIRPORTS",
+   "how": "stratified sample, read by eye"
+  },
+  "1674": {
+   "label": "not_scheme",
+   "name": "MEDICAL COLLEGES & 500 BEDDED HOSPITALS-ESTABLISHMENT COST, STIPEND ETC.",
+   "how": "stratified sample, read by eye"
+  },
+  "1686": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING AT DRUG AND FOOD SAFETY SECTOR",
+   "how": "stratified sample, read by eye"
+  },
+  "1692": {
+   "label": "not_scheme",
+   "name": "OUTSOURCING FOR ALL HOSPITALS, HEALTH CENTRES, LABORATORIES, OFFICES, DIAGNOSTIC CENTERS AND OTHER INSTITUTES (EXCEPT MEDICAL COLLEGE)",
+   "how": "stratified sample, read by eye"
+  },
+  "1697": {
+   "label": "not_scheme",
+   "name": "IFMS – VERSION 2.0",
+   "how": "stratified sample, read by eye"
+  },
+  "1705": {
+   "label": "not_scheme",
+   "name": "JHARKHAND STATE CONTINGENT FOODGRAINS FUND",
+   "how": "stratified sample, read by eye"
+  },
+  "1722": {
+   "label": "not_scheme",
+   "name": "GRANTS TO HOUSING BOARD FOR CAPACITY BUILDING",
+   "how": "stratified sample, read by eye"
+  },
+  "1730": {
+   "label": "scheme",
+   "name": "BIRSA VISHIST JANJATI VIKASH YOJNA",
+   "how": "stratified sample, read by eye"
+  },
+  "1743": {
+   "label": "not_scheme",
+   "name": "GRANTS-IN-AID SUPPORT TO DTPC FOR DEVELOPMNET OF TOURIST PLACES AND TOURISM IMPROVEMENT",
+   "how": "stratified sample, read by eye"
+  },
+  "1748": {
+   "label": "scheme",
+   "name": "AYUSHMAN BHARAT-MUKHYAMANTRI JAN AAROGYA YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "1753": {
+   "label": "not_scheme",
+   "name": "LOAN TO JHARKHAND BIJLI VITRAN NIGAM LIMITED UNDER JHARKHAND POWER SYSTEM IMPROVEMENT PROJECT",
+   "how": "stratified sample, read by eye"
+  },
+  "1756": {
+   "label": "scheme",
+   "name": "BLANKET AND CLOTH DISTRIBUTION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1767": {
+   "label": "not_scheme",
+   "name": "COMPENSATORY AFFORESTATION",
+   "how": "stratified sample, read by eye"
+  },
+  "1772": {
+   "label": "not_scheme",
+   "name": "OTHERS",
+   "how": "stratified sample, read by eye"
+  },
+  "1775": {
+   "label": "not_scheme",
+   "name": "SETTING UP OF FAST TRACK SPECIAL COURT FOR EXPEDIOUS DISPOSAL OF RAPE AND POCSO ACT. CASES.",
+   "how": "stratified sample, read by eye"
+  },
+  "1786": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION, UPGRADATION, REPAIRING & MAINTANACE OF SPORTS TRAINING CENTER",
+   "how": "stratified sample, read by eye"
+  },
+  "1797": {
+   "label": "not_scheme",
+   "name": "STATE SHARE FOR ESTABLISHMENT OF INSPECTION & CERTIFICATION CENTRE",
+   "how": "stratified sample, read by eye"
+  },
+  "1803": {
+   "label": "scheme",
+   "name": "CHIEF MINISTER SPECIAL SCHOLARSHIP SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1819": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI FORMALISATION OF MICRO FOOD PROCESSING ENTERPRISES (PMFME)",
+   "how": "stratified sample, read by eye"
+  },
+  "1826": {
+   "label": "not_scheme",
+   "name": "URBAN FORESTRY YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "1832": {
+   "label": "not_scheme",
+   "name": "STATE CONTRIBUTION TO JBVNL UNDER JPSIP",
+   "how": "stratified sample, read by eye"
+  },
+  "1841": {
+   "label": "scheme",
+   "name": "PAIR OX DISTRIBUTION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1842": {
+   "label": "not_scheme",
+   "name": "ESTABLISHMENT OF COW MUKTI DHAM",
+   "how": "stratified sample, read by eye"
+  },
+  "1848": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI MATSYA SAMPADA YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "1849": {
+   "label": "scheme",
+   "name": "SCHEME FOR SUGARCANE DEVELOPMENT",
+   "how": "stratified sample, read by eye"
+  },
+  "1867": {
+   "label": "scheme",
+   "name": "GRANT TO MGNREGA WORKERS",
+   "how": "stratified sample, read by eye"
+  },
+  "1871": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF MINORITY BOYS AND GIRLS RESIDENTIAL SCHOOL",
+   "how": "stratified sample, read by eye"
+  },
+  "1876": {
+   "label": "not_scheme",
+   "name": "STATE LEVEL SPORTS UNIVERSITY",
+   "how": "stratified sample, read by eye"
+  },
+  "1883": {
+   "label": "not_scheme",
+   "name": "FAIR/FESTIVAL/ EXHIBITION/ PUBLICITY/ DISSEMINATION/ SEMINAR AND ECO-RETREAT ETC (TOURISM PUBLICITY)",
+   "how": "stratified sample, read by eye"
+  },
+  "1885": {
+   "label": "not_scheme",
+   "name": "TRAINING, SKILL DEVELOPMENT & EXPOSURE VISIT ETC.",
+   "how": "stratified sample, read by eye"
+  },
+  "1887": {
+   "label": "not_scheme",
+   "name": "ESTABLISHMENT OF PMU",
+   "how": "stratified sample, read by eye"
+  },
+  "1889": {
+   "label": "not_scheme",
+   "name": "IMPLEMENTATION OF ELECTRIC VEHICLE POLICY",
+   "how": "stratified sample, read by eye"
+  },
+  "1890": {
+   "label": "not_scheme",
+   "name": "CREATION OF AUTOMATED DRIVING TESTING TRACK",
+   "how": "stratified sample, read by eye"
+  },
+  "1920": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF NEW AND ONGOING MINOR IRRIGATION SCHEMES",
+   "how": "stratified sample, read by eye"
+  },
+  "1924": {
+   "label": "not_scheme",
+   "name": "IT ENABLED SERVICES",
+   "how": "stratified sample, read by eye"
+  },
+  "1932": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF NURSING SECTOR",
+   "how": "stratified sample, read by eye"
+  },
+  "1934": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF STATE FORENSIC SCIENCE LABORATORY",
+   "how": "stratified sample, read by eye"
+  },
+  "1939": {
+   "label": "not_scheme",
+   "name": "GRANT TO CREATE MODEL PANCHAYAT",
+   "how": "stratified sample, read by eye"
+  },
+  "1952": {
+   "label": "scheme",
+   "name": "BIRSA SEED PRODUCTION, EXCHANGE, DISTIBUTION AND CROP DIVERSIFICATION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1955": {
+   "label": "not_scheme",
+   "name": "JHRAKHAND STATE HORTICULTURE PROMOTION SOCIETY & CHAMBER OF FARMERS",
+   "how": "stratified sample, read by eye"
+  },
+  "1956": {
+   "label": "not_scheme",
+   "name": "AGRI EXPORT & AGRI MARKETING CUM POST HARVEST INFRASTRUCTURE DEVELOPMENT SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "1964": {
+   "label": "not_scheme",
+   "name": "MODEL SCHOOL HOSTEL",
+   "how": "stratified sample, read by eye"
+  },
+  "1965": {
+   "label": "not_scheme",
+   "name": "KASTURBA GANDHI BALIKA VIDYALAYA HOSTEL",
+   "how": "stratified sample, read by eye"
+  },
+  "1978": {
+   "label": "not_scheme",
+   "name": "STRENTHEING OF INFRASTUCTARE AND FACILITES IN SECONDARY AND SENIOR SECORDARY SCHOOLS",
+   "how": "stratified sample, read by eye"
+  },
+  "1989": {
+   "label": "not_scheme",
+   "name": "GRANTS-IN-AID FOR PMAY-U (CAPACITY BUILDING) (100:00)",
+   "how": "stratified sample, read by eye"
+  },
+  "1992": {
+   "label": "scheme",
+   "name": "PRE MATRIC SCHOLARSHIP (CLASS I TO VIII)",
+   "how": "stratified sample, read by eye"
+  },
+  "1994": {
+   "label": "scheme",
+   "name": "FREE DISTRIBUTION OF SCHOOL UNIFORM TEXT BOOK AND COPY TO STUDENTS",
+   "how": "stratified sample, read by eye"
+  },
+  "1998": {
+   "label": "scheme",
+   "name": "MARANG GOMKE JAIPAL SINGH MUNDA OVERSEAS SCHOLARSHIP SCHEME FOR MINORITY",
+   "how": "stratified sample, read by eye"
+  },
+  "2000": {
+   "label": "scheme",
+   "name": "FREE DISTRIBUTION OF UNIFORM FOR STUDENTS OF CLASS 1 TO 8",
+   "how": "stratified sample, read by eye"
+  },
+  "2003": {
+   "label": "not_scheme",
+   "name": "ELEMENTARY SCHOOL INFRASTRUCTURE, MAINTANCE AND UPGRADATION",
+   "how": "stratified sample, read by eye"
+  },
+  "2004": {
+   "label": "scheme",
+   "name": "SUPPLEMENTARY NUTRITION (EGG/FRUIT)",
+   "how": "stratified sample, read by eye"
+  },
+  "2014": {
+   "label": "not_scheme",
+   "name": "MACHINE EQUIPMENTS AND FURNITURES ETC. UNDER OFFICES OF RURAL WORKS DEPARTMENTS",
+   "how": "stratified sample, read by eye"
+  },
+  "2023": {
+   "label": "scheme",
+   "name": "SUB-MISSION ON SEED AND PLANTING MATERIAL",
+   "how": "stratified sample, read by eye"
+  },
+  "2024": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF FOREST BUILDING AND ROAD IN FOREST, BOUNDRYWALL AND PARKS ETC.",
+   "how": "stratified sample, read by eye"
+  },
+  "2031": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF PALASH MART",
+   "how": "stratified sample, read by eye"
+  },
+  "2035": {
+   "label": "not_scheme",
+   "name": "TERTIARY CARE PROGRAMS",
+   "how": "stratified sample, read by eye"
+  },
+  "2036": {
+   "label": "scheme",
+   "name": "PRADHANMANTRI GARIB KALYAN ANNA YOJANA (PMGKAY)",
+   "how": "stratified sample, read by eye"
+  },
+  "2037": {
+   "label": "scheme",
+   "name": "GRANT-IN-AID FOR JHARKHAND MUKHYAMANTRI GRAM GADI YOJAN",
+   "how": "stratified sample, read by eye"
+  },
+  "2041": {
+   "label": "not_scheme",
+   "name": "COMPUTERIZATION OF PACS",
+   "how": "stratified sample, read by eye"
+  },
+  "2042": {
+   "label": "scheme",
+   "name": "REHABILITATION OF BONDED LABOUR SCHEME (50:50)",
+   "how": "stratified sample, read by eye"
+  },
+  "2049": {
+   "label": "scheme",
+   "name": "INCENTIVE UNDER JHARKHAND INDUSTRIAL PARK AND LOGISTIC POLICY-2022",
+   "how": "stratified sample, read by eye"
+  },
+  "2056": {
+   "label": "not_scheme",
+   "name": "LOAN TO TVNL FOR POWER PLANT",
+   "how": "stratified sample, read by eye"
+  },
+  "2057": {
+   "label": "not_scheme",
+   "name": "FUND RECEIVED FROM MOPA. GOL FOR NATIONAL E-VIDHAN APPLICATION",
+   "how": "stratified sample, read by eye"
+  },
+  "2064": {
+   "label": "not_scheme",
+   "name": "CLIMATE SMART AGRICULTURE, RESERCH AND AGRISTACK",
+   "how": "stratified sample, read by eye"
+  },
+  "2065": {
+   "label": "scheme",
+   "name": "JHARKHAND STATE MILLETS MISSION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "2073": {
+   "label": "scheme",
+   "name": "MINORITY HOSTEL NUTRITION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "2075": {
+   "label": "not_scheme",
+   "name": "SUPPLY OF TRADITIONAL MUSICAL INSTRUMENTS IN TRIBAL CULTURE AND ART CENTERS",
+   "how": "stratified sample, read by eye"
+  },
+  "2090": {
+   "label": "not_scheme",
+   "name": "PANCHAYAT SECRETARIAT STRENGTHENING",
+   "how": "stratified sample, read by eye"
+  },
+  "2099": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF RESIDENTIAL AND OTHER STRUCTURE UNDER GREATER RANCHI DEVELOPMENT AGENCY LIMITED",
+   "how": "stratified sample, read by eye"
+  },
+  "2101": {
+   "label": "not_scheme",
+   "name": "STRENGTHENING OF GOVERNMENT TECHNICAL EDUCATIONAL INSTITUTES",
+   "how": "stratified sample, read by eye"
+  },
+  "2105": {
+   "label": "not_scheme",
+   "name": "LAND ACQUISITION FOR HIGHER EDUCATIONAL INSTITUTIONS",
+   "how": "stratified sample, read by eye"
+  },
+  "2107": {
+   "label": "not_scheme",
+   "name": "FREE & DISTANCE EDUCATION, COACHING CENTER, WORKSHOP, CONSULTANCY, SECOND SHIFT CLASSES, NAAC, RESEARCH, INCUBATION CENTER AND GRANTS-IN-AID TO VITTA RAHIT COLLEGES",
+   "how": "stratified sample, read by eye"
+  },
+  "2110": {
+   "label": "not_scheme",
+   "name": "MUKHYAMANTRI GRAMSADAK YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "2117": {
+   "label": "not_scheme",
+   "name": "GRANTS-IN-AID FOR USED WATER MANAGEMENT UNDER SWACHH BHARAT MISSION (URBAN) 2.0",
+   "how": "stratified sample, read by eye"
+  },
+  "2119": {
+   "label": "not_scheme",
+   "name": "GRANTS-IN-AID FOR SOLID WASTE MANAGEMENT UNDER SWACHH BHARAT MISSION (URBAN) 2.0",
+   "how": "stratified sample, read by eye"
+  },
+  "2126": {
+   "label": "not_scheme",
+   "name": "SWACHHATA ACTION PLAN (SAP)",
+   "how": "stratified sample, read by eye"
+  },
+  "2131": {
+   "label": "not_scheme",
+   "name": "GRANTS TO CO-OPERATIVE SOCIETIES",
+   "how": "stratified sample, read by eye"
+  },
+  "2132": {
+   "label": "not_scheme",
+   "name": "SWACHHATA ACTION PLAN (S.A.P)",
+   "how": "stratified sample, read by eye"
+  },
+  "2140": {
+   "label": "not_scheme",
+   "name": "SECURITY RELATED EXPENDITURE (STATE POLICE)",
+   "how": "stratified sample, read by eye"
+  },
+  "2141": {
+   "label": "not_scheme",
+   "name": "JUTE PROCESSING UNIT",
+   "how": "stratified sample, read by eye"
+  },
+  "2143": {
+   "label": "not_scheme",
+   "name": "RURAL AND URBAN ELECTRIFICATION UNDER MUKHYAMANTRI UJJWAL JHARKHAND YOJNA",
+   "how": "stratified sample, read by eye"
+  },
+  "2144": {
+   "label": "not_scheme",
+   "name": "PROJECT TIGER AND ELEPHANT",
+   "how": "stratified sample, read by eye"
+  },
+  "2145": {
+   "label": "scheme",
+   "name": "INSURANCE COVERAGE",
+   "how": "stratified sample, read by eye"
+  },
+  "2150": {
+   "label": "not_scheme",
+   "name": "SCHEME FOR MODERNIZATION AND REFORMS THROUGH TECHNOLOGY IN PUBLIC DISTRIBUTION SYSTEM (SMART-PDS)",
+   "how": "stratified sample, read by eye"
+  },
+  "2157": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI DIVYANG KALYANARTH YOJANA",
+   "how": "stratified sample, read by eye"
+  },
+  "2158": {
+   "label": "not_scheme",
+   "name": "ESTABLISHMENT OF ICDS OFFICES",
+   "how": "stratified sample, read by eye"
+  },
+  "2159": {
+   "label": "not_scheme",
+   "name": "ESTABLISHMENT, STRENGTHENING AND OPERATION OF ANGANWADI CENTRES",
+   "how": "stratified sample, read by eye"
+  },
+  "2162": {
+   "label": "not_scheme",
+   "name": "MUKHYAMANTRI HAAT-BAZAR & MOHALLA CLINICS",
+   "how": "stratified sample, read by eye"
+  },
+  "2165": {
+   "label": "not_scheme",
+   "name": "INCENTIVE TO PRIVATE BODIES/TRUST FOR OPENING NEW MEDICAL COLLEGE/SUPERSPECIALITY HOSPITAL/PHARMACY/ NURSING INSTITUTIONS ETC.",
+   "how": "stratified sample, read by eye"
+  },
+  "2170": {
+   "label": "not_scheme",
+   "name": "COMPUTERISATION, MODERNISATION AND E-SOLUTION",
+   "how": "stratified sample, read by eye"
+  },
+  "2172": {
+   "label": "not_scheme",
+   "name": "GRANT-IN-AID TO JHARKHAND HIGHER EDUCATION COUNCIL",
+   "how": "stratified sample, read by eye"
+  },
+  "2173": {
+   "label": "scheme",
+   "name": "PM-JANMAN AWAAS",
+   "how": "stratified sample, read by eye"
+  },
+  "2187": {
+   "label": "scheme",
+   "name": "SCHEME FOR CARE AND SUPPORT TO VICTIM UNDER POCSO ACT, 2012",
+   "how": "stratified sample, read by eye"
+  },
+  "2193": {
+   "label": "not_scheme",
+   "name": "P.M. SHRI",
+   "how": "stratified sample, read by eye"
+  },
+  "2204": {
+   "label": "not_scheme",
+   "name": "JH-PMKSY-AIBP-NORTH KOEL PROJECT (JHARKHAND COMPONENT)",
+   "how": "stratified sample, read by eye"
+  },
+  "2207": {
+   "label": "not_scheme",
+   "name": "JHARKHAND PARTICIPATORY FORESTRY CAPACITY BUILDING PROJECT (EAP)",
+   "how": "stratified sample, read by eye"
+  },
+  "2213": {
+   "label": "not_scheme",
+   "name": "PURCHASE & MAINTENANCE OF HEAVY (LARGE & SMALL) MACHINE EQUIPMENT",
+   "how": "stratified sample, read by eye"
+  },
+  "2214": {
+   "label": "scheme",
+   "name": "SCHOLARSHIP/STIPEND FOR THE GOVERNMENT MEDICAL COLLEGE AND HOSPITAL",
+   "how": "stratified sample, read by eye"
+  },
+  "2220": {
+   "label": "scheme",
+   "name": "DEENDAYAL JAN AJEEVIKA YOJANA (SHEHRI)",
+   "how": "stratified sample, read by eye"
+  },
+  "2223": {
+   "label": "scheme",
+   "name": "GRANTS-IN-AID FOR PRADHAN MANTRI AWAS YOJANA-URBAN 2.0 FOR OTHERS",
+   "how": "stratified sample, read by eye"
+  },
+  "2230": {
+   "label": "not_scheme",
+   "name": "SPECIAL ASSISTANCE TO STATE FROM CENTRAL GOV.",
+   "how": "stratified sample, read by eye"
+  },
+  "2232": {
+   "label": "not_scheme",
+   "name": "P.M. POSHAN-MME",
+   "how": "stratified sample, read by eye"
+  },
+  "2242": {
+   "label": "scheme",
+   "name": "WOMEN FARMERS PROSPERITY SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "2250": {
+   "label": "not_scheme",
+   "name": "VIABILITY GAP FUNDING UNDER PPP PROJECTS",
+   "how": "stratified sample, read by eye"
+  },
+  "3193": {
+   "label": "not_scheme",
+   "name": "SCHEMES FOR SAFETY OF WOMEN-POLICE",
+   "how": "stratified sample, read by eye"
+  },
+  "3212": {
+   "label": "scheme",
+   "name": "DEVELOPMENT OF SKILLS",
+   "how": "stratified sample, read by eye"
+  },
+  "3548": {
+   "label": "not_scheme",
+   "name": "SUPPORT TO TRIBAL RESEARCH INSTITUTES",
+   "how": "stratified sample, read by eye"
+  },
+  "3563": {
+   "label": "not_scheme",
+   "name": "EXPANSION AND MODERNISATION OF FIRE SERVICES",
+   "how": "stratified sample, read by eye"
+  },
+  "3667": {
+   "label": "scheme",
+   "name": "PRADHANMANTRI JANTJATI ADIWASI NAYA MAHA ABHIYAN (PM-JANMAN UNDER SAMAGRA SHIKSHA)",
+   "how": "stratified sample, read by eye"
+  },
+  "3674": {
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI JAN VIKAS KARYAKARAM",
+   "how": "stratified sample, read by eye"
+  },
+  "3685": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI JAN AAROGYA YOJANA (PMJAY)",
+   "how": "stratified sample, read by eye"
+  },
+  "3730": {
+   "label": "scheme",
+   "name": "FORTIFICATION OF RICE AND ITS DISTRIBUTION UNDER PUBLIC DISTRIBUTION SYSTEM",
+   "how": "stratified sample, read by eye"
+  },
+  "3892": {
+   "label": "not_scheme",
+   "name": "INDIA COVID 19 EMERGENCY RESPONSE AND HEALTH SYSTEMS PREPAREDNESS PACKAGE EAC",
+   "how": "stratified sample, read by eye"
+  },
+  "3933": {
+   "label": "not_scheme",
+   "name": "GRANTS FOR HEALTH SECTOR",
+   "how": "stratified sample, read by eye"
+  },
+  "3949": {
+   "label": "scheme",
+   "name": "COVID-19 VACCINATION OF HEALTH CARE WORKERS (HCWS) & FRONT LINE WORKERS (FLWS)",
+   "how": "stratified sample, read by eye"
+  },
+  "3976": {
+   "label": "scheme",
+   "name": "INTEGRATED CHILD PROTECTION SCHEME",
+   "how": "stratified sample, read by eye"
+  },
+  "3984": {
+   "label": "not_scheme",
+   "name": "INDIA COVID-19 EMERGENCY RESPONSE AND HEALTH SYSTEM PREPAREDNESS PACKAGE-PHASE-II (ECRP-PHASE-II)",
+   "how": "stratified sample, read by eye"
+  },
+  "4151": {
+   "label": "not_scheme",
+   "name": "PROJECT TIGER AND ELEPHANT",
+   "how": "stratified sample, read by eye"
+  },
+  "4222": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI JANJATI ADIVASI NYAYA MAHA ABHIYAN(PM-JANMAN)",
+   "how": "stratified sample, read by eye"
+  },
+  "9165": {
+   "label": "scheme",
+   "name": "NUTRITIONAL SUPPORT TO PRIMARY EDUCATION (MDM)",
+   "how": "stratified sample, read by eye"
+  },
+  "9179": {
+   "label": "not_scheme",
+   "name": "GRANTS FOR JSRRDA UNDER PMGSY-ROAD CONNECTIVITY PROJECT FOR LEFT WING EXTREMISM (LWE) AFFECTED AREAS (RCPLWEA)",
+   "how": "stratified sample, read by eye"
+  },
+  "9183": {
+   "label": "scheme",
+   "name": "PRADHANMANTRI KRISHI SINCHAI YOJNA (9347)",
+   "how": "stratified sample, read by eye"
+  },
+  "9217": {
+   "label": "not_scheme",
+   "name": "MULTISECTORAL DEVELOPMENT PROGRAM FOR MINORITIES CS",
+   "how": "stratified sample, read by eye"
+  },
+  "9219": {
+   "label": "scheme",
+   "name": "MGNREGA (90:10)",
+   "how": "stratified sample, read by eye"
+  },
+  "9493": {
+   "label": "scheme",
+   "name": "PRE MATRIC SCHOLARSHIP FOR OBCS, EBCS AND DNTS-PM YASASVI",
+   "how": "stratified sample, read by eye"
+  },
+  "0028": {
+   "label": "scheme",
+   "name": "PRE MATRIC SCHOLARSHIP FOR OBCS, EBCS AND DNTS-PM YASASVI",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0041": {
+   "label": "scheme",
+   "name": "CYCLE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0077": {
+   "label": "not_scheme",
+   "name": "MUKHYA MANTRI GRAM SETU YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0189": {
+   "label": "scheme",
+   "name": "JHARKHAND UNORGANIZED WORKER’S SOCIAL SECURITY SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0206": {
+   "label": "not_scheme",
+   "name": "RURAL PIPE WATER SUPPLY SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0269": {
+   "label": "not_scheme",
+   "name": "DISTRIBUTION (ANNUAL DEVELOPMENT PROGRAMME & ULTRA MEGA POWER PROJECT)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0278": {
+   "label": "scheme",
+   "name": "DISTRIBUTION OF DHOTI-SAREE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0279": {
+   "label": "scheme",
+   "name": "ANTYODAYA ANNA YOJANA (AAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0293": {
+   "label": "scheme",
+   "name": "PRIORITY HOUSE HOLD SCHEME (UNDER NATIONAL FOOD SECURITY ACT, 2013)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0306": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI AWAS YOJNA RURAL",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0363": {
+   "label": "not_scheme",
+   "name": "CULTURAL WELFARE SCHEMES AND CULTURAL PUBLICATION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0367": {
+   "label": "not_scheme",
+   "name": "ARCHAEOLOGICAL ACTIVITIES AND SCHEMES",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0426": {
+   "label": "scheme",
+   "name": "NATIONAL HORTICULTURE MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0472": {
+   "label": "scheme",
+   "name": "REHABILITATION OF BONDED LABOUR SCHEME (50:50)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0488": {
+   "label": "scheme",
+   "name": "MERIT-CUM-POVERTY SCHOLARSHIP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0569": {
+   "label": "not_scheme",
+   "name": "FISHERIES MARKETING SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0641": {
+   "label": "not_scheme",
+   "name": "FISHERIES MARKETING SCHEME (CAPITAL)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0836": {
+   "label": "scheme",
+   "name": "JAL JEEVAN MISSION (JJM)/NATIONAL RURAL DRINKING WATER MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0868": {
+   "label": "not_scheme",
+   "name": "SCHEMES SPONSORED BY MOEF, GOI-NRCP (INCL. NLCP) (75:25) & NGRBA (70:30) INCLUDING NAMAMI GANGE",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0895": {
+   "label": "scheme",
+   "name": "NATIONAL URBAN LIVELIHOOD MISSION (NULM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "0957": {
+   "label": "not_scheme",
+   "name": "LEGISLATURE SCHEME (SCHEME ON RECOMMENDATION)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1009": {
+   "label": "not_scheme",
+   "name": "MUKHYA MANTRI PANCHAYAT PROTSAHAN PURASKAR YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1015": {
+   "label": "not_scheme",
+   "name": "JHARKHAND BALIKA AWASIYA (JBAV) YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1068": {
+   "label": "not_scheme",
+   "name": "INTERGRATED POWER DEVELOPMENT SCHEME (IPDS)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1069": {
+   "label": "not_scheme",
+   "name": "ATAL GRAMEEN JYOTI YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1070": {
+   "label": "scheme",
+   "name": "TILKA MANJHI KRISHI PUMP YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1169": {
+   "label": "scheme",
+   "name": "SKILL DEVELOPMENT MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1203": {
+   "label": "scheme",
+   "name": "NSAP PROGRAMME INDIRA GANDHI NATIONAL DISABILITY PENSION SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1218": {
+   "label": "scheme",
+   "name": "PRADHANMANTRI KRISHI SINCHAI YOJNA (9347)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1275": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI JAN-VAN YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1281": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI AWAS YOJANA (PMAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1292": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI KRISHI SINCHAYEE YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1324": {
+   "label": "not_scheme",
+   "name": "ASIDE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1351": {
+   "label": "not_scheme",
+   "name": "DISTRIBUTION OF DIGITAL WEIGHING MACHINE TO PDS DEALERS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1381": {
+   "label": "scheme",
+   "name": "AMBEDKAR AAWAS YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1387": {
+   "label": "not_scheme",
+   "name": "DEENDAYAL UPADHYAYA GRAM JYOTI YOJANA (DDUGJY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1388": {
+   "label": "not_scheme",
+   "name": "SHYAMA PRASAD MUKHERJEE RURBAN SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1409": {
+   "label": "scheme",
+   "name": "HEALTH INSURANCE SCHEME FOR JOURNALISTS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1493": {
+   "label": "scheme",
+   "name": "NSAP PROGRAMME INDIRA GANDHI NATIONAL OLD AGE PENSION SCHEME 71:29 (FOR THE PENSIONERS OF THE AGE OF 80 YEARS AND ABOVE)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1619": {
+   "label": "scheme",
+   "name": "PIG DEVELOPMENT/GOAT DEVELOPMENT/BROILER POULTRY DEVELOPMENT/COMMERCIAL LAYER BIRD DEVELOPMENT/LOW INPUT LAYER BIRD DISTRIBUTION SCHEMES",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1640": {
+   "label": "scheme",
+   "name": "GRANT TO DINDAYAL GRAM SWAWLAMBAN YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1688": {
+   "label": "not_scheme",
+   "name": "AMBULANCES/MORTUARY VAN SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1704": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI JHARKHAND INTERNATIONAL MIGRANT LABOUR GRANTS IN SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1706": {
+   "label": "scheme",
+   "name": "POSHAN ABHIYAN SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1727": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI AAJEEVIKA SAMWARDHAN YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1728": {
+   "label": "not_scheme",
+   "name": "ATAL GRAMOTHAN YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1750": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI JAN AAROGYA YOJANA (PMJAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1758": {
+   "label": "not_scheme",
+   "name": "SCHEME FOR UPLIFTMENT OF PVTG VILLAGES",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1789": {
+   "label": "scheme",
+   "name": "CHIEF MINISTER JOURNALISTS LIFE INSURANCE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1790": {
+   "label": "scheme",
+   "name": "JHARKHAND JOURNALISTS SAMMAN PENSION SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1794": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI SPECIAL SCHOLARSHIP SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1814": {
+   "label": "scheme",
+   "name": "FOODGRAINS DISTRIBUTION SCHEME FOR POOR PERSONS NOT COVERED UNDER NFSA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1827": {
+   "label": "not_scheme",
+   "name": "RIVER SIDE PLANTATION YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1833": {
+   "label": "scheme",
+   "name": "SCHEME FOR GOVERNMENT FOOD CENTRE",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1834": {
+   "label": "scheme",
+   "name": "PADDY PROCUREMENT SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1835": {
+   "label": "scheme",
+   "name": "SALT DISTRIBUTION SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1838": {
+   "label": "scheme",
+   "name": "DISTRIBUTION OF KEROSENE OIL SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1839": {
+   "label": "scheme",
+   "name": "DAKIYA SCHEME FOR ELIGIBLE BENEFICIARIES",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1840": {
+   "label": "scheme",
+   "name": "PRICE INCENTIVE TO MILK POURERS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1854": {
+   "label": "scheme",
+   "name": "FARMER FLOURISHING (PROSPERITY) SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1855": {
+   "label": "not_scheme",
+   "name": "INTEGRATED BIRSA VILLAGE DEVELOPMENT SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1861": {
+   "label": "scheme",
+   "name": "GRANTS FOR MUKHYAMANTRI SHRAMIK (SHAHRI ROZGAR MANJURI FOR KAMGAR) YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1864": {
+   "label": "scheme",
+   "name": "SWARNA JAYANTI GRAM SWAROJGAR YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1866": {
+   "label": "not_scheme",
+   "name": "PRADHANMANTRI KRISHI SINCHAI YOJNA - ADMINISTRATION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1870": {
+   "label": "scheme",
+   "name": "MARANG GOMKE JAIPAL SINGH MUNDA OVERSEAS SCHOLARSHIP SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1892": {
+   "label": "scheme",
+   "name": "TARIFF SUBSIDY THROUGH JBVNL FOR CONSUMERS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1905": {
+   "label": "scheme",
+   "name": "DINDAYAL UPADHYAY GRAMIN KAUSHAL YOJANA (DDU-GKY)- AAJEEVIKA SKILLS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1928": {
+   "label": "scheme",
+   "name": "ADOLESCENT HEALTH CARE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1929": {
+   "label": "scheme",
+   "name": "BABY HEALTH CARE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1953": {
+   "label": "scheme",
+   "name": "SOIL HEALTH MANAGEMENT SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1954": {
+   "label": "scheme",
+   "name": "STATE HORTICULTURE DEVELOPMENT SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1958": {
+   "label": "not_scheme",
+   "name": "AGRI SMART VILLAGE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1966": {
+   "label": "not_scheme",
+   "name": "ADARSH VIDYALAYA SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1967": {
+   "label": "not_scheme",
+   "name": "REVAMPED DISTRIBUTION SECTOR SCHEME (NEW)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1970": {
+   "label": "scheme",
+   "name": "GRANT-IN-AID FOR INDUSTRIAL UNITS INCENTIVE UNDER JHARKHAND ETHANOL PRODUCTION PROMOTION POLICY-2022",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1971": {
+   "label": "scheme",
+   "name": "GRANT-IN-AID FOR INDUSTRIAL UNITS INCENTIVE UNDER JHARKHAND PHARMACEUTICAL POLICY-2022",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1972": {
+   "label": "scheme",
+   "name": "GRANT-IN-AID FOR INDUSTRIAL UNITS INCENTIVE UNDER JHARKHAND ELECTRICAL VEHICLE POLICY-2022",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1983": {
+   "label": "scheme",
+   "name": "SCHEME FOR DISTRIBUTION OF PULSES",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "1997": {
+   "label": "scheme",
+   "name": "MUKHMANTRI PASUDHAN VIKAS YOJNA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2011": {
+   "label": "scheme",
+   "name": "CHIEF MINISTER’S HEALTH ASSISTANCE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2015": {
+   "label": "scheme",
+   "name": "NATIONAL FOOD SECURITY MISSION (OILSEEDS)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2054": {
+   "label": "scheme",
+   "name": "MATERNAL HEALTH CARE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2058": {
+   "label": "not_scheme",
+   "name": "SHAKTI SADAN SCHEME UNDER SAMARTHYA (MISSION SHAKTI)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2060": {
+   "label": "scheme",
+   "name": "MAHILA & KISHORI KALYAN YOJNA (MKKY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2061": {
+   "label": "scheme",
+   "name": "ANGANWADI CHALO ABHIYAN YOJNA (ACHAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2063": {
+   "label": "scheme",
+   "name": "POST-MATRIC SCHOLARSHIP FOR SCHEDULED CASTE",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2071": {
+   "label": "scheme",
+   "name": "GURUJI CREDIT CARD SCHEMES",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2083": {
+   "label": "scheme",
+   "name": "PRE-MATRIC SCHOLARSHIP FOR SCHEDULED CASTE",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2086": {
+   "label": "scheme",
+   "name": "POST-MATRIC SCHOLARSHIP FOR SCHEDULED TRIBE",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2087": {
+   "label": "scheme",
+   "name": "POST-MATRIC SCHOLARSHIP FOR OBCS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2089": {
+   "label": "scheme",
+   "name": "HUB FOR EMPOWERMENT OF WOMEN UNDER SAMARTHYA (MISSION SHAKTI)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2100": {
+   "label": "scheme",
+   "name": "DISTRIBUTION OF COARSE GRAIN AND OTHER FOOD ITEMS THROUGH PDS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2106": {
+   "label": "scheme",
+   "name": "GRANT-IN-AID FOR SCHOLARSHIP/FELLOWSHIP SCHEME FOR HIGHER EDUCATION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2123": {
+   "label": "scheme",
+   "name": "LIVESTOCK INSURANCE",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2138": {
+   "label": "scheme",
+   "name": "WOMEN HELP LINE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2146": {
+   "label": "scheme",
+   "name": "COMPENSATION AGAINST ACQUISITION OF LAND",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2151": {
+   "label": "scheme",
+   "name": "NATIONAL BAMBU MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2152": {
+   "label": "scheme",
+   "name": "ABUA AAWAS YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2154": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI SARVAJAN PENSION YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2155": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI SAMAJ KALYANARTH YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2156": {
+   "label": "scheme",
+   "name": "MUKHYAMANTRI KISHORI KALYANARTH YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2163": {
+   "label": "not_scheme",
+   "name": "PREMIUM FOR HEALTH INSURANCE TO GOVERNMENT EMPLOYEES INCLUDING PENSIONERS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2166": {
+   "label": "scheme",
+   "name": "FIVE UNIT SUBSIDY ON ELECTRICITY BILL IN URBAN AREA PLAN",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2171": {
+   "label": "scheme",
+   "name": "HEALTH INSURANCE SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2179": {
+   "label": "not_scheme",
+   "name": "SCHEME FOR SAKHI NIWAS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2185": {
+   "label": "scheme",
+   "name": "JHARKHAND MUKHYAMANTRI MAINYAN SAMMAN YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2190": {
+   "label": "not_scheme",
+   "name": "NETAJEE SUBHASH CHANDRA BOSE AWASIYA VIDYALAYA YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2200": {
+   "label": "scheme",
+   "name": "STATE SCHEME FOR PROVIDING EDCATION TO MADARSA/MINORITIES (SSPEMM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2202": {
+   "label": "scheme",
+   "name": "EGG PRODUCTION (BIG SCHEME FOR ENTERPRENEURSHIP DEVELOPMENT)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2208": {
+   "label": "scheme",
+   "name": "JHARKHAND STATE PRAWASI SULABH SAHAYATA SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2210": {
+   "label": "scheme",
+   "name": "NATIONAL MISSION ON NATURAL FARMING (NMNF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2211": {
+   "label": "not_scheme",
+   "name": "DIGITAL AGRICULTURE MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2244": {
+   "label": "scheme",
+   "name": "CASH CROP DEVELOPMENT AND EXTENSION SCHEME",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2246": {
+   "label": "scheme",
+   "name": "PULSES MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2247": {
+   "label": "scheme",
+   "name": "SCHEME FOR DEVELOPMENT OF MAKHANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2248": {
+   "label": "not_scheme",
+   "name": "IM AND KIND GRANTS UNDER NATIONAL RURAL HEALTH MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2255": {
+   "label": "scheme",
+   "name": "LHDCP-ASCAD (COMPENSATION)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "3163": {
+   "label": "scheme",
+   "name": "NSAP PROGRAMME INDIRA GANDHI NATIONAL OLD AGE PENSION SCHEME 33:67 (FOR THE PENSIONERS OF THE AGE OF 60-79 YEARS)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "3890": {
+   "label": "scheme",
+   "name": "PRADHAN MANTRI MATSYA SAMPADA YOJANA",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "3967": {
+   "label": "not_scheme",
+   "name": "PRADHAN MANTRI ANUSUCHIT JAATI ABHYUDAY YOJANA (PM AJAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "3980": {
+   "label": "scheme",
+   "name": "HUB FOR EMPOWERMENT OF WOMEN UNDER SAMARTHYA (MISSION SHAKTI)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "9150": {
+   "label": "scheme",
+   "name": "JAL JEEVAN MISSION (JJM)/NATIONAL RURAL DRINKING WATER MISSION",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "9180": {
+   "label": "scheme",
+   "name": "PM-JANMAN AWAAS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "9181": {
+   "label": "scheme",
+   "name": "DINDAYAL UPADHYAY GRAMIN KAUSHAL YOJANA (DDU-GKY)- AAJEEVIKA SKILLS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "9492": {
+   "label": "scheme",
+   "name": "PRE-MATRIC SCHOLARSHIP FOR SCHEDULED CASTE",
+   "how": "audit census at the publishing bar, read by eye"
+  }
+ },
+ "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT."
+}

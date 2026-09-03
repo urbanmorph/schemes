@@ -1,0 +1,2842 @@
+{
+ "state": "Telangana",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, pension, insurance or subsidy from this line? An office, a building, an irrigation project, a road, a survey, a police unit or a grant to a local body is not_scheme.",
+ "labelled": 566,
+ "scheme": 308,
+ "not_scheme": 258,
+ "sampling": "Stratified on the plan group the Pragathi Paddu files the line under (State Sector, Centrally Sponsored, Matching State Share, RIDF, AIBP, Externally Aided and none), 12% of each with a floor of 15, seed 20260903.",
+ "labels": {
+  "dept:&panchayat raj)|name:assistance to mandal praja parishads": {
+   "label": "not_scheme",
+   "name": "Assistance to Mandal Praja Parishads",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:&panchayat raj)|name:computerisation of all offices upto sub-divisional level": {
+   "label": "not_scheme",
+   "name": "Computerisation of All offices upto Sub-Divisional Level",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:&panchayat raj)|name:construction of new roads": {
+   "label": "not_scheme",
+   "name": "Construction of New Roads",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:&panchayat raj)|name:construction of roads and bridges in rural areas": {
+   "label": "not_scheme",
+   "name": "Construction of Roads and Bridges in Rural Areas",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:(css) schemes grants css tribal welfare department education: additional facilities to|name:students ambedkar overseas vidya nidhi coaching to st students for": {
+   "label": "scheme",
+   "name": "students Ambedkar Overseas Vidya Nidhi Coaching to ST Students for",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:advocate general office|name:legal advisers and counsels": {
+   "label": "not_scheme",
+   "name": "Legal Advisers and Counsels",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:agriculture department|name:crop insurance": {
+   "label": "scheme",
+   "name": "Crop Insurance",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:agriculture department|name:digital agriculture mission": {
+   "label": "not_scheme",
+   "name": "Digital Agriculture Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:agriculture department|name:national mission on agriculture mechanization": {
+   "label": "scheme",
+   "name": "National Mission on Agriculture Mechanization",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:and family welfare|name:centralised purchase of drugs and medicines": {
+   "label": "not_scheme",
+   "name": "Centralised Purchase of Drugs and Medicines",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:animal husbandry|name:mega dairy project": {
+   "label": "not_scheme",
+   "name": "Mega Dairy Project",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ayurveda, yoga, unani, siddha & homoeopathy (ayush) department|name:national mission on ayush including mission on medicinal plants": {
+   "label": "not_scheme",
+   "name": "National Mission on Ayush including Mission on Medicinal Plants",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ayurveda,yoga,unani,siddha & homoeopathy (ayush)|name:unani colleges": {
+   "label": "not_scheme",
+   "name": "Unani Colleges",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:ce srsp-i": {
+   "label": "not_scheme",
+   "name": "CE SRSP-I",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:laknavaram (ce glis)": {
+   "label": "not_scheme",
+   "name": "Laknavaram (CE GLIS)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:mathadi vagu (ce srsp-i)": {
+   "label": "not_scheme",
+   "name": "Mathadi Vagu (CE SRSP-I)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:nelwai (ce srsp-i)": {
+   "label": "not_scheme",
+   "name": "Nelwai (CE SRSP-I)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:nilwai project": {
+   "label": "not_scheme",
+   "name": "Nilwai Project",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:peddavagu jagannadhapur (ce srsp-i)": {
+   "label": "not_scheme",
+   "name": "Peddavagu Jagannadhapur (CE SRSP-I)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:peddavagu near adda (komaram bheem) -": {
+   "label": "not_scheme",
+   "name": "Peddavagu near Adda (Komaram Bheem) -",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:peddavagu near adda(komaram bheem) -": {
+   "label": "not_scheme",
+   "name": "Peddavagu near Adda(Komaram Bheem) -",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:peddavagu near jagganathpur-cesrsp-i": {
+   "label": "not_scheme",
+   "name": "Peddavagu near Jagganathpur-CESRSP-I",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:peddavagu near jagganathpur-cesrsp-i (mancherial)": {
+   "label": "not_scheme",
+   "name": "Peddavagu near Jagganathpur-CESRSP-I (Mancherial)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:ralivagu (cesrsp-i)": {
+   "label": "not_scheme",
+   "name": "Ralivagu (CESRSP-I)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:ramappa lake (ce glis)": {
+   "label": "not_scheme",
+   "name": "Ramappa Lake (CE GLIS)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:sanigaram (ce karimnagar)": {
+   "label": "not_scheme",
+   "name": "Sanigaram (CE Karimnagar)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ce minor irrigation ( pwd)|name:minor irrigation tanks under nabard": {
+   "label": "not_scheme",
+   "name": "Minor Irrigation tanks under NABARD",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ce minor irrigation ( pwd)|name:minor irrigation tanks under-aibp": {
+   "label": "not_scheme",
+   "name": "Minor Irrigation tanks under-AIBP",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ce minor irrigation ( pwd)|name:technology backbone for centric traffic management": {
+   "label": "not_scheme",
+   "name": "Technology Backbone for Centric Traffic Management",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:chief engineer (r&b), eap , rdc|name:telangana road sector project (telangana rdc)": {
+   "label": "not_scheme",
+   "name": "Telangana Road Sector Project (Telangana RDC)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:chief engineer (r&b), eap , rdc|name:telangana road sector project - road safety": {
+   "label": "not_scheme",
+   "name": "Telangana Road Sector Project - Road Safety",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:chief engineer, rural roads|name:construction and development of road works under ridf": {
+   "label": "not_scheme",
+   "name": "Construction and Development of Road Works under RIDF",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:chief engineer, rural water supply|name:mission bhagiradha": {
+   "label": "not_scheme",
+   "name": "Mission Bhagiradha",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:chief inspector of boilers|name:chief inspector of boilers- professional services": {
+   "label": "not_scheme",
+   "name": "Chief Inspector of Boilers- Professional Services",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:civil supplies department|name:bonus to agriculture produces": {
+   "label": "scheme",
+   "name": "Bonus to Agriculture produces",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:civil supplies|name:distribution of lpg connections to women in rural areas/ municipal areas": {
+   "label": "scheme",
+   "name": "Distribution of LPG Connections to Women in Rural areas/ Municipal areas",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:civil supplies|name:head quarter office": {
+   "label": "not_scheme",
+   "name": "Head Quarter Office",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:civil supplies|name:lpg subsidy under maha laxmi scheme": {
+   "label": "scheme",
+   "name": "LPG Subsidy under Maha Laxmi Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:agriculture college at kodangal": {
+   "label": "not_scheme",
+   "name": "Agriculture College at Kodangal",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:national mission on oil seed & oil palm": {
+   "label": "scheme",
+   "name": "National Mission on Oil Seed & Oil Palm",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:soil health and fertility and health card": {
+   "label": "scheme",
+   "name": "Soil Health and Fertility and Health Card",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:sub mission on agriculture mechanisation": {
+   "label": "scheme",
+   "name": "Sub Mission on Agriculture Mechanisation",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner and director, municipal administration department|name:nagarabhivrudhi including mancherial, mahabubnagar, kothagudem and palwancha municipalities and corporations": {
+   "label": "not_scheme",
+   "name": "NAGARABHIVRUDHI including Mancherial, Mahabubnagar, Kothagudem and Palwancha Municipalities and Corporations",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner cyberabad police|name:office of the commissioner of cyberabad police": {
+   "label": "not_scheme",
+   "name": "Office of the Commissioner of Cyberabad Police",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner cyberabad police|name:police stations as citizen friendly service delivery unit(cyberabad)": {
+   "label": "not_scheme",
+   "name": "Police Stations as Citizen Friendly Service Delivery Unit(Cyberabad)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner industries|name:awards to ssi units for productivity, innovations and safety": {
+   "label": "scheme",
+   "name": "Awards to SSI Units for Productivity, Innovations and Safety",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner industries|name:development of clusters in tiny sector": {
+   "label": "not_scheme",
+   "name": "Development of Clusters in Tiny Sector",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner industries|name:district office": {
+   "label": "not_scheme",
+   "name": "District Office",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of city police|name:police commemoration week": {
+   "label": "not_scheme",
+   "name": "Police Commemoration Week",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of city police|name:technology backbone for citizen centric traffic management": {
+   "label": "not_scheme",
+   "name": "Technology backbone for Citizen Centric Traffic Management",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of city police|name:technology it backbone for fighting with data (tgiccc)": {
+   "label": "not_scheme",
+   "name": "Technology IT backbone for fighting with data (TGICCC)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of health & family welfare|name:national health mission (incentives to asha workers)": {
+   "label": "scheme",
+   "name": "National Health Mission (Incentives to ASHA Workers)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of health and family welfare|name:kanti velugu telangana": {
+   "label": "scheme",
+   "name": "Kanti Velugu Telangana",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of malkjigiri police|name:community policing": {
+   "label": "not_scheme",
+   "name": "Community Policing",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of malkjigiri police|name:office of the commissioner of rachakonda police (east)": {
+   "label": "not_scheme",
+   "name": "Office of the Commissioner of Rachakonda Police (East)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of malkjigiri police|name:police commemoration event": {
+   "label": "not_scheme",
+   "name": "Police Commemoration Event",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of malkjigiri police|name:technology and it backbone for fighting organised crime and criminal ganga with data analytics(cyberabad)": {
+   "label": "not_scheme",
+   "name": "Technology and IT Backbone for Fighting Organised Crime and Criminal Ganga with Data Analytics(Cyberabad)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner of sericulture (hod)|name:implementation of sericulture schemes": {
+   "label": "scheme",
+   "name": "Implementation of Sericulture Schemes",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:aerial photography by nrsa": {
+   "label": "not_scheme",
+   "name": "Aerial Photography by NRSA",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:assistance for repairs and reconstruction of houses": {
+   "label": "scheme",
+   "name": "Assistance for Repairs and Reconstruction of Houses",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:assistance to artisans of village industries and handicrafts": {
+   "label": "scheme",
+   "name": "Assistance to Artisans of Village Industries and Handicrafts",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:assistance to pris for construction and restoration of mi sources": {
+   "label": "not_scheme",
+   "name": "Assistance to PRIs for Construction and Restoration of MI Sources",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:contour survey of godavari and krishna deltas": {
+   "label": "not_scheme",
+   "name": "Contour Survey of Godavari and Krishna Deltas",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:exgratia payments to bereaved families": {
+   "label": "scheme",
+   "name": "Exgratia Payments to Bereaved Families",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:hut insurance": {
+   "label": "scheme",
+   "name": "Hut Insurance",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:repairs and restoration of minor irrigation works under pr": {
+   "label": "not_scheme",
+   "name": "Repairs and Restoration of Minor Irrigation Works under PR",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner relief|name:supply of fodder and veterinary care": {
+   "label": "scheme",
+   "name": "Supply of Fodder and Veterinary Care",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner rural development|name:cheyutha pensions": {
+   "label": "scheme",
+   "name": "Cheyutha Pensions",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner rural development|name:mgnregs - material": {
+   "label": "not_scheme",
+   "name": "MGNREGS - Material",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner rural development|name:neeranchal": {
+   "label": "not_scheme",
+   "name": "Neeranchal",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner rural development|name:pensions to filaria patients": {
+   "label": "scheme",
+   "name": "Pensions to Filaria Patients",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner rural development|name:project unnati": {
+   "label": "scheme",
+   "name": "Project UNNATI",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner rural development|name:rural self employment training instute": {
+   "label": "not_scheme",
+   "name": "Rural Self Employment Training Instute",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, collegiate education|name:headquarter office commissionerate of collegiate edn": {
+   "label": "not_scheme",
+   "name": "Headquarter office Commissionerate of Collegiate Edn",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, excise|name:welfare of toddy tappers": {
+   "label": "scheme",
+   "name": "Welfare of Toddy Tappers",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, information & public relations|name:advertisements of govt. depts. in media": {
+   "label": "not_scheme",
+   "name": "Advertisements of Govt. Depts. In Media",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, information & public relations|name:journalist welfare fund": {
+   "label": "scheme",
+   "name": "Journalist Welfare Fund",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, information & public relations|name:press academi of telangana": {
+   "label": "not_scheme",
+   "name": "Press Academi of Telangana",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, information & public relations|name:purchase of books": {
+   "label": "not_scheme",
+   "name": "Purchase of Books",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, registration & stamps|name:cost of stamps": {
+   "label": "not_scheme",
+   "name": "Cost of Stamps",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, registration & stamps|name:head quarter office": {
+   "label": "not_scheme",
+   "name": "Head Quarter Office",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, state taxes|name:district offices": {
+   "label": "not_scheme",
+   "name": "District Offices",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commissioner, state taxes|name:head quarters office": {
+   "label": "not_scheme",
+   "name": "Head Quarters Office",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commr. & director municipal administration (hod)|name:assistance to khammam municipal corporation": {
+   "label": "not_scheme",
+   "name": "Assistance to Khammam Municipal corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commr. & director municipal administration (hod)|name:assistance to municipalities / corporations for interest free loans (vaddileni runalu)": {
+   "label": "not_scheme",
+   "name": "Assistance to Municipalities / Corporations for Interest Free Loans (Vaddileni Runalu)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commr. & director municipal administration (hod)|name:project establishment": {
+   "label": "not_scheme",
+   "name": "Project Establishment",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commr. & director municipal administration (hod)|name:sbm urban- capacity building skill development & knowledge management": {
+   "label": "not_scheme",
+   "name": "SBM Urban- Capacity Building Skill Development & Knowledge Management",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:commr. panchayat raj|name:finance commission grants to gram panchayats - basic grants(untied))": {
+   "label": "not_scheme",
+   "name": "Finance Commission Grants to Gram Panchayats - basic Grants(UNTIED))",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:assistance to ghmc for scsdf scheme": {
+   "label": "not_scheme",
+   "name": "Assistance to GHMC for SCSDF Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:assistance to telangana study circle": {
+   "label": "not_scheme",
+   "name": "Assistance to Telangana Study Circle",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:construction of infrastructure in sc colonies": {
+   "label": "not_scheme",
+   "name": "Construction of infrastructure in SC colonies",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:contribution to social welfare fund": {
+   "label": "not_scheme",
+   "name": "Contribution to Social Welfare Fund",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:digitalization of health records": {
+   "label": "not_scheme",
+   "name": "Digitalization of health records",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:finance commission grants for gps (basic grants (un-tied)": {
+   "label": "not_scheme",
+   "name": "Finance Commission Grants for GPs (Basic Grants (UN-TIED)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:finance commission grants for gps (tied)": {
+   "label": "not_scheme",
+   "name": "Finance Commission Grants for GPs (TIED)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:insentive to the sanna rakam paddy farmers": {
+   "label": "scheme",
+   "name": "Insentive to the Sanna Rakam Paddy Farmers",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:interest free loans to dwacra women (vaddileni runalu)": {
+   "label": "scheme",
+   "name": "Interest Free Loans to DWACRA Women (Vaddileni Runalu)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:monetary relief and legal aid to the victims of atrocities on scs": {
+   "label": "scheme",
+   "name": "Monetary Relief and Legal Aid to the Victims of Atrocities on SCs",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:professional educational support scheme": {
+   "label": "scheme",
+   "name": "Professional Educational Support Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:promotion of inter-caste marriages": {
+   "label": "scheme",
+   "name": "Promotion of Inter-Caste Marriages",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:rythu bharosa for landless agriculture labour": {
+   "label": "scheme",
+   "name": "Rythu Bharosa for Landless Agriculture Labour",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:corporation ltd|name:subsidy on rice": {
+   "label": "scheme",
+   "name": "Subsidy on Rice",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:development of infrastructure facilities for judiciary including gram nyayalayas|name:infra for judiciary": {
+   "label": "not_scheme",
+   "name": "Infra for Judiciary",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:dg & ig of police|name:community police": {
+   "label": "not_scheme",
+   "name": "Community Police",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:dg & ig of police|name:state disaster response force": {
+   "label": "not_scheme",
+   "name": "State Disaster Response Force",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:dg & ig of police|name:up-gradational of training colleges": {
+   "label": "not_scheme",
+   "name": "Up-gradational of Training Colleges",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:dg & ig of prison|name:construction of prison outlet visitors hall security enclosure and other buildings": {
+   "label": "not_scheme",
+   "name": "Construction of Prison Outlet Visitors Hall Security Enclosure and Other Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director intermediate education|name:buildings": {
+   "label": "not_scheme",
+   "name": "Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director intermediate education|name:construction of buildings to gjcs": {
+   "label": "not_scheme",
+   "name": "Construction of Buildings to GJCs",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director of public health and family welfare|name:district offices": {
+   "label": "not_scheme",
+   "name": "District Offices",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director of public health and family welfare|name:piblic health laboratories": {
+   "label": "not_scheme",
+   "name": "Piblic Health Laboratories",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director school education|name:assistance to state institute of educational technology": {
+   "label": "not_scheme",
+   "name": "Assistance to State Institute of Educational Technology",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, economics and statistics|name:other offices": {
+   "label": "not_scheme",
+   "name": "Other Offices",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, economics and statistics|name:rationalisation of mi statistics": {
+   "label": "not_scheme",
+   "name": "Rationalisation of MI Statistics",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, economics and statistics|name:training": {
+   "label": "not_scheme",
+   "name": "Training",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, horticulture|name:development of govt. gardens": {
+   "label": "not_scheme",
+   "name": "Development of Govt. Gardens",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, horticulture|name:micro irrigation": {
+   "label": "scheme",
+   "name": "Micro Irrigation",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, horticulture|name:national beekeeping honey mission": {
+   "label": "scheme",
+   "name": "National Beekeeping Honey Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, horticulture|name:national mission on edible oils-oil palm": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oils-Oil Palm",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, horticulture|name:oil palm cultivation": {
+   "label": "scheme",
+   "name": "Oil palm Cultivation",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:director, marketing|name:integrated scheme on agriculture marketing": {
+   "label": "not_scheme",
+   "name": "Integrated scheme on Agriculture Marketing",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:drugs control administration|name:administration of drugs act": {
+   "label": "not_scheme",
+   "name": "Administration of Drugs Act",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:drugs control administration|name:strengthening of drugs control laboratory at hyderabad under capacity building project programme": {
+   "label": "not_scheme",
+   "name": "Strengthening of Drugs Control Laboratory at Hyderabad under Capacity Building Project Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:educational institutions society|name:integrated residential schools": {
+   "label": "not_scheme",
+   "name": "Integrated Residential Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:education|name:head quarter office": {
+   "label": "not_scheme",
+   "name": "Head Quarter Office",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:education|name:state council of educational research and training": {
+   "label": "not_scheme",
+   "name": "State Council of Educational Research and Training",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:employment & training|name:left wing extremism": {
+   "label": "not_scheme",
+   "name": "Left Wing Extremism",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:employment and training department|name:skill enhancement value for iti students under sankalp": {
+   "label": "scheme",
+   "name": "Skill enhancement value for ITI students under SANKALP",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:employment and training department|name:upgradation of itis and opening new itis": {
+   "label": "not_scheme",
+   "name": "Upgradation of ITIs and opening new ITIs",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:endowments|name:godavari pushkaralu": {
+   "label": "not_scheme",
+   "name": "Godavari Pushkaralu",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:engineer in chief buildings|name:construction of buildings for collectorates": {
+   "label": "not_scheme",
+   "name": "Construction of Buildings for Collectorates",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:engineer in chief buildings|name:construction of inspection bunglows": {
+   "label": "not_scheme",
+   "name": "Construction of Inspection Bunglows",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:engineer in chief buildings|name:construction of multi storied buildings at old and new mla quarters": {
+   "label": "not_scheme",
+   "name": "Construction of Multi Storied Buildings at Old and New MLA quarters",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:engineer in chief public health|name:mission bhagiradha -urban": {
+   "label": "not_scheme",
+   "name": "Mission Bhagiradha -Urban",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:engineer-in-chief state roads|name:core network roads (works)": {
+   "label": "not_scheme",
+   "name": "Core Network Roads (Works)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:engineer-in-chief state roads|name:cost sharing with railways for new railway line": {
+   "label": "not_scheme",
+   "name": "Cost sharing with Railways for New Railway Line",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:engineer-in-chief, irrigation (general), hyderabad|name:construction and restoration of lift irrigation schemes (tgidc)": {
+   "label": "not_scheme",
+   "name": "Construction and Restoration of Lift Irrigation Schemes (TGIDC)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:finance department|name:buildings for finanace hods": {
+   "label": "not_scheme",
+   "name": "Buildings for Finanace HODs",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:fisheries|name:development of fisheries": {
+   "label": "not_scheme",
+   "name": "Development of Fisheries",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:fisheries|name:infrastructure for college for fisheries science at pebbair": {
+   "label": "not_scheme",
+   "name": "Infrastructure for College for Fisheries Science at Pebbair",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:fisheries|name:pradhan mantri matsya sampada yojana": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matsya Sampada Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:forest & wild life|name:fire management": {
+   "label": "not_scheme",
+   "name": "Fire Management",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:forest & wild life|name:zoological parks": {
+   "label": "not_scheme",
+   "name": "Zoological Parks",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:gad secretariat|name:public service commission": {
+   "label": "not_scheme",
+   "name": "Public Service Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:general & panchayat raj, engineer-in-chief|name:pradhan mantri gram sadak yojana (pmgsy)": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Gram Sadak Yojana (PMGSY)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:governor|name:furnishings": {
+   "label": "not_scheme",
+   "name": "Furnishings",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ground water department|name:buildings": {
+   "label": "not_scheme",
+   "name": "Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:health medical & family welfare|name:assistance to ts medical and aromatic plants board, hyderabad": {
+   "label": "not_scheme",
+   "name": "Assistance to TS Medical and Aromatic Plants Board, Hyderabad",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:health medical & family welfare|name:building for mnj institute of oncology and regional cance centre hyderabad": {
+   "label": "not_scheme",
+   "name": "Building for MNJ Institute of Oncology and Regional Cance Centre Hyderabad",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:health medical & family welfare|name:discretionary fund for hm & fw": {
+   "label": "not_scheme",
+   "name": "Discretionary Fund for HM & FW",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:higher education (dr ambedkar open university), secretariat department|name:establishment of b.r. ambedkar international center for dialogue on governance and equity (bridge)": {
+   "label": "not_scheme",
+   "name": "Establishment of B.R. Ambedkar International Center for Dialogue on Governance and Equity (BRIDGE)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:higher education - secretariat dept|name:suravaram pratap reddy telugu university": {
+   "label": "not_scheme",
+   "name": "Suravaram Pratap Reddy Telugu University",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:horticulture department|name:national bamboo mission": {
+   "label": "scheme",
+   "name": "National Bamboo Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ig greyhounds|name:construction of buildings for grey hounds units": {
+   "label": "not_scheme",
+   "name": "Construction of Buildings for Grey Hounds Units",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:igp intelligence|name:expenditure on security matters for curbing extremist activities in the state": {
+   "label": "not_scheme",
+   "name": "Expenditure on Security Matters for Curbing Extremist Activities in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:industries and commerce, secretariat department|name:industries and commerce department, sectt": {
+   "label": "not_scheme",
+   "name": "Industries and Commerce Department, Sectt",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:industries and commerce, secretariat department|name:tgiic": {
+   "label": "not_scheme",
+   "name": "TGIIC",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:information technology & communications|name:photonics valley": {
+   "label": "not_scheme",
+   "name": "Photonics Valley",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:information technology & communications|name:soft net": {
+   "label": "not_scheme",
+   "name": "SOFT NET",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:institutions society|name:gurukulam other ie": {
+   "label": "not_scheme",
+   "name": "Gurukulam Other IE",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:institutions society|name:residential schools for tribals": {
+   "label": "not_scheme",
+   "name": "Residential Schools for Tribals",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:capital works": {
+   "label": "not_scheme",
+   "name": "Capital Works",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:integrated child protection scheme (icps) mission vatsalya": {
+   "label": "scheme",
+   "name": "Integrated Child Protection Scheme (ICPS) Mission Vatsalya",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:training programmes under icds": {
+   "label": "not_scheme",
+   "name": "Training Programmes under ICDS",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:integrated child development services|name:upgradation of anganwadi centres": {
+   "label": "not_scheme",
+   "name": "Upgradation of Anganwadi Centres",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:intermediate education department|name:mid day meals for intermediate students": {
+   "label": "scheme",
+   "name": "Mid Day Meals for Intermediate Students",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:(c.e mahabubnagar)": {
+   "label": "not_scheme",
+   "name": "(C.E Mahabubnagar)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:ce kaleswaram project": {
+   "label": "not_scheme",
+   "name": "CE Kaleswaram Project",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:commissioner, command area development": {
+   "label": "not_scheme",
+   "name": "Commissioner, Command Area Development",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:commissioner, godavari basin -project estt": {
+   "label": "not_scheme",
+   "name": "Commissioner, Godavari Basin -Project Estt",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:dr ambedkar pranahitha chevella ss)": {
+   "label": "not_scheme",
+   "name": "DR Ambedkar Pranahitha Chevella SS)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:investigation of major and medium irrigation projects": {
+   "label": "not_scheme",
+   "name": "Investigation of Major and Medium Irrigation Projects",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:investments in public sector and other undertakings": {
+   "label": "not_scheme",
+   "name": "Investments in Public Sector and Other undertakings",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:j.chokka rao devadula lis(c.e glis)": {
+   "label": "not_scheme",
+   "name": "J.Chokka Rao Devadula LIS(C.E GLIS)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:modernisation of nsp": {
+   "label": "not_scheme",
+   "name": "Modernisation of NSP",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:narayanpet-kodangal lis (nkli)": {
+   "label": "not_scheme",
+   "name": "Narayanpet-Kodangal LIS (NKLI)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:nizam sagar": {
+   "label": "not_scheme",
+   "name": "Nizam Sagar",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:nsp lift irrigation (yerrupalem)": {
+   "label": "not_scheme",
+   "name": "NSP Lift irrigation (Yerrupalem)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:p.v.narasimha rao kanthanapally sujala sravanthi(c.e glis)": {
+   "label": "not_scheme",
+   "name": "P.V.Narasimha Rao Kanthanapally Sujala Sravanthi(C.E GLIS)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:pranahitha chevella srujala sravanthi(c.e": {
+   "label": "not_scheme",
+   "name": "Pranahitha Chevella Srujala Sravanthi(C.E",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:project director, ppmu, apwsp": {
+   "label": "not_scheme",
+   "name": "Project Director, PPMU, APWSP",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:project establishment under ilip (cada)": {
+   "label": "not_scheme",
+   "name": "Project Establishment under ILIP (CADA)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:project establishment under pd ppmu": {
+   "label": "not_scheme",
+   "name": "Project Establishment under PD PPMU",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:rajiv bheema l.i project": {
+   "label": "not_scheme",
+   "name": "Rajiv Bheema L.I Project",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:rehabilitation of medium irrigation projects under ilip(cada)": {
+   "label": "not_scheme",
+   "name": "Rehabilitation of Medium Irrigation Projects under ILIP(CADA)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:sriramsagar project stage -ii(c.e glis)": {
+   "label": "not_scheme",
+   "name": "Sriramsagar Project Stage -II(C.E GLIS)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:telangana state water resources dev. corpn": {
+   "label": "not_scheme",
+   "name": "Telangana State Water Resources Dev. Corpn",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:the foreshore of sriramsagar project (c.e": {
+   "label": "not_scheme",
+   "name": "the Foreshore of Sriramsagar Project (C.E",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:irrigation and flood control|name:wua programme under ilip (cada)": {
+   "label": "not_scheme",
+   "name": "WUA Programme under ILIP (CADA)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:kodangal|name:national livestock management programme": {
+   "label": "scheme",
+   "name": "National Livestock Management Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:kodangal|name:national plan for dairy development": {
+   "label": "scheme",
+   "name": "National Plan for Dairy Development",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:kodangal|name:providing for infrastructure facilities and others to new veterinary college at siddipet": {
+   "label": "not_scheme",
+   "name": "Providing for Infrastructure facilities and others to New Veterinary College at Siddipet",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:kodangal|name:providing for infrastructure facilities and others veterinary science cllege at mamnoor, warangal": {
+   "label": "not_scheme",
+   "name": "Providing for Infrastructure facilities and Others Veterinary Science Cllege at Mamnoor, Warangal",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:legal metrology|name:head quarters office": {
+   "label": "not_scheme",
+   "name": "Head Quarters Office",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:airstrips": {
+   "label": "not_scheme",
+   "name": "Airstrips",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:amruth": {
+   "label": "not_scheme",
+   "name": "Amruth",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:finance commission grants to million plus cities (hyd)": {
+   "label": "not_scheme",
+   "name": "Finance Commission Grants to Million Plus Cities (HYD)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:karimnagar smart city": {
+   "label": "not_scheme",
+   "name": "Karimnagar Smart city",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:metro connectivity to old city": {
+   "label": "not_scheme",
+   "name": "Metro Connectivity to Old city",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:mission for elimination of poverty in municipal areas (indira kranthi patham - urban)": {
+   "label": "scheme",
+   "name": "Mission for Elimination of Poverty in Municipal Areas (Indira Kranthi Patham - Urban)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:mi tanks under cbtmp|name:sector reforms under ilip": {
+   "label": "not_scheme",
+   "name": "Sector reforms under ILIP",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:minorities welfare|name:assistance to telangana haj committee": {
+   "label": "not_scheme",
+   "name": "Assistance to Telangana Haj Committee",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:minorities welfare|name:financial assistance to students of telangana (fast) rtf": {
+   "label": "scheme",
+   "name": "Financial Assistance to Students of Telangana (FAST) RTF",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:minorities welfare|name:iftar/dinner state function": {
+   "label": "not_scheme",
+   "name": "IFTAR/DINNER State function",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:minorities welfare|name:modernisation of kitchens": {
+   "label": "not_scheme",
+   "name": "Modernisation of Kitchens",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:minorities welfare|name:scholarships and stipends to minority students": {
+   "label": "scheme",
+   "name": "Scholarships and stipends to Minority Students",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:minorities welfare|name:ts minority study circle": {
+   "label": "not_scheme",
+   "name": "TS Minority Study Circle",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:municipal administration and urban development, secretariat department|name:amrut 2.0": {
+   "label": "not_scheme",
+   "name": "AMRUT 2.0",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:municipal administration and urban development, secretariat department|name:warangal smart city": {
+   "label": "not_scheme",
+   "name": "Warangal smart city",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:national rural drinking water programme (nrdwp)|name:swachh bharat": {
+   "label": "not_scheme",
+   "name": "Swachh Bharat",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pmpcc) production (scsp)": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Production (SCSP)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pmpcc) production(scsp)": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Production(SCSP)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:panchayat raj, hod|name:assistanc to zilla parishads": {
+   "label": "not_scheme",
+   "name": "Assistanc to Zilla Parishads",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:pd samagra siksha|name:civil works under samagra shiksha": {
+   "label": "not_scheme",
+   "name": "Civil Works under Samagra Shiksha",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:pd samagra siksha|name:civil works under ssa": {
+   "label": "not_scheme",
+   "name": "Civil Works under SSA",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:estt. of half way home for mental illness": {
+   "label": "not_scheme",
+   "name": "Estt. of Half way Home for Mental illness",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:head quarters office": {
+   "label": "not_scheme",
+   "name": "Head Quarters Office",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:sports meet of persons with disabilities": {
+   "label": "not_scheme",
+   "name": "Sports Meet of Persons with Disabilities",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:planning department|name:assistance to various department for technology modernisation including ai": {
+   "label": "not_scheme",
+   "name": "Assistance to various Department for Technology Modernisation including AI",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:planning department|name:prajavani programme": {
+   "label": "not_scheme",
+   "name": "Prajavani Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:planning, secretariat department|name:indiramma kutumbha jivitha bima (for all families)": {
+   "label": "scheme",
+   "name": "Indiramma Kutumbha Jivitha Bima (for all families)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:policy|name:gruha jyothi scheme": {
+   "label": "scheme",
+   "name": "Gruha jyothi Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:project director, samagra shiksha|name:pm-janman": {
+   "label": "scheme",
+   "name": "PM-JANMAN",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:project director, samagra shiksha|name:samagra shiksha": {
+   "label": "scheme",
+   "name": "Samagra Shiksha",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:rad)|name:farm mechanization": {
+   "label": "scheme",
+   "name": "Farm Mechanization",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:rad)|name:investment support scheme": {
+   "label": "scheme",
+   "name": "Investment Support Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:registrar of co-operative societies|name:assistance to state co-operative union": {
+   "label": "not_scheme",
+   "name": "Assistance to State Co-operative Union",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:registrar of high court|name:additional session courts (fast track courts)": {
+   "label": "not_scheme",
+   "name": "Additional Session Courts (Fast Track Courts)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:registrar of high court|name:special courts for the trial of prohibition and excise offences": {
+   "label": "not_scheme",
+   "name": "Special Courts for the Trial of Prohibition and Excise Offences",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:rural development. hod|name:cheyutha pensions to old age persons & widows": {
+   "label": "scheme",
+   "name": "Cheyutha Pensions to old age persons & widows",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:rural development. hod|name:indira gandhi national disabled pension scheme": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Disabled Pension Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:samagra shiksha|name:pm shri (pm schools for rising india)": {
+   "label": "not_scheme",
+   "name": "PM SHRI (PM SCHOOLS FOR RISING INDIA)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:scheduled castes development department|name:economic support scheme": {
+   "label": "scheme",
+   "name": "Economic Support Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:scheduled castes development department|name:scholarships post (rtf-professional courses)": {
+   "label": "scheme",
+   "name": "Scholarships Post (RTF-Professional Courses)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:school education department|name:telangana public school": {
+   "label": "not_scheme",
+   "name": "Telangana Public School",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:assistance to jnafau": {
+   "label": "not_scheme",
+   "name": "Assistance to JNAFAU",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:conjunctive use of ground water": {
+   "label": "not_scheme",
+   "name": "Conjunctive use of Ground Water",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:district museum": {
+   "label": "not_scheme",
+   "name": "District Museum",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:excavations": {
+   "label": "not_scheme",
+   "name": "Excavations",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:head quarter": {
+   "label": "not_scheme",
+   "name": "Head Quarter",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:improvement of hostels of gmr polytechnics for sc & sts": {
+   "label": "not_scheme",
+   "name": "Improvement of Hostels of GMR Polytechnics for SC & STs",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:renovation of ravinder bharathi": {
+   "label": "not_scheme",
+   "name": "Renovation of Ravinder Bharathi",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:state sector schemes|name:skill univercity": {
+   "label": "not_scheme",
+   "name": "Skill Univercity",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:technical education department|name:skill university": {
+   "label": "not_scheme",
+   "name": "Skill University",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:telangana biodiversity board|name:integrated rural energy planning": {
+   "label": "not_scheme",
+   "name": "Integrated Rural Energy Planning",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:telangana residential educational institutions society|name:providing of additional infrastructure in residential schools & colleges": {
+   "label": "not_scheme",
+   "name": "Providing of Additional Infrastructure in Residential Schools & Colleges",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:telangana state irrigation development corporation ltd|name:construction and restoration of li schemes": {
+   "label": "not_scheme",
+   "name": "Construction and Restoration of LI Schemes",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:telangana state irrigation development corporation ltd|name:li schemes": {
+   "label": "not_scheme",
+   "name": "LI Schemes",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:telangana state irrigation development corporation ltd|name:loans for mi scheme under nabard": {
+   "label": "not_scheme",
+   "name": "Loans For MI Scheme Under NABARD",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:bt roads to st habitations (unconnected)": {
+   "label": "not_scheme",
+   "name": "BT Roads to ST Habitations (unconnected)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:bt roads to unconnected tribal habitations": {
+   "label": "not_scheme",
+   "name": "BT Roads to Unconnected Tribal Habitations",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:buildings for girijan bhavans": {
+   "label": "not_scheme",
+   "name": "Buildings for Girijan Bhavans",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:farm mechanization": {
+   "label": "scheme",
+   "name": "Farm Mechanization",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:finance commission grants for zp": {
+   "label": "not_scheme",
+   "name": "Finance Commission Grants for ZP",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:finance commission grants to gps (untied)": {
+   "label": "not_scheme",
+   "name": "Finance Commission Grants to GPs (UNTIED)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:incentive to the sanna rakam paddy farmers": {
+   "label": "scheme",
+   "name": "Incentive to the Sanna Rakam Paddy Farmers",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:indira giri jala vikasam": {
+   "label": "not_scheme",
+   "name": "Indira Giri Jala Vikasam",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:insurance to farmers": {
+   "label": "scheme",
+   "name": "Insurance to Farmers",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:post-matric scholarships": {
+   "label": "scheme",
+   "name": "Post-Matric Scholarships",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:pre matric scholarships": {
+   "label": "scheme",
+   "name": "Pre Matric Scholarships",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:road infrastructure in three itda districts": {
+   "label": "not_scheme",
+   "name": "Road Infrastructure in Three ITDA Districts",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:subsidy on rice": {
+   "label": "scheme",
+   "name": "Subsidy on Rice",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:tribal welfare|name:tribal fares & festivals": {
+   "label": "not_scheme",
+   "name": "Tribal Fares & Festivals",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ts transco|name:assistance transco/discoms": {
+   "label": "not_scheme",
+   "name": "Assistance Transco/Discoms",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:ts transco|name:telegana electricity regulatory commission": {
+   "label": "not_scheme",
+   "name": "Telegana Electricity Regulatory Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:universities|name:indira giri jala vikasam": {
+   "label": "not_scheme",
+   "name": "Indira Giri Jala Vikasam",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:universities|name:providing quality education for sts": {
+   "label": "not_scheme",
+   "name": "Providing Quality Education for STs",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:universities|name:skill training for sts": {
+   "label": "scheme",
+   "name": "Skill Training for STs",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:veterinary services|name:livestock health and disease control programme –ascad (100%)": {
+   "label": "scheme",
+   "name": "Livestock Health and Disease Control Programme –ASCAD (100%)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:weaker section housing programme|name:indiramma indlu to the rural poor": {
+   "label": "scheme",
+   "name": "Indiramma Indlu to the rural poor",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:weaker section housing programme|name:pradhan mantri awas yojana (urban)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (Urban)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:weaker section housing programme|name:pradhan mantri awas yojana(grameen)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana(Grameen)",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:weaker section housing, hod|name:indiramma indlu (blc) to the urban poor": {
+   "label": "scheme",
+   "name": "Indiramma Indlu (BLC) to the Urban Poor",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:assistance to nayee brhmin co-op society free ele. supply": {
+   "label": "scheme",
+   "name": "Assistance to Nayee Brhmin Co-op Society Free Ele. Supply",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:c/o golla kurma community halls": {
+   "label": "not_scheme",
+   "name": "C/o Golla Kurma Community Halls",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:community services": {
+   "label": "not_scheme",
+   "name": "Community Services",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:construction of buildings": {
+   "label": "not_scheme",
+   "name": "Construction of Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:finance assistance to yadav coop socities": {
+   "label": "not_scheme",
+   "name": "Finance Assistance to yadav Coop Socities",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:most backwards classes development corporation": {
+   "label": "not_scheme",
+   "name": "Most Backwards Classes Development Corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:neera policy": {
+   "label": "not_scheme",
+   "name": "Neera Policy",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:post matric scholarships": {
+   "label": "scheme",
+   "name": "Post Matric Scholarships",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:pre-matric scholarships": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarships",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:savithri bai pule abhyudaya yojana": {
+   "label": "scheme",
+   "name": "Savithri Bai Pule Abhyudaya Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:scheme for development of (obc) other backward classes and denotified, nomadic and semi-nomadic tribes": {
+   "label": "scheme",
+   "name": "Scheme for Development of (OBC) Other Backward Classes and Denotified, Nomadic and Semi-nomadic Tribes",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:scholarships and stipends": {
+   "label": "scheme",
+   "name": "Scholarships and Stipends",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:welfare of backward classes|name:telangana commission for backward classes": {
+   "label": "not_scheme",
+   "name": "Telangana Commission for Backward Classes",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:women & child welfare|name:arogya lakshmi": {
+   "label": "scheme",
+   "name": "Arogya Lakshmi",
+   "how": "stratified sample, read by eye"
+  },
+  "dept:agriculture department|name:investment support scheme (rythu bharosa)": {
+   "label": "scheme",
+   "name": "Investment support scheme (Rythu Bharosa)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:agriculture department|name:mission for atmanirbharata in pulses": {
+   "label": "scheme",
+   "name": "Mission for Atmanirbharata in Pulses",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:agriculture department|name:national mission on edible oils ( oil seeds)": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oils ( Oil Seeds)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:agriculture department|name:national mission on natural farming (nmnf)": {
+   "label": "scheme",
+   "name": "National Mission on Natural Farming (NMNF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:agriculture department|name:sub mission on agricultural extension": {
+   "label": "scheme",
+   "name": "Sub Mission on Agricultural Extension",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:agriculture department|name:supply of seeds to farmers": {
+   "label": "scheme",
+   "name": "Supply of Seeds to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:c.e - medium irrigation|name:centrally sponsored schemes": {
+   "label": "not_scheme",
+   "name": "Centrally Sponsored Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ce minor irrigation ( pwd)|name:mission kakatiya": {
+   "label": "not_scheme",
+   "name": "Mission Kakatiya",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:chief engineer (r&b),electrical|name:rental housing scheme": {
+   "label": "not_scheme",
+   "name": "Rental Housing Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:chief engineer, rural water supply (rws)|name:jal jeevan mission": {
+   "label": "scheme",
+   "name": "Jal Jeevan Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:chief engineer, rural water supply|name:rural water supply schemes under swsm": {
+   "label": "not_scheme",
+   "name": "Rural Water Supply Schemes under SWSM",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:civil supplies department|name:lpg subsidy under maha laxmi scheme": {
+   "label": "scheme",
+   "name": "LPG subsidy under Maha Laxmi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:civil supplies department|name:subsidy on rice (human resource development)": {
+   "label": "scheme",
+   "name": "Subsidy on Rice (Human Resource Development)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:civil supplies|name:subsidy on rice": {
+   "label": "scheme",
+   "name": "Subsidy on Rice",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:assistance to small and marginal farmers towards premium for crop insurance scheme": {
+   "label": "scheme",
+   "name": "Assistance to Small and Marginal Farmers towards Premium for Crop Insurance Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:insurance to farmers": {
+   "label": "scheme",
+   "name": "Insurance to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:investment support scheme": {
+   "label": "scheme",
+   "name": "Investment Support Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:mission for atmanirbharatha in pulses": {
+   "label": "scheme",
+   "name": "Mission for Atmanirbharatha in Pulses",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:national mission on edible oils-oil seeds (100%)": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oils-Oil seeds (100%)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:national mission on natural farming (nmnf)": {
+   "label": "scheme",
+   "name": "National Mission on Natural Farming (NMNF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:national mission on sustainable agriculture": {
+   "label": "scheme",
+   "name": "National Mission on Sustainable Agriculture",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:national oilseed and oil palm mission": {
+   "label": "scheme",
+   "name": "National Oilseed and Oil Palm Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:paramparagath krishi vikas yojana": {
+   "label": "scheme",
+   "name": "Paramparagath Krishi Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:pradhan mantri krishi sinchai yojna (pmksy)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Krishi Sinchai Yojna (PMKSY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:rashtriya krushi vikasa yojana (rkvy)": {
+   "label": "scheme",
+   "name": "Rashtriya Krushi Vikasa Yojana (RKVY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:rastriya krushi vikas yojana": {
+   "label": "scheme",
+   "name": "Rastriya Krushi Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:rythu bharosa for landless agricultural labour": {
+   "label": "scheme",
+   "name": "Rythu Bharosa for Landless Agricultural Labour",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:scheme for debt relief to farmers": {
+   "label": "scheme",
+   "name": "Scheme for Debt Relief to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:sub mission on agriculture extension": {
+   "label": "scheme",
+   "name": "Sub Mission on Agriculture Extension",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:sub mission on seed and plant material": {
+   "label": "scheme",
+   "name": "Sub Mission on Seed and Plant Material",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:sub mission on seed and planting material": {
+   "label": "scheme",
+   "name": "Sub Mission on Seed and Planting Material",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner & director, agriculture|name:supply of seeds to farmers": {
+   "label": "scheme",
+   "name": "Supply of Seeds to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner and director, municipal administration department|name:national urban livelihood mission": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner of health & family welfare|name:national health mission(nhm)": {
+   "label": "not_scheme",
+   "name": "National Health Mission(NHM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner of health & family welfare|name:r.c.h. programme - ii - rural emergency health transport scheme(108 services)": {
+   "label": "scheme",
+   "name": "R.C.H. Programme - II - Rural Emergency Health Transport Scheme(108 Services)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner of health and family welfare|name:free mortuary hearses van services": {
+   "label": "not_scheme",
+   "name": "Free Mortuary Hearses Van Services",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner of health and family welfare|name:national health mission (nhm)": {
+   "label": "not_scheme",
+   "name": "National Health Mission (NHM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner of health and family welfare|name:r.c.h. programme - ii - rural emergency health transport scheme (108 services)": {
+   "label": "scheme",
+   "name": "R.C.H. Programme - II - Rural Emergency Health Transport Scheme (108 Services)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner relief|name:assistance to bpl families under accident insurance scheme (apathbandhu)": {
+   "label": "scheme",
+   "name": "Assistance to BPL Families under Accident Insurance Scheme (Apathbandhu)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner relief|name:public health schemes": {
+   "label": "not_scheme",
+   "name": "Public Health Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner relief|name:supply of feed to the cattle": {
+   "label": "scheme",
+   "name": "Supply of Feed to the Cattle",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner relief|name:supply of fodder": {
+   "label": "scheme",
+   "name": "Supply of Fodder",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner relief|name:supply of medicines": {
+   "label": "not_scheme",
+   "name": "Supply of Medicines",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner relief|name:supply of rescue boats": {
+   "label": "not_scheme",
+   "name": "Supply of Rescue Boats",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner relief|name:supply of seeds, fertilizers and agricultural implements": {
+   "label": "scheme",
+   "name": "Supply of Seeds, Fertilizers and Agricultural Implements",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:deendayal upadhyaya grameena koushalya yojana": {
+   "label": "scheme",
+   "name": "Deendayal Upadhyaya Grameena Koushalya Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:deendayal upadyay grameen koushalya yojana": {
+   "label": "scheme",
+   "name": "Deendayal Upadyay Grameen Koushalya Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:indiramma atmeeya bharosa": {
+   "label": "scheme",
+   "name": "Indiramma Atmeeya Bharosa",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:indra gandhi national disabled pension scheme": {
+   "label": "scheme",
+   "name": "Indra Gandhi National Disabled Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:indra gandhi national old pension scheme (ignoap)": {
+   "label": "scheme",
+   "name": "Indra Gandhi National Old Pension Scheme (IGNOAP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:indra gandhi national widow pension scheme": {
+   "label": "scheme",
+   "name": "Indra Gandhi National Widow Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:insurance/pension scheme to dwacra women(abhaya hastam)": {
+   "label": "scheme",
+   "name": "Insurance/Pension Scheme to DWACRA Women(Abhaya Hastam)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:mgnreg scheme": {
+   "label": "scheme",
+   "name": "MGNREG Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:national family benfit scheme (nfbs)": {
+   "label": "scheme",
+   "name": "National Family Benfit Scheme (NFBS)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:national rural livelihood mission": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:national rural livelihood mission (nrlm)": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (NRLM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:shyam prasad mukherjee rurban mission": {
+   "label": "not_scheme",
+   "name": "Shyam Prasad Mukherjee RUrban Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:shyam prasad mukherji rurban mission": {
+   "label": "not_scheme",
+   "name": "Shyam Prasad Mukherji RURBAN Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:swatch bharath mission - grameen": {
+   "label": "scheme",
+   "name": "Swatch Bharath Mission - Grameen",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner rural development|name:swatch bharath mission - grameen (60:40)": {
+   "label": "scheme",
+   "name": "Swatch Bharath Mission - Grameen (60:40)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner women & child welfare|name:bharosa centres": {
+   "label": "not_scheme",
+   "name": "Bharosa Centres",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner women & child welfare|name:integrated child development services schemes": {
+   "label": "scheme",
+   "name": "Integrated Child Development Services Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner, industries|name:extension of pavalavaddi scheme to all ssi and food processing units": {
+   "label": "scheme",
+   "name": "Extension of Pavalavaddi Scheme to all SSI and Food Processing units",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commissioner, industries|name:power subsidy for industries": {
+   "label": "scheme",
+   "name": "Power Subsidy for Industries",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commr. & director municipal administration (hod)|name:national urban livelihood mission": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commr. & director municipal administration (hod)|name:pradhan mantri awas yojana": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commr. panchayat raj|name:assiatance to non-provincialized pensions": {
+   "label": "not_scheme",
+   "name": "Assiatance to Non-Provincialized Pensions",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commr. panchayat raj|name:pradhana mantri adarsh gram yojana": {
+   "label": "not_scheme",
+   "name": "Pradhana Mantri Adarsh Gram Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:commr. panchayat raj|name:pradhana mantri anusuchith jati abhyuday yojana (pm-ajay)": {
+   "label": "not_scheme",
+   "name": "Pradhana Mantri Anusuchith Jati Abhyuday Yojana (PM-AJAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:arogya lalkshmi": {
+   "label": "scheme",
+   "name": "Arogya Lalkshmi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:assistance to small and marginal farmers towards premium for crop insurance scheme": {
+   "label": "scheme",
+   "name": "Assistance to Small and Marginal Farmers towards Premium for Crop Insurance Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:assistance to tgrtc towards reimbursement of expenditure for mahalaxmi scheme": {
+   "label": "scheme",
+   "name": "Assistance to TGRTC towards Reimbursement of expenditure for Mahalaxmi scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:assistance to transco for agriculture and allied subsidy": {
+   "label": "scheme",
+   "name": "Assistance to TRANSCO for Agriculture and Allied Subsidy",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:babu jagjeevan ram babu chhatrawas yojana": {
+   "label": "not_scheme",
+   "name": "Babu Jagjeevan ram babu chhatrawas yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:cheyuta pensions to disabled persons": {
+   "label": "scheme",
+   "name": "Cheyuta Pensions to Disabled Persons",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:cheyuta pensions to old age persons & widows": {
+   "label": "scheme",
+   "name": "Cheyuta Pensions to Old Age Persons & Widows",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:extention of pavala vaddi scheme to all ssi and food processing units": {
+   "label": "scheme",
+   "name": "Extention of Pavala Vaddi scheme to all SSI and Food processing units",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:gruha jyothi scheme": {
+   "label": "scheme",
+   "name": "Gruha Jyothi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:indiramma atmeeya bharosa": {
+   "label": "scheme",
+   "name": "Indiramma Atmeeya Bharosa",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:indiramma indlu to the rural poor": {
+   "label": "scheme",
+   "name": "Indiramma Indlu to the Rural Poor",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:indiramma indlu to the urban poor": {
+   "label": "scheme",
+   "name": "Indiramma Indlu to the Urban Poor",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:indiramma kutumba jivitha bima for all families": {
+   "label": "scheme",
+   "name": "Indiramma Kutumba Jivitha bima for all families",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:insurance to farmers": {
+   "label": "scheme",
+   "name": "Insurance to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:investment support scheme": {
+   "label": "scheme",
+   "name": "Investment Support Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:lpg subsidy under maha laxmi scheme": {
+   "label": "scheme",
+   "name": "LPG Subsidy under Maha Laxmi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:nutritious meals programmes for ix to x classes": {
+   "label": "scheme",
+   "name": "Nutritious Meals Programmes for IX to X Classes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:post matric scholarships": {
+   "label": "scheme",
+   "name": "Post Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:power subsidy for industries": {
+   "label": "scheme",
+   "name": "Power Subsidy for Industries",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:pre matric scholarships": {
+   "label": "scheme",
+   "name": "Pre Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:pre matric scholarships (ix & x)": {
+   "label": "scheme",
+   "name": "Pre Matric Scholarships (IX & X)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:pre matric scholarships for quality education": {
+   "label": "scheme",
+   "name": "Pre Matric Scholarships for Quality Education",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:providing free power to sc house holds": {
+   "label": "scheme",
+   "name": "Providing free power to SC House holds",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:scheme for debt relief to farmers": {
+   "label": "scheme",
+   "name": "Scheme for Debt Relief to farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:scholarships post (mtf)": {
+   "label": "scheme",
+   "name": "Scholarships Post (MTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:scholarships post (rtf)": {
+   "label": "scheme",
+   "name": "Scholarships Post (RTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:scholarships post(mtf-non professional courses, inter/degree/pg/polytechnic)": {
+   "label": "scheme",
+   "name": "Scholarships Post(MTF-Non Professional Courses, Inter/Degree/PG/Polytechnic)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:corporation ltd|name:supply of seeds to farmers": {
+   "label": "scheme",
+   "name": "Supply of Seeds to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:department civil supplies, hod bonus to agriculture|name:produces lpg subsidy under maha laxmi scheme subsidy on rice (human": {
+   "label": "not_scheme",
+   "name": "produces LPG subsidy under Maha Laxmi Scheme Subsidy on Rice (Human",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:department school education,hod breakfast & milk to school|name:shakti nirman (pm poshan": {
+   "label": "not_scheme",
+   "name": "Shakti Nirman (PM Poshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:department school education,hod breakfast & milk to school|name:students pradhan mantri poshan shakti nirman(pm poshan - cooking cost )(distribution)) pradhan mantri poshan": {
+   "label": "scheme",
+   "name": "Students Pradhan Mantri Poshan Shakti Nirman(PM POSHAN - Cooking Cost )(Distribution)) Pradhan Mantri Poshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:dg & ig of police|name:bharosa": {
+   "label": "not_scheme",
+   "name": "Bharosa",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director employment & training|name:skill development mission": {
+   "label": "scheme",
+   "name": "Skill Development Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director employment & training|name:stipends to atc students": {
+   "label": "scheme",
+   "name": "Stipends to ATC Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director intermediate education|name:incentives scholarships": {
+   "label": "scheme",
+   "name": "Incentives Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director intermediate education|name:mid day meals for inter students": {
+   "label": "scheme",
+   "name": "Mid Day meals for Inter students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director intermediate education|name:supply of text books to students in govt junior colleges": {
+   "label": "scheme",
+   "name": "Supply of Text Books to Students in Govt Junior Colleges",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director of medical education|name:ayushman bharat -pradhan mantri jan arogya yojana(abpm-jay)": {
+   "label": "scheme",
+   "name": "Ayushman Bharat -Pradhan Mantri Jan Arogya Yojana(ABPM-JAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director school education|name:chief ministers breakfast scheme": {
+   "label": "scheme",
+   "name": "Chief Ministers Breakfast Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director, horticulture|name:national bamboo mission": {
+   "label": "scheme",
+   "name": "National Bamboo Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:director, horticulture|name:national horticulture mission": {
+   "label": "scheme",
+   "name": "National Horticulture Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:educational institutions society|name:govt residential centralised schools-new scheme": {
+   "label": "not_scheme",
+   "name": "Govt Residential Centralised Schools-New Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:education|name:nutritious meals programmes for ix to x": {
+   "label": "scheme",
+   "name": "Nutritious Meals Programmes for IX to X",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:education|name:pradhan manthri poshan shakthi nirman (pm poshan)": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PM Poshan)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:education|name:pradhan manthri poshan shakthi nirman (pmpcc) egg cost production": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Egg Cost Production",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:education|name:pratibha scholarships": {
+   "label": "scheme",
+   "name": "Pratibha Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:enc-major irrigation|name:flood control schemes": {
+   "label": "not_scheme",
+   "name": "Flood Control Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:energy department energy,secretariat department assistance to transmission|name:allied subsidy assitance to genco green energy including": {
+   "label": "not_scheme",
+   "name": "allied Subsidy Assitance to GENCO Green Energy including",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:energy, secretariat department|name:gruha jyothi scheme": {
+   "label": "scheme",
+   "name": "Gruha jyothi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:engineer in chief buildings|name:rental housing scheme": {
+   "label": "not_scheme",
+   "name": "Rental Housing Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:engineer in chief buildings|name:supply of barricading equipment": {
+   "label": "not_scheme",
+   "name": "Supply of Barricading Equipment",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:engineer-in-chief, irrigation (general), hyderabad|name:mission kakatiya": {
+   "label": "not_scheme",
+   "name": "Mission Kakatiya",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:finance department|name:new web based pension application": {
+   "label": "not_scheme",
+   "name": "New Web based Pension Application",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:fisheries department|name:pradhana manthri matsya sampada yojana (60:40)": {
+   "label": "scheme",
+   "name": "Pradhana Manthri Matsya sampada Yojana (60:40)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:fisheries, hod|name:pradhan mantri matsya sampada yojana(60:40)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matsya Sampada Yojana(60:40)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:government text book press|name:state sector schemes": {
+   "label": "not_scheme",
+   "name": "State Sector Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:handlooms & textiles|name:insurance to weavers": {
+   "label": "scheme",
+   "name": "Insurance to Weavers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:health and family welfare department|name:national health mission (incentives to asha workers)": {
+   "label": "scheme",
+   "name": "National Health Mission (Incentives to ASHA Workers)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:health and family welfare department|name:national health mission(nhm)": {
+   "label": "not_scheme",
+   "name": "National Health Mission(NHM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:health and family welfare department|name:r.c.h. programme - ii - rural emergency health transport scheme(108 services)": {
+   "label": "scheme",
+   "name": "R.C.H. Programme - II - Rural Emergency Health Transport Scheme(108 Services)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:health infrastructure mission|name:national health mission": {
+   "label": "not_scheme",
+   "name": "National Health Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:health infrastructure mission|name:national health mission (nhm)": {
+   "label": "not_scheme",
+   "name": "National Health Mission (NHM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:horticulture department|name:national bee keeping honey mission": {
+   "label": "scheme",
+   "name": "National Bee keeping Honey Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:horticulture department|name:national horticulture mission": {
+   "label": "scheme",
+   "name": "National Horticulture Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:horticulture department|name:national mission on edible oils - oil palm": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oils - Oil Palm",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:horticulture,hod|name:national bamboo mission": {
+   "label": "scheme",
+   "name": "National Bamboo Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:horticulture,hod|name:national bee keeping honey mission": {
+   "label": "scheme",
+   "name": "National Bee keeping Honey Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:horticulture,hod|name:national horticulture mission": {
+   "label": "scheme",
+   "name": "National Horticulture Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:horticulture,hod|name:national mission on edible oils - oil palm": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oils - Oil Palm",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:human resource in health & medical education|name:arogya voy vandana": {
+   "label": "scheme",
+   "name": "Arogya Voy Vandana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:human resource in health & medical education|name:ayshman bharath - pradhanmanthri jan arogya yojana (abpm-jay)": {
+   "label": "scheme",
+   "name": "Ayshman Bharath - Pradhanmanthri Jan Arogya yojana (ABPM-JAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:human resource in health & medical education|name:national health protection scheme": {
+   "label": "scheme",
+   "name": "National Health Protection Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:industries & commerce secretariat department|name:extension of pavala vaddi scheme to all ssi and food processing units": {
+   "label": "scheme",
+   "name": "Extension of Pavala Vaddi scheme to all SSI and Food Processing Units",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:industries department|name:power subsidy for industries": {
+   "label": "scheme",
+   "name": "Power Subsidy for Industries",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:care and support to victims u/s 4 & 6 of pocso act (mission vatsalya)": {
+   "label": "scheme",
+   "name": "care and support to victims u/s 4 & 6 of POCSO Act (Mission Vatsalya)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:national nutrition mission": {
+   "label": "scheme",
+   "name": "National Nutrition Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:one stop centre scheme": {
+   "label": "scheme",
+   "name": "One Stop Centre Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:poshan abiyan-saksham anganwadi": {
+   "label": "scheme",
+   "name": "Poshan Abiyan-Saksham Anganwadi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:schemes to setup the srcw under national mission for empowerment of women": {
+   "label": "not_scheme",
+   "name": "Schemes to setup the SRCW under National Mission for Empowerment of Women",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:swadhar greh scheme": {
+   "label": "not_scheme",
+   "name": "Swadhar Greh Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:ujjawala scheme": {
+   "label": "scheme",
+   "name": "Ujjawala Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development service (icds)|name:women help line scheme": {
+   "label": "scheme",
+   "name": "Women Help Line Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development services|name:integrated child protection scheme": {
+   "label": "scheme",
+   "name": "Integrated Child Protection Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development services|name:national nutrition mission": {
+   "label": "scheme",
+   "name": "National Nutrition Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development services|name:schemes to setup the srcw under national mission for empowerment of women": {
+   "label": "not_scheme",
+   "name": "Schemes to setup the SRCW under National Mission for Empowerment of Women",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development services|name:swadhar greh scheme": {
+   "label": "not_scheme",
+   "name": "Swadhar Greh Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:integrated child development services|name:ujjawala scheme": {
+   "label": "scheme",
+   "name": "Ujjawala Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:irrigation and flood control|name:bhaktha ramdasu li scheme": {
+   "label": "not_scheme",
+   "name": "Bhaktha Ramdasu LI Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:irrigation and flood control|name:dindi li scheme": {
+   "label": "not_scheme",
+   "name": "Dindi LI Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:irrigation and flood control|name:kalwakurthi- mahatma gandhi li scheme": {
+   "label": "not_scheme",
+   "name": "Kalwakurthi- Mahatma Gandhi LI Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:irrigation and flood control|name:nettampadu l.i. scheme( jawahar": {
+   "label": "not_scheme",
+   "name": "Nettampadu L.I. Scheme( Jawahar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:kodangal|name:nlm-live stock insurance": {
+   "label": "scheme",
+   "name": "NLM-Live stock Insurance",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:basic services for urban poor under jawaharlal nehru national urban renewal mission (jnnurm)": {
+   "label": "not_scheme",
+   "name": "Basic Services for Urban Poor under Jawaharlal Nehru National Urban Renewal Mission (JNNURM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ma&ud secretariat dept|name:hmwssb reimbursement amount towards 20kl free water supply schemes": {
+   "label": "scheme",
+   "name": "HMWSSB Reimbursement amount towards 20KL Free Water Supply Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:medical education department|name:ayushman bharat -pradhan mantri jan arogya yojana (abpm-jay)": {
+   "label": "scheme",
+   "name": "Ayushman Bharat -Pradhan Mantri Jan Arogya Yojana (ABPM-JAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:member secretary, state legal services authority|name:victim compensation scheme": {
+   "label": "scheme",
+   "name": "Victim Compensation Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:minorities welfare|name:oversees study scheme for minorities": {
+   "label": "scheme",
+   "name": "Oversees Study Scheme for Minorities",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:minorities welfare|name:pre-matric scholarships": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:minorities welfare|name:scholarships": {
+   "label": "scheme",
+   "name": "Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:minorities welfare|name:scholarships(mtf)": {
+   "label": "scheme",
+   "name": "Scholarships(MTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:minorities welfare|name:scholarships(rtf)": {
+   "label": "scheme",
+   "name": "Scholarships(RTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:minorities welfare|name:subsidy for bank linked income generated schemes": {
+   "label": "scheme",
+   "name": "Subsidy for Bank Linked Income Generated Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:municipal administration, hod|name:national urban livelihood mission": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:national apprcentiseship promotion scheme (naps)|name:skill development mission": {
+   "label": "scheme",
+   "name": "Skill Development Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:nutritious meals programmes": {
+   "label": "scheme",
+   "name": "Nutritious Meals Programmes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pm poshan)": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PM Poshan)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pmpcc) distribution": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Distribution",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pmpcc) distribution(scsp)": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Distribution(SCSP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pmpcc) distribution(tsp)": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Distribution(TSP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pmpcc) production": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Production",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:nutritious meals programmes (mdm cooking cost)|name:pradhan manthri poshan shakthi nirman (pmpcc) production(tsp)": {
+   "label": "scheme",
+   "name": "Pradhan Manthri Poshan Shakthi Nirman (PMPCC) Production(TSP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:panchayat raj, hod|name:indiramma atmeeya bharosa": {
+   "label": "scheme",
+   "name": "Indiramma Atmeeya Bharosa",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:panchayath raj department|name:indiramma atmeeya bharosa": {
+   "label": "scheme",
+   "name": "Indiramma Atmeeya Bharosa",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:panchayath raj department|name:pradhan mantri anusuchit jaati abhyuday yojana (pm-ajay)": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM-AJAY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:marriages incentive awards and petrol subsidy": {
+   "label": "scheme",
+   "name": "Marriages Incentive Awards and Petrol Subsidy",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:protection and welfare of transgender persons": {
+   "label": "scheme",
+   "name": "Protection and Welfare of Transgender Persons",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:rehabilitation and supply of prosthetic aids to physically handicapped": {
+   "label": "scheme",
+   "name": "Rehabilitation and Supply of Prosthetic Aids to Physically Handicapped",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:schemes for implementation of persons with disability act": {
+   "label": "scheme",
+   "name": "Schemes for implementation of Persons with Disability Act",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:scholarships mtf": {
+   "label": "scheme",
+   "name": "Scholarships MTF",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:persons with disabilities & senior citizens welfare|name:scholarships rtf": {
+   "label": "scheme",
+   "name": "Scholarships RTF",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:planning department|name:research schemes": {
+   "label": "not_scheme",
+   "name": "Research Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:pm formalization of micro food processing enterprises scheme|name:pm formalization of micro food processing enterprises scheme": {
+   "label": "scheme",
+   "name": "PM Formalization of Micro Food Processing Enterprises Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:printing, stationery & stores purchase|name:purchase and supply of stationary stores": {
+   "label": "not_scheme",
+   "name": "Purchase and Supply of Stationary Stores",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:promotion|name:power subsidy for industries": {
+   "label": "scheme",
+   "name": "Power Subsidy for Industries",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rad)|name:crop insurance": {
+   "label": "scheme",
+   "name": "Crop Insurance",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rad)|name:mission for atmanirbharata in pulses": {
+   "label": "scheme",
+   "name": "Mission for Atmanirbharata in Pulses",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rad)|name:national mission on agriculture mechanisation": {
+   "label": "scheme",
+   "name": "National Mission on Agriculture Mechanisation",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rad)|name:national mission on edible oils( oil seeds)": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oils( Oil Seeds)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rad)|name:national mission on natural farming(nmnf)": {
+   "label": "scheme",
+   "name": "National Mission on Natural Farming(NMNF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rad)|name:sub mission on agricultural extension": {
+   "label": "scheme",
+   "name": "Sub Mission on Agricultural Extension",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rad)|name:supply of seeds to farmers": {
+   "label": "scheme",
+   "name": "Supply of Seeds to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development department|name:cheyutha pensions to disabled persons": {
+   "label": "scheme",
+   "name": "Cheyutha Pensions to Disabled Persons",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development department|name:cheyutha pensions to old age persons & widows": {
+   "label": "scheme",
+   "name": "Cheyutha Pensions to old age persons & widows",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development department|name:indira gandhi national disabled pension scheme": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Disabled Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development department|name:indira gandhi national old age pension scheme (ignoaps)": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development department|name:indira gandhi national widow pension scheme": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Widow Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development department|name:national rural livelihood mission (nrlm)": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (NRLM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development. hod|name:cheyutha pensions to disabled persons": {
+   "label": "scheme",
+   "name": "Cheyutha Pensions to Disabled Persons",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development. hod|name:indira gandhi national old age pension scheme(ignoap)": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Old Age Pension Scheme(IGNOAP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development. hod|name:indira gandhi national widow pension scheme": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Widow Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural development. hod|name:national rural livelihood mission (nrlm)": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (NRLM)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:rural water supply & sanitation, engineer-in-chief|name:jal jeevan mission (jjm) / national rural drinking water mission (nrdwp)": {
+   "label": "scheme",
+   "name": "Jal Jeevan Mission (JJM) / National Rural Drinking Water Mission (NRDWP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:scheduled castes development department|name:post matric scholarships": {
+   "label": "scheme",
+   "name": "Post Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:scheduled castes development department|name:pre matric scholarships (ix to x classes/unclean/merit up- gradation)": {
+   "label": "scheme",
+   "name": "Pre Matric Scholarships (IX to X Classes/Unclean/Merit Up- gradation)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:scheduled castes development department|name:scholarships post (mtf-non professional courses-inter, degree/pg academic ,polytechnic)": {
+   "label": "scheme",
+   "name": "Scholarships Post (MTF-Non Professional Courses-Inter, Degree/PG Academic ,Polytechnic)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:scheduled castes development department|name:scholarships post (mtf-professional courses)": {
+   "label": "scheme",
+   "name": "Scholarships Post (MTF-Professional Courses)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:scheduled castes development department|name:scholarships post(rtf-non professional courses-inter, degree/pg academic ,polytechnic)": {
+   "label": "scheme",
+   "name": "Scholarships Post(RTF-Non Professional Courses-Inter, Degree/PG Academic ,Polytechnic)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:school education department|name:nutritious meals programmes for ix to x classes": {
+   "label": "scheme",
+   "name": "Nutritious Meals Programmes for IX to X Classes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:school education department|name:pradhan mantri poshan shakti nirman(pm poshan - cooking cost) (distribution)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman(PM POSHAN - Cooking Cost) (Distribution)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:school education department|name:pradhan mantri poshan shakti nirman(pm poshan cooking cost) (production)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman(PM POSHAN COOKING COST) (PRODUCTION)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:sericulture department|name:implementation of sericulture schemes": {
+   "label": "scheme",
+   "name": "Implementation of Sericulture Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:sericulture, hod|name:implementation of sericulture schemes": {
+   "label": "scheme",
+   "name": "Implementation of Sericulture Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:state sector schemes|name:old age pensions to artists": {
+   "label": "scheme",
+   "name": "Old Age Pensions to Artists",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:state sector schemes|name:pratibha scholarships": {
+   "label": "scheme",
+   "name": "Pratibha Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:telecommunication and electronic industry|name:pm formalization of micro food processing enterprises scheme": {
+   "label": "scheme",
+   "name": "PM Formalization of Micro Food Processing Enterprises Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:transport, roads & buildings secretariat dept|name:assistance to tgsrtc towards reimbursement of expenditure for mahalaxmi scheme": {
+   "label": "scheme",
+   "name": "Assistance to TGSRTC towards Reimbursement of Expenditure for Mahalaxmi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:transport, roads and buildings secretariat department|name:assistance to tgrtc towards reimbursement of expenditure for mahalaxmi scheme": {
+   "label": "scheme",
+   "name": "Assistance to TGRTC towards Reimbursement of Expenditure for Mahalaxmi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:arogya lalkshmi": {
+   "label": "scheme",
+   "name": "Arogya Lalkshmi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:assistance to small and marginal farmers towards premium for crop insurance scheme": {
+   "label": "scheme",
+   "name": "Assistance to Small and Marginal Farmers towards Premium for Crop Insurance Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:assistance to tgrtc towards reimbursement of expenditure for mahalaxmi scheme": {
+   "label": "scheme",
+   "name": "Assistance to TGRTC towards Reimbursement of expenditure for Mahalaxmi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:assistance to transco for agriculture and allied subsidy": {
+   "label": "scheme",
+   "name": "Assistance to TRANSCO for Agriculture and Allied Subsidy",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:cheyuta pensions to disabled persons": {
+   "label": "scheme",
+   "name": "Cheyuta Pensions to Disabled Persons",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:cheyuta pensions to old age persons & widows": {
+   "label": "scheme",
+   "name": "Cheyuta Pensions to Old Age Persons & Widows",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:cm st enterprenuership & innovation scheme": {
+   "label": "scheme",
+   "name": "CM ST Enterprenuership & Innovation Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:economic support schemes": {
+   "label": "scheme",
+   "name": "Economic Support Schemes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:gruha jyothi scheme": {
+   "label": "scheme",
+   "name": "Gruha Jyothi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:indiramma atmeeya bharosa": {
+   "label": "scheme",
+   "name": "Indiramma Atmeeya Bharosa",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:indiramma indlu (blc) to the rural poor": {
+   "label": "scheme",
+   "name": "Indiramma Indlu (BLC) to the Rural Poor",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:indiramma indlu (blc) to the urban poor": {
+   "label": "scheme",
+   "name": "Indiramma Indlu (BLC) to the Urban Poor",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:indiramma kutumba jivitha bima for all families": {
+   "label": "scheme",
+   "name": "Indiramma Kutumba Jivitha bima for all families",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:investment support scheme": {
+   "label": "scheme",
+   "name": "Investment Support Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:lpg subsidy under maha laxmi scheme": {
+   "label": "scheme",
+   "name": "LPG Subsidy under Maha Laxmi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:nutritious meals programmes for ix to x classes": {
+   "label": "scheme",
+   "name": "Nutritious Meals Programmes for IX to X Classes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:post matric scholarships": {
+   "label": "scheme",
+   "name": "Post Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:power subsidy for industries": {
+   "label": "scheme",
+   "name": "Power Subsidy for Industries",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:pre-matric scholarships": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:professional educational support scheme for st advocates": {
+   "label": "scheme",
+   "name": "Professional Educational Support scheme for ST Advocates",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:providing free power to st house holds": {
+   "label": "scheme",
+   "name": "Providing free power to ST House holds",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:rythu bharosa for landless agril labour": {
+   "label": "scheme",
+   "name": "Rythu Bharosa for Landless Agril Labour",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:scheme for debt relief to farmers": {
+   "label": "scheme",
+   "name": "Scheme for Debt Relief to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:scholarships (post) (mtf)": {
+   "label": "scheme",
+   "name": "Scholarships (Post) (MTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:scholarships (rtf)": {
+   "label": "scheme",
+   "name": "Scholarships (RTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:tribal welfare|name:supply of seeds to farmers": {
+   "label": "scheme",
+   "name": "Supply of Seeds to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ts transco|name:assistance to transco for agriculture and allied subsidy": {
+   "label": "scheme",
+   "name": "Assistance to TRANSCO for Agriculture and Allied Subsidy",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ts transco|name:free power to educational istitutions (govt)": {
+   "label": "not_scheme",
+   "name": "Free Power to Educational Istitutions (Govt)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ts transco|name:gruha jyothi scheme": {
+   "label": "scheme",
+   "name": "Gruha Jyothi Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ts transco|name:taking over discoms losses under uday scheme": {
+   "label": "not_scheme",
+   "name": "Taking over DISCOMS Losses under Uday Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:ts transco|name:tariff incentive to biomass": {
+   "label": "not_scheme",
+   "name": "Tariff incentive to BIOMASS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:universities|name:cm st entreprenuership and innovation scheme": {
+   "label": "scheme",
+   "name": "CM ST Entreprenuership and Innovation Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:universities|name:post matric scholarships": {
+   "label": "scheme",
+   "name": "Post Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:universities|name:pre-matric scholarship-tribal": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship-Tribal",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:universities|name:pre-matric scholarships": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarships",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:universities|name:professional educatioal support scheme for st advocates": {
+   "label": "scheme",
+   "name": "Professional Educatioal Support Scheme for ST Advocates",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:universities|name:scholarships (rtf)": {
+   "label": "scheme",
+   "name": "Scholarships (RTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:veterinary services|name:nlm-livestock insurance": {
+   "label": "scheme",
+   "name": "NLM-Livestock Insurance",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:weaker section housing programme|name:indiramma indlu (blc) to the urban poor": {
+   "label": "scheme",
+   "name": "Indiramma Indlu (BLC) to the Urban Poor",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:weaker section housing programme|name:pradhan mantri awas yojana (grameen)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (Grameen)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:weaker section housing programme|name:pradhan mantri awas yojana (rural)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (Rural)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:weaker section housing, hod|name:pradhan mantri awas yojana(grameen)": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana(Grameen)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:welfare of backward classes|name:post matric scholarships (non professionals)": {
+   "label": "scheme",
+   "name": "Post Matric Scholarships (Non Professionals)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:welfare of backward classes|name:scholarships (rtf)": {
+   "label": "scheme",
+   "name": "Scholarships (RTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:welfare of backward classes|name:scholarships and stipends (ebc)": {
+   "label": "scheme",
+   "name": "Scholarships and Stipends (EBC)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:welfare of backward classes|name:scholarships to non professional courses(rtf)": {
+   "label": "scheme",
+   "name": "Scholarships to Non Professional Courses(RTF)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:welfare of backward classes|name:subsidy to advocates": {
+   "label": "scheme",
+   "name": "Subsidy to Advocates",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:women & child welfare|name:rajiv gandhi scheme for empowerment of adolescent girls (sabla)": {
+   "label": "scheme",
+   "name": "Rajiv Gandhi Scheme for Empowerment of Adolescent Girls (SABLA)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:women & child welfare|name:rajiv gandhi scheme for empowerment of adolscent girls (sabala)": {
+   "label": "scheme",
+   "name": "Rajiv Gandhi Scheme for Empowerment of Adolscent Girls (SABALA)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:women development & child welfare, hod|name:arogya lakshmi": {
+   "label": "scheme",
+   "name": "Arogya Lakshmi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:women development & child welfare, hod|name:rajiv gandhi scheme for empowerment of adolescent girls (sabala)": {
+   "label": "scheme",
+   "name": "Rajiv Gandhi Scheme for Empowerment of Adolescent Girls (SABALA)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:women development and child welfare department|name:arogya lakshmi": {
+   "label": "scheme",
+   "name": "Arogya Lakshmi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "dept:women development and child welfare department|name:rajiv gandhi scheme for empowerment of adolescent girls (sabala)": {
+   "label": "scheme",
+   "name": "Rajiv Gandhi Scheme for Empowerment of Adolescent Girls (SABALA)",
+   "how": "audit census at the publishing bar, read by eye"
+  }
+ },
+ "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT."
+}
