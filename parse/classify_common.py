@@ -85,7 +85,8 @@ def joiner(names, cap=40):
     return hit
 
 
-def classify(key, state, score, publish, listing, rejected, row_fields=None):
+def classify(key, state, score, publish, listing, rejected, row_fields=None,
+             ident=None):
     """Score one state's rows, validate against its labels, and write its verdicts.
 
     `score(row)` returns (points, evidence) and is the only state-specific thing here.
@@ -100,8 +101,16 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None):
     hit = joiner(ms)
     flag = f"in_myscheme_{key}"
 
-    def ident(r):
-        return r.get("code") or r.get("key") or (r.get("hoas") or [None])[0]
+    # `key` first, then `code`. Punjab publishes BOTH and its labels are keyed on the
+    # first; most states have one or the other, so this order is safe for them and wrong
+    # for none. Getting it backwards silently drops every hand label: Punjab reported 127
+    # of 154 census rows unlabelled and a precision of 0.175.
+    #
+    # A state whose identifier is neither passes its own. Uttar Pradesh's scheme code is
+    # unique only WITHIN a grant volume -- code 04 exists in all 91 of them -- so its rows
+    # are keyed on grant, code and page together.
+    ident = ident or (lambda r: r.get("key") or r.get("code")
+                      or (r.get("hoas") or [None])[0])
 
     out = []
     for r in sorted(d["entries"], key=lambda x: str(ident(x))):

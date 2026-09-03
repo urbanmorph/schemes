@@ -131,10 +131,12 @@ if [ "$VERIFY_OK" = "1" ]; then
   # current and is not.
   python3 parse/cag_join.py || true
   python3 parse/classify.py
-  python3 parse/classify_karnataka.py || true
-  for st in andhra kerala tamilnadu maharashtra odisha westbengal \
+  # Every state has one now. Not wrapped in a per-state `|| true` any more: a classifier
+  # that fails is a state that silently stops publishing absence claims, and the run should
+  # say so rather than build a smaller site without comment.
+  for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
             telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
-    [ -f "parse/classify_$st.py" ] && python3 "parse/classify_$st.py" || true
+    python3 "parse/classify_$st.py"
   done
   # Sector runs after the state parsers and before the site, because it classifies exactly
   # the rows those produce and the ones the union registry holds with no myScheme record.

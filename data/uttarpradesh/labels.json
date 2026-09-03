@@ -1,0 +1,3090 @@
+{
+ "state": "Uttar Pradesh",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, pension, insurance or subsidy from this line? An office, an establishment, a canal, maintenance, a building, a medical college, a loan or a state development loan is not_scheme. Read in Devanagari, which is the only language this book is published in.",
+ "labelled": 513,
+ "scheme": 191,
+ "not_scheme": 322,
+ "sampling": "Stratified on whether the scheme code is two digits (a state line) or four (a centrally sponsored line under a plan-type heading), 5% of each with a floor of 25, seed 20260903.",
+ "labels": {
+  "02|0101|14": {
+   "label": "not_scheme",
+   "name": "सिटी इकोनॉमिक रीजन योजना (के.60/रा.40-के.+रा.)",
+   "name_latin": "siti ikonomik rijan yojana (ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "02|0301|10": {
+   "label": "not_scheme",
+   "name": "डी.पी.आर. तैयार करने तथा कन्सल्टेन्ट का चयन",
+   "name_latin": "di.pi.ar. taiyar karane tatha kansaltent ka chayan",
+   "how": "stratified sample, read by eye"
+  },
+  "02|0402|16": {
+   "label": "not_scheme",
+   "name": "राज्य करों के भुगतान हेतुऋण",
+   "name_latin": "rajy karon ke bhugatan heturin",
+   "how": "stratified sample, read by eye"
+  },
+  "02|05|10": {
+   "label": "not_scheme",
+   "name": "उ 0 प्र 0 भू-संपदा विनियामक प्राधिकरण",
+   "name_latin": "u 0 pr 0 bhu-sampada viniyamak pradhikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "03|04|13": {
+   "label": "not_scheme",
+   "name": "क्राफ्ट डिजाइन शैक्षिक संस्थान",
+   "name_latin": "krapht dijain shaikshik sansthan",
+   "how": "stratified sample, read by eye"
+  },
+  "03|29|8": {
+   "label": "scheme",
+   "name": "सूक्ष्म, लघुएवं मध्यम उद्यम प्रोत्साहन नीति, 2017",
+   "name_latin": "sukshm, laghuevan madhyam udyam protsahan niti, 2017",
+   "how": "stratified sample, read by eye"
+  },
+  "06|04|8": {
+   "label": "not_scheme",
+   "name": "पी.एम.मित्र योजनान्तर्गत टेक्सटाइल पार्क की स्थापना सेसंबंधित विविध व्यय",
+   "name_latin": "pi.em.mitr yojanantargat teksatail park ki sthapana sesambandhit vividh vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "06|04|6": {
+   "label": "scheme",
+   "name": "पी.एम.मित्र पार्क के संचालन सेसंबंधित विविध व्यय",
+   "name_latin": "pi.em.mitr park ke sanchalan sesambandhit vividh vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "07|02|16": {
+   "label": "not_scheme",
+   "name": "रनियां कानपुर देहात में डम्प क्रोमियम वेस्ट के उपचार एवं डिस्पोजल",
+   "name_latin": "raniyan kanapur dehat men damp kromiyam vest ke upachar evan dispojal",
+   "how": "stratified sample, read by eye"
+  },
+  "07|15|18": {
+   "label": "not_scheme",
+   "name": "झांसी लिंक एक्सप्रेस-वे परियोजना",
+   "name_latin": "jhansi link eksapres-ve pariyojana",
+   "how": "stratified sample, read by eye"
+  },
+  "07|19|19": {
+   "label": "not_scheme",
+   "name": "जेवर एयरपोर्ट सेगंगा एक्सप्रेस-वे वाया बुलंदशहर संपर्क एक्सप्रेस-वे तक प्रवेश",
+   "name_latin": "jevar eyaraport seganga eksapres-ve vaya bulandashahar sampark eksapres-ve tak pravesh",
+   "how": "stratified sample, read by eye"
+  },
+  "07|29|20": {
+   "label": "not_scheme",
+   "name": "बुन्देलखण्ड-रीवा (एन.एच.-30 लिंक) एक्सप्रेस-वे का निर्माण",
+   "name_latin": "bundelakhand-riva (en.ech.-30 link) eksapres-ve ka nirman",
+   "how": "stratified sample, read by eye"
+  },
+  "08|07|9": {
+   "label": "not_scheme",
+   "name": "राजकीय मुद्रणालय ,वाराणसी",
+   "name_latin": "rajakiy mudranalay ,varanasi",
+   "how": "stratified sample, read by eye"
+  },
+  "09|03|11": {
+   "label": "not_scheme",
+   "name": "विद्युत सुरक्षा निदेशालय",
+   "name_latin": "vidyut suraksha nideshalay",
+   "how": "stratified sample, read by eye"
+  },
+  "09|05|14": {
+   "label": "not_scheme",
+   "name": "ग्रामीण क्षेत्रों में अविद्युतीकृत नई बसावटों के विद्युतीकरण के कार्य हेतुअंशपूंजी",
+   "name_latin": "gramin kshetron men avidyutikrit nai basavaton ke vidyutikaran ke kary hetuanshapunji",
+   "how": "stratified sample, read by eye"
+  },
+  "09|07|14": {
+   "label": "not_scheme",
+   "name": "उत्तर प्रदेश पावर ट्रांसमिशन कारपोरेशन लिमिटेड को पारेषण कार्यों हेतुअंशपूंजी",
+   "name_latin": "uttar pradesh pavar transamishan karaporeshan limited ko pareshan karyon hetuanshapunji",
+   "how": "stratified sample, read by eye"
+  },
+  "09|1436|13": {
+   "label": "not_scheme",
+   "name": "रिहन्द एवं ओबरा जल विद्युत परियोजना पर PSP (Pump Storage",
+   "name_latin": "rihand evan obara jal vidyut pariyojana par PSP (Pump Storage",
+   "how": "stratified sample, read by eye"
+  },
+  "10|0102|9": {
+   "label": "scheme",
+   "name": "पर ड्राप मोर क्राप- माइक्रो इरीगेशन (के.60/रा.40-के .+ रा.) 9145-UP183",
+   "name_latin": "par drap mor krap- maikro irigeshan (ke.60/ra.40-ke .+ ra.) 9145-UP183",
+   "how": "stratified sample, read by eye"
+  },
+  "10|0409|14": {
+   "label": "not_scheme",
+   "name": "खाद्य प्रसंकरण प्रशिक्षण एवं विधायन की योजना",
+   "name_latin": "khady prasankaran prashikshan evan vidhayan ki yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "10|06|16": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री सूक्ष्म खाद्य उद्योग उन्नयन योजनान्तर्गत कॉमन इन्क्यूवेशन सेन्टर्स का",
+   "name_latin": "pradhanamantri sukshm khady udyog unnayan yojanantargat koman inkyuveshan sentars ka",
+   "how": "stratified sample, read by eye"
+  },
+  "11|0105|23": {
+   "label": "not_scheme",
+   "name": "घटायें एस.एन.ए. सेवेतन की प्रतिपूर्ति इन्टीग्रेटेड स्कीम ऑन एग्रीकल्चर",
+   "name_latin": "ghatayen es.en.e. sevetan ki pratipurti intigreted skim on egrikalchar",
+   "how": "stratified sample, read by eye"
+  },
+  "11|0218|29": {
+   "label": "scheme",
+   "name": "क्राप डायवर्सीफिकेशन प्रोग्राम (के.60/रा.40-के .) 9145-UP280",
+   "name_latin": "krap dayavarsiphikeshan program (ke.60/ra.40-ke .) 9145-UP280",
+   "how": "stratified sample, read by eye"
+  },
+  "11|03|31": {
+   "label": "not_scheme",
+   "name": "अधिष्ठान व्यय",
+   "name_latin": "adhishthan vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "11|03|55": {
+   "label": "not_scheme",
+   "name": "कीटनाशक औषधियां की खरीद की लागत जिसमें प्रासंगिक व्यय सम्मिलित",
+   "name_latin": "kitanashak aushadhiyan ki kharid ki lagat jisamen prasangik vyay sammilit",
+   "how": "stratified sample, read by eye"
+  },
+  "11|03|16": {
+   "label": "not_scheme",
+   "name": "पौध संरक्षण सेवा तथा कृषि रक्षा सेवा",
+   "name_latin": "paudh sanrakshan seva tatha krishi raksha seva",
+   "how": "stratified sample, read by eye"
+  },
+  "11|03|38": {
+   "label": "scheme",
+   "name": "बुन्देलखण्ड के सभी विकास खण्डों में गौ आधारित प्राकृतिक खेती की योजना",
+   "name_latin": "bundelakhand ke sabhi vikas khandon men gau adharit prakritik kheti ki yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "11|0308|9": {
+   "label": "not_scheme",
+   "name": "कृषि विश्वविद्यालय बांदा के शिक्षकों / शिक्षणेत्तर कर्मचारियों के लिये नियोक्ता",
+   "name_latin": "krishi vishvavidyalay banda ke shikshakon / shikshanettar karmachariyon ke liye niyokta",
+   "how": "stratified sample, read by eye"
+  },
+  "11|05|30": {
+   "label": "not_scheme",
+   "name": "कृषि विभाग में बॉडी शॉपिंग के आधार पर रखे गयेयू.पी. एग्रो के नियमित समूह",
+   "name_latin": "krishi vibhag men bodi shoping ke adhar par rakhe gayeyu.pi. egro ke niyamit samuh",
+   "how": "stratified sample, read by eye"
+  },
+  "13|0202|22": {
+   "label": "not_scheme",
+   "name": "सोशल आडिट",
+   "name_latin": "soshal adit",
+   "how": "stratified sample, read by eye"
+  },
+  "13|03|20": {
+   "label": "not_scheme",
+   "name": "दीनदयाल उपाध्याय राज्य ग्राम्य विकास संस्थान, लखनऊ में 200 बेड के छात्रावास",
+   "name_latin": "dinadayal upadhyay rajy gramy vikas sansthan, lakhanau men 200 bed ke chhatravas",
+   "how": "stratified sample, read by eye"
+  },
+  "13|03|9": {
+   "label": "not_scheme",
+   "name": "जिला ग्राम विकास अभिकरणों के सेवानिवृत्त कार्मिकों को ग्रेच्युटी का भुगतान",
+   "name_latin": "jila gram vikas abhikaranon ke sevanivritt karmikon ko grechyuti ka bhugatan",
+   "how": "stratified sample, read by eye"
+  },
+  "13|03|23": {
+   "label": "not_scheme",
+   "name": "प्रधानमंत्री ग्राम सड़क योजना के अन्तर्गत सड़कों के निर्माण हेतुटॉपअप की व्यवस्था",
+   "name_latin": "pradhanamantri gram sadak yojana ke antargat sadakon ke nirman hetutopaap ki vyavastha",
+   "how": "stratified sample, read by eye"
+  },
+  "14|03|8": {
+   "label": "scheme",
+   "name": "मैनुअल स्कैवेंजर मृत्युक्षतिपूर्ति योजना",
+   "name_latin": "mainual skaivenjar mrityukshatipurti yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "14|05|15": {
+   "label": "not_scheme",
+   "name": "पन्द्रहवां वित्त आयोग द्वारा संस्तुत अनुदान",
+   "name_latin": "pandrahavan vitt ayog dvara sanstut anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "15|04|19": {
+   "label": "scheme",
+   "name": "भेड़ पालको को नस्ल सुधार हेतुमेढ़ें उपलब्ध कराने की योजना",
+   "name_latin": "bhed palako ko nasl sudhar hetumedhen upalabdh karane ki yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "15|0503|26": {
+   "label": "not_scheme",
+   "name": "राज्य कृषि प्रबन्ध संस्थान, रहमान खेड़ा, लखनऊ",
+   "name_latin": "rajy krishi prabandh sansthan, rahaman kheda, lakhanau",
+   "how": "stratified sample, read by eye"
+  },
+  "15|08|19": {
+   "label": "not_scheme",
+   "name": "राजकीय कुक्कुट / बत्तख प्रक्षेत्रों का विस्तार एवं सुदृढीकरण",
+   "name_latin": "rajakiy kukkut / battakh prakshetron ka vistar evan sudridhikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "15|12|27": {
+   "label": "not_scheme",
+   "name": "पशुधन विकास प्रशिक्षण केन्द्र चगेरवॉ जनपद बस्ती का संचालन",
+   "name_latin": "pashudhan vikas prashikshan kendr chageravo janapad basti ka sanchalan",
+   "how": "stratified sample, read by eye"
+  },
+  "15|18|17": {
+   "label": "scheme",
+   "name": "कामधेनुइकाईयों की स्थापना हेतुब्याज की प्रतिपूर्ति की योजना (राज्य योजना)",
+   "name_latin": "kamadhenuikaiyon ki sthapana hetubyaj ki pratipurti ki yojana (rajy yojana)",
+   "how": "stratified sample, read by eye"
+  },
+  "16|03|6": {
+   "label": "scheme",
+   "name": "गोकुल पुरस्कार का वितरण",
+   "name_latin": "gokul puraskar ka vitaran",
+   "how": "stratified sample, read by eye"
+  },
+  "17|12|14": {
+   "label": "scheme",
+   "name": "मत्स्य पालक कल्याण फण्ड",
+   "name_latin": "matsy palak kalyan phand",
+   "how": "stratified sample, read by eye"
+  },
+  "18|03|6": {
+   "label": "not_scheme",
+   "name": "सामान्य अधिष्ठान एवं अधीक्षण",
+   "name_latin": "samany adhishthan evan adhikshan",
+   "how": "stratified sample, read by eye"
+  },
+  "18|04|16": {
+   "label": "not_scheme",
+   "name": "अधिकोषण योजना के अर्न्‍तगत गैर लाइसेंस प्राप्‍त जिला सहकारी बैकों को",
+   "name_latin": "adhikoshan yojana ke arntagat gair laisens prapt jila sahakari baikon ko",
+   "how": "stratified sample, read by eye"
+  },
+  "18|04|14": {
+   "label": "not_scheme",
+   "name": "अधिकोषण योजना के अन्तर्गत गैर लाइसेन्स प्राप्त जिला सहकारी बैंकों को भारतीय",
+   "name_latin": "adhikoshan yojana ke antargat gair laisens prapt jila sahakari bainkon ko bharatiy",
+   "how": "stratified sample, read by eye"
+  },
+  "18|05|15": {
+   "label": "not_scheme",
+   "name": "सहकारी समितियों को संग्रह योजना हेतुऋण",
+   "name_latin": "sahakari samitiyon ko sangrah yojana heturin",
+   "how": "stratified sample, read by eye"
+  },
+  "18|05|16": {
+   "label": "not_scheme",
+   "name": "एकीकृत सहकारी विकास योजना के अर्न्तगत सहकारी संस्थाओं में अंश पूंजी",
+   "name_latin": "ekikrit sahakari vikas yojana ke arntagat sahakari sansthaon men ansh punji",
+   "how": "stratified sample, read by eye"
+  },
+  "18|13|12": {
+   "label": "not_scheme",
+   "name": "अन्न भण्डारण योजनान्तर्गत सहकारी समितियों / अन्य संस्थाओं के नवीन गोदामों",
+   "name_latin": "ann bhandaran yojanantargat sahakari samitiyon / any sansthaon ke navin godamon",
+   "how": "stratified sample, read by eye"
+  },
+  "19|04|5": {
+   "label": "not_scheme",
+   "name": "सेन्टर फार गुड गवर्नेन्स",
+   "name_latin": "sentar phar gud gavarnens",
+   "how": "stratified sample, read by eye"
+  },
+  "22|48|13": {
+   "label": "not_scheme",
+   "name": "जनपद कन्नौज के क्रिकेट स्टेडियम का निर्माण",
+   "name_latin": "janapad kannauj ke kriket stediyam ka nirman",
+   "how": "stratified sample, read by eye"
+  },
+  "24|08|7": {
+   "label": "not_scheme",
+   "name": "किसान सहकारी चीनी मिल लि. स्नेहरोड (बिजनौर) में तकनीकी हानियों में कमी",
+   "name_latin": "kisan sahakari chini mil li. sneharod (bijanaur) men takaniki haniyon men kami",
+   "how": "stratified sample, read by eye"
+  },
+  "24|10|8": {
+   "label": "not_scheme",
+   "name": "दि किसान सहकारी चीनी मिल सेमीखेड़ा एवं किसान सहकारी चीनी मिल लि.",
+   "name_latin": "di kisan sahakari chini mil semikheda evan kisan sahakari chini mil li.",
+   "how": "stratified sample, read by eye"
+  },
+  "24|13|8": {
+   "label": "not_scheme",
+   "name": "किसान सहकारी चीनी मिल लि., बागपत की कार्यक्षमता में सुधार हेतुतकनीकी",
+   "name_latin": "kisan sahakari chini mil li., bagapat ki karyakshamata men sudhar hetutakaniki",
+   "how": "stratified sample, read by eye"
+  },
+  "25|25|12": {
+   "label": "not_scheme",
+   "name": "कारागार मुख्य",
+   "name_latin": "karagar mukhy",
+   "how": "stratified sample, read by eye"
+  },
+  "26|03|40": {
+   "label": "not_scheme",
+   "name": "रिव्यूअथारिटी",
+   "name_latin": "rivyuathariti",
+   "how": "stratified sample, read by eye"
+  },
+  "26|03|7": {
+   "label": "not_scheme",
+   "name": "मुख्य",
+   "name_latin": "mukhy",
+   "how": "stratified sample, read by eye"
+  },
+  "26|03|49": {
+   "label": "not_scheme",
+   "name": "नागरिक अधिकार संरक्षण अधिनियम के कार्यान्वयन हेतुमशीनरी का सुढृढीकरण",
+   "name_latin": "nagarik adhikar sanrakshan adhiniyam ke karyanvayan hetumashinari ka sudhridhikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "26|0409|17": {
+   "label": "not_scheme",
+   "name": "सुरक्षा शाखा",
+   "name_latin": "suraksha shakha",
+   "how": "stratified sample, read by eye"
+  },
+  "26|05|26": {
+   "label": "not_scheme",
+   "name": "मोटर परिवहन अनुभाग- मुख्य",
+   "name_latin": "motar parivahan anubhag- mukhy",
+   "how": "stratified sample, read by eye"
+  },
+  "26|05|37": {
+   "label": "not_scheme",
+   "name": "खेलकूद निधि तथा खेलकूद समारोहों एवं टूर्नामेन्ट आदि के सम्बन्ध में व्यय",
+   "name_latin": "khelakud nidhi tatha khelakud samarohon evan turnament adi ke sambandh men vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "26|06|20": {
+   "label": "not_scheme",
+   "name": "इण्डिया रिजर्व वाहिनी का गठन",
+   "name_latin": "indiya rijarv vahini ka gathan",
+   "how": "stratified sample, read by eye"
+  },
+  "26|07|54": {
+   "label": "not_scheme",
+   "name": "स्पेशल पुलिस आपरेशन टीम",
+   "name_latin": "speshal pulis apareshan tim",
+   "how": "stratified sample, read by eye"
+  },
+  "26|09|54": {
+   "label": "not_scheme",
+   "name": "जिला पुलिस (मुख्य)",
+   "name_latin": "jila pulis (mukhy)",
+   "how": "stratified sample, read by eye"
+  },
+  "26|26|33": {
+   "label": "not_scheme",
+   "name": "साइबर क्राइम",
+   "name_latin": "saibar kraim",
+   "how": "stratified sample, read by eye"
+  },
+  "27|0501|6": {
+   "label": "not_scheme",
+   "name": "सामान्य",
+   "name_latin": "samany",
+   "how": "stratified sample, read by eye"
+  },
+  "28|03|8": {
+   "label": "scheme",
+   "name": "उ. प्र. स्वतंत्रता संग्राम सेनानी कल्याण परिषद सेसम्बन्धित अधिष्ठान मुख्यालय",
+   "name_latin": "u. pr. svatantrata sangram senani kalyan parishad sesambandhit adhishthan mukhyalay",
+   "how": "stratified sample, read by eye"
+  },
+  "28|04|9": {
+   "label": "not_scheme",
+   "name": "उ. प्र. स्वतंत्रता संग्राम सेनानी सहायता संस्थान",
+   "name_latin": "u. pr. svatantrata sangram senani sahayata sansthan",
+   "how": "stratified sample, read by eye"
+  },
+  "30|0301|5": {
+   "label": "not_scheme",
+   "name": "अभिसूचना के स्रोतों का विकास",
+   "name_latin": "abhisuchana ke sroton ka vikas",
+   "how": "stratified sample, read by eye"
+  },
+  "31|0106|38": {
+   "label": "not_scheme",
+   "name": "मेडिकल कालेज, देवरिया (के.60/रा.40-के.+रा.)",
+   "name_latin": "medikal kalej, devariya (ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "31|0118|40": {
+   "label": "not_scheme",
+   "name": "मेडिकल कालेज, पीलीभीत (के.60/रा.40-के.+रा.) 9157-UP28",
+   "name_latin": "medikal kalej, pilibhit (ke.60/ra.40-ke.+ra.) 9157-UP28",
+   "how": "stratified sample, read by eye"
+  },
+  "31|0381|32": {
+   "label": "not_scheme",
+   "name": "मेडिकल कालेज, फिरोजाबाद",
+   "name_latin": "medikal kalej, phirojabad",
+   "how": "stratified sample, read by eye"
+  },
+  "31|0387|33": {
+   "label": "not_scheme",
+   "name": "मा0 अटल बिहारी बाजपेयी उत्तर प्रदेश चिकित्सा विश्वविद्यालय, लखनऊ",
+   "name_latin": "ma0 atal bihari bajapeyi uttar pradesh chikitsa vishvavidyalay, lakhanau",
+   "how": "stratified sample, read by eye"
+  },
+  "31|1108|44": {
+   "label": "not_scheme",
+   "name": "स्वशासी राज्य चिकित्सा महाविद्यालय, मीरजापुर",
+   "name_latin": "svashasi rajy chikitsa mahavidyalay, mirajapur",
+   "how": "stratified sample, read by eye"
+  },
+  "31|14|46": {
+   "label": "not_scheme",
+   "name": "राजकीय आयुर्विज्ञान संस्थान, ग्रेटर नोएडा",
+   "name_latin": "rajakiy ayurvijnan sansthan, gretar noeda",
+   "how": "stratified sample, read by eye"
+  },
+  "31|1503|7": {
+   "label": "not_scheme",
+   "name": "लालालाजपत राय चिकित्सालय तथा सम्बद्ध बाल चिकित्सालय कानपुर",
+   "name_latin": "lalalajapat ray chikitsalay tatha sambaddh bal chikitsalay kanapur",
+   "how": "stratified sample, read by eye"
+  },
+  "31|1510|14": {
+   "label": "not_scheme",
+   "name": "संक्रामक रोग चिकित्सालय , कानपुर",
+   "name_latin": "sankramak rog chikitsalay , kanapur",
+   "how": "stratified sample, read by eye"
+  },
+  "31|46|49": {
+   "label": "not_scheme",
+   "name": "जे के इन्स्टीटयूट आफ रेडियो लाजी एवं कैंसर रिसर्च कानपुर में एडवांस एण्टी",
+   "name_latin": "je ke institayut aph rediyo laji evan kainsar risarch kanapur men edavans enti",
+   "how": "stratified sample, read by eye"
+  },
+  "31|93|59": {
+   "label": "not_scheme",
+   "name": "होमी भाभा कैंसर अस्पताल और महामना पण्डित मदन मोहन मालवीयच",
+   "name_latin": "homi bhabha kainsar aspatal aur mahamana pandit madan mohan malaviyach",
+   "how": "stratified sample, read by eye"
+  },
+  "32|0315|12": {
+   "label": "not_scheme",
+   "name": "वाराणसी का वल्लभ राम सालिगराम मेहता अस्पताल",
+   "name_latin": "varanasi ka vallabh ram saligaram mehata aspatal",
+   "how": "stratified sample, read by eye"
+  },
+  "32|0315|7": {
+   "label": "not_scheme",
+   "name": "वाराणसी का वल्लभ राम सालिगराम मेहता अस्पताल",
+   "name_latin": "varanasi ka vallabh ram saligaram mehata aspatal",
+   "how": "stratified sample, read by eye"
+  },
+  "32|0326|7": {
+   "label": "not_scheme",
+   "name": "श्री हनुमान प्रसाद पोद्दार कैंसर संस्थान, गोरखपुर को अनुदान",
+   "name_latin": "shri hanuman prasad poddar kainsar sansthan, gorakhapur ko anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "32|0328|7": {
+   "label": "not_scheme",
+   "name": "आगरा मानसिक आरोग्य शाला को अनुदान",
+   "name_latin": "agara manasik arogy shala ko anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "32|13|10": {
+   "label": "not_scheme",
+   "name": "वायोमेडिकल वेस्ट के डिस्पोजल हेतुपर्यावरण प्रबन्धन प्रकोष्ठ",
+   "name_latin": "vayomedikal vest ke dispojal hetuparyavaran prabandhan prakoshth",
+   "how": "stratified sample, read by eye"
+  },
+  "34|0101|9": {
+   "label": "not_scheme",
+   "name": "राष्ट्रीय आयुष मिशन (के.60/रा.40-के .+ रा.) 9158-UP29",
+   "name_latin": "rashtriy ayush mishan (ke.60/ra.40-ke .+ ra.) 9158-UP29",
+   "how": "stratified sample, read by eye"
+  },
+  "35|0101|19": {
+   "label": "not_scheme",
+   "name": "राज्य सरकार द्वारा संचालित नगर परिवार कल्याण केन्द्र (के.60/रा.40-के.+रा.)",
+   "name_latin": "rajy sarakar dvara sanchalit nagar parivar kalyan kendr (ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "35|0201|27": {
+   "label": "not_scheme",
+   "name": "चिकित्सालयों का सुदृढ़ीकरण (के.60/रा.40-के.+रा.) 4063-UP27",
+   "name_latin": "chikitsalayon ka sudridhikaran (ke.60/ra.40-ke.+ra.) 4063-UP27",
+   "how": "stratified sample, read by eye"
+  },
+  "37|04|18": {
+   "label": "not_scheme",
+   "name": "नगर निगम, लखनऊ में अमर शहीद चन्द्रशेखर आजाद शूटिंग रेंज एवं बहुद्देशीय",
+   "name_latin": "nagar nigam, lakhanau men amar shahid chandrashekhar ajad shuting renj evan bahuddeshiy",
+   "how": "stratified sample, read by eye"
+  },
+  "37|0402|19": {
+   "label": "not_scheme",
+   "name": "प्रयागराज",
+   "name_latin": "prayagaraj",
+   "how": "stratified sample, read by eye"
+  },
+  "37|0507|12": {
+   "label": "not_scheme",
+   "name": "01 लाख सेअधिक एवं 10 लाख सेकम (दोनों को सम्मिलित करतेहुये)",
+   "name_latin": "01 lakh seadhik evan 10 lakh sekam (donon ko sammilit karatehuye)",
+   "how": "stratified sample, read by eye"
+  },
+  "37|0512|13": {
+   "label": "not_scheme",
+   "name": "01 लाख सेकम जनसंख्या वालेशहरी निकाय के लिए यूज्ड वाटर मैनेजमेंट",
+   "name_latin": "01 lakh sekam janasankhya valeshahari nikay ke lie yujd vatar mainejament",
+   "how": "stratified sample, read by eye"
+  },
+  "37|17|21": {
+   "label": "not_scheme",
+   "name": "नगरीय निकायों में सुधार हेतुस्पेशल असिस्टेन्स टू स्टेटस योजना 2023-2024",
+   "name_latin": "nagariy nikayon men sudhar hetuspeshal asistens tu stetas yojana 2023-2024",
+   "how": "stratified sample, read by eye"
+  },
+  "38|03|8": {
+   "label": "scheme",
+   "name": "हवाई पट्टियो का अनुरक्षण",
+   "name_latin": "havai pattiyo ka anurakshan",
+   "how": "stratified sample, read by eye"
+  },
+  "39|07|7": {
+   "label": "not_scheme",
+   "name": "स्व.फखरुद्दीन अली अहमद स्मारक समिति को अनुदान",
+   "name_latin": "sv.phakharuddin ali ahamad smarak samiti ko anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "40|03|25": {
+   "label": "not_scheme",
+   "name": "जिला स्तर पर स्थापित एन. आई. सी. का रख-रखाव",
+   "name_latin": "jila star par sthapit en. ai. si. ka rakh-rakhav",
+   "how": "stratified sample, read by eye"
+  },
+  "40|03|32": {
+   "label": "not_scheme",
+   "name": "सामुदायिक / प्राथमिक स्वास्थ्य केन्द्रों एवं उपकेन्द्रों के भवन निर्माण/विस्तार के",
+   "name_latin": "samudayik / prathamik svasthy kendron evan upakendron ke bhavan nirman/vistar ke",
+   "how": "stratified sample, read by eye"
+  },
+  "40|0301|28": {
+   "label": "not_scheme",
+   "name": "जलपूर्ति कार्यक्रमों के लियेएकमुश्त व्यवस्था",
+   "name_latin": "jalapurti karyakramon ke liyeekamusht vyavastha",
+   "how": "stratified sample, read by eye"
+  },
+  "40|0401|16": {
+   "label": "not_scheme",
+   "name": "राजस्व व्यय",
+   "name_latin": "rajasv vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "40|05|17": {
+   "label": "not_scheme",
+   "name": "राज्य नियोजन संस्थान (मूल्यांकन प्रभाग)",
+   "name_latin": "rajy niyojan sansthan (mulyankan prabhag)",
+   "how": "stratified sample, read by eye"
+  },
+  "40|05|15": {
+   "label": "not_scheme",
+   "name": "फल एवं शाकभाजी/मसाला विकास के लियेएकमुश्त व्यवस्था (के.60/रा.40-के",
+   "name_latin": "phal evan shakabhaji/masala vikas ke liyeekamusht vyavastha (ke.60/ra.40-ke",
+   "how": "stratified sample, read by eye"
+  },
+  "40|06|30": {
+   "label": "not_scheme",
+   "name": "आकांक्षात्मक ब्लाकों को प्रोत्साहित करने के लिए व्यवस्था",
+   "name_latin": "akankshatmak blakon ko protsahit karane ke lie vyavastha",
+   "how": "stratified sample, read by eye"
+  },
+  "40|07|22": {
+   "label": "not_scheme",
+   "name": "स्टेट डाटा सेन्टर अथारिटी",
+   "name_latin": "stet data sentar athariti",
+   "how": "stratified sample, read by eye"
+  },
+  "40|08|24": {
+   "label": "not_scheme",
+   "name": "नेशनल डेवलपमेन्टल इण्टरप्राइजेज(एन.डी.ई) एवं डेवलपमेन्टल इण्टरप्राइज(डी.ई.)",
+   "name_latin": "neshanal devalapamental intarapraijej(en.di.i) evan devalapamental intarapraij(di.i.)",
+   "how": "stratified sample, read by eye"
+  },
+  "40|09|33": {
+   "label": "not_scheme",
+   "name": "सी.सी.रोड एवं के.सी. ड्रेन निर्माण हेतुएकमुश्त व्यवस्था (के.60/रा.40-के.+रा.)",
+   "name_latin": "si.si.rod evan ke.si. dren nirman hetuekamusht vyavastha (ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "40|18|34": {
+   "label": "not_scheme",
+   "name": "बाउण्ड्रीवाल सहित व्यायामशाला कम खेल मैदान का निर्माण / जीर्णोंद्धार आदि के",
+   "name_latin": "baundrival sahit vyayamashala kam khel maidan ka nirman / jirnonddhar adi ke",
+   "how": "stratified sample, read by eye"
+  },
+  "40|80|35": {
+   "label": "not_scheme",
+   "name": "सामान्य",
+   "name_latin": "samany",
+   "how": "stratified sample, read by eye"
+  },
+  "41|05|6": {
+   "label": "not_scheme",
+   "name": "निर्वाचन अधिष्ठान व्यय",
+   "name_latin": "nirvachan adhishthan vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "42|06|32": {
+   "label": "not_scheme",
+   "name": "मा0 उच्च न्यायालय, इलाहाबाद में 1000 के.वी.ए. के दो ट्रांसफार्मर, एच.टी.",
+   "name_latin": "ma0 uchch nyayalay, ilahabad men 1000 ke.vi.e. ke do transapharmar, ech.ti.",
+   "how": "stratified sample, read by eye"
+  },
+  "42|16|29": {
+   "label": "not_scheme",
+   "name": "मध्यस्थों को मानदेय का भुगतान",
+   "name_latin": "madhyasthon ko manadey ka bhugatan",
+   "how": "stratified sample, read by eye"
+  },
+  "42|19|29": {
+   "label": "not_scheme",
+   "name": "विश्वविद्यालयों के माध्यम सेलीगल ऐड",
+   "name_latin": "vishvavidyalayon ke madhyam seligal aid",
+   "how": "stratified sample, read by eye"
+  },
+  "44|09|12": {
+   "label": "not_scheme",
+   "name": "पर्यटन स्थलों का विकास (जिला योजना)",
+   "name_latin": "paryatan sthalon ka vikas (jila yojana)",
+   "how": "stratified sample, read by eye"
+  },
+  "44|55|14": {
+   "label": "not_scheme",
+   "name": "जैन सर्किट अन्तर्गत पर्यटन स्थलों का विकास",
+   "name_latin": "jain sarkit antargat paryatan sthalon ka vikas",
+   "how": "stratified sample, read by eye"
+  },
+  "46|04|6": {
+   "label": "not_scheme",
+   "name": "प्रशासनिक सुधार निदेशालय",
+   "name_latin": "prashasanik sudhar nideshalay",
+   "how": "stratified sample, read by eye"
+  },
+  "47|0101|8": {
+   "label": "scheme",
+   "name": "स्कीम फार इंटीग्रेटिंग परसन्स विद डिस एबिलिटीज इन दि मेन स्ट्रीम आफ",
+   "name_latin": "skim phar intigreting parasans vid dis ebilitij in di men strim aph",
+   "how": "stratified sample, read by eye"
+  },
+  "47|04|9": {
+   "label": "not_scheme",
+   "name": "मुरलीधर गजानन्द बहुधन्धी संस्था, हाथरस",
+   "name_latin": "muralidhar gajanand bahudhandhi sanstha, hatharas",
+   "how": "stratified sample, read by eye"
+  },
+  "47|09|9": {
+   "label": "not_scheme",
+   "name": "डी. जी. पालीटेक्निक, बड़ौत",
+   "name_latin": "di. ji. paliteknik, badaut",
+   "how": "stratified sample, read by eye"
+  },
+  "47|24|15": {
+   "label": "not_scheme",
+   "name": "राजकीय इंजीनियरिंग कालेज, बिजनौर",
+   "name_latin": "rajakiy injiniyaring kalej, bijanaur",
+   "how": "stratified sample, read by eye"
+  },
+  "48|0103|15": {
+   "label": "scheme",
+   "name": "अल्पसंख्यक समुदाय के लियेमेरिट कम मीन्स आधारित छात्रवृत्ति",
+   "name_latin": "alpasankhyak samuday ke liyemerit kam mins adharit chhatravritti",
+   "how": "stratified sample, read by eye"
+  },
+  "48|0104|16": {
+   "label": "not_scheme",
+   "name": "एम.एस.डी.पी. योजनान्तर्गत अल्पसंख्यक बाहुल्य विकास खण्डों में फैसिलिटेटर",
+   "name_latin": "em.es.di.pi. yojanantargat alpasankhyak bahuly vikas khandon men phaisilitetar",
+   "how": "stratified sample, read by eye"
+  },
+  "48|0107|19": {
+   "label": "not_scheme",
+   "name": "अल्पसंख्यक बाहुल्य जनपदों में मल्टी सेक्टोरल डिस्ट्रिक्ट प्लान के अन्तर्गत",
+   "name_latin": "alpasankhyak bahuly janapadon men malti sektoral distrikt plan ke antargat",
+   "how": "stratified sample, read by eye"
+  },
+  "48|03|8": {
+   "label": "not_scheme",
+   "name": "अल्प संख्यक कल्याण निदेशालय",
+   "name_latin": "alp sankhyak kalyan nideshalay",
+   "how": "stratified sample, read by eye"
+  },
+  "48|03|17": {
+   "label": "not_scheme",
+   "name": "प्रान्तीय हज समिति को अनुदान",
+   "name_latin": "prantiy haj samiti ko anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "49|0103|22": {
+   "label": "not_scheme",
+   "name": "पूंजीगत सम्पति का निर्माण (जेजेबी और सीडब्ल्यूसी सहित बाल देख रेख संस्थाओं",
+   "name_latin": "punjigat sampati ka nirman (jejebi aur sidablyusi sahit bal dekh rekh sansthaon",
+   "how": "stratified sample, read by eye"
+  },
+  "49|0107|17": {
+   "label": "not_scheme",
+   "name": "सखी निवास का संचालन (के.60/रा.40-के.+रा.) 3980-UP214",
+   "name_latin": "sakhi nivas ka sanchalan (ke.60/ra.40-ke.+ra.) 3980-UP214",
+   "how": "stratified sample, read by eye"
+  },
+  "49|07|17": {
+   "label": "scheme",
+   "name": "दहेजप्रथा सेपीड़ित महिलाओ की सहायता",
+   "name_latin": "dahejapratha sepidit mahilao ki sahayata",
+   "how": "stratified sample, read by eye"
+  },
+  "49|13|13": {
+   "label": "not_scheme",
+   "name": "संस्थानों/ग़ृहों का संचालन",
+   "name_latin": "sansthanon/grihon ka sanchalan",
+   "how": "stratified sample, read by eye"
+  },
+  "49|8910|15": {
+   "label": "not_scheme",
+   "name": "विशेष आवश्यकता वालेबच्चों के लिए विशेषीकृत यूनिट",
+   "name_latin": "vishesh avashyakata valebachchon ke lie visheshikrit yunit",
+   "how": "stratified sample, read by eye"
+  },
+  "49|8925|16": {
+   "label": "scheme",
+   "name": "पुष्टाहार कार्यक्रम के अन्तर्गत समन्वित बाल विकास परियोजनाओं पर राज्य",
+   "name_latin": "pushtahar karyakram ke antargat samanvit bal vikas pariyojanaon par rajy",
+   "how": "stratified sample, read by eye"
+  },
+  "50|03|11": {
+   "label": "not_scheme",
+   "name": "कलेक्टरी स्थापना",
+   "name_latin": "kalektari sthapana",
+   "how": "stratified sample, read by eye"
+  },
+  "51|06|10": {
+   "label": "not_scheme",
+   "name": "उत्तर प्रदेश आपदा प्रबन्ध प्राधिकरण",
+   "name_latin": "uttar pradesh apada prabandh pradhikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "52|0102|23": {
+   "label": "not_scheme",
+   "name": "प्रदेश के भू-अभिलेखों का कम्प्यूटरीकरण (के.50/रा.50-के.+/रा)",
+   "name_latin": "pradesh ke bhu-abhilekhon ka kampyutarikaran (ke.50/ra.50-ke.+/ra)",
+   "how": "stratified sample, read by eye"
+  },
+  "52|03|17": {
+   "label": "not_scheme",
+   "name": "राजस्व परिषद",
+   "name_latin": "rajasv parishad",
+   "how": "stratified sample, read by eye"
+  },
+  "52|03|21": {
+   "label": "not_scheme",
+   "name": "जनपद मेरठ व अमरोहा के सीमा विवाद के निस्तारण के लिए सीमा स्तम्भों की",
+   "name_latin": "janapad merath v amaroha ke sima vivad ke nistaran ke lie sima stambhon ki",
+   "how": "stratified sample, read by eye"
+  },
+  "52|0304|24": {
+   "label": "not_scheme",
+   "name": "अधिकतम जोत सीमा प्रतिकर बन्ध पत्र",
+   "name_latin": "adhikatam jot sima pratikar bandh patr",
+   "how": "stratified sample, read by eye"
+  },
+  "53|08|5": {
+   "label": "not_scheme",
+   "name": "महान विभूतियों के जन्मदिन पर राष्ट्रीय एकता एवं साम्प्रदायिक सदभाव कार्यक्रमों",
+   "name_latin": "mahan vibhutiyon ke janmadin par rashtriy ekata evan sampradayik sadabhav karyakramon",
+   "how": "stratified sample, read by eye"
+  },
+  "53|09|5": {
+   "label": "not_scheme",
+   "name": "जिला एकीकरण समितियों पर व्यय",
+   "name_latin": "jila ekikaran samitiyon par vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "54|04|6": {
+   "label": "not_scheme",
+   "name": "कार्यकारी",
+   "name_latin": "karyakari",
+   "how": "stratified sample, read by eye"
+  },
+  "55|05|11": {
+   "label": "not_scheme",
+   "name": "शासकीय भवनों के निर्माण करायेजाने के लियेप्रोजेक्ट रिपोर्ट / आगणन हेतु",
+   "name_latin": "shasakiy bhavanon ke nirman karayejane ke liyeprojekt riport / aganan hetu",
+   "how": "stratified sample, read by eye"
+  },
+  "58|06|11": {
+   "label": "not_scheme",
+   "name": "इन्डो नेपाल बार्डर पर प्रस्तावित मार्ग के भूमि अध्याप्ति हेतुव्यवस्था",
+   "name_latin": "indo nepal bardar par prastavit marg ke bhumi adhyapti hetuvyavastha",
+   "how": "stratified sample, read by eye"
+  },
+  "58|66|15": {
+   "label": "not_scheme",
+   "name": "कृषि विपणन सुविधाओं हेतुग्रामीण सम्पर्क मार्गों / लघुसेतुओं के नयेकार्यों हेतु",
+   "name_latin": "krishi vipanan suvidhaon hetugramin sampark margon / laghusetuon ke nayekaryon hetu",
+   "how": "stratified sample, read by eye"
+  },
+  "58|86|11": {
+   "label": "not_scheme",
+   "name": "शहरों के बाईपास / रिंग रोड / फ्लाई ओवर के चालूकार्यो की व्‍यवस्‍था",
+   "name_latin": "shaharon ke baipas / ring rod / phlai ovar ke chalukaryo ki vyavastha",
+   "how": "stratified sample, read by eye"
+  },
+  "59|03|16": {
+   "label": "not_scheme",
+   "name": "विधायक निवासो में कैन्टीन",
+   "name_latin": "vidhayak nivaso men kaintin",
+   "how": "stratified sample, read by eye"
+  },
+  "59|0301|17": {
+   "label": "not_scheme",
+   "name": "कालोनियों पर आवश्यक देयता तथा अन्य व्यय",
+   "name_latin": "kaloniyon par avashyak deyata tatha any vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "59|0302|17": {
+   "label": "not_scheme",
+   "name": "कालोनियों के विद्युत अनुरक्षण कार्य",
+   "name_latin": "kaloniyon ke vidyut anurakshan kary",
+   "how": "stratified sample, read by eye"
+  },
+  "59|0405|15": {
+   "label": "not_scheme",
+   "name": "अतिथि गृहों में स्थापित लिफ्टों का रख-रखाव",
+   "name_latin": "atithi grihon men sthapit liphton ka rakh-rakhav",
+   "how": "stratified sample, read by eye"
+  },
+  "59|0406|15": {
+   "label": "not_scheme",
+   "name": "भवनों में अग्निशमन उपकरणों का रख-रखाव",
+   "name_latin": "bhavanon men agnishaman upakaranon ka rakh-rakhav",
+   "how": "stratified sample, read by eye"
+  },
+  "59|0512|22": {
+   "label": "not_scheme",
+   "name": "आवासीय भवनों के निर्माण",
+   "name_latin": "avasiy bhavanon ke nirman",
+   "how": "stratified sample, read by eye"
+  },
+  "59|0514|22": {
+   "label": "not_scheme",
+   "name": "सचिव के अधिकार में आवासीय इमारतों के संबंध में छोटे और लघुनिर्माण",
+   "name_latin": "sachiv ke adhikar men avasiy imaraton ke sambandh men chhote aur laghunirman",
+   "how": "stratified sample, read by eye"
+  },
+  "59|0702|11": {
+   "label": "not_scheme",
+   "name": "भवनों के विद्युत अनुरक्षण कार्य",
+   "name_latin": "bhavanon ke vidyut anurakshan kary",
+   "how": "stratified sample, read by eye"
+  },
+  "60|06|25": {
+   "label": "not_scheme",
+   "name": "उत्तर प्रदेश में वन बल का आधुनिकीकरण",
+   "name_latin": "uttar pradesh men van bal ka adhunikikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "60|09|28": {
+   "label": "not_scheme",
+   "name": "संरक्षित क्षेत्र के बाहर वन्य जीवों का प्रबंधन",
+   "name_latin": "sanrakshit kshetr ke bahar vany jivon ka prabandhan",
+   "how": "stratified sample, read by eye"
+  },
+  "60|11|17": {
+   "label": "not_scheme",
+   "name": "कछुआ प्रजनन केन्द्र सारनाथ में वन्य जीवों का प्रबंधन एवं पर्यटक सुविधाओं का",
+   "name_latin": "kachhua prajanan kendr saranath men vany jivon ka prabandhan evan paryatak suvidhaon ka",
+   "how": "stratified sample, read by eye"
+  },
+  "61|03|50": {
+   "label": "not_scheme",
+   "name": "31 मार्च , 2004 तक के ऋणों की 31 मार्च , 2005 को अवशेष समेकित",
+   "name_latin": "31 march , 2004 tak ke rinon ki 31 march , 2005 ko avashesh samekit",
+   "how": "stratified sample, read by eye"
+  },
+  "61|0301|66": {
+   "label": "not_scheme",
+   "name": "पुलिस फोर्स का आधुनिकीकरण",
+   "name_latin": "pulis phors ka adhunikikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "61|0338|57": {
+   "label": "not_scheme",
+   "name": "8.46% उ.प्र. राज्य विकास ऋण-2024 (12.11.2014)",
+   "name_latin": "8.46% u.pr. rajy vikas rin-2024 (12.11.2014)",
+   "how": "stratified sample, read by eye"
+  },
+  "61|0353|58": {
+   "label": "not_scheme",
+   "name": "8.23% उ.प्र. राज्य विकास ऋण-2025 (09.09.2015)",
+   "name_latin": "8.23% u.pr. rajy vikas rin-2025 (09.09.2015)",
+   "how": "stratified sample, read by eye"
+  },
+  "61|0356|58": {
+   "label": "not_scheme",
+   "name": "7.99% उ.प्र. राज्य विकास ऋण-2025 (28.10.2015)",
+   "name_latin": "7.99% u.pr. rajy vikas rin-2025 (28.10.2015)",
+   "how": "stratified sample, read by eye"
+  },
+  "61|0367|59": {
+   "label": "not_scheme",
+   "name": "8.02% उ.प्र. राज्य विकास ऋण-2026 (25.05.2016)",
+   "name_latin": "8.02% u.pr. rajy vikas rin-2026 (25.05.2016)",
+   "how": "stratified sample, read by eye"
+  },
+  "61|04|55": {
+   "label": "not_scheme",
+   "name": "वास्तविक प्राप्तियों के आधार पर अवशेष समनुदेशन",
+   "name_latin": "vastavik praptiyon ke adhar par avashesh samanudeshan",
+   "how": "stratified sample, read by eye"
+  },
+  "61|0412|67": {
+   "label": "not_scheme",
+   "name": "विश्व बैंक सेउ.प्र. एग्रीकल्चर ग्रोथ रूरल इन्टरप्राइज ईको सिस्टम स्ट्रेंथेनिंग",
+   "name_latin": "vishv baink seu.pr. egrikalchar groth rural intarapraij iko sistam strenthening",
+   "how": "stratified sample, read by eye"
+  },
+  "62|0301|13": {
+   "label": "not_scheme",
+   "name": "दिनाँक 08 नवम्बर 2000 तक सेवाकाल में अन्धेया विकलांग होने वाले",
+   "name_latin": "dinank 08 navambar 2000 tak sevakal men andheya vikalang hone vale",
+   "how": "stratified sample, read by eye"
+  },
+  "67|03|6": {
+   "label": "not_scheme",
+   "name": "विधान परिषद्",
+   "name_latin": "vidhan parishad",
+   "how": "stratified sample, read by eye"
+  },
+  "67|03|9": {
+   "label": "not_scheme",
+   "name": "विधान परिषद् परिसर में सिविल एवं विद्युत संबंधी कार्य",
+   "name_latin": "vidhan parishad parisar men sivil evan vidyut sambandhi kary",
+   "how": "stratified sample, read by eye"
+  },
+  "68|0301|8": {
+   "label": "not_scheme",
+   "name": "सामान्य मरम्मत",
+   "name_latin": "samany marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "68|0302|8": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "69|03|9": {
+   "label": "scheme",
+   "name": "शिशिक्षु प्रशिक्षण योजना",
+   "name_latin": "shishikshu prashikshan yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "69|03|11": {
+   "label": "not_scheme",
+   "name": "अल्प संख्यक बाहुल्य विकास खण्डों एवं अन्य क्षेत्रों में राजकीय औद्योगिक प्रशिक्षण",
+   "name_latin": "alp sankhyak bahuly vikas khandon evan any kshetron men rajakiy audyogik prashikshan",
+   "how": "stratified sample, read by eye"
+  },
+  "69|12|12": {
+   "label": "not_scheme",
+   "name": "राजकीय औद्योगिक प्रशिक्षण संस्थानों में सौर ऊर्जा संयंत्र की स्थापना",
+   "name_latin": "rajakiy audyogik prashikshan sansthanon men saur urja sanyantr ki sthapana",
+   "how": "stratified sample, read by eye"
+  },
+  "70|05|7": {
+   "label": "not_scheme",
+   "name": "रिमोट सैन्सिंग एजेन्सी को अनुदान",
+   "name_latin": "rimot sainsing ejensi ko anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "70|06|8": {
+   "label": "not_scheme",
+   "name": "जनपद वाराणसी में साइंससिटी एवं नक्षत्रशाला की स्थापना",
+   "name_latin": "janapad varanasi men sainsasiti evan nakshatrashala ki sthapana",
+   "how": "stratified sample, read by eye"
+  },
+  "71|03|8": {
+   "label": "not_scheme",
+   "name": "राजकीय प्राथमिक विद्यालय",
+   "name_latin": "rajakiy prathamik vidyalay",
+   "how": "stratified sample, read by eye"
+  },
+  "71|0702|9": {
+   "label": "not_scheme",
+   "name": "सहाय़ता प्राप्त जू.हा.स्कूल एवं के.जी. नर्सरी विद्यालयों का सहायता",
+   "name_latin": "sahayata prapt ju.ha.skul evan ke.ji. narsari vidyalayon ka sahayata",
+   "how": "stratified sample, read by eye"
+  },
+  "71|12|13": {
+   "label": "not_scheme",
+   "name": "साक्षर भारत मिशन की अवशेष देनदारियों का भुगतान",
+   "name_latin": "sakshar bharat mishan ki avashesh denadariyon ka bhugatan",
+   "how": "stratified sample, read by eye"
+  },
+  "72|0120|20": {
+   "label": "not_scheme",
+   "name": "पी.एम. श्री (प्रधानमंत्री स्कूल फार राइजिंग इण्डिया) योजना (के.60/रा.40-के",
+   "name_latin": "pi.em. shri (pradhanamantri skul phar raijing indiya) yojana (ke.60/ra.40-ke",
+   "how": "stratified sample, read by eye"
+  },
+  "72|03|9": {
+   "label": "not_scheme",
+   "name": "माध्यमिक शिक्षा निदेशालय का अधिष्ठान",
+   "name_latin": "madhyamik shiksha nideshalay ka adhishthan",
+   "how": "stratified sample, read by eye"
+  },
+  "72|05|25": {
+   "label": "not_scheme",
+   "name": "राज्य विद्यालयी क्रीड़ा संस्थान,अयोध्या की स्थापना",
+   "name_latin": "rajy vidyalayi krida sansthan,ayodhya ki sthapana",
+   "how": "stratified sample, read by eye"
+  },
+  "72|05|32": {
+   "label": "not_scheme",
+   "name": "केन्द्रीय राज्य पुस्तकालय",
+   "name_latin": "kendriy rajy pustakalay",
+   "how": "stratified sample, read by eye"
+  },
+  "72|05|23": {
+   "label": "not_scheme",
+   "name": "राज्य निधि सेसहायता प्राप्त संस्कृत विद्यालयों/ महाविद्यालयों के शिक्षकों एवं शिक्षणेत्तर",
+   "name_latin": "rajy nidhi sesahayata prapt sanskrit vidyalayon/ mahavidyalayon ke shikshakon evan shikshanettar",
+   "how": "stratified sample, read by eye"
+  },
+  "72|10|20": {
+   "label": "not_scheme",
+   "name": "राजा राम मोहन राय पुस्तकालय संस्थान कलकत्ता को सहायक अनुदान",
+   "name_latin": "raja ram mohan ray pustakalay sansthan kalakatta ko sahayak anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "72|10|30": {
+   "label": "not_scheme",
+   "name": "क्षेत्रीय कर्मचारी निरीक्षण वर्ग (पुरूष)",
+   "name_latin": "kshetriy karmachari nirikshan varg (purush)",
+   "how": "stratified sample, read by eye"
+  },
+  "72|31|31": {
+   "label": "not_scheme",
+   "name": "उत्तर प्रदेश माध्यमिक संस्कृत शिक्षा परिषद",
+   "name_latin": "uttar pradesh madhyamik sanskrit shiksha parishad",
+   "how": "stratified sample, read by eye"
+  },
+  "72|34|31": {
+   "label": "not_scheme",
+   "name": "राजकीय इण्टर कॉलेजों की खेल सुविधाओं का सुदृढ़ीकरण",
+   "name_latin": "rajakiy intar kolejon ki khel suvidhaon ka sudridhikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "73|03|7": {
+   "label": "not_scheme",
+   "name": "उच्च शिक्षा निदेशालय",
+   "name_latin": "uchch shiksha nideshalay",
+   "how": "stratified sample, read by eye"
+  },
+  "73|04|15": {
+   "label": "scheme",
+   "name": "छात्रों को अन्तर्राष्ट्रीय स्तर पर अध्ययन हेतुछात्रवृत्ति",
+   "name_latin": "chhatron ko antarrashtriy star par adhyayan hetuchhatravritti",
+   "how": "stratified sample, read by eye"
+  },
+  "75|17|15": {
+   "label": "not_scheme",
+   "name": "गैर सरकारी प्रशिक्षण संस्थानों को पेंशन /ग्रेच्युटी के के लिए सहायक अनुदान",
+   "name_latin": "gair sarakari prashikshan sansthanon ko penshan /grechyuti ke ke lie sahayak anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "76|04|7": {
+   "label": "not_scheme",
+   "name": "क्षेत्रीय कार्यालय",
+   "name_latin": "kshetriy karyalay",
+   "how": "stratified sample, read by eye"
+  },
+  "76|0402|15": {
+   "label": "not_scheme",
+   "name": "संराधन बोर्ड-क्षेत्रीय कार्यालयों में श्रमिकों के दावों के निपटारे के लिए व्यवस्था",
+   "name_latin": "sanradhan bord-kshetriy karyalayon men shramikon ke davon ke nipatare ke lie vyavastha",
+   "how": "stratified sample, read by eye"
+  },
+  "76|0801|19": {
+   "label": "scheme",
+   "name": "कन्डीशनल कैश ट्रान्सफर योजना",
+   "name_latin": "kandishanal kaish transaphar yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "78|04|13": {
+   "label": "not_scheme",
+   "name": "सचिवालय प्रलेखीकरण केन्द्र एवं पुस्तकालय",
+   "name_latin": "sachivalay pralekhikaran kendr evan pustakalay",
+   "how": "stratified sample, read by eye"
+  },
+  "79|21|15": {
+   "label": "scheme",
+   "name": "पालनहार योजना",
+   "name_latin": "palanahar yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "80|02|19": {
+   "label": "not_scheme",
+   "name": "समाज कल्याण",
+   "name_latin": "samaj kalyan",
+   "how": "stratified sample, read by eye"
+  },
+  "80|03|24": {
+   "label": "scheme",
+   "name": "आरक्षित वर्ग के अतिरिक्त अन्य वर्गो (सामान्य) के गरीबी की रेखा सेनीचे जीवन",
+   "name_latin": "arakshit varg ke atirikt any vargo (samany) ke garibi ki rekha seniche jivan",
+   "how": "stratified sample, read by eye"
+  },
+  "80|06|22": {
+   "label": "not_scheme",
+   "name": "वरिष्ठ नागरिक के भरण पोषण हेतुअधिकरण/अपीलीय अधिकरण का संचालन",
+   "name_latin": "varishth nagarik ke bharan poshan hetuadhikaran/apiliy adhikaran ka sanchalan",
+   "how": "stratified sample, read by eye"
+  },
+  "80|07|22": {
+   "label": "scheme",
+   "name": "वरिष्ठ नागरिक कल्याण निधि",
+   "name_latin": "varishth nagarik kalyan nidhi",
+   "how": "stratified sample, read by eye"
+  },
+  "81|0102|32": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन अन्तर्गत महिला किसान सशक्तिकरण परियोजना",
+   "name_latin": "rashtriy gramin ajivika mishan antargat mahila kisan sashaktikaran pariyojana",
+   "how": "stratified sample, read by eye"
+  },
+  "81|0103|35": {
+   "label": "not_scheme",
+   "name": "जिला शिक्षा और प्रशिक्षण संस्थानों का सुदृढ़ीकरण (के.60/रा.40-के.+रा.)",
+   "name_latin": "jila shiksha aur prashikshan sansthanon ka sudridhikaran (ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "81|0117|16": {
+   "label": "not_scheme",
+   "name": "केन्द्रीय योजनाओं के क्रियान्वयन हेतुप्रशासनिक लागत (के..100/रा.00",
+   "name_latin": "kendriy yojanaon ke kriyanvayan hetuprashasanik lagat (ke..100/ra.00",
+   "how": "stratified sample, read by eye"
+  },
+  "81|0125|25": {
+   "label": "scheme",
+   "name": "अनुपूरक पुष्टाहार (के.50/र.50-के .)",
+   "name_latin": "anupurak pushtahar (ke.50/r.50-ke .)",
+   "how": "stratified sample, read by eye"
+  },
+  "81|02|37": {
+   "label": "not_scheme",
+   "name": "तकनीकी शिक्षा",
+   "name_latin": "takaniki shiksha",
+   "how": "stratified sample, read by eye"
+  },
+  "81|03|42": {
+   "label": "not_scheme",
+   "name": "अनुसूचित जनजाति बाहुल्य क्षेत्रों में राजकीय औद्योगिक प्रशिक्षण संस्थानों की स्थापना",
+   "name_latin": "anusuchit janajati bahuly kshetron men rajakiy audyogik prashikshan sansthanon ki sthapana",
+   "how": "stratified sample, read by eye"
+  },
+  "81|03|13": {
+   "label": "not_scheme",
+   "name": "प्रधानमंत्री उच्चतर शिक्षा अभियान (PM-USHA) योजनान्तर्गत मैनेजमेन्ट",
+   "name_latin": "pradhanamantri uchchatar shiksha abhiyan (PM-USHA) yojanantargat mainejament",
+   "how": "stratified sample, read by eye"
+  },
+  "81|06|34": {
+   "label": "scheme",
+   "name": "केन्द्रीय रेशम बोर्ड सहायतित रेशम विकास की योजना",
+   "name_latin": "kendriy resham bord sahayatit resham vikas ki yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "81|13|33": {
+   "label": "scheme",
+   "name": "मुख्यमंत्री लघुसिंचाई योजना (जिला योजना)",
+   "name_latin": "mukhyamantri laghusinchai yojana (jila yojana)",
+   "how": "stratified sample, read by eye"
+  },
+  "81|8902|33": {
+   "label": "scheme",
+   "name": "स्वच्छ शौचालय का निर्माण",
+   "name_latin": "svachchh shauchalay ka nirman",
+   "how": "stratified sample, read by eye"
+  },
+  "81|8902|40": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण)",
+   "name_latin": "pradhanamantri avas yojana (gramin)",
+   "how": "stratified sample, read by eye"
+  },
+  "81|8902|15": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सबके लियेआवास (शहरी) मिशन",
+   "name_latin": "pradhanamantri avas yojana sabake liyeavas (shahari) mishan",
+   "how": "stratified sample, read by eye"
+  },
+  "82|03|5": {
+   "label": "not_scheme",
+   "name": "सतर्कता आयोग एंव प्रशासनिक न्यायाधिकरण",
+   "name_latin": "satarkata ayog env prashasanik nyayadhikaran",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0111|28": {
+   "label": "scheme",
+   "name": "अत्याचारों सेउत्पीड़ित अनुसूचित जातियों एवं अनुसूचित जनजातियों को",
+   "name_latin": "atyacharon seutpidit anusuchit jatiyon evan anusuchit janajatiyon ko",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0111|43": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन नेचुरल फार्मिग (के.60/रा.40-के.+रा.) 4139-UP242",
+   "name_latin": "neshanal mishan on nechural pharmig (ke.60/ra.40-ke.+ra.) 4139-UP242",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0112|67": {
+   "label": "not_scheme",
+   "name": "पी.एम. योजनान्तर्गत प्रधानमंत्री आदर्श ग्राम योजना (के0-100/रा0-0-के",
+   "name_latin": "pi.em. yojanantargat pradhanamantri adarsh gram yojana (ke0-100/ra0-0-ke",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0113|38": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0119|47": {
+   "label": "scheme",
+   "name": "जोखिम प्रबन्धन एवं पशुधन बीमा योजना(के.60/रा.40-के.+रा.)",
+   "name_latin": "jokhim prabandhan evan pashudhan bima yojana(ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0120|58": {
+   "label": "not_scheme",
+   "name": "पी.एम. श्री (प्रधानमंत्री स्कूल फार राइजिंग इण्डिया) योजना (के.60/रा.40-के",
+   "name_latin": "pi.em. shri (pradhanamantri skul phar raijing indiya) yojana (ke.60/ra.40-ke",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0129|29": {
+   "label": "scheme",
+   "name": "अनुसूचित जाति के कक्षा 9 व 10 में पढने वालेछात्रों को छात्रवृत्ति",
+   "name_latin": "anusuchit jati ke kaksha 9 v 10 men padhane valechhatron ko chhatravritti",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0129|39": {
+   "label": "scheme",
+   "name": "मिशन फॉर आत्मनिर्भरता इन पल्सेस (के.60/रा.40-के.+रा.)",
+   "name_latin": "mishan phor atmanirbharata in palses (ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "83|02|15": {
+   "label": "not_scheme",
+   "name": "माध्यमिक शिक्षा",
+   "name_latin": "madhyamik shiksha",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0201|44": {
+   "label": "scheme",
+   "name": "मृदा एवं जल संरक्षण की योजनाएं (के.60/रा.40-के.+रा.)",
+   "name_latin": "mrida evan jal sanrakshan ki yojanaen (ke.60/ra.40-ke.+ra.)",
+   "how": "stratified sample, read by eye"
+  },
+  "83|03|55": {
+   "label": "scheme",
+   "name": "अनुसूचित जाति के व्यक्तियों के स्वरोजगार हेतुसामूहिक प्रशिक्षण",
+   "name_latin": "anusuchit jati ke vyaktiyon ke svarojagar hetusamuhik prashikshan",
+   "how": "stratified sample, read by eye"
+  },
+  "83|03|68": {
+   "label": "not_scheme",
+   "name": "आई.टी.आई. अलीगंज लखनऊ में प्रादेशिक स्टाफ प्रशिक्षण एवं शोध केन्द्र",
+   "name_latin": "ai.ti.ai. aliganj lakhanau men pradeshik staph prashikshan evan shodh kendr",
+   "how": "stratified sample, read by eye"
+  },
+  "83|03|75": {
+   "label": "not_scheme",
+   "name": "पूर्वांचल की विशेष योजनाएँ",
+   "name_latin": "purvanchal ki vishesh yojanaen",
+   "how": "stratified sample, read by eye"
+  },
+  "83|04|62": {
+   "label": "not_scheme",
+   "name": "राजकीय एलोपैथिक मेडिकल कालेज, कन्नौज",
+   "name_latin": "rajakiy elopaithik medikal kalej, kannauj",
+   "how": "stratified sample, read by eye"
+  },
+  "83|0403|74": {
+   "label": "not_scheme",
+   "name": "नगर पंचायतें",
+   "name_latin": "nagar panchayaten",
+   "how": "stratified sample, read by eye"
+  },
+  "83|10|30": {
+   "label": "not_scheme",
+   "name": "अनुसूचित जाति के छात्र / छात्राओं के छात्रावासों का संचालन",
+   "name_latin": "anusuchit jati ke chhatr / chhatraon ke chhatravason ka sanchalan",
+   "how": "stratified sample, read by eye"
+  },
+  "83|15|63": {
+   "label": "not_scheme",
+   "name": "राजकीय मेडिकल कालेज,जौनपुर",
+   "name_latin": "rajakiy medikal kalej,jaunapur",
+   "how": "stratified sample, read by eye"
+  },
+  "83|17|63": {
+   "label": "not_scheme",
+   "name": "राजकीय मेडिकल कालेज,आजमगढ़",
+   "name_latin": "rajakiy medikal kalej,ajamagadh",
+   "how": "stratified sample, read by eye"
+  },
+  "83|25|64": {
+   "label": "not_scheme",
+   "name": "गणेश शंकर विद्यार्थी स्मारक मेडिकल कालेज, कानपुर में स्थापित कार्डियोलाजिकल",
+   "name_latin": "ganesh shankar vidyarthi smarak medikal kalej, kanapur men sthapit kardiyolajikal",
+   "how": "stratified sample, read by eye"
+  },
+  "83|28|64": {
+   "label": "not_scheme",
+   "name": "डा0 राममनोहर लोहिया इंस्टीट्यूट आफ मेडिकल सांइसेज, लखनऊ",
+   "name_latin": "da0 ramamanohar lohiya instityut aph medikal sanisej, lakhanau",
+   "how": "stratified sample, read by eye"
+  },
+  "84|03|9": {
+   "label": "scheme",
+   "name": "कैलाश मानसरोवर यात्रा के दौरान उत्तर प्रदेश के निवासी तीर्थयात्री की मत्युकी",
+   "name_latin": "kailash manasarovar yatra ke dauran uttar pradesh ke nivasi tirthayatri ki matyuki",
+   "how": "stratified sample, read by eye"
+  },
+  "84|06|7": {
+   "label": "not_scheme",
+   "name": "जनगणना-2027",
+   "name_latin": "janaganana-2027",
+   "how": "stratified sample, read by eye"
+  },
+  "86|03|11": {
+   "label": "not_scheme",
+   "name": "अधिष्ठान",
+   "name_latin": "adhishthan",
+   "how": "stratified sample, read by eye"
+  },
+  "89|04|12": {
+   "label": "not_scheme",
+   "name": "जनपद श्रावस्ती में राज्य कर आवासीय निर्माण हेतु",
+   "name_latin": "janapad shravasti men rajy kar avasiy nirman hetu",
+   "how": "stratified sample, read by eye"
+  },
+  "91|03|12": {
+   "label": "not_scheme",
+   "name": "स्टाम्प पंजीकरण मुख्यालय",
+   "name_latin": "stamp panjikaran mukhyalay",
+   "how": "stratified sample, read by eye"
+  },
+  "91|03|8": {
+   "label": "not_scheme",
+   "name": "मुख्यालय",
+   "name_latin": "mukhyalay",
+   "how": "stratified sample, read by eye"
+  },
+  "91|03|10": {
+   "label": "not_scheme",
+   "name": "राज्य सरकार द्वारा संग्रहित 02 प्रतिशत अतिरिक्त स्टाम्प शुल्क का नगर निकायों",
+   "name_latin": "rajy sarakar dvara sangrahit 02 pratishat atirikt stamp shulk ka nagar nikayon",
+   "how": "stratified sample, read by eye"
+  },
+  "92|03|12": {
+   "label": "not_scheme",
+   "name": "अधिष्ठान व्यय",
+   "name_latin": "adhishthan vyay",
+   "how": "stratified sample, read by eye"
+  },
+  "92|05|14": {
+   "label": "not_scheme",
+   "name": "नेपाल सीमा सेजुड़े हुए उत्तर प्रदेश के जिलों तथा बुन्देलखण्ड के जनपदों मे मेलों",
+   "name_latin": "nepal sima sejude hue uttar pradesh ke jilon tatha bundelakhand ke janapadon me melon",
+   "how": "stratified sample, read by eye"
+  },
+  "92|06|9": {
+   "label": "scheme",
+   "name": "बेगम अख्तर पुरस्कार",
+   "name_latin": "begam akhtar puraskar",
+   "how": "stratified sample, read by eye"
+  },
+  "92|08|7": {
+   "label": "not_scheme",
+   "name": "भारतेन्दुनाट्य अकादमी लखनऊ को अनुदान",
+   "name_latin": "bharatendunaty akadami lakhanau ko anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "92|11|17": {
+   "label": "not_scheme",
+   "name": "प्राकृतिक विज्ञान संग्रहालय, लखनऊ",
+   "name_latin": "prakritik vijnan sangrahalay, lakhanau",
+   "how": "stratified sample, read by eye"
+  },
+  "92|12|7": {
+   "label": "not_scheme",
+   "name": "वृन्दावन शोध संस्थान वृन्दावन (मथुरा) को अनुदान",
+   "name_latin": "vrindavan shodh sansthan vrindavan (mathura) ko anudan",
+   "how": "stratified sample, read by eye"
+  },
+  "92|14|17": {
+   "label": "not_scheme",
+   "name": "जनपद मैनपुरी में संग्रहालय का निर्माण",
+   "name_latin": "janapad mainapuri men sangrahalay ka nirman",
+   "how": "stratified sample, read by eye"
+  },
+  "92|20|19": {
+   "label": "not_scheme",
+   "name": "जनपद बाराबंकी में \"पदम श्री\" बाबूके.डी. सिंह के पैतृक आवास को संग्रहालय",
+   "name_latin": "janapad barabanki men \"padam shri\" babuke.di. sinh ke paitrik avas ko sangrahalay",
+   "how": "stratified sample, read by eye"
+  },
+  "92|21|19": {
+   "label": "not_scheme",
+   "name": "जनपद कौशाम्बी के महत्व को दृष्टिगत रखतेहुए मुख्य पर्यटन केन्द्र के रूप में विकसित",
+   "name_latin": "janapad kaushambi ke mahatv ko drishtigat rakhatehue mukhy paryatan kendr ke rup men vikasit",
+   "how": "stratified sample, read by eye"
+  },
+  "92|22|8": {
+   "label": "not_scheme",
+   "name": "लोक एवं जनजातीय कला तथा सांस्कृतिक संस्थान की स्थापना",
+   "name_latin": "lok evan janajatiy kala tatha sanskritik sansthan ki sthapana",
+   "how": "stratified sample, read by eye"
+  },
+  "92|25|15": {
+   "label": "not_scheme",
+   "name": "उत्तर प्रदेश संस्कृति उत्सव 2024-25",
+   "name_latin": "uttar pradesh sanskriti utsav 2024-25",
+   "how": "stratified sample, read by eye"
+  },
+  "93|03|14": {
+   "label": "not_scheme",
+   "name": "लघुसिंचाई कार्यक्रम के अन्तर्गत बोरिंग गोदामों का निर्माण (जिला योजना)",
+   "name_latin": "laghusinchai karyakram ke antargat boring godamon ka nirman (jila yojana)",
+   "how": "stratified sample, read by eye"
+  },
+  "93|03|10": {
+   "label": "not_scheme",
+   "name": "लघुसिंचाई योजना",
+   "name_latin": "laghusinchai yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "94|03|101": {
+   "label": "not_scheme",
+   "name": "नवीन सम्पूर्ति",
+   "name_latin": "navin sampurti",
+   "how": "stratified sample, read by eye"
+  },
+  "94|03|78": {
+   "label": "not_scheme",
+   "name": "नवीन सम्पूर्ति",
+   "name_latin": "navin sampurti",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0301|33": {
+   "label": "not_scheme",
+   "name": "अनुरक्षण कार्य",
+   "name_latin": "anurakshan kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0301|26": {
+   "label": "not_scheme",
+   "name": "अनुरक्षण कार्य",
+   "name_latin": "anurakshan kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0301|22": {
+   "label": "not_scheme",
+   "name": "अनुरक्षण कार्य",
+   "name_latin": "anurakshan kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0301|50": {
+   "label": "not_scheme",
+   "name": "अनुरक्षण कार्य",
+   "name_latin": "anurakshan kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0301|39": {
+   "label": "not_scheme",
+   "name": "अनुरक्षण कार्य",
+   "name_latin": "anurakshan kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0302|75": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0302|52": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0302|62": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0302|37": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0302|27": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0302|50": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0302|34": {
+   "label": "not_scheme",
+   "name": "विशेष मरम्मत",
+   "name_latin": "vishesh marammat",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0303|68": {
+   "label": "not_scheme",
+   "name": "केन नहर",
+   "name_latin": "ken nahar",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0303|44": {
+   "label": "not_scheme",
+   "name": "यांत्रिक कार्य",
+   "name_latin": "yantrik kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0303|50": {
+   "label": "not_scheme",
+   "name": "यांत्रिक कार्य",
+   "name_latin": "yantrik kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0303|48": {
+   "label": "not_scheme",
+   "name": "यांत्रिक कार्य",
+   "name_latin": "yantrik kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0303|62": {
+   "label": "not_scheme",
+   "name": "यांत्रिक कार्य",
+   "name_latin": "yantrik kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0303|76": {
+   "label": "not_scheme",
+   "name": "यांत्रिक कार्य",
+   "name_latin": "yantrik kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0304|56": {
+   "label": "not_scheme",
+   "name": "सिल्ट सफाई",
+   "name_latin": "silt saphai",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0304|40": {
+   "label": "not_scheme",
+   "name": "सिल्ट सफाई",
+   "name_latin": "silt saphai",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0314|69": {
+   "label": "not_scheme",
+   "name": "गुरु सहाय नहर",
+   "name_latin": "guru sahay nahar",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0318|105": {
+   "label": "not_scheme",
+   "name": "राजकीय नलकूपों का पुनर्निर्माण",
+   "name_latin": "rajakiy nalakupon ka punarnirman",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0327|70": {
+   "label": "not_scheme",
+   "name": "जमानियां पम्प नहर",
+   "name_latin": "jamaniyan pamp nahar",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0330|70": {
+   "label": "not_scheme",
+   "name": "यमुना पम्प नहर",
+   "name_latin": "yamuna pamp nahar",
+   "how": "stratified sample, read by eye"
+  },
+  "94|06|71": {
+   "label": "not_scheme",
+   "name": "पं. दीनदयाल उपाध्याय सिंचाई एवं सांस्कृतिक संग्रहालय व उद्यान परिसर के अनुरक्षण",
+   "name_latin": "pan. dinadayal upadhyay sinchai evan sanskritik sangrahalay v udyan parisar ke anurakshan",
+   "how": "stratified sample, read by eye"
+  },
+  "94|07|107": {
+   "label": "not_scheme",
+   "name": "अनपेक्षित आपातक़ालीन कार्य",
+   "name_latin": "anapekshit apatakalin kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|0705|91": {
+   "label": "not_scheme",
+   "name": "गाड़ी भाड़ा",
+   "name_latin": "gadi bhada",
+   "how": "stratified sample, read by eye"
+  },
+  "94|10|71": {
+   "label": "not_scheme",
+   "name": "निर्दिष्ट बांधों के (बांध/बैराज/बंधी/वियर/लेक) ऑपरेशन एण्ड मेन्टीनेन्स",
+   "name_latin": "nirdisht bandhon ke (bandh/bairaj/bandhi/viyar/lek) opareshan end mentinens",
+   "how": "stratified sample, read by eye"
+  },
+  "94|1006|94": {
+   "label": "not_scheme",
+   "name": "पुनर्स्‍थापना",
+   "name_latin": "punarsthapana",
+   "how": "stratified sample, read by eye"
+  },
+  "94|1014|97": {
+   "label": "not_scheme",
+   "name": "देवकली पम्प नहर (वाणिज्यिक)",
+   "name_latin": "devakali pamp nahar (vanijyik)",
+   "how": "stratified sample, read by eye"
+  },
+  "94|1014|99": {
+   "label": "not_scheme",
+   "name": "सम्बद्ध कार्य",
+   "name_latin": "sambaddh kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|1014|93": {
+   "label": "not_scheme",
+   "name": "सम्बद्ध कार्य",
+   "name_latin": "sambaddh kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|1014|83": {
+   "label": "not_scheme",
+   "name": "सम्बद्ध कार्य",
+   "name_latin": "sambaddh kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|13|26": {
+   "label": "not_scheme",
+   "name": "मध्य गंगा नहर (वाणिज्यिक)",
+   "name_latin": "madhy ganga nahar (vanijyik)",
+   "how": "stratified sample, read by eye"
+  },
+  "94|13|91": {
+   "label": "not_scheme",
+   "name": "विभिन्न लिफट पम्प नहरों के आधुनिकीकरण की परियोजना(नाबार्ड)",
+   "name_latin": "vibhinn liphat pamp naharon ke adhunikikaran ki pariyojana(nabard)",
+   "how": "stratified sample, read by eye"
+  },
+  "94|1314|81": {
+   "label": "not_scheme",
+   "name": "सम्बद्ध कार्य",
+   "name_latin": "sambaddh kary",
+   "how": "stratified sample, read by eye"
+  },
+  "94|26|89": {
+   "label": "not_scheme",
+   "name": "लोअर रोहिणी बांध परियोजना (वाणिज्यिक)",
+   "name_latin": "loar rohini bandh pariyojana (vanijyik)",
+   "how": "stratified sample, read by eye"
+  },
+  "94|31|97": {
+   "label": "not_scheme",
+   "name": "सुरहाताल पम्प नहर (बाणिज्यिक)",
+   "name_latin": "surahatal pamp nahar (banijyik)",
+   "how": "stratified sample, read by eye"
+  },
+  "94|31|45": {
+   "label": "not_scheme",
+   "name": "सुराहाताल पम्प नहर (वाणिज्यिक )",
+   "name_latin": "surahatal pamp nahar (vanijyik )",
+   "how": "stratified sample, read by eye"
+  },
+  "94|32|46": {
+   "label": "not_scheme",
+   "name": "यमुना पम्प नहर (वाणिज्यिक )",
+   "name_latin": "yamuna pamp nahar (vanijyik )",
+   "how": "stratified sample, read by eye"
+  },
+  "94|37|48": {
+   "label": "not_scheme",
+   "name": "अर्जुन बॉध / नहरें (वाणिज्यिक )",
+   "name_latin": "arjun bodh / naharen (vanijyik )",
+   "how": "stratified sample, read by eye"
+  },
+  "95|10|9": {
+   "label": "not_scheme",
+   "name": "सिंचाई यांत्रिक के अधीन टोल फ्री काल सेन्टर",
+   "name_latin": "sinchai yantrik ke adhin tol phri kal sentar",
+   "how": "stratified sample, read by eye"
+  },
+  "02|03|14": {
+   "label": "not_scheme",
+   "name": "मुख्यमंत्री शहरी विस्तारीकरण / नयेशहर प्रोत्साहन योजना",
+   "name_latin": "mukhyamantri shahari vistarikaran / nayeshahar protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "02|07|13": {
+   "label": "not_scheme",
+   "name": "मुख्यमंत्री शहरी विस्तारीकरण / नयेशहर प्रोत्साहन योजना",
+   "name_latin": "mukhyamantri shahari vistarikaran / nayeshahar protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|0104|6": {
+   "label": "not_scheme",
+   "name": "औद्योगिक क्षेत्रों में महिलाओं और लड़कियों की सुरक्षा तथा सशक्तिकरण के",
+   "name_latin": "audyogik kshetron men mahilaon aur ladakiyon ki suraksha tatha sashaktikaran ke",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|04|9": {
+   "label": "scheme",
+   "name": "शिल्पकारों के लिए पेंशन योजना",
+   "name_latin": "shilpakaron ke lie penshan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|05|6": {
+   "label": "scheme",
+   "name": "विशिष्ट हस्तशिल्पियों को प्रादेशिक पुरस्कार",
+   "name_latin": "vishisht hastashilpiyon ko pradeshik puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|08|7": {
+   "label": "scheme",
+   "name": "लघुउद्यमियों को प्रोत्साहन हेतुप्रादेशिक पुरस्कार योजना",
+   "name_latin": "laghuudyamiyon ko protsahan hetupradeshik puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|10|7": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश हस्तशिल्प प्रोत्साहन नीति-2014",
+   "name_latin": "uttar pradesh hastashilp protsahan niti-2014",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|13|10": {
+   "label": "scheme",
+   "name": "त्वरित निर्यात विकास प्रोत्साहन योजना",
+   "name_latin": "tvarit niryat vikas protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|15|10": {
+   "label": "scheme",
+   "name": "“मुख्य मंत्री हस्तशिल्प पेंशन” योजना",
+   "name_latin": "“mukhy mantri hastashilp penshan” yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|22|8": {
+   "label": "scheme",
+   "name": "हस्तशिल्प विपणन प्रोत्साहन योजना",
+   "name_latin": "hastashilp vipanan protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "03|28|8": {
+   "label": "scheme",
+   "name": "उ.प्र. सूक्ष्म, लघुएवं मध्यम उद्यम प्रोत्साहन नीति-2022",
+   "name_latin": "u.pr. sukshm, laghuevan madhyam udyam protsahan niti-2022",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "05|09|6": {
+   "label": "scheme",
+   "name": "पुरस्कार योजना",
+   "name_latin": "puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "05|29|7": {
+   "label": "scheme",
+   "name": "खादी एवं ग्रामोद्योग विकास तथा सतत् स्वरोजगार प्रोत्साहन नीति",
+   "name_latin": "khadi evan gramodyog vikas tatha satat svarojagar protsahan niti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "05|30|7": {
+   "label": "not_scheme",
+   "name": "एन 0 पी0एस 0 पेंशन योजना अंशदान",
+   "name_latin": "en 0 pi0es 0 penshan yojana anshadan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "06|05|7": {
+   "label": "scheme",
+   "name": "हथकरघा बुनकरों को विद्युतदर में छूट की प्रतिपूर्ति",
+   "name_latin": "hathakaragha bunakaron ko vidyutadar men chhut ki pratipurti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "06|08|6": {
+   "label": "scheme",
+   "name": "संत कबीर राज्य हथकरघा पुरस्कार योजना",
+   "name_latin": "sant kabir rajy hathakaragha puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|03|11": {
+   "label": "scheme",
+   "name": "''त्वरित निवेश प्रोत्साहन नीति-2020'' का क्रियान्वयन",
+   "name_latin": "''tvarit nivesh protsahan niti-2020'' ka kriyanvayan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|03|21": {
+   "label": "not_scheme",
+   "name": "मुख्यमंत्री औद्योगिक क्षेत्र विस्तारीकरण / नयेऔद्योगिक क्षेत्र प्रोत्साहन योजना",
+   "name_latin": "mukhyamantri audyogik kshetr vistarikaran / nayeaudyogik kshetr protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|0401|12": {
+   "label": "scheme",
+   "name": "टेबलेट / स्मार्ट फोन का वितरण",
+   "name_latin": "tebalet / smart phon ka vitaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|06|22": {
+   "label": "scheme",
+   "name": "औद्योगिक निवेश प्रोत्साहन योजना, 2003",
+   "name_latin": "audyogik nivesh protsahan yojana, 2003",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|07|22": {
+   "label": "scheme",
+   "name": "औद्योगिक निवेश प्रोत्साहन योजना, 2012",
+   "name_latin": "audyogik nivesh protsahan yojana, 2012",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|20|13": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश ऑक्सीजन उत्पादन प्रोत्साहन नीति-2021",
+   "name_latin": "uttar pradesh oksijan utpadan protsahan niti-2021",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|28|14": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश औद्योगिक निवेश एवं रोजगार प्रोत्साहन नीति-2022",
+   "name_latin": "uttar pradesh audyogik nivesh evan rojagar protsahan niti-2022",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "07|32|14": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश सेमीकण्डक्टर नीति के अन्तर्गत निवेशकों को वित्तीय प्रोत्साहन",
+   "name_latin": "uttar pradesh semikandaktar niti ke antargat niveshakon ko vittiy protsahan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "09|05|7": {
+   "label": "not_scheme",
+   "name": "विद्युत वितरण कंपनियों के ऑपरेशन एवं फाईनेशियल टर्न अराउण्ड योजना- \"उदय\"",
+   "name_latin": "vidyut vitaran kampaniyon ke opareshan evan phaineshiyal tarn araund yojana- \"uday\"",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "09|05|13": {
+   "label": "not_scheme",
+   "name": "संचरण तथा वितरण",
+   "name_latin": "sancharan tatha vitaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "09|06|9": {
+   "label": "not_scheme",
+   "name": "रिवैम्प्ड योजना के अन्तर्गत विद्युत वितरण कम्पनियों की हानियों की फण्डिंग",
+   "name_latin": "rivaimpd yojana ke antargat vidyut vitaran kampaniyon ki haniyon ki phanding",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "09|09|10": {
+   "label": "not_scheme",
+   "name": "रिवैम्प्ड योजना के अन्तर्गत विद्युत वितरण कम्पनियों की हानियों की फण्डिंग",
+   "name_latin": "rivaimpd yojana ke antargat vidyut vitaran kampaniyon ki haniyon ki phanding",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "10|03|8": {
+   "label": "scheme",
+   "name": "प्रदेश में गुणवत्तायुक्त पान उत्पादन को प्रोत्साहन",
+   "name_latin": "pradesh men gunavattayukt pan utpadan ko protsahan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "10|0303|10": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश राज्य औद्यानिकी निर्यात प्रोत्साहन की योजना",
+   "name_latin": "uttar pradesh rajy audyaniki niryat protsahan ki yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "10|0402|14": {
+   "label": "scheme",
+   "name": "मुख्यमंत्री खाद्य प्रसंस्करण ग्राम स्वरोजगार योजना",
+   "name_latin": "mukhyamantri khady prasanskaran gram svarojagar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0101|48": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन एडिबिल ऑयल ( के.100/रा.0-के .)",
+   "name_latin": "neshanal mishan on edibil oyal ( ke.100/ra.0-ke .)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0103|18": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0104|18": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0105|18": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0105|54": {
+   "label": "not_scheme",
+   "name": "घटाएं एस.एन.ए. सेवेतन की प्रतिपूर्ति- इंटीग्रेटेड स्कीम ऑन",
+   "name_latin": "ghataen es.en.e. sevetan ki pratipurti- intigreted skim on",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0106|18": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0111|35": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन नेचुरल फार्मिग (के.60/रा.40-के .+ रा.) 4139-UP242",
+   "name_latin": "neshanal mishan on nechural pharmig (ke.60/ra.40-ke .+ ra.) 4139-UP242",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0124|27": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन एडिबिल ऑयल (टी.बी.ओ.) (के.60/रा.40-के .+ रा.)",
+   "name_latin": "neshanal mishan on edibil oyal (ti.bi.o.) (ke.60/ra.40-ke .+ ra.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|0125|27": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन एडिबलि ऑयल (के.100/रा.00-के .) 4138-UP293",
+   "name_latin": "neshanal mishan on edibali oyal (ke.100/ra.00-ke .) 4138-UP293",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|03|27": {
+   "label": "scheme",
+   "name": "तिलहन बीज मिनीकिट वितरण योजना",
+   "name_latin": "tilahan bij minikit vitaran yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|04|27": {
+   "label": "scheme",
+   "name": "गन्ना के साथ तिलहनी एवं दलहनी अन्त: फसली खेती के प्रोत्साहन की योजना",
+   "name_latin": "ganna ke sath tilahani evan dalahani ant: phasali kheti ke protsahan ki yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|06|38": {
+   "label": "scheme",
+   "name": "मृदा में सूक्ष्म तत्व की कमी को दूर करने एवं भूमि सुधार हेतुजिप्सम का वितरण",
+   "name_latin": "mrida men sukshm tatv ki kami ko dur karane evan bhumi sudhar hetujipsam ka vitaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|12|21": {
+   "label": "scheme",
+   "name": "कृषक उत्पादक संगठन एवं व्यवसायिक गतिविधयों को प्रोत्साहन की योजना",
+   "name_latin": "krishak utpadak sangathan evan vyavasayik gatividhayon ko protsahan ki yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|8903|21": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|8904|21": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|8905|21": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|8906|21": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|8911|37": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन नेचुरल फार्मिग",
+   "name_latin": "neshanal mishan on nechural pharmig",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "11|8924|28": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन एडिबिल ऑयल (टी.बी.ओ.)",
+   "name_latin": "neshanal mishan on edibil oyal (ti.bi.o.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|0101|10": {
+   "label": "scheme",
+   "name": "विकसित भारत-रोजगार गारण्टी एवं आजीविका मिशन (ग्रामीण) (वीबी-जी",
+   "name_latin": "vikasit bharat-rojagar garanti evan ajivika mishan (gramin) (vibi-ji",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|0201|7": {
+   "label": "scheme",
+   "name": "स्वर्णजयन्ती ग्राम स्वरोजगार योजना (जिला योजना) (के.60/रा.40-के.+रा.)",
+   "name_latin": "svarnajayanti gram svarojagar yojana (jila yojana) (ke.60/ra.40-ke.+ra.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|0201|8": {
+   "label": "scheme",
+   "name": "स्वर्णजयन्ती ग्राम स्वरोजगार योजना (जिला योजना) (के.60/रा.40-के.+रा.)",
+   "name_latin": "svarnajayanti gram svarojagar yojana (jila yojana) (ke.60/ra.40-ke.+ra.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|04|21": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण) (के.60/रा.40-के.+रा.) 9180-UP23",
+   "name_latin": "pradhanamantri avas yojana (gramin) (ke.60/ra.40-ke.+ra.) 9180-UP23",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|05|9": {
+   "label": "scheme",
+   "name": "स्वर्णजयन्ती ग्राम स्वरोजगार योजना हेतुटॉपअप की व्यवस्था (जिला योजना)",
+   "name_latin": "svarnajayanti gram svarojagar yojana hetutopaap ki vyavastha (jila yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|06|21": {
+   "label": "scheme",
+   "name": "मुख्यमंत्री आवास योजना (ग्रामीण)",
+   "name_latin": "mukhyamantri avas yojana (gramin)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|07|21": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण) हेतुटॉपअप की व्यवस्था",
+   "name_latin": "pradhanamantri avas yojana (gramin) hetutopaap ki vyavastha",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|8901|9": {
+   "label": "scheme",
+   "name": "स्वर्णजयन्ती ग्राम स्वरोजगार योजना (जिला योजना)",
+   "name_latin": "svarnajayanti gram svarojagar yojana (jila yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "13|8901|21": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण)",
+   "name_latin": "pradhanamantri avas yojana (gramin)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "14|03|9": {
+   "label": "scheme",
+   "name": "मैनुअल स्कैवेंजर मृत्युक्षतिपूर्ति योजना",
+   "name_latin": "mainual skaivenjar mrityukshatipurti yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "14|05|12": {
+   "label": "not_scheme",
+   "name": "पंचायत प्रतिपूर्ति एवं प्रोत्साहन योजना",
+   "name_latin": "panchayat pratipurti evan protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "14|07|7": {
+   "label": "scheme",
+   "name": "युवक एवं महिला मंगल दलों को प्रोत्साहन",
+   "name_latin": "yuvak evan mahila mangal dalon ko protsahan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "14|21|14": {
+   "label": "not_scheme",
+   "name": "मुख्यमंत्री पंचायत प्रोत्साहन पुरस्कार योजना",
+   "name_latin": "mukhyamantri panchayat protsahan puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "15|0301|23": {
+   "label": "scheme",
+   "name": "नैपियर घास की जड़े/रुट स्लिप उपलब्ध कराने हेतु",
+   "name_latin": "naipiyar ghas ki jade/rut slip upalabdh karane hetu",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "16|04|6": {
+   "label": "scheme",
+   "name": "“नन्द बाबा पुरस्कार”",
+   "name_latin": "“nand baba puraskar”",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "16|04|7": {
+   "label": "scheme",
+   "name": "“नन्द बाबा पुरस्कार”",
+   "name_latin": "“nand baba puraskar”",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "16|11|6": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश दुग्ध उत्पाद प्रोत्साहन नीति- 2022",
+   "name_latin": "uttar pradesh dugdh utpad protsahan niti- 2022",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "21|04|16": {
+   "label": "scheme",
+   "name": "खाण्डसारी शक्कर वितरण योजना",
+   "name_latin": "khandasari shakkar vitaran yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "21|04|17": {
+   "label": "scheme",
+   "name": "खाण्डसारी शक्कर वितरण योजना",
+   "name_latin": "khandasari shakkar vitaran yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "21|04|18": {
+   "label": "scheme",
+   "name": "खाण्डसारी शक्कर वितरण योजना",
+   "name_latin": "khandasari shakkar vitaran yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "21|06|15": {
+   "label": "scheme",
+   "name": "खाण्डसारी शक्कर वितरण योजना",
+   "name_latin": "khandasari shakkar vitaran yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "22|07|7": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश खेल विकास एवं प्रोत्साहन योजना",
+   "name_latin": "uttar pradesh khel vikas evan protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "22|10|7": {
+   "label": "scheme",
+   "name": "विशिष्ट खिलाड़ियों को प्रदेशीय पुरस्कार",
+   "name_latin": "vishisht khiladiyon ko pradeshiy puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "22|13|8": {
+   "label": "scheme",
+   "name": "राष्ट्रीय / अंतर्राष्ट्रीय प्रतियोगिताओं के विजेता खिलाड़ियों को पुरस्कार",
+   "name_latin": "rashtriy / antarrashtriy pratiyogitaon ke vijeta khiladiyon ko puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "24|03|6": {
+   "label": "scheme",
+   "name": "चीनी उद्योग कोजनरेशन एवं आसवनी प्रोत्साहन नीति-2013",
+   "name_latin": "chini udyog kojanareshan evan asavani protsahan niti-2013",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "26|21|32": {
+   "label": "not_scheme",
+   "name": "क्षतिपूर्ति दावा अधिकरण",
+   "name_latin": "kshatipurti dava adhikaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "31|0130|41": {
+   "label": "not_scheme",
+   "name": "फार्मास्युटिकल एवं मेडिकल डिवाइस में नैदानिक अनुसंधान हेतुप्रोत्साहन",
+   "name_latin": "pharmasyutikal evan medikal divais men naidanik anusandhan hetuprotsahan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "31|0313|17": {
+   "label": "scheme",
+   "name": "चिकित्सा स्नातकों के लियेअनिवार्य रोटेटिंग इन्टर्नशिप छात्रवृत्तियां",
+   "name_latin": "chikitsa snatakon ke liyeanivary roteting intarnaship chhatravrittiyan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "37|0104|14": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना- सबके लियेआवास (शहरी) मिशन(के.60/रा.40-के",
+   "name_latin": "pradhanamantri avas yojana- sabake liyeavas (shahari) mishan(ke.60/ra.40-ke",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "37|0104|22": {
+   "label": "scheme",
+   "name": "दीनदयाल अन्त्योदय योजना-राष्ट्रीय शहरी आजीविका मिशन (के.60/रा.40-के",
+   "name_latin": "dinadayal antyoday yojana-rashtriy shahari ajivika mishan (ke.60/ra.40-ke",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "37|0105|22": {
+   "label": "scheme",
+   "name": "दीनदयाल जन आजीविका योजना (शहरी) DJAY(S) ( के.100/रा.00-के",
+   "name_latin": "dinadayal jan ajivika yojana (shahari) DJAY(S) ( ke.100/ra.00-ke",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "37|0115|14": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना-सब के लिए आवास (शहरी) मिशन (2.0)",
+   "name_latin": "pradhanamantri avas yojana-sab ke lie avas (shahari) mishan (2.0)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "37|04|15": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना-सब के लिए आवास (शहरी) मिशन (2.0) हेतुटॉपअप",
+   "name_latin": "pradhanamantri avas yojana-sab ke lie avas (shahari) mishan (2.0) hetutopaap",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "37|8904|15": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना- सबके लियेआवास (शहरी) मिशन",
+   "name_latin": "pradhanamantri avas yojana- sabake liyeavas (shahari) mishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "37|8904|22": {
+   "label": "scheme",
+   "name": "दीनदयाल अन्त्योदय योजना-राष्ट्रीय शहरी आजीविका मिशन",
+   "name_latin": "dinadayal antyoday yojana-rashtriy shahari ajivika mishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "39|06|6": {
+   "label": "not_scheme",
+   "name": "राज्य कर्मचारियों को उर्दू की दक्षता परीक्षा पास करने पर पुरस्कार की योजना",
+   "name_latin": "rajy karmachariyon ko urdu ki dakshata pariksha pas karane par puraskar ki yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "39|10|7": {
+   "label": "scheme",
+   "name": "स्व. गोपाल दास नीरज स्मृति पुरस्कार योजना",
+   "name_latin": "sv. gopal das niraj smriti puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "42|06|29": {
+   "label": "not_scheme",
+   "name": "अधिवक्ता कल्याण निधि सेसंबंधित कल्याणकारी स्टाम्पों की बिक्री की शुद्ध प्राप्ति",
+   "name_latin": "adhivakta kalyan nidhi sesambandhit kalyanakari stampon ki bikri ki shuddh prapti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "42|15|29": {
+   "label": "scheme",
+   "name": "पीड़ित क्षतिपूर्ति योजना -2014",
+   "name_latin": "pidit kshatipurti yojana -2014",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "48|0101|15": {
+   "label": "scheme",
+   "name": "अल्पसंख्यक समुदाय के छात्र / छात्राओं के लिए पूर्व दशम (प्री मैट्रिक) छात्रवृत्ति",
+   "name_latin": "alpasankhyak samuday ke chhatr / chhatraon ke lie purv dasham (pri maitrik) chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "48|03|14": {
+   "label": "not_scheme",
+   "name": "राज्य अध्यापक पुरस्कार योजना",
+   "name_latin": "rajy adhyapak puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "48|0303|15": {
+   "label": "scheme",
+   "name": "अल्पसंख्यक समुदाय के दशमोत्तर कक्षाओं के छात्रों/ छात्राओं को छात्रवृत्ति",
+   "name_latin": "alpasankhyak samuday ke dashamottar kakshaon ke chhatron/ chhatraon ko chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "48|04|13": {
+   "label": "scheme",
+   "name": "अवध वसीका पेंशन",
+   "name_latin": "avadh vasika penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "48|12|14": {
+   "label": "not_scheme",
+   "name": "राज्य अध्यापक पुरस्कार योजना",
+   "name_latin": "rajy adhyapak puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "49|0136|23": {
+   "label": "not_scheme",
+   "name": "घटायें एस.एन.ए. सेवेतन की प्रतिपूर्ति किशोर न्याय अधिनियम के",
+   "name_latin": "ghatayen es.en.e. sevetan ki pratipurti kishor nyay adhiniyam ke",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "49|11|12": {
+   "label": "scheme",
+   "name": "अनूपूरक पुष्टाहार योजनान्तर्गत पोषाहार हेतुटॉपअप की व्यवस्था",
+   "name_latin": "anupurak pushtahar yojanantargat poshahar hetutopaap ki vyavastha",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "49|17|14": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश राज्य ग्रामीण आजीविका मिशन द्वारा संचालित पुष्टाहार उत्पादन इकाईयों",
+   "name_latin": "uttar pradesh rajy gramin ajivika mishan dvara sanchalit pushtahar utpadan ikaiyon",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "50|03|10": {
+   "label": "not_scheme",
+   "name": "प्रदेश की तहसीलों में न्यायिक तहसीलदार / नायब तहसीलदारों हेतुपृथक सेशौचालय",
+   "name_latin": "pradesh ki tahasilon men nyayik tahasiladar / nayab tahasiladaron hetuprithak seshauchalay",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "52|03|18": {
+   "label": "not_scheme",
+   "name": "एवज में पेंशन",
+   "name_latin": "evaj men penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "52|05|19": {
+   "label": "scheme",
+   "name": "प्रदेश के खातेदार/सहखातेदार कृषकों की व्यक्तिगत दुर्घटना बीमा योजना में",
+   "name_latin": "pradesh ke khatedar/sahakhatedar krishakon ki vyaktigat durghatana bima yojana men",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "53|11|5": {
+   "label": "not_scheme",
+   "name": "गुरू गोविन्द सिंह राष्ट्रीय एकता पुरस्कार वितरण/समारोह के आयोजन आदि पर",
+   "name_latin": "guru govind sinh rashtriy ekata puraskar vitaran/samaroh ke ayojan adi par",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "53|13|5": {
+   "label": "scheme",
+   "name": "अन्तर्धार्मिक विवाह हेतुप्रोत्साहन (नकद पुरस्कार) (राज्यांश 100 प्रतिशत)",
+   "name_latin": "antardharmik vivah hetuprotsahan (nakad puraskar) (rajyansh 100 pratishat)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|03|8": {
+   "label": "not_scheme",
+   "name": "पेंशन तथा उपदान के लियेअंशदान",
+   "name_latin": "penshan tatha upadan ke liyeanshadan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|03|9": {
+   "label": "not_scheme",
+   "name": "पेंशन तथा उपदान के लियेअंशदान",
+   "name_latin": "penshan tatha upadan ke liyeanshadan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|03|15": {
+   "label": "not_scheme",
+   "name": "जमा सम्बद्ध बीमा योजना",
+   "name_latin": "jama sambaddh bima yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0301|6": {
+   "label": "not_scheme",
+   "name": "दिनाँक 08 नवम्बर 2000 तक के पेंशनरों की अधिवर्षता पेंशन एवं सेवा",
+   "name_latin": "dinank 08 navambar 2000 tak ke penshanaron ki adhivarshata penshan evan seva",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0301|7": {
+   "label": "not_scheme",
+   "name": "दिनाँक 08 नवम्बर 2000 तक के पेंशनरों की पेंशन का राशिमूल्य (कम्युटेड",
+   "name_latin": "dinank 08 navambar 2000 tak ke penshanaron ki penshan ka rashimuly (kamyuted",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0301|8": {
+   "label": "not_scheme",
+   "name": "दिनाँक 08 नवम्बर 2000 तक के पेंशनरों की पारिवारिक पेंशन",
+   "name_latin": "dinank 08 navambar 2000 tak ke penshanaron ki parivarik penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0302|7": {
+   "label": "not_scheme",
+   "name": "दिनाँक 08 नवम्बर 2000 के पश्चात के पेंशनरों की पेंशन का राशिमूल्य(",
+   "name_latin": "dinank 08 navambar 2000 ke pashchat ke penshanaron ki penshan ka rashimuly(",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0302|8": {
+   "label": "not_scheme",
+   "name": "दिनाँक 08 नवम्बर 2000 के पश्चात् के पेंशनरों की पारिवारिक पेंशन",
+   "name_latin": "dinank 08 navambar 2000 ke pashchat ke penshanaron ki parivarik penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0302|12": {
+   "label": "not_scheme",
+   "name": "दिनाँक 08 नवम्बर 2000 के पश्चात् विधायको को पेंशन- राज्य विधान मण्डल",
+   "name_latin": "dinank 08 navambar 2000 ke pashchat vidhayako ko penshan- rajy vidhan mandal",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0402|13": {
+   "label": "not_scheme",
+   "name": "पारिवारिक पेंशन",
+   "name_latin": "parivarik penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0502|13": {
+   "label": "not_scheme",
+   "name": "पारिवारिक पेंशन",
+   "name_latin": "parivarik penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|0602|13": {
+   "label": "not_scheme",
+   "name": "पारिवारिक पेंशन",
+   "name_latin": "parivarik penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|08|15": {
+   "label": "not_scheme",
+   "name": "अशक्तता पेंशन भोगियों हेतुनियत परिचर भत्ता",
+   "name_latin": "ashaktata penshan bhogiyon hetuniyat parichar bhatta",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "62|10|15": {
+   "label": "not_scheme",
+   "name": "उ.प्र. राज्य पुनर्गठन अधिनियम,2000 के अन्तर्गत पेंशन दायित्बों के प्रभाजन",
+   "name_latin": "u.pr. rajy punargathan adhiniyam,2000 ke antargat penshan dayitbon ke prabhajan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "66|03|5": {
+   "label": "not_scheme",
+   "name": "कर्मचारी सामूहिक बीमा योजना",
+   "name_latin": "karmachari samuhik bima yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "66|05|6": {
+   "label": "not_scheme",
+   "name": "बीमा निधि में हुई हानि की प्रतिपूर्ति",
+   "name_latin": "bima nidhi men hui hani ki pratipurti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "69|18|8": {
+   "label": "scheme",
+   "name": "मुख्यमंत्री शिक्षुता प्रोत्साहन योजना",
+   "name_latin": "mukhyamantri shikshuta protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "70|03|8": {
+   "label": "scheme",
+   "name": "सौर ऊर्जा स्रोतों पर आधारित विद्युत उत्पादन की प्रोत्साहन योजना",
+   "name_latin": "saur urja sroton par adharit vidyut utpadan ki protsahan yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "71|04|13": {
+   "label": "scheme",
+   "name": "छात्र छात्राओं को फल वितरण",
+   "name_latin": "chhatr chhatraon ko phal vitaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "71|05|15": {
+   "label": "scheme",
+   "name": "एक ही परिवार की एक सेअधिक बच्चियों की ट्यूशन फीस की प्रतिपूर्ति",
+   "name_latin": "ek hi parivar ki ek seadhik bachchiyon ki tyushan phis ki pratipurti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "71|06|16": {
+   "label": "scheme",
+   "name": "निपुण भारत चैंपियन पुरस्कार",
+   "name_latin": "nipun bharat chaimpiyan puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "71|07|13": {
+   "label": "not_scheme",
+   "name": "पी.एम. पोषण योजनार्न्तगत रसोइयॉ मानदेय हेतुअतिरिक्त (टॉप-अप ) राज्यांश",
+   "name_latin": "pi.em. poshan yojanarntagat rasoiyo manadey hetuatirikt (top-ap ) rajyansh",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "71|23|9": {
+   "label": "not_scheme",
+   "name": "शिक्षा मित्रो को मानदेय का भुगतान (जिला योजना )",
+   "name_latin": "shiksha mitro ko manadey ka bhugatan (jila yojana )",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "71|24|9": {
+   "label": "scheme",
+   "name": "सामान्य वर्ग के बालकों को नि:शुल्क पाठ्य पुस्तकों का वितरण",
+   "name_latin": "samany varg ke balakon ko ni:shulk pathy pustakon ka vitaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "71|27|9": {
+   "label": "scheme",
+   "name": "सामान्य वर्ग के कक्षा 6 से 8 तक के बालकों को नि:शुल्क पाठ्य पुस्तकों का वितरण",
+   "name_latin": "samany varg ke kaksha 6 se 8 tak ke balakon ko ni:shulk pathy pustakon ka vitaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "72|03|7": {
+   "label": "not_scheme",
+   "name": "सैनिक स्कूल लखनऊ के कर्मचारियों को पेंशन का भुगतान",
+   "name_latin": "sainik skul lakhanau ke karmachariyon ko penshan ka bhugatan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "72|03|12": {
+   "label": "scheme",
+   "name": "स्वतंत्रता संग्राम सेनानियों के आश्रितों तथा बच्चों को शैक्षिक सुविधाएं और छात्रवृत्तियां",
+   "name_latin": "svatantrata sangram senaniyon ke ashriton tatha bachchon ko shaikshik suvidhaen aur chhatravrittiyan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "72|05|12": {
+   "label": "not_scheme",
+   "name": "राज्य शिक्षक पुरस्कार योजना",
+   "name_latin": "rajy shikshak puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "72|06|12": {
+   "label": "not_scheme",
+   "name": "' मुख्यमंत्री अध्यापक पुरस्कार '",
+   "name_latin": "' mukhyamantri adhyapak puraskar '",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "72|06|20": {
+   "label": "not_scheme",
+   "name": "व्यावसायिक शिक्षा के पाठक्रमों के अध्यापन हेतुअतिथि विषय विशेषज्ञों को मानदेय",
+   "name_latin": "vyavasayik shiksha ke pathakramon ke adhyapan hetuatithi vishay visheshajnon ko manadey",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "72|20|13": {
+   "label": "scheme",
+   "name": "पं. दीनदयाल उपाध्याय विशेष छात्रवृत्ति योजना",
+   "name_latin": "pan. dinadayal upadhyay vishesh chhatravritti yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "73|03|15": {
+   "label": "scheme",
+   "name": "सम्पूर्णानन्द संस्कृत विश्वविद्याल, वाराणसी के शोधार्थियों को छात्रवृत्ति/प्रोत्साहन",
+   "name_latin": "sampurnanand sanskrit vishvavidyal, varanasi ke shodharthiyon ko chhatravritti/protsahan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "73|04|16": {
+   "label": "not_scheme",
+   "name": "राज्य स्तरीय पुरस्कार योजना",
+   "name_latin": "rajy stariy puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "73|0801|15": {
+   "label": "not_scheme",
+   "name": "उच्च शिक्षा गुणवत्ता संवर्धन प्रोत्साहन",
+   "name_latin": "uchch shiksha gunavatta sanvardhan protsahan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "73|09|15": {
+   "label": "not_scheme",
+   "name": "उ.प्र. उच्च शिक्षा प्रोत्साहन नीति-2024",
+   "name_latin": "u.pr. uchch shiksha protsahan niti-2024",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "73|10|17": {
+   "label": "scheme",
+   "name": "मेधावी छात्रों को राज्य स्तरीय छात्रवृत्ति",
+   "name_latin": "medhavi chhatron ko rajy stariy chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "75|0107|22": {
+   "label": "not_scheme",
+   "name": "घटायें एस.एन.ए. सेवेतन की प्रतिपूर्ति जिला शिक्षा एवं प्रशिक्षण",
+   "name_latin": "ghatayen es.en.e. sevetan ki pratipurti jila shiksha evan prashikshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "76|03|10": {
+   "label": "scheme",
+   "name": "कर्मचारी राज्य बीमा योजना",
+   "name_latin": "karmachari rajy bima yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "76|03|18": {
+   "label": "not_scheme",
+   "name": "सामान्य आवास योजनायें",
+   "name_latin": "samany avas yojanayen",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "76|07|21": {
+   "label": "scheme",
+   "name": "असंगठित कर्मकार कल्याण निधि",
+   "name_latin": "asangathit karmakar kalyan nidhi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "76|08|21": {
+   "label": "scheme",
+   "name": "असंगठित कर्मकारों हेतु\"मुख्यमंत्री दुर्घटना बीमा योजना\"",
+   "name_latin": "asangathit karmakaron hetu\"mukhyamantri durghatana bima yojana\"",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|0102|7": {
+   "label": "scheme",
+   "name": "भारत सरकार द्वारा दशमोत्तर छात्रवृत्ति योजना (के . 60/रा.40-के .) 9494",
+   "name_latin": "bharat sarakar dvara dashamottar chhatravritti yojana (ke . 60/ra.40-ke .) 9494",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|03|7": {
+   "label": "scheme",
+   "name": "अन्य पिछड़े हुयेजातियों के दशमोत्तर कक्षा में अध्ययन करने वालेछात्रों को छात्रवृत्ति",
+   "name_latin": "any pichhade huyejatiyon ke dashamottar kaksha men adhyayan karane valechhatron ko chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|03|19": {
+   "label": "scheme",
+   "name": "शारीरिक रूप सेसक्षम व्यक्तियों द्वारा विकलांग सेशादी करने पर प्रोत्साहन पुरस्कार",
+   "name_latin": "sharirik rup sesaksham vyaktiyon dvara vikalang seshadi karane par protsahan puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|08|11": {
+   "label": "scheme",
+   "name": "दक्ष विकलांग कर्मचारियों एवं उनके सेवायोजकों को राज्य स्तरीय पुरस्कार",
+   "name_latin": "daksh vikalang karmachariyon evan unake sevayojakon ko rajy stariy puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|40|18": {
+   "label": "scheme",
+   "name": "शारीरिक रूप सेसक्षम व्यक्तियों द्वारा विकलांग सेशादी करने पर प्रोत्साहन पुरस्कार",
+   "name_latin": "sharirik rup sesaksham vyaktiyon dvara vikalang seshadi karane par protsahan puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|40|19": {
+   "label": "scheme",
+   "name": "शारीरिक रूप सेसक्षम व्यक्तियों द्वारा विकलांग सेशादी करने पर प्रोत्साहन पुरस्कार",
+   "name_latin": "sharirik rup sesaksham vyaktiyon dvara vikalang seshadi karane par protsahan puraskar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|41|19": {
+   "label": "scheme",
+   "name": "उत्तर प्रदेश दिव्यांगजन स्वावलम्बन एवं आजीविका सेतुमिशन",
+   "name_latin": "uttar pradesh divyangajan svavalamban evan ajivika setumishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "79|8902|7": {
+   "label": "scheme",
+   "name": "भारत सरकार द्वारा दशमोत्तर छात्रवृत्ति योजना",
+   "name_latin": "bharat sarakar dvara dashamottar chhatravritti yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "80|0101|9": {
+   "label": "scheme",
+   "name": "अनुसूचित जाति के दशमोत्तर कक्षाओं के छात्रो को छात्रवृत्ति(के.100/रा.0-के",
+   "name_latin": "anusuchit jati ke dashamottar kakshaon ke chhatro ko chhatravritti(ke.100/ra.0-ke",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "80|0102|9": {
+   "label": "scheme",
+   "name": "अनुसूचित जाति के दशमोत्तर कक्षाओं के छात्रो को छात्रवृत्ति (के.60/रा.40-रा.)",
+   "name_latin": "anusuchit jati ke dashamottar kakshaon ke chhatro ko chhatravritti (ke.60/ra.40-ra.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "80|0302|26": {
+   "label": "scheme",
+   "name": "वृद्धावस्था /किसान पेंशन",
+   "name_latin": "vriddhavastha /kisan penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "80|0501|21": {
+   "label": "scheme",
+   "name": "राष्ट्रीय वृद्वावस्था पेंशन योजना (के.100/रा.0-के .)",
+   "name_latin": "rashtriy vridvavastha penshan yojana (ke.100/ra.0-ke .)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "80|0501|22": {
+   "label": "scheme",
+   "name": "राष्ट्रीय वृद्वावस्था पेंशन योजना (के.100/रा.0-के .)",
+   "name_latin": "rashtriy vridvavastha penshan yojana (ke.100/ra.0-ke .)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "80|8902|14": {
+   "label": "scheme",
+   "name": "अनुसूचित जाति के दशमोत्तर कक्षाओं के छात्रो को छात्रवृत्ति",
+   "name_latin": "anusuchit jati ke dashamottar kakshaon ke chhatro ko chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0101|24": {
+   "label": "scheme",
+   "name": "दीन दयाल अन्त्योदय योजना- राष्ट्रीय शहरी आजीविका मिशन (के.60/रा.40",
+   "name_latin": "din dayal antyoday yojana- rashtriy shahari ajivika mishan (ke.60/ra.40",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0101|32": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन (के.60/रा.40-के.+रा.) 9181-UP175",
+   "name_latin": "rashtriy gramin ajivika mishan (ke.60/ra.40-ke.+ra.) 9181-UP175",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0101|44": {
+   "label": "not_scheme",
+   "name": "घटायें एस.एन.ए. सेवेतन की प्रतिपूर्ति जिला शिक्षा और प्रशिक्षण",
+   "name_latin": "ghatayen es.en.e. sevetan ki pratipurti jila shiksha aur prashikshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0102|15": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सबके लियेआवास (शहरी) मिशन (के.60/रा.40-के",
+   "name_latin": "pradhanamantri avas yojana sabake liyeavas (shahari) mishan (ke.60/ra.40-ke",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0102|29": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर के अन्तर्गत रैनफेड एरिया",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar ke antargat rainaphed eriya",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0102|40": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण) (के.60/रा.40-के .)",
+   "name_latin": "pradhanamantri avas yojana (gramin) (ke.60/ra.40-ke .)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0103|15": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सब के लिए आवास (शहरी) मिशन-(2.0)",
+   "name_latin": "pradhanamantri avas yojana sab ke lie avas (shahari) mishan-(2.0)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0105|26": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी के अन्तर्गत नेशनल",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji ke antargat neshanal",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0109|16": {
+   "label": "scheme",
+   "name": "अनुसूचित जनजाति पूर्वदशम (कक्षा 9 व 10) छात्रवृत्ति योजना (के .75",
+   "name_latin": "anusuchit janajati purvadasham (kaksha 9 v 10) chhatravritti yojana (ke .75",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|0125|26": {
+   "label": "scheme",
+   "name": "अनुपूरक पुष्टाहार (के.50/र.50-के .)",
+   "name_latin": "anupurak pushtahar (ke.50/r.50-ke .)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|02|40": {
+   "label": "scheme",
+   "name": "मुख्यमंत्री आवास योजना (ग्रामीण)",
+   "name_latin": "mukhyamantri avas yojana (gramin)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|03|15": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सब के लिए आवास (शहरी) मिशन-(2.0) हेतुटॉपअप",
+   "name_latin": "pradhanamantri avas yojana sab ke lie avas (shahari) mishan-(2.0) hetutopaap",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|03|32": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन हेतुटॉपअप की व्यवस्था",
+   "name_latin": "rashtriy gramin ajivika mishan hetutopaap ki vyavastha",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|03|34": {
+   "label": "scheme",
+   "name": "अनुसूचित जनजाति के व्यक्तियों के स्वरोजगार हेतुसामूहिक प्रशिक्षण",
+   "name_latin": "anusuchit janajati ke vyaktiyon ke svarojagar hetusamuhik prashikshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|07|11": {
+   "label": "not_scheme",
+   "name": "पी.एम. पोषण योजनार्न्तगत रसोइयॉ मानदेय हेतुअतिरिक्त (टॉप-अप ) राज्यांश",
+   "name_latin": "pi.em. poshan yojanarntagat rasoiyo manadey hetuatirikt (top-ap ) rajyansh",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|13|22": {
+   "label": "scheme",
+   "name": "दशमोत्तर कक्षाओं में अध्ययन करने वालेअनुसूचित जनजाति के छात्रों को छात्रवृत्ति",
+   "name_latin": "dashamottar kakshaon men adhyayan karane valeanusuchit janajati ke chhatron ko chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|8901|24": {
+   "label": "scheme",
+   "name": "दीन दयाल अन्त्योदय योजना- राष्ट्रीय शहरी आजीविका मिशन",
+   "name_latin": "din dayal antyoday yojana- rashtriy shahari ajivika mishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|8901|33": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन",
+   "name_latin": "rashtriy gramin ajivika mishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|8902|30": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर (एन.एम.एस.ए.) के अन्तर्गत",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar (en.em.es.e.) ke antargat",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "81|8925|26": {
+   "label": "scheme",
+   "name": "अनुपूरक पुष्टाहार",
+   "name_latin": "anupurak pushtahar",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0102|42": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर के अन्तर्गत रैनफेड एरिया डेवलपमेन्ट",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar ke antargat rainaphed eriya devalapament",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0102|52": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन (के.60/रा.40-के.+रा.) 9181-UP175",
+   "name_latin": "rashtriy gramin ajivika mishan (ke.60/ra.40-ke.+ra.) 9181-UP175",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0102|66": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण) (के.60/रा.40-के.+रा.) 9180-UP23",
+   "name_latin": "pradhanamantri avas yojana (gramin) (ke.60/ra.40-ke.+ra.) 9180-UP23",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0102|75": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण) (के.60/रा.40-के.+रा.)",
+   "name_latin": "pradhanamantri avas yojana (gramin) (ke.60/ra.40-ke.+ra.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0103|27": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सब के लिए आवास (शहरी) मिशन-(2.0)",
+   "name_latin": "pradhanamantri avas yojana sab ke lie avas (shahari) mishan-(2.0)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0103|32": {
+   "label": "scheme",
+   "name": "दीन दयाल अन्त्योदय योजना- राष्ट्रीय शहरी आजीविका मिशन (के.60/रा.40",
+   "name_latin": "din dayal antyoday yojana- rashtriy shahari ajivika mishan (ke.60/ra.40",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0103|52": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन के अन्तर्गत महिला किसान सशक्तिकरण",
+   "name_latin": "rashtriy gramin ajivika mishan ke antargat mahila kisan sashaktikaran",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0104|42": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर के अन्तर्गत परम्परागत कृषि विकास",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar ke antargat paramparagat krishi vikas",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0104|43": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर के अन्तर्गत परम्परागत कृषि",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar ke antargat paramparagat krishi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0111|38": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0112|38": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0112|43": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन फॉर सस्टेनेबल एग्रीकल्चर के अन्तर्गत नमामि गंगे योजना",
+   "name_latin": "neshanal mishan phor sastenebal egrikalchar ke antargat namami gange yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0120|28": {
+   "label": "scheme",
+   "name": "अनुसूचित जाति के कक्षा 9 व 10 में पढने वालेछात्रों को छात्रवृत्ति",
+   "name_latin": "anusuchit jati ke kaksha 9 v 10 men padhane valechhatron ko chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0122|27": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सबके लियेआवास (शहरी) मिशन (के.60/रा.40",
+   "name_latin": "pradhanamantri avas yojana sabake liyeavas (shahari) mishan (ke.60/ra.40",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0124|39": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन एडिबिल ऑयल (टी.बी.ओ.) (के.60/रा.40-के.+रा.)",
+   "name_latin": "neshanal mishan on edibil oyal (ti.bi.o.) (ke.60/ra.40-ke.+ra.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0127|39": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी के अन्तर्गत नेशनल",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji ke antargat neshanal",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|0128|29": {
+   "label": "scheme",
+   "name": "अन्तर्जातीय विवाह प्रोत्साहन योजना (के.50/रा.50)",
+   "name_latin": "antarjatiy vivah protsahan yojana (ke.50/ra.50)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|03|27": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सब के लिए आवास (शहरी) मिशन-(2.0) हेतुटॉपअप",
+   "name_latin": "pradhanamantri avas yojana sab ke lie avas (shahari) mishan-(2.0) hetutopaap",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|03|36": {
+   "label": "scheme",
+   "name": "वृद्धावस्था / किसान पेंशन (जिला योजना)",
+   "name_latin": "vriddhavastha / kisan penshan (jila yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|03|52": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन हेतुटॉपअप की व्यवस्था",
+   "name_latin": "rashtriy gramin ajivika mishan hetutopaap ki vyavastha",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|03|66": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना (ग्रामीण) हेतुटॉपअप की व्यवस्था",
+   "name_latin": "pradhanamantri avas yojana (gramin) hetutopaap ki vyavastha",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|04|36": {
+   "label": "scheme",
+   "name": "वृद्धावस्था / किसान पेंशन (राज्य सेक्टर)",
+   "name_latin": "vriddhavastha / kisan penshan (rajy sektar)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|04|52": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन के अन्तर्गत महिला किसान सशक्तिकरण हेतुटॉपअप",
+   "name_latin": "rashtriy gramin ajivika mishan ke antargat mahila kisan sashaktikaran hetutopaap",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|06|66": {
+   "label": "scheme",
+   "name": "मुख्य मंत्री आवास योजना (ग्रामीण)",
+   "name_latin": "mukhy mantri avas yojana (gramin)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|07|14": {
+   "label": "not_scheme",
+   "name": "पी.एम. पोषण योजनार्न्तगत रसोइयॉ मानदेय हेतुअतिरिक्त (टॉप-अप ) राज्यांश",
+   "name_latin": "pi.em. poshan yojanarntagat rasoiyo manadey hetuatirikt (top-ap ) rajyansh",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8902|52": {
+   "label": "scheme",
+   "name": "राष्ट्रीय ग्रामीण आजीविका मिशन",
+   "name_latin": "rashtriy gramin ajivika mishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8903|33": {
+   "label": "scheme",
+   "name": "दीन दयाल अन्त्योदय योजना- राष्ट्रीय शहरी आजीविका मिशन",
+   "name_latin": "din dayal antyoday yojana- rashtriy shahari ajivika mishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8904|44": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर के अन्तर्गत रैनफेड एरिया",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar ke antargat rainaphed eriya",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8904|45": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर के अन्तर्गत रैनफेड एरिया",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar ke antargat rainaphed eriya",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8906|45": {
+   "label": "scheme",
+   "name": "नेशनल मिशन फॉर सस्सटेनेबिल एग्रीकल्चर के अन्तर्गत परम्परागत कृषि",
+   "name_latin": "neshanal mishan phor sassatenebil egrikalchar ke antargat paramparagat krishi",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8911|45": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन नेचुुरल फार्मिग",
+   "name_latin": "neshanal mishan on nechural pharmig",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8912|45": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन फॉर सस्टेनेबल एग्रीकल्चर के अन्तर्गत नमामि गंगे योजना",
+   "name_latin": "neshanal mishan phor sastenebal egrikalchar ke antargat namami gange yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8919|41": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8920|32": {
+   "label": "scheme",
+   "name": "अनुसूचित जाति के कक्षा 9 व 10 में पढने वालेछात्रों को छात्रवृत्ति",
+   "name_latin": "anusuchit jati ke kaksha 9 v 10 men padhane valechhatron ko chhatravritti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8920|41": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8921|41": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी (एन.एम.ए.ई.टी.)",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji (en.em.e.i.ti.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8922|28": {
+   "label": "scheme",
+   "name": "प्रधानमंत्री आवास योजना सबके लियेआवास (शहरी) मिशन",
+   "name_latin": "pradhanamantri avas yojana sabake liyeavas (shahari) mishan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8924|42": {
+   "label": "scheme",
+   "name": "नेशनल मिशन ऑन एडिबिल ऑयल (टी.बी.ओ.)",
+   "name_latin": "neshanal mishan on edibil oyal (ti.bi.o.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "83|8927|42": {
+   "label": "not_scheme",
+   "name": "नेशनल मिशन ऑन एग्रीकल्चर एक्सटेंशन एण्ड टेक्नोलाजी के अन्तर्गत नेशनल",
+   "name_latin": "neshanal mishan on egrikalchar eksatenshan end teknolaji ke antargat neshanal",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "84|03|7": {
+   "label": "scheme",
+   "name": "अशोक चक्र श्रृखला के अन्तर्गत उल्लिखित पुरस्कारों सेविभूषित कियेजाने वालेउ.",
+   "name_latin": "ashok chakr shrrikhala ke antargat ullikhit puraskaron sevibhushit kiyejane valeu.",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "84|04|7": {
+   "label": "scheme",
+   "name": "जीवन रक्षा श्रृखला के अन्तर्गत उल्लिखित पुरस्कारों सेविभूषित कियेजाने वालेउ.",
+   "name_latin": "jivan raksha shrrikhala ke antargat ullikhit puraskaron sevibhushit kiyejane valeu.",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "84|05|7": {
+   "label": "scheme",
+   "name": "महारानी अहिल्याबाई होलकर पुरस्कार योजना",
+   "name_latin": "maharani ahilyabai holakar puraskar yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "87|05|5": {
+   "label": "scheme",
+   "name": "बार टू सेना मेडल के पुरस्कार प्राप्त उ. प्र. के एवं सीमा सुरक्षा बल के सैनिकों को",
+   "name_latin": "bar tu sena medal ke puraskar prapt u. pr. ke evan sima suraksha bal ke sainikon ko",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "89|13|9": {
+   "label": "not_scheme",
+   "name": "टैक्स फ्री फिल्मों हेतुदेय एस.जी.एस.टी. के समतुल्य धनराशि की प्रतिपूर्ति",
+   "name_latin": "taiks phri philmon hetudey es.ji.es.ti. ke samatuly dhanarashi ki pratipurti",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "92|03|9": {
+   "label": "scheme",
+   "name": "यश भारती सम्मान एवं पद्म एवार्ड सेसम्मानित महानुभावों को पेंशन",
+   "name_latin": "yash bharati samman evan padm evard sesammanit mahanubhavon ko penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "92|09|9": {
+   "label": "scheme",
+   "name": "वृद्ध कलाकारों लेखकों को मासिक पेंशन",
+   "name_latin": "vriddh kalakaron lekhakon ko masik penshan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "93|0105|10": {
+   "label": "not_scheme",
+   "name": "घटायें एस.एन.ए. सेवेतन की प्रतिपूर्ति रेशनलाइजेशन आफ माइनर इरीगेशन",
+   "name_latin": "ghatayen es.en.e. sevetan ki pratipurti reshanalaijeshan aph mainar irigeshan",
+   "how": "audit census at the publishing bar, read by eye"
+  }
+ },
+ "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT."
+}

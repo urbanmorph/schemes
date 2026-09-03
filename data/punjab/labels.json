@@ -1,0 +1,2297 @@
+{
+ "state": "Punjab",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, subsidy, pension or insurance from this line? An object head (computer stationery, manpower, direction and administration), a canal lining, an assistance to a corporation or a university, a building or a software purchase is not_scheme.",
+ "labelled": 457,
+ "scheme": 166,
+ "not_scheme": 291,
+ "sampling": "Stratified on the level of the head of account the line sits at (sub-head, sub-sub-head, or neither), 10% of each with a floor of 25, seed 20260903.",
+ "labels": {
+  "hoa:1-2401-001-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery and Consumable Items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-102-01": {
+   "label": "not_scheme",
+   "name": "Agriculture Extension",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-102-14": {
+   "label": "scheme",
+   "name": "Incentivizing Direct Seeding of Rice",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-105-08": {
+   "label": "scheme",
+   "name": "Soil Health Card Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-789-02": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-789-09": {
+   "label": "not_scheme",
+   "name": "Soil Testing Projects at Village Level- Setting up of Village level Soil Testing Labs",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-789-43": {
+   "label": "scheme",
+   "name": "Scheme for Power subsidy to Farmers",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-800-24": {
+   "label": "not_scheme",
+   "name": "AGR-34 Grant in Aid to Punjab Rural Development Board",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2402-001-01": {
+   "label": "not_scheme",
+   "name": "Direction and Administration",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2402-789-06": {
+   "label": "not_scheme",
+   "name": "Project for conservation of available water resources by promoting underground pipeline system among farmers in Punjab (NABARD RIDF-29",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2402-789-22": {
+   "label": "not_scheme",
+   "name": "NABARD-RIDF-Projects",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:10-2052-090-98": {
+   "label": "not_scheme",
+   "name": "Computerization in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:10-2075-800-05": {
+   "label": "not_scheme",
+   "name": "Grant and Contribution to Various Organisations",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:10-2235-200-43": {
+   "label": "not_scheme",
+   "name": "Contribution to the Chief Minister Relief Fund",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:10-3451-090-01": {
+   "label": "not_scheme",
+   "name": "Secretariat Economic Services",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2210-001-07": {
+   "label": "not_scheme",
+   "name": "Development of Hosting the Website",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2210-101-03": {
+   "label": "not_scheme",
+   "name": "Other Hospital and Dispensaries (Aushdhalaya)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2210-101-05": {
+   "label": "not_scheme",
+   "name": "Yoga Unit",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2210-103-01": {
+   "label": "not_scheme",
+   "name": "Primary Health Centres",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2210-104-09": {
+   "label": "not_scheme",
+   "name": "Setting up of Food and Drug Authority",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2210-199-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab Red Cross Society",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2211-109-02": {
+   "label": "scheme",
+   "name": "Pulse Polio Programme under NRHM",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-2211-789-04": {
+   "label": "not_scheme",
+   "name": "Training of MPW(M) in Training School at Mohali Amritsar, Nabha",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-4210-110-02": {
+   "label": "not_scheme",
+   "name": "Medical Relief to Other Hospitals and Dispensaries",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-4210-110-23": {
+   "label": "not_scheme",
+   "name": "PH 6.4 Medical Relief to T.B. Clinic",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:11-4210-110-63": {
+   "label": "not_scheme",
+   "name": "Strengthening of Fire Safety services in the Hospitals",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-2055-109-07": {
+   "label": "not_scheme",
+   "name": "Setting Up/ Strengthening of Women Helpdesk in Police Stations",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-2055-114-01": {
+   "label": "not_scheme",
+   "name": "Police Wireless and Computer Staff",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-2055-114-07": {
+   "label": "not_scheme",
+   "name": "Development of Hosting Website",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-2055-114-98": {
+   "label": "not_scheme",
+   "name": "Computerization in State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-2070-107-07": {
+   "label": "not_scheme",
+   "name": "Development of Hosting Website",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-2250-102-01": {
+   "label": "not_scheme",
+   "name": "Cost of Maintenance of Charitable Endowments",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-4055-207-08": {
+   "label": "not_scheme",
+   "name": "PH 2 Modernisation of police Forces (EY-31 March",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-4055-207-17": {
+   "label": "not_scheme",
+   "name": "Chemical Laboratory at Kharar",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-4055-207-19": {
+   "label": "not_scheme",
+   "name": "Construction/Renovation of Police Complexes",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:12-4070-800-07": {
+   "label": "not_scheme",
+   "name": "Home Guards Border Wing",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:13-2851-789-11": {
+   "label": "not_scheme",
+   "name": "Financial Assistance to Punjab Information and Communication Technology Corporation for start-ups",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:13-2851-800-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery and Consumable Items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:13-2852-104-01": {
+   "label": "scheme",
+   "name": "Power Subsidies to Industries",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:13-2852-789-01": {
+   "label": "scheme",
+   "name": "Power subsidies to Industries",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:13-4851-800-40": {
+   "label": "not_scheme",
+   "name": "VSI-03: Northern India Institute of Fashion Technology (NIIFT), Mohali, Jallandhar, Ludhiana (VSI-03 (i)merged)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:14-2235-200-07": {
+   "label": "scheme",
+   "name": "Reimbursement of Free Travelling Facility to Accredited Journalists and Desk Journalists",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-2700-800-01": {
+   "label": "not_scheme",
+   "name": "Dam Rehabilitation & Improvement Project Externally Aided Projects",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-2702-102-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery & Consumable items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-2702-190-02": {
+   "label": "not_scheme",
+   "name": "Repair of Watercourses / Underground Pipeline",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-2711-001-01": {
+   "label": "not_scheme",
+   "name": "Direction and Administration",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-2853-102-01": {
+   "label": "not_scheme",
+   "name": "IN 16.1 Development of Mines and Minerals in Punjab",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-2853-102-05": {
+   "label": "not_scheme",
+   "name": "Man Power",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4700-799-05": {
+   "label": "not_scheme",
+   "name": "Credit To Miscellaneous Advance",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-000-08": {
+   "label": "not_scheme",
+   "name": "Works Expenditure",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-03": {
+   "label": "not_scheme",
+   "name": "Concrete Lining of Nadampur Distributary System",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-17": {
+   "label": "not_scheme",
+   "name": "Rehabilitation of Renovation/Modernization of Various Channel Offtake from Kotla Branch and Ghaggar Branch",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-34": {
+   "label": "not_scheme",
+   "name": "Lining and allied works of Dhipali Disty System",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-36": {
+   "label": "not_scheme",
+   "name": "Lining and allied works of New Abul Khurana Disty. And Goniana minor",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-37": {
+   "label": "not_scheme",
+   "name": "Lining and allied works of Patti Disty. System",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-52": {
+   "label": "not_scheme",
+   "name": "Cement Concrete Lining of Sodhiwala Disty System",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-77": {
+   "label": "not_scheme",
+   "name": "Digitization of Canal Monitoring System",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-86": {
+   "label": "not_scheme",
+   "name": "Rehabilitation of Kakrala Minor",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-101-93": {
+   "label": "not_scheme",
+   "name": "Rehabilitation, Renovation & Modernization of Mohleke Minor",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-700-29": {
+   "label": "not_scheme",
+   "name": "Special Component for Plan Shceduled castes (EY-31 Mar 2023)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-789-01": {
+   "label": "not_scheme",
+   "name": "Remodelling/construction of distributories/minors",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-789-02": {
+   "label": "not_scheme",
+   "name": "Renovation and Modernisation of Regulators Structures in the State of Punjab (RIDF XXII)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4701-799-04": {
+   "label": "not_scheme",
+   "name": "Credit to misc advance",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4705-101-53": {
+   "label": "not_scheme",
+   "name": "NABARD Loan",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4705-102-03": {
+   "label": "not_scheme",
+   "name": "Construction of watercourses and laying of underground pipeline falling under Lining Division Mansa",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4705-105-04": {
+   "label": "not_scheme",
+   "name": "Underground pipeline/watercourses project in various Districts of Punjab funded by PWRDA",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4705-789-51": {
+   "label": "not_scheme",
+   "name": "State Share(Excluding Grant and Loan)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:15-4711-799-02": {
+   "label": "not_scheme",
+   "name": "DEBIT TO MISCELLANEOUS ADVANCE",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:16-2230-102-03": {
+   "label": "not_scheme",
+   "name": "Strengthening Of Directorate Of Factories",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:16-2230-112-01": {
+   "label": "scheme",
+   "name": "Centrally Sponsored Scheme for Rehabilitation of bonded labourers",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:17-2216-800-05": {
+   "label": "not_scheme",
+   "name": "Administrative and other expenses (A & OE)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:17-3604-200-31": {
+   "label": "not_scheme",
+   "name": "Grant-in-Aid to Urban Local Bodies from Cow cess collected in urban areas of Punjab on Liquor",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:17-4217-051-05": {
+   "label": "not_scheme",
+   "name": "AMRUT 1.0 Project Funds",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:17-4217-051-09": {
+   "label": "not_scheme",
+   "name": "Municipal Development Fund",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:17-4217-051-15": {
+   "label": "not_scheme",
+   "name": "Urban Rejuvention Mission-500 Habitations AMRUT",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:18-2051-102-04": {
+   "label": "not_scheme",
+   "name": "Computer Furniture`s Items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:18-2051-102-06": {
+   "label": "not_scheme",
+   "name": "Development of Application Software",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:18-2051-102-08": {
+   "label": "not_scheme",
+   "name": "AMC for IT Related Items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:18-2070-003-08": {
+   "label": "not_scheme",
+   "name": "AMC for IT related items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:18-2070-003-98": {
+   "label": "not_scheme",
+   "name": "Computerization in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:19-3451-101-01": {
+   "label": "not_scheme",
+   "name": "Planning Board",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:19-3451-101-24": {
+   "label": "not_scheme",
+   "name": "Consultancy Seminars/Pilot Study/Quick Survey of plan projects/Schemes of the Department",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:19-3454-204-21": {
+   "label": "not_scheme",
+   "name": "CSST-4 Engagement Of Young Professionals For Economic And Statistical Organisation",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:19-5475-112-23": {
+   "label": "not_scheme",
+   "name": "CS (PM) -24 Vibrant Village Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:2-2403-001-01": {
+   "label": "not_scheme",
+   "name": "Direction and Administration",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:2-2403-101-13": {
+   "label": "not_scheme",
+   "name": "Assistance to States for Control of Animal Diseases Creation of Dissease free zone 60:40 (ASCAD) (EY-Ongoing)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:2-2403-789-03": {
+   "label": "not_scheme",
+   "name": "Procurement of Livestock, Poultry vaccines and their Accessories and Medicines for endo parasitic control",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:2-2404-191-08": {
+   "label": "not_scheme",
+   "name": "Modernisation of Dairy Practices with facility of modern Hi-Tech housing arrangements at the Dairy Farms",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:2-2405-101-06": {
+   "label": "not_scheme",
+   "name": "Development of Application Software",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:2-4403-101-14": {
+   "label": "not_scheme",
+   "name": "RENOVATION AND UPGRADATION OF VETERINARY INSTITUTIONS IN THE STATE",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:2-4403-101-22": {
+   "label": "not_scheme",
+   "name": "Establishment of New Blue Cross Store in Veterinary Polyclinics in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:20-2045-103-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery and Consumable items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:20-4810-101-03": {
+   "label": "not_scheme",
+   "name": "NABARD-XXVIII",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:20-4810-101-13": {
+   "label": "not_scheme",
+   "name": "Saturation of Government Buildings with Solar Power Plants under State Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:21-5054-789-02": {
+   "label": "not_scheme",
+   "name": "Central Road and Infrastructure Fund",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:22-2245-102-02": {
+   "label": "not_scheme",
+   "name": "District Disaster Management Authority",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:22-2245-282-01": {
+   "label": "not_scheme",
+   "name": "Public Health",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:22-4070-800-42": {
+   "label": "not_scheme",
+   "name": "Revenue, Rehabilitation and Disaster Management",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-2501-102-03": {
+   "label": "scheme",
+   "name": "Mahila Kisan Sashaktikaran Priyojana (MKSP)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-2501-789-01": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (Aajeevika)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-2515-001-05": {
+   "label": "not_scheme",
+   "name": "Manpower",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-2515-001-98": {
+   "label": "not_scheme",
+   "name": "Computerization in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-3604-200-01": {
+   "label": "not_scheme",
+   "name": "Basic Grant",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-4515-103-02": {
+   "label": "not_scheme",
+   "name": "Reward/Incentive to Gram Panchayats for excellent performance",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-4515-103-32": {
+   "label": "not_scheme",
+   "name": "Development for Hadda Roris in the Villages",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-4515-103-36": {
+   "label": "not_scheme",
+   "name": "Development/Allocation of Land for Kabarsthan/Kabargah for Muslim/Christians Community (60:40)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-4515-103-45": {
+   "label": "not_scheme",
+   "name": "Infrastructure gap filling Optimum utilization of work for the year 2020-21",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-4515-789-08": {
+   "label": "not_scheme",
+   "name": "Modernisation and Improvement of Scheduled Castes Villages having more than 50% Scheduled Castes population",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:23-4515-789-16": {
+   "label": "not_scheme",
+   "name": "RDO (S)-11/RDO(S)-13 CONSTRUCTION OF PANCHAYAT GHARS AT GRAM PANCHAYAT LEVEL UNDER RASHTRIYA GRAM SWARAJ YOJANA (75:25)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:24-3425-200-03": {
+   "label": "not_scheme",
+   "name": "Punjab Life Sciences Up-Skilling (Plus)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:24-3425-200-22": {
+   "label": "not_scheme",
+   "name": "Setting up of Patents Facilitating Cell 40:60",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:24-3425-200-48": {
+   "label": "not_scheme",
+   "name": "SR-01 Pushpa Gujral Science City at Kapurthala",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:24-3425-200-58": {
+   "label": "not_scheme",
+   "name": "Financial Assistance for Schemes for STEM Outeach in Punjab",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:24-3425-789-01": {
+   "label": "not_scheme",
+   "name": "SR-07 students of Government Schools visiting the Science city",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:24-3435-800-25": {
+   "label": "not_scheme",
+   "name": "Salary and Establishment for the Punjab Bio Diversity Board Secretariat Technical Staff",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-2235-101-02": {
+   "label": "not_scheme",
+   "name": "Purchase of Software(System Software and Data Base Software)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-2235-102-05": {
+   "label": "not_scheme",
+   "name": "Implementation of Childern Act/Justice Juvenile Act",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-2235-102-27": {
+   "label": "scheme",
+   "name": "Child Helpline",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-2235-102-28": {
+   "label": "scheme",
+   "name": "Non Institutional Care-Sponsorship/Foster Care/After Care",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-2235-103-31": {
+   "label": "scheme",
+   "name": "Universalization of Women Helpline",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-2235-789-01": {
+   "label": "not_scheme",
+   "name": "Assistance to various Homes run by Social Security",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-2235-789-05": {
+   "label": "not_scheme",
+   "name": "Administrative Expenses",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-4235-102-10": {
+   "label": "not_scheme",
+   "name": "Creation of Capital Assets (Construction of CCIs Including JJBs and CWCs)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:25-4235-103-02": {
+   "label": "not_scheme",
+   "name": "Construction of toilets in Existing AWCs in Government Owned Building",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:26-2011-103-02": {
+   "label": "not_scheme",
+   "name": "Purchase of Software (System Software and Data Base Software)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:27-2203-102-04": {
+   "label": "not_scheme",
+   "name": "Grant in Aid for Shri Guru Gobind Singh Skill University",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:27-2203-789-22": {
+   "label": "not_scheme",
+   "name": "Grant in Aid for Shri Guru Gobind Singh Skill University",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:27-2230-789-24": {
+   "label": "scheme",
+   "name": "Scheme for Skill Development and rehabilitation of Jail Inmates in Punjab",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:28-2205-102-16": {
+   "label": "not_scheme",
+   "name": "Implementation of Punjab State Cultural and Heritage Policy (Punjab Art Council)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:28-3452-001-01": {
+   "label": "not_scheme",
+   "name": "Direction and Administration",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:28-4202-106-01": {
+   "label": "not_scheme",
+   "name": "Restoration and Conversation of Quila Mubarak Patiala",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:28-4202-106-11": {
+   "label": "not_scheme",
+   "name": "Setting Up of Memorials of Ghallugharas and Other Art Academies",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:29-3055-201-24": {
+   "label": "not_scheme",
+   "name": "Rent/Lease Payable to Private Operators Under Km Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:29-5053-102-10": {
+   "label": "not_scheme",
+   "name": "AV-2 Setting up of Civil Air Terminal At AFS Halwara",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:29-5055-050-01": {
+   "label": "not_scheme",
+   "name": "Bus Stand at Rampura Phul (Local Govt.)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:29-5055-050-02": {
+   "label": "not_scheme",
+   "name": "Bus Stand at Gurdsapur (Local Govt.)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:29-5055-050-17": {
+   "label": "not_scheme",
+   "name": "Bus Stand at Talwandi (PRTC)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:29-5055-050-27": {
+   "label": "not_scheme",
+   "name": "Bus Stand at Dera Beas (Panchayati Raj)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:3-2425-001-07": {
+   "label": "not_scheme",
+   "name": "Development of Hosting of Website",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:3-2425-101-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery and Consumable Items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:3-6404-195-02": {
+   "label": "not_scheme",
+   "name": "Loans to the Punjab State Cooperative Milk Producers Federation Limited (MILKFED)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:3-6425-190-12": {
+   "label": "not_scheme",
+   "name": "Loans to setup New Sugar Complexes for Efficient Processing and Value addition to Sugarcane in Punjab",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:30-2062-102-02": {
+   "label": "not_scheme",
+   "name": "Purchase of Software (System Software and Data Base Software)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:31-2230-003-66": {
+   "label": "not_scheme",
+   "name": "Grant in aid to Punjab Skill Development Mission Society",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:31-2230-199-03": {
+   "label": "not_scheme",
+   "name": "Maharaja Ranjit Singh Armed Forces Services Prepratory Institute Mohali",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:31-2501-102-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab Skill Development Mission Society",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:32-2406-102-08": {
+   "label": "not_scheme",
+   "name": "AMC for IT related items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:33-2052-092-33": {
+   "label": "not_scheme",
+   "name": "GR11- For implementaion of recommendations made by Punjab Governance Reforms Commission in respect of various departments",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:33-2052-092-37": {
+   "label": "not_scheme",
+   "name": "National e-Vidhan Application (NeVA)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:33-2052-092-46": {
+   "label": "not_scheme",
+   "name": "Building Fiscal and Institutional Resilience for Growth",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:33-2052-092-98": {
+   "label": "not_scheme",
+   "name": "Computerization in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:33-4070-800-33": {
+   "label": "not_scheme",
+   "name": "Implementation of New Technologies (Block Chain Artificial Intelligence) and other Project",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:34-2401-789-50": {
+   "label": "scheme",
+   "name": "INCENTIVIZING FARMERS TO ADOPT HORTICULTURE FRUIT ORCHARDS AND THEREBY REDUCING THE DEPLETING GROUND WATER",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:35-2216-103-01": {
+   "label": "scheme",
+   "name": "Punjab Shehri Awas Yojna (PUDA)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:35-2217-001-04": {
+   "label": "not_scheme",
+   "name": "Town Planner",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:36-2056-101-02": {
+   "label": "not_scheme",
+   "name": "District Jails",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:36-4055-800-02": {
+   "label": "not_scheme",
+   "name": "Body Worn Cameras Pilot Project in Jails",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:36-4055-800-04": {
+   "label": "not_scheme",
+   "name": "Construction, Renovation and upgradation in Central Jails",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:37-2014-105-01": {
+   "label": "not_scheme",
+   "name": "District and Session Courts",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:37-2014-105-11": {
+   "label": "not_scheme",
+   "name": "Allowances to retired judicial officers under NPS",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:37-2014-117-01": {
+   "label": "not_scheme",
+   "name": "Family Courts (14th Finance Commission)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:37-2235-200-08": {
+   "label": "not_scheme",
+   "name": "AMC for IT related items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:38-4210-105-29": {
+   "label": "not_scheme",
+   "name": "Upgradation of State Government Medical College Amritsar",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:38-4210-105-37": {
+   "label": "not_scheme",
+   "name": "Tertiary Cancer Care Center",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:38-4210-789-31": {
+   "label": "not_scheme",
+   "name": "Opening up of New Nursing College in the State of Punjab",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:39-4058-103-06": {
+   "label": "not_scheme",
+   "name": "Construction of Building and other Important Works at Patiala / Mohali",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:4-2235-200-29": {
+   "label": "scheme",
+   "name": "Financial Assistance to the Parents of Martyrs",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:4-2235-200-46": {
+   "label": "not_scheme",
+   "name": "Incentive to Schools whose student Join NDA",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:4-2235-800-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery and Consumable Items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:40-2204-001-03": {
+   "label": "not_scheme",
+   "name": "S.Y.5-Youth Festival & Awards and other Activities",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:40-2204-102-06": {
+   "label": "not_scheme",
+   "name": "State Level N.S.S. Cell",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:40-2204-104-06": {
+   "label": "not_scheme",
+   "name": "Hosting of International Events",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:40-2204-104-13": {
+   "label": "not_scheme",
+   "name": "Construction of New Sports Infrastructure Upgradation and Strengthening of Existing Sports Infrasturture",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:40-2204-104-48": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab State Sports Council",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:40-4202-789-04": {
+   "label": "not_scheme",
+   "name": "Khelo India (Earlier Name- Rajiv Gandhi Khel Abhiyan (75:25)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:41-2215-800-10": {
+   "label": "not_scheme",
+   "name": "Maintenace of Water Supply in Government Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:41-4215-102-06": {
+   "label": "not_scheme",
+   "name": "Administrative Expenditure",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:41-4215-102-09": {
+   "label": "not_scheme",
+   "name": "Administrative Expenditure",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:41-4215-102-10": {
+   "label": "not_scheme",
+   "name": "Augmentation / Upgradation of 144 Rural Piped Water Supply Schemes in all Districts of State of Punjab under NABARD RIDF-XXX",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:41-4215-102-38": {
+   "label": "not_scheme",
+   "name": "Construction of Jal Bhawan- Office Complex and other Office Buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:41-4215-789-05": {
+   "label": "not_scheme",
+   "name": "Information Education & Communication (IEC) and Capacity Building Activities",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2062-104-01": {
+   "label": "not_scheme",
+   "name": "Punjab State Vigilance Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-101-03": {
+   "label": "not_scheme",
+   "name": "EDE-10 Provision for Salary of Inclusive Education Volunteers (IEV) under SSA Programme (Salary) V-54 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-102-03": {
+   "label": "not_scheme",
+   "name": "Grant to Punjabi University and its Constituent Colleges",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-102-16": {
+   "label": "not_scheme",
+   "name": "Establishment of Jagat Guru Nanak Dev Punjab State Open University at Patiala",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-106-01": {
+   "label": "not_scheme",
+   "name": "Grant-in-Aid to Punjab State University Text Book Board",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-109-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Samagrh Shiksha Abhiyan V-65 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-200-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Panchayat Samities for Social Education by Development Department",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-789-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Samagrah Shiksha Abhiyan Society V-61 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-789-02": {
+   "label": "scheme",
+   "name": "EDE-03 Pradhan Mantri Poshan Shakti Nirman Yojna (PM Poshan)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2202-789-19": {
+   "label": "not_scheme",
+   "name": "Management Monitoring Evaluation and Research (MMER)-RUSA",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2203-102-02": {
+   "label": "not_scheme",
+   "name": "Assistance to Maharaja Ranjit Singh Punjab Technical University,Bathinda",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2210-001-83": {
+   "label": "not_scheme",
+   "name": "Manpower development under National mental health Amritsar (60:40) (EY-Ongoing)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2210-102-40": {
+   "label": "not_scheme",
+   "name": "Grant in aid to State Health Socoiety AYUSH (EY Ongoing)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2210-789-05": {
+   "label": "scheme",
+   "name": "Universal State Health Insurance Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2216-789-02": {
+   "label": "not_scheme",
+   "name": "Affordable Rental Housing",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2230-199-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Non-Goverment Industrial Training Institutes",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2235-102-01": {
+   "label": "scheme",
+   "name": "Welfare and Rehabilitation of the children",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2401-102-02": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2401-109-10": {
+   "label": "not_scheme",
+   "name": "Agriculture Extension.(Krishonati Yojana) V-7 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2401-114-01": {
+   "label": "scheme",
+   "name": "National Mission on Edible Oil (Oil Seeds)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2401-789-02": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2403-190-01": {
+   "label": "not_scheme",
+   "name": "Assistance to GADVASU",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2415-120-01": {
+   "label": "not_scheme",
+   "name": "Assistance for University and Constituent Colleges",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2425-108-02": {
+   "label": "not_scheme",
+   "name": "Grant-in-aid for Computerization of Agriculture and Rural Development Banks (ARDBs)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2425-108-05": {
+   "label": "not_scheme",
+   "name": "Assistance to Sugarfed",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2425-108-06": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab State Cooperative Agricultural Development Bank for Re-Payment of Loan to NABARD V-44 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2425-108-07": {
+   "label": "not_scheme",
+   "name": "Assistance to the Punjab State Cooperative Agricultural Development Bank Ltd",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2501-789-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab Skill Development Mission Society",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2702-190-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab Water Resources Management Development Corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2702-190-02": {
+   "label": "not_scheme",
+   "name": "Repair of Watercourses / Underground Pipeline",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2851-188-05": {
+   "label": "not_scheme",
+   "name": "Assistance to Institute for Autoparts & Hand Tools Technology, Ludhiana",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2851-190-01": {
+   "label": "not_scheme",
+   "name": "Assistance for Promotion of Micro and Small Enterprises Cluster Development Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2851-190-02": {
+   "label": "not_scheme",
+   "name": "Women Entrepreneurship-Innovation, Start ups Hand Holding (Punjab INFOTECH) V-127 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2851-190-03": {
+   "label": "not_scheme",
+   "name": "Assistance to PSIEC V-128 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2851-789-13": {
+   "label": "scheme",
+   "name": "State Scheme for awareness and Entrepreneurship Development to Promote SC/STs Under Stand up India Project",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2851-789-15": {
+   "label": "not_scheme",
+   "name": "Assistance to PSIEC V-131 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2851-789-18": {
+   "label": "not_scheme",
+   "name": "Assistance to SPV's for the State Mini Cluster Development",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-2852-188-01": {
+   "label": "not_scheme",
+   "name": "Enhancement of Competitiveness in the Indian Capital Goods Sector Phase-II V-133 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3055-190-05": {
+   "label": "not_scheme",
+   "name": "Assistance to Punbus",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3425-200-56": {
+   "label": "not_scheme",
+   "name": "Mukh Mantri Vigyan Yatra Pushpa Gujral Science City Kapurthala V-177 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3456-103-01": {
+   "label": "not_scheme",
+   "name": "For Margin Money and Intra-State Movement of Food grains",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3456-190-05": {
+   "label": "not_scheme",
+   "name": "Assistance to PUNSUP",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3604-200-01": {
+   "label": "not_scheme",
+   "name": "Basic Grant V-173 ) Thousands) Minor Head/Sub Head Accounts Budget Revised Budget",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3604-200-03": {
+   "label": "not_scheme",
+   "name": "Untied Grant",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3604-200-06": {
+   "label": "not_scheme",
+   "name": "Health Sector Grant for Urban Health & Wellnes Centres (UHWCS)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-3604-200-35": {
+   "label": "not_scheme",
+   "name": "Grant-in-Aid to PRIs as per Recommendation of 16th Central Finance Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-None-None-05": {
+   "label": "not_scheme",
+   "name": "CONSTRUCTION OF DR. B.R. AMBEDKAR BHAWANS AND THEIR OPERATION",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-None-None-09": {
+   "label": "scheme",
+   "name": "ASHIRWAD TO BACKWARD CLASSES EWS (ECONOMICALLY WEAKER SECTIONS) AND CHRISTIAN GIRLS/WIDOWS/DIVORCEES AND DAUGHTER OF WIDOWS OF ANY CASTE AT THE TIME OF MARRIAGE",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-None-None-10": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab Backward Classes Land Development and finance Corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-None-None-28": {
+   "label": "not_scheme",
+   "name": "NEW COURSES VOCATIONAL TRAINING ININDUSTRIAL TRAINING INSTITUTES FOR SCHEDULED CASTES STUDENTS (STAFF EXPENDITURE, SCHOLARSHIP TO SCHEDULED CASTES STUDENTS.)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:42-None-None-56": {
+   "label": "not_scheme",
+   "name": "REPAIR OF DR. B.R. AMBEDKAR BHAWANS AND THEIR OPERATION",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2075-104-01": {
+   "label": "scheme",
+   "name": "Pensions and Awards in Consideration of Distinguished Services",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-001-09": {
+   "label": "not_scheme",
+   "name": "Annual Technical Support",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-101-02": {
+   "label": "not_scheme",
+   "name": "EDE-08/1.2(i) Provision for Deficit Budget to meet the enhanced honorarium of special trainers under SSA Programme (salary)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-101-05": {
+   "label": "not_scheme",
+   "name": "EDE-50 Furniture and Play Material for Pre Primary Students",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-101-34": {
+   "label": "scheme",
+   "name": "EDS-57-Attendance Scholarship to SC Primary Girls Students",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-102-14": {
+   "label": "not_scheme",
+   "name": "H.E.06- Rajiv Gandhi National University of Law Punjab",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-103-28": {
+   "label": "not_scheme",
+   "name": "Support to the Govt Colleges for Digital Class Rooms with e-Content",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-107-10": {
+   "label": "scheme",
+   "name": "Chief Minister Scholarship to General Category Students for Giving Concession in University Fee",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-108-01": {
+   "label": "scheme",
+   "name": "National Talent Search Examination",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-200-05": {
+   "label": "scheme",
+   "name": "New India Literacy Programmes for Adult Education",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-10": {
+   "label": "not_scheme",
+   "name": "Provision of Salary for Lab Attendants",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-17": {
+   "label": "not_scheme",
+   "name": "Establishing Centers for Professional Coaching for Employment",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-19": {
+   "label": "not_scheme",
+   "name": "EDE -12 To provide furniture in Primary schools",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-30": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-34": {
+   "label": "scheme",
+   "name": "Free Text Books to all students of 9th to 12th class",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-37": {
+   "label": "scheme",
+   "name": "Encouragement Award to SC Girl Students for pursuing 10+2 Education",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-38": {
+   "label": "scheme",
+   "name": "Award to SC Sports Students (6-12 Classes)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-41": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship for SC Students & Others",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2202-789-48": {
+   "label": "not_scheme",
+   "name": "Punjab Accelerated Outcomes in School Education (POISE under World Bank)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-2204-102-01": {
+   "label": "not_scheme",
+   "name": "National Cadet Corps-General Establishment",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-4202-202-26": {
+   "label": "not_scheme",
+   "name": "EDS-56 Upgradation of Infrastructure in Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-4202-202-27": {
+   "label": "not_scheme",
+   "name": "EDS-67 Construction and renovation of District Education office",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-4202-202-28": {
+   "label": "not_scheme",
+   "name": "EDS-62 Construction of Auditorium in DIET Sangrur",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-4202-202-30": {
+   "label": "not_scheme",
+   "name": "Construction and Repair of Existing Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-4202-203-01": {
+   "label": "not_scheme",
+   "name": "New Colleges in Educationally Backward Areas",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:5-4202-203-29": {
+   "label": "not_scheme",
+   "name": "Establishment of Guru Teg Bahadur Punjab State University of Law, Tarn Taran",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:6-2015-101-98": {
+   "label": "not_scheme",
+   "name": "Computerization in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:7-2020-105-98": {
+   "label": "not_scheme",
+   "name": "Computerization in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:7-2040-001-01": {
+   "label": "not_scheme",
+   "name": "Direction and Administration",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:7-4070-800-01": {
+   "label": "not_scheme",
+   "name": "Excise Department",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2049-115-01": {
+   "label": "not_scheme",
+   "name": "Interest on Ways & Means Advances from Reserve Bank of India",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2049-115-02": {
+   "label": "not_scheme",
+   "name": "Interest on Overdraft/shortfall from Reserve Bank of India",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2049-200-01": {
+   "label": "not_scheme",
+   "name": "Interest on temporary loans obtained from the Bank of India and other Banks for purchase of Food Grains",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2054-095-02": {
+   "label": "not_scheme",
+   "name": "Purchase of Software (System Softaware and Data Base Software)",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2054-098-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery and Consumable Items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2070-001-03": {
+   "label": "not_scheme",
+   "name": "Computer Stationery and consumable items",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2075-190-01": {
+   "label": "not_scheme",
+   "name": "Assistance to Punjab Infrastructure Development Board",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-2235-104-01": {
+   "label": "not_scheme",
+   "name": "Deposit linked Insurance Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-4070-800-01": {
+   "label": "not_scheme",
+   "name": "Construction of District Treasury office in Sri Muktsar Sahib",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-6003-101-04": {
+   "label": "not_scheme",
+   "name": "Market Loans Bearing Interest (From September",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:8-6003-101-90": {
+   "label": "not_scheme",
+   "name": "7.60% of Punjab SDL 2027",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:9-3456-001-01": {
+   "label": "not_scheme",
+   "name": "Direction",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:9-3456-001-98": {
+   "label": "not_scheme",
+   "name": "Computerizaton in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:9-3456-190-07": {
+   "label": "not_scheme",
+   "name": "Special Assistance to PUNSUP for Capital Investment to upgrade / reconstruction of Godowns",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:9-3475-106-98": {
+   "label": "not_scheme",
+   "name": "Computerization in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of health family 2024 25 2025 26 2025 26 2026 27|grant in aid to state health society ayush": {
+   "label": "not_scheme",
+   "name": "Grant-in-aid to State Health Society AYUSH",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of higher 2024 25 2025 26 2025 26 2026 27|assistance under nfsa to pungrain": {
+   "label": "not_scheme",
+   "name": "Assistance under NFSA to PUNGRAIN",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of higher 2024 25 2025 26 2025 26 2026 27|professional coaching for employment": {
+   "label": "not_scheme",
+   "name": "Professional coaching for employment",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of higher 2024 25 2025 26 2025 26 2026 27|punjab urban health infrastructure dhs 0 0 10 11 13 15 and 25 civil works equipment aca 2011 12": {
+   "label": "not_scheme",
+   "name": "Punjab Urban Health Infrastructure (DHS- 0-0 10,11,13,15 and 25) (Civil works+Equipment) (ACA 2011-12)",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of higher 2024 25 2025 26 2025 26 2026 27|setting up food drug authority": {
+   "label": "not_scheme",
+   "name": "Setting up Food & Drug Authority",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of medical 2024 25 2025 26 2025 26 2026 27|new medical college kapurthala": {
+   "label": "not_scheme",
+   "name": "New Medical College, Kapurthala",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of medical 2024 25 2025 26 2025 26 2026 27|punjab institute of liver and biliary sciences at 3b1 mohali": {
+   "label": "not_scheme",
+   "name": "Punjab Institute of Liver and Biliary Sciences at 3b1 Mohali",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of medical 2024 25 2025 26 2025 26 2026 27|tertiary care cancer center": {
+   "label": "not_scheme",
+   "name": "Tertiary Care Cancer Center",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of medical 2024 25 2025 26 2025 26 2026 27|upgradation of infrastructure in government medical college and hospital patiala": {
+   "label": "not_scheme",
+   "name": "Upgradation of infrastructure in Government Medical College and Hospital (Patiala)",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of rural 2024 25 2025 26 2025 26 2026 27|modernization of villages with more than 50 sc population": {
+   "label": "not_scheme",
+   "name": "Modernization of Villages with More Than 50% SC Population",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of rural 2024 25 2025 26 2025 26 2026 27|pradhan mantri awaas yojana g 60 40": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awaas Yojana (G) (60:40)",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|conduction of research studies programme evaluation impact analysis of various schemes and programmes of the department of school education": {
+   "label": "not_scheme",
+   "name": "Conduction of Research Studies/ Programme Evaluation/ Impact Analysis of Various Schemes and Programmes of the Department of School Education",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|digital education in the govt schools": {
+   "label": "not_scheme",
+   "name": "Digital Education in the Govt Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|provision for deficit budget to meet the enhanced honorarium of special trainers under ssa programme salary": {
+   "label": "not_scheme",
+   "name": "Provision for Deficit Budget to Meet the Enhanced Honorarium of Special Trainers Under SSA Programme (Salary)",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|provision of separate toilets menstrual health hygiene for girls in govt schools": {
+   "label": "not_scheme",
+   "name": "Provision of separate toilets & menstrual health & hygiene for Girls in Govt. Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|schools of eminence": {
+   "label": "not_scheme",
+   "name": "Schools of Eminence",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|upgradation of infrastructure in schools": {
+   "label": "not_scheme",
+   "name": "Upgradation of Infrastructure in Schools",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of social 2024 25 2025 26 2025 26 2026 27|margin money to backfinco to raise term loan from nmdfc": {
+   "label": "not_scheme",
+   "name": "Margin money to BACKFINCO to raise Term Loan from NMDFC",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of social 2024 25 2025 26 2025 26 2026 27|sca sc 1 setting up of institutes for training in typing and stenography to below poverty line scs": {
+   "label": "not_scheme",
+   "name": "SCA(SC)-1 : Setting up of Institutes for Training in Typing and Stenography to Below Poverty Line SCs",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of social 2024 25 2025 26 2025 26 2026 27|special central assistance to scheduled castes sub plan component of pradhan mantri anushuchitjattiabayudhay yojana pmajay": {
+   "label": "scheme",
+   "name": "Special Central Assistance to Scheduled Castes Sub Plan Component of Pradhan Mantri AnushuchitJattiAbayudhay Yojana (PMAJAY)",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of social security|rajiv gandhi scheme for empowerment of adolescent girls rgseag sabla snp 50 50 training 60 40 goi gop": {
+   "label": "scheme",
+   "name": "Rajiv Gandhi Scheme for Empowerment of Adolescent Girls (RGSEAG) (SABLA) (SNP 50:50) (Training 60:40) (GOI:GOP)",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of social security|reimbursement to transport department in lieu of free concessional travel facility to physically handicapped and blinds in government pepsu road transport corporation buses": {
+   "label": "scheme",
+   "name": "Reimbursement to Transport Department in Lieu of Free/Concessional Travel Facility to Physically Handicapped and Blinds in Government/Pepsu Road Transport Corporation Buses",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of social security|the punjab divyangjan shaktikaran yojana": {
+   "label": "scheme",
+   "name": "The Punjab Divyangjan Shaktikaran Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of social security|working women hostel providing hostel facilities to working women": {
+   "label": "not_scheme",
+   "name": "Working Women Hostel (Providing Hostel facilities to Working Women)",
+   "how": "stratified sample, read by eye"
+  },
+  "name:department of technical 2024 25 2025 26 2025 26 2026 27|up gradation of govt polytechnic colleges as center of excellence": {
+   "label": "not_scheme",
+   "name": "Up gradation of Govt Polytechnic Colleges as Center of Excellence.",
+   "how": "stratified sample, read by eye"
+  },
+  "hoa:1-2401-102-02": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-102-10": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security (Krishionnati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-102-11": {
+   "label": "scheme",
+   "name": "Krishionnati Yojana Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-104-02": {
+   "label": "scheme",
+   "name": "Scheme for Power Subsidy to Farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-105-17": {
+   "label": "scheme",
+   "name": "CS (AGR-28) Parampragat Krishi Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-108-22": {
+   "label": "scheme",
+   "name": "Subsidy schemes for cane price payment to the cane farmers",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-109-10": {
+   "label": "scheme",
+   "name": "Agriculture Extension.(Krishonati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-109-14": {
+   "label": "scheme",
+   "name": "AGR-06 Rashtriya Krishi Vikas Yojana (including K3P)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-109-18": {
+   "label": "not_scheme",
+   "name": "Digital Agriculture (Krishionnati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-789-19": {
+   "label": "scheme",
+   "name": "AGR-06 Rashtriya Krishi Vikas Yojana (RKVY) (including K3P)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-789-32": {
+   "label": "scheme",
+   "name": "Agriculture Extension(Krishonnati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-789-34": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security(Krishionnati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-789-36": {
+   "label": "scheme",
+   "name": "CS (AGR)-28 Parampragat Krishi Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-789-47": {
+   "label": "scheme",
+   "name": "Incentivizing Direct Seeding of Rice(DSR)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-789-54": {
+   "label": "scheme",
+   "name": "Krishionnati Yojana Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:1-2401-800-28": {
+   "label": "scheme",
+   "name": "Incentivizing Direct Seeding of Rice(DSR)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:10-2075-104-02": {
+   "label": "not_scheme",
+   "name": "Award of Parman Patras",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:10-2235-107-01": {
+   "label": "scheme",
+   "name": "Pension and other Benefits to the Freedom Fighters and their Wards",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-001-33": {
+   "label": "scheme",
+   "name": "Balri Rakshak Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-102-01": {
+   "label": "scheme",
+   "name": "C.S.VI.I Employees State Insurance Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-102-08": {
+   "label": "not_scheme",
+   "name": "Strengthening Of Existing Govrnment Homoeopathic Dispensaries (Prime Minister Gramin Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-190-09": {
+   "label": "scheme",
+   "name": "Universal State Health Insurance Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-190-10": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Sehat Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-789-03": {
+   "label": "scheme",
+   "name": "Balri Rakshak Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-789-04": {
+   "label": "scheme",
+   "name": "DHS 66- Sarbat Sehat Bima Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-789-05": {
+   "label": "scheme",
+   "name": "Universal State Health Insurance Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2210-789-06": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Sehat Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:11-2235-200-03": {
+   "label": "not_scheme",
+   "name": "Reimbursement of Medical Charges to Punjab Government Pensioners",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:12-2055-113-03": {
+   "label": "not_scheme",
+   "name": "Free Travel facility from the Rank of Constable to Inspector in Government/P.R.T.C.. Buses",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:13-2851-103-07": {
+   "label": "scheme",
+   "name": "Scholarship Share of Punjab Government for Diploma Courses in Handloom Technology",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:13-2852-104-02": {
+   "label": "scheme",
+   "name": "Incentive to Industrial Units as per FIIP 2013 and Industrial and Business Development Policy 2017",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:13-2852-104-03": {
+   "label": "scheme",
+   "name": "Incentive to Industrial units as per old Policies prior to 2013",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:13-2852-104-04": {
+   "label": "scheme",
+   "name": "For availing Special Fiscal Incentives to existing industries to switch over to paddy Straw fuel based boiler",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:13-2852-104-05": {
+   "label": "scheme",
+   "name": "Fiscal Incentives for industrial Promotion 2013 Investment Promotion Campaign in Punjab",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:13-2852-800-01": {
+   "label": "scheme",
+   "name": "VSI-1/IN 12.4 -Incentives Under Various Industrial Policies",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:13-2852-800-03": {
+   "label": "scheme",
+   "name": "Fiscal Incentives for Industrial Promotion 2013 Investment Promotion Campaign In Punjab",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:17-2216-789-03": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana – Urban 2.0- Housing for All",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:17-4217-051-06": {
+   "label": "not_scheme",
+   "name": "AMRUT 1.0 Reform Incentive",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:2-2404-191-07": {
+   "label": "scheme",
+   "name": "Livestock Insurance (General/APL)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:2-2404-789-08": {
+   "label": "scheme",
+   "name": "Livestock Insurance (BPL/SC/ST)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:2-2404-789-09": {
+   "label": "scheme",
+   "name": "DD-05 Promotion of Dairy farming as livelihood for SC beneficiaries under SCSP",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:2-2405-101-21": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matasya Sampada Yojana (PMMSY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:2-2405-789-10": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matasya Sampada Yojana (PMMSY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:2-4405-101-06": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matasya Sampada Yojana (PMMSY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:21-3054-337-04": {
+   "label": "not_scheme",
+   "name": "Maintenance of Roads under Pradhan Mantri Gram Sadak Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:21-5054-789-03": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Gram Sadak Yojna (PMGSY-I)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:22-2235-200-11": {
+   "label": "scheme",
+   "name": "Reimbursement to Transport Department in lieu of Free Concessional Travel Facility to Terrorists victims",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-2501-102-01": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission (Aajeevika)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-2501-102-02": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-2501-307-01": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Krishi Sinchai Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-2501-789-02": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-2501-789-03": {
+   "label": "scheme",
+   "name": "Mahila Kisan Sashaktikaran Priyojana (MKSP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-2501-789-09": {
+   "label": "not_scheme",
+   "name": "CS/RDS(D)-06 Integrated Watershed Management programme (IWMP)(60:40) Now PM Krishi Shinchai Yojna (EY Ongoing)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-2515-102-04": {
+   "label": "not_scheme",
+   "name": "NRI-02 : Friends Of Punjab - NRI - Mukh Mantri Garima Gram Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-4515-103-04": {
+   "label": "scheme",
+   "name": "CS(RDE)-8 Indira Awas Yojana (60:40) Now PM Awas Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:23-4515-789-10": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-101-14": {
+   "label": "scheme",
+   "name": "Attendance Scholarship To Handicapped Girl Students In Rural Area",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-101-17": {
+   "label": "scheme",
+   "name": "Niramaya-A Health Insurance Scheme For The Welfare Of Persons With Autism, Cerebral Palsy, Mental Retardation And Multiple Disability",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-101-21": {
+   "label": "scheme",
+   "name": "The Punjab Divyangjan Shaktikarn Yojana (PDSY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-102-19": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY) (EY-31 Mar 2022)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-103-37": {
+   "label": "scheme",
+   "name": "Mata Tripta mahila Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-103-40": {
+   "label": "scheme",
+   "name": "Punjab Divyangjan Shaktikarn yojana (PDSY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-200-13": {
+   "label": "scheme",
+   "name": "Reimbursement to Transport Department in lieu of Free Concessional Travel facility to Women above the age of",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-789-09": {
+   "label": "scheme",
+   "name": "Attendance Scholarship To Handicapped Girl Students In Rural Area",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2235-789-26": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY) (EY-31 Mar 2022)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2236-101-01": {
+   "label": "scheme",
+   "name": "National Nutrition Mission (EY-31 March 2020)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:25-2236-789-01": {
+   "label": "scheme",
+   "name": "Nutrition-Integrated Child Development Scheme (50:50) (EY-31 March 2022)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:26-2235-200-14": {
+   "label": "not_scheme",
+   "name": "Reimbursement of Medical Charges to Ex M.L.As/M.L.Cs",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:26-2235-200-15": {
+   "label": "not_scheme",
+   "name": "Reimbursement of Travel Expenses to Ex-M.L.As and and their spouses",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:27-2203-107-01": {
+   "label": "scheme",
+   "name": "Merit-cum-Means Scholarships to Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:27-2230-003-10": {
+   "label": "scheme",
+   "name": "Provide Insurance Coverage for Trainees",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:27-2230-800-01": {
+   "label": "scheme",
+   "name": "Reimbursement to Transport Department/PRTC in lieu of free concessional Travel Facility to Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:31-2230-003-03": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Kaushal Vikas Yojna (PMKVY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:31-2230-003-05": {
+   "label": "scheme",
+   "name": "Skill Acquisition and Knowledge Awareness for Livelihood (SANKALP) Promotion Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:31-2230-003-11": {
+   "label": "scheme",
+   "name": "Punjab Hunar Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:31-2230-789-04": {
+   "label": "scheme",
+   "name": "Skill Acquisition and Knowledge Awareness for Livelihood (SANKALP) Promotion Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:31-2230-789-05": {
+   "label": "scheme",
+   "name": "Punjab Hunar Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:34-2401-119-62": {
+   "label": "scheme",
+   "name": "Incentivizing farmers to adopt horticulture fruit orchards and thereby reducing the depleting ground water",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:34-2401-789-02": {
+   "label": "scheme",
+   "name": "Subsidies on Freight Charges for Export of Fruits and Vegetables in Punjab",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:4-2235-200-01": {
+   "label": "scheme",
+   "name": "(a) Pension to EX-Servicemen/War widows above the age of 65 years",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2202-789-30": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2210-190-10": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Sehat Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2210-789-04": {
+   "label": "scheme",
+   "name": "DHS 66- Sarbat Sehat Bima Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2216-103-01": {
+   "label": "scheme",
+   "name": "Punjab Shehri Awas Yojna (PUDA)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2216-789-03": {
+   "label": "scheme",
+   "name": "Interest Subsidy Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2230-003-03": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Kaushal Vikas Yojna (PMKVY)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2230-003-05": {
+   "label": "scheme",
+   "name": "Skill Acquisition and Knowledge Awareness for Livelihood (SANKALP) Promotion Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2230-003-10": {
+   "label": "scheme",
+   "name": "Provide Insurance Coverage for Trainees",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2230-789-04": {
+   "label": "scheme",
+   "name": "Skill Acquisition and Knowledge Awareness for Livelihood (SANKALP) Promotion Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2401-102-10": {
+   "label": "scheme",
+   "name": "Food and Nutrition Security (Krishionnati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2401-105-17": {
+   "label": "scheme",
+   "name": "CS (AGR-28) Parampragat Krishi Vikas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2401-109-14": {
+   "label": "scheme",
+   "name": "AGR-06 Rashtriya Krishi Vikas Yojana (including K3P)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2401-109-18": {
+   "label": "not_scheme",
+   "name": "Digital Agriculture (Krishionnati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2401-789-19": {
+   "label": "scheme",
+   "name": "AGR-06 Rashtriya Krishi Vikas Yojana (RKVY) (including K3P)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2401-789-32": {
+   "label": "scheme",
+   "name": "Agriculture Extension(Krishonnati Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2401-789-54": {
+   "label": "scheme",
+   "name": "Krishionnati Yojana Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2501-102-02": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2501-307-01": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Krishi Sinchai Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2501-789-02": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2501-789-03": {
+   "label": "scheme",
+   "name": "Mahila Kisan Sashaktikaran Priyojana (MKSP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-2501-789-09": {
+   "label": "not_scheme",
+   "name": "CS/RDS(D)-06 Integrated Watershed Management programme (IWMP)(60:40) Now PM Krishi Shinchai Yojna (EY Ongoing)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-3456-190-01": {
+   "label": "not_scheme",
+   "name": "Off Budget Borrowing Reimbursement of Advance Payment",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-None-None-65": {
+   "label": "scheme",
+   "name": "Post Matric Scholarship for Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:42-None-None-80": {
+   "label": "scheme",
+   "name": "Provision of Free Text books and Tool Kits to Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2071-109-01": {
+   "label": "not_scheme",
+   "name": "Pension to Employees of State Aided Educational Institutions (Schools)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-101-25": {
+   "label": "not_scheme",
+   "name": "EDE-15 Award for Best Government School in each District",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-101-29": {
+   "label": "scheme",
+   "name": "EDS-58-Attendance Scholarship to BC/EWS Primary Girls Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-106-01": {
+   "label": "scheme",
+   "name": "EDS-38 Free Text Books to all Students from 9th to",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-107-01": {
+   "label": "scheme",
+   "name": "Scholarships General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-107-02": {
+   "label": "scheme",
+   "name": "Scholarships General",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-107-06": {
+   "label": "scheme",
+   "name": "E.D.3.15(ii) Scholarships to the Childern of Riots Victims Families",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-107-07": {
+   "label": "scheme",
+   "name": "CM Scholarships Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-107-08": {
+   "label": "scheme",
+   "name": "Pre -Matric Scholarship for OBC/EBC and DNT Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-109-63": {
+   "label": "not_scheme",
+   "name": "Awards for best Government School in each district",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-112-01": {
+   "label": "scheme",
+   "name": "EDE-03- Pradhan Mantri Poshan Shakti Nirman Yojna (PM Poshan)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-789-02": {
+   "label": "scheme",
+   "name": "EDE-03 Pradhan Mantri Poshan Shakti Nirman Yojna (PM Poshan)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-789-26": {
+   "label": "scheme",
+   "name": "CM Scholarship Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:5-2202-789-39": {
+   "label": "scheme",
+   "name": "Pre-matric Scholarship for SC and others Component-II",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:6-2015-911-01": {
+   "label": "not_scheme",
+   "name": "REIMBURSEMENT OF ELECTION EXPENDITURE",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:8-2054-095-04": {
+   "label": "not_scheme",
+   "name": "User Services and Other Charges on New Defined Contribution Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:8-2071-102-01": {
+   "label": "not_scheme",
+   "name": "Commuted Value of Pensions",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:8-2071-105-01": {
+   "label": "not_scheme",
+   "name": "Family Pension",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:8-2071-111-01": {
+   "label": "not_scheme",
+   "name": "Pension to Legislators",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:8-2071-117-01": {
+   "label": "not_scheme",
+   "name": "Government Contribution for Defined Contribution Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:8-6003-106-03": {
+   "label": "not_scheme",
+   "name": "Ujwal Discom Assurance Yojna (UDAY Bonds)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "hoa:9-3456-190-01": {
+   "label": "not_scheme",
+   "name": "Off Budget Borrowing Reimbursement of Advance Payment",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of health family 2024 25 2025 26 2025 26 2026 27|mukhya mantri sehat yojna": {
+   "label": "scheme",
+   "name": "Mukhya Mantri Sehat Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of rural 2024 25 2025 26 2025 26 2026 27|integrated watershed management programme iwmp 60 40 pmksy pradhan mantri krishi sinchayee yojana": {
+   "label": "not_scheme",
+   "name": "Integrated Watershed Management Programme (IWMP) (60:40) PMKSY(Pradhan Mantri Krishi Sinchayee Yojana)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of rural 2024 25 2025 26 2025 26 2026 27|mahila kisan sashaktikaran pariyojana": {
+   "label": "scheme",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of rural 2024 25 2025 26 2025 26 2026 27|punjab state rural livelihoods mission": {
+   "label": "scheme",
+   "name": "Punjab State Rural Livelihoods Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|attendance scholarship to bc ews primary girl students 34 scholarship stipend": {
+   "label": "scheme",
+   "name": "Attendance Scholarship to BC/EWS Primary Girl Students. 34-Scholarship/ Stipend",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|attendance scholarship to sc primary girl students 34 scholarship stipend": {
+   "label": "scheme",
+   "name": "Attendance Scholarship to SC Primary Girl Students.34-Scholarship/ Stipend",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|award for best government middle school in each district": {
+   "label": "not_scheme",
+   "name": "Award for Best Government Middle School in Each District",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|award for best government primary school in each block": {
+   "label": "not_scheme",
+   "name": "Award for Best Government Primary School in Each Block",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|award to sc sports students scheme": {
+   "label": "scheme",
+   "name": "Award to SC Sports Students Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|dr hargobind khurana scholarship for brilliant students": {
+   "label": "scheme",
+   "name": "Dr. Hargobind Khurana Scholarship for brilliant students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|encouragement award to sc girls students": {
+   "label": "scheme",
+   "name": "Encouragement Award to SC Girls Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|pre matric scholarship for other backward classes students": {
+   "label": "scheme",
+   "name": "Pre Matric Scholarship for Other Backward Classes Students",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of school 2024 25 2025 26 2025 26 2026 27|pre matric scholarship for sc students studying in classes ix x": {
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship for SC Students Studying in Classes IX & X",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social 2024 25 2025 26 2025 26 2026 27|post matric scholarship to the other backward classes for study in india 100 goi over and above committed liability of state govt": {
+   "label": "scheme",
+   "name": "Post matric Scholarship to the Other Backward Classes for Study in India (100% GOI over and above committed liability of State Govt.)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social 2024 25 2025 26 2025 26 2026 27|pradhan mantri adarsh gram yojana pmagy in sc villages 50 50 goi gop goi share includes incentive grant": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Adarsh Gram Yojana (PMAGY) in SC Villages (50:50) (GOI:GOP) (GOI share includes incentive grant)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social 2024 25 2025 26 2025 26 2026 27|provision of free text books and tool kits to scheduled castes": {
+   "label": "scheme",
+   "name": "Provision of Free Text Books and Tool Kits to Scheduled Castes",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social 2024 25 2025 26 2025 26 2026 27|scholarship for post matric students for scheduled castes 100 goi over above committed liability of state govt shifted from non plan": {
+   "label": "scheme",
+   "name": "Scholarship for Post Matric Students for Scheduled Castes (100% GOI over & above committed liability of State Govt) (Shifted from Non-Plan)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|attendance scholarship to handicapped girl students in rural areas": {
+   "label": "scheme",
+   "name": "Attendance Scholarship to Handicapped Girl Students in Rural Areas",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|indira gandhi national disabled pension scheme": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Disabled Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|indira gandhi national old age pension": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Old Age Pension",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|indira gandhi national widow pension scheme": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Widow Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|mata tripta mahila yojana": {
+   "label": "scheme",
+   "name": "Mata Tripta Mahila Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|national nutrition mission 60 40 goi gop": {
+   "label": "scheme",
+   "name": "National Nutrition Mission (60:40) (GoI-GoP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|nutrition icds 50 of acutal expenditure reimburses by goi snp 50 50 goi gop": {
+   "label": "scheme",
+   "name": "Nutrition ICDS (50% of acutal expenditure reimburses by GoI) (SNP) (50:50)(GoI-GoP)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|old age pension": {
+   "label": "scheme",
+   "name": "Old Age Pension",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|reimbursement to transport department in lieu of free concessional travel facility to women above the age of 60 years in govt prtc buses in the state of punjab": {
+   "label": "scheme",
+   "name": "Reimbursement to Transport Department in lieu of Free Concessional Travel facility to Women above the age of 60 years in Govt./PRTC Buses in the State of Punjab",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of social security|women helpline whl": {
+   "label": "scheme",
+   "name": "Women Helpline (WHL)",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of technical 2024 25 2025 26 2025 26 2026 27|providing insurance coverage for training against accidents during institutional training and on the job tarining in industry": {
+   "label": "scheme",
+   "name": "Providing Insurance Coverage for Training against Accidents During Institutional Training and on The Job Tarining in Industry",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "name:department of technical 2024 25 2025 26 2025 26 2026 27|strengthening of apprenticeship scheme thro pssds reimbursement of stipend and bt cost": {
+   "label": "scheme",
+   "name": "Strengthening of Apprenticeship Scheme Thro PSSDS-Reimbursement of Stipend and BT Cost",
+   "how": "audit census at the publishing bar, read by eye"
+  }
+ },
+ "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT."
+}

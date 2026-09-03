@@ -30,19 +30,19 @@ out of different numbers.
 |---|---|---|---|---|---|---|---|
 | West Bengal | yes | yes | yes | yes | yes | 5 of 5 | 9,024 |
 | Tamil Nadu | yes | yes | yes | yes | yes | 5 of 5 | 6,220 |
-| Punjab | yes | yes | yes | yes | yes | 5 of 5 | 2,961 (not yet on the site) |
+| Punjab | yes | yes | yes | yes | yes | 5 of 5 | 2,961 |
 | Kerala | yes | yes | yes | yes | yes | 5 of 5 | 2,629 |
-| Telangana | yes | yes | yes | yes | yes | 5 of 5 | 2,039 (not yet on the site) |
+| Telangana | yes | yes | yes | yes | yes | 5 of 5 | 2,039 |
 | Maharashtra | yes | yes | yes | yes | yes | 5 of 5 | 1,956 |
 | Odisha | yes | yes | yes | yes | yes | 5 of 5 | 1,628 |
-| Haryana | yes | yes | yes | yes | yes | 5 of 5 | 970 (not yet on the site) |
-| Jharkhand | yes | yes | yes | yes | yes | 5 of 5 | 852 (not yet on the site) |
-| Tripura | yes | yes | yes | yes | yes | 5 of 5 | 134 (not yet on the site) |
-| Uttarakhand | yes | yes | yes | yes | **no** | 4 of 5 | 2,324 (not yet on the site) |
-| Delhi | yes | yes | yes | yes | **no** | 4 of 5 | 1,578 (not yet on the site) |
+| Haryana | yes | yes | yes | yes | yes | 5 of 5 | 970 |
+| Jharkhand | yes | yes | yes | yes | yes | 5 of 5 | 852 |
+| Tripura | yes | yes | yes | yes | yes | 5 of 5 | 134 |
+| Uttarakhand | yes | yes | yes | yes | **no** | 4 of 5 | 2,324 |
+| Delhi | yes | yes | yes | yes | **no** | 4 of 5 | 1,578 |
 | Karnataka | yes | yes | yes | yes | **no** | 4 of 5 | 969 |
 | Andhra Pradesh | yes | yes | yes | yes | **no** | 4 of 5 | 552 |
-| Uttar Pradesh | yes | yes | yes | **no** | **no** | 3 of 5 | 5,831 (not yet on the site) |
+| Uttar Pradesh | yes | yes | yes | **no** | **no** | 3 of 5 | 5,831 |
 | *Surveyed, does not yield* | | | | | | | |
 | Gujarat | yes | yes | **no** | &middot; | &middot; | 2 of 3 | &middot; |
 | Rajasthan | yes | yes | **no** | yes | &middot; | 3 of 4 | &middot; |
@@ -53,9 +53,9 @@ out of different numbers.
 | Himachal Pradesh | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
 
 15 of 22 states surveyed yield a machine-readable scheme list, between them naming
-39,667 schemes. 7 of those 15 are published on the site, covering 22,978 schemes; the
-other 8 are read, reconciled against their own books and committed, and each still needs
-a classifier with hand-counted precision before its absence claims can be published.
+39,667 lines. All 15 carry a classifier built and validated against
+that state's own hand labels, so every absence claim on the site has counted precision
+behind it and named errors beside it.
 
 ---
 

@@ -534,10 +534,12 @@ def legibility_section(leg, ms=None):
             named += '<span class="of" title="listed from the state\'s own budget book; '\
                      'no classifier yet, so no row here is named as hidden">'\
                      '<br>listed, not yet judged</span>' 
-        # A state listed without a classifier has a register page of its own, and the
-        # scoreboard is where a reader will go looking for it.
+        # EVERY built state's name links to its register page. The link used to be there
+        # only for states without a classifier, which orphaned all fifteen pages the moment
+        # the last classifier landed: a classifier decides which lines this register calls
+        # schemes and does not make the rest of a state's book stop existing.
         label = e(r["state"])
-        if r["built"] and r.get("key") and not m.get("absence_claims_published"):
+        if r["built"] and r.get("key"):
             label = f'<a href="{link("state/" + r["key"] + ".html")}">{label}</a>'
         return (f'<tr class="{"" if r["built"] else "refused"}">'
                 f'<td>{label}</td>{cells(r)}'
@@ -609,15 +611,15 @@ def legibility_section(leg, ms=None):
     transparency.</b> It measures one thing, whether a machine can read what a state
     publishes, and a state can publish a great deal that a machine cannot read.
     <p style="margin:8px 0 0"><b style="display:inline;color:var(--ink);font-family:inherit;
-    font-size:inherit;text-transform:none;letter-spacing:0">Reading a state and accusing a
-    portal are different things, and only the first is done for all fourteen.</b>
-    {num(leg.get("states_on_site"))} of the {num(leg.get("states_built"))} are searchable
-    on this site today, covering {num(leg.get("schemes_named_on_site"))} of the
-    {named} schemes. The other {num(leg.get("states_built") - leg.get("states_on_site"))}
-    are read, reconciled against their own books and committed, and each still needs a
-    classifier with hand-counted precision before this register will say of any of its
-    rows that a portal is hiding it. Naming a directorate as a hidden scheme is a false
-    accusation, and the bar for making one is not the bar for counting a budget line.</p>
+    font-size:inherit;text-transform:none;letter-spacing:0">Listing a state and accusing a
+    portal are different claims, and all {word(leg.get("states_built")).lower()} states now
+    make both.</b> Every one has a classifier built and validated against its own hand
+    labels, and every row at each state&rsquo;s publishing bar carries one, so the
+    precision behind an absence claim is a COUNT and its errors are named rather than
+    estimated. Naming a directorate as a hidden scheme is a false accusation, and that is
+    the bar these clear. Each state&rsquo;s full budget book is behind its name in the
+    table above: a classifier decides which lines this register will call schemes and does
+    not make the rest of the book stop existing.</p>
     <p style="margin:8px 0 0"><b style="display:inline;color:var(--ink);font-family:inherit;
     font-size:inherit;text-transform:none;letter-spacing:0">Uttar Pradesh is here without
     clearing the English test, and it is the only one.</b> The largest state in India
@@ -1465,7 +1467,8 @@ def unify(checks, registry, classification):
 # Rows already matched to a myScheme record are skipped, because those schemes have a page.
 LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
                "maharashtra": 2, "odisha": 4, "westbengal": 3, "haryana": 3,
-               "tripura": 1, "jharkhand": 1, "delhi": 1, "telangana": 1}
+               "tripura": 1, "jharkhand": 1, "delhi": 1, "telangana": 1,
+               "uttarakhand": 1, "punjab": 1, "uttarpradesh": 1}
 STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
             "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
             "maharashtra": "Maharashtra", "odisha": "Odisha",

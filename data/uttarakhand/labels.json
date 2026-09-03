@@ -1,0 +1,1877 @@
+{
+ "state": "Uttarakhand",
+ "snapshot": "2026-09-03",
+ "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, pension or subsidy from this line? An allowance or pay for staff, a building, a land purchase, a loan to a corporation or to a legislator, a council, a directorate, or a bare 'State Share Relative to Centrally Assisted Scheme' is not_scheme.",
+ "labelled": 373,
+ "scheme": 143,
+ "not_scheme": 230,
+ "sampling": "Stratified on whether the major head is a revenue head (2xxx, 3xxx) or a capital one (4xxx to 6xxx), 11% of each with a floor of 20, seed 20260903.",
+ "labels": {
+  "2011021010300": {
+   "label": "not_scheme",
+   "name": "Legislative Assembly",
+   "how": "stratified sample, read by eye"
+  },
+  "2011021030100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme E- Vidhan Sabha",
+   "how": "stratified sample, read by eye"
+  },
+  "2011021039500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2012001020300": {
+   "label": "not_scheme",
+   "name": "Governor/ Administrators of Union Territories Governor Discretionary Grant",
+   "how": "stratified sample, read by eye"
+  },
+  "2013001050500": {
+   "label": "not_scheme",
+   "name": "Lump sum Grant for H. Chief Minister announcements",
+   "how": "stratified sample, read by eye"
+  },
+  "2014001140300": {
+   "label": "not_scheme",
+   "name": "Advocate General Dearness Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "2015001030300": {
+   "label": "not_scheme",
+   "name": "Legislative Assembly and Parliament (50% CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2030010010500": {
+   "label": "not_scheme",
+   "name": "Compensation for Stamp Registration in local Bodies Area",
+   "how": "stratified sample, read by eye"
+  },
+  "2030011010300": {
+   "label": "not_scheme",
+   "name": "Non-judicial stamp",
+   "how": "stratified sample, read by eye"
+  },
+  "2030011020300": {
+   "label": "not_scheme",
+   "name": "Judicial Stamp",
+   "how": "stratified sample, read by eye"
+  },
+  "2030011020500": {
+   "label": "not_scheme",
+   "name": "Payment by Treasury to Stamp Vendor",
+   "how": "stratified sample, read by eye"
+  },
+  "2043000010400": {
+   "label": "not_scheme",
+   "name": "Trade promotion scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2043008000200": {
+   "label": "not_scheme",
+   "name": "State share in GSTN",
+   "how": "stratified sample, read by eye"
+  },
+  "2048007970300": {
+   "label": "not_scheme",
+   "name": "Transfer to sinking fund",
+   "how": "stratified sample, read by eye"
+  },
+  "2052000902000": {
+   "label": "scheme",
+   "name": "Gaurav Samman Award",
+   "how": "stratified sample, read by eye"
+  },
+  "2052000902100": {
+   "label": "not_scheme",
+   "name": "Related to various events/programs organized by the General Administration Department",
+   "how": "stratified sample, read by eye"
+  },
+  "2052000910400": {
+   "label": "not_scheme",
+   "name": "Directorate of Budget, Fiscal Planning and Resources Travelling Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "2054000039700": {
+   "label": "not_scheme",
+   "name": "Externally Aided Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2054000980500": {
+   "label": "not_scheme",
+   "name": "Account oraganization of Zilla panchayat and kshetr samitiyon",
+   "how": "stratified sample, read by eye"
+  },
+  "2054000980600": {
+   "label": "not_scheme",
+   "name": "Audit Directorate Other Allowances",
+   "how": "stratified sample, read by eye"
+  },
+  "2054008000200": {
+   "label": "not_scheme",
+   "name": "Payment of electricity bills",
+   "how": "stratified sample, read by eye"
+  },
+  "2056011080700": {
+   "label": "not_scheme",
+   "name": "Training for amended IPC, CRPC and evidence act",
+   "how": "stratified sample, read by eye"
+  },
+  "2056011090700": {
+   "label": "not_scheme",
+   "name": "Mounted Police Unit",
+   "how": "stratified sample, read by eye"
+  },
+  "2056011090900": {
+   "label": "not_scheme",
+   "name": "Water Police",
+   "how": "stratified sample, read by eye"
+  },
+  "2056011130401": {
+   "label": "not_scheme",
+   "name": "District police Pay",
+   "how": "stratified sample, read by eye"
+  },
+  "2056011131100": {
+   "label": "not_scheme",
+   "name": "Para Military Forces Welfare Council",
+   "how": "stratified sample, read by eye"
+  },
+  "2056011159500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2071001020300": {
+   "label": "not_scheme",
+   "name": "Commuted value of Pension",
+   "how": "stratified sample, read by eye"
+  },
+  "2071001020302": {
+   "label": "not_scheme",
+   "name": "Restructuring under Uttarakhand",
+   "how": "stratified sample, read by eye"
+  },
+  "2071001020401": {
+   "label": "not_scheme",
+   "name": "Encashment for employees of UP State Electricity Board",
+   "how": "stratified sample, read by eye"
+  },
+  "2071001040301": {
+   "label": "not_scheme",
+   "name": "Restructuring under uttar Pradesh Civil",
+   "how": "stratified sample, read by eye"
+  },
+  "2071001210300": {
+   "label": "not_scheme",
+   "name": "Contribution for pension (pool corpus",
+   "how": "stratified sample, read by eye"
+  },
+  "2071011150300": {
+   "label": "not_scheme",
+   "name": "Leave encashment benefit in Retirement",
+   "how": "stratified sample, read by eye"
+  },
+  "2202001030300": {
+   "label": "not_scheme",
+   "name": "Government Degree College Dearness Allowance Universty and Higher Education",
+   "how": "stratified sample, read by eye"
+  },
+  "2202001030322": {
+   "label": "scheme",
+   "name": "Special financial assistance to the meritorious students for coaching the main examinations of the Union Public Service Commission and the State Public Service Commission of Uttarakhand",
+   "how": "stratified sample, read by eye"
+  },
+  "2202001040500": {
+   "label": "not_scheme",
+   "name": "Increase of Establishment expenses as a result of salary revision Grant in Aid for Pay,Allowances and Other Expenses",
+   "how": "stratified sample, read by eye"
+  },
+  "2202001070800": {
+   "label": "scheme",
+   "name": "Chief Minister Chevening Higher Education Scholarship",
+   "how": "stratified sample, read by eye"
+  },
+  "2202001130295": {
+   "label": "not_scheme",
+   "name": "Establishment of secondary / elementary school and teacher education conducted under the Samagra Shiksha",
+   "how": "stratified sample, read by eye"
+  },
+  "2202011022000": {
+   "label": "scheme",
+   "name": "Distribution of teaching material/ free textbooks to students",
+   "how": "stratified sample, read by eye"
+  },
+  "2202021010107": {
+   "label": "not_scheme",
+   "name": "Organizing sports competitions",
+   "how": "stratified sample, read by eye"
+  },
+  "2202021090300": {
+   "label": "not_scheme",
+   "name": "Boys and girls school Dearness Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "2202021139503": {
+   "label": "not_scheme",
+   "name": "Establishment of secondary / elementary school / teacher education conducted under the samagra shiksha",
+   "how": "stratified sample, read by eye"
+  },
+  "2202028000116": {
+   "label": "not_scheme",
+   "name": "P.M. Shri scheme (90 %CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2202028009500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2202030010100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Rashtriya Uchhatar Shiksha Abhiyan (90%) (RUSA) (PM-USHA",
+   "how": "stratified sample, read by eye"
+  },
+  "2202030019500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2202031020100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Uttarakhand Skill Development and Multi-Disciplinary University (100% CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2202032000102": {
+   "label": "scheme",
+   "name": "Ullas- Nav Bharat Literacy Program (90% CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2202032009500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2203000010300": {
+   "label": "not_scheme",
+   "name": "Directorate of Technical Education Dearness Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "2204001041600": {
+   "label": "not_scheme",
+   "name": "Purchasing of Sports equipment",
+   "how": "stratified sample, read by eye"
+  },
+  "2204001044100": {
+   "label": "not_scheme",
+   "name": "Sports University Nainital",
+   "how": "stratified sample, read by eye"
+  },
+  "2204001044300": {
+   "label": "not_scheme",
+   "name": "Organisation of important days and events",
+   "how": "stratified sample, read by eye"
+  },
+  "2205000010200": {
+   "label": "not_scheme",
+   "name": "Scheme for recording, preservation and upgradation of tribal art and culture",
+   "how": "stratified sample, read by eye"
+  },
+  "2205001020600": {
+   "label": "not_scheme",
+   "name": "Establishinment of Literary Arts Council",
+   "how": "stratified sample, read by eye"
+  },
+  "2205001030200": {
+   "label": "not_scheme",
+   "name": "Implementation of Antiquities and Valuable Artwork Act",
+   "how": "stratified sample, read by eye"
+  },
+  "2205001040200": {
+   "label": "not_scheme",
+   "name": "Digitization of Manuscripts",
+   "how": "stratified sample, read by eye"
+  },
+  "2210001020506": {
+   "label": "not_scheme",
+   "name": "Grants to Homeopathic Medical Board for maintenance",
+   "how": "stratified sample, read by eye"
+  },
+  "2210001100395": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2210001100500": {
+   "label": "not_scheme",
+   "name": "Establishment of TB Hospitals",
+   "how": "stratified sample, read by eye"
+  },
+  "2210001101800": {
+   "label": "not_scheme",
+   "name": "",
+   "how": "stratified sample, read by eye"
+  },
+  "2210012000500": {
+   "label": "not_scheme",
+   "name": "Establishment of State Project Cell under National blindness prevention program",
+   "how": "stratified sample, read by eye"
+  },
+  "2210027969501": {
+   "label": "not_scheme",
+   "name": "National AYUSH Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "2210051050415": {
+   "label": "not_scheme",
+   "name": "Establishment of State Medical College, Pithoragarh",
+   "how": "stratified sample, read by eye"
+  },
+  "2210061010113": {
+   "label": "not_scheme",
+   "name": "HMIS for Atal Ayushman (Digitization",
+   "how": "stratified sample, read by eye"
+  },
+  "2210061019900": {
+   "label": "not_scheme",
+   "name": "Organization of various Health programme under Public Private partnership",
+   "how": "stratified sample, read by eye"
+  },
+  "2215801021000": {
+   "label": "not_scheme",
+   "name": "Maintenance of rural pumping schemes",
+   "how": "stratified sample, read by eye"
+  },
+  "2217001910316": {
+   "label": "not_scheme",
+   "name": "Uttarakhand Housing and Development Board",
+   "how": "stratified sample, read by eye"
+  },
+  "2217001910327": {
+   "label": "not_scheme",
+   "name": "Aid for Uttarakhand Housing and Urban Development Authority",
+   "how": "stratified sample, read by eye"
+  },
+  "2217008000100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2217008001200": {
+   "label": "not_scheme",
+   "name": "Survey of Metro / DPR",
+   "how": "stratified sample, read by eye"
+  },
+  "2217008001900": {
+   "label": "not_scheme",
+   "name": "Refund of deposit amount for freeholding Nazul land",
+   "how": "stratified sample, read by eye"
+  },
+  "2217008009503": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "2217030010600": {
+   "label": "not_scheme",
+   "name": "Establishment of Town and rural planning Other Allowances",
+   "how": "stratified sample, read by eye"
+  },
+  "2217800010300": {
+   "label": "not_scheme",
+   "name": "Nagar Panchayats elections Dearness Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "2220601030400": {
+   "label": "not_scheme",
+   "name": "Establishment of Journalist Welfare Fund",
+   "how": "stratified sample, read by eye"
+  },
+  "2220601070200": {
+   "label": "not_scheme",
+   "name": "Songs and Drama scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2225001020100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2225002770102": {
+   "label": "scheme",
+   "name": "Scheduled Tribe Tenth (Class 9 & 10) scholarship scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2225002771000": {
+   "label": "scheme",
+   "name": "Pre-examination coaching for Scheduled Tribe students of Civil and Allied Services",
+   "how": "stratified sample, read by eye"
+  },
+  "2225002771800": {
+   "label": "not_scheme",
+   "name": "Establishment of of model residential school for SC students",
+   "how": "stratified sample, read by eye"
+  },
+  "2225007960201": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2225007960228": {
+   "label": "not_scheme",
+   "name": "Tribal Science Festival",
+   "how": "stratified sample, read by eye"
+  },
+  "2225008001000": {
+   "label": "not_scheme",
+   "name": "Grants to Arabia Madarasa",
+   "how": "stratified sample, read by eye"
+  },
+  "2225008002600": {
+   "label": "not_scheme",
+   "name": "Tribal Youth Sports Festival",
+   "how": "stratified sample, read by eye"
+  },
+  "2225010010700": {
+   "label": "not_scheme",
+   "name": "Establisment of SCP/TSP Planning Department",
+   "how": "stratified sample, read by eye"
+  },
+  "2230000030300": {
+   "label": "not_scheme",
+   "name": "Crafsmen training scheme and establishment Dearness Allowance Training",
+   "how": "stratified sample, read by eye"
+  },
+  "2230021010400": {
+   "label": "not_scheme",
+   "name": "State Advisory Contract Labour Board Travelling Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "2235001020100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Saksham Anganwadi & Poshan 2.0-Anganwadi Services (Integrated Child Development Schemes Schedule Cast area) (90% CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021020100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Saksham Anganwadi & Poshan 2.0-Anganwadi Services (Procure/Supply of Medicine Kit, Pre School Kit & Saree/Suit) (90% CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021020142": {
+   "label": "not_scheme",
+   "name": "Shakti Sadan Other Departmental Expenditure",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021020144": {
+   "label": "not_scheme",
+   "name": "Sanitation Action Plan",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021020148": {
+   "label": "scheme",
+   "name": "Saksham Aanganwadi & Poshan 2.0-Anganwadi Services (Saksham Anganwadi kendra (90% CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021029510": {
+   "label": "not_scheme",
+   "name": "Monitoring and evaluation (10%) Saksham Anganwadi Service and Poshan",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021029534": {
+   "label": "scheme",
+   "name": "Mission Shakti-Samarthya (Aanganwadi cum Creche (Palna) (10% SS",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021029548": {
+   "label": "scheme",
+   "name": "Saksham Aanganwadi & Poshan 2.0-Anganwadi Services (Saksham Anganwadi kendra (10% SS",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021030108": {
+   "label": "scheme",
+   "name": "Mission Shakti-Sambal (Women Helpline-181) (100% CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021031800": {
+   "label": "not_scheme",
+   "name": "Arrangment of staff for working women hostels",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021032100": {
+   "label": "scheme",
+   "name": "Welfare Fund for Aanganbadi workers (State Plan",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021039511": {
+   "label": "not_scheme",
+   "name": "Gender Budgeting (10 percent",
+   "how": "stratified sample, read by eye"
+  },
+  "2235021040400": {
+   "label": "not_scheme",
+   "name": "Prevention of begging Travelling Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "2235022000900": {
+   "label": "not_scheme",
+   "name": "Monitoring Committee of Social welfare schemes",
+   "how": "stratified sample, read by eye"
+  },
+  "2235037890102": {
+   "label": "scheme",
+   "name": "Indira Gandhi National Disabled Pension",
+   "how": "stratified sample, read by eye"
+  },
+  "2235601020200": {
+   "label": "not_scheme",
+   "name": "Special Component Plan for Scheduled Castes",
+   "how": "stratified sample, read by eye"
+  },
+  "2235601070200": {
+   "label": "scheme",
+   "name": "Pension to freedom fighters and their dependents",
+   "how": "stratified sample, read by eye"
+  },
+  "2235602000301": {
+   "label": "not_scheme",
+   "name": "Army headquarters Pay",
+   "how": "stratified sample, read by eye"
+  },
+  "2235602000500": {
+   "label": "scheme",
+   "name": "Assistance to riot victims",
+   "how": "stratified sample, read by eye"
+  },
+  "2235602000700": {
+   "label": "scheme",
+   "name": "Rajya Andolankari pension facility (Transferred to Grant",
+   "how": "stratified sample, read by eye"
+  },
+  "2235602001000": {
+   "label": "not_scheme",
+   "name": "Uttarakhand State Ex-Servicemen Welfare Advisory Council",
+   "how": "stratified sample, read by eye"
+  },
+  "2245089019501": {
+   "label": "not_scheme",
+   "name": "Funds met from S.D.M.F",
+   "how": "stratified sample, read by eye"
+  },
+  "2251000920400": {
+   "label": "scheme",
+   "name": "Financial Assitance to Dependents of freedom fighters for their Cremation",
+   "how": "stratified sample, read by eye"
+  },
+  "2401000010100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Rastriya krishi Vikas yojna-RKVY/ DPR based Agriculture infrastructure support CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2401000010107": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas Yojana (Soil Health and Fertility (90%CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2401000019500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2401000019502": {
+   "label": "scheme",
+   "name": "National Food Security Mission- Other corps/ Krishi Unnati Yojna",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001090104": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojna (Sub Mission on Agriculture Extension) (90%CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001190102": {
+   "label": "scheme",
+   "name": "Per Drop More Crop (PMKSY",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001190115": {
+   "label": "scheme",
+   "name": "Per Drop More Crop (PMKSY",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001190213": {
+   "label": "not_scheme",
+   "name": "Afforestation development plan",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001190318": {
+   "label": "scheme",
+   "name": "State Food Processing Scheme (2401001190339,11912 included",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001190500": {
+   "label": "not_scheme",
+   "name": "Strengthening of state parks",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001190602": {
+   "label": "scheme",
+   "name": "Tea Development Scheme in the State",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001191000": {
+   "label": "scheme",
+   "name": "Bee keeping scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2401001191500": {
+   "label": "scheme",
+   "name": "Gherbar Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "2403001010109": {
+   "label": "scheme",
+   "name": "Development Program – NLM (National Livestock Mission) (90% CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2403001029500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2403001060210": {
+   "label": "scheme",
+   "name": "Sheep rearing scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2403007899501": {
+   "label": "not_scheme",
+   "name": "Assistance to States for Control of Animal Disease",
+   "how": "stratified sample, read by eye"
+  },
+  "2403007969502": {
+   "label": "not_scheme",
+   "name": "Assistance to states for control of animal diseases (50 percent",
+   "how": "stratified sample, read by eye"
+  },
+  "2405001010100": {
+   "label": "scheme",
+   "name": "CSS Pradhan Mantri Matsya Sampada Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "2405011011100": {
+   "label": "scheme",
+   "name": "Livestock Insurance Scheme under State Sector Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2405011019513": {
+   "label": "not_scheme",
+   "name": "Events sponsored by NFDB",
+   "how": "stratified sample, read by eye"
+  },
+  "2405011130105": {
+   "label": "not_scheme",
+   "name": "Reduction in reimbursement of salary - Development Program – LC & ISS Establishment of Statistical Cell for Integrated Sample Survey ) (50% CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2405011130106": {
+   "label": "not_scheme",
+   "name": "Development Program – LC & ISS ( Establishment of Statistical Cell for Integrated Sample Survey ) (100% CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2406000700400": {
+   "label": "not_scheme",
+   "name": "Guest house maintenance",
+   "how": "stratified sample, read by eye"
+  },
+  "2406001020700": {
+   "label": "not_scheme",
+   "name": "Assistance to various Boards, Councils and Foundations",
+   "how": "stratified sample, read by eye"
+  },
+  "2406011010500": {
+   "label": "not_scheme",
+   "name": "National Forest Plantation Program Green India Mission and Forest Management",
+   "how": "stratified sample, read by eye"
+  },
+  "2406021109500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--0010103": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojana (National Food Security and Nutrition Mission (90 percent CS",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--0010107": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas Yojana (Soil Health and Fertility (90%CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--0010113": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas Yojana (Krishi vaniki",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--0019600": {
+   "label": "not_scheme",
+   "name": "Top up Against Centrally Assisted Schemes",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--1080800": {
+   "label": "scheme",
+   "name": "Balance payment of sugar cane",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--1081200": {
+   "label": "not_scheme",
+   "name": "Grants for workers working in sugarcane development / training institute",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--1099500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--1110100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Pay",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--1140103": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojana (National Mission on edible Oils- oil seed ) (90%CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--1140104": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojana (National Mission on Edible Oil Seeds",
+   "how": "stratified sample, read by eye"
+  },
+  "2415--1149500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2501061029501": {
+   "label": "scheme",
+   "name": "Women Farmers Empowerment Project under National Rural Livelihoods Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "2505021010100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme National Rural Employment Guarantee Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2515001020108": {
+   "label": "not_scheme",
+   "name": "Rashtirya Gram Swaraj Abhiyan",
+   "how": "stratified sample, read by eye"
+  },
+  "2515001029501": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "2515001029502": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "2515001029504": {
+   "label": "scheme",
+   "name": "Pandit Deendayal Upadhyaya Rural Skill Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2515001029509": {
+   "label": "scheme",
+   "name": "PM Janman Yojana",
+   "how": "stratified sample, read by eye"
+  },
+  "2515011020100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme National Livelihood Mission (Ajeevika) 90%CS(Rural",
+   "how": "stratified sample, read by eye"
+  },
+  "2515011021200": {
+   "label": "scheme",
+   "name": "Deen Dayal Uttarakhand Rural Housing Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2515011023500": {
+   "label": "scheme",
+   "name": "Chief Minister Women Self Help Group Empowerment Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2515011029506": {
+   "label": "not_scheme",
+   "name": "State level Rural Development Institute",
+   "how": "stratified sample, read by eye"
+  },
+  "2701161010200": {
+   "label": "not_scheme",
+   "name": "Other maintenance",
+   "how": "stratified sample, read by eye"
+  },
+  "2701800010400": {
+   "label": "not_scheme",
+   "name": "Small construction works in tubewell, canal, lift scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "2702800050104": {
+   "label": "not_scheme",
+   "name": "Spring Census (100%CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "2711011030200": {
+   "label": "not_scheme",
+   "name": "For flood protection works",
+   "how": "stratified sample, read by eye"
+  },
+  "2810001010300": {
+   "label": "scheme",
+   "name": "Assistance to UREDA for water heater plants and roof top solar plants for domestic consumers",
+   "how": "stratified sample, read by eye"
+  },
+  "2810007960500": {
+   "label": "not_scheme",
+   "name": "Small hydro power and improved gharats scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "3054043379801": {
+   "label": "not_scheme",
+   "name": "Maintenance of road/culverts",
+   "how": "stratified sample, read by eye"
+  },
+  "3054800010200": {
+   "label": "not_scheme",
+   "name": "Rajbhawan (Dehradun and Nainital) Raj Bhawan (Dehradun and Nainital",
+   "how": "stratified sample, read by eye"
+  },
+  "3054800010500": {
+   "label": "not_scheme",
+   "name": "Payment of wages to Work-charge employees",
+   "how": "stratified sample, read by eye"
+  },
+  "3054800530200": {
+   "label": "not_scheme",
+   "name": "Monitoring and Maintenance of Circuit House Office Buildings – General and Special Repairs",
+   "how": "stratified sample, read by eye"
+  },
+  "3054807970100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Central road and infrastructure fund",
+   "how": "stratified sample, read by eye"
+  },
+  "3425606000100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "3425606000600": {
+   "label": "not_scheme",
+   "name": "Implementation of AI",
+   "how": "stratified sample, read by eye"
+  },
+  "3451000921400": {
+   "label": "not_scheme",
+   "name": "Pariwar Pehchaan Patra Uttarakhand",
+   "how": "stratified sample, read by eye"
+  },
+  "3452800011700": {
+   "label": "not_scheme",
+   "name": "Grant to IHM Ramnagar",
+   "how": "stratified sample, read by eye"
+  },
+  "3452801040200": {
+   "label": "scheme",
+   "name": "Veer Chandra Singh Garhwali tourism Self - employment scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "3454028000500": {
+   "label": "not_scheme",
+   "name": "Establishment of GIS Cell and Geo Portal",
+   "how": "stratified sample, read by eye"
+  },
+  "3475002000200": {
+   "label": "not_scheme",
+   "name": "Wages",
+   "how": "stratified sample, read by eye"
+  },
+  "3604002000111": {
+   "label": "not_scheme",
+   "name": "Untied Grant received from Central Finance Commission to Gram Panchayats CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "4059600510100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "4059600510600": {
+   "label": "not_scheme",
+   "name": "Development of infrastructure facilities for the Advocate General",
+   "how": "stratified sample, read by eye"
+  },
+  "4059600519500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "4059600519710": {
+   "label": "not_scheme",
+   "name": "Uttarakhand Disaster Preparedness and Resilience Project",
+   "how": "stratified sample, read by eye"
+  },
+  "4059800510500": {
+   "label": "not_scheme",
+   "name": "Centralized record rooms in districts",
+   "how": "stratified sample, read by eye"
+  },
+  "4059800529700": {
+   "label": "not_scheme",
+   "name": "Externally Aided Project",
+   "how": "stratified sample, read by eye"
+  },
+  "4059802010400": {
+   "label": "not_scheme",
+   "name": "Land acquisition in various departments",
+   "how": "stratified sample, read by eye"
+  },
+  "4059808002300": {
+   "label": "not_scheme",
+   "name": "For mega projects under various departments",
+   "how": "stratified sample, read by eye"
+  },
+  "4059808009200": {
+   "label": "not_scheme",
+   "name": "SASCI",
+   "how": "stratified sample, read by eye"
+  },
+  "4202001050214": {
+   "label": "not_scheme",
+   "name": "Veer Madho Singh Bhandari University of Technology",
+   "how": "stratified sample, read by eye"
+  },
+  "4202002030100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Grant for construction of buildings for universities/ Government/ non-Government Degree Collegesunder RUSA (PM-USHA) (90% CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "4202002030400": {
+   "label": "not_scheme",
+   "name": "Purchase of Land / building State degree college",
+   "how": "stratified sample, read by eye"
+  },
+  "4202002031600": {
+   "label": "not_scheme",
+   "name": "Sanskrit University",
+   "how": "stratified sample, read by eye"
+  },
+  "4202031020400": {
+   "label": "not_scheme",
+   "name": "construction of Sports stadium (new work",
+   "how": "stratified sample, read by eye"
+  },
+  "4202031020800": {
+   "label": "not_scheme",
+   "name": "Establishment of Sports Directorate",
+   "how": "stratified sample, read by eye"
+  },
+  "4202031021000": {
+   "label": "not_scheme",
+   "name": "Construction of residential building for Directorateof Youth Welfare",
+   "how": "stratified sample, read by eye"
+  },
+  "4202031022400": {
+   "label": "not_scheme",
+   "name": "Establishment of Pt. Nainshigh Surveyors Mountainring Training Centre",
+   "how": "stratified sample, read by eye"
+  },
+  "4202031022800": {
+   "label": "not_scheme",
+   "name": "Grant to Nehru Institute of Mountaineering",
+   "how": "stratified sample, read by eye"
+  },
+  "4202031029400": {
+   "label": "not_scheme",
+   "name": "National Housing Bank",
+   "how": "stratified sample, read by eye"
+  },
+  "4202041060300": {
+   "label": "not_scheme",
+   "name": "Construction of Museum related building",
+   "how": "stratified sample, read by eye"
+  },
+  "4202048000200": {
+   "label": "not_scheme",
+   "name": "Construction of Cultural Building /Community Center etc. in Scheduled Tribes Areas",
+   "how": "stratified sample, read by eye"
+  },
+  "4210007890100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Grant for creation of capital assests SC (GBS) ( SNA SPARSHConstruction",
+   "how": "stratified sample, read by eye"
+  },
+  "4210031010102": {
+   "label": "not_scheme",
+   "name": "Establishment of National AYUSH Mission",
+   "how": "stratified sample, read by eye"
+  },
+  "4210031050107": {
+   "label": "not_scheme",
+   "name": "Tertionary Care Programe Unit of National Work for the arrangement for the treatment of burns wounded in State Doon Medical College, Dehradun (90%CSS",
+   "how": "stratified sample, read by eye"
+  },
+  "4210031059500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "4210031059510": {
+   "label": "not_scheme",
+   "name": "Tertiary Care Programme (Establishment of State Cancer Institute under Government Medical College Haldwani",
+   "how": "stratified sample, read by eye"
+  },
+  "4210031059515": {
+   "label": "not_scheme",
+   "name": "Construction of Nursing College Haridwar",
+   "how": "stratified sample, read by eye"
+  },
+  "4210031059518": {
+   "label": "not_scheme",
+   "name": "Construction of Nursing College Srinagar (Pauri",
+   "how": "stratified sample, read by eye"
+  },
+  "4216800039801": {
+   "label": "not_scheme",
+   "name": "Construction of ITI buildings",
+   "how": "stratified sample, read by eye"
+  },
+  "4216808000500": {
+   "label": "not_scheme",
+   "name": "Developing the Haridwar Corridor",
+   "how": "stratified sample, read by eye"
+  },
+  "4216809110200": {
+   "label": "not_scheme",
+   "name": "Deduct -Recoveries",
+   "how": "stratified sample, read by eye"
+  },
+  "4217030510110": {
+   "label": "not_scheme",
+   "name": "Atal Renewal and urban Transformation Mission (90%CSS) Phase",
+   "how": "stratified sample, read by eye"
+  },
+  "4217030510200": {
+   "label": "not_scheme",
+   "name": "Pedestrian infrastructure in Urban areas",
+   "how": "stratified sample, read by eye"
+  },
+  "4217600520200": {
+   "label": "not_scheme",
+   "name": "Solid waste management",
+   "how": "stratified sample, read by eye"
+  },
+  "4225002770100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Construction of hostels for students of other backward classes (component of PM Yashasvi)(90% CS",
+   "how": "stratified sample, read by eye"
+  },
+  "4225002830200": {
+   "label": "not_scheme",
+   "name": "Major construction work in scheduled caste Commission",
+   "how": "stratified sample, read by eye"
+  },
+  "4225021900300": {
+   "label": "not_scheme",
+   "name": "Self-Employment Share Capital for Scheduled Tribes (49% of SSC",
+   "how": "stratified sample, read by eye"
+  },
+  "4225022771000": {
+   "label": "not_scheme",
+   "name": "Construction of the School of Ashram padhati for the boys School Binson in Dehradun",
+   "how": "stratified sample, read by eye"
+  },
+  "4250001019505": {
+   "label": "not_scheme",
+   "name": "Himalayan Earthquake Risk Assessment and Mitigation",
+   "how": "stratified sample, read by eye"
+  },
+  "4401001190200": {
+   "label": "not_scheme",
+   "name": "Development of Infrastructure facilities for Bharsar University",
+   "how": "stratified sample, read by eye"
+  },
+  "4401001190300": {
+   "label": "not_scheme",
+   "name": "for TDC) for reconstruction of properties acquired from Pantnagar University of Agriculture for Pantnagar Airport Expansion (4 equal installments",
+   "how": "stratified sample, read by eye"
+  },
+  "4403001011100": {
+   "label": "not_scheme",
+   "name": "Construction of Gau Sadan",
+   "how": "stratified sample, read by eye"
+  },
+  "4405001019800": {
+   "label": "not_scheme",
+   "name": "NABARD Funded",
+   "how": "stratified sample, read by eye"
+  },
+  "4408010010300": {
+   "label": "not_scheme",
+   "name": "Establishment Expenses (food and supplies Dearness Allowance",
+   "how": "stratified sample, read by eye"
+  },
+  "4408010010600": {
+   "label": "not_scheme",
+   "name": "Consumer Awareness Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "4515001010400": {
+   "label": "not_scheme",
+   "name": "Resource Central Building Construction",
+   "how": "stratified sample, read by eye"
+  },
+  "4515001020108": {
+   "label": "not_scheme",
+   "name": "PMGSY Road Component under Vibrant Village Program",
+   "how": "stratified sample, read by eye"
+  },
+  "4515001020400": {
+   "label": "not_scheme",
+   "name": "Construction of Residential/Non-residential building for extension Training Centres",
+   "how": "stratified sample, read by eye"
+  },
+  "4515001022000": {
+   "label": "not_scheme",
+   "name": "Chief Minister Marginal Area Development Scheme (MBADP",
+   "how": "stratified sample, read by eye"
+  },
+  "4515001029501": {
+   "label": "not_scheme",
+   "name": "Border Area Development Programme",
+   "how": "stratified sample, read by eye"
+  },
+  "4515001030300": {
+   "label": "not_scheme",
+   "name": "Rural Roads and Drainage",
+   "how": "stratified sample, read by eye"
+  },
+  "4515001030600": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Gram Sadak Yojana under Disaster Response Fund",
+   "how": "stratified sample, read by eye"
+  },
+  "4700180010200": {
+   "label": "not_scheme",
+   "name": "Other expenses (transferred from",
+   "how": "stratified sample, read by eye"
+  },
+  "4701800010700": {
+   "label": "not_scheme",
+   "name": "Construction of reservoirs etc. for water conservation, water conservation and drinking water supply (transferred from",
+   "how": "stratified sample, read by eye"
+  },
+  "4702001029500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "4702008009801": {
+   "label": "not_scheme",
+   "name": "NABARD Aided minor irrigation scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "4801001059701": {
+   "label": "not_scheme",
+   "name": "ADB Funded Project (HRESRD",
+   "how": "stratified sample, read by eye"
+  },
+  "4801010010400": {
+   "label": "scheme",
+   "name": "Grant in respect of discount in electricity tariff to domestic consumers of the state",
+   "how": "stratified sample, read by eye"
+  },
+  "4801058000300": {
+   "label": "not_scheme",
+   "name": "U.P.C.L (RDSS",
+   "how": "stratified sample, read by eye"
+  },
+  "4801058009700": {
+   "label": "not_scheme",
+   "name": "Externally Aided Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "4859008009202": {
+   "label": "not_scheme",
+   "name": "Strengthening State Data Centre",
+   "how": "stratified sample, read by eye"
+  },
+  "5053001900300": {
+   "label": "scheme",
+   "name": "Compensation and DBT payments to transport corporation for providing Free travel facility",
+   "how": "stratified sample, read by eye"
+  },
+  "5053001901500": {
+   "label": "not_scheme",
+   "name": "Transfer of amount in Urban Transport Infrstructure Fund received from Green Cess",
+   "how": "stratified sample, read by eye"
+  },
+  "5054043370203": {
+   "label": "not_scheme",
+   "name": "Land Acquistion for Road/ building/ Bridges",
+   "how": "stratified sample, read by eye"
+  },
+  "5054053370100": {
+   "label": "not_scheme",
+   "name": "Centrally assisted scheme Infrastructure grant from the Government of India for the Kumbh Mela",
+   "how": "stratified sample, read by eye"
+  },
+  "5055000500500": {
+   "label": "not_scheme",
+   "name": "Compensation of land acquisition for construction of railway line Muzaffarnagar-Roorkee, Khatima-Kichha",
+   "how": "stratified sample, read by eye"
+  },
+  "5055000509401": {
+   "label": "not_scheme",
+   "name": "Infrastructure development with loan from UIDF",
+   "how": "stratified sample, read by eye"
+  },
+  "5055000509504": {
+   "label": "not_scheme",
+   "name": "Infrastructure for Dehradun under PME-Bus Service Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "5055001900300": {
+   "label": "not_scheme",
+   "name": "Construction of Bus Stations/ Bus Depots of Uttarakhand Transport Corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "5452801040200": {
+   "label": "not_scheme",
+   "name": "Special Component Plan ST/SC",
+   "how": "stratified sample, read by eye"
+  },
+  "5452801040452": {
+   "label": "not_scheme",
+   "name": "Infrastructure construction / development of Chardham yatra routes",
+   "how": "stratified sample, read by eye"
+  },
+  "5452801040462": {
+   "label": "not_scheme",
+   "name": "Purchase of land for Char Dham and various places under tourism department",
+   "how": "stratified sample, read by eye"
+  },
+  "6401001091000": {
+   "label": "not_scheme",
+   "name": "Loans to Uttarakhand cooperative sector / corporation mills (for sugarcane payment",
+   "how": "stratified sample, read by eye"
+  },
+  "6425000010600": {
+   "label": "not_scheme",
+   "name": "Cooperative Election Authority Other Allowances",
+   "how": "stratified sample, read by eye"
+  },
+  "6425000010700": {
+   "label": "not_scheme",
+   "name": "Creation and administration of Cooperative Council",
+   "how": "stratified sample, read by eye"
+  },
+  "6425001079500": {
+   "label": "not_scheme",
+   "name": "State Share Relative to Centrally Assisted Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "6425001079503": {
+   "label": "not_scheme",
+   "name": "Computerization, software repair manufacturing under Strengthening of Cooperative Through Intervention Scheme (10%) intervention Scheme",
+   "how": "stratified sample, read by eye"
+  },
+  "6425001080400": {
+   "label": "not_scheme",
+   "name": "Construction of Shopping complex in Kashipur",
+   "how": "stratified sample, read by eye"
+  },
+  "6425001080800": {
+   "label": "not_scheme",
+   "name": "Establishment of PMU for the cooperative sector",
+   "how": "stratified sample, read by eye"
+  },
+  "7055001010500": {
+   "label": "not_scheme",
+   "name": "Grants for payment of interest on loan for purchase of buses",
+   "how": "stratified sample, read by eye"
+  },
+  "7055001010700": {
+   "label": "not_scheme",
+   "name": "Loan to Uttarakhand Transport Corporation",
+   "how": "stratified sample, read by eye"
+  },
+  "7610002010300": {
+   "label": "not_scheme",
+   "name": "Payment of Advance for Construction / renovation to All India Service officers",
+   "how": "stratified sample, read by eye"
+  },
+  "7610002010400": {
+   "label": "not_scheme",
+   "name": "Payment of Advance for Construction / Repair to State employees",
+   "how": "stratified sample, read by eye"
+  },
+  "7610008000200": {
+   "label": "not_scheme",
+   "name": "Loan to MLAs for various projects",
+   "how": "stratified sample, read by eye"
+  },
+  "7615002000200": {
+   "label": "not_scheme",
+   "name": "Loans for purchasing vehicles for Honorable legislators",
+   "how": "stratified sample, read by eye"
+  },
+  "7615002000300": {
+   "label": "not_scheme",
+   "name": "Housing loans for Honorable Legislators",
+   "how": "stratified sample, read by eye"
+  },
+  "2043000010600": {
+   "label": "scheme",
+   "name": "Insurance Scheme for Registered Traders",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2056010011500": {
+   "label": "scheme",
+   "name": "Pension scheme to democracy fighters and their dependents",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2202021120100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Pradhan Mantri poshan Shakti Nirman (PM Poshan) (90%CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2202032000100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Pradhan Mantri poshan Shakti Nirman (PM Poshan) (90%CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2202801070200": {
+   "label": "scheme",
+   "name": "Chief Minister Scholarship Scheme for NCC cadets",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2217001910105": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission (90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2217001910106": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (80% CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2217008000108": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2217031919501": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2217038000108": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2217038009508": {
+   "label": "scheme",
+   "name": "National Urban Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2225001020201": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Financial assistance under Article 275(1) of the Constitution",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2225001020300": {
+   "label": "scheme",
+   "name": "Livelihood Opportunities Promotion Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2225002770600": {
+   "label": "scheme",
+   "name": "Corpus fund for Raja Sohail Dev scholarship scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2225002830102": {
+   "label": "scheme",
+   "name": "Atal Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2225002830200": {
+   "label": "scheme",
+   "name": "Atal Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235001029502": {
+   "label": "scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Anganwadi Services (Integrated Child Development Schemes Schedule Cast area) (10% SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235002000200": {
+   "label": "scheme",
+   "name": "Kisan Pension Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021020134": {
+   "label": "scheme",
+   "name": "Mission Shakti-Samarthya (Aanganwadi cum Creche (Palna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021020135": {
+   "label": "scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Poshan Abhiyan (90% CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021020136": {
+   "label": "scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Scheme for Adolescent Girls (90% CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021020137": {
+   "label": "scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Anganwadi Services (Integrated Child Development Scheme-Payment of salary) (90% CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021020139": {
+   "label": "not_scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Anganwadi Services (District level staff arrangements for the Integrated Child Development Scheme-Payment of salary CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021029535": {
+   "label": "scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Poshan Abhiyan (10% SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021029536": {
+   "label": "scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Scheme for Adolescent Girls (10% SS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021032400": {
+   "label": "scheme",
+   "name": "Chief Minister Woman Sustainable Livelihood Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235021033600": {
+   "label": "scheme",
+   "name": "Chief Minister Single Women Self Employment Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235031010100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Indira Gandhi National Old age Pension",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235037890100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Indira Gandhi National old Age Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235037960100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Indira Gandhi National old Age Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235037960102": {
+   "label": "scheme",
+   "name": "Indira Gandhi National old Age Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235601020300": {
+   "label": "scheme",
+   "name": "Kisan Pension scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235601020600": {
+   "label": "scheme",
+   "name": "Farmer pension scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2235967890100": {
+   "label": "scheme",
+   "name": "Indira Gandhi National old Age Pension Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000010102": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojana (National Food Security and Nutrition Mission (90 percent CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000010105": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas Yojana (PDMC/Pradhan Mantri Krishi Sinchai Yojana -RKVY including micro irrigation fund(90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000010106": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas Yojana (Soil Health and Fertility (90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000010108": {
+   "label": "scheme",
+   "name": "Krishi Vikas Yojna (Paramparagat)(90%CSS) Krishi Vikas Yojana (Green Revolution",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000010111": {
+   "label": "not_scheme",
+   "name": "Rashtriya Krishi Vikas Yojana (Namami Gange Clean Campaign",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000010113": {
+   "label": "scheme",
+   "name": "Rashtriya Krishi Vikas Yojana (Krishi vaniki",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000019501": {
+   "label": "scheme",
+   "name": "Rashtriya Krishi Vikas Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000019503": {
+   "label": "scheme",
+   "name": "Rainfed Area Developmrnt-Rastriya Krishi Vikas yojna -RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000019504": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Krishi Sinchai Yojana (Integrated Watershed Management programme/(PMKSY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000019505": {
+   "label": "scheme",
+   "name": "PDMC/Pradhan Mantri Krishi Sinchai Yojna-Rastriya Krishi Vikas yojna-RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000019506": {
+   "label": "scheme",
+   "name": "Soil Health Management (SHM)-Rastriya Krishi Vikas yojna-RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000019507": {
+   "label": "scheme",
+   "name": "Soil Health Management (SHM)- Rastriya Krishi Vikas yojna-RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401000019508": {
+   "label": "scheme",
+   "name": "Paramparagat Krishi Vikas Yojana (PKVY)- Rastriya Krishi Vikas yojna-RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001090102": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojana) Sub mission on seeds and Planting Material (90%CSS) On sheeds And Planting Material (Green Revolution",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001090103": {
+   "label": "not_scheme",
+   "name": "Krishi Unnati Yojna (Digital Agriculture Misson) (90% CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001090105": {
+   "label": "scheme",
+   "name": "Krishionnati Yojana (Sub Mission on Seeds and Planting Material",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001099501": {
+   "label": "scheme",
+   "name": "Sub- Mission on Agricultural Machanization (SMAM)-Rastriya Krishi Vikash yojna_RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001099502": {
+   "label": "scheme",
+   "name": "Sub Machine On Sheeds And Planting Material (Krishi Unnati Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001099503": {
+   "label": "not_scheme",
+   "name": "Digital Agriculture /Krishi Unnati Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001099504": {
+   "label": "scheme",
+   "name": "Sub Mission on Agriculture Extension/Krishi Unnati Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001140100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Krishi Unnati Yojana (National Mission on edible Oils- oil seed ) (90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001149501": {
+   "label": "scheme",
+   "name": "National Food Security Mission & Oil seed and oil palm- (Krishi Unnati Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001190317": {
+   "label": "scheme",
+   "name": "Gardens Insurance Scheme (90 percent premium amount subsidized",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2401001199515": {
+   "label": "scheme",
+   "name": "Per Drop More Crop Pradhan Mantri Krishi Sinchayi Yojana (PMKSY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2403001060206": {
+   "label": "scheme",
+   "name": "Self-Employment / Beneficiary Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0010105": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas Yojana (PDMC/Pradhan Mantri Krishi Sinchai Yojana RKVY( including micro irrigation fund(90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0010108": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas Yojana (Paramparagat Krshi Vikaas Yojana) - (90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0010112": {
+   "label": "not_scheme",
+   "name": "Rastriya Krishi Vikas Yojana (Namami Gange Clean Abhiyan",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0019501": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas yojna-RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0019502": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Krishi Sinchayi Yojana ( Integrated Watershed Management Program (10%)(PMKSY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0019503": {
+   "label": "scheme",
+   "name": "National Food Security Mission- Other Crops /Krishionnati Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0019505": {
+   "label": "scheme",
+   "name": "PDMC/Pradhan Mantri Krishi Sinchai Yojana-Rastriya Krishi Vikas yojna-RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0019507": {
+   "label": "scheme",
+   "name": "Soil Health Management (SHM)-Rastriya Krishi Vikas yojna-RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--0019508": {
+   "label": "scheme",
+   "name": "Paramparaagat Krshi Vikaas Yojana -Rastriya Krishi Vikas yojna-RKVY(Green Revolution",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1090102": {
+   "label": "scheme",
+   "name": "Rastriya Krishi Vikas yojana (National -Mission on Agricultural Mechanization SMAM) (90CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1090103": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojna (Sub mission On seeds And Planting Material) (90CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1090104": {
+   "label": "not_scheme",
+   "name": "Krishi Unnati Yojna (Digital Agriculture Misson) (90% CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1090105": {
+   "label": "scheme",
+   "name": "Krishionnati Yojna (All Mission on Agriculture Extensio)(90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1090106": {
+   "label": "scheme",
+   "name": "Krishi Unnati Yojana (Sub mission On seeds And Planting Material",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1099502": {
+   "label": "scheme",
+   "name": "Sub-Mission on Agricultural Mechanization (SMAM)- Rastriya Krishi Vikas yojna RKVY",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1099503": {
+   "label": "scheme",
+   "name": "Sub mission On seeds And Planting Material (Krishi Unnati",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1099504": {
+   "label": "not_scheme",
+   "name": "Digital Agriculture/Krishi Unnati Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1099505": {
+   "label": "scheme",
+   "name": "Sub-Mission on Agriculture Extension/Krishi Unnati Yojna",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2415--1149503": {
+   "label": "scheme",
+   "name": "National Food Security Mission - Oil seed and oil pam ( Krishi Unnati Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2501061020100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme Women Farmers Empowerment Project under National Rural Livelihoods Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2505027890100": {
+   "label": "scheme",
+   "name": "Centrally Sponsored Scheme Viksit Bharat Rojgar avam Ajeevika Mission (Rural) Labour share",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2505027960100": {
+   "label": "scheme",
+   "name": "Centrally Sponsored Scheme Viksit Bharat Rojgar Guarantee and Ajeevika Mission (Rural) Labour share",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515001020102": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515001020105": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515001020110": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515001029505": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515001029605": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011020102": {
+   "label": "scheme",
+   "name": "National Livelihood Mission (Ajeevika) (Women Farmers Empowerment Project under National Rural Livelihoods Mission)(90%CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011020103": {
+   "label": "scheme",
+   "name": "National Livelihood Mission (Ajeevika) (Startup Village Entrepreneurship Program under National Rural Livelihood Mission Scheme)(90%CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011020110": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011020200": {
+   "label": "not_scheme",
+   "name": "Cell constituted under National Rural Livelihood Mission Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011029501": {
+   "label": "scheme",
+   "name": "National Rural Livelihood Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011029502": {
+   "label": "scheme",
+   "name": "Women Farmers Empowerment Project under National Rural Livelihoods Mission",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011029503": {
+   "label": "scheme",
+   "name": "Startup Village Entrepreneurship Program under National Rural Livelihood Mission Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2515011029510": {
+   "label": "scheme",
+   "name": "Pradhan Mantri Awas Yojana (10% CS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2853601025000": {
+   "label": "scheme",
+   "name": "Chief Minister Self Employment Scheme Subsidy",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "2853601031200": {
+   "label": "scheme",
+   "name": "Pension scheme for crafts man",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "3452801040201": {
+   "label": "scheme",
+   "name": "Veer Chandra Singh Garhwali tourism Self Employment scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "3452801040700": {
+   "label": "scheme",
+   "name": "Veer Chandra Singh Garhwali Tourism Self-Employment Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4217030510100": {
+   "label": "scheme",
+   "name": "Centrally Assisted Scheme National Urban Livelihood Mission (90%CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4235021020109": {
+   "label": "scheme",
+   "name": "Saksham Anganwadi & Poshan 2.0-Anganwadi Services (PM Janman Yojana CSS",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4250002030200": {
+   "label": "scheme",
+   "name": "Self-employment scheme for minorities",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4700800010100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Pradhan Mantri Krishi Sinchai Yojana (Water to every field) (Moved from",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4700800019501": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Krishi Sinchai Yojana (Water to every farm) (Moved from",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4702001010100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Pradhan Mantri Krishi Sinchai Yojana -Har khet ko pani ( SMI",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4702001019501": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Krishi Sinchai Yojana -Har khet ko pani ( SMI",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4702001020100": {
+   "label": "not_scheme",
+   "name": "Centrally Assisted Scheme Pradhan Mantri Krishi Sinchai Yojana - Water to every field (ground water",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "4702001029501": {
+   "label": "not_scheme",
+   "name": "Pradhan Mantri Krishi Sinchai Yojana- Water to every field (ground water",
+   "how": "audit census at the publishing bar, read by eye"
+  },
+  "6425001060700": {
+   "label": "scheme",
+   "name": "Accident insurance facility through Kisan Samriddhi Card Scheme",
+   "how": "audit census at the publishing bar, read by eye"
+  }
+ },
+ "census": "Every row scoring 4 or more carries a hand label, so precision at the bar is a COUNT."
+}
