@@ -584,3 +584,7 @@ footer .foot a{color:var(--stamp)}
 .lg-list li{margin-bottom:5px;line-height:1.5}
 .lg-list b{font-family:inherit;font-size:inherit;text-transform:none;letter-spacing:0;
   color:var(--ink);display:inline;margin:0;font-weight:500}
+/* The refused rows are tinted by an id-and-class selector, which outranks the table's
+   hover rule and left a third of the scoreboard with no hover feedback at all. On a table
+   this wide, the row highlight is how a reader keeps their place across nine columns. */
+#legib tr.refused:hover{background:var(--stamp-soft)}
