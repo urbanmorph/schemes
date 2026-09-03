@@ -2550,7 +2550,7 @@
   }
  ],
  "absent_distinct_names": 87,
- "absent_from_myscheme_all_rows": 8911,
+ "absent_from_myscheme_all_rows": 8917,
  "absent_from_myscheme_and_classified_scheme": 111,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged West Bengal, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 126 joins over the whole corpus and 51 of them are wrong, so a row counted present may not be, and the absent count here is if anything an understatement. The surviving list is a floor for the opposite reason too: no book prints a purpose line, recall at the published bar is 21%, and a scheme the state names Lakshmir Bhandar and books as a plain grant-in-aid cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
@@ -67313,7 +67313,6 @@
    "minor_head": "001",
    "minor_head_name": "DIRECTION AND ADMINISTRATION",
    "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)",
     "West Bengal Student Credit Card Scheme"
    ],
    "name": "Student Credit Card Scheme [HE]",
@@ -96847,15 +96846,13 @@
    "evidence": [],
    "hand_label": null,
    "hoa": "2210-06-101-030",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2210-06-101-030",
    "letter_spaced": false,
    "major_head": "2210",
    "minor_head": "101",
    "minor_head_name": "PREVENTION AND CONTROL OF DISEASES",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)"
-   ],
+   "myscheme_match": null,
    "name": "National AIDS & STD Control Programme (Central Share) (OCASPS) [HF]",
    "object_heads": [
     "31"
@@ -112234,15 +112231,13 @@
    ],
    "hand_label": null,
    "hoa": "2217-05-001-002",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2217-05-001-002",
    "letter_spaced": false,
    "major_head": "2217",
    "minor_head": "001",
    "minor_head_name": "DIRECTION AND ADMINISTRATION",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)"
-   ],
+   "myscheme_match": null,
    "name": "Assistance for Smart Cities (Central share) (OCASPS) [UM]",
    "object_heads": [
     "31",
@@ -127194,15 +127189,13 @@
    ],
    "hand_label": "not_scheme",
    "hoa": "2225-01-277-015",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2225-01-277-015",
    "letter_spaced": false,
    "major_head": "2225",
    "minor_head": "277",
    "minor_head_name": "EDUCATION",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)"
-   ],
+   "myscheme_match": null,
    "name": "Scheme for Development of Scheduled Castes (Central Share) (OCASPS) [SC]",
    "object_heads": [
     "31"
@@ -144664,15 +144657,13 @@
    ],
    "hand_label": "not_scheme",
    "hoa": "2230-03-796-789",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2230-03-796-789",
    "letter_spaced": false,
    "major_head": "2230",
    "minor_head": "796",
    "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED TRIBES (DAPST)",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)"
-   ],
+   "myscheme_match": null,
    "name": "Development Action Plan for Scheduled Castes (DAPSC) Central Sector Scheme",
    "object_heads": [],
    "score": 7,
@@ -152587,15 +152578,13 @@
    ],
    "hand_label": "not_scheme",
    "hoa": "2235-02-104-037",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2235-02-104-037",
    "letter_spaced": false,
    "major_head": "2235",
    "minor_head": "104",
    "minor_head_name": "WELFARE OF AGED, INFIRM AND DESTITUTE",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)"
-   ],
+   "myscheme_match": null,
    "name": "State Action Plan for Senior Citizens ( Central Share) (OCASPS) [WC]",
    "object_heads": [
     "31"
@@ -294260,15 +294249,13 @@
    ],
    "hand_label": null,
    "hoa": "4217-01-051-006",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "4217-01-051-006",
    "letter_spaced": false,
    "major_head": "4217",
    "minor_head": "051",
    "minor_head_name": "CONSTRUCTION",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Standard Quality Compliance (SCCS)"
-   ],
+   "myscheme_match": null,
    "name": "Assistance for Smart Cities (Central share) (OCASPS) [UM]",
    "object_heads": [
     "53"
@@ -348036,7 +348023,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-02T15:18:56Z",
+ "built": "2026-09-03T11:15:22Z",
  "classified_not_scheme": 8890,
  "classified_scheme": 134,
  "classified_scheme_distinct_names": 98,

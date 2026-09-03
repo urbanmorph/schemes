@@ -2476,7 +2476,7 @@
   }
  ],
  "absent_distinct_names": 84,
- "absent_from_myscheme_all_rows": 1923,
+ "absent_from_myscheme_all_rows": 1924,
  "absent_from_myscheme_and_classified_scheme": 91,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Maharashtra, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 167 joins over the whole corpus and 131 of them are wrong, so a row counted present may not be, and the absent count here is if anything an understatement. The surviving list is a floor for the opposite reason too: no purpose line and no object head is printed anywhere in the book, recall at the published bar is 28.3%, and the state's largest cash transfer does not clear it.",
  "absent_schemes": [
@@ -45539,14 +45539,12 @@
     ]
    ],
    "hand_label": null,
-   "in_myscheme_maharashtra": true,
+   "in_myscheme_maharashtra": false,
    "key": "1111190029",
    "major_heads": [
     "2202"
    ],
-   "myscheme_match": [
-    "Special Education And Vocational Training Through Government Institutions"
-   ],
+   "myscheme_match": null,
    "name": "INFRASTRUCTURE DEVELOPMENT FOR SCHOOL RUN BY MINORITY INSTITUTION (IDMI)(Umbrella 27)",
    "score": -3,
    "sector": "Social & Community Services",
@@ -74390,7 +74388,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-02T15:18:26Z",
+ "built": "2026-09-03T11:14:51Z",
  "capital_or_loan_head_rows": 450,
  "classified_not_scheme": 1860,
  "classified_scheme": 96,

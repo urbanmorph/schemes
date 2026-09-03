@@ -886,7 +886,7 @@
   }
  ],
  "absent_distinct_names": 28,
- "absent_from_myscheme_all_rows": 1603,
+ "absent_from_myscheme_all_rows": 1606,
  "absent_from_myscheme_and_classified_scheme": 28,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Odisha, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 37 joins over the whole corpus and 22 of them are wrong, so a row counted present may not be. The surviving list is a floor and a weak one: counted precision at the bar is 90.3%, the lowest of the five states, and recall is 25.0%. Read can_this_state_support_a_high_precision_classifier before quoting any number from this file.",
  "absent_schemes": [
@@ -58934,7 +58934,7 @@
     "2402-00-789",
     "2402-00-796"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3064",
    "major_heads": [
     "2402"
@@ -58944,9 +58944,7 @@
     "789",
     "796"
    ],
-   "myscheme_match": [
-    "Mukhyamantri Kalakar Sahayata Yojana"
-   ],
+   "myscheme_match": null,
    "name": "Pradhan Mantri Krishi Sinchai Yojana (PMKSY)",
    "object_heads": [
     "18",
@@ -65951,7 +65949,7 @@
     "2401-00-789",
     "2401-00-796"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3345",
    "major_heads": [
     "2401"
@@ -65961,9 +65959,7 @@
     "789",
     "796"
    ],
-   "myscheme_match": [
-    "Mukhyamantri Kalakar Sahayata Yojana"
-   ],
+   "myscheme_match": null,
    "name": "Pradhan Mantri Krishi Sinchai Yojana (PMKSY) - Per Drop More Crop",
    "object_heads": [
     "18",
@@ -72410,7 +72406,7 @@
     "2851-00-789",
     "2851-00-796"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3540",
    "major_heads": [
     "2851"
@@ -72420,9 +72416,7 @@
     "789",
     "796"
    ],
-   "myscheme_match": [
-    "Mukhyamantri Bayan Jyoti Yojana"
-   ],
+   "myscheme_match": null,
    "name": "BOYAN JYOTI",
    "object_heads": [
     "43"
@@ -93659,7 +93653,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-02T15:18:27Z",
+ "built": "2026-09-03T11:14:52Z",
  "can_this_state_support_a_high_precision_classifier": "Not to the standard the other four reach, and the honest answer is published rather than engineered around. Counted precision at the publishing bar is 90.3% on 31 codes, against Karnataka's 91.9%, Andhra Pradesh's 95.7%, Tamil Nadu's 96.3% and Kerala's 97.4%. Three of the 31 published codes are not schemes and all three are named in known_errors. The cause is measured and not guessed: Odisha prints no purpose line, and the chart of accounts that substituted for one in Tamil Nadu is present here but says nothing, because its benefit-type classes are the standing lines inside jails, hospitals and homes rather than transfers to citizens (0.125 over 8 development rows, against Tamil Nadu's 0.895 over 19). What is left is short English names over a base rate of 10%, and the strongest positive signal in the file measures 0.389. Cumulative precision is also not monotone above the bar, which is direct evidence that the score does not rank the top of the list. A reader who requires better than nine in ten should read the band at 12 and above, which is two rows and not a register. The published 31 are a floor and a weak one.",
  "charged_and_classified_scheme": 0,
  "charged_rows": 90,

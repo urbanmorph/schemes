@@ -1,10 +1,10 @@
 {
  "added_by": {
-  "budget": 556,
-  "dbt": 135,
+  "budget": 559,
+  "dbt": 138,
   "outcome": 10
  },
- "built": "2026-09-02T15:16:36Z",
+ "built": "2026-09-03T11:12:47Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -4122,33 +4122,12 @@
   {
    "name": "Ayurswasthya Yojana: AYUSH for Sports Medicine",
    "sources": {
-    "budget": {
-     "be_cr": 1300.0,
-     "cycle": "2026-27",
-     "demand_no": 4,
-     "merge_reason": "acronym match: ayush",
-     "name": "National AYUSH Mission",
-     "statement": "stat4a"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: ayush",
-     "name": "National AYUSH Mission - Medicines under AYUSH Services"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Ayush",
      "passed": 6,
      "slug": "asyasm",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CSS",
-     "merge_reason": "acronym match: ayush",
-     "name": "National Ayush Mission43",
-     "outlay_cr": 1300.0,
-     "page": 38,
-     "targets": 0
     }
    }
   },
@@ -9067,14 +9046,6 @@
   {
    "name": "Construction of NABARD-Funded Minor Irrigation Projects - Uttarakhand",
    "sources": {
-    "budget": {
-     "be_cr": 0.01,
-     "cycle": "2026-27",
-     "demand_no": 32,
-     "merge_reason": "acronym match: nabard",
-     "name": "Subscription to Share Captial of National Bank for Agricultural and Rural Development (NABARD)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Minor Irrigation Department",
@@ -23571,7 +23542,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: iccr / iccr",
+     "merge_reason": "acronym containment: iccr / ipiccr",
      "name": "ICCR Scholarship"
     },
     "myscheme": {
@@ -23870,11 +23841,6 @@
   {
    "name": "Investment Promotion Scheme (IPS) for Thrust Sectors: Scheme For Medical Equipment And Accessories, Medical Diagnostics And Ayush Products Manufacturing Units",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: ayush",
-     "name": "Promotion of International Co-operation in AYUSH"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Department of Industries",
@@ -31546,11 +31512,6 @@
   {
    "name": "Mahila Kisan Yojana",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: kisan",
-     "name": "PM KISAN"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Welfare of Scheduled Caste & Backward Classes Department",
@@ -36017,7 +35978,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "all 6 content words of the shorter name are present",
+     "merge_reason": "one name begins with the whole of the other",
      "name": "National Pension Scheme for Traders and Self Employed Persons [erstwhile Pradhan Mantri Laghu Vyapari Maan-dhan (PM-LVM) Yojana]"
     },
     "myscheme": {
@@ -39062,7 +39023,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: gate / gate",
+     "merge_reason": "acronym containment: gpat / gpat",
      "name": "P.G. Scholarship For GATE/GPAT Qualified Students For Pursuing M.Tech/ M.E./M.Pharma - AICTE"
     },
     "myscheme": {
@@ -39759,6 +39720,11 @@
      "name": "Pradhan Mantri Kisan Samman Nidhi (PM-Kisan)",
      "statement": "stat4b"
     },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "acronym match: kisan",
+     "name": "PM KISAN"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Agriculture and Farmers Welfare",
@@ -39783,7 +39749,7 @@
      "be_cr": 5000.0,
      "cycle": "2026-27",
      "demand_no": 71,
-     "merge_reason": "all 7 content words of the shorter name are present",
+     "merge_reason": "acronym match: kusum",
      "name": "Kisan Urja Suraksha evam Utthaan Mahabhiyan (KUSUM )",
      "statement": "stat4b"
     },
@@ -39801,7 +39767,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "all 7 content words of the shorter name are present",
+     "merge_reason": "acronym match: kusum",
      "name": "PM-Kisan Urja Suraksha Evam Utthaan Mahabhiyan (KUSUM)",
      "outlay_cr": 5000.0,
      "page": 210,
@@ -39879,7 +39845,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "all 5 content words of the shorter name are present",
+     "merge_reason": "acronym match: svanidhi",
      "name": "PM-SVANIDHI- Pradhan Mantri Street Vendors AtmaNirbhar Nidhi",
      "outlay_cr": 900.0,
      "page": 181,
@@ -40548,11 +40514,6 @@
   {
    "name": "Pradhan Mantri Krishi Sinchayee Yojana: Per Drop More Crop",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 4 content words of the shorter name are present",
-     "name": "Per Drop More Crop"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Agriculture and Farmers Welfare",
@@ -41176,14 +41137,6 @@
   {
    "name": "Pashudhan Mitra Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 300.0,
-     "cycle": "2026-27",
-     "demand_no": 98,
-     "merge_reason": "acronym match: mitra",
-     "name": "PM - MITRA",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Animal Husbandary Department",
@@ -42810,13 +42763,13 @@
      "be_cr": 101.0,
      "cycle": "2026-27",
      "demand_no": 93,
-     "merge_reason": "acronym containment: seed / seed",
+     "merge_reason": "acronym containment: seed / pseed",
      "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
      "statement": "stat4b"
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: seed / seed",
+     "merge_reason": "acronym containment: seed / pseed",
      "name": "Scheme for Economic Empowerment of DNTs (SEED)"
     },
     "myscheme": {
@@ -44440,11 +44393,6 @@
   {
    "name": "RKVY Soil Health and Fertility - Soil Health Card",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: rkvy / rkvy",
-     "name": "RKVY (RAFTAAR)"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Agriculture and Farmers Welfare",
@@ -59610,6 +59558,31 @@
    }
   },
   {
+   "name": "National AYUSH Mission",
+   "sources": {
+    "budget": {
+     "be_cr": 1300.0,
+     "cycle": "2026-27",
+     "demand_no": 4,
+     "name": "National AYUSH Mission",
+     "statement": "stat4a"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "one name begins with the whole of the other",
+     "name": "National AYUSH Mission - Medicines under AYUSH Services"
+    },
+    "outcome": {
+     "classification": "CSS",
+     "merge_reason": "similarity 0.81",
+     "name": "National Ayush Mission43",
+     "outlay_cr": 1300.0,
+     "page": 38,
+     "targets": 0
+    }
+   }
+  },
+  {
    "name": "Assistance to States Agencies for Intra-State Movement of Foodgrains and FPS Dealers Margin under NFSA",
    "sources": {
     "budget": {
@@ -63544,6 +63517,18 @@
    }
   },
   {
+   "name": "Subscription to Share Captial of National Bank for Agricultural and Rural Development (NABARD)",
+   "sources": {
+    "budget": {
+     "be_cr": 0.01,
+     "cycle": "2026-27",
+     "demand_no": 32,
+     "name": "Subscription to Share Captial of National Bank for Agricultural and Rural Development (NABARD)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Recapitalization of Regional Rural Banks (RRBs)",
    "sources": {
     "budget": {
@@ -66902,6 +66887,18 @@
    }
   },
   {
+   "name": "PM - MITRA",
+   "sources": {
+    "budget": {
+     "be_cr": 300.0,
+     "cycle": "2026-27",
+     "demand_no": 98,
+     "name": "PM - MITRA",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Scheme for Protection of the Handlooms and Implementation of the Handlooms (Reservation of Articles",
    "sources": {
     "budget": {
@@ -67425,6 +67422,24 @@
     "dbt": {
      "list": "central",
      "name": "Mission Organic Value Chain Development for North East Region"
+    }
+   }
+  },
+  {
+   "name": "Per Drop More Crop",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Per Drop More Crop"
+    }
+   }
+  },
+  {
+   "name": "RKVY (RAFTAAR)",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "RKVY (RAFTAAR)"
     }
    }
   },
@@ -68005,6 +68020,15 @@
    }
   },
   {
+   "name": "Promotion of International Co-operation in AYUSH",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Promotion of International Co-operation in AYUSH"
+    }
+   }
+  },
+  {
    "name": "Rashtriya Ayurveda Vidyapeeth",
    "sources": {
     "dbt": {
@@ -68546,15 +68570,15 @@
   }
  ],
  "in_n_sources": {
-  "1": 5087,
-  "2": 313,
+  "1": 5099,
+  "2": 307,
   "3": 50,
   "4": 22
  },
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
  "snapshot": "2026-08-30",
- "total_entries": 5472,
+ "total_entries": 5478,
  "unlisted_but_funded": [
   {
    "also_in": [],
@@ -69379,6 +69403,16 @@
    "demand_no": 24,
    "name": "Mission Mausam CENTRAL SECTOR SCHEMES",
    "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "outcome",
+    "dbt"
+   ],
+   "be_cr": 1300.0,
+   "demand_no": 4,
+   "name": "National AYUSH Mission",
+   "statement": "stat4a"
   },
   {
    "also_in": [],
@@ -70386,6 +70420,13 @@
    "be_cr": 300.0,
    "demand_no": 65,
    "name": "Legal Aid Defense Counsel System (LADCS)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 300.0,
+   "demand_no": 98,
+   "name": "PM - MITRA",
    "statement": "stat4b"
   },
   {
@@ -71587,22 +71628,8 @@
    "demand_no": 29,
    "name": "Mongolia",
    "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 25.0,
-   "demand_no": 64,
-   "name": "Coaching and Guidance for SC,ST and Other Backward Classes",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 20.0,
-   "demand_no": 11,
-   "name": "Price and Production Statistics",
-   "statement": "stat4b"
   }
  ],
- "unlisted_but_funded_cr": 1361020.85,
- "unlisted_but_funded_total": 497
+ "unlisted_but_funded_cr": 1362620.86,
+ "unlisted_but_funded_total": 500
 }

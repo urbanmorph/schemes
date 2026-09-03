@@ -53,20 +53,16 @@
    "demand_no": 26,
    "evidence": [
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
      "+2",
      "benefit words in the name: fellowship"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": true,
    "in_outcome": false,
    "ministry": "M/o Education",
    "name": "ASEAN Fellowship",
-   "score": 5,
+   "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -149,24 +145,16 @@
    "demand_no": 4,
    "evidence": [
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
      "+2",
      "benefit words in the name: yojana"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": true,
-   "in_outcome": true,
+   "in_outcome": false,
    "ministry": "Ministry of Ayush",
    "name": "AYUSH Oushadhi Gunvatta evum Uttpadan Samvardhan Yojana (AOGUSY)",
-   "score": 6,
+   "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -194,36 +182,6 @@
    "name": "Government Co-contribution to Atal Pension Yojana",
    "score": 6,
    "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
-   "be_cr": 1300.0,
-   "demand_no": 4,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
-     "+2",
-     "Centrally Sponsored, delivered through states to citizens"
-    ],
-    [
-     "+2",
-     "benefit words in the name: mission"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": true,
-   "ministry": "Ministry of Ayush",
-   "name": "National AYUSH Mission",
-   "score": 8,
-   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -434,19 +392,6 @@
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
-  },
-  {
-   "be_cr": 0.01,
-   "demand_no": 32,
-   "evidence": [],
-   "in_dbt": false,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Finance",
-   "name": "Subscription to Share Captial of National Bank for Agricultural and Rural Development (NABARD)",
-   "score": 0,
-   "statement": "stat4b",
-   "verdict": "budget head"
   },
   {
    "be_cr": null,
@@ -1711,22 +1656,18 @@
    "demand_no": 71,
    "evidence": [
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
      "+1",
      "has an Output-Outcome framework"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": true,
    "in_outcome": true,
    "ministry": "M/o New and Renewable Energy",
    "name": "Kisan Urja Suraksha evam Utthaan Mahabhiyan (KUSUM )",
-   "score": 4,
+   "score": 1,
    "statement": "stat4b",
-   "verdict": "scheme"
+   "verdict": "budget head"
   },
   {
    "be_cr": 12750.0,
@@ -1807,10 +1748,6 @@
    "demand_no": 26,
    "evidence": [
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
      "+1",
      "has an Output-Outcome framework"
     ],
@@ -1819,12 +1756,12 @@
      "benefit words in the name: shiksha, yojna"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": true,
    "in_outcome": true,
    "ministry": "M/o Education",
    "name": "PM Uchchatar Shiksha Protsahan (PM-USP) Yojna",
-   "score": 6,
+   "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -2139,19 +2076,6 @@
    "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
-  },
-  {
-   "be_cr": 300.0,
-   "demand_no": 98,
-   "evidence": [],
-   "in_dbt": false,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Textiles",
-   "name": "PM - MITRA",
-   "score": 0,
-   "statement": "stat4b",
-   "verdict": "budget head"
   },
   {
    "be_cr": 6140.5,
@@ -2937,10 +2861,6 @@
    "demand_no": 1,
    "evidence": [
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
      "+1",
      "has an Output-Outcome framework"
     ],
@@ -2953,12 +2873,12 @@
      "benefit words in the name: vikas, yojna"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": false,
    "in_outcome": true,
    "ministry": "M/o Agriculture and Farmers' Welfare",
    "name": "Rashtriya Krishi Vikas Yojna",
-   "score": 8,
+   "score": 5,
    "statement": "stat4a",
    "verdict": "scheme"
   },
@@ -2985,6 +2905,36 @@
    "ministry": "M/o Agriculture and Farmers' Welfare",
    "name": "Krishionnati Yojana",
    "score": 5,
+   "statement": "stat4a",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 1300.0,
+   "demand_no": 4,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: mission"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "Ministry of Ayush",
+   "name": "National AYUSH Mission",
+   "score": 8,
    "statement": "stat4a",
    "verdict": "scheme"
   },
@@ -7942,6 +7892,19 @@
    "in_myscheme": false,
    "in_outcome": false,
    "ministry": "M/o Finance",
+   "name": "Subscription to Share Captial of National Bank for Agricultural and Rural Development (NABARD)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
+   "be_cr": 0.01,
+   "demand_no": 32,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Finance",
    "name": "Recapitalization of Regional Rural Banks (RRBs)",
    "score": 0,
    "statement": "stat4b",
@@ -9370,20 +9333,16 @@
    "demand_no": 64,
    "evidence": [
     [
-     "+1",
-     "has an Output-Outcome framework"
-    ],
-    [
      "+2",
      "benefit words in the name: employment, scheme"
     ]
    ],
    "in_dbt": false,
    "in_myscheme": false,
-   "in_outcome": true,
+   "in_outcome": false,
    "ministry": "M/o Labour and Employment",
    "name": "New Employment Generation Scheme",
-   "score": 3,
+   "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
   },
@@ -12244,6 +12203,19 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 300.0,
+   "demand_no": 98,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Textiles",
+   "name": "PM - MITRA",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 7.0,
    "demand_no": 98,
    "evidence": [
@@ -12683,9 +12655,9 @@
    "verdict": "budget head"
   }
  ],
- "built": "2026-09-02T15:17:29Z",
- "classified_head": 398,
- "classified_scheme": 296,
+ "built": "2026-09-03T11:13:44Z",
+ "classified_head": 399,
+ "classified_scheme": 295,
  "cycle": "2026-27",
  "lines": 694,
  "publish_threshold": 4,
@@ -12701,45 +12673,45 @@
  "threshold": 2,
  "threshold_sweep": [
   {
-   "f1": 0.371,
-   "precision": 0.229,
-   "recall_floor": 0.986,
+   "f1": 0.364,
+   "precision": 0.224,
+   "recall_floor": 0.985,
    "threshold": 0
   },
   {
-   "f1": 0.462,
-   "precision": 0.319,
-   "recall_floor": 0.833,
+   "f1": 0.461,
+   "precision": 0.317,
+   "recall_floor": 0.844,
    "threshold": 1
   },
   {
-   "f1": 0.484,
-   "precision": 0.355,
-   "recall_floor": 0.761,
+   "f1": 0.479,
+   "precision": 0.349,
+   "recall_floor": 0.763,
    "threshold": 2
   },
   {
-   "f1": 0.547,
-   "precision": 0.497,
-   "recall_floor": 0.609,
+   "f1": 0.533,
+   "precision": 0.485,
+   "recall_floor": 0.593,
    "threshold": 3
   },
   {
-   "f1": 0.504,
-   "precision": 0.6,
-   "recall_floor": 0.435,
+   "f1": 0.476,
+   "precision": 0.573,
+   "recall_floor": 0.407,
    "threshold": 4
   },
   {
-   "f1": 0.486,
-   "precision": 0.643,
-   "recall_floor": 0.391,
+   "f1": 0.463,
+   "precision": 0.617,
+   "recall_floor": 0.37,
    "threshold": 5
   },
   {
-   "f1": 0.36,
-   "precision": 0.667,
-   "recall_floor": 0.246,
+   "f1": 0.339,
+   "precision": 0.646,
+   "recall_floor": 0.23,
    "threshold": 6
   }
  ],
@@ -12831,10 +12803,6 @@
    "demand_no": 1,
    "evidence": [
     [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
      "+1",
      "has an Output-Outcome framework"
     ],
@@ -12847,12 +12815,12 @@
      "benefit words in the name: vikas, yojna"
     ]
    ],
-   "in_dbt": true,
+   "in_dbt": false,
    "in_myscheme": false,
    "in_outcome": true,
    "ministry": "M/o Agriculture and Farmers' Welfare",
    "name": "Rashtriya Krishi Vikas Yojna",
-   "score": 8,
+   "score": 5,
    "statement": "stat4a",
    "verdict": "scheme"
   },
@@ -13230,6 +13198,36 @@
    "name": "Vigyan Dhara",
    "score": 4,
    "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 1300.0,
+   "demand_no": 4,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+1",
+     "has an Output-Outcome framework"
+    ],
+    [
+     "+2",
+     "Centrally Sponsored, delivered through states to citizens"
+    ],
+    [
+     "+2",
+     "benefit words in the name: mission"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": true,
+   "ministry": "Ministry of Ayush",
+   "name": "National AYUSH Mission",
+   "score": 8,
+   "statement": "stat4a",
    "verdict": "scheme"
   },
   {
@@ -13653,16 +13651,16 @@
    "verdict": "scheme"
   }
  ],
- "unlisted_schemes_cr": 220750.34,
- "unlisted_schemes_total": 36,
+ "unlisted_schemes_cr": 222050.34,
+ "unlisted_schemes_total": 37,
  "validation": {
-  "false_negative": 33,
-  "false_positive": 191,
+  "false_negative": 32,
+  "false_positive": 192,
   "ground_truth": "myScheme membership",
   "note": "Recall is a floor, not a measurement: a line called a scheme that myScheme lacks may be the classifier being right and the portal being incomplete, which is the thing this project documents. Precision is the metric worth reading.",
-  "precision": 0.355,
-  "recall_floor": 0.761,
-  "true_negative": 365,
-  "true_positive": 105
+  "precision": 0.349,
+  "recall_floor": 0.763,
+  "true_negative": 367,
+  "true_positive": 103
  }
 }

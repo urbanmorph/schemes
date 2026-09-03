@@ -1,13 +1,13 @@
 {
- "built": "2026-09-02T15:27:55Z",
+ "built": "2026-09-03T11:15:32Z",
  "by_family": {
   "andhra": {
    "classified": 235,
    "rows": 246
   },
   "central": {
-   "classified": 586,
-   "rows": 701
+   "classified": 592,
+   "rows": 707
   },
   "karnataka": {
    "classified": 281,
@@ -22,29 +22,29 @@
    "rows": 610
   },
   "odisha": {
-   "classified": 109,
-   "rows": 183
+   "classified": 111,
+   "rows": 185
   },
   "tamilnadu": {
    "classified": 868,
    "rows": 922
   },
   "westbengal": {
-   "classified": 855,
-   "rows": 1142
+   "classified": 858,
+   "rows": 1145
   }
  },
  "by_sector": {
-  "Agriculture,Rural & Environment": 770,
-  "Banking,Financial Services and Insurance": 107,
-  "Business & Entrepreneurship": 230,
+  "Agriculture,Rural & Environment": 775,
+  "Banking,Financial Services and Insurance": 108,
+  "Business & Entrepreneurship": 231,
   "Education & Learning": 607,
-  "Health & Wellness": 167,
+  "Health & Wellness": 168,
   "Housing & Shelter": 238,
   "Public Safety,Law & Justice": 66,
   "Science, IT & Communications": 73,
   "Skills & Employment": 133,
-  "Social welfare & Empowerment": 741,
+  "Social welfare & Empowerment": 744,
   "Sports & Culture": 57,
   "Transport & Infrastructure": 68,
   "Travel & Tourism": 10,
@@ -52,13 +52,13 @@
   "Women and Child": 494,
   "not stated": 733
  },
- "classified": 3834,
+ "classified": 3845,
  "counting_basis": "One row per key. A state votes a scheme's revenue head and its capital head separately and both are separate rows here, exactly as they are separate rows in the register.",
  "coverage": 0.84,
  "deciding_signal": {
-  "a benefit phrase in the name": 2841,
-  "a topic word in the name": 268,
-  "the department or ministry": 712,
+  "a benefit phrase in the name": 2847,
+  "a topic word in the name": 271,
+  "the department or ministry": 714,
   "the purpose line": 13
  },
  "known_errors": [
@@ -225,7 +225,7 @@
   "why": "Chosen for usefulness, not for safety. A wrong sector is a browsing annoyance, not a false accusation, so this file does not run at the 0.95 precision bar the scheme-or-not classifiers in this directory use. It still abstains where nothing but one weak signal fires, because a wrong sector is worse than a missing one for a reader filtering by it."
  },
  "question": "Which of the 15 myScheme sectors does each register row belong to, for the rows myScheme does not list and which therefore carry no sector of their own?",
- "rows": 4567,
+ "rows": 4578,
  "scope": "The 680 registry entries with no myScheme source, plus every state classification row at or above site/build.py's listing bar that myScheme does not list. A superset of what the site shows by 366 centrally sponsored state shares that site/build.py folds into their parent scheme.",
  "sectors": {
   "andhra|Agriculture Department | Annadata Sukhibhava": {
@@ -26014,6 +26014,23 @@
    "name": "Scheme for the development of Economically Backward Classes (EBCs)",
    "sector": "Social welfare & Empowerment"
   },
+  "odisha|3064": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2402"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "odisha",
+   "name": "Pradhan Mantri Krishi Sinchai Yojana (PMKSY)",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "odisha|3071": {
    "evidence": [
     [
@@ -26273,6 +26290,23 @@
    "family": "odisha",
    "name": "Pradhan Mantri Matru Vandana Yojana",
    "sector": "Women and Child"
+  },
+  "odisha|3345": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "odisha",
+   "name": "Pradhan Mantri Krishi Sinchai Yojana (PMKSY) - Per Drop More Crop",
+   "sector": "Agriculture,Rural & Environment"
   },
   "odisha|3346": {
    "evidence": [
@@ -31256,6 +31290,18 @@
    "name": "NIKSHAY - Tribal TB Patients",
    "sector": "Social welfare & Empowerment"
   },
+  "registry|National AYUSH Mission": {
+   "evidence": [
+    [
+     "+2",
+     "Health & Wellness",
+     "the department or ministry: Ministry of Ayush"
+    ]
+   ],
+   "family": "central",
+   "name": "National AYUSH Mission",
+   "sector": "Health & Wellness"
+  },
   "registry|National Action Plan for Drug Demand Reduction (NAPDDR)": {
    "evidence": [
     [
@@ -32260,6 +32306,18 @@
    "name": "PALNA- Honorarium to Workers",
    "sector": "Women and Child"
   },
+  "registry|PM - MITRA": {
+   "evidence": [
+    [
+     "+2",
+     "Business & Entrepreneurship",
+     "the department or ministry: Ministry of Textiles"
+    ]
+   ],
+   "family": "central",
+   "name": "PM - MITRA",
+   "sector": "Business & Entrepreneurship"
+  },
   "registry|PM One Nation One Subscription (PM-ONOS)": {
    "evidence": [
     [
@@ -32430,6 +32488,18 @@
    "family": "central",
    "name": "Pensioner's Portal",
    "sector": "Social welfare & Empowerment"
+  },
+  "registry|Per Drop More Crop": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Per Drop More Crop",
+   "sector": "Agriculture,Rural & Environment"
   },
   "registry|Pilgrimage Rejuvenation and Spiritual, Heritage Augmentation Drive (PRASHAD)": {
    "evidence": [
@@ -33063,6 +33133,18 @@
    "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
    "sector": "Business & Entrepreneurship"
   },
+  "registry|Promotion of International Co-operation in AYUSH": {
+   "evidence": [
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Promotion of International Co-operation in AYUSH",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "registry|Promotion of MSMEs in NER and Sikkim": {
    "evidence": [
     [
@@ -33255,6 +33337,18 @@
    "family": "central",
    "name": "RGNIYD-Scholarships to Students",
    "sector": "Education & Learning"
+  },
+  "registry|RKVY (RAFTAAR)": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "RKVY (RAFTAAR)",
+   "sector": "Agriculture,Rural & Environment"
   },
   "registry|Radiation and Isotopes Project (BRIT)": {
    "evidence": [
@@ -34797,6 +34891,28 @@
    ],
    "family": "central",
    "name": "Sub Mission on Agriculture Mechanization-Centrally Sponsored",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Subscription to Share Captial of National Bank for Agricultural and Rural Development (NABARD)": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "the department or ministry: Department of Financial Services"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Subscription to Share Captial of National Bank for Agricultural and Rural Development (NABARD)",
    "sector": "Agriculture,Rural & Environment"
   },
   "registry|Subsidy to Jute Corporation of India towards market operation": {
@@ -58657,6 +58773,23 @@
    "name": "Ashram Hostel attached to Primary School in Rural Areas [SC]",
    "sector": "Education & Learning"
   },
+  "westbengal|2225-01-277-015": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Scheme for Development of Scheduled Castes (Central Share) (OCASPS) [SC]",
+   "sector": "Social welfare & Empowerment"
+  },
   "westbengal|2225-01-277-018": {
    "evidence": [
     [
@@ -60890,6 +61023,23 @@
    "name": "Apprenticeship Training",
    "sector": "Skills & Employment"
   },
+  "westbengal|2230-03-796-789": {
+   "evidence": [
+    [
+     "+1",
+     "Skills & Employment",
+     "major head 2230"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Development Action Plan for Scheduled Castes (DAPSC) Central Sector Scheme",
+   "sector": "Social welfare & Empowerment"
+  },
   "westbengal|2230-03-800-111": {
    "evidence": [
     [
@@ -62496,6 +62646,23 @@
    "family": "westbengal",
    "name": "Capacity Building for frontline workers for providing services to vulnerable (External Loan of EAP-World Bank) (EAP) [WC]",
    "sector": "Banking,Financial Services and Insurance"
+  },
+  "westbengal|2235-02-104-037": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "State Action Plan for Senior Citizens ( Central Share) (OCASPS) [WC]",
+   "sector": "Social welfare & Empowerment"
   },
   "westbengal|2235-02-104-038": {
    "evidence": [
