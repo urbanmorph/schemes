@@ -984,10 +984,10 @@ Five books are read and a sixth is archived without being read:
 
 | Book | Pages | Named rows |
 |---|---|---|
-| Demand for Grants Vol-I | 732 | 1,251 |
-| Demand for Grants Vol-II | 633 | 1,175 |
+| Demand for Grants Vol-I | 732 | 1,220 |
+| Demand for Grants Vol-II | 633 | 1,184 |
 | Demand for Grants Vol-III | 701 | 1,187 |
-| Central Sponsored Scheme Budget Book | 427 | 573 |
+| Central Sponsored Scheme Budget Book | 427 | 580 |
 | Gender Budget, Parts A, B and C | 47 | 190 |
 | Special Component Plan (English) | 162 | archived, not parsed: its schemes sit in narrative rather than in a table |
 
@@ -1117,51 +1117,58 @@ national portal it would be compared against lists in English.
 
 ## What the Telangana and Punjab joins say about `parse/match.py`
 
-Every join was read by eye. Telangana produced **9** pairs against myScheme's 22 non-central
-records and **5 are wrong**; Punjab produced **17** against 41 and **9 are wrong**. Four
-distinct holes, all in the acronym half of `probably_same`, and none of them is a new idea:
-each is the rule the file already documents, defeated by a case its guard does not cover.
+Every join was read by eye, against the version of `parse/match.py` standing at the end of
+this round. Telangana produced **5** pairs against myScheme's 22 non-central records and
+**1 is wrong**; Punjab produced **16** against 41 and **8 are wrong**. Three holes in the
+acronym rules and one in containment.
 
-**1. The shouted-title guard needs three words, so a two-word capital title yields both its
-words as acronyms.** `acronyms()` stands down when a name is entirely upper case AND has
-three or more words, on the ground that a source shouting every word has said nothing about
-which are acronyms. `SKILL UNIVERSITY` has two, so it yields `skill` and `university`, and
-`skill` is a token of four different `Skill Development Training - ...` records on myScheme.
-`WORKS EXPENDITURE` yields `expenditure` the same way and joins
-`Reimbursement of Expenditure for Occupational Diseases`. Five wrong joins between them.
+An earlier reading of the same two corpora found five more, all from two-word capital
+titles: `SKILL UNIVERSITY` yielding `skill` and joining four `Skill Development Training`
+records, `WORKS EXPENDITURE` yielding `expenditure`. Those are gone, closed by the guard
+that now treats **two** space-separated words of unbroken capitals as a shouted title
+rather than three. They are recorded here because the same corpus proves the fix: both
+names are still in this register and neither joins anything now.
 
-**2. The same guard is defeated by a single lower-case character.** Punjab prints
+**1. The shouted-title guard is defeated by a single lower-case character.** Punjab prints
 `IMPLEMENTATION OF PROTECTION OF CIVIL RIGHTS ACT-1955 AND THE SCHEDULED CASTES AND
-SCHEDULED TRIBES (PREVENTION OF ATROCITIES) ACT 1989 (50:50)(EY-Ongoing)`. The `(EY-Ongoing)`
-suffix makes `letters == letters.upper()` false, the guard does not fire, and the name yields
-`implementation`, `protection`, `rights`, `scheduled`, `castes`, `tribes`, `prevention` and
-`atrocities` as acronyms. `scheduled` then joins `Post Matric Scholarship For Scheduled
-Caste`. The other copy of the same scheme in Title Case matches nothing, which is the tell.
+SCHEDULED TRIBES (PREVENTION OF ATROCITIES) ACT 1989 (50:50)(EY-Ongoing)`. The
+`(EY-Ongoing)` suffix makes `letters == letters.upper()` false, the guard does not fire, and
+the name yields `scheduled`, `castes`, `rights` and `tribes` as acronyms. `scheduled` then
+joins `Post Matric Scholarship For Scheduled Caste`. The tell is that Punjab prints the
+same scheme a second time in Title Case, and that copy joins nothing.
 
-**3. A capitalised transliteration in brackets is not an acronym.** `Universalisation of
-Secondary Education (ANDARIKI VIDYA)` yields `vidya` and `andariki`, and `vidya` joins
-`Mahatma Jyothiba Phule Overseas Vidya Nidhi for BC and EBC`. The bracketed-acronym rule
-itself is innocent here, `(ANDARIKI VIDYA)` contains a space and does not match it; it is the
-capitals rule again.
+The eight-letter ceiling added this round does not catch it: the pattern is
+`[A-Z][A-Z0-9]{3,8}`, which is one leading letter plus up to eight more, so a NINE-letter
+word still passes and `SCHEDULED` is nine. If the intent is what the comment says, that the
+longest real acronym in this corpus is HPBOCWWB at eight, the quantifier wants to be `{3,7}`.
 
-**4. Acronym containment accepts a substring at any offset, though its own comment says
+**2. A capitalised transliteration in brackets is not an acronym.**
+`Universalisation of Secondary Education (ANDARIKI VIDYA)` yields `vidya` and `andariki`,
+and `vidya` joins `Mahatma Jyothiba Phule Overseas Vidya Nidhi for BC and EBC`. The
+bracketed-acronym rule is innocent here: `(ANDARIKI VIDYA)` contains a space and does not
+match it. It is the capitals rule, on a name whose lower-case majority keeps the shouted
+guard from firing. Telangana's only wrong join.
+
+**3. Acronym containment accepts a substring at any offset, though its own comment says
 tail.** The rule exists for `NRLM` inside `DAYNRLM`, and the code tests `x in y or y in x`.
 `NDPS`, written in capitals in `Advisory Board under NDPS Act`, sits at offset 2 inside
 `igndpsp`, the DERIVED initialism of `Indira Gandhi National Disability Pension Scheme
 (Punjab)`, and covers 4 of its 7 letters, which clears the 0.5 ratio guard. Two wrong joins,
-one of them on the state's own typo `Advisory Borad Under NDPS Act`.
+the second on the state's own typo, `Advisory Borad Under NDPS Act`.
 
-**And one that is a judgement rather than a defect.** Five Punjab joins are a demand book's
-generic establishment head against a welfare board scheme of the same words: `Family Pension`
-to `Family/ Widow Pension Scheme (P.B.O.C.W.W.B)`, `Old Age Pension` and `Indira Gandhi
-National Old Age Pension` to `Old Age Pension Scheme (P.B.O.C.W.W.B)`, `Maternity Benefit
-Programme(60:40)(GoI-GoP))` to `Maternity Benefit Scheme (P.B.O.C.W.W.B)`. The containment
-rule's comparability guard passes because the myScheme names are short too. The Punjab
-Building and Other Construction Workers Welfare Board runs its own pension and maternity
-schemes, and they are not the state's.
+**4. And one that is a judgement rather than a defect.** Five Punjab joins are a demand
+book's generic head against a welfare board scheme of the same words: `Family Pension` to
+`Family/ Widow Pension Scheme (P.B.O.C.W.W.B)`, `Old Age Pension` and `Indira Gandhi
+National Old Age Pension` to `Old Age Pension Scheme (P.B.O.C.W.W.B)`, and `Maternity
+Benefit Programme(60:40)(GoI-GoP))` to `Maternity Benefit Scheme (P.B.O.C.W.W.B)`. The
+containment rule's comparability guard passes because the myScheme names are short too. The
+Punjab Building and Other Construction Workers Welfare Board runs its own pension and
+maternity schemes out of a cess, and they are not the state's. `Old Age Pension` also joins
+`Indira Gandhi National Old Age Pension Scheme (Punjab)`, which is the central scheme and
+not Punjab's own, though it correctly joins `Old Age Pension Scheme - Punjab` as well.
 
-`parse/match.py` was NOT edited. Every one of these errors is a false MATCH, which means a
-scheme is treated as present on myScheme and is therefore not claimed absent: the cost is
-under-reported absence, not a false accusation, which is the asymmetry the module is built
-on. The Telangana and Punjab absence counts in this register are therefore floors twice
-over.
+`parse/match.py` was NOT edited from here. Every one of these errors is a false MATCH,
+which means a scheme is treated as present on myScheme and is therefore not claimed absent:
+the cost is under-reported absence, not a false accusation, which is the asymmetry the
+module is built on. The Telangana and Punjab absence counts in this register are floors
+twice over.

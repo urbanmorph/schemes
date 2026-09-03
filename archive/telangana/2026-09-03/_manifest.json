@@ -1,0 +1,49 @@
+{
+ "alternates": [],
+ "base": "https://ifmis.telangana.gov.in/budget_volumes",
+ "books": {
+  "pragathi": {
+   "bytes": 1787504,
+   "sha256": "a22423e797278f2719abfb3594cb8fef71e3297194ebbb352ac61ec0cb73d03c",
+   "url": "https://d20exy1ygbh3sg.cloudfront.net/publicfiles/budget-books/2026-27/1773983749_Pragathi_Paddu__VII-I_1773983748_.pdf",
+   "what": "Volume VII/1, Pragathi Paddu (Scheme Expenditure): the state's scheme list, sector and department wise, with the head of account and three years of figures against each scheme and a printed total at every level"
+  },
+  "scsdf": {
+   "bytes": 1472234,
+   "sha256": "4e94635d4b769bcd5e7dd6b42f6a58eb9d7164eb177a7a45fee58696f29a6658",
+   "url": "https://d20exy1ygbh3sg.cloudfront.net/publicfiles/budget-books/2026-27/1773983773_SCSDF_Vol_VII-II_2026-27_1773983773_.pdf",
+   "what": "Volume VII/2, Scheduled Castes Special Development Fund, department wise and scheme wise, with a printed total per department and a grand total"
+  },
+  "stsdf": {
+   "bytes": 1757172,
+   "sha256": "37a73b865b95e90ea819e7ea9a624485daa49338864dc5807e692e78f294c594",
+   "url": "https://d20exy1ygbh3sg.cloudfront.net/publicfiles/budget-books/2026-27/1773983796_STSDF_Volume_VII-III_2026-27_1773983796_.pdf",
+   "what": "Volume VII/3, Scheduled Tribes Special Development Fund, department wise and scheme wise, with a printed sub-total per group and a grand total"
+  }
+ },
+ "books_collected": 3,
+ "books_expected": [
+  "pragathi",
+  "scsdf",
+  "stsdf"
+ ],
+ "cycle": "2026-27",
+ "errors": [],
+ "finished": "2026-09-03T03:14:39Z",
+ "index_bytes": 510790,
+ "other_cycles_on_index": [
+  "2025-26"
+ ],
+ "pdfs_on_index": 725,
+ "skipped": {
+  "Volume I/1 and I/2, II, IV, V, VIII/2, IX, X": "Annual Financial Statement, Statement of Demands for Grants, Receipts, Public Account, Guarantees, Appendices, Analysis of Demands and Commercial Undertakings. All of them are organised by head of account or by demand and none prints a scheme name",
+  "Volume III/1 to III/17": "the seventeen department budget books. They carry the detailed heads under each demand, which is the same money the Pragathi Paddu prints against a scheme name; they are a larger download for a coarser answer and were not taken this cycle",
+  "Volume VI, Budget in Brief; Volume VIII/1, Employee Strength; Budget Speech; FRBM Fiscal Policy Statement; Notice": "summary, staffing and prose documents",
+  "finance.telangana.gov.in/budget-volumes.jsp": "the Finance Department's own budget page, not used: its newest directory is budget-2025-26-books and it does not carry the current cycle at all. See the module docstring"
+ },
+ "source": "telangana",
+ "started": "2026-09-03T03:14:33Z",
+ "status_histogram": {
+  "200": 3
+ }
+}

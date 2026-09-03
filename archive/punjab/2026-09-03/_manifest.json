@@ -1,0 +1,74 @@
+{
+ "alternates": [],
+ "base": "https://finance.punjab.gov.in/StateBudget/Index",
+ "books": {
+  "css": {
+   "bytes": 11086744,
+   "served_as": "85c58fa9-2f8c-4044-8316-1ab336767d89_Central Sponsored Scheme Budget Book (CSS) FY 2026-27.pdf",
+   "sha256": "4b580697f558b6d5f1120c19960acdd6502e505a6b61b8aef789918db484f846",
+   "url": "https://finance.punjab.gov.in/uploads/85c58fa9-2f8c-4044-8316-1ab336767d89_Central%20Sponsored%20Scheme%20Budget%20Book%20%28CSS%29%20FY%202026-27.pdf",
+   "what": "Central Sponsored Scheme Budget Book: the same layout with the State and CSS shares of each object head printed on separate lines"
+  },
+  "dfg-1": {
+   "bytes": 15520452,
+   "served_as": "84998369-36db-4b71-a8ed-3b154dde550a_Demand for Grants Vol-I FY 2026-27.pdf",
+   "sha256": "506f6af20b8ab720fc0fe0c97f133a5cccc46152baa72845482c2b06cb641e2f",
+   "url": "https://finance.punjab.gov.in/uploads/84998369-36db-4b71-a8ed-3b154dde550a_Demand%20for%20Grants%20Vol-I%20FY%202026-27.pdf",
+   "what": "Demand for Grants Volume I: detailed accounts by demand, minor head, sub-head and object head, Punjabi and English in separate columns, four years of figures in thousands"
+  },
+  "dfg-2": {
+   "bytes": 14990375,
+   "served_as": "f6a331be-4893-4f02-8703-87b67e31fa6e_Demand for Grants Vol-II FY 2026-27.pdf",
+   "sha256": "e2787eccd8cbea15273cdd1a3e0a8b3e0880ad8c07a7ab64dfae00ed269f0b8b",
+   "url": "https://finance.punjab.gov.in/uploads/f6a331be-4893-4f02-8703-87b67e31fa6e_Demand%20for%20Grants%20Vol-II%20FY%202026-27.pdf",
+   "what": "Demand for Grants Volume II"
+  },
+  "dfg-3": {
+   "bytes": 10105549,
+   "served_as": "0350d12a-aaf5-4387-b484-01cf3aaeb0c7_Demand for Grants Vol-III FY 2026-27.pdf",
+   "sha256": "539e09135146f464e49a2df34e459ba1429dcd261a78ae0f9801b0b6a902522e",
+   "url": "https://finance.punjab.gov.in/uploads/0350d12a-aaf5-4387-b484-01cf3aaeb0c7_Demand%20for%20Grants%20Vol-III%20FY%202026-27.pdf",
+   "what": "Demand for Grants Volume III"
+  },
+  "gender": {
+   "bytes": 13662632,
+   "served_as": "acdc31d7-1fc6-4290-823e-d5e5bea4c16a_Gender Budget 2026-27.pdf",
+   "sha256": "f4b2b8a6e8b8436a1da528a1bd2d4514b3753fa87e3e022f8fcef061371d4235",
+   "url": "https://finance.punjab.gov.in/uploads/acdc31d7-1fc6-4290-823e-d5e5bea4c16a_Gender%20Budget%202026-27.pdf",
+   "what": "Gender Budget: Parts A, B and C, a plain English numbered scheme table with four years of figures in thousands"
+  },
+  "scp": {
+   "bytes": 8095364,
+   "served_as": "c0498d4c-966b-4303-9619-6366e6fb4399_Special Component Plan FY 2026-27 (English).pdf",
+   "sha256": "24fbba867f62571d2c6f1e3c45f7e69377f815792894f46719b234af6f7fa8e9",
+   "url": "https://finance.punjab.gov.in/uploads/c0498d4c-966b-4303-9619-6366e6fb4399_Special%20Component%20Plan%20FY%202026-27%20%28English%29.pdf",
+   "what": "Special Component Plan, English edition. ARCHIVED AND NOT PARSED: its schemes carry codes and outlays but are interleaved with narrative rather than tabulated, so it is kept for a later reading rather than guessed at"
+  }
+ },
+ "books_collected": 6,
+ "books_expected": [
+  "css",
+  "dfg-1",
+  "dfg-2",
+  "dfg-3",
+  "gender",
+  "scp"
+ ],
+ "cycle": "2026-27",
+ "errors": [],
+ "finished": "2026-09-03T03:53:50Z",
+ "index_bytes": 191055,
+ "other_cycles_on_index": [],
+ "pdfs_on_index": 193,
+ "skipped": {
+  "Annual Financial Statement, Budget at a Glance, Receipt Budget Book, Statistical Abstract": "aggregate and receipts documents, organised by major head; none names a scheme",
+  "Capital Expenditure Budget Book": "a cut of the same provisions by capital head. Every scheme in it is already in the three Demand for Grants volumes, which carry the revenue side too",
+  "Special Component Plan (Punjabi), Budget Speech (Punjabi, Hindi, English), Research & Development Budget": "prose, or the Punjabi edition of a book taken in English",
+  "Supplementary Demand (English and Punjabi)": "the supplementary demands for the CURRENT year, 2025-26. A different document from the 2026-27 demands and not a variant of them; mixing the two would put a 2025-26 figure in a 2026-27 register"
+ },
+ "source": "punjab",
+ "started": "2026-09-03T03:48:31Z",
+ "status_histogram": {
+  "200": 6
+ }
+}
