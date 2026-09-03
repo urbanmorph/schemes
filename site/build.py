@@ -514,8 +514,13 @@ def legibility_section(leg, ms=None):
             named += '<span class="of" title="listed from the state\'s own budget book; '\
                      'no classifier yet, so no row here is named as hidden">'\
                      '<br>listed, not yet judged</span>' 
+        # A state listed without a classifier has a register page of its own, and the
+        # scoreboard is where a reader will go looking for it.
+        label = e(r["state"])
+        if r["built"] and r.get("key") and not m.get("absence_claims_published"):
+            label = f'<a href="{link("state/" + r["key"] + ".html")}">{label}</a>'
         return (f'<tr class="{"" if r["built"] else "refused"}">'
-                f'<td>{e(r["state"])}</td>{cells(r)}'
+                f'<td>{label}</td>{cells(r)}'
                 f'<td class="num">{r["cleared"]}<span class="of"> of '
                 f'{r["tests_run"]}</span></td>'
                 f'<td class="num">{named}</td>'
@@ -667,6 +672,107 @@ def classifier_note(cls, floor_sentence):
             f'{num((cls.get("ground_truth") or {}).get("labelled"))} hand labels in all. '
             f'Recall is {v.get("at_publish_threshold", {}).get("recall", 0):.0%}, so this is '
             f'a floor and never a total. {floor_sentence}')
+
+
+def page_state(key, state, d, leg_row):
+    """One state's budget book as published, for a state with no classifier yet.
+
+    This is the register's weaker claim rendered in full: these are the lines the state
+    files at the level it files schemes at, its own names, codes, heads of account and
+    figures, with its own caveat about what else sits at that level. Nothing on this page
+    calls a row a scheme and nothing here is an absence claim.
+    """
+    rows = d.get("entries") or []
+    rec = d.get("reconciliation") or {}
+
+    def total(o, field):
+        n = 0
+        if isinstance(o, dict):
+            if isinstance(o.get(field), int):
+                n += o[field]
+            for v in o.values():
+                n += total(v, field)
+        elif isinstance(o, list):
+            for v in o:
+                n += total(v, field)
+        return n
+
+    checked, failed = total(rec, "checked"), total(rec, "failed")
+    money = sum(r["be_lakh"] for r in rows if isinstance(r.get("be_lakh"), (int, float)))
+    def line(r):
+        ident = one(r, "ident") or ""
+        anchor = slug_for(f"{r.get('name') or ''} {ident}")
+        sub = ""
+        # Uttar Pradesh publishes only in Hindi, so the romanisation is what an English
+        # reader can scan; Haryana prints a paragraph of purpose against most schemes.
+        # Both go under the name rather than in a column, because only two states have
+        # either and a mostly empty column reads as missing data.
+        if r.get("name_latin"):
+            sub += f'<div class="sub2">{e(r["name_latin"])}</div>'
+        if r.get("purpose"):
+            sub += f'<div class="sub2">{e(r["purpose"])}</div>'
+        amt = (inr(round(r["be_lakh"] / 100))
+               if isinstance(r.get("be_lakh"), (int, float)) and r["be_lakh"] else NIL)
+        return (f'<tr id="{e(anchor)}"><td>{e(r.get("name") or "")}{sub}</td>'
+                f'<td class="nowrap"><code>{e(str(ident))}</code></td>'
+                f'<td class="muted">{e(str(one(r, "department") or ""))}</td>'
+                f'<td class="num alloc">{amt}</td></tr>')
+
+    body = "".join(line(r) for r in rows)
+
+    checks = ""
+    if checked:
+        checks = (f"The book prints its own totals and this reading agrees with "
+                  f"<b>{num(checked - failed)} of {num(checked)}</b> of them"
+                  + (f", and disagrees with {num(failed)}, which are listed in the data."
+                     if failed else ", with none left over."))
+    return f"""
+<div class="eyebrow">Route &middot; /state/{e(key)}</div>
+<h1 class="pagetitle">{e(state)}&rsquo;s budget, as {e(state)} publishes it</h1>
+<p class="standfirst">{num(len(rows))} lines, at the level this state files schemes at.
+This page makes one claim and it is a small one: {e(state)}&rsquo;s own budget names these.
+It does not say which are schemes a citizen can apply to, and none of them is named as
+hidden anywhere on this site.</p>
+
+<div class="census">
+  <div class="cell"><div class="k">Lines named</div><div class="v">{num(len(rows))}</div>
+    <div class="n">{e(str(d.get("cycle") or ""))}</div></div>
+  <div class="cell"><div class="k">With a figure</div>
+    <div class="v">{num(sum(1 for r in rows if r.get("be_lakh")))}</div>
+    <div class="n">a provision this cycle</div></div>
+  <div class="cell"><div class="k">Together</div>
+    <div class="v">{inr(round(money / 100)) if money else NIL}</div>
+    <div class="n">crore, not a state total</div></div>
+  <div class="cell"><div class="k">Printed totals checked</div>
+    <div class="v">{num(checked) if checked else NIL}</div>
+    <div class="n">{num(failed)} disagree</div></div>
+</div>
+
+<div class="warnbox">
+  <b>What one row here is, in this state&rsquo;s own terms</b>
+  {e(d.get("caveat") or "")}
+  {'<p style="margin:8px 0 0">' + checks + '</p>' if checks else ''}
+</div>
+
+<div class="warnbox">
+  <b>Why there is no score against any of these</b>
+  A classifier separates a scheme from a budget head, and it is built per state and
+  validated against hand labels, because every state publishes different evidence.
+  {e(state)} does not have one yet. Until it does, this register will list what the state
+  names and will not say of any row that a portal is hiding it: that is an accusation and
+  it needs counted precision behind it.
+  {'<p style="margin:8px 0 0">' + e(leg_row.get("why") or "") + '</p>' if leg_row else ''}
+</div>
+
+<section class="sec">
+  <h2>Every line, as published</h2>
+  <div class="sec-note">{e(d.get("source") or "")}</div>
+  <div class="tscroll"><table id="stbl">
+    <thead><tr><th>Name</th><th>Code</th><th>Filed under</th>
+      <th class="num">2026&ndash;27 (&#8377; cr)</th></tr></thead>
+    <tbody>{body}</tbody>
+  </table></div>
+</section>"""
 
 
 def page_audit(cag, audited):
@@ -1426,6 +1532,13 @@ def unclassified_state(load, key, state, already_held, sectors):
     rows = d.get("entries") or []
     caveat = d.get("caveat")
     out = []
+    # These rows do NOT get a page each, and the reason is not the file limit that found
+    # it. A budget line with no classifier behind it has a name, a code, a head of account
+    # and a figure, which is a table row's worth of fact; giving each one its own page
+    # would dress a row up as a record. They live on their state's register page, where a
+    # reader can also see what sits beside them in the state's own book. Cloudflare Pages
+    # caps a deployment at 20,000 files and 16,689 of these took it to 23,955, which is how
+    # the question got asked.
     for r in sorted(rows, key=lambda x: str(x.get("key") or x.get("code") or x.get("name"))):
         name = (r.get("name") or "").strip()
         if len(name) < 5:
@@ -1441,6 +1554,7 @@ def unclassified_state(load, key, state, already_held, sectors):
         out.append({
             "name": name,
             "slug": slug_for(f"{state} {name} {ident or ''}"),
+            "href": "state/" + key + "#" + slug_for(f"{name} {ident or ''}"),
             "on_myscheme": False,
             "checks": None,
             "sources": [key],
@@ -2747,6 +2861,9 @@ def build():
             "/scheme/*\n"
             "  Cache-Control: public, max-age=600, stale-while-revalidate=86400\n"
             "\n"
+            "/state/*\n"
+            "  Cache-Control: public, max-age=600, stale-while-revalidate=86400\n"
+            "\n"
             # Cloudflare compresses by content type and text/csv is not on its list, so
             # this file shipped as 2.4 MB where it gzips to about 400 KB. Declaring it
             # text/plain puts it on the list; Content-Disposition keeps it a download
@@ -2817,7 +2934,8 @@ def build():
                 " ".join(en.get("sources") or []),
                 "yes" if en.get("on_myscheme") else "no",
                 ck.get("passed", ""), ck.get("total", ""),
-                SITE_BASE + "/scheme/" + str(en["slug"]),
+                SITE_BASE + "/" + (en["href"] if en.get("href")
+                                    else "scheme/" + str(en["slug"])),
             ])
 
     w("index.html", shell(
@@ -2848,6 +2966,24 @@ def build():
         page_audit(load("data/cag/reports.json", {}), load("data/cag/audited.json", {})),
         desc=("Every audit report the Comptroller and Auditor General of India has tabled, "
               "and which government schemes have been audited at all.")))
+    # A register page for every state listed without a classifier. Fifteen files rather
+    # than 16,689, and the right shape for the claim: these rows belong to a state's book
+    # and are shown inside it.
+    os.makedirs(os.path.join(OUT, "state"), exist_ok=True)
+    leg_by_state = {r["state"]: r for r in (load("data/legibility.json", {}) or {}).get("states", [])}
+    for key, st_name in sorted(STATE_OF.items()):
+        if (load(f"data/{key}/classification.json", {}) or {}).get("all_entries"):
+            continue
+        sd = load(f"data/{key}/schemes.json", {}) or {}
+        if not sd.get("entries"):
+            continue
+        w(os.path.join("state", f"{key}.html"), shell(
+            f"{st_name}'s budget", f"/state/{key}",
+            page_state(key, st_name, sd, leg_by_state.get(st_name) or {}),
+            desc=(f"{len(sd['entries']):,} lines from {st_name}'s own budget, at the level "
+                  f"the state files schemes at, with its codes, heads of account and "
+                  f"provisions.")))
+
     w("changes.html", shell(
         "Changes", "/changes", page_changes(load("data/changes.json", {})),
         desc="What Indian government scheme records changed between monthly snapshots."))
@@ -2855,6 +2991,9 @@ def build():
     n = 0
     seen = set()
     for en in entries:
+        # Rows that already point somewhere (a state register page) get no page here.
+        if en.get("href"):
+            continue
         if en["slug"] in seen:
             continue
         seen.add(en["slug"])

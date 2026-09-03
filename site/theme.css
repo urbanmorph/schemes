@@ -615,3 +615,15 @@ table.mini td:nth-child(2){width:18%}
 /* The bar is a length, not a chart: it makes the shape of a distribution readable at a
    glance without implying a precision the counts do not have. */
 .barfill{display:block;height:7px;background:var(--stamp);opacity:.5;min-width:2px}
+
+/* A state's own budget book, at /state/<key>. Four columns, the name taking the width,
+   and the code monospaced so a reader can scan for one. */
+#stbl{table-layout:fixed;width:100%;min-width:780px}
+#stbl th:nth-child(1),#stbl td:nth-child(1){width:48%}
+#stbl th:nth-child(2),#stbl td:nth-child(2){width:16%}
+#stbl th:nth-child(3),#stbl td:nth-child(3){width:22%}
+#stbl th:nth-child(4),#stbl td:nth-child(4){width:14%}
+#stbl td{vertical-align:top;word-break:break-word}
+#stbl code{font-size:var(--fs-xs);word-break:break-all}
+/* The row a reader arrived at by following an anchor from the register. */
+#stbl tr:target{background:var(--stamp-soft);box-shadow:inset 3px 0 0 var(--stamp-bright)}
