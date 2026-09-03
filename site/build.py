@@ -510,9 +510,10 @@ def legibility_section(leg, ms=None):
         named = num(n) if n else NIL
         # A state that is read and not yet on the site says so in the cell that would
         # otherwise imply a reader can go and look at those schemes.
-        if n and not m.get("on_site"):
-            named += '<span class="of" title="read and reconciled; not yet searchable '\
-                     'on this site"><br>not yet listed</span>' 
+        if n and not m.get("absence_claims_published"):
+            named += '<span class="of" title="listed from the state\'s own budget book; '\
+                     'no classifier yet, so no row here is named as hidden">'\
+                     '<br>listed, not yet judged</span>' 
         return (f'<tr class="{"" if r["built"] else "refused"}">'
                 f'<td>{e(r["state"])}</td>{cells(r)}'
                 f'<td class="num">{r["cleared"]}<span class="of"> of '

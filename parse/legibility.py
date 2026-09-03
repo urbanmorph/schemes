@@ -160,14 +160,13 @@ def measure(key):
     if not os.path.exists(p):
         return None
     d = json.load(open(p, encoding="utf-8"))
-    # Reading a state's budget and PUBLISHING its absence claims are two different things,
-    # and the gap between them is the whole two-bar argument this project runs on. A state
-    # is read once its parser lands; it reaches the site only once a classifier has been
-    # built and hand-validated for it, because "this scheme is funded and no portal lists
-    # it" is an accusation and needs counted precision behind it. Seven states are read and
-    # not yet accused of anything, and the site has to say so rather than let a reader
-    # search for Punjab and find nothing.
-    on_site = os.path.exists(os.path.join(ROOT, "data", key, "classification.json"))
+    # Every state that parses is LISTED on the site, straight from its own budget book.
+    # What a classifier buys is not the listing but the ACCUSATION: "this scheme is funded
+    # and no portal lists it" needs counted precision behind it, and until a state has one
+    # its rows appear with no score and no verdict. The site used to require a classifier
+    # before it would list anything at all, which left eight states invisible; the flag is
+    # kept, renamed to what it actually gates.
+    accuses = os.path.exists(os.path.join(ROOT, "data", key, "classification.json"))
     ents = d.get("entries") or []
     names = [r.get("name") or "" for r in ents]
     latin = sum(1 for n in names if not NON_ASCII.search(n))
@@ -192,7 +191,8 @@ def measure(key):
 
     return {
         "rows": len(ents),
-        "on_site": on_site,
+        "on_site": True,
+        "absence_claims_published": accuses,
         "names_in_latin_script": latin,
         "names": len(names),
         "totals_checked": checked,
@@ -275,6 +275,8 @@ def run():
         "states_on_site": sum(1 for r in built if (r["measured"] or {}).get("on_site")),
         "schemes_named_on_site": sum((r["measured"] or {}).get("rows", 0) for r in built
                                      if (r["measured"] or {}).get("on_site")),
+        "states_with_absence_claims": sum(
+            1 for r in built if (r["measured"] or {}).get("absence_claims_published")),
         "unreached_note": ("A test with no verdict was never reached, because an earlier "
                            "test decided the state first. It is not scored as a failure: "
                            "nobody knows whether Bihar's scheme names are bounded, because "

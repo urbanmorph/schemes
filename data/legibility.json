@@ -1,8 +1,8 @@
 {
- "built_at": "2026-09-03T07:52:08Z",
+ "built_at": "2026-09-03T07:52:36Z",
  "method_note": "Verdicts are hand-entered from reading each state's documents, which is the only way this survey has ever been done. Every verdict for a state that was built is then checked against that state's own parser output, and a disagreement stops the build rather than publishing. The refusals have no output to check against, which is what a refusal is, so each carries the measurement that decided it instead.",
  "schemes_named": 39667,
- "schemes_named_on_site": 22978,
+ "schemes_named_on_site": 39667,
  "states": [
   {
    "built": true,
@@ -10,6 +10,7 @@
    "failed_at": "closes",
    "key": "karnataka",
    "measured": {
+    "absence_claims_published": true,
     "cycle": "2026-27",
     "names": 969,
     "names_in_latin_script": 965,
@@ -42,6 +43,7 @@
    "failed_at": "closes",
    "key": "andhra",
    "measured": {
+    "absence_claims_published": true,
     "cycle": "2026-27",
     "names": 552,
     "names_in_latin_script": 552,
@@ -74,6 +76,7 @@
    "failed_at": null,
    "key": "kerala",
    "measured": {
+    "absence_claims_published": true,
     "cycle": "2026-27",
     "names": 2629,
     "names_in_latin_script": 2627,
@@ -106,6 +109,7 @@
    "failed_at": null,
    "key": "tamilnadu",
    "measured": {
+    "absence_claims_published": true,
     "cycle": "2026-27",
     "names": 6220,
     "names_in_latin_script": 6128,
@@ -138,10 +142,11 @@
    "failed_at": null,
    "key": "telangana",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 2039,
     "names_in_latin_script": 2038,
-    "on_site": false,
+    "on_site": true,
     "rows": 2039,
     "says": {
      "closes": true,
@@ -170,6 +175,7 @@
    "failed_at": null,
    "key": "maharashtra",
    "measured": {
+    "absence_claims_published": true,
     "cycle": "2026-2027",
     "names": 1956,
     "names_in_latin_script": 1944,
@@ -202,6 +208,7 @@
    "failed_at": null,
    "key": "odisha",
    "measured": {
+    "absence_claims_published": true,
     "cycle": "2026-2027",
     "names": 1628,
     "names_in_latin_script": 1625,
@@ -234,6 +241,7 @@
    "failed_at": null,
    "key": "westbengal",
    "measured": {
+    "absence_claims_published": true,
     "cycle": "2026-2027",
     "names": 9024,
     "names_in_latin_script": 8981,
@@ -266,10 +274,11 @@
    "failed_at": null,
    "key": "punjab",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 2961,
     "names_in_latin_script": 2948,
-    "on_site": false,
+    "on_site": true,
     "rows": 2961,
     "says": {
      "closes": true,
@@ -298,10 +307,11 @@
    "failed_at": null,
    "key": "jharkhand",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 852,
     "names_in_latin_script": 844,
-    "on_site": false,
+    "on_site": true,
     "rows": 852,
     "says": {
      "closes": true,
@@ -330,10 +340,11 @@
    "failed_at": "closes",
    "key": "delhi",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 1578,
     "names_in_latin_script": 1577,
-    "on_site": false,
+    "on_site": true,
     "rows": 1578,
     "says": {
      "closes": false,
@@ -362,10 +373,11 @@
    "failed_at": null,
    "key": "haryana",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 970,
     "names_in_latin_script": 969,
-    "on_site": false,
+    "on_site": true,
     "rows": 970,
     "says": {
      "closes": true,
@@ -394,10 +406,11 @@
    "failed_at": "closes",
    "key": "uttarakhand",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 2324,
     "names_in_latin_script": 2305,
-    "on_site": false,
+    "on_site": true,
     "rows": 2324,
     "says": {
      "closes": false,
@@ -426,10 +439,11 @@
    "failed_at": "english",
    "key": "uttarpradesh",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 5831,
     "names_in_latin_script": 0,
-    "on_site": false,
+    "on_site": true,
     "rows": 5831,
     "says": {
      "closes": false,
@@ -458,10 +472,11 @@
    "failed_at": null,
    "key": "tripura",
    "measured": {
+    "absence_claims_published": false,
     "cycle": "2026-27",
     "names": 134,
     "names_in_latin_script": 133,
-    "on_site": false,
+    "on_site": true,
     "rows": 134,
     "says": {
      "closes": true,
@@ -605,9 +620,10 @@
   }
  ],
  "states_built": 15,
- "states_on_site": 7,
+ "states_on_site": 15,
  "states_refused": 7,
  "states_surveyed": 22,
+ "states_with_absence_claims": 7,
  "tests": [
   {
    "key": "list",
