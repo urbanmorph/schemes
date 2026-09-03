@@ -1,0 +1,32 @@
+{
+ "alternates": [],
+ "base": "https://delhiplanning.delhi.gov.in/planning/2026-27",
+ "books": {
+  "scheme-wise": {
+   "bytes": 646935,
+   "matched_on": "scheme-wise budget + 2026-27",
+   "sha256": "aa04e1cfa109809ae89ce6268b1849250d7801b23528e54ae1736de880b96b4b",
+   "url": "https://delhiplanning.delhi.gov.in/sites/default/files/Planning/scheme_wise_6.pdf",
+   "what": "Scheme-wise Budget 2026-27: SCHEME/PROGRAMME/PROJECTS WISE OUTLAY, sector by department by scheme, four years of figures in lakh with a printed subtotal at every level and a Grand Total"
+  }
+ },
+ "books_collected": 1,
+ "books_expected": [
+  "scheme-wise"
+ ],
+ "cycle_wanted": "2026-27",
+ "errors": [],
+ "finished": "2026-09-03T03:16:18Z",
+ "index_bytes": 78736,
+ "pdfs_on_index": 6,
+ "skipped": {
+  "Budget Highlights 2026-27 (English and Hindi), budget speech, budget graph": "prose and summary",
+  "finance.delhi.gov.in/finance/demand-grants-year-2026-27 and finance.delhi.gov.in/finance/detailed-demands-grants-0": "the Finance Department's own Demand for Grants pages, checked 2026-09-03 and carrying no document at all",
+  "finance.delhi.gov.in/finance/gender-budget and /finance/css-statement": "both list documents, the newest named for 2025-26. Not collected in this round because the Scheme-wise Budget already covers 2026-27 and mixing a 2025-26 gender statement into it would put last year's figures in a 2026-27 register"
+ },
+ "source": "delhi",
+ "started": "2026-09-03T03:16:14Z",
+ "status_histogram": {
+  "200": 1
+ }
+}

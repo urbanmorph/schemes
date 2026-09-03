@@ -1,0 +1,85 @@
+{
+ "alternates": [],
+ "base": "https://finance.tripura.gov.in/budget",
+ "books": {
+  "css-sls": {
+   "bytes": 1896455,
+   "matched_on": "css + sls + budget overview + 2026-27",
+   "sha256": "66c946127c7d474a9b9a82d21b609677b68fd2a37e6ff8214e69b666a9064231",
+   "url": "https://finance.tripura.gov.in/sites/default/files/CSS%20%26%20SLS-%20BUDGET%20OVERVIEW%202026-27.pdf",
+   "what": "CSS & SLS Budget Overview: every Centrally Sponsored Scheme onboarded on SNS SPARSH and every State Level Scheme under it, per demand, with the state's own CSS and TR codes, the heads of account and a printed total per scheme"
+  },
+  "gender": {
+   "bytes": 16980728,
+   "matched_on": "gender budget + 2026-27",
+   "sha256": "baacb2d81f9f9855bc05dde7da4db556647c2d6ac9b2f23a54acb1500e6d1566",
+   "url": "https://finance.tripura.gov.in/sites/default/files/Gender%20Budget%202026-27.pdf",
+   "what": "Gender Budget Statement: Part A (100% women-specific), Part B (30 to 99% women component) and Part C (below 30%), scheme-wise with the department named and a printed total per department"
+  }
+ },
+ "books_collected": 2,
+ "books_expected": [
+  "css-sls",
+  "gender"
+ ],
+ "cycle_wanted": "2026-27",
+ "errors": [],
+ "finished": "2026-09-03T03:13:58Z",
+ "index_pages": [
+  {
+   "bytes": 230796,
+   "page": 0,
+   "pdfs": 25,
+   "url": "https://finance.tripura.gov.in/budget?page=0"
+  },
+  {
+   "bytes": 230913,
+   "page": 1,
+   "pdfs": 25,
+   "url": "https://finance.tripura.gov.in/budget?page=1"
+  },
+  {
+   "bytes": 230981,
+   "page": 2,
+   "pdfs": 25,
+   "url": "https://finance.tripura.gov.in/budget?page=2"
+  },
+  {
+   "bytes": 230692,
+   "page": 3,
+   "pdfs": 25,
+   "url": "https://finance.tripura.gov.in/budget?page=3"
+  },
+  {
+   "bytes": 231911,
+   "page": 4,
+   "pdfs": 25,
+   "url": "https://finance.tripura.gov.in/budget?page=4"
+  },
+  {
+   "bytes": 218129,
+   "page": 5,
+   "pdfs": 15,
+   "url": "https://finance.tripura.gov.in/budget?page=5"
+  },
+  {
+   "bytes": 199125,
+   "page": 6,
+   "pdfs": 0,
+   "url": "https://finance.tripura.gov.in/budget?page=6"
+  }
+ ],
+ "pdfs_on_index": 140,
+ "skipped": {
+  "Annual Financial Statement, Budget at a Glance, Highlights, Supplementary Grants, Finance Minister's Speech, Action taken against the budget declaration": "aggregate, prose or last-year documents",
+  "Budget for Scheduled Caste and Budget for Scheduled Tribe 2026-27": "collected by nobody yet: both are published in a (B.E.) and an (A.C. & R.E. & B.E.) variant for the same year and neither was measured in this round. A future round should take exactly one variant and say which",
+  "Expenditure Budget 2026-27 Volume 1 - Abstracts of Accounts": "major-head abstracts, no scheme rows",
+  "Expenditure Budget 2026-27 Volume 2, both (B.E.) and (A.C. & B.E. & R.E) variants": "the detailed account by object head, 664 pages in Part I alone. It is English and it reconciles, but its Detail Head level mixes schemes with establishment items: 1,338 distinct detail heads in Part I include 'Assembly Secretariat', 'Electricity Charges' and 'Gardening/Beautification' beside real schemes. Publishing those as schemes would make false absence claims against myScheme. The CSS & SLS book names the schemes and says which they are",
+  "Output & Outcome Budget 2025-26": "the only Outcome Budget on the index is last year's; there is no 2026-27 one"
+ },
+ "source": "tripura",
+ "started": "2026-09-03T03:13:28Z",
+ "status_histogram": {
+  "200": 2
+ }
+}

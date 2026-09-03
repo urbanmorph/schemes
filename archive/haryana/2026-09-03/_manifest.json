@@ -1,0 +1,33 @@
+{
+ "alternates": [],
+ "base": "https://finhry.gov.in/budget-2026-27/",
+ "books": {
+  "plan-memo": {
+   "bytes": 4903983,
+   "matched_on": "explanatory memorandum + welfare + development schemes",
+   "sha256": "564cb58cad23a723d0fa602230ad23a48a75bd9fae58095cc65d323a46ad8163",
+   "url": "https://cdnbbsr.s3waas.gov.in/s386e78499eeb33fb9cac16b7555b50767/uploads/2026/03/20260320967023201.pdf",
+   "what": "Explanatory Memorandum on Welfare & Development Schemes (Plan Memo): every scheme with the state's own 20-character scheme code, the central and state share in lakh, and for most of them a paragraph of purpose"
+  }
+ },
+ "books_collected": 1,
+ "books_expected": [
+  "plan-memo"
+ ],
+ "cycle_wanted": "2026-27",
+ "errors": [],
+ "finished": "2026-09-03T03:14:46Z",
+ "index_bytes": 85072,
+ "pdfs_on_index": 11,
+ "skipped": {
+  "Budget at a Glance, Finance Minister's Speech (English and Hindi), Annual Financial Statement & Explanatory Memorandum (F.S. Memo.), Haryana FRBM Act, An Introduction to Budget": "aggregate or prose documents",
+  "Budgetary Transfers to Local Bodies": "26 MB of transfers to panchayats and municipalities, which are bodies and not schemes",
+  "Demands for Grants with Detailed Estimates of Expenditure (Volume II)": "1,498 pages. English scheme names are present but the Hindi beside them is a LOSSY text layer of the Rajasthan kind, dropping consonants and matras, and the book is organised by head of account rather than by scheme. The Plan Memo carries the same schemes with a code and a description",
+  "Detailed Estimates of Capital Expenditure (Volume III), Detailed Estimates for Revenue Receipts (Volume I)": "capital works and receipts, no scheme register"
+ },
+ "source": "haryana",
+ "started": "2026-09-03T03:14:44Z",
+ "status_histogram": {
+  "200": 1
+ }
+}

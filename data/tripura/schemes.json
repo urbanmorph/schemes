@@ -1,0 +1,4148 @@
+{
+ "books": {
+  "css-sls": {
+   "bytes": 1896455,
+   "matched_on": "css + sls + budget overview + 2026-27",
+   "sha256": "66c946127c7d474a9b9a82d21b609677b68fd2a37e6ff8214e69b666a9064231",
+   "url": "https://finance.tripura.gov.in/sites/default/files/CSS%20%26%20SLS-%20BUDGET%20OVERVIEW%202026-27.pdf",
+   "what": "CSS & SLS Budget Overview: every Centrally Sponsored Scheme onboarded on SNS SPARSH and every State Level Scheme under it, per demand, with the state's own CSS and TR codes, the heads of account and a printed total per scheme"
+  },
+  "gender": {
+   "bytes": 16980728,
+   "matched_on": "gender budget + 2026-27",
+   "sha256": "baacb2d81f9f9855bc05dde7da4db556647c2d6ac9b2f23a54acb1500e6d1566",
+   "url": "https://finance.tripura.gov.in/sites/default/files/Gender%20Budget%202026-27.pdf",
+   "what": "Gender Budget Statement: Part A (100% women-specific), Part B (30 to 99% women component) and Part C (below 30%), scheme-wise with the department named and a printed total per department"
+  }
+ },
+ "built": "2026-09-03T04:19:47Z",
+ "caveat": "One row here is one State Level Scheme code as Tripura's own budget system numbers them. A scheme funded under more than one demand has its provisions ADDED and every demand recorded. This book covers the schemes onboarded on SNS SPARSH, which is the single-nodal-agency route through which centrally sponsored money flows, so a purely state-funded scheme outside that route does not appear here and this is a floor on Tripura's schemes rather than a count of them. The centrally sponsored schemes are published separately under centrally_sponsored_schemes, because a CSS name is the Government of India's name for a scheme and not Tripura's.",
+ "centrally_sponsored_schemes": [
+  {
+   "be_lakh": 510.0,
+   "code": "0257",
+   "demands": [
+    30
+   ],
+   "name": "Forest Fire Prevention and Management Scheme"
+  },
+  {
+   "be_lakh": 15970.0,
+   "code": "1989",
+   "demands": [
+    35
+   ],
+   "name": "OTHER ITEMS OF STATE/UT COMPONENT-PMAY URBAN"
+  },
+  {
+   "be_lakh": 40.0,
+   "code": "2027",
+   "demands": [
+    15
+   ],
+   "name": "IRRIGATION CENSUS"
+  },
+  {
+   "be_lakh": 54.0,
+   "code": "2035",
+   "demands": [
+    16
+   ],
+   "name": "Tertiary Care Programs"
+  },
+  {
+   "be_lakh": 1500.0,
+   "code": "2052",
+   "demands": [
+    15
+   ],
+   "name": "HAR KHET KO PANI"
+  },
+  {
+   "be_lakh": 710.58,
+   "code": "2063",
+   "demands": [
+    20
+   ],
+   "name": "POST-MATRIC SCHOLARSHIP-SCs"
+  },
+  {
+   "be_lakh": 259.0,
+   "code": "3095",
+   "demands": [
+    30
+   ],
+   "name": "CONSERVATION OF AQUATIC ECO SYSTEMS"
+  },
+  {
+   "be_lakh": 33174.8,
+   "code": "3163",
+   "demands": [
+    41
+   ],
+   "name": "INDIRA GANDHI NATIONAL OLD AGE PENSION SCHEME (IGNOAPS)"
+  },
+  {
+   "be_lakh": 230.52,
+   "code": "3166",
+   "demands": [
+    41
+   ],
+   "name": "NATIONAL FAMILY BENEFIT SCHEME"
+  },
+  {
+   "be_lakh": 4395.24,
+   "code": "3167",
+   "demands": [
+    41
+   ],
+   "name": "INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME(IGNWPS)"
+  },
+  {
+   "be_lakh": 402.44,
+   "code": "3169",
+   "demands": [
+    41
+   ],
+   "name": "INDIRA GANDHI NATIONAL DISABILITY PENSION SCHEME(IGNDPS)"
+  },
+  {
+   "be_lakh": 231.13,
+   "code": "3194",
+   "demands": [
+    10
+   ],
+   "name": "MODERNISATION OF POLICE FORCES"
+  },
+  {
+   "be_lakh": 6814.51,
+   "code": "3373",
+   "demands": [
+    19
+   ],
+   "name": "POST MATRIC SCHOLARSHIP-TRIBAL"
+  },
+  {
+   "be_lakh": 100.0,
+   "code": "3380",
+   "demands": [
+    19
+   ],
+   "name": "PRADHAN MANTRI ADI ADARSH GRAM YOJANA"
+  },
+  {
+   "be_lakh": 5060.0,
+   "code": "3381",
+   "demands": [
+    19
+   ],
+   "name": "GRANTS UNDER PROVISO TO ARTICLE 275 (1) OF THE CONSTITUTION"
+  },
+  {
+   "be_lakh": 1355.0,
+   "code": "3548",
+   "demands": [
+    53
+   ],
+   "name": "SUPPORT TO TRIBAL RESEARCH INSTITUTES"
+  },
+  {
+   "be_lakh": 5000.0,
+   "code": "3617",
+   "demands": [
+    23
+   ],
+   "name": "Rashtriya Gram Swaraj Abhiyan(RGSA)"
+  },
+  {
+   "be_lakh": 500.0,
+   "code": "3640",
+   "demands": [
+    24
+   ],
+   "name": "STRENGTHENING OF INFRASTRUCTURE FOR INSTITUTIONAL TRAINING"
+  },
+  {
+   "be_lakh": 11.0,
+   "code": "3663",
+   "demands": [
+    16
+   ],
+   "name": "Strengthening of State Drug Regulatory Systems"
+  },
+  {
+   "be_lakh": 79093.15,
+   "code": "3667",
+   "demands": [
+    40
+   ],
+   "name": "Samagra Shiksha"
+  },
+  {
+   "be_lakh": 5555.0,
+   "code": "3674",
+   "demands": [
+    57
+   ],
+   "name": "PRADHAN MANTRI JAN VIKAS KARYAKARAM"
+  },
+  {
+   "be_lakh": 2.0,
+   "code": "3690",
+   "demands": [
+    5
+   ],
+   "name": "National Mission for Safety of Women (Fast Track Spl Courts-Nirbhaya Fund)"
+  },
+  {
+   "be_lakh": 339.0,
+   "code": "3817",
+   "demands": [
+    41
+   ],
+   "name": "NATIONAL ACTION PLAN FOR DRUG DEMAND REDUCTION (SJE)"
+  },
+  {
+   "be_lakh": 1111.11,
+   "code": "3887",
+   "demands": [
+    24
+   ],
+   "name": "PM FORMALIZATION OF MICRO FOOD PROCESSING ENTERPRISES PM-FME"
+  },
+  {
+   "be_lakh": 2760.0,
+   "code": "3890",
+   "demands": [
+    26
+   ],
+   "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)"
+  },
+  {
+   "be_lakh": 7376.16,
+   "code": "3967",
+   "demands": [
+    20
+   ],
+   "name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM AJAY)"
+  },
+  {
+   "be_lakh": 100.0,
+   "code": "3968",
+   "demands": [
+    41
+   ],
+   "name": "Atal Vayo Abhyuday Yojana (AVYAY)"
+  },
+  {
+   "be_lakh": 46864.84,
+   "code": "3975",
+   "demands": [
+    41
+   ],
+   "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+  },
+  {
+   "be_lakh": 7915.43,
+   "code": "3976",
+   "demands": [
+    41
+   ],
+   "name": "MISSION VATSALYA (CHILD PROTECTION SERVICES AND CHILD WELFARE SERVICES)"
+  },
+  {
+   "be_lakh": 789.98,
+   "code": "3979",
+   "demands": [
+    41
+   ],
+   "name": "SAMBAL (Beti Bachao Beti Padhao One Stop Centre Mahila Police Volunteer Women"
+  },
+  {
+   "be_lakh": 2769.36,
+   "code": "3980",
+   "demands": [
+    41
+   ],
+   "name": "SAMARTHYA (Shakti Sadan (Swadhar Ujjawala Widow Home) Shakhi Niwas Palna PMMVY"
+  },
+  {
+   "be_lakh": 2161.25,
+   "code": "3991",
+   "demands": [
+    52
+   ],
+   "name": "PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PM-ABHIM)"
+  },
+  {
+   "be_lakh": 6000.0,
+   "code": "4048",
+   "demands": [
+    21
+   ],
+   "name": "Assistence to State Agecies for intra-state movement of foodgrains and FPS dealers margin"
+  },
+  {
+   "be_lakh": 52719.64,
+   "code": "4063",
+   "demands": [
+    52
+   ],
+   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and"
+  },
+  {
+   "be_lakh": 46.92,
+   "code": "4122",
+   "demands": [
+    40
+   ],
+   "name": "NEW INDIA LITERACY PROGRAMME (NILP)"
+  },
+  {
+   "be_lakh": 1874.0,
+   "code": "4123",
+   "demands": [
+    29
+   ],
+   "name": "LIVESTOCK HEALTH AND DISEASE CONTROL PROGRAMME CSS"
+  },
+  {
+   "be_lakh": 17003.2,
+   "code": "4138",
+   "demands": [
+    24,
+    27,
+    28
+   ],
+   "name": "KRISHIONNATI YOJANA"
+  },
+  {
+   "be_lakh": 1111.09,
+   "code": "4139",
+   "demands": [
+    27
+   ],
+   "name": "NATIONAL MISSION ON NATURAL FARMING CSS"
+  },
+  {
+   "be_lakh": 4734.44,
+   "code": "4145",
+   "demands": [
+    40
+   ],
+   "name": "PM SCHOOLS FOR RISING INDIA (PM SHRI)"
+  },
+  {
+   "be_lakh": 333.0,
+   "code": "4151",
+   "demands": [
+    30
+   ],
+   "name": "PROJECT TIGER AND ELEPHANT"
+  },
+  {
+   "be_lakh": 200.0,
+   "code": "4188",
+   "demands": [
+    19
+   ],
+   "name": "Administrative Cost to States/UTs"
+  },
+  {
+   "be_lakh": 247.22,
+   "code": "4220",
+   "demands": [
+    12
+   ],
+   "name": "STRENGTHENING OF COOPERATIVES THROUGH IT INTERVENTIONS"
+  },
+  {
+   "be_lakh": 87.0,
+   "code": "4221",
+   "demands": [
+    21
+   ],
+   "name": "SCHEME FOR MODERNIZATION AND REFORMS THROUGH TECHNOLOGY IN PUBLIC"
+  },
+  {
+   "be_lakh": 2500.0,
+   "code": "4222",
+   "demands": [
+    32
+   ],
+   "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN)"
+  },
+  {
+   "be_lakh": 1232.5,
+   "code": "4259",
+   "demands": [
+    35
+   ],
+   "name": "CITY INVESTMENT TO INNOVATE INTEGRATE AND SUSTAIN 2.0 (CITIIS 2.0)"
+  },
+  {
+   "be_lakh": 2000.0,
+   "code": "4311",
+   "demands": [
+    19
+   ],
+   "name": "DHARTI AABA JANJATIYA GRAM UTKARSH ABHIYAN (DA-JGUA)"
+  },
+  {
+   "be_lakh": 110.0,
+   "code": "4312",
+   "demands": [
+    35
+   ],
+   "name": "Deendayal Jan Aajeevika Yojana -Shehari"
+  },
+  {
+   "be_lakh": 500.0,
+   "code": "4348",
+   "demands": [
+    15
+   ],
+   "name": "MODERNIZATION OF COMMAND AREA DEVELOPMENT AND WATEER MANAGEMENT"
+  },
+  {
+   "be_lakh": 332.0,
+   "code": "9008",
+   "demands": [
+    29
+   ],
+   "name": "National Livestock Mission"
+  },
+  {
+   "be_lakh": 15175.51,
+   "code": "9145",
+   "demands": [
+    27
+   ],
+   "name": "Rashtriya Krishi Vikas Yojna"
+  },
+  {
+   "be_lakh": 11111.0,
+   "code": "9150",
+   "demands": [
+    51
+   ],
+   "name": "JAL JEEVAN MISSION(JJM)/NATIONAL RURAL DRINKING WATER MISSION"
+  },
+  {
+   "be_lakh": 8330.94,
+   "code": "9151",
+   "demands": [
+    67
+   ],
+   "name": "SBM-RURAL (DWS)"
+  },
+  {
+   "be_lakh": 241.8,
+   "code": "9157",
+   "demands": [
+    16
+   ],
+   "name": "Human Resources for Health and Medical Education"
+  },
+  {
+   "be_lakh": 4201.2,
+   "code": "9158",
+   "demands": [
+    16
+   ],
+   "name": "National AYUSH Misson (NAM)"
+  },
+  {
+   "be_lakh": 400.0,
+   "code": "9161",
+   "demands": [
+    6
+   ],
+   "name": "Border Area Development Program"
+  },
+  {
+   "be_lakh": 7369.0,
+   "code": "9165",
+   "demands": [
+    62
+   ],
+   "name": "PRADHAN MANTRI POSHAN SHAKTI NIRMAN (Erstwhile National Programme of Mid Day"
+  },
+  {
+   "be_lakh": 320.0,
+   "code": "9169",
+   "demands": [
+    62
+   ],
+   "name": "Education Scheme for Madrasas and Minorities"
+  },
+  {
+   "be_lakh": 10850.0,
+   "code": "9170",
+   "demands": [
+    39
+   ],
+   "name": "Pradhan mantri Uchhatar Shiksha Abhiyan (PM-USHA)"
+  },
+  {
+   "be_lakh": 2296.77,
+   "code": "9174",
+   "demands": [
+    5
+   ],
+   "name": "Infrastructure Facilities for Judiciary"
+  },
+  {
+   "be_lakh": 38000.0,
+   "code": "9179",
+   "demands": [
+    13
+   ],
+   "name": "PRADHAN MANTRI GRAM SADAK YOJNA"
+  },
+  {
+   "be_lakh": 67249.86,
+   "code": "9180",
+   "demands": [
+    31
+   ],
+   "name": "PRADHAN MANTRI AWAS YOJNA (PMAY)- RURAL"
+  },
+  {
+   "be_lakh": 66658.52,
+   "code": "9181",
+   "demands": [
+    31
+   ],
+   "name": "NATIONAL RURAL LIVELIHOOD MISSION"
+  },
+  {
+   "be_lakh": 2377.78,
+   "code": "9183",
+   "demands": [
+    28
+   ],
+   "name": "Pradhan Mantri Krishi Sinchayi Yojna-Watershed Development Component"
+  },
+  {
+   "be_lakh": 333.0,
+   "code": "9186",
+   "demands": [
+    30
+   ],
+   "name": "INTEGRATED DEVELOPMENT NOF WILDLIFE HABITATS"
+  },
+  {
+   "be_lakh": 72504.0,
+   "code": "9219",
+   "demands": [
+    31
+   ],
+   "name": "MAHATMA GANDHI NATIONAL RURAL GURANTEE PROGRAM"
+  },
+  {
+   "be_lakh": 609.95,
+   "code": "9272",
+   "demands": [
+    19
+   ],
+   "name": "PRE MATRIC SCHOLARSHIP-TRIBAL"
+  },
+  {
+   "be_lakh": 240.75,
+   "code": "9488",
+   "demands": [
+    20
+   ],
+   "name": "STRENGTHENING OF MACHINERY FOR ENFORCEMENT OF PROTECTION OF CIVIL"
+  },
+  {
+   "be_lakh": 37.3,
+   "code": "9492",
+   "demands": [
+    20
+   ],
+   "name": "PRE-MATRIC SCHOLARSHIP FOR SC STUDENTS"
+  },
+  {
+   "be_lakh": 416.0,
+   "code": "9493",
+   "demands": [
+    61
+   ],
+   "name": "Pre Matric Scholarship for OBCs, EBCs and DNTs- PM YASASVI"
+  },
+  {
+   "be_lakh": 5098.0,
+   "code": "9494",
+   "demands": [
+    61
+   ],
+   "name": "Post Matric Scholarship for OBCs, EBCs and DNTs- PM YASASVI"
+  },
+  {
+   "be_lakh": 2817.0,
+   "code": "9495",
+   "demands": [
+    61
+   ],
+   "name": "BOYS AND GIRLS HOSTEL OBC"
+  },
+  {
+   "be_lakh": 7100.0,
+   "code": "9556",
+   "demands": [
+    35
+   ],
+   "name": "URBAN REJUVENATION MISSION-500 CITIES"
+  },
+  {
+   "be_lakh": 2555.0,
+   "code": "9757",
+   "demands": [
+    35
+   ],
+   "name": "Swachh Bharat Mission (SBM) - Urban"
+  },
+  {
+   "be_lakh": 119.0,
+   "code": "9978",
+   "demands": [
+    29
+   ],
+   "name": "Livestock Census and Integrated Sample Survey"
+  }
+ ],
+ "counts": {
+  "budget_lines_read": 134,
+  "centrally_sponsored_schemes": 74,
+  "dbt_bharat_counts_for_tripura": 209,
+  "demands_read": 30,
+  "funded_under_more_than_one_demand": 0,
+  "heads_of_account_read": 658,
+  "myscheme_lists_for_tripura": 37,
+  "pages_printing_the_lakh_unit": 79,
+  "pages_read": 124,
+  "state_and_central_together": 208,
+  "state_level_schemes": 134,
+  "with_a_positive_be": 134
+ },
+ "cycle": "2026-27",
+ "entries": [
+  {
+   "also_named": null,
+   "be_lakh": 10850.0,
+   "budget_lines": 1,
+   "code": "TR1",
+   "css_codes": [
+    {
+     "code": "9170",
+     "name": "Pradhan mantri Uchhatar Shiksha Abhiyan (PM-USHA)"
+    }
+   ],
+   "demands": [
+    39
+   ],
+   "departments": [
+    "Higher Education"
+   ],
+   "hoas": [
+    "2202-03-103-90-55-49",
+    "2202-03-103-91-55-49",
+    "2202-03-789-90-55-49",
+    "2202-03-789-91-55-49",
+    "2202-03-796-90-55-49",
+    "2202-03-796-91-55-49"
+   ],
+   "name": "TR- RASTRIYA UCHCHATAR SHIKSHA ABHIYAN"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 52719.64,
+   "budget_lines": 1,
+   "code": "TR10",
+   "css_codes": [
+    {
+     "code": "4063",
+     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and"
+    }
+   ],
+   "demands": [
+    52
+   ],
+   "departments": [
+    "Family Welfare and Preventive Medicine"
+   ],
+   "hoas": [
+    "2211-00-001-90-14-49",
+    "2211-00-001-91-14-01",
+    "2211-00-001-91-14-49",
+    "2211-00-789-90-14-49",
+    "2211-00-789-91-14-49",
+    "2211-00-796-50-14-49",
+    "2211-00-796-50-19-49",
+    "2211-00-796-89-62-49",
+    "2211-00-796-89-68-49",
+    "2211-00-796-90-14-49",
+    "2211-00-796-91-14-49",
+    "4211-00-101-90-14-60",
+    "4211-00-101-91-14-60",
+    "4211-00-789-90-14-60",
+    "4211-00-789-91-14-60",
+    "4211-00-796-50-14-60",
+    "4211-00-796-50-19-60",
+    "4211-00-796-89-62-60",
+    "4211-00-796-89-68-60",
+    "4211-00-796-90-14-60",
+    "4211-00-796-91-14-60"
+   ],
+   "name": "TRIPURA_NATIONAL HEALTH MISSION"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 11.0,
+   "budget_lines": 1,
+   "code": "TR101",
+   "css_codes": [
+    {
+     "code": "3663",
+     "name": "Strengthening of State Drug Regulatory Systems"
+    }
+   ],
+   "demands": [
+    16
+   ],
+   "departments": [
+    "Health Services"
+   ],
+   "hoas": [
+    "4210-01-103-90-45-60",
+    "4210-01-103-91-45-60",
+    "4210-01-789-90-45-60",
+    "4210-01-789-91-45-60",
+    "4210-01-796-90-45-60",
+    "4210-01-796-91-45-60"
+   ],
+   "name": "STRENGTHENING OF STATE DRUG REGULATORY SYSTEM TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 400.0,
+   "budget_lines": 1,
+   "code": "TR102",
+   "css_codes": [
+    {
+     "code": "9161",
+     "name": "Border Area Development Program"
+    }
+   ],
+   "demands": [
+    6
+   ],
+   "departments": [
+    "Revenue"
+   ],
+   "hoas": [
+    "4575-06-001-90-30-60",
+    "4575-06-001-91-30-60",
+    "4575-06-789-90-30-60",
+    "4575-06-789-91-30-60",
+    "4575-06-796-90-30-60",
+    "4575-06-796-91-30-60"
+   ],
+   "name": "BORDER AREA DEVELOPMENT PROGRAMME TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 96.6,
+   "budget_lines": 1,
+   "code": "TR103",
+   "css_codes": [
+    {
+     "code": "9978",
+     "name": "Livestock Census and Integrated Sample Survey"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-113-70-71-49",
+    "2403-00-113-87-10-49",
+    "2403-00-789-70-71-49",
+    "2403-00-789-87-10-31",
+    "2403-00-796-70-71-49",
+    "2403-00-796-87-10-49"
+   ],
+   "name": "ISS SALARY TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1500.0,
+   "budget_lines": 1,
+   "code": "TR105",
+   "css_codes": [
+    {
+     "code": "3980",
+     "name": "SAMARTHYA (Shakti Sadan (Swadhar Ujjawala Widow Home) Shakhi Niwas Palna PMMVY"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-103-70-79-49",
+    "2235-02-103-88-85-49",
+    "2235-02-789-70-79-49",
+    "2235-02-789-88-85-49",
+    "2235-02-796-70-79-49",
+    "2235-02-796-88-85-49"
+   ],
+   "name": "Pradhan Mantri Matru Vandana Yojana Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 299.98,
+   "budget_lines": 1,
+   "code": "TR109",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-115-90-35-49",
+    "2401-00-115-91-35-49",
+    "2401-00-789-90-35-49",
+    "2401-00-789-91-35-49",
+    "2401-00-796-90-35-49",
+    "2401-00-796-91-35-49"
+   ],
+   "name": "Digital Agriculture Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 32600.0,
+   "budget_lines": 1,
+   "code": "TR11",
+   "css_codes": [
+    {
+     "code": "9179",
+     "name": "PRADHAN MANTRI GRAM SADAK YOJNA"
+    }
+   ],
+   "demands": [
+    13
+   ],
+   "departments": [
+    "Public Works (R&B)"
+   ],
+   "hoas": [
+    "5054-04-337-90-22-73",
+    "5054-04-337-91-22-73"
+   ],
+   "name": "TR PRADHAN MANTRI GRAM SADAK YOJANA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 240.75,
+   "budget_lines": 1,
+   "code": "TR110",
+   "css_codes": [
+    {
+     "code": "9488",
+     "name": "STRENGTHENING OF MACHINERY FOR ENFORCEMENT OF PROTECTION OF CIVIL"
+    }
+   ],
+   "demands": [
+    20
+   ],
+   "departments": [
+    "Welfare of SC"
+   ],
+   "hoas": [
+    "2225-01-789-70-85-49",
+    "2225-01-789-88-31-49"
+   ],
+   "name": "STRENGTHENING OF MACHINERY FOR ENFORCEMENT OF PROTECTION OF"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 4000.0,
+   "budget_lines": 1,
+   "code": "TR111",
+   "css_codes": [
+    {
+     "code": "3975",
+     "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2236-02-101-90-83-49",
+    "2236-02-101-91-83-49",
+    "2236-02-789-90-83-49",
+    "2236-02-789-91-83-49",
+    "2236-02-796-90-83-49",
+    "2236-02-796-91-83-49"
+   ],
+   "name": "POSHAN ABHIYAAN TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 919.98,
+   "budget_lines": 1,
+   "code": "TR12",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-102-90-31-49",
+    "2401-00-102-91-31-49",
+    "2401-00-789-90-31-49",
+    "2401-00-789-91-31-49",
+    "2401-00-796-90-31-49",
+    "2401-00-796-91-31-49"
+   ],
+   "name": "Food and Nutrition Security (Krishionnati Yojana) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2133.33,
+   "budget_lines": 1,
+   "code": "TR120",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    24
+   ],
+   "departments": [
+    "Industries & Commerce"
+   ],
+   "hoas": [
+    "2406-01-102-70-89-31",
+    "2406-01-102-87-26-31",
+    "2406-01-789-70-89-31",
+    "2406-01-789-87-26-31",
+    "2406-01-796-70-89-31",
+    "2406-01-796-87-26-31",
+    "4851-00-796-50-19-60",
+    "4851-00-796-89-68-60"
+   ],
+   "name": "NATIONAL BAMBOO MISSION-TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5000.0,
+   "budget_lines": 1,
+   "code": "TR121",
+   "css_codes": [
+    {
+     "code": "3617",
+     "name": "Rashtriya Gram Swaraj Abhiyan(RGSA)"
+    }
+   ],
+   "demands": [
+    23
+   ],
+   "departments": [
+    "Panchayats"
+   ],
+   "hoas": [
+    "2515-00-101-90-18-49",
+    "2515-00-101-91-18-49",
+    "2515-00-789-90-18-49",
+    "2515-00-789-91-18-49",
+    "2515-00-796-90-18-49",
+    "2515-00-796-91-18-49",
+    "4515-00-101-90-18-60",
+    "4515-00-101-91-18-60",
+    "4515-00-789-90-18-60",
+    "4515-00-789-91-18-60",
+    "4515-00-796-90-18-60",
+    "4515-00-796-91-18-60"
+   ],
+   "name": "RASHTRIYA GRAM SWARAJ ABHIYAN (RGSA)-TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2296.77,
+   "budget_lines": 1,
+   "code": "TR122",
+   "css_codes": [
+    {
+     "code": "9174",
+     "name": "Infrastructure Facilities for Judiciary"
+    }
+   ],
+   "demands": [
+    5
+   ],
+   "departments": [
+    "Law"
+   ],
+   "hoas": [
+    "4059-60-051-90-58-72",
+    "4059-60-051-91-58-72",
+    "4059-60-789-90-58-72",
+    "4059-60-796-90-58-72"
+   ],
+   "name": "Infrastructure Facilities for Judiciary Tripura(9174)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 342.0,
+   "budget_lines": 1,
+   "code": "TR123",
+   "css_codes": [
+    {
+     "code": "3979",
+     "name": "SAMBAL (Beti Bachao Beti Padhao One Stop Centre Mahila Police Volunteer Women"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-103-91-85-49",
+    "2235-02-789-91-85-49",
+    "2235-02-796-91-85-49"
+   ],
+   "name": "ONE STOP CENTRE TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 502.0,
+   "budget_lines": 1,
+   "code": "TR128",
+   "css_codes": [
+    {
+     "code": "3967",
+     "name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM AJAY)"
+    }
+   ],
+   "demands": [
+    20
+   ],
+   "departments": [
+    "Welfare of SC"
+   ],
+   "hoas": [
+    "2225-01-789-91-64-49",
+    "4225-01-789-91-64-60"
+   ],
+   "name": "Pradhan Mantri Adarsh Gram Yojana (PMAGY)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 11111.0,
+   "budget_lines": 1,
+   "code": "TR13",
+   "css_codes": [
+    {
+     "code": "9150",
+     "name": "JAL JEEVAN MISSION(JJM)/NATIONAL RURAL DRINKING WATER MISSION"
+    }
+   ],
+   "demands": [
+    51
+   ],
+   "departments": [
+    "Public Works (DWS)"
+   ],
+   "hoas": [
+    "4215-01-102-90-13-73",
+    "4215-01-789-90-13-73",
+    "4215-01-796-90-13-73"
+   ],
+   "name": "TRIPURA NATIONAL RURAL DRINKING WATER PROGRAMME (NRDWP)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 6000.0,
+   "budget_lines": 1,
+   "code": "TR133",
+   "css_codes": [
+    {
+     "code": "4048",
+     "name": "Assistence to State Agecies for intra-state movement of foodgrains and FPS dealers margin"
+    }
+   ],
+   "demands": [
+    21
+   ],
+   "departments": [
+    "Food, Civil Supplies & Consumer Affairs"
+   ],
+   "hoas": [
+    "3456-00-103-50-09-49",
+    "3456-00-103-89-42-49",
+    "3456-00-789-50-09-49",
+    "3456-00-789-89-42-49",
+    "3456-00-796-50-09-49",
+    "3456-00-796-89-42-49"
+   ],
+   "name": "ASSISTANCE TO STATE AGENCIES FOR INTRA-STATE MOVEMENT OF"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 8330.94,
+   "budget_lines": 1,
+   "code": "TR14",
+   "css_codes": [
+    {
+     "code": "9151",
+     "name": "SBM-RURAL (DWS)"
+    }
+   ],
+   "demands": [
+    67
+   ],
+   "departments": [
+    "Public Works (Rural Sanitation)"
+   ],
+   "hoas": [
+    "4215-02-102-90-12-73",
+    "4215-02-102-91-12-73",
+    "4215-02-789-90-12-73",
+    "4215-02-789-91-12-73",
+    "4215-02-796-90-12-73",
+    "4215-02-796-91-12-73"
+   ],
+   "name": "TRIPURA SWATCH BHARAT ABHIYAN"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 71288.71,
+   "budget_lines": 1,
+   "code": "TR144",
+   "css_codes": [
+    {
+     "code": "3667",
+     "name": "Samagra Shiksha"
+    }
+   ],
+   "demands": [
+    40
+   ],
+   "departments": [
+    "Secondary Education"
+   ],
+   "hoas": [
+    "2202-01-113-90-51-49",
+    "2202-01-113-90-89-49",
+    "2202-01-113-91-51-49",
+    "2202-01-113-91-89-49",
+    "2202-01-789-90-89-49",
+    "2202-01-789-91-89-49",
+    "2202-01-796-90-89-49",
+    "2202-01-796-91-89-49",
+    "2202-02-113-90-51-49",
+    "2202-02-113-90-52-49",
+    "2202-02-113-90-89-49",
+    "2202-02-113-91-51-49",
+    "2202-02-113-91-52-49",
+    "2202-02-113-91-89-49",
+    "2202-02-789-90-52-49",
+    "2202-02-789-90-89-49",
+    "2202-02-789-91-52-49",
+    "2202-02-789-91-89-49",
+    "2202-02-796-90-52-49",
+    "2202-02-796-90-89-49",
+    "2202-02-796-91-52-49",
+    "2202-02-796-91-89-49",
+    "4202-01-201-90-25-60",
+    "4202-01-201-90-52-60",
+    "4202-01-201-91-25-60",
+    "4202-01-201-91-52-60",
+    "4202-01-202-90-51-60",
+    "4202-01-202-90-52-60",
+    "4202-01-202-91-51-60",
+    "4202-01-202-91-52-60",
+    "4202-01-789-90-25-60",
+    "4202-01-789-90-51-60",
+    "4202-01-789-90-52-60",
+    "4202-01-789-91-25-60",
+    "4202-01-789-91-51-60",
+    "4202-01-789-91-52-60",
+    "4202-01-796-90-25-60",
+    "4202-01-796-90-51-60",
+    "4202-01-796-90-52-60",
+    "4202-01-796-91-25-60",
+    "4202-01-796-91-51-60",
+    "4202-01-796-91-52-60"
+   ],
+   "name": "SAMAGRA SIKSHA ABHIYAN"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 259.0,
+   "budget_lines": 1,
+   "code": "TR153",
+   "css_codes": [
+    {
+     "code": "3095",
+     "name": "CONSERVATION OF AQUATIC ECO SYSTEMS"
+    }
+   ],
+   "demands": [
+    30
+   ],
+   "departments": [
+    "Forest"
+   ],
+   "hoas": [
+    "2406-01-101-90-42-49",
+    "2406-01-101-91-42-49",
+    "2406-01-789-90-42-49",
+    "2406-01-789-91-42-49",
+    "2406-01-796-90-42-49",
+    "2406-01-796-91-42-49"
+   ],
+   "name": "TRIPURA CONSERVATION OF AQUATIC ECO SYSTEMS"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 333.0,
+   "budget_lines": 1,
+   "code": "TR156",
+   "css_codes": [
+    {
+     "code": "9186",
+     "name": "INTEGRATED DEVELOPMENT NOF WILDLIFE HABITATS"
+    }
+   ],
+   "demands": [
+    30
+   ],
+   "departments": [
+    "Forest"
+   ],
+   "hoas": [
+    "2406-02-110-90-43-49",
+    "2406-02-110-91-43-49",
+    "2406-02-789-90-43-49",
+    "2406-02-789-91-43-49",
+    "2406-02-796-90-43-49",
+    "2406-02-796-91-43-49"
+   ],
+   "name": "Tripura Integrated Development of Wildlife Habits"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2.0,
+   "budget_lines": 1,
+   "code": "TR157",
+   "css_codes": [
+    {
+     "code": "3690",
+     "name": "National Mission for Safety of Women (Fast Track Spl Courts-Nirbhaya Fund)"
+    }
+   ],
+   "demands": [
+    5
+   ],
+   "departments": [
+    "Law"
+   ],
+   "hoas": [
+    "2014-00-103-90-90-49",
+    "2014-00-103-91-90-49"
+   ],
+   "name": "Tripura Fastrack Special Code/National Mission Safety of Women"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 4201.2,
+   "budget_lines": 1,
+   "code": "TR16",
+   "css_codes": [
+    {
+     "code": "9158",
+     "name": "National AYUSH Misson (NAM)"
+    }
+   ],
+   "demands": [
+    16
+   ],
+   "departments": [
+    "Health Services"
+   ],
+   "hoas": [
+    "2210-04-200-90-46-49",
+    "2210-04-200-91-46-49",
+    "2210-04-789-90-46-49",
+    "2210-04-789-91-46-49",
+    "2210-04-796-90-46-49",
+    "2210-04-796-91-46-49",
+    "4210-04-200-90-46-60",
+    "4210-04-200-91-46-60",
+    "4210-04-789-90-46-60",
+    "4210-04-789-91-46-60",
+    "4210-04-796-90-46-60",
+    "4210-04-796-91-46-60"
+   ],
+   "name": "TRIPURA NATIONAL AYUSH MISSION (NAM)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5555.0,
+   "budget_lines": 1,
+   "code": "TR162",
+   "css_codes": [
+    {
+     "code": "3674",
+     "name": "PRADHAN MANTRI JAN VIKAS KARYAKARAM"
+    }
+   ],
+   "demands": [
+    57
+   ],
+   "departments": [
+    "Minorities Welfare"
+   ],
+   "hoas": [
+    "4225-04-277-90-59-60",
+    "4225-04-277-91-59-60"
+   ],
+   "name": "PRADHAN MANTRI JAN VIKAS KARYAKARAM TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 114.16,
+   "budget_lines": 1,
+   "code": "TR163",
+   "css_codes": [
+    {
+     "code": "3967",
+     "name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM AJAY)"
+    }
+   ],
+   "demands": [
+    20
+   ],
+   "departments": [
+    "Welfare of SC"
+   ],
+   "hoas": [
+    "4225-01-789-50-08-60"
+   ],
+   "name": "BJRCY, BOYS AND GIRLS HOSTELS (SCs) TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 100.0,
+   "budget_lines": 1,
+   "code": "TR164",
+   "css_codes": [
+    {
+     "code": "3968",
+     "name": "Atal Vayo Abhyuday Yojana (AVYAY)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-104-86-52-49",
+    "2235-02-789-86-52-49",
+    "2235-02-796-86-52-49"
+   ],
+   "name": "NATIONAL ACTION PLAN FOR SENIOR CITIZENS TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1500.0,
+   "budget_lines": 1,
+   "code": "TR165",
+   "css_codes": [
+    {
+     "code": "2052",
+     "name": "HAR KHET KO PANI"
+    }
+   ],
+   "demands": [
+    15
+   ],
+   "departments": [
+    "Public Works (WR)"
+   ],
+   "hoas": [
+    "4702-00-102-91-17-60",
+    "4702-00-789-91-17-60",
+    "4702-00-796-91-17-60"
+   ],
+   "name": "HAR KHET KO PANI TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 339.0,
+   "budget_lines": 1,
+   "code": "TR166",
+   "css_codes": [
+    {
+     "code": "3817",
+     "name": "NATIONAL ACTION PLAN FOR DRUG DEMAND REDUCTION (SJE)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-200-86-50-49",
+    "2235-02-789-86-50-49",
+    "2235-02-796-86-50-49"
+   ],
+   "name": "DRUG DEMAND REDUCTION TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 66300.86,
+   "budget_lines": 1,
+   "code": "TR17",
+   "css_codes": [
+    {
+     "code": "9180",
+     "name": "PRADHAN MANTRI AWAS YOJNA (PMAY)- RURAL"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2216-03-105-90-19-49",
+    "2216-03-105-91-19-49",
+    "2216-03-789-90-19-49",
+    "2216-03-789-91-19-49",
+    "2216-03-796-90-19-49",
+    "2216-03-796-91-19-49"
+   ],
+   "name": "TRIPURA PRADHAN MANTRI AWAS YOJNA (PMAY) (RURAL)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 500.0,
+   "budget_lines": 1,
+   "code": "TR172",
+   "css_codes": [
+    {
+     "code": "3640",
+     "name": "STRENGTHENING OF INFRASTRUCTURE FOR INSTITUTIONAL TRAINING"
+    }
+   ],
+   "demands": [
+    24
+   ],
+   "departments": [
+    "Industries & Commerce"
+   ],
+   "hoas": [
+    "2852-80-003-86-47-31",
+    "2852-80-789-86-47-31",
+    "2852-80-796-86-47-31"
+   ],
+   "name": "Strengthening of Infrastructure for Institutional Training Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1111.11,
+   "budget_lines": 1,
+   "code": "TR175",
+   "css_codes": [
+    {
+     "code": "3887",
+     "name": "PM FORMALIZATION OF MICRO FOOD PROCESSING ENTERPRISES PM-FME"
+    }
+   ],
+   "demands": [
+    24
+   ],
+   "departments": [
+    "Industries & Commerce"
+   ],
+   "hoas": [
+    "2851-00-102-90-75-31",
+    "2851-00-102-91-75-31"
+   ],
+   "name": "TRIPURA PM FORMALIZATION OF MICRO FOOD PROCESSING ENTERPRISES"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 46.92,
+   "budget_lines": 1,
+   "code": "TR176",
+   "css_codes": [
+    {
+     "code": "4122",
+     "name": "NEW INDIA LITERACY PROGRAMME (NILP)"
+    }
+   ],
+   "demands": [
+    40
+   ],
+   "departments": [
+    "Secondary Education"
+   ],
+   "hoas": [
+    "2202-04-200-90-93-49",
+    "2202-04-200-91-93-49",
+    "2202-04-789-90-93-49",
+    "2202-04-789-91-93-49",
+    "2202-04-796-90-93-49",
+    "2202-04-796-91-93-49"
+   ],
+   "name": "NEW INDIA LITERACY PROGRAMME (NILP) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2760.0,
+   "budget_lines": 1,
+   "code": "TR178",
+   "css_codes": [
+    {
+     "code": "3890",
+     "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)"
+    }
+   ],
+   "demands": [
+    26
+   ],
+   "departments": [
+    "Fisheries"
+   ],
+   "hoas": [
+    "2405-00-101-70-98-31",
+    "2405-00-101-70-98-35",
+    "2405-00-101-86-57-31",
+    "2405-00-101-86-57-35",
+    "2405-00-789-70-98-31",
+    "2405-00-789-70-98-35",
+    "2405-00-789-86-57-31",
+    "2405-00-789-86-57-35",
+    "2405-00-796-70-98-31",
+    "2405-00-796-70-98-35",
+    "2405-00-796-86-57-31",
+    "2405-00-796-86-57-35",
+    "4405-00-101-86-57-60",
+    "4405-00-789-86-57-60",
+    "4405-00-796-86-57-60"
+   ],
+   "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 6500.0,
+   "budget_lines": 1,
+   "code": "TR181",
+   "css_codes": [
+    {
+     "code": "9181",
+     "name": "NATIONAL RURAL LIVELIHOOD MISSION"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2501-06-102-90-23-49",
+    "2501-06-102-91-23-49",
+    "2501-06-789-90-23-49",
+    "2501-06-789-91-23-49",
+    "2501-06-796-90-23-49",
+    "2501-06-796-91-23-49"
+   ],
+   "name": "Deendayal Upadhyaya Grameen Kaushalya Yojana (DDUGKY) (Project & Support"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 3938.32,
+   "budget_lines": 1,
+   "code": "TR182",
+   "css_codes": [
+    {
+     "code": "9181",
+     "name": "NATIONAL RURAL LIVELIHOOD MISSION"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2501-06-102-90-98-49",
+    "2501-06-102-91-98-49",
+    "2501-06-789-90-98-49",
+    "2501-06-789-91-98-49",
+    "2501-06-796-90-98-49",
+    "2501-06-796-91-98-49"
+   ],
+   "name": "The Start-up Village Entrepreneurship Programme (SVEP)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1000.0,
+   "budget_lines": 1,
+   "code": "TR183",
+   "css_codes": [
+    {
+     "code": "9181",
+     "name": "NATIONAL RURAL LIVELIHOOD MISSION"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2501-06-102-91-97-49"
+   ],
+   "name": "Rural Self Employment Training Institutes (RSETIs)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 75.2,
+   "budget_lines": 1,
+   "code": "TR186",
+   "css_codes": [
+    {
+     "code": "3979",
+     "name": "SAMBAL (Beti Bachao Beti Padhao One Stop Centre Mahila Police Volunteer Women"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-103-91-86-49",
+    "2235-02-789-91-86-49",
+    "2235-02-796-91-86-49"
+   ],
+   "name": "WOMEN HELP LINE TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 63000.0,
+   "budget_lines": 1,
+   "code": "TR19",
+   "css_codes": [
+    {
+     "code": "9219",
+     "name": "MAHATMA GANDHI NATIONAL RURAL GURANTEE PROGRAM"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "4515-00-103-90-20-60",
+    "4515-00-103-91-20-60",
+    "4515-00-789-90-20-60",
+    "4515-00-789-91-20-60",
+    "4515-00-796-90-20-60",
+    "4515-00-796-91-20-60"
+   ],
+   "name": "MGNREGA Material"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2161.25,
+   "budget_lines": 1,
+   "code": "TR192",
+   "css_codes": [
+    {
+     "code": "3991",
+     "name": "PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION (PM-ABHIM)"
+    }
+   ],
+   "demands": [
+    52
+   ],
+   "departments": [
+    "Family Welfare and Preventive Medicine"
+   ],
+   "hoas": [
+    "2211-00-200-90-96-49",
+    "2211-00-200-91-96-49",
+    "4211-00-106-90-96-60",
+    "4211-00-106-91-96-60",
+    "4211-00-789-90-96-60",
+    "4211-00-789-91-96-60",
+    "4211-00-796-90-96-60",
+    "4211-00-796-91-96-60"
+   ],
+   "name": "PRADHAN MANTRI AYUSHMAN BHARAT HEALTH INFRASTRUCTURE MISSION"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 40.0,
+   "budget_lines": 1,
+   "code": "TR198",
+   "css_codes": [
+    {
+     "code": "2027",
+     "name": "IRRIGATION CENSUS"
+    }
+   ],
+   "demands": [
+    15
+   ],
+   "departments": [
+    "Public Works (WR)"
+   ],
+   "hoas": [
+    "2702-80-001-86-16-49",
+    "2702-80-789-86-16-49",
+    "2702-80-796-86-16-49"
+   ],
+   "name": "IRRIGATION CENSUS TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 200.0,
+   "budget_lines": 1,
+   "code": "TR199",
+   "css_codes": [
+    {
+     "code": "3979",
+     "name": "SAMBAL (Beti Bachao Beti Padhao One Stop Centre Mahila Police Volunteer Women"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-103-91-84-49",
+    "2235-02-789-91-84-49",
+    "2235-02-796-91-84-49"
+   ],
+   "name": "Beti Bachao Beti Padhao Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1899.99,
+   "budget_lines": 1,
+   "code": "TR2",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-109-70-65-49",
+    "2401-00-109-86-83-49",
+    "2401-00-789-70-65-49",
+    "2401-00-789-86-83-49",
+    "2401-00-796-70-65-49",
+    "2401-00-796-86-83-49"
+   ],
+   "name": "Agriculture Extension (Krishionnati Yojana )Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 170.0,
+   "budget_lines": 1,
+   "code": "TR200",
+   "css_codes": [
+    {
+     "code": "4123",
+     "name": "LIVESTOCK HEALTH AND DISEASE CONTROL PROGRAMME CSS"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-101-90-37-49",
+    "2403-00-101-91-37-18",
+    "2403-00-101-91-37-49",
+    "2403-00-789-90-37-49",
+    "2403-00-796-90-37-49"
+   ],
+   "name": "Livestock Health and Disease Control Programme Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 12.4,
+   "budget_lines": 1,
+   "code": "TR203",
+   "css_codes": [
+    {
+     "code": "9978",
+     "name": "Livestock Census and Integrated Sample Survey"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-113-86-97-49",
+    "2403-00-789-86-97-49",
+    "2403-00-796-86-97-49"
+   ],
+   "name": "Livestock Census Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 10.0,
+   "budget_lines": 1,
+   "code": "TR204",
+   "css_codes": [
+    {
+     "code": "9978",
+     "name": "Livestock Census and Integrated Sample Survey"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-789-87-12-49"
+   ],
+   "name": "ISS Other Components Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 14444.0,
+   "budget_lines": 1,
+   "code": "TR205",
+   "css_codes": [
+    {
+     "code": "3975",
+     "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-90-16-49",
+    "2235-02-102-91-16-49",
+    "2235-02-789-90-16-49",
+    "2235-02-789-91-16-49",
+    "2235-02-796-90-16-49",
+    "2235-02-796-91-16-49"
+   ],
+   "name": "ICDS Supplementary Nutrition Programme Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 17639.51,
+   "budget_lines": 1,
+   "code": "TR206",
+   "css_codes": [
+    {
+     "code": "3975",
+     "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-90-15-49",
+    "2235-02-102-91-15-49",
+    "2235-02-789-90-15-49",
+    "2235-02-789-91-15-49",
+    "2235-02-796-90-15-49",
+    "2235-02-796-91-15-49"
+   ],
+   "name": "ICDS Anganwadi Services General Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 7222.22,
+   "budget_lines": 1,
+   "code": "TR207",
+   "css_codes": [
+    {
+     "code": "3975",
+     "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "4059-60-051-90-27-72",
+    "4059-60-051-91-27-72",
+    "4059-60-789-90-27-72",
+    "4059-60-789-91-27-72",
+    "4059-60-796-90-27-72",
+    "4059-60-796-91-27-72"
+   ],
+   "name": "ICDS Construction and Up-gradation of AWCs Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 52.78,
+   "budget_lines": 1,
+   "code": "TR208",
+   "css_codes": [
+    {
+     "code": "3979",
+     "name": "SAMBAL (Beti Bachao Beti Padhao One Stop Centre Mahila Police Volunteer Women"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-91-65-49",
+    "2235-02-789-91-65-49",
+    "2235-02-796-91-65-49"
+   ],
+   "name": "Nari Adalat Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 371.44,
+   "budget_lines": 1,
+   "code": "TR209",
+   "css_codes": [
+    {
+     "code": "3980",
+     "name": "SAMARTHYA (Shakti Sadan (Swadhar Ujjawala Widow Home) Shakhi Niwas Palna PMMVY"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-60-200-90-71-49",
+    "2235-60-200-91-71-49",
+    "2235-60-789-90-71-49",
+    "2235-60-789-91-71-49",
+    "2235-60-796-90-71-49",
+    "2235-60-796-91-71-49"
+   ],
+   "name": "Hub for Empowerment of Women Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 6579.03,
+   "budget_lines": 1,
+   "code": "TR21",
+   "css_codes": [
+    {
+     "code": "9165",
+     "name": "PRADHAN MANTRI POSHAN SHAKTI NIRMAN (Erstwhile National Programme of Mid Day"
+    }
+   ],
+   "demands": [
+    62
+   ],
+   "departments": [
+    "Elementary Education"
+   ],
+   "hoas": [
+    "2236-02-102-90-24-49",
+    "2236-02-102-91-24-49",
+    "2236-02-789-90-24-49",
+    "2236-02-789-91-24-49",
+    "2236-02-796-90-24-31",
+    "2236-02-796-90-24-49",
+    "2236-02-796-91-24-31",
+    "2236-02-796-91-24-49"
+   ],
+   "name": "MID-DAY MEALS"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 172.07,
+   "budget_lines": 1,
+   "code": "TR210",
+   "css_codes": [
+    {
+     "code": "3980",
+     "name": "SAMARTHYA (Shakti Sadan (Swadhar Ujjawala Widow Home) Shakhi Niwas Palna PMMVY"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-90-67-49",
+    "2235-02-102-91-67-49",
+    "2235-02-789-90-67-49",
+    "2235-02-789-91-67-49",
+    "2235-02-796-90-67-49",
+    "2235-02-796-91-67-49"
+   ],
+   "name": "Sakhi Niwas Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 9000.0,
+   "budget_lines": 1,
+   "code": "TR212",
+   "css_codes": [
+    {
+     "code": "9219",
+     "name": "MAHATMA GANDHI NATIONAL RURAL GURANTEE PROGRAM"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2505-02-101-89-53-49",
+    "2505-02-789-89-53-49",
+    "2505-02-796-89-53-49"
+   ],
+   "name": "MGNREGA Admin"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 30.0,
+   "budget_lines": 1,
+   "code": "TR214",
+   "css_codes": [
+    {
+     "code": "9219",
+     "name": "MAHATMA GANDHI NATIONAL RURAL GURANTEE PROGRAM"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2505-02-101-89-55-49",
+    "2505-02-789-89-55-49",
+    "2505-02-796-89-55-49"
+   ],
+   "name": "MGNREGA Project Unnati"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 606.0,
+   "budget_lines": 1,
+   "code": "TR215",
+   "css_codes": [
+    {
+     "code": "4123",
+     "name": "LIVESTOCK HEALTH AND DISEASE CONTROL PROGRAMME CSS"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-101-87-14-09",
+    "2403-00-789-87-14-09"
+   ],
+   "name": "ASCAD for training awareness etc"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 561.0,
+   "budget_lines": 1,
+   "code": "TR216",
+   "css_codes": [
+    {
+     "code": "4123",
+     "name": "LIVESTOCK HEALTH AND DISEASE CONTROL PROGRAMME CSS"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-101-50-01-49",
+    "2403-00-101-87-01-49",
+    "2403-00-789-50-01-49",
+    "2403-00-789-87-01-49",
+    "2403-00-796-50-01-49",
+    "2403-00-796-87-01-49"
+   ],
+   "name": "ASCAD for payment of compensation"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 537.0,
+   "budget_lines": 1,
+   "code": "TR217",
+   "css_codes": [
+    {
+     "code": "4123",
+     "name": "LIVESTOCK HEALTH AND DISEASE CONTROL PROGRAMME CSS"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-101-50-02-49",
+    "2403-00-789-50-02-49",
+    "2403-00-796-50-02-49",
+    "2403-00-796-87-17-49"
+   ],
+   "name": "ESVHD MVU recurring expenditure for operating MVUs"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 300.0,
+   "budget_lines": 1,
+   "code": "TR218",
+   "css_codes": [
+    {
+     "code": "9757",
+     "name": "Swachh Bharat Mission (SBM) - Urban"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "4217-60-051-91-12-60"
+   ],
+   "name": "IHHL CT PT Aspirational Toilets SBM-U Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 800.0,
+   "budget_lines": 1,
+   "code": "TR219",
+   "css_codes": [
+    {
+     "code": "9757",
+     "name": "Swachh Bharat Mission (SBM) - Urban"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "4217-03-051-90-12-60",
+    "4217-03-051-91-12-60"
+   ],
+   "name": "Used Water Management UWM SBM-U Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 750.0,
+   "budget_lines": 1,
+   "code": "TR220",
+   "css_codes": [
+    {
+     "code": "9757",
+     "name": "Swachh Bharat Mission (SBM) - Urban"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "4217-04-051-90-12-60",
+    "4217-04-051-91-12-60"
+   ],
+   "name": "Solid Waste Management SWM SBM-U Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 355.0,
+   "budget_lines": 1,
+   "code": "TR221",
+   "css_codes": [
+    {
+     "code": "9757",
+     "name": "Swachh Bharat Mission (SBM) - Urban"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "2217-05-051-90-12-49",
+    "2217-05-051-91-12-49"
+   ],
+   "name": "IEC & Behaviour Change IEC&BC SBM-U Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 350.0,
+   "budget_lines": 1,
+   "code": "TR222",
+   "css_codes": [
+    {
+     "code": "9757",
+     "name": "Swachh Bharat Mission (SBM) - Urban"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "2217-03-051-90-12-49",
+    "2217-03-051-91-12-49"
+   ],
+   "name": "Capacity Building Skill Development and Knowledge Management SBM-U"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 120.0,
+   "budget_lines": 1,
+   "code": "TR223",
+   "css_codes": [
+    {
+     "code": "3979",
+     "name": "SAMBAL (Beti Bachao Beti Padhao One Stop Centre Mahila Police Volunteer Women"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "4235-02-103-91-85-72",
+    "4235-02-789-91-85-72",
+    "4235-02-796-91-85-72"
+   ],
+   "name": "Capital Assets (Construction of One Stop Centres)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 200.0,
+   "budget_lines": 1,
+   "code": "TR225",
+   "css_codes": [
+    {
+     "code": "4188",
+     "name": "Administrative Cost to States/UTs"
+    }
+   ],
+   "demands": [
+    19
+   ],
+   "departments": [
+    "Tribal Welfare"
+   ],
+   "hoas": [
+    "2225-02-796-91-70-49"
+   ],
+   "name": "Administrative Costs to States/UTs-Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 3327.84,
+   "budget_lines": 1,
+   "code": "TR228",
+   "css_codes": [
+    {
+     "code": "3976",
+     "name": "MISSION VATSALYA (CHILD PROTECTION SERVICES AND CHILD WELFARE SERVICES)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-50-06-49",
+    "2235-02-102-89-57-49",
+    "2235-02-789-50-06-49",
+    "2235-02-789-89-57-49",
+    "2235-02-796-50-06-49",
+    "2235-02-796-89-57-49"
+   ],
+   "name": "Non-Institutional Care-Sponsorship/ Foster Care/ After Care Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 848.31,
+   "budget_lines": 1,
+   "code": "TR229",
+   "css_codes": [
+    {
+     "code": "3976",
+     "name": "MISSION VATSALYA (CHILD PROTECTION SERVICES AND CHILD WELFARE SERVICES)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "4235-02-102-90-72-72",
+    "4235-02-102-91-72-72",
+    "4235-02-789-90-72-72",
+    "4235-02-789-91-72-72",
+    "4235-02-796-90-72-72",
+    "4235-02-796-91-72-72"
+   ],
+   "name": "Creation of Capital Assets (Construction of CCIs including JJBs and CWCs)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 15.96,
+   "budget_lines": 1,
+   "code": "TR230",
+   "css_codes": [
+    {
+     "code": "3976",
+     "name": "MISSION VATSALYA (CHILD PROTECTION SERVICES AND CHILD WELFARE SERVICES)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-50-07-49",
+    "2235-02-102-89-58-49",
+    "2235-02-789-50-07-49",
+    "2235-02-789-89-58-49",
+    "2235-02-796-50-07-49",
+    "2235-02-796-89-58-49"
+   ],
+   "name": "Swachhata Action Plan (SAP) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 371.32,
+   "budget_lines": 1,
+   "code": "TR231",
+   "css_codes": [
+    {
+     "code": "3976",
+     "name": "MISSION VATSALYA (CHILD PROTECTION SERVICES AND CHILD WELFARE SERVICES)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-87-58-49",
+    "2235-02-789-87-58-49",
+    "2235-02-796-87-58-49"
+   ],
+   "name": "Child Helpline Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 6100.0,
+   "budget_lines": 1,
+   "code": "TR232",
+   "css_codes": [
+    {
+     "code": "9556",
+     "name": "URBAN REJUVENATION MISSION-500 CITIES"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "4217-60-051-70-86-60",
+    "4217-60-051-89-34-60",
+    "4217-60-789-70-86-60",
+    "4217-60-789-89-34-60",
+    "4217-60-796-70-86-60",
+    "4217-60-796-89-34-60"
+   ],
+   "name": "AMRUT2.0 Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 629.97,
+   "budget_lines": 1,
+   "code": "TR233",
+   "css_codes": [
+    {
+     "code": "9165",
+     "name": "PRADHAN MANTRI POSHAN SHAKTI NIRMAN (Erstwhile National Programme of Mid Day"
+    }
+   ],
+   "demands": [
+    62
+   ],
+   "departments": [
+    "Elementary Education"
+   ],
+   "hoas": [
+    "2236-02-102-87-55-49",
+    "2236-02-789-87-55-49",
+    "2236-02-796-87-55-49"
+   ],
+   "name": "Recurring non shareable component-Cost of Food grains, Transportation"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 160.0,
+   "budget_lines": 1,
+   "code": "TR234",
+   "css_codes": [
+    {
+     "code": "9165",
+     "name": "PRADHAN MANTRI POSHAN SHAKTI NIRMAN (Erstwhile National Programme of Mid Day"
+    }
+   ],
+   "demands": [
+    62
+   ],
+   "departments": [
+    "Elementary Education"
+   ],
+   "hoas": [
+    "4202-01-201-90-24-60",
+    "4202-01-201-91-24-60",
+    "4202-01-789-90-24-60",
+    "4202-01-789-91-24-60",
+    "4202-01-796-90-24-60",
+    "4202-01-796-91-24-60"
+   ],
+   "name": "Non recurring shareable component-Kitchen cum stores, Kitchen devices and"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 4734.44,
+   "budget_lines": 1,
+   "code": "TR238",
+   "css_codes": [
+    {
+     "code": "4145",
+     "name": "PM SCHOOLS FOR RISING INDIA (PM SHRI)"
+    }
+   ],
+   "demands": [
+    40
+   ],
+   "departments": [
+    "Secondary Education"
+   ],
+   "hoas": [
+    "2202-01-101-50-05-49",
+    "2202-01-101-89-56-49",
+    "2202-01-789-50-05-49",
+    "2202-01-789-89-56-49",
+    "2202-01-796-50-05-49",
+    "2202-01-796-89-56-49",
+    "4202-01-201-50-05-60",
+    "4202-01-201-89-56-60",
+    "4202-01-789-50-05-60",
+    "4202-01-789-89-56-60",
+    "4202-01-796-50-05-60",
+    "4202-01-796-89-56-60"
+   ],
+   "name": "PM SHRI Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 45.0,
+   "budget_lines": 1,
+   "code": "TR241",
+   "css_codes": [
+    {
+     "code": "9008",
+     "name": "National Livestock Mission"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-109-50-10-49",
+    "2403-00-109-87-06-49",
+    "2403-00-789-87-06-49"
+   ],
+   "name": "Seminars NLM Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 287.0,
+   "budget_lines": 1,
+   "code": "TR243",
+   "css_codes": [
+    {
+     "code": "9008",
+     "name": "National Livestock Mission"
+    }
+   ],
+   "demands": [
+    29
+   ],
+   "departments": [
+    "Animal Resources Development"
+   ],
+   "hoas": [
+    "2403-00-108-50-11-49",
+    "2403-00-108-87-02-49",
+    "2403-00-109-50-11-49",
+    "2403-00-109-87-02-49",
+    "2403-00-789-87-02-49",
+    "2403-00-796-87-02-49"
+   ],
+   "name": "LiveStock Insurance NLM Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1100.0,
+   "budget_lines": 1,
+   "code": "TR246",
+   "css_codes": [
+    {
+     "code": "3548",
+     "name": "SUPPORT TO TRIBAL RESEARCH INSTITUTES"
+    }
+   ],
+   "demands": [
+    53
+   ],
+   "departments": [
+    "Tribal Research and Cultural Institute"
+   ],
+   "hoas": [
+    "2225-02-796-88-64-31"
+   ],
+   "name": "Support to Tribal research Institutes-General Scheme-Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2400.0,
+   "budget_lines": 1,
+   "code": "TR247",
+   "css_codes": [
+    {
+     "code": "9181",
+     "name": "NATIONAL RURAL LIVELIHOOD MISSION"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2501-06-102-50-12-49",
+    "2501-06-102-89-60-49",
+    "2501-06-789-50-12-49",
+    "2501-06-789-89-60-49",
+    "2501-06-796-50-12-49",
+    "2501-06-796-89-60-49"
+   ],
+   "name": "Mahila Kisan Sashaktikaran Pariyojana-MKSP Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1000.0,
+   "budget_lines": 1,
+   "code": "TR248",
+   "css_codes": [
+    {
+     "code": "9556",
+     "name": "URBAN REJUVENATION MISSION-500 CITIES"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "2217-80-001-89-34-49",
+    "2217-80-789-89-34-49",
+    "2217-80-796-89-34-49"
+   ],
+   "name": "AMRUT 2.0 (A&OE fund) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 3352.0,
+   "budget_lines": 1,
+   "code": "TR25",
+   "css_codes": [
+    {
+     "code": "3976",
+     "name": "MISSION VATSALYA (CHILD PROTECTION SERVICES AND CHILD WELFARE SERVICES)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-90-72-49",
+    "2235-02-102-91-72-49",
+    "2235-02-789-90-72-49",
+    "2235-02-789-91-72-49",
+    "2235-02-796-90-72-49",
+    "2235-02-796-91-72-49"
+   ],
+   "name": "MISSION VATSALYA TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1020.0,
+   "budget_lines": 1,
+   "code": "TR250",
+   "css_codes": [
+    {
+     "code": "3975",
+     "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "4235-02-102-89-62-72",
+    "4235-02-789-89-62-72",
+    "4235-02-796-89-62-72"
+   ],
+   "name": "PM JANMAN Tripura under Saksham Anganwadi and POSHAN 2"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5400.0,
+   "budget_lines": 1,
+   "code": "TR251",
+   "css_codes": [
+    {
+     "code": "9179",
+     "name": "PRADHAN MANTRI GRAM SADAK YOJNA"
+    }
+   ],
+   "demands": [
+    13
+   ],
+   "departments": [
+    "Public Works (R&B)"
+   ],
+   "hoas": [
+    "5054-05-796-50-14-73",
+    "5054-05-796-89-62-73"
+   ],
+   "name": "PM JANMAN Tripura under PMGSY"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 949.0,
+   "budget_lines": 1,
+   "code": "TR252",
+   "css_codes": [
+    {
+     "code": "9180",
+     "name": "PRADHAN MANTRI AWAS YOJNA (PMAY)- RURAL"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2216-03-796-50-14-49",
+    "2216-03-796-89-62-49"
+   ],
+   "name": "PM JANMAN under PMAYG"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 225.0,
+   "budget_lines": 1,
+   "code": "TR253",
+   "css_codes": [
+    {
+     "code": "4220",
+     "name": "STRENGTHENING OF COOPERATIVES THROUGH IT INTERVENTIONS"
+    }
+   ],
+   "demands": [
+    12
+   ],
+   "departments": [
+    "Co-operation"
+   ],
+   "hoas": [
+    "4425-00-106-50-15-71",
+    "4425-00-106-89-63-71",
+    "4425-00-789-50-15-71",
+    "4425-00-789-89-63-71",
+    "4425-00-796-50-15-71",
+    "4425-00-796-89-63-71"
+   ],
+   "name": "Computerization of the Offices of Registrar of Cooperatives of States and UTs"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 22.22,
+   "budget_lines": 1,
+   "code": "TR254",
+   "css_codes": [
+    {
+     "code": "4220",
+     "name": "STRENGTHENING OF COOPERATIVES THROUGH IT INTERVENTIONS"
+    }
+   ],
+   "demands": [
+    12
+   ],
+   "departments": [
+    "Co-operation"
+   ],
+   "hoas": [
+    "4425-00-106-50-13-71",
+    "4425-00-106-89-61-71",
+    "4425-00-789-50-13-71",
+    "4425-00-789-89-61-71",
+    "4425-00-796-50-13-71",
+    "4425-00-796-89-61-71"
+   ],
+   "name": "Computerization of Tripura Co-operative Agriculture and Rural Development"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2500.0,
+   "budget_lines": 1,
+   "code": "TR255",
+   "css_codes": [
+    {
+     "code": "4222",
+     "name": "Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan (PM-JANMAN)"
+    }
+   ],
+   "demands": [
+    32
+   ],
+   "departments": [
+    "T.R.P. & P.T.G."
+   ],
+   "hoas": [
+    "4225-02-796-89-62-60"
+   ],
+   "name": "PM JANMAN PTG TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 87.0,
+   "budget_lines": 1,
+   "code": "TR259",
+   "css_codes": [
+    {
+     "code": "4221",
+     "name": "SCHEME FOR MODERNIZATION AND REFORMS THROUGH TECHNOLOGY IN PUBLIC"
+    }
+   ],
+   "demands": [
+    21
+   ],
+   "departments": [
+    "Food, Civil Supplies & Consumer Affairs"
+   ],
+   "hoas": [
+    "3456-00-104-50-16-31",
+    "3456-00-104-89-25-49",
+    "3456-00-789-50-16-31",
+    "3456-00-789-89-25-49",
+    "3456-00-796-50-16-31",
+    "3456-00-796-89-25-49"
+   ],
+   "name": "Scheme for Modernization and Reforms through Technology in Public"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 4900.0,
+   "budget_lines": 1,
+   "code": "TR261",
+   "css_codes": [
+    {
+     "code": "3667",
+     "name": "Samagra Shiksha"
+    }
+   ],
+   "demands": [
+    40
+   ],
+   "departments": [
+    "Secondary Education"
+   ],
+   "hoas": [
+    "4202-01-796-50-14-60",
+    "4202-01-796-89-62-60"
+   ],
+   "name": "PM JANMAN under Samagra Shiksha Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 401.11,
+   "budget_lines": 1,
+   "code": "TR263",
+   "css_codes": [
+    {
+     "code": "3980",
+     "name": "SAMARTHYA (Shakti Sadan (Swadhar Ujjawala Widow Home) Shakhi Niwas Palna PMMVY"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-60-200-70-72-49",
+    "2235-60-200-89-45-49",
+    "2235-60-789-70-72-49",
+    "2235-60-789-89-45-49",
+    "2235-60-796-70-72-49",
+    "2235-60-796-89-45-49"
+   ],
+   "name": "PALNA AWCCs Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1111.09,
+   "budget_lines": 1,
+   "code": "TR272",
+   "css_codes": [
+    {
+     "code": "4139",
+     "name": "NATIONAL MISSION ON NATURAL FARMING CSS"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-104-50-18-49",
+    "2401-00-104-89-67-49",
+    "2401-00-789-50-18-49",
+    "2401-00-789-89-67-49",
+    "2401-00-796-50-18-49",
+    "2401-00-796-89-67-49"
+   ],
+   "name": "National Mission on Natural Farming (NMNF) - Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2000.0,
+   "budget_lines": 1,
+   "code": "TR275",
+   "css_codes": [
+    {
+     "code": "4311",
+     "name": "DHARTI AABA JANJATIYA GRAM UTKARSH ABHIYAN (DA-JGUA)"
+    }
+   ],
+   "demands": [
+    19
+   ],
+   "departments": [
+    "Tribal Welfare"
+   ],
+   "hoas": [
+    "2225-02-796-89-68-49",
+    "4225-02-796-89-68-60"
+   ],
+   "name": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan Tripura (TW)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1232.5,
+   "budget_lines": 1,
+   "code": "TR276",
+   "css_codes": [
+    {
+     "code": "4259",
+     "name": "CITY INVESTMENT TO INNOVATE INTEGRATE AND SUSTAIN 2.0 (CITIIS 2.0)"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "4217-03-001-70-96-60",
+    "4217-03-001-87-35-60",
+    "4217-03-789-70-96-60",
+    "4217-03-789-87-35-60",
+    "4217-03-796-70-96-60",
+    "4217-03-796-87-35-60"
+   ],
+   "name": "Tripura CITIIS 2.0"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2904.44,
+   "budget_lines": 1,
+   "code": "TR277",
+   "css_codes": [
+    {
+     "code": "3667",
+     "name": "Samagra Shiksha"
+    }
+   ],
+   "demands": [
+    40
+   ],
+   "departments": [
+    "Secondary Education"
+   ],
+   "hoas": [
+    "4202-01-796-50-19-60",
+    "4202-01-796-89-68-60"
+   ],
+   "name": "DAJGUA Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2817.0,
+   "budget_lines": 1,
+   "code": "TR278",
+   "css_codes": [
+    {
+     "code": "9495",
+     "name": "BOYS AND GIRLS HOSTEL OBC"
+    }
+   ],
+   "demands": [
+    61
+   ],
+   "departments": [
+    "Welfare of Other Backward Classes"
+   ],
+   "hoas": [
+    "4225-03-102-90-62-72",
+    "4225-03-102-91-62-72"
+   ],
+   "name": "Construction of Hostels for OBC Boys and Girls Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 10155.0,
+   "budget_lines": 1,
+   "code": "TR28",
+   "css_codes": [
+    {
+     "code": "1989",
+     "name": "OTHER ITEMS OF STATE/UT COMPONENT-PMAY URBAN"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "2217-03-051-90-80-49",
+    "2217-03-051-91-80-49",
+    "2217-80-001-90-80-49",
+    "2217-80-001-91-80-49",
+    "4217-03-051-90-80-60",
+    "4217-03-051-91-80-60",
+    "4217-03-789-90-80-60",
+    "4217-03-789-91-80-60",
+    "4217-03-796-90-80-60",
+    "4217-03-796-91-80-60"
+   ],
+   "name": "TRIPURA PRADHAN MANTRI AWAS YOJNA (PMAY) (URBAN)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 110.0,
+   "budget_lines": 1,
+   "code": "TR281",
+   "css_codes": [
+    {
+     "code": "4312",
+     "name": "Deendayal Jan Aajeevika Yojana -Shehari"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "2217-05-191-90-49-49",
+    "2217-05-191-91-49-49",
+    "2217-05-789-90-49-49",
+    "2217-05-789-91-49-49",
+    "2217-05-796-90-49-49",
+    "2217-05-796-91-49-49"
+   ],
+   "name": "Tripura Deendayal Jan Aajeevika Yojana (Shehari)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5395.0,
+   "budget_lines": 1,
+   "code": "TR282",
+   "css_codes": [
+    {
+     "code": "1989",
+     "name": "OTHER ITEMS OF STATE/UT COMPONENT-PMAY URBAN"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "4217-60-051-90-80-60",
+    "4217-60-051-91-80-60",
+    "4217-60-789-90-80-60",
+    "4217-60-789-91-80-60",
+    "4217-60-796-90-80-60",
+    "4217-60-796-91-80-60"
+   ],
+   "name": "Beneficiary Led Construction (PMAY-U 2.0) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 420.0,
+   "budget_lines": 1,
+   "code": "TR284",
+   "css_codes": [
+    {
+     "code": "1989",
+     "name": "OTHER ITEMS OF STATE/UT COMPONENT-PMAY URBAN"
+    }
+   ],
+   "demands": [
+    35
+   ],
+   "departments": [
+    "Urban Development"
+   ],
+   "hoas": [
+    "4216-02-190-90-80-60",
+    "4216-02-190-91-80-60",
+    "4217-01-051-90-80-60",
+    "4217-01-051-91-80-60"
+   ],
+   "name": "Other Component (PMAY-U 2.0) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1428.0,
+   "budget_lines": 1,
+   "code": "TR285",
+   "css_codes": [
+    {
+     "code": "3975",
+     "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "4235-02-796-89-68-72"
+   ],
+   "name": "Dharti Abha Janjati Gram Utkarsh Abhiyan (DAJGUA) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 100.0,
+   "budget_lines": 1,
+   "code": "TR288",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    28
+   ],
+   "departments": [
+    "Horticulture & Soil Conservation"
+   ],
+   "hoas": [
+    "2402-00-102-87-61-49",
+    "2402-00-789-87-61-49",
+    "2402-00-796-87-61-49"
+   ],
+   "name": "National Mission on Edible Oil - Oil Palm - Tripura (100 Percent Central Share)"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 4500.0,
+   "budget_lines": 1,
+   "code": "TR3",
+   "css_codes": [
+    {
+     "code": "9145",
+     "name": "Rashtriya Krishi Vikas Yojna"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-109-90-17-49",
+    "2401-00-109-91-17-49",
+    "2401-00-789-90-17-49",
+    "2401-00-789-91-17-31",
+    "2401-00-796-90-17-49",
+    "2401-00-796-91-17-49"
+   ],
+   "name": "PRADHAN MANTRI KRISHI SINCHAI YOJNA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 500.0,
+   "budget_lines": 1,
+   "code": "TR301",
+   "css_codes": [
+    {
+     "code": "4348",
+     "name": "MODERNIZATION OF COMMAND AREA DEVELOPMENT AND WATEER MANAGEMENT"
+    }
+   ],
+   "demands": [
+    15
+   ],
+   "departments": [
+    "Public Works (WR)"
+   ],
+   "hoas": [
+    "2702-80-001-86-15-49",
+    "2702-80-789-86-15-49",
+    "2702-80-796-86-15-49"
+   ],
+   "name": "Modernization of Command Area Development and Water Management"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 485.54,
+   "budget_lines": 1,
+   "code": "TR302",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-112-50-23-49",
+    "2401-00-112-89-71-49",
+    "2401-00-789-50-23-49",
+    "2401-00-789-89-71-49",
+    "2401-00-796-50-23-49",
+    "2401-00-796-89-71-49"
+   ],
+   "name": "Mission for Aatmanirbharta in Pulses Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1042.16,
+   "budget_lines": 1,
+   "code": "TR33",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-114-90-34-49",
+    "2401-00-114-91-34-49",
+    "2401-00-789-90-34-49",
+    "2401-00-789-91-34-49",
+    "2401-00-796-90-34-49",
+    "2401-00-796-91-34-49"
+   ],
+   "name": "Edible Oil – Oilseeds (Krishionnati Yojna) Agri Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 444.43,
+   "budget_lines": 1,
+   "code": "TR34",
+   "css_codes": [
+    {
+     "code": "9145",
+     "name": "Rashtriya Krishi Vikas Yojna"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-102-70-64-49",
+    "2401-00-102-86-94-49",
+    "2401-00-789-70-64-49",
+    "2401-00-789-86-94-49",
+    "2401-00-796-70-64-49",
+    "2401-00-796-86-94-49"
+   ],
+   "name": "RAINFED AREA DEVELOPMENT PROGRAMME TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 1111.11,
+   "budget_lines": 1,
+   "code": "TR38",
+   "css_codes": [
+    {
+     "code": "3975",
+     "name": "SAKSHAM ANGANWADIAND POSHAN2.0(UMBRELLA ICDS-ANGANWADI SERVICES POSHAN"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-102-90-73-49",
+    "2235-02-102-91-73-49",
+    "2235-02-789-90-73-49",
+    "2235-02-789-91-73-49",
+    "2235-02-796-90-73-49",
+    "2235-02-796-91-73-49"
+   ],
+   "name": "TRIPURA SCHEME FOR ADOLESCENT GIRLS-SAG"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 52820.2,
+   "budget_lines": 1,
+   "code": "TR4",
+   "css_codes": [
+    {
+     "code": "9181",
+     "name": "NATIONAL RURAL LIVELIHOOD MISSION"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2501-04-105-90-23-49",
+    "2501-04-105-91-23-49",
+    "2501-04-789-90-23-49",
+    "2501-04-789-91-23-49",
+    "2501-04-796-90-23-49",
+    "2501-04-796-91-23-49"
+   ],
+   "name": "National Rural Livelihood Mission Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 6814.51,
+   "budget_lines": 1,
+   "code": "TR43",
+   "css_codes": [
+    {
+     "code": "3373",
+     "name": "POST MATRIC SCHOLARSHIP-TRIBAL"
+    }
+   ],
+   "demands": [
+    19
+   ],
+   "departments": [
+    "Tribal Welfare"
+   ],
+   "hoas": [
+    "2225-02-796-70-76-34",
+    "2225-02-796-86-29-34"
+   ],
+   "name": "Tripura- Post Matric Scholarship for ST students Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5000.0,
+   "budget_lines": 1,
+   "code": "TR44",
+   "css_codes": [
+    {
+     "code": "9145",
+     "name": "Rashtriya Krishi Vikas Yojna"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-113-70-66-49",
+    "2401-00-113-86-76-49",
+    "2401-00-789-70-66-49",
+    "2401-00-789-86-76-49",
+    "2401-00-796-70-66-49",
+    "2401-00-796-86-76-49"
+   ],
+   "name": "TRIPURA- SUBMISSION ON AGRICULTURAL MECHANIZATION"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 333.0,
+   "budget_lines": 1,
+   "code": "TR46",
+   "css_codes": [
+    {
+     "code": "4151",
+     "name": "PROJECT TIGER AND ELEPHANT"
+    }
+   ],
+   "demands": [
+    30
+   ],
+   "departments": [
+    "Forest"
+   ],
+   "hoas": [
+    "2406-01-101-70-88-49",
+    "2406-01-101-88-46-49",
+    "2406-01-789-70-88-49",
+    "2406-01-789-88-46-49",
+    "2406-01-796-70-88-49",
+    "2406-01-796-88-46-49"
+   ],
+   "name": "Project Tiger and Elephant Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 241.8,
+   "budget_lines": 1,
+   "code": "TR48",
+   "css_codes": [
+    {
+     "code": "9157",
+     "name": "Human Resources for Health and Medical Education"
+    }
+   ],
+   "demands": [
+    16
+   ],
+   "departments": [
+    "Health Services"
+   ],
+   "hoas": [
+    "4210-03-105-90-45-60",
+    "4210-03-105-91-45-52",
+    "4210-03-789-90-45-60",
+    "4210-03-789-91-45-52",
+    "4210-03-796-90-45-60",
+    "4210-03-796-91-45-52"
+   ],
+   "name": "TRIPURA HUMAN RESOURCES FOR HEALTH AND MEDICAL EDUCATION"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5060.0,
+   "budget_lines": 1,
+   "code": "TR54",
+   "css_codes": [
+    {
+     "code": "3381",
+     "name": "GRANTS UNDER PROVISO TO ARTICLE 275 (1) OF THE CONSTITUTION"
+    }
+   ],
+   "demands": [
+    19
+   ],
+   "departments": [
+    "Tribal Welfare"
+   ],
+   "hoas": [
+    "2225-02-796-91-06-49",
+    "4225-02-796-91-06-60"
+   ],
+   "name": "GRANTS UNDER PROVISO TO ARTICLE 275 (1) OF THE CONSTITUTION"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 100.0,
+   "budget_lines": 1,
+   "code": "TR55",
+   "css_codes": [
+    {
+     "code": "3380",
+     "name": "PRADHAN MANTRI ADI ADARSH GRAM YOJANA"
+    }
+   ],
+   "demands": [
+    19
+   ],
+   "departments": [
+    "Tribal Welfare"
+   ],
+   "hoas": [
+    "2225-02-796-91-05-49"
+   ],
+   "name": "PRADHAN MANTRI ADI ADARSH GRAM YOJANA TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5098.0,
+   "budget_lines": 1,
+   "code": "TR57",
+   "css_codes": [
+    {
+     "code": "9494",
+     "name": "Post Matric Scholarship for OBCs, EBCs and DNTs- PM YASASVI"
+    }
+   ],
+   "demands": [
+    61
+   ],
+   "departments": [
+    "Welfare of Other Backward Classes"
+   ],
+   "hoas": [
+    "2225-03-277-50-04-34",
+    "2225-03-277-86-37-34"
+   ],
+   "name": "POST-MATRIC SCHOLARSHIP OBC TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 416.0,
+   "budget_lines": 1,
+   "code": "TR58",
+   "css_codes": [
+    {
+     "code": "9493",
+     "name": "Pre Matric Scholarship for OBCs, EBCs and DNTs- PM YASASVI"
+    }
+   ],
+   "demands": [
+    61
+   ],
+   "departments": [
+    "Welfare of Other Backward Classes"
+   ],
+   "hoas": [
+    "2225-03-277-70-74-34",
+    "2225-03-277-86-40-34"
+   ],
+   "name": "PRE-MATRIC SCHOLARSHIP OBC TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 474.0,
+   "budget_lines": 1,
+   "code": "TR65",
+   "css_codes": [
+    {
+     "code": "9219",
+     "name": "MAHATMA GANDHI NATIONAL RURAL GURANTEE PROGRAM"
+    }
+   ],
+   "demands": [
+    31
+   ],
+   "departments": [
+    "Rural Development"
+   ],
+   "hoas": [
+    "2505-02-101-88-17-49",
+    "2505-02-789-88-17-49",
+    "2505-02-796-88-17-49"
+   ],
+   "name": "Social Audit Unit, Tripura, Part of Administrative Expenses of MGNREG Scheme"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 510.0,
+   "budget_lines": 1,
+   "code": "TR66",
+   "css_codes": [
+    {
+     "code": "0257",
+     "name": "Forest Fire Prevention and Management Scheme"
+    }
+   ],
+   "demands": [
+    30
+   ],
+   "departments": [
+    "Forest"
+   ],
+   "hoas": [
+    "2406-04-101-70-73-49",
+    "2406-04-101-88-63-49",
+    "2406-04-789-70-73-49",
+    "2406-04-789-88-63-49",
+    "2406-04-796-70-73-49",
+    "2406-04-796-88-63-49",
+    "4406-01-101-70-73-60",
+    "4406-01-101-88-63-60",
+    "4406-01-789-70-73-60",
+    "4406-01-789-88-63-60",
+    "4406-01-796-70-73-60",
+    "4406-01-796-88-63-60"
+   ],
+   "name": "FOREST FIRE PREVENTION AND MANAGEMENT SCHEME TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5061.1,
+   "budget_lines": 1,
+   "code": "TR68",
+   "css_codes": [
+    {
+     "code": "9145",
+     "name": "Rashtriya Krishi Vikas Yojna"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-109-90-11-49",
+    "2401-00-109-91-11-49",
+    "2401-00-789-90-11-49",
+    "2401-00-789-91-11-49",
+    "2401-00-796-90-11-49",
+    "2401-00-796-91-11-49"
+   ],
+   "name": "RASHTRIYA KRISHI VIKAS YOJANA TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 2377.78,
+   "budget_lines": 1,
+   "code": "TR7",
+   "css_codes": [
+    {
+     "code": "9183",
+     "name": "Pradhan Mantri Krishi Sinchayi Yojna-Watershed Development Component"
+    }
+   ],
+   "demands": [
+    28
+   ],
+   "departments": [
+    "Horticulture & Soil Conservation"
+   ],
+   "hoas": [
+    "2402-00-102-90-17-49",
+    "2402-00-102-91-17-49",
+    "2402-00-789-90-17-49",
+    "2402-00-789-91-17-49",
+    "2402-00-796-90-17-49",
+    "2402-00-796-91-17-49"
+   ],
+   "name": "PRADHAN MANTRI KRISHI SINCHAI YOJANA(WATERSHED DEVELOPMENT"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 4788.89,
+   "budget_lines": 1,
+   "code": "TR70",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    28
+   ],
+   "departments": [
+    "Horticulture & Soil Conservation"
+   ],
+   "hoas": [
+    "2402-00-102-90-34-49",
+    "2402-00-102-91-34-49",
+    "2402-00-789-90-34-49",
+    "2402-00-789-91-34-49",
+    "2402-00-796-90-34-49",
+    "2402-00-796-91-34-49"
+   ],
+   "name": "National Mission on Edible Oil - Oil Palm. (Krishionnati Yojana) Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 255.0,
+   "budget_lines": 1,
+   "code": "TR71",
+   "css_codes": [
+    {
+     "code": "3548",
+     "name": "SUPPORT TO TRIBAL RESEARCH INSTITUTES"
+    }
+   ],
+   "demands": [
+    53
+   ],
+   "departments": [
+    "Tribal Research and Cultural Institute"
+   ],
+   "hoas": [
+    "4225-02-796-88-64-72"
+   ],
+   "name": "TRIBAL FESTIVAL RESEARCH ,INFORMATION AND MASS EDUCATION"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 609.95,
+   "budget_lines": 1,
+   "code": "TR73",
+   "css_codes": [
+    {
+     "code": "9272",
+     "name": "PRE MATRIC SCHOLARSHIP-TRIBAL"
+    }
+   ],
+   "demands": [
+    19
+   ],
+   "departments": [
+    "Tribal Welfare"
+   ],
+   "hoas": [
+    "2225-02-796-70-75-34",
+    "2225-02-796-89-10-34"
+   ],
+   "name": "PRE MATRIC SCHOLARSHIP FOR TRIBAL TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 710.58,
+   "budget_lines": 1,
+   "code": "TR75",
+   "css_codes": [
+    {
+     "code": "2063",
+     "name": "POST-MATRIC SCHOLARSHIP-SCs"
+    }
+   ],
+   "demands": [
+    20
+   ],
+   "departments": [
+    "Welfare of SC"
+   ],
+   "hoas": [
+    "2225-01-789-70-97-31",
+    "2225-01-789-86-38-31"
+   ],
+   "name": "POST MATRIC SCHOLARSHIP FOR SC TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 37.3,
+   "budget_lines": 1,
+   "code": "TR76",
+   "css_codes": [
+    {
+     "code": "9492",
+     "name": "PRE-MATRIC SCHOLARSHIP FOR SC STUDENTS"
+    }
+   ],
+   "demands": [
+    20
+   ],
+   "departments": [
+    "Welfare of SC"
+   ],
+   "hoas": [
+    "2225-01-789-70-91-31",
+    "2225-01-789-89-17-31"
+   ],
+   "name": "Pre-Matric Scholarship for SCs"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 169.98,
+   "budget_lines": 1,
+   "code": "TR79",
+   "css_codes": [
+    {
+     "code": "9145",
+     "name": "Rashtriya Krishi Vikas Yojna"
+    }
+   ],
+   "demands": [
+    27
+   ],
+   "departments": [
+    "Agriculture and Farmers Welfare"
+   ],
+   "hoas": [
+    "2401-00-105-90-33-49",
+    "2401-00-105-91-33-49",
+    "2401-00-789-90-33-49",
+    "2401-00-789-91-33-31",
+    "2401-00-796-90-33-49",
+    "2401-00-796-91-33-31"
+   ],
+   "name": "NATIONAL PROJECT ON SOIL AND HEALTH FERTILITY TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 324.74,
+   "budget_lines": 1,
+   "code": "TR81",
+   "css_codes": [
+    {
+     "code": "3980",
+     "name": "SAMARTHYA (Shakti Sadan (Swadhar Ujjawala Widow Home) Shakhi Niwas Palna PMMVY"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-02-103-70-78-49",
+    "2235-02-103-89-18-49",
+    "2235-02-789-70-78-49",
+    "2235-02-789-89-18-49",
+    "2235-02-796-70-78-49",
+    "2235-02-796-89-18-49"
+   ],
+   "name": "Shakti Sadan Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 54.0,
+   "budget_lines": 1,
+   "code": "TR82",
+   "css_codes": [
+    {
+     "code": "2035",
+     "name": "Tertiary Care Programs"
+    }
+   ],
+   "demands": [
+    16
+   ],
+   "departments": [
+    "Health Services"
+   ],
+   "hoas": [
+    "4210-01-789-91-82-60"
+   ],
+   "name": "TERTIARY CARE PROGRAMS TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 320.0,
+   "budget_lines": 1,
+   "code": "TR84",
+   "css_codes": [
+    {
+     "code": "9169",
+     "name": "Education Scheme for Madrasas and Minorities"
+    }
+   ],
+   "demands": [
+    62
+   ],
+   "departments": [
+    "Elementary Education"
+   ],
+   "hoas": [
+    "2202-05-102-91-54-31"
+   ],
+   "name": "Education Scheme For Madrasas and Minorities"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 5333.33,
+   "budget_lines": 1,
+   "code": "TR87",
+   "css_codes": [
+    {
+     "code": "4138",
+     "name": "KRISHIONNATI YOJANA"
+    }
+   ],
+   "demands": [
+    28
+   ],
+   "departments": [
+    "Horticulture & Soil Conservation"
+   ],
+   "hoas": [
+    "2401-00-119-90-32-49",
+    "2401-00-119-91-32-49",
+    "2401-00-789-90-32-49",
+    "2401-00-789-91-32-49",
+    "2401-00-796-90-32-49",
+    "2401-00-796-91-32-49"
+   ],
+   "name": "NATIONAL MISSION ON HORTICULTURE TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 231.13,
+   "budget_lines": 1,
+   "code": "TR89",
+   "css_codes": [
+    {
+     "code": "3194",
+     "name": "MODERNISATION OF POLICE FORCES"
+    }
+   ],
+   "demands": [
+    10
+   ],
+   "departments": [
+    "Home (Police)"
+   ],
+   "hoas": [
+    "4055-00-207-90-48-60",
+    "4055-00-207-91-48-60"
+   ],
+   "name": "ASUMP Main Plan Tripura"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 6760.0,
+   "budget_lines": 1,
+   "code": "TR94",
+   "css_codes": [
+    {
+     "code": "3967",
+     "name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM AJAY)"
+    }
+   ],
+   "demands": [
+    20
+   ],
+   "departments": [
+    "Welfare of SC"
+   ],
+   "hoas": [
+    "2225-01-789-86-41-49",
+    "4225-01-789-86-41-60"
+   ],
+   "name": "SPECIAL CENTRAL ASSISTANCE TO SCHEDULE CASTE SUB PLAN TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 33174.8,
+   "budget_lines": 1,
+   "code": "TR95",
+   "css_codes": [
+    {
+     "code": "3163",
+     "name": "INDIRA GANDHI NATIONAL OLD AGE PENSION SCHEME (IGNOAPS)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-03-101-90-21-42",
+    "2235-03-101-91-21-49",
+    "2235-03-789-90-21-42",
+    "2235-03-789-91-21-49",
+    "2235-03-796-90-21-42",
+    "2235-03-796-91-21-49"
+   ],
+   "name": "INDIRA GANDHI NATIONAL OLD AGE PENSION SCHEME(IGNOAPS) TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 230.52,
+   "budget_lines": 1,
+   "code": "TR96",
+   "css_codes": [
+    {
+     "code": "3166",
+     "name": "NATIONAL FAMILY BENEFIT SCHEME"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-03-102-87-71-49",
+    "2235-03-789-87-71-49",
+    "2235-03-796-87-71-49"
+   ],
+   "name": "NATIONAL FAMILY BENEFIT SCHEME TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 4395.24,
+   "budget_lines": 1,
+   "code": "TR97",
+   "css_codes": [
+    {
+     "code": "3167",
+     "name": "INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME(IGNWPS)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-03-101-90-99-42",
+    "2235-03-101-91-99-49",
+    "2235-03-789-90-99-42",
+    "2235-03-789-91-99-49",
+    "2235-03-796-90-99-42",
+    "2235-03-796-91-99-49"
+   ],
+   "name": "INDIRA GANDHI NATIONAL WIDOW PENSION SCHEME(IGNWPS)TRIPURA"
+  },
+  {
+   "also_named": null,
+   "be_lakh": 402.44,
+   "budget_lines": 1,
+   "code": "TR98",
+   "css_codes": [
+    {
+     "code": "3169",
+     "name": "INDIRA GANDHI NATIONAL DISABILITY PENSION SCHEME(IGNDPS)"
+    }
+   ],
+   "demands": [
+    41
+   ],
+   "departments": [
+    "Social Welfare & Social Education"
+   ],
+   "hoas": [
+    "2235-03-101-90-01-42",
+    "2235-03-101-91-01-49",
+    "2235-03-789-90-01-42",
+    "2235-03-789-91-01-49",
+    "2235-03-796-90-01-42",
+    "2235-03-796-91-01-49"
+   ],
+   "name": "INDIRA GANDHI NATIONAL DISABILITY PENSION SCHEME(IGNDPS)TRIPURA"
+  }
+ ],
+ "gender_budget_not_read": "Tripura's Gender Budget 2026-27 is archived beside this book and is not parsed. Its text stream carries spaces inside words, so Mukhyamantri SATH extracts as 'Mukhya Mantri Scholars hip for Achiecer s Towards Higher Educatio n-CM SATH', and 'Academi c Excellen ce', 'Examina tion' and 'Minister’ s' come out the same way. pdftotext -raw and the default mode return the identical breaks, so the spaces are in the PDF and not in the extraction. A name in that state cannot be matched against myScheme, and publishing it would put a garbled name beside a real allocation.",
+ "myscheme_join_summary": {
+  "how": "indexed on match.tokens, match.skeleton and match.acronyms, then match.probably_same on every candidate pair",
+  "joins_produced": 0,
+  "joins_wrong_on_inspection": 0,
+  "myscheme_tripura_records": 37,
+  "no_defects_to_report": "A join count of zero produces no wrong joins, so this round adds nothing to the record of parse/match.py defects from Tripura.",
+  "read_this_carefully": "Zero. A generous matcher run over 37 myScheme records and 134 state scheme names found nothing at all, and that is a finding rather than a failure. The two lists describe different halves of Tripura's spending. myScheme's 37 are almost entirely welfare-board benefits and state pensions: Mukhyamantri Samajik Sahayata Prakalpa in four variants, six Tripura Building and Other Construction Workers Welfare Board benefits, the Tripura Journalist Health Insurance Scheme, the Lynching/Mob Violence Victim Compensation Scheme. This book is the schemes onboarded on SNS SPARSH, which is the route centrally sponsored money takes. Neither list contains the other and both are real, so Tripura's true count is at least 37 plus 208. The state schemes myScheme DOES list are named in Tripura's Gender Budget, which is archived here and cannot be read: see gender_budget_not_read.",
+  "register_names": 134
+ },
+ "reconciliation": {
+  "css_totals": {
+   "checked": 76,
+   "failed": 0,
+   "failures": null,
+   "what": "every printed 'CSS <code> Total' against the SLS totals read beneath it"
+  },
+  "cycles_other_than_wanted": null,
+  "cycles_seen_in_page_headers": [
+   "2026-27"
+  ],
+  "demand_totals": {
+   "checked": 30,
+   "failed": 0,
+   "failures": null,
+   "what": "every printed 'Grand Total for Demand no. N' against the CSS totals read beneath it"
+  },
+  "sls_totals": {
+   "checked": 134,
+   "failed": 0,
+   "failures": null,
+   "what": "every printed 'SLS <code> Total' against the head-of-account rows read beneath it"
+  }
+ },
+ "schemes": 134,
+ "snapshot": "2026-09-03",
+ "source": "Tripura Budget 2026-27, CSS & SLS Budget Overview: Details of Centrally Sponsored Schemes onboarded on SNS SPARSH, with the State Level Schemes under each",
+ "source_url": "https://finance.tripura.gov.in/budget",
+ "state": "Tripura",
+ "unit": "lakh",
+ "unit_note": "be_lakh is rupees in LAKH, read from the '(Amount in Lakhs)' the book prints in the column header of every detail page. Figures carry four decimals because the book does, so a provision of Rs 1,000 prints as 0.0100 and is kept as such rather than rounded to nothing. be_lakh is the Budget Estimate 2026-27; this book publishes no other year, which is why there is no variant to choose.",
+ "variant": "Budget Estimate 2026-27",
+ "variant_note": "One edition, one year, one figure per scheme. Tripura does publish its Expenditure Budget Volume 2 twice for the same cycle, as (B.E.) and as (A.C. & B.E. & R.E), and neither is read here; see collect/tripura.py."
+}

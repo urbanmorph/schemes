@@ -1,0 +1,67 @@
+{
+ "alternates": [],
+ "base": "https://budget.uk.gov.in/budget-2026-27/",
+ "books": {
+  "gender": {
+   "bytes": 1430939,
+   "matched_on": "gender budget",
+   "sha256": "1083a55d437a5ae5ea4cf923e68031708494e81a81c624a93163fe69edbea09e",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3c65d7bd70fe3e5e3a2f3de681edc193d/uploads/2026/03/202603091312163645.pdf",
+   "what": "Gender Budget: the same detailed estimates annotated with a Group I / Group II women-benefit classification per scheme"
+  },
+  "vol5-part1": {
+   "bytes": 2225705,
+   "matched_on": "volume 5 + part 1",
+   "sha256": "650ae798581e33a666693b68f9c385ae9183bf3c7abd74dd5a41853fbb27e0e4",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3c65d7bd70fe3e5e3a2f3de681edc193d/uploads/2026/03/20260309649781473.pdf",
+   "what": "Volume 5, Head wise details of accounts, Part 1: the detailed estimates with the English name printed under the Hindi at every level, in thousands of rupees"
+  },
+  "vol5-part2": {
+   "bytes": 2790642,
+   "matched_on": "volume 5 + part 2",
+   "sha256": "4434c0a6c587d8976fa7bb63816cf4be7fd2ebe8092f297c0c3743853f468303",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3c65d7bd70fe3e5e3a2f3de681edc193d/uploads/2026/03/20260309482459857.pdf",
+   "what": "Volume 5, Head wise details, Part 2"
+  },
+  "vol5-part3": {
+   "bytes": 2351308,
+   "matched_on": "volume 5 + part 3",
+   "sha256": "694f9511e08ac69b746a0874414006bd56fbe302d15072e10570f698f46ae203",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3c65d7bd70fe3e5e3a2f3de681edc193d/uploads/2026/03/202603092105617402.pdf",
+   "what": "Volume 5, Head wise details, Part 3"
+  },
+  "vol5-part4": {
+   "bytes": 2004458,
+   "matched_on": "volume 5 + part 4",
+   "sha256": "8144682f398121b9a55b214f8c12f629e4bcf771bc79a10d760f8225c5e46d9c",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3c65d7bd70fe3e5e3a2f3de681edc193d/uploads/2026/03/202603091501118791.pdf",
+   "what": "Volume 5, Head wise details, Part 4"
+  }
+ },
+ "books_collected": 5,
+ "books_expected": [
+  "gender",
+  "vol5-part1",
+  "vol5-part2",
+  "vol5-part3",
+  "vol5-part4"
+ ],
+ "cycle_wanted": "2026-27",
+ "errors": [],
+ "finished": "2026-09-03T03:16:14Z",
+ "index_bytes": 102266,
+ "pdfs_on_index": 14,
+ "skipped": {
+  "Details related to urban local bodies and Panchayati Raj Institutions": "transfers to bodies rather than schemes",
+  "Volume 1 (Budget Speech), Budget at a Glance, Budget Ek Drishti": "prose and summary",
+  "Volume 2 (Annual Financial Statements) Part 1 and Part 2": "the Annual Financial Statement. Its preface and notes are KrutiDev with no ToUnicode and extract as garbage; its statement pages carry English but only down to the minor head, so it names no scheme Volume 5 does not",
+  "Volume 3 (New items of Expenditure)": "not measured in this round. It is the one document that would say which schemes are NEW this cycle and is worth a look next time",
+  "Volume 4 (Detailed Estimates of Receipts)": "receipts, not expenditure",
+  "Volume 6 (Post Description)": "sanctioned posts, not schemes"
+ },
+ "source": "uttarakhand",
+ "started": "2026-09-03T03:16:07Z",
+ "status_histogram": {
+  "200": 5
+ }
+}

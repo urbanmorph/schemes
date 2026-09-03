@@ -45,6 +45,13 @@ QUALIFIERS = [
     {"boys"}, {"girls"},
     {"sc", "scheduled caste"}, {"st", "scheduled tribe"}, {"obc"}, {"minority"},
     {"pre matric", "prematric"}, {"post matric", "postmatric"},
+    # Who announced it, which in India is who pays for it. "Mukhyamantri Matsya Sampada
+    # Yojana" is Haryana's and "Pradhan Mantri Matsya Sampada Yojana" is the Union's, and
+    # they reduce to mmsy and pmmsy: one dropped letter carrying the whole state-versus-
+    # central distinction, which acronym containment then bridged in 7 joins. Treating it
+    # as an axis rather than a spelling is what makes the pair disagree instead of match.
+    {"mukhyamantri", "mukhya mantri", "mukhya"},
+    {"pradhanmantri", "pradhan mantri", "pradhan"},
     {"primary"}, {"secondary"}, {"higher"},
 ]
 
@@ -148,6 +155,11 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                    "jharkhand", "chhattisgarh", "uttarakhand", "ladakh", "kashmir"}
                 # Tax and fund abbreviations that are not schemes.
                 | {"sgst", "cgst", "igst", "gst", "sdrf", "ndrf", "cess"}
+                # A ministry, a lender, a budget cut and a person are none of them a scheme.
+                # ayush produced 16 wrong joins in Tripura, nabard 22, and scsp is a
+                # Scheduled Caste Sub Plan cut that every state books under.
+                | {"ayush", "nabard", "nabard", "scsp", "tsp", "sccs", "gandhi",
+                   "ambedkar", "padma", "medical", "hospital", "college", "nskfdc"}
                 # Eighth and ninth instances, and these two were already corrupting the
                 # registry rather than merely inflating a join. "Solar Power (Grid)" was
                 # merged into "SERB - POWER Fellowship" and its Rs 1,775 cr published under
@@ -172,7 +184,7 @@ def written_acronyms(s):
             out.add(norm(m).replace(" ", ""))
     letters = re.sub(r"[^A-Za-z]", "", s or "")
     if not (letters and letters == letters.upper() and len(norm(s).split()) >= 3):
-        for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or ""):
+        for w in re.findall(r"\b([A-Z][A-Z0-9]{3,8})\b", s or ""):
             if w.lower() not in NOT_ACRONYMS:
                 out.add(w.lower())
     return {a for a in out if len(a) >= 4}
@@ -221,12 +233,26 @@ def acronyms(s):
     #
     # Length is what separates the two cases. An acronym is short by construction, so
     # "DAY-NRLM" and "PMAY" are upper case BECAUSE they are acronyms and must keep working:
-    # suppressing those broke the DAY-NRLM test below. Three words or more of unbroken
-    # capitals is a title being shouted, not a code.
+    # suppressing those broke the DAY-NRLM test below.
+    #
+    # TWO refinements, both from states that shout their scheme names.
+    #
+    # Two space-separated words of unbroken capitals is already a shouted title, not a code.
+    # Requiring three let "KIYOSK CONSTRUCTION" through, and Jharkhand prints every banner
+    # in capitals: acronyms("KIYOSK CONSTRUCTION") gave construction and kiyosk while
+    # acronyms("Kiyosk Construction") gave nothing, which is a controlled pair showing the
+    # rule keys on typography rather than meaning. DAY-NRLM survives because it carries no
+    # space.
+    #
+    # And a caps word over 8 letters is not an acronym in any case. That is what catches
+    # the names this guard cannot see at all, where one lower-case fragment anywhere makes
+    # the whole string mixed case: Delhi appends "GIA-Capital" and "Dr." to shouted names,
+    # so CONSTRUCTION, PROCUREMENT, INSTITUTE, EXTENSION and TRANSPORT all read as acronyms.
+    # The longest real acronym in this corpus is HPBOCWWB at 8.
     letters = re.sub(r"[^A-Za-z]", "", s or "")
-    shouted = bool(letters) and letters == letters.upper() and len(norm(s).split()) >= 3
+    shouted = bool(letters) and letters == letters.upper() and len((s or "").split()) >= 2
     if not shouted:
-        for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or ""):
+        for w in re.findall(r"\b([A-Z][A-Z0-9]{3,8})\b", s or ""):
             if w.lower() not in NOT_ACRONYMS:
                 out.add(w.lower())
     return {a for a in out if len(a) >= 4}
@@ -269,6 +295,11 @@ _AXES = [
     [{"pre matric", "prematric"}, {"post matric", "postmatric"}],
     [{"primary"}, {"secondary"}, {"higher"}],
     [{"sc", "scheduled caste"}, {"st", "scheduled tribe"}, {"obc"}, {"minority"}],
+    # A group must be listed on an axis or qualifier_conflict never fires for it: adding
+    # the two to QUALIFIERS alone fixed MRKVY against RKVY, which goes through a different
+    # rule, and left MMSY against PMMSY matching.
+    [{"mukhyamantri", "mukhya mantri", "mukhya"},
+     {"pradhanmantri", "pradhan mantri", "pradhan"}],
 ]
 
 
@@ -422,6 +453,25 @@ SELFTEST = [
     ("NRLM", "National Handloom Development Programme", False),
 ]
 
+
+SELFTEST += [
+    # A shouted title is not a code, and two words is already shouting. Jharkhand prints
+    # every banner in capitals, and the controlled pair is the proof: "KIYOSK CONSTRUCTION"
+    # yielded construction and kiyosk where "Kiyosk Construction" yielded nothing.
+    ("Rearing Pond Construction Scheme", "KIYOSK CONSTRUCTION", False),
+    # A ministry and a lender are not schemes. 16 and 22 wrong joins in Tripura.
+    ("Healthy Lifestyle for School Children through Ayurvidya",
+     "Establishment of National AYUSH Mission", False),
+    ("Construction of NABARD-Funded Minor Irrigation Projects",
+     "Redemeption of NABARD Loan", False),
+    # Who announced it is who pays for it: one dropped letter between mmsy and pmmsy is a
+    # state scheme against a central one.
+    ("Mukhyamantri Matsya Sampada Yojana",
+     "Pradhan Mantri Matsya Sampada Yojana (PMMSY)", False),
+    ("Mukhyamantri Rajya Krishi Vikas Yojana", "Rastriya Krishi Vikas Yojana", False),
+    # ...and the central family still matches itself.
+    ("Pradhan Mantri Awas Yojana (PMAY)", "PMAY Urban", True),
+]
 
 SELFTEST += [
     # A community abbreviation is who a scheme is for, never which scheme it is. VJNT alone

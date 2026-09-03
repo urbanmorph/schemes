@@ -70,6 +70,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # would be the wrong trade in the wrong direction.
 CA_BY_HOST = {
     "finance.karnataka.gov.in": "globalsign-gcc-r46-ov-tls-ca-2025.pem",
+    # The same GlobalSign GCC R46 fault, on a second state. Registered here rather than
+    # from collect/jharkhand.py, which had to reach into this module at import time to get
+    # a fetch at all: a frozen collector poking a shared table is a worse precedent than
+    # one more line in the table it pokes.
+    "finance.jharkhand.gov.in": "globalsign-gcc-r46-ov-tls-ca-2025.pem",
 }
 
 _CTX = ssl.create_default_context()
