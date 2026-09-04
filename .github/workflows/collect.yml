@@ -1,4 +1,4 @@
-name: Monthly collection
+name: Monthly run
 
 # Cadence is monthly on purpose (PLAN.md §6). The Budget is annual, myScheme moves
 # slowly, and weekly was never justified by the data's velocity — it only multiplied the
@@ -46,26 +46,27 @@ jobs:
       - name: Set snapshot date
         run: echo "SNAP=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
 
-      - name: Collect myScheme
+      - name: Run the pipeline
+        id: run
         env:
           MYSCHEME_KEY: ${{ secrets.MYSCHEME_KEY }}   # optional; falls back to the bundle key
-        run: python3 collect/myscheme.py --date "$SNAP" --pace "${{ inputs.pace || '0.7' }}"
-
-      - name: Verify
-        id: verify
-        # Writes status.json and exits non-zero when the snapshot is not publishable.
-        # continue-on-error so a failed snapshot is still committed — an INCOMPLETE
-        # archive is evidence, and discarding it would lose the only record of what went
-        # wrong. The run is failed explicitly at the end instead.
+        # THIS STEP USED TO BE THREE, and they were the whole job: collect myScheme, verify,
+        # run parse/explode.py. Nothing else. Not DBT, not the CAG catalogue, not one of the
+        # fifteen state budgets, not the union registry, not any of the fifteen classifiers,
+        # not sector, legibility, the CAG join, either enrichment, the change feed or the
+        # site. The register's entire claim is an unattended monthly series and the
+        # automation covered the first sixth of it.
+        #
+        # The 2026-09-03 snapshot is what that looks like from outside: it committed a fresh
+        # myScheme census against a registry, fifteen classifications and a change feed all
+        # derived from the day before, and nothing said so. Everything downstream had to be
+        # re-derived by hand before it could be published.
+        #
+        # run.sh is the pipeline and it is what runs now. It records each failing step,
+        # keeps going, publishes what succeeded and exits non-zero, so a broken source
+        # costs that source and not the month.
         continue-on-error: true
-        run: python3 verify/verify.py --date "$SNAP"
-
-      - name: Build the current tree
-        # Parsing is downstream of the archive and only runs on a complete snapshot.
-        # This is the step the repair agent is allowed to fix, because it can be replayed
-        # against archive/ to re-derive every past month (PLAN.md §7).
-        if: steps.verify.outcome == 'success'
-        run: python3 parse/explode.py --date "$SNAP"
+        run: ./run.sh --date "$SNAP" --pace "${{ inputs.pace || '0.7' }}"
 
       - name: Commit
         run: |
@@ -76,19 +77,29 @@ jobs:
             echo "nothing changed"; exit 0
           fi
           VERDICT=$(python3 -c "import json;print(json.load(open('status.json'))['verdict'])")
+          # The message says what the snapshot was, not what the run did, because a run
+          # that half-failed still commits the archive it managed to fetch. Whether the
+          # run was clean is the job's exit status and the step below.
           git commit -m "snapshot $SNAP — $VERDICT"
           git push
 
-      - name: Fail loudly if the snapshot was incomplete
-        # The alarm has to reach a human without anyone going to look for it. A failed
-        # job emails; a dashboard does not. PLAN.md §8, §9.
-        if: steps.verify.outcome != 'success'
+      - name: Fail loudly if anything in the run failed
+        # The alarm has to reach a human without anyone going to look for it. A failed job
+        # emails; a dashboard does not. PLAN.md §8, §9.
+        #
+        # Keyed on run.sh's exit status rather than on verification alone, because a
+        # snapshot can verify while the CAG crawl, a state parser or a classifier did not
+        # run. run.sh names each failed step on stderr and in the job log above.
+        if: steps.run.outcome != 'success'
         run: |
-          echo "::error::Snapshot $SNAP failed verification — see status.json"
+          echo "::error::The monthly run for $SNAP did not complete cleanly — see the log above"
           python3 -c "
-          import json
-          for name, when, why in json.load(open('status.json'))['attention']:
-              print(f'  {name}: {why}')
+          import json, os
+          if os.path.exists('status.json'):
+              d = json.load(open('status.json'))
+              print('  verdict:', d.get('verdict'))
+              for name, when, why in d.get('attention', []):
+                  print(f'  {name}: {why}')
           "
           exit 1
 

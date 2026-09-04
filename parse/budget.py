@@ -98,8 +98,24 @@ def parse_statement(text):
 
     seen = {r["index"] for r in rows}
     highest = max(seen) if seen else 0
-    missing = [i for i in range(1, highest + 1) if i not in seen]
-    return rows, grand, missing, highest
+    gaps = [i for i in range(1, highest + 1) if i not in seen]
+
+    # A gap in the numbering is TWO different facts and the difference decides whether this
+    # is a bug in the reading or a fact about the document. If the number appears nowhere
+    # in the text at all, the document does not use it. If it appears and no row was built
+    # from it, the extraction lost a row that is there.
+    #
+    # Statement 4A 2026-27 numbers its rows 1-27, 29, 30, 32-86: it skips 28 and 31, and
+    # "28." and "31." occur nowhere in the file. VERIFIED BY EYE, page 3 rendered at 130
+    # dpi: the printed list runs 25, 26, 27, 29, 30, Demand No. 51 total, Police, 32, 33.
+    # There is no row 28 and no row 31 on the page.
+    #
+    # This matters because the check was failing every single run on it, and because the
+    # comment that used to sit here said the opposite -- that both rows existed, were lost
+    # by pdftotext, and carried a nil BE. The document says otherwise.
+    unused = [i for i in gaps if not re.search(rf"(?<![\d.]){i}\.\s", text)]
+    lost = [i for i in gaps if i not in unused]
+    return rows, grand, lost, highest, unused
 
 
 def parse_year(year):
@@ -112,7 +128,7 @@ def parse_year(year):
         gz = os.path.join(src, f"{stmt}.pdf.gz")
         if not os.path.exists(gz):
             continue
-        rows, grand, missing, highest = parse_statement(to_text(gz))
+        rows, grand, missing, highest, unused = parse_statement(to_text(gz))
         parsed_sum = round(sum(r["be_next_year"] or 0 for r in rows), 2)
 
         write_json(f"data/budget/{year}/{stmt}.json", {
@@ -121,30 +137,28 @@ def parse_year(year):
             "rows_extracted": len(rows),
             "highest_index_in_document": highest,
             "missing_indices": missing,
+            "indices_the_document_does_not_use": unused,
             "parsed_sum_be": parsed_sum,
             "printed_grand_total": grand,
             "items": rows,
         })
 
-        # TWO independent assertions, because neither is sufficient alone.
+        # TWO independent assertions, because neither is sufficient alone. The money check
+        # alone would pass while the scheme list was short, and this project counts schemes
+        # and not only rupees, so a row the extraction LOST is a hard failure even when the
+        # rupees add up.
         #
-        # Measured 2026-08-31 on Statement 4A: 84 rows extracted where the document
-        # numbers 86 — rows 28 and 31 are absent from pdftotext's output entirely, in
-        # both -layout and plain mode — and yet the 84 rows sum to the printed Grand
-        # Total exactly. Both lost rows carry a nil BE for this cycle, so the money
-        # reconciles while the scheme list is short by two.
-        #
-        # The money check alone would have passed and we would have published 84
-        # Centrally Sponsored Schemes as though that were the count. This project counts
-        # schemes, not only rupees, so contiguity of the document's own numbering is a
-        # separate and equally hard requirement.
+        # A number the document never uses is not a lost row and is not a failure. See
+        # parse_statement: 4A skips 28 and 31 and that was verified against the rendered
+        # page, not inferred from the text being empty.
         reconciles = grand is not None and abs(parsed_sum - grand) < 0.02
-        contiguous = not missing
+        contiguous = not missing          # `missing` is now LOST rows only
         ok = reconciles and contiguous
 
         totals[stmt] = {"parsed_sum": parsed_sum, "printed_grand_total": grand,
                         "rows": len(rows), "highest_index": highest,
                         "missing_indices": missing,
+                        "indices_the_document_does_not_use": unused,
                         "reconciles": reconciles, "contiguous": contiguous, "ok": ok}
 
         printed = "—" if grand is None else f"{grand:,.2f}"
@@ -152,6 +166,7 @@ def parse_year(year):
               f"parsed {parsed_sum:,.2f} vs printed {printed} cr")
         print(f"  {'OK ' if contiguous else 'FAIL'} {stmt} rows:  "
               f"{len(rows)} extracted, document numbers up to {highest}"
+              + (f", and does not use {unused}" if unused else "")
               + (f" — LOST {missing}" if missing else ""))
         if not ok:
             failures.append(stmt)

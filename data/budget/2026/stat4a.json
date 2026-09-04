@@ -1,6 +1,10 @@
 {
  "cycle": "2026-27",
  "highest_index_in_document": 86,
+ "indices_the_document_does_not_use": [
+  28,
+  31
+ ],
  "items": [
   {
    "be_next_year": 8550.0,
@@ -507,10 +511,7 @@
    "name": "Others (including amount Met from & Transfer to various funds)"
   }
  ],
- "missing_indices": [
-  28,
-  31
- ],
+ "missing_indices": [],
  "parsed_sum_be": 548797.73,
  "printed_grand_total": 548797.73,
  "rows_extracted": 84,
