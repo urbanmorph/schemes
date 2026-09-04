@@ -72,6 +72,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
 from match import probably_same, tokens as m_tokens, skeleton as m_skeleton, \
     acronyms as m_acronyms  # noqa: E402
+from classify_common import excluded_by_rule  # noqa: E402
 
 # A benefit a person, household, farmer, student, worker or firm receives. "assistance" is
 # deliberately absent and "mission" deliberately present; both are measured in
@@ -125,6 +126,13 @@ LISTING_THRESHOLD = 3
 
 
 def score(r):
+    # The register's definition, held in classify_common because it is the rule and not a
+    # signal: money that buys the capacity of a delivery system is not a scheme however
+    # strongly this state's own evidence reads it. This file predates that harness and has
+    # to reach for it explicitly.
+    if excluded_by_rule(r["name"]):
+        return -99, [("rule", "buys the capacity of the delivery system, not the benefit")]
+
     s, ev = 0, []
     for key, rx, pts, why in SIGNALS:
         hit = bool(r.get("works_lakh")) if key == "works_money" else bool(rx.search(r["name"]))

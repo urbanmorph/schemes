@@ -4,7 +4,7 @@
   "dbt": 138,
   "outcome": 10
  },
- "built": "2026-09-03T11:12:47Z",
+ "built": "2026-09-04T18:34:47Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -2163,7 +2163,7 @@
      "be_cr": 1675.18,
      "cycle": "2026-27",
      "demand_no": 30,
-     "merge_reason": "acronym containment: ideas / idea",
+     "merge_reason": "acronym containment: lcuidea / idea",
      "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
      "statement": "stat4b"
     },
@@ -2176,7 +2176,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "acronym containment: ideas / idea",
+     "merge_reason": "acronym containment: lcuidea / idea",
      "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
      "outlay_cr": 1675.18,
      "page": 120,
@@ -7343,7 +7343,7 @@
      "be_cr": 364.0,
      "cycle": "2026-27",
      "demand_no": 16,
-     "merge_reason": "acronym containment: copacs / pacs",
+     "merge_reason": "acronym containment: cpacs / pacs",
      "name": "Computerization of Primary Agricultural Credit Societies",
      "statement": "stat4a"
     },
@@ -42763,13 +42763,13 @@
      "be_cr": 101.0,
      "cycle": "2026-27",
      "demand_no": 93,
-     "merge_reason": "acronym containment: seed / pseed",
+     "merge_reason": "acronym containment: seed / seed",
      "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
      "statement": "stat4b"
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: seed / pseed",
+     "merge_reason": "acronym containment: seed / seed",
      "name": "Scheme for Economic Empowerment of DNTs (SEED)"
     },
     "myscheme": {

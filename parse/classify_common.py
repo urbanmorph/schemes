@@ -46,6 +46,43 @@ def norm(name):
     return re.sub(r"[_/]+", " ", name or "")
 
 
+# THE RULE, NOT A SIGNAL, WHICH IS WHY IT IS THE ONE PATTERN THIS FILE HOLDS.
+#
+# The register's definition of a scheme excludes money that "pays for the capacity of the
+# delivery system rather than the benefit". A helpline, a creche, an anganwadi's running
+# costs, a child-protection system, a one-stop centre, an agricultural extension wing: each
+# is how a benefit reaches somebody and none is the benefit. Seven states were labelled
+# against that wording from the start. Eight later ones were labelled against a looser
+# sentence that admitted "a service", and 56 of their published rows changed side when they
+# were re-read against this one.
+#
+# It sits here rather than in each state's file because it is not an observation about any
+# state's book. It is the definition, and the whole point of the definition is that it is
+# the same everywhere.
+CAPACITY = re.compile(
+    r"helpline|help line|one stop cent|hub for empowerment|anganwadi service|"
+    r"aanganwadi service|creche|palna|vatsalya|child protection|nari adalat|"
+    r"anganwadi chalo|poshan abhiyan|poshan abiyan|food centre|"
+    r"agriculture extension|agricultural extension|agriculture extensio|"
+    r"soil health management|sankalp|women helpdesk|"
+    r"components other than nutrition", re.I)
+
+# A row that names the benefit itself survives, even when a capacity word is also in it.
+# "ICDS Projects (Saksham Aanganwadi & Poshan 2.0) Supplementary Nutrition Programme" buys
+# food for a household and carries two capacity words; "Mission Vatsalya - care and support
+# to victims" reaches a named person. The override is what keeps the rule a rule rather
+# than a word list.
+BENEFIT_DESPITE = re.compile(
+    r"supplementary nutrition|adolescent girls|janman|victim|pavala|pavalavaddi|"
+    r"fodder|seed|insurance coverage|stipend|scholarship", re.I)
+
+
+def excluded_by_rule(name):
+    """True when the money buys delivery capacity rather than a benefit."""
+    n = name or ""
+    return bool(CAPACITY.search(n)) and not BENEFIT_DESPITE.search(n)
+
+
 def myscheme_records(state):
     """myScheme's own state-level records for one state, from the archived snapshot."""
     out = []
@@ -115,6 +152,12 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
     out = []
     for r in sorted(d["entries"], key=lambda x: str(ident(x))):
         s, ev = score(r)
+        # Applied after the state's own scoring and before any threshold, because it is the
+        # definition rather than evidence: a row that buys delivery capacity is not a
+        # scheme however strongly that state's signals read it.
+        if excluded_by_rule(r["name"]):
+            s = -99
+            ev = [("rule", "buys the capacity of the delivery system, not the benefit")]
         m = hit(r["name"])
         row = {
             "key": ident(r), "code": r.get("code"), "name": r["name"],

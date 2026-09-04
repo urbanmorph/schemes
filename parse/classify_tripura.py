@@ -52,6 +52,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
 from match import probably_same, tokens as m_tokens, skeleton as m_skeleton, \
     acronyms as m_acronyms  # noqa: E402
+from classify_common import excluded_by_rule  # noqa: E402
 
 BENEFIT = re.compile(
     r"\b(yojana|yojna|scholarship|pension|insurance|awas|meal|nutrition|poshan|anganwadi|"
@@ -88,6 +89,13 @@ def norm(name):
 
 
 def score(r):
+    # The register's definition, held in classify_common because it is the rule and not a
+    # signal: money that buys the capacity of a delivery system is not a scheme however
+    # strongly this state's own evidence reads it. This file predates that harness and has
+    # to reach for it explicitly.
+    if excluded_by_rule(r["name"]):
+        return -99, [("rule", "buys the capacity of the delivery system, not the benefit")]
+
     n = norm(r["name"])
     s, ev = 0, []
     if BENEFIT.search(n):

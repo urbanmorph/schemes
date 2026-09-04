@@ -1,7 +1,7 @@
 {
  "state": "Uttar Pradesh",
  "snapshot": "2026-09-03",
- "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, pension, insurance or subsidy from this line? An office, an establishment, a canal, maintenance, a building, a medical college, a loan or a state development loan is not_scheme. Read in Devanagari, which is the only language this book is published in.",
+ "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
  "labelled": 513,
  "scheme": 191,
  "not_scheme": 322,
@@ -3086,5 +3086,10 @@
    "how": "audit census at the publishing bar, read by eye"
   }
  },
- "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT."
+ "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT.",
+ "rule": {
+  "scheme": "the money buys an identifiable benefit received by a person or household: cash, a kit, food, a scholarship, a stipend, a fee waiver, a pension, insurance, a subsidy that lowers what that household pays, a loan or an interest subvention on its own borrowing, free travel, free power, a house, a named treatment entitlement, or training in which the trainee is himself the beneficiary class",
+  "not_scheme": "the money runs, builds, staffs or maintains an organisation or an asset, devolves general purpose funds to another tier of government, pays for the capacity of the delivery system rather than the benefit, discharges the state's obligation to its own serving or retired staff, services the state's own debt, or is an accounting or adjustment head",
+  "adopted": "This is the register's SINGLE definition, taken from the wording the first seven states were labelled against because it is the more carefully drawn of the two that existed. The eight states labelled later used a looser one that admitted 'a service', which pulled in the capacity of a delivery system: a helpline, a creche, an anganwadi's running costs, an agricultural extension wing. 69 published rows were re-read against this wording and 56 changed side. The register's headline number counted two different things before that and said so nowhere."
+ }
 }

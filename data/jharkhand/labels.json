@@ -1,10 +1,10 @@
 {
  "state": "Jharkhand",
  "snapshot": "2026-09-03",
- "question": "Can a person, household, farmer, student or worker receive a benefit, service, scholarship, pension, insurance, subsidy or training from this line? Construction, an office or institution, share capital, a loan to a corporation, administration, research, a survey, area development or a monitoring component is not_scheme.",
+ "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
  "labelled": 374,
- "scheme": 166,
- "not_scheme": 208,
+ "scheme": 156,
+ "not_scheme": 218,
  "sampling": "Stratified on the statement the line appears under (State Schemes, Central Assistance, Central Sector), 28% of each with a floor of 20, seed 20260903.",
  "labels": {
   "0017": {
@@ -48,9 +48,10 @@
    "how": "stratified sample, read by eye"
   },
   "0127": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "INTEGRATED CHILD PROTECTION SCHEME",
-   "how": "stratified sample, read by eye"
+   "how": "stratified sample, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "0145": {
    "label": "not_scheme",
@@ -548,9 +549,10 @@
    "how": "stratified sample, read by eye"
   },
   "1594": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "NATIONAL CRECHE SCHEME",
-   "how": "stratified sample, read by eye"
+   "how": "stratified sample, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "1598": {
    "label": "not_scheme",
@@ -1203,9 +1205,10 @@
    "how": "stratified sample, read by eye"
   },
   "3976": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "INTEGRATED CHILD PROTECTION SCHEME",
-   "how": "stratified sample, read by eye"
+   "how": "stratified sample, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "3984": {
    "label": "not_scheme",
@@ -1518,9 +1521,10 @@
    "how": "audit census at the publishing bar, read by eye"
   },
   "1833": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "SCHEME FOR GOVERNMENT FOOD CENTRE",
-   "how": "audit census at the publishing bar, read by eye"
+   "how": "audit census at the publishing bar, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "1834": {
    "label": "scheme",
@@ -1598,9 +1602,10 @@
    "how": "audit census at the publishing bar, read by eye"
   },
   "1953": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "SOIL HEALTH MANAGEMENT SCHEME",
-   "how": "audit census at the publishing bar, read by eye"
+   "how": "audit census at the publishing bar, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "1954": {
    "label": "scheme",
@@ -1673,9 +1678,10 @@
    "how": "audit census at the publishing bar, read by eye"
   },
   "2061": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "ANGANWADI CHALO ABHIYAN YOJNA (ACHAY)",
-   "how": "audit census at the publishing bar, read by eye"
+   "how": "audit census at the publishing bar, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "2063": {
    "label": "scheme",
@@ -1703,9 +1709,10 @@
    "how": "audit census at the publishing bar, read by eye"
   },
   "2089": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "HUB FOR EMPOWERMENT OF WOMEN UNDER SAMARTHYA (MISSION SHAKTI)",
-   "how": "audit census at the publishing bar, read by eye"
+   "how": "audit census at the publishing bar, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "2100": {
    "label": "scheme",
@@ -1723,9 +1730,10 @@
    "how": "audit census at the publishing bar, read by eye"
   },
   "2138": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "WOMEN HELP LINE SCHEME",
-   "how": "audit census at the publishing bar, read by eye"
+   "how": "audit census at the publishing bar, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "2146": {
    "label": "scheme",
@@ -1813,9 +1821,10 @@
    "how": "audit census at the publishing bar, read by eye"
   },
   "2244": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "CASH CROP DEVELOPMENT AND EXTENSION SCHEME",
-   "how": "audit census at the publishing bar, read by eye"
+   "how": "audit census at the publishing bar, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "2246": {
    "label": "scheme",
@@ -1853,9 +1862,10 @@
    "how": "audit census at the publishing bar, read by eye"
   },
   "3980": {
-   "label": "scheme",
+   "label": "not_scheme",
    "name": "HUB FOR EMPOWERMENT OF WOMEN UNDER SAMARTHYA (MISSION SHAKTI)",
-   "how": "audit census at the publishing bar, read by eye"
+   "how": "audit census at the publishing bar, read by eye",
+   "reread": "re-read against the unified rule: delivery capacity, not a benefit"
   },
   "9150": {
    "label": "scheme",
@@ -1878,5 +1888,10 @@
    "how": "audit census at the publishing bar, read by eye"
   }
  },
- "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT."
+ "census": "Every row scoring 3 or more carries a hand label, so precision at the bar is a COUNT.",
+ "rule": {
+  "scheme": "the money buys an identifiable benefit received by a person or household: cash, a kit, food, a scholarship, a stipend, a fee waiver, a pension, insurance, a subsidy that lowers what that household pays, a loan or an interest subvention on its own borrowing, free travel, free power, a house, a named treatment entitlement, or training in which the trainee is himself the beneficiary class",
+  "not_scheme": "the money runs, builds, staffs or maintains an organisation or an asset, devolves general purpose funds to another tier of government, pays for the capacity of the delivery system rather than the benefit, discharges the state's obligation to its own serving or retired staff, services the state's own debt, or is an accounting or adjustment head",
+  "adopted": "This is the register's SINGLE definition, taken from the wording the first seven states were labelled against because it is the more carefully drawn of the two that existed. The eight states labelled later used a looser one that admitted 'a service', which pulled in the capacity of a delivery system: a helpline, a creche, an anganwadi's running costs, an agricultural extension wing. 69 published rows were re-read against this wording and 56 changed side. The register's headline number counted two different things before that and said so nowhere."
+ }
 }

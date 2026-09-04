@@ -602,6 +602,30 @@ def legibility_section(leg, ms=None):
   </div>
 
   <div class="warnbox">
+    <b>What this register counts as a scheme, in one sentence, because it used to count two
+      things</b>
+    A scheme is a line where <b style="display:inline;color:var(--ink);font-family:inherit;
+    font-size:inherit;text-transform:none;letter-spacing:0">the money buys an identifiable
+    benefit received by a person or household</b>: cash, a kit, food, a scholarship, a
+    stipend, a fee waiver, a pension, insurance, a subsidy that lowers what that household
+    pays, a loan or an interest subvention on its own borrowing, free travel, free power, a
+    house, a named treatment entitlement, or training in which the trainee is himself the
+    beneficiary class. It is <em>not</em> a scheme where the money runs, builds, staffs or
+    maintains an organisation or an asset, devolves general purpose funds to another tier of
+    government, pays for the <b style="display:inline;color:var(--ink);font-family:inherit;
+    font-size:inherit;text-transform:none;letter-spacing:0">capacity of the delivery system
+    rather than the benefit</b>, discharges the state&rsquo;s obligation to its own serving
+    or retired staff, services its own debt, or is an accounting head.
+    <p style="margin:8px 0 0">That last clause is the one that does the work and the one
+    this register got wrong. Seven states were labelled against this wording; eight later
+    ones were labelled against a looser sentence that admitted &ldquo;a service&rdquo;, which
+    pulls in a helpline, a creche, an anganwadi&rsquo;s running costs and an agricultural
+    extension wing. Sixty-nine published rows were re-read against the wording above and
+    fifty-six changed side. Until that was done the headline number added two different
+    definitions together and said so nowhere.</p>
+  </div>
+
+  <div class="warnbox">
     <b>How to read a score, and how not to</b>
     The five tests are asked in order and a state that fails one is never asked the rest,
     so an unasked test shows as {"&middot;&middot;&middot;"} and is never counted as a

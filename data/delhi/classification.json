@@ -504,7 +504,7 @@
     ]
    ],
    "group": "Sub-Total Poshan [Deptt. of 2.0) Women CSS",
-   "hand_label": "scheme",
+   "hand_label": "not_scheme",
    "hoas": [],
    "in_myscheme_delhi": false,
    "key": "unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
@@ -913,44 +913,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 100.0,
-   "code": null,
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "Sub-Total [Child Development]",
-   "hand_label": "scheme",
-   "hoas": [],
-   "in_myscheme_delhi": false,
-   "key": "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line CSS GIA-General",
-   "myscheme_name": null,
-   "name": "Mission Vatsalaya- Child Help Line CSS GIA-General",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "code": null,
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "Sub-Total [Child Development]",
-   "hand_label": "scheme",
-   "hoas": [],
-   "in_myscheme_delhi": false,
-   "key": "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line SS",
-   "myscheme_name": null,
-   "name": "Mission Vatsalaya- Child Help Line SS",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 200.0,
    "code": null,
    "evidence": [
@@ -1156,25 +1118,6 @@
    "key": "unsectored | TOTAL [DGHS] | Financial incentive to good Samaritians",
    "myscheme_name": null,
    "name": "Financial incentive to good Samaritians",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 2.0,
-   "code": null,
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "TOTAL [DGHS]",
-   "hand_label": "scheme",
-   "hoas": [],
-   "in_myscheme_delhi": false,
-   "key": "unsectored | TOTAL [DGHS] | Health Helpline",
-   "myscheme_name": null,
-   "name": "Health Helpline",
    "score": 3,
    "verdict": "scheme"
   },
@@ -2530,25 +2473,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 100.0,
-   "code": null,
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "Sub-Total [Child Development]",
-   "hand_label": "scheme",
-   "hoas": [],
-   "in_myscheme_delhi": false,
-   "key": "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line CSS GIA-General",
-   "myscheme_name": null,
-   "name": "Mission Vatsalaya- Child Help Line CSS GIA-General",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 90.0,
    "code": null,
    "evidence": [
@@ -2811,6 +2735,25 @@
    "key": "unsectored | TOTAL [DGHS] | Financial incentive to good Samaritians",
    "myscheme_name": null,
    "name": "Financial incentive to good Samaritians",
+   "score": 3,
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 5.0,
+   "code": null,
+   "evidence": [
+    [
+     "+3",
+     "a benefit word in the name"
+    ]
+   ],
+   "group": "Sub-Total CSS",
+   "hand_label": "scheme",
+   "hoas": [],
+   "in_myscheme_delhi": false,
+   "key": "unsectored | Sub-Total CSS | Pre-matric Scholarship for SC students CSS SCSP",
+   "myscheme_name": null,
+   "name": "Pre-matric Scholarship for SC students CSS SCSP",
    "score": 3,
    "verdict": "scheme"
   }
@@ -5911,7 +5854,12 @@
   {
    "be_lakh": 490.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total [C]",
    "hand_label": "scheme",
    "hoas": [],
@@ -5919,13 +5867,18 @@
    "key": "unsectored | Sub Total [C] | POSHAN Abhiyan (POSHAN Mission) SS",
    "myscheme_name": null,
    "name": "POSHAN Abhiyan (POSHAN Mission) SS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
    "be_lakh": 884.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total [C]",
    "hand_label": null,
    "hoas": [],
@@ -5933,13 +5886,18 @@
    "key": "unsectored | Sub Total [C] | Palna- National Creches Scheme (Saksham Aanganwadi & Poshan 2.0) (GIA to NGOs) CSS",
    "myscheme_name": null,
    "name": "Palna- National Creches Scheme (Saksham Aanganwadi & Poshan 2.0) (GIA to NGOs) CSS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
    "be_lakh": 590.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total [C]",
    "hand_label": null,
    "hoas": [],
@@ -5947,7 +5905,7 @@
    "key": "unsectored | Sub Total [C] | Palna- National Creches Scheme (Saksham Aanganwadi & Poshan 2.0) SS",
    "myscheme_name": null,
    "name": "Palna- National Creches Scheme (Saksham Aanganwadi & Poshan 2.0) SS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -5967,7 +5925,12 @@
   {
    "be_lakh": 0.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total [C]",
    "hand_label": null,
    "hoas": [],
@@ -5975,7 +5938,7 @@
    "key": "unsectored | Sub Total [C] | Procurement of Aadhar Kit, Anganwadi service scheme under Umbrella ICDS Scheme (Saksham Aanganwadi &",
    "myscheme_name": null,
    "name": "Procurement of Aadhar Kit, Anganwadi service scheme under Umbrella ICDS Scheme (Saksham Aanganwadi &",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -6033,7 +5996,12 @@
   {
    "be_lakh": 1000.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total [C]",
    "hand_label": null,
    "hoas": [],
@@ -6041,13 +6009,18 @@
    "key": "unsectored | Sub Total [C] | SAMARTHYA-PALNA State Top - Up Scheme",
    "myscheme_name": null,
    "name": "SAMARTHYA-PALNA State Top - Up Scheme",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
    "be_lakh": 0.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total [C]",
    "hand_label": "scheme",
    "hoas": [],
@@ -6055,13 +6028,18 @@
    "key": "unsectored | Sub Total [C] | Stand alone Creches CSS",
    "myscheme_name": null,
    "name": "Stand alone Creches CSS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
    "be_lakh": 0.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total [C]",
    "hand_label": null,
    "hoas": [],
@@ -6069,7 +6047,7 @@
    "key": "unsectored | Sub Total [C] | Stand alone Creches SS",
    "myscheme_name": null,
    "name": "Stand alone Creches SS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -6655,12 +6633,8 @@
    "code": null,
    "evidence": [
     [
-     "+3",
-     "a benefit word in the name"
-    ],
-    [
-     "-4",
-     "assistance to an organisation rather than to a person"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub Total",
@@ -6670,7 +6644,7 @@
    "key": "unsectored | Sub Total | Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS",
    "myscheme_name": null,
    "name": "Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS",
-   "score": -1,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -6678,12 +6652,8 @@
    "code": null,
    "evidence": [
     [
-     "+3",
-     "a benefit word in the name"
-    ],
-    [
-     "-4",
-     "assistance to an organisation rather than to a person"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub Total",
@@ -6693,7 +6663,7 @@
    "key": "unsectored | Sub Total | Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS SCSP",
    "myscheme_name": null,
    "name": "Agriculture Extension (Krishionnati Yojana) for Extension Reforms (ATMA) CSS SCSP",
-   "score": -1,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -7311,7 +7281,12 @@
   {
    "be_lakh": 200.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub Total",
    "hand_label": null,
    "hoas": [],
@@ -7319,7 +7294,7 @@
    "key": "unsectored | Sub Total | Creche in offices with Aaya",
    "myscheme_name": null,
    "name": "Creche in offices with Aaya",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -8780,8 +8755,8 @@
    "code": null,
    "evidence": [
     [
-     "-4",
-     "the name is entirely upper case, so it is a heading"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub Total",
@@ -8791,7 +8766,7 @@
    "key": "unsectored | Sub Total | NIPUN SANKALP",
    "myscheme_name": null,
    "name": "NIPUN SANKALP",
-   "score": -4,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -12885,7 +12860,7 @@
     ]
    ],
    "group": "Sub-Total Poshan [Deptt. of 2.0) Women CSS",
-   "hand_label": "scheme",
+   "hand_label": "not_scheme",
    "hoas": [],
    "in_myscheme_delhi": false,
    "key": "unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
@@ -14424,31 +14399,27 @@
    "code": null,
    "evidence": [
     [
-     "+3",
-     "a benefit word in the name"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Child Development]",
-   "hand_label": "scheme",
+   "hand_label": "not_scheme",
    "hoas": [],
    "in_myscheme_delhi": false,
    "key": "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line CSS GIA-General",
    "myscheme_name": null,
    "name": "Mission Vatsalaya- Child Help Line CSS GIA-General",
-   "score": 3,
-   "verdict": "scheme"
+   "score": -99,
+   "verdict": "not_scheme"
   },
   {
    "be_lakh": 400.0,
    "code": null,
    "evidence": [
     [
-     "+3",
-     "a benefit word in the name"
-    ],
-    [
-     "-3",
-     "grant-in-aid for salary or capital"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Child Development]",
@@ -14458,7 +14429,7 @@
    "key": "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line CSS GIA-Salary",
    "myscheme_name": null,
    "name": "Mission Vatsalaya- Child Help Line CSS GIA-Salary",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -14466,19 +14437,19 @@
    "code": null,
    "evidence": [
     [
-     "+3",
-     "a benefit word in the name"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Child Development]",
-   "hand_label": "scheme",
+   "hand_label": "not_scheme",
    "hoas": [],
    "in_myscheme_delhi": false,
    "key": "unsectored | Sub-Total [Child Development] | Mission Vatsalaya- Child Help Line SS",
    "myscheme_name": null,
    "name": "Mission Vatsalaya- Child Help Line SS",
-   "score": 3,
-   "verdict": "scheme"
+   "score": -99,
+   "verdict": "not_scheme"
   },
   {
    "be_lakh": 47.0,
@@ -14747,12 +14718,8 @@
    "code": null,
    "evidence": [
     [
-     "+3",
-     "a benefit word in the name"
-    ],
-    [
-     "-3",
-     "the name names an institution"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Women Welfare]",
@@ -14762,7 +14729,7 @@
    "key": "unsectored | Sub-Total [Women Welfare] | Delhi Commission for Women for Women Helpline -181 CSS GIA-General",
    "myscheme_name": null,
    "name": "Delhi Commission for Women for Women Helpline -181 CSS GIA-General",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -14978,8 +14945,8 @@
    "code": null,
    "evidence": [
     [
-     "-3",
-     "the name names an institution"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Women Welfare]",
@@ -14989,7 +14956,7 @@
    "key": "unsectored | Sub-Total [Women Welfare] | One Stop Centre- Sambal CSS",
    "myscheme_name": null,
    "name": "One Stop Centre- Sambal CSS",
-   "score": -3,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -14997,12 +14964,8 @@
    "code": null,
    "evidence": [
     [
-     "-3",
-     "the name names an institution"
-    ],
-    [
-     "-3",
-     "grant-in-aid for salary or capital"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Women Welfare]",
@@ -15012,7 +14975,7 @@
    "key": "unsectored | Sub-Total [Women Welfare] | One Stop Centre- Sambal CSS GIA-Capital",
    "myscheme_name": null,
    "name": "One Stop Centre- Sambal CSS GIA-Capital",
-   "score": -6,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -15117,7 +15080,12 @@
   {
    "be_lakh": 282.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub-Total [Women Welfare]",
    "hand_label": "scheme",
    "hoas": [],
@@ -15125,13 +15093,18 @@
    "key": "unsectored | Sub-Total [Women Welfare] | Samarthya Hub for Empowerment for Women-Mission Shakti CSS",
    "myscheme_name": null,
    "name": "Samarthya Hub for Empowerment for Women-Mission Shakti CSS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
    "be_lakh": 187.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub-Total [Women Welfare]",
    "hand_label": null,
    "hoas": [],
@@ -15139,7 +15112,7 @@
    "key": "unsectored | Sub-Total [Women Welfare] | Samarthya Hub for Empowerment for Women-Mission Shakti SS",
    "myscheme_name": null,
    "name": "Samarthya Hub for Empowerment for Women-Mission Shakti SS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -15173,7 +15146,12 @@
   {
    "be_lakh": 1.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "Sub-Total [Women Welfare]",
    "hand_label": null,
    "hoas": [],
@@ -15181,7 +15159,7 @@
    "key": "unsectored | Sub-Total [Women Welfare] | Sambal- Nari Adalat- Mission Shakti CSS",
    "myscheme_name": null,
    "name": "Sambal- Nari Adalat- Mission Shakti CSS",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -15203,12 +15181,8 @@
    "code": null,
    "evidence": [
     [
-     "-4",
-     "the line builds, buys or runs something"
-    ],
-    [
-     "-3",
-     "the name names an institution"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Women Welfare]",
@@ -15218,7 +15192,7 @@
    "key": "unsectored | Sub-Total [Women Welfare] | Strengthening of One Stop Centre in each Districts - State",
    "myscheme_name": null,
    "name": "Strengthening of One Stop Centre in each Districts - State",
-   "score": -7,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -15226,16 +15200,8 @@
    "code": null,
    "evidence": [
     [
-     "-4",
-     "the line builds, buys or runs something"
-    ],
-    [
-     "-3",
-     "the name names an institution"
-    ],
-    [
-     "-3",
-     "grant-in-aid for salary or capital"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "Sub-Total [Women Welfare]",
@@ -15245,7 +15211,7 @@
    "key": "unsectored | Sub-Total [Women Welfare] | Strengthening of One Stop Centre in each Districts - State Top up SS GIA-Capital",
    "myscheme_name": null,
    "name": "Strengthening of One Stop Centre in each Districts - State Top up SS GIA-Capital",
-   "score": -10,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -19145,19 +19111,19 @@
    "code": null,
    "evidence": [
     [
-     "+3",
-     "a benefit word in the name"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "TOTAL [DGHS]",
-   "hand_label": "scheme",
+   "hand_label": "not_scheme",
    "hoas": [],
    "in_myscheme_delhi": false,
    "key": "unsectored | TOTAL [DGHS] | Health Helpline",
    "myscheme_name": null,
    "name": "Health Helpline",
-   "score": 3,
-   "verdict": "scheme"
+   "score": -99,
+   "verdict": "not_scheme"
   },
   {
    "be_lakh": 5.0,
@@ -19905,7 +19871,12 @@
   {
    "be_lakh": 0.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "TOTAL [DT&TE]",
    "hand_label": null,
    "hoas": [],
@@ -19913,13 +19884,18 @@
    "key": "unsectored | TOTAL [DT&TE] | Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP) CSS SCSP GIA-General",
    "myscheme_name": null,
    "name": "Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP) CSS SCSP GIA-General",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
    "be_lakh": 0.0,
    "code": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "group": "TOTAL [DT&TE]",
    "hand_label": null,
    "hoas": [],
@@ -19927,7 +19903,7 @@
    "key": "unsectored | TOTAL [DT&TE] | Skill Acquisition and Knowledge Awareness for Livelihood R Promotion (SANKALP) CSS GIA-General",
    "myscheme_name": null,
    "name": "Skill Acquisition and Knowledge Awareness for Livelihood R Promotion (SANKALP) CSS GIA-General",
-   "score": 0,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -30958,8 +30934,8 @@
    "code": null,
    "evidence": [
     [
-     "-3",
-     "the name names an institution"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "sub total",
@@ -30969,7 +30945,7 @@
    "key": "unsectored | sub total | State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya)",
    "myscheme_name": null,
    "name": "State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya)",
-   "score": -3,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -30977,8 +30953,8 @@
    "code": null,
    "evidence": [
     [
-     "-3",
-     "the name names an institution"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "sub total",
@@ -30988,7 +30964,7 @@
    "key": "unsectored | sub total | State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya) CSS GIA-",
    "myscheme_name": null,
    "name": "State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya) CSS GIA-",
-   "score": -3,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -30996,12 +30972,8 @@
    "code": null,
    "evidence": [
     [
-     "-3",
-     "the name names an institution"
-    ],
-    [
-     "-3",
-     "grant-in-aid for salary or capital"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "sub total",
@@ -31011,7 +30983,7 @@
    "key": "unsectored | sub total | State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya) CSS GIA- Salary",
    "myscheme_name": null,
    "name": "State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya) CSS GIA- Salary",
-   "score": -6,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -31019,8 +30991,8 @@
    "code": null,
    "evidence": [
     [
-     "-3",
-     "the name names an institution"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "sub total",
@@ -31030,7 +31002,7 @@
    "key": "unsectored | sub total | State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya) SS GIA-",
    "myscheme_name": null,
    "name": "State Child Protection Society - (earlier Setting up of Juvenile Shelter Homes) (Mission Vatsalaya) SS GIA-",
-   "score": -3,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -31038,12 +31010,8 @@
    "code": null,
    "evidence": [
     [
-     "-3",
-     "the name names an institution"
-    ],
-    [
-     "-3",
-     "grant-in-aid for salary or capital"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "group": "sub total",
@@ -31053,7 +31021,7 @@
    "key": "unsectored | sub total | State Child Protection Society - (earlier Setting up of R Juvenile Shelter Homes) (Mission Vatsalaya) SS GIA- Salary",
    "myscheme_name": null,
    "name": "State Child Protection Society - (earlier Setting up of R Juvenile Shelter Homes) (Mission Vatsalaya) SS GIA- Salary",
-   "score": -6,
+   "score": -99,
    "verdict": "not_scheme"
   },
   {
@@ -31133,20 +31101,21 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-09-03T12:36:34Z",
+ "built": "2026-09-04T18:44:56Z",
  "caveat": "One row here is one line of Delhi's scheme-wise budget, keyed on (sector, name) because the document prints no scheme code. Rows repeating a name within one sector are ADDED, which is what the document means when it splits a scheme into GIA-General, GIA-Salary and GIA-Capital lines. This list is a superset of Delhi's citizen-facing schemes: works and establishment lines such as 'Construction of Residential Complex for Judicial Officers' sit at the same level as 'Laadli Yojana'. It is also slightly SHORT of the document: about ten nil-provision rows are read as headings by the blank-line rule described in parse/delhi.py, and appear under headings rather than under entries.",
- "classified_not_scheme": 1478,
- "classified_scheme": 100,
+ "classified_not_scheme": 1481,
+ "classified_scheme": 97,
  "cycle": "2026-27",
  "ground_truth": {
   "labelled": 373,
-  "not_scheme": 258,
-  "question": "Can a person, household, student, patient or worker receive a benefit, service, scholarship, subsidy, pension or reimbursement from this line? An institution's grant-in-aid, machinery, a building, a department heading, a commission or an academy is not_scheme.",
+  "not_scheme": 262,
+  "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
   "sampling": "Stratified on whether the provision is revenue money, capital or loan money, both or neither, 17% of each with a floor of 17, seed 20260903.",
-  "scheme": 115
+  "scheme": 111
  },
  "known_errors": [
   "Subsidy for Electric Vehicles for 579 e- buses",
+  "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
   "DSEU for Project Samridhi GIA-General",
   "State Award to service doctors working in Delhi Govt. Hospitals",
   "upto secondary Scholarship level"
@@ -31188,55 +31157,55 @@
  "state": "Delhi",
  "threshold_sweep": [
   {
-   "n_labelled": 218,
-   "precision": 0.528,
-   "recall": 1.0,
+   "n_labelled": 209,
+   "precision": 0.517,
+   "recall": 0.973,
    "threshold": -2
   },
   {
-   "n_labelled": 218,
-   "precision": 0.528,
-   "recall": 1.0,
+   "n_labelled": 209,
+   "precision": 0.517,
+   "recall": 0.973,
    "threshold": -1
   },
   {
-   "n_labelled": 204,
-   "precision": 0.564,
-   "recall": 1.0,
+   "n_labelled": 197,
+   "precision": 0.548,
+   "recall": 0.973,
    "threshold": 0
   },
   {
-   "n_labelled": 100,
-   "precision": 0.96,
-   "recall": 0.835,
+   "n_labelled": 97,
+   "precision": 0.948,
+   "recall": 0.829,
    "threshold": 1
   },
   {
-   "n_labelled": 100,
-   "precision": 0.96,
-   "recall": 0.835,
+   "n_labelled": 97,
+   "precision": 0.948,
+   "recall": 0.829,
    "threshold": 2
   },
   {
-   "n_labelled": 100,
-   "precision": 0.96,
-   "recall": 0.835,
+   "n_labelled": 97,
+   "precision": 0.948,
+   "recall": 0.829,
    "threshold": 3
   }
  ],
  "validation": {
   "at_publish_threshold": {
-   "n_labelled": 100,
-   "precision": 0.96,
-   "recall": 0.835,
+   "n_labelled": 97,
+   "precision": 0.948,
+   "recall": 0.829,
    "threshold": 3
   },
   "at_publish_threshold_census": {
-   "not_schemes": 4,
-   "precision": 0.96,
-   "rows": 100,
-   "rows_hand_labelled": 100,
-   "schemes": 96,
+   "not_schemes": 5,
+   "precision": 0.948,
+   "rows": 97,
+   "rows_hand_labelled": 97,
+   "schemes": 92,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors below are named ones."
   }
