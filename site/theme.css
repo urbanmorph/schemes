@@ -726,3 +726,38 @@ table.mini td:nth-child(2){width:18%}
   .sos-b{flex:1 1 100%}
   .sos-go{align-self:flex-start;margin-top:4px}
 }
+
+/* /states. Eight columns, six of them numbers, and the last one a sentence that should
+   take whatever is left. The state name never wraps: it is the row's identity and the
+   link, and "Uttar Pradesh" breaking across two lines reads as two states. */
+#stix{table-layout:fixed;width:100%;min-width:960px}
+#stix th:nth-child(1),#stix td:nth-child(1){width:11%;white-space:nowrap}
+#stix th:nth-child(2),#stix td:nth-child(2),
+#stix th:nth-child(3),#stix td:nth-child(3),
+#stix th:nth-child(4),#stix td:nth-child(4),
+#stix th:nth-child(5),#stix td:nth-child(5){width:10%;padding-left:8px;padding-right:8px}
+/* 10% and not 8%: "Precision" is a 73px word and 8% of the 960px minimum leaves 61. */
+#stix th:nth-child(6),#stix td:nth-child(6),
+#stix th:nth-child(7),#stix td:nth-child(7){width:10%;padding-left:8px;padding-right:8px}
+#stix thead th{white-space:normal;letter-spacing:.04em;line-height:1.3}
+#stix td{vertical-align:top}
+#stix td:last-child{font-size:var(--fs-sm);line-height:1.45}
+
+#stref{table-layout:fixed;width:100%;min-width:760px}
+#stref th:nth-child(1),#stref td:nth-child(1){width:16%;white-space:nowrap}
+#stref th:nth-child(2),#stref td:nth-child(2){width:12%;padding-left:8px;padding-right:8px}
+#stref th:nth-child(3),#stref td:nth-child(3){width:12%}
+#stref td{vertical-align:top}
+#stref td:last-child{font-size:var(--fs-sm);line-height:1.45}
+#stref tr.refused{background:var(--sink)}
+#stref tr.refused td:first-child{color:var(--ink);font-weight:500}
+
+/* The watchlist on /changes. The two dates are the point, so they are monospaced and
+   right-aligned against each other rather than left in prose. */
+#wlt{table-layout:fixed;width:100%;min-width:820px}
+#wlt th:nth-child(1),#wlt td:nth-child(1){width:34%}
+#wlt th:nth-child(2),#wlt td:nth-child(2){width:13%}
+#wlt th:nth-child(3),#wlt td:nth-child(3),
+#wlt th:nth-child(4),#wlt td:nth-child(4){width:13%;padding-left:8px;padding-right:8px}
+#wlt thead th{white-space:normal;letter-spacing:.04em;line-height:1.3}
+#wlt td{vertical-align:top}

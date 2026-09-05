@@ -606,6 +606,14 @@ def run(threshold=PUBLISH_THRESHOLD):
                         "line, and a real scheme with a plain name and no purpose line "
                         "cannot clear a high bar on the evidence the books print."),
         "absent_schemes": absent,
+        # absent_distinct is the key every other state publishes and the one the site reads.
+        # This file predates it and emitted only absent_schemes, so the site counted
+        # Karnataka's absence claim as zero while still rendering its table from the other
+        # key: the register's own headline was missing a state it was publishing on the
+        # page below it. Karnataka's 72 rows carry 72 distinct names, so the de-duplicated
+        # view and the full list are the same list, and it is written out under both names
+        # rather than left for a reader of the JSON to work out.
+        "absent_distinct": absent,
         "all_entries": rows,
     }
     write_json("data/karnataka/classification.json", out)

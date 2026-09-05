@@ -212,6 +212,14 @@ fi
 say "changes"
 step "parse/changes" python3 parse/changes.py
 
+# AFTER the classifiers and after changes, because it reads what they concluded. The
+# watchlist is the only file here with a MEMORY: it reads its own previous output, keeps the
+# date each accusation was first made, and checks whether the portal has started listing it.
+# That makes it the one thing in this repository that measures whether publishing an
+# omission does anything, and it only works if it runs every cycle. A missed month is a hole
+# in the record that cannot be filled in afterwards.
+step "parse/watchlist" python3 parse/watchlist.py --date "$DATE"
+
 say "build"
 python3 site/build.py
 

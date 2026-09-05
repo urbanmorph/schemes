@@ -58,7 +58,8 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,50
 # evidence for it are the same page: someone who reads that 99% of schemes carry no end
 # date should be able to scroll straight into the list and check it, without treating
 # "see the data" as a separate destination.
-ROUTES = [("/", "index.html"), ("/divergence", "divergence.html"),
+ROUTES = [("/", "index.html"), ("/states", "states.html"),
+          ("/divergence", "divergence.html"),
           ("/audit", "audit.html"), ("/changes", "changes.html")]
 
 
@@ -448,13 +449,13 @@ def state_of_schemes(entries):
          f"&#8377;{inr(round(absent_lakh / 100))} crore of provision in the current cycle. Each "
          f"one "
          f"is named, scored, and published with the hand label that judged it.",
-         "/divergence", "See the schemes and the errors"),
+         "/states", "See them state by state"),
         (f"{refused} of {surveyed}", "states publish a budget no machine can read",
          "Surveyed against five sequential tests: does it publish a list, are the names text, "
          "does a name have an end, is it in English, does the book prove itself against its "
          "own totals. A state that fails one is not accused of anything here; it is recorded "
          "as unreadable, and the register refuses rather than guesses.",
-         "/divergence#legibility", "See where each state stops"),
+         "/states", "See where each state stops"),
         (f"{worst[1].get('fail_pct', 0):.0f}%" if worst else "&hellip;",
          f"of the portal&rsquo;s own records {worst_label}",
          "myScheme is the only source here written for citizens rather than for accountants, "
@@ -794,40 +795,6 @@ def legibility_section(leg, ms=None):
 </section>"""
 
 
-def state_section(state, title, note, standfirst, rows, warn_title, warn_body):
-    """Chrome shared by every state's absence table.
-
-    The row builders are NOT shared and should not be. Each state publishes different
-    evidence, so Karnataka's rows carry a purpose line, Andhra Pradesh's carry the
-    departments that fund a scheme, and the next one will carry something else again.
-    Forcing those into one builder would mean rendering the poorest common denominator of
-    what the states publish, which is the opposite of the point.
-
-    What every section does share is the shape of the claim: name the state's own source,
-    say how many rows survived classification, show the table, and then state the floor and
-    the counted error rate before the reader has scrolled past. That last part is the reason
-    this is a function rather than a copied block. A precision figure and a recall figure
-    belong together, and the moment they are three copies of the same paragraph, one of them
-    drifts.
-    """
-    return f"""
-<section class="sec">
-  <h2>{title}</h2>
-  <div class="sec-note">{note}</div>
-  <p class="standfirst">{standfirst}</p>
-  <div class="tscroll"><table>
-    <thead><tr><th>In {e(state)}&rsquo;s budget, absent from myScheme</th>
-      <th class="num">2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
-      <th>Why it scores as a scheme</th></tr></thead>
-    <tbody>{rows}</tbody>
-  </table></div>
-  <div class="warnbox">
-    <b>{warn_title}</b>
-    {warn_body}
-  </div>
-</section>"""
-
-
 def classifier_note(cls, floor_sentence):
     """The precision-and-recall paragraph, in the words the project has settled on.
 
@@ -847,6 +814,32 @@ def classifier_note(cls, floor_sentence):
             f'Recall is {v.get("at_publish_threshold", {}).get("recall", 0):.0%}, measured on '
             f'the stratified sample alone, so this is a floor and never a total. '
             f'{floor_sentence}')
+
+
+def absent_rows(cls, limit=None):
+    """The rows one state's classifier will stand behind, as table HTML.
+
+    The four states that had a hand-written section on /divergence rendered these four
+    different ways, which is three more than the evidence supports: every classifier emits
+    the same fields, and the differences were leftovers from the order the states were
+    built in rather than anything the states publish differently.
+    """
+    rows = cls.get("absent_distinct") or []
+    rows = sorted(rows, key=lambda r: -(r.get("be_lakh") or 0))
+    if limit:
+        rows = rows[:limit]
+    out = []
+    for r in rows:
+        why = "; ".join(w for _, w in (r.get("evidence") or []) if w) or "&mdash;"
+        ident = r.get("code") or r.get("key") or ""
+        money = inr(round((r["be_lakh"] or 0) / 100)) if r.get("be_lakh") else NIL
+        out.append(
+            f'<tr><td>{e(r.get("name") or "")}'
+            + (f' <span class="acr">{e(str(ident))}</span>' if ident else "")
+            + f'</td><td class="num">{money}</td>'
+            f'<td class="num">{r.get("score")}</td>'
+            f'<td class="lg-why">{e(why)}</td></tr>')
+    return "".join(out), len(cls.get("absent_distinct") or [])
 
 
 def page_state(key, state, d, leg_row, cls=None):
@@ -934,6 +927,41 @@ def page_state(key, state, d, leg_row, cls=None):
                   f"<b>{num(checked - failed)} of {num(checked)}</b> of them"
                   + (f", and disagrees with {num(failed)}, which are listed in the data."
                      if failed else ", with none left over."))
+    # THE ABSENCE CLAIM, on the state's own page and on all fifteen.
+    #
+    # It used to live on /divergence and only for Karnataka, Andhra Pradesh, Kerala and
+    # Tamil Nadu, which were the first four classified. Eleven more states have had the same
+    # claim behind them for weeks with nowhere to read it, and /divergence was making the
+    # same argument five times over. The claim belongs beside the book it is drawn from.
+    absent_block = ""
+    if scored and (cls or {}).get("absent_distinct"):
+        arows, an = absent_rows(cls)
+        acr = sum((r.get("be_lakh") or 0) for r in cls["absent_distinct"]) / 100
+        biggest = max(cls["absent_distinct"], key=lambda r: r.get("be_lakh") or 0)
+        floor = (f"The largest line it will not stand behind is bigger than the largest it "
+                 f"will, and that is what a floor means.") if False else (
+                 f"The largest of them is {e(biggest.get('name') or '')}, at "
+                 f"{inr(round((biggest.get('be_lakh') or 0) / 100))} crore.")
+        absent_block = f"""
+<section class="sec">
+  <h2>Funded by {e(state)}, listed by no national portal</h2>
+  <div class="sec-note">{num(an)} of the {num(cls.get("classified_scheme"))} lines that
+    clear the bar &middot; {inr(round(acr))} crore &middot; joined against myScheme&rsquo;s
+    own records for {e(state)}</div>
+  <p class="standfirst">These are the rows this register will stand behind: {e(state)}&rsquo;s
+  budget funds them, this page names them, and no national portal lists them.</p>
+  <div class="tscroll"><table aria-label="Schemes funded by this state and absent from myScheme">
+    <thead><tr><th>In {e(state)}&rsquo;s budget, absent from myScheme</th>
+      <th class="num">2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
+      <th>Why it scores as a scheme</th></tr></thead>
+    <tbody>{arows}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>This is a floor, and its errors are counted rather than estimated</b>
+    {classifier_note(cls, floor)}
+  </div>
+</section>"""
+
     return f"""
 <div class="eyebrow">Route &middot; /state/{e(key)}</div>
 <h1 class="pagetitle">{e(state)}&rsquo;s budget, as {e(state)} publishes it</h1>
@@ -968,6 +996,8 @@ hidden anywhere on this site.</p>
   {'<p style="margin:8px 0 0">' + e(leg_row.get("why") or "") + '</p>' if leg_row else ''}
 </div>
 
+{absent_block}
+
 <section class="sec">
   <h2>Every line, as published</h2>
   <div class="sec-note">{e(d.get("source") or "")}</div>
@@ -977,6 +1007,134 @@ hidden anywhere on this site.</p>
     <tbody>{body}</tbody>
   </table></div>
 </section>"""
+
+
+def page_states(leg):
+    """A directory of the states, because there was no route to any of them.
+
+    Fifteen state pages existed and nothing linked to them except one table halfway down
+    /divergence. They hold the register's largest single body of evidence, every line of
+    fifteen budget books, and a reader who did not already know they were there had no way
+    to find out. The navigation had four entries and none of them was the states.
+
+    The seven that refuse are listed here too, and not in a footnote. A state whose budget
+    cannot be read is not a gap in this register: it is the finding, and it belongs in the
+    same list as the states that yielded rather than in a paragraph about them.
+    """
+    states = (leg or {}).get("states") or []
+    by_key = {r.get("key"): r for r in states}
+
+    built, refused = [], []
+    for key, name in sorted(STATE_OF.items(), key=lambda kv: kv[1]):
+        row = by_key.get(key) or {}
+        cls = load(f"data/{key}/classification.json", {}) or {}
+        sd = load(f"data/{key}/schemes.json", {}) or {}
+        if not sd.get("entries"):
+            continue
+        absent = cls.get("absent_distinct") or []
+        v = (cls.get("validation") or {})
+        cen = v.get("at_publish_threshold_census") or {}
+        built.append({
+            "key": key, "name": name,
+            "lines": len(sd["entries"]),
+            "bar": cls.get("classified_scheme"),
+            "absent": len(absent),
+            "cr": sum((r.get("be_lakh") or 0) for r in absent) / 100,
+            "precision": cen.get("precision"),
+            "recall": (v.get("at_publish_threshold") or {}).get("recall"),
+            "cleared": row.get("cleared"), "why": row.get("why") or "",
+        })
+    for r in states:
+        if not r.get("built"):
+            refused.append(r)
+    refused.sort(key=lambda r: (-(r.get("cleared") or 0), r.get("state") or ""))
+
+    built.sort(key=lambda r: -r["absent"])
+    # Row by row rather than a comprehension: two of the eight cells are conditional and
+    # a conditional expression inside one join loses the rest of the row.
+    brows = ""
+    for b in built:
+        brows += (
+            f'<tr><td><a href="{link("state/" + b["key"] + ".html")}">{e(b["name"])}</a></td>'
+            f'<td class="num">{num(b["lines"])}</td>'
+            f'<td class="num">{num(b["bar"])}</td>'
+            f'<td class="num hi">{num(b["absent"])}</td>'
+            f'<td class="num">{inr(round(b["cr"])) if b["cr"] else NIL}</td>'
+            f'<td class="num">{b["precision"]:.1%}' if b["precision"] is not None
+            else f'<td class="num">{NIL}')
+        brows += (f'</td><td class="num">{b["recall"]:.0%}</td>' if b["recall"] is not None
+                  else f'</td><td class="num">{NIL}</td>')
+        brows += f'<td class="lg-why">{e(b["why"])}</td></tr>'
+
+    rrows = "".join(
+        f'<tr class="refused"><td>{e(r.get("state") or "")}</td>'
+        f'<td class="num">{r.get("cleared")} <span class="of">of 5</span></td>'
+        f'<td>{e(str(r.get("failed_at") or ""))}</td>'
+        f'<td class="lg-why">{e(r.get("why") or "")}</td></tr>'
+        for r in refused)
+
+    tot_absent = sum(b["absent"] for b in built)
+    tot_cr = sum(b["cr"] for b in built)
+    tot_lines = sum(b["lines"] for b in built)
+
+    return f'''
+<div class="eyebrow">Route &middot; /states</div>
+<h1 class="pagetitle">The states, one page each</h1>
+<p class="standfirst">{num(len(built))} states publish a budget this register can read, and
+every line of every one of them is on this site. {num(len(refused))} more publish one it
+cannot. Both facts are below, in the same table shape, because a state that cannot be read
+is a finding and not an omission.</p>
+
+<div class="census">
+  <div class="cell"><div class="k">States read</div><div class="v">{num(len(built))}</div>
+    <div class="n">of {num(len(built) + len(refused))} surveyed</div></div>
+  <div class="cell"><div class="k">Budget lines held</div>
+    <div class="v">{num(tot_lines)}</div><div class="n">as each state published them</div></div>
+  <div class="cell"><div class="k">Funded and unlisted</div>
+    <div class="v">{num(tot_absent)}</div><div class="n">across all {num(len(built))}</div></div>
+  <div class="cell"><div class="k">Together</div>
+    <div class="v">{inr(round(tot_cr))}</div><div class="n">crore of provision</div></div>
+</div>
+
+<section class="sec">
+  <h2>The states this register can read</h2>
+  <div class="sec-note">Ordered by how many schemes each one funds that no national portal
+    lists &middot; open a state for its whole book</div>
+  <div class="tscroll"><table id="stix" aria-label="Every state with a budget this register reads">
+    <thead><tr><th>State</th><th class="num">Lines in the book</th>
+      <th class="num">Clear the bar</th><th class="num">Funded and unlisted</th>
+      <th class="num">&#8377; crore</th><th class="num">Precision</th>
+      <th class="num">Recall</th><th>What its book is</th></tr></thead>
+    <tbody>{brows}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>Do not rank the states by the fourth column</b>
+    It is a floor set by how much evidence a state prints, not a measure of how much it
+    hides. Kerala publishes 2,629 plan lines and this register will stand behind 37 of them;
+    that is a fact about how much the Kerala plan document proves, not about Kerala.
+    Precision is a count in every row, recall is measured on each state&rsquo;s stratified
+    sample alone, and both are explained on the state&rsquo;s own page.
+  </div>
+</section>
+
+<section class="sec">
+  <h2>The states it cannot</h2>
+  <div class="sec-note">Surveyed against the same five tests and stopped at one of
+    them &middot; no page, no list, and no accusation either</div>
+  <div class="tscroll"><table id="stref" aria-label="States whose budget cannot be read by machine">
+    <thead><tr><th>State</th><th class="num">Cleared</th><th>Stops at</th>
+      <th>What stops it</th></tr></thead>
+    <tbody>{rrows}</tbody>
+  </table></div>
+  <div class="warnbox">
+    <b>A refusal here is about the document, not the state</b>
+    These seven publish budgets. What they do not publish is a budget a machine can read
+    one scheme at a time: a scanned image, a legacy font, a name with no boundary, or a
+    book that does not prove itself against its own totals. This register records where
+    each one stops and makes no claim about what is inside.
+  </div>
+</section>
+'''
 
 
 def page_audit(cag, audited):
@@ -1114,8 +1272,7 @@ which of them are about a scheme, and there is no way to ask it. This page is th
 </section>"""
 
 
-def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=None,
-                    kl=None, tn=None, leg=None):
+def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
     """Two questions, kept apart: how many schemes a state has, and which are unlisted.
 
     The per-state table and the unlisted-schemes table were both built into a local named
@@ -1176,168 +1333,20 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=N
 
     kar_ms, kar_dbt = ms.get("Karnataka"), ds.get("Karnataka")
 
-    # A state's own budget against the national portal. The central sections of this page
-    # answer "which funded schemes is the Union not telling citizens about". This answers
-    # the same question one level down, where until now the page could only report a count.
-    ka_section = ""
-    if ka and ka.get("absent_schemes"):
-        v = ka.get("validation", {})
-        cen = v.get("at_publish_threshold_census", {})
-        rows_ka = "".join(
-            f'<tr><td>{e(r["name"])}'
-            + (f'<div class="sub2">{e(r["purpose"])}</div>' if r.get("purpose") else "")
-            + f'</td><td class="num">{inr(round((r["be_lakh"] or 0) / 100))}</td>'
-            f'<td class="num">{r["score"]}</td>'
-            f'<td class="muted" style="font-size:12px">{e("; ".join(w for _, w in r.get("evidence", [])[:2]))}</td></tr>'
-            for r in ka["absent_schemes"])
-        total_rows = (ka.get("classified_scheme") or 0) + (ka.get("classified_not_scheme") or 0)
-        ka_section = state_section(
-            "Karnataka",
-            "Karnataka&rsquo;s own budget names schemes its citizens cannot look up",
-            f"Karnataka Budget {e(str(ka.get('cycle') or ''))}, scheme-wise books &middot; "
-            f"{num(ka.get('classified_scheme'))} of {num(total_rows)} rows survive "
-            f"classification as schemes",
-            f"The state publishes its Gender, Child and SCSP/TSP budgets, and between them "
-            f"they name {num(total_rows)} budget heads. myScheme lists "
-            f"{num(ka.get('myscheme_karnataka_records'))} schemes for Karnataka. These "
-            f"{num(len(ka['absent_schemes']))} are on the state&rsquo;s books, carry money, "
-            f"read as schemes, and are on the national portal nowhere.",
-            rows_ka,
-            "This is a floor, and the errors in it are counted rather than estimated",
-            "A budget book lists colleges, commissionerates and building heads beside "
-            "schemes, and calling one of those a hidden scheme would be a false accusation. "
-            "Every row is scored on signals published with the arithmetic."
-            '<p style="margin:8px 0 0">' + classifier_note(
-                ka,
-                f"Gruha Lakshmi, Karnataka&rsquo;s largest welfare scheme, is missing from "
-                f"this table: 580 of the {num(total_rows)} rows carry no purpose line, and a "
-                f"real scheme with a plain name and no stated purpose cannot clear a high "
-                f"bar on the evidence the books print.") + "</p>")
-
-    # Andhra Pradesh. Written parallel to the Karnataka block above rather than sharing a
-    # helper with it, because the two states publish different evidence: Karnataka prints a
-    # purpose line and Andhra Pradesh prints a head of account and a department. When a
-    # third state lands, the chrome is worth factoring out and the row builders are not.
-    ap_section = ""
-    if ap and ap.get("absent_distinct"):
-        v2 = ap.get("validation", {})
-        cen2 = v2.get("at_publish_threshold_census", {})
-        rows_ap = "".join(
-            f'<tr><td>{e(r["name"])}'
-            + (f'<div class="sub2">funded by {num(len(r["departments"]))} departments: '
-               f'{e(", ".join(d.replace(" Department", "") for d in r["departments"]))}</div>'
-               if len(r["departments"]) > 1 else "")
-            + f'</td><td class="num">{inr(round((r["be_lakh"] or 0) / 100))}</td>'
-            f'<td class="num">{r["score"]}</td>'
-            f'<td class="muted" style="font-size:12px">{e("; ".join(w for _, w in r.get("evidence", [])[:2]))}</td></tr>'
-            for r in ap["absent_distinct"])
-        tot_ap = sum(r["be_lakh"] or 0 for r in ap["absent_distinct"]) / 100
-        # Read from the data, never typed in. A hardcoded 69 on this page had already
-        # drifted once while the number behind it moved.
-        top_ap = max(ap["absent_distinct"], key=lambda r: r["be_lakh"] or 0)
-        miss_ap = max((x for x in (ap.get("all_entries") or [])
-                       if x.get("verdict") != "scheme"),
-                      key=lambda x: x.get("be_lakh") or 0, default=None)
-        ap_section = state_section(
-            "Andhra Pradesh",
-            "Andhra Pradesh, where the portal and the budget describe different countries",
-            f"Andhra Pradesh Budget {e(str(ap.get('cycle') or ''))}, six scheme-wise books "
-            f"&middot; {num(len(ap['absent_distinct']))} schemes, {inr(round(tot_ap))} crore",
-            f"myScheme lists {num(ap.get('myscheme_andhra_records'))} schemes for Andhra "
-            f"Pradesh: corporation and welfare-board items, tricycles, spectacles, pensions. "
-            f"The state&rsquo;s own budget names its largest programmes, and not one of them "
-            f"reaches the portal. {e(top_ap['name'])} alone is "
-            f"{inr(round((top_ap['be_lakh'] or 0) / 100))} crore.",
-            rows_ap,
-            "One row per scheme, not per departmental share, and a floor again",
-            "Andhra Pradesh funds a scheme separately out of each social-category "
-            "department, so NTR Bharosa Pension is six budget lines. They are added rather "
-            "than listed six times, because the departments are distinct and the shares are "
-            "of one provision. That is the opposite of the rule used across the six books, "
-            "where the publications report overlapping slices and the largest is taken."
-            '<p style="margin:8px 0 0">' + classifier_note(
-                ap,
-                f"No Andhra Pradesh book prints a purpose line and 150 rows print no head of "
-                f"account either, so the classifier reads a name and nothing else. The "
-                f"largest thing it rejects is {e((miss_ap or {}).get('name', ''))} at "
-                f"{inr(round(((miss_ap or {}).get('be_lakh') or 0) / 100))} crore, on a score "
-                f"of {(miss_ap or {}).get('score', 0)}.") + "</p>")
-
-    def simple_state(cfg, state, title, note, standfirst, floor, warn_title, warn_body):
-        """A state whose rows carry a name, an allocation and a score, and nothing else."""
-        rows = "".join(
-            f'<tr><td>{e(r["name"])}</td>'
-            f'<td class="num">{inr(round((r["be_lakh"] or 0) / 100))}</td>'
-            f'<td class="num">{r["score"]}</td>'
-            f'<td class="muted" style="font-size:12px">'
-            f'{e("; ".join(w for _, w in r.get("evidence", [])[:2]))}</td></tr>'
-            for r in cfg["absent_distinct"])
-        # The state is passed, not carved out of the title. Deriving it by splitting on an
-        # apostrophe worked for Kerala and produced a table headed "In Tamil Nadu books a
-        # transfer and its advertising in one place's budget".
-        return state_section(state, title, note, standfirst, rows, warn_title,
-                             warn_body + '<p style="margin:8px 0 0">'
-                             + classifier_note(cfg, floor) + "</p>")
-
-    kl_section = ""
-    if kl and kl.get("absent_distinct"):
-        kl_section = simple_state(
-            kl, "Kerala", "Kerala&rsquo;s plan names 2,629 schemes and the portal lists 87",
-            f"Kerala Annual Plan statements &middot; {num(len(kl['absent_distinct']))} named "
-            f"at high confidence out of {num(kl.get('classified_scheme'))} that clear the bar",
-            f"The count is the finding here and it needs no classifier: Kerala&rsquo;s Annual "
-            f"Plan carries 2,629 scheme rows and myScheme lists "
-            f"{num(kl.get('myscheme_kerala_records') or 87)} for Kerala. Naming which of them "
-            f"are hidden schemes is harder in Kerala than anywhere else, and these "
-            f"{num(len(kl['absent_distinct']))} are the ones this register will stand behind.",
-            "The National Old Age Pension, PMAY-Gramin, PMMVY and DDUGKY are all absent from "
-            "this table, each one point below the bar. Kerala&rsquo;s schemes are named "
-            "Deendayal Antyodaya Yojana or PM KUSUM, and 28 of 50 sampled carry no English "
-            "benefit or beneficiary word at all, so a classifier reading English for evidence "
-            "of a benefit finds none in a name that is simply a name.",
-            "This table is the smallest and least complete on the page",
-            "Kerala&rsquo;s Annual Plan is a plan document, so most of its rows are "
-            "institutions and establishment heads rather than schemes: an academy, a "
-            "university, a directorate. Every row is scored on signals published with the "
-            "arithmetic.")
-
-    def _recall(d):
-        return ((d or {}).get("validation") or {}).get("at_publish_threshold", {}).get("recall")
-
-    four = [(n, _recall(d)) for n, d in
-            (("Tamil Nadu", tn), ("Andhra Pradesh", ap), ("Karnataka", ka), ("Kerala", kl))
-            if _recall(d) is not None]
-    four.sort(key=lambda x: -x[1])
-    four_recalls = ("Recall is "
-                    + ", ".join(f"{r:.0%} in {n}" for n, r in four[:-1])
-                    + f" and {four[-1][1]:.0%} in {four[-1][0]}") if four else \
-        "Recall is a floor in every one of them"
-
-    tn_section = ""
-    if tn and tn.get("absent_distinct"):
-        tn_section = simple_state(
-            tn, "Tamil Nadu", "Tamil Nadu books a transfer and its advertising in one place",
-            f"Tamil Nadu Revised Budget Estimates, 55 demand books &middot; "
-            f"{num(len(tn['absent_distinct']))} schemes, "
-            f"{inr(round(sum(r['be_lakh'] or 0 for r in tn['absent_distinct']) / 100))} crore",
-            f"myScheme lists {num(tn.get('myscheme_tamil_nadu_records') or 240)} schemes for "
-            f"Tamil Nadu, the second highest of any state, so this was the place the portal "
-            f"might not be behind. The demand books carry 6,220 heads of account, and these "
-            f"{num(len(tn['absent_distinct']))} read as schemes and reach the portal nowhere.",
-            "Magalir Urimai Thogai, the state&rsquo;s largest cash transfer at "
-            "&#8377;14,414 crore, is missing from this table for &#8377;9,803 crore of its "
-            "value. Its two sub-plan heads carry a benefit object head alone and are here; "
-            "its general head books "
-            "<em>Advertising and Publicity</em> under the same sub-head as the transfer, "
-            "which costs it exactly the margin. The Breakfast Scheme fails the same way. That "
-            "is not a classifier failing to read, it is a state booking a benefit and its "
-            "marketing in one place with no line saying which is which.",
-            "Tamil Nadu prints object heads, which is why this is the best measured state",
-            "These are the full detailed estimates rather than a welfare-only cut, so five "
-            "rows in six are establishment, works or accounting heads. What separates them is "
-            "the object head: a row whose every object head is a benefit transfer is a scheme "
-            "89.5% of the time, and one whose every object head is an accounting head never "
-            "is.")
+    # The fifteen states' absence claims live on the fifteen state pages now. This page
+    # keeps the ARGUMENT -- four sources disagree, seven states cannot be read -- and stops
+    # re-making it four times with four hand-written tables. The totals below are the same
+    # claim summed, and they are counted from the classifications rather than typed.
+    states_built = states_absent = 0
+    states_cr = 0.0
+    for _k in sorted(STATE_OF):
+        _c = load(f"data/{_k}/classification.json", {}) or {}
+        _a = _c.get("absent_distinct") or []
+        if not _c.get("all_entries"):
+            continue
+        states_built += 1
+        states_absent += len(_a)
+        states_cr += sum((r.get("be_lakh") or 0) for r in _a) / 100
 
     # Funded, monitored, and never announced. The strongest thing the union registry
     # says: these are named as schemes by at least two government sources and carry a
@@ -1463,10 +1472,18 @@ and be done.</p>
   </div>
 </section>
 
-{ka_section}
-{ap_section}
-{kl_section}
-{tn_section}
+<section class="sec">
+  <h2>The same claim, for fifteen states, on fifteen pages</h2>
+  <div class="sec-note">{num(states_built)} states read &middot; {num(states_absent)} schemes
+    funded and listed by no national portal &middot; {inr(round(states_cr))} crore</div>
+  <p class="standfirst">This page used to end with four hand-written state sections,
+  Karnataka, Andhra Pradesh, Kerala and Tamil Nadu, which were simply the first four
+  classified. Eleven more states have had the same claim behind them since, and making the
+  same argument five times over on one page taught a reader nothing the first one had not.
+  Each state&rsquo;s absence claim now sits beside the book it is drawn from.</p>
+  <p><a class="jump" href="/states">All {num(states_built)} states, one page each &rarr;</a></p>
+</section>
+
 <div class="warnbox">
   <b>This register published its own recall too high, and this is the corrected number</b>
   Every state here is measured twice: a stratified probability sample of the whole budget
@@ -1482,15 +1499,6 @@ and be done.</p>
   from 91% to 62%. Nothing about which schemes are published changed, and no precision
   changed. What changed is the claim about how much each table leaves out, which was
   flattering and is now not.
-</div>
-
-<div class="warnbox">
-  <b>Do not add these four tables together, and do not rank the states by them</b>
-  Each state's table is a floor set by how much evidence that state prints, not a measure of
-  how much it hides. {four_recalls}, so Kerala's short table says that Kerala's plan
-  document is hard to read and says nothing at all about Kerala. Reading these as comparable
-  would repeat exactly the mistake this page opens by documenting: four government sources
-  publishing numbers that look like each other and count different things.
 </div>
 
 {unlisted_section}
@@ -2727,7 +2735,90 @@ def page_unlisted(en, status):
 """
 
 
-def page_changes(ch):
+def watchlist_section(wl):
+    """What happened to the schemes this register accused.
+
+    /changes answered one question, what the portal changed about its own records, and it
+    can only answer that once two snapshots exist. It said nothing at all about the
+    register's own claims, which is the harder and more useful question: of the schemes
+    named as funded and unlisted, has the portal started listing any of them?
+
+    The answer today is none, and none is a real answer on the day the clock starts. The
+    page says how long the clock has been running so a reader can tell a finding from a
+    beginning.
+    """
+    if not wl or not wl.get("entries"):
+        return ""
+    total = wl.get("accused_total", 0)
+    listed = wl.get("since_listed", 0)
+    still = wl.get("still_absent", 0)
+    gone = wl.get("no_longer_named", 0)
+    first = wl.get("first_snapshot") or wl.get("snapshot")
+
+    rows = ""
+    shown = [x for x in wl["entries"] if x.get("status") in ("listed", "no longer named at the bar")]
+    shown.sort(key=lambda x: (x.get("listed_on") or x.get("left_the_books") or "", x["name"]))
+    for x in shown[:60]:
+        when = x.get("listed_on") or x.get("left_the_books") or ""
+        what = ("myScheme now lists it" if x["status"] == "listed"
+                else "the state's book no longer names it at the bar")
+        rows += (f'<tr><td>{e(x.get("name") or "")}</td>'
+                 f'<td>{e(x.get("state") or "")}</td>'
+                 f'<td class="num">{e(str(x.get("first_named") or ""))}</td>'
+                 f'<td class="num">{e(str(when))}</td>'
+                 f'<td class="lg-why">{e(what)}</td></tr>')
+
+    table = (f'''<div class="tscroll"><table id="wlt" aria-label="Named-absent schemes that have since changed">
+    <thead><tr><th>Scheme</th><th>State</th><th class="num">Named absent</th>
+      <th class="num">Changed</th><th>What changed</th></tr></thead>
+    <tbody>{rows}</tbody></table></div>''' if rows else
+      f'''<div class="empty"><span class="big">{NIL}</span>
+      <b>Nothing has moved yet.</b><br>
+      Every one of the {num(total)} is still funded by its state and still listed by no
+      national portal. The first accusation was made on {e(str(first))}, so this is the
+      beginning of the record rather than a finding about it.</div>''')
+
+    return f'''
+<section class="sec">
+  <h2>What happened to the schemes this register named</h2>
+  <div class="sec-note">{num(total)} accusations on record since {e(str(first))} &middot;
+    re-checked against myScheme every cycle</div>
+  <p class="standfirst">The page above asks what the portal changed about its own records.
+  This asks the question only this repository can: of the schemes it named as funded and
+  unlisted, has the portal begun listing any of them?</p>
+
+  <div class="census">
+    <div class="cell"><div class="k">Named as unlisted</div><div class="v">{num(total)}</div>
+      <div class="n">since {e(str(first))}</div></div>
+    <div class="cell"><div class="k">Still unlisted</div><div class="v">{num(still)}</div>
+      <div class="n">as of this snapshot</div></div>
+    <div class="cell"><div class="k">Since listed</div><div class="v">{num(listed)}</div>
+      <div class="n">myScheme carries it now</div></div>
+    <div class="cell"><div class="k">No longer named</div><div class="v">{num(gone)}</div>
+      <div class="n">left the state&rsquo;s book</div></div>
+  </div>
+
+  {table}
+
+  <div class="warnbox">
+    <b>Two dates, and no claim about what connects them</b>
+    A scheme moving from unlisted to listed is recorded here as the date this register
+    named it and the date the portal began carrying it. <b>It is not evidence that one
+    caused the other.</b> The portal publishes no reason for adding a record, this register
+    cannot see one, and inferring a cause from two dates is the exact move it documents in
+    everybody else. The dates are the finding; what connects them is somebody else&rsquo;s
+    research.
+    <p style="margin:8px 0 0">The fourth number is kept apart from the third on purpose. A
+    scheme can leave this list because the portal listed it, which is the thing worth
+    counting, or because the state stopped funding it, renamed it, or a classifier signal
+    moved. Only the first is a portal catching up, and folding the others in with it would
+    flatter the register at its own reader&rsquo;s expense.</p>
+  </div>
+</section>
+'''
+
+
+def page_changes(ch, wl=None):
     """What differs between two snapshots of the same source.
 
     Never the repository's own history. This page previously rendered `git log` over
@@ -2796,6 +2887,8 @@ payloads and the field that differs between them, so nothing here is an opinion.
   {rows_for(ch.get("added", []), "added")}
   {rows_for(ch.get("removed", []), "removed")}
 </section>
+
+{watchlist_section(wl)}
 
 <div class="warnbox"><b>Why this page can be trusted more than the rest of the site</b>
 A diff is not a judgment. Every row is derived from two archived payloads anyone can
@@ -3304,14 +3397,16 @@ def build():
                    "rows": getattr(page_index, "rowdata", [])},
                   fh, separators=(",", ":"), ensure_ascii=False)
 
+    w("states.html", shell(
+        "The states", "/states", page_states(load("data/legibility.json", {})),
+        desc=("Every Indian state whose budget this register can read, one page each, with "
+              "what each one funds that no national portal lists, and the states whose "
+              "budgets cannot be read at all."),
+        canon=SITE_BASE + "/states"))
     w("divergence.html", shell(
         "Divergence", "/divergence",
         page_divergence(census, dbt, load("data/registry.json", {}),
                         load("data/classification.json", {}), entries=entries,
-                        ka=load("data/karnataka/classification.json", {}),
-                        ap=load("data/andhra/classification.json", {}),
-                        kl=load("data/kerala/classification.json", {}),
-                        tn=load("data/tamilnadu/classification.json", {}),
                         leg=load("data/legibility.json", {})),
         desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
               "portal you ask. Three official sources, counted side by side."),
@@ -3360,7 +3455,7 @@ def build():
         desc="No page at this address in the Schemes Register."))
 
     w("changes.html", shell(
-        "Changes", "/changes", page_changes(load("data/changes.json", {})),
+        "Changes", "/changes", page_changes(load("data/changes.json", {}), load("data/watchlist.json", {})),
         desc="What Indian government scheme records changed between monthly snapshots.",
         canon=SITE_BASE + "/changes"))
 
