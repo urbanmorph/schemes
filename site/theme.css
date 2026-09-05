@@ -145,25 +145,57 @@ code{font-family:var(--mono);font-size:.88em;background:var(--sink);padding:1px 
 .tscroll{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
 /* The scheme and ministry columns hold the long strings; letting them wrap keeps the
    table inside its container instead of pushing every other column off the edge. */
-#tbl{table-layout:fixed;width:100%}
+/* min-width, because the columns are percentages and a percentage of a small number is
+   smaller than the word it has to hold. Below this the "Score" column is 22px wide for a
+   45px word. It sits in .tscroll, so the table scrolls sideways instead of mangling the
+   header; under 620px it stops being a table at all and becomes cards. */
+#tbl{table-layout:fixed;width:100%;min-width:900px}
+#tbl thead th{white-space:normal;line-height:1.3}
+/* The two numeric columns are the narrowest and their headings are the longest words in
+   the row, so they get the padding back as content. */
+#tbl th:nth-child(5),#tbl th:nth-child(6){padding-left:8px;padding-right:8px}
 /* Five columns, not six. The failing-checks list moved to the scheme page, where each
    one can say why it failed instead of being three codes in a narrow cell, and the
    scheme name took the width back: 31% to 42%, which is the difference between a long
    title wrapping to four lines and to two. */
-#tbl th:nth-child(1),#tbl td:nth-child(1){width:35%}
-#tbl th:nth-child(2),#tbl td:nth-child(2){width:13%}
-#tbl th:nth-child(3),#tbl td:nth-child(3){width:10%}
-#tbl th:nth-child(4),#tbl td:nth-child(4){width:21%}
+#tbl th:nth-child(1),#tbl td:nth-child(1){width:29%}
+/* 16%, sized on the longest word any sector label contains. "Entrepreneurship" needs
+   about 112px whole and 95px hyphenated as Entrepreneur-, and below this even the
+   hyphenated form does not fit, so it fell back to breaking anywhere. */
+#tbl th:nth-child(2),#tbl td:nth-child(2){width:17%}
+/* 13% and not 10%: this column holds state names, and Uttarakhand and Lakshadweep are
+   eleven characters that did not fit, so they broke as Uttarakh / and. */
+#tbl th:nth-child(3),#tbl td:nth-child(3){width:15%}
+#tbl th:nth-child(4),#tbl td:nth-child(4){width:18%}
 #tbl th:nth-child(5),#tbl td:nth-child(5){width:13%}
 #tbl th:nth-child(6),#tbl td:nth-child(6){width:8%}
 .alloc{white-space:nowrap}
-#tbl td{word-break:break-word;vertical-align:top}
+/* hyphens, because a word that genuinely cannot fit its column should break where the
+   language breaks it. word-break alone split Entrepreneurship as Entrepreneu / rship and
+   Financial as Fina / ncial. With hyphens:auto (the document is lang="en") the same word
+   breaks as Entrepreneur- / ship, which a reader can still read. */
+/* overflow-wrap and NOT word-break, because word-break pre-empts hyphenation: it breaks
+   at whatever character reaches the edge before the hyphenation dictionary is consulted,
+   which is how Entrepreneurship became Entrepreneu / rship. overflow-wrap breaks a word
+   only when it cannot fit at all, and by then hyphens:auto has had its turn. */
+#tbl td{overflow-wrap:break-word;hyphens:auto;vertical-align:top}
 #tbl td:nth-child(2){white-space:normal}
 table{border-collapse:collapse;width:100%;font-size:var(--fs-base)}
 th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule)}
+/* nowrap is the right DEFAULT and the wrong rule for four tables, which is the distinction
+   that took a bug to find. In an auto-layout table nowrap is what makes the browser widen a
+   column to fit its own header, so it can never overflow; forcing those to wrap instead
+   just squeezes the column and breaks a word down the middle. In a FIXED-layout table the
+   width is already decided, so nowrap has nowhere to go and the text leaves the cell and
+   prints on top of the next column. The legibility scoreboard had five headers doing that
+   at once, "Publishes a scheme list" wanting 211px of an 85px column, and the census
+   table's "Where it applies" did it on a STICKY header, so it overlapped its neighbour all
+   the way down the page.
+   So: nowrap here, and white-space:normal on each fixed-layout table below, where the
+   columns are also sized to fit the longest word in their own heading. */
 thead th,thead th.num{font-family:var(--mono);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.11em;
   color:var(--faint);font-weight:500;border-bottom:1px solid var(--rule-strong);
-  white-space:nowrap;background:var(--sink)}
+  white-space:nowrap;vertical-align:bottom;background:var(--sink)}
 tbody tr:last-child td{border-bottom:none}
 tbody tr:hover{background:var(--stamp-soft)}
 .num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:var(--fs-base)}
@@ -554,7 +586,12 @@ footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   font-family:var(--mono);font-size:var(--fs-sm);color:var(--faint)}
 footer .foot a{color:var(--stamp)}
 @media (max-width:620px){footer .srcs{grid-template-columns:1fr;gap:2px 0}
-  footer .srcs span{margin-bottom:7px}}
+  footer .srcs span{margin-bottom:7px}
+  /* nowrap keeps a source's name on one line, which is right on a wide screen and is what
+     made every page on the site scroll sideways by 24px on a phone: "Outcome Budget, Output
+     Outcome Framework" is wider than a 390px viewport, and one unbreakable link in a grid
+     column sets the width of the whole document. */
+  footer .srcs a{white-space:normal}}
 
 .listedby{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 0}
 .listedby .lbl{font:500 var(--fs-xs)/1 var(--sans);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
@@ -565,10 +602,23 @@ footer .foot a{color:var(--stamp)}
    paragraphs. */
 #legib{table-layout:fixed;width:100%;min-width:940px}
 #legib th:nth-child(1),#legib td:nth-child(1){width:13%}
-#legib th.t,#legib td.t{width:7.4%;text-align:center}
+/* 8.6% and not 7.4%, and tighter side padding, because the width that matters is the
+   CONTENT box: at 7.4% these cells were 85px with 14px of padding a side, leaving 57px,
+   and "Publishes" needs about 65. It broke mid-word to PUBLISH / ES. The last column is
+   the only elastic one and it has the room to give. */
+#legib th.t,#legib td.t{width:8.6%;text-align:center;padding-left:6px;padding-right:6px}
+/* Same content-box arithmetic as the verdict columns: at 8% these are 91px, and 14px of
+   padding a side left 63 for a word that needs 65, so "Schemes named" broke to SCHEME / S. */
 #legib th:nth-child(7),#legib td:nth-child(7),
-#legib th:nth-child(8),#legib td:nth-child(8){width:8%}
+#legib th:nth-child(8),#legib td:nth-child(8){width:9%;padding-left:8px;padding-right:8px}
 #legib td{vertical-align:top}
+/* The global thead rule sets white-space:nowrap, which is right for the short headers
+   every other table has and wrong for this one: these nine are whole sentences, and in a
+   fixed-layout table with 7.4% verdict columns they overflowed their cells and printed on
+   top of each other. "Publishes a scheme list" wanted 211px of an 85px column. They wrap
+   here, sit on the bottom edge so the last line meets the rule above the ticks, and drop
+   the tracking, which buys about a character a line at this width. */
+#legib thead th{white-space:normal;letter-spacing:.04em;line-height:1.32}
 #legib .mark{width:auto;display:inline}
 #legib .of{color:var(--faint);font-size:var(--fs-xs)}
 .lg-why{font-size:var(--fs-sm);line-height:1.45;word-break:break-word}
@@ -595,16 +645,18 @@ footer .foot a{color:var(--stamp)}
    else is fixed; the summary tables above it are small enough to sit two or four across. */
 #audall{table-layout:fixed;width:100%;min-width:900px}
 #audall th:nth-child(1),#audall td:nth-child(1){width:44%}
-#audall th:nth-child(2),#audall td:nth-child(2){width:12%}
+#audall th:nth-child(2),#audall td:nth-child(2){width:12%;padding-left:8px;padding-right:8px}
 #audall th:nth-child(3),#audall td:nth-child(3){width:10%}
 #audall th:nth-child(4),#audall td:nth-child(4){width:14%}
 #audall th:nth-child(5),#audall td:nth-child(5){width:13%}
 #audall td{vertical-align:top;word-break:break-word;font-size:var(--fs-sm);line-height:1.45}
+#audall thead th{white-space:normal;line-height:1.3}
 #audsch{table-layout:fixed;width:100%;min-width:760px}
 #audsch th:nth-child(1),#audsch td:nth-child(1){width:34%}
-#audsch th:nth-child(2),#audsch td:nth-child(2){width:9%}
+#audsch th:nth-child(2),#audsch td:nth-child(2){width:11%;padding-left:8px;padding-right:8px}
 #audsch th:nth-child(4),#audsch td:nth-child(4){width:14%}
 #audsch td{vertical-align:top}
+#audsch thead th{white-space:normal;line-height:1.3}
 .nowrap{white-space:nowrap}
 .twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px 34px;
   margin-top:26px}
@@ -621,6 +673,7 @@ table.mini td:nth-child(2){width:18%}
 /* A state's own budget book, at /state/<key>. Four columns, the name taking the width,
    and the code monospaced so a reader can scan for one. */
 #stbl{table-layout:fixed;width:100%;min-width:780px}
+#stbl thead th{white-space:normal;line-height:1.3}
 #stbl th:nth-child(1),#stbl td:nth-child(1){width:48%}
 #stbl th:nth-child(2),#stbl td:nth-child(2){width:16%}
 #stbl th:nth-child(3),#stbl td:nth-child(3){width:22%}

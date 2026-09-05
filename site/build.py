@@ -2277,7 +2277,7 @@ def index_section(entries):
 <div class="workspace">
 <div class="wmain">
 <div class="tscroll"><table id="tbl" aria-label="Every scheme in the register, filterable">
-  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Sector</th><th>Where it applies</th>
+  <thead><tr><th class="sortable" data-k="n">Scheme</th><th>Sector</th><th>Where</th>
     <th>Ministry / department</th>
     <th class="num sortable" data-k="b">Allocation</th>
     <th class="num sortable" data-k="p" title="Percentage of the nine documentation checks
@@ -3237,6 +3237,15 @@ def build():
     for en in entries:
         if not en.get("category") and not en.get("on_myscheme"):
             en["category"] = sector_map.get("registry|" + (en.get("name") or ""))
+    # myScheme writes one of its own category labels as "Banking,Financial Services and
+    # Insurance", with no space after the comma, and a browser treats the whole thing as one
+    # 17-character word: in a sector column that wide it can only break mid-word, which
+    # looks like this register's error rather than the portal's. A space after a comma is
+    # whitespace normalisation, the same kind this file already does with runs of spaces,
+    # and it changes no word.
+    for en in entries:
+        if en.get("category"):
+            en["category"] = re.sub(r",(?=\S)", ", ", en["category"])
     seen_slugs = set()
     for en in entries:                       # slugs must be unique or pages overwrite
         sl, i = en["slug"], 2
