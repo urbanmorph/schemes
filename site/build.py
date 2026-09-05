@@ -364,7 +364,7 @@ SEED_ROWS = 60
 WINDOW = 300
 
 
-def state_of_schemes():
+def state_of_schemes(entries):
     """The register's standing verdict, in the order the evidence narrows.
 
     The overview used to open with five source counts and a search box, which tells a
@@ -373,13 +373,21 @@ def state_of_schemes():
     who never clicked left with the impression of a catalogue.
 
     It is a funnel because that is the actual shape of the finding: every number here is a
-    subset of the one above it, and the drop between two rows is the claim. 5,478 schemes
-    are named; 5,099 of them by a single source; 1,560 are funded by a state and listed by
-    no portal. Reading those three as separate statistics loses the argument that connects
-    them.
+    subset of the one above it, and the drop between two rows is the claim. Reading them as
+    separate statistics loses the argument that connects them.
 
-    Every figure is computed from data/ at build time and none is typed here, for the
-    reason the /divergence warnbox already gives: a number written into prose drifts from
+    IT TAKES `entries`, THE SAME LIST THE TABLE BELOW RENDERS, AND THAT IS THE WHOLE POINT.
+    The first version of this block opened with 5,478 and called it "the most generous
+    count", which is the union of the four NATIONAL sources. The table three inches below
+    it said 10,598. Both numbers were right and they count different things: the extra
+    5,120 are rows from fifteen state budget books that clear that state's listing bar and
+    match no myScheme record, schemes that exist only in a state's own accounts. Publishing
+    one of them as the total, on the homepage, is precisely the failure this register was
+    built to document in others. Counting the rendered list rather than a file that happens
+    to hold a similar number is what stops it happening again.
+
+    Every figure is computed at build time and none is typed here, for the reason the
+    /divergence warnbox already gives about its own: a number written into prose drifts from
     the number in the file, and this one is the first thing a reader sees.
     """
     reg = load("data/registry.json", {}) or {}
@@ -387,7 +395,11 @@ def state_of_schemes():
     cagd = load("data/cag/audited.json", {}) or {}
     ck = (load("data/checks.json", {}) or {}).get("summary", {}).get("by_check", {})
 
-    named = reg.get("total_entries") or len(reg.get("entries") or [])
+    # `held` is the rendered list. `national` is the four-source union inside it, and the
+    # remainder is what only a state's own book names.
+    held = len(entries)
+    national = reg.get("total_entries") or len(reg.get("entries") or [])
+    state_only = max(0, held - national)
     one = int((reg.get("in_n_sources") or {}).get("1") or 0)
 
     absent = 0
@@ -419,15 +431,17 @@ def state_of_schemes():
     audit_of = cagd.get("register_names") or named
 
     steps = [
-        (num(named), "schemes exist, at the most generous count",
-         "Every distinct scheme any of the four official sources names. It is a floor: the "
-         "union under-merges on purpose, because one scheme listed twice is a visible error "
-         "and two schemes silently merged is not.", "#schemes", "Search all of them"),
-        (f"{one / named:.0%}" if named else "&hellip;",
-         "of them are named by exactly one source",
-         f"{num(one)} of {num(named)} schemes appear in a single government list and in no "
-         f"other. There is no agreed register of what the Indian state runs, and this is the "
-         f"measurement of that rather than the assertion of it.", "/divergence",
+        (num(held), "schemes this register can name",
+         f"{num(national)} of them are named by at least one of the four national sources. "
+         f"The other {num(state_only)} appear in no national list at all: they are lines in "
+         f"a state&rsquo;s own budget book that the state files as schemes. Even this is a "
+         f"floor, because the union under-merges on purpose and because seven states cannot "
+         f"be read at all.", "#schemes", "Search all of them"),
+        (f"{one / national:.0%}" if national else "&hellip;",
+         f"of the {num(national)} that reach a national source are named by only one of them",
+         f"{num(one)} appear in a single government list and in no other. Four sources, one "
+         f"country, and no agreed register of what it runs. This is the measurement of that "
+         f"rather than the assertion of it.", "/divergence",
          "See the four sources disagree"),
         (num(absent), "are funded by a state budget and listed by no national portal",
          f"Across the {num(states_classified)} states this register reads closely, worth "
@@ -525,7 +539,7 @@ def page_index(census, checks, dbt, entries):
   <a class="jump" href="#argument">Why this exists &darr;</a>
 </div>
 
-{state_of_schemes()}
+{state_of_schemes(entries)}
 
 {index_section(entries)}
 
@@ -2233,11 +2247,19 @@ def index_section(entries):
         return ('<section class="sec"><h2>Every scheme</h2><div class="empty">'
                 '<span class="big">...</span><b>No registry built yet.</b><br>'
                 'Run parse/registry.py.</div></section>')
+    # This note used to read "N across four sources" over a count that is not four sources.
+    # The four national lists supply the registry union; the rest of this table is fifteen
+    # state budget books, which is the half of it a national source never names, and calling
+    # the whole thing four-source erased exactly the rows the register exists to surface.
+    nat = (load("data/registry.json", {}) or {}).get("total_entries") or 0
+    st_only = max(0, n - nat)
     return f"""
 <section class="sec schemes" id="schemes">
-<div class="sec-note">{n:,} across four sources: myScheme, the Union Budget,
-  the Outcome Budget and DBT Bharat. Open a scheme to see which checks it fails and why.
-  Entries with no myScheme record have nothing to check, which is itself the finding.</div>
+<div class="sec-note">{n:,} schemes: {nat:,} from the four national sources, myScheme,
+  the Union Budget, the Outcome Budget and DBT Bharat, and {st_only:,} that no national
+  source names, read out of fifteen state budget books. Open a scheme to see which checks it
+  fails and why. Entries with no myScheme record have nothing to check, which is itself the
+  finding.</div>
 <div class="filters">
   <input id="q" type="search" placeholder="Search name or acronym, e.g. pm kisan or mgnrega&hellip;"
     aria-label="Search schemes by name, acronym or slug">
@@ -3258,8 +3280,9 @@ def build():
 
     w("index.html", shell(
         "The census and the argument", "/", page_index(census, checks, dbt, entries),
-        desc=(f"{len(entries):,} Indian government schemes across four official sources, "
-              "with what each source publishes and what it leaves out."),
+        desc=(f"{len(entries):,} Indian government schemes from four national sources and "
+              "fifteen state budget books, with what each source publishes and what it "
+              "leaves out."),
         canon=SITE_BASE + "/"))
     # Every row the table can show, as data. This replaced filters.json, which carried the
     # filter fields for rows whose display fields were in the HTML: two payloads describing
