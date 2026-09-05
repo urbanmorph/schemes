@@ -115,12 +115,17 @@ def decode(s):
     # states. NOT U+F8FF, which was the first choice: Chhattisgarh's other legacy font
     # extracts U+F8FF as a real character 326 times, so a placeholder there would collide
     # with the document the day the two decoders meet.
+    # A COMMA BETWEEN TWO DIGITS IS A COMMA. Kruti Dev types ए as ',', and Madhya
+    # Pradesh's demand books print money as 4,80,00, so the table turned every thousands
+    # separator into a vowel: 4ए80ए00. Parked before the table pass and restored after,
+    # which is the one place a pre-pass is right, because no Kruti Dev key spans a digit.
+    s = re.sub(r"(?<=\d),(?=\d)", "\U000f0001", s)
     out = _PAT.sub(lambda m: MAP[m.group(0)], s)
     # The i-matra is printed to the left of its consonant and stored that way. Unicode
     # stores it to the right, so every ि moves past the cluster that follows it.
     out = _CLUSTER.sub(lambda m: m.group(1) + "ि", out)
     out = _REPH.sub(lambda mm: "र्" + mm.group(1), out)
-    return out.replace("\U000f0000", "र्")
+    return out.replace("\U000f0000", "र्").replace("\U000f0001", ",")
 
 
 # THE PARALLEL CORPUS, and it is the whole argument that this file reads rather than

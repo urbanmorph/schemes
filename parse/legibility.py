@@ -131,10 +131,20 @@ SURVEY = [
      "The Outcome Budget puts the name, the head of account and sometimes the target in "
      "one column with no separator, and the column boundaries move between pages. There "
      "is no rule that finds the end of a name."),
-    ("Madhya Pradesh", None, dict(list=True, text=False, bounded=None, english=None, closes=None),
-     "The Gender Budget is set in KrutiDev, a legacy 8-bit font whose ToUnicode map "
-     "points back at 8-bit codepoints, so the extracted characters are not the "
-     "characters on the page."),
+    # The only refusal here whose reason CHANGED rather than being confirmed. It stood on
+    # the font and the font is no longer the problem; what stops it now is the calendar,
+    # and saying the old thing would be saying something false about a state.
+    ("Madhya Pradesh", None, dict(list=False, text=None, bounded=None, english=None, closes=None),
+     "NOT the font any more. It is set in KrutiDev010, which parse/krutidev.py decodes: a "
+     "page of Volume 9 came out as fluent Hindi with no change to the decoder, and its "
+     "demand books print a scheme code in brackets, a name and four money columns, so they "
+     "would parse. What stops it is the CYCLE. Its latest published budget is 2025-26 and "
+     "this register publishes 2026-27; the year filter on the finance site offers 2026-27 "
+     "and returns no documents for it, and every naming variant of the volume and demand "
+     "book URLs 404s. So it stops at the FIRST test, which asks for a scheme list FOR THIS "
+     "CYCLE, and the later tests are not asked. It would pass three of them if they were: "
+     "that is recorded here and not in the score, because a test this state was never asked "
+     "must not be counted as one it cleared."),
     ("Bihar", None, dict(list=True, text=False, bounded=None, english=None, closes=None),
      "It converts its budget to vector curves before publishing it. Its own file is "
      "called Demands For Grants Curve.pdf, and 108 pages of it yield 108 extractable "

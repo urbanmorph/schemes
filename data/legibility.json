@@ -1,5 +1,5 @@
 {
- "built_at": "2026-09-05T16:57:05Z",
+ "built_at": "2026-09-05T17:23:31Z",
  "method_note": "Verdicts are hand-entered from reading each state's documents, which is the only way this survey has ever been done. Every verdict for a state that was built is then checked against that state's own parser output, and a disagreement stops the build rather than publishing. The refusals have no output to check against, which is what a refusal is, so each carries the measurement that decided it instead.",
  "schemes_named": 40241,
  "schemes_named_on_site": 40241,
@@ -551,8 +551,8 @@
   },
   {
    "built": false,
-   "cleared": 1,
-   "failed_at": "text",
+   "cleared": 0,
+   "failed_at": "list",
    "key": null,
    "measured": null,
    "state": "Madhya Pradesh",
@@ -560,11 +560,11 @@
     "bounded": null,
     "closes": null,
     "english": null,
-    "list": true,
-    "text": false
+    "list": false,
+    "text": null
    },
-   "tests_run": 2,
-   "why": "The Gender Budget is set in KrutiDev, a legacy 8-bit font whose ToUnicode map points back at 8-bit codepoints, so the extracted characters are not the characters on the page."
+   "tests_run": 1,
+   "why": "NOT the font any more. It is set in KrutiDev010, which parse/krutidev.py decodes: a page of Volume 9 came out as fluent Hindi with no change to the decoder, and its demand books print a scheme code in brackets, a name and four money columns, so they would parse. What stops it is the CYCLE. Its latest published budget is 2025-26 and this register publishes 2026-27; the year filter on the finance site offers 2026-27 and returns no documents for it, and every naming variant of the volume and demand book URLs 404s. So it stops at the FIRST test, which asks for a scheme list FOR THIS CYCLE, and the later tests are not asked. It would pass three of them if they were: that is recorded here and not in the score, because a test this state was never asked must not be counted as one it cleared."
   },
   {
    "built": false,
