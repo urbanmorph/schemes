@@ -4,7 +4,7 @@
   "dbt": 138,
   "outcome": 10
  },
- "built": "2026-09-05T16:22:07Z",
+ "built": "2026-09-05T16:58:21Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [

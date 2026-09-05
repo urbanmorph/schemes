@@ -76,6 +76,8 @@ MAP = {
     "ª": "्र",
     "z": "्र",           # the rakar, the र hanging under the consonant before it
     "J": "श्र", "]": ",", "kW": "ॉ", "W": "ॉ", "@": "/", "A": "।",
+    "Z": "\U000f0000",   # the reph, parked here; the rule below moves it left
+    "}": "द्व", ":": "रू",
     "ç": "प्र", "É": "क्र", "Ó": "व्", "‚": "स्",
     # --- digits and punctuation the font maps to itself --------------------------------
     "0": "0", "1": "1", "2": "2", "3": "3", "4": "4",
@@ -105,13 +107,15 @@ def decode(s):
     """One Kruti Dev string to Unicode Devanagari."""
     if not s:
         return s
-    # Z is parked on a plane-15 private-use codepoint through the table pass. NOT U+F8FF,
-    # which was the first choice and is wrong: Chhattisgarh's OTHER legacy font extracts
-    # U+F8FF as a real character 326 times in the parallel corpus, so a placeholder there
-    # would collide with the document the day these two decoders meet. It cannot become
-    # the letter yet: the reph rule has to find it AFTER the i-matra has moved, and by
-    # then a real र् would be indistinguishable from one that belongs where it sits.
-    out = _PAT.sub(lambda m: MAP[m.group(0)], s.replace("Z", "\U000f0000"))
+    # Z is parked on a plane-15 private-use codepoint so the reph rule can find it after
+    # the i-matra has moved, and it is parked BY THE TABLE rather than by a pass before
+    # it. A pre-pass looked simpler and silently destroyed every multi-character key
+    # containing a Z: "bZ" is the whole letter ई, and with Z replaced first it could only
+    # ever decode as इ followed by a reph, which is why सफाई came out as सफाइर् in two
+    # states. NOT U+F8FF, which was the first choice: Chhattisgarh's other legacy font
+    # extracts U+F8FF as a real character 326 times, so a placeholder there would collide
+    # with the document the day the two decoders meet.
+    out = _PAT.sub(lambda m: MAP[m.group(0)], s)
     # The i-matra is printed to the left of its consonant and stored that way. Unicode
     # stores it to the right, so every ि moves past the cluster that follows it.
     out = _CLUSTER.sub(lambda m: m.group(1) + "ि", out)

@@ -1,52 +1,45 @@
 {
  "built_from": "data/chhattisgarh/schemes.json",
  "census": "Every row scoring 4 or more carries a hand label, so precision at the bar is a COUNT.",
- "key_is": "department number, book and the state's own scheme name, which is the only identifier these books print: the Outcome books carry no scheme code.",
- "labelled": 214,
+ "key_is": "department, book and the state's OWN Kruti Dev string, which is what Chhattisgarh printed. Not the decoded name: that is this register's reading and it moves when the decoder improves.",
+ "labelled": 212,
  "labels": {
-  "06|outcome|मंदिरों तथा धार्मिक स्थलों पर धर्मशालाओं का निर्माण": {
+  "06|outcome|eafnjksa rFkk /kkfeZd LFkyksa ij /keZ'kkykvksa dk fuekZ.k": {
    "be_lakh": 3300.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "मंदिरों तथा धार्मिक स्थलों पर धर्मशालाओं का निर्माण"
   },
-  "07|outcome|इर्-धरती": {
+  "07|outcome|bZ&/kjrh": {
    "be_lakh": 2500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "इर्-धरती"
   },
-  "07|outcome|दीनदयाल उपाध्याय भूमिहीन कृषि मजदूर कल्याण योजना": {
-   "be_lakh": 60000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "दीनदयाल उपाध्याय भूमिहीन कृषि मजदूर कल्याण योजना"
-  },
-  "07|outcome|मुख्य फसलों के उत्पादन संबंधी अनुमानों को समय पर भेजने की योजना": {
+  "07|outcome|eq[; Qlyksa ds mRiknu laca/kh vuqekuksa dks le; ij Hkstus dh ;kstuk": {
    "be_lakh": 115.4,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "मुख्य फसलों के उत्पादन संबंधी अनुमानों को समय पर भेजने की योजना"
   },
-  "09|outcome|खिलाडि़यों को प्रोत्साहन": {
-   "be_lakh": 400.0,
+  "07|outcome|nhun;ky mik/;k; Hkwfeghu d`f\"k etnwj dY;k.k ;kstuk": {
+   "be_lakh": 60000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
-   "name": "खिलाडि़यों को प्रोत्साहन"
+   "name": "दीनदयाल उपाध्याय भूमिहीन कृषि मजदूर कल्याण योजना"
   },
-  "09|outcome|खेल अकादमी": {
-   "be_lakh": 761.0,
+  "09|outcome|;qod dY;k.k xfrfof/k;ka": {
+   "be_lakh": 500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "खेल अकादमी"
+   "name": "युवक कल्याण गतिविधियां"
   },
-  "09|outcome|छत्तीसगगढि़या क्रीड़ा प्रोत्साहन योजना": {
+  "09|outcome|NRrhlxxf<+;k ØhM+k izksRlkgu ;kstuk": {
    "be_lakh": 5700.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -54,21 +47,28 @@
    "name": "छत्तीसगगढि़या क्रीड़ा प्रोत्साहन योजना",
    "reason": "cash incentive to a player"
   },
-  "09|outcome|युवक कल्याण गतिविधियां": {
-   "be_lakh": 500.0,
+  "09|outcome|[ksy vdkneh": {
+   "be_lakh": 761.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "युवक कल्याण गतिविधियां"
+   "name": "खेल अकादमी"
   },
-  "09|outcome|राज्य युवा महोत्सव": {
+  "09|outcome|f[kykfM+;ksa dks izksRlkgu": {
+   "be_lakh": 400.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "खिलाडि़यों को प्रोत्साहन"
+  },
+  "09|outcome|jkT; ;qok egksRlo": {
    "be_lakh": 500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "राज्य युवा महोत्सव"
   },
-  "09|outcome|राज्य स्तरीय खेल पुरस्कार": {
+  "09|outcome|jkT; Lrjh; [ksy iqjLdkj": {
    "be_lakh": 300.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -76,448 +76,462 @@
    "name": "राज्य स्तरीय खेल पुरस्कार",
    "reason": "a cash prize to a person"
   },
-  "09|outcome|सरगुजा ओलम्पिक": {
+  "09|outcome|ljxqtk vksyfEid": {
    "be_lakh": 500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "सरगुजा ओलम्पिक"
   },
-  "10|outcome|जैव विविधता का संरक्षण": {
-   "be_lakh": 1500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "जैव विविधता का संरक्षण"
-  },
-  "10|outcome|जैव विविधता बोर्ड की स्थापना": {
-   "be_lakh": 140.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "जैव विविधता बोर्ड की स्थापना"
-  },
-  "10|outcome|पथ वृक्षारोपण": {
-   "be_lakh": 1500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "पथ वृक्षारोपण"
-  },
-  "10|outcome|प्रोजेक्ट टाइर्गर": {
-   "be_lakh": 1750.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "प्रोजेक्ट टाइर्गर"
-  },
-  "10|outcome|बिगड़े वनों का सुधार": {
-   "be_lakh": 21000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "बिगड़े वनों का सुधार"
-  },
-  "10|outcome|बिगड़े वनों का सुधार बांस वनों सहित": {
-   "be_lakh": 550.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "बिगड़े वनों का सुधार बांस वनों सहित"
-  },
-  "10|outcome|मगरमच्छ संरक्षण योजना": {
+  "10|outcome|exjePN laj{k.k ;kstuk": {
    "be_lakh": 95.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "मगरमच्छ संरक्षण योजना"
   },
-  "10|outcome|राज्य में वानिकी अनुसंधान": {
-   "be_lakh": 90.0,
+  "10|outcome|fcxM+s ouksa dk lq/kkj": {
+   "be_lakh": 21000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "राज्य में वानिकी अनुसंधान"
+   "name": "बिगड़े वनों का सुधार"
   },
-  "10|outcome|राष्ट्रीय उद्यान एवं अभयारण्यों का विकास": {
-   "be_lakh": 1100.0,
+  "10|outcome|fcxM+s ouksa dk lq/kkj ckal ouksa lfgr": {
+   "be_lakh": 550.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "राष्ट्रीय उद्यान एवं अभयारण्यों का विकास"
+   "name": "बिगड़े वनों का सुधार बांस वनों सहित"
   },
-  "10|outcome|वन मार्गो पर रपटा एवं पुलिया निर्माण": {
-   "be_lakh": 500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "वन मार्गो पर रपटा एवं पुलिया निर्माण"
-  },
-  "10|outcome|वन विकास उपकर निधि से व्यय": {
-   "be_lakh": 400.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "वन विकास उपकर निधि से व्यय"
-  },
-  "10|outcome|संयुक्त वन प्रबंधन का सुदृढ़ीकरण एवं विकास": {
-   "be_lakh": 1000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "संयुक्त वन प्रबंधन का सुदृढ़ीकरण एवं विकास"
-  },
-  "10|outcome|हरियाली प्रसार योजना": {
+  "10|outcome|gfj;kyh izlkj ;kstuk": {
    "be_lakh": 528.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "हरियाली प्रसार योजना"
   },
-  "11|outcome|औद्योगिक इकाइर्यों को प्रतिपूर्ति/अनुदान": {
-   "be_lakh": 65200.0,
+  "10|outcome|iFk o`{kkjksi.k": {
+   "be_lakh": 1500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "औद्योगिक इकाइर्यों को प्रतिपूर्ति/अनुदान"
+   "name": "पथ वृक्षारोपण"
   },
-  "11|outcome|औद्योगिक क्षेत्र में अधोसंरचनात्मक उन्नयन कार्य": {
-   "be_lakh": 2500.0,
+  "10|outcome|izkstsDV VkbZxj": {
+   "be_lakh": 1750.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "औद्योगिक क्षेत्र में अधोसंरचनात्मक उन्नयन कार्य"
+   "name": "प्रोजेक्ट टाइर्गर"
   },
-  "11|youth|उद्यम क्रांति योजना": {
+  "10|outcome|jk\"Vªh; m|ku ,oa vHk;kj.;ksa dk fodkl": {
+   "be_lakh": 1100.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "राष्ट्रीय उद्यान एवं अभयारण्यों का विकास"
+  },
+  "10|outcome|jkT; esa okfudh vuqla/kku": {
+   "be_lakh": 90.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "राज्य में वानिकी अनुसंधान"
+  },
+  "10|outcome|la;qDr ou izca/ku dk lqn`<+hdj.k ,oa fodkl": {
+   "be_lakh": 1000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "संयुक्त वन प्रबंधन का सुदृढ़ीकरण एवं विकास"
+  },
+  "10|outcome|ou ekxksZ ij jiVk ,oa iqfy;k fuekZ.k": {
+   "be_lakh": 500.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "वन मार्गो पर रपटा एवं पुलिया निर्माण"
+  },
+  "10|outcome|ou fodkl midj fuf/k ls O;;": {
+   "be_lakh": 400.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "वन विकास उपकर निधि से व्यय"
+  },
+  "10|outcome|tSo fofo/krk cksMZ dh LFkkiuk": {
+   "be_lakh": 140.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "जैव विविधता बोर्ड की स्थापना"
+  },
+  "10|outcome|tSo fofo/krk dk laj{k.k": {
+   "be_lakh": 1500.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "जैव विविधता का संरक्षण"
+  },
+  "11|outcome|m|e Økafr ;kstuk": {
    "be_lakh": 500.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "उद्यम क्रांति योजना"
   },
-  "13|outcome|कृषि पम्पों का ऊर्जाीकरण": {
-   "be_lakh": 5000.0,
+  "11|outcome|vkS|ksfxd bdkbZ;ksa dks izfriwfrZ@vuqnku": {
+   "be_lakh": 65200.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "कृषि पम्पों का ऊर्जाीकरण"
+   "name": "औद्योगिक इकाइर्यों को प्रतिपूर्ति/अनुदान"
   },
-  "13|outcome|घरेलू विद्युत उपभोक्ताओं को विद्युत देयकों में राहत": {
+  "11|outcome|vkS|ksfxd {ks= esa v/kkslajpukRed mUu;u dk;Z": {
+   "be_lakh": 2500.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "औद्योगिक क्षेत्र में अधोसंरचनात्मक उन्नयन कार्य"
+  },
+  "13|outcome|?kjsyw fo|qr miHkksDrkvksa dks fo|qr ns;dksa esa jkgr": {
    "be_lakh": 80000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "घरेलू विद्युत उपभोक्ताओं को विद्युत देयकों में राहत"
   },
-  "13|outcome|पांच अश्वशक्ति तक के कृषि पंपों को निःशुल्क विद्युत प्रदाय हेतु अनुदा": {
-   "be_lakh": 550000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "पांच अश्वशक्ति तक के कृषि पंपों को निःशुल्क विद्युत प्रदाय हेतु अनुदा"
-  },
-  "13|outcome|पावर कम्पनी के ऋण का टेक ओव्हर": {
-   "be_lakh": 35340.0,
+  "13|outcome|d`f\"k iEiksa dk ÅtkhZdj.k": {
+   "be_lakh": 5000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "पावर कम्पनी के ऋण का टेक ओव्हर"
+   "name": "कृषि पम्पों का ऊर्जाीकरण"
   },
-  "13|outcome|पी-एम- जनमन योजना": {
-   "be_lakh": 330.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "पी-एम- जनमन योजना"
-  },
-  "13|outcome|मुख्यमंत्री शहरी विद्युतीकरण योजना": {
+  "13|outcome|eq[;ea=h 'kgjh fo|qrhdj.k ;kstuk": {
    "be_lakh": 5000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "मुख्यमंत्री शहरी विद्युतीकरण योजना"
   },
-  "13|outcome|सौर ऊर्जा आधारित योजनाओं हेतु अनुदान": {
-   "be_lakh": 3500.0,
+  "13|outcome|ih-,e- tueu ;kstuk": {
+   "be_lakh": 330.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "पी-एम- जनमन योजना"
+  },
+  "13|outcome|ikap v'o'kfDr rd ds d`f\"k iaiksa dks fu%'kqYd fo|qr iznk; gsrq vuqnk": {
+   "be_lakh": 550000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "पांच अश्वशक्ति तक के कृषि पंपों को निःशुल्क विद्युत प्रदाय हेतु अनुदा"
+  },
+  "13|outcome|ikoj dEiuh ds _.k dk Vsd vksOgj": {
+   "be_lakh": 35340.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "सौर ऊर्जा आधारित योजनाओं हेतु अनुदान"
+   "name": "पावर कम्पनी के ऋण का टेक ओव्हर"
   },
-  "13|outcome|सौर सामुदायिक सिंचाइर् योजना": {
+  "13|outcome|lkSj lkeqnkf;d flapkbZ ;kstuk": {
    "be_lakh": 500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "सौर सामुदायिक सिंचाइर् योजना"
   },
-  "14|outcome|कृषि यंत्रों पर अनुदान": {
-   "be_lakh": 1.48,
+  "13|outcome|lkSj ÅtkZ vk/kkfjr ;kstukvksa gsrq vuqnku": {
+   "be_lakh": 3500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "कृषि यंत्रों पर अनुदान"
+   "label": "not_scheme",
+   "name": "सौर ऊर्जा आधारित योजनाओं हेतु अनुदान"
   },
-  "14|outcome|कृषि यांत्रिकीकरण मिशन अंतर्गत": {
-   "be_lakh": 34.04,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "कृषि यांत्रिकीकरण मिशन अंतर्गत"
-  },
-  "14|outcome|ड्ढषक समग्र विकास योजना": {
-   "be_lakh": 15249.98,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "ड्ढषक समग्र विकास योजना"
-  },
-  "14|outcome|फसल प्रदर्शन योजना": {
+  "14|outcome|Qly izn'kZu ;kstuk": {
    "be_lakh": 117.34,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "फसल प्रदर्शन योजना"
   },
-  "14|outcome|राष्ट्रीय कृषि विकास योजना": {
-   "be_lakh": 30.0,
+  "14|outcome|d`f\"k ;a=ksa ij vuqnku": {
+   "be_lakh": 1.48,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "राष्ट्रीय कृषि विकास योजना"
+   "label": "scheme",
+   "name": "कृषि यंत्रों पर अनुदान"
   },
-  "14|outcome|राष्ट्रीय खाद्य सुरक्षा मिशन": {
+  "14|outcome|d`f\"k ;kaf=dhdj.k fe'ku varxZr": {
+   "be_lakh": 34.04,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "कृषि यांत्रिकीकरण मिशन अंतर्गत"
+  },
+  "14|outcome|jk\"Vªh; [kk| lqj{kk fe'ku": {
    "be_lakh": 314.09,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "राष्ट्रीय खाद्य सुरक्षा मिशन"
   },
-  "14|youth|नेशनल मिशन आॉन आइर्लपॉम एवं आइर्लसीड": {
+  "14|outcome|jk\"Vªh; d`f\"k fodkl ;kstuk": {
+   "be_lakh": 30.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "राष्ट्रीय कृषि विकास योजना"
+  },
+  "14|outcome|us'kuy fe'ku vkWu vkbZyikWe ,oa vkbZylhM": {
    "be_lakh": 5000.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "नेशनल मिशन आॉन आइर्लपॉम एवं आइर्लसीड"
   },
-  "15|outcome|सहकारी समितियों के लिए अंशपूंजी": {
+  "14|outcome|Ñ\"kd lexz fodkl ;kstuk": {
+   "be_lakh": 15249.98,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "ड्ढषक समग्र विकास योजना"
+  },
+  "15|outcome|lgdkjh lfefr;ksa ds fy, va'kiwath": {
    "be_lakh": 1000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "सहकारी समितियों के लिए अंशपूंजी"
   },
-  "16|gender|असंगठित कर्मकार महतारी जतन योजना": {
-   "be_lakh": 86.35,
-   "book": "Gender Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "असंगठित कर्मकार महतारी जतन योजना"
-  },
-  "16|gender|असंगठित कर्मकार मृत्यु एवं दिव्यांग": {
-   "be_lakh": 3.99,
-   "book": "Gender Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "असंगठित कर्मकार मृत्यु एवं दिव्यांग"
-  },
-  "16|gender|सफाइर् कर्मकार हेतु आवश्यक उपकरण": {
+  "16|gender|lQkbZ deZdkj gsrq vko';d midj.k": {
    "be_lakh": 1.98,
    "book": "Gender Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "सफाइर् कर्मकार हेतु आवश्यक उपकरण"
   },
-  "16|outcome|(अ) असंगठित श्रमिक सुरक्षा एवं कल्याण मंडल (ब) असंगठित सफाइर् कर्मगार कल्याण मंडल (स) ठेका मजदूर घरेलू कामकाजी महिला एवं हमाल कल्याण मंडल": {
-   "be_lakh": 12800.0,
-   "book": "Outcome Budget",
+  "16|gender|vlaxfBr deZdkj e`R;q ,oa fnO;kax": {
+   "be_lakh": 3.99,
+   "book": "Gender Budget",
    "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(अ) असंगठित श्रमिक सुरक्षा एवं कल्याण मंडल (ब) असंगठित सफाइर् कर्मगार कल्याण मंडल (स) ठेका मजदूर घरेलू कामकाजी महिला एवं हमाल कल्याण मंडल"
+   "label": "scheme",
+   "name": "असंगठित कर्मकार मृत्यु एवं दिव्यांग"
   },
-  "16|outcome|कर्मचारी राज्य बीमा चिकित्सालय": {
+  "16|gender|vlaxfBr deZdkj egrkjh tru ;kstuk": {
+   "be_lakh": 86.35,
+   "book": "Gender Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "असंगठित कर्मकार महतारी जतन योजना"
+  },
+  "16|outcome|deZpkjh jkT; chek fpfdRlky;": {
    "be_lakh": 2900.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "कर्मचारी राज्य बीमा चिकित्सालय"
   },
-  "16|outcome|राज्य बीमा अस्पताल की स्थापना": {
+  "16|outcome|jkT; chek vLirky dh LFkkiuk": {
    "be_lakh": 4500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "राज्य बीमा अस्पताल की स्थापना"
   },
-  "17|child|गहन डायरिया नियंत्रण पखवाडा ( प्जमदेपपिमक क्पंततीमं ब्वदजतवस थ्वतजदपहीज )": {
-   "be_lakh": 375.21,
-   "book": "Child Budget",
+  "16|outcome|¼v½ vlaxfBr Jfed lqj{kk ,oa dY;k.k eaMy ¼c½ vlaxfBr lQkbZ deZxkj dY;k.k eaMy ¼l½ Bsdk etnwj ?kjsyw dkedkth efgyk ,oa geky dY;k.k eaMy": {
+   "be_lakh": 12800.0,
+   "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "गहन डायरिया नियंत्रण पखवाडा ( प्जमदेपपिमक क्पंततीमं ब्वदजतवस थ्वतजदपहीज )"
+   "name": "(अ) असंगठित श्रमिक सुरक्षा एवं कल्याण मंडल (ब) असंगठित सफाइर् कर्मगार कल्याण मंडल (स) ठेका मजदूर घरेलू कामकाजी महिला एवं हमाल कल्याण मंडल"
   },
-  "17|child|नियमित टीकाकरण": {
-   "be_lakh": 4355.96,
-   "book": "Child Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "नियमित टीकाकरण"
-  },
-  "17|child|माँ कार्यक्रम (डवजीमत’े ।इेवसनजम ।िमिबजपवद)": {
-   "be_lakh": 465.68,
-   "book": "Child Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "माँ कार्यक्रम (डवजीमत’े ।इेवसनजम ।िमिबजपवद)"
-  },
-  "17|child|राष्ट्रीय बाल स्वास्थ्य कार्यक्रम": {
-   "be_lakh": 2905.92,
-   "book": "Child Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "राष्ट्रीय बाल स्वास्थ्य कार्यक्रम"
-  },
-  "17|child|शिशु”संरक्षण माह ( ैैड": {
-   "be_lakh": 0.09,
-   "book": "Child Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "शिशु”संरक्षण माह ( ैैड"
-  },
-  "17|child|स्कूल हेल्थ एंड वेलनेस कार्यक्रम": {
+  "17|child|Ldwy gsYFk ,aM osyusl dk;ZØe": {
    "be_lakh": 4.8,
    "book": "Child Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "स्कूल हेल्थ एंड वेलनेस कार्यक्रम"
   },
-  "17|outcome|चिकित्सा परिचारिकाओं का प्रशिक्षण केन्द्र": {
-   "be_lakh": 3500.0,
-   "book": "Outcome Budget",
+  "17|child|ek¡ dk;ZØe (Mother’s Absolute Affection)": {
+   "be_lakh": 465.68,
+   "book": "Child Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "चिकित्सा परिचारिकाओं का प्रशिक्षण केन्द्र"
+   "name": "माँ कार्यक्रम (डवजीमत’े ।इेवसनजम ।िमिबजपवद)"
   },
-  "17|outcome|मितानिन कल्याण निधि": {
-   "be_lakh": 35000.0,
-   "book": "Outcome Budget",
+  "17|child|f'k'kq”laj{k.k ekg ¼ SSM": {
+   "be_lakh": 0.09,
+   "book": "Child Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "शिशु”संरक्षण माह ( ैैड"
+  },
+  "17|child|fu;fer Vhdkdj.k": {
+   "be_lakh": 4355.96,
+   "book": "Child Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
-   "name": "मितानिन कल्याण निधि"
+   "name": "नियमित टीकाकरण"
   },
-  "17|outcome|मुख्यमंत्री दवा पेटी योजना": {
-   "be_lakh": 1500.0,
-   "book": "Outcome Budget",
+  "17|child|jk\"Vªh; cky LokLF; dk;ZØe": {
+   "be_lakh": 2905.92,
+   "book": "Child Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
-   "name": "मुख्यमंत्री दवा पेटी योजना"
+   "name": "राष्ट्रीय बाल स्वास्थ्य कार्यक्रम"
   },
-  "17|outcome|शहीद वीरनारायण सिंह आयुष्मान स्वास्थ्य योजना": {
+  "17|child|xgu Mk;fj;k fu;a=.k i[kokMk ¼ Itensified Diarrhea Control Fortnight ½": {
+   "be_lakh": 375.21,
+   "book": "Child Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "गहन डायरिया नियंत्रण पखवाडा ( प्जमदेपपिमक क्पंततीमं ब्वदजतवस थ्वतजदपहीज )"
+  },
+  "17|outcome|'kghn ohjukjk;.k flag vk;q\"eku LokLF; ;kstuk": {
    "be_lakh": 150000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "शहीद वीरनारायण सिंह आयुष्मान स्वास्थ्य योजना"
   },
-  "17|outcome|सामुदायिक स्वाास्थ्य केद्र": {
-   "be_lakh": 65300.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "सामुदायिक स्वाास्थ्य केद्र"
-  },
-  "17|outcome|स्वास्थ्य मितानिन योजना": {
+  "17|outcome|LokLF; ferkfuu ;kstuk": {
    "be_lakh": 150.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "स्वास्थ्य मितानिन योजना"
   },
-  "18|outcome|आदर्श शहर समृि) योजन": {
-   "be_lakh": 20000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "आदर्श शहर समृि) योजन"
-  },
-  "18|outcome|आवास योजना": {
-   "be_lakh": 83450.0,
+  "17|outcome|eq[;ea=h nok isVh ;kstuk": {
+   "be_lakh": 1500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
-   "name": "आवास योजना"
+   "name": "मुख्यमंत्री दवा पेटी योजना"
   },
-  "18|outcome|नगरीय निकायों की अधोसंरचना विकास योजना": {
-   "be_lakh": 75000.0,
+  "17|outcome|ferkfuu dY;k.k fuf/k": {
+   "be_lakh": 35000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "मितानिन कल्याण निधि"
+  },
+  "17|outcome|fpfdRlk ifjpkfjdkvksa dk izf'k{k.k dsUnz": {
+   "be_lakh": 3500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "नगरीय निकायों की अधोसंरचना विकास योजना"
+   "name": "चिकित्सा परिचारिकाओं का प्रशिक्षण केन्द्र"
   },
-  "18|outcome|मुख्यमंत्री नगरोत्थान योजना": {
-   "be_lakh": 45000.0,
+  "17|outcome|lkeqnkf;d LokkLF; dsnz": {
+   "be_lakh": 65300.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "मुख्यमंत्री नगरोत्थान योजना"
+   "name": "सामुदायिक स्वाास्थ्य केद्र"
   },
-  "18|outcome|मुख्यमंत्री मितान योजना": {
+  "18|outcome|eq[;ea=h ferku ;kstuk": {
    "be_lakh": 5000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "मुख्यमंत्री मितान योजना"
   },
-  "19|outcome|ए-डी-बी- परियोजनायें": {
+  "18|outcome|eq[;ea=h uxjksRFkku ;kstuk": {
+   "be_lakh": 45000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "मुख्यमंत्री नगरोत्थान योजना"
+  },
+  "18|outcome|uxjh; fudk;ksa dh v/kkslajpuk fodkl ;kstuk": {
+   "be_lakh": 75000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "नगरीय निकायों की अधोसंरचना विकास योजना"
+  },
+  "18|outcome|vkn'kZ 'kgj le`f) ;kstu": {
+   "be_lakh": 20000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "आदर्श शहर समृि) योजन"
+  },
+  "18|outcome|vkokl ;kstuk": {
+   "be_lakh": 83450.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "आवास योजना"
+  },
+  "19|outcome|,-Mh-ch- ifj;kstuk;sa": {
    "be_lakh": 101.15,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "ए-डी-बी- परियोजनायें"
   },
-  "19|outcome|खेल एवं युवा कल्याण संबंधी निर्माण कार्य": {
+  "19|outcome|[ksy ,oa ;qok dY;k.k laca/kh fuekZ.k dk;Z": {
    "be_lakh": 11500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "खेल एवं युवा कल्याण संबंधी निर्माण कार्य"
   },
-  "19|outcome|ग्रामीण एवं अन्य जिला मार्गाे का निर्माण": {
-   "be_lakh": 133952.1,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "ग्रामीण एवं अन्य जिला मार्गाे का निर्माण"
-  },
-  "19|outcome|जवाहर सेतु योजना": {
-   "be_lakh": 17100.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "जवाहर सेतु योजना"
-  },
-  "19|outcome|जिला मार्ग का निर्माण": {
+  "19|outcome|ftyk ekxZ dk fuekZ.k": {
    "be_lakh": 40000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "जिला मार्ग का निर्माण"
   },
-  "19|outcome|द्रुतगामी सड़क सम्पर्क योजना": {
+  "19|outcome|nzqrxkeh lM+d lEidZ ;kstuk": {
    "be_lakh": 20000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "द्रुतगामी सड़क सम्पर्क योजना"
   },
-  "19|outcome|वृहद एवं मध्यम पुलों का निर्माण": {
+  "19|outcome|o`gn ,oa e/;e iqyksa dk fuekZ.k": {
    "be_lakh": 75000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "वृहद एवं मध्यम पुलों का निर्माण"
   },
-  "20|outcome|कन्या शिक्षा प्रोत्साहन योजना": {
+  "19|outcome|tokgj lsrq ;kstuk": {
+   "be_lakh": 17100.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "जवाहर सेतु योजना"
+  },
+  "19|outcome|xzkeh.k ,oa vU; ftyk ekxkZs dk fuekZ.k": {
+   "be_lakh": 133952.1,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "ग्रामीण एवं अन्य जिला मार्गाे का निर्माण"
+  },
+  "20|outcome|Nk=kvksa dks fu%'kqYd ljLorh lk;dy iznk; ;kstuk": {
+   "be_lakh": 6600.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "छात्राओं को निःशुल्क सरस्वती सायकल प्रदाय योजना"
+  },
+  "20|outcome|Vk;fiax cksMZ dk xBu": {
+   "be_lakh": 75.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "टायपिंग बोर्ड का गठन"
+  },
+  "20|outcome|dU;k f'k{kk izksRlkgu ;kstuk": {
    "be_lakh": 500.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -525,28 +539,14 @@
    "name": "कन्या शिक्षा प्रोत्साहन योजना",
    "reason": "an incentive paid for a girl's schooling"
   },
-  "20|outcome|छात्राओं को निःशुल्क सरस्वती सायकल प्रदाय योजना": {
-   "be_lakh": 6600.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "छात्राओं को निःशुल्क सरस्वती सायकल प्रदाय योजना"
-  },
-  "20|outcome|टायपिंग बोर्ड का गठन": {
-   "be_lakh": 75.0,
+  "20|outcome|ekWMy Ldwy": {
+   "be_lakh": 2200.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "टायपिंग बोर्ड का गठन"
+   "name": "मॉडल स्कूल"
   },
-  "20|outcome|निःशुल्क गणवेश प्रदाय योजना": {
-   "be_lakh": 5500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "निःशुल्क गणवेश प्रदाय योजना"
-  },
-  "20|outcome|मुख्यमंत्री ज्ञान प्रोत्साहन योजना": {
+  "20|outcome|eq[;ea=h Kku izksRlkgu ;kstuk": {
    "be_lakh": 100.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -554,28 +554,7 @@
    "name": "मुख्यमंत्री ज्ञान प्रोत्साहन योजना",
    "reason": "an incentive paid to a student"
   },
-  "20|outcome|मॉडल स्कूल": {
-   "be_lakh": 2200.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "मॉडल स्कूल"
-  },
-  "20|outcome|राज्य छात्रवृत्ति": {
-   "be_lakh": 15000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "राज्य छात्रवृत्ति"
-  },
-  "20|outcome|विद्यार्थी दुर्घटना बीमा योजना": {
-   "be_lakh": 500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "विद्यार्थी दुर्घटना बीमा योजना"
-  },
-  "20|outcome|शिक्षकों को पुरस्कार": {
+  "20|outcome|f'k{kdksa dks iqjLdkj": {
    "be_lakh": 77.31,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -583,42 +562,49 @@
    "name": "शिक्षकों को पुरस्कार",
    "reason": "a prize inside the state's own employment relationship with its teachers. Uttar Pradesh measured teacher prizes at P(scheme) 0.000 over 61 labels and this register labels them the same way wherever they appear"
   },
-  "22|outcome|जिला पंचायत विकास निधि": {
-   "be_lakh": 2300.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "जिला पंचायत विकास निधि"
-  },
-  "22|outcome|मुख्यमंत्री ग्राम गौरव पथ योजना": {
-   "be_lakh": 10000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "मुख्यमंत्री ग्राम गौरव पथ योजना"
-  },
-  "22|outcome|मुख्यमंत्री ग्राम सड़क एवं विकास योजना": {
-   "be_lakh": 25000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "मुख्यमंत्री ग्राम सड़क एवं विकास योजना"
-  },
-  "22|outcome|विवेकानंद युवा प्रोत्साहन योजना": {
+  "20|outcome|fo|kFkhZ nq?kZVuk chek ;kstuk": {
    "be_lakh": 500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
-   "name": "विवेकानंद युवा प्रोत्साहन योजना"
+   "name": "विद्यार्थी दुर्घटना बीमा योजना"
   },
-  "22|outcome|श्र)ांजली योजना": {
+  "20|outcome|fu%'kqYd x.kos'k iznk; ;kstuk": {
+   "be_lakh": 5500.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "निःशुल्क गणवेश प्रदाय योजना"
+  },
+  "20|outcome|jkT; Nk=o`fRr": {
+   "be_lakh": 15000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "राज्य छात्रवृत्ति"
+  },
+  "22|outcome|J)katyh ;kstuk": {
    "be_lakh": 750.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "श्र)ांजली योजना"
   },
-  "22|youth|विवेकानंद युवा प्रोत्साहन योजना": {
+  "22|outcome|eq[;ea=h xzke lM+d ,oa fodkl ;kstuk": {
+   "be_lakh": 25000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "मुख्यमंत्री ग्राम सड़क एवं विकास योजना"
+  },
+  "22|outcome|eq[;ea=h xzke xkSjo iFk ;kstuk": {
+   "be_lakh": 10000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "मुख्यमंत्री ग्राम गौरव पथ योजना"
+  },
+  "22|outcome|foosdkuan ;qok izksRlkgu ;kstuk": {
    "be_lakh": 500.0,
    "book": "Youth Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -626,114 +612,158 @@
    "name": "विवेकानंद युवा प्रोत्साहन योजना",
    "reason": "youth incentive"
   },
-  "25|outcome|एकीकृत अम्ब्रेला योजना (पोस्ट मैट्रिक छात्रवृत्ति)": {
-   "be_lakh": 11000.0,
+  "22|outcome|ftyk iapk;r fodkl fuf/k": {
+   "be_lakh": 2300.0,
    "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "जिला पंचायत विकास निधि"
+  },
+  "22|youth|foosdkuan ;qok izksRlkgu ;kstuk": {
+   "be_lakh": 500.0,
+   "book": "Youth Budget",
+   "how": "audit census at the publishing bar, read by eye",
+   "label": "scheme",
+   "name": "विवेकानंद युवा प्रोत्साहन योजना",
+   "reason": "a scholarship or a study incentive paid to a person. The state files the same scheme in more than one of its four books, so this row is the second filing of one already labelled, and it is labelled again rather than inherited: the books are separate documents."
+  },
+  "25|outcome|,dhd`r vEczsyk ;kstuk ¼iksLV eSfVªd Nk=o`fRr½": {
+   "be_lakh": 11000.0,
+   "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "एकीकृत अम्ब्रेला योजना (पोस्ट मैट्रिक छात्रवृत्ति)"
   },
-  "25|outcome|कन्या शिक्षा परिसर": {
+  "25|outcome|dU;k f'k{kk ifjlj": {
    "be_lakh": 800.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "कन्या शिक्षा परिसर"
   },
-  "25|outcome|गु:कुल आवासीय विद्यालय": {
-   "be_lakh": 54.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "गु:कुल आवासीय विद्यालय"
-  },
-  "25|outcome|विज्ञान, वाणिज्य शिक्षण प्रोत्साहन योजना": {
-   "be_lakh": 400.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
+  "25|outcome|flfoy lsok ijh{kk izksRlkgu ;kstuk": {
+   "be_lakh": 23.0,
+   "book": "Youth Budget",
+   "how": "audit census at the publishing bar, read by eye",
    "label": "scheme",
-   "name": "विज्ञान, वाणिज्य शिक्षण प्रोत्साहन योजना"
+   "name": "सिविल सेवा परीक्षा प्रोत्साहन योजना",
+   "reason": "an incentive paid to a candidate"
   },
-  "25|outcome|विशेष कोचिंग केन्द्र योजना": {
+  "25|outcome|fo'ks\"k dksfpax dsUnz ;kstuk": {
    "be_lakh": 150.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "विशेष कोचिंग केन्द्र योजना"
   },
-  "25|outcome|विशेष पिछड़ी जनजाति आश्रम": {
+  "25|outcome|fo'ks\"k fiNM+h tutkfr vkJe": {
    "be_lakh": 82.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "विशेष पिछड़ी जनजाति आश्रम"
   },
-  "25|outcome|सिविल सेवा परीक्षा प्रोत्साहन योजना": {
-   "be_lakh": 23.0,
+  "25|outcome|foKku] okf.kT; f'k{k.k izksRlkgu ;kstuk": {
+   "be_lakh": 400.0,
    "book": "Outcome Budget",
-   "how": "audit census at the publishing bar, read by eye",
-   "label": "scheme",
-   "name": "सिविल सेवा परीक्षा प्रोत्साहन योजना",
-   "reason": "an incentive paid to a candidate"
-  },
-  "25|youth|एकीकृत अम्ब्रेला योजना (पोस्ट मैट्रिक छात्रवृत्ति)": {
-   "be_lakh": 11000.0,
-   "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
-   "name": "एकीकृत अम्ब्रेला योजना (पोस्ट मैट्रिक छात्रवृत्ति)"
+   "name": "विज्ञान, वाणिज्य शिक्षण प्रोत्साहन योजना"
   },
-  "25|youth|सिविल सेवा परीक्षा प्रोत्साहन योजना": {
+  "25|outcome|xq:dqy vkoklh; fo|ky;": {
+   "be_lakh": 54.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "गु:कुल आवासीय विद्यालय"
+  },
+  "25|youth|,dhd`r vEczsyk ;kstuk ¼iksLV eSfVªd Nk=o`fRr½": {
+   "be_lakh": 11000.0,
+   "book": "Youth Budget",
+   "how": "audit census at the publishing bar, read by eye",
+   "label": "scheme",
+   "name": "एकीकृत अम्ब्रेला योजना (पोस्ट मैट्रिक छात्रवृत्ति)",
+   "reason": "a scholarship or a study incentive paid to a person. The state files the same scheme in more than one of its four books, so this row is the second filing of one already labelled, and it is labelled again rather than inherited: the books are separate documents."
+  },
+  "25|youth|flfoy lsok ijh{kk izksRlkgu ;kstuk": {
    "be_lakh": 23.0,
    "book": "Youth Budget",
    "how": "audit census at the publishing bar, read by eye",
    "label": "scheme",
    "name": "सिविल सेवा परीक्षा प्रोत्साहन योजना",
-   "reason": "an incentive paid to a candidate"
+   "reason": "a scholarship or a study incentive paid to a person. The state files the same scheme in more than one of its four books, so this row is the second filing of one already labelled, and it is labelled again rather than inherited: the books are separate documents."
   },
-  "26|child|दिव्यांग छात्रवृन्निा": {
+  "26|child|fnO;kax Nk=o`fÙk": {
    "be_lakh": 268.0,
    "book": "Child Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "दिव्यांग छात्रवृन्निा"
   },
-  "26|outcome|इंदिरा गांधी राष्ट्रीय दिव्यांग पेंशन": {
-   "be_lakh": 2000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "इंदिरा गांधी राष्ट्रीय दिव्यांग पेंशन"
-  },
-  "26|outcome|उत्थान सब्सिडी योजना": {
-   "be_lakh": 5.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "उत्थान सब्सिडी योजना"
-  },
-  "26|outcome|घरौंदा योजना": {
+  "26|outcome|?kjkSank ;kstuk": {
    "be_lakh": 350.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "घरौंदा योजना"
   },
-  "26|outcome|छत्तीसगढ़ राज्य केश शिल्पी कल्याण बोर्ड": {
+  "26|outcome|Hkkjrh; dq\"B fuokjd la?k laLFkk dks vuqnku": {
+   "be_lakh": 14.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "भारतीय कुष्ठ निवारक संघ संस्था को अनुदान"
+  },
+  "26|outcome|NRrhlx<+ jkT; ds'k f'kYih dY;k.k cksMZ": {
    "be_lakh": 100.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "छत्तीसगढ़ राज्य केश शिल्पी कल्याण बोर्ड"
   },
-  "26|outcome|जिला दिव्यांग पुनर्वास केन्द्र": {
-   "be_lakh": 37.0,
+  "26|outcome|bafnjk xka/kh jk\"Vªh; fnO;kax isa'ku": {
+   "be_lakh": 2000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "इंदिरा गांधी राष्ट्रीय दिव्यांग पेंशन"
+  },
+  "26|outcome|ekufld chekj efgykvksa ds fy, ;kstuk ¼vijkftrk½": {
+   "be_lakh": 131.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "जिला दिव्यांग पुनर्वास केन्द्र"
+   "name": "मानसिक बीमार महिलाओं के लिए योजना (अपराजिता)"
   },
-  "26|outcome|दिव्यांगजन विवाह प्रोत्साहन योजना": {
+  "26|outcome|fQftdy fjQjsy fjgcyhVs'ku lsaVj dh ekuk esa LFkkiuk": {
+   "be_lakh": 198.92,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "फिजिकल रिफरेल रिहबलीटेशन सेंटर की माना में स्थापना"
+  },
+  "26|outcome|fl;ku gsYi ykbZu Vksy Qzh uEcj": {
+   "be_lakh": 130.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "सियान हेल्प लाइर्न टोल फ्री नम्बर"
+  },
+  "26|outcome|fnO;kaxtu f'k{kk izksRlkgu ;kstuk": {
+   "be_lakh": 30.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "दिव्यांगजन शिक्षा प्रोत्साहन योजना"
+  },
+  "26|outcome|fnO;kaxtu flfoy lsok izksRlkgu ;kstuk": {
+   "be_lakh": 25.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "दिव्यांगजन सिविल सेवा प्रोत्साहन योजना"
+  },
+  "26|outcome|fnO;kaxtu fookg izksRlkgu ;kstuk": {
    "be_lakh": 400.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -741,35 +771,14 @@
    "name": "दिव्यांगजन विवाह प्रोत्साहन योजना",
    "reason": "cash on the marriage of a disabled person"
   },
-  "26|outcome|दिव्यांगजन शिक्षा प्रोत्साहन योजना": {
-   "be_lakh": 30.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "दिव्यांगजन शिक्षा प्रोत्साहन योजना"
-  },
-  "26|outcome|दिव्यांगजन सामर्थ्य विकास": {
+  "26|outcome|fnO;kaxtu lkeF;Z fodkl": {
    "be_lakh": 350.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "दिव्यांगजन सामर्थ्य विकास"
   },
-  "26|outcome|दिव्यांगजन सिविल सेवा प्रोत्साहन योजना": {
-   "be_lakh": 25.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "दिव्यांगजन सिविल सेवा प्रोत्साहन योजना"
-  },
-  "26|outcome|दिव्यांगजनों के लिये शासकीय शालाए विशेष विद्यालय तथा संस्थाएं": {
-   "be_lakh": 3700.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "दिव्यांगजनों के लिये शासकीय शालाए विशेष विद्यालय तथा संस्थाएं"
-  },
-  "26|outcome|दिव्यांगजनों को छात्रवृत्ति": {
+  "26|outcome|fnO;kaxtuksa dks Nk=o`fRr": {
    "be_lakh": 270.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -777,56 +786,91 @@
    "name": "दिव्यांगजनों को छात्रवृत्ति",
    "reason": "a scholarship"
   },
-  "26|outcome|नशाबंदी कार्यक्रम": {
-   "be_lakh": 250.0,
+  "26|outcome|fnO;kaxtuksa ds fy;s 'kkldh; 'kkyk, fo'ks\"k fo|ky; rFkk laLFkk,a": {
+   "be_lakh": 3700.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "नशाबंदी कार्यक्रम"
+   "name": "दिव्यांगजनों के लिये शासकीय शालाए विशेष विद्यालय तथा संस्थाएं"
   },
-  "26|outcome|प्रमस्तिष्क अंगाघात निःशक्तजनों हेतु उपचार एवं पुनर्वास संस्थान": {
-   "be_lakh": 107.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "प्रमस्तिष्क अंगाघात निःशक्तजनों हेतु उपचार एवं पुनर्वास संस्थान"
-  },
-  "26|outcome|फिजिकल रिफरेल रिहबलीटेशन सेंटर की माना में स्थापना": {
-   "be_lakh": 198.92,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "फिजिकल रिफरेल रिहबलीटेशन सेंटर की माना में स्थापना"
-  },
-  "26|outcome|भारतीय कुष्ठ निवारक संघ संस्था को अनुदान": {
-   "be_lakh": 14.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "भारतीय कुष्ठ निवारक संघ संस्था को अनुदान"
-  },
-  "26|outcome|मानसिक बीमार महिलाओं के लिए योजना (अपराजिता)": {
-   "be_lakh": 131.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "मानसिक बीमार महिलाओं के लिए योजना (अपराजिता)"
-  },
-  "26|outcome|विश्व दिव्यांग दिवस": {
+  "26|outcome|fo'o fnO;kax fnol": {
    "be_lakh": 100.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "विश्व दिव्यांग दिवस"
   },
-  "26|outcome|सियान हेल्प लाइर्न टोल फ्री नम्बर": {
-   "be_lakh": 130.0,
+  "26|outcome|ftyk fnO;kax iquokZl dsUnz": {
+   "be_lakh": 37.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "सियान हेल्प लाइर्न टोल फ्री नम्बर"
+   "name": "जिला दिव्यांग पुनर्वास केन्द्र"
   },
-  "29|outcome|अंत्योदय अन्न योजनांतर्गत चना का प्रदाय": {
+  "26|outcome|izefLr\"d vaxk?kkr fu%'kDrtuksa gsrq mipkj ,oa iquokZl laLFkku": {
+   "be_lakh": 107.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "प्रमस्तिष्क अंगाघात निःशक्तजनों हेतु उपचार एवं पुनर्वास संस्थान"
+  },
+  "26|outcome|mRFkku lfClMh ;kstuk": {
+   "be_lakh": 5.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "उत्थान सब्सिडी योजना"
+  },
+  "26|outcome|u'kkcanh dk;Zdze": {
+   "be_lakh": 250.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "नशाबंदी कार्यक्रम"
+  },
+  "29|outcome|'kDdj forj.k ;kstuk": {
+   "be_lakh": 22500.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "शक्कर वितरण योजना"
+  },
+  "29|outcome|R;kSgkjksa@esyk gsrq nky&Hkkr dsUnzksa d lapkyu": {
+   "be_lakh": 100.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "त्यौहारों/मेला हेतु दाल-भात केन्द्रों क संचालन"
+  },
+  "29|outcome|eq[;ea=h [kk|kUu lgk;rk ;kstuk": {
+   "be_lakh": 500000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "मुख्यमंत्री खाद्यान्न सहायता योजना"
+  },
+  "29|outcome|fj;k;rh nj ij vk;ksMkbZTM ued forj.k": {
+   "be_lakh": 15000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "रियायती दर पर आयोडाइर्ज्ड नमक वितरण"
+  },
+  "29|outcome|mfpr ewY; nqdkuksa dks foRrh; iks\"k.k": {
+   "be_lakh": 1000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "उचित मूल्य दुकानों को वित्तीय पोषण"
+  },
+  "29|outcome|ukckMZ lgk;rk ls xksnke fuekZ.k": {
+   "be_lakh": 18000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "नाबार्ड सहायता से गोदाम निर्माण"
+  },
+  "29|outcome|vaR;ksn; vUu ;kstukarxZr puk dk iznk;": {
    "be_lakh": 45000.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -834,14 +878,7 @@
    "name": "अंत्योदय अन्न योजनांतर्गत चना का प्रदाय",
    "reason": "food to an Antyodaya household"
   },
-  "29|outcome|उचित मूल्य दुकानों को वित्तीय पोषण": {
-   "be_lakh": 1000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "उचित मूल्य दुकानों को वित्तीय पोषण"
-  },
-  "29|outcome|गुड़ वितरण योजना": {
+  "29|outcome|xqM+ forj.k ;kstuk": {
    "be_lakh": 7500.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -849,259 +886,210 @@
    "name": "गुड़ वितरण योजना",
    "reason": "jaggery distributed to households"
   },
-  "29|outcome|त्यौहारों/मेला हेतु दाल-भात केन्द्रों क संचालन": {
-   "be_lakh": 100.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "त्यौहारों/मेला हेतु दाल-भात केन्द्रों क संचालन"
-  },
-  "29|outcome|नाबार्ड सहायता से गोदाम निर्माण": {
-   "be_lakh": 18000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "नाबार्ड सहायता से गोदाम निर्माण"
-  },
-  "29|outcome|मुख्यमंत्री खाद्यान्न सहायता योजना": {
-   "be_lakh": 500000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "मुख्यमंत्री खाद्यान्न सहायता योजना"
-  },
-  "29|outcome|रियायती दर पर आयोडाइर्ज्ड नमक वितरण": {
-   "be_lakh": 15000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "रियायती दर पर आयोडाइर्ज्ड नमक वितरण"
-  },
-  "29|outcome|शक्कर वितरण योजना": {
-   "be_lakh": 22500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "शक्कर वितरण योजना"
-  },
-  "30|outcome|जिला विचारणियका पुनरीक्षण": {
-   "be_lakh": 100.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "जिला विचारणियका पुनरीक्षण"
-  },
-  "30|outcome|फोटोग्राफी सेल": {
+  "30|outcome|QksVksxzkQh lsy": {
    "be_lakh": 20.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "फोटोग्राफी सेल"
   },
-  "30|outcome|मुक्ताकाश संग्रहालय": {
+  "30|outcome|eqDrkdk'k laxzgky;": {
    "be_lakh": 780.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "मुक्ताकाश संग्रहालय"
   },
-  "30|outcome|समारोह हेतु अनुदान": {
+  "30|outcome|ftyk fopkjf.k;dk iqujh{k.k": {
+   "be_lakh": 100.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "जिला विचारणियका पुनरीक्षण"
+  },
+  "30|outcome|lekjksg gsrq vuqnku": {
    "be_lakh": 5000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "समारोह हेतु अनुदान"
   },
-  "30|outcome|सार्वजनिक पुस्तकालय": {
+  "30|outcome|lkoZtfud iqLrdky;": {
    "be_lakh": 25.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "सार्वजनिक पुस्तकालय"
   },
-  "31|outcome|(10) खारंग जलाशय": {
-   "be_lakh": 5400.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(10) खारंग जलाशय"
-  },
-  "31|outcome|(11) झुमका": {
-   "be_lakh": 100.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(11) झुमका"
-  },
-  "31|outcome|(11) मनियारी जलाशय": {
-   "be_lakh": 4325.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(11) मनियारी जलाशय"
-  },
-  "31|outcome|(12) गेज": {
-   "be_lakh": 511.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(12) गेज"
-  },
-  "31|outcome|(13) किंकारीनाला": {
-   "be_lakh": 80.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(13) किंकारीनाला"
-  },
-  "31|outcome|(14) कुंवरपुर": {
-   "be_lakh": 10.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(14) कुंवरपुर"
-  },
-  "31|outcome|(16) पैरी बांध एवं पैरी-महानदी इन्टरलिंकिंग परियोजना मध्यम परियोजना": {
-   "be_lakh": 10.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(16) पैरी बांध एवं पैरी-महानदी इन्टरलिंकिंग परियोजना मध्यम परियोजना"
-  },
-  "31|outcome|(20) कोसारटेड़ा": {
-   "be_lakh": 3010.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(20) कोसारटेड़ा"
-  },
-  "31|outcome|(23) घुमरिया नाला": {
-   "be_lakh": 110.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(23) घुमरिया नाला"
-  },
-  "31|outcome|(3) :से": {
-   "be_lakh": 28.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(3) :से"
-  },
-  "31|outcome|(35) झीरमनदी": {
-   "be_lakh": 100.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(35) झीरमनदी"
-  },
-  "31|outcome|(4) कोडार परियोजना": {
-   "be_lakh": 1050.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(4) कोडार परियोजना"
-  },
-  "31|outcome|(4) खपरी": {
-   "be_lakh": 400.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(4) खपरी"
-  },
-  "31|outcome|(5) तांदुला जलाशय": {
-   "be_lakh": 4050.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(5) तांदुला जलाशय"
-  },
-  "31|outcome|(6) मटियामोती": {
-   "be_lakh": 1300.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(6) मटियामोती"
-  },
-  "31|outcome|(7) छिरपानी": {
-   "be_lakh": 800.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(7) छिरपानी"
-  },
-  "31|outcome|(8) समोदा परियोजना": {
-   "be_lakh": 5120.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(8) समोदा परियोजना"
-  },
-  "31|outcome|(9) पिपरिया": {
-   "be_lakh": 350.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "(9) पिपरिया"
-  },
-  "31|outcome|बांध सुरक्षा का कार्य": {
+  "31|outcome|cka/k lqj{kk dk dk;Z": {
    "be_lakh": 2432.75,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "बांध सुरक्षा का कार्य"
   },
-  "32|outcome|मुख्यमंत्री आवासीय योजना": {
-   "be_lakh": 200.0,
+  "31|outcome|¼10½ [kkjax tyk'k;": {
+   "be_lakh": 5400.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "मुख्यमंत्री आवासीय योजना"
+   "label": "not_scheme",
+   "name": "(10) खारंग जलाशय"
   },
-  "32|outcome|स्टेट कैपिटल रीजन अथॉरिटी": {
+  "31|outcome|¼11½ >qedk": {
+   "be_lakh": 100.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(11) झुमका"
+  },
+  "31|outcome|¼11½ efu;kjh tyk'k;": {
+   "be_lakh": 4325.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(11) मनियारी जलाशय"
+  },
+  "31|outcome|¼12½ xst": {
+   "be_lakh": 511.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(12) गेज"
+  },
+  "31|outcome|¼13½ fdadkjhukyk": {
+   "be_lakh": 80.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(13) किंकारीनाला"
+  },
+  "31|outcome|¼14½ dqaojiqj": {
+   "be_lakh": 10.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(14) कुंवरपुर"
+  },
+  "31|outcome|¼16½ iSjh cka/k ,oa iSjh&egkunh bUVjfyafdax ifj;kstuk e/;e ifj;kstuk": {
+   "be_lakh": 10.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(16) पैरी बांध एवं पैरी-महानदी इन्टरलिंकिंग परियोजना मध्यम परियोजना"
+  },
+  "31|outcome|¼20½ dkslkjVsM+k": {
+   "be_lakh": 3010.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(20) कोसारटेड़ा"
+  },
+  "31|outcome|¼23½ ?kqefj;k ukyk": {
+   "be_lakh": 110.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(23) घुमरिया नाला"
+  },
+  "31|outcome|¼35½ >hjeunh": {
+   "be_lakh": 100.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(35) झीरमनदी"
+  },
+  "31|outcome|¼3½ :ls": {
+   "be_lakh": 28.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(3) :से"
+  },
+  "31|outcome|¼4½ [kijh": {
+   "be_lakh": 400.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(4) खपरी"
+  },
+  "31|outcome|¼4½ dksMkj ifj;kstuk": {
+   "be_lakh": 1050.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(4) कोडार परियोजना"
+  },
+  "31|outcome|¼5½ rkanqyk tyk'k;": {
+   "be_lakh": 4050.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(5) तांदुला जलाशय"
+  },
+  "31|outcome|¼6½ efV;keksrh": {
+   "be_lakh": 1300.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(6) मटियामोती"
+  },
+  "31|outcome|¼7½ fNjikuh": {
+   "be_lakh": 800.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(7) छिरपानी"
+  },
+  "31|outcome|¼8½ leksnk ifj;kstuk": {
+   "be_lakh": 5120.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(8) समोदा परियोजना"
+  },
+  "31|outcome|¼9½ fiifj;k": {
+   "be_lakh": 350.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "(9) पिपरिया"
+  },
+  "32|outcome|LVsV dSfiVy jhtu vFkkWfjVh": {
    "be_lakh": 6800.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "स्टेट कैपिटल रीजन अथॉरिटी"
   },
-  "34|child|आंगनबाड़ी एवं अस्पताल में नलकूप खनन कार्य": {
-   "be_lakh": 3.0,
-   "book": "Child Budget",
+  "32|outcome|eq[;ea=h vkoklh; ;kstuk": {
+   "be_lakh": 200.0,
+   "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "आंगनबाड़ी एवं अस्पताल में नलकूप खनन कार्य"
+   "label": "scheme",
+   "name": "मुख्यमंत्री आवासीय योजना"
   },
-  "34|child|ग्रामों में पेयजल प्रदाय": {
-   "be_lakh": 5000.0,
-   "book": "Child Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "ग्रामों में पेयजल प्रदाय"
-  },
-  "34|child|जल जीवन मिशन": {
+  "34|child|ty thou fe'ku": {
    "be_lakh": 450000.06,
    "book": "Child Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "जल जीवन मिशन"
   },
-  "34|outcome|जल जीवन मिशन (जे-जे-एम-) के अन्तर्गत": {
-   "be_lakh": 300000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "जल जीवन मिशन (जे-जे-एम-) के अन्तर्गत"
-  },
-  "34|outcome|राज्य मद ग्रामीण पेयजल कार्यक्रम के अन्तर्गत": {
-   "be_lakh": 42000.0,
-   "book": "Outcome Budget",
+  "34|child|vkaxuckM+h ,oa vLirky esa uydwi [kuu dk;Z": {
+   "be_lakh": 3.0,
+   "book": "Child Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "राज्य मद ग्रामीण पेयजल कार्यक्रम के अन्तर्गत"
+   "name": "आंगनबाड़ी एवं अस्पताल में नलकूप खनन कार्य"
   },
-  "34|outcome|शहरी तथा अ)र्शहरी क्षेत्रों में जल प्रदाय योजना और बड़े शहरों में जल निकास योजना का सर्वेक्षण": {
+  "34|child|xzkeksa esa is;ty iznk;": {
+   "be_lakh": 5000.0,
+   "book": "Child Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "ग्रामों में पेयजल प्रदाय"
+  },
+  "34|outcome|'kgjh rFkk v)Z'kgjh {ks=ksa esa ty iznk; ;kstuk vkSj cM+s 'kgjksa esa ty fudkl ;kstuk dk losZ{k.k": {
    "be_lakh": 25.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -1109,254 +1097,240 @@
    "name": "शहरी तथा अ)र्शहरी क्षेत्रों में जल प्रदाय योजना और बड़े शहरों में जल निकास योजना का सर्वेक्षण",
    "reason": "running an urban water supply and drainage system"
   },
-  "34|outcome|शहरी/नगरीय क्षेत्रों में जल प्रदाय योजना": {
+  "34|outcome|'kgjh@uxjh; {ks=ksa esa ty iznk; ;kstuk": {
    "be_lakh": 3000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "शहरी/नगरीय क्षेत्रों में जल प्रदाय योजना"
   },
-  "34|outcome|शालाओं में जल प्रदाय व्यवस्था": {
+  "34|outcome|'kkykvksa esa ty iznk; O;oLFkk": {
    "be_lakh": 3.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "शालाओं में जल प्रदाय व्यवस्था"
   },
-  "35|outcome|छत्तीसगढ़ गौ-सेवा एवं ग्रामीण विकास आयोग को अनुदान": {
+  "34|outcome|jkT; en xzkeh.k is;ty dk;Zdze ds vUrxZr": {
+   "be_lakh": 42000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "राज्य मद ग्रामीण पेयजल कार्यक्रम के अन्तर्गत"
+  },
+  "34|outcome|ty thou fe'ku ¼ts-ts-,e-½ ds vUrxZr": {
+   "be_lakh": 300000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "जल जीवन मिशन (जे-जे-एम-) के अन्तर्गत"
+  },
+  "35|outcome|NRrhlx<+ xkS&lsok ,oa xzkeh.k fodkl vk;ksx dks vuqnku": {
    "be_lakh": 250.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "छत्तीसगढ़ गौ-सेवा एवं ग्रामीण विकास आयोग को अनुदान"
   },
-  "35|outcome|दुग्ध उत्पादन अधोसंरचना": {
-   "be_lakh": 1200.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "दुग्ध उत्पादन अधोसंरचना"
-  },
-  "35|outcome|नस्ल सुधार हेतु सांडों का वितरण": {
-   "be_lakh": 81.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "नस्ल सुधार हेतु सांडों का वितरण"
-  },
-  "35|outcome|पशुरोग नियंत्रण": {
-   "be_lakh": 1000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "पशुरोग नियंत्रण"
-  },
-  "35|outcome|बकरी पालन प्रक्षेत्रों का सुदृढ़ीकरण": {
+  "35|outcome|cdjh ikyu iz{ks=ksa dk lqn`<+hdj.k": {
    "be_lakh": 1075.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "बकरी पालन प्रक्षेत्रों का सुदृढ़ीकरण"
   },
-  "35|outcome|राज्य पशु चिकित्सा परिषद की स्थापना": {
-   "be_lakh": 88.9,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "राज्य पशु चिकित्सा परिषद की स्थापना"
-  },
-  "35|outcome|विशेष पशुपालन कार्यक्रम": {
+  "35|outcome|fo'ks\"k i'kqikyu dk;Zdze": {
    "be_lakh": 250.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "विशेष पशुपालन कार्यक्रम"
   },
-  "36|outcome|कामधेनु पशु चिकित्सा विश्वविद्यालय": {
+  "35|outcome|i'kqjksx fu;a=.k": {
+   "be_lakh": 1000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "पशुरोग नियंत्रण"
+  },
+  "35|outcome|jkT; i'kq fpfdRlk ifj\"kn dh LFkkiuk": {
+   "be_lakh": 88.9,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "राज्य पशु चिकित्सा परिषद की स्थापना"
+  },
+  "35|outcome|nqX/k mRiknu v/kkslajpuk": {
+   "be_lakh": 1200.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "दुग्ध उत्पादन अधोसंरचना"
+  },
+  "35|outcome|uLy lq/kkj gsrq lkaMksa dk forj.k": {
+   "be_lakh": 81.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "नस्ल सुधार हेतु सांडों का वितरण"
+  },
+  "36|outcome|dke/ksuq i'kq fpfdRlk fo'ofo|ky;": {
    "be_lakh": 400.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "कामधेनु पशु चिकित्सा विश्वविद्यालय"
   },
-  "36|outcome|प्रधानमंत्री मत्स्य संपदा योजना": {
-   "be_lakh": 20000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "प्रधानमंत्री मत्स्य संपदा योजना"
-  },
-  "36|outcome|मत्स्यालय": {
+  "36|outcome|eRL;ky;": {
    "be_lakh": 40.01,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "मत्स्यालय"
   },
-  "36|outcome|विस्तार एवं प्रशिक्षण": {
+  "36|outcome|foLrkj ,oa izf'k{k.k": {
    "be_lakh": 350.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "विस्तार एवं प्रशिक्षण"
   },
-  "38|outcome|दुर्ग विश्वविद्यालय": {
-   "be_lakh": 1050.0,
+  "36|outcome|iz/kkuea=h eRL; laink ;kstuk": {
+   "be_lakh": 20000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "दुर्ग विश्वविद्यालय"
+   "label": "scheme",
+   "name": "प्रधानमंत्री मत्स्य संपदा योजना"
   },
-  "38|outcome|पं- रविशंकर शुक्ल विश्वविद्यालय रायपुर": {
+  "38|outcome|ch-ih-,y- cqd cSad ;kstuk": {
+   "be_lakh": 60.0,
+   "book": "Youth Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "बी-पी-एल- बुक बैंक योजना"
+  },
+  "38|outcome|ch-ih-,y-Nk=o`fRr ;kstuk": {
+   "be_lakh": 500.0,
+   "book": "Youth Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "बी-पी-एल-छात्रवृत्ति योजना"
+  },
+  "38|outcome|ia- jfo'kadj 'kqDy fo'ofo|ky; jk;iqj": {
    "be_lakh": 4000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "पं- रविशंकर शुक्ल विश्वविद्यालय रायपुर"
   },
-  "38|outcome|पं- सुन्दरलाल शर्मा (मुक्त) विश्वविद्यालय": {
+  "38|outcome|ia- lqUnjyky 'kekZ ¼eqDr½ fo'ofo|ky;": {
    "be_lakh": 150.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "पं- सुन्दरलाल शर्मा (मुक्त) विश्वविद्यालय"
   },
-  "38|outcome|बी-पी-एल- बुक बैंक योजना": {
-   "be_lakh": 60.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "बी-पी-एल- बुक बैंक योजना"
-  },
-  "38|outcome|बी-पी-एल-छात्रवृत्ति योजना": {
-   "be_lakh": 500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "बी-पी-एल-छात्रवृत्ति योजना"
-  },
-  "38|outcome|रायगढ़ विश्वविद्यालय": {
-   "be_lakh": 400.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "रायगढ़ विश्वविद्यालय"
-  },
-  "38|outcome|राष्ट्रीय उच्चतर शिक्षा अभियान": {
+  "38|outcome|jk\"Vªh; mPprj f'k{kk vfHk;ku": {
    "be_lakh": 10000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "राष्ट्रीय उच्चतर शिक्षा अभियान"
   },
-  "38|outcome|सरगुजा विश्वविद्यालय": {
+  "38|outcome|jk;x<+ fo'ofo|ky;": {
+   "be_lakh": 400.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "रायगढ़ विश्वविद्यालय"
+  },
+  "38|outcome|ljxqtk fo'ofo|ky;": {
    "be_lakh": 700.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "सरगुजा विश्वविद्यालय"
   },
-  "38|youth|बी-पी-एल- बुक बैंक योजना": {
-   "be_lakh": 60.0,
-   "book": "Youth Budget",
+  "38|outcome|nqxZ fo'ofo|ky;": {
+   "be_lakh": 1050.0,
+   "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "बी-पी-एल- बुक बैंक योजना"
+   "label": "not_scheme",
+   "name": "दुर्ग विश्वविद्यालय"
   },
-  "38|youth|बी-पी-एल-छात्रवृत्ति योजना": {
+  "38|youth|ch-ih-,y-Nk=o`fRr ;kstuk": {
    "be_lakh": 500.0,
    "book": "Youth Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "बी-पी-एल-छात्रवृत्ति योजना"
-  },
-  "42|outcome|आइर्-आइर्-आइर्-टी की स्थापना": {
-   "be_lakh": 1500.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "आइर्-आइर्-आइर्-टी की स्थापना"
-  },
-  "42|outcome|ड्राइंर्ग सामग्री का प्रदाय": {
-   "be_lakh": 0.38,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "ड्राइंर्ग सामग्री का प्रदाय"
-  },
-  "42|outcome|पॉलिटेक्निक संस्थाएं": {
-   "be_lakh": 17900.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "पॉलिटेक्निक संस्थाएं"
-  },
-  "42|outcome|बी-पी-एल- छात्रवृत्ति योजना": {
-   "be_lakh": 10.0,
-   "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
    "label": "scheme",
-   "name": "बी-पी-एल- छात्रवृत्ति योजना",
-   "reason": "a scholarship"
+   "name": "बी-पी-एल-छात्रवृत्ति योजना",
+   "reason": "a scholarship or a study incentive paid to a person. The state files the same scheme in more than one of its four books, so this row is the second filing of one already labelled, and it is labelled again rather than inherited: the books are separate documents."
   },
-  "42|outcome|सेन्ट्रल इंस्टीट्यूट आॉफ प्लास्टिक इंजीनियरिंग एण्ड टेक्नालॉजी (सिपेट)": {
-   "be_lakh": 50.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "सेन्ट्रल इंस्टीट्यूट आॉफ प्लास्टिक इंजीनियरिंग एण्ड टेक्नालॉजी (सिपेट)"
-  },
-  "42|youth|ड्राइंर्ग सामग्री का प्रदाय": {
+  "42|outcome|MªkbaZx lkexzh dk iznk;": {
    "be_lakh": 100.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "ड्राइंर्ग सामग्री का प्रदाय"
   },
-  "42|youth|बी-पी-एल- छात्रवृत्ति योजना": {
+  "42|outcome|ch-ih-,y- Nk=o`fRr ;kstuk": {
    "be_lakh": 10.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "बी-पी-एल- छात्रवृत्ति योजना"
   },
-  "42|youth|मुख्यमंत्री कौशल विकास योजना": {
+  "42|outcome|eq[;ea=h dkS'ky fodkl ;kstuk": {
    "be_lakh": 3000.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "मुख्यमंत्री कौशल विकास योजना"
   },
-  "42|youth|शिल्पकार प्रशिक्षण योजना (औद्योगिक प्रशिक्षण संस्था का संचालन)": {
+  "42|outcome|f'kYidkj izf'k{k.k ;kstuk ¼vkS|ksfxd izf'k{k.k laLFkk dk lapkyu½": {
    "be_lakh": 25700.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "शिल्पकार प्रशिक्षण योजना (औद्योगिक प्रशिक्षण संस्था का संचालन)"
   },
-  "43|outcome|अटल मॉनिटरिंग पोर्टल (सी-एम- डैशबोर्ड)": {
-   "be_lakh": 1000.0,
+  "42|outcome|ikWfyVsfDud laLFkk,a": {
+   "be_lakh": 17900.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "अटल मॉनिटरिंग पोर्टल (सी-एम- डैशबोर्ड)"
+   "name": "पॉलिटेक्निक संस्थाएं"
   },
-  "43|outcome|जिला इर्-गवर्नेस सोसायटी का संचालन": {
+  "42|outcome|lsUVªy baLVhV~;wV vkWQ IykfLVd bathfu;fjax ,.M VsDukykWth ¼flisV½": {
+   "be_lakh": 50.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "सेन्ट्रल इंस्टीट्यूट आॉफ प्लास्टिक इंजीनियरिंग एण्ड टेक्नालॉजी (सिपेट)"
+  },
+  "42|outcome|vkbZ-vkbZ-vkbZ-Vh dh LFkkiuk": {
+   "be_lakh": 1500.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "आइर्-आइर्-आइर्-टी की स्थापना"
+  },
+  "42|youth|ch-ih-,y- Nk=o`fRr ;kstuk": {
+   "be_lakh": 10.0,
+   "book": "Youth Budget",
+   "how": "audit census at the publishing bar, read by eye",
+   "label": "scheme",
+   "name": "बी-पी-एल- छात्रवृत्ति योजना",
+   "reason": "a scholarship or a study incentive paid to a person. The state files the same scheme in more than one of its four books, so this row is the second filing of one already labelled, and it is labelled again rather than inherited: the books are separate documents."
+  },
+  "43|outcome|ftyk bZ&xousZl lkslk;Vh dk lapkyu": {
    "be_lakh": 300.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "जिला इर्-गवर्नेस सोसायटी का संचालन"
   },
-  "43|outcome|नवाचार प्रोत्साहन एवं नवीनतम तकनीक": {
-   "be_lakh": 500.0,
-   "book": "Outcome Budget",
-   "how": "audit census at the publishing bar, read by eye",
-   "label": "not_scheme",
-   "name": "नवाचार प्रोत्साहन एवं नवीनतम तकनीक",
-   "reason": "promoting innovation, no named beneficiary"
-  },
-  "43|outcome|राज्य में सूचना प्रौद्योगिकी के क्षेत्र में निवेश प्रोत्साहन की योजना": {
+  "43|outcome|jkT; esa lwpuk izkS|ksfxdh ds {ks= esa fuos'k izksRlkgu dh ;kstuk": {
    "be_lakh": 1200.0,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -1364,98 +1338,99 @@
    "name": "राज्य में सूचना प्रौद्योगिकी के क्षेत्र में निवेश प्रोत्साहन की योजना",
    "reason": "an investment incentive to firms, not to a person or household"
   },
-  "50|outcome|छत्तीसगढ़ राज्य बाल कल्याण संरक्षण योजना": {
+  "43|outcome|uokpkj izksRlkgu ,oa uohure rduhd": {
    "be_lakh": 500.0,
    "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
+   "how": "audit census at the publishing bar, read by eye",
    "label": "not_scheme",
-   "name": "छत्तीसगढ़ राज्य बाल कल्याण संरक्षण योजना"
+   "name": "नवाचार प्रोत्साहन एवं नवीनतम तकनीक",
+   "reason": "promoting innovation, no named beneficiary"
   },
-  "50|outcome|महतारी वंदन योजना": {
-   "be_lakh": 820000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "महतारी वंदन योजना"
-  },
-  "50|outcome|महिला हेल्पलाइर्न 181": {
-   "be_lakh": 81.0,
+  "43|outcome|vVy ekWfuVfjax iksVZy ¼lh-,e- MS'kcksMZ½": {
+   "be_lakh": 1000.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "महिला हेल्पलाइर्न 181"
+   "name": "अटल मॉनिटरिंग पोर्टल (सी-एम- डैशबोर्ड)"
   },
-  "50|outcome|मुख्यमंत्री कन्या दान योजन": {
-   "be_lakh": 4000.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "मुख्यमंत्री कन्या दान योजन"
-  },
-  "50|outcome|शक्ति सदन": {
+  "50|outcome|'kfDr lnu": {
    "be_lakh": 340.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "शक्ति सदन"
   },
-  "50|outcome|सखी निवास": {
+  "50|outcome|NRrhlx<+ jkT; cky dY;k.k laj{k.k ;kstuk": {
+   "be_lakh": 500.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "छत्तीसगढ़ राज्य बाल कल्याण संरक्षण योजना"
+  },
+  "50|outcome|efgyk gsYiykbZu 181": {
+   "be_lakh": 81.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "महिला हेल्पलाइर्न 181"
+  },
+  "50|outcome|egrkjh oanu ;kstuk": {
+   "be_lakh": 820000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "महतारी वंदन योजना"
+  },
+  "50|outcome|eq[;ea=h dU;k nku ;kstu": {
+   "be_lakh": 4000.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "scheme",
+   "name": "मुख्यमंत्री कन्या दान योजन"
+  },
+  "50|outcome|l[kh fuokl": {
    "be_lakh": 162.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "सखी निवास"
   },
-  "50|youth|महिला जागृति शिविर एवं दिशा दर्शन": {
+  "50|youth|efgyk tkx`fr f'kfoj ,oa fn'kk n'kZu": {
    "be_lakh": 600.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "महिला जागृति शिविर एवं दिशा दर्शन"
   },
-  "50|youth|मुख्यमंत्री कन्या दान योजना": {
+  "50|youth|eq[;ea=h dU;k nku ;kstuk": {
    "be_lakh": 4000.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "मुख्यमंत्री कन्या दान योजना"
   },
-  "52|outcome|खादी वस्त्र उत्पादन पर रिबेट": {
+  "52|outcome|[kknh oL= mRiknu ij fjcsV": {
    "be_lakh": 80.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "खादी वस्त्र उत्पादन पर रिबेट"
   },
-  "52|outcome|नैसर्गिक टसर कोसा उत्पादन विकास योजना": {
-   "be_lakh": 871.0,
-   "book": "Outcome Budget",
+  "52|outcome|dqaHkdkj VsjkdksVk f'kYi ;kstuk": {
+   "be_lakh": 300.0,
+   "book": "Youth Budget",
    "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "नैसर्गिक टसर कोसा उत्पादन विकास योजना"
+   "label": "scheme",
+   "name": "कुंभकार टेराकोटा शिल्प योजना"
   },
-  "52|outcome|प्रदर्शनी प्रचार एवं प्रसार": {
-   "be_lakh": 155.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "प्रदर्शनी प्रचार एवं प्रसार"
-  },
-  "52|outcome|रेशम उद्योग का विकास कार्य": {
-   "be_lakh": 83.5,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "रेशम उद्योग का विकास कार्य"
-  },
-  "52|outcome|स्पिनिंग मिल हेतु अनुदान": {
+  "52|outcome|fLifuax fey gsrq vuqnku": {
    "be_lakh": 14.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "स्पिनिंग मिल हेतु अनुदान"
   },
-  "52|outcome|हथकरघा बुनकर पुरस्कार योजना": {
+  "52|outcome|gFkdj?kk cqudj iqjLdkj ;kstuk": {
    "be_lakh": 5.5,
    "book": "Outcome Budget",
    "how": "audit census at the publishing bar, read by eye",
@@ -1463,61 +1438,75 @@
    "name": "हथकरघा बुनकर पुरस्कार योजना",
    "reason": "a cash award to a handloom weaver"
   },
-  "52|youth|कुंभकार टेराकोटा शिल्प योजना": {
-   "be_lakh": 300.0,
-   "book": "Youth Budget",
+  "52|outcome|izn'kZuh izpkj ,oa izlkj": {
+   "be_lakh": 155.0,
+   "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
-   "label": "scheme",
-   "name": "कुंभकार टेराकोटा शिल्प योजना"
+   "label": "not_scheme",
+   "name": "प्रदर्शनी प्रचार एवं प्रसार"
   },
-  "52|youth|शिल्पी हेतु डिजाइर्न एवं विकास शिक्षा ब- ऐसी योजनायें जिसमें युवाओं की भागीदारी 50 प्रतिशत अथवा अधिक है । योजना का नाम क्र-": {
+  "52|outcome|js'ke m|ksx dk fodkl dk;Z": {
+   "be_lakh": 83.5,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "रेशम उद्योग का विकास कार्य"
+  },
+  "52|outcome|uSlfxZd Vlj dkslk mRiknu fodkl ;kstuk": {
+   "be_lakh": 871.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "नैसर्गिक टसर कोसा उत्पादन विकास योजना"
+  },
+  "52|youth|f'kYih gsrq fMtkbZu ,oa fodkl f'k{kk c- ,slh ;kstuk;sa ftlesa ;qokvksa dh Hkkxhnkjh 50 izfr'kr vFkok vf/kd gS A ;kstuk dk uke Ø-": {
    "be_lakh": 65.0,
    "book": "Youth Budget",
    "how": "stratified sample, read by eye",
    "label": "scheme",
    "name": "शिल्पी हेतु डिजाइर्न एवं विकास शिक्षा ब- ऐसी योजनायें जिसमें युवाओं की भागीदारी 50 प्रतिशत अथवा अधिक है । योजना का नाम क्र-"
   },
-  "53|outcome|आयुर्वेद औषधालय के लिए ड्रग टेस्टिंग लेब्रोटरी एवं अनुसंधान केन्द्र": {
-   "be_lakh": 250.0,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "आयुर्वेद औषधालय के लिए ड्रग टेस्टिंग लेब्रोटरी एवं अनुसंधान केन्द्र"
-  },
-  "53|outcome|नर्सिंग के बुनियादी पाठ्यक्रम से लोकस्वास्थ्य का एकीकरण": {
-   "be_lakh": 11010.01,
-   "book": "Outcome Budget",
-   "how": "stratified sample, read by eye",
-   "label": "not_scheme",
-   "name": "नर्सिंग के बुनियादी पाठ्यक्रम से लोकस्वास्थ्य का एकीकरण"
-  },
-  "53|outcome|शासकीय आयुर्वेद महाविद्यालय तथा संब) चिकित्सालय बिलासपुर": {
+  "53|outcome|'kkldh; vk;qosZn egkfo|ky; rFkk lac) fpfdRlky; fcykliqj": {
    "be_lakh": 5500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "शासकीय आयुर्वेद महाविद्यालय तथा संब) चिकित्सालय बिलासपुर"
   },
-  "53|outcome|शासकीय आयुर्वेद महाविद्यालय तथा संब) चिकित्सालय रायपुर": {
+  "53|outcome|'kkldh; vk;qosZn egkfo|ky; rFkk lac) fpfdRlky; jk;iqj": {
    "be_lakh": 5300.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "शासकीय आयुर्वेद महाविद्यालय तथा संब) चिकित्सालय रायपुर"
   },
-  "53|outcome|होम्योपैथी औषधालय (मूलभूत सेवाएॉं": {
+  "53|outcome|fpfdRlk] nar ,oa fQft;ksFksjsih egkfo|ky;": {
+   "be_lakh": 153600.0,
+   "book": "Youth Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "चिकित्सा, दंत एवं फिजियोथेरेपी महाविद्यालय"
+  },
+  "53|outcome|gksE;ksiSFkh vkS\"k/kky; ¼ewyHkwr lsok,Wa": {
    "be_lakh": 1500.0,
    "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
    "name": "होम्योपैथी औषधालय (मूलभूत सेवाएॉं"
   },
-  "53|youth|चिकित्सा, दंत एवं फिजियोथेरेपी महाविद्यालय": {
-   "be_lakh": 153600.0,
-   "book": "Youth Budget",
+  "53|outcome|uflZax ds cqfu;knh ikB~;dze ls yksdLokLF; dk ,dhdj.k": {
+   "be_lakh": 11010.01,
+   "book": "Outcome Budget",
    "how": "stratified sample, read by eye",
    "label": "not_scheme",
-   "name": "चिकित्सा, दंत एवं फिजियोथेरेपी महाविद्यालय"
+   "name": "नर्सिंग के बुनियादी पाठ्यक्रम से लोकस्वास्थ्य का एकीकरण"
+  },
+  "53|outcome|vk;qosZn vkS\"k/kky; ds fy, Mªx VsfLVax ysczksVjh ,oa vuqla/kku dsUnz": {
+   "be_lakh": 250.0,
+   "book": "Outcome Budget",
+   "how": "stratified sample, read by eye",
+   "label": "not_scheme",
+   "name": "आयुर्वेद औषधालय के लिए ड्रग टेस्टिंग लेब्रोटरी एवं अनुसंधान केन्द्र"
   }
  },
  "not_scheme": 145,
@@ -1527,7 +1516,7 @@
   "scheme": "the money buys an identifiable benefit received by a person or household: cash, a kit, food, a scholarship, a stipend, a fee waiver, a pension, insurance, a subsidy that lowers what that household pays, a loan or an interest subvention on its own borrowing, free travel, free power, a house, a named treatment entitlement, or training in which the trainee is himself the beneficiary class"
  },
  "sampling": "Stratified by BOOK (Outcome, Gender, Youth, Child, which is the choice the state itself makes about a line) crossed with allocation quartile, 13 non-empty strata, a third of each. Then every row at the publishing bar labelled so precision is a count.",
- "scheme": 69,
+ "scheme": 67,
  "snapshot": "2026-09-05",
  "state": "Chhattisgarh",
  "what": "Hand labels for Chhattisgarh's Outcome, Gender, Youth and Child budget rows. Ground truth for parse/classify_chhattisgarh.py. Audit and correct these: the classifier is only as good as they are."

@@ -201,7 +201,13 @@ def run(date=None):
             name = decode(name_kd).strip()
             if not name or len(name) < 3:
                 continue
-            key = f"{dep}|{kind}|{code or name}"
+            # KEYED ON THE STATE'S OWN BYTES, not on this register's reading of them. The
+            # first version keyed on the decoded name, and improving parse/krutidev.py by
+            # one letter then orphaned fifteen hand labels: their rows still existed and
+            # were suddenly unlabelled, because the identifier was a derived field. The
+            # Kruti Dev string is what Chhattisgarh printed and does not move when the
+            # decoder gets better.
+            key = f"{dep}|{kind}|{code or name_kd.strip()}"
             if key in seen:
                 continue
             seen.add(key)
