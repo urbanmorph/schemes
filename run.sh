@@ -65,6 +65,31 @@ step() {
 # holds them, which --refresh-annual overrides when a state republishes mid-year.
 have_annual() { [ "$REFRESH_ANNUAL" = "0" ] && compgen -G "$1" > /dev/null; }
 
+# The same question for a STATE budget, and it has to be asked differently. A state's
+# archive is keyed on the date it was collected, not on the cycle it covers, so
+# `archive/karnataka/*` matches last year's book as happily as this year's. The guard used
+# to be exactly that glob, which meant a state collected once was never collected again:
+# roll STATE_CYCLE to 2027-28 and the register would go on publishing 2026-27 provisions
+# for every one of the fifteen states, indefinitely and without a word. The Union Budget's
+# guard was cycle-scoped and the states' was not, and only the Budget would have moved.
+#
+# Every state manifest records the cycle it was collected for, so the question can be
+# asked exactly: is there an archive for THIS cycle?
+have_cycle() {
+  [ "$REFRESH_ANNUAL" = "0" ] || return 1
+  python3 - "$1" "$2" <<'EOF'
+import glob, json, os, sys
+state, cycle = sys.argv[1], sys.argv[2]
+for m in glob.glob(os.path.join("archive", state, "*", "_manifest.json")):
+    try:
+        if json.load(open(m, encoding="utf-8")).get("cycle") == cycle:
+            sys.exit(0)
+    except (ValueError, OSError):
+        continue
+sys.exit(1)
+EOF
+}
+
 if [ "$SKIP_COLLECT" = "0" ]; then
   say "collect · myScheme ($DATE)"
   python3 collect/myscheme.py --date "$DATE" --pace "$PACE" "${LIMIT[@]+"${LIMIT[@]}"}"
@@ -87,8 +112,8 @@ if [ "$SKIP_COLLECT" = "0" ]; then
   fi
   for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
             telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
-    if have_annual "archive/$st/*"; then
-      echo "  $st budget already archived, skipping"
+    if have_cycle "$st" "$STATE_CYCLE"; then
+      echo "  $st $STATE_CYCLE already archived, skipping"
     # Not every collector takes --cycle, and passing it to one that does not aborts the
     # whole run under `set -e`. A state takes it when the cycle is part of the ADDRESS of
     # its documents (Karnataka's index URL carries the financial year); a state that omits
@@ -110,7 +135,19 @@ VERIFY_OK=1
 python3 verify/verify.py --date "$DATE" || VERIFY_OK=0
 
 say "parse · sources"
-step "parse/dbt" python3 parse/dbt.py --date "$DATE"
+# DBT is collected at $DATE alongside myScheme, so in a real run its archive is always
+# there. Under --skip-collect it is there only if some earlier run collected that same
+# date, and reporting its absence as a failed step would train the operator to read red as
+# noise -- which is the exact habit step() exists to prevent. So the two causes are named
+# apart: no archive because collection was skipped is a consequence of the flag, and no
+# archive on a run that DID collect is a real failure. Neither is allowed to pass silently,
+# because a missing DBT archive means the DBT half of the registry is last month's.
+if [ "$SKIP_COLLECT" = "1" ] && [ ! -d "archive/dbt/$DATE" ]; then
+  echo "  no DBT archive for $DATE and --skip-collect was passed, so none was made."
+  echo "  the registry's DBT half is whatever data/dbt.json already holds. NOT re-parsed."
+else
+  step "parse/dbt" python3 parse/dbt.py --date "$DATE"
+fi
 step "parse/budget" python3 parse/budget.py --year "$CYCLE_YEAR"
 step "parse/outcome" python3 parse/outcome.py --year "$CYCLE_YEAR"
 # No --date: the CAG crawl is stamped with its own date and is not tied to the myScheme
@@ -177,6 +214,28 @@ step "parse/changes" python3 parse/changes.py
 
 say "build"
 python3 site/build.py
+
+# What the archive costs, printed every run so its growth is never a surprise. The archive
+# is the evidence and stays in git, so it only grows; the question is when that stops being
+# free. Measured 2026-09-05: 709 MB, of which 676 MB is the fifteen state budget books.
+# Those are ANNUAL, so one full re-collection lands per cycle, and the monthly sources add
+# about 111 MB a year on top. That is roughly 790 MB a year: past GitHub's 1 GB warning
+# inside a year and into the 5 GB range where they ask you to reduce in about five.
+#
+# Nothing is restructured for that yet, on purpose. git-lfs needs paid data packs above
+# 1 GB and a split archive repository costs the property that makes this one auditable,
+# that the code and the bytes it read are one checkout. Both are worth doing when the
+# number says so and not before. The number is here so that judgement is made against it.
+say "archive"
+python3 - <<'EOF'
+import os
+tot = sum(os.path.getsize(os.path.join(r, f))
+          for r, _, fs in os.walk("archive") for f in fs)
+print(f"  archive/ holds {tot / 1024**3:.2f} GB across "
+      f"{sum(len(fs) for _, _, fs in os.walk('archive')):,} files")
+if tot > 1024**3:
+    print("  past 1 GB. GitHub warns here; see the note in run.sh before it reaches 5.")
+EOF
 
 echo
 if [ "${#FAILED[@]}" -gt 0 ]; then

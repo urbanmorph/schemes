@@ -418,8 +418,13 @@ def probably_same(a, b, floor=0.75):
     # another is not evidence: famhev from the FAME expansion contains famh from "Financial
     # Assistance for Marriage (HPBOCWWB)", and no human ever wrote either.
     wa, wb = written_acronyms(a), written_acronyms(b)
-    for x in aa:
-        for y in ab:
+    # SORTED, because more than one pair can satisfy every test below and the first one
+    # found is the one named in the reason. aa and ab are sets, set order comes from hash
+    # randomisation, and the registry recorded "iccr / ipiccr" one month and "iccr / iccr"
+    # the next on identical bytes. The verdict was never in doubt; the sentence explaining
+    # it was, and an explanation that moves on its own is not evidence.
+    for x in sorted(aa):
+        for y in sorted(ab):
             if len(x) < 4 or len(y) < 4 or not (x in y or y in x):
                 continue
             if not (x in wa or y in wb):

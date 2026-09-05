@@ -1,12 +1,6 @@
 {
  "api_version": "search/v6 + schemes/v6",
- "attention": [
-  [
-   "budget stat4a rows",
-   "2026-09-03",
-   "84 of 86 numbered rows — extraction lost [28, 31]"
-  ]
- ],
+ "attention": [],
  "checks": [
   {
    "check": "list records == census total",
@@ -41,9 +35,9 @@
   },
   {
    "check": "budget stat4a rows",
-   "detail": "84 of 86 numbered rows — extraction lost [28, 31]",
+   "detail": "84 of 86 numbered rows",
    "gating": false,
-   "ok": false
+   "ok": true
   },
   {
    "check": "budget stat4b money",
@@ -61,15 +55,13 @@
  "collection_finished": "2026-09-03T10:20:53Z",
  "expected_total": 4772,
  "key_event": null,
- "last_complete_run": "2026-09-03T10:20:54Z",
- "last_run": "2026-09-03T10:20:54Z",
+ "last_complete_run": "2026-09-05T03:56:44Z",
+ "last_run": "2026-09-05T03:56:44Z",
  "pages_expected": 48,
  "pages_written": 48,
  "records_parsed": 4771,
  "snapshot": "2026-09-03",
  "snapshots": 3,
- "standing_issues": [
-  "budget stat4a rows"
- ],
+ "standing_issues": [],
  "verdict": "COMPLETE"
 }
