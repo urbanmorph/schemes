@@ -633,3 +633,43 @@ table.mini td:nth-child(2){width:18%}
 /* The sentinel the table appends its next window from. It carries no text and no height
    of its own; the IntersectionObserver watches it 600px before it arrives. */
 .more{height:1px}
+
+/* ---- The state of the schemes, at the top of the overview -------------------
+   A funnel, not a stat grid. Each row's number is a subset of the one above and
+   the drop between two rows is the claim, so they are stacked in one bordered
+   column with a shared left gutter for the figures: the eye runs down that
+   gutter and reads the narrowing without being told about it. A grid of cells,
+   which is what the source counts below use, would say these six numbers are
+   siblings, and they are not. */
+.sos{border:1px solid var(--rule-strong);background:var(--surface);margin:26px 0 0}
+.sos-hd{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;padding:16px 22px 0}
+.sos-date{font-family:var(--mono);font-size:var(--fs-xs);color:var(--faint)}
+.sos .standfirst{padding:0 22px;margin:9px 0 4px;max-width:62ch}
+.sos-row{display:flex;gap:22px;align-items:baseline;padding:17px 22px;
+  border-top:1px solid var(--rule)}
+.sos-n{flex:0 0 132px;font-family:var(--serif);font-size:33px;line-height:1.05;
+  font-variant-numeric:tabular-nums;color:var(--stamp-bright)}
+.sos-b{flex:1 1 auto;min-width:0}
+.sos-lbl{font-size:var(--fs-base);line-height:1.45;color:var(--ink)}
+.sos-why{margin:7px 0 0;font-size:var(--fs-sm);line-height:1.5;color:var(--muted);
+  max-width:66ch}
+/* Aligned to the label's own line, not centred in the row. Centring floated it
+   against a three-line paragraph and it read as belonging to the block rather
+   than to the claim beside it. */
+.sos-go{flex:0 0 auto;align-self:flex-start;margin-top:2px;
+  font-family:var(--mono);font-size:var(--fs-xs);
+  text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;color:var(--muted);
+  text-decoration:none;border-bottom:1px solid var(--rule-strong);padding-bottom:2px}
+.sos-go:hover,.sos-go:focus-visible{color:var(--stamp-bright);
+  border-bottom-color:var(--stamp-bright)}
+
+/* Under about 760px the three-column row stops working: the figure gutter eats
+   the label's width and the call to action wraps to a line of its own anyway.
+   Stack them, and let the figure sit directly above the sentence it measures. */
+@media (max-width:760px){
+  .sos-row{flex-wrap:wrap;gap:6px 18px}
+  .sos-n{flex:0 0 100%;font-size:29px}
+  .sos-b{flex:1 1 100%}
+  .sos-go{align-self:flex-start;margin-top:4px}
+}

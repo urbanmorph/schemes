@@ -15,6 +15,7 @@ gets a notation rather than a gap.
 
 import argparse
 import collections
+import glob
 import hashlib
 import html
 import json
@@ -363,6 +364,117 @@ SEED_ROWS = 60
 WINDOW = 300
 
 
+def state_of_schemes():
+    """The register's standing verdict, in the order the evidence narrows.
+
+    The overview used to open with five source counts and a search box, which tells a
+    reader how much this register HOLDS and nothing about what it FOUND. Everything the
+    project has established lived one click away on /divergence and /state, and a reader
+    who never clicked left with the impression of a catalogue.
+
+    It is a funnel because that is the actual shape of the finding: every number here is a
+    subset of the one above it, and the drop between two rows is the claim. 5,478 schemes
+    are named; 5,099 of them by a single source; 1,560 are funded by a state and listed by
+    no portal. Reading those three as separate statistics loses the argument that connects
+    them.
+
+    Every figure is computed from data/ at build time and none is typed here, for the
+    reason the /divergence warnbox already gives: a number written into prose drifts from
+    the number in the file, and this one is the first thing a reader sees.
+    """
+    reg = load("data/registry.json", {}) or {}
+    leg = load("data/legibility.json", {}) or {}
+    cagd = load("data/cag/audited.json", {}) or {}
+    ck = (load("data/checks.json", {}) or {}).get("summary", {}).get("by_check", {})
+
+    named = reg.get("total_entries") or len(reg.get("entries") or [])
+    one = int((reg.get("in_n_sources") or {}).get("1") or 0)
+
+    absent = 0
+    absent_lakh = 0.0
+    states_classified = 0
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "*", "classification.json"))):
+        with open(f, encoding="utf-8") as fh:
+            d = json.load(fh)
+        rows = d.get("absent_distinct") or []
+        states_classified += 1
+        absent += len(rows)
+        absent_lakh += sum((r.get("be_lakh") or 0) for r in rows)
+
+    surveyed = leg.get("states_surveyed") or 0
+    refused = leg.get("states_refused") or 0
+
+    # The documentation check that fails most often, chosen by measurement rather than by
+    # which one makes the better sentence.
+    worst = max(ck.items(), key=lambda kv: kv[1].get("fail_pct", 0)) if ck else None
+    worst_label = {
+        "end_date_recorded": "carry no end date",
+        "start_date_recorded": "carry no start date",
+        "implementing_agency_named": "name no implementing agency",
+        "application_path_published": "publish no way to apply",
+        "benefit_quantified": "do not say what the benefit is worth",
+    }.get(worst[0] if worst else "", "fail this register's weakest documentation test")
+
+    audited = cagd.get("joins_published") or 0
+    audit_of = cagd.get("register_names") or named
+
+    steps = [
+        (num(named), "schemes exist, at the most generous count",
+         "Every distinct scheme any of the four official sources names. It is a floor: the "
+         "union under-merges on purpose, because one scheme listed twice is a visible error "
+         "and two schemes silently merged is not.", "#schemes", "Search all of them"),
+        (f"{one / named:.0%}" if named else "&hellip;",
+         "of them are named by exactly one source",
+         f"{num(one)} of {num(named)} schemes appear in a single government list and in no "
+         f"other. There is no agreed register of what the Indian state runs, and this is the "
+         f"measurement of that rather than the assertion of it.", "/divergence",
+         "See the four sources disagree"),
+        (num(absent), "are funded by a state budget and listed by no national portal",
+         f"Across the {num(states_classified)} states this register reads closely, worth "
+         f"&#8377;{inr(round(absent_lakh / 100))} crore of provision in the current cycle. Each "
+         f"one "
+         f"is named, scored, and published with the hand label that judged it.",
+         "/divergence", "See the schemes and the errors"),
+        (f"{refused} of {surveyed}", "states publish a budget no machine can read",
+         "Surveyed against five sequential tests: does it publish a list, are the names text, "
+         "does a name have an end, is it in English, does the book prove itself against its "
+         "own totals. A state that fails one is not accused of anything here; it is recorded "
+         "as unreadable, and the register refuses rather than guesses.",
+         "/divergence#legibility", "See where each state stops"),
+        (f"{worst[1].get('fail_pct', 0):.0f}%" if worst else "&hellip;",
+         f"of the portal&rsquo;s own records {worst_label}",
+         "myScheme is the only source here written for citizens rather than for accountants, "
+         "and this is the field it most often leaves blank. Every scheme page on this site "
+         "shows which of these tests its record passes.", "#schemes", "Search the records"),
+        (f"{audited} of {num(audit_of)}", "scheme names reach a CAG audit report",
+         "The catalogue holds "
+         f"{num(cagd.get('reports_in_catalogue') or 0)} reports. This register records that "
+         "an audit exists, on what and where to read it, and never what one concluded: that "
+         "is the CAG&rsquo;s to publish.", "/audit", "See the catalogue"),
+    ]
+
+    rows = "".join(
+        f'<div class="sos-row">'
+        f'<div class="sos-n">{v}</div>'
+        f'<div class="sos-b"><div class="sos-lbl">{lbl}</div>'
+        f'<p class="sos-why">{why}</p></div>'
+        f'<a class="sos-go" href="{href}">{cta} &rarr;</a>'
+        f'</div>'
+        for v, lbl, why, href, cta in steps)
+
+    return f'''
+<section class="sos" id="state-of-the-schemes">
+  <div class="sos-hd">
+    <div class="eyebrow">The state of the schemes</div>
+    <div class="sos-date">Rebuilt {e(str(leg.get("built_at") or "")[:10])}</div>
+  </div>
+  <p class="standfirst">What this register has established, in the order the evidence
+  narrows. Every number is counted from the sources below and recomputed every month.</p>
+  {rows}
+</section>
+'''
+
+
 def page_index(census, checks, dbt, entries):
     facets = (census or {}).get("facets", {})
     lvl = facets.get("level", {})
@@ -412,6 +524,8 @@ def page_index(census, checks, dbt, entries):
   </div>
   <a class="jump" href="#argument">Why this exists &darr;</a>
 </div>
+
+{state_of_schemes()}
 
 {index_section(entries)}
 
