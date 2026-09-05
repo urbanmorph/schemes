@@ -129,7 +129,7 @@
    "what": "Budget Publication 26, Detailed Demands for Grants"
   }
  },
- "built": "2026-09-05T17:22:27Z",
+ "built": "2026-09-05T17:45:47Z",
  "caveat": "One row here is one SUB-HEAD of a demand for grant, keyed on its full head of account, which is West Bengal's own scheme-level unit. The object heads beneath it (Salaries, Wages, Other Charges) are deliberately not published, because they are what a scheme spends money on and not schemes. The state also files establishment and recovery provisions at sub-head level, so this list is a superset of West Bengal's schemes and not a count of them, and a reader counting schemes should discount the Deduct - Recoveries heads and the directorate and secretariat rows. A scheme with a revenue head and a capital head appears twice, because the state votes them separately. The tags the books append to a name, [WC], [PS], (State Share), (OCASPS), (60:40), are the state's own and are kept. One artefact is left as printed and not repaired: 66 names are LETTER-SPACED in the source, so 'Expenditure for payment' is typeset as 'E x p e n d i t u r e f o r p a y m e n t' and pdftotext reproduces it faithfully. The word boundaries are lost in the PDF itself, single spaces separating letters and words alike, so closing the gaps would give one run-on word and guessing where the words end would be inventing a name. They are published as the state printed them, and counted in names_the_state_letter_spaced. A scheme with a general, a Scheduled Caste (789) and a Tribal (796) head appears three times, because the state votes them separately.",
  "counts": {
   "deduct_recoveries_heads": 271,

@@ -130,7 +130,10 @@ SURVEY = [
     ("Gujarat", None, dict(list=True, text=True, bounded=False, english=None, closes=None),
      "The Outcome Budget puts the name, the head of account and sometimes the target in "
      "one column with no separator, and the column boundaries move between pages. There "
-     "is no rule that finds the end of a name."),
+     "is no rule that finds the end of a name.",
+     "Put the head of account in a column of its own, or any separator at "
+     "all between it and the name. Nothing else about the document has to "
+     "change."),
     # The only refusal here whose reason CHANGED rather than being confirmed. It stood on
     # the font and the font is no longer the problem; what stops it now is the calendar,
     # and saying the old thing would be saying something false about a state.
@@ -144,24 +147,53 @@ SURVEY = [
      "book URLs 404s. So it stops at the FIRST test, which asks for a scheme list FOR THIS "
      "CYCLE, and the later tests are not asked. It would pass three of them if they were: "
      "that is recorded here and not in the score, because a test this state was never asked "
-     "must not be counted as one it cleared."),
+     "must not be counted as one it cleared.",
+     "Publish the 2026-27 books at the same URLs the 2025-26 ones are "
+     "already at. The format is readable; only the year is missing."),
     ("Bihar", None, dict(list=True, text=False, bounded=None, english=None, closes=None),
      "It converts its budget to vector curves before publishing it. Its own file is "
      "called Demands For Grants Curve.pdf, and 108 pages of it yield 108 extractable "
-     "characters."),
+     "characters.",
+     "Publish the same book with its text layer intact. The file is called "
+     "Demands For Grants Curve.pdf and the curves are the whole problem: the "
+     "document was typeset from text before it was flattened into drawings."),
     ("Rajasthan", None, dict(list=True, text=True, bounded=False, english=True, closes=None),
      "The Output-Outcome Budget is in English and breaks names across lines mid-word "
      "with no hyphen, which cannot be undone from geometry alone, and prints no totals "
-     "to check a guess against."),
+     "to check a guess against.",
+     "Print the totals. A name broken across lines could be rejoined by "
+     "guessing, and a guess with nothing to check it against is not a "
+     "reading."),
     ("Assam", None, dict(list=False, text=None, bounded=None, english=None, closes=None),
      "Its seven documents for this cycle include no scheme list. The FY 2024-25 Gender "
-     "Budget is a good table and is two cycles behind what this register publishes."),
+     "Budget is a good table and is two cycles behind what this register publishes.",
+     "Publish a scheme list for the current cycle. The FY 2024-25 Gender "
+     "Budget is a good table, so this is a question of when and not of how."),
     ("Himachal Pradesh", None, dict(list=False, text=None, bounded=None, english=None, closes=None),
      "It publishes thirty documents and serves none of them: every link is a "
-     "__doPostBack that 302s back to the portal home."),
+     "__doPostBack that 302s back to the portal home.",
+     "Serve the thirty documents at addresses. They exist and the portal "
+     "lists them; it just will not hand any of them over."),
 ]
 
 NON_ASCII = re.compile(r"[^\x00-\x7f]")
+
+
+def _counts():
+    """What the two national sources say a state has, for states this register cannot read."""
+    dbt = myscheme = {}
+    p = os.path.join(ROOT, "data", "dbt", "states.json")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as fh:
+            dbt = (json.load(fh).get("states") or {})
+    p = os.path.join(ROOT, "data", "myscheme", "census.json")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as fh:
+            myscheme = ((json.load(fh).get("facets") or {}).get("beneficiaryState") or {})
+    return dbt, myscheme
+
+
+DBT, MYSCHEME = _counts()
 
 
 def measure(key):
@@ -234,7 +266,9 @@ def measure(key):
 
 def run():
     rows, disagreements = [], []
-    for state, key, verdict, why in SURVEY:
+    for row in SURVEY:
+        state, key, verdict, why = row[0], row[1], row[2], row[3]
+        fix = row[4] if len(row) > 4 else None
         m = measure(key) if key else None
         if key and m is None:
             raise SystemExit(f"{state} is listed as built from data/{key}/ and that file is "
@@ -247,10 +281,19 @@ def run():
                         f"says {got}")
         run_tests = [t for t, _, _ in TESTS if verdict.get(t) is not None]
         cleared = [t for t in run_tests if verdict[t]]
+        # HOW MANY SCHEMES ARE BEHIND THE REFUSAL, which is the number that makes a
+        # refusal mean anything. Neither is this register's count: DBT Bharat publishes a
+        # per-state scheme total and myScheme lists per-state records, and for a state
+        # whose own budget cannot be read those two are the only numbers anybody has.
+        # They disagree in every one of these states, and there is no third source to
+        # settle it, because the third source is the one that cannot be read.
         rows.append({
             "state": state,
             "key": key,
             "built": bool(key),
+            "what_would_change_it": fix,
+            "dbt_state_schemes": DBT.get(state),
+            "myscheme_records": MYSCHEME.get(state),
             "tests": {t: verdict.get(t) for t, _, _ in TESTS},
             "tests_run": len(run_tests),
             "cleared": len(cleared),

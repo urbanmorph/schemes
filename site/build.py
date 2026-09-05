@@ -1069,12 +1069,34 @@ def page_states(leg):
                   else f'</td><td class="num">{NIL}</td>')
         brows += f'<td class="lg-why">{e(b["why"])}</td></tr>'
 
-    rrows = "".join(
-        f'<tr class="refused"><td>{e(r.get("state") or "")}</td>'
-        f'<td class="num">{r.get("cleared")} <span class="of">of 5</span></td>'
-        f'<td>{e(str(r.get("failed_at") or ""))}</td>'
-        f'<td class="lg-why">{e(r.get("why") or "")}</td></tr>'
-        for r in refused)
+    # NOT A TABLE. A refusal is the most important thing on this page and it was a cell
+    # four columns wide: the state, a score, a word, and a sentence squeezed against the
+    # edge. What a reader needs is what the state publishes, exactly where the reading
+    # stops, how many schemes are behind it, and what would change it, and none of those
+    # fits in a cell. The counts are the two national sources' own, because for a state
+    # whose budget cannot be read those are the only numbers anybody has.
+    ref_dbt = sum(r.get("dbt_state_schemes") or 0 for r in refused)
+    ref_ms = sum(r.get("myscheme_records") or 0 for r in refused)
+    rblocks = ""
+    for r in refused:
+        dbt, ms = r.get("dbt_state_schemes"), r.get("myscheme_records")
+        counts = ""
+        if dbt or ms:
+            counts = (
+                f'<div class="ref-n">'
+                f'<div><b>{num(dbt) if dbt else NIL}</b><span>DBT Bharat counts</span></div>'
+                f'<div><b>{num(ms) if ms else NIL}</b><span>myScheme lists</span></div>'
+                f'<div><b>{NIL}</b><span>this register can read</span></div></div>')
+        fix = r.get("what_would_change_it")
+        rblocks += (
+            f'<div class="ref">'
+            f'<div class="ref-hd"><h3>{e(r.get("state") or "")}</h3>'
+            f'<span class="ref-stop">stops at <b>{e(str(r.get("failed_at") or ""))}</b>'
+            f' &middot; {r.get("cleared")} of {r.get("tests_run")} tests asked</span></div>'
+            f'{counts}'
+            f'<p class="ref-why">{e(r.get("why") or "")}</p>'
+            + (f'<p class="ref-fix"><b>What would change it.</b> {e(fix)}</p>' if fix else "")
+            + '</div>')
 
     tot_absent = sum(b["absent"] for b in built)
     tot_cr = sum(b["cr"] for b in built)
@@ -1122,19 +1144,26 @@ is a finding and not an omission.</p>
 
 <section class="sec">
   <h2>The states it cannot</h2>
-  <div class="sec-note">Surveyed against the same five tests and stopped at one of
-    them &middot; no page, no list, and no accusation either</div>
-  <div class="tscroll"><table id="stref" aria-label="States whose budget cannot be read by machine">
-    <thead><tr><th>State</th><th class="num">Cleared</th><th>Stops at</th>
-      <th>What stops it</th></tr></thead>
-    <tbody>{rrows}</tbody>
-  </table></div>
+  <div class="sec-note">Surveyed against the same five tests and stopped at one of them
+    &middot; DBT Bharat counts {num(ref_dbt)} state schemes between them and myScheme lists
+    {num(ref_ms)} &middot; this register can read none of either</div>
+  <p class="standfirst">These are the six budgets a machine cannot read, and they are the
+  most important thing on this page. Every one of them is a document a citizen of that
+  state cannot check either: not because the state is hiding it, but because of how it was
+  saved to a file.</p>
+  {rblocks}
   <div class="warnbox">
-    <b>A refusal here is about the document, not the state</b>
-    These seven publish budgets. What they do not publish is a budget a machine can read
-    one scheme at a time: a scanned image, a legacy font, a name with no boundary, or a
-    book that does not prove itself against its own totals. This register records where
-    each one stops and makes no claim about what is inside.
+    <b>The two numbers above a refusal are not this register&rsquo;s, and they disagree</b>
+    For a state whose own budget can be read, this register is a third source and can say
+    which of the other two is closer. For these it is not, so what is left is DBT Bharat&rsquo;s
+    count and myScheme&rsquo;s, and those two do not agree about a single one of them:
+    myScheme lists 643 schemes for Gujarat where DBT counts 394, and 75 for Himachal Pradesh
+    where DBT counts 174. Somewhere behind each of these documents is a number that would
+    settle it, and the document is the thing that cannot be read.
+    <p style="margin:8px 0 0">A refusal is about the DOCUMENT and not about the state. None
+    of these is accused of hiding anything, and nothing here is a claim about what is
+    inside: a budget that cannot be read one scheme at a time cannot be read the other way
+    either, and this register will not guess at what it holds.</p>
   </div>
 </section>
 '''
