@@ -98,22 +98,25 @@ _CLUSTER = re.compile("ि((?:[क-हक़-य़]्)*[क-हक़-य़])")
 # travels left past the consonant and whatever matra hangs off it. Twelve of the
 # thirty-three department names in the parallel corpus turn on this one rule.
 _REPH = re.compile("([\u0915-\u0939\u0958-\u095f](?:\u094d[\u0915-\u0939])*"
-                   "[\u093e-\u094c]*[\u0901-\u0903]?)\uf8ff")
+                   "[\u093e-\u094c]*[\u0901-\u0903]?)\U000f0000")
 
 
 def decode(s):
     """One Kruti Dev string to Unicode Devanagari."""
     if not s:
         return s
-    # Z is parked on a private-use codepoint through the table pass. It cannot become
+    # Z is parked on a plane-15 private-use codepoint through the table pass. NOT U+F8FF,
+    # which was the first choice and is wrong: Chhattisgarh's OTHER legacy font extracts
+    # U+F8FF as a real character 326 times in the parallel corpus, so a placeholder there
+    # would collide with the document the day these two decoders meet. It cannot become
     # the letter yet: the reph rule has to find it AFTER the i-matra has moved, and by
     # then a real र् would be indistinguishable from one that belongs where it sits.
-    out = _PAT.sub(lambda m: MAP[m.group(0)], s.replace("Z", "\uf8ff"))
+    out = _PAT.sub(lambda m: MAP[m.group(0)], s.replace("Z", "\U000f0000"))
     # The i-matra is printed to the left of its consonant and stored that way. Unicode
     # stores it to the right, so every ि moves past the cluster that follows it.
     out = _CLUSTER.sub(lambda m: m.group(1) + "ि", out)
     out = _REPH.sub(lambda mm: "र्" + mm.group(1), out)
-    return out.replace("\uf8ff", "र्")
+    return out.replace("\U000f0000", "र्")
 
 
 # THE PARALLEL CORPUS, and it is the whole argument that this file reads rather than
