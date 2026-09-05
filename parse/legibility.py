@@ -110,6 +110,17 @@ SURVEY = [
      "anywhere in its budget, and myScheme lists its schemes in romanised Hindi rather "
      "than in English, so the join is a change of script. 111 of its 4,198 printed totals "
      "do not reconcile."),
+    ("Chhattisgarh", "chhattisgarh",
+     dict(list=True, text=True, bounded=True, english=False, closes=False),
+     "Built from the WRONG BOOKS, and it says so on its own page. Its 44 department scheme "
+     "books hold 2,562 rows and set every name in the Chanakya legacy font, whose encoding "
+     "maps its codes to Latin glyph names with Devanagari outlines drawn in the slots, so "
+     "the font cannot decode itself and nothing in the PDF can: those names fail the text "
+     "test and are not published. The Outcome, Gender, Youth and Child books that 33 "
+     "departments publish are in Kruti Dev, which is ASCII and whose table is checked "
+     "against the state's own Unicode department index, and they are what this register "
+     "reads. Hindi only, like Uttar Pradesh, so the English test is not cleared and the "
+     "join is a change of script rather than a translation."),
     ("Tripura", "tripura", dict(list=True, text=True, bounded=True, english=True, closes=True),
      "These 134 state schemes and the 74 centrally sponsored ones printed beside them "
      "come to 208 against DBT Bharat's 209, the closest any state document here has come "
@@ -128,10 +139,6 @@ SURVEY = [
      "It converts its budget to vector curves before publishing it. Its own file is "
      "called Demands For Grants Curve.pdf, and 108 pages of it yield 108 extractable "
      "characters."),
-    ("Chhattisgarh", None, dict(list=True, text=False, bounded=None, english=None, closes=None),
-     "Its 44 department books extract 2,429 scheme rows perfectly and 0 of 2,429 "
-     "readable names, in the Krishna and Chanakya legacy fonts; all twelve English "
-     "editions it links return 404 while the Hindi twins work."),
     ("Rajasthan", None, dict(list=True, text=True, bounded=False, english=True, closes=None),
      "The Output-Outcome Budget is in English and breaks names across lines mid-word "
      "with no hyphen, which cannot be undone from geometry alone, and prints no totals "

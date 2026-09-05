@@ -20,3 +20,18 @@ openssl s_client -connect <host>:443 -servername <host> </dev/null 2>/dev/null \
   | openssl x509 -noout -text | grep -A1 'Authority Information Access'
 curl -sS -o i.crt <the CA Issuers URL> && openssl x509 -inform DER -in i.crt -out i.pem
 ```
+
+## letsencrypt-yr-chain.pem
+
+`finance.cg.gov.in` serves a leaf issued by `Let's Encrypt YR2` with no intermediate
+attached, the same class of fault as the GlobalSign one above and a different issuer.
+YR2 is signed by `ISRG Root YR`, which is recent enough to be missing from the system
+trust store, so both are carried here: the intermediate and the root.
+
+This does not widen trust. ISRG Root YR is cross-signed by ISRG Root X1, which the
+machine already trusted, so the chain still terminates where it did before. Verification
+stays on; what changes is that Python can now find the links a browser fetches for itself
+from the leaf's Authority Information Access extension.
+
+Fetched 2026-09-05 from the AIA URLs in the certificates themselves,
+`http://yr2.i.lencr.org/` and `http://yr.i.lencr.org/`.

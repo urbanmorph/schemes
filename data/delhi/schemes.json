@@ -8,7 +8,7 @@
    "what": "Scheme-wise Budget 2026-27: SCHEME/PROGRAMME/PROJECTS WISE OUTLAY, sector by department by scheme, four years of figures in lakh with a printed subtotal at every level and a Grand Total"
   }
  },
- "built": "2026-09-05T15:22:51Z",
+ "built": "2026-09-05T16:20:26Z",
  "caveat": "One row here is one line of Delhi's scheme-wise budget, keyed on (sector, name) because the document prints no scheme code. Rows repeating a name within one sector are ADDED, which is what the document means when it splits a scheme into GIA-General, GIA-Salary and GIA-Capital lines. This list is a superset of Delhi's citizen-facing schemes: works and establishment lines such as 'Construction of Residential Complex for Judicial Officers' sit at the same level as 'Laadli Yojana'. It is also slightly SHORT of the document: about ten nil-provision rows are read as headings by the blank-line rule described in parse/delhi.py, and appear under headings rather than under entries.",
  "counts": {
   "funded_at_nil": 450,

@@ -111,7 +111,8 @@ if [ "$SKIP_COLLECT" = "0" ]; then
     python3 collect/budget.py --year "$CYCLE_YEAR"
   fi
   for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
-            telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
+            telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh \
+            chhattisgarh; do
     if have_cycle "$st" "$STATE_CYCLE"; then
       echo "  $st $STATE_CYCLE already archived, skipping"
     # Not every collector takes --cycle, and passing it to one that does not aborts the
@@ -159,7 +160,8 @@ step "parse/cag" python3 parse/cag.py
 # Karnataka budget less true. Their absence claims are not, and those wait below.
 say "parse · states"
 for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
-          telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
+          telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh \
+            chhattisgarh; do
   step "parse/$st" python3 "parse/$st.py"
 done
 
@@ -193,7 +195,8 @@ if [ "$VERIFY_OK" = "1" ]; then
   # Every state has one now. A classifier that fails is a state that stops publishing
   # absence claims, which the run must SAY rather than either hide or die on.
   for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
-            telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh; do
+            telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh \
+            chhattisgarh; do
     step "classify_$st" python3 "parse/classify_$st.py"
   done
   # Sector runs after the state parsers and before the site, because it classifies exactly

@@ -1,8 +1,8 @@
 {
- "built_at": "2026-09-05T15:23:16Z",
+ "built_at": "2026-09-05T16:20:50Z",
  "method_note": "Verdicts are hand-entered from reading each state's documents, which is the only way this survey has ever been done. Every verdict for a state that was built is then checked against that state's own parser output, and a disagreement stops the build rather than publishing. The refusals have no output to check against, which is what a refusal is, so each carries the measurement that decided it instead.",
- "schemes_named": 39667,
- "schemes_named_on_site": 39667,
+ "schemes_named": 40241,
+ "schemes_named_on_site": 40241,
  "states": [
   {
    "built": true,
@@ -468,6 +468,39 @@
   },
   {
    "built": true,
+   "cleared": 3,
+   "failed_at": "english",
+   "key": "chhattisgarh",
+   "measured": {
+    "absence_claims_published": true,
+    "cycle": "2026-27",
+    "names": 574,
+    "names_in_latin_script": 0,
+    "on_site": true,
+    "rows": 574,
+    "says": {
+     "closes": false,
+     "english": false,
+     "list": true,
+     "text": true
+    },
+    "source": "Chhattisgarh Budget 2026-27, Outcome, Gender, Youth and Child budgets, one set per department",
+    "totals_checked": 0,
+    "totals_failed": 0
+   },
+   "state": "Chhattisgarh",
+   "tests": {
+    "bounded": true,
+    "closes": false,
+    "english": false,
+    "list": true,
+    "text": true
+   },
+   "tests_run": 5,
+   "why": "Built from the WRONG BOOKS, and it says so on its own page. Its 44 department scheme books hold 2,562 rows and set every name in the Chanakya legacy font, whose encoding maps its codes to Latin glyph names with Devanagari outlines drawn in the slots, so the font cannot decode itself and nothing in the PDF can: those names fail the text test and are not published. The Outcome, Gender, Youth and Child books that 33 departments publish are in Kruti Dev, which is ASCII and whose table is checked against the state's own Unicode department index, and they are what this register reads. Hindi only, like Uttar Pradesh, so the English test is not cleared and the join is a change of script rather than a translation."
+  },
+  {
+   "built": true,
    "cleared": 5,
    "failed_at": null,
    "key": "tripura",
@@ -552,23 +585,6 @@
   },
   {
    "built": false,
-   "cleared": 1,
-   "failed_at": "text",
-   "key": null,
-   "measured": null,
-   "state": "Chhattisgarh",
-   "tests": {
-    "bounded": null,
-    "closes": null,
-    "english": null,
-    "list": true,
-    "text": false
-   },
-   "tests_run": 2,
-   "why": "Its 44 department books extract 2,429 scheme rows perfectly and 0 of 2,429 readable names, in the Krishna and Chanakya legacy fonts; all twelve English editions it links return 404 while the Hindi twins work."
-  },
-  {
-   "built": false,
    "cleared": 3,
    "failed_at": "bounded",
    "key": null,
@@ -619,11 +635,11 @@
    "why": "It publishes thirty documents and serves none of them: every link is a __doPostBack that 302s back to the portal home."
   }
  ],
- "states_built": 15,
- "states_on_site": 15,
- "states_refused": 7,
+ "states_built": 16,
+ "states_on_site": 16,
+ "states_refused": 6,
  "states_surveyed": 22,
- "states_with_absence_claims": 15,
+ "states_with_absence_claims": 16,
  "tests": [
   {
    "key": "list",

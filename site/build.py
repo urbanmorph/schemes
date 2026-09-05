@@ -1675,7 +1675,7 @@ STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
             "westbengal": "West Bengal", "telangana": "Telangana",
             "punjab": "Punjab", "jharkhand": "Jharkhand", "tripura": "Tripura",
             "delhi": "Delhi", "haryana": "Haryana", "uttarakhand": "Uttarakhand",
-            "uttarpradesh": "Uttar Pradesh"}
+            "uttarpradesh": "Uttar Pradesh", "chhattisgarh": "Chhattisgarh"}
 
 SOURCE_LABEL.update({k: f"{v} Budget" for k, v in STATE_OF.items()})
 

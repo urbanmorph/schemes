@@ -75,6 +75,12 @@ CA_BY_HOST = {
     # a fetch at all: a frozen collector poking a shared table is a worse precedent than
     # one more line in the table it pokes.
     "finance.jharkhand.gov.in": "globalsign-gcc-r46-ov-tls-ca-2025.pem",
+    # A DIFFERENT incomplete chain with the same shape. finance.cg.gov.in serves a leaf
+    # issued by Let's Encrypt YR2 and attaches nothing above it, and YR2 is signed by ISRG
+    # Root YR, which is new enough not to be in the system store yet. Both are carried, and
+    # Root YR is itself cross-signed by ISRG Root X1, so the chain still terminates at a
+    # root the machine already trusted: nothing new is being trusted, the gap is filled.
+    "finance.cg.gov.in": "letsencrypt-yr-chain.pem",
 }
 
 _CTX = ssl.create_default_context()
