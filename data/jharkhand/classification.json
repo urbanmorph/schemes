@@ -27576,17 +27576,21 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-09-05T04:02:55Z",
+ "built": "2026-09-05T04:35:08Z",
  "caveat": "This is a floor on Jharkhand's schemes and never a total. It counts what the 36 demand books print under STATE SCHEMES, CENTRAL ASSISTANCE SCHEMES and CENTRAL SECTOR SCHEMES; a benefit paid from a welfare board's own fund rather than from a demand does not appear. In the other direction some rows here are heads of expenditure rather than schemes a citizen can apply to, which is why the count is stated with the source and not as a headline.",
  "classified_not_scheme": 710,
  "classified_scheme": 142,
  "cycle": "2026-27",
  "ground_truth": {
+  "audit_census": 125,
   "labelled": 374,
   "not_scheme": 218,
   "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
+  "recall_measured_on": "The stratified sample alone. The audit census is selected on the classifier's own output -- every row in it is above the bar -- so counting it would raise recall with the size of the audit rather than with the quality of the classifier.",
   "sampling": "Stratified on the statement the line appears under (State Schemes, Central Assistance, Central Sector), 28% of each with a floor of 20, seed 20260903.",
-  "scheme": 156
+  "scheme": 156,
+  "stratified": 249,
+  "stratified_scheme": 71
  },
  "known_errors": [
   "ARCHAEOLOGICAL ACTIVITIES AND SCHEMES",
@@ -27633,47 +27637,54 @@
  "state": "Jharkhand",
  "threshold_sweep": [
   {
-   "n_labelled": 259,
-   "precision": 0.598,
-   "recall": 0.994,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 141,
+   "precision": 0.504,
+   "recall": 1.0,
    "threshold": -2
   },
   {
-   "n_labelled": 259,
-   "precision": 0.598,
-   "recall": 0.994,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 141,
+   "precision": 0.504,
+   "recall": 1.0,
    "threshold": -1
   },
   {
-   "n_labelled": 209,
-   "precision": 0.722,
-   "recall": 0.968,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 119,
+   "precision": 0.563,
+   "recall": 0.944,
    "threshold": 0
   },
   {
-   "n_labelled": 142,
-   "precision": 0.958,
-   "recall": 0.872,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 52,
+   "precision": 1.0,
+   "recall": 0.732,
    "threshold": 1
   },
   {
-   "n_labelled": 142,
-   "precision": 0.958,
-   "recall": 0.872,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 52,
+   "precision": 1.0,
+   "recall": 0.732,
    "threshold": 2
   },
   {
-   "n_labelled": 142,
-   "precision": 0.958,
-   "recall": 0.872,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 52,
+   "precision": 1.0,
+   "recall": 0.732,
    "threshold": 3
   }
  ],
  "validation": {
   "at_publish_threshold": {
-   "n_labelled": 142,
-   "precision": 0.958,
-   "recall": 0.872,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 52,
+   "precision": 1.0,
+   "recall": 0.732,
    "threshold": 3
   },
   "at_publish_threshold_census": {

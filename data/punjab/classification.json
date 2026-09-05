@@ -71037,17 +71037,21 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-09-05T04:02:54Z",
+ "built": "2026-09-05T04:35:07Z",
  "caveat": "The sub-head is the scheme and the object head is not, so Salaries, Wages and Office Expenses do not appear here. What does appear alongside real schemes are the establishment sub-heads the state files at the same level, Direction and Administration among them; they are kept because Punjab files them there and a reader counting welfare schemes should discount them. Allocations are not summed across books: the Gender Budget reports the women's share of provisions the demand books state in full, so the demand book figure wins and the Gender Budget figure is published as an earmark. The number here is a floor on Punjab's schemes, never a total.",
  "classified_not_scheme": 2817,
  "classified_scheme": 144,
  "cycle": "2026-27",
  "ground_truth": {
+  "audit_census": 155,
   "labelled": 457,
   "not_scheme": 301,
   "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
+  "recall_measured_on": "The stratified sample alone. The audit census is selected on the classifier's own output -- every row in it is above the bar -- so counting it would raise recall with the size of the audit rather than with the quality of the classifier.",
   "sampling": "Stratified on the level of the head of account the line sits at (sub-head, sub-sub-head, or neither), 10% of each with a floor of 25, seed 20260903.",
-  "scheme": 156
+  "scheme": 156,
+  "stratified": 302,
+  "stratified_scheme": 39
  },
  "known_errors": [
   "Reward/Incentive to Gram Panchayats for excellent performance",
@@ -71092,47 +71096,54 @@
  "state": "Punjab",
  "threshold_sweep": [
   {
-   "n_labelled": 261,
-   "precision": 0.59,
-   "recall": 0.987,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 114,
+   "precision": 0.325,
+   "recall": 0.949,
    "threshold": -2
   },
   {
-   "n_labelled": 261,
-   "precision": 0.59,
-   "recall": 0.987,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 114,
+   "precision": 0.325,
+   "recall": 0.949,
    "threshold": -1
   },
   {
-   "n_labelled": 226,
-   "precision": 0.668,
-   "recall": 0.968,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 109,
+   "precision": 0.312,
+   "recall": 0.872,
    "threshold": 0
   },
   {
-   "n_labelled": 144,
-   "precision": 0.972,
-   "recall": 0.897,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 27,
+   "precision": 0.852,
+   "recall": 0.59,
    "threshold": 1
   },
   {
-   "n_labelled": 144,
-   "precision": 0.972,
-   "recall": 0.897,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 27,
+   "precision": 0.852,
+   "recall": 0.59,
    "threshold": 2
   },
   {
-   "n_labelled": 144,
-   "precision": 0.972,
-   "recall": 0.897,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 27,
+   "precision": 0.852,
+   "recall": 0.59,
    "threshold": 3
   }
  ],
  "validation": {
   "at_publish_threshold": {
-   "n_labelled": 144,
-   "precision": 0.972,
-   "recall": 0.897,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 27,
+   "precision": 0.852,
+   "recall": 0.59,
    "threshold": 3
   },
   "at_publish_threshold_census": {

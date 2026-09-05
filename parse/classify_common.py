@@ -133,7 +133,46 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
     d = json.load(open(os.path.join(ROOT, "data", key, "schemes.json"), encoding="utf-8"))
     lj = json.load(open(os.path.join(ROOT, "data", key, "labels.json"), encoding="utf-8"))
     labels = {c: v["label"] for c, v in lj["labels"].items()}
-    lab = {c: v == "scheme" for c, v in labels.items()}
+
+    # WHICH LABELS THE SWEEP IS ALLOWED TO SEE, and it is not all of them.
+    #
+    # Every state here labels TWO sets: a stratified probability sample of the whole book,
+    # and an audit census of every row at or above the publishing bar. The census is what
+    # makes precision a count. It must never touch recall, because it is selected on the
+    # classifier's own output: every census row is above the bar, most are schemes, and
+    # each one therefore adds a true positive to the numerator AND to the denominator.
+    # Recall computed over both sets rises with the size of the census and not with the
+    # quality of the classifier.
+    #
+    # It had exactly that effect. The eight states built on this file reported recall
+    # 0.742 to 0.907 and the seven older ones, whose own classifiers restrict the sweep,
+    # reported 0.120 to 0.410 -- read for months as the newer work being better. Ranking
+    # the eight by census share reproduces their recall ranking almost exactly. Corrected
+    # to the sample alone: Uttar Pradesh 0.901 -> 0.436, Uttarakhand 0.748 -> 0.340,
+    # Telangana 0.907 -> 0.622. Tripura is the control -- whole corpus, no census, nothing
+    # selected on the outcome -- and its 0.618 does not move at all.
+    #
+    # West Bengal's labels file had already written the rule down: the stratified set "is
+    # the only set the threshold sweep uses, because precision and recall estimated on
+    # anything else would not generalise to the rows the classifier has not seen."
+    STRATIFIED = "stratified"
+    prov = {}
+    for c, v in lj["labels"].items():
+        how = str(v.get("how") or v.get("sample") or "")
+        if how.startswith("audit census") or how == "audit":
+            prov[c] = "audit"
+        elif how.startswith("stratified") or how.startswith("whole corpus"):
+            prov[c] = STRATIFIED
+        else:
+            # Refuse rather than guess. A label whose provenance is unrecorded cannot be
+            # placed on either side, and putting it on the wrong one is how this went
+            # unnoticed the first time.
+            raise SystemExit(
+                f"{key}: label {c!r} records no provenance ('how' or 'sample'). "
+                f"The sweep cannot tell a sampled row from an audited one, so no recall "
+                f"can be published for this state until it does.")
+    sampled = {c for c, v in prov.items() if v == STRATIFIED}
+    lab = {c: labels[c] == "scheme" for c in sampled}
     ms = myscheme_records(state)
     hit = joiner(ms)
     flag = f"in_myscheme_{key}"
@@ -172,12 +211,15 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
         out.append(row)
 
     def sweep(t):
-        h = [o for o in out if o["score"] >= t and o["hand_label"]]
+        # Stratified rows only, on both sides of the fraction. See the note above.
+        h = [o for o in out
+             if o["score"] >= t and o["hand_label"] and o["key"] in sampled]
         if not h:
             return None
         tp = sum(1 for o in h if o["hand_label"] == "scheme")
         return {"threshold": t, "n_labelled": len(h), "precision": round(tp / len(h), 3),
-                "recall": round(tp / max(1, sum(lab.values())), 3)}
+                "recall": round(tp / max(1, sum(lab.values())), 3),
+                "measured_on": "the stratified sample only"}
 
     census = [o for o in out if o["score"] >= publish]
     unlabelled = [o for o in census if o["hand_label"] is None]
@@ -195,6 +237,14 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
         "ground_truth": {"labelled": len(labels),
                          "scheme": sum(1 for v in labels.values() if v == "scheme"),
                          "not_scheme": sum(1 for v in labels.values() if v == "not_scheme"),
+                         "stratified": len(sampled),
+                         "stratified_scheme": sum(1 for v in lab.values() if v),
+                         "audit_census": len(labels) - len(sampled),
+                         "recall_measured_on": (
+                             "The stratified sample alone. The audit census is selected on "
+                             "the classifier's own output -- every row in it is above the "
+                             "bar -- so counting it would raise recall with the size of the "
+                             "audit rather than with the quality of the classifier."),
                          "question": lj.get("question"), "sampling": lj.get("sampling")},
         "threshold_sweep": [x for x in (sweep(t) for t in range(-2, 9)) if x],
         "validation": {

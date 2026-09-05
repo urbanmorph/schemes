@@ -31101,17 +31101,21 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-09-05T04:02:57Z",
+ "built": "2026-09-05T04:35:10Z",
  "caveat": "One row here is one line of Delhi's scheme-wise budget, keyed on (sector, name) because the document prints no scheme code. Rows repeating a name within one sector are ADDED, which is what the document means when it splits a scheme into GIA-General, GIA-Salary and GIA-Capital lines. This list is a superset of Delhi's citizen-facing schemes: works and establishment lines such as 'Construction of Residential Complex for Judicial Officers' sit at the same level as 'Laadli Yojana'. It is also slightly SHORT of the document: about ten nil-provision rows are read as headings by the blank-line rule described in parse/delhi.py, and appear under headings rather than under entries.",
  "classified_not_scheme": 1481,
  "classified_scheme": 97,
  "cycle": "2026-27",
  "ground_truth": {
+  "audit_census": 91,
   "labelled": 373,
   "not_scheme": 262,
   "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
+  "recall_measured_on": "The stratified sample alone. The audit census is selected on the classifier's own output -- every row in it is above the bar -- so counting it would raise recall with the size of the audit rather than with the quality of the classifier.",
   "sampling": "Stratified on whether the provision is revenue money, capital or loan money, both or neither, 17% of each with a floor of 17, seed 20260903.",
-  "scheme": 111
+  "scheme": 111,
+  "stratified": 282,
+  "stratified_scheme": 39
  },
  "known_errors": [
   "Subsidy for Electric Vehicles for 579 e- buses",
@@ -31157,47 +31161,54 @@
  "state": "Delhi",
  "threshold_sweep": [
   {
-   "n_labelled": 209,
-   "precision": 0.517,
-   "recall": 0.973,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 121,
+   "precision": 0.298,
+   "recall": 0.923,
    "threshold": -2
   },
   {
-   "n_labelled": 209,
-   "precision": 0.517,
-   "recall": 0.973,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 121,
+   "precision": 0.298,
+   "recall": 0.923,
    "threshold": -1
   },
   {
-   "n_labelled": 197,
-   "precision": 0.548,
-   "recall": 0.973,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 120,
+   "precision": 0.3,
+   "recall": 0.923,
    "threshold": 0
   },
   {
-   "n_labelled": 97,
-   "precision": 0.948,
-   "recall": 0.829,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 20,
+   "precision": 1.0,
+   "recall": 0.513,
    "threshold": 1
   },
   {
-   "n_labelled": 97,
-   "precision": 0.948,
-   "recall": 0.829,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 20,
+   "precision": 1.0,
+   "recall": 0.513,
    "threshold": 2
   },
   {
-   "n_labelled": 97,
-   "precision": 0.948,
-   "recall": 0.829,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 20,
+   "precision": 1.0,
+   "recall": 0.513,
    "threshold": 3
   }
  ],
  "validation": {
   "at_publish_threshold": {
-   "n_labelled": 97,
-   "precision": 0.948,
-   "recall": 0.829,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 20,
+   "precision": 1.0,
+   "recall": 0.513,
    "threshold": 3
   },
   "at_publish_threshold_census": {

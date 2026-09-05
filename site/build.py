@@ -716,8 +716,9 @@ def classifier_note(cls, floor_sentence):
             f'threshold carries a hand label, so the errors in this table are '
             f'{num(cen.get("not_schemes"))} named ones. Validated against '
             f'{num((cls.get("ground_truth") or {}).get("labelled"))} hand labels in all. '
-            f'Recall is {v.get("at_publish_threshold", {}).get("recall", 0):.0%}, so this is '
-            f'a floor and never a total. {floor_sentence}')
+            f'Recall is {v.get("at_publish_threshold", {}).get("recall", 0):.0%}, measured on '
+            f'the stratified sample alone, so this is a floor and never a total. '
+            f'{floor_sentence}')
 
 
 def page_state(key, state, d, leg_row, cls=None):
@@ -770,13 +771,25 @@ def page_state(key, state, d, leg_row, cls=None):
     # were not. Both are on the same page because the page is the state's book either way.
     scored = bool((cls or {}).get("all_entries"))
     if scored:
-        v = ((cls or {}).get("validation") or {}).get("at_publish_threshold_census") or {}
+        val = ((cls or {}).get("validation") or {})
+        v = val.get("at_publish_threshold_census") or {}
+        # Recall belongs beside precision on every state page and not only on the four
+        # /divergence writes out in full, because the two numbers are only honest together:
+        # precision says how much of this table is right, recall says how much of the state's
+        # book never reached it. And it says what it is measured ON, because the audit census
+        # is chosen on the classifier's own output and counting it there inflated seven of
+        # these states by as much as 41 points.
+        rc = (val.get("at_publish_threshold") or {}).get("recall")
+        recall_note = (
+            f' Recall is {rc:.0%}, measured on the stratified sample alone, so this table is '
+            f'a floor on what {e(state)} funds and never a total.' if rc is not None else "")
         scored_note = (
             f'{num(cls.get("classified_scheme"))} of these {num(len(rows))} lines clear the '
             f'bar this register uses before it will call a line a scheme, and every one at '
             f'or above that bar carries a hand label, so its precision is a count rather '
             f'than an estimate: {v.get("precision", 0):.1%} on '
-            f'{num(v.get("rows"))} rows, with {num(v.get("not_schemes"))} named errors. '
+            f'{num(v.get("rows"))} rows, with {num(v.get("not_schemes"))} named errors.'
+            f'{recall_note} '
             f'The rest of the book is on this page because {e(state)} published it, not '
             f'because this register calls it anything.')
     else:
@@ -1160,6 +1173,18 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, ka=None, ap=N
             "university, a directorate. Every row is scored on signals published with the "
             "arithmetic.")
 
+    def _recall(d):
+        return ((d or {}).get("validation") or {}).get("at_publish_threshold", {}).get("recall")
+
+    four = [(n, _recall(d)) for n, d in
+            (("Tamil Nadu", tn), ("Andhra Pradesh", ap), ("Karnataka", ka), ("Kerala", kl))
+            if _recall(d) is not None]
+    four.sort(key=lambda x: -x[1])
+    four_recalls = ("Recall is "
+                    + ", ".join(f"{r:.0%} in {n}" for n, r in four[:-1])
+                    + f" and {four[-1][1]:.0%} in {four[-1][0]}") if four else \
+        "Recall is a floor in every one of them"
+
     tn_section = ""
     if tn and tn.get("absent_distinct"):
         tn_section = simple_state(
@@ -1315,13 +1340,29 @@ and be done.</p>
 {kl_section}
 {tn_section}
 <div class="warnbox">
+  <b>This register published its own recall too high, and this is the corrected number</b>
+  Every state here is measured twice: a stratified probability sample of the whole budget
+  book, and an <em>audit census</em> in which every row at or above the publishing bar is
+  hand-labelled, which is what makes the precision above a count rather than an estimate.
+  Until this month seven states divided their recall by both sets together. Every row in an
+  audit census is above the bar by construction, so counting it there adds a hit to the top
+  and the bottom of the fraction at once, and the number grows with the size of the audit
+  rather than with how much of the book the classifier actually finds. Ranking those seven
+  by the size of their census reproduced their recall ranking almost exactly, which is what
+  gave it away. Recall is now divided by the stratified sample alone, and it fell in every
+  one of the seven: Uttar Pradesh from 90% to 44%, Uttarakhand from 75% to 34%, Telangana
+  from 91% to 62%. Nothing about which schemes are published changed, and no precision
+  changed. What changed is the claim about how much each table leaves out, which was
+  flattering and is now not.
+</div>
+
+<div class="warnbox">
   <b>Do not add these four tables together, and do not rank the states by them</b>
   Each state's table is a floor set by how much evidence that state prints, not a measure of
-  how much it hides. Recall is 41% in Tamil Nadu, 37% in Andhra Pradesh, 32% in Karnataka and
-  12% in Kerala, so Kerala's short table says that Kerala's plan document is hard to read and
-  says nothing at all about Kerala. Reading these as comparable would repeat exactly the
-  mistake this page opens by documenting: four government sources publishing numbers that
-  look like each other and count different things.
+  how much it hides. {four_recalls}, so Kerala's short table says that Kerala's plan
+  document is hard to read and says nothing at all about Kerala. Reading these as comparable
+  would repeat exactly the mistake this page opens by documenting: four government sources
+  publishing numbers that look like each other and count different things.
 </div>
 
 {unlisted_section}

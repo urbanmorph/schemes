@@ -9,8 +9,15 @@ classify_common.py; every signal below is Jharkhand's own.
 
 374 hand labels: a 249-row stratified sample on the statement each line appears under
 (State Schemes, Central Assistance, Central Sector), then every row at the publishing bar
-labelled so precision is a COUNT. 152 of 852 lines clear it, precision 0.967 with five
-named errors, recall 0.886.
+labelled so precision is a COUNT. 142 of 852 lines clear it, precision 0.958 with six
+named errors, recall 0.732.
+
+RECALL WAS PUBLISHED TOO HIGH UNTIL NOW, and by a lot. The sweep was counting the
+audit census, which is selected on this classifier's own output -- every row in it is
+at or above the bar -- so it added true positives to the numerator and the denominator
+together and rose with the size of the audit rather than with the quality of the
+scoring. classify_common sweeps the stratified sample alone now. The old figure was
+0.886.
 
 WHAT MAKES JHARKHAND DIFFERENT. Its book is the noisiest of the eight states classified
 here: 852 scheme codes in which ROADS, BRIDGES, DIRECTION - ADMINISTRATION, SEMINAR

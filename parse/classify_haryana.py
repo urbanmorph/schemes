@@ -54,6 +54,12 @@ P(scheme) 0.000, over 19 and 7 rows. They are in the score because they were mea
 they were looked for because the census showed them; that order matters and it is the order
 this file was written in.
 
+AND WHAT THE CENSUS MUST NOT TOUCH IS RECALL. Every row in it is at or above the bar by
+construction, so counting it there adds a true positive to both sides of the fraction and
+the number rises with the size of the audit rather than with the quality of the scoring.
+This file swept all 390 labels and published 0.742; on the 300 stratified labels alone,
+which are the only ones drawn without looking at the score, it is 0.524.
+
 REJECTED SIGNALS, with the measurement that rejected each, are in signals_rejected below.
 The purpose line is there. So is the word "assistance", at 0.385 against a 0.280 base: too
 weak to carry a positive when "Assistance to States for Conduct of Livestock Census" and
@@ -169,7 +175,15 @@ def run():
     rows = d["entries"]
     lj = json.load(open(os.path.join(ROOT, "data", "haryana", "labels.json"), encoding="utf-8"))
     labels = {c: v["label"] for c, v in lj["labels"].items()}
-    lab = {c: v == "scheme" for c, v in labels.items()}
+    # The sweep sees the stratified sample and not the audit census. The census is chosen
+    # on this classifier's own output -- every row in it is at or above the bar -- so
+    # letting it into recall raises the number with the size of the audit instead of with
+    # the quality of the scoring. classify_common carries the full note; this file predates
+    # that harness and has to say it again. Haryana's 90 audited rows had it reading 0.742.
+    sampled = {c for c, v in lj["labels"].items()
+               if not str(v.get("how") or v.get("sample") or "").startswith(
+                   ("audit census", "audit"))}
+    lab = {c: labels[c] == "scheme" for c in sampled}
 
     ms = myscheme_haryana()
     idx = collections.defaultdict(set)
@@ -202,16 +216,8 @@ def run():
             "in_myscheme_haryana": bool(m), "myscheme_name": m,
         })
 
-    def sweep(t):
-        hit = [c for c in lab if score(next(r for r in rows if r["code"] == c))[0] >= t]
-        if not hit:
-            return None
-        tp = sum(lab[c] for c in hit)
-        tot = sum(lab.values())
-        return {"threshold": t, "n_labelled": len(hit), "precision": round(tp / len(hit), 3),
-                "recall": round(tp / tot, 3)}
-
     by_code = {r["code"]: r for r in rows}
+
     def sweep2(t):
         hit = [c for c in lab if score(by_code[c])[0] >= t]
         if not hit:
@@ -219,7 +225,8 @@ def run():
         tp = sum(lab[c] for c in hit)
         return {"threshold": t, "n_labelled": len(hit),
                 "precision": round(tp / len(hit), 3),
-                "recall": round(tp / sum(lab.values()), 3)}
+                "recall": round(tp / sum(lab.values()), 3),
+                "measured_on": "the stratified sample only"}
 
     census = [o for o in out if o["score"] >= PUBLISH_THRESHOLD]
     unlabelled = [o for o in census if o["hand_label"] is None]

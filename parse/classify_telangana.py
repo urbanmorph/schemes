@@ -8,8 +8,15 @@ classify_common.py; every signal below is Telangana's own.
     data/telangana/classification.json  the verdicts, the output
 
 566 hand labels: a 287-row stratified sample on the plan group the book files each line
-under, then every row at the publishing bar labelled so precision is a COUNT. 283 of 2,039
-lines clear it, precision 0.989 with three named errors, recall 0.909. That is the largest
+under, then every row at the publishing bar labelled so precision is a COUNT. 275 of 2,039
+lines clear it, precision 0.989 with three named errors, recall 0.622.
+
+RECALL WAS PUBLISHED TOO HIGH UNTIL NOW, and by a lot. The sweep was counting the
+audit census, which is selected on this classifier's own output -- every row in it is
+at or above the bar -- so it added true positives to the numerator and the denominator
+together and rose with the size of the audit rather than with the quality of the
+scoring. classify_common sweeps the stratified sample alone now. The old figure was
+0.909. That is the largest
 published set of any state here, and it is large because the Pragathi Paddu really is a
 scheme volume: Telangana's own caveat says it files establishment heads at the same level,
 and it files a great many schemes beside them.

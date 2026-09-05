@@ -58658,17 +58658,21 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-09-05T04:03:12Z",
+ "built": "2026-09-05T04:35:26Z",
  "caveat": "One row here is one node of Uttarakhand's own account tree that the book prints a total for and that sits below a minor head, keyed on the 13-digit scheme code the state's own Volume 5 front matter uses. That is a superset of the schemes a citizen can apply to: establishment heads such as 'Establishment of Departmental Accounts' sit at the same level as 'Grant for rainwater harvesting'. Items of expenditure below it (Pay, Dearness Allowance, Office Expenses) are excluded, and the test is the document's own: the book prints a total for a level with children and never for an item of expenditure. Names are Uttarakhand's own English, printed under the Hindi on every line. be_lakh is the figure the book prints on that node's own Total line; total_reconciled says whether the rows beneath it add up to it, and 82 per cent of them do. See reconciliation.printed_totals.",
  "classified_not_scheme": 2228,
  "classified_scheme": 96,
  "cycle": "2026-27",
  "ground_truth": {
+  "audit_census": 108,
   "labelled": 373,
   "not_scheme": 246,
   "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
+  "recall_measured_on": "The stratified sample alone. The audit census is selected on the classifier's own output -- every row in it is above the bar -- so counting it would raise recall with the size of the audit rather than with the quality of the classifier.",
   "sampling": "Stratified on whether the major head is a revenue head (2xxx, 3xxx) or a capital one (4xxx to 6xxx), 11% of each with a floor of 20, seed 20260903.",
-  "scheme": 127
+  "scheme": 127,
+  "stratified": 265,
+  "stratified_scheme": 47
  },
  "known_errors": [
   "Saksham Anganwadi & Poshan 2.0-Anganwadi Services (PM Janman Yojana CSS"
@@ -58710,65 +58714,75 @@
  "state": "Uttarakhand",
  "threshold_sweep": [
   {
-   "n_labelled": 210,
-   "precision": 0.59,
-   "recall": 0.976,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 114,
+   "precision": 0.395,
+   "recall": 0.957,
    "threshold": -2
   },
   {
-   "n_labelled": 208,
-   "precision": 0.591,
-   "recall": 0.969,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 112,
+   "precision": 0.393,
+   "recall": 0.936,
    "threshold": -1
   },
   {
-   "n_labelled": 193,
-   "precision": 0.637,
-   "recall": 0.969,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 111,
+   "precision": 0.396,
+   "recall": 0.936,
    "threshold": 0
   },
   {
-   "n_labelled": 129,
-   "precision": 0.86,
-   "recall": 0.874,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 47,
+   "precision": 0.681,
+   "recall": 0.681,
    "threshold": 1
   },
   {
-   "n_labelled": 108,
-   "precision": 0.935,
-   "recall": 0.795,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 28,
+   "precision": 0.786,
+   "recall": 0.468,
    "threshold": 2
   },
   {
-   "n_labelled": 103,
-   "precision": 0.971,
-   "recall": 0.787,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 23,
+   "precision": 0.913,
+   "recall": 0.447,
    "threshold": 3
   },
   {
-   "n_labelled": 96,
-   "precision": 0.99,
-   "recall": 0.748,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 16,
+   "precision": 1.0,
+   "recall": 0.34,
    "threshold": 4
   },
   {
-   "n_labelled": 36,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 8,
    "precision": 1.0,
-   "recall": 0.283,
+   "recall": 0.17,
    "threshold": 5
   },
   {
-   "n_labelled": 23,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 5,
    "precision": 1.0,
-   "recall": 0.181,
+   "recall": 0.106,
    "threshold": 6
   }
  ],
  "validation": {
   "at_publish_threshold": {
-   "n_labelled": 96,
-   "precision": 0.99,
-   "recall": 0.748,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 16,
+   "precision": 1.0,
+   "recall": 0.34,
    "threshold": 4
   },
   "at_publish_threshold_census": {

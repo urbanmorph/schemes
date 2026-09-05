@@ -8,8 +8,15 @@ classify_common.py; every signal below is Delhi's own.
     data/delhi/classification.json  the verdicts, the output
 
 373 hand labels: a 282-row stratified sample on the shape of the provision, then every row
-at the publishing bar labelled so precision is a COUNT. 100 of 1,578 lines clear it,
-precision 0.960 with four named errors, recall 0.835.
+at the publishing bar labelled so precision is a COUNT. 97 of 1,578 lines clear it,
+precision 0.948 with five named errors, recall 0.513.
+
+RECALL WAS PUBLISHED TOO HIGH UNTIL NOW, and by a lot. The sweep was counting the
+audit census, which is selected on this classifier's own output -- every row in it is
+at or above the bar -- so it added true positives to the numerator and the denominator
+together and rose with the size of the audit rather than with the quality of the
+scoring. classify_common sweeps the stratified sample alone now. The old figure was
+0.835.
 
 THE BASE RATE IS 0.145, THE LOWEST OF ANY STATE HERE, and that is a fact about the
 document rather than about Delhi. The Scheme-wise Budget is the whole of Delhi's spending

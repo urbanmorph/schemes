@@ -57248,17 +57248,21 @@
    "verdict": "scheme"
   }
  ],
- "built": "2026-09-05T04:02:50Z",
+ "built": "2026-09-05T04:35:03Z",
  "caveat": "The Pragathi Paddu is Telangana's scheme expenditure volume and it files establishment heads at the same level as schemes: Governor Secretariat, Raj Bhavan Gardens, Furniture Estt, Public Service Commission. They are kept, because the state files them here and dropping them would be this project editing a state's own list; a reader counting welfare schemes should discount them. Allocations are not summed across books: the SCSDF and STSDF report the Scheduled Caste and Scheduled Tribe slices of provisions the Pragathi Paddu states in full, so the Pragathi Paddu figure wins and the fund figures are published separately as earmarks. The number here is a floor on Telangana's schemes, never a total.",
  "classified_not_scheme": 1764,
  "classified_scheme": 275,
  "cycle": "2026-27",
  "ground_truth": {
+  "audit_census": 279,
   "labelled": 566,
   "not_scheme": 266,
   "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
+  "recall_measured_on": "The stratified sample alone. The audit census is selected on the classifier's own output -- every row in it is above the bar -- so counting it would raise recall with the size of the audit rather than with the quality of the classifier.",
   "sampling": "Stratified on the plan group the Pragathi Paddu files the line under (State Sector, Centrally Sponsored, Matching State Share, RIDF, AIBP, Externally Aided and none), 12% of each with a floor of 15, seed 20260903.",
-  "scheme": 300
+  "scheme": 300,
+  "stratified": 287,
+  "stratified_scheme": 74
  },
  "known_errors": [
   "Assiatance to Non-Provincialized Pensions",
@@ -57302,47 +57306,54 @@
  "state": "Telangana",
  "threshold_sweep": [
   {
-   "n_labelled": 424,
-   "precision": 0.698,
-   "recall": 0.987,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 152,
+   "precision": 0.461,
+   "recall": 0.946,
    "threshold": -2
   },
   {
-   "n_labelled": 424,
-   "precision": 0.698,
-   "recall": 0.987,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 152,
+   "precision": 0.461,
+   "recall": 0.946,
    "threshold": -1
   },
   {
-   "n_labelled": 369,
-   "precision": 0.794,
-   "recall": 0.977,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 140,
+   "precision": 0.479,
+   "recall": 0.905,
    "threshold": 0
   },
   {
-   "n_labelled": 275,
-   "precision": 0.989,
-   "recall": 0.907,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 46,
+   "precision": 1.0,
+   "recall": 0.622,
    "threshold": 1
   },
   {
-   "n_labelled": 275,
-   "precision": 0.989,
-   "recall": 0.907,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 46,
+   "precision": 1.0,
+   "recall": 0.622,
    "threshold": 2
   },
   {
-   "n_labelled": 275,
-   "precision": 0.989,
-   "recall": 0.907,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 46,
+   "precision": 1.0,
+   "recall": 0.622,
    "threshold": 3
   }
  ],
  "validation": {
   "at_publish_threshold": {
-   "n_labelled": 275,
-   "precision": 0.989,
-   "recall": 0.907,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 46,
+   "precision": 1.0,
+   "recall": 0.622,
    "threshold": 3
   },
   "at_publish_threshold_census": {

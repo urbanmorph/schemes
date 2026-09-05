@@ -8,8 +8,15 @@ classify_common.py; every signal below is Punjab's own.
     data/punjab/classification.json  the verdicts, the output
 
 457 hand labels: a 302-row stratified sample on the level of the head of account, then
-every row at the publishing bar labelled so precision is a COUNT. 154 of 2,961 lines clear
-it, precision 0.974 with four named errors, recall 0.904.
+every row at the publishing bar labelled so precision is a COUNT. 144 of 2,961 lines clear
+it, precision 0.972 with four named errors, recall 0.590.
+
+RECALL WAS PUBLISHED TOO HIGH UNTIL NOW, and by a lot. The sweep was counting the
+audit census, which is selected on this classifier's own output -- every row in it is
+at or above the bar -- so it added true positives to the numerator and the denominator
+together and rose with the size of the audit rather than with the quality of the
+scoring. classify_common sweeps the stratified sample alone now. The old figure was
+0.904.
 
 BASE RATE 0.136. Punjab's demand books are the full detailed accounts, so the sample is
 mostly the state running itself: Computer Stationery and Consumable Items, Manpower,

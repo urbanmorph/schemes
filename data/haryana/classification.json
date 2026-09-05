@@ -28673,7 +28673,7 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-09-05T04:03:01Z",
+ "built": "2026-09-05T04:35:15Z",
  "caveat": "One row here is one line of Haryana's Plan Memo, keyed on the state's own scheme code. The book is a register of WELFARE AND DEVELOPMENT schemes and not of the whole budget, so establishment and pension heads are largely absent, which makes this a cleaner scheme list than most states publish and a smaller one than their total expenditure. purpose is Haryana's own description of the scheme, taken verbatim from the narrative half of the same book; it is present for most schemes and null for the rest.",
  "classified_not_scheme": 853,
  "classified_scheme": 117,
@@ -28735,53 +28735,61 @@
  "state": "Haryana",
  "threshold_sweep": [
   {
-   "n_labelled": 209,
-   "precision": 0.699,
-   "recall": 0.942,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 121,
+   "precision": 0.62,
+   "recall": 0.893,
    "threshold": 0
   },
   {
-   "n_labelled": 197,
-   "precision": 0.736,
-   "recall": 0.935,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 118,
+   "precision": 0.627,
+   "recall": 0.881,
    "threshold": 1
   },
   {
-   "n_labelled": 154,
-   "precision": 0.838,
-   "recall": 0.832,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 76,
+   "precision": 0.763,
+   "recall": 0.69,
    "threshold": 2
   },
   {
-   "n_labelled": 135,
-   "precision": 0.911,
-   "recall": 0.794,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 62,
+   "precision": 0.839,
+   "recall": 0.619,
    "threshold": 3
   },
   {
-   "n_labelled": 117,
-   "precision": 0.983,
-   "recall": 0.742,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 44,
+   "precision": 1.0,
+   "recall": 0.524,
    "threshold": 4
   },
   {
-   "n_labelled": 54,
-   "precision": 0.981,
-   "recall": 0.342,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 20,
+   "precision": 1.0,
+   "recall": 0.238,
    "threshold": 5
   },
   {
-   "n_labelled": 42,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 14,
    "precision": 1.0,
-   "recall": 0.271,
+   "recall": 0.167,
    "threshold": 6
   }
  ],
  "validation": {
   "at_publish_threshold": {
-   "n_labelled": 117,
-   "precision": 0.983,
-   "recall": 0.742,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 44,
+   "precision": 1.0,
+   "recall": 0.524,
    "threshold": 4
   },
   "at_publish_threshold_census": {

@@ -36,7 +36,7 @@
    "what": "ANNUAL SCHEME summary statement, English: department and sector totals, used to reconcile the detailed book against a figure printed elsewhere"
   }
  },
- "built": "2026-09-05T03:57:26Z",
+ "built": "2026-09-05T04:29:40Z",
  "caveat": "One row here is one SCHEME as Maharashtra's Planning Department numbers them, keyed on the 10-digit scheme code the state prints. be_lakh is the sum of that scheme's budget-code rows, which is what the book's own Sub Sector Totals add: two rows of one scheme are two heads of account holding different halves of one provision, most often the state and central shares of a centrally sponsored scheme. The GENERAL, SCCS (Scheduled Caste Component) and TCS (Tribal Component) cuts use disjoint scheme codes on this snapshot, so a scheme belongs to exactly one of them and none is counted twice. Statements GN5 (externally aided) and GN6 (domestic financial institutions) are not read because all 31 and all 24 of their scheme codes already appear in GN2. Statements GN7 and GN8, the women and child and human development cross-cuts, carry no scheme code and are not merged, because linking them would mean matching Maharashtra's names to Maharashtra's own names and asserting a link the state did not print. Statement GN3, the physical targets, is not read yet.",
  "counts": {
   "budget_code_rows_read": 3916,

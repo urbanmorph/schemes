@@ -7,9 +7,16 @@ classify_common.py; every signal below is Uttar Pradesh's own.
     data/uttarpradesh/labels.json          hand ground truth, the input
     data/uttarpradesh/classification.json  the verdicts, the output
 
-513 hand labels: a 289-row stratified sample on whether the scheme code is two digits or
+528 hand labels: a 289-row stratified sample on whether the scheme code is two digits or
 four, then every row at the publishing bar labelled so precision is a COUNT. 184 of 5,831
-lines clear it, precision 0.935 with twelve named errors, recall 0.869.
+lines clear it, precision 0.940 with eleven named errors, recall 0.436.
+
+BOTH OF THOSE NUMBERS MOVED, AND FOR THE SAME REASON. Recall was published as 0.869 while
+the sweep was counting the audit census, which is chosen on this classifier's own output;
+classify_common now sweeps the stratified sample alone and the honest figure is 0.436.
+Precision was published as 0.935 as though it were a count, and it was not: grant, code and
+page do not identify a row here, so 15 rows at the bar were being given a hand label
+somebody wrote about a different line. They are labelled now, and 0.940 is a count.
 
 THIS FILE IS WRITTEN IN DEVANAGARI AND THAT IS THE POINT. Uttar Pradesh publishes its
 budget in Hindi and in nothing else, so every regex below matches Hindi, and the labels
@@ -56,9 +63,11 @@ size hard: the vocabulary is right and the subject is not.
 """
 
 import argparse
+import json
+import os
 import re
 
-from classify_common import classify, report
+from classify_common import ROOT, classify, report
 
 POSITIVE = re.compile(
     "छात्रवृत्ति|बीमा|प्रोत्साहन|पुरस्कार|पेंशन|आवास योजना|आजीविका|पुष्टाहार|कल्याण निधि|"
@@ -92,9 +101,61 @@ PUBLISH_THRESHOLD = 3
 LISTING_THRESHOLD = 1
 
 
-def ident(r):
+def _base(r):
     """Uttar Pradesh's code is unique only within a grant volume: 04 exists in all 91."""
     return f"{r['grant']}|{r['code']}|{r['page']}"
+
+
+# ...AND GRANT, CODE AND PAGE TOGETHER ARE STILL NOT UNIQUE. 486 of them name more than one
+# row, covering 1,093 of the 5,831. The book really does print one scheme name under one
+# code on one page twice with two different provisions: of the 202 collisions that survive
+# adding the NAME as well, 132 differ only in the amount and 44 in the amount and the head
+# it sits under. Two provisions, not one printed twice.
+#
+# The cost was silent and it was in the ground truth. classify_common assigns hand labels by
+# looking the identifier up, so every row sharing an identifier was given the label somebody
+# wrote for ONE of them: 289 sampled labels were landing on 370 rows, so 81 rows in the
+# threshold sweep -- 22% of it -- carried a verdict written about a different line. At the
+# publishing bar the damage is one pair, प्रादेशिक सेना डेकोरेशन and महारानी अहिल्याबाई
+# होलकर पुरस्कार योजना, which share 84|05|7 and are plainly two different things.
+#
+# The ordinal is appended only from the SECOND occurrence, so every identifier that was
+# already unique is unchanged and the labels written against it still match. Occurrences are
+# ordered by the row's own printed content rather than by position in the file, because
+# classify_common sorts on the identifier and so calls this during the sort, when file order
+# is not available. Two rows identical in every field -- there are 8 such pairs -- are
+# indistinguishable in the data and are left sharing an identifier rather than separated by
+# an ordinal the book does not support.
+def _ordinals():
+    import collections
+    d = json.load(open(os.path.join(ROOT, "data", "uttarpradesh", "schemes.json"),
+                       encoding="utf-8"))
+    groups = collections.defaultdict(list)
+    for r in d["entries"]:
+        groups[_base(r)].append(r)
+    out = {}
+    for base, rows in groups.items():
+        if len(rows) == 1:
+            continue
+        for i, sig in enumerate(sorted({_sig(r) for r in rows})):
+            if i:
+                out[(base, sig)] = f"{base}#{i + 1}"
+    return out
+
+
+def _sig(r):
+    return json.dumps(r, sort_keys=True, ensure_ascii=False)
+
+
+_ORDINAL = None
+
+
+def ident(r):
+    global _ORDINAL
+    if _ORDINAL is None:
+        _ORDINAL = _ordinals()
+    base = _base(r)
+    return _ORDINAL.get((base, _sig(r)), base)
 
 
 def score(r):

@@ -8,8 +8,15 @@ classify_common.py; every signal below is Uttarakhand's own.
     data/uttarakhand/classification.json  the verdicts, the output
 
 373 hand labels: a 265-row stratified sample on whether the major head is revenue or
-capital, then every row at the publishing bar labelled so precision is a COUNT. 112 of
-2,324 lines clear it, precision 1.000 with no errors, recall 0.783.
+capital, then every row at the publishing bar labelled so precision is a COUNT. 96 of
+2,324 lines clear it, precision 0.990 with one named error, recall 0.340.
+
+RECALL WAS PUBLISHED TOO HIGH UNTIL NOW, and by a lot. The sweep was counting the
+audit census, which is selected on this classifier's own output -- every row in it is
+at or above the bar -- so it added true positives to the numerator and the denominator
+together and rose with the size of the audit rather than with the quality of the
+scoring. classify_common sweeps the stratified sample alone now. The old figure was
+0.783.
 
 THIS IS THE RAWEST BOOK OF THE ELEVEN. Uttarakhand's Volume 5 is the detailed estimates
 with nothing filtered out, so the sample is full of Dearness Allowance, Travelling
