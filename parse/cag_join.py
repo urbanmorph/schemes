@@ -36,10 +36,37 @@ were read by eye:
 The published tier is small and it is right, which is the trade this register makes every
 time: an audit attached to the wrong scheme is a factual error on that scheme's page, and
 a missing one is a gap the next pass can close.
+
+WIDENING THE POOL TO THE WHOLE REGISTER CHANGED NOTHING, WHICH IS THE FINDING.
+
+This joined against data/registry.json alone, 5,475 names from the four NATIONAL sources,
+and the other half of the register was not in the pool at all: 4,716 more names read out of
+fifteen state budget books, which could not be joined to any audit however exactly they
+matched. That was plainly the wrong half to leave out, because 2,257 of the 2,804 reports
+in the catalogue, 80% of it, are audits of STATE governments.
+
+The pool is now 10,191 and each state's schemes are scoped to that state's own reports, so
+a Karnataka report is never offered a Kerala scheme. The published joins went from 22 to
+22. Not one of the 4,716 state names clears the similarity rule.
+
+The reason is in the shapes of the two strings. A CAG subject names a programme area:
+"Housing for Urban Poor". A state budget line names an accounting provision: "Grants to
+Tamil Nadu Shelter Fund under Inclusive...", "Schemes Implementation of Housing Projects",
+"Grants to TNUHDB for implementation of Asian Development Bank...". Those three are all
+plausibly what that audit is about and none of them is what it is CALLED, so the only rule
+that joins them is containment, which this file already measured and rejected, and these
+are three fresh examples of why: one report, three different schemes, no way to tell from
+the strings which one it audited.
+
+So the coverage stays where it is and the denominator is now honest about what it counted.
+Joining a state audit to a state scheme needs evidence these two documents do not share --
+a scheme code in the report, or the report's own text -- and inventing a rule to bridge
+them here would be this register doing what it documents in everybody else.
 """
 
 import argparse
 import collections
+import glob
 import json
 import os
 import sys
@@ -72,7 +99,45 @@ def run():
         raise SystemExit("need data/cag/reports.json and data/registry.json: "
                          "run parse/cag.py and parse/registry.py first")
 
-    names = sorted({e["name"] for e in (reg.get("entries") or []) if e.get("name")})
+    # THE POOL IS BOTH HALVES OF THE REGISTER, AND IT USED TO BE ONE.
+    #
+    # This joined against data/registry.json alone: 5,475 names from the four NATIONAL
+    # sources. The other half of what this register holds, 5,120 schemes read out of fifteen
+    # state budget books, was not in the pool at all, so no state scheme could be joined to
+    # any audit however exactly it matched. That is the wrong half to leave out. 2,257 of
+    # the 2,804 reports in the catalogue, 80% of it, are audits of STATE governments, and a
+    # state audit is precisely the thing a state scheme would join to.
+    #
+    # A state's schemes are scoped to that state's own reports, which is a precision gain
+    # and not only a coverage one: a Karnataka report cannot be an audit of a Kerala scheme,
+    # so scoping removes a whole class of wrong join before the similarity rule is asked.
+    # The national pool stays joinable to every government, because a centrally sponsored
+    # scheme really is audited in a state report.
+    names, scope = [], []
+    seen = set()
+    for e in (reg.get("entries") or []):
+        n = e.get("name")
+        if n and n not in seen:
+            seen.add(n)
+            names.append(n)
+            scope.append(None)          # joinable to any government
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "*", "classification.json"))):
+        d = load(os.path.relpath(f, ROOT)) or {}
+        if not d.get("all_entries"):
+            continue
+        st, bar = d.get("state"), d.get("listing_threshold")
+        if not st or bar is None:
+            continue
+        flag = "in_myscheme_" + os.path.basename(os.path.dirname(f))
+        for r in d["all_entries"]:
+            n = r.get("name")
+            # The rows the site publishes for this state: at its listing bar, and not
+            # already held under a national name, which is what `seen` carries.
+            if not n or r.get("score", -99) < bar or r.get(flag) or n in seen:
+                continue
+            seen.add(n)
+            names.append(n)
+            scope.append(st)
     idx = collections.defaultdict(set)
     for i, n in enumerate(names):
         for k in (set(tokens(n)) | {skeleton(t) for t in tokens(n)}
@@ -94,6 +159,9 @@ def run():
         # join at all.
         for i, n in sorted(hits.items(), key=lambda kv: (-kv[1], kv[0]))[:CAND_CAP]:
             if n < 2:
+                continue
+            # A state's scheme is only ever a candidate for that state's own reports.
+            if scope[i] is not None and scope[i] != r.get("government"):
                 continue
             ok, why = probably_same(sub, names[i])
             if not ok:
@@ -127,6 +195,12 @@ def run():
         "reports_in_catalogue": cag.get("reports"),
         "subjects_offered": len(subjects),
         "register_names": len(names),
+        "register_names_national": sum(1 for x in scope if x is None),
+        "register_names_state": sum(1 for x in scope if x is not None),
+        "pool_note": ("Both halves of the register: every name from the four national "
+                      "sources, joinable to any government, plus each state's own budget "
+                      "schemes, joinable only to that state's reports. A Karnataka report "
+                      "cannot be an audit of a Kerala scheme."),
         "joins_considered": considered,
         "joins_published": published,
         "schemes_audited": len(out),

@@ -964,6 +964,11 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "own finding. The 1,956 codes carry 1,889 distinct names. absent_distinct is the "
             "de-duplicated view of the same list and its allocations add."),
         "publish_threshold": threshold,
+        # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
+        # this as a scheme". It lived only in site/build.py, so the data could not
+        # say which rows the site lists and anything else reading this file had to
+        # guess. parse/cag_join.py guessed by skipping this state entirely.
+        "listing_threshold": 2,
         "classified_scheme": len(schemes),
         "classified_scheme_distinct_names": len({x["name"].lower() for x in schemes}),
         "classified_not_scheme": len(rows) - len(schemes),

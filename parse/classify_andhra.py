@@ -780,6 +780,11 @@ def run(threshold=PUBLISH_THRESHOLD):
                            "five departments is five provisions and collapsing them would "
                            "erase four."),
         "publish_threshold": threshold,
+        # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
+        # this as a scheme". It lived only in site/build.py, so the data could not
+        # say which rows the site lists and anything else reading this file had to
+        # guess. parse/cag_join.py guessed by skipping this state entirely.
+        "listing_threshold": 0,
         "classified_scheme": len(schemes),
         "classified_scheme_distinct_names": len({x["name"] for x in schemes}),
         "classified_not_scheme": len(rows) - len(schemes),

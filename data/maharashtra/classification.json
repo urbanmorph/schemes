@@ -74388,7 +74388,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-05T06:31:17Z",
+ "built": "2026-09-05T06:50:57Z",
  "capital_or_loan_head_rows": 450,
  "classified_not_scheme": 1860,
  "classified_scheme": 96,
@@ -87109,6 +87109,7 @@
    "why": "An unambiguous in-kind benefit to a named beneficiary class, penalised twice for the route it takes: -3 for beginning 'Grant to' and -3 for naming Zilla Parishad. Both penalties are right on average and both are wrong here. This is the same defect parse/classify_tamilnadu.py recorded against its own object head 309: charging a row for the accounting of the transfer it makes."
   }
  ],
+ "listing_threshold": 2,
  "myscheme_join_defects": [
   {
    "defect": "a COMMUNITY abbreviation written in capitals on both sides is read as a scheme acronym. VJNT is Vimukta Jati and Nomadic Tribes, the same kind of word as SC, ST, OBC and minority, which QUALIFIERS already knows describe a scheme rather than name it. VJNT and SBC are in neither QUALIFIERS nor NOT_ACRONYMS, so written_acronyms returns vjnt for both names and the containment rule fires at a perfect ratio",

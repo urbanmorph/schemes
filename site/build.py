@@ -462,10 +462,13 @@ def state_of_schemes(entries):
          "and this is the field it most often leaves blank. Every scheme page on this site "
          "shows which of these tests its record passes.", "#schemes", "Search the records"),
         (f"{audited} of {num(audit_of)}", "scheme names reach a CAG audit report",
-         "The catalogue holds "
-         f"{num(cagd.get('reports_in_catalogue') or 0)} reports. This register records that "
-         "an audit exists, on what and where to read it, and never what one concluded: that "
-         "is the CAG&rsquo;s to publish.", "/audit", "See the catalogue"),
+         f"The catalogue holds {num(cagd.get('reports_in_catalogue') or 0)} reports, and "
+         f"{num(cagd.get('register_names_national') or 0)} of the names above come from the "
+         f"national sources with {num(cagd.get('register_names_state') or 0)} more read out "
+         f"of state budget books. A name that two of them share is counted once, which is "
+         f"why this denominator is smaller than the {num(held)} rows. This register records "
+         f"that an audit exists, on what and where to read it, and never what one concluded: "
+         f"that is the CAG&rsquo;s to publish.", "/audit", "See the catalogue"),
     ]
 
     rows = "".join(
@@ -1666,10 +1669,6 @@ def unify(checks, registry, classification):
 # cleared.
 #
 # Rows already matched to a myScheme record are skipped, because those schemes have a page.
-LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
-               "maharashtra": 2, "odisha": 4, "westbengal": 3, "haryana": 3,
-               "tripura": 1, "jharkhand": 1, "delhi": 1, "telangana": 1,
-               "uttarakhand": 1, "punjab": 1, "uttarpradesh": 1}
 STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
             "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
             "maharashtra": "Maharashtra", "odisha": "Odisha",
@@ -1878,7 +1877,15 @@ def state_entries(load, known_names=(), sectors=None):
         if not cls.get("all_entries"):
             out += unclassified_state(load, key, state, already_held, sectors)
             continue
-        bar = LISTING_BAR[key]
+        # From the classification, not from a dict in this file. The bar is the
+        # classifier's decision and every one of them publishes it now; holding a second
+        # copy here meant the site and the data could disagree about which rows the site
+        # lists, and anything else reading the JSON had to guess. parse/cag_join.py guessed
+        # by skipping the seven states whose files did not carry it.
+        bar = cls.get("listing_threshold")
+        if bar is None:
+            raise SystemExit(f"{key}: classification.json carries no listing_threshold. "
+                             f"The bar is the classifier's to publish, not this file's.")
         matched_flag = f"in_myscheme_{key}"
         for r in sorted(cls.get("all_entries") or [], key=lambda x: str(x.get("key") or x.get("hoa") or x.get("name"))):
             if r.get("score", -99) < bar or r.get(matched_flag):

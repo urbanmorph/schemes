@@ -348023,7 +348023,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-05T06:31:47Z",
+ "built": "2026-09-05T06:51:28Z",
  "classified_not_scheme": 8890,
  "classified_scheme": 134,
  "classified_scheme_distinct_names": 98,
@@ -365045,6 +365045,7 @@
  ],
  "letter_spaced_names": 62,
  "letter_spaced_note": "The state printed 66 names letter-spaced and parse/westbengal.py counts them that way. The detector here fires on 62, and the four it does not are names where only a bracketed acronym is spaced, \"(F A W L O I)\" inside an otherwise normal name, which needs no run-on matching. Every name is published exactly as the state printed it; the run-on collapse is used for scoring only and never rewrites the name.",
+ "listing_threshold": 3,
  "myscheme_join_defects": [
   {
    "defect": "containment on a generic domain phrase, at the largest scale this register has seen it. 'Old Age Pension' is three content words and every one of the 44 rows in these books whose name contains them satisfies the rule",

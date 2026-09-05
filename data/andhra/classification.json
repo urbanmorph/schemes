@@ -21952,7 +21952,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-09-05T06:30:35Z",
+ "built": "2026-09-05T06:50:18Z",
  "classified_not_scheme": 460,
  "classified_scheme": 92,
  "classified_scheme_distinct_names": 71,
@@ -27486,6 +27486,7 @@
    "why": "The one join that is real, at similarity 0.78. It is here so the reader can see that the count of true joins across 552 rows and 52 records is one."
   }
  ],
+ "listing_threshold": 0,
  "myscheme_andhra_records": 52,
  "publish_threshold": 4,
  "question": "Which of Andhra Pradesh's 552 scheme-wise budget rows are welfare schemes, and which are institutions, establishment heads, asset heads or accounting heads?",
