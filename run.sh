@@ -220,6 +220,12 @@ step "parse/changes" python3 parse/changes.py
 # in the record that cannot be filled in afterwards.
 step "parse/watchlist" python3 parse/watchlist.py --date "$DATE"
 
+# AFTER every classifier and before the build, because it checks what they concluded and
+# the site is what publishes it. Three bugs in one day were a ratio computed over one
+# population and labelled with another, which is the exact error this register documents in
+# government sources. Publishing that while pointing at it would end the argument.
+step "parse/ratios" python3 parse/ratios.py
+
 say "build"
 python3 site/build.py
 
