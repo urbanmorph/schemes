@@ -416,6 +416,11 @@ def state_of_schemes(entries):
 
     surveyed = leg.get("states_surveyed") or 0
     refused = leg.get("states_refused") or 0
+    # What the two national sources say is behind the refusals. Neither is this register's,
+    # and that is the point: for these states it has no number of its own to offer.
+    ref = [r for r in (leg.get("states") or []) if not r.get("built")]
+    ref_dbt = sum(r.get("dbt_state_schemes") or 0 for r in ref)
+    ref_ms = sum(r.get("myscheme_records") or 0 for r in ref)
 
     # The documentation check that fails most often, chosen by measurement rather than by
     # which one makes the better sentence.
@@ -451,11 +456,12 @@ def state_of_schemes(entries):
          f"is named, scored, and published with the hand label that judged it.",
          "/states", "See them state by state"),
         (f"{refused} of {surveyed}", "states publish a budget no machine can read",
-         "Surveyed against five sequential tests: does it publish a list, are the names text, "
-         "does a name have an end, is it in English, does the book prove itself against its "
-         "own totals. A state that fails one is not accused of anything here; it is recorded "
-         "as unreadable, and the register refuses rather than guesses.",
-         "/states", "See where each state stops"),
+         f"DBT Bharat counts {num(ref_dbt)} state schemes between those {word(refused).lower()} and "
+         f"myScheme lists {num(ref_ms)}. Those two are the only sources anybody has for these "
+         f"states and they agree about none of them, because the document that would settle "
+         f"it is the one that cannot be read. A state here is not accused of hiding anything: "
+         f"the fault is in how a file was saved, and each one is named with the single change "
+         f"that would undo it.", "/states", "Read each refusal"),
         (f"{worst[1].get('fail_pct', 0):.0f}%" if worst else "&hellip;",
          f"of the portal&rsquo;s own records {worst_label}",
          "myScheme is the only source here written for citizens rather than for accountants, "
@@ -698,6 +704,10 @@ def legibility_section(leg, ms=None):
         groups += (f'<li><b>{e(", ".join(r["state"] for r in hit))}</b> '
                    f'{vs if len(hit) == 1 else vp} {what}: {detail}.</li>')
 
+    # What the national sources say is behind the refusals, so the scoreboard names a
+    # size and not only a count of states.
+    leg_dbt = sum(r.get("dbt_state_schemes") or 0
+                  for r in (leg.get("states") or []) if not r.get("built"))
     return f"""
 <section class="sec" id="legibility">
   <h2>{word(leg.get("states_built"))} states can be read by a machine.
@@ -705,13 +715,16 @@ def legibility_section(leg, ms=None):
     {word(leg.get("states_refused")).lower()}.</h2>
   <div class="sec-note">{num(leg.get("states_surveyed"))} states surveyed against their own
     budget documents &middot; five tests each &middot; {named} schemes named in the
-    {num(leg.get("states_built"))} that yield</div>
+    {num(leg.get("states_built"))} that yield &middot; DBT Bharat counts {num(leg_dbt)} more
+    behind the {num(leg.get("states_refused"))} that do not</div>
   <p class="standfirst">Every number further down this page comes from a state whose budget
   a machine could read. That is not the same as a state that publishes one. Gujarat
   publishes more than most states here and cannot be read at all; Bihar publishes more than
   Gujarat and converts it to drawings first. A state that refuses to be read is not a gap
   in this register, it is a fact about that state, and it belongs on the page beside the
   states that yielded.</p>
+  <p><a class="jump" href="/states#refused">What stops each of the
+  {num(leg.get("states_refused"))}, and what would undo it &rarr;</a></p>
 
   <div class="tscroll"><table id="legib" aria-label="Every state surveyed, against five tests">
     <thead><tr><th>State</th>{heads}<th class="num">Cleared</th>
@@ -1142,7 +1155,7 @@ is a finding and not an omission.</p>
   </div>
 </section>
 
-<section class="sec">
+<section class="sec" id="refused">
   <h2>The states it cannot</h2>
   <div class="sec-note">Surveyed against the same five tests and stopped at one of them
     &middot; DBT Bharat counts {num(ref_dbt)} state schemes between them and myScheme lists
