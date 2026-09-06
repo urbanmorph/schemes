@@ -1228,14 +1228,33 @@ def page_audit(cag, audited):
         + "</td></tr>"
         for name, v in sorted(sch.items(), key=lambda kv: (-len(kv[1]), kv[0])))
 
-    rows = "".join(
-        f'<tr><td>{e(r["title"])[:220]}</td>'
-        f'<td>{e(r.get("government") or "")}</td>'
-        f'<td>{e(r.get("audit_type") or "")}</td>'
-        f'<td>{e(r.get("sector") or "")}</td>'
-        f'<td class="nowrap">{e(r.get("tabled") or "")}</td>'
-        f'<td>{f"""<a href="{e(r["pdf_url"])}" rel="noopener">PDF</a>""" if r.get("pdf_url") else NIL}</td>'
-        f'</tr>' for r in reports)
+    # THE CATALOGUE IS DATA, NOT DOM, exactly as the census table is. 2,804 rows shipped as
+    # HTML made this page 1,074 KB, eight times the overview, which carries 10,598 rows in
+    # 131 KB by shipping SEED_ROWS and fetching the rest. The same machinery here, plus the
+    # filters the page was already computing tallies for and then not offering: a reader
+    # who can see that Kerala has 103 reports could not ask to see them.
+    def rowdict(r):
+        return [e(r["title"])[:220], r.get("government") or "", r.get("audit_type") or "",
+                r.get("sector") or "", r.get("tabled") or "", r.get("pdf_url") or ""]
+
+    page_audit.rowdata = [rowdict(r) for r in reports]
+
+    def rowhtml(d):
+        title, gov, kind, sec, tab, pdf = d
+        return (f'<tr><td>{title}</td><td>{e(gov)}</td><td>{e(kind)}</td>'
+                f'<td>{e(sec)}</td><td class="nowrap">{e(tab)}</td>'
+                f'<td>{f"""<a href="{e(pdf)}" rel="noopener">PDF</a>""" if pdf else NIL}</td></tr>')
+
+    rows = "".join(rowhtml(d) for d in page_audit.rowdata[:SEED_ROWS])
+
+    def opts(field, label):
+        seen = sorted({str(r.get(field) or "").strip() for r in reports} - {""})
+        return (f'<select id="a{label}" class="form-control" aria-label="{label}">'
+                f'<option value="">Any {label}</option>'
+                + "".join(f'<option>{e(v)}</option>' for v in seen) + "</select>")
+
+    audfilters = (opts("government", "government") + opts("audit_type", "kind")
+                  + opts("sector", "sector"))
 
     return f"""
 <div class="eyebrow">Route &middot; /audit</div>
@@ -1309,12 +1328,88 @@ which of them are about a scheme, and there is no way to ask it. This page is th
   <h2>Every report in the catalogue</h2>
   <div class="sec-note">As the CAG publishes it &middot; title, government, kind, sector,
     the date it was tabled, and where to read it</div>
+  <div class="filters afilters">
+    <input id="aq" type="search" placeholder="Search a report title&hellip;"
+      aria-label="Search audit report titles">
+    {audfilters}
+    <span class="count" id="acount" role="status" aria-live="polite">{num(total)} reports</span>
+    <button id="aclear" class="tbtn" type="button">clear</button>
+  </div>
   <div class="tscroll"><table id="audall" aria-label="Every audit report in the CAG catalogue">
     <thead><tr><th>Report</th><th>Government</th><th>Kind</th><th>Sector</th>
       <th>Tabled</th><th>Read</th></tr></thead>
-    <tbody>{rows}</tbody>
+    <tbody id="audbody">{rows}</tbody>
   </table></div>
-</section>"""
+  <div id="amore" class="more" hidden></div>
+  <p class="railnote" id="anote">The {SEED_ROWS} rows above ship with the page; the rest
+  arrive as data. Every one of the {num(total)} is in <a href="audit.json">audit.json</a>,
+  and the filters read the CAG&rsquo;s own fields.</p>
+</section>
+
+<script>
+(function(){{
+  var tb=document.getElementById('audbody'), q=document.getElementById('aq'),
+      c=document.getElementById('acount'), sent=document.getElementById('amore'),
+      sel={{government:document.getElementById('agovernment'),
+           kind:document.getElementById('akind'),
+           sector:document.getElementById('asector')}};
+  var rows=[],vis=[],drawn=0,WIN={WINDOW};
+  var esc=function(v){{return String(v==null?'':v)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}};
+  var norm=function(v){{return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
+
+  function html(r){{
+    return '<tr><td>'+r[0]+'</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td>'
+      +'<td>'+esc(r[3])+'</td><td class="nowrap">'+esc(r[4])+'</td>'
+      +'<td>'+(r[5]?'<a href="'+esc(r[5])+'" rel="noopener">PDF</a>'
+                   :'<span class="nil">&middot;&middot;&middot;</span>')+'</td></tr>';
+  }}
+  function draw(reset){{
+    if(reset){{ drawn=0; tb.innerHTML=''; }}
+    var next=Math.min(vis.length, drawn+WIN);
+    if(next<=drawn) return;
+    var h='';
+    for(var i=drawn;i<next;i++) h+=html(vis[i]);
+    tb.insertAdjacentHTML('beforeend',h);
+    drawn=next;
+    sent.hidden = drawn>=vis.length;
+  }}
+  function apply(){{
+    var t=norm(q.value).split(' ').filter(Boolean),
+        g=sel.government.value, k=sel.kind.value, sc=sel.sector.value;
+    vis=rows.filter(function(r){{
+      if(g && r[1]!==g) return false;
+      if(k && r[2]!==k) return false;
+      if(sc && r[3]!==sc) return false;
+      if(!t.length) return true;
+      var h=r[6];
+      for(var i=0;i<t.length;i++) if(h.indexOf(t[i])<0) return false;
+      return true;
+    }});
+    c.textContent = vis.length.toLocaleString('en-IN')+' of '
+                  + rows.length.toLocaleString('en-IN')+' reports';
+    draw(true);
+  }}
+  fetch('audit.json').then(function(r){{return r.json();}}).then(function(d){{
+    rows=d.rows.map(function(v){{ v[6]=norm(v[0]+' '+v[1]+' '+v[3]); return v; }});
+    apply();
+  }}).catch(function(){{
+    var n=document.getElementById('anote');
+    if(n) n.textContent='The catalogue data did not load, so filtering is unavailable. '
+                       +'The first rows are above.';
+  }});
+  [q,sel.government,sel.kind,sel.sector].forEach(function(el){{
+    el.addEventListener('input',apply);
+  }});
+  document.getElementById('aclear').addEventListener('click',function(){{
+    q.value=''; sel.government.value=''; sel.kind.value=''; sel.sector.value=''; apply();
+  }});
+  if(window.IntersectionObserver){{
+    new IntersectionObserver(function(es){{ if(es[0].isIntersecting) draw(false); }},
+      {{rootMargin:'600px'}}).observe(sent);
+  }}
+}})();
+</script>"""
 
 
 def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
@@ -3340,6 +3435,9 @@ def build():
             "/rows.json\n"
             "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
             "\n"
+            "/audit.json\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
             "/scheme/*\n"
             "  Cache-Control: public, max-age=600, stale-while-revalidate=86400\n"
             "\n"
@@ -3502,6 +3600,13 @@ def build():
         '<p><a class="dl" href="/">Go to the register</a> '
         '<a class="dl" href="/divergence">See the divergence page</a></p>',
         desc="No page at this address in the Schemes Register."))
+    # The catalogue as data, beside the page that renders it. Same shape as rows.json:
+    # positional, no indentation, because nobody reads it and 2,804 copies of six field
+    # names is the kind of weight that made this page 1,074 KB in the first place.
+    with open(os.path.join(OUT, "audit.json"), "w", encoding="utf-8") as fh:
+        json.dump({"cols": ["title", "government", "kind", "sector", "tabled", "pdf"],
+                   "rows": getattr(page_audit, "rowdata", [])},
+                  fh, separators=(",", ":"), ensure_ascii=False)
 
     w("changes.html", shell(
         "Changes", "/changes", page_changes(load("data/changes.json", {}), load("data/watchlist.json", {})),

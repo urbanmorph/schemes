@@ -789,3 +789,28 @@ table.mini td:nth-child(2){width:18%}
 .ref-fix b{color:var(--ink);font-family:inherit;font-size:inherit;text-transform:none;
   letter-spacing:0;font-weight:500}
 @media (max-width:620px){.ref{padding:15px 16px}}
+
+/* ---- the audit catalogue's filter row ---------------------------------------
+   A select sizes itself to its longest OPTION, and one CAG sector name is wider
+   than a phone. Without min-width:0 a flex item refuses to shrink below its
+   intrinsic width, so #asector was 396px inside a 375px viewport and pushed the
+   whole page sideways. */
+.afilters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.afilters input,.afilters select{flex:1 1 170px;min-width:0;max-width:100%;
+  font-size:var(--fs-sm);padding:7px 10px;background:var(--surface);
+  color:var(--ink);border:1px solid var(--rule-strong);border-radius:0}
+.afilters input{flex:2 1 220px}
+.afilters .count{flex:0 0 auto;font-family:var(--mono);font-size:var(--fs-xs);
+  color:var(--muted);white-space:nowrap}
+@media (max-width:620px){.afilters input,.afilters select{flex:1 1 100%}}
+
+/* The catalogue table. Six columns, the title taking the width; the rest fixed so
+   2,804 rows re-render at one width instead of relaying out on every window. */
+#audall{table-layout:fixed;width:100%;min-width:860px}
+#audall th:nth-child(1),#audall td:nth-child(1){width:40%}
+#audall th:nth-child(2),#audall td:nth-child(2){width:12%}
+#audall th:nth-child(3),#audall td:nth-child(3){width:12%}
+#audall th:nth-child(4),#audall td:nth-child(4){width:14%}
+#audall th:nth-child(5),#audall td:nth-child(5){width:12%;padding-left:8px;padding-right:8px}
+#audall th:nth-child(6),#audall td:nth-child(6){width:10%;padding-left:8px;padding-right:8px}
+#audall thead th{white-space:normal;letter-spacing:.04em;line-height:1.3}

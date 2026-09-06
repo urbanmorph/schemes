@@ -174,7 +174,14 @@ def parse_page(body):
             "tabled": pick(b, r'<span class="dtn">(.*?)</span>'),
             "audit_type": pick(b, r'<div class="reportType">\s*<span>(.*?)</span>'),
             "government": pick(b, r'<div class="reportIcon">.*?<h5>(.*?)</h5>') or "Union",
-            "sector": pick(b, r'<div class="sectorDetail">\s*<div>Sector:?</div>\s*<div>(.*?)</div>'),
+            # The catalogue writes a sector with a TRAILING PIPE about half the time, the
+            # separator it would use between two of them left behind when there is only
+            # one. Never anywhere but the end, checked over all 2,804 rows, so it separates
+            # nothing. Kept it would split the field in two: 33 distinct sectors where
+            # there are 18, with "Finance" and "Finance |" as different answers to the same
+            # question. Stripping a dangling delimiter is punctuation, not a change of word.
+            "sector": re.sub(r"\s*\|\s*$", "", pick(
+                b, r'<div class="sectorDetail">\s*<div>Sector:?</div>\s*<div>(.*?)</div>') or ""),
             "report_no": rno.group(1) if rno else None,
             "report_year": int(rno.group(2)) if rno else None,
             "detail_url": BASE + m.group(1),
