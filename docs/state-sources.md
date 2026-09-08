@@ -43,17 +43,17 @@ out of different numbers.
 | Karnataka | yes | yes | yes | yes | **no** | 4 of 5 | 969 |
 | Andhra Pradesh | yes | yes | yes | yes | **no** | 4 of 5 | 552 |
 | Uttar Pradesh | yes | yes | yes | **no** | **no** | 3 of 5 | 5,831 |
+| Chhattisgarh | yes | yes | yes | **no** | &middot; | 3 of 4 | 574 |
 | *Surveyed, does not yield* | | | | | | | |
 | Gujarat | yes | yes | **no** | &middot; | &middot; | 2 of 3 | &middot; |
 | Rajasthan | yes | yes | **no** | yes | &middot; | 3 of 4 | &middot; |
 | Bihar | yes | **no** | &middot; | &middot; | &middot; | 1 of 2 | &middot; |
-| Chhattisgarh | yes | **no** | &middot; | &middot; | &middot; | 1 of 2 | &middot; |
-| Madhya Pradesh | yes | **no** | &middot; | &middot; | &middot; | 1 of 2 | &middot; |
+| Madhya Pradesh | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
 | Assam | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
 | Himachal Pradesh | **no** | &middot; | &middot; | &middot; | &middot; | 0 of 1 | &middot; |
 
-15 of 22 states surveyed yield a machine-readable scheme list, between them naming
-39,667 lines. All 15 carry a classifier built and validated against
+16 of 22 states surveyed yield a machine-readable scheme list, between them naming
+40,241 lines. All 16 carry a classifier built and validated against
 that state's own hand labels, so every absence claim on the site has counted precision
 behind it and named errors beside it.
 
@@ -336,7 +336,24 @@ Gujarat's: West Bengal has laid the table out correctly and then photographed it
 
 ---
 
-## Madhya Pradesh: DOES NOT WORK, and the reason is a font
+## Madhya Pradesh: DOES NOT WORK, and the reason CHANGED
+
+> **Revisited 2026-09-06, and the reason below is no longer the reason.** The font is not
+> the problem any more: `parse/krutidev.py` decodes KrutiDev010, and a page of Volume 9
+> came out as fluent Hindi with no change to the decoder. Its demand books print a scheme
+> code in brackets, a name and four money columns, so they would parse.
+>
+> What stops it now is the **cycle**. The latest published budget is 2025-26 and this
+> register publishes 2026-27. The finance site's year filter offers 2026-27 and returns no
+> documents for it, and every naming variant of the volume and demand-book URLs 404s. So it
+> stops at the FIRST test, which asks for a scheme list for this cycle, and the later four
+> are never asked. Building it on 2025-26 would put one state a year behind fifteen others
+> in the same total, which is the different-units error this register documents in others.
+>
+> **Re-check after March.** The original finding is kept below because it was true when it
+> was written and is the reason the decoder exists at all.
+
+### The original finding, as recorded
 
 `finance.mp.gov.in` is up but intermittent: it refused connections on port 443 for a full
 hour during this survey and answered normally afterwards, and archive.org has not
@@ -525,7 +542,24 @@ intermediate already in `collect/certs/` is carried and verification stays on.
 
 ---
 
-## Chhattisgarh: DOES NOT WORK, and the English edition it advertises has never existed
+## Chhattisgarh: WORKS, from the books it can read, and 2,562 names are still behind a font
+
+> **Revisited 2026-09-05 and built.** The refusal below was about the 44 department scheme
+> books, and it still stands for those: they set every name in **Chanakya**, whose embedded
+> encoding maps its codes to standard Latin glyph names with Devanagari outlines drawn in
+> the slots, so the font cannot decode itself and nothing in the PDF can. 2,562 scheme names
+> are behind it, and this register does not publish a name it cannot read.
+>
+> What it reads instead is the **Outcome, Gender, Youth and Child budgets** that 33
+> departments publish in **Kruti Dev**, which is ASCII and whose table is checked against the
+> state's own Unicode department index. 574 schemes, 29 of them funded and listed by no
+> national portal, precision 0.966 counted on all 29. The state page says which half it is
+> reading before it shows the table.
+>
+> The number will grow the day `parse/chanakya_derive.py` converges, and it will grow because
+> this register learned to read something, not because Chhattisgarh started funding it.
+>
+> **The original finding, as recorded, follows.**
 
 Chhattisgarh's index is the easiest static one in this file:
 `finance.cg.gov.in/budget_doc/Budget.asp` links `main_budget.asp?year1=2026`, which is
