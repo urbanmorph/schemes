@@ -22,9 +22,11 @@ Everything here is about *the data about* schemes, never about whether a scheme 
 scheme, and every flag is worded so that distinction survives being screenshotted
 without its caption.
 
-**New here?** Read [PLAN.md](PLAN.md) — it is the contract this repository follows, and
-`collect/` is frozen for a reason. Then
-[docs/MAINTAINING.md](docs/MAINTAINING.md) for running it month to month.
+**New here?** Read [PLAN.md](PLAN.md) first — it is the contract this repository follows,
+and `collect/` is frozen for a reason. Then
+[docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) if you are going to write code, or
+[docs/MAINTAINING.md](docs/MAINTAINING.md) if you are going to run it. `./check.sh` runs
+everything that can be checked without the network.
 
 ---
 
@@ -157,6 +159,7 @@ self-tests for each failure that prompted it.
 ./run.sh                 # collect, verify, parse, enrich, build
 ./run.sh --skip-collect  # rebuild everything from the existing archive, no network
 ./serve.sh               # build and serve at 127.0.0.1:8788
+./check.sh               # every check that needs no network; run before pushing
 
 # deploy (see PLAN.md §10; .dev.vars is gitignored and holds the token)
 set -a && . ./.dev.vars && set +a

@@ -1,0 +1,37 @@
+name: Checks
+
+# The monthly collection job is the wrong place to discover a broken parser: it runs once a
+# month, it needs the network, and its failure costs a snapshot. This runs on every push and
+# pull request, needs no network, and finishes in under a minute.
+#
+# It deliberately does NOT collect. Everything it checks is replayable against the archive
+# already in the repository, which is the property PLAN.md §7 exists to protect.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The site build reads data/ only; archive/ is 0.69 GB and not needed here.
+          filter: blob:none
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install poppler
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - name: check.sh
+        run: ./check.sh
