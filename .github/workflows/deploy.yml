@@ -82,8 +82,14 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # THROUGH env, NEVER interpolated into the script. `reason` is a commit message,
+          # which anybody who can push controls, and this job holds the deploy token: a
+          # message containing $(...) or backticks would run in it. GitHub substitutes
+          # ${{ }} into the shell source before bash sees it, so the only safe way to use
+          # untrusted input in a run block is to bind it to a variable and quote it.
+          REASON: ${{ inputs.reason || 'manual' }}
         run: |
-          echo "deploying: ${{ inputs.reason || 'manual' }}"
+          echo "deploying: $REASON"
           npx --yes wrangler@3 pages deploy site/_out \
             --project-name=india-schemes --branch=main
 

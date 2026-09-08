@@ -22,11 +22,11 @@ Everything here is about *the data about* schemes, never about whether a scheme 
 scheme, and every flag is worded so that distinction survives being screenshotted
 without its caption.
 
-**New here?** Read [PLAN.md](PLAN.md) first — it is the contract this repository follows,
-and `collect/` is frozen for a reason. Then
-[docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) if you are going to write code, or
-[docs/MAINTAINING.md](docs/MAINTAINING.md) if you are going to run it. `./check.sh` runs
-everything that can be checked without the network.
+**New here? → [docs/START-HERE.md](docs/START-HERE.md).** An hour, in order, from clone to
+first change. After that: [PLAN.md](PLAN.md) is the contract this repository follows and
+`collect/` is frozen for a reason; [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) has the
+conventions and the open threads; [docs/MAINTAINING.md](docs/MAINTAINING.md) is the
+month-to-month operation.
 
 ---
 
@@ -228,7 +228,7 @@ Collected monthly and politely: one pass, paced, identified in the User-Agent wh
 the host permits it. Nothing here is scraped faster than it changes.
 
 Derived datasets under `data/` are published CC BY 4.0. Code is MIT. Source material
-carries the terms of the department that published it.
+carries the terms of the department that published it. See [LICENSE](LICENSE).
 
 The API key in `collect/myscheme.py` is myScheme's own public client key, read from the
 JS bundle their website serves to every visitor. It is public by construction, not a
