@@ -160,11 +160,10 @@ self-tests for each failure that prompted it.
 ./run.sh --skip-collect  # rebuild everything from the existing archive, no network
 ./serve.sh               # build and serve at 127.0.0.1:8788
 ./check.sh               # every check that needs no network; run before pushing
-
-# deploy (see PLAN.md §10; .dev.vars is gitignored and holds the token)
-set -a && . ./.dev.vars && set +a
-npx wrangler pages deploy site/_out --project-name=india-schemes --branch=main
 ```
+
+**Deployment is automatic.** A push to `main` that passes checks deploys itself, and so does
+the monthly collection run. Nobody holds a Cloudflare token; see [PLAN.md §10](PLAN.md).
 
 `--skip-collect` is the one to reach for: it replays the whole pipeline against bytes
 already in `archive/` and touches no government server.

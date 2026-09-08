@@ -1,0 +1,100 @@
+name: Deploy
+
+# Deployment lives here and not on anybody's laptop.
+#
+# It used to be a wrangler command run by hand, which meant the person deploying held a
+# Cloudflare token locally and nobody else could ship. Two developers and one secret is a
+# bad arrangement: either the token gets passed around, or one person becomes the only
+# route to production. The token is a repository secret now, scoped to Pages Edit on the
+# urbanmorph account and nothing else, and no human needs a copy.
+#
+# Called, never triggered directly by a push, so there is exactly one answer to "what is
+# deployed": whatever last passed checks on main, or whatever the monthly run produced.
+# workflow_dispatch is kept for the case where the site needs rebuilding without a commit.
+
+on:
+  workflow_call:
+    inputs:
+      reason:
+        description: "What is being deployed, for the run log"
+        required: false
+        type: string
+        default: "push to main"
+  workflow_dispatch:
+
+concurrency:
+  # Never two deploys at once, and never cancel one midway: a half-uploaded site is worse
+  # than a stale one.
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The site build reads data/ only. archive/ is 0.69 GB and not needed to publish.
+          filter: blob:none
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install poppler
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      # Rebuilt here rather than carried from another job, because site/_out is not
+      # committed and a deploy that publishes a stale artefact is the failure this is
+      # meant to prevent.
+      - name: Build the site
+        run: python3 site/build.py
+
+      - name: Every internal link resolves
+        # The last gate before the public site. Cloudflare Pages answers an unknown path
+        # with index.html and HTTP 200 unless 404.html exists, so a dead link does not
+        # look like one: it serves the whole register under the wrong URL.
+        run: |
+          python3 - <<'PY'
+          import os, re, glob, sys
+          out = "site/_out"
+          have = set()
+          for r, _, fs in os.walk(out):
+              for f in fs:
+                  p = os.path.relpath(os.path.join(r, f), out)
+                  have.add("/" + p)
+                  if p.endswith(".html"):
+                      have.add("/" + p[:-5])
+                      if p == "index.html":
+                          have.add("/")
+          bad = {}
+          for p in glob.glob(out + "/**/*.html", recursive=True):
+              for h in re.findall(r'href="(/[^"#?]*)', open(p, encoding="utf-8").read()):
+                  if h not in have:
+                      bad[h] = bad.get(h, 0) + 1
+          print(f"{len(have):,} live paths, {len(bad)} broken target(s)")
+          for h, n in list(bad.items())[:5]:
+              print(f"  {h}  ({n} references)")
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "deploying: ${{ inputs.reason || 'manual' }}"
+          npx --yes wrangler@3 pages deploy site/_out \
+            --project-name=india-schemes --branch=main
+
+      - name: Confirm the deployed site answers
+        # The edge serves stale under stale-while-revalidate, so a check straight after a
+        # deploy can return the previous build. A cache-busting query is the difference
+        # between checking the deploy and checking the cache.
+        run: |
+          for path in / /states /divergence /audit /changes; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' \
+              "https://india-schemes.pages.dev${path}?cb=${GITHUB_SHA}")
+            printf '  %-14s %s\n' "$path" "$code"
+            [ "$code" = "200" ] || exit 1
+          done

@@ -13,8 +13,10 @@ half of it.
 It takes about an hour and a half. Most of that is paced HTTP: roughly 4,800 requests to
 myScheme and 281 to the CAG catalogue, deliberately slow.
 
-**It does not deploy.** The site is deployed by hand (§10 of PLAN.md). If nobody deploys, the
-data is still collected and committed; only the public site goes stale.
+**It deploys itself.** The job calls `deploy.yml` after committing, so the month's data
+reaches the site without anybody doing anything. That call is necessary rather than tidy: a
+push made with `GITHUB_TOKEN` does not trigger other workflows, so the deploy has to be
+invoked explicitly or the data would sit in the repository unpublished.
 
 ### When it fails
 

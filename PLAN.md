@@ -227,27 +227,41 @@ is committed every run so the history of the register's own health is in git bes
 
 ## §10 — Deployment
 
-The site is a static build in `site/_out/`, deployed to **Cloudflare Pages**, project
+The site is a static build in `site/_out/`, published to **Cloudflare Pages**, project
 `india-schemes`, live at <https://india-schemes.pages.dev>.
 
-```bash
-set -a && . ./.dev.vars && set +a
-npx wrangler pages deploy site/_out --project-name=india-schemes --branch=main
-```
+**Deployment is automatic and nobody holds the token.** It used to be a `wrangler` command
+run by hand, which meant one person had the credential and was therefore the only route to
+production. `.github/workflows/deploy.yml` is a callable workflow, invoked from exactly two
+places:
 
-`.dev.vars` is **gitignored** and holds `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
-The token's scope is minimal: Account → Cloudflare Pages → Edit, and nothing else. It must
-never be pasted into a chat, a log, an issue or a commit.
+- `check.yml`, after checks pass on a push to `main`. A failing check never reaches the
+  public site and a pull request never deploys at all.
+- `collect.yml`, after the monthly run commits. This call is necessary rather than tidy: a
+  push made with `GITHUB_TOKEN` does not trigger other workflows, so without it the month's
+  data would land in the repository and never reach the site.
+
+It rebuilds the site rather than carrying an artefact between jobs, because `site/_out` is
+not committed and publishing a stale artefact is the failure this is meant to prevent. It
+re-checks every internal link before uploading, and confirms the deployed pages answer 200
+afterwards.
+
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are **repository secrets**. The token is
+scoped to Account → Cloudflare Pages → Edit on the urbanmorph account and nothing else. It
+must never be pasted into a chat, a log, an issue or a commit. There is no reason for a
+developer to hold a copy; if you find yourself wanting one, deploy from
+**Actions → Deploy → Run workflow** instead.
+
+`.dev.vars` remains gitignored and is only needed if you are deploying from a laptop, which
+you should not need to do.
 
 Two things about the deployed site that have each caused a wrong conclusion:
 
 - **Unknown paths serve `index.html` with HTTP 200** unless `404.html` exists, which is how
   15,108 dead links once stayed invisible. `404.html` is built; keep it.
 - **The edge serves stale under `stale-while-revalidate`.** A check immediately after a
-  deploy can return the previous build. Use a cache-busting query, or request twice, before
-  concluding a deploy failed.
-
----
+  deploy can return the previous build. Use a cache-busting query, which the deploy
+  workflow's own confirmation step does.
 
 ## §11 — Taking this over
 

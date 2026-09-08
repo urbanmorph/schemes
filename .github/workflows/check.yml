@@ -35,3 +35,13 @@ jobs:
 
       - name: check.sh
         run: ./check.sh
+
+  # Deploy only what passed. A push to main that fails a check never reaches the public
+  # site, and a pull request never deploys at all.
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      reason: ${{ github.event.head_commit.message }}

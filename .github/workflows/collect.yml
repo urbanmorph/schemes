@@ -103,6 +103,22 @@ jobs:
           "
           exit 1
 
+  # The monthly data commit is pushed with GITHUB_TOKEN, and a push made with that token
+  # does not trigger other workflows. Without calling deploy here the month's collection
+  # would land in the repository and never reach the site, which is the quiet failure this
+  # whole project exists to notice in other people.
+  #
+  # It runs even when a step failed, because run.sh publishes what succeeded and a partial
+  # month is still better on the site than last month's. It does not run when the snapshot
+  # did not verify: an INCOMPLETE snapshot manufactures false change events (PLAN.md §8).
+  deploy:
+    needs: collect
+    if: always() && needs.collect.result != 'cancelled'
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      reason: monthly snapshot
+
   # Repair runs only when collection failed, and only when a key is configured — so it
   # is inert until you opt in. It may propose changes to parse/ and open a PR. It must
   # never touch collect/, and it must never merge: the value of the archive is that
