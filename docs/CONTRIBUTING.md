@@ -81,6 +81,21 @@ Three rules, each of which was learned by getting it wrong:
 Rough order of value, and each is genuinely unstarted or genuinely stuck rather than merely
 unpolished.
 
+### Recall, and the head of account
+Median recall at the publishing bar is 41% and the worst is Kerala at 12%: in books already
+collected and sitting on disk, the classifiers find well under half the schemes that are
+there. This is the largest unexploited seam in the register and it needs no new document, no
+new collector and no network.
+
+[docs/findings/head-of-account.md](findings/head-of-account.md) is a measured, held-out lead
+on why. Every classifier reads the scheme's NAME; the head of account is a nationally
+standardised function code that no name-based signal can be, and the schemes the names miss
+cluster in exactly the heads that predict scheme-ness. Kerala could go from 38 published
+schemes to 99 at a precision still above the register's floor, with hand labels that already
+exist. It is measured and deliberately not adopted, and the note says why.
+
+Start here if you want the biggest number for the least machinery.
+
 ### Chanakya — 2,562 Chhattisgarh scheme names behind a font
 `parse/chanakya_derive.py`, `data/chhattisgarh/chanakya_corpus.json`. The encoding is
 understood, the corpus to check any table against exists, and the derivation reaches 10 of
