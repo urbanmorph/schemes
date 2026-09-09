@@ -74,13 +74,26 @@ F1 peaks at threshold 1, where precision is 83% and one published name in six is
 Publishing runs at 7 instead. The audit census is what settles that number, because it
 counts errors rather than estimating them:
 
-    threshold 5   149 rows published, 12 are not schemes   precision 91.9%
-    threshold 6   106 rows published,  6 are not schemes   precision 94.3%
-    threshold 7    74 rows published,  2 are not schemes   precision 97.3%
-    threshold 8    50 rows published,  1 is not a scheme   precision 98.0%
+    threshold 5   159 rows published, 15 are not schemes   precision 90.6%
+    threshold 6   126 rows published,  8 are not schemes   precision 93.7%
+    threshold 7   112 rows published,  7 are not schemes   precision 93.8%
+    threshold 8    89 rows published,  6 are not schemes   precision 93.3%
+    threshold 9    64 rows published,  2 are not schemes   precision 96.9%
+
+THE SCALE OF THIS TABLE CHANGED ON 2026-09-09 and the bar did not. The welfare head of
+account went from 2 points to 4 (see the sweep beside WELFARE_MAJOR), so a row under a
+welfare head sits two points higher than it used to. The list published at 7 went from 74
+names to 112 and its counted precision from 97.3% to 93.8%. The bar was held and the scale
+beneath it moved, which is the same thing as lowering the bar and is described that way
+rather than presented as free recall.
+
+What stopped it at 4 points was not precision. At 5 the published list is 154 rows reading
+94.8%, better than what is published here, and 37 of those rows carry no hand label at all,
+so that 94.8% is an estimate over the labelled remainder while 93.8% is a count of the whole
+list. The register publishes counts.
 
 The stratified sample alone would have said 97.5% at threshold 5, on the strength of 40
-rows. The census says 91.9%. That gap is the reason the audit exists: a probability sample
+rows. The census says 90.6%. That gap is the reason the audit exists: a probability sample
 of 215 rows leaves too few above the bar to state the published list's precision to better
 than a few points, and the direction of the error was flattering. Being wrong about a name
 is worse than leaving a true case out, because the first is an accusation and the second is
@@ -134,6 +147,21 @@ ESTAB_MINOR = {"001", "003", "004", "005", "051", "052", "053"}
 # 69.0% of the 29 development rows under these were schemes, against 25.3% elsewhere.
 WELFARE_MAJOR = {"2216", "2225", "2235", "2236", "2408", "2501", "2505"}
 
+
+# THE WEIGHT ON THIS SIGNAL, AND WHERE THE NUMBER CAME FROM. It was 2, picked by hand. It is
+# 4, the largest value Karnataka's audit census supports. Every weight from 1 to 8 was scored
+# over all 969 rows and read at the publishing bar of 7, counting errors:
+#
+#     weight 1    58 published   precision 0.983    1 error
+#     weight 2    74 published   precision 0.973    2 errors     <- what this was
+#     weight 3    97 published   precision 0.938    6 errors
+#     weight 4   112 published   precision 0.938    7 errors     <- what this is
+#     weight 5   154 published   precision 0.948    8 errors, and 37 rows carry no label
+#
+# Note what stops it here: NOT precision, which is still 0.948 at weight 5 and would read as
+# an improvement. From weight 5 the bar reaches 37 rows the census never labelled, so that
+# 0.948 is an estimate over the labelled subset and not a count of the published list. The
+# register publishes counts. See docs/findings/head-of-account.md.
 # Words that name an organisation rather than a benefit. "Chamarajanagar Government Law
 # College", "Directorate of Minorities", "Karnataka State Wakf Board".
 INSTITUTION = {
@@ -248,7 +276,7 @@ def score_entry(hoa, name, purpose):
         add(-2, "the book's purpose line describes building or upkeep, not a transfer")
 
     if hoa[:4] in WELFARE_MAJOR:
-        add(2, "welfare function major head " + hoa[:4])
+        add(4, "welfare function major head " + hoa[:4])
 
     pben = sorted(tp & BENEFIT)
     if pben:
@@ -285,7 +313,7 @@ SIGNALS = [
      "measured": "P(scheme) 0.167 over 6 development rows, the weakest line here"},
     {"points": 3, "signal": "the purpose line names a benefit",
      "measured": "P(scheme) 0.947 over 19 development rows"},
-    {"points": 2, "signal": "welfare function major head, 2216 2225 2235 2236 2408 2501 2505",
+    {"points": 4, "signal": "welfare function major head, 2216 2225 2235 2236 2408 2501 2505",
      "measured": "P(scheme) 0.690 over 29 development rows"},
     {"points": 2, "signal": "the purpose line names who receives it",
      "measured": "P(scheme) 0.909 over 22 development rows"},
@@ -332,7 +360,7 @@ KNOWN_ERRORS = [
              "rule says an office is not a scheme, but its purpose line says unemployment "
              "allowance to differently abled persons, which is a transfer. This label "
              "could reasonably be flipped, and if it were, precision at threshold 7 would "
-             "read 98.6% rather than 97.3%.")},
+             "read 94.6% rather than 93.8%.")},
     {"name": "CSS-Salary-Integrated Child Protection Scheme", "score": 5,
      "kind": "false positive, excluded at threshold 7",
      "why": ("A salary head that says so in its own name. It gets -2 for the word salary "

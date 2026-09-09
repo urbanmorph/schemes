@@ -116,7 +116,7 @@ better than a few points, and which way it errs is luck. Precision is counted. R
 estimated, because the rows the classifier rejects are too many to label exhaustively.
 
 WHAT THE MISSING PURPOSE LINE COSTS. Recall at threshold 4 is 36.5% on the stratified
-sample, against Karnataka's 31.6% at its own published bar, so the two states are not
+sample, against Karnataka's 39.2% at its own published bar, so the two states are not
 far apart on that number; but Karnataka reached it with a sentence of English on 40% of its
 rows and Andhra Pradesh reaches it on the chart of accounts alone. The rows this loses are
 named in known_errors and they are the state's own brands: Thallikivandanam, Annadata

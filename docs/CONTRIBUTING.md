@@ -82,17 +82,27 @@ Rough order of value, and each is genuinely unstarted or genuinely stuck rather 
 unpolished.
 
 ### Recall, and the head of account
-Median recall at the publishing bar is 41% and the worst is Kerala at 12%: in books already
-collected and sitting on disk, the classifiers find well under half the schemes that are
-there. This is the largest unexploited seam in the register and it needs no new document, no
-new collector and no network.
+Median recall at the publishing bar is 41% and the worst is Chhattisgarh at 24%: in books
+already collected and sitting on disk, the classifiers find well under half the schemes that
+are there. This is the largest unexploited seam in the register and it needs no new document,
+no new collector and no network.
 
-[docs/findings/head-of-account.md](findings/head-of-account.md) is a measured, held-out lead
-on why. Every classifier reads the scheme's NAME; the head of account is a nationally
-standardised function code that no name-based signal can be, and the schemes the names miss
-cluster in exactly the heads that predict scheme-ness. Kerala could go from 38 published
-schemes to 99 at a precision still above the register's floor, with hand labels that already
-exist. It is measured and deliberately not adopted, and the note says why.
+[docs/findings/head-of-account.md](findings/head-of-account.md) is the measured lead on why,
+and **four states have now acted on it**. Every classifier reads the scheme's NAME; the head
+of account is a nationally standardised function code that no name-based signal can be, and
+the schemes the names miss cluster in exactly the heads that predict scheme-ness. On
+2026-09-09 Kerala, Karnataka, Tamil Nadu and West Bengal raised the weight on that signal to
+the largest value each state's own audit census supports, and together they went from 572
+published schemes to 849. Kerala alone went from 38 to 99, and its recall from 12% to 26%.
+
+**Twelve states have not been measured, and that is the work.** The method is in the finding
+note under "Reproducing this". Two rules matter and the second is the one that is easy to
+miss: stop at the largest weight that keeps counted precision at or above 0.903, the
+register's floor, AND leaves no row at the bar without a hand label. Karnataka and Tamil
+Nadu both had a weight that read as *more* precise and was rejected, because the extra
+precision was an estimate over the labelled subset rather than a count of the published
+list. If the weight that helps needs labels that do not exist yet, label rows; do not lower
+the standard.
 
 Start here if you want the biggest number for the least machinery.
 

@@ -1,5 +1,5 @@
 {
- "built": "2026-09-06T13:58:42Z",
+ "built": "2026-09-09T09:12:40Z",
  "by_family": {
   "andhra": {
    "classified": 235,
@@ -10,12 +10,12 @@
    "rows": 707
   },
   "karnataka": {
-   "classified": 281,
-   "rows": 363
+   "classified": 293,
+   "rows": 384
   },
   "kerala": {
-   "classified": 345,
-   "rows": 400
+   "classified": 367,
+   "rows": 445
   },
   "maharashtra": {
    "classified": 555,
@@ -26,39 +26,39 @@
    "rows": 185
   },
   "tamilnadu": {
-   "classified": 868,
-   "rows": 922
+   "classified": 1040,
+   "rows": 1111
   },
   "westbengal": {
-   "classified": 858,
-   "rows": 1145
+   "classified": 921,
+   "rows": 1247
   }
  },
  "by_sector": {
-  "Agriculture,Rural & Environment": 775,
-  "Banking,Financial Services and Insurance": 108,
-  "Business & Entrepreneurship": 231,
-  "Education & Learning": 607,
-  "Health & Wellness": 168,
-  "Housing & Shelter": 238,
-  "Public Safety,Law & Justice": 66,
+  "Agriculture,Rural & Environment": 826,
+  "Banking,Financial Services and Insurance": 117,
+  "Business & Entrepreneurship": 234,
+  "Education & Learning": 633,
+  "Health & Wellness": 177,
+  "Housing & Shelter": 254,
+  "Public Safety,Law & Justice": 70,
   "Science, IT & Communications": 73,
-  "Skills & Employment": 133,
-  "Social welfare & Empowerment": 744,
-  "Sports & Culture": 57,
+  "Skills & Employment": 143,
+  "Social welfare & Empowerment": 846,
+  "Sports & Culture": 63,
   "Transport & Infrastructure": 68,
-  "Travel & Tourism": 10,
-  "Utility & Sanitation": 73,
-  "Women and Child": 494,
-  "not stated": 733
+  "Travel & Tourism": 13,
+  "Utility & Sanitation": 74,
+  "Women and Child": 523,
+  "not stated": 821
  },
- "classified": 3845,
+ "classified": 4114,
  "counting_basis": "One row per key. A state votes a scheme's revenue head and its capital head separately and both are separate rows here, exactly as they are separate rows in the register.",
- "coverage": 0.84,
+ "coverage": 0.834,
  "deciding_signal": {
-  "a benefit phrase in the name": 2847,
-  "a topic word in the name": 271,
-  "the department or ministry": 714,
+  "a benefit phrase in the name": 3006,
+  "a topic word in the name": 296,
+  "the department or ministry": 799,
   "the purpose line": 13
  },
  "known_errors": [
@@ -211,7 +211,7 @@
   "right_if_each_organisation_took_its_modal_sector": 3314,
   "why": "A ceiling for any department-only rule, measured on myScheme's own records with its own answers in hand. A department is not a sector."
  },
- "not_stated": 733,
+ "not_stated": 821,
  "operating_point": {
   "margin": 1,
   "min_score": 2,
@@ -225,7 +225,7 @@
   "why": "Chosen for usefulness, not for safety. A wrong sector is a browsing annoyance, not a false accusation, so this file does not run at the 0.95 precision bar the scheme-or-not classifiers in this directory use. It still abstains where nothing but one weak signal fires, because a wrong sector is worse than a missing one for a reader filtering by it."
  },
  "question": "Which of the 15 myScheme sectors does each register row belong to, for the rows myScheme does not list and which therefore carry no sector of their own?",
- "rows": 4578,
+ "rows": 4935,
  "scope": "The 680 registry entries with no myScheme source, plus every state classification row at or above site/build.py's listing bar that myScheme does not list. A superset of what the site shows by 366 centrally sponsored state shares that site/build.py folds into their parent scheme.",
  "sectors": {
   "andhra|Agriculture Department | Annadata Sukhibhava": {
@@ -5812,6 +5812,45 @@
    "name": "CSS-State Share-Pradhan Mantri Awas Yojane Grameena",
    "sector": "Housing & Shelter"
   },
+  "karnataka|2225-01-102-0-11": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the purpose line"
+    ],
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Dr.B.R.Ambedkar Development Corporation- Ganga Kalyana",
+   "sector": "Social welfare & Empowerment"
+  },
+  "karnataka|2225-01-190-2-09": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Dr.B.R.Ambedkar Development Corporation- Micro Credit through Self Help Women Groups (SHGs)",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "karnataka|2225-01-196-1-01": {
    "evidence": [
     [
@@ -6269,6 +6308,45 @@
    "name": "Upgradation of Merit of ST Students",
    "sector": "Education & Learning"
   },
+  "karnataka|2225-02-277-0-37": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Morarji Desai Residential Schools (MDRSs) and Maintenance of Kittur Rani Chenamma Residential School (KREIS)",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-02-794-0-01": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "a benefit phrase in the purpose line"
+    ],
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-Development of Particularly Vulnerable Tribal Groups",
+   "sector": "Social welfare & Empowerment"
+  },
   "karnataka|2225-02-794-0-04": {
    "evidence": [
     [
@@ -6482,6 +6560,28 @@
    ],
    "family": "karnataka",
    "name": "CSS-State Share-Pre-Matric Scholarship to Backward Classes Students Studying in 9th and 10th Standard",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-04-102-0-13": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Post Matric Hostels for Minorities",
    "sector": "Education & Learning"
   },
   "karnataka|2225-04-196-1-02": {
@@ -7011,6 +7111,23 @@
    "name": "CSS-State Share-Monthly Financial Assistance to the Physically Challenged and the Disabled Poor (NSAP)",
    "sector": "Social welfare & Empowerment"
   },
+  "karnataka|2235-02-101-0-47": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Commissionerate for Persons with Disability Act - 1995",
+   "sector": "Social welfare & Empowerment"
+  },
   "karnataka|2235-02-101-0-50": {
    "evidence": [
     [
@@ -7206,6 +7323,23 @@
    "name": "Prevention of Trafficking in Women & Children",
    "sector": "Women and Child"
   },
+  "karnataka|2235-02-102-0-28": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Karnataka State Commission for Protection of Child Rights",
+   "sector": "Women and Child"
+  },
   "karnataka|2235-02-102-0-33": {
    "evidence": [
     [
@@ -7250,6 +7384,28 @@
    "name": "CSS-Salary-Integrated Child Protection Scheme",
    "sector": "Women and Child"
   },
+  "karnataka|2235-02-102-0-37": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Directorate of Child Protection",
+   "sector": "Women and Child"
+  },
   "karnataka|2235-02-102-0-41": {
    "evidence": [
     [
@@ -7265,6 +7421,23 @@
    ],
    "family": "karnataka",
    "name": "CSS-Central Share(100% GoI)-Beti Bachao, Beti Padhao",
+   "sector": "Women and Child"
+  },
+  "karnataka|2235-02-102-0-42": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share(100% GoI)-One Stop Centre",
    "sector": "Women and Child"
   },
   "karnataka|2235-02-102-0-43": {
@@ -7968,6 +8141,23 @@
    "family": "karnataka",
    "name": "Grants to NGOs for Welfare of Differently Abled and Senior Citizens",
    "sector": "Social welfare & Empowerment"
+  },
+  "karnataka|2235-02-196-1-05": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Salary Share -ICDS (30 District ICDS Cell)",
+   "sector": "Women and Child"
   },
   "karnataka|2235-02-197-1-01": {
    "evidence": [
@@ -9703,6 +9893,33 @@
    "name": "CSS-State Share-Start Up Village Entrepreneurship Program -SVEP(NRLM)",
    "sector": "Business & Entrepreneurship"
   },
+  "karnataka|2501-06-198-6-05": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+1",
+     "Skills & Employment",
+     "a benefit phrase in the purpose line"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-Rural Self Employment Training Institutes-RSETI (NRLM)",
+   "sector": "Social welfare & Empowerment"
+  },
   "karnataka|2501-06-198-6-07": {
    "evidence": [
     [
@@ -9785,6 +10002,23 @@
    "family": "karnataka",
    "name": "CSS-State Share-Deen Dayal Upadhaya Grameena Kaushalya Yojana DDUGKY - (NRLM)",
    "sector": "Skills & Employment"
+  },
+  "karnataka|2505-02-101-0-03": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-MGNREGA (Administrative Expenses)",
+   "sector": "Agriculture,Rural & Environment"
   },
   "karnataka|2505-02-101-0-04": {
    "evidence": [
@@ -11127,6 +11361,23 @@
    "name": "Interest Subsidy to KURDFC towards the Loan Availed from HUDCO for the Implementation of LIFE-Parppida Mission Scheme-Rural",
    "sector": "Banking,Financial Services and Insurance"
   },
+  "kerala|code:CDT 115": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "at Panchayat Kudumbasree share) Urban Employment Development care to Landless",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "kerala|code:CS 033": {
    "evidence": [
     [
@@ -11960,6 +12211,23 @@
    "family": "kerala",
    "name": "Deendayal Antyodaya Yojana-National Rural Livelihoods Mission (DAY NRLM) - General (60%CSS) State Share",
    "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:RDT 043 (1)": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "One Time State Support for Poverty Alleviation Units in District Panchayats (erstwhile DRDAs)",
+   "sector": "Agriculture,Rural & Environment"
   },
   "kerala|code:RDT 046 (1)": {
    "evidence": [
@@ -12890,6 +13158,23 @@
    "name": "National Widow Pension - State Share Social Justice",
    "sector": "Social welfare & Empowerment"
   },
+  "kerala|code:SWE 013": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Social Security Initiatives for the Marginalized Groups/Unorganized Groups",
+   "sector": "Social welfare & Empowerment"
+  },
   "kerala|code:SWE 021": {
    "evidence": [
     [
@@ -12906,6 +13191,28 @@
    "family": "kerala",
    "name": "Assistance to After Care Programmes and Followup Services of Victims Rehabilitation Fund",
    "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:SWE 037": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Development of Anganwadi as Community Resource Centres for Women and Children - A Life Cycle Approach",
+   "sector": "Women and Child"
   },
   "kerala|code:SWE 051": {
    "evidence": [
@@ -13261,6 +13568,23 @@
    "family": "kerala",
    "name": "BETI BACHAO BETI PADAO-100% Central Share",
    "sector": "Women and Child"
+  },
+  "kerala|code:SWE 149": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "SAAYAM PRABHA (Welfare of Old Age People)",
+   "sector": "Social welfare & Empowerment"
   },
   "kerala|code:SWE 150": {
    "evidence": [
@@ -13651,6 +13975,23 @@
    "name": "Skill Development Training and Employment for Women",
    "sector": "Skills & Employment"
   },
+  "kerala|code:SWE 219": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Fare Food- Inclusion of Egg and Milk in Anganwadi Menu",
+   "sector": "Women and Child"
+  },
   "kerala|code:SWE 220": {
    "evidence": [
     [
@@ -14025,6 +14366,40 @@
    "name": "PALNA Standalone Creches (40% State Share)",
    "sector": "Women and Child"
   },
+  "kerala|code:SWE 245": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "State fund for persons with disabilities",
+   "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:SWE 246": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Establishment of Creches in workplace as per maternity benefit Act",
+   "sector": "Women and Child"
+  },
   "kerala|code:SWE 247 (2)": {
    "evidence": [
     [
@@ -14042,6 +14417,23 @@
    "name": "Swachhata Action Plan - 40% State Share",
    "sector": "Utility & Sanitation"
   },
+  "kerala|code:SWE 250": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Research and Development - ICDS",
+   "sector": "Women and Child"
+  },
   "kerala|code:SWE 252": {
    "evidence": [
     [
@@ -14057,6 +14449,23 @@
    ],
    "family": "kerala",
    "name": "Scheme for Care and Support to Victims under Section 4 & 6 of the POCSO Act, 2012 (100% CSS)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:SWE 254": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "ANPU VEEDU-Block level Care Homes for persons with intellectual disability",
    "sector": "Social welfare & Empowerment"
   },
   "kerala|code:SYS 080": {
@@ -14824,6 +15233,23 @@
    "name": "to Landless Families for Construction of Houses",
    "sector": "Housing & Shelter"
   },
+  "kerala|code:WBC 278 (1)": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Land to Landless Families for Construction of Houses (State Share )",
+   "sector": "Housing & Shelter"
+  },
   "kerala|code:WBC 280": {
    "evidence": [
     [
@@ -14840,6 +15266,28 @@
    "family": "kerala",
    "name": "Financial Assistance for Marriage of SC Girls",
    "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:WBC 281": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Sports & Culture",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Management of Model Residential Schools Including Ayyankali Memorial Model Residential School for Sports,Vellayani",
+   "sector": "Sports & Culture"
   },
   "kerala|code:WBC 282": {
    "evidence": [
@@ -14895,6 +15343,23 @@
    ],
    "family": "kerala",
    "name": "Engaging social workers in tribal welfare",
+   "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:WBC 288 (1)": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Tribal Promoters",
    "sector": "Social welfare & Empowerment"
   },
   "kerala|code:WBC 288 (3)": {
@@ -14991,6 +15456,28 @@
    "family": "kerala",
    "name": "Assistance to Orphans",
    "sector": "Women and Child"
+  },
+  "kerala|code:WBC 292": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Comprehensive Tribal Health Care",
+   "sector": "Health & Wellness"
   },
   "kerala|code:WBC 295": {
    "evidence": [
@@ -15249,6 +15736,23 @@
    "family": "kerala",
    "name": "Proff. Joseph Mundassery Scholarship for Talented Minority Students and Civil Service Students",
    "sector": "Education & Learning"
+  },
+  "kerala|code:WBC 349": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Chief Minister's Debt Relief Scheme 2016 - SC/ST Development Corporation",
+   "sector": "Social welfare & Empowerment"
   },
   "kerala|code:WBC 358": {
    "evidence": [
@@ -15525,6 +16029,23 @@
    "family": "kerala",
    "name": "Gothra Valsalyanidhi( Tribal Girl Child Endowment Scheme)",
    "sector": "Women and Child"
+  },
+  "kerala|code:WBC 361": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Gothrabandhu-Engaging Tribal Teachers in Primary Schools",
+   "sector": "Education & Learning"
   },
   "kerala|code:WBC 362": {
    "evidence": [
@@ -15960,6 +16481,28 @@
    "name": "Housing Scheme for the Homeless STs Under Life mission",
    "sector": "Housing & Shelter"
   },
+  "kerala|code:WBC 398": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Agriculture Income Initiative for Scheduled Tribes",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "kerala|code:WBC 414 (1)": {
    "evidence": [
     [
@@ -16280,6 +16823,23 @@
    "name": "PM YASASVI Post-matric scholarships for OBC,EBC and DNT Students - 40% State Share",
    "sector": "Education & Learning"
   },
+  "kerala|code:WBC 428 (2)": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Marketing Centres for the Products of Traditional Vocational Communities",
+   "sector": "Skills & Employment"
+  },
   "kerala|code:WBC 430": {
    "evidence": [
     [
@@ -16314,6 +16874,23 @@
    "name": "UNNATHI-Entrepreneurship development programme and start-ups",
    "sector": "Business & Entrepreneurship"
   },
+  "kerala|code:WBC 432": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "WINGS ( Skill development programme in Aviation field)",
+   "sector": "Skills & Employment"
+  },
   "kerala|code:WBC 433": {
    "evidence": [
     [
@@ -16330,6 +16907,23 @@
    "family": "kerala",
    "name": "Self -employment Scheme for widows belonging to OBCs",
    "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:WBC 434": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Start-up Ventures for Engineering Professionals",
+   "sector": "Business & Entrepreneurship"
   },
   "kerala|code:WBC 435": {
    "evidence": [
@@ -16491,6 +17085,45 @@
    "family": "kerala",
    "name": "Chief Minister's Research Fellowship for Minorities - (erstwhile Research Fellowships for Minority Scholars)",
    "sector": "Education & Learning"
+  },
+  "kerala|code:WBC 454": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Academic and Research Chair for Tribal Studies",
+   "sector": "Social welfare & Empowerment"
+  },
+  "kerala|code:WBC 458": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Travel & Tourism",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "kerala",
+   "name": "Promotion of Indigenous Tourism in Tribal Areas",
+   "sector": "Travel & Tourism"
   },
   "kerala|code:WBC 461": {
    "evidence": [
@@ -39110,6 +39743,28 @@
    "name": "Kind Grant under National Health Mission - State Share",
    "sector": "Health & Wellness"
   },
+  "tamilnadu|2216 02 190 AF": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants to Tamil Nadu Shelter Fund under Housing Habitat Development Project",
+   "sector": "Housing & Shelter"
+  },
   "tamilnadu|2216 02 190 AG": {
    "evidence": [
     [
@@ -39176,6 +39831,45 @@
    "name": "Additional cost for Government of Tamil Nadu Share (Weavers) under Pradhan Mantri Awas Yojana (Urban)",
    "sector": "Housing & Shelter"
   },
+  "tamilnadu|2216 02 190 JU": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Providing basic amenities for resettlement and re-habilitation of flood affected slum dwellers on the river margins",
+   "sector": "Housing & Shelter"
+  },
+  "tamilnadu|2216 02 190 PA": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants to TNUHDB under Tamil Nadu Housing and Habitat Development Project",
+   "sector": "Housing & Shelter"
+  },
   "tamilnadu|2216 02 190 PB": {
    "evidence": [
     [
@@ -39196,6 +39890,28 @@
    ],
    "family": "tamilnadu",
    "name": "Grants to TNUHDB for implementation of Asian Development Bank (ADB) assisted Inclusive Resilient and Sustainable Housing for the Urban Poor",
+   "sector": "Housing & Shelter"
+  },
+  "tamilnadu|2216 02 190 UA": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Slum Survey Programme under Housing For All - Pradhan Mantri Awas Yojana (Urban)",
    "sector": "Housing & Shelter"
   },
   "tamilnadu|2216 02 190 UC": {
@@ -39220,6 +39936,50 @@
    "name": "Housing For All - Pradhan Mantri Awas Yojana (Urban) - Affordable Housing in Partnership",
    "sector": "Housing & Shelter"
   },
+  "tamilnadu|2216 02 190 UE": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants for the Third Party Quality Monitoring Agencies activities (TPQMA) under Pradhan Mantri Awas Yojana (Urban) - Housing for All",
+   "sector": "Housing & Shelter"
+  },
+  "tamilnadu|2216 02 190 UF": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Slum Survey Programme under Housing For All - Pradhan Mantri Awas Yojana (Urban) - State Share",
+   "sector": "Housing & Shelter"
+  },
   "tamilnadu|2216 02 190 UG": {
    "evidence": [
     [
@@ -39240,6 +40000,28 @@
    ],
    "family": "tamilnadu",
    "name": "Housing For All - Pradhan Mantri Awas Yojana (Urban) - Affordable Housing in Partnership - State Share",
+   "sector": "Housing & Shelter"
+  },
+  "tamilnadu|2216 02 190 UI": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants for the Third Party Quality Monitoring Agencies activities (TPQMA) under Pradhan Mantri Awas Yojana (Urban) - Housing for All - State Share",
    "sector": "Housing & Shelter"
   },
   "tamilnadu|2216 02 190 UJ": {
@@ -39350,6 +40132,28 @@
    ],
    "family": "tamilnadu",
    "name": "Grants to State Level Technical Cells (SLTC) and City Level Technical Cells (CLTC) under Housing For All – Pradhan Mantri Awaas Yojana (Urban) 2.0",
+   "sector": "Housing & Shelter"
+  },
+  "tamilnadu|2216 02 190 UQ": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: HOUSING AND URBAN DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants for the Third Party Quality Monitoring Agencies acivities (TPQMA) under Housing For All – Pradhan Mantri Awaas Yojana (Urban) 2.0",
    "sector": "Housing & Shelter"
   },
   "tamilnadu|2216 02 190 UR": {
@@ -39704,6 +40508,33 @@
    "name": "Grants to TNUHDB for Project Management under Inclusive Resilient and Sustainable Housing for the Urban Poor",
    "sector": "Housing & Shelter"
   },
+  "tamilnadu|2216 03 051 AA": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Roofing cost for construction of Concrete Houses for Other Backward Classes",
+   "sector": "Housing & Shelter"
+  },
   "tamilnadu|2216 03 105 AA": {
    "evidence": [
     [
@@ -39823,6 +40654,23 @@
    "family": "tamilnadu",
    "name": "Additional unit cost for the houses under the Pradhan Mantri JANMAN Scheme",
    "sector": "Housing & Shelter"
+  },
+  "tamilnadu|2216 03 800 AF": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Vetri Veedu Thittam",
+   "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2216 03 800 JA": {
    "evidence": [
@@ -40039,6 +40887,28 @@
    "name": "Integrated Development of Scheduled Caste Majority Villages under Pradhan Mantri Adarsh Gram Yojana",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 01 190 JB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Compensation to Tamil Nadu Adi-Dravidar Housing and Development Corporation for waiver of margin money and interest",
+   "sector": "Housing & Shelter"
+  },
   "tamilnadu|2225 01 190 SA": {
    "evidence": [
     [
@@ -40114,6 +40984,28 @@
    "family": "tamilnadu",
    "name": "Special Scholarship Scheme to Scheduled Caste students who are at post-matric level",
    "sector": "Education & Learning"
+  },
+  "tamilnadu|2225 01 277 BD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Compensation to Government Aided Polytechnics / Engineering Colleges",
+   "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 01 277 BY": {
    "evidence": [
@@ -40355,6 +41247,33 @@
    "name": "Free Supply of Bicycles to all boy students belonging to Scheduled Castes / Scheduled Caste converts to Christianity studying in Std XI and XII in the Government / Government Aided Higher Secondary Schools",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 01 277 KQ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Special coaching to students studying in Standard IX to XII in Adi Dravidar Welfare High Schools and Higher Secondary Schools",
+   "sector": "Education & Learning"
+  },
   "tamilnadu|2225 01 277 KS": {
    "evidence": [
     [
@@ -40382,6 +41301,28 @@
    "name": "Educational Assistance for Meritorious Adi-Dravidar / Tribal Students to study in reputed schools",
    "sector": "Education & Learning"
   },
+  "tamilnadu|2225 01 277 KV": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Smart Class Rooms in Adi - Dravidar/ Tribal Welfare Higher Secondary Schools",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 01 277 KW": {
    "evidence": [
     [
@@ -40402,6 +41343,77 @@
    ],
    "family": "tamilnadu",
    "name": "Financial assistance to the Adi-Dravidar and Tribal students pursuing Ph.d",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 01 277 KX": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Opening of Adi-Dravidar Welfare ITI and Hostel",
+   "sector": "Skills & Employment"
+  },
+  "tamilnadu|2225 01 277 LA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Scheme for Coaching to Scheduled Caste students for Common Admission Test (CAT)",
+   "sector": "Education & Learning"
+  },
+  "tamilnadu|2225 01 277 LC": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Providing Welcome Kit to the Students newly admitted in Adi Dravidar Welfare Hostels",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 01 277 UC": {
@@ -40511,6 +41523,50 @@
    "family": "tamilnadu",
    "name": "Pre-Matric Scholarship to Scheduled Caste Students",
    "sector": "Education & Learning"
+  },
+  "tamilnadu|2225 01 789 AF": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "'Nannilam' Adi Dravidar Women Land Ownership Scheme",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 01 789 AW": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Payment for funeral rites",
+   "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 01 789 AX": {
    "evidence": [
@@ -40676,6 +41732,33 @@
    "name": "Distribution of Free Note Books to Students",
    "sector": "Education & Learning"
   },
+  "tamilnadu|2225 01 789 JI": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Skills & Employment",
+     "the department or ministry: LABOUR WELFARE AND SKILL DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Setting up of Coaching - cum - Guidance Centre under Special Component Plan for Scheduled Castes",
+   "sector": "Education & Learning"
+  },
   "tamilnadu|2225 01 793 SB": {
    "evidence": [
     [
@@ -40698,6 +41781,50 @@
    "name": "Implementation of Economic Development Programmes under Scheduled Castes Sub Plan (SCSP)",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 01 793 UA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Reward to selected villages",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 01 793 UB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Reward to selected villages - State Share",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 01 800 JB": {
    "evidence": [
     [
@@ -40713,6 +41840,28 @@
    ],
    "family": "tamilnadu",
    "name": "Assistance to Technically Trained persons",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 01 800 LX": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Dr. Ambedkar award for persons promoting welfare of Scheduled Castes",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 02 102 AB": {
@@ -40786,6 +41935,28 @@
    "name": "Assistance to ST for Higher Educational Special Scholarship Scheme",
    "sector": "Education & Learning"
   },
+  "tamilnadu|2225 02 277 BB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Compensation to Government Aided Polytechnics / Engineering Colleges",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 02 277 BC": {
    "evidence": [
     [
@@ -40835,6 +42006,33 @@
    "name": "Free Education to the Students of ST Girls studying P.G.Courses",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 02 277 BI": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Sports & Culture",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Supply of Sports articles and development of play grounds to Tribal Welfare High Schools / Higher Secondary Schools",
+   "sector": "Sports & Culture"
+  },
   "tamilnadu|2225 02 277 BL": {
    "evidence": [
     [
@@ -40877,6 +42075,28 @@
    ],
    "family": "tamilnadu",
    "name": "Free Supply of Bicycles to all boy students belonging to Scheduled Tribes studying in Std XI and XII in the Government / Government Aided Higher Secondary Schools",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 277 BO": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Smart Class Rooms in Tribal Welfare Higher Secondary Schools",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 02 277 BQ": {
@@ -40923,6 +42143,72 @@
    "name": "Payment of All Fees for the Students of Tribes admitted under the 7.5% preferential allotment of seats in MBBS/BDS course",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 02 277 BS": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Award of Prizes to Tribal Welfare Schools",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 277 BT": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants for Eklavya Model Residential Schools",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 277 BU": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Providing Welcome Kit to the Students newly admitted in Tribal Welfare Hostels",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 02 277 KC": {
    "evidence": [
     [
@@ -40943,6 +42229,23 @@
    ],
    "family": "tamilnadu",
    "name": "Boarding grants to Tribal Students",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 277 KD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Boarding grant to Hostels run by Non Governmental Organisation",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 02 277 KP": {
@@ -41097,6 +42400,23 @@
    "name": "Welfare Schemes for Scheduled Tribes in Integrated Rural Development Project Blocks under Tribal Sub-Plan",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 02 794 SB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Development of Particularly Vulnerable Tribes - Funds released by the GOI under Art.275(i) of the Constitution of India",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 02 794 SE": {
    "evidence": [
     [
@@ -41141,6 +42461,106 @@
    "name": "An ancient Tribal development Scheme on the brink of extinction",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 02 794 SH": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Administrative Costs to States / U.Ts for implementation of Schemes",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 794 SI": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 796 AB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Tamil Nadu Tribal Development Authority",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 796 AD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Dispersed Tribal Group",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 02 796 AE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "'Nannilam' Tribal Women Land Ownership Scheme",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 02 796 JF": {
    "evidence": [
     [
@@ -41167,6 +42587,33 @@
    "family": "tamilnadu",
    "name": "Distribution of Free Note Books to Students",
    "sector": "Education & Learning"
+  },
+  "tamilnadu|2225 02 796 JW": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: FORESTS (Environment, Climate Change and Forests Department)"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Providing assured and safe drinking water to Tribal Areas",
+   "sector": "Utility & Sanitation"
   },
   "tamilnadu|2225 02 796 JX": {
    "evidence": [
@@ -41261,6 +42708,67 @@
    "name": "Schemes for Economic Development of Scheduled Tribes",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 02 796 SF": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 03 102 AK": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Financial Assistance to Tailors of Backward Classes, Most Backward Classes and Denotified Communities Welfare for formation of Readymade Garments Units",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 03 102 AL": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Financial Assistance to Launderer of Backward Classes, Most Backward Classes and Denotified Communities Welfare for formation of Modernisation Laundry",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 03 102 AM": {
    "evidence": [
     [
@@ -41282,6 +42790,72 @@
    "family": "tamilnadu",
    "name": "Financial Assistance to Handicraft Mission",
    "sector": "Business & Entrepreneurship"
+  },
+  "tamilnadu|2225 03 102 KD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Free supply of sewing machines to Backward Classes",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 03 102 KE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Free supply of sewing machine to Most Backward Classes and Denotified Communities",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 03 102 KF": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Free tools to Most Backward Classes",
+   "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 03 190 AF": {
    "evidence": [
@@ -41309,6 +42883,50 @@
    "family": "tamilnadu",
    "name": "Providing Loan Assistance to the students of Backward Classes, Most Backward Classes and Denotified Community through TABCEDCO for pursuing Higher Education in Foreign Universities",
    "sector": "Banking,Financial Services and Insurance"
+  },
+  "tamilnadu|2225 03 277 AA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Backward Classes Hostels",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 03 277 BC": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Most Backward Classes Hostels",
+   "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 03 277 JC": {
    "evidence": [
@@ -41898,6 +43516,23 @@
    "name": "Most Backward Classes Welfare Board",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 03 800 JC": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Vanniyar Public Property Welfare Board",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 04 001 AD": {
    "evidence": [
     [
@@ -41918,6 +43553,28 @@
    ],
    "family": "tamilnadu",
    "name": "Rewards - Incentive Scheme for Rural Minority Girls Students of Std. III to VI",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 04 102 AA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Free supply of sewing machine to Minorities",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2225 04 190 AA": {
@@ -42018,6 +43675,28 @@
    "name": "Education Scholarship for Minority Students to pursue Higher Education in Abroad",
    "sector": "Education & Learning"
   },
+  "tamilnadu|2225 04 277 JA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Job Oriented Training Courses to Minorities",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 04 277 JB": {
    "evidence": [
     [
@@ -42067,6 +43746,45 @@
    "name": "Scholarship to Students belonging to Minority Communities",
    "sector": "Education & Learning"
   },
+  "tamilnadu|2225 04 800 AB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Providing subsidy for purchase of two wheeler to the working ulemas in waqf institution",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 80 101 AE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Denotified Community Schools",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2225 80 101 AF": {
    "evidence": [
     [
@@ -42106,6 +43824,45 @@
    "name": "Denotified Communities Welfare Board",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2225 80 101 AN": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Educational Tour Expenditure for Welfare of Denotified Communities School Students",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 80 800 AB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Civil Services Examination Centre for SC/ST/BC/MBC & Denotified Communities students",
+   "sector": "Education & Learning"
+  },
   "tamilnadu|2225 80 800 AC": {
    "evidence": [
     [
@@ -42126,6 +43883,57 @@
    ],
    "family": "tamilnadu",
    "name": "Contribution towards Setting up of Adi Dravidar and Tribal Welfare Activities Foundation",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 80 800 AE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Supply of free Bicycles to Ulemas and Motinars belonging to Islamic Communities",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 80 800 JI": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Puthirai Vannar Welfare Board",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2225 80 800 JJ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Ulemas and other Employees Welfare Board",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2230 01 789 JA": {
@@ -42410,6 +44218,23 @@
    "name": "Supply of Text Books and Drawing Instruments to Government aided ITI students",
    "sector": "Skills & Employment"
   },
+  "tamilnadu|2235 01 105 AC": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Refugees relief measures",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 01 200 BA": {
    "evidence": [
     [
@@ -42564,6 +44389,23 @@
    "name": "Financial Assistance for the Rehabilitation of Erstwhile Prohibition Offenders",
    "sector": "Public Safety,Law & Justice"
   },
+  "tamilnadu|2235 01 202 BA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Public Safety,Law & Justice",
+     "the department or ministry: PROHIBITION AND EXCISE (Home, Prohibition and Excise Department)"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Drug Free Tamil Nadu - Tamil Nadu Substance Abuse Treatment, Rehabilitation and Reintegration Fund",
+   "sector": "Public Safety,Law & Justice"
+  },
   "tamilnadu|2235 01 800 AI": {
    "evidence": [
     [
@@ -42580,6 +44422,23 @@
    "family": "tamilnadu",
    "name": "Transportation of deceased Non Resident Tamils / Repatriation of Tamil Nationals in distress/ medical invalidation",
    "sector": "Health & Wellness"
+  },
+  "tamilnadu|2235 01 800 AJ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Sports & Culture",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Cultural tour programme by Government of Tamil Nadu for Tamil Diaspora Youth",
+   "sector": "Sports & Culture"
   },
   "tamilnadu|2235 02 101 BB": {
    "evidence": [
@@ -42608,6 +44467,33 @@
    "name": "Scholarships to the Differently Abled Students",
    "sector": "Education & Learning"
   },
+  "tamilnadu|2235 02 101 BE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "School for the Severely affected Orthopaedic Differently Abled Persons",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 101 CE": {
    "evidence": [
     [
@@ -42635,6 +44521,72 @@
    "name": "Assistance to Government recognised schools for the Differently abled",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 02 101 CF": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Assistance to Non-Government Organisations for Schools for Mentally Retarded Children",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 101 CG": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Assistance for Recaning of Wooden Furniture by Blind Persons",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 101 CH": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Assistance to School for the Differently Abled Persons",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 101 CK": {
    "evidence": [
     [
@@ -42655,6 +44607,23 @@
    ],
    "family": "tamilnadu",
    "name": "Grants to Welfare Board for the Differently abled",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 101 CM": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Maintenance Grants to the persons with Muscular Dystrophy Disease",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2235 02 101 CN": {
@@ -42679,6 +44648,28 @@
    "name": "Assistance to differently abled Persons for Self Employment under Prime Minister's Employment Generation Programme",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 02 101 CO": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Scheme for Rehabilitation of the Differently Abled Persons",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 101 CP": {
    "evidence": [
     [
@@ -42699,6 +44690,28 @@
    ],
    "family": "tamilnadu",
    "name": "Self-Employment for Differently Abled Persons",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 101 CS": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Scribe Assistance to Students of Schools for Blind and Expenses for the Helper",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2235 02 101 CU": {
@@ -42816,6 +44829,55 @@
    ],
    "family": "tamilnadu",
    "name": "Concessions to able persons who come forward to marry deaf and dumb",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 101 DG": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Annual Tour Programme for the Differently Abled Children of Primary Training Centres",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 101 DH": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Early Intervention Programme for the Children with development delay to the age group of 0-6 years",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2235 02 101 DI": {
@@ -42955,6 +45017,23 @@
    "name": "Unemployment Allowance to Unemployed differently abled / Hearing Impaired / Mentally Retarded registered in Employment Exchange",
    "sector": "Skills & Employment"
   },
+  "tamilnadu|2235 02 101 MO": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Assistance for Rehabilitation of Mentally ill",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 101 MP": {
    "evidence": [
     [
@@ -43065,6 +45144,23 @@
    "name": "Assistance to NGO's for Special Institution for Children with Autism",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 02 101 NB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mobility Assistance Appliance for persons affected by Muscular Dystrophy",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 101 NI": {
    "evidence": [
     [
@@ -43156,6 +45252,33 @@
    ],
    "family": "tamilnadu",
    "name": "Corpus Fund for Personal Assistance Services to Differently Abled with High Support Needs",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 101 NP": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: DEPARTMENT FOR THE WELFARE OF DIFFERENTLY ABLED PERSONS"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants to RKMVERI, Coimbatore for conducting Disability Management and Special Education Courses",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2235 02 101 NS": {
@@ -43388,6 +45511,72 @@
    "name": "De-addiction Centres for Children",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 02 102 KN": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Special Grants to Schools for the Welfare of the students requiring maintenance and safety",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 102 KO": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Maintenance grant to the children who lost parents due to COVID-19",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 102 KT": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Maintenance Grant for Children who have lost their parents due to alcohol consumption",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 102 KU": {
    "evidence": [
     [
@@ -43557,6 +45746,50 @@
    ],
    "family": "tamilnadu",
    "name": "Financial Assistance for Non-Institutional Care - Sponsorship / Foster care / After care - State Share",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2235 02 102 UO": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Health & Wellness",
+     "the department or ministry: HEALTH AND FAMILY WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2235 02 102 UP": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Health & Wellness",
+     "the department or ministry: HEALTH AND FAMILY WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY) - State Share",
    "sector": "Women and Child"
   },
   "tamilnadu|2235 02 103 BN": {
@@ -43938,6 +46171,28 @@
    "name": "Assistance to NGOs under Revised Ujjawala Scheme",
    "sector": "Women and Child"
   },
+  "tamilnadu|2235 02 103 UE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Implementation of Swadhar Greh Scheme under Social Welfare Department",
+   "sector": "Women and Child"
+  },
   "tamilnadu|2235 02 103 UG": {
    "evidence": [
     [
@@ -43959,6 +46214,191 @@
    "family": "tamilnadu",
    "name": "Assistance to NGOs under Revised Ujjawala Scheme - State Share",
    "sector": "Women and Child"
+  },
+  "tamilnadu|2235 02 103 UH": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Implementation of Swadhar Greh Scheme under Social Welfare Department - State Share",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2235 02 103 UJ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants to Tamil Nadu Working Women’s Hostels Corporation for construction of Working Women Hostels",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 103 UK": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants to Tamil Nadu Working Women’s Hostels Corporation for construction of Working Women Hostels - State Share",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 103 UN": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Rajya Mahila Sashaktikaran Kendra Schemes",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 103 UO": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Rajya Mahila Sashaktikaran Kendra Schemes - State Share",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 103 UP": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Pradhan Mantri Mahila Sashaktikaran Kendra Schemes",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 103 UQ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Pradhan Mantri Mahila Sashaktikaran Kendra Schemes - State Share",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 103 UR": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Other Schemes funded from Nirbhaya Fund for Construction of Working Women Hostel",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 103 US": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Other Schemes funded from Nirbhaya Fund for Construction of Working Women Hostel - State Share",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 104 KT": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Public Safety,Law & Justice",
+     "the department or ministry: POLICE (Home, Prohibition and Excise Department)"
+    ],
+    [
+     "+5",
+     "Public Safety,Law & Justice",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Students in Responsible Police Initiatives (SIRPI) unit in Chennai",
+   "sector": "Public Safety,Law & Justice"
   },
   "tamilnadu|2235 02 104 SA": {
    "evidence": [
@@ -43982,6 +46422,62 @@
    "name": "National Action Plan for Senior Citizens",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 02 106 AD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Government Child Care Institutions",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 106 AF": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "After Care Home for Women",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 106 AG": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "After Care Home for boys",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 106 BH": {
    "evidence": [
     [
@@ -44003,6 +46499,50 @@
    "family": "tamilnadu",
    "name": "Social Security Welfare of Transgender Persons",
    "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 106 UE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Formation of Child Welfare Committee under Juvenile Justice (Care and Protection of Children) Act",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 106 UH": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Maintenance Grants to NGO under Mission Vatsalya Scheme",
+   "sector": "Women and Child"
   },
   "tamilnadu|2235 02 106 UI": {
    "evidence": [
@@ -44029,6 +46569,28 @@
    ],
    "family": "tamilnadu",
    "name": "District Child Protection Unit under Mission Vatsalya Scheme",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2235 02 106 UN": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Maintenance Grants to NGO under Mission Vatsalya Scheme– State Share",
    "sector": "Women and Child"
   },
   "tamilnadu|2235 02 106 UO": {
@@ -44249,6 +46811,23 @@
    "name": "Reimbursement of expenses to State Transport Undertakings for providing Zero fare facility for Self Help Group members to carry goods in buses",
    "sector": "Transport & Infrastructure"
   },
+  "tamilnadu|2235 02 200 AZ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Sports & Culture",
+     "the department or ministry: INFORMATION AND PUBLICITY (Tamil Development and Information Department)"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Special Assistance to Journalists",
+   "sector": "Sports & Culture"
+  },
   "tamilnadu|2235 02 200 JG": {
    "evidence": [
     [
@@ -44270,6 +46849,23 @@
    "family": "tamilnadu",
    "name": "Tamil Nadu Government Inter Caste Marriage Assistance Scheme",
    "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 02 200 JI": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Skills & Employment",
+     "the department or ministry: LABOUR WELFARE AND SKILL DEVELOPMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Rehabilitation of bonded Labourers",
+   "sector": "Skills & Employment"
   },
   "tamilnadu|2235 02 200 SB": {
    "evidence": [
@@ -44462,6 +47058,50 @@
    "name": "Assistance to Scheme for Girl Children Welfare under Special Component Plan",
    "sector": "Women and Child"
   },
+  "tamilnadu|2235 02 789 PC": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "World Bank aided Tamil Nadu Rural Transformation Project (TNPVP Phase-II) under Special Component Plan",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2235 02 789 PD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "World Bank aided Tamil Nadu Rural Transformation Project (TNRTP Phase-II) (Vaazhndu Kaattuvom Project)",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2235 02 793 UC": {
    "evidence": [
     [
@@ -44643,6 +47283,28 @@
    "name": "Financial Assistance for Marriage - \"Annan Seer\" Scheme - Tribal Sub-Plan",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 02 796 JB": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Tailoring Centres for Tribal Women",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 02 796 JF": {
    "evidence": [
     [
@@ -44690,6 +47352,28 @@
    ],
    "family": "tamilnadu",
    "name": "World Bank aided Tamil Nadu Rural Transformation Project (TNPVP Phase-II) under Tribal Area Sub-Plan",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2235 02 796 PD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "World Bank aided Tamil Nadu Rural Transformation Project (TNRTP Phase-II) (Vaazhndu Kaattuvom Project)",
    "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2235 02 800 AI": {
@@ -45066,6 +47750,111 @@
    "name": "Indira Gandhi National Disabled Pension Scheme - State Share",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 60 105 AA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: FORESTS (Environment, Climate Change and Forests Department)"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Group Insurance Scheme for the Officers and Personnel of Forest Department",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2235 60 105 AD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "the department or ministry: FINANCE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Payment of Premium to the Insurance Company for Implementing New Health Insurance Scheme (NHIS)",
+   "sector": "Health & Wellness"
+  },
+  "tamilnadu|2235 60 110 BU": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "the department or ministry: FINANCE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Payment of premium to the Life Insurance Corporation of India under Group Insurance Scheme",
+   "sector": "Banking,Financial Services and Insurance"
+  },
+  "tamilnadu|2235 60 110 BV": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Public Safety,Law & Justice",
+     "the department or ministry: PRISONS AND CORRECTIONAL SERVICES (Home, Prohibition and Excise Department)"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Payment of Premium to the United India Insurance Company Limited under Group Insurance Scheme to the executive staff of Prison Department",
+   "sector": "Banking,Financial Services and Insurance"
+  },
+  "tamilnadu|2235 60 200 AM": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Contribution to T.N.Special Fund for Reconstruction and Rehabilitation of Ex-Servicemen-Annual Maintenance Grants to kin of Defence Personnel killed/or disabled in Indo-Pakistan war,1971",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 60 200 AY": {
    "evidence": [
     [
@@ -45104,6 +47893,89 @@
    "family": "tamilnadu",
    "name": "Compensation payable to the Victims of Police Atrocity",
    "sector": "Public Safety,Law & Justice"
+  },
+  "tamilnadu|2235 60 200 BE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "the department or ministry: FINANCE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Tamil Nadu Government Employees Special Provident Fund - cum - Gratuity Scheme",
+   "sector": "Banking,Financial Services and Insurance"
+  },
+  "tamilnadu|2235 60 200 CD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "the department or ministry: HIGHER EDUCATION DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Special Provident Fund-cum-Gratuity Scheme for Aided Educational Institutions controlled by the Director of Collegiate Education",
+   "sector": "Education & Learning"
+  },
+  "tamilnadu|2235 60 200 CE": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "the department or ministry: HIGHER EDUCATION DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Special Provident Fund-cum-Gratuity Scheme for Aided Educational Institutions controlled by the Director of Technical Education",
+   "sector": "Education & Learning"
+  },
+  "tamilnadu|2235 60 200 CF": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "the department or ministry: SCHOOL EDUCATION DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Special Provident Fund-cum-Gratuity Scheme for Aided Educational Institutions - controlled by the Director of Elementary Education",
+   "sector": "Education & Learning"
   },
   "tamilnadu|2235 60 200 CI": {
    "evidence": [
@@ -45166,6 +48038,45 @@
    "name": "Lumpsum Provision to Anganwadi Workers",
    "sector": "Women and Child"
   },
+  "tamilnadu|2235 60 200 DF": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Muslim Women Society",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 60 200 DI": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Public Safety,Law & Justice",
+     "the department or ministry: ADMINISTRATION OF JUSTICE"
+    ],
+    [
+     "+5",
+     "Public Safety,Law & Justice",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Contribution to Advocates Welfare Fund",
+   "sector": "Public Safety,Law & Justice"
+  },
   "tamilnadu|2235 60 200 DO": {
    "evidence": [
     [
@@ -45182,6 +48093,23 @@
    "family": "tamilnadu",
    "name": "Lumpsum grant to the Children of Ex-Servicemen who join Armed Forces",
    "sector": "Women and Child"
+  },
+  "tamilnadu|2235 60 200 DP": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Lumpsum Provision to Noon-Meal Organisers",
+   "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2235 60 200 DT": {
    "evidence": [
@@ -45225,6 +48153,62 @@
    ],
    "family": "tamilnadu",
    "name": "Financial Assistance for Funeral Expenses to Noon Meal Workers under Special Pension Scheme",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 60 200 DV": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Health & Wellness",
+     "the department or ministry: HEALTH AND FAMILY WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Thaimaaman Thanga Mothiram Thittam",
+   "sector": "Health & Wellness"
+  },
+  "tamilnadu|2235 60 200 JK": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Business & Entrepreneurship",
+     "the department or ministry: HANDLOOMS AND TEXTILES (Handlooms, Handicrafts, Textiles and Khadi Department)"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Free distribution of Handloom Cloth to the People Below Poverty Line",
+   "sector": "Business & Entrepreneurship"
+  },
+  "tamilnadu|2235 60 200 JO": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: FOOD AND CONSUMER PROTECTION (Co-operation , Food and Consumer Protection Department)"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Implementation of Annapurna Scheme",
    "sector": "Social welfare & Empowerment"
   },
   "tamilnadu|2235 60 200 JQ": {
@@ -45282,6 +48266,50 @@
    "family": "tamilnadu",
    "name": "Financial Assistance to Christian Associations for Women",
    "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 60 200 MC": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL JUSTICE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Providing incentives for the development of Villages in all the Districts (except Chennai District) which allows cemeteries without caste discrimination",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 60 200 MD": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Chief Minister's Farmers Security Scheme",
+   "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2235 60 200 ME": {
    "evidence": [
@@ -45348,6 +48376,23 @@
    "family": "tamilnadu",
    "name": "Accident Relief Schemes to certain poor occupational categories",
    "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2235 60 789 AA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Health & Wellness",
+     "the department or ministry: HEALTH AND FAMILY WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Thaimaaman Thanga Mothiram Thittam",
+   "sector": "Health & Wellness"
   },
   "tamilnadu|2235 60 789 BB": {
    "evidence": [
@@ -45779,6 +48824,23 @@
    "name": "Indira Gandhi National Widow Pension Scheme - State Share",
    "sector": "Social welfare & Empowerment"
   },
+  "tamilnadu|2235 60 796 AA": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Health & Wellness",
+     "the department or ministry: HEALTH AND FAMILY WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Thaimaaman Thanga Mothiram Thittam",
+   "sector": "Health & Wellness"
+  },
   "tamilnadu|2235 60 796 JB": {
    "evidence": [
     [
@@ -45938,6 +49000,94 @@
    "name": "Reimbursement of loss due to issue of free bus passes to HIV / AIDS Patients",
    "sector": "Health & Wellness"
   },
+  "tamilnadu|2235 60 800 AV": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Travel & Tourism",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Grants to Christians for pilgrimage to Jerusalem",
+   "sector": "Travel & Tourism"
+  },
+  "tamilnadu|2235 60 800 AX": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Skills & Employment",
+     "the department or ministry: LABOUR WELFARE AND SKILL DEVELOPMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Payment of relief to the Unemployed Youth",
+   "sector": "Skills & Employment"
+  },
+  "tamilnadu|2235 60 800 AZ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: BACKWARD CLASSES, MOST BACKWARD CLASSES AND MINORITIES WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Travel & Tourism",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Government grants for Buddhists, Jains and Sikhs to undertake pilgrimages",
+   "sector": "Travel & Tourism"
+  },
+  "tamilnadu|2235 60 800 DQ": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "the department or ministry: FINANCE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Advance from the Government account to the Tamil Nadu Government Pensioners' Family Security Fund Scheme to settle the pending claims",
+   "sector": "Social welfare & Empowerment"
+  },
   "tamilnadu|2235 60 800 DS": {
    "evidence": [
     [
@@ -46080,6 +49230,28 @@
    "name": "Tamil Nadu Integrated Child Development Services Scheme Phase-III",
    "sector": "Women and Child"
   },
+  "tamilnadu|2236 02 101 UG": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Nutrition Mission (NNM)",
+   "sector": "Health & Wellness"
+  },
   "tamilnadu|2236 02 101 UH": {
    "evidence": [
     [
@@ -46127,6 +49299,126 @@
    ],
    "family": "tamilnadu",
    "name": "Tamil Nadu Integrated Child Development Services Scheme Phase-III - State Share",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2236 02 101 UL": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Nutrition Mission (NNM) - State Share",
+   "sector": "Health & Wellness"
+  },
+  "tamilnadu|2236 02 101 UO": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Anganwadi Services",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2236 02 101 UP": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Anganwadi Services - State Share",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2236 02 101 UQ": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Integrated Child Development Services Scheme - Phase III",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2236 02 101 UR": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Integrated Child Development Services Scheme - Phase III - State Share",
    "sector": "Women and Child"
   },
   "tamilnadu|2236 02 101 US": {
@@ -46183,6 +49475,33 @@
    "name": "Integrated Child Development Services Scheme - State Share",
    "sector": "Women and Child"
   },
+  "tamilnadu|2236 02 102 BG": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Providing breakfast to the students studying up to the eighth standard under the Perunthalaivar Kamarajar Breakfast Scheme",
+   "sector": "Women and Child"
+  },
   "tamilnadu|2236 02 102 KB": {
    "evidence": [
     [
@@ -46208,6 +49527,33 @@
    ],
    "family": "tamilnadu",
    "name": "Feeding to children in the Age Group of 10-14 under Puratchi Thalaivar MGR NMP - payment of cost to TNCSC for supply of food articles",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2236 02 102 KC": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Feeding Children in the age group of 5 - 9 under Puratchi Thalaivar MGR Nutritious Meals Programme - Payment of cost to Tamil Nadu Civil Supplies Corporation for supply of food articles",
    "sector": "Women and Child"
   },
   "tamilnadu|2236 02 102 KL": {
@@ -46316,6 +49662,33 @@
    ],
    "family": "tamilnadu",
    "name": "Feeding children of Adi Dravidar Welfare Schools under Puratchithalaivar MGR Nutritious Meal Programme",
+   "sector": "Women and Child"
+  },
+  "tamilnadu|2236 02 102 KP": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: SOCIAL WELFARE AND WOMEN EMPOWERMENT DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Puratchi Thalaivar MGR Nutritious Meal Programme for Children in the age group of 5 to 9 in the Corporation and Municipal Schools",
    "sector": "Women and Child"
   },
   "tamilnadu|2236 02 102 KQ": {
@@ -49104,6 +52477,28 @@
    "name": "Production and Distribution of quality seeds - State Share",
    "sector": "Agriculture,Rural & Environment"
   },
+  "tamilnadu|2401 00 103 SU": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Seed Reserve Scheme under Sub Mission on Seeds and Planting Materials",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2401 00 104 AN": {
    "evidence": [
     [
@@ -49160,6 +52555,23 @@
    "name": "Tamil Nadu Mission on Sustainable Green Cover in Farm Lands under NMSA -State Share",
    "sector": "Agriculture,Rural & Environment"
   },
+  "tamilnadu|2401 00 107 AL": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Assistance for Unforseen Pest attacks and Other events",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2401 00 108 LD": {
    "evidence": [
     [
@@ -49204,6 +52616,28 @@
    "name": "Rainfed Area Development under National Mission on Sustainable Agriculture",
    "sector": "Agriculture,Rural & Environment"
   },
+  "tamilnadu|2401 00 108 VK": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Paramparagat Krishi Vikas Yojana (PKVY) under National Mission on Sustainable Agriculture",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2401 00 108 VP": {
    "evidence": [
     [
@@ -49224,6 +52658,326 @@
    ],
    "family": "tamilnadu",
    "name": "Rainfed Area Development under National Mission on Sustainable Agriculture - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 108 VQ": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Paramparagat Krishi Vikas Yojana (PKVY) under National Mission on Sustainable Agriculture - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 108 VY": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Mission on Natural Farming",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 108 VZ": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Mission on Natural Farming - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 109 UC": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Mission on Agricultural Extention and Technology",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 109 UD": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National e-Governance plan in Agriculture and National Mission on Agricultural Extension Technology",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 109 VD": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Mission on Agricultural Extention and Technology - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 109 VE": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National e-Governance plan in Agriculture and National Mission on Agricultural Extension Technology - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 110 JJ": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "State's Share towards Premium Subsidy under Pradhan Mantri Fasal Bima Yojana (PMFBY) for Agriculture Crops",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 110 JK": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "State's Share towards Premium Subsidy under Pradhan Mantri Fasal Bima Yojana (PMFBY) for Horticulture Crops",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 110 JL": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Crop Insurance Division under Pradhan Manthri Fasal Bima Yojana Schemes",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 112 SC": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mission for Aatmanirbharta in Pulses (NFSNM)",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 112 UB": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Food Security Mission (NFSM) - Other Crops",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 112 UD": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Food Security Mission (NFSM) - Other Crops - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 112 UF": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mission for Aatmanirbharata in Pulses (NFSNM)",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 112 UG": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mission for Cotton Productivity (NFSNM)",
    "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2401 00 113 UB": {
@@ -49268,6 +53022,28 @@
    ],
    "family": "tamilnadu",
    "name": "Sub Mission on Agricultural Mechanization - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 114 SE": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Purchase of Breeder Seed Under National Mission on Edible Oilseeds(NMEO)",
    "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2401 00 114 UB": {
@@ -49639,6 +53415,28 @@
    "name": "State Horticulture Development Scheme",
    "sector": "Agriculture,Rural & Environment"
   },
+  "tamilnadu|2401 00 119 PG": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Micro Irrigation in Tank and Non-Tank Command Area under Tamil Nadu Irrigated Agriculture Modernisation Project-II",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2401 00 119 UF": {
    "evidence": [
     [
@@ -49683,6 +53481,23 @@
    "name": "Assistance to TANHODA under National Horticulture Mission",
    "sector": "Agriculture,Rural & Environment"
   },
+  "tamilnadu|2401 00 119 UH": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Bamboo Mission",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2401 00 119 UL": {
    "evidence": [
     [
@@ -49725,6 +53540,67 @@
    ],
    "family": "tamilnadu",
    "name": "Assistance to TANHODA under National Horticulture Mission - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 119 UN": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "National Bamboo Mission - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 119 UP": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Crop Diversification Programme - under NADP-RKVY cafeteria",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 119 UQ": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Crop Diversification Programme - under NADP-RKVY cafeteria - State Share",
    "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2401 00 195 JB": {
@@ -49892,6 +53768,33 @@
    "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2401 00 789 AN": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Kalaignar's All Villages Integrated Agricultural Development Programme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2401 00 789 AO": {
    "evidence": [
     [
      "+1",
@@ -53901,6 +57804,50 @@
    "name": "Price Deficiency Payment (PDP) under the Market Intervention Scheme(MIS) for Mango",
    "sector": "Agriculture,Rural & Environment"
   },
+  "tamilnadu|2501 05 101 UB": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Integrated Watershed Management Programme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2501 05 101 UC": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Integrated Watershed Management Programme - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2501 05 793 UA": {
    "evidence": [
     [
@@ -53999,6 +57946,282 @@
    "name": "Integrated Watershed Management Programme - State Share",
    "sector": "Agriculture,Rural & Environment"
   },
+  "tamilnadu|2501 06 102 UA": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2501 06 102 UC": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP) - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2501 06 793 UB": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Aajeevika(NRLM)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2501 06 793 UC": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2501 06 793 UF": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Aajeevika(NRLM) - State Share",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2501 06 793 UG": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP) - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2501 06 794 UB": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Aajeevika(NRLM)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2501 06 794 UC": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP)",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2501 06 794 UF": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Aajeevika(NRLM) - State Share",
+   "sector": "Social welfare & Empowerment"
+  },
+  "tamilnadu|2501 06 794 UG": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahila Kisan Sashaktikaran Pariyojana (MKSP) - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2505 01 702 JA": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Sampoorna Grameen Rozgar Yojana - Block Panchayats",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2505 01 794 UC": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Pradhan Mantri Janman",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2505 01 794 UD": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Pradhan Mantri Janman - State Share",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "tamilnadu|2505 02 101 AA": {
    "evidence": [
     [
@@ -54014,6 +58237,60 @@
    ],
    "family": "tamilnadu",
    "name": "VETRI 150 – Wages for Additional person-days provided by the State Government under the VB-G RAM G Scheme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2505 02 101 UA": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahatma Gandhi Rural Employment Guarantee Scheme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "tamilnadu|2505 02 101 UB": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: RURAL DEVELOPMENT AND PANCHAYAT RAJ DEPARTMENT"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "tamilnadu",
+   "name": "Mahatma Gandhi Rural Employment Guarantee Scheme - State Share",
    "sector": "Agriculture,Rural & Environment"
   },
   "tamilnadu|2505 02 793 UA": {
@@ -57416,6 +61693,57 @@
    "name": "SBM-Rural; World Bank Performance Based Incentive Grant (Central Share) (OCASPS) [PN]",
    "sector": "Utility & Sanitation"
   },
+  "westbengal|2216-01-700-006": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Maintanance of Government Housing Estates [UM]",
+   "sector": "Housing & Shelter"
+  },
+  "westbengal|2216-02-101-001": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Low Income Group Housing Scheme [HO]",
+   "sector": "Housing & Shelter"
+  },
+  "westbengal|2216-02-104-001": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Low Income Group Housing Scheme [CO]",
+   "sector": "Housing & Shelter"
+  },
   "westbengal|2216-02-104-002": {
    "evidence": [
     [
@@ -57584,6 +61912,23 @@
    "name": "Banglar Bari (Gramin) (BB-G) [PN]",
    "sector": "Agriculture,Rural & Environment"
   },
+  "westbengal|2216-03-796-001": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Banglar Bari (Gramin) (BB-G) [PN]",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "westbengal|2216-03-796-002": {
    "evidence": [
     [
@@ -57689,6 +62034,23 @@
    ],
    "family": "westbengal",
    "name": "Other Housing",
+   "sector": "Housing & Shelter"
+  },
+  "westbengal|2216-80-103-001": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Grants to West Bengal Housing Industry Regulatory Authority (WBHIRA) [HO]",
    "sector": "Housing & Shelter"
   },
   "westbengal|2216-80-800-101": {
@@ -58756,6 +63118,45 @@
    "name": "Taposili Bandhu-Old Age Pension Scheme to Scheduled Castes under Jai Bangla (JAIBANGLA) [SC]",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2225-01-190-001": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "West Bengal Scheduled Castes and Scheduled Tribes Development And Finance Corporation [SC]",
+   "sector": "Banking,Financial Services and Insurance"
+  },
+  "westbengal|2225-01-190-002": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "West Bengal Tribal Development Co-operative Corporation Ltd. [SC]",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "westbengal|2225-01-277-006": {
    "evidence": [
     [
@@ -59185,6 +63586,23 @@
    "name": "Pre Matric SCholarship for SC and others (SNA- SPARSH) (SPARSH) [SC]",
    "sector": "Education & Learning"
   },
+  "westbengal|2225-01-800-002": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Aid to Voluntary Agencies working for the development of Scheduled Castes [SC]",
+   "sector": "Social welfare & Empowerment"
+  },
   "westbengal|2225-01-800-004": {
    "evidence": [
     [
@@ -59201,6 +63619,40 @@
    "family": "westbengal",
    "name": "Scheme for giving relief to the victims of atrocities [SC]",
    "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2225-01-800-006": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Sports & Culture",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Promotion of cultural activities [SC]",
+   "sector": "Sports & Culture"
+  },
+  "westbengal|2225-02-277-017": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Residential Schools for Girls at Belpahari [TW]",
+   "sector": "Education & Learning"
   },
   "westbengal|2225-02-277-022": {
    "evidence": [
@@ -59923,6 +64375,23 @@
    "name": "Research Information & Mass Education, Tribal Festivals and others (Grant-in-Aid General to Tribal Research Institutes) (SNA-SPARSH) (SPARSH) [TW]",
    "sector": "Education & Learning"
   },
+  "westbengal|2225-02-796-133": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Research Information & Mass Education, Tribal Festivals and others (Grant-in-Aid to Tribal Research Institutes for Creation of Capital Assets) (SNA-SPARSH)) (SPARSH) [TW]",
+   "sector": "Education & Learning"
+  },
   "westbengal|2225-02-796-135": {
    "evidence": [
     [
@@ -59955,6 +64424,23 @@
    ],
    "family": "westbengal",
    "name": "Tribal Research & Training [TW]",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2225-03-199-001": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "W. B. Commission for Backward Classes [SC] [SC]",
    "sector": "Social welfare & Empowerment"
   },
   "westbengal|2225-03-277-008": {
@@ -60149,6 +64635,28 @@
    "name": "Additional contribution of State for Pre-Matric Scholarship for OBCs, EBCs and DNTs-PM YASASVI [SC]",
    "sector": "Education & Learning"
   },
+  "westbengal|2225-04-190-001": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "West Bengal Minorities Development and Finance Corporation (WBMDFC) [MD]",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "westbengal|2225-04-190-002": {
    "evidence": [
     [
@@ -60256,6 +64764,23 @@
    "name": "National scholarship at the secondary stage for talented children from rural areas [MD]",
    "sector": "Education & Learning"
   },
+  "westbengal|2225-04-277-015": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Aliah University [MD]",
+   "sector": "Education & Learning"
+  },
   "westbengal|2225-04-277-019": {
    "evidence": [
     [
@@ -60271,6 +64796,28 @@
    ],
    "family": "westbengal",
    "name": "Assistance to messes and hostels attached to Government and Non Government Institutions for students welfare [MD]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-04-277-020": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Printing of Nationalised Text book for Children at Primary Stage [MD]",
    "sector": "Education & Learning"
   },
   "westbengal|2225-04-277-021": {
@@ -60441,6 +64988,96 @@
    "name": "Scheme for Housing for Destitute Minority Women under Destitute Minority [MD]",
    "sector": "Housing & Shelter"
   },
+  "westbengal|2225-04-800-001": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Scheme for providing Quality Education in Madarasas (Central Share) [SPQEM] [MD]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-04-800-024": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Incentive for girl students of the Madrashas [MD]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-04-800-277": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Education",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-001-008": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Pre-examination coaching for SC/ST candidates appearing at the competitive examinations for Group - B, C and D categories of posts in Government/PSU Services [SC]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-190-001": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "West Bengal Scheduled Castes and Scheduled Tribes Development and Finance Corporation [SC] [SC]",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "westbengal|2225-80-800-001": {
    "evidence": [
     [
@@ -60478,6 +65115,23 @@
    ],
    "family": "westbengal",
    "name": "Education- Pre-examination Training Centres for Scheduled Caste and Scheduled Tribe Students apearing at the Competitive Examination [SC]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-800-003": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Improvement of working conditions of Boys and Girls Hostels estiblished previously for the benefit of Scheduled Caste and Scheduled Tribe Students reading in Secondary Stages [SC]",
    "sector": "Education & Learning"
   },
   "westbengal|2225-80-800-004": {
@@ -60568,6 +65222,45 @@
    "name": "Taposili Bandhu-Old Age Pension Scheme to Scheduled Castes under Jai Bangla (JAIBANGLA) [SC]",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2225-80-800-017": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Petty maintenance works and management of all hostels including central hostels for SC and OBC students [SC]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-800-018": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Special Scholarships to Meritorious SC & ST Students Reading in Classes IX-XII in order to Prepare them for Engineering, Technical Higher Studies and Competitive Examinations [SC]",
+   "sector": "Education & Learning"
+  },
   "westbengal|2225-80-800-022": {
    "evidence": [
     [
@@ -60627,6 +65320,23 @@
    ],
    "family": "westbengal",
    "name": "Pre-matric stipends for the children of those who are engaged in unclean occupation [SC]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-800-047": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Ashram facilities community students [SC]",
    "sector": "Education & Learning"
   },
   "westbengal|2225-80-800-049": {
@@ -60690,6 +65400,45 @@
    "name": "Education- Participation in Melas, Seminars and Exhibitions etc. to popularise Handicrafts of S.C. and S.T. people of this State. [SC]",
    "sector": "Business & Entrepreneurship"
   },
+  "westbengal|2225-80-800-055": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Scholarships to students reading in Post-Secondary Stage etc. [SC]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-800-065": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Sports & Culture",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "The West Bengal Thami Development & Cultural Board [SC]",
+   "sector": "Sports & Culture"
+  },
   "westbengal|2225-80-800-068": {
    "evidence": [
     [
@@ -60711,6 +65460,40 @@
    "family": "westbengal",
    "name": "Special scholarship to Meritorious Schedule Tribe students reading in class IX-XII in order to prepare them for Engineering, Technical & competitive Examinations [TW]",
    "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-800-277": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Education",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2225-80-800-282": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Health",
+   "sector": "Health & Wellness"
   },
   "westbengal|2225-80-800-796": {
    "evidence": [
@@ -60796,6 +65579,23 @@
    "family": "westbengal",
    "name": "Improvement of working conditions of Child & Women labour",
    "sector": "Women and Child"
+  },
+  "westbengal|2230-01-797-002": {
+   "evidence": [
+    [
+     "+1",
+     "Skills & Employment",
+     "major head 2230"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "West Bengal Migrant Workers’ Welfare Fund [LB]",
+   "sector": "Social welfare & Empowerment"
   },
   "westbengal|2230-02-101-005": {
    "evidence": [
@@ -60885,6 +65685,40 @@
    ],
    "family": "westbengal",
    "name": "National Apprenticeship Training [ET]",
+   "sector": "Skills & Employment"
+  },
+  "westbengal|2230-03-003-023": {
+   "evidence": [
+    [
+     "+1",
+     "Skills & Employment",
+     "major head 2230"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Development of Skills [Central Share] (OCASPS) [ET]",
+   "sector": "Skills & Employment"
+  },
+  "westbengal|2230-03-003-024": {
+   "evidence": [
+    [
+     "+1",
+     "Skills & Employment",
+     "major head 2230"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Development of Skills [State Share] (OCASPS) [ET]",
    "sector": "Skills & Employment"
   },
   "westbengal|2230-03-102-002": {
@@ -61040,6 +65874,23 @@
    "name": "Development Action Plan for Scheduled Castes (DAPSC) Central Sector Scheme",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2230-03-800-101": {
+   "evidence": [
+    [
+     "+1",
+     "Skills & Employment",
+     "major head 2230"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Industrial Relations",
+   "sector": "Business & Entrepreneurship"
+  },
   "westbengal|2230-03-800-111": {
    "evidence": [
     [
@@ -61089,6 +65940,23 @@
    ],
    "family": "westbengal",
    "name": "Development Action Plan for Scheduled Tribes (DAPST)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2235-01-800-001": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Refugee Relief and Rehabilitation Directorate Establishment [LD]",
    "sector": "Social welfare & Empowerment"
   },
   "westbengal|2235-01-800-112": {
@@ -61349,6 +66217,23 @@
    "name": "Welfare of Street Children [WC]",
    "sector": "Women and Child"
   },
+  "westbengal|2235-02-102-024": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "West Bengal Commission for Protection of Child Rights [WC]",
+   "sector": "Women and Child"
+  },
   "westbengal|2235-02-102-025": {
    "evidence": [
     [
@@ -61370,6 +66255,23 @@
    "family": "westbengal",
    "name": "Introduction of Vocational Training Centres for Destitute Children [WC]",
    "sector": "Skills & Employment"
+  },
+  "westbengal|2235-02-102-079": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "W.B. State Nutrition Mission Society [WC]",
+   "sector": "Health & Wellness"
   },
   "westbengal|2235-02-102-081": {
    "evidence": [
@@ -62591,6 +67493,23 @@
    "name": "Non-Institutional Services for prevention of Child Beggary [WC]",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2235-02-104-008": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Establishment of Training Centres for the promotion of Tailoring and Cutting to the Destitute and Poor Girls and Women [WC]",
+   "sector": "Social welfare & Empowerment"
+  },
   "westbengal|2235-02-104-018": {
    "evidence": [
     [
@@ -62612,6 +67531,23 @@
    "family": "westbengal",
    "name": "Non-institutional care for Destitute Children [WC]",
    "sector": "Women and Child"
+  },
+  "westbengal|2235-02-104-025": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Promotion of Establishment of Homes for the Old Destitute [WC]",
+   "sector": "Social welfare & Empowerment"
   },
   "westbengal|2235-02-104-030": {
    "evidence": [
@@ -62713,6 +67649,23 @@
    ],
    "family": "westbengal",
    "name": "Social Welfare Scheme for the Unemployed Persons including Yuvashree [LB]",
+   "sector": "Skills & Employment"
+  },
+  "westbengal|2235-02-200-004": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Social Welfare Scheme for the Unemployed Persons [LB]",
    "sector": "Skills & Employment"
   },
   "westbengal|2235-02-200-010": {
@@ -62866,6 +67819,23 @@
    "name": "Integrated Minority Development Scheme [MD]",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2235-02-200-026": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Procurement and Distribution of bi-cycles to Minorities [MD]",
+   "sector": "Social welfare & Empowerment"
+  },
   "westbengal|2235-02-200-027": {
    "evidence": [
     [
@@ -62921,6 +67891,28 @@
    "family": "westbengal",
    "name": "Scheme for Housing for Destitute Minority Women under Destitute Minority Women Rehabilitation Programme [MD]",
    "sector": "Housing & Shelter"
+  },
+  "westbengal|2235-02-200-034": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "West Bengal Minorities Development and Finance Corporation [MD]",
+   "sector": "Banking,Financial Services and Insurance"
   },
   "westbengal|2235-02-200-036": {
    "evidence": [
@@ -65253,6 +70245,23 @@
    "name": "Pension to Retired Jounalists and Photo -Journalists [IC]",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2235-60-200-006": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Public Safety,Law & Justice",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Legal Aid Committees- Legal aid to poor persons [JD]",
+   "sector": "Public Safety,Law & Justice"
+  },
   "westbengal|2235-60-200-007": {
    "evidence": [
     [
@@ -66001,6 +71010,23 @@
    "name": "Provident Fund Scheme for Unorganised Workers in Urban and Rural Areas [LB]",
    "sector": "Agriculture,Rural & Environment"
   },
+  "westbengal|2235-60-796-004": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Social Welfare Scheme for the Unemployed Persons [LB]",
+   "sector": "Skills & Employment"
+  },
   "westbengal|2235-60-796-005": {
    "evidence": [
     [
@@ -66034,6 +71060,23 @@
    "family": "westbengal",
    "name": "Health Insurance Scheme for Unorganised Workers [LB]",
    "sector": "Health & Wellness"
+  },
+  "westbengal|2235-60-796-009": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Social Welfare scheme for the unemployed persons [LB]",
+   "sector": "Skills & Employment"
   },
   "westbengal|2235-60-796-010": {
    "evidence": [
@@ -66256,6 +71299,23 @@
    "name": "Development Action Plan for Scheduled Castes (DAPSC)",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2235-60-800-001": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Other Ex-gratia Payments [FD]",
+   "sector": "Social welfare & Empowerment"
+  },
   "westbengal|2235-60-800-002": {
    "evidence": [
     [
@@ -66272,6 +71332,203 @@
    "family": "westbengal",
    "name": "Deposit Linked Insurance Scheme for the Members of Government P.F. other than A.I.S. Officers [FD]",
    "sector": "Banking,Financial Services and Insurance"
+  },
+  "westbengal|2235-60-800-003": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Grant of Pension to Destitute Old People [WC]",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2235-60-800-004": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Pension to the Employees of West Bengal Veterinary Council [AD]",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2235-60-800-010": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Scholarships to Handicapped Students studying below Class-IX [WC]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2235-60-800-014": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Widow Pension Scheme under Jai Bangla (JAIBANGLA) [PN]",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2235-60-800-016": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Scholarships to Handicapped Students Studying below Class-IX [WC]",
+   "sector": "Education & Learning"
+  },
+  "westbengal|2235-60-800-033": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers (Central Share) [WC]",
+   "sector": "Women and Child"
+  },
+  "westbengal|2235-60-800-073": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Schemes for Economic Rehabilitation of Women under SC categories rendered destitute due to Socio-Economic causes [WC]",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2235-60-800-076": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Grants to Pension for Destitute Old people[SW] [WC]",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2235-60-800-083": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (Central Share) (OCASPS) [WC]",
+   "sector": "Women and Child"
+  },
+  "westbengal|2235-60-800-090": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Widow Pension Scheme under Jai Bangla (JAIBANGLA) [WC]",
+   "sector": "Social welfare & Empowerment"
+  },
+  "westbengal|2235-60-800-101": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Widow Pension Scheme under Jai Bangla (JAIBANGLA) [WC]",
+   "sector": "Social welfare & Empowerment"
   },
   "westbengal|2235-60-800-110": {
    "evidence": [
@@ -66324,6 +71581,23 @@
    "name": "Development Action Plan for Scheduled Tribes (DAPST)",
    "sector": "Social welfare & Empowerment"
   },
+  "westbengal|2236-02-101-002": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Applied Nutrition Programme [AG]",
+   "sector": "Women and Child"
+  },
   "westbengal|2236-02-101-006": {
    "evidence": [
     [
@@ -66344,6 +71618,23 @@
    ],
    "family": "westbengal",
    "name": "Supplementary Nutrition Programme for Children and Expectant and Nursing Mothers [WC]",
+   "sector": "Women and Child"
+  },
+  "westbengal|2236-02-101-016": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Special Nutrition Programme [WC]",
    "sector": "Women and Child"
   },
   "westbengal|2236-02-101-021": {
@@ -66531,6 +71822,23 @@
    "name": "Supplementary Nutrition Programme for Children and Expectant and Nursing Mothers [WC]",
    "sector": "Women and Child"
   },
+  "westbengal|2236-02-796-007": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Special Nutrition Programme [WC]",
+   "sector": "Women and Child"
+  },
   "westbengal|2236-02-796-008": {
    "evidence": [
     [
@@ -66582,6 +71890,23 @@
    "name": "Anganwadi Services (including erstwhile SNP) under Saksham Anganwadi and POSHAN 2.0 (SNA SPARSH) (SPARSH) [WC]",
    "sector": "Women and Child"
   },
+  "westbengal|2236-02-796-016": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Special Nutrition Programme [WC]",
+   "sector": "Women and Child"
+  },
   "westbengal|2236-02-796-021": {
    "evidence": [
     [
@@ -66602,6 +71927,23 @@
    ],
    "family": "westbengal",
    "name": "Supplementary Nutrition Programme for Children and Expectant Nursing Mothers [CW] [WC]",
+   "sector": "Women and Child"
+  },
+  "westbengal|2236-02-796-028": {
+   "evidence": [
+    [
+     "+1",
+     "Women and Child",
+     "major head 2236"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Wheat Based Nutrition Programme (State Share) under Saksham Anganwadi and POSHAN 2.0 (OCASPS) [WC]",
    "sector": "Women and Child"
   },
   "westbengal|2236-02-796-101": {
@@ -69251,6 +74593,50 @@
    "name": "National Rural Employment Guarantee Scheme (MGNREGA) (Central Share) (OCASPS) [PN]",
    "sector": "Agriculture,Rural & Environment"
   },
+  "westbengal|2505-60-796-001": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Refund of State Share of Mahatma Gandhi National Rural Employment Guarantee Programme (MGNREGA) (OCASPS) [PN]",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "westbengal|2505-60-796-003": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Pradhan Mantri Awas Yojna - Rural (Erstwhile Indira Awas Yojona (State Share)) (OCASPS) [PN]",
+   "sector": "Housing & Shelter"
+  },
   "westbengal|2505-60-796-004": {
    "evidence": [
     [
@@ -69293,6 +74679,23 @@
    ],
    "family": "westbengal",
    "name": "National Rural Employment Guarantee Scheme (MGNREGA) (Central Share) (OCASPS) [PN]",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "westbengal|2505-60-796-006": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "westbengal",
+   "name": "Payment of Pending Wages to Workers under MGNREGS from State Fund [PN]",
    "sector": "Agriculture,Rural & Environment"
   },
   "westbengal|2515-00-101-032": {
@@ -70472,7 +75875,7 @@
     },
     "dropped_because_the_answer_changed_after_the_audit": 65,
     "precision_over_the_audited_rows": 0.906,
-    "precision_reweighted_to_the_published_rows": 0.938,
+    "precision_reweighted_to_the_published_rows": 0.935,
     "right": 213,
     "wrong": 22
    },
@@ -70502,7 +75905,7 @@
     },
     "dropped_because_the_answer_changed_after_the_audit": 0,
     "precision_over_the_audited_rows": 0.86,
-    "precision_reweighted_to_the_published_rows": 0.885,
+    "precision_reweighted_to_the_published_rows": 0.883,
     "right": 153,
     "wrong": 25
    }

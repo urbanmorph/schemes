@@ -1,8 +1,9 @@
 # The number we were not reading: the head of account
 
-**Status: measured, validated on held-out states, not adopted.** Adopting it is a decision
-about what the register publishes, not a mechanical change, and the note below has the
-numbers that decision needs.
+**Status: adopted in four states on 2026-09-09, per state, at a weight each state's own
+audit census supports.** Kerala, Karnataka, Tamil Nadu and West Bengal. Not adopted in
+Odisha, Andhra Pradesh or Maharashtra, and the reasons are in "Where it was not adopted"
+below. What changed and where each number came from is in "What was actually adopted".
 
 ---
 
@@ -90,9 +91,103 @@ and not an estimate. The work is already paid for.
 
 ---
 
-## Why it is not adopted here
+---
 
-Three reasons, and none of them is that the signal is bad.
+## What was actually adopted
+
+Not a new signal and not a new head list. **The weight on a signal all four classifiers
+already had.** Every one of them was scoring the welfare head at 2 or 3 points, a number
+picked by hand when the classifier was written and never measured against anything.
+
+Membership was left exactly as committed, and that was tested rather than assumed. Three
+variants were measured at the adopted weight: each state's shipped hand-picked set, a set
+fitted to that state's own development half, and one national set read off the List of Major
+and Minor Heads of Account.
+
+| state | shipped | fitted to its own dev half | national list |
+|---|---|---|---|
+| Kerala | **99 @ 0.909** | 114 @ 0.886, under the floor | 114 @ 0.886, under the floor |
+| Karnataka | **112 @ 0.938** | 110, 4 rows unlabelled | 134, 9 rows unlabelled |
+| Tamil Nadu | **419 @ 0.912** | 431, 12 rows unlabelled | 437, 18 rows unlabelled |
+| West Bengal | **219 @ 0.904** | identical set | 266 @ 0.865, under the floor |
+
+**The shipped set is the only one publishable in all four**, and the two alternatives fail
+in different ways: the wider sets buy rows the audit census never labelled, and where they
+do stay inside the labelled region they buy them at a precision under the floor. Widening
+membership and raising the weight are the same move made twice, and the weight is the one
+that can be measured per state against a census that already exists.
+
+An earlier draft of this note claimed the three variants were worth almost nothing against
+each other. That was measured at a weight none of them could publish at, and it was wrong.
+
+### The sweep
+
+Every weight from 1 to 8, scored over every row in the state, read at that state's
+publishing bar, counting errors against hand labels rather than estimating them:
+
+| state | bar | weight was | published | precision | weight now | published | precision | what stopped it |
+|---|---|---|---|---|---|---|---|---|
+| Kerala | 9 | 2 | 38 | 0.974 | **4** | **99** | **0.909** | weight 5 is 0.872, under the floor |
+| Karnataka | 7 | 2 | 74 | 0.973 | **4** | **112** | **0.938** | weight 5 leaves 37 rows unlabelled |
+| Tamil Nadu | 10 | 2 | 326 | 0.963 | **4** | **419** | **0.912** | weight 5 leaves 94 rows unlabelled |
+| West Bengal | 10 | 3 | 134 | 0.925 | **5** | **219** | **0.904** | weight 6 is 0.826, under the floor |
+
+**+277 schemes**, every one of them a row the state's own budget funds and names.
+
+Each state landed on the same increment, +2, and that is a coincidence of four separate
+measurements rather than a rule. The stopping conditions differ: Kerala and West Bengal run
+out of precision, Karnataka and Tamil Nadu run out of labels.
+
+### The two limits, and why the second one is the interesting one
+
+**The floor.** The register's precision floor is 0.903, which is Odisha's, and nothing
+publishes below it.
+
+**The count.** Precision here is a COUNT: every row at or above the bar carries a hand
+label and every error is named in `known_errors` (`PLAN.md` §4). Raising a weight pushes
+rows up across the bar, and rows nobody ever labelled come up with them. Karnataka at
+weight 5 reads 0.948, *better* than the 0.938 it publishes at — but 37 of those 154 rows
+have no label, so 0.948 is an estimate over the labelled subset while 0.938 is a count of
+the whole list. Tamil Nadu at weight 5 reads 0.927 against the 0.912 it publishes, for the
+same reason. **Both were rejected for reading too well.**
+
+### What it cost
+
+Precision fell in all four: Kerala 0.974 → 0.909, Karnataka 0.973 → 0.938, Tamil Nadu
+0.963 → 0.912, West Bengal 0.925 → 0.904. Those are real false accusations, from 25 named
+errors across the four states to 74. The trade was taken deliberately: 49 more errors buys
+277 more funded schemes named as absent, and every error is printed rather than averaged
+away.
+
+**West Bengal at 0.904 is one error above the floor.** That is the thinnest margin in the
+register and it should be rechecked whenever its labels change.
+
+## Where it was not adopted
+
+- **Odisha.** It sets the floor at 0.903 and the simulation had it falling to 0.688. Its
+  bar has no room.
+- **Andhra Pradesh.** The signal does not separate there — 0.458 inside the heads against
+  0.403 outside, a lift of 1.1x where the others are 3x to 5x. Weighting noise is not a
+  gain.
+- **Maharashtra and the other ten.** Not measured. Each needs its own sweep against its own
+  census; none should inherit these numbers.
+
+## Reproducing this
+
+`parse/classify_<state>.py` carries the state's own sweep table in a comment beside the
+weight, which is where the numbers above come from. To re-derive one: score every row at
+each candidate weight, take the rows at or above the publishing bar, and count how many
+carry a `label` of anything but `scheme` — and, before believing any of it, count how many
+carry no label at all. A sweep that does not report that second number will recommend a
+weight that cannot be published.
+
+---
+
+## Why it was not adopted when this was written
+
+Kept as written. Three reasons were given, and reading them against what happened is the
+useful part: reason 1 was accepted and paid, reason 2 was right and is what the sweep above
+does, and reason 3 turned out not to matter at all.
 
 1. **A positive on an accusation bar lowers precision.** The publishing bar is
    high-precision on purpose (`PLAN.md` §4) and 0.974 to 0.909 is a real cost paid in false
@@ -104,12 +199,23 @@ Three reasons, and none of them is that the signal is bad.
    book actually uses rather than inheriting this list, and publish that measurement in its
    `signals_rejected` the way every other signal here does.
 
+That advice was followed: Kerala went first, then Karnataka, Tamil Nadu and West Bengal,
+each measured against its own census.
+
+**Reason 3 held, in the opposite direction to the one intended.** It predicted a state would
+need to measure the heads *its* book uses rather than inherit a list. A set fitted to each
+state's own labels was measured, and it is worse than the shipped one in three states of
+four — it reaches rows the census never labelled, or drops precision under the floor. The
+head codes are a national standard, which is the whole finding, so a set fitted on 10-row
+per-head samples is fitting noise on top of a signal that was already there. What genuinely
+differs per state is how much the signal is worth, and that is the weight.
+
 ## If you are picking this up
 
-Start with **Kerala**: worst recall in the register, biggest measured gain, labels already
-deep enough that precision stays a count. Measure its own heads against its own stratified
-sample, set the weight from that, re-read the census at the new bar, and put the numbers in
-the classifier's docstring.
+Twelve states have not been measured. Take one, run the sweep in "Reproducing this" against
+its own audit census, and stop at the largest weight that clears 0.903 **with no unlabelled
+row at the bar**. Report both numbers. If the weight that helps needs labels that do not
+exist yet, the answer is to label rows, not to lower the standard.
 
-Do not roll one head list across sixteen states. That is the mistake this register already
+Do not roll one weight across sixteen states. That is the mistake this register already
 made once with a shared definition, and it took 56 rows changing side to find it.

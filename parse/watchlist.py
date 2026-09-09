@@ -70,9 +70,19 @@ def ident_of(r):
     (Persons with Disabilities)..." and "Scholarships to students (Persons with
     Disabilities)..." as two provisions with two scheme codes and two different amounts.
     Lower-casing here merged them and made this list one short of the published claim.
+
+    hoas, PLURAL, IS NOT AN IDENTIFIER AND IS NOT USED AS ONE. A row carrying `hoas` is a
+    name-collapsed row: several heads of account gathered under one name, which is the very
+    case this function documents above. Reading the first of them as the identity says two
+    schemes are one whenever they share a head. Kerala published three separate accusations
+    under 2501-06-198-48 on 2026-09-09 -- Mahila Kisan Sashaktikaran Pariyojana and two
+    Deen Dayal Upadhyaya Grameen Kaushalya Yojana provisions -- and this list counted them
+    as one, standing at 1,882 against a published 1,884. The head is not the thing being
+    accused. Singular `hoa` is still an identity, because the states that publish it publish
+    one row per head.
     """
     return str(r.get("key") or r.get("code") or r.get("hoa")
-               or (r.get("hoas") or [None])[0] or (r.get("name") or "").strip())
+               or (r.get("name") or "").strip())
 
 
 def today_rows():
@@ -122,10 +132,24 @@ def run(snapshot=None):
         with open(p, encoding="utf-8") as fh:
             prev = {e["key"]: e for e in (json.load(fh).get("entries") or [])}
 
+    # A row whose KEY changed is the same accusation, and losing its first_named would
+    # redate an old accusation to today. Keyed on what these rows are collapsed on anyway,
+    # the state and the name, so history survives a rekeying of the kind that changed
+    # ident_of above. Only unambiguous names are carried: where one state prints the same
+    # name twice there is nothing here to carry it to.
+    by_name, seen_twice = {}, set()
+    for e in prev.values():
+        nk = (e.get("state_key"), e.get("name"))
+        if nk in by_name:
+            seen_twice.add(nk)
+        by_name[nk] = e
+    for nk in seen_twice:
+        by_name.pop(nk, None)
+
     entries = {}
     # Everything accused today: new ones get today's date, old ones keep theirs.
     for k, cur in accused_now.items():
-        was = prev.get(k) or {}
+        was = prev.get(k) or by_name.get((cur.get("state_key"), cur.get("name"))) or {}
         entries[k] = {
             "key": k, **cur,
             "first_named": was.get("first_named") or snap,

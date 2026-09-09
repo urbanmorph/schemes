@@ -1,12 +1,12 @@
 {
- "built": "2026-09-06T13:55:46Z",
- "joins_considered": 150,
- "joins_published": 22,
+ "built": "2026-09-09T09:09:50Z",
+ "joins_considered": 153,
+ "joins_published": 24,
  "method_note": "Every one of the joins any rule produced was read by eye. The similarity tier was correct in all of them and is published; containment and the acronym rules were wrong often enough to reject, and the module records which errors decided that. A CAG title is a phrase and not a name, which is why containment fails here and works elsewhere: 'Employees' Provident Fund Organisation' contains every content word of 'Internship Scheme Of Employees' Provident Fund Organisation', and an audit of the organisation is not an audit of that scheme.",
  "pool_note": "Both halves of the register: every name from the four national sources, joinable to any government, plus each state's own budget schemes, joinable only to that state's reports. A Karnataka report cannot be an audit of a Kerala scheme.",
- "register_names": 10321,
+ "register_names": 10610,
  "register_names_national": 5475,
- "register_names_state": 4846,
+ "register_names_state": 5135,
  "reports_in_catalogue": 2804,
  "rule": "similarity >= 0.85, and no other rule",
  "schemes": {
@@ -242,6 +242,32 @@
     "title": "Report of the Comptroller and Auditor General of India on Mahatma Gandhi National Rural Employment Guarantee Scheme (Report No. 6 of 2025)"
    }
   ],
+  "Pradhan Mantri Awaas Yojana (Gramin)": [
+   {
+    "audit_type": "Performance",
+    "detail_url": "https://cag.gov.in/en/audit-report/details/118797",
+    "government": "Tamil Nadu",
+    "id": 118797,
+    "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2021/Report-No-6-of-2022-PMAY-G-2020-21-English-064427d5a33aa49.69300243.pdf",
+    "sector": "Social Welfare",
+    "similarity": 1.0,
+    "subject": "Pradhan Mantri Awaas Yojana-Gramin",
+    "tabled": "21 April 2023",
+    "title": "Report No.6 of 2022- Report of the Comptroller and Auditor General of India Performance Audit on implementation of Pradhan Mantri Awaas Yojana-Gramin"
+   },
+   {
+    "audit_type": "Performance",
+    "detail_url": "https://cag.gov.in/en/audit-report/details/118805",
+    "government": "Tamil Nadu",
+    "id": 118805,
+    "pdf_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2021/Report-No-6-of-2022-PMAY-G-2020-21-Tamil-06448f9125e16c5.36816309.pdf",
+    "sector": "Social Welfare",
+    "similarity": 0.86,
+    "subject": "Pradhan Mantri Awaas Yojana-Gramin (Tamil)",
+    "tabled": "21 April 2023",
+    "title": "Report No.6 of 2022- Report of the Comptroller and Auditor General of India Performance Audit on implementation of Pradhan Mantri Awaas Yojana-Gramin (Tamil)"
+   }
+  ],
   "Pradhan Mantri Awaas Yojana - Gramin": [
    {
     "audit_type": "Performance",
@@ -295,7 +321,7 @@
    }
   ]
  },
- "schemes_audited": 10,
+ "schemes_audited": 11,
  "scope_note": "That a report exists on this scheme, and nothing about what it found. The CAG's conclusions are the CAG's to publish.",
  "snapshot": "2026-09-02",
  "source": "Comptroller and Auditor General of India, audit report index",

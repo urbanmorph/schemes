@@ -11,9 +11,18 @@ AGENT-EDITABLE (PLAN.md SS7). Reads data/ only. Never fetches.
                                      file, and running it changes no classifier output.
     data/recall_investigation.json   the written record, the output
 
-THE PROBLEM. All seven classifiers read English: benefit words, beneficiary classes, purpose
-lines. Counted precision runs 90.3% to 97.4% and recall 12% to 41%, and the misses are not
-random. In every state the largest schemes are missed and always for the same reason.
+SUPERSEDED IN PART ON 2026-09-09, AND KEPT AS WRITTEN. Every number below was measured
+before Kerala, Karnataka, Tamil Nadu and West Bengal began weighting the head of account at
+the value their own censuses support; see docs/findings/head-of-account.md. Counted
+precision now runs 90.3% to 96.9% and recall 25% to 47.5%. Nothing here was rewritten to
+match, because this file is the record of an investigation and not a live claim, and its
+conclusion is the part that still holds: the rejections below were right for the reasons
+given, and the one signal it could not reject on the evidence available is the one that
+was later adopted.
+
+THE PROBLEM, as it stood. All seven classifiers read English: benefit words, beneficiary
+classes, purpose lines. Counted precision ran 90.3% to 97.4% and recall 12% to 41%, and the
+misses are not random. In every state the largest schemes are missed and always for the same reason.
 "Lakshmir Bhandar", "Thallikivandanam", "Magalir Urimai Thogai", "Subhadra Yojana" and
 "Mukhyamantri Mazi Ladaki Bahin" are Bengali, Telugu, Tamil, Odia and Marathi brand names and
 say nothing to an English vocabulary. There is nothing in the row to read.

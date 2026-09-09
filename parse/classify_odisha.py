@@ -6,10 +6,14 @@ AGENT-EDITABLE (PLAN.md SS7). Reads data/ only. Never fetches.
     data/odisha/labels.json          hand ground truth, the input
     data/odisha/classification.json  the verdicts, the output
 
-READ THIS FIRST. Of the five states classified so far, ODISHA IS THE ONE WHOSE BOOKS DO NOT
-SUPPORT THE PRECISION THE OTHER FOUR REACH. The counted precision at the publishing bar is
-90.3%, against Karnataka's 91.9%, Andhra Pradesh's 95.7%, Tamil Nadu's 96.3% and Kerala's
-97.4%, and it is counted on 31 published codes of which 3 are not schemes. That number is
+READ THIS FIRST. ODISHA COUNTS THE LOWEST PRECISION IN THE REGISTER AND SETS ITS FLOOR.
+The counted precision at the publishing bar is 90.3%, against West Bengal's 90.4%, Kerala's
+90.9%, Tamil Nadu's 91.2%, Karnataka's 93.8%, Andhra Pradesh's 95.7% and Maharashtra's
+96.9%, and it is counted on 31 published codes of which 3 are not schemes. Four of those
+states sat above 96% until 2026-09-09, when they began reading the head of account and
+traded precision for recall down to this level; the gap that made Odisha exceptional
+closed from the other side rather than here. What has not changed is that Odisha cannot go
+higher, and the reason is below. That number is
 published rather than engineered away, and the reason it cannot be raised is in
 signals_rejected: the one instrument that carried Tamil Nadu is measured here and fails.
 A reader who needs better than nine in ten should read the band at 12 and above, which is
@@ -974,10 +978,11 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
         "salary_head_rows": sum(1 for x in rows if "01" in x["object_heads"]),
         "sub_schemes_read": sum(len(x["sub_schemes"]) for x in rows),
         "can_this_state_support_a_high_precision_classifier": (
-            "Not to the standard the other four reach, and the honest answer is published "
-            "rather than engineered around. Counted precision at the publishing bar is "
-            "90.3% on 31 codes, against Karnataka's 91.9%, Andhra Pradesh's 95.7%, Tamil "
-            "Nadu's 96.3% and Kerala's 97.4%. Three of the 31 published codes are not "
+            "Not to the standard the strongest states reach, and the honest answer is "
+            "published rather than engineered around. Counted precision at the publishing "
+            "bar is 90.3% on 31 codes, the lowest in the register and its floor, against "
+            "West Bengal's 90.4%, Kerala's 90.9%, Tamil Nadu's 91.2%, Karnataka's 93.8%, "
+            "Andhra Pradesh's 95.7% and Maharashtra's 96.9%. Three of the 31 published codes are not "
             "schemes and all three are named in known_errors. The cause is measured and not "
             "guessed: Odisha prints no purpose line, and the chart of accounts that "
             "substituted for one in Tamil Nadu is present here but says nothing, because its "

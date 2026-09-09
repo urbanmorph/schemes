@@ -170,8 +170,8 @@ suit the audit would destroy the one measurement in this file that counts errors
 estimating them. It is named here instead.
 
 WHAT THE MISSING PURPOSE LINE COSTS. Recall at threshold 8 is 28.3% on the stratified
-sample and 35.6% on the held-out half, against Karnataka's 31.6%, Andhra Pradesh's 36.5%
-and Tamil Nadu's 41.0% at their own published bars. It is the lowest of the five, and the
+sample and 35.6% on the held-out half, against Karnataka's 39.2%, Andhra Pradesh's 36.5%
+and Tamil Nadu's 47.5% at their own published bars. It is the lowest of the five, and the
 reason is visible in the bands: the band at exactly 7 is 53 rows of which 46 really are
 schemes and the band at 6 is 62 rows of which 51 are, so the classifier can SEE about a
 hundred more schemes than it publishes and cannot separate them from the eighteen
