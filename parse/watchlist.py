@@ -152,6 +152,22 @@ def run(snapshot=None):
             e["left_the_books"] = e.get("left_the_books") or snap
         entries[k] = e
 
+    # A KEY CHANGE IS NOT A GOVERNMENT CHANGE, and this file cannot tell the two apart on
+    # its own. When Chhattisgarh's labels were rekeyed from the decoded Hindi name onto the
+    # state's own Kruti Dev string, 29 rows vanished from under their old identifiers and
+    # reappeared under new ones. This file saw 29 departures and would have published them
+    # as the state's book no longer naming those schemes: a false event of exactly the kind
+    # PLAN.md 8 says the register must never manufacture, and manufactured by us.
+    #
+    # A row is only recorded as having left the bar if NOTHING with its name is still at
+    # the bar. That is weaker than keying on identity and it is the right weakness: a
+    # genuine departure and a rename are indistinguishable from outside, and the register
+    # should say nothing rather than say the wrong one.
+    live_names = {e["name"] for e in entries.values() if e["status"] == "absent"}
+    for k, e in list(entries.items()):
+        if e["status"] == "no longer named at the bar" and e.get("name") in live_names:
+            del entries[k]
+
     vals = list(entries.values())
     listed = [e for e in vals if e["status"] == "listed"]
     gone = [e for e in vals if e["status"] == "no longer named at the bar"]
