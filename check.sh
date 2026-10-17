@@ -41,6 +41,13 @@ step "parse/krutidev.py self-tests" python3 parse/krutidev.py
 step "parse/changes.py self-tests"  python3 parse/changes.py --self-test
 step "site/build.py self-tests"     python3 site/build.py --self-test
 
+# 2b. The monthly run's chunking: what counts as finished, and the side-branch checkpoint.
+#     tests/run_chunks.sh drives run.sh itself through a stopped, resumed and repeated month
+#     with every collector stubbed. It takes a minute, so run it when run.sh or
+#     collect.yml changes rather than on every push.
+step "progress.py self-tests"       python3 progress.py --self-test
+step "checkpoint.sh"                bash tests/checkpoint.sh
+
 # 3. Every published ratio divides two counts of the same list. See PLAN.md §4.
 step "parse/ratios.py" python3 parse/ratios.py
 

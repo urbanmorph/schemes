@@ -6,6 +6,14 @@
 #   ./run.sh --skip-collect  re-derive everything from the existing archive
 #   ./run.sh --limit 20      smoke test (deliberately marked INCOMPLETE)
 #   ./run.sh --refresh-annual  re-fetch the annual sources even if this cycle is held
+#   ./run.sh --resume-month --if-needed --deadline-min 300     what the monthly job runs
+#
+# --resume-month continues the snapshot already started this month instead of opening a
+# second one, --if-needed exits at once when this month's run already finished clean, and
+# --deadline-min gives every collector a time budget inside that many minutes, keeping
+# enough back to parse and build. A collector that hits its budget is stopped, what it
+# archived stays on disk, and the run exits 75 so the next attempt continues it. See
+# progress.py for what counts as done.
 #
 # The ordering is not a convenience. Collection writes raw bytes and nothing else;
 # verification decides whether those bytes are a publishable snapshot; only then does
@@ -28,6 +36,10 @@ SKIP_COLLECT=0
 REFRESH_ANNUAL=0
 LIMIT=()
 PACE=0.7
+RESUME_MONTH=0
+IF_NEEDED=0
+DEADLINE=""
+UNIT=${BUDGET_UNIT:-60}     # seconds per budget minute; only a test changes it
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -36,11 +48,25 @@ while [ $# -gt 0 ]; do
     --limit)          LIMIT=(--limit "$2"); shift 2 ;;
     --pace)           PACE="$2"; shift 2 ;;
     --refresh-annual) REFRESH_ANNUAL=1; shift ;;
+    --resume-month)   RESUME_MONTH=1; shift ;;
+    --if-needed)      IF_NEEDED=1; shift ;;
+    --deadline-min)   DEADLINE=$(( $(date +%s) + $2 * UNIT )); shift 2 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done
 
-say() { printf '\n\033[1m== %s\033[0m\n' "$1"; }
+# The October 2026 run printed nothing for three hours and then everything at once,
+# because Python buffers stdout when it is not a terminal. A log you cannot watch is a
+# log that tells you what went wrong only after it is too late to matter.
+export PYTHONUNBUFFERED=1
+
+[ "$RESUME_MONTH" = "1" ] && DATE="$(python3 progress.py month-date)"
+if [ "$IF_NEEDED" = "1" ] && python3 progress.py run-ok "$DATE"; then
+  echo "the run for $DATE already finished clean (run.json); nothing to do"
+  exit 0
+fi
+
+say() { printf '\n\033[1m== %s\033[0m  %s\n' "$1" "$(date -u +%H:%M:%SZ)"; }
 
 # Every step that can fail runs through this, and the two things it replaces were both
 # wrong in opposite directions. `|| true` swallowed a failure completely: parse/dbt.py
@@ -59,6 +85,52 @@ step() {
   fi
 }
 
+# A collector under a time budget. The October 2026 run spent 96 minutes collecting a
+# complete myScheme snapshot, then 81 more inside the CAG crawl, and was killed at the
+# job's three-hour limit before anything was committed. Every byte was lost, including
+# the finished snapshot, because one step had no limit of its own and the commit waited
+# for all of them.
+#
+# So each collector gets a cap in minutes, and with --deadline-min also no more than the
+# time left after RESERVE, which is what parsing and building need. A collector that hits
+# it is stopped (SIGTERM, then SIGKILL 30s later), its archive stays on disk for the next
+# run to continue, and it is recorded in STOPPED, not FAILED: nothing is wrong with it,
+# it ran out of time. One that cannot be given two minutes is not started at all.
+# Without --deadline-min nothing is capped, which is how a person runs this by hand.
+STOPPED=()
+RESERVE=$(( ${RESERVE_MIN:-40} * UNIT ))
+TIMEOUT="$(command -v timeout || command -v gtimeout || true)"
+budgeted() {
+  local label="$1" secs=$(( $2 * UNIT )) rc=0 t0
+  shift 2
+  if [ -n "$DEADLINE" ]; then
+    local left=$(( DEADLINE - $(date +%s) - RESERVE ))
+    [ "$left" -lt "$secs" ] && secs=$left
+    if [ "$secs" -lt $(( 2 * UNIT )) ]; then
+      STOPPED+=("$label")
+      printf '  \033[33m.. DEFERRED\033[0m %s: out of time this run, the next one starts it\n' "$label"
+      return 0
+    fi
+  fi
+  t0=$(date +%s)
+  if [ -n "$DEADLINE" ] && [ -n "$TIMEOUT" ]; then
+    "$TIMEOUT" -k 30 "$secs" "$@" || rc=$?
+  else
+    "$@" || rc=$?
+  fi
+  if [ "$rc" = 124 ] || [ "$rc" = 137 ]; then
+    STOPPED+=("$label")
+    printf '  \033[33m.. STOPPED\033[0m %s at its %ss budget; what it archived stays for the next run\n' \
+      "$label" "$secs"
+  elif [ "$rc" != 0 ]; then
+    FAILED+=("$label")
+    printf '  \033[31m!! FAILED\033[0m %s\n' "$label" >&2
+  fi
+  echo "  ($label: $(( $(date +%s) - t0 ))s)"
+}
+[ -n "$DEADLINE" ] && [ -z "$TIMEOUT" ] && \
+  echo "  no timeout(1) on this machine: collectors run uncapped and the deadline is advisory" >&2
+
 # An annual document does not change between January and December, and re-fetching 20MB
 # of state budget PDFs twelve times a year to watch them not change is rude to a source
 # this project depends on. These collect once per cycle and are skipped once the archive
@@ -73,42 +145,59 @@ have_annual() { [ "$REFRESH_ANNUAL" = "0" ] && compgen -G "$1" > /dev/null; }
 # for every one of the fifteen states, indefinitely and without a word. The Union Budget's
 # guard was cycle-scoped and the states' was not, and only the Budget would have moved.
 #
-# Every state manifest records the cycle it was collected for, so the question can be
-# asked exactly: is there an archive for THIS cycle?
+# So the question is asked exactly: is there an archive for THIS cycle? It used to assume
+# every manifest records that as `cycle: "2026-27"`, and nine of sixteen do not, so those
+# nine were re-downloaded every month. progress.py held knows all three ways they say it.
 have_cycle() {
   [ "$REFRESH_ANNUAL" = "0" ] || return 1
-  python3 - "$1" "$2" <<'EOF'
-import glob, json, os, sys
-state, cycle = sys.argv[1], sys.argv[2]
-for m in glob.glob(os.path.join("archive", state, "*", "_manifest.json")):
-    try:
-        if json.load(open(m, encoding="utf-8")).get("cycle") == cycle:
-            sys.exit(0)
-    except (ValueError, OSError):
-        continue
-sys.exit(1)
-EOF
+  python3 progress.py held "$1" "$2"
 }
 
 if [ "$SKIP_COLLECT" = "0" ]; then
+  # Each source is a chunk that is either finished for this snapshot, and skipped, or
+  # not, and run under its budget. myScheme resumes from its own archive (collect/
+  # myscheme.py keeps every whole record it already wrote), so a second attempt fetches
+  # only what the first did not reach. A --limit smoke run is never "done", by design.
   say "collect · myScheme ($DATE)"
-  python3 collect/myscheme.py --date "$DATE" --pace "$PACE" "${LIMIT[@]+"${LIMIT[@]}"}"
+  if [ "${#LIMIT[@]}" -eq 0 ] && python3 progress.py finished myscheme "$DATE"; then
+    echo "  every detail for $DATE is archived, skipping"
+  else
+    budgeted "collect/myscheme" 150 \
+      python3 collect/myscheme.py --date "$DATE" --pace "$PACE" "${LIMIT[@]+"${LIMIT[@]}"}"
+  fi
 
   say "collect · DBT Bharat"
-  python3 collect/dbt.py --date "$DATE"
+  if python3 progress.py finished dbt "$DATE"; then
+    echo "  DBT for $DATE is archived, skipping"
+  else
+    budgeted "collect/dbt" 15 python3 collect/dbt.py --date "$DATE"
+  fi
 
   # The audit catalogue is append-mostly and grows a few reports a month, so unlike the
-  # budgets it is collected every run. 281 paced requests, about nine minutes, and the
-  # walk checks its own distinct-id count against the total the site prints, which is a
-  # checksum an incremental crawl could not do.
+  # budgets it is collected every month. 282 paced requests: 26 minutes from a laptop in
+  # India, but more than 81 from a GitHub runner, where it was still going when the
+  # October 2026 job was killed. The walk checks its own distinct-id count against the
+  # total the site prints, a checksum an incremental crawl could not do, and that is also
+  # why it cannot resume: a walk that stops part way is deleted rather than kept, so
+  # parse/cag.py goes on reading the last complete one instead of a fragment.
   say "collect · CAG catalogue"
-  step "collect/cag" python3 collect/cag.py --date "$DATE"
+  if python3 progress.py finished cag "$DATE"; then
+    echo "  a complete CAG walk for ${DATE:0:7} is archived, skipping"
+  else
+    budgeted "collect/cag" 45 python3 collect/cag.py --date "$DATE"
+    if [ -d "archive/cag/$DATE" ] && [ ! -f "archive/cag/$DATE/_manifest.json" ]; then
+      echo "  discarding the unfinished CAG walk for $DATE"
+      rm -rf "archive/cag/$DATE"
+    fi
+  fi
 
   say "collect · annual sources"
+  # These used to run bare under `set -e`, so one state's site being down ended the whole
+  # month's run before verification. They are budgeted steps now, like everything else.
   if have_annual "archive/budget/$CYCLE_YEAR"; then
     echo "  Union Budget $CYCLE_YEAR already archived, skipping"
   else
-    python3 collect/budget.py --year "$CYCLE_YEAR"
+    budgeted "collect/budget" 20 python3 collect/budget.py --year "$CYCLE_YEAR"
   fi
   for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
             telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh \
@@ -122,9 +211,9 @@ if [ "$SKIP_COLLECT" = "0" ]; then
     # reached the other way round. Asking the collector rather than keeping a second list
     # here means the two cannot drift.
     elif python3 "collect/$st.py" --help 2>/dev/null | grep -q -- "--cycle"; then
-      python3 "collect/$st.py" --cycle "$STATE_CYCLE" --date "$DATE"
+      budgeted "collect/$st" 20 python3 "collect/$st.py" --cycle "$STATE_CYCLE" --date "$DATE"
     else
-      python3 "collect/$st.py" --date "$DATE"
+      budgeted "collect/$st" 20 python3 "collect/$st.py" --date "$DATE"
     fi
   done
 fi
@@ -258,6 +347,33 @@ echo
 if [ "${#FAILED[@]}" -gt 0 ]; then
   printf '\033[31m%d step(s) failed:\033[0m\n' "${#FAILED[@]}"
   for f in ${FAILED[@]+"${FAILED[@]}"}; do echo "    $f"; done
+fi
+if [ "${#STOPPED[@]}" -gt 0 ]; then
+  printf '\033[33m%d collector(s) ran out of time:\033[0m\n' "${#STOPPED[@]}"
+  for f in ${STOPPED[@]+"${STOPPED[@]}"}; do echo "    $f"; done
+fi
+
+# What this run concluded, for --if-needed to read next time. Only a run with nothing
+# failed, nothing stopped and a verified snapshot is ok; anything less is run again.
+# A --limit smoke run never is, so it can never stand in for a real month. A
+# --skip-collect re-derive says nothing about collection, so it leaves run.json alone.
+[ "$SKIP_COLLECT" = "0" ] && python3 - "$DATE" "$VERIFY_OK" "${#LIMIT[@]}" "${#FAILED[@]}" \
+  ${FAILED[@]+"${FAILED[@]}"} ${STOPPED[@]+"${STOPPED[@]}"} <<'EOF'
+import json, sys
+from datetime import datetime, timezone
+date, verified, limited, nfail, rest = sys.argv[1], sys.argv[2] == "1", sys.argv[3] != "0", int(sys.argv[4]), sys.argv[5:]
+failed, stopped = rest[:nfail], rest[nfail:]
+with open("run.json", "w", encoding="utf-8") as fh:
+    json.dump({"date": date, "finished": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+               "verified": verified, "failed": failed, "stopped": stopped,
+               "ok": verified and not failed and not stopped and not limited},
+              fh, indent=1, sort_keys=True)
+    fh.write("\n")
+EOF
+
+if [ "${#STOPPED[@]}" -gt 0 ]; then
+  echo "the next run (./run.sh --resume-month) continues from here."
+  exit 75                 # EX_TEMPFAIL: not broken, unfinished
 fi
 
 if [ "$VERIFY_OK" = "1" ] && [ "${#FAILED[@]}" -eq 0 ]; then

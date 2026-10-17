@@ -7,11 +7,29 @@ half of it.
 
 ## The monthly job
 
-`.github/workflows/collect.yml` runs at **04:00 UTC on the 3rd**. It runs `./run.sh`, commits
-`archive/`, `data/` and `status.json`, and fails loudly if any step failed.
+`.github/workflows/collect.yml` runs at **04:00 UTC on the 3rd, and again each day to the
+7th**. It runs `./run.sh --resume-month --if-needed --deadline-min 300`, commits `archive/`,
+`data/`, `status.json` and `run.json`, and fails loudly if any step failed.
 
-It takes about an hour and a half. Most of that is paced HTTP: roughly 4,800 requests to
-myScheme and 281 to the CAG catalogue, deliberately slow.
+A full month is about two and a half hours on a GitHub runner, nearly all of it paced HTTP:
+myScheme took 96 minutes in October 2026 and the CAG catalogue more than 81 (26 from a
+laptop in India). That is close enough to any single limit that the run is built in chunks:
+
+- **Each source is a chunk that is either finished or not.** `progress.py` reads the
+  archive's own manifests to say which; a finished one is skipped. A month already finished
+  clean (`run.json` says `ok`) exits in seconds, which is why the extra days cost nothing.
+- **Each collector has a time budget** inside the run's deadline, which keeps 40 minutes back
+  to parse and build. One that hits it is stopped, not failed, and the run exits 75.
+- **What was fetched is kept.** Every ten minutes the archive in progress is pushed to the
+  branch `wip/collect-YYYY-MM` (`checkpoint.sh`). The next attempt restores it, keeps the
+  same snapshot date, and myScheme's collector fetches only the records it does not have.
+  The CAG walk cannot resume, so an unfinished one is discarded and retried whole.
+- **A complete myScheme snapshot goes to main as soon as it exists**, even if a secondary
+  source is still retrying, and the side branch is then deleted.
+
+An unfinished run before the 7th is a warning in the log, not a failure email, because the
+next day's attempt continues it. On the 7th it fails loudly. To continue sooner, run the
+workflow by hand (Actions → Monthly run → Run workflow); it picks up the same way.
 
 **It deploys itself.** The job calls `deploy.yml` after committing, so the month's data
 reaches the site without anybody doing anything. That call is necessary rather than tidy: a
