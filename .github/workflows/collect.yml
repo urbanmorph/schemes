@@ -133,6 +133,9 @@ jobs:
               # run that half-failed still commits the archive it managed to fetch.
               # Whether the run was clean is the job's exit status and the step below.
               git commit -q -m "snapshot $SNAP — $VERDICT"
+              # main can move during a run that lasts hours; without this a code push
+              # made meanwhile rejects this one and the month never reaches main.
+              git pull -q --rebase origin main
               git push -q
               echo "committed=true" >> "$GITHUB_OUTPUT"
             fi

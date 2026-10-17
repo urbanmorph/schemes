@@ -176,7 +176,9 @@ if [ "$SKIP_COLLECT" = "0" ]; then
   # The audit catalogue is append-mostly and grows a few reports a month, so unlike the
   # budgets it is collected every month. 282 paced requests: 26 minutes from a laptop in
   # India, but more than 81 from a GitHub runner, where it was still going when the
-  # October 2026 job was killed. The walk checks its own distinct-id count against the
+  # October 2026 job was killed. Hence 120 minutes, which still fits the deadline beside
+  # a myScheme that needs its whole 96 (the budget gives it what is left either way).
+  # The walk checks its own distinct-id count against the
   # total the site prints, a checksum an incremental crawl could not do, and that is also
   # why it cannot resume: a walk that stops part way is deleted rather than kept, so
   # parse/cag.py goes on reading the last complete one instead of a fragment.
@@ -184,7 +186,7 @@ if [ "$SKIP_COLLECT" = "0" ]; then
   if python3 progress.py finished cag "$DATE"; then
     echo "  a complete CAG walk for ${DATE:0:7} is archived, skipping"
   else
-    budgeted "collect/cag" 45 python3 collect/cag.py --date "$DATE"
+    budgeted "collect/cag" 120 python3 collect/cag.py --date "$DATE"
     if [ -d "archive/cag/$DATE" ] && [ ! -f "archive/cag/$DATE/_manifest.json" ]; then
       echo "  discarding the unfinished CAG walk for $DATE"
       rm -rf "archive/cag/$DATE"
