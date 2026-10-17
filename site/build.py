@@ -3393,6 +3393,11 @@ def build():
     # because the site otherwise needs nothing but the standard library and pdftotext, and
     # a card that carries no changing numbers does not need rebuilding every month.
     shutil.copy(os.path.join(HERE, "og.png"), os.path.join(OUT, "og.png"))
+    # Google Search Console's ownership proof for the URL-prefix property, which is how the
+    # ops dashboard reads search traffic. Delete it and the property unverifies quietly.
+    # Pages redirects it to the extensionless path; Google follows that (irrational does too).
+    shutil.copy(os.path.join(HERE, "google10baad30f7442a2a.html"),
+                os.path.join(OUT, "google10baad30f7442a2a.html"))
 
     # Cloudflare Pages defaults every response to max-age=0, must-revalidate, so a reader
     # moving between scheme pages re-validates the stylesheet on every one. This register
