@@ -61,6 +61,12 @@ jobs:
         # runtime, which is one of the reasons collection lives here (PLAN.md §6).
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
 
+      - name: Install PyMuPDF
+        # parse/chhattisgarh.py reads glyph positions with it; without it the state is
+        # skipped and the run fails, as it did on 2026-10-17. Pinned to what built the
+        # committed data, so a version bump is a decision rather than a drift.
+        run: pip install -q pymupdf==1.27.2
+
       - name: Restore this month's unfinished collection
         # A run that was stopped pushed what it had to wip/collect-YYYY-MM every ten
         # minutes (checkpoint.sh). Bring it back so this attempt continues it; myScheme's
