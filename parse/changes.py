@@ -15,6 +15,7 @@ apart, saying something different. Anything else is noise from this repository a
 not belong on a page that points at government.
 
     data/changes.json   added, removed and per-field changes between two snapshots
+    data/lastmod.json   per slug, the snapshot its watched fields last changed in
 
 Only fields where a difference means something are compared. Ordering inside lists is
 normalised first, because a source that returns the same three references in a different
@@ -119,9 +120,30 @@ def diff(older, newer):
     return added, removed, changed
 
 
+def last_changed(snaps, loader=load):
+    """slug -> the snapshot in which its watched fields last differed from the one before.
+
+    For the sitemap's lastmod. Stamping every page with the build date tells a crawler that
+    all 11,000 changed on every deploy, and a crawler that is told that learns to ignore the
+    field. A record unchanged since the first snapshot is dated by that snapshot, which is
+    as far back as this archive can see. Only two snapshots are ever held in memory.
+    """
+    out, prev = {}, {}
+    for date in snaps:
+        cur = loader(date) or {}
+        for s, f in cur.items():
+            if prev.get(s) != f:
+                out[s] = date
+        prev = cur
+    return {s: d for s, d in out.items() if s in prev}
+
+
 def run(older=None, newer=None):
     snaps = snapshots()
     out = {"built": utcnow(), "snapshots_held": len(snaps), "snapshots": snaps}
+    # Written before the two-snapshot test: one snapshot still dates every record.
+    write_json("data/lastmod.json", {"built": out["built"], "snapshots": snaps,
+                                     "last_changed": dict(sorted(last_changed(snaps).items()))})
     if len(snaps) < 2:
         # Not an error. A change feed needs two snapshots and cannot be back-filled,
         # which is the entire reason collection started before the site did.
@@ -146,11 +168,34 @@ def run(older=None, newer=None):
     return out
 
 
+def selftest():
+    snaps = {"2026-08-30": {"a": {"name": "A"}, "b": {"name": "B"}},
+             "2026-09-02": {"a": {"name": "A"}, "b": {"name": "B2"}, "c": {"name": "C"}},
+             "2026-09-03": {"a": {"name": "A"}, "b": {"name": "B2"}, "c": {"name": "C"}}}
+    got = last_changed(sorted(snaps), snaps.get)
+    want = {"a": "2026-08-30", "b": "2026-09-02", "c": "2026-09-02"}
+    bad = 0
+    for s, w in want.items():
+        ok = got.get(s) == w
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {s}: want {w} got {got.get(s)}")
+    # a record that leaves and comes back has changed, as far as a reader can tell
+    gone = {"x": {"s": {"n": 1}}, "y": {}, "z": {"s": {"n": 1}}}
+    ok = last_changed(["x", "y", "z"], gone.get) == {"s": "z"}
+    bad += not ok
+    print(f"  {'ok  ' if ok else 'FAIL'} a removed record that returns is dated by its return")
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Diff two archived myScheme snapshots.")
     ap.add_argument("--older")
     ap.add_argument("--newer")
+    ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
+    if a.self_test:
+        print("last_changed self-test")
+        sys.exit(1 if selftest() else 0)
     o = run(a.older, a.newer)
     if not o["comparable"]:
         print(f"snapshots held: {o['snapshots_held']}. {o['note']}")

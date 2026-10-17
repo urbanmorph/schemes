@@ -38,6 +38,8 @@ PY
 step "parse/match.py self-tests"    python3 parse/match.py
 step "parse/krutidev.py self-tests" python3 parse/krutidev.py
 [ -f parse/devanagari.py ] && step "parse/devanagari.py self-tests" python3 parse/devanagari.py
+step "parse/changes.py self-tests"  python3 parse/changes.py --self-test
+step "site/build.py self-tests"     python3 site/build.py --self-test
 
 # 3. Every published ratio divides two counts of the same list. See PLAN.md §4.
 step "parse/ratios.py" python3 parse/ratios.py

@@ -228,7 +228,55 @@ def load(rel, default=None):
 
 # --------------------------------------------------------------------- chrome
 
-def shell(title, active, body, depth=0, desc="", canon=""):
+# Words that already tell a searcher a name is a scheme, so the title need not add one.
+# Devanagari has no \b: its vowel signs are not word characters, so those match bare.
+KIND = re.compile(r"\b(scheme|yojana|yojna|mission|programme|program|abhiyan|nidhi|fund)\b"
+                  r"|योजना|मिशन|कार्यक्रम",
+                  re.I)                       # yojana, mission, karyakram
+
+
+def place_of(entry):
+    """The one government a scheme belongs to, or None. Only what the record states: a
+    Union Budget line is central by definition, and anything else unplaced stays so."""
+    st = entry.get("state")
+    named = [x for x in (st if isinstance(st, list) else [st] if st else []) if x and x != "All"]
+    srcs = set(entry.get("sources") or [])
+    if entry.get("level_value") == "central" or (not named and srcs and srcs <= {"budget", "outcome"}):
+        return "Government of India"
+    return named[0] if len(named) == 1 else None
+
+
+def seo_title(name, short, entry):
+    """A scheme page's <title>: the name, then where it applies.
+
+    The page heading stays the scheme's own short title, which is often an acronym like
+    ANIDAS. Nobody searches "ANIDAS" alone, and a title of only that cannot say whose
+    scheme it is. The place is what a searcher adds, so it goes in the title, and so does
+    the word "scheme" unless the name already carries one.
+    """
+    place = place_of(entry)
+    if place and place.lower() in name.lower().replace("&", "and"):
+        place = None                          # already in the name; once is enough
+    base = name
+    # A name with a bracket already carries its acronym, and myScheme's short title for it
+    # is then usually that acronym run together with the rest of the name.
+    if (short and "(" not in name and short.lower() not in name.lower()
+            and len(name) + len(short) + 3 <= 70):
+        base = f"{name} ({short})"
+    if KIND.search(name):
+        return f"{base}, {place}" if place else base
+    return f"{base}: {place or 'government'} scheme"
+
+
+def ld_script(obj):
+    """schema.org structured data as a <script> block. "<" is escaped so that no value,
+    however it was written at source, can close the tag and spill into the page."""
+    return ('<script type="application/ld+json">'
+            + json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+            + "</script>")
+
+
+def shell(title, active, body, depth=0, desc="", canon="", ld=None):
     # Descriptions are built from source text that has not been through md(), so the
     # dash rule has to be applied here too or the build guard catches it later.
     desc = re.sub(r"\u2014", "\u2013", desc or "")
@@ -279,6 +327,7 @@ def shell(title, active, body, depth=0, desc="", canon=""):
 <meta name="twitter:card" content="summary_large_image">
 {f'<link rel="canonical" href="{e(canon)}">' if canon else ""}
 {f'<meta property="og:url" content="{e(canon)}">' if canon else ""}
+{ld_script(ld) if ld else ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
@@ -3532,12 +3581,42 @@ def build():
                                     else "scheme/" + str(en["slug"])),
             ])
 
+    # The date of the data, not of the build. A page rebuilt from the same snapshot has not
+    # changed, and saying otherwise is how a sitemap's dates come to be ignored.
+    snap = status.get("snapshot") or datetime.now().strftime("%Y-%m-%d")
+    home_desc = (f"{len(entries):,} Indian government schemes from four national sources and "
+                 "fifteen state budget books, with what each source publishes and what it "
+                 "leaves out.")
+    # Dataset, so the register can be found where people look for data rather than pages
+    # (Google Dataset Search reads exactly this). It describes the CSV, which is the form
+    # of the register most of its readers can open.
+    lm = load("data/lastmod.json", {}) or {}          # written by parse/changes.py
+    last_changed, snaps, lastmod = lm.get("last_changed") or {}, lm.get("snapshots") or [snap], {}
+    home_ld = [
+        {"@context": "https://schema.org", "@type": "WebSite",
+         "name": "The Schemes Register", "url": SITE_BASE + "/"},
+        {"@context": "https://schema.org", "@type": "Dataset",
+         "name": "The Schemes Register: Indian government schemes and what their sources leave out",
+         "description": home_desc + " Assembled monthly from official sources: myScheme, "
+                        "DBT Bharat, the Union Budget and Outcome Budget, and state budget books.",
+         "url": SITE_BASE + "/",
+         "sameAs": "https://github.com/urbanmorph/schemes",
+         "license": "https://creativecommons.org/licenses/by/4.0/",
+         "isAccessibleForFree": True,
+         "creator": {"@type": "Organization", "name": "Urban Morph",
+                     "url": "https://github.com/urbanmorph"},
+         "keywords": ["Indian government schemes", "welfare schemes", "myScheme",
+                      "DBT Bharat", "Union Budget", "state budgets", "open data"],
+         "spatialCoverage": {"@type": "Place", "name": "India"},
+         "temporalCoverage": f"{snaps[0]}/{snaps[-1]}",
+         "dateModified": snap,
+         "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv",
+                           "contentUrl": SITE_BASE + "/schemes.csv"}]},
+    ]
     w("index.html", shell(
-        "The census and the argument", "/", page_index(census, checks, dbt, entries),
-        desc=(f"{len(entries):,} Indian government schemes from four national sources and "
-              "fifteen state budget books, with what each source publishes and what it "
-              "leaves out."),
-        canon=SITE_BASE + "/"))
+        "Indian government schemes, and what each source leaves out", "/",
+        page_index(census, checks, dbt, entries),
+        desc=home_desc, canon=SITE_BASE + "/", ld=home_ld))
     # Every row the table can show, as data. This replaced filters.json, which carried the
     # filter fields for rows whose display fields were in the HTML: two payloads describing
     # the same 23,955 rows. Compact on purpose, no indentation and no spaces after
@@ -3628,7 +3707,7 @@ def build():
             continue
         seen.add(en["slug"])
         c = en["checks"]
-        title = (c or {}).get("short") or en["name"]
+        title = seo_title(en["name"], (c or {}).get("short"), en)
         body = (page_scheme(c, status, enrich, en) if c
                 else page_unlisted(en, status))
         # The description is the scheme's own words where it has any, because that is
@@ -3643,9 +3722,35 @@ def build():
             d = (f"{en['name']} is named by "
                  f"{', '.join(SOURCE_LABEL[k] for k in en['sources'])} and is not "
                  f"listed on myScheme.")
+        canon = f"{SITE_BASE}/scheme/{en['slug']}"
+        # A myScheme record is dated by the snapshot it last changed in; anything else
+        # changes only when a new snapshot is parsed, so it carries that snapshot's date.
+        lastmod[f"scheme/{en['slug']}"] = last_changed.get((c or {}).get("slug"), snap)
+        # Breadcrumbs through the state's own budget page where the scheme came from one,
+        # so a search result shows whose book named it rather than a bare URL.
+        crumbs = [("The Schemes Register", SITE_BASE + "/")]
+        if len(en["sources"]) == 1 and en["sources"][0] in STATE_OF:
+            k = en["sources"][0]
+            crumbs.append((f"{STATE_OF[k]}'s budget", f"{SITE_BASE}/state/{k}"))
+        crumbs.append((en["name"], canon))
+        service = {"@context": "https://schema.org", "@type": "GovernmentService",
+                   "name": en["name"], "description": d, "url": canon}
+        if (c or {}).get("short") and c["short"] != en["name"]:
+            service["alternateName"] = c["short"]
+        place = place_of(en)
+        if place:
+            service["areaServed"] = {"@type": "Place",
+                                     "name": "India" if place == "Government of India" else place}
+        if en.get("org"):
+            service["provider"] = {"@type": "GovernmentOrganization", "name": en["org"]}
+        if en.get("category"):
+            service["serviceType"] = en["category"]
         w(os.path.join("scheme", f"{en['slug']}.html"),
-          shell(title, "/", body, depth=1, desc=d,
-                canon=f"{SITE_BASE}/scheme/{en['slug']}"))
+          shell(title, "/", body, depth=1, desc=d, canon=canon, ld=[
+              {"@context": "https://schema.org", "@type": "BreadcrumbList",
+               "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": nm, "item": u}
+                                   for i, (nm, u) in enumerate(crumbs)]},
+              service]))
         n += 1
 
     # A sitemap because most pages are reachable only through a JS-filtered table, and a
@@ -3661,13 +3766,12 @@ def build():
                    if n.endswith(".html"))
     urls += sorted(f"scheme/{n[:-5]}" for n in os.listdir(os.path.join(OUT, "scheme"))
                    if n.endswith(".html"))
-    stamp = datetime.now().strftime("%Y-%m-%d")
     with open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8") as fh:
         fh.write('<?xml version="1.0" encoding="UTF-8"?>\n'
                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         for u in urls:
             fh.write(f"<url><loc>{SITE_BASE}/{u}</loc>"
-                     f"<lastmod>{stamp}</lastmod></url>\n")
+                     f"<lastmod>{lastmod.get(u, snap)}</lastmod></url>\n")
         fh.write("</urlset>\n")
     with open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8") as fh:
         fh.write("User-agent: *\nAllow: /\n"
@@ -3702,9 +3806,52 @@ def audit_text(out_dir):
     return bad
 
 
+def selftest():
+    bad = 0
+    def check(label, got, want):
+        nonlocal bad
+        ok = got == want
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}" + ("" if ok else f"\n        want {want!r}\n        got  {got!r}"))
+    ut = {"state": ["Andaman and Nicobar Islands"], "level_value": "state"}
+    check("acronym gets its place and the word people search",
+          seo_title("ANIDAS", None, ut), "ANIDAS: Andaman and Nicobar Islands scheme")
+    check("a name that already says what it is gets only the place",
+          seo_title("Disability Allowance Scheme", None, ut),
+          "Disability Allowance Scheme, Andaman and Nicobar Islands")
+    check("central schemes name the government",
+          seo_title("Pradhan Mantri Kisan Samman Nidhi", "PM-KISAN", {"level_value": "central"}),
+          "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN), Government of India")
+    check("a Union Budget line with no level is central",
+          seo_title("Samagra Shiksha", None, {"sources": ["budget", "outcome"]}),
+          "Samagra Shiksha: Government of India scheme")
+    check("several states are not one place",
+          seo_title("XYZ", None, {"state": ["Goa", "Kerala"], "level_value": "state"}),
+          "XYZ: government scheme")
+    check("a long name drops the acronym rather than the place",
+          seo_title("A" * 66, "AA", ut), "A" * 66 + ": Andaman and Nicobar Islands scheme")
+    check("a name that already says the place is not told it twice",
+          seo_title("The Andaman & Nicobar Islands Disability Allowance Scheme", "ANIDAS", ut),
+          "The Andaman & Nicobar Islands Disability Allowance Scheme (ANIDAS)")
+    check("a name already carrying a bracket gets no generated acronym",
+          seo_title("Marriage Assistance (JKBOCWWB)", "MAJKBOCWWB", {"state": ["Goa"]}),
+          "Marriage Assistance (JKBOCWWB): Goa scheme")
+    check("yojana in Devanagari is already a scheme",
+          seo_title("कृषक योजना", None, {"state": ["Uttar Pradesh"]}),
+          "कृषक योजना, Uttar Pradesh")
+    tag = ld_script({"name": "a </script><b> — b"})
+    check("structured data cannot close its own script tag", "</script><b>" in tag[:-9], False)
+    check("structured data stays valid JSON",
+          json.loads(tag.split(">", 1)[1].rsplit("<", 1)[0])["name"], "a </script><b> — b")
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Build the static site into site/_out.")
-    ap.parse_args()
+    ap.add_argument("--self-test", action="store_true")
+    if ap.parse_args().self_test:
+        print("build self-test")
+        raise SystemExit(1 if selftest() else 0)
     n = build()
     print(f"built site/_out: {len(ROUTES)} pages + {n:,} scheme pages")
     bad = audit_text(OUT)
