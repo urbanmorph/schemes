@@ -1,6 +1,6 @@
 {
- "accused_total": 1884,
- "built": "2026-09-09T09:13:19Z",
+ "accused_total": 1886,
+ "built": "2026-10-17T18:00:23Z",
  "causation_note": "A scheme moving from absent to listed is recorded here as two dates and nothing else. This register does not claim the listing happened because of it: the portal publishes no reason, and inferring one would be the exact move this project documents in others.",
  "entries": [
   {
@@ -1616,6 +1616,19 @@
    "status": "absent"
   },
   {
+   "be_lakh": 0.0,
+   "first_named": "2026-10-17",
+   "ident": "unsectored | Sub-Total & Poshan [Deptt. 2.0) CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi",
+   "key": "delhi|unsectored | Sub-Total & Poshan [Deptt. 2.0) CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi",
+   "left_the_books": null,
+   "listed_on": null,
+   "myscheme_name": null,
+   "name": "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi",
+   "state": "Delhi",
+   "state_key": "delhi",
+   "status": "absent"
+  },
+  {
    "be_lakh": 380.0,
    "first_named": "2026-09-03",
    "ident": "unsectored | Sub-Total CSS | Post-matric Scholarship for OBC students CSS",
@@ -1646,13 +1659,13 @@
    "first_named": "2026-09-03",
    "ident": "unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
    "key": "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
-   "left_the_books": null,
+   "left_the_books": "2026-10-17",
    "listed_on": null,
    "myscheme_name": null,
    "name": "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
    "state": "Delhi",
    "state_key": "delhi",
-   "status": "absent"
+   "status": "no longer named at the bar"
   },
   {
    "be_lakh": 100.0,
@@ -2179,13 +2192,13 @@
    "first_named": "2026-09-03",
    "ident": "unsectored | Total [Economic Development] | Employment through DSCFDC includes Financial Assistance for",
    "key": "delhi|unsectored | Total [Economic Development] | Employment through DSCFDC includes Financial Assistance for",
-   "left_the_books": null,
+   "left_the_books": "2026-10-17",
    "listed_on": null,
    "myscheme_name": null,
    "name": "Employment through DSCFDC includes Financial Assistance for",
    "state": "Delhi",
    "state_key": "delhi",
-   "status": "absent"
+   "status": "no longer named at the bar"
   },
   {
    "be_lakh": 25.0,
@@ -2196,6 +2209,19 @@
    "listed_on": null,
    "myscheme_name": null,
    "name": "Financial Assistance to SC/ST for Self Employment through DSCFDC includes Financial Assistance for",
+   "state": "Delhi",
+   "state_key": "delhi",
+   "status": "absent"
+  },
+  {
+   "be_lakh": 10.0,
+   "first_named": "2026-10-17",
+   "ident": "unsectored | Total [Economic Development] | for Self Employment through DSCFDC includes Financial Assistance for",
+   "key": "delhi|unsectored | Total [Economic Development] | for Self Employment through DSCFDC includes Financial Assistance for",
+   "left_the_books": null,
+   "listed_on": null,
+   "myscheme_name": null,
+   "name": "for Self Employment through DSCFDC includes Financial Assistance for",
    "state": "Delhi",
    "state_key": "delhi",
    "status": "absent"
@@ -2270,13 +2296,13 @@
    "first_named": "2026-09-03",
    "ident": "unsectored | Total [Revenue Department] | Award to Minority students (Statefunded Scheme)",
    "key": "delhi|unsectored | Total [Revenue Department] | Award to Minority students (Statefunded Scheme)",
-   "left_the_books": null,
+   "left_the_books": "2026-10-17",
    "listed_on": null,
    "myscheme_name": null,
    "name": "Award to Minority students (Statefunded Scheme)",
    "state": "Delhi",
    "state_key": "delhi",
-   "status": "absent"
+   "status": "no longer named at the bar"
   },
   {
    "be_lakh": 2500.0,
@@ -24497,12 +24523,13 @@
   }
  ],
  "first_snapshot": "2026-09-03",
- "no_longer_named": 0,
+ "no_longer_named": 3,
  "since_listed": 0,
- "snapshot": "2026-09-03",
+ "snapshot": "2026-10-17",
  "snapshots_of_evidence": [
-  "2026-09-03"
+  "2026-09-03",
+  "2026-10-17"
  ],
- "still_absent": 1884,
+ "still_absent": 1883,
  "what": "Schemes this register named as funded by a state and listed by no national portal, with the date each accusation was first made and the date, if it ever comes, that the portal began listing it."
 }
