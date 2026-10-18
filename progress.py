@@ -9,6 +9,8 @@ one finished, and so that a run stopped at its time limit continues where it sto
     python3 progress.py finished SOURCE DATE  exit 0 if SOURCE is finished for DATE
     python3 progress.py held STATE CYCLE      exit 0 if STATE's budget book for CYCLE is archived
     python3 progress.py run-ok DATE           exit 0 if the whole run for DATE finished clean
+    python3 progress.py parsed STATE          exit 0 if data/STATE is current with its inputs
+    python3 progress.py stamp STATE           record those inputs, after a parse succeeds
     python3 progress.py --self-test
 
 A run that stops part way through the month must not start a second snapshot the next
@@ -17,9 +19,11 @@ snapshot date is the one already started this month, if any, and today otherwise
 """
 
 import glob
+import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.parse
 from datetime import datetime, timezone
@@ -102,6 +106,78 @@ def held(state, cycle, root=ROOT):
     return False
 
 
+# What a state parser reads besides its archive and its own code. Uttar Pradesh checks its
+# budget names against myScheme's records for the state.
+EXTRA_INPUTS = {"uttarpradesh": ["data/myscheme/schemes"]}
+IMPORT = re.compile(r"^\s*(?:from|import)\s+(\w+)", re.M)
+
+
+def _sha(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for block in iter(lambda: fh.read(1 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def _code(root, name, seen):
+    """parse/NAME.py and every module of this repository it imports, transitively."""
+    for d in ("parse", "collect"):
+        p = os.path.join(root, d, name + ".py")
+        if os.path.isfile(p) and p not in seen:
+            seen.add(p)
+            with open(p, encoding="utf-8") as fh:
+                for m in IMPORT.findall(fh.read()):
+                    _code(root, m, seen)
+    return seen
+
+
+def _inputs(state, root):
+    files = set(_code(root, state, set()))
+    for d in [os.path.join("archive", state)] + EXTRA_INPUTS.get(state, []):
+        for r, _, fs in os.walk(os.path.join(root, d)):
+            files.update(os.path.join(r, f) for f in fs)
+    h = hashlib.sha256()
+    for p in sorted(files):
+        h.update(f"{os.path.relpath(p, root)}\0{_sha(p)}\n".encode())
+    return h.hexdigest(), len(files)
+
+
+def _stamp_path(state, root):
+    return os.path.join(root, "data", state, "inputs.json")
+
+
+def parsed(state, root=ROOT):
+    """Is data/STATE/schemes.json what parse/STATE.py makes of what it reads now?
+
+    The state books are annual, so on most monthly runs nothing a state parser reads has
+    changed and running it again can only add noise. It added worse than noise in October
+    2026: the runner's pdftotext (poppler 24.02) lays out two of the same Delhi and
+    Jharkhand PDFs differently from the one that built the committed data (26.04), which
+    renamed group headings, cut two hand labels loose, and failed the ratios check. So a
+    parse whose inputs and output are both unchanged since it was stamped is skipped.
+    """
+    s = _read(_stamp_path(state, root)) or {}
+    out = os.path.join(root, "data", state, "schemes.json")
+    return bool(s and os.path.isfile(out) and s.get("output") == _sha(out)
+                and s.get("inputs") == _inputs(state, root)[0])
+
+
+def stamp(state, root=ROOT):
+    """Record what data/STATE/schemes.json was built from, after a parse that succeeded."""
+    digest, n = _inputs(state, root)
+    try:
+        v = subprocess.run(["pdftotext", "-v"], capture_output=True, text=True).stderr
+        v = (re.search(r"version (\S+)", v) or [None, None])[1]
+    except OSError:
+        v = None
+    out = os.path.join(root, "data", state, "schemes.json")
+    with open(_stamp_path(state, root), "w", encoding="utf-8") as fh:
+        json.dump({"inputs": digest, "files": n, "output": _sha(out), "pdftotext": v},
+                  fh, indent=1)
+        fh.write("\n")
+
+
 def run_ok(date, root=ROOT):
     r = _read(os.path.join(root, "run.json")) or {}
     return r.get("date") == date and r.get("ok") is True
@@ -177,6 +253,51 @@ def selftest():
     put(r, "run.json", {"date": "2026-10-03", "ok": True})
     check("a clean run is not repeated", run_ok("2026-10-03", r), True)
     check("a clean run last month does not cover this one", run_ok("2026-11-03", r), False)
+
+    def write(rel, text):
+        p = os.path.join(r, rel)
+        os.makedirs(os.path.dirname(p), exist_ok=True)
+        with open(p, "w", encoding="utf-8") as fh:
+            fh.write(text)
+
+    write("parse/goa.py", "import os\nfrom common import ROOT\nfrom helper import x\n")
+    write("parse/helper.py", "import re\n")
+    write("collect/common.py", "ROOT = 1\n")
+    write("archive/goa/2026-09-02/book.pdf", "bytes")
+    check("a state never parsed is not current", parsed("goa", r), False)
+    write("data/goa/schemes.json", "{}")
+    stamp("goa", r)
+    check("parsed and unchanged is current", parsed("goa", r), True)
+    write("archive/goa/2026-09-02/book.pdf", "other bytes")
+    check("a changed book is not", parsed("goa", r), False)
+    stamp("goa", r)
+    write("parse/goa.py", "import os\nfrom common import ROOT\nfrom helper import x\n# edited\n")
+    check("an edited parser is not", parsed("goa", r), False)
+    stamp("goa", r)
+    write("parse/helper.py", "import re  # edited\n")
+    check("an edited module it imports is not", parsed("goa", r), False)
+    stamp("goa", r)
+    write("collect/common.py", "ROOT = 2\n")
+    check("...including one from collect/", parsed("goa", r), False)
+    stamp("goa", r)
+    write("data/goa/schemes.json", '{"edited": true}')
+    check("an output changed since it was built is not", parsed("goa", r), False)
+    stamp("goa", r)
+    os.remove(os.path.join(r, "data/goa/schemes.json"))
+    check("a missing output is not", parsed("goa", r), False)
+    write("data/goa/schemes.json", "{}")
+    stamp("goa", r)
+    write("archive/goa/2026-10-01/book.pdf", "a new snapshot")
+    check("a new snapshot is not", parsed("goa", r), False)
+
+    write("parse/uttarpradesh.py", "import os\n")
+    write("archive/uttarpradesh/2026-09-03/book.pdf", "bytes")
+    write("data/uttarpradesh/schemes.json", "{}")
+    write("data/myscheme/schemes/a.json", "{}")
+    stamp("uttarpradesh", r)
+    check("Uttar Pradesh, unchanged, is current", parsed("uttarpradesh", r), True)
+    write("data/myscheme/schemes/a.json", '{"changed": 1}')
+    check("...but not once the myScheme records it reads change", parsed("uttarpradesh", r), False)
     return bad
 
 
@@ -191,6 +312,11 @@ def main(argv):
         return 0 if finished(argv[1], argv[2]) else 1
     if argv[:1] == ["held"] and len(argv) == 3:
         return 0 if held(argv[1], argv[2]) else 1
+    if argv[:1] == ["parsed"] and len(argv) == 2:
+        return 0 if parsed(argv[1]) else 1
+    if argv[:1] == ["stamp"] and len(argv) == 2:
+        stamp(argv[1])
+        return 0
     if argv[:1] == ["run-ok"] and len(argv) == 2:
         return 0 if run_ok(argv[1]) else 1
     print(__doc__.strip().split("\n\n")[1], file=sys.stderr)

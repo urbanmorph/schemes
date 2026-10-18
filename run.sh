@@ -250,10 +250,18 @@ step "parse/cag" python3 parse/cag.py
 # derived from their own archives and nothing about a throttled myScheme crawl makes the
 # Karnataka budget less true. Their absence claims are not, and those wait below.
 say "parse · states"
+# shellcheck disable=SC2329  # called through step
+parse_state() { python3 "parse/$1.py" && python3 progress.py stamp "$1"; }
 for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
           telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh \
             chhattisgarh; do
-  step "parse/$st" python3 "parse/$st.py"
+  # Skipped when nothing it reads has changed since its output was built: see parsed()
+  # in progress.py for the month a re-parse on the runner rewrote two states.
+  if python3 progress.py parsed "$st"; then
+    echo "  $st: inputs unchanged since data/$st/schemes.json was built, skipping"
+  else
+    step "parse/$st" parse_state "$st"
+  fi
 done
 
 # The legibility scoreboard, which is the only thing here that reads EVERY state at once.

@@ -8,7 +8,7 @@
    "what": "Scheme-wise Budget 2026-27: SCHEME/PROGRAMME/PROJECTS WISE OUTLAY, sector by department by scheme, four years of figures in lakh with a printed subtotal at every level and a Grand Total"
   }
  },
- "built": "2026-10-17T17:50:33Z",
+ "built": "2026-10-18T00:51:57Z",
  "caveat": "One row here is one line of Delhi's scheme-wise budget, keyed on (sector, name) because the document prints no scheme code. Rows repeating a name within one sector are ADDED, which is what the document means when it splits a scheme into GIA-General, GIA-Salary and GIA-Capital lines. This list is a superset of Delhi's citizen-facing schemes: works and establishment lines such as 'Construction of Residential Complex for Judicial Officers' sit at the same level as 'Laadli Yojana'. It is also slightly SHORT of the document: about ten nil-provision rows are read as headings by the blank-line rule described in parse/delhi.py, and appear under headings rather than under entries.",
  "counts": {
   "funded_at_nil": 450,
@@ -1563,9 +1563,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Sub Total",
-   "key": "unsectored | Sub Total | (Nirbhaya Fund) Infrastructural SS for judiciary (Scheme shifted from",
+   "key": "unsectored | Sub Total | (Nirbhaya Fund) SS",
    "mre_2025_26_lakh": 0.0,
-   "name": "(Nirbhaya Fund) Infrastructural SS for judiciary (Scheme shifted from",
+   "name": "(Nirbhaya Fund) SS",
    "pages": [
     127
    ],
@@ -1582,9 +1582,9 @@
    "be_lakh": 840.0,
    "be_revenue_lakh": 840.0,
    "group": "Sub Total",
-   "key": "unsectored | Sub Total | (Nirbhaya Setting up Fund) of FastCSS Track Special Courts (FTSC's) for R expeditious disposal of cases of rape & POCSO Act",
+   "key": "unsectored | Sub Total | (Nirbhaya Setting Fund) up of FastCSSTrack Special Courts (FTSC's) for R expeditious disposal of cases of rape & POCSO Act",
    "mre_2025_26_lakh": 840.0,
-   "name": "(Nirbhaya Setting up Fund) of FastCSS Track Special Courts (FTSC's) for R expeditious disposal of cases of rape & POCSO Act",
+   "name": "(Nirbhaya Setting Fund) up of FastCSSTrack Special Courts (FTSC's) for R expeditious disposal of cases of rape & POCSO Act",
    "pages": [
     127
    ],
@@ -3614,6 +3614,23 @@
    "snos": [
     "16"
    ]
+  },
+  {
+   "actual_2024_25_lakh": 1650.0,
+   "be_2025_26_lakh": 5000.0,
+   "be_capital_or_loan_lakh": 5500.0,
+   "be_lakh": 5500.0,
+   "be_revenue_lakh": 0.0,
+   "group": "Sub Total",
+   "key": "unsectored | Sub Total | Infrastructural facilities for judiciary (Scheme shifted from C Public works sector w.e.f. BE 2022-23) CSS",
+   "mre_2025_26_lakh": 5000.0,
+   "name": "Infrastructural facilities for judiciary (Scheme shifted from C Public works sector w.e.f. BE 2022-23) CSS",
+   "pages": [
+    127
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": []
   },
   {
    "actual_2024_25_lakh": 0.0,
@@ -5856,23 +5873,6 @@
    ]
   },
   {
-   "actual_2024_25_lakh": 1650.0,
-   "be_2025_26_lakh": 5000.0,
-   "be_capital_or_loan_lakh": 5500.0,
-   "be_lakh": 5500.0,
-   "be_revenue_lakh": 0.0,
-   "group": "Sub Total",
-   "key": "unsectored | Sub Total | facilities C Public works sector w.e.f. BE 2022-23) CSS",
-   "mre_2025_26_lakh": 5000.0,
-   "name": "facilities C Public works sector w.e.f. BE 2022-23) CSS",
-   "pages": [
-    127
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": []
-  },
-  {
    "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 0.0,
    "be_capital_or_loan_lakh": 0.0,
@@ -7537,9 +7537,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Sub Total [C]",
-   "key": "unsectored | Sub Total [C] | Poshan 2.0) POSHAN CSS (POSHAN Mission) CSS",
+   "key": "unsectored | Sub Total [C] | Poshan POSHAN 2.0) CSS (POSHAN Mission) CSS",
    "mre_2025_26_lakh": 0.0,
-   "name": "Poshan 2.0) POSHAN CSS (POSHAN Mission) CSS",
+   "name": "Poshan POSHAN 2.0) CSS (POSHAN Mission) CSS",
    "pages": [
     117
    ],
@@ -7837,9 +7837,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Sub Total [MRTS]",
-   "key": "unsectored | Sub Total [MRTS] | Act toAcquisition",
+   "key": "unsectored | Sub Total [MRTS] | Act LandtoAcquisition",
    "mre_2025_26_lakh": 0.0,
-   "name": "Act toAcquisition",
+   "name": "Act LandtoAcquisition",
    "pages": [
     14
    ],
@@ -7848,6 +7848,23 @@
    "snos": [
     "b."
    ]
+  },
+  {
+   "actual_2024_25_lakh": 10000.0,
+   "be_2025_26_lakh": 49245.0,
+   "be_capital_or_loan_lakh": 58085.0,
+   "be_lakh": 58085.0,
+   "be_revenue_lakh": 0.0,
+   "group": "Sub Total [MRTS]",
+   "key": "unsectored | Sub Total [MRTS] | DMRC-old name) (from 2018-19 treated as loan",
+   "mre_2025_26_lakh": 128952.0,
+   "name": "DMRC-old name) (from 2018-19 treated as loan",
+   "pages": [
+    14
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": []
   },
   {
    "actual_2024_25_lakh": 37273.0,
@@ -7924,23 +7941,6 @@
    "snos": [
     "a."
    ]
-  },
-  {
-   "actual_2024_25_lakh": 10000.0,
-   "be_2025_26_lakh": 49245.0,
-   "be_capital_or_loan_lakh": 58085.0,
-   "be_lakh": 58085.0,
-   "be_revenue_lakh": 0.0,
-   "group": "Sub Total [MRTS]",
-   "key": "unsectored | Sub Total [MRTS] | Land DMRC-old name) (from 2018-19 treated as loan",
-   "mre_2025_26_lakh": 128952.0,
-   "name": "Land DMRC-old name) (from 2018-19 treated as loan",
-   "pages": [
-    14
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": []
   },
   {
    "actual_2024_25_lakh": 15000.0,
@@ -12470,25 +12470,6 @@
    "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
-   "group": "Sub-Total & Poshan [Deptt. 2.0) CSS",
-   "key": "unsectored | Sub-Total & Poshan [Deptt. 2.0) CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi",
-   "mre_2025_26_lakh": 0.0,
-   "name": "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi",
-   "pages": [
-    118
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": [
-    "8.b"
-   ]
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 0.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 0.0,
-   "be_revenue_lakh": 0.0,
    "group": "Sub-Total (DFW)",
    "key": "unsectored | Sub-Total (DFW) | DTE. OF FAMILY WELFARE",
    "mre_2025_26_lakh": 0.0,
@@ -13248,6 +13229,25 @@
    "sector": null,
    "snos": [
     "12"
+   ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 0.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 0.0,
+   "be_revenue_lakh": 0.0,
+   "group": "Sub-Total Poshan [Deptt. of 2.0) Women CSS",
+   "key": "unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
+   "mre_2025_26_lakh": 0.0,
+   "name": "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
+   "pages": [
+    118
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": [
+    "8.b"
    ]
   },
   {
@@ -16877,6 +16877,25 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "TOTAL [DGHS]",
+   "key": "unsectored | TOTAL [DGHS] | (AAMs)] Ayushman State Share Bharat SS Mission Digital GIA-General",
+   "mre_2025_26_lakh": 0.0,
+   "name": "(AAMs)] Ayushman State Share Bharat SS Mission Digital GIA-General",
+   "pages": [
+    62
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": [
+    "44"
+   ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 0.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 0.0,
+   "be_revenue_lakh": 0.0,
+   "group": "TOTAL [DGHS]",
    "key": "unsectored | TOTAL [DGHS] | (AAMs)] CSS and DSHM-Health GIA-General Wellness Centres (HWCs)/ Ayushman",
    "mre_2025_26_lakh": 0.0,
    "name": "(AAMs)] CSS and DSHM-Health GIA-General Wellness Centres (HWCs)/ Ayushman",
@@ -16887,25 +16906,6 @@
    "sector": null,
    "snos": [
     "43"
-   ]
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 0.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 0.0,
-   "be_revenue_lakh": 0.0,
-   "group": "TOTAL [DGHS]",
-   "key": "unsectored | TOTAL [DGHS] | (AAMs)] State Ayushman Share Bharat SS Mission Digital GIA-General",
-   "mre_2025_26_lakh": 0.0,
-   "name": "(AAMs)] State Ayushman Share Bharat SS Mission Digital GIA-General",
-   "pages": [
-    62
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": [
-    "44"
    ]
   },
   {
@@ -18497,9 +18497,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "TOTAL [ENVIRONMENT DEPTT.]",
-   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | Awareness and Other Stg. of Technical related Set-up in theactivities",
+   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | Awareness Stg. and Other of Technical related Set-up in activitiesof) Environment",
    "mre_2025_26_lakh": 0.0,
-   "name": "Awareness and Other Stg. of Technical related Set-up in theactivities",
+   "name": "Awareness Stg. and Other of Technical related Set-up in activitiesof) Environment",
    "pages": [
     17
    ],
@@ -18603,23 +18603,6 @@
    "snos": [
     "9"
    ]
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 10.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 10.0,
-   "be_revenue_lakh": 10.0,
-   "group": "TOTAL [ENVIRONMENT DEPTT.]",
-   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | Deptt. of) Environment",
-   "mre_2025_26_lakh": 1.0,
-   "name": "Deptt. of) Environment",
-   "pages": [
-    17
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": []
   },
   {
    "actual_2024_25_lakh": 0.0,
@@ -18870,12 +18853,29 @@
    "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 0.0,
    "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 200.0,
+   "be_revenue_lakh": 200.0,
+   "group": "TOTAL [ENVIRONMENT DEPTT.]",
+   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | Technology Demonstration and Evaluation of Cloud Seeding GIA-",
+   "mre_2025_26_lakh": 114.0,
+   "name": "Technology Demonstration and Evaluation of Cloud Seeding GIA-",
+   "pages": [
+    19
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": []
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 0.0,
+   "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "TOTAL [ENVIRONMENT DEPTT.]",
-   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | caused GIA byKanpur to IIT illegal extraction of ground for Pilot Project water GIA-General",
+   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | caused GIA by illegal to IIT extraction Kanpur for Pilot of ground Project on water GIA-General",
    "mre_2025_26_lakh": 0.0,
-   "name": "caused GIA byKanpur to IIT illegal extraction of ground for Pilot Project water GIA-General",
+   "name": "caused GIA by illegal to IIT extraction Kanpur for Pilot of ground Project on water GIA-General",
    "pages": [
     19
    ],
@@ -18906,16 +18906,16 @@
   },
   {
    "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 0.0,
+   "be_2025_26_lakh": 10.0,
    "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 200.0,
-   "be_revenue_lakh": 200.0,
+   "be_lakh": 10.0,
+   "be_revenue_lakh": 10.0,
    "group": "TOTAL [ENVIRONMENT DEPTT.]",
-   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | on Technology Demonstration and Evaluation of Cloud Seeding GIA-",
-   "mre_2025_26_lakh": 114.0,
-   "name": "on Technology Demonstration and Evaluation of Cloud Seeding GIA-",
+   "key": "unsectored | TOTAL [ENVIRONMENT DEPTT.] | the Deptt.",
+   "mre_2025_26_lakh": 1.0,
+   "name": "the Deptt.",
    "pages": [
-    19
+    17
    ],
    "rows_added": 1,
    "sector": null,
@@ -20592,9 +20592,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total",
-   "key": "unsectored | Total | HealthSkill Delhi Quantum Computing among & Entrepreneurship others GIA-General University (earlier known as GIA to Delhi Skill / Vocational University &",
+   "key": "unsectored | Total | HealthSkill Delhi Quantum & Computing among Entrepreneurship others (earlier University GIA-General known as GIA to Delhi Skill / Vocational University &",
    "mre_2025_26_lakh": 0.0,
-   "name": "HealthSkill Delhi Quantum Computing among & Entrepreneurship others GIA-General University (earlier known as GIA to Delhi Skill / Vocational University &",
+   "name": "HealthSkill Delhi Quantum & Computing among Entrepreneurship others (earlier University GIA-General known as GIA to Delhi Skill / Vocational University &",
    "pages": [
     46
    ],
@@ -23741,6 +23741,23 @@
   },
   {
    "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 10.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 100.0,
+   "be_revenue_lakh": 100.0,
+   "group": "Total [Deptt. of Information Technology]",
+   "key": "unsectored | Total [Deptt. of Information Technology] | Employees R Hardware & Software",
+   "mre_2025_26_lakh": 50.0,
+   "name": "Employees R Hardware & Software",
+   "pages": [
+    20
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": []
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 0.0,
    "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 0.0,
@@ -23898,9 +23915,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Deptt. of Information Technology]",
-   "key": "unsectored | Total [Deptt. of Information Technology] | WAN in Delhi Training Sectt.]) of Delhi Govt. in Use of IT",
+   "key": "unsectored | Total [Deptt. of Information Technology] | WAN in of Training Delhi Sectt.]) of Delhi Govt. in Use of IT",
    "mre_2025_26_lakh": 0.0,
-   "name": "WAN in Delhi Training Sectt.]) of Delhi Govt. in Use of IT",
+   "name": "WAN in of Training Delhi Sectt.]) of Delhi Govt. in Use of IT",
    "pages": [
     20
    ],
@@ -23929,23 +23946,6 @@
   },
   {
    "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 10.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 100.0,
-   "be_revenue_lakh": 100.0,
-   "group": "Total [Deptt. of Information Technology]",
-   "key": "unsectored | Total [Deptt. of Information Technology] | of Employees R Hardware & Software",
-   "mre_2025_26_lakh": 50.0,
-   "name": "of Employees R Hardware & Software",
-   "pages": [
-    20
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": []
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 0.0,
    "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 0.0,
@@ -23962,6 +23962,23 @@
    "snos": [
     "II"
    ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 10.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 10.0,
+   "be_revenue_lakh": 10.0,
+   "group": "Total [Economic Development]",
+   "key": "unsectored | Total [Economic Development] | Employment through DSCFDC includes Financial Assistance for",
+   "mre_2025_26_lakh": 10.0,
+   "name": "Employment through DSCFDC includes Financial Assistance for",
+   "pages": [
+    103
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": []
   },
   {
    "actual_2024_25_lakh": 0.0,
@@ -24027,25 +24044,6 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Economic Development]",
-   "key": "unsectored | Total [Economic Development] | Purchase Assistance Financial of TSRs, Buses and General to SC/ST Buses, General",
-   "mre_2025_26_lakh": 0.0,
-   "name": "Purchase Assistance Financial of TSRs, Buses and General to SC/ST Buses, General",
-   "pages": [
-    103
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": [
-    "19b"
-   ]
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 0.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 0.0,
-   "be_revenue_lakh": 0.0,
-   "group": "Total [Economic Development]",
    "key": "unsectored | Total [Economic Development] | Purchase GIA of TSRs,GIA-General",
    "mre_2025_26_lakh": 0.0,
    "name": "Purchase GIA of TSRs,GIA-General",
@@ -24060,20 +24058,22 @@
   },
   {
    "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 10.0,
+   "be_2025_26_lakh": 0.0,
    "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 10.0,
-   "be_revenue_lakh": 10.0,
+   "be_lakh": 0.0,
+   "be_revenue_lakh": 0.0,
    "group": "Total [Economic Development]",
-   "key": "unsectored | Total [Economic Development] | for Self Employment through DSCFDC includes Financial Assistance for",
-   "mre_2025_26_lakh": 10.0,
-   "name": "for Self Employment through DSCFDC includes Financial Assistance for",
+   "key": "unsectored | Total [Economic Development] | Purchase of Financial TSRs, to Buses Assistance and for SC/ST General Self Buses, General",
+   "mre_2025_26_lakh": 0.0,
+   "name": "Purchase of Financial TSRs, to Buses Assistance and for SC/ST General Self Buses, General",
    "pages": [
     103
    ],
    "rows_added": 1,
    "sector": null,
-   "snos": []
+   "snos": [
+    "19b"
+   ]
   },
   {
    "actual_2024_25_lakh": 86.0,
@@ -24137,6 +24137,25 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Educational Development]",
+   "key": "unsectored | Total [Educational Development] | KISS society - Residential PWD",
+   "mre_2025_26_lakh": 0.0,
+   "name": "KISS society - Residential PWD",
+   "pages": [
+    102
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": [
+    "15(b)"
+   ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 0.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 0.0,
+   "be_revenue_lakh": 0.0,
+   "group": "Total [Educational Development]",
    "key": "unsectored | Total [Educational Development] | KISS society Jai Bhim - PWD SCSP",
    "mre_2025_26_lakh": 0.0,
    "name": "KISS society Jai Bhim - PWD SCSP",
@@ -24147,25 +24166,6 @@
    "sector": null,
    "snos": [
     "16.a"
-   ]
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 0.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 0.0,
-   "be_revenue_lakh": 0.0,
-   "group": "Total [Educational Development]",
-   "key": "unsectored | Total [Educational Development] | KISS societyschool",
-   "mre_2025_26_lakh": 0.0,
-   "name": "KISS societyschool",
-   "pages": [
-    102
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": [
-    "15(b)"
    ]
   },
   {
@@ -24186,15 +24186,15 @@
    "snos": []
   },
   {
-   "actual_2024_25_lakh": 14.16,
+   "actual_2024_25_lakh": 2.0,
    "be_2025_26_lakh": 50.0,
    "be_capital_or_loan_lakh": 1.0,
    "be_lakh": 1.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Educational Development]",
-   "key": "unsectored | Total [Educational Development] | Residential - PWD for Weaker Section of SC/ OBC/ Minorities/ Orphans at Village Ishapur in collabaration with",
+   "key": "unsectored | Total [Educational Development] | OBC/ C Minorities/ Orphans at Village Ishapur in collabaration with",
    "mre_2025_26_lakh": 1.0,
-   "name": "Residential - PWD for Weaker Section of SC/ OBC/ Minorities/ Orphans at Village Ishapur in collabaration with",
+   "name": "OBC/ C Minorities/ Orphans at Village Ishapur in collabaration with",
    "pages": [
     102
    ],
@@ -24223,14 +24223,31 @@
   },
   {
    "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 100.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 1.0,
+   "be_revenue_lakh": 1.0,
+   "group": "Total [Educational Development]",
+   "key": "unsectored | Total [Educational Development] | Weaker Section of SC/OBC/Minorities/Orphans at Village Ishapur in",
+   "mre_2025_26_lakh": 304.0,
+   "name": "Weaker Section of SC/OBC/Minorities/Orphans at Village Ishapur in",
+   "pages": [
+    102
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": []
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 0.0,
    "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Educational Development]",
-   "key": "unsectored | Total [Educational Development] | collabaration with KISS Residential school society Section for Weaker GIA-General",
+   "key": "unsectored | Total [Educational Development] | collabaration with Residential schoolKISS for society GIA-General",
    "mre_2025_26_lakh": 0.0,
-   "name": "collabaration with KISS Residential school society Section for Weaker GIA-General",
+   "name": "collabaration with Residential schoolKISS for society GIA-General",
    "pages": [
     102
    ],
@@ -24247,9 +24264,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Educational Development]",
-   "key": "unsectored | Total [Educational Development] | collabarationschool Residential with KISS societySection for Weaker SCSP GIA-General",
+   "key": "unsectored | Total [Educational Development] | collabarationschool Residential with for KISSWeaker societySection SCSP of SC/ GIA-General",
    "mre_2025_26_lakh": 0.0,
-   "name": "collabarationschool Residential with KISS societySection for Weaker SCSP GIA-General",
+   "name": "collabarationschool Residential with for KISSWeaker societySection SCSP of SC/ GIA-General",
    "pages": [
     102
    ],
@@ -24260,32 +24277,15 @@
    ]
   },
   {
-   "actual_2024_25_lakh": 2.0,
+   "actual_2024_25_lakh": 14.16,
    "be_2025_26_lakh": 50.0,
    "be_capital_or_loan_lakh": 1.0,
    "be_lakh": 1.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Educational Development]",
-   "key": "unsectored | Total [Educational Development] | of SC/ OBC/ C Minorities/ Orphans at Village Ishapur in collabaration with",
+   "key": "unsectored | Total [Educational Development] | school for Weaker Section of SC/ OBC/ Minorities/ Orphans at Village Ishapur in collabaration with",
    "mre_2025_26_lakh": 1.0,
-   "name": "of SC/ OBC/ C Minorities/ Orphans at Village Ishapur in collabaration with",
-   "pages": [
-    102
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": []
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 100.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 1.0,
-   "be_revenue_lakh": 1.0,
-   "group": "Total [Educational Development]",
-   "key": "unsectored | Total [Educational Development] | of SC/OBC/Minorities/Orphans at Village Ishapur in",
-   "mre_2025_26_lakh": 304.0,
-   "name": "of SC/OBC/Minorities/Orphans at Village Ishapur in",
+   "name": "school for Weaker Section of SC/ OBC/ Minorities/ Orphans at Village Ishapur in collabaration with",
    "pages": [
     102
    ],
@@ -24488,9 +24488,9 @@
    "be_lakh": 16800.0,
    "be_revenue_lakh": 16800.0,
    "group": "Total [Nutrition] JAIL",
-   "key": "unsectored | Total [Nutrition] JAIL | of Women & Child Development]",
+   "key": "unsectored | Total [Nutrition] JAIL | & Child Development]",
    "mre_2025_26_lakh": 17000.0,
-   "name": "of Women & Child Development]",
+   "name": "& Child Development]",
    "pages": [
     118
    ],
@@ -25037,9 +25037,9 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total [Revenue Department]",
-   "key": "unsectored | Total [Revenue Department] | /Institutions/Universities(State DR. B.R. Ambedkar State topper Funded AwardScheme)",
+   "key": "unsectored | Total [Revenue Department] | /Institutions/Universities(State DR. B.R. Ambedkar Funded State topper Scheme)",
    "mre_2025_26_lakh": 0.0,
-   "name": "/Institutions/Universities(State DR. B.R. Ambedkar State topper Funded AwardScheme)",
+   "name": "/Institutions/Universities(State DR. B.R. Ambedkar Funded State topper Scheme)",
    "pages": [
     124
    ],
@@ -25067,6 +25067,23 @@
    "snos": [
     "B."
    ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 5.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 5.0,
+   "be_revenue_lakh": 5.0,
+   "group": "Total [Revenue Department]",
+   "key": "unsectored | Total [Revenue Department] | Award to Minority students (Statefunded Scheme)",
+   "mre_2025_26_lakh": 0.5,
+   "name": "Award to Minority students (Statefunded Scheme)",
+   "pages": [
+    124
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": []
   },
   {
    "actual_2024_25_lakh": 0.0,
@@ -25996,23 +26013,6 @@
    ]
   },
   {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 5.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 5.0,
-   "be_revenue_lakh": 5.0,
-   "group": "Total [Revenue Department]",
-   "key": "unsectored | Total [Revenue Department] | to Minority students (Statefunded Scheme)",
-   "mre_2025_26_lakh": 0.5,
-   "name": "to Minority students (Statefunded Scheme)",
-   "pages": [
-    124
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": []
-  },
-  {
    "actual_2024_25_lakh": 7125.0,
    "be_2025_26_lakh": 61123.0,
    "be_capital_or_loan_lakh": 0.0,
@@ -26541,25 +26541,6 @@
   },
   {
    "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 100000.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 0.0,
-   "be_revenue_lakh": 0.0,
-   "group": "Total [WATER SUPPLY] *",
-   "key": "unsectored | Total [WATER SUPPLY] * | (East GIA to&DJB North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
-   "mre_2025_26_lakh": 0.0,
-   "name": "(East GIA to&DJB North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
-   "pages": [
-    89
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": [
-    "5"
-   ]
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 1000.0,
    "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 1007.0,
@@ -26594,6 +26575,25 @@
    "sector": null,
    "snos": [
     "3"
+   ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 100000.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 0.0,
+   "be_revenue_lakh": 0.0,
+   "group": "Total [WATER SUPPLY] *",
+   "key": "unsectored | Total [WATER SUPPLY] * | GIA o&DJB (East North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
+   "mre_2025_26_lakh": 0.0,
+   "name": "GIA o&DJB (East North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
+   "pages": [
+    89
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": [
+    "5"
    ]
   },
   {
@@ -26998,21 +26998,19 @@
   {
    "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 0.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 0.0,
+   "be_capital_or_loan_lakh": 5000.0,
+   "be_lakh": 5000.0,
    "be_revenue_lakh": 0.0,
    "group": "Total- PWD Roads & Bridges C",
-   "key": "unsectored | Total- PWD Roads & Bridges C | (Payment IntegrationtoofDMRC)",
+   "key": "unsectored | Total- PWD Roads & Bridges C | (Payment elevated road along Yamuna River parallel to Ring Road Between Wazirabad flyover (Signature bridge)",
    "mre_2025_26_lakh": 0.0,
-   "name": "(Payment IntegrationtoofDMRC)",
+   "name": "(Payment elevated road along Yamuna River parallel to Ring Road Between Wazirabad flyover (Signature bridge)",
    "pages": [
     12
    ],
    "rows_added": 1,
    "sector": null,
-   "snos": [
-    "28"
-   ]
+   "snos": []
   },
   {
    "actual_2024_25_lakh": 0.0,
@@ -27490,6 +27488,25 @@
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total- PWD Roads & Bridges C",
+   "key": "unsectored | Total- PWD Roads & Bridges C | IntegrationtoofDMRC)",
+   "mre_2025_26_lakh": 0.0,
+   "name": "IntegrationtoofDMRC)",
+   "pages": [
+    12
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": [
+    "28"
+   ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 0.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 0.0,
+   "be_revenue_lakh": 0.0,
+   "group": "Total- PWD Roads & Bridges C",
    "key": "unsectored | Total- PWD Roads & Bridges C | Marg Construction of Half Underpass on ORR at Gopalpur Redlight, Jagat Pur Bridge",
    "mre_2025_26_lakh": 410.0,
    "name": "Marg Construction of Half Underpass on ORR at Gopalpur Redlight, Jagat Pur Bridge",
@@ -27784,30 +27801,13 @@
   {
    "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 0.0,
-   "be_capital_or_loan_lakh": 5000.0,
-   "be_lakh": 5000.0,
-   "be_revenue_lakh": 0.0,
-   "group": "Total- PWD Roads & Bridges C",
-   "key": "unsectored | Total- PWD Roads & Bridges C | elevated road along Yamuna River parallel to Ring Road Between Wazirabad flyover (Signature bridge)",
-   "mre_2025_26_lakh": 0.0,
-   "name": "elevated road along Yamuna River parallel to Ring Road Between Wazirabad flyover (Signature bridge)",
-   "pages": [
-    12
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": []
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 0.0,
    "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 0.0,
    "be_revenue_lakh": 0.0,
    "group": "Total- PWD Roads & Bridges C",
-   "key": "unsectored | Total- PWD Roads & Bridges C | with metro coridor, Improvement Maujpur-Majlis of Drainage Park System at M.B(Ph-IV) Soorghat",
+   "key": "unsectored | Total- PWD Roads & Bridges C | with metro Improvement coridor, of Maujpur-Majlis Drainage Park System at M.B(Ph-IV) Soorghat",
    "mre_2025_26_lakh": 0.0,
-   "name": "with metro coridor, Improvement Maujpur-Majlis of Drainage Park System at M.B(Ph-IV) Soorghat",
+   "name": "with metro Improvement coridor, of Maujpur-Majlis Drainage Park System at M.B(Ph-IV) Soorghat",
    "pages": [
     12
    ],
@@ -28031,9 +28031,9 @@
    "be_lakh": 1.0,
    "be_revenue_lakh": 1.0,
    "group": "Total-IHBAS (NHMP)CSS GIA-Capital",
-   "key": "unsectored | Total-IHBAS (NHMP)CSS GIA-Capital | IHBAS under the National Teritairy Care Scheme(NTCS) for centre of excellence of National Mental Health Programme IHBAS under(NHMP) CSS Teritairy the National GIA-General",
+   "key": "unsectored | Total-IHBAS (NHMP)CSS GIA-Capital | IHBAS under the National Teritairy Care Scheme(NTCS) for centre of excellence of National Mental Health Programme IHBAS (NHMP) under the CSS Teritairy National GIA-General",
    "mre_2025_26_lakh": 1.0,
-   "name": "IHBAS under the National Teritairy Care Scheme(NTCS) for centre of excellence of National Mental Health Programme IHBAS under(NHMP) CSS Teritairy the National GIA-General",
+   "name": "IHBAS under the National Teritairy Care Scheme(NTCS) for centre of excellence of National Mental Health Programme IHBAS (NHMP) under the CSS Teritairy National GIA-General",
    "pages": [
     73
    ],
@@ -34861,7 +34861,7 @@
       0.0
      ],
      "items_covered": 1,
-     "label": "Sub-Total     & Poshan [Deptt.     2.0) CSS",
+     "label": "Sub-Total      Poshan [Deptt. of 2.0) Women CSS",
      "ok": true,
      "page": 118,
      "printed": [

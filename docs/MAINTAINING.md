@@ -26,6 +26,13 @@ laptop in India). That is close enough to any single limit that the run is built
   The CAG walk cannot resume, so an unfinished one is discarded and retried whole.
 - **A complete myScheme snapshot goes to main as soon as it exists**, even if a secondary
   source is still retrying, and the side branch is then deleted.
+- **A state is re-parsed only when something it reads has changed.** `data/<state>/inputs.json`
+  holds a checksum of the state's archive, its parser and every repository module that
+  parser imports, plus its output. The runner's `pdftotext` is not the one the committed data
+  and hand labels were built with, and it reads two states' books differently, so a parse
+  the runner did not need to do is a parse it can only get wrong. After changing a state
+  parser, run it locally and commit its output with the new `inputs.json`
+  (`python3 progress.py stamp <state>`); `run.sh` does both.
 
 An unfinished run before the 7th is a warning in the log, not a failure email, because the
 next day's attempt continues it. On the 7th it fails loudly. To continue sooner, run the
@@ -87,6 +94,8 @@ There is no generic state parser and there should not be one. Each state is:
    collector that failed to find it.
 2. `parse/<state>.py` — `archive/` to `data/<state>/schemes.json`, with a `caveat` saying what
    one row is in that state's own terms.
+   If it reads anything outside `archive/<state>/` and the modules it imports, add that to
+   `EXTRA_INPUTS` in `progress.py`, or a change to it will not trigger a re-parse.
 3. `data/<state>/labels.json` — hand labels. A stratified probability sample of the whole
    book, **plus an audit census of every row at the publishing bar**, each row carrying its
    `how`. The census is what makes precision a count; the sample is what makes recall

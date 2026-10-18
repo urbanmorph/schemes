@@ -72,7 +72,15 @@ a = ap.parse_args(); d = "archive/$st/" + (a.year or a.date); os.makedirs(d, exi
 json.dump({"cycle": "2026-27"}, open(d + "/_manifest.json", "w"))
 EOF
 done
-rm -rf archive/myscheme/2026-10-* run.json
+# State parsers: say they ran, so a skipped one can be told from a re-run one.
+for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal telangana punjab \
+          jharkhand tripura delhi haryana uttarakhand uttarpradesh chhattisgarh; do
+  printf "open('%s', 'a').write('%s\\\\n')\\n" "$SP/parsed.log" "$st" > "parse/$st.py"
+done
+parsed() { [ -f "$SP/parsed.log" ] && wc -l < "$SP/parsed.log" | tr -d ' ' || echo 0; }
+# Start the month from nothing, whatever this checkout already holds for it.
+M=$(date -u +%Y-%m)
+rm -rf archive/myscheme/"$M"-* archive/dbt/"$M"-* archive/cag/"$M"-* run.json data/*/inputs.json
 
 # Every file under archive/ plus run.json, with its modification time: a run that writes
 # anything at all changes this.
@@ -94,6 +102,8 @@ got=$(wc -l < "archive/myscheme/$DAY1/details" | tr -d ' ')
 want "what it fetched stays on disk" "$([ "$got" -ge 3 ] && [ "$got" -lt 6 ] && echo yes || echo "no ($got)")" yes
 want "sources it had no time for are deferred" "$(grep -c 'DEFERRED' "$SP/e2e-1.log" | awk '{print ($1>0)?"yes":"no"}')" yes
 want "run.json says not ok" "$(python3 -c "import json;print(json.load(open('run.json'))['ok'])")" False
+want "every state is parsed the first time" "$(parsed)" 16
+rm -f "$SP/parsed.log"
 
 echo "-- attempt 2: continues the same snapshot, CAG hangs past its budget"
 NEED=6 CAG_SECS=100 RESERVE_MIN=2 ./run.sh --resume-month --if-needed --deadline-min 60 > "$SP/e2e-2.log" 2>&1; rc=$?
@@ -101,12 +111,15 @@ want "the same snapshot date is resumed" "$(grep -c "collect · myScheme ($DAY1)
 want "myScheme finished from where it stopped" "$(wc -l < "archive/myscheme/$DAY1/details" | tr -d ' ')" 6
 want "a stopped CAG walk is discarded" "$([ -d "archive/cag/$DAY1" ] && echo kept || echo gone)" gone
 want "still exits 75 while CAG is unfinished" "$rc" 75
+want "no state is parsed again when nothing it reads changed" "$(parsed)" 0
+echo "new book" > archive/delhi/new-book.pdf
 
 echo "-- attempt 3: everything left fits"
 NEED=6 RESERVE_MIN=2 ./run.sh --resume-month --if-needed --deadline-min 60 > "$SP/e2e-3.log" 2>&1; rc=$?
 want "finished myScheme is skipped" "$(grep -c 'every detail for .* is archived, skipping' "$SP/e2e-3.log")" 1
 want "finished DBT is skipped" "$(grep -c 'DBT for .* is archived, skipping' "$SP/e2e-3.log")" 1
 want "a clean run exits 0" "$rc" 0
+want "a changed archive re-parses that state alone" "$(cat "$SP/parsed.log" 2>/dev/null)" delhi
 want "run.json says ok" "$(python3 -c "import json;print(json.load(open('run.json'))['ok'])")" True
 
 echo "-- attempt 4: the month is done"
@@ -118,4 +131,4 @@ want "a repeat says there is nothing to do" "$(grep -c 'nothing to do' "$SP/e2e-
 want "a repeat changes no file" "$before" "$after"
 
 cd "$REPO" && git worktree remove --force "$W"
-[ "$fails" = 0 ] && echo "all e2e tests pass" || { echo "$fails failed"; exit 1; }
+if [ "$fails" = 0 ]; then echo "all e2e tests pass"; else echo "$fails failed"; exit 1; fi
