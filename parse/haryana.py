@@ -106,8 +106,6 @@ RUPEE_UNIT = re.compile(r"\(\s*Amount\s+in\s+₹\s*\)", re.I)
 # Haryana prints the banner with its spaces intact on 96 pages and with every space
 # dropped on two, so the cycle is read from the page with the spaces squeezed out.
 LIST_BANNER = re.compile(r"LISTOFSCHEMESBUDGETESTIMATE(\d{4}-\d{2})")
-SUMMARY_BANNER = re.compile(r"SummaryofBudgetEstimate(\d{4}-\d{2})", re.I)
-
 # P-01-10-2401-51-105-96-51, the state's own scheme code: part, department, major head,
 # sub-major, minor, scheme serial, object head.
 TABLE_CODE = re.compile(r"^\s*(P-\d{2}-\d{2}-\d{4}-\d{2}-\d{3}-\d{2}-\d{2,3})\s")

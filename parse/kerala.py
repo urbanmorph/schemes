@@ -209,10 +209,6 @@ def _pages_of(path, tol=2.5):
         el.clear()
 
 
-def words(row):
-    return [c[2] for c in row[2]]
-
-
 def text_of(cells):
     return re.sub(r"\s+", " ", " ".join(c[2] for c in cells)).strip()
 

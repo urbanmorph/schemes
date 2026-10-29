@@ -102,7 +102,6 @@ main{padding:38px 0 76px}
    the tighter one always winning and the container doing nothing. .measure is kept as a
    no-op hook so existing markup stays valid. */
 .measure{max-width:none}
-.lede{font-family:var(--serif);font-size:var(--fs-lg);line-height:1.5;margin:0 0 18px}
 p{margin:0 0 15px}
 .muted{color:var(--muted)}
 .sec{margin-top:48px}
@@ -749,15 +748,6 @@ table.mini td:nth-child(2){width:18%}
 #stix thead th{white-space:normal;letter-spacing:.04em;line-height:1.3}
 #stix td{vertical-align:top}
 #stix td:last-child{font-size:var(--fs-sm);line-height:1.45}
-
-#stref{table-layout:fixed;width:100%;min-width:760px}
-#stref th:nth-child(1),#stref td:nth-child(1){width:16%;white-space:nowrap}
-#stref th:nth-child(2),#stref td:nth-child(2){width:12%;padding-left:8px;padding-right:8px}
-#stref th:nth-child(3),#stref td:nth-child(3){width:12%}
-#stref td{vertical-align:top}
-#stref td:last-child{font-size:var(--fs-sm);line-height:1.45}
-#stref tr.refused{background:var(--sink)}
-#stref tr.refused td:first-child{color:var(--ink);font-weight:500}
 
 /* The watchlist on /changes. The two dates are the point, so they are monospaced and
    right-aligned against each other rather than left in prose. */

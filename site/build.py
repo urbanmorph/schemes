@@ -573,10 +573,6 @@ def page_findings(census, checks, dbt, entries):
     summ = (checks or {}).get("summary", {})
     by = summ.get("by_check", {})
 
-    def failpct(k):
-        v = by.get(k)
-        return f'{v["fail_pct"]}%' if v else '<span class="nil">...</span>'
-
     dbt_total = (dbt or {}).get("state_total")
     ms_state = lvl.get("State")
 
@@ -2332,7 +2328,6 @@ def index_section(entries):
     r0_src = {k: sum(1 for x in entries if k in x["sources"])
               for k in ("myscheme", "budget", "dbt", "outcome")}
     r0 = {
-        "shown": f"{len(entries):,}",
         "noms": f"{len(entries) - r0_src['myscheme']:,}",
         "unjudged": f"{sum(1 for x in entries if x.get('href')):,}",
         # Expressed the same way as the table's Score column beside it. A rail reading
@@ -3287,55 +3282,54 @@ def state_block_for(entry):
     st = (entry or {}).get("state_source")
     if not st:
         return ""
-    if True:
-        bits = []
-        if st.get("code"):
-            bits.append(f'<tr><td>Scheme code</td><td><code>{e(st["code"])}</code></td>'
-                        f'<td class="muted">the state&rsquo;s own identifier</td></tr>')
-        if st.get("heads"):
-            bits.append(f'<tr><td>Head of account</td><td><code>'
-                        f'{e(", ".join(str(h) for h in st["heads"][:4]))}</code></td>'
-                        f'<td class="muted">where the money is voted</td></tr>')
-        if st.get("sector"):
-            bits.append(f'<tr><td>Sector</td><td>{e(st["sector"])}</td>'
-                        f'<td class="muted">as the state files it</td></tr>')
-        if st.get("books"):
-            bits.append(f'<tr><td>Named in</td><td>{e(", ".join(st["books"]))}</td>'
-                        f'<td class="muted">which of the state&rsquo;s books list it</td></tr>')
-        if st.get("name_latin"):
-            bits.insert(0, f'<tr><td>Romanised</td><td>{e(st["name_latin"])}</td>'
-                           f'<td class="muted">derived by transliteration, not translation: '
-                           f'a change of script that makes no claim about meaning</td></tr>')
-        why = "; ".join(w for _, w in (st.get("evidence") or [])[:3])
-        if st.get("unclassified"):
-            # No classifier has run on this state, so there is no score and no verdict, and
-            # the page must not imply either. What the row asserts is the whole of what can
-            # be asserted: the state's budget names this, at the level the state files
-            # schemes. The caveat is the state parser's own words, not a paraphrase.
-            judged = f"""
-    <b>This is a budget line the state names, and nothing here calls it a scheme</b>
-    No classifier has been built for {e(st["state"])} yet, so this register makes the
-    weaker of its two claims about this row: {e(st["state"])}&rsquo;s own budget names it,
-    at the level that state files schemes at. It does not say the row is a scheme a citizen
-    can apply to, and it does not appear among the schemes named as hidden on
-    /divergence. Naming a directorate as a hidden scheme would be a false accusation and
-    that bar is not this one.
-    {'<p style="margin:8px 0 0">' + e(st["caveat"]) + '</p>' if st.get("caveat") else ''}"""
-        else:
-            strength = ("It also clears the higher bar this register uses before saying a "
-                        "scheme is hidden from citizens, and it is named on /divergence."
-                        if st.get("publishable") else
-                        "It does NOT clear the higher bar this register uses before saying a "
-                        "scheme is hidden from citizens, so it is listed here and not named "
-                        "there. Listing a budget head as a scheme is an annoyance; naming one "
-                        "as hidden would be a false accusation, and the two are not the same "
-                        "claim.")
-            judged = f"""
-    <b>How this was judged a scheme rather than a budget head</b>
-    A state budget book lists colleges, directorates and building heads beside schemes.
-    This row scored {st.get("score")} on published signals: {e(why) or "see the data"}.
-    {strength}"""
-        state_block = f"""
+    bits = []
+    if st.get("code"):
+        bits.append(f'<tr><td>Scheme code</td><td><code>{e(st["code"])}</code></td>'
+                    f'<td class="muted">the state&rsquo;s own identifier</td></tr>')
+    if st.get("heads"):
+        bits.append(f'<tr><td>Head of account</td><td><code>'
+                    f'{e(", ".join(str(h) for h in st["heads"][:4]))}</code></td>'
+                    f'<td class="muted">where the money is voted</td></tr>')
+    if st.get("sector"):
+        bits.append(f'<tr><td>Sector</td><td>{e(st["sector"])}</td>'
+                    f'<td class="muted">as the state files it</td></tr>')
+    if st.get("books"):
+        bits.append(f'<tr><td>Named in</td><td>{e(", ".join(st["books"]))}</td>'
+                    f'<td class="muted">which of the state&rsquo;s books list it</td></tr>')
+    if st.get("name_latin"):
+        bits.insert(0, f'<tr><td>Romanised</td><td>{e(st["name_latin"])}</td>'
+                       f'<td class="muted">derived by transliteration, not translation: '
+                       f'a change of script that makes no claim about meaning</td></tr>')
+    why = "; ".join(w for _, w in (st.get("evidence") or [])[:3])
+    if st.get("unclassified"):
+        # No classifier has run on this state, so there is no score and no verdict, and
+        # the page must not imply either. What the row asserts is the whole of what can
+        # be asserted: the state's budget names this, at the level the state files
+        # schemes. The caveat is the state parser's own words, not a paraphrase.
+        judged = f"""
+<b>This is a budget line the state names, and nothing here calls it a scheme</b>
+No classifier has been built for {e(st["state"])} yet, so this register makes the
+weaker of its two claims about this row: {e(st["state"])}&rsquo;s own budget names it,
+at the level that state files schemes at. It does not say the row is a scheme a citizen
+can apply to, and it does not appear among the schemes named as hidden on
+/divergence. Naming a directorate as a hidden scheme would be a false accusation and
+that bar is not this one.
+{'<p style="margin:8px 0 0">' + e(st["caveat"]) + '</p>' if st.get("caveat") else ''}"""
+    else:
+        strength = ("It also clears the higher bar this register uses before saying a "
+                    "scheme is hidden from citizens, and it is named on /divergence."
+                    if st.get("publishable") else
+                    "It does NOT clear the higher bar this register uses before saying a "
+                    "scheme is hidden from citizens, so it is listed here and not named "
+                    "there. Listing a budget head as a scheme is an annoyance; naming one "
+                    "as hidden would be a false accusation, and the two are not the same "
+                    "claim.")
+        judged = f"""
+<b>How this was judged a scheme rather than a budget head</b>
+A state budget book lists colleges, directorates and building heads beside schemes.
+This row scored {st.get("score")} on published signals: {e(why) or "see the data"}.
+{strength}"""
+    state_block = f"""
 <section class="sec">
   <h2>What {e(st["state"])} publishes about this</h2>
   <div class="sec-note">From the state&rsquo;s own budget books &middot; myScheme has no

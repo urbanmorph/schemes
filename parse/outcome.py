@@ -32,7 +32,6 @@ and what the government is on the hook for, are extracted in full.
 
 import argparse
 import gzip
-import json
 import os
 import re
 import shutil

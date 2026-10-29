@@ -1,7 +1,7 @@
 """
 Enrichment from the archived Union Budget statements — money myScheme never publishes.
 
-SECONDARY LAYER (see enrich/wikidata.py for the rule). Writes only to
+SECONDARY LAYER (see docs/attic/wikidata.py for the rule). Writes only to
 data/enrichment/, never into data/myscheme/, and is never counted by parse/checks.py.
 
 Why this source rather than the open web: the point of the register is to surface what

@@ -19,7 +19,6 @@ document offers, so every parse is checked against it and a mismatch is fatal.
 """
 
 import argparse
-import glob
 import gzip
 import os
 import re

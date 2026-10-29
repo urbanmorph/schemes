@@ -123,7 +123,6 @@ SNO_WIDTH = 8
 # ("S.P.C.A.- Total"), so the test is for the word anywhere in the cell.
 TOTAL_WORD = re.compile(r"\btotals?\b", re.I)
 # A sector total names its own sector in brackets: "TOTAL [OTHER ADMN. SERVICES]".
-SECTOR_TOTAL = re.compile(r"^\s*TOTAL\s*\[(.+?)\]\s*$", re.I)
 GRAND_TOTAL = re.compile(r"^\s*Grand\s+Total\s*$", re.I)
 
 BLOCKS = ("actual 2024-25", "be 2025-26", "mre 2025-26", "be 2026-27")

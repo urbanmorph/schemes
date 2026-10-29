@@ -34,8 +34,6 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, looks_like_error, read_json, utcnow, today, write_json  # noqa: E402
 
-STALE_DAYS = 40      # monthly cadence + a week of slack
-
 
 class Truncated(Exception):
     """The gzip stream ends without its end-of-stream marker."""
