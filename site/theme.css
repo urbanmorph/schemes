@@ -60,7 +60,7 @@ a{color:inherit}
 
 .mast{border-bottom:1px solid var(--rule-strong);background:var(--surface)}
 .mast-in{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
-  padding:22px 0 16px;flex-wrap:wrap}
+  padding-top:22px;padding-bottom:16px;flex-wrap:wrap}
 .brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
 .brand .nil{font-family:var(--mono);font-size:34px;color:var(--stamp-bright);letter-spacing:.06em;
   line-height:.7;opacity:.9}
@@ -398,7 +398,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 /* Everything above the search box is chrome. It was costing roughly 320px on a laptop
    and more than a phone screen on mobile, so the first thing a reader saw was the
    masthead and the last thing they reached was the register. */
-.mast-in{padding:15px 0 12px}
+.mast-in{padding-top:15px;padding-bottom:12px}
 .route{padding:10px 18px}
 .fresh .wrap{padding:7px 28px}
 main{padding:22px 0 64px}
@@ -418,7 +418,7 @@ main{padding:22px 0 64px}
 }
 
 @media (max-width:620px){
-  .mast-in{padding:10px 0 9px;gap:10px}
+  .mast-in{padding-top:10px;padding-bottom:9px;gap:10px}
   .brand h1{font-size:var(--fs-lg)}
   .brand .nil{font-size:var(--fs-xl)}
   .brand .sub{display:none}          /* the strapline repeats the page title */
@@ -474,12 +474,19 @@ main{padding:22px 0 64px}
   display:flex;gap:2px;margin-left:auto;margin-right:14px}
 .route{padding:7px 12px;border-bottom:2px solid transparent}
 .brand{margin-right:8px}
+/* Six routes and a one-line tagline do not fit beside each other at laptop width, and the
+   nav dropped to a row of its own. Two lines of tagline cost nothing in height: the brand
+   name already makes the header that tall. */
+.brand .sub{display:block;max-width:36ch}
 
 @media (max-width:760px){
   .mast-in{flex-wrap:wrap;row-gap:6px}
-  .routes{margin-left:0;margin-right:0;width:100%;order:3}
-  .brand{margin-right:auto}
-  .route{padding:6px 11px;min-width:40px}
+  /* The routes and the theme button share the last row, and the routes wrap within it.
+     Six routes are wider than a phone. */
+  .routes{margin-left:0;margin-right:0;flex:1 1 0;flex-wrap:wrap;order:3}
+  #themeBtn{order:4;align-self:flex-start}
+  .brand{margin-right:auto;width:100%}
+  .route{padding:6px 9px;min-width:40px}
 }
 
 /* ---- mobile: the rail becomes a sticky footer ----------------------------------- */

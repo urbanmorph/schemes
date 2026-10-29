@@ -54,11 +54,12 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,50
          "&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500"
          "&display=optional")
 
-# The scheme index lives on "/" rather than behind its own route. The argument and the
-# evidence for it are the same page: someone who reads that 99% of schemes carry no end
-# date should be able to scroll straight into the list and check it, without treating
-# "see the data" as a separate destination.
-ROUTES = [("/", "index.html"), ("/states", "states.html"),
+# "/" is the scheme list and nothing else. It held the findings above the list for a
+# while, on the argument that a reader should be able to check a claim against the rows
+# without leaving the page. Most readers come to find a scheme, and they had to scroll
+# past six findings to reach the search box. The findings have their own page, and every
+# finding there links back to the rows that support it.
+ROUTES = [("/", "index.html"), ("/findings", "findings.html"), ("/states", "states.html"),
           ("/divergence", "divergence.html"),
           ("/audit", "audit.html"), ("/changes", "changes.html")]
 
@@ -491,7 +492,7 @@ def state_of_schemes(entries):
          f"The other {num(state_only)} appear in no national list at all: they are lines in "
          f"a state&rsquo;s own budget book that the state files as schemes. Even this is a "
          f"floor, because the union under-merges on purpose and because seven states cannot "
-         f"be read at all.", "#schemes", "Search all of them"),
+         f"be read at all.", "/#schemes", "Search all of them"),
         (f"{one / national:.0%}" if national else "&hellip;",
          f"of the {num(national)} that reach a national source are named by only one of them",
          f"{num(one)} appear in a single government list and in no other. Four sources, one "
@@ -515,7 +516,7 @@ def state_of_schemes(entries):
          f"of the portal&rsquo;s own records {worst_label}",
          "myScheme is the only source here written for citizens rather than for accountants, "
          "and this is the field it most often leaves blank. Every scheme page on this site "
-         "shows which of these tests its record passes.", "#schemes", "Search the records"),
+         "shows which of these tests its record passes.", "/#schemes", "Search the records"),
         (f"{audited} of {num(audit_of)}", "scheme names reach a CAG audit report",
          f"The catalogue holds {num(cagd.get('reports_in_catalogue') or 0)} reports, and "
          f"{num(cagd.get('register_names_national') or 0)} of the names above come from the "
@@ -548,7 +549,22 @@ def state_of_schemes(entries):
 '''
 
 
-def page_index(census, checks, dbt, entries):
+def page_index(entries):
+    """The front page: find a scheme. The findings are on /findings."""
+    return f"""
+<div class="topline">
+  <div>
+    <div class="eyebrow">Find a scheme</div>
+    <h1 class="pagetitle">Every scheme any government source names, in one list</h1>
+  </div>
+  <a class="jump" href="/findings">What the register has found &rarr;</a>
+</div>
+
+{index_section(entries)}
+"""
+
+
+def page_findings(census, checks, dbt, entries):
     facets = (census or {}).get("facets", {})
     lvl = facets.get("level", {})
     stype = facets.get("schemeType", {})
@@ -591,16 +607,13 @@ def page_index(census, checks, dbt, entries):
     return f"""
 <div class="topline">
   <div>
-    <div class="eyebrow">The census</div>
-    <h1 class="pagetitle">Every scheme any government source names,
-      and what each one fails to say</h1>
+    <div class="eyebrow">Findings</div>
+    <h1 class="pagetitle">What the government&rsquo;s scheme data leaves out</h1>
   </div>
-  <a class="jump" href="#argument">Why this exists &darr;</a>
+  <a class="jump" href="#argument">Why this register exists &darr;</a>
 </div>
 
 {state_of_schemes(entries)}
-
-{index_section(entries)}
 
 <section class="hero" id="argument">
   <div class="bignil" aria-hidden="true">...</div>
@@ -3720,8 +3733,14 @@ def build():
     ]
     w("index.html", shell(
         "Indian government schemes, and what each source leaves out", "/",
-        page_index(census, checks, dbt, entries),
+        page_index(entries),
         desc=home_desc, canon=SITE_BASE + "/", ld=home_ld))
+    w("findings.html", shell(
+        "Findings", "/findings", page_findings(census, checks, dbt, entries),
+        desc=("What the register has found in India's scheme data: how many schemes only "
+              "one source names, what state budgets fund that no portal lists, and which "
+              "states publish budgets no machine can read."),
+        canon=SITE_BASE + "/findings"))
     # Every row the table can show, as data. This replaced filters.json, which carried the
     # filter fields for rows whose display fields were in the HTML: two payloads describing
     # the same 23,955 rows. Compact on purpose, no indentation and no spaces after
