@@ -34,3 +34,7 @@ __pycache__/
 
 # Generated site output — rebuild with ./serve.sh
 site/_out/
+
+# Local-only copies too large for the git archive (e.g. CAG reports that left the
+# CAG index). Each folder carries a manifest with checksums. Not published.
+local/
