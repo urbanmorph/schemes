@@ -97,8 +97,8 @@ SURVEY = [
      "It prints STATE SCHEME &lt;name&gt;(&lt;code&gt;) in English capitals, and the "
      "Hindi and English are separated by a slash."),
     ("Delhi", "delhi", dict(list=True, text=True, bounded=True, english=True, closes=False),
-     "The whole scheme budget is one plain English file, and its Grand Total does not "
-     "close: 62,55,000 lakh printed against 64,55,956 summed, 3.2 per cent over."),
+     "The whole scheme budget is one plain English file. Its Grand Total does not close: "
+     "it prints 62,55,000 lakh, and the rows sum to 64,55,956, 3.2 per cent more."),
     ("Haryana", "haryana", dict(list=True, text=True, bounded=True, english=True, closes=True),
      "The Plan Memorandum names 970 schemes where the national portal lists 249."),
     ("Uttarakhand", "uttarakhand", dict(list=True, text=True, bounded=True, english=True, closes=False),
@@ -106,31 +106,30 @@ SURVEY = [
      "printed totals do not reconcile against the rows beneath them."),
     ("Uttar Pradesh", "uttarpradesh",
      dict(list=True, text=True, bounded=True, english=False, closes=False),
-     "The only state here built WITHOUT clearing the English test: there is no English "
-     "anywhere in its budget, and myScheme lists its schemes in romanised Hindi rather "
-     "than in English, so the join is a change of script. 111 of its 4,198 printed totals "
-     "do not reconcile."),
+     "The only state here built WITHOUT clearing the English test. Its budget has no "
+     "English. myScheme lists its schemes in romanised Hindi, so the join is a change of "
+     "script. 111 of its 4,198 printed totals do not reconcile."),
     ("Chhattisgarh", "chhattisgarh",
      dict(list=True, text=True, bounded=True, english=False, closes=False),
-     "Built from the WRONG BOOKS, and it says so on its own page. Its 44 department scheme "
-     "books hold 2,562 rows and set every name in the Chanakya legacy font, whose encoding "
-     "maps its codes to Latin glyph names with Devanagari outlines drawn in the slots, so "
-     "the font cannot decode itself and nothing in the PDF can: those names fail the text "
-     "test and are not published. The Outcome, Gender, Youth and Child books that 33 "
-     "departments publish are in Kruti Dev, which is ASCII and whose table is checked "
-     "against the state's own Unicode department index, and they are what this register "
-     "reads. Hindi only, like Uttar Pradesh, so the English test is not cleared and the "
-     "join is a change of script rather than a translation."),
+     "Built from the WRONG BOOKS, and its own page says so. Its 44 department scheme books "
+     "hold 2,562 rows and set every name in the Chanakya legacy font. That font maps its "
+     "codes to Latin glyph names and draws Devanagari outlines in the slots. So neither the "
+     "font nor anything else in the PDF can decode the names. They fail the text test, and "
+     "this register does not publish them. Instead it reads the Outcome, Gender, Youth and "
+     "Child books that 33 departments publish. These are in Kruti Dev, an ASCII font. Its "
+     "table is checked against the state's own Unicode department index. Like Uttar "
+     "Pradesh, the books are Hindi only. So the state does not clear the English test, and "
+     "the join is a change of script, not a translation."),
     ("Tripura", "tripura", dict(list=True, text=True, bounded=True, english=True, closes=True),
-     "These 134 state schemes and the 74 centrally sponsored ones printed beside them "
-     "come to 208 against DBT Bharat's 209, the closest any state document here has come "
-     "to reproducing a national count."),
+     "Its 134 state schemes and the 74 centrally sponsored ones beside them come to 208. "
+     "DBT Bharat counts 209. No other state document here comes this close to a national "
+     "count."),
 
     # ---- surveyed and refused ----------------------------------------------------
     ("Gujarat", None, dict(list=True, text=True, bounded=False, english=None, closes=None),
      "The Outcome Budget puts the name, the head of account and sometimes the target in "
-     "one column with no separator, and the column boundaries move between pages. There "
-     "is no rule that finds the end of a name.",
+     "one column, with no separator. The column boundaries move between pages. No rule "
+     "can find the end of a name.",
      "Put the head of account in a column of its own, or any separator at "
      "all between it and the name. Nothing else about the document has to "
      "change."),
@@ -138,32 +137,29 @@ SURVEY = [
     # the font and the font is no longer the problem; what stops it now is the calendar,
     # and saying the old thing would be saying something false about a state.
     ("Madhya Pradesh", None, dict(list=False, text=None, bounded=None, english=None, closes=None),
-     "NOT the font any more. It is set in KrutiDev010, which parse/krutidev.py decodes: a "
-     "page of Volume 9 came out as fluent Hindi with no change to the decoder, and its "
-     "demand books print a scheme code in brackets, a name and four money columns, so they "
-     "would parse. What stops it is the CYCLE. Its latest published budget is 2025-26 and "
-     "this register publishes 2026-27; the year filter on the finance site offers 2026-27 "
-     "and returns no documents for it, and every naming variant of the volume and demand "
-     "book URLs 404s. So it stops at the FIRST test, which asks for a scheme list FOR THIS "
-     "CYCLE, and the later tests are not asked. It would pass three of them if they were: "
-     "that is recorded here and not in the score, because a test this state was never asked "
-     "must not be counted as one it cleared.",
+     "NOT the font any more. It is set in KrutiDev010, and parse/krutidev.py decodes it. "
+     "A page of Volume 9 came out as fluent Hindi with no change to the decoder. Its demand "
+     "books print a scheme code in brackets, a name and four money columns, so they would "
+     "parse. What stops it is the CYCLE. Its latest published budget is 2025-26, and this "
+     "register publishes 2026-27. The finance site's year filter offers 2026-27 but returns "
+     "no documents for it. Every naming variant of the volume and demand book URLs gives a "
+     "404. So it stops at the FIRST test, which asks for a scheme list FOR THIS CYCLE, and "
+     "the later tests are not asked. It would pass three of them. This note records that, "
+     "but the score does not: a test the state was never asked cannot count as cleared.",
      "Publish the 2026-27 books at the same URLs the 2025-26 ones are "
      "already at. The format is readable; only the year is missing."),
     ("Bihar", None, dict(list=True, text=False, bounded=None, english=None, closes=None),
-     "It converts its budget to vector curves before publishing it. Its own file is "
-     "called Demands For Grants Curve.pdf, and 108 pages of it yield 108 extractable "
-     "characters.",
+     "It converts its budget to vector curves before it publishes it. Its own file name "
+     "is Demands For Grants Curve.pdf. Its 108 pages yield 108 extractable characters.",
      "Publish the same book with its text layer intact. The file is called "
-     "Demands For Grants Curve.pdf and the curves are the whole problem: the "
-     "document was typeset from text before it was flattened into drawings."),
+     "Demands For Grants Curve.pdf, and the curves are the whole problem. The "
+     "state typeset the document from text, then flattened it into drawings."),
     ("Rajasthan", None, dict(list=True, text=True, bounded=False, english=True, closes=None),
-     "The Output-Outcome Budget is in English and breaks names across lines mid-word "
-     "with no hyphen, which cannot be undone from geometry alone, and prints no totals "
-     "to check a guess against.",
-     "Print the totals. A name broken across lines could be rejoined by "
-     "guessing, and a guess with nothing to check it against is not a "
-     "reading."),
+     "The Output-Outcome Budget is in English. It breaks names across lines mid-word with "
+     "no hyphen, and geometry alone cannot undo that. It prints no totals to check a "
+     "guess against.",
+     "Print the totals. A machine could guess how to rejoin a broken name, "
+     "but a guess that nothing can check is not a reading."),
     ("Assam", None, dict(list=False, text=None, bounded=None, english=None, closes=None),
      "Its seven documents for this cycle include no scheme list. The FY 2024-25 Gender "
      "Budget is a good table and is two cycles behind what this register publishes.",

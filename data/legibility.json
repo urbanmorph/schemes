@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-29T04:20:54Z",
+ "built_at": "2026-10-29T09:11:49Z",
  "method_note": "Verdicts are hand-entered from reading each state's documents, which is the only way this survey has ever been done. Every verdict for a state that was built is then checked against that state's own parser output, and a disagreement stops the build rather than publishing. The refusals have no output to check against, which is what a refusal is, so each carries the measurement that decided it instead.",
  "schemes_named": 40241,
  "schemes_named_on_site": 40241,
@@ -398,7 +398,7 @@
    },
    "tests_run": 5,
    "what_would_change_it": null,
-   "why": "The whole scheme budget is one plain English file, and its Grand Total does not close: 62,55,000 lakh printed against 64,55,956 summed, 3.2 per cent over."
+   "why": "The whole scheme budget is one plain English file. Its Grand Total does not close: it prints 62,55,000 lakh, and the rows sum to 64,55,956, 3.2 per cent more."
   },
   {
    "built": true,
@@ -506,7 +506,7 @@
    },
    "tests_run": 5,
    "what_would_change_it": null,
-   "why": "The only state here built WITHOUT clearing the English test: there is no English anywhere in its budget, and myScheme lists its schemes in romanised Hindi rather than in English, so the join is a change of script. 111 of its 4,198 printed totals do not reconcile."
+   "why": "The only state here built WITHOUT clearing the English test. Its budget has no English. myScheme lists its schemes in romanised Hindi, so the join is a change of script. 111 of its 4,198 printed totals do not reconcile."
   },
   {
    "built": true,
@@ -542,7 +542,7 @@
    },
    "tests_run": 5,
    "what_would_change_it": null,
-   "why": "Built from the WRONG BOOKS, and it says so on its own page. Its 44 department scheme books hold 2,562 rows and set every name in the Chanakya legacy font, whose encoding maps its codes to Latin glyph names with Devanagari outlines drawn in the slots, so the font cannot decode itself and nothing in the PDF can: those names fail the text test and are not published. The Outcome, Gender, Youth and Child books that 33 departments publish are in Kruti Dev, which is ASCII and whose table is checked against the state's own Unicode department index, and they are what this register reads. Hindi only, like Uttar Pradesh, so the English test is not cleared and the join is a change of script rather than a translation."
+   "why": "Built from the WRONG BOOKS, and its own page says so. Its 44 department scheme books hold 2,562 rows and set every name in the Chanakya legacy font. That font maps its codes to Latin glyph names and draws Devanagari outlines in the slots. So neither the font nor anything else in the PDF can decode the names. They fail the text test, and this register does not publish them. Instead it reads the Outcome, Gender, Youth and Child books that 33 departments publish. These are in Kruti Dev, an ASCII font. Its table is checked against the state's own Unicode department index. Like Uttar Pradesh, the books are Hindi only. So the state does not clear the English test, and the join is a change of script, not a translation."
   },
   {
    "built": true,
@@ -578,7 +578,7 @@
    },
    "tests_run": 5,
    "what_would_change_it": null,
-   "why": "These 134 state schemes and the 74 centrally sponsored ones printed beside them come to 208 against DBT Bharat's 209, the closest any state document here has come to reproducing a national count."
+   "why": "Its 134 state schemes and the 74 centrally sponsored ones beside them come to 208. DBT Bharat counts 209. No other state document here comes this close to a national count."
   },
   {
    "built": false,
@@ -598,7 +598,7 @@
    },
    "tests_run": 3,
    "what_would_change_it": "Put the head of account in a column of its own, or any separator at all between it and the name. Nothing else about the document has to change.",
-   "why": "The Outcome Budget puts the name, the head of account and sometimes the target in one column with no separator, and the column boundaries move between pages. There is no rule that finds the end of a name."
+   "why": "The Outcome Budget puts the name, the head of account and sometimes the target in one column, with no separator. The column boundaries move between pages. No rule can find the end of a name."
   },
   {
    "built": false,
@@ -618,7 +618,7 @@
    },
    "tests_run": 1,
    "what_would_change_it": "Publish the 2026-27 books at the same URLs the 2025-26 ones are already at. The format is readable; only the year is missing.",
-   "why": "NOT the font any more. It is set in KrutiDev010, which parse/krutidev.py decodes: a page of Volume 9 came out as fluent Hindi with no change to the decoder, and its demand books print a scheme code in brackets, a name and four money columns, so they would parse. What stops it is the CYCLE. Its latest published budget is 2025-26 and this register publishes 2026-27; the year filter on the finance site offers 2026-27 and returns no documents for it, and every naming variant of the volume and demand book URLs 404s. So it stops at the FIRST test, which asks for a scheme list FOR THIS CYCLE, and the later tests are not asked. It would pass three of them if they were: that is recorded here and not in the score, because a test this state was never asked must not be counted as one it cleared."
+   "why": "NOT the font any more. It is set in KrutiDev010, and parse/krutidev.py decodes it. A page of Volume 9 came out as fluent Hindi with no change to the decoder. Its demand books print a scheme code in brackets, a name and four money columns, so they would parse. What stops it is the CYCLE. Its latest published budget is 2025-26, and this register publishes 2026-27. The finance site's year filter offers 2026-27 but returns no documents for it. Every naming variant of the volume and demand book URLs gives a 404. So it stops at the FIRST test, which asks for a scheme list FOR THIS CYCLE, and the later tests are not asked. It would pass three of them. This note records that, but the score does not: a test the state was never asked cannot count as cleared."
   },
   {
    "built": false,
@@ -637,8 +637,8 @@
     "text": false
    },
    "tests_run": 2,
-   "what_would_change_it": "Publish the same book with its text layer intact. The file is called Demands For Grants Curve.pdf and the curves are the whole problem: the document was typeset from text before it was flattened into drawings.",
-   "why": "It converts its budget to vector curves before publishing it. Its own file is called Demands For Grants Curve.pdf, and 108 pages of it yield 108 extractable characters."
+   "what_would_change_it": "Publish the same book with its text layer intact. The file is called Demands For Grants Curve.pdf, and the curves are the whole problem. The state typeset the document from text, then flattened it into drawings.",
+   "why": "It converts its budget to vector curves before it publishes it. Its own file name is Demands For Grants Curve.pdf. Its 108 pages yield 108 extractable characters."
   },
   {
    "built": false,
@@ -657,8 +657,8 @@
     "text": true
    },
    "tests_run": 4,
-   "what_would_change_it": "Print the totals. A name broken across lines could be rejoined by guessing, and a guess with nothing to check it against is not a reading.",
-   "why": "The Output-Outcome Budget is in English and breaks names across lines mid-word with no hyphen, which cannot be undone from geometry alone, and prints no totals to check a guess against."
+   "what_would_change_it": "Print the totals. A machine could guess how to rejoin a broken name, but a guess that nothing can check is not a reading.",
+   "why": "The Output-Outcome Budget is in English. It breaks names across lines mid-word with no hyphen, and geometry alone cannot undo that. It prints no totals to check a guess against."
   },
   {
    "built": false,

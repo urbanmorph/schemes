@@ -358,7 +358,7 @@ def shell(title, active, body, depth=0, desc="", canon="", ld=None):
 <main id="main" tabindex="-1"><div class="wrap">{body}</div></main>
 <footer><div class="wrap">
   <div class="srcs">
-    <b>Every figure on this page comes from one of four government sources</b>
+    <b>Every figure on this page comes from one of these government sources</b>
     <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener">myScheme</a>
     <span>scheme records, eligibility, benefits</span>
     <a href="https://www.indiabudget.gov.in/doc/eb/stat4a.pdf" target="_blank" rel="noopener">Union Budget, Statements 4A and 4B</a>
@@ -367,9 +367,13 @@ def shell(title, active, body, depth=0, desc="", canon="", ld=None):
     <span>output and outcome targets</span>
     <a href="https://dbtbharat.gov.in/" target="_blank" rel="noopener">DBT Bharat</a>
     <span>direct benefit transfer listings</span>
-    <p>Collected {e(st.get('snapshot') or '')} and archived byte for byte, so any figure
-    here can be traced to the request that produced it. Nothing on this site is
-    calculated from a source that is not named above.</p>
+    <a href="{up}states">State budget books</a>
+    <span>fifteen states&rsquo; own scheme lines</span>
+    <a href="https://cag.gov.in/en/audit-report" target="_blank" rel="noopener">CAG audit reports</a>
+    <span>which schemes have been audited</span>
+    <p>Collected {e(st.get('snapshot') or '')}. The archive keeps every answer byte for
+    byte, so you can trace any figure here to the request that produced it. This site
+    calculates nothing from a source that is not named above.</p>
   </div>
   <div class="foot">
     <span>The Schemes Register &middot; local build, not deployed</span>
@@ -488,43 +492,42 @@ def state_of_schemes(entries):
 
     steps = [
         (num(held), "schemes this register can name",
-         f"{num(national)} of them are named by at least one of the four national sources. "
-         f"The other {num(state_only)} appear in no national list at all: they are lines in "
-         f"a state&rsquo;s own budget book that the state files as schemes. Even this is a "
-         f"floor, because the union under-merges on purpose and because seven states cannot "
-         f"be read at all.", "/#schemes", "Search all of them"),
+         f"At least one of the four national sources names {num(national)} of them. The other "
+         f"{num(state_only)} are in no national list. They are lines in a state&rsquo;s own "
+         f"budget book that the state files as schemes. Even this total is a floor. The union "
+         f"merges too little on purpose, and a machine cannot read {word(refused).lower()} "
+         f"states&rsquo; budgets at all.", "/#schemes", "Search all of them"),
         (f"{one / national:.0%}" if national else "&hellip;",
          f"of the {num(national)} that reach a national source are named by only one of them",
-         f"{num(one)} appear in a single government list and in no other. Four sources, one "
-         f"country, and no agreed register of what it runs. This is the measurement of that "
-         f"rather than the assertion of it.", "/divergence",
+         f"{num(one)} appear in one government list and in no other. One country has four "
+         f"sources and no agreed register of what it runs. This number measures that gap.",
+         "/divergence",
          "See the four sources disagree"),
         (num(absent), "are funded by a state budget and listed by no national portal",
          f"Across the {num(states_classified)} states this register reads closely, worth "
-         f"&#8377;{inr(round(absent_lakh / 100))} crore of provision in the current cycle. Each "
-         f"one "
-         f"is named, scored, and published with the hand label that judged it.",
+         f"&#8377;{inr(round(absent_lakh / 100))} crore of provision in the current cycle. "
+         f"Each one has its name, its score and the hand label that judged it.",
          "/states", "See them state by state"),
         (f"{refused} of {surveyed}", "states publish a budget no machine can read",
          f"DBT Bharat counts {num(ref_dbt)} state schemes between those {word(refused).lower()} and "
-         f"myScheme lists {num(ref_ms)}. Those two are the only sources anybody has for these "
-         f"states and they agree about none of them, because the document that would settle "
-         f"it is the one that cannot be read. A state here is not accused of hiding anything: "
-         f"the fault is in how a file was saved, and each one is named with the single change "
-         f"that would undo it.", "/states", "Read each refusal"),
+         f"myScheme lists {num(ref_ms)}. They are the only sources for these states, and they "
+         f"disagree about every one. The budget that would settle it is the document a machine "
+         f"cannot read. This register accuses no state of hiding anything. The cause is how a "
+         f"file was saved, and each state&rsquo;s entry names the one change that would fix "
+         f"it.", "/states", "Read each refusal"),
         (f"{worst[1].get('fail_pct', 0):.0f}%" if worst else "&hellip;",
          f"of the portal&rsquo;s own records {worst_label}",
-         "myScheme is the only source here written for citizens rather than for accountants, "
-         "and this is the field it most often leaves blank. Every scheme page on this site "
-         "shows which of these tests its record passes.", "/#schemes", "Search the records"),
+         "myScheme is the only source here written for citizens. The others are written for "
+         "accountants. This is the field myScheme most often leaves blank. Every scheme page "
+         "on this site shows which tests its record passes.", "/#schemes", "Search the records"),
         (f"{audited} of {num(audit_of)}", "scheme names reach a CAG audit report",
-         f"The catalogue holds {num(cagd.get('reports_in_catalogue') or 0)} reports, and "
-         f"{num(cagd.get('register_names_national') or 0)} of the names above come from the "
-         f"national sources with {num(cagd.get('register_names_state') or 0)} more read out "
-         f"of state budget books. A name that two of them share is counted once, which is "
-         f"why this denominator is smaller than the {num(held)} rows. This register records "
-         f"that an audit exists, on what and where to read it, and never what one concluded: "
-         f"that is the CAG&rsquo;s to publish.", "/audit", "See the catalogue"),
+         f"The catalogue holds {num(cagd.get('reports_in_catalogue') or 0)} reports. Of the "
+         f"names above, {num(cagd.get('register_names_national') or 0)} come from the national "
+         f"sources and {num(cagd.get('register_names_state') or 0)} from state budget books."
+         f" A name in two sources counts once here, so this number "
+         f"is smaller than the {num(held)} rows. This register records that an audit exists, "
+         f"its subject and where to read it. It never records what an audit concluded. Only "
+         f"the CAG publishes that.", "/audit", "See the catalogue"),
     ]
 
     rows = "".join(
@@ -542,8 +545,9 @@ def state_of_schemes(entries):
     <div class="eyebrow">The state of the schemes</div>
     <div class="sos-date">Rebuilt {e(str(leg.get("built_at") or "")[:10])}</div>
   </div>
-  <p class="standfirst">What this register has established, in the order the evidence
-  narrows. Every number is counted from the sources below and recomputed every month.</p>
+  <p class="standfirst">What this register has found, from the widest count to the
+  narrowest. The build counts every number from the archived sources and counts it again
+  every month.</p>
   {rows}
 </section>
 '''
@@ -629,15 +633,14 @@ def page_findings(census, checks, dbt, entries):
 
 <section class="sec">
   <h2>What this is</h2>
-  <div class="sec-note">And, more to the point, what it is not</div>
+  <div class="sec-note">And what it does not do</div>
   <div class="measure">
-    <p>This is not a list of schemes you can apply to. myScheme already does that.
-    This is a record of <em>the data about</em> those schemes: how completely each one is
-    documented, whether the sources contradict one another, and what changed since last
-    month.</p>
-    <p>Every claim here is about government publishing practice, never about whether a
-    scheme works. &ldquo;No end date recorded&rdquo; is a fact about a database field. It
-    is not a judgment on the scheme.</p>
+    <p>To apply for a scheme, use myScheme. This register records <em>the data about</em>
+    schemes. It shows how completely each source documents a scheme, where the sources
+    contradict one another, and what changed since last month.</p>
+    <p>Every claim here is about how the government publishes. None is about whether a
+    scheme works. &ldquo;No end date recorded&rdquo; describes a database field, and says
+    nothing about the scheme itself.</p>
   </div>
 </section>
 
@@ -649,9 +652,9 @@ def page_findings(census, checks, dbt, entries):
     <thead><tr><th>Check</th><th class="num">Schemes failing</th><th class="num">Share</th></tr></thead>
     <tbody>{qrows or '<tr><td colspan="3" class="muted">run parse/checks.py</td></tr>'}</tbody>
   </table></div>
-  <div class="sec-note" style="margin-top:9px">Link reachability and cross-source joins are
-    deliberately not here yet. Both carry real error bars and belong behind a
-    methodology page. These do not.</div>
+  <div class="sec-note" style="margin-top:9px">This table leaves out link checks and
+    cross-source joins on purpose. Both have real error bars and need a methodology page.
+    The checks above have none.</div>
 </section>
 """
 
@@ -661,16 +664,15 @@ def page_findings(census, checks, dbt, entries):
 # names instead of writing them" is a pattern, and a pattern is what a reader can act on.
 REFUSAL_GROUP = {
     "list": ("serves", "serve", "no scheme list at all",
-             "Assam publishes none for this cycle; Himachal Pradesh publishes thirty "
+             "Assam publishes none for this cycle. Himachal Pradesh publishes thirty "
              "documents and serves none of them"),
     "text": ("publishes", "publish", "names as pictures rather than as text",
-             "Madhya Pradesh and Chhattisgarh in legacy 8-bit fonts, Bihar by converting "
-             "the page to vector curves"),
+             "Bihar converts each page to vector curves before it publishes the book"),
     "bounded": ("publishes", "publish", "names a machine cannot find the end of",
-                "Gujarat runs the name, the code and the target into one column; "
+                "Gujarat runs the name, the code and the target into one column. "
                 "Rajasthan breaks names across lines mid-word"),
     "english": ("publishes", "publish", "no English at all",
-                "names a machine can read perfectly and cannot join to a list in English"),
+                "a machine can read the names but cannot join them to a list in English"),
 }
 
 
@@ -763,8 +765,10 @@ def legibility_section(leg, ms=None):
         if not hit or key not in REFUSAL_GROUP:
             continue
         vs, vp, what, detail = REFUSAL_GROUP[key]
-        groups += (f'<li><b>{e(", ".join(r["state"] for r in hit))}</b> '
-                   f'{vs if len(hit) == 1 else vp} {what}: {detail}.</li>')
+        names = [r["state"] for r in hit]
+        names = ", ".join(names[:-1]) + " and " + names[-1] if len(names) > 1 else names[0]
+        groups += (f'<li><b>{e(names)}</b> {vs if len(hit) == 1 else vp} {what}. '
+                   f'{detail[0].upper() + detail[1:]}.</li>')
 
     # What the national sources say is behind the refusals, so the scoreboard names a
     # size and not only a count of states.
@@ -782,9 +786,9 @@ def legibility_section(leg, ms=None):
   <p class="standfirst">Every number further down this page comes from a state whose budget
   a machine could read. That is not the same as a state that publishes one. Gujarat
   publishes more than most states here and cannot be read at all; Bihar publishes more than
-  Gujarat and converts it to drawings first. A state that refuses to be read is not a gap
-  in this register, it is a fact about that state, and it belongs on the page beside the
-  states that yielded.</p>
+  Gujarat and converts it to drawings first. When a machine cannot read a state&rsquo;s
+  budget, that is a fact about the state. This page shows those states beside the ones a
+  machine can read.</p>
   <p><a class="jump" href="/states#refused">What stops each of the
   {num(leg.get("states_refused"))}, and what would undo it &rarr;</a></p>
 
@@ -802,10 +806,10 @@ def legibility_section(leg, ms=None):
       less than it looks</b>
     <ul class="lg-list">{groups}</ul>
     <p style="margin:8px 0 0">Only one of the {word(leg.get("states_refused")).lower()} is a
-    layout problem. The rest are
-    decisions: to set a budget in a legacy font, to convert it to curves before publishing
-    it, to publish the English edition and serve a 404 for it, to publish nothing for the
-    current cycle. Each is reversible by the state and by nobody else.</p>
+    layout problem. Each of the others comes from a decision. One state sets its budget in
+    a legacy font. One converts it to curves before it publishes it. One lists an English
+    edition and serves a 404 for it. One publishes nothing for the current cycle. Only the
+    state can reverse each decision.</p>
   </div>
 
   <div class="warnbox">
@@ -824,12 +828,12 @@ def legibility_section(leg, ms=None):
     rather than the benefit</b>, discharges the state&rsquo;s obligation to its own serving
     or retired staff, services its own debt, or is an accounting head.
     <p style="margin:8px 0 0">That last clause is the one that does the work and the one
-    this register got wrong. Seven states were labelled against this wording; eight later
-    ones were labelled against a looser sentence that admitted &ldquo;a service&rdquo;, which
-    pulls in a helpline, a creche, an anganwadi&rsquo;s running costs and an agricultural
-    extension wing. Sixty-nine published rows were re-read against the wording above and
-    fifty-six changed side. Until that was done the headline number added two different
-    definitions together and said so nowhere.</p>
+    this register got wrong. We labelled seven states against this wording. We labelled
+    eight later states against a looser sentence that admitted &ldquo;a service&rdquo;.
+    That sentence lets in a helpline, a creche, an anganwadi&rsquo;s running costs and an
+    agricultural extension wing. We read sixty-nine published rows again against the
+    wording above, and fifty-six changed side. Until then, the headline number added two
+    different definitions together and did not say so.</p>
   </div>
 
   <div class="warnbox">
@@ -844,31 +848,28 @@ def legibility_section(leg, ms=None):
     <p style="margin:8px 0 0"><b style="display:inline;color:var(--ink);font-family:inherit;
     font-size:inherit;text-transform:none;letter-spacing:0">Listing a state and accusing a
     portal are different claims, and all {word(leg.get("states_built")).lower()} states now
-    make both.</b> Every one has a classifier built and validated against its own hand
-    labels, and every row at each state&rsquo;s publishing bar carries one, so the
-    precision behind an absence claim is a COUNT and its errors are named rather than
-    estimated. Naming a directorate as a hidden scheme is a false accusation, and that is
-    the bar these clear. Each state&rsquo;s full budget book is behind its name in the
-    table above: a classifier decides which lines this register will call schemes and does
-    not make the rest of the book stop existing.</p>
+    make both.</b> Each state has a classifier, tested against that state&rsquo;s own hand
+    labels. Every row at the state&rsquo;s publishing bar has a hand label. So the precision
+    behind an absence claim is a count, and each error has a name. To call a directorate a
+    hidden scheme is a false accusation, and these states clear that bar. The table above
+    links each state&rsquo;s full budget book. The classifier decides which lines this
+    register calls schemes. The other lines of the book stay on the state&rsquo;s page.</p>
     <p style="margin:8px 0 0"><b style="display:inline;color:var(--ink);font-family:inherit;
     font-size:inherit;text-transform:none;letter-spacing:0">Uttar Pradesh is here without
     clearing the English test, and it is the only one.</b> The largest state in India
-    publishes its budget in Hindi and in nothing else. It was a refusal for that reason
-    until the reason was checked, and the check went the other way: myScheme does not list
-    Uttar Pradesh&rsquo;s schemes in English either. It lists them in romanised Hindi:
-    Kanya Sumangala Yojana, Berojgari Bhatta Yojna. So what stood between the two lists was
-    a change of SCRIPT, which is deterministic, and not a translation, which would be this
-    register making a claim about meaning. Its 5,831 names are
-    published as the state wrote them, with a romanisation beside each one, labelled as
-    derived.
-    <p style="margin:8px 0 0">The last test is the one that separates the states that
-    yielded, and it is the strictest thing here: the book prints its own totals and a parse
-    of it agrees with <em>all</em> of them. Karnataka and Andhra Pradesh fail it because
-    their books print no totals at all, so their readings cannot be checked against the
-    source. Delhi and Uttarakhand fail it because the totals are printed and do not close.
-    Those are different failures and the table cannot tell them apart; the sentence beside
-    each one can.</p>
+    publishes its budget in Hindi and in nothing else. For that reason it was a refusal,
+    until we checked the reason. The check went the other way: myScheme does not list Uttar
+    Pradesh&rsquo;s schemes in English either. It lists them in romanised Hindi: Kanya
+    Sumangala Yojana, Berojgari Bhatta Yojna. So the two lists differ only in SCRIPT. A
+    change of script is mechanical. A translation would be a claim about meaning, and this
+    register does not make one. This page shows its 5,831 names as the state wrote them,
+    each with a romanisation labelled as derived.
+    <p style="margin:8px 0 0">The last test is the strictest, and it separates the states
+    that a machine can read. The book prints its own totals, and our reading must agree with
+    <em>all</em> of them. Karnataka and Andhra Pradesh fail because their books print no
+    totals, so nothing can check our reading against the source. Delhi and Uttarakhand fail
+    because their printed totals do not close. These are different failures. The table
+    cannot show the difference, but the sentence beside each state does.</p>
   </div>
 </section>"""
 
@@ -993,17 +994,17 @@ def page_state(key, state, d, leg_row, cls=None):
             f'because this register calls it anything.')
     else:
         scored_note = (
-            "A classifier separates a scheme from a budget head, and it is built per state "
-            "and validated against hand labels, because every state publishes different "
-            f"evidence. {e(state)} does not have one yet. Until it does, this register will "
-            "list what the state names and will not say of any row that a portal is hiding "
-            "it: that is an accusation and it needs counted precision behind it.")
+            "A classifier separates a scheme from a budget head. Each state publishes "
+            "different evidence, so each state gets its own classifier, tested against hand "
+            f"labels. {e(state)} does not have one yet. Until it does, this register lists "
+            "what the state names. It does not say that a portal hides any row, because "
+            "that is an accusation and needs counted precision behind it.")
 
     checks = ""
     if checked:
-        checks = (f"The book prints its own totals and this reading agrees with "
+        checks = (f"The book prints its own totals. This reading agrees with "
                   f"<b>{num(checked - failed)} of {num(checked)}</b> of them"
-                  + (f", and disagrees with {num(failed)}, which are listed in the data."
+                  + (f". The data lists the {num(failed)} that disagree."
                      if failed else ", with none left over."))
     # THE ABSENCE CLAIM, on the state's own page and on all fifteen.
     #
@@ -1222,23 +1223,22 @@ is a finding and not an omission.</p>
   <div class="sec-note">Surveyed against the same five tests and stopped at one of them
     &middot; DBT Bharat counts {num(ref_dbt)} state schemes between them and myScheme lists
     {num(ref_ms)} &middot; this register can read none of either</div>
-  <p class="standfirst">These are the six budgets a machine cannot read, and they are the
-  most important thing on this page. Every one of them is a document a citizen of that
-  state cannot check either: not because the state is hiding it, but because of how it was
-  saved to a file.</p>
+  <p class="standfirst">A machine cannot read these budgets, and they are the most important
+  thing on this page. A citizen of each state cannot check the budget either. The cause is
+  how the state saved the file.</p>
   {rblocks}
   <div class="warnbox">
     <b>The two numbers above a refusal are not this register&rsquo;s, and they disagree</b>
-    For a state whose own budget can be read, this register is a third source and can say
-    which of the other two is closer. For these it is not, so what is left is DBT Bharat&rsquo;s
-    count and myScheme&rsquo;s, and those two do not agree about a single one of them:
-    myScheme lists 643 schemes for Gujarat where DBT counts 394, and 75 for Himachal Pradesh
-    where DBT counts 174. Somewhere behind each of these documents is a number that would
-    settle it, and the document is the thing that cannot be read.
-    <p style="margin:8px 0 0">A refusal is about the DOCUMENT and not about the state. None
-    of these is accused of hiding anything, and nothing here is a claim about what is
-    inside: a budget that cannot be read one scheme at a time cannot be read the other way
-    either, and this register will not guess at what it holds.</p>
+    When a machine can read a state&rsquo;s budget, this register is a third source. It can
+    then say which of the other two is closer. For these states that is not possible. Only
+    DBT Bharat&rsquo;s count and myScheme&rsquo;s remain, and they disagree about every
+    state. myScheme lists 643 schemes for Gujarat and DBT counts 394. For Himachal Pradesh
+    the numbers are 75 and 174. Each budget holds the number that would settle the
+    question, and a machine cannot read it.
+    <p style="margin:8px 0 0">A refusal is about the DOCUMENT. This register does not
+    accuse any of these states of hiding anything, and it makes no claim about what the
+    documents hold. If a machine cannot read a budget one scheme at a time, it cannot read
+    the budget in any other way. This register does not guess at the contents.</p>
   </div>
 </section>
 '''
@@ -1326,8 +1326,9 @@ def page_audit(cag, audited):
 <div class="eyebrow">Route &middot; /audit</div>
 <h1 class="pagetitle">What the CAG has audited, which is not published as a list anywhere</h1>
 <p class="standfirst">The Comptroller and Auditor General of India has tabled
-{num(total)} audit reports. The catalogue says what each one is about; it does not say
-which of them are about a scheme, and there is no way to ask it. This page is that list.</p>
+{num(total)} audit reports. The catalogue says what each report is about. It does not say
+which reports are about a scheme, and you cannot search it for that. This page gives that
+list.</p>
 
 <div class="callout">
   <div class="big">{num((audited or {}).get("schemes_audited"))} schemes in this register
@@ -1348,9 +1349,9 @@ which of them are about a scheme, and there is no way to ask it. This page is th
   <div class="sec-note">{num((audited or {}).get("joins_published"))} of
     {num((audited or {}).get("joins_considered"))} joins any rule produced &middot; the
     rest were measured and rejected</div>
-  <p class="standfirst">This is the short list, and it is short on purpose. An audit
-  attached to the wrong scheme is a factual error on that scheme&rsquo;s page; a missing
-  one is a gap the next pass can close.</p>
+  <p class="standfirst">The list is short on purpose. An audit joined to the wrong scheme
+  puts a false fact on that scheme&rsquo;s page. A missing audit is a gap that a later
+  pass can close.</p>
   <div class="tscroll"><table id="audsch" aria-label="Schemes in this register the CAG has audited">
     <thead><tr><th>Scheme</th><th class="num">Reports</th><th>Type, government, tabled</th>
       <th>Read it</th></tr></thead>
@@ -1577,9 +1578,9 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
   <div class="sec-note">Union registry across four government sources &middot;
     {num(reg.get('total_entries'))} entries against myScheme's
     {num(reg.get('myscheme_entries'))}</div>
-  <p class="standfirst">A scheme the state funds but never tells citizens about is a
-  harder finding than any missing field, and it is invisible to anything that
-  treats myScheme&rsquo;s 4,772 as the universe.</p>
+  <p class="standfirst">Some schemes are funded but never announced to citizens. That is a
+  stronger finding than any missing field. A count that starts from myScheme&rsquo;s
+  {num(reg.get('myscheme_entries'))} records cannot see these schemes.</p>
   <div class="tscroll"><table>
     <thead><tr><th>Funded and classified a scheme, absent from myScheme</th>
       <th class="num">BE 2026&ndash;27 (&#8377; cr)</th><th class="num">Score</th>
@@ -1593,16 +1594,16 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
     Suspense&rdquo;, none of which a citizen applies to. A classifier scores each line on
     independent signals: named in DBT Bharat&rsquo;s list (+3), Centrally Sponsored (+2),
     benefit words in the name (+2), has an outcome framework (+1), asset or accounting
-    words (&minus;3), capital-heavy demand (&minus;2). Every line&rsquo;s arithmetic is
-    published so the verdict can be rechecked.
-    <p style="margin:8px 0 0">Validated against myScheme membership as ground truth:
-    at the F1-optimal threshold of 2 precision is
-    {v.get('precision', 0):.0%}; this table runs at the stricter threshold of {thr},
-    where precision is {prec:.0%}. Naming a scheme as missing is an accusation,
-    so it runs at the high-precision end. Recall is a floor and not a measurement: a
-    line called a scheme that myScheme lacks may be the classifier being right and the
-    portal being incomplete, which is the thing this page is about. Residual errors are
-    visible above: &ldquo;Space Technology&rdquo; should not be here.</p>
+    words (&minus;3), capital-heavy demand (&minus;2). This page shows the arithmetic for
+    every line, so anyone can check the verdict.
+    <p style="margin:8px 0 0">We tested the classifier against myScheme membership. At the
+    F1-optimal threshold of 2, precision is {v.get('precision', 0):.0%}. This table uses the
+    stricter threshold of {thr}, where precision is {prec:.0%}. To name a scheme as missing
+    is an accusation, so the table uses the high-precision end. The recall figure is a
+    floor. When the classifier calls a line a scheme and myScheme lacks it, the classifier
+    can be right and the portal incomplete. That is the subject of this page. Some errors
+    remain, and you can see them above: &ldquo;Space Technology&rdquo; should not be
+    here.</p>
   </div>
 </section>"""
 
@@ -1648,8 +1649,8 @@ and be done.</p>
 <section class="sec">
   <h2>The same portal, counted the same way, disagreeing with itself</h2>
   <div class="sec-note">myScheme state-level records only &middot; one snapshot</div>
-  <p class="standfirst">A gap between two portals can always be explained away as
-  different units. A gap <em>inside</em> one portal cannot. Every number below is
+  <p class="standfirst">Someone can always explain a gap between two portals as a
+  difference in units. That explanation fails for a gap <em>inside</em> one portal. Every number below is
   myScheme&rsquo;s own, counted the same way on the same day.</p>
   <div class="tscroll"><table>
     <thead><tr><th>State</th><th class="num">Schemes</th><th>Compared with</th>
@@ -1657,9 +1658,9 @@ and be done.</p>
     <tbody>{pair_rows}</tbody>
   </table></div>
   <p>Uttarakhand is a tenth of Uttar Pradesh by population. Goa is smaller than most
-  Indian cities. These ratios are not descriptions of how much welfare a state
-  administers, because no plausible policy difference runs an order of magnitude in that
-  direction. They describe how much of it each state has loaded onto a central portal.</p>
+  Indian cities. No plausible policy difference runs an order of magnitude in that
+  direction. So these ratios show how much each state has loaded onto a central portal,
+  and say little about how much welfare it runs.</p>
   <div class="warnbox">
     <b>What this register can and cannot itemise</b>
     For central schemes the Union Budget supplies an independent list of names, so a
@@ -1669,12 +1670,10 @@ and be done.</p>
     central can itemise the shortfall of
     {num(sum(max(0, (ds.get(n) or 0) - v) for n, v in ms.items() if ds.get(n)))} schemes
     across the {num(higher)} states where DBT counts more.
-    <p style="margin:8px 0 0">The way to name them is to read each state&rsquo;s own
-    budget, which has to be done state by state: there is no common format and no
-    guarantee a state publishes a readable one. Karnataka is done and is below. Andhra
-    Pradesh is collected. Gujarat was attempted and its budget cannot be read by machine,
-    which is a finding about Gujarat rather than a gap here. The survey of what each state
-    publishes, including the failures, is in the repository.</p>
+    <p style="margin:8px 0 0">To name them, this register reads each state&rsquo;s own
+    budget, one state at a time. There is no common format, and a state may not publish a
+    readable budget at all. <a href="/states">/states</a> shows the
+    {num(states_built)} states a machine can read and the states it cannot.</p>
   </div>
 </section>
 
@@ -1682,29 +1681,25 @@ and be done.</p>
   <h2>The same claim, for fifteen states, on fifteen pages</h2>
   <div class="sec-note">{num(states_built)} states read &middot; {num(states_absent)} schemes
     funded and listed by no national portal &middot; {inr(round(states_cr))} crore</div>
-  <p class="standfirst">This page used to end with four hand-written state sections,
-  Karnataka, Andhra Pradesh, Kerala and Tamil Nadu, which were simply the first four
-  classified. Eleven more states have had the same claim behind them since, and making the
-  same argument five times over on one page taught a reader nothing the first one had not.
-  Each state&rsquo;s absence claim now sits beside the book it is drawn from.</p>
+  <p class="standfirst">Each state&rsquo;s absence claim is on that state&rsquo;s own page,
+  beside the budget book it comes from.</p>
   <p><a class="jump" href="/states">All {num(states_built)} states, one page each &rarr;</a></p>
 </section>
 
 <div class="warnbox">
   <b>This register published its own recall too high, and this is the corrected number</b>
-  Every state here is measured twice: a stratified probability sample of the whole budget
-  book, and an <em>audit census</em> in which every row at or above the publishing bar is
-  hand-labelled, which is what makes the precision above a count rather than an estimate.
-  Until this month seven states divided their recall by both sets together. Every row in an
-  audit census is above the bar by construction, so counting it there adds a hit to the top
-  and the bottom of the fraction at once, and the number grows with the size of the audit
-  rather than with how much of the book the classifier actually finds. Ranking those seven
-  by the size of their census reproduced their recall ranking almost exactly, which is what
-  gave it away. Recall is now divided by the stratified sample alone, and it fell in every
-  one of the seven: Uttar Pradesh from 90% to 44%, Uttarakhand from 75% to 34%, Telangana
-  from 91% to 62%. Nothing about which schemes are published changed, and no precision
-  changed. What changed is the claim about how much each table leaves out, which was
-  flattering and is now not.
+  We measure every state twice. The first measure is a stratified probability sample of the
+  whole budget book. The second is an <em>audit census</em>: we hand-label every row at or
+  above the publishing bar. The census makes the precision above a count, not an estimate.
+  Until this month, seven states divided their recall by both sets together. Every row in
+  an audit census is above the bar, so each one added a hit to the top and the bottom of
+  the fraction. The number then grew with the size of the audit, and not with how much of
+  the book the classifier finds. When we ranked those seven states by census size, the
+  order matched their recall order almost exactly. That showed the error. Recall now
+  divides by the stratified sample alone, and it fell in all seven states: Uttar Pradesh
+  from 90% to 44%, Uttarakhand from 75% to 34%, Telangana from 91% to 62%. The published
+  schemes did not change, and no precision changed. Only the claim about how much each
+  table leaves out changed, and it is now lower.
 </div>
 
 {unlisted_section}
@@ -3012,17 +3007,17 @@ def watchlist_section(wl):
 
   <div class="warnbox">
     <b>Two dates, and no claim about what connects them</b>
-    A scheme moving from unlisted to listed is recorded here as the date this register
-    named it and the date the portal began carrying it. <b>It is not evidence that one
-    caused the other.</b> The portal publishes no reason for adding a record, this register
-    cannot see one, and inferring a cause from two dates is the exact move it documents in
-    everybody else. The dates are the finding; what connects them is somebody else&rsquo;s
-    research.
-    <p style="margin:8px 0 0">The fourth number is kept apart from the third on purpose. A
-    scheme can leave this list because the portal listed it, which is the thing worth
-    counting, or because the state stopped funding it, renamed it, or a classifier signal
-    moved. Only the first is a portal catching up, and folding the others in with it would
-    flatter the register at its own reader&rsquo;s expense.</p>
+    When a scheme moves from unlisted to listed, this page records two dates: the date this
+    register named it, and the date the portal began to list it. <b>The two dates do not show
+    that one event caused the other.</b> The portal gives no reason when it adds a record,
+    and this register cannot see one. To infer a cause from two dates is the error this
+    register documents in others. The dates are the finding. Others can research what
+    connects them.
+    <p style="margin:8px 0 0">The fourth number stays apart from the third on purpose. A
+    scheme can leave this list for four reasons: the portal listed it, the state stopped
+    funding it, the state renamed it, or a classifier signal moved. Only the first is a
+    portal catching up. To count the others with it would flatter this register and mislead
+    its readers.</p>
   </div>
 </section>
 '''
@@ -3802,9 +3797,9 @@ def build():
         "Not found", "/",
         '<div class="eyebrow">404</div>'
         '<h1 class="pagetitle">There is nothing at this address</h1>'
-        '<p class="standfirst">A scheme page may have moved: rows from a state with no '
-        'classifier are listed on that state&rsquo;s own register page rather than one '
-        'page each. The register is searchable from the front page.</p>'
+        '<p class="standfirst">A scheme page may have moved. When a state has no '
+        'classifier, its rows are on that state&rsquo;s own register page, not on one '
+        'page each. You can search the whole register from the front page.</p>'
         '<p><a class="dl" href="/">Go to the register</a> '
         '<a class="dl" href="/divergence">See the divergence page</a></p>',
         desc="No page at this address in the Schemes Register."))
