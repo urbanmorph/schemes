@@ -93,13 +93,12 @@ import gzip
 import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, read_json, utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -136,17 +135,6 @@ BLOCKS = ("actual 2024-25", "be 2025-26", "mre 2025-26", "be 2026-27")
 TRAILING_FLAG = re.compile(r"\s+(?:R|C|L|R/C|R/L|C/L|C/R)$")
 
 
-def pdftotext(pdf_bytes):
-    """pdftotext -layout on raw bytes, via a temp file."""
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "a.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, text=True)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout
 
 
 def markers(strip_line):

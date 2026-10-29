@@ -82,7 +82,7 @@ def explode(date):
     # by the per-scheme detail endpoint, so building records from details alone dropped
     # the state dimension entirely — a register of Indian schemes with no idea which
     # state each belongs to. Merge it back in from the same snapshot's list pages.
-    listed = {}
+    listed, list_skipped = {}, 0
     lp = os.path.join(src, "list.ndjson.gz")
     if os.path.exists(lp):
         with gzip.open(lp, "rb") as fh:
@@ -92,7 +92,10 @@ def explode(date):
                     continue
                 try:
                     items = json.loads(line)["data"]["hits"]["items"]
-                except Exception:
+                except (ValueError, KeyError, TypeError):
+                    # A whole page of list items: those records lose beneficiaryState,
+                    # which Uttar Pradesh and every state classifier filter on.
+                    list_skipped += 1
                     continue
                 for it in items:
                     f = it.get("fields", it)
@@ -119,7 +122,7 @@ def explode(date):
             except Exception:
                 skipped += 1
                 continue
-            if not isinstance(rec, dict):
+            if not isinstance(rec, dict) or not row.get("slug"):
                 skipped += 1
                 continue
             rec["_slug"] = row.get("slug")
@@ -133,16 +136,18 @@ def explode(date):
             write_json(f"data/myscheme/schemes/{safe_name(row['slug'])}.json", rec)
             n += 1
 
-    return n, skipped
+    return n, skipped, list_skipped
 
 
 def main():
     ap = argparse.ArgumentParser(description="Rebuild data/ from an archived snapshot.")
     ap.add_argument("--date", default=today())
     args = ap.parse_args()
-    n, skipped = explode(args.date)
+    n, skipped, list_skipped = explode(args.date)
     print(f"built data/myscheme from snapshot {args.date}: {n} schemes"
           + (f", {skipped} unparseable" if skipped else ""))
+    if list_skipped:
+        sys.exit(f"{list_skipped} list page(s) do not parse: their schemes have no state tag")
 
 
 if __name__ == "__main__":

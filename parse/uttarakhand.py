@@ -71,13 +71,12 @@ import gzip
 import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, read_json, utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -152,18 +151,6 @@ def header_end(lines):
                 all(DEVANAGARI.search(t) for t in toks):
             end = i
     return end
-
-
-def pdftotext(pdf_bytes):
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "a.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, text=True)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout
 
 
 def value(tok):

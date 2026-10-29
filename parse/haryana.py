@@ -84,13 +84,12 @@ import itertools
 import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, read_json, utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -131,18 +130,6 @@ ROMAN = {"I": 1, "II": 2, "III": 3}
 PART_NAME = {1: "Part-I State Scheme",
              2: "Part-II Central Scheme (sharing basis)",
              3: "Part-III Centrally Sponsored Scheme (100%)"}
-
-
-def pdftotext(pdf_bytes):
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "a.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, text=True)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout
 
 
 def rupees(s):

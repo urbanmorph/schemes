@@ -274,8 +274,9 @@ def report(key, out, census, right, errors, ms, unlabelled, publish):
     if unlabelled:
         print(f"  {len(unlabelled)} rows at the bar carry NO hand label. Precision below is "
               f"not yet a count; label them before publishing.")
-    print(f"  counted precision {right/len(census):.3f} on {len(census)-len(unlabelled)} "
-          f"hand-labelled rows, {len(errors)} named errors")
+    if census:
+        print(f"  counted precision {right/len(census):.3f} on {len(census)-len(unlabelled)} "
+              f"hand-labelled rows, {len(errors)} named errors")
     for e in errors[:6]:
         print(f"     not a scheme: {e[:68]}")
     print(f"  myScheme lists {len(ms)}; "

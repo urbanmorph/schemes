@@ -297,8 +297,10 @@ def main():
     argparse.ArgumentParser(description="Classify Haryana's Plan Memo lines.").parse_args()
     out, census, right, errors, ms = run()
     print(f"haryana: {len(out)} lines, {len(census)} clear the publishing bar of {PUBLISH_THRESHOLD}")
-    print(f"  counted precision {right/len(census):.3f} on {len(census)} hand-labelled rows, "
-          f"{len(errors)} named errors")
+    labelled = sum(1 for o in census if o.get("hand_label") is not None)
+    if census:
+        print(f"  counted precision {right/len(census):.3f} on {labelled} hand-labelled rows, "
+              f"{len(errors)} named errors")
     for e in errors:
         print(f"     not a scheme: {e[:70]}")
     print(f"  myScheme lists {len(ms)} Haryana schemes; "

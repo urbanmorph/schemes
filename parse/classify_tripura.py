@@ -181,6 +181,9 @@ def run():
     census = [o for o in out if o["score"] >= PUBLISH_THRESHOLD]
     right = sum(1 for o in census if o["hand_label"] == "scheme")
     errors = [o["name"] for o in census if o["hand_label"] == "not_scheme"]
+    # Counted, not assumed. Every line carries a label today; the first new line that does
+    # not would otherwise be published as a hand-labelled count.
+    unlabelled = [o["name"] for o in census if o["hand_label"] is None]
     absent = [o for o in census if not o["in_myscheme_tripura"]]
 
     write_json("data/tripura/classification.json", {
@@ -197,8 +200,8 @@ def run():
         "threshold_sweep": [x for x in (sweep(t) for t in range(0, 6)) if x],
         "validation": {
             "at_publish_threshold_census": {
-                "rows": len(census), "rows_hand_labelled": len(census),
-                "unlabelled": 0, "schemes": right, "not_schemes": len(errors),
+                "rows": len(census), "rows_hand_labelled": len(census) - len(unlabelled),
+                "unlabelled": len(unlabelled), "schemes": right, "not_schemes": len(errors),
                 "precision": round(right / len(census), 3) if census else None,
                 "what": ("Every line in Tripura's book carries a hand label, so this is a "
                          "count over the whole population and not over a sample. There is "
@@ -238,8 +241,12 @@ def main():
     argparse.ArgumentParser(description="Classify Tripura's scheme lines.").parse_args()
     out, census, right, errors, ms = run()
     print(f"tripura: {len(out)} lines, {len(census)} clear the publishing bar of {PUBLISH_THRESHOLD}")
-    print(f"  counted precision {right/len(census):.3f} over the WHOLE corpus, "
-          f"{len(errors)} errors")
+    if census:
+        print(f"  counted precision {right/len(census):.3f} over the WHOLE corpus, "
+              f"{len(errors)} errors")
+    gaps = sum(1 for o in census if o["hand_label"] is None)
+    if gaps:
+        print(f"  {gaps} rows at the bar carry NO hand label; label them before publishing.")
     print(f"  myScheme lists {len(ms)} Tripura schemes; "
           f"{sum(1 for o in census if not o['in_myscheme_tripura'])} of these reach it nowhere")
 

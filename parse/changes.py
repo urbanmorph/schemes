@@ -48,12 +48,27 @@ def _parser(name):
 cag_parse, dbt_parse = _parser("cag"), _parser("dbt")
 
 
-def snapshots():
-    """Archived snapshot dates, oldest first. A snapshot is a details file, not a commit."""
+def _progress():
+    spec = importlib.util.spec_from_file_location(
+        "progress", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                 "progress.py"))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def snapshots(root=ROOT, finished=None):
+    """Finished snapshot dates, oldest first. A snapshot is a details file, not a commit.
+
+    Finished by progress.py's test, the one run.sh uses: a resumed or stopped snapshot
+    has a details file too, and diffed it shows every scheme it has not reached yet as
+    removed."""
+    finished = finished or _progress().finished
     out = []
-    for p in sorted(glob.glob(os.path.join(ROOT, "archive", "myscheme", "*"))):
-        if os.path.isfile(os.path.join(p, "details.ndjson.gz")):
-            out.append(os.path.basename(p))
+    for p in sorted(glob.glob(os.path.join(root, "archive", "myscheme", "*"))):
+        d = os.path.basename(p)
+        if os.path.isfile(os.path.join(p, "details.ndjson.gz")) and finished("myscheme", d, root):
+            out.append(d)
     return out
 
 
@@ -95,9 +110,11 @@ def fields(rec):
     }
 
 
-def load(date):
-    p = os.path.join(ROOT, "archive", "myscheme", date, "details.ndjson.gz")
-    out = {}
+def load(date, root=ROOT):
+    """slug -> watched fields, for one snapshot. A line that does not parse raises: skipped,
+    its scheme would be reported as removed from the portal."""
+    p = os.path.join(root, "archive", "myscheme", date, "details.ndjson.gz")
+    out, bad = {}, 0
     with gzip.open(p, "rb") as fh:
         for line in fh:
             line = line.strip()
@@ -105,11 +122,16 @@ def load(date):
                 continue
             try:
                 row = json.loads(line)
-            except Exception:
+            except ValueError:
+                bad += 1
+                continue
+            if not row.get("slug"):
                 continue
             body = row.get("body") or {}
             rec = body.get("data") if isinstance(body.get("data"), dict) else body
-            out[row.get("slug")] = fields(rec)
+            out[row["slug"]] = fields(rec)
+    if bad:
+        raise ValueError(f"{p}: {bad} line(s) do not parse; refusing to compare it")
     return out
 
 
@@ -282,7 +304,28 @@ def selftest():
     # a record that leaves and comes back has changed, as far as a reader can tell
     gone = {"x": {"s": {"n": 1}}, "y": {}, "z": {"s": {"n": 1}}}
 
+    import tempfile
+    with tempfile.TemporaryDirectory() as root:
+        for d, man in [("2026-09-03", {"finished": "x"}), ("2026-10-03", {"in_progress": True})]:
+            os.makedirs(os.path.join(root, "archive", "myscheme", d))
+            with gzip.open(os.path.join(root, "archive", "myscheme", d, "details.ndjson.gz"), "wb") as fh:
+                fh.write(b'{"slug": "a", "body": {"data": {}}}\n{"body": {}}\n')
+        done = lambda src, d, r: d == "2026-09-03"  # noqa: E731
+        held = snapshots(root, done)
+        rows = load("2026-09-03", root)
+        with gzip.open(os.path.join(root, "archive", "myscheme", "2026-09-03",
+                                    "details.ndjson.gz"), "ab") as fh:
+            fh.write(b'{"slug": "b", "bo\n')
+        try:
+            load("2026-09-03", root)
+            corrupt = "read"
+        except ValueError:
+            corrupt = "refused"
+
     for label, got, want in [
+            ("an unfinished snapshot is not compared", held, ["2026-09-03"]),
+            ("a row with no slug is not a record", sorted(rows), ["a"]),
+            ("a corrupt line stops the comparison, not drops a scheme", corrupt, "refused"),
             ("a removed record that returns is dated by its return",
              history(["x", "y", "z"], gone.get)[0], {"s": "z"}),
             ("quiet since the snapshot after the last difference", quiet, "2026-09-02"),

@@ -96,6 +96,9 @@ def today_rows():
             continue
         snapshot = snapshot or d.get("snapshot")
         bar = d.get("publish_threshold")
+        if bar is None:
+            print(f"  watchlist: {key} publishes no publish_threshold, skipped", file=sys.stderr)
+            continue
         flag = f"in_myscheme_{key}"
 
         # Every row at the bar, by the same identity, so a scheme that was accused before

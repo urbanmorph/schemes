@@ -50,7 +50,8 @@ def _load(name, path):
 # Absence and membership questions use the generous matcher; see parse/match.py.
 _m = _load("scheme_match", os.path.join(HERE, "match.py"))
 probably_same = _m.probably_same
-latest_dbt = _load("parse_registry", os.path.join(HERE, "registry.py")).latest_dbt
+_reg = _load("parse_registry", os.path.join(HERE, "registry.py"))
+latest_dbt = _reg.latest_dbt
 
 # Words that name a benefit delivered to a person.
 SCHEME_WORDS = {
@@ -83,11 +84,13 @@ def tokens(s):
     return set(re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).split())
 
 
-def demand_ministry_map():
+def demand_ministry_map(year):
     """demand number -> ministry, from the Outcome Budget's contents table."""
-    p = os.path.join(ROOT, "archive", "budget", "2026", "outcome.pdf.gz")
+    p = os.path.join(ROOT, "archive", "budget", str(year), "outcome.pdf.gz")
     if not os.path.exists(p):
-        return {}
+        # Raised, not {}: an empty map silently removes the ministry signal from every
+        # line's score, and the year used to be written into the path as 2026.
+        raise SystemExit(f"no Outcome Budget at {os.path.relpath(p, ROOT)}")
     import shutil, subprocess, tempfile
     with tempfile.TemporaryDirectory() as td:
         pdf = os.path.join(td, "o.pdf")
@@ -106,17 +109,6 @@ def demand_ministry_map():
                            t, re.M | re.I):
         out.setdefault(int(n), m.strip())
     return out
-
-
-def dbt_names(date):
-    p = os.path.join(ROOT, "archive", "dbt", date, "central-list.html.gz")
-    if not os.path.exists(p):
-        return []
-    h = gzip.open(p, "rb").read().decode("utf-8", "replace")
-    return [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", li)).strip()
-            for ol in re.findall(r"<ol[^>]*>(.*?)</ol>", h, re.S | re.I)
-            for li in re.findall(r"<li[^>]*>(.*?)</li>", ol, re.S | re.I)
-            if re.sub(r"<[^>]+>", "", li).strip()]
 
 
 def score_line(name, statement, demand_no, in_dbt, in_outcome, ministry):
@@ -152,11 +144,18 @@ def score_line(name, statement, demand_no, in_dbt, in_outcome, ministry):
 
 def run(snapshot, year, threshold):
     reg = json.load(open(os.path.join(ROOT, "data", "registry.json"), encoding="utf-8"))
-    dbt = dbt_names(snapshot)
-    dmap = demand_ministry_map()
+    # Each of these is a scoring signal, and a missing one used to read as empty: every
+    # line lost its +3 for DBT, or its ministry, with no message. Missing is an error.
+    dbt = _reg.dbt_central(snapshot)
+    if not dbt:
+        raise SystemExit(f"no DBT central list in archive/dbt/{snapshot}")
+    dmap = demand_ministry_map(year)
 
     obp = os.path.join(ROOT, "data", "outcome", f"{year}.json")
-    ob = json.load(open(obp, encoding="utf-8"))["schemes"] if os.path.exists(obp) else []
+    if not os.path.exists(obp):
+        raise SystemExit(f"no parsed Outcome Budget at data/outcome/{year}.json")
+    with open(obp, encoding="utf-8") as fh:
+        ob = json.load(fh)["schemes"]
     ob_names = [f["name"] for f in ob]
 
     lines = []

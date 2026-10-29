@@ -102,7 +102,7 @@ jobs:
           REASON: ${{ inputs.reason || 'manual' }}
         run: |
           echo "deploying: $REASON"
-          npx --yes wrangler@3 pages deploy site/_out \
+          npx --yes wrangler@3.114.17 pages deploy site/_out \
             --project-name=india-schemes --branch=main
 
       - name: Confirm the deployed site answers

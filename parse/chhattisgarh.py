@@ -33,7 +33,6 @@ import argparse
 import collections
 import glob
 import gzip
-import io
 import json
 import os
 import re
@@ -73,10 +72,10 @@ def bands_of(doc, tol=5.0):
     return out
 
 
-def read_book(raw, kind, dep):
+def read_book(raw):
     """One book's schemes: (name, objective, provision in thousands)."""
-    doc = fitz.open(stream=raw, filetype="pdf")
-    bands = bands_of(doc)
+    with fitz.open(stream=raw, filetype="pdf") as doc:
+        bands = bands_of(doc)
     # TWO HEADER LAYOUTS. The Outcome books head the name column "yojana@karyakram ka
     # naam"; the Gender, Youth and Child books head it "yojana ka naam". Matching only the
     # first read the Outcome books and returned nothing at all from the other three, which
@@ -181,22 +180,32 @@ def read_book(raw, kind, dep):
 
 def run(date=None):
     root = os.path.join(ROOT, "archive", "chhattisgarh")
-    dates = sorted(os.listdir(root)) if os.path.isdir(root) else []
-    date = date if date in dates else (dates[-1] if dates else None)
-    if not date:
+    dates = sorted(os.path.basename(p) for p in glob.glob(os.path.join(root, "*"))
+                   if os.path.isdir(p))
+    if not dates:
         raise SystemExit("no archive at archive/chhattisgarh/")
+    if date and date not in dates:
+        raise SystemExit(f"no archive at archive/chhattisgarh/{date}")
+    date = date or dates[-1]
     man = json.load(open(os.path.join(root, date, "_manifest.json"), encoding="utf-8"))
 
-    entries, by_kind, depts = [], collections.Counter(), {}
-    seen = set()
+    # Every book first, then the rows. Each book prints its department's name in its own
+    # spelling, and taking whichever book was read last filed department 34 under two
+    # names in one output. The name most of its books print wins; ties go to the first.
+    books, spellings = [], collections.defaultdict(collections.Counter)
     for f in sorted(glob.glob(os.path.join(root, date, "*.pdf.gz"))):
-        base = os.path.basename(f)[:-7]
-        kind, dep = base.split("-", 1)
+        kind, dep = os.path.basename(f)[:-7].split("-", 1)
         with gzip.open(f, "rb") as fh:
-            raw = fh.read()
-        rows, dept = read_book(raw, kind, dep)
+            rows, dept = read_book(fh.read())
         if dept:
-            depts[dep] = dept
+            spellings[dep][dept] += 1
+        books.append((kind, dep, rows))
+    depts = {dep: min(c.items(), key=lambda kv: (-kv[1], kv[0]))[0]
+             for dep, c in spellings.items()}
+
+    entries, by_kind = [], collections.Counter()
+    seen = set()
+    for kind, dep, rows in books:
         for name_kd, obj_kd, amt, code in rows:
             name = decode(name_kd).strip()
             if not name or len(name) < 3:
