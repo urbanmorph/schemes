@@ -1,10 +1,13 @@
 """tools/cag_mirror.py: which URL to try, what to skip, and that a stopped run resumes."""
+import contextlib
 import hashlib
+import io
 import json
 import os
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
 import cag_mirror as m  # noqa: E402
@@ -29,7 +32,9 @@ class Candidates(unittest.TestCase):
 
 class Run(unittest.TestCase):
     def setUp(self):
-        self.dir = tempfile.mkdtemp()
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.dir = tmp.name
         self.calls = []
 
     def fetch(self, url):
@@ -80,6 +85,23 @@ class Run(unittest.TestCase):
         self.run_once()
         self.assertEqual(len(self.calls), 1)
 
+    def test_held_files_are_matched_by_size_without_reading_them(self):
+        self.run_once()
+        self.calls.clear()
+        with mock.patch.object(m, "sha", side_effect=AssertionError("hashed a held file")):
+            self.run_once()
+        self.assertEqual(self.calls, [])
+
+    def test_verify_catches_a_same_size_change_that_the_size_check_cannot(self):
+        self.run_once()
+        with open(os.path.join(self.dir, "2.pdf"), "wb") as fh:
+            fh.write(b"X" * len(PDF))
+        self.calls.clear()
+        self.run_once()
+        self.assertEqual(self.calls, [])
+        self.run_once(verify=True)
+        self.assertEqual(len(self.calls), 1)
+
     def test_stops_cleanly_when_the_disk_is_nearly_full(self):
         done = m.mirror(self.reports(), self.dir, "https://new.cloudfront.net", fetch=self.fetch,
                         sleep=lambda s: None, free_gb=lambda p: 5, min_free_gb=20)
@@ -87,8 +109,6 @@ class Run(unittest.TestCase):
         self.assertEqual(self.calls, [])
 
     def test_the_held_count_ignores_the_limit(self):
-        import contextlib
-        import io
         buf = io.StringIO()
         with contextlib.redirect_stdout(buf):
             self.run_once(limit=1)

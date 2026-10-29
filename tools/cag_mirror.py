@@ -12,11 +12,13 @@ report existed. Only a copy of the file keeps what it said.
     python3 tools/cag_mirror.py                 every report in the latest complete crawl
     python3 tools/cag_mirror.py --limit 50      the 50 newest not yet held
     python3 tools/cag_mirror.py --deadline-min 120
+    python3 tools/cag_mirror.py --verify        re-hash every held file first
 
 Each file is written whole or not at all (.part, then rename) and recorded in
 local/cag/manifest.json with its SHA-256, which is saved every 25 files and on any exit.
-A rerun skips every file whose bytes still match their checksum, so a stopped run
-continues where it stopped and a finished one fetches nothing. It stops by itself when
+A rerun skips every file whose size still matches the manifest, so a stopped run
+continues where it stopped and a finished one fetches nothing. --verify compares every
+held file's SHA-256 instead, which reads all of them (some 30 GB). It stops by itself when
 the disk has less than --min-free-gb left.
 """
 import argparse
@@ -91,8 +93,29 @@ def save_manifest(out, man):
     os.replace(p + ".part", p)
 
 
+def held(rec, path, verify):
+    """True when the file on disk is the one the manifest recorded. A size check catches the
+    truncated and half-written files a stopped run leaves; only `verify` reads the bytes."""
+    if not rec.get("sha256") or not os.path.exists(path):
+        return False
+    if verify:
+        return sha(path) == rec["sha256"]
+    return os.path.getsize(path) == rec.get("bytes")
+
+
+def first_pdf(urls, fetch, sleep, pace, tried):
+    """The first of `urls` that answers with a PDF, as (body, final url), or (b"", None)."""
+    for u in urls:
+        sleep(pace)
+        code, body, final = fetch(u)
+        tried.append([u, code])
+        if code == 200 and body[:5] == b"%PDF-":
+            return body, final
+    return b"", None
+
+
 def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_free_gb=20,
-           pace=1.0, limit=None, deadline=None):
+           pace=1.0, limit=None, deadline=None, verify=False):
     os.makedirs(out, exist_ok=True)
     free_gb = free_gb or (lambda p: shutil.disk_usage(p).free / 2 ** 30)
     mp = os.path.join(out, "manifest.json")
@@ -100,16 +123,12 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
     if os.path.exists(mp):
         with open(mp, encoding="utf-8") as fh:
             man = json.load(fh)
-    todo = []
-    for r in sorted(reports, key=lambda r: -r["id"]):
-        rec, path = man.get(str(r["id"])) or {}, os.path.join(out, f"{r['id']}.pdf")
-        if rec.get("sha256") and os.path.exists(path) and sha(path) == rec["sha256"]:
-            continue
-        todo.append(r)
-    held = len(reports) - len(todo)
+    todo = [r for r in sorted(reports, key=lambda r: -r["id"])
+            if not held(man.get(str(r["id"])) or {}, os.path.join(out, f"{r['id']}.pdf"), verify)]
+    have = len(reports) - len(todo)
     if limit:
         todo = todo[:limit]
-    log(f"cag mirror: {len(reports):,} reports, {held:,} held, {len(todo):,} to fetch -> {out}")
+    log(f"cag mirror: {len(reports):,} reports, {have:,} held, {len(todo):,} to fetch -> {out}")
 
     got = bytes_ = 0
     stopped = None
@@ -127,27 +146,19 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
             rec = {"id": r["id"], "title": r.get("title"), "government": r.get("government"),
                    "tabled": r.get("tabled"), "detail_url": r.get("detail_url"),
                    "archived_url": r.get("pdf_url")}
-            urls = candidates(r.get("pdf_url"), host)
-            body, tried = b"", []
-            for attempt in range(2):
-                for u in urls:
-                    sleep(pace)
-                    code, body, final = fetch(u)
-                    tried.append([u, code])
-                    if code == 200 and body[:5] == b"%PDF-":
-                        rec["url"] = final
-                        break
-                    body = b""
-                if body or attempt or not r.get("detail_url"):
-                    break
+            tried = []
+            body, final = first_pdf(candidates(r.get("pdf_url"), host), fetch, sleep, pace, tried)
+            if not body and r.get("detail_url"):
                 # The report page links whichever file is current, under whatever host.
                 sleep(pace)
                 code, page, _ = fetch(r["detail_url"])
                 rec["detail_status"] = code
                 m = PDF_LINK.search(page.decode("utf-8", "replace")) if code == 200 else None
-                urls = [html.unescape(m.group(1))] if m else []
+                if m:
+                    body, final = first_pdf([html.unescape(m.group(1))], fetch, sleep, pace, tried)
             rec["tried"], rec["checked"] = tried, datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             if body:
+                rec["url"] = final
                 path = os.path.join(out, f"{r['id']}.pdf")
                 with open(path + ".part", "wb") as fh:
                     fh.write(body)
@@ -173,18 +184,12 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
 
 def latest_reports():
     """Every report in the newest complete CAG crawl, read with parse/cag.py."""
-    sys.path.insert(0, os.path.join(ROOT, "collect"))
-    spec = importlib.util.spec_from_file_location("parse_cag", os.path.join(ROOT, "parse", "cag.py"))
-    cag = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(cag)
-    dates = []
-    for d in sorted(os.listdir(os.path.join(ROOT, "archive", "cag"))):
-        mp = os.path.join(ROOT, "archive", "cag", d, "_manifest.json")
-        if os.path.exists(mp):
-            with open(mp, encoding="utf-8") as fh:
-                if json.load(fh).get("complete"):
-                    dates.append(d)
-    return cag.read(dates[-1])[0], dates[-1]
+    spec = importlib.util.spec_from_file_location("parse_changes",
+                                                  os.path.join(ROOT, "parse", "changes.py"))
+    changes = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(changes)
+    crawl = changes.complete("cag", lambda m: m.get("complete"))[-1]
+    return changes.cag_parse.read(crawl)[0], crawl
 
 
 def main():
@@ -193,6 +198,7 @@ def main():
     ap.add_argument("--pace", type=float, default=1.0, help="seconds between requests")
     ap.add_argument("--min-free-gb", type=float, default=20)
     ap.add_argument("--deadline-min", type=float)
+    ap.add_argument("--verify", action="store_true", help="re-hash every held file")
     a = ap.parse_args()
     reports, crawl = latest_reports()
     with_pdf = [r for r in reports if r.get("pdf_url")]
@@ -207,7 +213,7 @@ def main():
     log(f"current PDF host {host}")
     deadline = time.time() + a.deadline_min * 60 if a.deadline_min else None
     r = mirror(with_pdf, OUT, host, pace=a.pace, limit=a.limit, deadline=deadline,
-               min_free_gb=a.min_free_gb)
+               min_free_gb=a.min_free_gb, verify=a.verify)
     sys.exit(75 if r["stopped"] else 0)
 
 

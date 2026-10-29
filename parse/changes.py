@@ -35,7 +35,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 from common import ROOT, utcnow, write_json  # noqa: E402
 
 
-
 def _parser(name):
     """parse/<name>.py, by path. collect/ has a module of the same name, and each parser
     puts collect/ first on sys.path as it loads, so a plain import finds the wrong one."""
@@ -140,31 +139,12 @@ def deltas(d):
     return [{"field": f, "from": shorten(x), "to": shorten(y)} for f, x, y in d]
 
 
-def diff(older, newer):
-    a, b = load(older), load(newer)
+def diff(a, b):
     added, removed, changed = compare(a, b)
     return ([{"slug": s, "name": b[s].get("name")} for s in added],
             [{"slug": s, "name": a[s].get("name")} for s in removed],
             [{"slug": s, "name": b[s].get("name"), "changes": deltas(d)}
              for s, d in changed.items()])
-
-
-def quiet_since(snaps, loader=load):
-    """The snapshot from which every later one holds exactly the same records, or None
-    with fewer than two to compare.
-
-    A month with no change is a finding about the source and is published as one. Without
-    this the page could only say "0 added, 0 removed", which reads as a feed that did not
-    run: myScheme returned the same 4,771 records, byte for byte, from 30 August to
-    17 October 2026.
-    """
-    since, prev = None, None
-    for date in snaps:
-        cur = loader(date) or {}
-        if prev is None or cur != prev:
-            since = date
-        prev = cur
-    return since if len(snaps) > 1 else None
 
 
 def complete(source, ok):
@@ -220,31 +200,44 @@ def dbt_changes():
                        for s in sorted(set(sa) | set(sb)) if sa.get(s) != sb.get(s)]}
 
 
-def last_changed(snaps, loader=load):
-    """slug -> the snapshot in which its watched fields last differed from the one before.
+def history(snaps, loader=load):
+    """One pass over the snapshots, oldest first, reading each once. Returns:
 
-    For the sitemap's lastmod. Stamping every page with the build date tells a crawler that
-    all 11,000 changed on every deploy, and a crawler that is told that learns to ignore the
-    field. A record unchanged since the first snapshot is dated by that snapshot, which is
-    as far back as this archive can see. Only two snapshots are ever held in memory.
+    - slug -> the snapshot in which its watched fields last differed from the one before.
+      For the sitemap's lastmod. Stamping every page with the build date tells a crawler
+      that all 11,000 changed on every deploy, and a crawler that is told that learns to
+      ignore the field. A record unchanged since the first snapshot is dated by that
+      snapshot, which is as far back as this archive can see.
+    - the snapshot from which every later one holds exactly the same records, or None with
+      fewer than two to compare. A month with no change is a finding about the source and
+      is published as one. Without it the page could only say "0 added, 0 removed", which
+      reads as a feed that did not run: myScheme returned the same 4,771 records, byte for
+      byte, from 30 August to 17 October 2026.
+    - {date: records} for the newest two snapshots, for the diff. Only those two are ever
+      held in memory.
     """
-    out, prev = {}, {}
+    out, since, prev, tail = {}, None, None, {}
     for date in snaps:
         cur = loader(date) or {}
+        if prev is None or cur != prev:
+            since = date
         for s, f in cur.items():
-            if prev.get(s) != f:
+            if (prev or {}).get(s) != f:
                 out[s] = date
+        tail = {d: r for d, r in tail.items() if r is prev} | {date: cur}
         prev = cur
-    return {s: d for s, d in out.items() if s in prev}
+    return ({s: d for s, d in out.items() if s in (prev or {})},
+            since if len(snaps) > 1 else None, tail)
 
 
 def run(older=None, newer=None):
     snaps = snapshots()
+    last, quiet, tail = history(snaps)
     out = {"built": utcnow(), "snapshots_held": len(snaps), "snapshots": snaps,
-           "quiet_since": quiet_since(snaps), "cag": cag_changes(), "dbt": dbt_changes()}
+           "quiet_since": quiet, "cag": cag_changes(), "dbt": dbt_changes()}
     # Written before the two-snapshot test: one snapshot still dates every record.
     write_json("data/lastmod.json", {"built": out["built"], "snapshots": snaps,
-                                     "last_changed": dict(sorted(last_changed(snaps).items()))})
+                                     "last_changed": dict(sorted(last.items()))})
     if len(snaps) < 2:
         # Not an error. A change feed needs two snapshots and cannot be back-filled,
         # which is the entire reason collection started before the site did.
@@ -255,7 +248,8 @@ def run(older=None, newer=None):
         return out
     older = older or snaps[-2]
     newer = newer or snaps[-1]
-    added, removed, changed = diff(older, newer)
+    a, b = (tail.get(d) or load(d) for d in (older, newer))
+    added, removed, changed = diff(a, b)
     field_counts = {}
     for c in changed:
         for d in c["changes"]:
@@ -263,7 +257,7 @@ def run(older=None, newer=None):
     out.update(comparable=True, older=older, newer=newer,
                added=added[:300], removed=removed[:300], changed=changed[:400],
                added_total=len(added), removed_total=len(removed),
-               changed_total=len(changed), records=len(load(newer)),
+               changed_total=len(changed), records=len(b),
                by_field=dict(sorted(field_counts.items(), key=lambda kv: -kv[1])))
     write_json("data/changes.json", out)
     return out
@@ -273,7 +267,12 @@ def selftest():
     snaps = {"2026-08-30": {"a": {"name": "A"}, "b": {"name": "B"}},
              "2026-09-02": {"a": {"name": "A"}, "b": {"name": "B2"}, "c": {"name": "C"}},
              "2026-09-03": {"a": {"name": "A"}, "b": {"name": "B2"}, "c": {"name": "C"}}}
-    got = last_changed(sorted(snaps), snaps.get)
+    reads = []
+
+    def counted(date):
+        reads.append(date)
+        return snaps.get(date)
+    got, quiet, tail = history(sorted(snaps), counted)
     want = {"a": "2026-08-30", "b": "2026-09-02", "c": "2026-09-02"}
     bad = 0
     for s, w in want.items():
@@ -282,16 +281,17 @@ def selftest():
         print(f"  {'ok  ' if ok else 'FAIL'} {s}: want {w} got {got.get(s)}")
     # a record that leaves and comes back has changed, as far as a reader can tell
     gone = {"x": {"s": {"n": 1}}, "y": {}, "z": {"s": {"n": 1}}}
-    ok = last_changed(["x", "y", "z"], gone.get) == {"s": "z"}
-    bad += not ok
-    print(f"  {'ok  ' if ok else 'FAIL'} a removed record that returns is dated by its return")
 
     for label, got, want in [
-            ("quiet since the snapshot after the last difference",
-             quiet_since(sorted(snaps), snaps.get), "2026-09-02"),
+            ("a removed record that returns is dated by its return",
+             history(["x", "y", "z"], gone.get)[0], {"s": "z"}),
+            ("quiet since the snapshot after the last difference", quiet, "2026-09-02"),
             ("a source whose newest snapshot moved is quiet since that one",
-             quiet_since(["x", "y"], gone.get), "y"),
-            ("one snapshot cannot show quiet", quiet_since(["x"], gone.get), None),
+             history(["x", "y"], gone.get)[1], "y"),
+            ("one snapshot cannot show quiet", history(["x"], gone.get)[1], None),
+            ("each snapshot is read once", reads, sorted(snaps)),
+            ("the newest two snapshots are kept for the diff",
+             sorted(tail), ["2026-09-02", "2026-09-03"]),
             ("compare: added, removed, and only the fields that differ",
              compare({1: {"t": "a", "u": 1}, 2: {"t": "b"}},
                      {1: {"t": "A", "u": 1}, 3: {"t": "c"}}, ("t", "u")),
@@ -311,7 +311,7 @@ def main():
     ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
     if a.self_test:
-        print("last_changed self-test")
+        print("changes self-test")
         sys.exit(1 if selftest() else 0)
     o = run(a.older, a.newer)
     if not o["comparable"]:
