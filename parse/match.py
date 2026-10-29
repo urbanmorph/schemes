@@ -33,6 +33,7 @@ are never the same scheme however similar the rest reads.
 """
 
 import difflib
+import functools
 import re
 
 STOP = {"scheme", "schemes", "yojana", "yojna", "programme", "program", "mission",
@@ -66,6 +67,24 @@ KINDS = [{"mission", "abhiyan", "abhiyaan"},
          {"scheme", "schemes", "yojana", "yojna", "programme", "program"}]
 
 
+# Every feature of a name is a pure function of the name, and the same few thousand names
+# are compared hundreds of thousands of times: the registry, the site build and the Union
+# classifier spent most of their time recomputing them (registry 77 s, classify 63 s).
+# Cached as immutable values; callers get a fresh list or set, so one that edits its copy
+# cannot change what the next caller sees.
+_CACHE = 1 << 16
+
+
+def _as_list(f):
+    cached = functools.lru_cache(maxsize=_CACHE)(lambda s: tuple(f(s)))
+    return functools.wraps(f)(lambda s: list(cached(s)))
+
+
+def _as_set(f):
+    cached = functools.lru_cache(maxsize=_CACHE)(lambda s: frozenset(f(s)))
+    return functools.wraps(f)(lambda s: set(cached(s)))
+
+
 def kind_conflict(a, b):
     """Both names declare a kind, and no kind is common to them."""
     ka = {i for i, k in enumerate(KINDS) if k & set(norm(a).split())}
@@ -73,6 +92,7 @@ def kind_conflict(a, b):
     return bool(ka and kb and not ka & kb)
 
 
+@functools.lru_cache(maxsize=_CACHE)
 def norm(s):
     s = (s or "").lower()
     s = re.sub(r"[^a-z0-9]+", " ", s)
@@ -90,6 +110,7 @@ def _singular(t):
     return t[:-1] if len(t) > 4 and t.endswith("s") and not t.endswith("ss") else t
 
 
+@_as_list
 def tokens(s):
     return [_singular(t) for t in norm(s).split() if t not in STOP and len(t) > 2]
 
@@ -111,6 +132,7 @@ def skeleton(t):
     return re.sub(r"[aeiou]", "", _ASPIRATE.sub("", t)) or t
 
 
+@_as_set
 def skeletons(s):
     # A two-character skeleton is noise: "MEIS and SEIS" against "Scheme for SSI / MSI
     # Sector" agreed on ['ms', 'ss'] and matched. But DROPPING those, which is what this
@@ -186,6 +208,7 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                    "health", "roads", "authority", "council", "committee", "society"})
 
 
+@_as_set
 def written_acronyms(s):
     """Only acronyms the source actually WRITES as one: bracketed, or in capitals.
 
@@ -207,6 +230,7 @@ def written_acronyms(s):
     return {a for a in out if len(a) >= 4}
 
 
+@_as_set
 def acronyms(s):
     """Acronyms this name could be written as, plus any it already contains.
 
@@ -275,6 +299,7 @@ def acronyms(s):
     return {a for a in out if len(a) >= 4}
 
 
+@_as_set
 def qualifier_groups(s):
     """Which qualifier axes a name actually names."""
     n = norm(s)
@@ -327,6 +352,7 @@ def _same_axis(g1, g2):
     return False
 
 
+@functools.lru_cache(maxsize=1 << 18)
 def similarity(a, b):
     """Conservative score — the one to use when ATTACHING data to a scheme."""
     na, nb = norm(a), norm(b)
@@ -343,8 +369,9 @@ def probably_same(a, b, floor=0.75):
     if qualifier_conflict(a, b):
         return False, "qualifier conflict"
 
-    if similarity(a, b) >= floor:
-        return True, f"similarity {similarity(a, b):.2f}"
+    sim = similarity(a, b)
+    if sim >= floor:
+        return True, f"similarity {sim:.2f}"
 
     ta, tb = set(tokens(a)), set(tokens(b))
     if ta and tb:
