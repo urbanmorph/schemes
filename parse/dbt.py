@@ -54,6 +54,19 @@ def count_from(html):
     return None
 
 
+def central_names(html):
+    """Scheme names on DBT Bharat's central list. The page is one <ol> per ministry, not
+    a table: 56 lists, 320 <li>, which is the count DBT Bharat states for itself. It was
+    counted as <tr> rows, of which it has none, so the count was always empty."""
+    out = []
+    for block in re.findall(r"<ol[^>]*>(.*?)</ol>", html, re.S | re.I):
+        for li in re.findall(r"<li[^>]*>(.*?)</li>", block, re.S | re.I):
+            name = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", li)).strip()
+            if name:
+                out.append(name)
+    return out
+
+
 def read(date):
     """One snapshot's scheme count per state (None where unreadable) and its central rows."""
     src = os.path.join(ROOT, "archive", "dbt", date)
@@ -70,10 +83,7 @@ def read(date):
     cpath = os.path.join(src, "central-list.html.gz")
     if os.path.exists(cpath):
         with gzip.open(cpath, "rb") as fh:
-            html = fh.read()
-        # Rows in the central scheme table; the page has no headline count of its own.
-        central = len(re.findall(rb"<tr[\s>]", html, re.I)) - 1
-        central = max(central, 0) or None
+            central = len(central_names(fh.read().decode("utf-8", "replace"))) or None
     return states, central
 
 
@@ -95,10 +105,29 @@ def parse(date):
     return out
 
 
+def selftest():
+    page = ('<h3>Ministry A</h3><ol class="x"><li><a href="#">PM  Kisan</a></li>'
+            '<li>Scheme <b>Two</b></li><li> </li></ol>'
+            '<ol><li>Scheme Three</li></ol><table><tr><td>not a scheme</td></tr></table>')
+    bad = 0
+    for label, got, want in [
+            ("names come from the <ol> lists, tags and spacing removed",
+             central_names(page), ["PM Kisan", "Scheme Two", "Scheme Three"]),
+            ("a page with no list has no names", central_names("<table></table>"), [])]:
+        ok = got == want
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}" + ("" if ok else f": want {want} got {got}"))
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Parse archived DBT Bharat HTML.")
     ap.add_argument("--date", default=today())
+    ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
+    if args.self_test:
+        print("dbt self-test")
+        sys.exit(1 if selftest() else 0)
     out = parse(args.date)
     print(f"DBT {args.date}: {out['states_read']}/36 states read, "
           f"total {out['state_total']:,} state schemes")

@@ -768,28 +768,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 40.0,
-   "demand_no": 71,
-   "evidence": [
-    [
-     "+3",
-     "named in DBT Bharat's central list, so money reaches individuals"
-    ],
-    [
-     "+2",
-     "benefit words in the name: training"
-    ]
-   ],
-   "in_dbt": true,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o New and Renewable Energy",
-   "name": "Human Resources Development and Training",
-   "score": 5,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": null,
    "demand_no": 93,
    "evidence": [],
@@ -4903,6 +4881,24 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 6,
+   "evidence": [
+    [
+     "-3",
+     "asset or accounting words in the name: reserve"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Chemicals and Fertilisers",
+   "name": "Additional amount met from Reserve Fund",
+   "score": -3,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 215.0,
    "demand_no": 7,
    "evidence": [
@@ -5750,6 +5746,19 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": null,
+   "demand_no": 11,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Commerce and Industry",
+   "name": "Actual Recoveries",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 324.99,
    "demand_no": 12,
    "evidence": [],
@@ -6169,6 +6178,19 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 14,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Consumer Affairs, Food and Public Distribution",
+   "name": "Actual Recoveries (CS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 200.0,
    "demand_no": 15,
    "evidence": [
@@ -6278,6 +6300,19 @@
    "score": 3,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 15,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Consumer Affairs, Food and Public Distribution",
+   "name": "Actual Recoveries",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 0.01,
@@ -6495,6 +6530,24 @@
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
+  },
+  {
+   "be_cr": 17250.25,
+   "demand_no": 21,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": null,
+   "name": "Research and Development",
+   "score": 3,
+   "statement": "stat4b",
+   "verdict": "scheme"
   },
   {
    "be_cr": 15.0,
@@ -6834,6 +6887,19 @@
    "score": 4,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 23,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Development of North Eastern Region",
+   "name": "Actual Recoveries (CS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 625.0,
@@ -7278,6 +7344,19 @@
    "in_outcome": false,
    "ministry": "M/o Education",
    "name": "PM One Nation One Subscription (PM-ONOS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 26,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Education",
+   "name": "Actual Recoveries (CS)",
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
@@ -8149,6 +8228,19 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 43,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
+   "name": "Actual Recoveries (CS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 465.0,
    "demand_no": 44,
    "evidence": [],
@@ -8192,6 +8284,19 @@
    "in_outcome": false,
    "ministry": "M/o Fisheries, Animal Husbandry and Dairying",
    "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 45,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Food Processing Industries",
+   "name": "Actual Recoveries (CS)",
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
@@ -8406,6 +8511,19 @@
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 46,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Health and Family Welfare",
+   "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 70.0,
@@ -9249,6 +9367,19 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": null,
+   "demand_no": 62,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "Ministry of Jal Shakti",
+   "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 75.0,
    "demand_no": 64,
    "evidence": [
@@ -9355,6 +9486,19 @@
    "in_outcome": false,
    "ministry": "M/o Labour and Employment",
    "name": "Shram Registration, Inspection, Samadhan and Transparency Initiative (SRISTI)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 64,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Labour and Employment",
+   "name": "Actual Recoveries",
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
@@ -9606,6 +9750,19 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 68,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Micro, Small and Medium Enterprises",
+   "name": "Actual Recoveries CENTRAL SECTOR SCHEMES",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 440.0,
    "demand_no": 69,
    "evidence": [
@@ -9737,6 +9894,19 @@
    "score": 5,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 70,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Minority Affairs",
+   "name": "Actual Recoveries (CS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 0.01,
@@ -9893,6 +10063,46 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": 46.0,
+   "demand_no": 71,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o New and Renewable Energy",
+   "name": "Research and Development",
+   "score": 3,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 40.0,
+   "demand_no": 71,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+2",
+     "benefit words in the name: training"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o New and Renewable Energy",
+   "name": "Human Resources Development and Training",
+   "score": 5,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 8.5,
    "demand_no": 71,
    "evidence": [],
@@ -9914,6 +10124,19 @@
    "in_outcome": false,
    "ministry": "M/o New and Renewable Energy",
    "name": "International Relations",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 71,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o New and Renewable Energy",
+   "name": "Actual Recoveries (CS)",
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
@@ -10211,6 +10434,24 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 76,
+   "evidence": [
+    [
+     "-3",
+     "asset or accounting words in the name: reserve"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Petroleum and Natural Gas",
+   "name": "Additional Transfer to Reserve Fund",
+   "score": -3,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": -1000.0,
    "demand_no": 76,
    "evidence": [
@@ -10276,6 +10517,24 @@
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
+  },
+  {
+   "be_cr": 31.0,
+   "demand_no": 76,
+   "evidence": [
+    [
+     "+2",
+     "benefit words in the name: scheme"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Petroleum and Natural Gas",
+   "name": "Scheme for promotion of flagging of merchant ships in India",
+   "score": 2,
+   "statement": "stat4b",
+   "verdict": "scheme"
   },
   {
    "be_cr": 0.01,
@@ -10632,6 +10891,24 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 78,
+   "evidence": [
+    [
+     "-2",
+     "capital-heavy demand: M/o Ports, Shipping and Waterways"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Ports, Shipping and Waterways",
+   "name": "Actual Recoveries",
+   "score": -2,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 969.11,
    "demand_no": 79,
    "evidence": [
@@ -10760,6 +11037,19 @@
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 79,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Power",
+   "name": "Actual Recoveries (CS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 13000.0,
@@ -11548,6 +11838,24 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 86,
+   "evidence": [
+    [
+     "-2",
+     "capital-heavy demand: M/o Road Transport and Highways"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Road Transport and Highways",
+   "name": "Actual Recoveries",
+   "score": -2,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 155.0,
    "demand_no": 87,
    "evidence": [],
@@ -11556,6 +11864,19 @@
    "in_outcome": false,
    "ministry": "M/o Rural Development",
    "name": "Management Support to Rural Development Programs and Strengthening of District Planning Process",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 87,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Rural Development",
+   "name": "Actual Recoveries (CS)",
    "score": 0,
    "statement": "stat4b",
    "verdict": "budget head"
@@ -11845,6 +12166,19 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": null,
+   "demand_no": 93,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Social Justice and Empowerment",
+   "name": "Actual Recoveries (CS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 167.0,
    "demand_no": 94,
    "evidence": [
@@ -11897,6 +12231,19 @@
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 94,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": null,
+   "name": "Actual Recoveries (CS)",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 10397.06,
@@ -12291,6 +12638,19 @@
    "verdict": "budget head"
   },
   {
+   "be_cr": null,
+   "demand_no": 98,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Textiles",
+   "name": "Actual Recoveries",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
+  },
+  {
    "be_cr": 1905.0,
    "demand_no": 99,
    "evidence": [
@@ -12383,6 +12743,19 @@
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 99,
+   "evidence": [],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Tourism",
+   "name": "Recoveries",
+   "score": 0,
+   "statement": "stat4b",
+   "verdict": "budget head"
   },
   {
    "be_cr": 7150.01,
@@ -12653,13 +13026,31 @@
    "score": -5,
    "statement": "stat4b",
    "verdict": "budget head"
+  },
+  {
+   "be_cr": null,
+   "demand_no": 102,
+   "evidence": [
+    [
+     "-2",
+     "capital-heavy demand: M/o Youth Affairs and Sports"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Youth Affairs and Sports",
+   "name": "Recoveries",
+   "score": -2,
+   "statement": "stat4b",
+   "verdict": "budget head"
   }
  ],
- "built": "2026-10-29T04:23:18Z",
- "classified_head": 399,
- "classified_scheme": 295,
+ "built": "2026-10-29T18:08:18Z",
+ "classified_head": 423,
+ "classified_scheme": 298,
  "cycle": "2026-27",
- "lines": 694,
+ "lines": 721,
  "publish_threshold": 4,
  "scoring": {
   "Centrally Sponsored (4A)": 2,
@@ -12669,49 +13060,49 @@
   "has outcome framework": 1,
   "in DBT central list": 3
  },
- "snapshot": "2026-08-30",
+ "snapshot": "2026-10-17",
  "threshold": 2,
  "threshold_sweep": [
   {
-   "f1": 0.362,
-   "precision": 0.222,
+   "f1": 0.349,
+   "precision": 0.212,
    "recall_floor": 0.985,
    "threshold": 0
   },
   {
-   "f1": 0.457,
-   "precision": 0.314,
-   "recall_floor": 0.843,
+   "f1": 0.452,
+   "precision": 0.309,
+   "recall_floor": 0.842,
    "threshold": 1
   },
   {
-   "f1": 0.476,
-   "precision": 0.346,
-   "recall_floor": 0.761,
+   "f1": 0.469,
+   "precision": 0.339,
+   "recall_floor": 0.759,
    "threshold": 2
   },
   {
-   "f1": 0.535,
-   "precision": 0.485,
-   "recall_floor": 0.597,
+   "f1": 0.527,
+   "precision": 0.473,
+   "recall_floor": 0.594,
    "threshold": 3
   },
   {
-   "f1": 0.478,
-   "precision": 0.573,
-   "recall_floor": 0.41,
+   "f1": 0.472,
+   "precision": 0.562,
+   "recall_floor": 0.406,
    "threshold": 4
   },
   {
-   "f1": 0.465,
-   "precision": 0.617,
-   "recall_floor": 0.373,
+   "f1": 0.458,
+   "precision": 0.605,
+   "recall_floor": 0.368,
    "threshold": 5
   },
   {
-   "f1": 0.341,
+   "f1": 0.343,
    "precision": 0.646,
-   "recall_floor": 0.231,
+   "recall_floor": 0.233,
    "threshold": 6
   }
  ],
@@ -13629,6 +14020,28 @@
    "verdict": "scheme"
   },
   {
+   "be_cr": 40.0,
+   "demand_no": 71,
+   "evidence": [
+    [
+     "+3",
+     "named in DBT Bharat's central list, so money reaches individuals"
+    ],
+    [
+     "+2",
+     "benefit words in the name: training"
+    ]
+   ],
+   "in_dbt": true,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o New and Renewable Energy",
+   "name": "Human Resources Development and Training",
+   "score": 5,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
    "be_cr": 0.01,
    "demand_no": 32,
    "evidence": [
@@ -13651,16 +14064,16 @@
    "verdict": "scheme"
   }
  ],
- "unlisted_schemes_cr": 222050.34,
- "unlisted_schemes_total": 37,
+ "unlisted_schemes_cr": 222090.34,
+ "unlisted_schemes_total": 38,
  "validation": {
   "false_negative": 32,
-  "false_positive": 193,
+  "false_positive": 197,
   "ground_truth": "myScheme membership",
   "note": "Recall is a floor, not a measurement: a line called a scheme that myScheme lacks may be the classifier being right and the portal being incomplete, which is the thing this project documents. Precision is the metric worth reading.",
-  "precision": 0.346,
-  "recall_floor": 0.761,
-  "true_negative": 367,
-  "true_positive": 102
+  "precision": 0.339,
+  "recall_floor": 0.759,
+  "true_negative": 391,
+  "true_positive": 101
  }
 }

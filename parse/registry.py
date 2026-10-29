@@ -28,17 +28,17 @@ seconds and makes the same comparisons.
 """
 
 import argparse
+import glob
 import gzip
 import importlib.util
 import json
 import os
-import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import ROOT, read_json, utcnow, write_json  # noqa: E402
 
 
 def _load(name, path):
@@ -50,6 +50,8 @@ def _load(name, path):
 
 _m = _load("scheme_match", os.path.join(HERE, "match.py"))
 probably_same, m_tokens, m_acronyms = _m.probably_same, _m.tokens, _m.acronyms
+# By path: collect/dbt.py is the collector and comes first on sys.path.
+_dbt = _load("parse_dbt", os.path.join(HERE, "dbt.py"))
 m_skeleton, m_similarity = _m.skeleton, _m.similarity
 
 # Merging uses parse/match.py's GENEROUS matcher, not enrich/budget.py's conservative
@@ -59,23 +61,21 @@ m_skeleton, m_similarity = _m.skeleton, _m.similarity
 # "MGNREGA" as false absences before this was caught.
 
 
-def dbt_central(date):
-    """Scheme names from the archived DBT Bharat central list.
+def same_line(held, name, detail):
+    """Is (name, detail) the source line an entry already holds? Name AND every field the
+    source records about it. Two lines named alike in different demands are two lines:
+    "Research and Development" is voted in demands 9, 21, 71 and 89, and comparing names
+    alone kept demand 9's Rs 21 crore and dropped demand 21's Rs 17,250 crore."""
+    return held.get("name") == name and all(held.get(k) == v for k, v in detail.items())
 
-    The page is 56 <ol> blocks, one per ministry, not a table — 320 <li> in total,
-    which is the count DBT Bharat states for itself.
-    """
+
+def dbt_central(date):
+    """Scheme names from the archived DBT Bharat central list."""
     p = os.path.join(ROOT, "archive", "dbt", date, "central-list.html.gz")
     if not os.path.exists(p):
         return []
-    html = gzip.open(p, "rb").read().decode("utf-8", "replace")
-    out = []
-    for block in re.findall(r"<ol[^>]*>(.*?)</ol>", html, re.S | re.I):
-        for li in re.findall(r"<li[^>]*>(.*?)</li>", block, re.S | re.I):
-            name = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", li)).strip()
-            if name:
-                out.append(name)
-    return out
+    with gzip.open(p, "rb") as fh:
+        return _dbt.central_names(fh.read().decode("utf-8", "replace"))
 
 
 def build(snapshot, year):
@@ -155,10 +155,10 @@ def build(snapshot, year):
             # umbrella schemes routinely have several: 721 budget lines became 493
             # registry sources, losing 228 of them including FAME. If the slot is taken
             # by a DIFFERENT line, this is a distinct thing and gets its own entry.
-            if hit is not None and (key not in hit["sources"]
-                                    or hit["sources"][key].get("name") == name):
-                hit["sources"].setdefault(key, {**detail, "name": name,
-                                                "merge_reason": why})
+            if hit is not None and key not in hit["sources"]:
+                hit["sources"][key] = {**detail, "name": name, "merge_reason": why}
+            elif hit is not None and same_line(hit["sources"][key], name, detail):
+                pass
             else:
                 en = {"name": name, "sources": {key: {**detail, "name": name}}}
                 entries.append(en)
@@ -226,12 +226,48 @@ def build(snapshot, year):
     return out
 
 
+def latest_dbt():
+    """The newest DBT snapshot that walked clean. run.sh called this module and
+    classify.py with no --snapshot, and the default was a fixed 2026-08-30, so every
+    monthly run built the DBT half of the registry from August's archive and labelled it
+    that way."""
+    dates = [os.path.basename(os.path.dirname(p))
+             for p in glob.glob(os.path.join(ROOT, "archive", "dbt", "*", "_manifest.json"))
+             if (read_json(p, {}) or {}).get("error_count") == 0]
+    if not dates:
+        raise SystemExit("no clean DBT snapshot under archive/dbt")
+    return max(dates)
+
+
+def selftest():
+    held = {"name": "Research and Development", "statement": "stat4b", "demand_no": 9,
+            "be_cr": 21.0, "merge_reason": "exact"}
+    bad = 0
+    for label, got, want in [
+            ("the same line read twice is one line",
+             same_line(held, "Research and Development",
+                       {"statement": "stat4b", "demand_no": 9, "be_cr": 21.0}), True),
+            ("the same name in another demand is another line",
+             same_line(held, "Research and Development",
+                       {"statement": "stat4b", "demand_no": 21, "be_cr": 17250.25}), False),
+            ("a different name is another line",
+             same_line(held, "Research", {"statement": "stat4b", "demand_no": 9}), False)]:
+        ok = got == want
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}")
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Build the union registry across sources.")
-    ap.add_argument("--snapshot", default="2026-08-30")
+    ap.add_argument("--self-test", action="store_true")
+    ap.add_argument("--snapshot", help="DBT snapshot date (default: the newest clean one)")
     ap.add_argument("--year", type=int, default=2026)
     a = ap.parse_args()
-    o = build(a.snapshot, a.year)
+    if a.self_test:
+        print("registry self-test")
+        sys.exit(1 if selftest() else 0)
+    o = build(a.snapshot or latest_dbt(), a.year)
     print(f"union registry: {o['total_entries']:,} entries "
           f"(myScheme alone: {o['myscheme_entries']:,})")
     for k, v in o["added_by"].items():

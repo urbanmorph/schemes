@@ -139,6 +139,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from classify_common import excluded_by_rule  # noqa: E402
 
 
 def _load(name, path):
@@ -308,6 +309,10 @@ def score_entry(name, hoas):
     Circle", should have to work to clear the bar, because that is the row that would
     embarrass the published list.
     """
+    # The shared definition, the same in every state: money that buys a delivery
+    # system's capacity is not a scheme however this state's evidence reads it.
+    if excluded_by_rule(name):
+        return -99, [["rule", "buys the capacity of the delivery system, not the benefit"]]
     tk = tokens(name)
     major, minor, obj = hoa_fields(hoas)
     ev = []

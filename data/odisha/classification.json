@@ -1,5 +1,5 @@
 {
- "absent_cr": 11750.72,
+ "absent_cr": 11733.54,
  "absent_distinct": [
   {
    "be_lakh": 583675.01,
@@ -608,39 +608,6 @@
    "score": 11
   },
   {
-   "be_lakh": 1717.61,
-   "codes": [
-    "3742"
-   ],
-   "departments": [
-    "36 DEPARTMENT OF WOMEN & CHILD DEVELOPMENT"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3742, in the block above 3000"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
-    ]
-   ],
-   "name": "Mission Vatsalya - Child Helpline",
-   "score": 10
-  },
-  {
    "be_lakh": 1200.0,
    "codes": [
     "3649"
@@ -885,9 +852,9 @@
    "score": 11
   }
  ],
- "absent_distinct_names": 28,
+ "absent_distinct_names": 27,
  "absent_from_myscheme_all_rows": 1606,
- "absent_from_myscheme_and_classified_scheme": 28,
+ "absent_from_myscheme_and_classified_scheme": 27,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Odisha, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 37 joins over the whole corpus and 22 of them are wrong, so a row counted present may not be. The surviving list is a floor and a weak one: counted precision at the bar is 90.3%, the lowest of the five states, and recall is 25.0%. Read can_this_state_support_a_high_precision_classifier before quoting any number from this file.",
  "absent_schemes": [
   {
@@ -1950,61 +1917,6 @@
    "score": 11,
    "sub_schemes": [
     "Other Charges"
-   ],
-   "verdict": "scheme"
-  },
-  {
-   "be_charged_lakh": null,
-   "be_lakh": 1717.61,
-   "code": "3742",
-   "departments": [
-    "36 DEPARTMENT OF WOMEN & CHILD DEVELOPMENT"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3742, in the block above 3000"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2235-02-102"
-   ],
-   "in_myscheme_odisha": false,
-   "key": "3742",
-   "major_heads": [
-    "2235"
-   ],
-   "minor_heads": [
-    "102"
-   ],
-   "myscheme_match": null,
-   "name": "Mission Vatsalya - Child Helpline",
-   "object_heads": [
-    "20",
-    "78"
-   ],
-   "score": 10,
-   "sub_schemes": [
-    "Central Share of CSS",
-    "Other Charges",
-    "State Share of CSS"
    ],
    "verdict": "scheme"
   },
@@ -53002,7 +52914,12 @@
    "departments": [
     "37 ELECTRONICS & INFORMATION TECHNOLOGY DEPARTMENT"
    ],
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "hand_label": null,
    "hoas": [
     "2852-07-202"
@@ -53020,7 +52937,7 @@
    "object_heads": [
     "41"
    ],
-   "score": 0,
+   "score": -99,
    "sub_schemes": [
     "Grants-in-aid"
    ],
@@ -66147,16 +66064,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "scheme code 3349, in the block above 3000"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -66180,7 +66089,7 @@
     "20",
     "78"
    ],
-   "score": 5,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Dharti Aaba Janjatiya Utkarsha Abhijan",
@@ -67321,16 +67230,8 @@
    ],
    "evidence": [
     [
-     "-2",
-     "establishment or works minor head 003"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3392, in the block above 3000"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -67351,7 +67252,7 @@
     "20",
     "78"
    ],
-   "score": 0,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
@@ -71505,24 +71406,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789, 796"
-    ],
-    [
-     "+1",
-     "scheme code 3519, in the block above 3000"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -71547,7 +71432,7 @@
     "20",
     "78"
    ],
-   "score": 8,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
@@ -76338,20 +76223,8 @@
    ],
    "evidence": [
     [
-     "-3",
-     "the name names a body: centre"
-    ],
-    [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3656, in the block above 3000"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -76372,7 +76245,7 @@
     "20",
     "78"
    ],
-   "score": 1,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges"
@@ -76388,20 +76261,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3657, in the block above 3000"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: women"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -76422,7 +76283,7 @@
     "20",
     "78"
    ],
-   "score": 7,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges"
@@ -76921,24 +76782,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20"
-    ],
-    [
-     "+1",
-     "scheme code 3668, in the block above 3000"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: women"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: samarthya"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -76960,11 +76805,11 @@
    "object_heads": [
     "20"
    ],
-   "score": 10,
+   "score": -99,
    "sub_schemes": [
     "Other Charges"
    ],
-   "verdict": "scheme"
+   "verdict": "not a scheme"
   },
   {
    "be_charged_lakh": null,
@@ -76975,16 +76820,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3669, in the block above 3000"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -77005,7 +76842,7 @@
     "20",
     "78"
    ],
-   "score": 4,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
@@ -77082,20 +76919,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20"
-    ],
-    [
-     "+1",
-     "scheme code 3671, in the block above 3000"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: samarthya"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -77117,7 +76942,7 @@
    "object_heads": [
     "20"
    ],
-   "score": 7,
+   "score": -99,
    "sub_schemes": [
     "Other Charges"
    ],
@@ -79881,24 +79706,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3742, in the block above 3000"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -79919,13 +79728,13 @@
     "20",
     "78"
    ],
-   "score": 10,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
     "State Share of CSS"
    ],
-   "verdict": "scheme"
+   "verdict": "not a scheme"
   },
   {
    "be_charged_lakh": null,
@@ -79998,20 +79807,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3744, in the block above 3000"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "scheme",
@@ -80032,7 +79829,7 @@
     "20",
     "78"
    ],
-   "score": 7,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
@@ -80049,24 +79846,8 @@
    ],
    "evidence": [
     [
-     "-2",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: construction"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3745, in the block above 3000"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -80087,7 +79868,7 @@
     "20",
     "78"
    ],
-   "score": 0,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
@@ -80104,20 +79885,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "scheme code 3746, in the block above 3000"
-    ],
-    [
-     "+3",
-     "scheme marker word in the name: mission"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -80138,7 +79907,7 @@
     "20",
     "78"
    ],
-   "score": 7,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
@@ -85907,20 +85676,8 @@
    ],
    "evidence": [
     [
-     "+2",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20, 78"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789, 796"
-    ],
-    [
-     "+1",
-     "scheme code 3864, in the block above 3000"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "scheme",
@@ -85945,7 +85702,7 @@
     "20",
     "78"
    ],
-   "score": 5,
+   "score": -99,
    "sub_schemes": [
     "Central Share of CSS",
     "Other Charges",
@@ -86017,24 +85774,8 @@
    ],
    "evidence": [
     [
-     "-2",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: construction"
-    ],
-    [
-     "-3",
-     "the name names a body: centre"
-    ],
-    [
-     "+1",
-     "every detailed head under this code is a programme head rather than an establishment head: 20"
-    ],
-    [
-     "+1",
-     "scheme code 3866, in the block above 3000"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -86054,7 +85795,7 @@
    "object_heads": [
     "20"
    ],
-   "score": -6,
+   "score": -99,
    "sub_schemes": [
     "Other Charges"
    ],
@@ -93653,13 +93394,13 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T04:24:17Z",
+ "built": "2026-10-29T18:04:35Z",
  "can_this_state_support_a_high_precision_classifier": "Not to the standard the strongest states reach, and the honest answer is published rather than engineered around. Counted precision at the publishing bar is 90.3% on 31 codes, the lowest in the register and its floor, against West Bengal's 90.4%, Kerala's 90.9%, Tamil Nadu's 91.2%, Karnataka's 93.8%, Andhra Pradesh's 95.7% and Maharashtra's 96.9%. Three of the 31 published codes are not schemes and all three are named in known_errors. The cause is measured and not guessed: Odisha prints no purpose line, and the chart of accounts that substituted for one in Tamil Nadu is present here but says nothing, because its benefit-type classes are the standing lines inside jails, hospitals and homes rather than transfers to citizens (0.125 over 8 development rows, against Tamil Nadu's 0.895 over 19). What is left is short English names over a base rate of 10%, and the strongest positive signal in the file measures 0.389. Cumulative precision is also not monotone above the bar, which is direct evidence that the score does not rank the top of the list. A reader who requires better than nine in ten should read the band at 12 and above, which is two rows and not a register. The published 31 are a floor and a weak one.",
  "charged_and_classified_scheme": 0,
  "charged_rows": 90,
- "classified_not_scheme": 1597,
- "classified_scheme": 31,
- "classified_scheme_distinct_names": 31,
+ "classified_not_scheme": 1599,
+ "classified_scheme": 29,
+ "classified_scheme_distinct_names": 29,
  "counting_basis": "EVERY COUNT HERE IS ON THE 1,628 SCHEME CODE BASIS unless the field name says distinct. The 4-digit code is Odisha's own identifier for a provision and it is the code the state's Gender Budget prints beside each scheme name; where the same code recurs under several demands parse/odisha.py has already added the provisions and named every department. The 1,628 codes carry 1,627 distinct names, so unlike Tamil Nadu and Maharashtra the two bases are almost the same list; absent_distinct is published anyway for comparability.",
  "cycle": "2026-2027",
  "distinct_names": 1627,
@@ -112995,47 +112736,7 @@
    "false_positive": 350,
    "precision": 0.103,
    "recall": 1.0,
-   "threshold": -20,
-   "true_positive": 40
-  },
-  {
-   "called_scheme": 389,
-   "f1": 0.186,
-   "false_negative": 0,
-   "false_positive": 349,
-   "precision": 0.103,
-   "recall": 1.0,
-   "threshold": -19,
-   "true_positive": 40
-  },
-  {
-   "called_scheme": 389,
-   "f1": 0.186,
-   "false_negative": 0,
-   "false_positive": 349,
-   "precision": 0.103,
-   "recall": 1.0,
-   "threshold": -18,
-   "true_positive": 40
-  },
-  {
-   "called_scheme": 389,
-   "f1": 0.186,
-   "false_negative": 0,
-   "false_positive": 349,
-   "precision": 0.103,
-   "recall": 1.0,
-   "threshold": -17,
-   "true_positive": 40
-  },
-  {
-   "called_scheme": 388,
-   "f1": 0.187,
-   "false_negative": 0,
-   "false_positive": 348,
-   "precision": 0.103,
-   "recall": 1.0,
-   "threshold": -16,
+   "threshold": -99,
    "true_positive": 40
   },
   {
@@ -113045,7 +112746,827 @@
    "false_positive": 345,
    "precision": 0.104,
    "recall": 1.0,
-   "threshold": -15,
+   "threshold": -98,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -97,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -96,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -95,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -94,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -93,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -92,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -91,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -90,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -89,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -88,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -87,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -86,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -85,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -84,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -83,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -82,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -81,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -80,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -79,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -78,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -77,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -76,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -75,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -74,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -73,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -72,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -71,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -70,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -69,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -68,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -67,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -66,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -65,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -64,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -63,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -62,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -61,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -60,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -59,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -58,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -57,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -56,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -55,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -54,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -53,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -52,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -51,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -50,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -49,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -48,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -47,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -46,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -45,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -44,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -43,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -42,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -41,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -40,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -39,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -38,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -37,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -36,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -35,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -34,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -33,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -32,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -31,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -30,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -29,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -28,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -27,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -26,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -25,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -24,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -23,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -22,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -21,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 385,
+   "f1": 0.188,
+   "false_negative": 0,
+   "false_positive": 345,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -20,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 384,
+   "f1": 0.189,
+   "false_negative": 0,
+   "false_positive": 344,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -19,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 384,
+   "f1": 0.189,
+   "false_negative": 0,
+   "false_positive": 344,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -18,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 384,
+   "f1": 0.189,
+   "false_negative": 0,
+   "false_positive": 344,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -17,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 383,
+   "f1": 0.189,
+   "false_negative": 0,
+   "false_positive": 343,
+   "precision": 0.104,
+   "recall": 1.0,
+   "threshold": -16,
    "true_positive": 40
   },
   {
@@ -113055,245 +113576,255 @@
    "false_positive": 340,
    "precision": 0.105,
    "recall": 1.0,
+   "threshold": -15,
+   "true_positive": 40
+  },
+  {
+   "called_scheme": 375,
+   "f1": 0.193,
+   "false_negative": 0,
+   "false_positive": 335,
+   "precision": 0.107,
+   "recall": 1.0,
    "threshold": -14,
    "true_positive": 40
   },
   {
-   "called_scheme": 371,
-   "f1": 0.195,
+   "called_scheme": 366,
+   "f1": 0.197,
    "false_negative": 0,
-   "false_positive": 331,
-   "precision": 0.108,
+   "false_positive": 326,
+   "precision": 0.109,
    "recall": 1.0,
    "threshold": -13,
    "true_positive": 40
   },
   {
-   "called_scheme": 365,
-   "f1": 0.198,
+   "called_scheme": 360,
+   "f1": 0.2,
    "false_negative": 0,
-   "false_positive": 325,
-   "precision": 0.11,
+   "false_positive": 320,
+   "precision": 0.111,
    "recall": 1.0,
    "threshold": -12,
    "true_positive": 40
   },
   {
-   "called_scheme": 350,
-   "f1": 0.205,
+   "called_scheme": 345,
+   "f1": 0.208,
    "false_negative": 0,
-   "false_positive": 310,
-   "precision": 0.114,
+   "false_positive": 305,
+   "precision": 0.116,
    "recall": 1.0,
    "threshold": -11,
    "true_positive": 40
   },
   {
-   "called_scheme": 330,
-   "f1": 0.216,
+   "called_scheme": 325,
+   "f1": 0.219,
    "false_negative": 0,
-   "false_positive": 290,
-   "precision": 0.121,
+   "false_positive": 285,
+   "precision": 0.123,
    "recall": 1.0,
    "threshold": -10,
    "true_positive": 40
   },
   {
-   "called_scheme": 308,
-   "f1": 0.23,
+   "called_scheme": 303,
+   "f1": 0.233,
    "false_negative": 0,
-   "false_positive": 268,
-   "precision": 0.13,
+   "false_positive": 263,
+   "precision": 0.132,
    "recall": 1.0,
    "threshold": -9,
    "true_positive": 40
   },
   {
-   "called_scheme": 288,
-   "f1": 0.244,
+   "called_scheme": 283,
+   "f1": 0.248,
    "false_negative": 0,
-   "false_positive": 248,
-   "precision": 0.139,
+   "false_positive": 243,
+   "precision": 0.141,
    "recall": 1.0,
    "threshold": -8,
    "true_positive": 40
   },
   {
-   "called_scheme": 272,
-   "f1": 0.256,
+   "called_scheme": 267,
+   "f1": 0.261,
    "false_negative": 0,
-   "false_positive": 232,
-   "precision": 0.147,
+   "false_positive": 227,
+   "precision": 0.15,
    "recall": 1.0,
    "threshold": -7,
    "true_positive": 40
   },
   {
-   "called_scheme": 242,
-   "f1": 0.284,
+   "called_scheme": 237,
+   "f1": 0.289,
    "false_negative": 0,
-   "false_positive": 202,
-   "precision": 0.165,
+   "false_positive": 197,
+   "precision": 0.169,
    "recall": 1.0,
    "threshold": -6,
    "true_positive": 40
   },
   {
-   "called_scheme": 223,
-   "f1": 0.304,
+   "called_scheme": 218,
+   "f1": 0.31,
    "false_negative": 0,
-   "false_positive": 183,
-   "precision": 0.179,
+   "false_positive": 178,
+   "precision": 0.183,
    "recall": 1.0,
    "threshold": -5,
    "true_positive": 40
   },
   {
-   "called_scheme": 213,
-   "f1": 0.316,
+   "called_scheme": 208,
+   "f1": 0.323,
    "false_negative": 0,
-   "false_positive": 173,
-   "precision": 0.188,
+   "false_positive": 168,
+   "precision": 0.192,
    "recall": 1.0,
    "threshold": -4,
    "true_positive": 40
   },
   {
-   "called_scheme": 184,
-   "f1": 0.348,
+   "called_scheme": 179,
+   "f1": 0.356,
    "false_negative": 1,
-   "false_positive": 145,
-   "precision": 0.212,
+   "false_positive": 140,
+   "precision": 0.218,
    "recall": 0.975,
    "threshold": -3,
    "true_positive": 39
   },
   {
-   "called_scheme": 158,
-   "f1": 0.394,
+   "called_scheme": 153,
+   "f1": 0.404,
    "false_negative": 1,
-   "false_positive": 119,
-   "precision": 0.247,
+   "false_positive": 114,
+   "precision": 0.255,
    "recall": 0.975,
    "threshold": -2,
    "true_positive": 39
   },
   {
-   "called_scheme": 138,
-   "f1": 0.438,
+   "called_scheme": 133,
+   "f1": 0.451,
    "false_negative": 1,
-   "false_positive": 99,
-   "precision": 0.283,
+   "false_positive": 94,
+   "precision": 0.293,
    "recall": 0.975,
    "threshold": -1,
    "true_positive": 39
   },
   {
-   "called_scheme": 128,
-   "f1": 0.452,
+   "called_scheme": 123,
+   "f1": 0.466,
    "false_negative": 2,
-   "false_positive": 90,
-   "precision": 0.297,
+   "false_positive": 85,
+   "precision": 0.309,
    "recall": 0.95,
    "threshold": 0,
    "true_positive": 38
   },
   {
-   "called_scheme": 109,
-   "f1": 0.483,
+   "called_scheme": 104,
+   "f1": 0.5,
    "false_negative": 4,
-   "false_positive": 73,
-   "precision": 0.33,
+   "false_positive": 68,
+   "precision": 0.346,
    "recall": 0.9,
    "threshold": 1,
    "true_positive": 36
   },
   {
-   "called_scheme": 90,
-   "f1": 0.492,
+   "called_scheme": 85,
+   "f1": 0.512,
    "false_negative": 8,
-   "false_positive": 58,
-   "precision": 0.356,
+   "false_positive": 53,
+   "precision": 0.376,
    "recall": 0.8,
    "threshold": 2,
    "true_positive": 32
   },
   {
-   "called_scheme": 69,
-   "f1": 0.514,
+   "called_scheme": 64,
+   "f1": 0.538,
    "false_negative": 12,
-   "false_positive": 41,
-   "precision": 0.406,
+   "false_positive": 36,
+   "precision": 0.438,
    "recall": 0.7,
    "threshold": 3,
    "true_positive": 28
   },
   {
-   "called_scheme": 58,
-   "f1": 0.531,
+   "called_scheme": 53,
+   "f1": 0.559,
    "false_negative": 14,
-   "false_positive": 32,
-   "precision": 0.448,
+   "false_positive": 27,
+   "precision": 0.491,
    "recall": 0.65,
    "threshold": 4,
    "true_positive": 26
   },
   {
-   "called_scheme": 47,
-   "f1": 0.529,
+   "called_scheme": 42,
+   "f1": 0.561,
    "false_negative": 17,
-   "false_positive": 24,
-   "precision": 0.489,
+   "false_positive": 19,
+   "precision": 0.548,
    "recall": 0.575,
    "threshold": 5,
    "true_positive": 23
   },
   {
-   "called_scheme": 32,
-   "f1": 0.5,
+   "called_scheme": 28,
+   "f1": 0.529,
    "false_negative": 22,
-   "false_positive": 14,
-   "precision": 0.562,
+   "false_positive": 10,
+   "precision": 0.643,
    "recall": 0.45,
    "threshold": 6,
    "true_positive": 18
   },
   {
-   "called_scheme": 26,
-   "f1": 0.485,
+   "called_scheme": 22,
+   "f1": 0.516,
    "false_negative": 24,
-   "false_positive": 10,
-   "precision": 0.615,
+   "false_positive": 6,
+   "precision": 0.727,
    "recall": 0.4,
    "threshold": 7,
    "true_positive": 16
   },
   {
-   "called_scheme": 17,
-   "f1": 0.456,
+   "called_scheme": 15,
+   "f1": 0.473,
    "false_negative": 27,
-   "false_positive": 4,
-   "precision": 0.765,
+   "false_positive": 2,
+   "precision": 0.867,
    "recall": 0.325,
    "threshold": 8,
    "true_positive": 13
   },
   {
-   "called_scheme": 12,
-   "f1": 0.385,
+   "called_scheme": 11,
+   "f1": 0.392,
    "false_negative": 30,
-   "false_positive": 2,
-   "precision": 0.833,
+   "false_positive": 1,
+   "precision": 0.909,
    "recall": 0.25,
    "threshold": 9,
    "true_positive": 10
   },
   {
-   "called_scheme": 7,
-   "f1": 0.213,
+   "called_scheme": 6,
+   "f1": 0.217,
    "false_negative": 35,
-   "false_positive": 2,
-   "precision": 0.714,
+   "false_positive": 1,
+   "precision": 0.833,
    "recall": 0.125,
    "threshold": 10,
    "true_positive": 5
@@ -113321,14 +113852,14 @@
  ],
  "threshold_sweep_census": [
   {
-   "band_at_exactly_this_score": 51,
-   "band_not_schemes": 37,
-   "band_precision": 0.275,
-   "not_schemes": 107,
-   "precision": 0.462,
-   "published": 199,
-   "rows_hand_labelled": 199,
-   "rows_in_corpus": 199,
+   "band_at_exactly_this_score": 50,
+   "band_not_schemes": 36,
+   "band_precision": 0.28,
+   "not_schemes": 99,
+   "precision": 0.476,
+   "published": 189,
+   "rows_hand_labelled": 189,
+   "rows_in_corpus": 189,
    "the_errors": [
     "15th FC Grant for Nutrition [3452]",
     "ADMIN - MGNREGS ADMIN - MGNREGS [3693]",
@@ -113378,9 +113909,6 @@
     "Management of working women hostels [3798]",
     "Managerial Subsidy to Scheduled Caste Finance Co-operative Corporation [0874]",
     "Managerial Subsidy to TDCC [0875]",
-    "Mission VATSALYA [3519]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "Mission Vatsalya - Swachhata Action Plan (SAP) (SAP) [3746]",
     "Mission for Aatmanirbharta in Pulses ( Seed Production Programme 100%) [4014]",
     "Mukhyamantri Bayana Shilpa Vikash Yojana [3985]",
     "Mukhyamantri Hastatanta Bikash Yojana [3984]",
@@ -113389,7 +113917,6 @@
     "Mukhyamantri Prani Kalyan Yojana (MPKY) [3823]",
     "NLM - Assistance for Quality Fodder seed Production [3750]",
     "NLM-Dharti Aaba-Janajatiya Unnat Gram Utkarsh Abhiyan (DA-JGUA) [3934]",
-    "Nari Adalat (SAMBAL) [3669]",
     "National Action Plan for Drug Demand Reduction (NAPDDR) [3398]",
     "National Health Mission [2943]",
     "National Mission on AYUSH including Mission on Medicinal Plants [3039]",
@@ -113403,7 +113930,6 @@
     "Operationalisation of Urban Hostel Complexes (AKANKSHYA) [3084]",
     "Other Plan Schemes for welfare of handicapped [2388]",
     "POSHAN Abhiyaan [3865]",
-    "Palna (SAMARTHYA) [3671]",
     "Pradhan Mantri Adi Adarsh Grama Yojana(PMAAGY) [3642]",
     "Pradhan Mantri Krishi Sinchai Yojana (PMKSY) [3064]",
     "Pradhan Matri Anusuchita Jati Abhyudaya Yojana (PM-AJAY) (PM-AJAY) [3583]",
@@ -113418,12 +113944,10 @@
     "Shakti Sadan (SAMARTHYA) [3667]",
     "Start-up Village Entrepreneurship Programme (SVEP) [3529]",
     "State Fund for implementation of the Rights of Persons with Disabilities (RPD) Act. [3312]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]",
     "State Institute for Empowerment of persons with Disabilities(SIEP) [3310]",
     "State Support to Child Welfare [3991]",
     "State Top up Assistance for Horticultural Intervention [3723]",
     "Students Academic Management System SAMS SAMS [3453]",
-    "Sub-Mission on Agriculture Extension [3349]",
     "Sub-Mission on Plant Protection & Plant Quarantine [3347]",
     "Subhadra Sambedna [3940]",
     "Subsidies for Small Scale Industries [2329]",
@@ -113434,21 +113958,20 @@
     "Swachha Bharat Mission (SBM) - Urban [3221]",
     "Swachhata Action Plan (Sakshyam anganwadi and POSHAN 2.0) [3790]",
     "Welfare of Fishermen [3624]",
-    "Women Helpline (SAMBAL) [3657]",
     "Women Hostel for PWD [2892]",
     "Youth Parliament Competition [2435]"
    ],
    "threshold": 4
   },
   {
-   "band_at_exactly_this_score": 55,
-   "band_not_schemes": 32,
-   "band_precision": 0.418,
-   "not_schemes": 70,
-   "precision": 0.527,
-   "published": 148,
-   "rows_hand_labelled": 148,
-   "rows_in_corpus": 148,
+   "band_at_exactly_this_score": 53,
+   "band_not_schemes": 31,
+   "band_precision": 0.415,
+   "not_schemes": 63,
+   "precision": 0.547,
+   "published": 139,
+   "rows_hand_labelled": 139,
+   "rows_in_corpus": 139,
    "the_errors": [
     "Adhaar enrolment kit (Sakshyam anganwadi and POSHAN 2.0) [3555]",
     "Ama Similipal Yojana [3931]",
@@ -113482,9 +114005,6 @@
     "Management of working women hostels [3798]",
     "Managerial Subsidy to Scheduled Caste Finance Co-operative Corporation [0874]",
     "Managerial Subsidy to TDCC [0875]",
-    "Mission VATSALYA [3519]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "Mission Vatsalya - Swachhata Action Plan (SAP) (SAP) [3746]",
     "Mission for Aatmanirbharta in Pulses ( Seed Production Programme 100%) [4014]",
     "Mukhyamantri Hastatanta Bikash Yojana [3984]",
     "Mukhyamantri Karma Tatpara Abhiyan (MUKTA) [3586]",
@@ -113499,7 +114019,6 @@
     "Odisha Pusti Mission [3941]",
     "Other Plan Schemes for welfare of handicapped [2388]",
     "POSHAN Abhiyaan [3865]",
-    "Palna (SAMARTHYA) [3671]",
     "Pradhan Mantri Adi Adarsh Grama Yojana(PMAAGY) [3642]",
     "Pradhan Mantri Krishi Sinchai Yojana (PMKSY) [3064]",
     "Pradhan Matri Anusuchita Jati Abhyudaya Yojana (PM-AJAY) (PM-AJAY) [3583]",
@@ -113509,16 +114028,13 @@
     "Rehabilitation of physically and mentally challanged socially disadvanta- ged persons [2126]",
     "Shakhi Niwas (SAMARTHYA) [3670]",
     "State Fund for implementation of the Rights of Persons with Disabilities (RPD) Act. [3312]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]",
     "State Top up Assistance for Horticultural Intervention [3723]",
-    "Sub-Mission on Agriculture Extension [3349]",
     "Sub-Mission on Plant Protection & Plant Quarantine [3347]",
     "Subsidy for MSME [3112]",
     "Subsidy to ICDP [2382]",
     "Swachha Bharat Mission (SBM) - Urban [3221]",
     "Swachhata Action Plan (Sakshyam anganwadi and POSHAN 2.0) [3790]",
     "Welfare of Fishermen [3624]",
-    "Women Helpline (SAMBAL) [3657]",
     "Women Hostel for PWD [2892]"
    ],
    "threshold": 5
@@ -113527,11 +114043,11 @@
    "band_at_exactly_this_score": 23,
    "band_not_schemes": 16,
    "band_precision": 0.304,
-   "not_schemes": 38,
-   "precision": 0.591,
-   "published": 93,
-   "rows_hand_labelled": 93,
-   "rows_in_corpus": 93,
+   "not_schemes": 32,
+   "precision": 0.628,
+   "published": 86,
+   "rows_hand_labelled": 86,
+   "rows_in_corpus": 86,
    "the_errors": [
     "Adhaar enrolment kit (Sakshyam anganwadi and POSHAN 2.0) [3555]",
     "Ama Similipal Yojana [3931]",
@@ -113553,36 +114069,30 @@
     "Intra State movement and handling of Food Grains and Fair price shop dealers margin under NFSA [3299]",
     "Jaga Mission [3359]",
     "Management of working women hostels [3798]",
-    "Mission VATSALYA [3519]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "Mission Vatsalya - Swachhata Action Plan (SAP) (SAP) [3746]",
     "Mission for Aatmanirbharta in Pulses ( Seed Production Programme 100%) [4014]",
     "Mukhyamantri Matshya Mitra Yojana (MMMY) [3987]",
     "NLM - Assistance for Quality Fodder seed Production [3750]",
     "NLM-Dharti Aaba-Janajatiya Unnat Gram Utkarsh Abhiyan (DA-JGUA) [3934]",
     "National Rural Livelihood Mission (NRLM) [2950]",
     "Odisha Pusti Mission [3941]",
-    "Palna (SAMARTHYA) [3671]",
     "Pradhan Mantri Adi Adarsh Grama Yojana(PMAAGY) [3642]",
     "Pradhan Matri Anusuchita Jati Abhyudaya Yojana (PM-AJAY) (PM-AJAY) [3583]",
     "Prevention of Violence Against Women [3247]",
     "Programmes and activities for Senior Citizens [3132]",
     "Rehabilitation of physically and mentally challanged socially disadvanta- ged persons [2126]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]",
-    "State Top up Assistance for Horticultural Intervention [3723]",
-    "Women Helpline (SAMBAL) [3657]"
+    "State Top up Assistance for Horticultural Intervention [3723]"
    ],
    "threshold": 6
   },
   {
-   "band_at_exactly_this_score": 24,
-   "band_not_schemes": 15,
-   "band_precision": 0.375,
-   "not_schemes": 22,
-   "precision": 0.686,
-   "published": 70,
-   "rows_hand_labelled": 70,
-   "rows_in_corpus": 70,
+   "band_at_exactly_this_score": 20,
+   "band_not_schemes": 12,
+   "band_precision": 0.4,
+   "not_schemes": 16,
+   "precision": 0.746,
+   "published": 63,
+   "rows_hand_labelled": 63,
+   "rows_in_corpus": 63,
    "the_errors": [
     "Adhaar enrolment kit (Sakshyam anganwadi and POSHAN 2.0) [3555]",
     "Amenities for Minority Hostels [3613]",
@@ -113594,38 +114104,29 @@
     "Implementation of Forest Rights Act 2006 in Odisha(Mo Jungle Jami Yojana) [3641]",
     "Implementation of Persons with Disabilities Act - [3071]",
     "Management of working women hostels [3798]",
-    "Mission VATSALYA [3519]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "Mission Vatsalya - Swachhata Action Plan (SAP) (SAP) [3746]",
     "NLM - Assistance for Quality Fodder seed Production [3750]",
     "National Rural Livelihood Mission (NRLM) [2950]",
     "Odisha Pusti Mission [3941]",
-    "Palna (SAMARTHYA) [3671]",
     "Pradhan Mantri Adi Adarsh Grama Yojana(PMAAGY) [3642]",
     "Pradhan Matri Anusuchita Jati Abhyudaya Yojana (PM-AJAY) (PM-AJAY) [3583]",
-    "Prevention of Violence Against Women [3247]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]",
-    "Women Helpline (SAMBAL) [3657]"
+    "Prevention of Violence Against Women [3247]"
    ],
    "threshold": 7
   },
   {
-   "band_at_exactly_this_score": 15,
-   "band_not_schemes": 4,
-   "band_precision": 0.733,
-   "not_schemes": 7,
-   "precision": 0.848,
-   "published": 46,
-   "rows_hand_labelled": 46,
-   "rows_in_corpus": 46,
+   "band_at_exactly_this_score": 14,
+   "band_not_schemes": 3,
+   "band_precision": 0.786,
+   "not_schemes": 4,
+   "precision": 0.907,
+   "published": 43,
+   "rows_hand_labelled": 43,
+   "rows_in_corpus": 43,
    "the_errors": [
     "Adhaar enrolment kit (Sakshyam anganwadi and POSHAN 2.0) [3555]",
     "Development of PVTGs [3612]",
     "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) [3891]",
-    "Mission VATSALYA [3519]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "Odisha Pusti Mission [3941]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]"
+    "Odisha Pusti Mission [3941]"
    ],
    "threshold": 8
   },
@@ -113633,31 +114134,27 @@
    "band_at_exactly_this_score": 11,
    "band_not_schemes": 0,
    "band_precision": 1.0,
-   "not_schemes": 3,
-   "precision": 0.903,
-   "published": 31,
-   "rows_hand_labelled": 31,
-   "rows_in_corpus": 31,
+   "not_schemes": 1,
+   "precision": 0.966,
+   "published": 29,
+   "rows_hand_labelled": 29,
+   "rows_in_corpus": 29,
    "the_errors": [
-    "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) [3891]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]"
+    "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) [3891]"
    ],
    "threshold": 9
   },
   {
-   "band_at_exactly_this_score": 9,
-   "band_not_schemes": 2,
-   "band_precision": 0.778,
-   "not_schemes": 3,
-   "precision": 0.85,
-   "published": 20,
-   "rows_hand_labelled": 20,
-   "rows_in_corpus": 20,
+   "band_at_exactly_this_score": 7,
+   "band_not_schemes": 0,
+   "band_precision": 1.0,
+   "not_schemes": 1,
+   "precision": 0.944,
+   "published": 18,
+   "rows_hand_labelled": 18,
+   "rows_in_corpus": 18,
    "the_errors": [
-    "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) [3891]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]"
+    "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) [3891]"
    ],
    "threshold": 10
   },
@@ -113696,47 +114193,827 @@
    "false_positive": 173,
    "precision": 0.113,
    "recall": 1.0,
+   "threshold": -99,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -98,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -97,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -96,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -95,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -94,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -93,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -92,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -91,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -90,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -89,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -88,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -87,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -86,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -85,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -84,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -83,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -82,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -81,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -80,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -79,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -78,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -77,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -76,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -75,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -74,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -73,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -72,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -71,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -70,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -69,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -68,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -67,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -66,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -65,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -64,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -63,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -62,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -61,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -60,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -59,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -58,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -57,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -56,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -55,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -54,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -53,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -52,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -51,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -50,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -49,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -48,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -47,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -46,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -45,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -44,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -43,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -42,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -41,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -40,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -39,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -38,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -37,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -36,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -35,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -34,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -33,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -32,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -31,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -30,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -29,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -28,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -27,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -26,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -25,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -24,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -23,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -22,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
+   "threshold": -21,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 193,
+   "f1": 0.205,
+   "false_negative": 0,
+   "false_positive": 171,
+   "precision": 0.114,
+   "recall": 1.0,
    "threshold": -20,
    "true_positive": 22
   },
   {
-   "called_scheme": 195,
-   "f1": 0.203,
+   "called_scheme": 193,
+   "f1": 0.205,
    "false_negative": 0,
-   "false_positive": 173,
-   "precision": 0.113,
+   "false_positive": 171,
+   "precision": 0.114,
    "recall": 1.0,
    "threshold": -19,
    "true_positive": 22
   },
   {
-   "called_scheme": 195,
-   "f1": 0.203,
+   "called_scheme": 193,
+   "f1": 0.205,
    "false_negative": 0,
-   "false_positive": 173,
-   "precision": 0.113,
+   "false_positive": 171,
+   "precision": 0.114,
    "recall": 1.0,
    "threshold": -18,
    "true_positive": 22
   },
   {
-   "called_scheme": 195,
-   "f1": 0.203,
+   "called_scheme": 193,
+   "f1": 0.205,
    "false_negative": 0,
-   "false_positive": 173,
-   "precision": 0.113,
+   "false_positive": 171,
+   "precision": 0.114,
    "recall": 1.0,
    "threshold": -17,
-   "true_positive": 22
-  },
-  {
-   "called_scheme": 194,
-   "f1": 0.204,
-   "false_negative": 0,
-   "false_positive": 172,
-   "precision": 0.113,
-   "recall": 1.0,
-   "threshold": -16,
    "true_positive": 22
   },
   {
@@ -113746,225 +115023,235 @@
    "false_positive": 170,
    "precision": 0.115,
    "recall": 1.0,
+   "threshold": -16,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 190,
+   "f1": 0.208,
+   "false_negative": 0,
+   "false_positive": 168,
+   "precision": 0.116,
+   "recall": 1.0,
    "threshold": -15,
    "true_positive": 22
   },
   {
-   "called_scheme": 191,
-   "f1": 0.207,
+   "called_scheme": 189,
+   "f1": 0.209,
    "false_negative": 0,
-   "false_positive": 169,
-   "precision": 0.115,
+   "false_positive": 167,
+   "precision": 0.116,
    "recall": 1.0,
    "threshold": -14,
    "true_positive": 22
   },
   {
-   "called_scheme": 186,
-   "f1": 0.212,
+   "called_scheme": 184,
+   "f1": 0.214,
    "false_negative": 0,
-   "false_positive": 164,
-   "precision": 0.118,
+   "false_positive": 162,
+   "precision": 0.12,
    "recall": 1.0,
    "threshold": -13,
    "true_positive": 22
   },
   {
-   "called_scheme": 183,
-   "f1": 0.215,
+   "called_scheme": 181,
+   "f1": 0.217,
    "false_negative": 0,
-   "false_positive": 161,
-   "precision": 0.12,
+   "false_positive": 159,
+   "precision": 0.122,
    "recall": 1.0,
    "threshold": -12,
    "true_positive": 22
   },
   {
-   "called_scheme": 177,
-   "f1": 0.221,
+   "called_scheme": 175,
+   "f1": 0.223,
    "false_negative": 0,
-   "false_positive": 155,
-   "precision": 0.124,
+   "false_positive": 153,
+   "precision": 0.126,
    "recall": 1.0,
    "threshold": -11,
    "true_positive": 22
   },
   {
-   "called_scheme": 168,
-   "f1": 0.232,
+   "called_scheme": 166,
+   "f1": 0.234,
    "false_negative": 0,
-   "false_positive": 146,
-   "precision": 0.131,
+   "false_positive": 144,
+   "precision": 0.133,
    "recall": 1.0,
    "threshold": -10,
    "true_positive": 22
   },
   {
-   "called_scheme": 155,
-   "f1": 0.249,
+   "called_scheme": 153,
+   "f1": 0.251,
    "false_negative": 0,
-   "false_positive": 133,
-   "precision": 0.142,
+   "false_positive": 131,
+   "precision": 0.144,
    "recall": 1.0,
    "threshold": -9,
    "true_positive": 22
   },
   {
-   "called_scheme": 144,
-   "f1": 0.265,
+   "called_scheme": 142,
+   "f1": 0.268,
    "false_negative": 0,
-   "false_positive": 122,
-   "precision": 0.153,
+   "false_positive": 120,
+   "precision": 0.155,
    "recall": 1.0,
    "threshold": -8,
    "true_positive": 22
   },
   {
-   "called_scheme": 135,
-   "f1": 0.28,
+   "called_scheme": 133,
+   "f1": 0.284,
    "false_negative": 0,
-   "false_positive": 113,
-   "precision": 0.163,
+   "false_positive": 111,
+   "precision": 0.165,
    "recall": 1.0,
    "threshold": -7,
    "true_positive": 22
   },
   {
-   "called_scheme": 121,
-   "f1": 0.308,
+   "called_scheme": 119,
+   "f1": 0.312,
    "false_negative": 0,
-   "false_positive": 99,
-   "precision": 0.182,
+   "false_positive": 97,
+   "precision": 0.185,
    "recall": 1.0,
    "threshold": -6,
    "true_positive": 22
   },
   {
-   "called_scheme": 113,
-   "f1": 0.326,
+   "called_scheme": 111,
+   "f1": 0.331,
    "false_negative": 0,
-   "false_positive": 91,
-   "precision": 0.195,
+   "false_positive": 89,
+   "precision": 0.198,
    "recall": 1.0,
    "threshold": -5,
    "true_positive": 22
   },
   {
-   "called_scheme": 112,
-   "f1": 0.328,
+   "called_scheme": 110,
+   "f1": 0.333,
    "false_negative": 0,
-   "false_positive": 90,
-   "precision": 0.196,
+   "false_positive": 88,
+   "precision": 0.2,
    "recall": 1.0,
    "threshold": -4,
    "true_positive": 22
   },
   {
-   "called_scheme": 97,
-   "f1": 0.353,
+   "called_scheme": 95,
+   "f1": 0.359,
    "false_negative": 1,
-   "false_positive": 76,
-   "precision": 0.216,
+   "false_positive": 74,
+   "precision": 0.221,
    "recall": 0.955,
    "threshold": -3,
    "true_positive": 21
   },
   {
-   "called_scheme": 84,
-   "f1": 0.396,
+   "called_scheme": 82,
+   "f1": 0.404,
    "false_negative": 1,
-   "false_positive": 63,
-   "precision": 0.25,
+   "false_positive": 61,
+   "precision": 0.256,
    "recall": 0.955,
    "threshold": -2,
    "true_positive": 21
   },
   {
-   "called_scheme": 73,
-   "f1": 0.442,
+   "called_scheme": 71,
+   "f1": 0.452,
    "false_negative": 1,
-   "false_positive": 52,
-   "precision": 0.288,
+   "false_positive": 50,
+   "precision": 0.296,
    "recall": 0.955,
    "threshold": -1,
    "true_positive": 21
   },
   {
-   "called_scheme": 67,
-   "f1": 0.449,
+   "called_scheme": 65,
+   "f1": 0.46,
    "false_negative": 2,
-   "false_positive": 47,
-   "precision": 0.299,
+   "false_positive": 45,
+   "precision": 0.308,
    "recall": 0.909,
    "threshold": 0,
    "true_positive": 20
   },
   {
-   "called_scheme": 56,
-   "f1": 0.487,
+   "called_scheme": 54,
+   "f1": 0.5,
    "false_negative": 3,
-   "false_positive": 37,
-   "precision": 0.339,
+   "false_positive": 35,
+   "precision": 0.352,
    "recall": 0.864,
    "threshold": 1,
    "true_positive": 19
   },
   {
-   "called_scheme": 44,
-   "f1": 0.485,
+   "called_scheme": 42,
+   "f1": 0.5,
    "false_negative": 6,
-   "false_positive": 28,
-   "precision": 0.364,
+   "false_positive": 26,
+   "precision": 0.381,
    "recall": 0.727,
    "threshold": 2,
    "true_positive": 16
   },
   {
-   "called_scheme": 35,
-   "f1": 0.491,
+   "called_scheme": 33,
+   "f1": 0.509,
    "false_negative": 8,
-   "false_positive": 21,
-   "precision": 0.4,
+   "false_positive": 19,
+   "precision": 0.424,
    "recall": 0.636,
    "threshold": 3,
    "true_positive": 14
   },
   {
-   "called_scheme": 30,
-   "f1": 0.5,
+   "called_scheme": 28,
+   "f1": 0.52,
    "false_negative": 9,
-   "false_positive": 17,
-   "precision": 0.433,
+   "false_positive": 15,
+   "precision": 0.464,
    "recall": 0.591,
    "threshold": 4,
    "true_positive": 13
   },
   {
-   "called_scheme": 22,
-   "f1": 0.455,
+   "called_scheme": 20,
+   "f1": 0.476,
    "false_negative": 12,
-   "false_positive": 12,
-   "precision": 0.455,
+   "false_positive": 10,
+   "precision": 0.5,
    "recall": 0.455,
    "threshold": 5,
    "true_positive": 10
   },
   {
-   "called_scheme": 15,
-   "f1": 0.432,
+   "called_scheme": 13,
+   "f1": 0.457,
    "false_negative": 14,
-   "false_positive": 7,
-   "precision": 0.533,
+   "false_positive": 5,
+   "precision": 0.615,
    "recall": 0.364,
    "threshold": 6,
    "true_positive": 8
   },
   {
-   "called_scheme": 12,
-   "f1": 0.412,
+   "called_scheme": 10,
+   "f1": 0.438,
    "false_negative": 15,
-   "false_positive": 5,
-   "precision": 0.583,
+   "false_positive": 3,
+   "precision": 0.7,
    "recall": 0.318,
    "threshold": 7,
    "true_positive": 7
@@ -114023,8 +115310,8 @@
  "validation": {
   "at_publish_threshold": {
    "false_negative": 30,
-   "false_positive": 2,
-   "precision": 0.833,
+   "false_positive": 1,
+   "precision": 0.909,
    "recall": 0.25,
    "threshold": 9,
    "true_positive": 10
@@ -114033,15 +115320,13 @@
    "band_at_exactly_this_score": 11,
    "band_not_schemes": 0,
    "band_precision": 1.0,
-   "not_schemes": 3,
-   "precision": 0.903,
-   "published": 31,
-   "rows_hand_labelled": 31,
-   "rows_in_corpus": 31,
+   "not_schemes": 1,
+   "precision": 0.966,
+   "published": 29,
+   "rows_hand_labelled": 29,
+   "rows_in_corpus": 29,
    "the_errors": [
-    "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) [3891]",
-    "Mission Vatsalya - Child Helpline [3742]",
-    "State Hub for Empowerment of Women (SAMARTHYA) [3668]"
+    "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) [3891]"
    ],
    "threshold": 9
   },
@@ -114056,7 +115341,7 @@
   "base_rate_note": "About one Odisha scheme code in ten is a welfare scheme, the lowest base rate of the five states: 16% of Tamil Nadu's Demand Book sub-heads, 24% of Maharashtra's Annual Scheme rows, 41% of Andhra Pradesh's scheme-wise rows and 55% of Karnataka's. That is a fact about the document before it is a fact about the state: Odisha files establishment and generic heads at the same level as schemes, so 'District Establishment', 'Stationery Offices' and 'Emoluments of Governor' each occupy a scheme code.",
   "base_rate_stratified": 0.103,
   "census_note": "Every row at or above score 4 is hand labelled, so precision at these thresholds is counted rather than estimated. The census starts at 4 because the corpus puts 199 rows there, 273 at score 3 and 349 at 2; 199 rows, of which 141 needed a new label, is comfortably readable and covers the published region plus the five bands below it. Recall still comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
-  "f1_optimal_threshold": 4,
+  "f1_optimal_threshold": 5,
   "n_development": 195,
   "n_held_out": 195,
   "n_labelled": 390,

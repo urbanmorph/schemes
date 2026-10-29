@@ -1,5 +1,5 @@
 {
- "absent_cr": 1089.47,
+ "absent_cr": 1088.75,
  "absent_distinct": [
   {
    "be_lakh": 29500.0,
@@ -1955,39 +1955,6 @@
    "score": 11
   },
   {
-   "be_lakh": 72.0,
-   "codes": [
-    "SWE 238 (1)"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
-    ],
-    [
-     "+2",
-     "a transliterated scheme brand in the name: shakti"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: mission, scheme"
-    ]
-   ],
-   "hoas": [
-    "2235-02-103-44-01"
-   ],
-   "name": "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share",
-   "score": 10
-  },
-  {
    "be_lakh": 60.0,
    "codes": [
     "WBC 359 (7)"
@@ -3091,10 +3058,10 @@
    "score": 11
   }
  ],
- "absent_distinct_names": 97,
+ "absent_distinct_names": 96,
  "absent_from_myscheme_all_rows": 2610,
- "absent_from_myscheme_and_classified_scheme": 98,
- "absent_lakh": 108947.24,
+ "absent_from_myscheme_and_classified_scheme": 97,
+ "absent_lakh": 108875.24,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Kerala, because claiming absence should require that even a generous matcher finds nothing. The list is a floor twice over. Once because the matcher over-joins: 8 of its 21 joins are wrong, so a row counted present may not be. And once because recall at the published bar is 12%: a real scheme with a Malayalam name, no benefit word and a head of account outside 2225 and 2235 cannot clear a high bar on the evidence the Annual Plan prints.",
  "absent_schemes": [
   {
@@ -6234,56 +6201,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 72.0,
-   "books": [
-    "Annual Plan Statements"
-   ],
-   "code": "SWE 238 (1)",
-   "code_prefix": "SWE",
-   "earmarks": null,
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
-    ],
-    [
-     "+2",
-     "a transliterated scheme brand in the name: shakti"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: mission, scheme"
-    ]
-   ],
-   "family": "WELFARE",
-   "hand_label": "not_scheme",
-   "has_objectives": false,
-   "hoas": [
-    "2235-02-103-44-01"
-   ],
-   "in_myscheme_kerala": false,
-   "key": "code:SWE 238 (1)",
-   "major_heads": [
-    "2235"
-   ],
-   "minor_heads": [
-    "103"
-   ],
-   "myscheme_match": null,
-   "name": "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share",
-   "score": 10,
-   "sector": "Social Security & Welfare",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 60.0,
    "books": [
     "Annual Plan Statements"
@@ -8115,7 +8032,12 @@
    "code": "AGR 011 (1)",
    "code_prefix": "AGR",
    "earmarks": null,
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "family": "ECONOMY",
    "hand_label": null,
    "has_objectives": false,
@@ -8132,7 +8054,7 @@
    ],
    "myscheme_match": null,
    "name": "Strengthening Agricultural Extension",
-   "score": 0,
+   "score": -99,
    "sector": "Agriculture",
    "verdict": "not a scheme"
   },
@@ -8576,8 +8498,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "-2",
-     "minor head 800, Other Expenditure"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "ECONOMY",
@@ -8596,7 +8518,7 @@
    ],
    "myscheme_match": null,
    "name": "Soil Health Management and Productivity Improvement",
-   "score": -2,
+   "score": -99,
    "sector": "Agriculture",
    "verdict": "not a scheme"
   },
@@ -39015,8 +38937,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "-4",
-     "institution word in the name: cell"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -39035,7 +38957,7 @@
    ],
    "myscheme_match": null,
    "name": "24 Hours Help line /Call Centre and NRK grievance redressal cell",
-   "score": -4,
+   "score": -99,
    "sector": "Labour, Labour Welfare and Welfare of Non-Residents",
    "verdict": "not a scheme"
   },
@@ -57052,20 +56974,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "a transliterated scheme brand in the name: abhiyan, poshan"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: abhiyan"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -57084,7 +56994,7 @@
    ],
    "myscheme_match": null,
    "name": "Poshan Abhiyan (40% State Share)",
-   "score": 8,
+   "score": -99,
    "sector": "Nutrition",
    "verdict": "not a scheme"
   },
@@ -80513,20 +80423,8 @@
    },
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -80545,7 +80443,7 @@
    ],
    "myscheme_match": null,
    "name": "Integrated Child Protection Scheme (60%CSS)",
-   "score": 8,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -81977,12 +81875,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -82001,7 +81895,7 @@
    ],
    "myscheme_match": null,
    "name": "One Stop Centre(100%CSS)",
-   "score": 5,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -82582,12 +82476,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: children"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -82606,7 +82496,7 @@
    ],
    "myscheme_match": null,
    "name": "Mobile creche and day care centers for the children of migrant labours",
-   "score": 6,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -82664,12 +82554,8 @@
    },
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: child"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -82688,7 +82574,7 @@
    ],
    "myscheme_match": null,
    "name": "Juvenile Justice Fund for Implementation of Child Protection Activities",
-   "score": 6,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -85131,16 +85017,8 @@
    },
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -85159,7 +85037,7 @@
    ],
    "myscheme_match": null,
    "name": "National Creche Scheme 60:40(40% State Share)",
-   "score": 6,
+   "score": -99,
    "sector": "WELFARE OF SCS/STS/OBCS,MINORITIES",
    "verdict": "not a scheme"
   },
@@ -85173,16 +85051,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -85201,7 +85071,7 @@
    ],
    "myscheme_match": null,
    "name": "National Creche Scheme - Anganwadi cum creche scheme under PALNA (60% Central Share)",
-   "score": 6,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -85215,16 +85085,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -85243,7 +85105,7 @@
    ],
    "myscheme_match": null,
    "name": "National Creche Scheme - Anganwadi cum creche scheme under PALNA (40% State Share)",
-   "score": 6,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -85305,12 +85167,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -85329,7 +85187,7 @@
    ],
    "myscheme_match": null,
    "name": "181 Mithra Help Line- 100% CSS",
-   "score": 5,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -85386,12 +85244,8 @@
    },
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -85410,7 +85264,7 @@
    ],
    "myscheme_match": null,
    "name": "Hub for empowerment of women",
-   "score": 6,
+   "score": -99,
    "sector": "WOMEN DEVELOPMENT PROGRAMMES",
    "verdict": "not a scheme"
   },
@@ -85424,16 +85278,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -85452,7 +85298,7 @@
    ],
    "myscheme_match": null,
    "name": "Hub for Empowerment of Women (HEW) - 60% Central Share",
-   "score": 7,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -85466,16 +85312,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -85494,7 +85332,7 @@
    ],
    "myscheme_match": null,
    "name": "Hub for Empowerment of Women (HEW) - 40% State Share",
-   "score": 7,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -85984,16 +85822,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: child"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -86012,7 +85842,7 @@
    ],
    "myscheme_match": null,
    "name": "Child Helpline Kerala (100% CSS)",
-   "score": 7,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -86026,24 +85856,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
-    ],
-    [
-     "+2",
-     "a transliterated scheme brand in the name: shakti"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: mission, scheme"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -86062,9 +85876,9 @@
    ],
    "myscheme_match": null,
    "name": "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share",
-   "score": 10,
+   "score": -99,
    "sector": "Social Security & Welfare",
-   "verdict": "scheme"
+   "verdict": "not a scheme"
   },
   {
    "be_lakh": 120.0,
@@ -86610,12 +86424,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -86634,7 +86444,7 @@
    ],
    "myscheme_match": null,
    "name": "PALNA Standalone Creches (60%Central Share)",
-   "score": 5,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -86648,12 +86458,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "a centrally sponsored share-of-cost marker in the name"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -86672,7 +86478,7 @@
    ],
    "myscheme_match": null,
    "name": "PALNA Standalone Creches (40% State Share)",
-   "score": 5,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -86723,16 +86529,8 @@
    },
    "evidence": [
     [
-     "-3",
-     "accounting or establishment word in the name: establishment"
-    ],
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "benefit word in the name: maternity"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -86751,7 +86549,7 @@
    ],
    "myscheme_match": null,
    "name": "Establishment of Creches in workplace as per maternity benefit Act",
-   "score": 4,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -86887,12 +86685,8 @@
    "earmarks": null,
    "evidence": [
     [
-     "-3",
-     "asset or works word in the name: construction"
-    ],
-    [
-     "-2",
-     "capital outlay or loan major head 4235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "family": "WELFARE",
@@ -86911,7 +86705,7 @@
    ],
    "myscheme_match": null,
    "name": "Construction of One Stop Centre Social Security & Welfare",
-   "score": -5,
+   "score": -99,
    "sector": "Social Security & Welfare",
    "verdict": "not a scheme"
   },
@@ -111174,10 +110968,10 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T04:23:40Z",
- "classified_not_scheme": 2530,
- "classified_scheme": 99,
- "classified_scheme_distinct_names": 98,
+ "built": "2026-10-29T18:04:29Z",
+ "classified_not_scheme": 2531,
+ "classified_scheme": 98,
+ "classified_scheme_distinct_names": 97,
  "counting_basis": "EVERY COUNT HERE IS ON THE 2,629 SCHEME CODE BASIS unless the field name says distinct. The code is Kerala's own identifier for the provision, it is present and well formed on every row, and it is what the Annual Plan votes: a scheme's central share and its state share are separate codes, and its Special Component Plan and Tribal Sub-Plan provisions are separate codes again. The 2,629 codes carry 2,611 distinct names. The head of account could not be the key here as it is in Tamil Nadu, because 139 rows carry none at all and 419 rows carry more than one. absent_distinct is the de-duplicated view of the same list.",
  "cycle": "2026-27",
  "distinct_names": 2611,
@@ -123548,185 +123342,1065 @@
    "false_positive": 272,
    "precision": 0.155,
    "recall": 1.0,
+   "threshold": -99,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -98,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -97,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -96,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -95,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -94,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -93,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -92,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -91,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -90,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -89,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -88,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -87,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -86,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -85,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -84,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -83,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -82,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -81,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -80,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -79,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -78,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -77,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -76,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -75,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -74,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -73,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -72,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -71,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -70,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -69,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -68,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -67,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -66,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -65,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -64,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -63,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -62,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -61,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -60,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -59,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -58,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -57,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -56,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -55,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -54,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -53,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -52,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -51,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -50,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -49,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -48,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -47,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -46,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -45,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -44,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -43,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -42,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -41,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -40,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -39,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -38,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -37,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -36,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -35,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -34,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -33,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -32,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -31,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -30,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -29,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -28,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -27,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -26,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -25,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -24,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -23,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -22,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -21,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -20,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -19,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -18,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -17,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -16,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -15,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -14,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -13,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
+   "threshold": -12,
+   "true_positive": 50
+  },
+  {
+   "called_scheme": 319,
+   "f1": 0.271,
+   "false_negative": 0,
+   "false_positive": 269,
+   "precision": 0.157,
+   "recall": 1.0,
    "threshold": -11,
    "true_positive": 50
   },
   {
-   "called_scheme": 315,
-   "f1": 0.274,
+   "called_scheme": 312,
+   "f1": 0.276,
    "false_negative": 0,
-   "false_positive": 265,
-   "precision": 0.159,
+   "false_positive": 262,
+   "precision": 0.16,
    "recall": 1.0,
    "threshold": -10,
    "true_positive": 50
   },
   {
-   "called_scheme": 307,
-   "f1": 0.28,
+   "called_scheme": 304,
+   "f1": 0.282,
    "false_negative": 0,
-   "false_positive": 257,
-   "precision": 0.163,
+   "false_positive": 254,
+   "precision": 0.164,
    "recall": 1.0,
    "threshold": -9,
    "true_positive": 50
   },
   {
-   "called_scheme": 297,
-   "f1": 0.282,
+   "called_scheme": 294,
+   "f1": 0.285,
    "false_negative": 1,
-   "false_positive": 248,
-   "precision": 0.165,
+   "false_positive": 245,
+   "precision": 0.167,
    "recall": 0.98,
    "threshold": -8,
    "true_positive": 49
   },
   {
-   "called_scheme": 284,
-   "f1": 0.293,
+   "called_scheme": 281,
+   "f1": 0.296,
    "false_negative": 1,
-   "false_positive": 235,
-   "precision": 0.173,
+   "false_positive": 232,
+   "precision": 0.174,
    "recall": 0.98,
    "threshold": -7,
    "true_positive": 49
   },
   {
-   "called_scheme": 266,
-   "f1": 0.31,
+   "called_scheme": 263,
+   "f1": 0.313,
    "false_negative": 1,
-   "false_positive": 217,
-   "precision": 0.184,
+   "false_positive": 214,
+   "precision": 0.186,
    "recall": 0.98,
    "threshold": -6,
    "true_positive": 49
   },
   {
-   "called_scheme": 247,
-   "f1": 0.33,
+   "called_scheme": 244,
+   "f1": 0.333,
    "false_negative": 1,
-   "false_positive": 198,
-   "precision": 0.198,
+   "false_positive": 195,
+   "precision": 0.201,
    "recall": 0.98,
    "threshold": -5,
    "true_positive": 49
   },
   {
-   "called_scheme": 227,
-   "f1": 0.339,
+   "called_scheme": 224,
+   "f1": 0.343,
    "false_negative": 3,
-   "false_positive": 180,
-   "precision": 0.207,
+   "false_positive": 177,
+   "precision": 0.21,
    "recall": 0.94,
    "threshold": -4,
    "true_positive": 47
   },
   {
-   "called_scheme": 196,
-   "f1": 0.374,
+   "called_scheme": 193,
+   "f1": 0.379,
    "false_negative": 4,
-   "false_positive": 150,
-   "precision": 0.235,
+   "false_positive": 147,
+   "precision": 0.238,
    "recall": 0.92,
    "threshold": -3,
    "true_positive": 46
   },
   {
-   "called_scheme": 173,
-   "f1": 0.404,
+   "called_scheme": 170,
+   "f1": 0.409,
    "false_negative": 5,
-   "false_positive": 128,
-   "precision": 0.26,
+   "false_positive": 125,
+   "precision": 0.265,
    "recall": 0.9,
    "threshold": -2,
    "true_positive": 45
   },
   {
-   "called_scheme": 131,
-   "f1": 0.486,
+   "called_scheme": 129,
+   "f1": 0.492,
    "false_negative": 6,
-   "false_positive": 87,
-   "precision": 0.336,
+   "false_positive": 85,
+   "precision": 0.341,
    "recall": 0.88,
    "threshold": -1,
    "true_positive": 44
   },
   {
-   "called_scheme": 120,
-   "f1": 0.506,
+   "called_scheme": 118,
+   "f1": 0.512,
    "false_negative": 7,
-   "false_positive": 77,
-   "precision": 0.358,
+   "false_positive": 75,
+   "precision": 0.364,
    "recall": 0.86,
    "threshold": 0,
    "true_positive": 43
   },
   {
-   "called_scheme": 76,
-   "f1": 0.651,
+   "called_scheme": 74,
+   "f1": 0.661,
    "false_negative": 9,
-   "false_positive": 35,
-   "precision": 0.539,
+   "false_positive": 33,
+   "precision": 0.554,
    "recall": 0.82,
    "threshold": 1,
    "true_positive": 41
   },
   {
-   "called_scheme": 68,
-   "f1": 0.678,
+   "called_scheme": 66,
+   "f1": 0.69,
    "false_negative": 10,
-   "false_positive": 28,
-   "precision": 0.588,
+   "false_positive": 26,
+   "precision": 0.606,
    "recall": 0.8,
    "threshold": 2,
    "true_positive": 40
   },
   {
-   "called_scheme": 51,
-   "f1": 0.693,
+   "called_scheme": 49,
+   "f1": 0.707,
    "false_negative": 15,
-   "false_positive": 16,
-   "precision": 0.686,
+   "false_positive": 14,
+   "precision": 0.714,
    "recall": 0.7,
    "threshold": 3,
    "true_positive": 35
   },
   {
-   "called_scheme": 37,
-   "f1": 0.621,
+   "called_scheme": 35,
+   "f1": 0.635,
    "false_negative": 23,
-   "false_positive": 10,
-   "precision": 0.73,
+   "false_positive": 8,
+   "precision": 0.771,
    "recall": 0.54,
    "threshold": 4,
    "true_positive": 27
   },
   {
-   "called_scheme": 33,
-   "f1": 0.578,
+   "called_scheme": 31,
+   "f1": 0.593,
    "false_negative": 26,
-   "false_positive": 9,
-   "precision": 0.727,
+   "false_positive": 7,
+   "precision": 0.774,
    "recall": 0.48,
    "threshold": 5,
    "true_positive": 24
   },
   {
-   "called_scheme": 22,
-   "f1": 0.5,
+   "called_scheme": 21,
+   "f1": 0.507,
    "false_negative": 32,
-   "false_positive": 4,
-   "precision": 0.818,
+   "false_positive": 3,
+   "precision": 0.857,
    "recall": 0.36,
    "threshold": 6,
    "true_positive": 18
   },
   {
-   "called_scheme": 20,
-   "f1": 0.457,
+   "called_scheme": 19,
+   "f1": 0.464,
    "false_negative": 34,
-   "false_positive": 4,
-   "precision": 0.8,
+   "false_positive": 3,
+   "precision": 0.842,
    "recall": 0.32,
    "threshold": 7,
    "true_positive": 16
@@ -123807,20 +124481,18 @@
    "band_at_exactly_this_score": 29,
    "band_not_schemes": 5,
    "band_precision": 0.828,
-   "not_schemes": 77,
-   "precision": 0.742,
-   "published": 299,
-   "rows_hand_labelled": 299,
-   "rows_in_corpus": 368,
+   "not_schemes": 64,
+   "precision": 0.776,
+   "published": 286,
+   "rows_hand_labelled": 286,
+   "rows_in_corpus": 351,
    "the_errors": [
     "(100% CSS) Project Management unit (100% CSS) [WBC 439]",
     "(DA-JGUA) (100% CSS) Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) (100% CSS) [WBC 452]",
     "(PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) (PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) [WBC 426]",
-    "181 Mithra Help Line- 100% CSS [SWE 224]",
     "CSS) Organization of Events(100% CSS) Welfare of SCs, STs, OBCs, Welfare of Scheduled Tribes [WBC 449]",
     "CSS) Pradhan Mantri Adi Adarsh Gram Yojan (SCA to TSS) (100% CSS) [WBC 427]",
     "Career Guidance and Development Programme for Minority Students [WBC 308]",
-    "Child Helpline Kerala (100% CSS) [SWE 236]",
     "Conservation cum Development (CCD) Plan for PVTGS(100% CSS) Welfare of SCs, STs, OBCs, Welfare of Scheduled Tribes [WBC 166]",
     "Development Schemes using the Grant-in-Aid under Article 275 (1)100% CSS) [WBC 386]",
     "Development of Anganwadi as Community Resource Centres for Women and Children - A Life Cycle Approach [SWE 037]",
@@ -123831,9 +124503,6 @@
     "Ente Koodu - Shelterhomes for Destitutes [SWE 098]",
     "Entrepreneur Support Scheme/State Investment Subsidy [VSI 008]",
     "Honorarium to Counselors Engaged in the Hostels and MRS [WBC 288 (4)]",
-    "Hub for Empowerment of Women (HEW) - 40% State Share [SWE 228 (2)]",
-    "Hub for Empowerment of Women (HEW) - 60% Central Share [SWE 228 (1)]",
-    "Hub for empowerment of women [SWE 228]",
     "ICDS - Central Share [NUT 014 (1)]",
     "ICDS - State Share [NUT 014 (2)]",
     "ICDS Training Programme (40%State Share) [SWE 137]",
@@ -123841,22 +124510,15 @@
     "ICDS Training Programme -60% Central Share Social Security & Welfare [SWE 137 (1)]",
     "Implementation of Scheduled Tribes and other Traditional Forest Dwellers (Recognition of Forest Right) Act,2006 under Article 275 (1).100% CSS) [WBC 225]",
     "Insurance coverage for Anganwadi workers and helpers 60% CSS [SWE 239]",
-    "Integrated Child Protection Scheme (60%CSS) [SWE 078]",
     "Interest Subsidy to KURDFC towards the Loan Availed from HUDCO for the Implementation of LIFE-Parppida Mission Scheme-Rural [CDT 105]",
     "Issuing Disability Certificate cum Identity Cards to Disabled Persons [SWE 120]",
-    "Juvenile Justice Fund for Implementation of Child Protection Activities [SWE 152]",
     "Mahatma Gandhi National Rural Employment Guarantee Programme (100 %CSS)-Cluster Facilitation Project (CFP)-Central Share. Rural Development [RDT 051 (6)]",
     "Management Cost for the Running of Model Residential Schools [WBC 236]",
-    "Mobile creche and day care centers for the children of migrant labours [SWE 150]",
     "National Action Plan for Senior Citizens(100%CSS) [SWE 210]",
     "National Action for Drug Demand Reduction (NAPDDR)-100% CSS [SWE 201]",
-    "National Creche Scheme - Anganwadi cum creche scheme under PALNA (40% State Share) [SWE 221 (2)]",
-    "National Creche Scheme - Anganwadi cum creche scheme under PALNA (60% Central Share) [SWE 221 (1)]",
-    "National Creche Scheme 60:40(40% State Share) [SWE 221]",
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
     "National Nutrition Mission - 20% State Share [NUT 019 (2)]",
     "Our Responsibility to Children (ORC) [SWE 178 (1)]",
-    "Poshan Abhiyan (40% State Share) [NUT 020 (2)]",
     "Poshan Pakhwada 2023 (100% CSS) [SWE 234]",
     "Post Matric Hostels for Tribals [WBC 077]",
     "Pradhan Mantri Jeevan Jyoti Bima Yojana(PMJJBY) & Pradhan Mantri Suraksha Bima Yojana (PMSBY) - 40% State Share [SWE 239 (2)]",
@@ -123888,29 +124550,26 @@
     "Umbrella Scheme on Krishi Unnathi Yojana and other CSS -NMAET-SMAE (60% CSS) [AGR 221 (1)]",
     "Vidhyavahini [WBC 445]",
     "Water Supply Scheme in Minority Concentrated Areas [WBC 311]",
-    "Weavers/Allied Workers Motivation Programme [VSI 272]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "Weavers/Allied Workers Motivation Programme [VSI 272]"
    ],
    "threshold": 4
   },
   {
-   "band_at_exactly_this_score": 57,
-   "band_not_schemes": 16,
-   "band_precision": 0.719,
-   "not_schemes": 72,
-   "precision": 0.733,
-   "published": 270,
-   "rows_hand_labelled": 270,
-   "rows_in_corpus": 306,
+   "band_at_exactly_this_score": 56,
+   "band_not_schemes": 15,
+   "band_precision": 0.732,
+   "not_schemes": 59,
+   "precision": 0.77,
+   "published": 257,
+   "rows_hand_labelled": 257,
+   "rows_in_corpus": 290,
    "the_errors": [
     "(100% CSS) Project Management unit (100% CSS) [WBC 439]",
     "(DA-JGUA) (100% CSS) Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) (100% CSS) [WBC 452]",
     "(PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) (PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) [WBC 426]",
-    "181 Mithra Help Line- 100% CSS [SWE 224]",
     "CSS) Organization of Events(100% CSS) Welfare of SCs, STs, OBCs, Welfare of Scheduled Tribes [WBC 449]",
     "CSS) Pradhan Mantri Adi Adarsh Gram Yojan (SCA to TSS) (100% CSS) [WBC 427]",
     "Career Guidance and Development Programme for Minority Students [WBC 308]",
-    "Child Helpline Kerala (100% CSS) [SWE 236]",
     "Conservation cum Development (CCD) Plan for PVTGS(100% CSS) Welfare of SCs, STs, OBCs, Welfare of Scheduled Tribes [WBC 166]",
     "Development Schemes using the Grant-in-Aid under Article 275 (1)100% CSS) [WBC 386]",
     "Development of Particularly Vulnerable Tribal Groups(PVTGs)(100% CSS) [WBC 450]",
@@ -123919,9 +124578,6 @@
     "Engaging social workers in tribal welfare [WBC 288]",
     "Ente Koodu - Shelterhomes for Destitutes [SWE 098]",
     "Honorarium to Counselors Engaged in the Hostels and MRS [WBC 288 (4)]",
-    "Hub for Empowerment of Women (HEW) - 40% State Share [SWE 228 (2)]",
-    "Hub for Empowerment of Women (HEW) - 60% Central Share [SWE 228 (1)]",
-    "Hub for empowerment of women [SWE 228]",
     "ICDS - Central Share [NUT 014 (1)]",
     "ICDS - State Share [NUT 014 (2)]",
     "ICDS Training Programme (40%State Share) [SWE 137]",
@@ -123929,21 +124585,14 @@
     "ICDS Training Programme -60% Central Share Social Security & Welfare [SWE 137 (1)]",
     "Implementation of Scheduled Tribes and other Traditional Forest Dwellers (Recognition of Forest Right) Act,2006 under Article 275 (1).100% CSS) [WBC 225]",
     "Insurance coverage for Anganwadi workers and helpers 60% CSS [SWE 239]",
-    "Integrated Child Protection Scheme (60%CSS) [SWE 078]",
     "Issuing Disability Certificate cum Identity Cards to Disabled Persons [SWE 120]",
-    "Juvenile Justice Fund for Implementation of Child Protection Activities [SWE 152]",
     "Mahatma Gandhi National Rural Employment Guarantee Programme (100 %CSS)-Cluster Facilitation Project (CFP)-Central Share. Rural Development [RDT 051 (6)]",
     "Management Cost for the Running of Model Residential Schools [WBC 236]",
-    "Mobile creche and day care centers for the children of migrant labours [SWE 150]",
     "National Action Plan for Senior Citizens(100%CSS) [SWE 210]",
     "National Action for Drug Demand Reduction (NAPDDR)-100% CSS [SWE 201]",
-    "National Creche Scheme - Anganwadi cum creche scheme under PALNA (40% State Share) [SWE 221 (2)]",
-    "National Creche Scheme - Anganwadi cum creche scheme under PALNA (60% Central Share) [SWE 221 (1)]",
-    "National Creche Scheme 60:40(40% State Share) [SWE 221]",
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
     "National Nutrition Mission - 20% State Share [NUT 019 (2)]",
     "Our Responsibility to Children (ORC) [SWE 178 (1)]",
-    "Poshan Abhiyan (40% State Share) [NUT 020 (2)]",
     "Poshan Pakhwada 2023 (100% CSS) [SWE 234]",
     "Post Matric Hostels for Tribals [WBC 077]",
     "Pradhan Mantri Jeevan Jyoti Bima Yojana(PMJJBY) & Pradhan Mantri Suraksha Bima Yojana (PMSBY) - 40% State Share [SWE 239 (2)]",
@@ -123973,20 +124622,19 @@
     "Umbrella Scheme on Krishi Unnathi Yojana and other CSS -NMAET-SMAE (60% CSS) [AGR 221 (1)]",
     "Vidhyavahini [WBC 445]",
     "Water Supply Scheme in Minority Concentrated Areas [WBC 311]",
-    "Weavers/Allied Workers Motivation Programme [VSI 272]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "Weavers/Allied Workers Motivation Programme [VSI 272]"
    ],
    "threshold": 5
   },
   {
-   "band_at_exactly_this_score": 52,
-   "band_not_schemes": 29,
-   "band_precision": 0.442,
-   "not_schemes": 56,
-   "precision": 0.737,
-   "published": 213,
-   "rows_hand_labelled": 213,
-   "rows_in_corpus": 213,
+   "band_at_exactly_this_score": 46,
+   "band_not_schemes": 23,
+   "band_precision": 0.5,
+   "not_schemes": 44,
+   "precision": 0.781,
+   "published": 201,
+   "rows_hand_labelled": 201,
+   "rows_in_corpus": 201,
    "the_errors": [
     "(100% CSS) Project Management unit (100% CSS) [WBC 439]",
     "(DA-JGUA) (100% CSS) Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) (100% CSS) [WBC 452]",
@@ -123994,7 +124642,6 @@
     "CSS) Organization of Events(100% CSS) Welfare of SCs, STs, OBCs, Welfare of Scheduled Tribes [WBC 449]",
     "CSS) Pradhan Mantri Adi Adarsh Gram Yojan (SCA to TSS) (100% CSS) [WBC 427]",
     "Career Guidance and Development Programme for Minority Students [WBC 308]",
-    "Child Helpline Kerala (100% CSS) [SWE 236]",
     "Conservation cum Development (CCD) Plan for PVTGS(100% CSS) Welfare of SCs, STs, OBCs, Welfare of Scheduled Tribes [WBC 166]",
     "Development Schemes using the Grant-in-Aid under Article 275 (1)100% CSS) [WBC 386]",
     "Development of Particularly Vulnerable Tribal Groups(PVTGs)(100% CSS) [WBC 450]",
@@ -124003,9 +124650,6 @@
     "Engaging social workers in tribal welfare [WBC 288]",
     "Ente Koodu - Shelterhomes for Destitutes [SWE 098]",
     "Honorarium to Counselors Engaged in the Hostels and MRS [WBC 288 (4)]",
-    "Hub for Empowerment of Women (HEW) - 40% State Share [SWE 228 (2)]",
-    "Hub for Empowerment of Women (HEW) - 60% Central Share [SWE 228 (1)]",
-    "Hub for empowerment of women [SWE 228]",
     "ICDS - Central Share [NUT 014 (1)]",
     "ICDS - State Share [NUT 014 (2)]",
     "ICDS Training Programme (40%State Share) [SWE 137]",
@@ -124013,20 +124657,13 @@
     "ICDS Training Programme -60% Central Share Social Security & Welfare [SWE 137 (1)]",
     "Implementation of Scheduled Tribes and other Traditional Forest Dwellers (Recognition of Forest Right) Act,2006 under Article 275 (1).100% CSS) [WBC 225]",
     "Insurance coverage for Anganwadi workers and helpers 60% CSS [SWE 239]",
-    "Integrated Child Protection Scheme (60%CSS) [SWE 078]",
     "Issuing Disability Certificate cum Identity Cards to Disabled Persons [SWE 120]",
-    "Juvenile Justice Fund for Implementation of Child Protection Activities [SWE 152]",
     "Mahatma Gandhi National Rural Employment Guarantee Programme (100 %CSS)-Cluster Facilitation Project (CFP)-Central Share. Rural Development [RDT 051 (6)]",
     "Management Cost for the Running of Model Residential Schools [WBC 236]",
-    "Mobile creche and day care centers for the children of migrant labours [SWE 150]",
     "National Action Plan for Senior Citizens(100%CSS) [SWE 210]",
-    "National Creche Scheme - Anganwadi cum creche scheme under PALNA (40% State Share) [SWE 221 (2)]",
-    "National Creche Scheme - Anganwadi cum creche scheme under PALNA (60% Central Share) [SWE 221 (1)]",
-    "National Creche Scheme 60:40(40% State Share) [SWE 221]",
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
     "National Nutrition Mission - 20% State Share [NUT 019 (2)]",
     "Our Responsibility to Children (ORC) [SWE 178 (1)]",
-    "Poshan Abhiyan (40% State Share) [NUT 020 (2)]",
     "Poshan Pakhwada 2023 (100% CSS) [SWE 234]",
     "Post Matric Hostels for Tribals [WBC 077]",
     "Pradhan Mantri Jeevan Jyoti Bima Yojana(PMJJBY) & Pradhan Mantri Suraksha Bima Yojana (PMSBY) - 40% State Share [SWE 239 (2)]",
@@ -124042,38 +124679,32 @@
     "Swadhar Greh Scheme -40% State Share [SWE 167 (2)]",
     "Swadhar Greh Scheme -60% Central Share [SWE 167 (1)]",
     "Vidhyavahini [WBC 445]",
-    "Water Supply Scheme in Minority Concentrated Areas [WBC 311]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "Water Supply Scheme in Minority Concentrated Areas [WBC 311]"
    ],
    "threshold": 6
   },
   {
-   "band_at_exactly_this_score": 19,
-   "band_not_schemes": 9,
-   "band_precision": 0.526,
-   "not_schemes": 27,
-   "precision": 0.832,
-   "published": 161,
-   "rows_hand_labelled": 161,
-   "rows_in_corpus": 161,
+   "band_at_exactly_this_score": 16,
+   "band_not_schemes": 6,
+   "band_precision": 0.625,
+   "not_schemes": 21,
+   "precision": 0.865,
+   "published": 155,
+   "rows_hand_labelled": 155,
+   "rows_in_corpus": 155,
    "the_errors": [
     "(DA-JGUA) (100% CSS) Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) (100% CSS) [WBC 452]",
     "(PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) (PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) [WBC 426]",
     "CSS) Pradhan Mantri Adi Adarsh Gram Yojan (SCA to TSS) (100% CSS) [WBC 427]",
     "Career Guidance and Development Programme for Minority Students [WBC 308]",
-    "Child Helpline Kerala (100% CSS) [SWE 236]",
     "Dr. Ambedkar Village Development Scheme [WBC 368]",
     "Honorarium to Counselors Engaged in the Hostels and MRS [WBC 288 (4)]",
-    "Hub for Empowerment of Women (HEW) - 40% State Share [SWE 228 (2)]",
-    "Hub for Empowerment of Women (HEW) - 60% Central Share [SWE 228 (1)]",
     "Implementation of Scheduled Tribes and other Traditional Forest Dwellers (Recognition of Forest Right) Act,2006 under Article 275 (1).100% CSS) [WBC 225]",
     "Insurance coverage for Anganwadi workers and helpers 60% CSS [SWE 239]",
-    "Integrated Child Protection Scheme (60%CSS) [SWE 078]",
     "Mahatma Gandhi National Rural Employment Guarantee Programme (100 %CSS)-Cluster Facilitation Project (CFP)-Central Share. Rural Development [RDT 051 (6)]",
     "National Action Plan for Senior Citizens(100%CSS) [SWE 210]",
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
     "National Nutrition Mission - 20% State Share [NUT 019 (2)]",
-    "Poshan Abhiyan (40% State Share) [NUT 020 (2)]",
     "Poshan Pakhwada 2023 (100% CSS) [SWE 234]",
     "Post Matric Hostels for Tribals [WBC 077]",
     "Pradhan Mantri Jeevan Jyoti Bima Yojana(PMJJBY) & Pradhan Mantri Suraksha Bima Yojana (PMSBY) - 40% State Share [SWE 239 (2)]",
@@ -124082,39 +124713,35 @@
     "Procurement of AAdhar Enrolment Kit -60% Central Share [SWE 213 (1)]",
     "Psycho Social Services to Adolescent Girls [SWE 072]",
     "State Innovative Programme for Children including ORC [SWE 178]",
-    "Water Supply Scheme in Minority Concentrated Areas [WBC 311]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "Water Supply Scheme in Minority Concentrated Areas [WBC 311]"
    ],
    "threshold": 7
   },
   {
-   "band_at_exactly_this_score": 43,
-   "band_not_schemes": 9,
-   "band_precision": 0.791,
-   "not_schemes": 18,
-   "precision": 0.873,
-   "published": 142,
-   "rows_hand_labelled": 142,
-   "rows_in_corpus": 142,
+   "band_at_exactly_this_score": 41,
+   "band_not_schemes": 7,
+   "band_precision": 0.829,
+   "not_schemes": 15,
+   "precision": 0.892,
+   "published": 139,
+   "rows_hand_labelled": 139,
+   "rows_in_corpus": 139,
    "the_errors": [
     "(DA-JGUA) (100% CSS) Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) (100% CSS) [WBC 452]",
     "(PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) (PM-AJAY) (100% CSS) Pradhan Mantri Anusuchit Jaati Abhyuday Yojna (PM-AJAY) (100% CSS) [WBC 426]",
     "CSS) Pradhan Mantri Adi Adarsh Gram Yojan (SCA to TSS) (100% CSS) [WBC 427]",
     "Career Guidance and Development Programme for Minority Students [WBC 308]",
     "Insurance coverage for Anganwadi workers and helpers 60% CSS [SWE 239]",
-    "Integrated Child Protection Scheme (60%CSS) [SWE 078]",
     "Mahatma Gandhi National Rural Employment Guarantee Programme (100 %CSS)-Cluster Facilitation Project (CFP)-Central Share. Rural Development [RDT 051 (6)]",
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
     "National Nutrition Mission - 20% State Share [NUT 019 (2)]",
-    "Poshan Abhiyan (40% State Share) [NUT 020 (2)]",
     "Post Matric Hostels for Tribals [WBC 077]",
     "Pradhan Mantri Jeevan Jyoti Bima Yojana(PMJJBY) & Pradhan Mantri Suraksha Bima Yojana (PMSBY) - 40% State Share [SWE 239 (2)]",
     "Pradhan Mantri Jeevan Jyoti Bima Yojana(PMJJBY) & Pradhan Mantri Suraksha Bima Yojana (PMSBY)-60% Central Share Social Security & Welfare [SWE 239 (1)]",
     "Procurement of AAdhar Enrolment Kit -40% State Share [SWE 213 (2)]",
     "Procurement of AAdhar Enrolment Kit -60% Central Share [SWE 213 (1)]",
     "Psycho Social Services to Adolescent Girls [SWE 072]",
-    "State Innovative Programme for Children including ORC [SWE 178]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "State Innovative Programme for Children including ORC [SWE 178]"
    ],
    "threshold": 8
   },
@@ -124122,11 +124749,11 @@
    "band_at_exactly_this_score": 45,
    "band_not_schemes": 5,
    "band_precision": 0.889,
-   "not_schemes": 9,
-   "precision": 0.909,
-   "published": 99,
-   "rows_hand_labelled": 99,
-   "rows_in_corpus": 99,
+   "not_schemes": 8,
+   "precision": 0.918,
+   "published": 98,
+   "rows_hand_labelled": 98,
+   "rows_in_corpus": 98,
    "the_errors": [
     "(DA-JGUA) (100% CSS) Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) (100% CSS) [WBC 452]",
     "CSS) Pradhan Mantri Adi Adarsh Gram Yojan (SCA to TSS) (100% CSS) [WBC 427]",
@@ -124135,25 +124762,23 @@
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
     "National Nutrition Mission - 20% State Share [NUT 019 (2)]",
     "Post Matric Hostels for Tribals [WBC 077]",
-    "State Innovative Programme for Children including ORC [SWE 178]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "State Innovative Programme for Children including ORC [SWE 178]"
    ],
    "threshold": 9
   },
   {
-   "band_at_exactly_this_score": 16,
-   "band_not_schemes": 3,
-   "band_precision": 0.812,
-   "not_schemes": 4,
-   "precision": 0.926,
-   "published": 54,
-   "rows_hand_labelled": 54,
-   "rows_in_corpus": 54,
+   "band_at_exactly_this_score": 15,
+   "band_not_schemes": 2,
+   "band_precision": 0.867,
+   "not_schemes": 3,
+   "precision": 0.943,
+   "published": 53,
+   "rows_hand_labelled": 53,
+   "rows_in_corpus": 53,
    "the_errors": [
     "Insurance coverage for Anganwadi workers and helpers 60% CSS [SWE 239]",
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
-    "Post Matric Hostels for Tribals [WBC 077]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "Post Matric Hostels for Tribals [WBC 077]"
    ],
    "threshold": 10
   },
@@ -124216,127 +124841,997 @@
    "false_positive": 139,
    "precision": 0.137,
    "recall": 1.0,
+   "threshold": -99,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -98,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -97,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -96,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -95,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -94,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -93,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -92,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -91,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -90,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -89,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -88,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -87,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -86,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -85,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -84,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -83,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -82,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -81,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -80,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -79,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -78,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -77,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -76,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -75,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -74,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -73,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -72,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -71,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -70,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -69,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -68,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -67,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -66,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -65,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -64,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -63,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -62,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -61,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -60,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -59,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -58,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -57,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -56,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -55,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -54,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -53,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -52,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -51,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -50,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -49,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -48,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -47,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -46,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -45,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -44,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -43,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -42,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -41,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -40,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -39,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -38,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -37,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -36,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -35,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -34,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -33,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -32,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -31,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -30,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -29,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -28,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -27,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -26,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -25,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -24,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -23,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -22,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -21,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -20,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -19,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -18,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -17,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -16,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -15,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -14,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -13,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
+   "threshold": -12,
+   "true_positive": 22
+  },
+  {
+   "called_scheme": 160,
+   "f1": 0.242,
+   "false_negative": 0,
+   "false_positive": 138,
+   "precision": 0.138,
+   "recall": 1.0,
    "threshold": -11,
    "true_positive": 22
   },
   {
-   "called_scheme": 157,
-   "f1": 0.246,
+   "called_scheme": 156,
+   "f1": 0.247,
    "false_negative": 0,
-   "false_positive": 135,
-   "precision": 0.14,
+   "false_positive": 134,
+   "precision": 0.141,
    "recall": 1.0,
    "threshold": -10,
    "true_positive": 22
   },
   {
-   "called_scheme": 153,
-   "f1": 0.251,
+   "called_scheme": 152,
+   "f1": 0.253,
    "false_negative": 0,
-   "false_positive": 131,
-   "precision": 0.144,
+   "false_positive": 130,
+   "precision": 0.145,
    "recall": 1.0,
    "threshold": -9,
    "true_positive": 22
   },
   {
-   "called_scheme": 150,
-   "f1": 0.256,
+   "called_scheme": 149,
+   "f1": 0.257,
    "false_negative": 0,
-   "false_positive": 128,
-   "precision": 0.147,
+   "false_positive": 127,
+   "precision": 0.148,
    "recall": 1.0,
    "threshold": -8,
    "true_positive": 22
   },
   {
-   "called_scheme": 144,
-   "f1": 0.265,
+   "called_scheme": 143,
+   "f1": 0.267,
    "false_negative": 0,
-   "false_positive": 122,
-   "precision": 0.153,
+   "false_positive": 121,
+   "precision": 0.154,
    "recall": 1.0,
    "threshold": -7,
    "true_positive": 22
   },
   {
-   "called_scheme": 135,
-   "f1": 0.28,
+   "called_scheme": 134,
+   "f1": 0.282,
    "false_negative": 0,
-   "false_positive": 113,
-   "precision": 0.163,
+   "false_positive": 112,
+   "precision": 0.164,
    "recall": 1.0,
    "threshold": -6,
    "true_positive": 22
   },
   {
-   "called_scheme": 122,
-   "f1": 0.306,
+   "called_scheme": 121,
+   "f1": 0.308,
    "false_negative": 0,
-   "false_positive": 100,
-   "precision": 0.18,
+   "false_positive": 99,
+   "precision": 0.182,
    "recall": 1.0,
    "threshold": -5,
    "true_positive": 22
   },
   {
-   "called_scheme": 113,
-   "f1": 0.326,
+   "called_scheme": 112,
+   "f1": 0.328,
    "false_negative": 0,
-   "false_positive": 91,
-   "precision": 0.195,
+   "false_positive": 90,
+   "precision": 0.196,
    "recall": 1.0,
    "threshold": -4,
    "true_positive": 22
   },
   {
-   "called_scheme": 97,
-   "f1": 0.353,
+   "called_scheme": 96,
+   "f1": 0.356,
    "false_negative": 1,
-   "false_positive": 76,
-   "precision": 0.216,
+   "false_positive": 75,
+   "precision": 0.219,
    "recall": 0.955,
    "threshold": -3,
    "true_positive": 21
   },
   {
-   "called_scheme": 84,
-   "f1": 0.377,
+   "called_scheme": 83,
+   "f1": 0.381,
    "false_negative": 2,
-   "false_positive": 64,
-   "precision": 0.238,
+   "false_positive": 63,
+   "precision": 0.241,
    "recall": 0.909,
    "threshold": -2,
    "true_positive": 20
   },
   {
-   "called_scheme": 64,
-   "f1": 0.465,
+   "called_scheme": 63,
+   "f1": 0.471,
    "false_negative": 2,
-   "false_positive": 44,
-   "precision": 0.312,
+   "false_positive": 43,
+   "precision": 0.317,
    "recall": 0.909,
    "threshold": -1,
    "true_positive": 20
   },
   {
-   "called_scheme": 58,
-   "f1": 0.5,
+   "called_scheme": 57,
+   "f1": 0.506,
    "false_negative": 2,
-   "false_positive": 38,
-   "precision": 0.345,
+   "false_positive": 37,
+   "precision": 0.351,
    "recall": 0.909,
    "threshold": 0,
-   "true_positive": 20
-  },
-  {
-   "called_scheme": 34,
-   "f1": 0.714,
-   "false_negative": 2,
-   "false_positive": 14,
-   "precision": 0.588,
-   "recall": 0.909,
-   "threshold": 1,
    "true_positive": 20
   },
   {
@@ -124346,35 +125841,45 @@
    "false_positive": 13,
    "precision": 0.606,
    "recall": 0.909,
+   "threshold": 1,
+   "true_positive": 20
+  },
+  {
+   "called_scheme": 32,
+   "f1": 0.741,
+   "false_negative": 2,
+   "false_positive": 12,
+   "precision": 0.625,
+   "recall": 0.909,
    "threshold": 2,
    "true_positive": 20
   },
   {
-   "called_scheme": 29,
-   "f1": 0.745,
+   "called_scheme": 28,
+   "f1": 0.76,
    "false_negative": 3,
-   "false_positive": 10,
-   "precision": 0.655,
+   "false_positive": 9,
+   "precision": 0.679,
    "recall": 0.864,
    "threshold": 3,
    "true_positive": 19
   },
   {
-   "called_scheme": 21,
-   "f1": 0.651,
+   "called_scheme": 20,
+   "f1": 0.667,
    "false_negative": 8,
-   "false_positive": 7,
-   "precision": 0.667,
+   "false_positive": 6,
+   "precision": 0.7,
    "recall": 0.636,
    "threshold": 4,
    "true_positive": 14
   },
   {
-   "called_scheme": 19,
-   "f1": 0.634,
+   "called_scheme": 18,
+   "f1": 0.65,
    "false_negative": 9,
-   "false_positive": 6,
-   "precision": 0.684,
+   "false_positive": 5,
+   "precision": 0.722,
    "recall": 0.591,
    "threshold": 5,
    "true_positive": 13
@@ -124483,11 +125988,11 @@
    "band_at_exactly_this_score": 45,
    "band_not_schemes": 5,
    "band_precision": 0.889,
-   "not_schemes": 9,
-   "precision": 0.909,
-   "published": 99,
-   "rows_hand_labelled": 99,
-   "rows_in_corpus": 99,
+   "not_schemes": 8,
+   "precision": 0.918,
+   "published": 98,
+   "rows_hand_labelled": 98,
+   "rows_in_corpus": 98,
    "the_errors": [
     "(DA-JGUA) (100% CSS) Dharti Aaba Janjatiya Gram Utkarsh Abhiyan (DA-JGUA) (100% CSS) [WBC 452]",
     "CSS) Pradhan Mantri Adi Adarsh Gram Yojan (SCA to TSS) (100% CSS) [WBC 427]",
@@ -124496,8 +126001,7 @@
     "National Nutrition Mission (POSHAN Abhiyaan (20% state share) [NUT 020]",
     "National Nutrition Mission - 20% State Share [NUT 019 (2)]",
     "Post Matric Hostels for Tribals [WBC 077]",
-    "State Innovative Programme for Children including ORC [SWE 178]",
-    "Women Helpline under Mission Shakti-Sambal Scheme-100 % Central Share [SWE 238 (1)]"
+    "State Innovative Programme for Children including ORC [SWE 178]"
    ],
    "threshold": 9
   },

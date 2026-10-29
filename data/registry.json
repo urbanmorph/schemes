@@ -1,10 +1,10 @@
 {
  "added_by": {
-  "budget": 560,
+  "budget": 588,
   "dbt": 138,
-  "outcome": 10
+  "outcome": 11
  },
- "built": "2026-10-29T04:22:10Z",
+ "built": "2026-10-29T18:07:05Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -21384,14 +21384,6 @@
   {
    "name": "Scheme of Human Resources Development in Sports- Exchange of Knowledge / Research / Ideas for Holding Training Programmes, Seminars, Workshops, Clinics and Conferences Within the Country",
    "sources": {
-    "budget": {
-     "be_cr": 40.0,
-     "cycle": "2026-27",
-     "demand_no": 71,
-     "merge_reason": "all 4 content words of the shorter name are present",
-     "name": "Human Resources Development and Training",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Youth Affairs & Sports",
@@ -61031,6 +61023,18 @@
    }
   },
   {
+   "name": "Additional amount met from Reserve Fund",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 6,
+     "name": "Additional amount met from Reserve Fund",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "National Institutes of Pharmaceutical Education and Research (NIPERs)",
    "sources": {
     "budget": {
@@ -61717,6 +61721,18 @@
    }
   },
   {
+   "name": "Actual Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 11,
+     "name": "Actual Recoveries",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Postal Operation CENTRAL SECTOR SCHEMES",
    "sources": {
     "budget": {
@@ -62101,6 +62117,18 @@
    }
   },
   {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 14,
+     "name": "Actual Recoveries (CS)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Sugar Subsidy payable under Public Distribution System",
    "sources": {
     "budget": {
@@ -62182,6 +62210,18 @@
      "list": "central",
      "merge_reason": "acronym match: sfdosi",
      "name": "Scheme for Development of Silk Industry"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 15,
+     "name": "Actual Recoveries",
+     "statement": "stat4b"
     }
    }
   },
@@ -62350,6 +62390,23 @@
      "demand_no": 21,
      "name": "Emergency Authorisation for newly created DPSUs",
      "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Research and Development",
+   "sources": {
+    "budget": {
+     "be_cr": 17250.25,
+     "cycle": "2026-27",
+     "demand_no": 21,
+     "name": "Research and Development",
+     "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "transliteration variant: ['dvlpmnt', 'rsrc']",
+     "name": "National S and T Human Resource Development"
     }
    }
   },
@@ -62631,6 +62688,18 @@
      "outlay_cr": 2306.0,
      "page": 71,
      "targets": 12
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 23,
+     "name": "Actual Recoveries (CS)",
+     "statement": "stat4b"
     }
    }
   },
@@ -62984,6 +63053,18 @@
      "cycle": "2026-27",
      "demand_no": 26,
      "name": "PM One Nation One Subscription (PM-ONOS)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 26,
+     "name": "Actual Recoveries (CS)",
      "statement": "stat4b"
     }
    }
@@ -63739,6 +63820,18 @@
    }
   },
   {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 43,
+     "name": "Actual Recoveries (CS)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Infrastructure Development Fund",
    "sources": {
     "budget": {
@@ -63778,6 +63871,18 @@
      "cycle": "2026-27",
      "demand_no": 44,
      "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 45,
+     "name": "Actual Recoveries (CS)",
      "statement": "stat4b"
     }
    }
@@ -63938,6 +64043,18 @@
      "cycle": "2026-27",
      "demand_no": 46,
      "name": "Scheme for Allied Health Care Professionals (AHPs)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 46,
+     "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
      "statement": "stat4b"
     }
    }
@@ -64593,6 +64710,18 @@
    }
   },
   {
+   "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 62,
+     "name": "Actual Recoveries (CS) CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Labour and Employment Statistical System (LESS)",
    "sources": {
     "budget": {
@@ -64672,6 +64801,18 @@
      "cycle": "2026-27",
      "demand_no": 64,
      "name": "Shram Registration, Inspection, Samadhan and Transparency Initiative (SRISTI)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 64,
+     "name": "Actual Recoveries",
      "statement": "stat4b"
     }
    }
@@ -64898,6 +65039,18 @@
    }
   },
   {
+   "name": "Actual Recoveries CENTRAL SECTOR SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 68,
+     "name": "Actual Recoveries CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "National Critical Mineral Mission (NCMM)",
    "sources": {
     "budget": {
@@ -64989,6 +65142,18 @@
      "cycle": "2026-27",
      "demand_no": 70,
      "name": "PM-Viraasat Ka Samvardhan (PM VIKAS)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 70,
+     "name": "Actual Recoveries (CS)",
      "statement": "stat4b"
     }
    }
@@ -65146,6 +65311,35 @@
    }
   },
   {
+   "name": "Research and Development",
+   "sources": {
+    "budget": {
+     "be_cr": 46.0,
+     "cycle": "2026-27",
+     "demand_no": 71,
+     "name": "Research and Development",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Human Resources Development and Training",
+   "sources": {
+    "budget": {
+     "be_cr": 40.0,
+     "cycle": "2026-27",
+     "demand_no": 71,
+     "name": "Human Resources Development and Training",
+     "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "all 4 content words of the shorter name are present",
+     "name": "Human Resource Development (HRD) And Promotional Activities Scheme- Training Programme in Scientific sheep rearing/ artificial insemination /Manufacturing of woollen items/machine shearing etc."
+    }
+   }
+  },
+  {
    "name": "Information and Public Advertising (I&PA)",
    "sources": {
     "budget": {
@@ -65165,6 +65359,18 @@
      "cycle": "2026-27",
      "demand_no": 71,
      "name": "International Relations",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 71,
+     "name": "Actual Recoveries (CS)",
      "statement": "stat4b"
     }
    }
@@ -65402,6 +65608,18 @@
    }
   },
   {
+   "name": "Additional Transfer to Reserve Fund",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 76,
+     "name": "Additional Transfer to Reserve Fund",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Additional Amount met from Reserve fund",
    "sources": {
     "budget": {
@@ -65453,6 +65671,18 @@
      "cycle": "2026-27",
      "demand_no": 76,
      "name": "Numaligarh Refinery Expansion Project",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Scheme for promotion of flagging of merchant ships in India",
+   "sources": {
+    "budget": {
+     "be_cr": 31.0,
+     "cycle": "2026-27",
+     "demand_no": 76,
+     "name": "Scheme for promotion of flagging of merchant ships in India",
      "statement": "stat4b"
     }
    }
@@ -65706,6 +65936,18 @@
    }
   },
   {
+   "name": "Actual Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 78,
+     "name": "Actual Recoveries",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Strengthening of Power Systems",
    "sources": {
     "budget": {
@@ -65817,6 +66059,18 @@
      "cycle": "2026-27",
      "demand_no": 79,
      "name": "Carbon Capture Utilization and Storage Scheme CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 79,
+     "name": "Actual Recoveries (CS)",
      "statement": "stat4b"
     }
    }
@@ -66210,11 +66464,6 @@
      "demand_no": 85,
      "name": "Training/Human Resource Development",
      "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 4 content words of the shorter name are present",
-     "name": "Human Resource Development (HRD) And Promotional Activities Scheme- Training Programme in Scientific sheep rearing/ artificial insemination /Manufacturing of woollen items/machine shearing etc."
     }
    }
   },
@@ -66359,6 +66608,18 @@
    }
   },
   {
+   "name": "Actual Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 86,
+     "name": "Actual Recoveries",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Management Support to Rural Development Programs and Strengthening of District Planning Process",
    "sources": {
     "budget": {
@@ -66366,6 +66627,18 @@
      "cycle": "2026-27",
      "demand_no": 87,
      "name": "Management Support to Rural Development Programs and Strengthening of District Planning Process",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 87,
+     "name": "Actual Recoveries (CS)",
      "statement": "stat4b"
     }
    }
@@ -66403,11 +66676,6 @@
      "demand_no": 89,
      "name": "Research and Development",
      "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "transliteration variant: ['dvlpmnt', 'rsrc']",
-     "name": "National S and T Human Resource Development"
     }
    }
   },
@@ -66599,6 +66867,18 @@
    }
   },
   {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 93,
+     "name": "Actual Recoveries (CS)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Deendayal Disabled Rehabilitation Scheme",
    "sources": {
     "budget": {
@@ -66630,6 +66910,18 @@
      "cycle": "2026-27",
      "demand_no": 94,
      "name": "Divyangjan Sahara Yojana",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Actual Recoveries (CS)",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 94,
+     "name": "Actual Recoveries (CS)",
      "statement": "stat4b"
     }
    }
@@ -66956,6 +67248,18 @@
    }
   },
   {
+   "name": "Actual Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 98,
+     "name": "Actual Recoveries",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Integrated Development of Tourist Circuits around specific themes (Swadesh Darshan)",
    "sources": {
     "budget": {
@@ -67019,6 +67323,18 @@
      "cycle": "2026-27",
      "demand_no": 99,
      "name": "Domestic Promotion and Publicity including Market Development Assistance",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 99,
+     "name": "Recoveries",
      "statement": "stat4b"
     }
    }
@@ -67206,6 +67522,18 @@
    }
   },
   {
+   "name": "Recoveries",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 102,
+     "name": "Recoveries",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Price Stabilization Fund",
    "sources": {
     "dbt": {
@@ -67267,6 +67595,18 @@
      "outlay_cr": 30940.0,
      "page": 171,
      "targets": 2
+    }
+   }
+  },
+  {
+   "name": "Fund of Funds",
+   "sources": {
+    "outcome": {
+     "classification": "CS",
+     "name": "Fund of Funds",
+     "outlay_cr": 900.0,
+     "page": 202,
+     "targets": 3
     }
    }
   },
@@ -68574,15 +68914,15 @@
   }
  ],
  "in_n_sources": {
-  "1": 5101,
-  "2": 306,
+  "1": 5131,
+  "2": 305,
   "3": 50,
   "4": 22
  },
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
- "snapshot": "2026-08-30",
- "total_entries": 5479,
+ "snapshot": "2026-10-17",
+ "total_entries": 5508,
  "unlisted_but_funded": [
   {
    "also_in": [],
@@ -68748,6 +69088,15 @@
    "be_cr": 17251.0,
    "demand_no": 85,
    "name": "Investment in PSU/JV/SPV etc.",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "dbt"
+   ],
+   "be_cr": 17250.25,
+   "demand_no": 21,
+   "name": "Research and Development",
    "statement": "stat4b"
   },
   {
@@ -70158,9 +70507,7 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
+   "also_in": [],
    "be_cr": 488.28,
    "demand_no": 85,
    "name": "Training/Human Resource Development",
@@ -71458,6 +71805,13 @@
   },
   {
    "also_in": [],
+   "be_cr": 46.0,
+   "demand_no": 71,
+   "name": "Research and Development",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
    "be_cr": 45.0,
    "demand_no": 4,
    "name": "Information, Education and Communication",
@@ -71503,6 +71857,15 @@
    "be_cr": 40.0,
    "demand_no": 26,
    "name": "Scheme for Transformational and Advanced Research in Sciences (STARS)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "dbt"
+   ],
+   "be_cr": 40.0,
+   "demand_no": 71,
+   "name": "Human Resources Development and Training",
    "statement": "stat4b"
   },
   {
@@ -71572,6 +71935,13 @@
   },
   {
    "also_in": [],
+   "be_cr": 31.0,
+   "demand_no": 76,
+   "name": "Scheme for promotion of flagging of merchant ships in India",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
    "be_cr": 30.0,
    "demand_no": 18,
    "name": "Global Engagement and International Cooperation",
@@ -71604,36 +71974,8 @@
    "demand_no": 64,
    "name": "Shram Registration, Inspection, Samadhan and Transparency Initiative (SRISTI)",
    "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 27.24,
-   "demand_no": 46,
-   "name": "Development of Nursing Services",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 26.0,
-   "demand_no": 16,
-   "name": "Centrally Sponsored Project for Strengthening of Cooperatives through IT Interventions",
-   "statement": "stat4a"
-  },
-  {
-   "also_in": [],
-   "be_cr": 26.0,
-   "demand_no": 70,
-   "name": "Special Programmes of Minorities",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 25.0,
-   "demand_no": 7,
-   "name": "Scheme of Programme Management",
-   "statement": "stat4b"
   }
  ],
- "unlisted_but_funded_cr": 1364920.86,
- "unlisted_but_funded_total": 501
+ "unlisted_but_funded_cr": 1382288.11,
+ "unlisted_but_funded_total": 505
 }

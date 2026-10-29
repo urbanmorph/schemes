@@ -1,5 +1,5 @@
 {
- "absent_cr": 12527.14,
+ "absent_cr": 12525.79,
  "absent_distinct": [
   {
    "be_lakh": 680496.06,
@@ -1182,39 +1182,6 @@
    "score": 11
   },
   {
-   "be_lakh": 75.0,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "heads": [
-    "2235-02-789-100"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC]",
-   "score": 13
-  },
-  {
    "be_lakh": 70.15,
    "evidence": [
     [
@@ -1237,35 +1204,6 @@
     "2425"
    ],
    "name": "Subsidies for Interest Liabilities in respect of Share Croppers, Small Farmers and Self-employed Persons- [CO]",
-   "score": 12
-  },
-  {
-   "be_lakh": 60.0,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "heads": [
-    "2235-02-102-117"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC]",
    "score": 12
   },
   {
@@ -3951,9 +3889,9 @@
    "score": 13
   }
  ],
- "absent_distinct_names": 138,
+ "absent_distinct_names": 136,
  "absent_from_myscheme_all_rows": 8917,
- "absent_from_myscheme_and_classified_scheme": 181,
+ "absent_from_myscheme_and_classified_scheme": 179,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged West Bengal, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 126 joins over the whole corpus and 51 of them are wrong, so a row counted present may not be, and the absent count here is if anything an understatement. The surviving list is a floor for the opposite reason too: no book prints a purpose line, recall at the published bar is 21%, and a scheme the state names Lakshmir Bhandar and books as a plain grant-in-aid cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
   {
@@ -6313,53 +6251,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 75.0,
-   "books": [
-    "bp-26"
-   ],
-   "demands": [
-    74
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-789-100",
-   "in_myscheme_westbengal": false,
-   "key": "2235-02-789-100",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "789",
-   "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED CASTES (DAPSC)",
-   "myscheme_match": null,
-   "name": "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC]",
-   "object_heads": [
-    "31"
-   ],
-   "score": 13,
-   "sub_head": "100",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 70.15,
    "books": [
     "bp-22"
@@ -6396,49 +6287,6 @@
    ],
    "score": 12,
    "sub_head": "051",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 60.0,
-   "books": [
-    "bp-26"
-   ],
-   "demands": [
-    74
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-117",
-   "in_myscheme_westbengal": false,
-   "key": "2235-02-102-117",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "102",
-   "minor_head_name": "CHILD WELFARE",
-   "myscheme_match": null,
-   "name": "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC]",
-   "object_heads": [
-    "31"
-   ],
-   "score": 12,
-   "sub_head": "117",
    "verdict": "scheme"
   },
   {
@@ -152276,20 +152124,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "the name begins with an establishment word"
-    ],
-    [
-     "-4",
-     "the name names a body: establishment"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: children"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -152313,7 +152149,7 @@
     "31",
     "50"
    ],
-   "score": 0,
+   "score": -99,
    "sub_head": "004",
    "verdict": "not a scheme"
   },
@@ -152774,8 +152610,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -152804,7 +152640,7 @@
     "50",
     "77"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "081",
    "verdict": "not a scheme"
   },
@@ -152818,8 +152654,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -152836,7 +152672,7 @@
     "31",
     "50"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "082",
    "verdict": "not a scheme"
   },
@@ -152890,8 +152726,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -152921,7 +152757,7 @@
     "50",
     "77"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "084",
    "verdict": "not a scheme"
   },
@@ -152935,8 +152771,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -152953,7 +152789,7 @@
     "31",
     "50"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "085",
    "verdict": "not a scheme"
   },
@@ -153007,8 +152843,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153024,7 +152860,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "087",
    "verdict": "not a scheme"
   },
@@ -153038,8 +152874,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153055,7 +152891,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "088",
    "verdict": "not a scheme"
   },
@@ -153069,8 +152905,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153086,7 +152922,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "089",
    "verdict": "not a scheme"
   },
@@ -153100,8 +152936,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153117,7 +152953,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "090",
    "verdict": "not a scheme"
   },
@@ -153263,8 +153099,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153292,7 +153128,7 @@
     "50",
     "77"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "095",
    "verdict": "not a scheme"
   },
@@ -153306,8 +153142,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153336,7 +153172,7 @@
     "50",
     "77"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "096",
    "verdict": "not a scheme"
   },
@@ -153539,12 +153375,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -153560,7 +153392,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 8,
+   "score": -99,
    "sub_head": "102",
    "verdict": "not a scheme"
   },
@@ -153574,8 +153406,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153591,7 +153423,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "103",
    "verdict": "not a scheme"
   },
@@ -153605,8 +153437,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153622,7 +153454,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "104",
    "verdict": "not a scheme"
   },
@@ -153636,8 +153468,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153653,7 +153485,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "105",
    "verdict": "not a scheme"
   },
@@ -153667,8 +153499,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153684,7 +153516,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "106",
    "verdict": "not a scheme"
   },
@@ -153791,12 +153623,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "every object head is a running cost or works head: 02"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -153812,7 +153640,7 @@
    "object_heads": [
     "02"
    ],
-   "score": 1,
+   "score": -99,
    "sub_head": "110",
    "verdict": "not a scheme"
   },
@@ -153997,12 +153825,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -154018,7 +153842,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "116",
    "verdict": "not a scheme"
   },
@@ -154032,20 +153856,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -154061,9 +153873,9 @@
    "object_heads": [
     "31"
    ],
-   "score": 12,
+   "score": -99,
    "sub_head": "117",
-   "verdict": "scheme"
+   "verdict": "not a scheme"
   },
   {
    "be_lakh": 3.0,
@@ -154075,12 +153887,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -154096,7 +153904,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "118",
    "verdict": "not a scheme"
   },
@@ -154110,12 +153918,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -154131,7 +153935,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "119",
    "verdict": "not a scheme"
   },
@@ -154223,12 +154027,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -154242,7 +154042,7 @@
    "myscheme_match": null,
    "name": "Umbrella ICDS-Anganwadi Services under Saksham Anganwadi and POSHAN 2.0(60:40)(SNA-SPARSH) (SPARSH) [WC]",
    "object_heads": [],
-   "score": 6,
+   "score": -99,
    "sub_head": "122",
    "verdict": "not a scheme"
   },
@@ -155648,8 +155448,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -155665,7 +155465,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "085",
    "verdict": "not a scheme"
   },
@@ -155679,8 +155479,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -155696,7 +155496,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "088",
    "verdict": "not a scheme"
   },
@@ -155710,8 +155510,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -155727,7 +155527,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "089",
    "verdict": "not a scheme"
   },
@@ -155776,12 +155576,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -155795,7 +155591,7 @@
    "myscheme_match": null,
    "name": "One stop Centre under SAMBAL (SNA-SPARSH) (SPARSH) [WC]",
    "object_heads": [],
-   "score": 6,
+   "score": -99,
    "sub_head": "091",
    "verdict": "not a scheme"
   },
@@ -155809,12 +155605,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -155830,7 +155622,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "092",
    "verdict": "not a scheme"
   },
@@ -155844,12 +155636,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -155865,7 +155653,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "093",
    "verdict": "not a scheme"
   },
@@ -155955,16 +155743,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: women"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -155980,7 +155760,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 9,
+   "score": -99,
    "sub_head": "096",
    "verdict": "not a scheme"
   },
@@ -160031,12 +159811,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160064,7 +159840,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "079",
    "verdict": "not a scheme"
   },
@@ -160078,12 +159854,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160099,7 +159871,7 @@
    "object_heads": [
     "50"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "080",
    "verdict": "not a scheme"
   },
@@ -160113,12 +159885,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160146,7 +159914,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "081",
    "verdict": "not a scheme"
   },
@@ -160160,12 +159928,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160181,7 +159945,7 @@
    "object_heads": [
     "50"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "082",
    "verdict": "not a scheme"
   },
@@ -160195,12 +159959,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160216,7 +159976,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "083",
    "verdict": "not a scheme"
   },
@@ -160230,12 +159990,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160251,7 +160007,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "084",
    "verdict": "not a scheme"
   },
@@ -160343,12 +160099,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160375,7 +160127,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "087",
    "verdict": "not a scheme"
   },
@@ -160389,12 +160141,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160421,7 +160169,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "088",
    "verdict": "not a scheme"
   },
@@ -160513,16 +160261,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -160538,7 +160278,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 9,
+   "score": -99,
    "sub_head": "091",
    "verdict": "not a scheme"
   },
@@ -160552,12 +160292,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160573,7 +160309,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "092",
    "verdict": "not a scheme"
   },
@@ -160587,12 +160323,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160608,7 +160340,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "093",
    "verdict": "not a scheme"
   },
@@ -160622,12 +160354,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160643,7 +160371,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "094",
    "verdict": "not a scheme"
   },
@@ -160657,12 +160385,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160678,7 +160402,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "095",
    "verdict": "not a scheme"
   },
@@ -160805,16 +160529,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160830,7 +160546,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "099",
    "verdict": "not a scheme"
   },
@@ -160844,24 +160560,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -160877,9 +160577,9 @@
    "object_heads": [
     "31"
    ],
-   "score": 13,
+   "score": -99,
    "sub_head": "100",
-   "verdict": "scheme"
+   "verdict": "not a scheme"
   },
   {
    "be_lakh": 200.0,
@@ -160891,16 +160591,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160916,7 +160608,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "101",
    "verdict": "not a scheme"
   },
@@ -160930,16 +160622,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -160955,7 +160639,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "102",
    "verdict": "not a scheme"
   },
@@ -161016,16 +160700,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -161048,7 +160724,7 @@
     "36",
     "50"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "104",
    "verdict": "not a scheme"
   },
@@ -162443,12 +162119,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162476,7 +162148,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "079",
    "verdict": "not a scheme"
   },
@@ -162490,12 +162162,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162511,7 +162179,7 @@
    "object_heads": [
     "50"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "080",
    "verdict": "not a scheme"
   },
@@ -162525,12 +162193,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162558,7 +162222,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "081",
    "verdict": "not a scheme"
   },
@@ -162572,12 +162236,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162593,7 +162253,7 @@
    "object_heads": [
     "50"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "082",
    "verdict": "not a scheme"
   },
@@ -162607,12 +162267,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162628,7 +162284,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "083",
    "verdict": "not a scheme"
   },
@@ -162642,12 +162298,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162663,7 +162315,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "084",
    "verdict": "not a scheme"
   },
@@ -162755,12 +162407,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162787,7 +162435,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "087",
    "verdict": "not a scheme"
   },
@@ -162801,12 +162449,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162833,7 +162477,7 @@
     "50",
     "77"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "088",
    "verdict": "not a scheme"
   },
@@ -162925,16 +162569,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: child"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -162950,7 +162586,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 9,
+   "score": -99,
    "sub_head": "091",
    "verdict": "not a scheme"
   },
@@ -162964,12 +162600,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -162985,7 +162617,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "092",
    "verdict": "not a scheme"
   },
@@ -163041,12 +162673,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -163062,7 +162690,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "094",
    "verdict": "not a scheme"
   },
@@ -163076,12 +162704,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -163097,7 +162721,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "095",
    "verdict": "not a scheme"
   },
@@ -163224,16 +162848,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -163249,7 +162865,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "100",
    "verdict": "not a scheme"
   },
@@ -163304,16 +162920,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -163329,7 +162937,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "102",
    "verdict": "not a scheme"
   },
@@ -163343,16 +162951,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -163368,7 +162968,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "103",
    "verdict": "not a scheme"
   },
@@ -163423,16 +163023,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -163453,7 +163045,7 @@
     "27",
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "105",
    "verdict": "not a scheme"
   },
@@ -175003,16 +174595,8 @@
    ],
    "evidence": [
     [
-     "-6",
-     "every object head on this row is an accounting head: 70"
-    ],
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -175028,7 +174612,7 @@
    "object_heads": [
     "70"
    ],
-   "score": -2,
+   "score": -99,
    "sub_head": "081",
    "verdict": "not a scheme"
   },
@@ -175136,16 +174720,8 @@
    ],
    "evidence": [
     [
-     "-6",
-     "every object head on this row is an accounting head: 70"
-    ],
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -175161,7 +174737,7 @@
    "object_heads": [
     "70"
    ],
-   "score": -2,
+   "score": -99,
    "sub_head": "084",
    "verdict": "not a scheme"
   },
@@ -175445,16 +175021,8 @@
    ],
    "evidence": [
     [
-     "-6",
-     "every object head on this row is an accounting head: 70"
-    ],
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -175470,7 +175038,7 @@
    "object_heads": [
     "70"
    ],
-   "score": -2,
+   "score": -99,
    "sub_head": "096",
    "verdict": "not a scheme"
   },
@@ -176359,8 +175927,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -176377,7 +175945,7 @@
     "21",
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "026",
    "verdict": "not a scheme"
   },
@@ -176391,8 +175959,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "scheme",
@@ -176409,7 +175977,7 @@
     "21",
     "31"
    ],
-   "score": 5,
+   "score": -99,
    "sub_head": "027",
    "verdict": "not a scheme"
   },
@@ -176502,12 +176070,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -176524,7 +176088,7 @@
     "21",
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "030",
    "verdict": "not a scheme"
   },
@@ -176538,12 +176102,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -176560,7 +176120,7 @@
     "21",
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "008",
    "verdict": "not a scheme"
   },
@@ -176574,12 +176134,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -176596,7 +176152,7 @@
     "21",
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "009",
    "verdict": "not a scheme"
   },
@@ -176610,16 +176166,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -176636,7 +176184,7 @@
     "21",
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "010",
    "verdict": "not a scheme"
   },
@@ -176783,12 +176331,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -176806,7 +176350,7 @@
     "31",
     "70"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "008",
    "verdict": "not a scheme"
   },
@@ -176820,12 +176364,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -176842,7 +176382,7 @@
     "21",
     "31"
    ],
-   "score": 6,
+   "score": -99,
    "sub_head": "009",
    "verdict": "not a scheme"
   },
@@ -176856,16 +176396,8 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "scheme",
@@ -176882,7 +176414,7 @@
     "21",
     "31"
    ],
-   "score": 7,
+   "score": -99,
    "sub_head": "010",
    "verdict": "not a scheme"
   },
@@ -176986,16 +176518,8 @@
    ],
    "evidence": [
     [
-     "-6",
-     "every object head on this row is an accounting head: 70"
-    ],
-    [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -177011,7 +176535,7 @@
    "object_heads": [
     "70"
    ],
-   "score": 0,
+   "score": -99,
    "sub_head": "026",
    "verdict": "not a scheme"
   },
@@ -177025,16 +176549,8 @@
    ],
    "evidence": [
     [
-     "-6",
-     "every object head on this row is an accounting head: 70"
-    ],
-    [
-     "+5",
-     "welfare function major head 2236"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -177050,7 +176566,7 @@
    "object_heads": [
     "70"
    ],
-   "score": 0,
+   "score": -99,
    "sub_head": "027",
    "verdict": "not a scheme"
   },
@@ -184279,20 +183795,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "the name names a body: directorate, organisation"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 01, 02, 07, 11"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: strengthening"
-    ],
-    [
-     "-2",
-     "establishment or works minor head 001"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -184316,7 +183820,7 @@
     "19",
     "50"
    ],
-   "score": -13,
+   "score": -99,
    "sub_head": "003",
    "verdict": "not a scheme"
   },
@@ -184373,12 +183877,8 @@
    ],
    "evidence": [
     [
-     "-3",
-     "asset or works word in the name: improvement"
-    ],
-    [
-     "-2",
-     "establishment or works minor head 001"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -184407,7 +183907,7 @@
     "50",
     "78"
    ],
-   "score": -5,
+   "score": -99,
    "sub_head": "005",
    "verdict": "not a scheme"
   },
@@ -186540,7 +186040,12 @@
    "demands": [
     5
    ],
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "hand_label": null,
    "hoa": "2401-00-109-042",
    "in_myscheme_westbengal": false,
@@ -186554,7 +186059,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 0,
+   "score": -99,
    "sub_head": "042",
    "verdict": "not a scheme"
   },
@@ -186566,7 +186071,12 @@
    "demands": [
     5
    ],
-   "evidence": [],
+   "evidence": [
+    [
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
+    ]
+   ],
    "hand_label": null,
    "hoa": "2401-00-109-043",
    "in_myscheme_westbengal": false,
@@ -186580,7 +186090,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 0,
+   "score": -99,
    "sub_head": "043",
    "verdict": "not a scheme"
   },
@@ -186594,8 +186104,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -186611,7 +186121,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 1,
+   "score": -99,
    "sub_head": "046",
    "verdict": "not a scheme"
   },
@@ -186953,20 +186463,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "the name names a body: cell"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 01, 07, 11, 12"
-    ],
-    [
-     "-3",
-     "accounting word in the name: evaluation, monitoring"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: creation"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -186989,7 +186487,7 @@
     "16",
     "50"
    ],
-   "score": -14,
+   "score": -99,
    "sub_head": "008",
    "verdict": "not a scheme"
   },
@@ -191268,8 +190766,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -191285,7 +190783,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 1,
+   "score": -99,
    "sub_head": "115",
    "verdict": "not a scheme"
   },
@@ -191299,8 +190797,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -191316,7 +190814,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 1,
+   "score": -99,
    "sub_head": "116",
    "verdict": "not a scheme"
   },
@@ -192237,12 +191735,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -192258,7 +191752,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 2,
+   "score": -99,
    "sub_head": "147",
    "verdict": "not a scheme"
   },
@@ -194029,8 +193523,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -194046,7 +193540,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 1,
+   "score": -99,
    "sub_head": "096",
    "verdict": "not a scheme"
   },
@@ -194060,8 +193554,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -194077,7 +193571,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 1,
+   "score": -99,
    "sub_head": "097",
    "verdict": "not a scheme"
   },
@@ -195002,12 +194496,8 @@
    ],
    "evidence": [
     [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -195023,7 +194513,7 @@
    "object_heads": [
     "31"
    ],
-   "score": 2,
+   "score": -99,
    "sub_head": "128",
    "verdict": "not a scheme"
   },
@@ -195567,16 +195057,8 @@
    ],
    "evidence": [
     [
-     "-6",
-     "every object head on this row is an accounting head: 70"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: improvement"
-    ],
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -195592,7 +195074,7 @@
    "object_heads": [
     "70"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "005",
    "verdict": "not a scheme"
   },
@@ -195687,20 +195169,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "the name names a body: cell"
-    ],
-    [
-     "-3",
-     "accounting word in the name: evaluation, monitoring"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: creation"
-    ],
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -195718,7 +195188,7 @@
     "50",
     "70"
    ],
-   "score": -11,
+   "score": -99,
    "sub_head": "008",
    "verdict": "not a scheme"
   },
@@ -196689,12 +196159,8 @@
    ],
    "evidence": [
     [
-     "-6",
-     "every object head on this row is an accounting head: 70"
-    ],
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -196710,7 +196176,7 @@
    "object_heads": [
     "70"
    ],
-   "score": -7,
+   "score": -99,
    "sub_head": "043",
    "verdict": "not a scheme"
   },
@@ -196959,16 +196425,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "the name names a body: directorate, organisation"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: strengthening"
-    ],
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -196985,7 +196443,7 @@
     "31",
     "70"
    ],
-   "score": -8,
+   "score": -99,
    "sub_head": "058",
    "verdict": "not a scheme"
   },
@@ -305336,16 +304794,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305361,7 +304811,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -11,
+   "score": -99,
    "sub_head": "015",
    "verdict": "not a scheme"
   },
@@ -305375,16 +304825,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305400,7 +304842,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -11,
+   "score": -99,
    "sub_head": "016",
    "verdict": "not a scheme"
   },
@@ -305414,12 +304856,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305435,7 +304873,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -8,
+   "score": -99,
    "sub_head": "017",
    "verdict": "not a scheme"
   },
@@ -305449,12 +304887,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305470,7 +304904,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -8,
+   "score": -99,
    "sub_head": "018",
    "verdict": "not a scheme"
   },
@@ -305484,16 +304918,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305509,7 +304935,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -11,
+   "score": -99,
    "sub_head": "019",
    "verdict": "not a scheme"
   },
@@ -305523,16 +304949,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305548,7 +304966,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -11,
+   "score": -99,
    "sub_head": "020",
    "verdict": "not a scheme"
   },
@@ -305562,20 +304980,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305591,7 +304997,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "021",
    "verdict": "not a scheme"
   },
@@ -305605,16 +305011,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -305628,7 +305026,7 @@
    "myscheme_match": null,
    "name": "Construction/Up gradation of AWC building under Anganwadi Services under Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC]",
    "object_heads": [],
-   "score": -6,
+   "score": -99,
    "sub_head": "022",
    "verdict": "not a scheme"
   },
@@ -306107,20 +305505,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306136,7 +305522,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "008",
    "verdict": "not a scheme"
   },
@@ -306150,20 +305536,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306179,7 +305553,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "009",
    "verdict": "not a scheme"
   },
@@ -306193,16 +305567,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306218,7 +305584,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -7,
+   "score": -99,
    "sub_head": "010",
    "verdict": "not a scheme"
   },
@@ -306232,16 +305598,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306257,7 +305615,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -7,
+   "score": -99,
    "sub_head": "011",
    "verdict": "not a scheme"
   },
@@ -306271,20 +305629,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": "not_scheme",
@@ -306300,7 +305646,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "012",
    "verdict": "not a scheme"
   },
@@ -306314,20 +305660,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306343,7 +305677,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "013",
    "verdict": "not a scheme"
   },
@@ -306357,24 +305691,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306390,7 +305708,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -9,
+   "score": -99,
    "sub_head": "014",
    "verdict": "not a scheme"
   },
@@ -306404,24 +305722,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306437,7 +305739,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -9,
+   "score": -99,
    "sub_head": "015",
    "verdict": "not a scheme"
   },
@@ -306580,20 +305882,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306609,7 +305899,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "008",
    "verdict": "not a scheme"
   },
@@ -306623,20 +305913,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306652,7 +305930,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "009",
    "verdict": "not a scheme"
   },
@@ -306666,16 +305944,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306691,7 +305961,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -7,
+   "score": -99,
    "sub_head": "010",
    "verdict": "not a scheme"
   },
@@ -306705,16 +305975,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306730,7 +305992,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -7,
+   "score": -99,
    "sub_head": "011",
    "verdict": "not a scheme"
   },
@@ -306744,20 +306006,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306773,7 +306023,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "012",
    "verdict": "not a scheme"
   },
@@ -306787,20 +306037,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306816,7 +306054,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -10,
+   "score": -99,
    "sub_head": "013",
    "verdict": "not a scheme"
   },
@@ -306830,24 +306068,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: asset, construction, creation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306863,7 +306085,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -9,
+   "score": -99,
    "sub_head": "014",
    "verdict": "not a scheme"
   },
@@ -306877,24 +306099,8 @@
    ],
    "evidence": [
     [
-     "-4",
-     "capital outlay or loan major head 4235"
-    ],
-    [
-     "-4",
-     "every object head is a running cost or works head: 53"
-    ],
-    [
-     "-3",
-     "asset or works word in the name: building, construction, gradation"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
+     "rule",
+     "buys the capacity of the delivery system, not the benefit"
     ]
    ],
    "hand_label": null,
@@ -306910,7 +306116,7 @@
    "object_heads": [
     "53"
    ],
-   "score": -9,
+   "score": -99,
    "sub_head": "015",
    "verdict": "not a scheme"
   },
@@ -352304,10 +351510,10 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T04:24:47Z",
- "classified_not_scheme": 8805,
- "classified_scheme": 219,
- "classified_scheme_distinct_names": 155,
+ "built": "2026-10-29T18:05:40Z",
+ "classified_not_scheme": 8807,
+ "classified_scheme": 217,
+ "classified_scheme_distinct_names": 153,
  "counting_basis": "EVERY COUNT HERE IS ON THE 9,024 HEAD OF ACCOUNT BASIS unless the field name says distinct. The head of account is West Bengal's own identifier for a provision and it is what the state votes: a scheme's revenue head and its capital head are separate provisions, and so are its general head, its Scheduled Caste head under minor head 789 and its Tribal head under 796, which is why the same name is printed three times. The 9,024 heads carry 6,440 distinct names, or 6,355 once case is ignored, which is the number distinct_names reports. Collapsing on the name would merge a provision with its own Deduct Recoveries mirror, which carries the same name and is not the same thing, so the head of account is the published basis and absent_distinct is the de-duplicated view of the same list.",
  "cycle": "2026-2027",
  "distinct_names": 6355,
@@ -369542,184 +368748,184 @@
  "state": "West Bengal",
  "threshold_sweep": [
   {
-   "called_scheme": 355,
-   "f1": 0.193,
-   "false_negative": 0,
-   "false_positive": 317,
-   "precision": 0.107,
-   "recall": 1.0,
+   "called_scheme": 348,
+   "f1": 0.187,
+   "false_negative": 2,
+   "false_positive": 312,
+   "precision": 0.103,
+   "recall": 0.947,
    "threshold": -10,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 319,
-   "f1": 0.213,
-   "false_negative": 0,
-   "false_positive": 281,
-   "precision": 0.119,
-   "recall": 1.0,
+   "called_scheme": 313,
+   "f1": 0.205,
+   "false_negative": 2,
+   "false_positive": 277,
+   "precision": 0.115,
+   "recall": 0.947,
    "threshold": -9,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 307,
-   "f1": 0.22,
-   "false_negative": 0,
-   "false_positive": 269,
-   "precision": 0.124,
-   "recall": 1.0,
+   "called_scheme": 301,
+   "f1": 0.212,
+   "false_negative": 2,
+   "false_positive": 265,
+   "precision": 0.12,
+   "recall": 0.947,
    "threshold": -8,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 283,
-   "f1": 0.237,
-   "false_negative": 0,
-   "false_positive": 245,
-   "precision": 0.134,
-   "recall": 1.0,
+   "called_scheme": 277,
+   "f1": 0.229,
+   "false_negative": 2,
+   "false_positive": 241,
+   "precision": 0.13,
+   "recall": 0.947,
    "threshold": -7,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 253,
-   "f1": 0.261,
-   "false_negative": 0,
-   "false_positive": 215,
-   "precision": 0.15,
-   "recall": 1.0,
+   "called_scheme": 248,
+   "f1": 0.252,
+   "false_negative": 2,
+   "false_positive": 212,
+   "precision": 0.145,
+   "recall": 0.947,
    "threshold": -6,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 233,
-   "f1": 0.28,
-   "false_negative": 0,
-   "false_positive": 195,
-   "precision": 0.163,
-   "recall": 1.0,
+   "called_scheme": 228,
+   "f1": 0.271,
+   "false_negative": 2,
+   "false_positive": 192,
+   "precision": 0.158,
+   "recall": 0.947,
    "threshold": -5,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 220,
-   "f1": 0.295,
-   "false_negative": 0,
-   "false_positive": 182,
-   "precision": 0.173,
-   "recall": 1.0,
+   "called_scheme": 215,
+   "f1": 0.285,
+   "false_negative": 2,
+   "false_positive": 179,
+   "precision": 0.167,
+   "recall": 0.947,
    "threshold": -4,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 176,
-   "f1": 0.355,
-   "false_negative": 0,
-   "false_positive": 138,
-   "precision": 0.216,
-   "recall": 1.0,
+   "called_scheme": 171,
+   "f1": 0.344,
+   "false_negative": 2,
+   "false_positive": 135,
+   "precision": 0.211,
+   "recall": 0.947,
    "threshold": -3,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 164,
-   "f1": 0.376,
-   "false_negative": 0,
-   "false_positive": 126,
-   "precision": 0.232,
-   "recall": 1.0,
+   "called_scheme": 159,
+   "f1": 0.365,
+   "false_negative": 2,
+   "false_positive": 123,
+   "precision": 0.226,
+   "recall": 0.947,
    "threshold": -2,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 144,
-   "f1": 0.418,
-   "false_negative": 0,
-   "false_positive": 106,
-   "precision": 0.264,
-   "recall": 1.0,
+   "called_scheme": 139,
+   "f1": 0.407,
+   "false_negative": 2,
+   "false_positive": 103,
+   "precision": 0.259,
+   "recall": 0.947,
    "threshold": -1,
-   "true_positive": 38
+   "true_positive": 36
   },
   {
-   "called_scheme": 127,
-   "f1": 0.448,
-   "false_negative": 1,
-   "false_positive": 90,
-   "precision": 0.291,
-   "recall": 0.974,
+   "called_scheme": 122,
+   "f1": 0.438,
+   "false_negative": 3,
+   "false_positive": 87,
+   "precision": 0.287,
+   "recall": 0.921,
    "threshold": 0,
-   "true_positive": 37
+   "true_positive": 35
   },
   {
-   "called_scheme": 97,
-   "f1": 0.548,
-   "false_negative": 1,
-   "false_positive": 60,
-   "precision": 0.381,
-   "recall": 0.974,
+   "called_scheme": 92,
+   "f1": 0.538,
+   "false_negative": 3,
+   "false_positive": 57,
+   "precision": 0.38,
+   "recall": 0.921,
    "threshold": 1,
-   "true_positive": 37
+   "true_positive": 35
   },
   {
-   "called_scheme": 71,
-   "f1": 0.624,
-   "false_negative": 4,
-   "false_positive": 37,
-   "precision": 0.479,
-   "recall": 0.895,
-   "threshold": 2,
-   "true_positive": 34
-  },
-  {
-   "called_scheme": 60,
-   "f1": 0.653,
+   "called_scheme": 66,
+   "f1": 0.615,
    "false_negative": 6,
-   "false_positive": 28,
-   "precision": 0.533,
+   "false_positive": 34,
+   "precision": 0.485,
    "recall": 0.842,
-   "threshold": 3,
+   "threshold": 2,
    "true_positive": 32
   },
   {
-   "called_scheme": 52,
-   "f1": 0.667,
+   "called_scheme": 55,
+   "f1": 0.645,
    "false_negative": 8,
-   "false_positive": 22,
-   "precision": 0.577,
+   "false_positive": 25,
+   "precision": 0.545,
    "recall": 0.789,
-   "threshold": 4,
+   "threshold": 3,
    "true_positive": 30
   },
   {
-   "called_scheme": 40,
-   "f1": 0.692,
-   "false_negative": 11,
-   "false_positive": 13,
-   "precision": 0.675,
-   "recall": 0.711,
-   "threshold": 5,
-   "true_positive": 27
+   "called_scheme": 47,
+   "f1": 0.659,
+   "false_negative": 10,
+   "false_positive": 19,
+   "precision": 0.596,
+   "recall": 0.737,
+   "threshold": 4,
+   "true_positive": 28
   },
   {
-   "called_scheme": 33,
-   "f1": 0.704,
+   "called_scheme": 35,
+   "f1": 0.685,
    "false_negative": 13,
-   "false_positive": 8,
-   "precision": 0.758,
+   "false_positive": 10,
+   "precision": 0.714,
    "recall": 0.658,
-   "threshold": 6,
+   "threshold": 5,
    "true_positive": 25
   },
   {
-   "called_scheme": 25,
-   "f1": 0.667,
-   "false_negative": 17,
+   "called_scheme": 30,
+   "f1": 0.706,
+   "false_negative": 14,
+   "false_positive": 6,
+   "precision": 0.8,
+   "recall": 0.632,
+   "threshold": 6,
+   "true_positive": 24
+  },
+  {
+   "called_scheme": 24,
+   "f1": 0.645,
+   "false_negative": 18,
    "false_positive": 4,
-   "precision": 0.84,
-   "recall": 0.553,
+   "precision": 0.833,
+   "recall": 0.526,
    "threshold": 7,
-   "true_positive": 21
+   "true_positive": 20
   },
   {
    "called_scheme": 20,
@@ -369834,14 +369040,14 @@
  ],
  "threshold_sweep_census": [
   {
-   "band_at_exactly_this_score": 61,
-   "band_not_schemes": 24,
-   "band_precision": 0.607,
-   "not_schemes": 139,
-   "precision": 0.743,
-   "published": 541,
-   "rows_hand_labelled": 541,
-   "rows_in_corpus": 706,
+   "band_at_exactly_this_score": 59,
+   "band_not_schemes": 22,
+   "band_precision": 0.627,
+   "not_schemes": 131,
+   "precision": 0.754,
+   "published": 532,
+   "rows_hand_labelled": 532,
+   "rows_in_corpus": 655,
    "the_errors": [
     "Agricultural Training Centres Including Farmer's Training- [AG] [2401-00-109-006]",
     "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS] [2235-60-200-041]",
@@ -369857,11 +369063,6 @@
     "Award to Outstanding Employers of Handicapped and Handicapped Employees [WC] [2235-02-101-006]",
     "Award to Outstanding Employers of Handicapped and Handicapped Employees [WC] [2235-02-789-009]",
     "Award to Outstanding Employers of Handicrapped and Handicapped Employees [WC] [2235-02-796-014]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-102-102]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-789-091]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-796-091]",
     "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH] [2235-60-200-076]",
     "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD] [2235-60-800-009]",
     "Deposit Linked Insurance Scheme for the Members of A.I.S. Government P.F. [FD] [2235-60-104-001]",
@@ -369958,8 +369159,6 @@
     "Subsidy to CSTC/CTC/NBSTC/SBSTC for Implementation of VRS. (EAP) [TR] [3055-00-190-008]",
     "Subsidy to CTC for implementation of VRS [TR] [3055-00-190-011]",
     "Subsidy to SWL for Implementation of VRS. (EAP) [TR] [3056-00-190-001]",
-    "Swachhata Action Plan (SAP) under Mission Vatsalya (Central Share) (OCASPS) [WC] [2235-02-796-094]",
-    "Swachhata Action Plan (SAP) under Mission Vatsalya (SNA-SPARSH) (SPARSH) [WC] [2235-02-102-119]",
     "Swadhar Greh under under SAMBAL [Mission Shakti (Mission for Protection and Empowerment for Women)] (Central Share) (OCASPS) [WC] [2235-02-103-077]",
     "Swadhar Greh under under SAMBAL [Mission Shakti (Mission for Protection and Empowerment for Women)] (State Share) (OCASPS) [WC] [2235-02-103-078]",
     "Training under Saksham Anganwadi and Poshan 2.0 (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-105]",
@@ -369980,20 +369179,19 @@
     "Welfare of Street Children [WC] [2235-02-102-015]",
     "Welfare of Street Children [WC] [2235-02-789-014]",
     "Welfare of Street Children [WC] [2235-02-796-020]",
-    "West Bengal State M.I. Corporation Water Rate Subsidy [WI] [2702-80-789-001]",
-    "Women helpline under SAMBAL (SNA-SPARSH) (SPARSH) [WC] [2235-02-103-096]"
+    "West Bengal State M.I. Corporation Water Rate Subsidy [WI] [2702-80-789-001]"
    ],
    "threshold": 6
   },
   {
-   "band_at_exactly_this_score": 38,
+   "band_at_exactly_this_score": 37,
    "band_not_schemes": 12,
-   "band_precision": 0.684,
-   "not_schemes": 115,
-   "precision": 0.76,
-   "published": 480,
-   "rows_hand_labelled": 480,
-   "rows_in_corpus": 529,
+   "band_precision": 0.676,
+   "not_schemes": 109,
+   "precision": 0.77,
+   "published": 473,
+   "rows_hand_labelled": 473,
+   "rows_in_corpus": 513,
    "the_errors": [
     "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS] [2235-60-200-041]",
     "Ashram Hostel attached to Primary School in Rural Areas [SC] [2225-01-277-006]",
@@ -370007,11 +369205,6 @@
     "Award to Outstanding Employers of Handicapped and Handicapped Employees [WC] [2235-02-101-006]",
     "Award to Outstanding Employers of Handicapped and Handicapped Employees [WC] [2235-02-789-009]",
     "Award to Outstanding Employers of Handicrapped and Handicapped Employees [WC] [2235-02-796-014]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-102-102]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-789-091]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-796-091]",
     "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH] [2235-60-200-076]",
     "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD] [2235-60-800-009]",
     "Deposit Linked Insurance Scheme for the Members of A.I.S. Government P.F. [FD] [2235-60-104-001]",
@@ -370108,20 +369301,19 @@
     "Welfare of Handicapped [2235-02-796-101]",
     "Welfare of Street Children [WC] [2235-02-102-015]",
     "Welfare of Street Children [WC] [2235-02-789-014]",
-    "Welfare of Street Children [WC] [2235-02-796-020]",
-    "Women helpline under SAMBAL (SNA-SPARSH) (SPARSH) [WC] [2235-02-103-096]"
+    "Welfare of Street Children [WC] [2235-02-796-020]"
    ],
    "threshold": 7
   },
   {
-   "band_at_exactly_this_score": 112,
-   "band_not_schemes": 42,
-   "band_precision": 0.625,
-   "not_schemes": 103,
-   "precision": 0.767,
-   "published": 442,
-   "rows_hand_labelled": 442,
-   "rows_in_corpus": 442,
+   "band_at_exactly_this_score": 111,
+   "band_not_schemes": 41,
+   "band_precision": 0.631,
+   "not_schemes": 97,
+   "precision": 0.778,
+   "published": 436,
+   "rows_hand_labelled": 436,
+   "rows_in_corpus": 436,
    "the_errors": [
     "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS] [2235-60-200-041]",
     "Ashram Hostel attached to Primary School in Rural Areas [SC] [2225-01-277-006]",
@@ -370135,11 +369327,6 @@
     "Award to Outstanding Employers of Handicapped and Handicapped Employees [WC] [2235-02-101-006]",
     "Award to Outstanding Employers of Handicapped and Handicapped Employees [WC] [2235-02-789-009]",
     "Award to Outstanding Employers of Handicrapped and Handicapped Employees [WC] [2235-02-796-014]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-102-102]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-789-091]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-796-091]",
     "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH] [2235-60-200-076]",
     "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD] [2235-60-800-009]",
     "Deposit Linked Insurance Scheme for the Members of A.I.S. Government P.F. [FD] [2235-60-104-001]",
@@ -370224,20 +369411,19 @@
     "Welfare of Handicapped [2235-02-796-101]",
     "Welfare of Street Children [WC] [2235-02-102-015]",
     "Welfare of Street Children [WC] [2235-02-789-014]",
-    "Welfare of Street Children [WC] [2235-02-796-020]",
-    "Women helpline under SAMBAL (SNA-SPARSH) (SPARSH) [WC] [2235-02-103-096]"
+    "Welfare of Street Children [WC] [2235-02-796-020]"
    ],
    "threshold": 8
   },
   {
-   "band_at_exactly_this_score": 111,
-   "band_not_schemes": 40,
-   "band_precision": 0.64,
-   "not_schemes": 61,
-   "precision": 0.815,
-   "published": 330,
-   "rows_hand_labelled": 330,
-   "rows_in_corpus": 330,
+   "band_at_exactly_this_score": 108,
+   "band_not_schemes": 37,
+   "band_precision": 0.657,
+   "not_schemes": 56,
+   "precision": 0.828,
+   "published": 325,
+   "rows_hand_labelled": 325,
+   "rows_in_corpus": 325,
    "the_errors": [
     "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS] [2235-60-200-041]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC] [2235-02-102-124]",
@@ -370246,10 +369432,6 @@
     "Assistance to Voluntary Organisations [WC] [2235-02-789-023]",
     "Award to Outstanding Employers of Handicapped and Handicapped Employees [WC] [2235-02-789-009]",
     "Award to Outstanding Employers of Handicrapped and Handicapped Employees [WC] [2235-02-796-014]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-789-091]",
-    "Child Helpline Services under Mission Vatsalya (GoI Code 3976)(Central Share) (OCASPS) [WC] [2235-02-796-091]",
     "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH] [2235-60-200-076]",
     "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD] [2235-60-800-009]",
     "Development Action Plan for Scheduled Castes (DAPSC) Central Sector Scheme [2230-03-796-789]",
@@ -370298,8 +369480,7 @@
     "Welfare of Aged, Infirm and Destitute [2235-02-796-104]",
     "Welfare of Handicapped [2235-02-796-101]",
     "Welfare of Street Children [WC] [2235-02-789-014]",
-    "Welfare of Street Children [WC] [2235-02-796-020]",
-    "Women helpline under SAMBAL (SNA-SPARSH) (SPARSH) [WC] [2235-02-103-096]"
+    "Welfare of Street Children [WC] [2235-02-796-020]"
    ],
    "threshold": 9
   },
@@ -370307,18 +369488,16 @@
    "band_at_exactly_this_score": 26,
    "band_not_schemes": 5,
    "band_precision": 0.808,
-   "not_schemes": 21,
-   "precision": 0.904,
-   "published": 219,
-   "rows_hand_labelled": 219,
-   "rows_in_corpus": 219,
+   "not_schemes": 19,
+   "precision": 0.912,
+   "published": 217,
+   "rows_hand_labelled": 217,
+   "rows_in_corpus": 217,
    "the_errors": [
     "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS] [2235-60-200-041]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC] [2235-02-102-124]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (Central Share) (OCASPS) [WC] [2235-02-102-083]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (State Share) (OCASPS) [WC] [2235-02-102-086]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
     "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH] [2235-60-200-076]",
     "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD] [2235-60-800-009]",
     "Development of Particularly Vulnerable Tribal Groups (100% Central Share) (SNA-SPARSH) (SPARSH) [TW] [2225-02-796-135]",
@@ -370341,18 +369520,16 @@
    "band_at_exactly_this_score": 67,
    "band_not_schemes": 8,
    "band_precision": 0.881,
-   "not_schemes": 16,
-   "precision": 0.917,
-   "published": 193,
-   "rows_hand_labelled": 193,
-   "rows_in_corpus": 193,
+   "not_schemes": 14,
+   "precision": 0.927,
+   "published": 191,
+   "rows_hand_labelled": 191,
+   "rows_in_corpus": 191,
    "the_errors": [
     "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS] [2235-60-200-041]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC] [2235-02-102-124]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (Central Share) (OCASPS) [WC] [2235-02-102-083]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (State Share) (OCASPS) [WC] [2235-02-102-086]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
     "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH] [2235-60-200-076]",
     "Improvement of residential schools for Girls at Belpahari [TW] [2225-02-796-023]",
     "Payment of ex-gratia grant by the State Government to the families of service personnel killed, missing, taken as prisoner of war or disabled in acition [HH] [2235-60-200-014]",
@@ -370367,18 +369544,16 @@
    "threshold": 11
   },
   {
-   "band_at_exactly_this_score": 56,
-   "band_not_schemes": 4,
-   "band_precision": 0.929,
-   "not_schemes": 8,
-   "precision": 0.937,
-   "published": 126,
-   "rows_hand_labelled": 126,
-   "rows_in_corpus": 126,
+   "band_at_exactly_this_score": 55,
+   "band_not_schemes": 3,
+   "band_precision": 0.945,
+   "not_schemes": 6,
+   "precision": 0.952,
+   "published": 124,
+   "rows_hand_labelled": 124,
+   "rows_in_corpus": 124,
    "the_errors": [
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC] [2235-02-102-124]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
     "Improvement of residential schools for Girls at Belpahari [TW] [2225-02-796-023]",
     "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidised Price [FS] [2235-60-200-053]",
     "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidized Price [FS] [2408-01-102-007]",
@@ -370388,16 +369563,15 @@
    "threshold": 12
   },
   {
-   "band_at_exactly_this_score": 16,
-   "band_not_schemes": 3,
-   "band_precision": 0.812,
-   "not_schemes": 4,
-   "precision": 0.943,
-   "published": 70,
-   "rows_hand_labelled": 70,
-   "rows_in_corpus": 70,
+   "band_at_exactly_this_score": 15,
+   "band_not_schemes": 2,
+   "band_precision": 0.867,
+   "not_schemes": 3,
+   "precision": 0.957,
+   "published": 69,
+   "rows_hand_labelled": 69,
+   "rows_in_corpus": 69,
    "the_errors": [
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
     "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidised Price [FS] [2235-60-200-053]",
     "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidized Price [FS] [2408-01-789-010]",
     "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidized Price [FS] [2408-01-796-012]"
@@ -370469,171 +369643,171 @@
  ],
  "threshold_sweep_held_out": [
   {
-   "called_scheme": 184,
-   "f1": 0.196,
-   "false_negative": 0,
-   "false_positive": 164,
-   "precision": 0.109,
-   "recall": 1.0,
+   "called_scheme": 180,
+   "f1": 0.19,
+   "false_negative": 1,
+   "false_positive": 161,
+   "precision": 0.106,
+   "recall": 0.95,
    "threshold": -10,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 164,
-   "f1": 0.217,
-   "false_negative": 0,
-   "false_positive": 144,
-   "precision": 0.122,
-   "recall": 1.0,
+   "called_scheme": 160,
+   "f1": 0.211,
+   "false_negative": 1,
+   "false_positive": 141,
+   "precision": 0.119,
+   "recall": 0.95,
    "threshold": -9,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 159,
-   "f1": 0.223,
-   "false_negative": 0,
-   "false_positive": 139,
-   "precision": 0.126,
-   "recall": 1.0,
+   "called_scheme": 155,
+   "f1": 0.217,
+   "false_negative": 1,
+   "false_positive": 136,
+   "precision": 0.123,
+   "recall": 0.95,
    "threshold": -8,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 145,
-   "f1": 0.242,
-   "false_negative": 0,
-   "false_positive": 125,
-   "precision": 0.138,
-   "recall": 1.0,
+   "called_scheme": 141,
+   "f1": 0.236,
+   "false_negative": 1,
+   "false_positive": 122,
+   "precision": 0.135,
+   "recall": 0.95,
    "threshold": -7,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 128,
-   "f1": 0.27,
-   "false_negative": 0,
-   "false_positive": 108,
-   "precision": 0.156,
-   "recall": 1.0,
+   "called_scheme": 125,
+   "f1": 0.262,
+   "false_negative": 1,
+   "false_positive": 106,
+   "precision": 0.152,
+   "recall": 0.95,
    "threshold": -6,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 119,
-   "f1": 0.288,
-   "false_negative": 0,
-   "false_positive": 99,
-   "precision": 0.168,
-   "recall": 1.0,
+   "called_scheme": 116,
+   "f1": 0.279,
+   "false_negative": 1,
+   "false_positive": 97,
+   "precision": 0.164,
+   "recall": 0.95,
    "threshold": -5,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 109,
-   "f1": 0.31,
-   "false_negative": 0,
-   "false_positive": 89,
-   "precision": 0.183,
-   "recall": 1.0,
+   "called_scheme": 106,
+   "f1": 0.302,
+   "false_negative": 1,
+   "false_positive": 87,
+   "precision": 0.179,
+   "recall": 0.95,
    "threshold": -4,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 93,
-   "f1": 0.354,
-   "false_negative": 0,
-   "false_positive": 73,
-   "precision": 0.215,
-   "recall": 1.0,
+   "called_scheme": 90,
+   "f1": 0.345,
+   "false_negative": 1,
+   "false_positive": 71,
+   "precision": 0.211,
+   "recall": 0.95,
    "threshold": -3,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 86,
-   "f1": 0.377,
-   "false_negative": 0,
-   "false_positive": 66,
-   "precision": 0.233,
-   "recall": 1.0,
+   "called_scheme": 83,
+   "f1": 0.369,
+   "false_negative": 1,
+   "false_positive": 64,
+   "precision": 0.229,
+   "recall": 0.95,
    "threshold": -2,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 77,
-   "f1": 0.412,
-   "false_negative": 0,
-   "false_positive": 57,
-   "precision": 0.26,
-   "recall": 1.0,
+   "called_scheme": 74,
+   "f1": 0.404,
+   "false_negative": 1,
+   "false_positive": 55,
+   "precision": 0.257,
+   "recall": 0.95,
    "threshold": -1,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 68,
-   "f1": 0.455,
-   "false_negative": 0,
-   "false_positive": 48,
-   "precision": 0.294,
-   "recall": 1.0,
+   "called_scheme": 65,
+   "f1": 0.447,
+   "false_negative": 1,
+   "false_positive": 46,
+   "precision": 0.292,
+   "recall": 0.95,
    "threshold": 0,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 53,
-   "f1": 0.548,
-   "false_negative": 0,
-   "false_positive": 33,
-   "precision": 0.377,
-   "recall": 1.0,
+   "called_scheme": 50,
+   "f1": 0.543,
+   "false_negative": 1,
+   "false_positive": 31,
+   "precision": 0.38,
+   "recall": 0.95,
    "threshold": 1,
-   "true_positive": 20
+   "true_positive": 19
   },
   {
-   "called_scheme": 36,
-   "f1": 0.607,
-   "false_negative": 3,
-   "false_positive": 19,
-   "precision": 0.472,
-   "recall": 0.85,
+   "called_scheme": 33,
+   "f1": 0.604,
+   "false_negative": 4,
+   "false_positive": 17,
+   "precision": 0.485,
+   "recall": 0.8,
    "threshold": 2,
-   "true_positive": 17
-  },
-  {
-   "called_scheme": 30,
-   "f1": 0.64,
-   "false_negative": 4,
-   "false_positive": 14,
-   "precision": 0.533,
-   "recall": 0.8,
-   "threshold": 3,
    "true_positive": 16
   },
   {
-   "called_scheme": 29,
-   "f1": 0.653,
-   "false_negative": 4,
-   "false_positive": 13,
-   "precision": 0.552,
-   "recall": 0.8,
-   "threshold": 4,
-   "true_positive": 16
-  },
-  {
-   "called_scheme": 23,
-   "f1": 0.698,
+   "called_scheme": 27,
+   "f1": 0.638,
    "false_negative": 5,
-   "false_positive": 8,
-   "precision": 0.652,
+   "false_positive": 12,
+   "precision": 0.556,
    "recall": 0.75,
-   "threshold": 5,
+   "threshold": 3,
    "true_positive": 15
   },
   {
-   "called_scheme": 19,
-   "f1": 0.667,
-   "false_negative": 7,
+   "called_scheme": 26,
+   "f1": 0.652,
+   "false_negative": 5,
+   "false_positive": 11,
+   "precision": 0.577,
+   "recall": 0.75,
+   "threshold": 4,
+   "true_positive": 15
+  },
+  {
+   "called_scheme": 20,
+   "f1": 0.7,
+   "false_negative": 6,
    "false_positive": 6,
-   "precision": 0.684,
+   "precision": 0.7,
+   "recall": 0.7,
+   "threshold": 5,
+   "true_positive": 14
+  },
+  {
+   "called_scheme": 18,
+   "f1": 0.684,
+   "false_negative": 7,
+   "false_positive": 5,
+   "precision": 0.722,
    "recall": 0.65,
    "threshold": 6,
    "true_positive": 13
@@ -370772,18 +369946,16 @@
    "band_at_exactly_this_score": 26,
    "band_not_schemes": 5,
    "band_precision": 0.808,
-   "not_schemes": 21,
-   "precision": 0.904,
-   "published": 219,
-   "rows_hand_labelled": 219,
-   "rows_in_corpus": 219,
+   "not_schemes": 19,
+   "precision": 0.912,
+   "published": 217,
+   "rows_hand_labelled": 217,
+   "rows_in_corpus": 217,
    "the_errors": [
     "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS] [2235-60-200-041]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC] [2235-02-102-124]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (Central Share) (OCASPS) [WC] [2235-02-102-083]",
     "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (State Share) (OCASPS) [WC] [2235-02-102-086]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPARSH) (SPARSH) [WC] [2235-02-789-100]",
-    "Child Helpline Services under Mission Vatsalya (100% Central assistance) (SNA-SPRASH) (SPARSH) [WC] [2235-02-102-117]",
     "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH] [2235-60-200-076]",
     "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD] [2235-60-800-009]",
     "Development of Particularly Vulnerable Tribal Groups (100% Central Share) (SNA-SPARSH) (SPARSH) [TW] [2225-02-796-135]",

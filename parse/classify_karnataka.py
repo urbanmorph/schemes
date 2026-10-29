@@ -112,6 +112,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from classify_common import excluded_by_rule  # noqa: E402
 
 
 def _load(name, path):
@@ -241,6 +242,10 @@ def score_entry(hoa, name, purpose):
     Blind", should have to work to clear the bar, because that is the row that would
     embarrass the published list.
     """
+    # The shared definition, the same in every state: money that buys a delivery
+    # system's capacity is not a scheme however this state's evidence reads it.
+    if excluded_by_rule(name):
+        return -99, [["rule", "buys the capacity of the delivery system, not the benefit"]]
     tk = tokens(name)
     tp = tokens(purpose)
     ev = []
@@ -405,6 +410,7 @@ KNOWN_FALSE_ABSENCES = [
              "Karnataka side.")},
     {"karnataka": "Interest Subsidy for Crop Loan, Pledge Loan, SHGs",
      "myscheme": "Interest Subvention Scheme",
+     "uncertain": True,
      "why": ("Uncertain rather than confirmed: myScheme's record is thin enough that it "
              "may or may not be this line. Listed so a reader can check it.")},
 ]
@@ -494,12 +500,18 @@ def run(threshold=PUBLISH_THRESHOLD):
     by_hoa = {x["hoa"]: x for x in labels["labels"]}
 
     listed = myscheme_karnataka()
+    # The confirmed entries above, applied. The list was written and never read, so
+    # Bhagya Lakshmi, Udyogini and Vidyasiri went on being published as absent from a
+    # portal that lists them. Only while the myScheme record it names is still there.
+    held = set(listed)
+    known = {x["karnataka"]: x["myscheme"] for x in KNOWN_FALSE_ABSENCES
+             if not x.get("uncertain") and x["myscheme"] in held}
 
     rows = []
     for r in entries:
         total, ev = score_entry(r["hoa"], r["name"], r.get("purpose"))
         # [0] because probably_same returns (bool, why) and a tuple is always truthy.
-        in_ms = any(probably_same(r["name"], k)[0] for k in listed)
+        in_ms = r["name"] in known or any(probably_same(r["name"], k)[0] for k in listed)
         rows.append({
             "hoa": r["hoa"], "name": r["name"], "purpose": r.get("purpose"),
             "be_lakh": r.get("be_lakh"), "books": sorted(r.get("books") or []),

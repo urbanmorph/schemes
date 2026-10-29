@@ -39,6 +39,8 @@ step "parse/match.py self-tests"    python3 parse/match.py
 step "parse/krutidev.py self-tests" python3 parse/krutidev.py
 [ -f parse/devanagari.py ] && step "parse/devanagari.py self-tests" python3 parse/devanagari.py
 step "parse/cag.py self-tests"      python3 parse/cag.py --self-test
+step "parse/dbt.py self-tests"      python3 parse/dbt.py --self-test
+step "parse/registry.py self-tests" python3 parse/registry.py --self-test
 step "parse/watchlist.py self-tests" python3 parse/watchlist.py --self-test
 step "parse/changes.py self-tests"  python3 parse/changes.py --self-test
 step "site/build.py self-tests"     python3 site/build.py --self-test
@@ -46,7 +48,7 @@ step "site/build.py self-tests"     python3 site/build.py --self-test
 # 2b. The monthly run's chunking: what counts as finished, and the side-branch checkpoint.
 #     tests/run_chunks.sh drives run.sh itself through a stopped, resumed and repeated month
 #     with every collector stubbed. It takes a minute, so run it when run.sh or
-#     collect.yml changes rather than on every push.
+#     collect.yml changes rather than on every push. CI (check.yml) runs it on every push.
 step "tools/cag_mirror.py tests"   python3 tests/test_cag_mirror.py
 step "progress.py self-tests"       python3 progress.py --self-test
 step "checkpoint.sh"                bash tests/checkpoint.sh

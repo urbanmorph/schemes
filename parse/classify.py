@@ -50,6 +50,7 @@ def _load(name, path):
 # Absence and membership questions use the generous matcher; see parse/match.py.
 _m = _load("scheme_match", os.path.join(HERE, "match.py"))
 probably_same = _m.probably_same
+latest_dbt = _load("parse_registry", os.path.join(HERE, "registry.py")).latest_dbt
 
 # Words that name a benefit delivered to a person.
 SCHEME_WORDS = {
@@ -245,11 +246,11 @@ def run(snapshot, year, threshold):
 
 def main():
     ap = argparse.ArgumentParser(description="Classify budget lines as scheme or head.")
-    ap.add_argument("--snapshot", default="2026-08-30")
+    ap.add_argument("--snapshot", help="DBT snapshot date (default: the newest clean one)")
     ap.add_argument("--year", type=int, default=2026)
     ap.add_argument("--threshold", type=int, default=2)
     a = ap.parse_args()
-    o = run(a.snapshot, a.year, a.threshold)
+    o = run(a.snapshot or latest_dbt(), a.year, a.threshold)
     v = o["validation"]
     print(f"budget lines classified: {o['lines']}")
     print(f"  scheme       {o['classified_scheme']:>5}")

@@ -123,8 +123,9 @@ def today_rows():
     return accused, at_bar, snapshot
 
 
-def merge(prev, accused_now, at_bar, snap):
-    """The record carried forward: this snapshot's accusations against those on file."""
+def merge(prev, accused_now, at_bar, snap, prev_snap=None):
+    """The record carried forward: this snapshot's accusations against those on file.
+    `prev_snap` is the snapshot the file on record was built from."""
     # A row whose KEY changed is the same accusation, and losing its first_named would
     # redate an old accusation to today. Keyed on what these rows are collapsed on anyway,
     # the state and the name, so history survives a rekeying of the kind that changed
@@ -164,7 +165,17 @@ def merge(prev, accused_now, at_bar, snap):
             continue
         e = dict(was)
         row = at_bar.get(k)
-        if row and row["listed"]:
+        if was.get("status") == "withdrawn":
+            pass
+        elif prev_snap == snap:
+            # Rebuilt over the same evidence it last recorded, so nothing in a government or
+            # on the portal can have moved: the register corrected its own classification
+            # or join. Recorded as that, and kept, because an accusation this register made
+            # and took back is part of its record. Reported as "listed" or "no longer
+            # named" it would be a false event of the kind PLAN.md 8 forbids.
+            e["status"] = "withdrawn"
+            e["withdrawn_on"] = snap
+        elif row and row["listed"]:
             e["status"] = "listed"
             e["listed_on"] = e.get("listed_on") or snap
             e["myscheme_name"] = row["myscheme_name"]
@@ -203,7 +214,12 @@ def run(snapshot=None):
         with open(p, encoding="utf-8") as fh:
             prev = {e["key"]: e for e in (json.load(fh).get("entries") or [])}
 
-    vals = merge(prev, accused_now, at_bar, snap)
+    prev_snap = None
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as fh:
+            prev_snap = json.load(fh).get("snapshot")
+    vals = merge(prev, accused_now, at_bar, snap, prev_snap)
+    withdrawn = [e for e in vals if e["status"] == "withdrawn"]
     listed = [e for e in vals if e["status"] == "listed"]
     gone = [e for e in vals if e["status"] == "no longer named at the bar"]
     still = [e for e in vals if e["status"] == "absent"]
@@ -222,6 +238,7 @@ def run(snapshot=None):
         "still_absent": len(still),
         "since_listed": len(listed),
         "no_longer_named": len(gone),
+        "withdrawn": len(withdrawn),
         "snapshots_of_evidence": sorted({e["first_named"] for e in vals if e.get("first_named")}),
         "first_snapshot": min([e["first_named"] for e in vals if e.get("first_named")],
                               default=None),
@@ -251,6 +268,25 @@ def selftest():
              "fragment" not in got)]:
         bad += not ok
         print(f"  {'ok  ' if ok else 'FAIL'} {label}")
+
+    # Rebuilt over the snapshot it last recorded: nothing outside moved, so whatever left
+    # was the register correcting itself.
+    again = {e["key"]: e for e in merge(prev, now, at_bar, "2026-10-17", prev_snap="2026-10-17")}
+    later = {e["key"]: e for e in merge(again, now, {}, "2026-11-03", prev_snap="2026-10-17")}
+    back = {e["key"]: e for e in merge(again, {"gone": {"state_key": "s", "ident": "gone",
+                                                         "name": "gone"}, **now},
+                                       {}, "2026-11-03", prev_snap="2026-10-17")}
+    for label, ok in [
+            ("over the same snapshot, a dropped accusation is withdrawn, not gone",
+             again["gone"]["status"] == "withdrawn" and again["gone"]["withdrawn_on"] == "2026-10-17"),
+            ("...and a now-listed one is withdrawn, not listed",
+             again["listed"]["status"] == "withdrawn" and not again["listed"].get("listed_on")),
+            ("a withdrawal stays withdrawn on later snapshots",
+             later["gone"]["status"] == "withdrawn"),
+            ("a withdrawn accusation made again is absent again, with its first date",
+             back["gone"]["status"] == "absent" and back["gone"]["first_named"] == "2026-09-03")]:
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}")
     return bad
 
 
@@ -267,6 +303,7 @@ def main():
     print(f"  still absent      {len(still):,}")
     print(f"  since listed      {len(listed):,}")
     print(f"  no longer named   {len(gone):,}")
+    print(f"  withdrawn         {sum(1 for e in accused if e['status'] == 'withdrawn'):,}")
 
 
 if __name__ == "__main__":

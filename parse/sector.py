@@ -216,6 +216,7 @@ the honest degradation.
 """
 
 import argparse
+import glob
 import collections
 import gzip
 import os
@@ -230,20 +231,13 @@ ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, read_json, utcnow, write_json  # noqa: E402
 
-# The listing bars are site/build.py's, mirrored rather than imported so that parse/ does
-# not depend on site/. They decide which state rows the register shows at all, and the
-# accuracy below is quoted on that population because that is what a reader filters.
-# Must match site/build.py's own LISTING_BAR and STATE_OF. Three states were added there
-# and not here, which left 1,974 of 8,748 site rows unfilterable by the register's primary
-# filter: the classifier had simply never been shown them. Duplicated rather than imported
-# because parse/ does not import from site/, and a mismatch is now a visible regression in
-# the not-stated count rather than a silent one.
-LISTING_BAR = {"karnataka": 1, "andhra": 0, "kerala": 3, "tamilnadu": 5,
-               "maharashtra": 2, "odisha": 4, "westbengal": 3}
-STATE_OF = {"karnataka": "Karnataka", "andhra": "Andhra Pradesh",
-            "kerala": "Kerala", "tamilnadu": "Tamil Nadu",
-            "maharashtra": "Maharashtra", "odisha": "Odisha",
-            "westbengal": "West Bengal"}
+# Which state rows the register shows is each classifier's own decision, published as
+# `listing_threshold` in its classification.json. This file used to hold a copy of those
+# bars for seven states, "to match site/build.py's", and when nine more states were
+# classified neither copy moved here: 1,938 listed rows in those states got no sector,
+# and the site's primary filter could not find them. Read from the files, as build.py
+# and cag_join.py now do, a new state is covered the day its classifier runs.
+
 
 # Scoring. A benefit phrase in the name is worth more than everything else put together,
 # because it measured 0.865 alone against 0.659 for the department and 0.652 for the head.
@@ -539,8 +533,12 @@ def universe(demands):
             "heads": [], "major": [], "purpose": None, "own_sector": None,
             "sources": sorted(srcs),
         })
-    for state, bar in sorted(LISTING_BAR.items()):
-        cls = read_json("data/%s/classification.json" % state, {}) or {}
+    for path in sorted(glob.glob(os.path.join(ROOT, "data", "*", "classification.json"))):
+        state = os.path.basename(os.path.dirname(path))
+        cls = read_json(path, {}) or {}
+        bar = cls.get("listing_threshold")
+        if bar is None or not cls.get("all_entries"):
+            continue
         for e in cls.get("all_entries") or []:
             if e.get("score", -99) < bar or e.get("in_myscheme_%s" % state):
                 continue
