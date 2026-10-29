@@ -39,6 +39,7 @@ step "parse/match.py self-tests"    python3 parse/match.py
 step "parse/krutidev.py self-tests" python3 parse/krutidev.py
 [ -f parse/devanagari.py ] && step "parse/devanagari.py self-tests" python3 parse/devanagari.py
 step "parse/cag.py self-tests"      python3 parse/cag.py --self-test
+step "parse/watchlist.py self-tests" python3 parse/watchlist.py --self-test
 step "parse/changes.py self-tests"  python3 parse/changes.py --self-test
 step "site/build.py self-tests"     python3 site/build.py --self-test
 

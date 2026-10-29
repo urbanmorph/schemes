@@ -123,15 +123,8 @@ def today_rows():
     return accused, at_bar, snapshot
 
 
-def run(snapshot=None):
-    accused_now, at_bar, snap = today_rows()
-    snap = snapshot or snap
-    prev = {}
-    p = os.path.join(ROOT, OUT)
-    if os.path.exists(p):
-        with open(p, encoding="utf-8") as fh:
-            prev = {e["key"]: e for e in (json.load(fh).get("entries") or [])}
-
+def merge(prev, accused_now, at_bar, snap):
+    """The record carried forward: this snapshot's accusations against those on file."""
     # A row whose KEY changed is the same accusation, and losing its first_named would
     # redate an old accusation to today. Keyed on what these rows are collapsed on anyway,
     # the state and the name, so history survives a rekeying of the kind that changed
@@ -162,6 +155,13 @@ def run(snapshot=None):
     for k, was in prev.items():
         if k in entries or not was.get("first_named"):
             continue
+        # Accused and withdrawn within one snapshot is two parses of the same bytes, and
+        # nothing in the government moved. The runner misread Delhi's book on 2026-10-17
+        # with a different pdftotext and accused two fragments of names; the corrected
+        # parse of the same archive withdrew them. Kept, they stood on /changes as Delhi's
+        # book no longer naming two schemes it had never named.
+        if was["first_named"] == snap:
+            continue
         e = dict(was)
         row = at_bar.get(k)
         if row and row["listed"]:
@@ -191,8 +191,19 @@ def run(snapshot=None):
     for k, e in list(entries.items()):
         if e["status"] == "no longer named at the bar" and e.get("name") in live_names:
             del entries[k]
+    return list(entries.values())
 
-    vals = list(entries.values())
+
+def run(snapshot=None):
+    accused_now, at_bar, snap = today_rows()
+    snap = snapshot or snap
+    prev = {}
+    p = os.path.join(ROOT, OUT)
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as fh:
+            prev = {e["key"]: e for e in (json.load(fh).get("entries") or [])}
+
+    vals = merge(prev, accused_now, at_bar, snap)
     listed = [e for e in vals if e["status"] == "listed"]
     gone = [e for e in vals if e["status"] == "no longer named at the bar"]
     still = [e for e in vals if e["status"] == "absent"]
@@ -219,10 +230,38 @@ def run(snapshot=None):
     return vals, still, listed, gone, snap
 
 
+def selftest():
+    def row(k, first, name=None):
+        return {"key": k, "state_key": "s", "ident": k, "name": name or k, "first_named": first}
+    prev = {k: row(k, f) for k, f in
+            [("old", "2026-09-03"), ("gone", "2026-09-03"), ("fragment", "2026-10-17"),
+             ("listed", "2026-09-03")]}
+    now = {"old": {"state_key": "s", "ident": "old", "name": "old"}}
+    at_bar = {"listed": {"listed": True, "myscheme_name": "Listed"}}
+    got = {e["key"]: e for e in merge(prev, now, at_bar, "2026-10-17")}
+    bad = 0
+    for label, ok in [
+            ("a standing accusation keeps its first date",
+             got["old"]["first_named"] == "2026-09-03" and got["old"]["status"] == "absent"),
+            ("an older accusation the book dropped is recorded as gone",
+             got["gone"]["status"] == "no longer named at the bar"),
+            ("an accusation the portal now lists is recorded as listed",
+             got["listed"]["status"] == "listed" and got["listed"]["listed_on"] == "2026-10-17"),
+            ("one made and withdrawn in the same snapshot is not recorded at all",
+             "fragment" not in got)]:
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}")
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Track whether named-absent schemes get listed.")
     ap.add_argument("--date", help="snapshot date to record against")
+    ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
+    if a.self_test:
+        print("watchlist self-test")
+        sys.exit(1 if selftest() else 0)
     accused, still, listed, gone, snap = run(a.date)
     print(f"watchlist ({snap}): {len(accused):,} accusations on record")
     print(f"  still absent      {len(still):,}")
