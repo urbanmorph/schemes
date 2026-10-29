@@ -46,20 +46,24 @@ class Run(unittest.TestCase):
                 {"id": 1, "pdf_url": "https://d7i5wg8xwe4hf.cloudfront.net/uploads/download_audit_report/x/gone.pdf",
                  "detail_url": "https://cag.gov.in/en/audit-report/details/1", "title": "One"}]
 
+    def manifest(self):
+        with open(os.path.join(self.dir, "manifest.json"), encoding="utf-8") as fh:
+            return json.load(fh)
+
     def run_once(self, **kw):
         return m.mirror(self.reports(), self.dir, "https://new.cloudfront.net", fetch=self.fetch,
                         sleep=lambda s: None, free_gb=lambda p: 500, **kw)
 
     def test_newest_first_saved_with_checksum(self):
         self.run_once()
-        man = json.load(open(os.path.join(self.dir, "manifest.json")))
+        man = self.manifest()
         self.assertEqual(self.calls[0], "https://new.cloudfront.net/uploads/download_audit_report/x/two.pdf")
         self.assertEqual(man["2"]["sha256"], hashlib.sha256(PDF).hexdigest())
         self.assertTrue(os.path.exists(os.path.join(self.dir, "2.pdf")))
 
     def test_a_dead_cdn_path_falls_back_to_the_report_page(self):
         self.run_once()
-        man = json.load(open(os.path.join(self.dir, "manifest.json")))
+        man = self.manifest()
         self.assertEqual(man["1"]["url"], "https://new.cloudfront.net/uploads/download_audit_report/x/fresh.pdf")
 
     def test_a_second_run_fetches_nothing(self):
@@ -70,7 +74,8 @@ class Run(unittest.TestCase):
 
     def test_a_file_that_no_longer_matches_its_checksum_is_fetched_again(self):
         self.run_once()
-        open(os.path.join(self.dir, "2.pdf"), "wb").write(b"truncated")
+        with open(os.path.join(self.dir, "2.pdf"), "wb") as fh:
+            fh.write(b"truncated")
         self.calls.clear()
         self.run_once()
         self.assertEqual(len(self.calls), 1)

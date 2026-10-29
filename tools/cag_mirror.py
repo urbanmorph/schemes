@@ -96,7 +96,10 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
     os.makedirs(out, exist_ok=True)
     free_gb = free_gb or (lambda p: shutil.disk_usage(p).free / 2 ** 30)
     mp = os.path.join(out, "manifest.json")
-    man = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {}
+    man = {}
+    if os.path.exists(mp):
+        with open(mp, encoding="utf-8") as fh:
+            man = json.load(fh)
     todo = []
     for r in sorted(reports, key=lambda r: -r["id"]):
         rec, path = man.get(str(r["id"])) or {}, os.path.join(out, f"{r['id']}.pdf")
@@ -177,8 +180,10 @@ def latest_reports():
     dates = []
     for d in sorted(os.listdir(os.path.join(ROOT, "archive", "cag"))):
         mp = os.path.join(ROOT, "archive", "cag", d, "_manifest.json")
-        if os.path.exists(mp) and json.load(open(mp)).get("complete"):
-            dates.append(d)
+        if os.path.exists(mp):
+            with open(mp, encoding="utf-8") as fh:
+                if json.load(fh).get("complete"):
+                    dates.append(d)
     return cag.read(dates[-1])[0], dates[-1]
 
 
