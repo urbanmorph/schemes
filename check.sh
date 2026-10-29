@@ -47,6 +47,7 @@ step "site/build.py self-tests"     python3 site/build.py --self-test
 #     tests/run_chunks.sh drives run.sh itself through a stopped, resumed and repeated month
 #     with every collector stubbed. It takes a minute, so run it when run.sh or
 #     collect.yml changes rather than on every push.
+step "tools/cag_mirror.py tests"   python3 tests/test_cag_mirror.py
 step "progress.py self-tests"       python3 progress.py --self-test
 step "checkpoint.sh"                bash tests/checkpoint.sh
 
