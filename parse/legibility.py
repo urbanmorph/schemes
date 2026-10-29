@@ -221,6 +221,7 @@ def measure(key):
     # Every state's parser reports reconciliation in its own shape, because every state's
     # book prints totals at its own levels. What they share is a pair of integers per
     # block, so this walks for those rather than assuming one layout.
+
     def walk(o):
         nonlocal checked, failed
         if isinstance(o, dict):

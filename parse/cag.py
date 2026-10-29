@@ -121,6 +121,7 @@ NOT_A_SUBJECT = re.compile(
     r"(?:\s*(?:sector|sectors|finances?|undertakings?|departments?|institutions?|"
     r"bodies|accounts?|audit|receipts?|expenditure)s?)*\s*$", re.I)
 
+
 def text(s):
     s = re.sub(r"<[^>]+>", " ", s or "")
     return re.sub(r"\s+", " ", html.unescape(s)).strip()

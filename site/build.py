@@ -22,9 +22,7 @@ import json
 import re
 import os
 import shutil
-import subprocess
 import urllib.parse
-import sys
 from datetime import datetime, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -393,6 +391,7 @@ document.getElementById('themeBtn').addEventListener('click',function(){{
 
 shell.status = {}
 
+
 # Content hash in the stylesheet URL. Without it a browser happily pairs freshly built
 # HTML with a cached stylesheet, which is not a cosmetic problem: the hero markup and
 # the hero CSS changed together, and the old grid applied to the new markup laid the
@@ -488,7 +487,7 @@ def state_of_schemes(entries):
     }.get(worst[0] if worst else "", "fail this register's weakest documentation test")
 
     audited = cagd.get("joins_published") or 0
-    audit_of = cagd.get("register_names") or named
+    audit_of = cagd.get("register_names") or held
 
     steps = [
         (num(held), "schemes this register can name",
@@ -571,7 +570,6 @@ def page_index(entries):
 def page_findings(census, checks, dbt, entries):
     facets = (census or {}).get("facets", {})
     lvl = facets.get("level", {})
-    stype = facets.get("schemeType", {})
     summ = (checks or {}).get("summary", {})
     by = summ.get("by_check", {})
 
@@ -735,7 +733,7 @@ def legibility_section(leg, ms=None):
         if n and not m.get("absence_claims_published"):
             named += '<span class="of" title="listed from the state\'s own budget book; '\
                      'no classifier yet, so no row here is named as hidden">'\
-                     '<br>listed, not yet judged</span>' 
+                     '<br>listed, not yet judged</span>'
         # EVERY built state's name links to its register page. The link used to be there
         # only for states without a classifier, which orphaned all fifteen pages the moment
         # the last classifier landed: a classifier decides which lines this register calls
@@ -946,6 +944,7 @@ def page_state(key, state, d, leg_row, cls=None):
 
     checked, failed = total(rec, "checked"), total(rec, "failed")
     money = sum(r["be_lakh"] for r in rows if isinstance(r.get("be_lakh"), (int, float)))
+
     def line(r):
         ident = one(r, "ident") or ""
         anchor = slug_for(f"{r.get('name') or ''} {ident}")
@@ -1017,9 +1016,7 @@ def page_state(key, state, d, leg_row, cls=None):
         arows, an = absent_rows(cls)
         acr = sum((r.get("be_lakh") or 0) for r in cls["absent_distinct"]) / 100
         biggest = max(cls["absent_distinct"], key=lambda r: r.get("be_lakh") or 0)
-        floor = (f"The largest line it will not stand behind is bigger than the largest it "
-                 f"will, and that is what a floor means.") if False else (
-                 f"The largest of them is {e(biggest.get('name') or '')}, at "
+        floor = (f"The largest of them is {e(biggest.get('name') or '')}, at "
                  f"{inr(round((biggest.get('be_lakh') or 0) / 100))} crore.")
         absent_block = f"""
 <section class="sec">
@@ -1538,8 +1535,6 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
     total_ms, total_ds = sum(ms.values()), sum(v for v in ds.values() if v)
     higher = sum(1 for n in ms if ds.get(n) and ds[n] > ms[n])
 
-    kar_ms, kar_dbt = ms.get("Karnataka"), ds.get("Karnataka")
-
     # The fifteen states' absence claims live on the fifteen state pages now. This page
     # keeps the ARGUMENT -- four sources disagree, seven states cannot be read -- and stops
     # re-making it four times with four hand-written tables. The totals below are the same
@@ -2048,7 +2043,7 @@ def state_entries(load, known_names=(), sectors=None):
         several thousand candidates for an ordinary row, and 16,689 rows against that is
         tens of millions of calls to a string-similarity function. The build did not finish
         in ten minutes.
-        
+
         The cap is safe in the direction that matters. Every rule in probably_same that can
         fire needs more than one word in common: containment needs all the content words of
         the shorter name, the skeleton rule needs two skeletons to line up, and the acronym
@@ -2179,7 +2174,6 @@ def index_section(entries):
             k = orgs.setdefault(o, {"n": 0, "kind": "ministry" if str(o).lower().startswith(("ministry", "m/o")) else "department"})
             k["n"] += 1
     order = sorted(orgs.items(), key=lambda kv: (-kv[1]["n"], kv[0]))
-    org_ix = {name: i for i, (name, _) in enumerate(order)}
 
     # A combobox, not a select. 386 options is too many to scroll and too many to know
     # by heart, so it has to be both browsable and searchable: <datalist> shows the whole
@@ -2240,13 +2234,6 @@ def index_section(entries):
                              + [(k, LEVEL_LABEL.get(k, k), LEVEL_SHORT.get(k, k), n)
                                 for k, n in sorted(lv.items(), key=lambda kv: -kv[1])])
 
-    src_counts = {}
-    for e_ in entries:
-        for k in e_["sources"]:
-            src_counts[k] = src_counts.get(k, 0) + 1
-    not_ms = sum(1 for e_ in entries if not e_["on_myscheme"])
-    SRC_SHORT = {"myscheme": "myScheme", "budget": "Budget", "dbt": "DBT",
-                 "outcome": "Outcome"}
     # Sector where the listed-by pills used to be. Which sources name a scheme is a question
     # about this register; what a scheme is FOR is a question about the country, and it is
     # the one a person browsing 6,996 schemes actually has. The long names are shortened for
@@ -2371,8 +2358,6 @@ def index_section(entries):
             sq |= set(keywords(c["brief"], e_["name"]))
         sq = {x for x in sq if len(x) > 2 and x not in hay.split()}
         acr = f'<span class="acr">{e(short)}</span>' if short and short != e_["name"] else ""
-        badges = "".join(f'<span class="src {k}">{e(SOURCE_LABEL[k])}</span>'
-                         for k in e_["sources"])
         # Which checks failed lives on the scheme page, where each one has room to say
         # why. Three abbreviated codes in a narrow cell told a reader less than the count
         # already does, and cost the scheme name a seventh of the table.
@@ -3151,6 +3136,7 @@ def dbt_changes(d):
     """DBT Bharat's count of schemes per state, snapshot against snapshot."""
     if not d or not d.get("comparable"):
         return ""
+
     def change(r):
         return "" if r["from"] is None or r["to"] is None else f'{r["to"] - r["from"]:+,}'
     rows = "".join(
@@ -3593,7 +3579,7 @@ def build():
                 for route, f in ROUTES
                 for path in (("/", "/index.html") if f == "index.html"
                              else ("/" + f[:-5], "/" + f)))
-            +             "/theme.css\n"
+            + "/theme.css\n"
             "  Cache-Control: public, max-age=31536000, immutable\n"
             "\n"
             "/og.png\n"
@@ -3927,6 +3913,7 @@ def audit_text(out_dir):
 
 def selftest():
     bad = 0
+
     def check(label, got, want):
         nonlocal bad
         ok = got == want
