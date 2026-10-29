@@ -37,6 +37,7 @@ PY
 #    the failure was invisible in the output.
 step "parse/match.py self-tests"    python3 parse/match.py
 step "parse/krutidev.py self-tests" python3 parse/krutidev.py
+step "parse/text.py self-tests"     python3 parse/text.py --self-test
 [ -f parse/devanagari.py ] && step "parse/devanagari.py self-tests" python3 parse/devanagari.py
 step "parse/cag.py self-tests"      python3 parse/cag.py --self-test
 step "parse/dbt.py self-tests"      python3 parse/dbt.py --self-test

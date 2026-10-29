@@ -35,12 +35,11 @@ import gzip
 import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext  # noqa: E402
 
 HOA = re.compile(r"^(\d{4}-\d{2}-\d{3}-\d-\d{2})$")
 # An amounts row: two or more money-shaped tokens, where "......" is how these books
@@ -55,16 +54,6 @@ BOOK_LABEL = {"GB": "Gender Budget", "CB": "Child Budget",
               "SCSPTSP": "SCSP/TSP Allocations"}
 
 
-def pdftotext(pdf_bytes):
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, timeout=600)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout.decode("utf-8", "replace")
 
 
 def is_english(s):

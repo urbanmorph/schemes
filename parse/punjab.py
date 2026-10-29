@@ -102,6 +102,8 @@ import xml.etree.ElementTree as ET
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from text import joined, clean  # noqa: E402
+from pdf import layout_text  # noqa: E402
 
 # Gurmukhi, plus the two joiners and the Indian rupee sign. Deleting this from a line
 # leaves the English column; nothing else is needed to separate the two scripts.
@@ -148,16 +150,8 @@ NS = "{http://www.w3.org/1999/xhtml}"
 
 def pdftotext(pdf_bytes, timeout=1800):
     """Plain -layout text. Used for the Gender Budget, which has one script and no
-    columns worth defending."""
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, timeout=timeout)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout.decode("utf-8", "replace")
+    columns worth defending. Punjab's books are the slowest, hence the limit."""
+    return layout_text(pdf_bytes, timeout)
 
 
 def pdf_pages(pdf_bytes, timeout=1800, tol=4.0):
@@ -301,28 +295,6 @@ def tail_money(text, n=4):
 
 def head_of(text, n=4):
     return " ".join(text.split()[:-n]).strip()
-
-
-def clean(s):
-    return re.sub(r"\s+", " ", s or "").strip(" .,;:-")
-
-
-def joined(parts):
-    """Join wrapped fragments. A fragment ending in a hyphen against a letter is one word
-    broken over the line and must not gain a space; a hyphen used as punctuation keeps its
-    spaces. Same distinction as parse/andhra.py."""
-    out = ""
-    for p in parts:
-        p = (p or "").strip()
-        if not p:
-            continue
-        if not out:
-            out = p
-        elif re.search(r"\w-$", out):
-            out += p
-        else:
-            out += " " + p
-    return re.sub(r"\s+", " ", out).strip()
 
 
 # ------------------------------------------------------------------ demand books

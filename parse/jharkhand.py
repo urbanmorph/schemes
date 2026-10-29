@@ -108,12 +108,12 @@ import gzip
 import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from text import joined  # noqa: E402
+from pdf import layout_text as pdftotext  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -210,16 +210,6 @@ CONTENTS_DEMAND = re.compile(
     r"योग\s*/?\s*Total\s*[-\u2010-\u2015]\s*(\d{1,2})[.\s]")
 
 
-def pdftotext(pdf_bytes, timeout=900):
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, timeout=timeout)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout.decode("utf-8", "replace")
 
 
 def money(tok):
@@ -228,24 +218,6 @@ def money(tok):
     neg = tok.startswith("(-)")
     v = float(tok.replace("(-)", "").replace(",", "").strip())
     return -v if neg else v
-
-
-def joined(parts):
-    """Join wrapped name fragments. A fragment ending in a hyphen against a letter is one
-    word broken over a line and must not gain a space; a hyphen used as punctuation keeps
-    its spaces. Same rule as parse/andhra.py, parse/kerala.py and parse/odisha.py."""
-    out = ""
-    for p in parts:
-        p = p.strip()
-        if not p:
-            continue
-        if not out:
-            out = p
-        elif re.search(r"\w-$", out):
-            out += p
-        else:
-            out += " " + p
-    return re.sub(r"\s+", " ", out).strip()
 
 
 class Block:

@@ -108,6 +108,7 @@ import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from text import joined, clean  # noqa: E402
 
 NS = "{http://www.w3.org/1999/xhtml}"
 
@@ -211,28 +212,6 @@ def _pages_of(path, tol=2.5):
 
 def text_of(cells):
     return re.sub(r"\s+", " ", " ".join(c[2] for c in cells)).strip()
-
-
-def joined(parts):
-    """Join wrapped fragments. A fragment ending in a hyphen against a letter is one word
-    broken over the line, `Nadu-` + `Nedu`, and must not gain a space; a hyphen used as
-    punctuation keeps its spaces. Same distinction as parse/andhra.py."""
-    out = ""
-    for p in parts:
-        p = p.strip()
-        if not p:
-            continue
-        if not out:
-            out = p
-        elif re.search(r"\w-$", out):
-            out += p
-        else:
-            out += " " + p
-    return re.sub(r"\s+", " ", out).strip()
-
-
-def clean(s):
-    return re.sub(r"\s+", " ", s or "").strip(" .,;:-")
 
 
 # ------------------------------------------------------------------ units

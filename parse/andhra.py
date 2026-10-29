@@ -84,12 +84,12 @@ import gzip
 import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from text import clean  # noqa: E402
+from pdf import layout_text as pdftotext  # noqa: E402
 
 BOOK_LABEL = {
     "Gender-Budget": "Gender Budget",
@@ -147,20 +147,6 @@ PART_TOTAL = re.compile(
     r"An amount of Rs\.?\s*([\d,]+\.\d{2})\s*Lakhs is provided under Part\s*[AB]")
 
 
-def pdftotext(pdf_bytes):
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, timeout=900)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout.decode("utf-8", "replace")
-
-
-def clean(s):
-    return re.sub(r"\s+", " ", s or "").strip(" .,;:-")
 
 
 def flat(s):

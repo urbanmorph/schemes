@@ -64,12 +64,11 @@ import gzip
 import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext  # noqa: E402
 
 # One money cell. The book prints plain two-decimal figures; a nil provision is 0.00 and
 # a negative one is real (a recovery head) so the sign is kept. Commas are accepted
@@ -111,16 +110,6 @@ DEPT_GN4 = re.compile(
     r"(?:\s+Umbrella Scheme:\s*(.*))?$")
 
 
-def pdftotext(pdf_bytes, timeout=900):
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-layout", p, "-"],
-                           capture_output=True, timeout=timeout)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout.decode("utf-8", "replace")
 
 
 def money(tok):
