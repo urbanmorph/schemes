@@ -3015,84 +3015,187 @@ def watchlist_section(wl):
 '''
 
 
-def page_changes(ch, wl=None):
-    """What differs between two snapshots of the same source.
+def day(iso):
+    """2026-08-30 as 30 August 2026."""
+    try:
+        d = datetime.strptime(str(iso), "%Y-%m-%d")
+    except ValueError:
+        return str(iso or "")
+    return f"{d.day} {d.strftime('%B %Y')}"
 
-    Never the repository's own history. This page previously rendered `git log` over
-    data/, so with one snapshot collected it listed commit subjects from this project
-    under the heading "What the government changed without saying". A page that points
-    at government has to be evidenced by government bytes.
-    """
-    ch = ch or {}
+
+def delta_rows(items, kind, href):
+    """One row per record that differs: its name, and each field from before to after."""
+    out = ""
+    for it in items:
+        deltas = "".join(
+            f'<div class="delta"><span class="dfield">{e(d["field"])}</span>'
+            f'<span class="dold">{e(d["from"]) if d["from"] else "not set"}</span>'
+            f'<span class="dnew">{e(d["to"]) if d["to"] else "not set"}</span></div>'
+            for d in it.get("changes", []))
+        out += (f'<div class="ch"><div class="ctype {kind}">{e(kind)}</div>'
+                f'<div><a class="chname" href="{e(href(it))}">'
+                f'{e(it.get("name") or it.get("title") or it.get("slug"))}</a>{deltas}</div></div>')
+    return out
+
+
+def myscheme_changes(ch):
+    """myScheme, snapshot against snapshot. A month with no change is said in words."""
     if not ch.get("comparable"):
-        held = ch.get("snapshots_held", 0)
         return f"""
-<div class="eyebrow">Route &middot; /changes</div>
-<h1 class="pagetitle">What the government changed without saying</h1>
-<p class="standfirst">A diff between consecutive monthly snapshots. Nothing here is an
-opinion: each row is two archived payloads and the field that differs between them.</p>
-<div class="empty">
-  <span class="big">...</span>
-  <b>{held} snapshot held.</b><br>
-  A change feed needs two, and it cannot be back-filled. Wayback does not capture API
-  responses and myScheme versions nothing, so the only record of what it said last month
-  is the one collected last month. That is why collection started before this site did.
-</div>"""
+<section class="sec">
+  <h2>myScheme</h2>
+  <div class="empty"><span class="big">{NIL}</span>
+  <b>{ch.get("snapshots_held", 0)} snapshot held.</b><br>
+  A comparison needs two snapshots, and nobody can collect last month&rsquo;s afterwards.
+  myScheme keeps no versions, and the Wayback Machine does not save API answers.</div>
+</section>"""
 
-    def rows_for(items, kind):
-        out = ""
-        for it in items:
-            deltas = "".join(
-                f'<div class="delta"><span class="dfield">{e(d["field"])}</span>'
-                f'<span class="dold">{e(d["from"]) if d["from"] else "not set"}</span>'
-                f'<span class="dnew">{e(d["to"]) if d["to"] else "not set"}</span></div>'
-                for d in it.get("changes", []))
-            out += (f'<div class="ch"><div class="ctype {kind}">{e(kind)}</div>'
-                    f'<div><a class="chname" href="scheme/{e(it["slug"])}">'
-                    f'{e(it.get("name") or it["slug"])}</a>{deltas}</div></div>')
-        return out
+    quiet = ch.get("quiet_since")
+    if quiet and quiet != ch["newer"] and not (ch["added_total"] or ch["removed_total"]
+                                               or ch["changed_total"]):
+        held = [s for s in ch.get("snapshots", []) if s >= quiet]
+        return f"""
+<section class="sec">
+  <h2>myScheme</h2>
+  <div class="sec-note">{len(held)} snapshots compared &middot; {e(day(quiet))} to
+    {e(day(ch["newer"]))}</div>
+  <div class="empty"><span class="big">0</span>
+  <b>myScheme has not changed since {e(day(quiet))}.</b><br>
+  The {len(held)} snapshots from {e(day(quiet))} to {e(day(ch["newer"]))} hold the same
+  {num(ch.get("records"))} records. No record was added or removed, and no field changed.
+  Each snapshot is a new download of every record, so this result comes from the portal
+  and not from a cache.</div>
+</section>"""
 
     byf = "".join(f'<tr><td>{e(k)}</td><td class="num">{v:,}</td></tr>'
                   for k, v in (ch.get("by_field") or {}).items())
+    href = lambda it: f'scheme/{it["slug"]}'  # noqa: E731
     return f"""
-<div class="eyebrow">Route &middot; /changes</div>
-<h1 class="pagetitle">What the government changed without saying</h1>
-<p class="standfirst">{e(ch["older"])} to {e(ch["newer"])}. Each row is two archived
-payloads and the field that differs between them, so nothing here is an opinion.</p>
-
-<div class="census">
-  <div class="cell"><div class="k">Schemes added</div><div class="v">{ch["added_total"]:,}</div>
-    <div class="n">not in the previous snapshot</div></div>
-  <div class="cell"><div class="k">Schemes removed</div><div class="v">{ch["removed_total"]:,}</div>
-    <div class="n">present before, gone now</div></div>
-  <div class="cell"><div class="k">Records edited</div><div class="v">{ch["changed_total"]:,}</div>
-    <div class="n">same scheme, different field</div></div>
-</div>
-
 <section class="sec">
-  <h2>Which fields moved</h2>
+  <h2>myScheme</h2>
+  <div class="sec-note">{e(day(ch["older"]))} to {e(day(ch["newer"]))}</div>
+  <div class="census">
+    <div class="cell"><div class="k">Schemes added</div><div class="v">{ch["added_total"]:,}</div>
+      <div class="n">not in the previous snapshot</div></div>
+    <div class="cell"><div class="k">Schemes removed</div><div class="v">{ch["removed_total"]:,}</div>
+      <div class="n">in the previous snapshot only</div></div>
+    <div class="cell"><div class="k">Records edited</div><div class="v">{ch["changed_total"]:,}</div>
+      <div class="n">same scheme, a field differs</div></div>
+  </div>
   <div class="tscroll"><table>
     <thead><tr><th>Field</th><th class="num">Records</th></tr></thead>
     <tbody>{byf or '<tr><td colspan="2" class="muted">none</td></tr>'}</tbody>
   </table></div>
-</section>
+  {delta_rows(ch.get("changed", []), "edited", href)}
+  {delta_rows(ch.get("added", []), "added", href)}
+  {delta_rows(ch.get("removed", []), "removed", href)}
+</section>"""
 
-<section class="sec">
-  <h2>Every difference</h2>
-  <div class="sec-note">Edited first, then added and removed</div>
-  {rows_for(ch.get("changed", []), "edited")}
-  {rows_for(ch.get("added", []), "added")}
-  {rows_for(ch.get("removed", []), "removed")}
-</section>
 
+def cag_changes(c):
+    """The CAG's catalogue of audit reports, crawl against crawl."""
+    if not c or not c.get("comparable"):
+        return ""
+    added, removed, edited = c.get("added") or [], c.get("removed") or [], c.get("edited") or []
+    tests = sum(1 for r in added if re.fullmatch(r"\s*test(ing)?( report)?\s*", r.get("title") or "", re.I))
+
+    def table(rows, label):
+        body = "".join(
+            f'<tr><td><a href="{e(r.get("detail_url"))}" rel="noopener">{e(r.get("title"))[:220]}</a></td>'
+            f'<td>{e(r.get("government") or "")}</td>'
+            f'<td class="nowrap">{e(r.get("tabled") or "")}</td></tr>' for r in rows)
+        return (f'<h3>{label}</h3><div class="tscroll"><table>'
+                '<thead><tr><th>Report</th><th>Government</th><th>Tabled</th></tr></thead>'
+                f'<tbody>{body}</tbody></table></div>') if rows else ""
+
+    return f"""
+<section class="sec" id="cag">
+  <h2>The CAG&rsquo;s catalogue of audit reports</h2>
+  <div class="sec-note">{e(day(c["older"]))} to {e(day(c["newer"]))} &middot; both crawls
+    match the total that the CAG&rsquo;s site prints</div>
+  <div class="census">
+    <div class="cell"><div class="k">Reports</div><div class="v">{num(c["reports_after"])}</div>
+      <div class="n">was {num(c["reports_before"])}</div></div>
+    <div class="cell"><div class="k">Removed</div><div class="v">{len(removed):,}</div>
+      <div class="n">listed before, not now</div></div>
+    <div class="cell"><div class="k">Added</div><div class="v">{len(added):,}</div>
+      <div class="n">listed now, not before</div></div>
+    <div class="cell"><div class="k">Edited</div><div class="v">{len(edited):,}</div>
+      <div class="n">title, date, type or sector</div></div>
+  </div>
+  <p class="standfirst" style="margin-top:14px">The CAG does not say why a report leaves its index. A removed report
+  can still exist on cag.gov.in under its old address.{
+  f" {word(tests)} of the added entries have the title &ldquo;test&rdquo;, &ldquo;testing&rdquo; "
+  f"or &ldquo;test report&rdquo;. They are on the CAG&rsquo;s live index, so this page lists them."
+  if tests else ""}</p>
+  {table(removed, "Removed")}
+  {table(added, "Added")}
+  {f"<h3>Edited</h3>{delta_rows(edited, 'edited', lambda it: it.get('detail_url') or '')}" if edited else ""}
+  <div class="sec-note">This page does not count PDF addresses as changes. In this period
+    the CAG moved {num(c.get("pdf_host_moved"))} PDFs to a different host, but the reports
+    did not change. Each report on <a href="/audit">/audit</a> links to its CAG page, and
+    that page links to the current file.</div>
+</section>"""
+
+
+def dbt_changes(d):
+    """DBT Bharat's count of schemes per state, snapshot against snapshot."""
+    if not d or not d.get("comparable"):
+        return ""
+    def change(r):
+        return "" if r["from"] is None or r["to"] is None else f'{r["to"] - r["from"]:+,}'
+    rows = "".join(
+        f'<tr><td>{e(r["state"])}</td><td class="num">{num(r["from"])}</td>'
+        f'<td class="num">{num(r["to"])}</td><td class="num">{change(r)}</td></tr>'
+        for r in sorted(d.get("states") or [],
+                        key=lambda r: -abs((r["to"] or 0) - (r["from"] or 0))))
+    return f"""
+<section class="sec" id="dbt">
+  <h2>DBT Bharat&rsquo;s count of state schemes</h2>
+  <div class="sec-note">{e(day(d["older"]))} to {e(day(d["newer"]))} &middot;
+    {num(d["total_before"])} to {num(d["total_after"])} schemes across all states</div>
+  <div class="tscroll"><table>
+    <thead><tr><th>State or UT</th><th class="num">Before</th><th class="num">After</th>
+      <th class="num">Change</th></tr></thead>
+    <tbody>{rows or '<tr><td colspan="4" class="muted">No state&rsquo;s count changed.</td></tr>'}</tbody>
+  </table></div>
+  <div class="sec-note">A DBT count shows how many schemes a state has put on the DBT
+    platform. It does not show how many schemes the state runs. DBT Bharat publishes only the
+    count, so this page cannot name the schemes behind a change.</div>
+</section>"""
+
+
+def page_changes(ch, wl=None):
+    """What differs between two snapshots of each source.
+
+    Never the repository's own history. This page once rendered `git log` over data/, so
+    with one snapshot collected it listed this project's commit subjects under the heading
+    "What the government changed without saying". A page about government has to be built
+    from government bytes.
+
+    It covered myScheme alone until October 2026. myScheme did not change from 30 August,
+    so the page showed three zeros while the CAG removed 63 reports from its index and
+    DBT Bharat's count moved in 19 states.
+    """
+    ch = ch or {}
+    return f"""
+<div class="eyebrow">Route &middot; /changes</div>
+<h1 class="pagetitle">What changed in the sources since the last snapshot</h1>
+<p class="standfirst">Each month this register downloads every source again and compares
+the new copy with the last one. Each row on this page is a difference between two archived
+copies. The page records what changed. It does not say why.</p>
+
+{myscheme_changes(ch)}
+{cag_changes(ch.get("cag"))}
+{dbt_changes(ch.get("dbt"))}
 {watchlist_section(wl)}
 
-<div class="warnbox"><b>Why this page can be trusted more than the rest of the site</b>
-A diff is not a judgment. Every row is derived from two archived payloads anyone can
-re-fetch from this repository and compare. A snapshot that fails its completeness
-assertion is archived but marked INCOMPLETE, and this page refuses to diff against it,
-because one dropped page of results would otherwise appear here as dozens of schemes
-being removed.</div>
+<div class="warnbox"><b>How to check this page</b>
+Every row comes from two archived copies of a source, and anyone can compare them in this
+repository. A snapshot that fails its completeness check is kept but marked INCOMPLETE, and
+this page does not compare against it. One missing page of results would otherwise show
+here as dozens of removed schemes.</div>
 """
 
 

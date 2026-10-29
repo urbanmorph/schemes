@@ -192,6 +192,18 @@ def parse_page(body):
     return out
 
 
+def read(date):
+    """One archived crawl's reports, in id order, and the number of pages read. Writes nothing."""
+    by_id, pages = {}, 0
+    for p in sorted(glob.glob(os.path.join(ROOT, "archive", "cag", date, "page-*.html.gz"))):
+        with gzip.open(p, "rb") as fh:
+            body = fh.read().decode("utf-8", "replace")
+        pages += 1
+        for r in parse_page(body):
+            by_id.setdefault(r["id"], r)
+    return [by_id[k] for k in sorted(by_id)], pages
+
+
 def run(date=None):
     dates = sorted(os.path.basename(p) for p in glob.glob(os.path.join(ROOT, "archive", "cag", "*"))
                    if os.path.isdir(p))
@@ -214,14 +226,7 @@ def run(date=None):
     mp = os.path.join(src, "_manifest.json")
     man = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {}
 
-    by_id, pages = {}, 0
-    for p in sorted(glob.glob(os.path.join(src, "page-*.html.gz"))):
-        with gzip.open(p, "rb") as fh:
-            body = fh.read().decode("utf-8", "replace")
-        pages += 1
-        for r in parse_page(body):
-            by_id.setdefault(r["id"], r)
-    reports = [by_id[k] for k in sorted(by_id)]
+    reports, pages = read(date)
 
     def tally(field):
         t = {}

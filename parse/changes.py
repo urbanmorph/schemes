@@ -25,12 +25,28 @@ order has not changed anything and reporting it as change would drown the real o
 import argparse
 import glob
 import gzip
+import importlib.util
 import json
 import os
 import sys
+from urllib.parse import urlsplit
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+
+
+
+def _parser(name):
+    """parse/<name>.py, by path. collect/ has a module of the same name, and each parser
+    puts collect/ first on sys.path as it loads, so a plain import finds the wrong one."""
+    spec = importlib.util.spec_from_file_location(
+        f"parse_{name}", os.path.join(os.path.dirname(os.path.abspath(__file__)), f"{name}.py"))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+cag_parse, dbt_parse = _parser("cag"), _parser("dbt")
 
 
 def snapshots():
@@ -107,17 +123,101 @@ def shorten(v, n=110):
     return s if len(s) <= n else s[:n - 1] + "…"
 
 
+def compare(a, b, fields=None):
+    """Two {key: record} snapshots: keys added, keys removed, and per kept key the fields
+    that differ as (field, before, after). Without `fields`, every field of the older
+    record is watched."""
+    changed = {}
+    for k in sorted(set(a) & set(b)):
+        d = [(f, a[k].get(f), b[k].get(f)) for f in (fields or a[k])
+             if a[k].get(f) != b[k].get(f)]
+        if d:
+            changed[k] = d
+    return sorted(set(b) - set(a)), sorted(set(a) - set(b)), changed
+
+
+def deltas(d):
+    return [{"field": f, "from": shorten(x), "to": shorten(y)} for f, x, y in d]
+
+
 def diff(older, newer):
     a, b = load(older), load(newer)
-    added = [{"slug": s, "name": b[s].get("name")} for s in sorted(set(b) - set(a))]
-    removed = [{"slug": s, "name": a[s].get("name")} for s in sorted(set(a) - set(b))]
-    changed = []
-    for s in sorted(set(a) & set(b)):
-        deltas = [{"field": k, "from": shorten(a[s].get(k)), "to": shorten(b[s].get(k))}
-                  for k in a[s] if a[s].get(k) != b[s].get(k)]
-        if deltas:
-            changed.append({"slug": s, "name": b[s].get("name"), "changes": deltas})
-    return added, removed, changed
+    added, removed, changed = compare(a, b)
+    return ([{"slug": s, "name": b[s].get("name")} for s in added],
+            [{"slug": s, "name": a[s].get("name")} for s in removed],
+            [{"slug": s, "name": b[s].get("name"), "changes": deltas(d)}
+             for s, d in changed.items()])
+
+
+def quiet_since(snaps, loader=load):
+    """The snapshot from which every later one holds exactly the same records, or None
+    with fewer than two to compare.
+
+    A month with no change is a finding about the source and is published as one. Without
+    this the page could only say "0 added, 0 removed", which reads as a feed that did not
+    run: myScheme returned the same 4,771 records, byte for byte, from 30 August to
+    17 October 2026.
+    """
+    since, prev = None, None
+    for date in snaps:
+        cur = loader(date) or {}
+        if prev is None or cur != prev:
+            since = date
+        prev = cur
+    return since if len(snaps) > 1 else None
+
+
+def complete(source, ok):
+    """Snapshot dates of an archived source whose manifest passes `ok`, oldest first. A
+    crawl that did not finish would show every report it missed as removed."""
+    out = []
+    for p in sorted(glob.glob(os.path.join(ROOT, "archive", source, "*", "_manifest.json"))):
+        with open(p, encoding="utf-8") as fh:
+            if ok(json.load(fh)):
+                out.append(os.path.basename(os.path.dirname(p)))
+    return out
+
+
+# What a CAG listing says about a report. Not the PDF URL: the CAG moves its files between
+# CDN hosts, and 2,722 links changing host in October 2026 is not 2,722 reports changing.
+CAG_FIELDS = ("title", "tabled", "audit_type", "government", "sector")
+
+
+def cag_changes():
+    dates = complete("cag", lambda m: m.get("complete"))
+    if len(dates) < 2:
+        return {"comparable": False, "snapshots": dates}
+    older, newer = dates[-2:]
+    a = {r["id"]: r for r in cag_parse.read(older)[0]}
+    b = {r["id"]: r for r in cag_parse.read(newer)[0]}
+    added, removed, changed = compare(a, b, CAG_FIELDS)
+
+    def brief(r):
+        return {k: r.get(k) for k in ("id", "title", "government", "tabled", "detail_url")}
+    return {"comparable": True, "older": older, "newer": newer,
+            "reports_before": len(a), "reports_after": len(b),
+            "added": [brief(b[k]) for k in added],
+            "removed": [brief(a[k]) for k in removed],
+            "edited": [{**brief(b[k]), "changes": deltas(d)} for k, d in changed.items()],
+            "pdf_host_moved": sum(
+                1 for k in set(a) & set(b)
+                if urlsplit(a[k].get("pdf_url") or "").netloc
+                != urlsplit(b[k].get("pdf_url") or "").netloc)}
+
+
+def dbt_changes():
+    dates = complete("dbt", lambda m: not m.get("error_count")
+                     and m.get("states_written") == m.get("states_expected"))
+    if len(dates) < 2:
+        return {"comparable": False, "snapshots": dates}
+    older, newer = dates[-2:]
+    (sa, ca), (sb, cb) = dbt_parse.read(older), dbt_parse.read(newer)
+    return {"comparable": True, "older": older, "newer": newer,
+            "total_before": sum(v or 0 for v in sa.values()),
+            "total_after": sum(v or 0 for v in sb.values()),
+            "central_before": ca, "central_after": cb,
+            "states": [{"state": s, "from": sa.get(s), "to": sb.get(s)}
+                       for s in sorted(set(sa) | set(sb)) if sa.get(s) != sb.get(s)]}
 
 
 def last_changed(snaps, loader=load):
@@ -140,7 +240,8 @@ def last_changed(snaps, loader=load):
 
 def run(older=None, newer=None):
     snaps = snapshots()
-    out = {"built": utcnow(), "snapshots_held": len(snaps), "snapshots": snaps}
+    out = {"built": utcnow(), "snapshots_held": len(snaps), "snapshots": snaps,
+           "quiet_since": quiet_since(snaps), "cag": cag_changes(), "dbt": dbt_changes()}
     # Written before the two-snapshot test: one snapshot still dates every record.
     write_json("data/lastmod.json", {"built": out["built"], "snapshots": snaps,
                                      "last_changed": dict(sorted(last_changed(snaps).items()))})
@@ -162,7 +263,7 @@ def run(older=None, newer=None):
     out.update(comparable=True, older=older, newer=newer,
                added=added[:300], removed=removed[:300], changed=changed[:400],
                added_total=len(added), removed_total=len(removed),
-               changed_total=len(changed),
+               changed_total=len(changed), records=len(load(newer)),
                by_field=dict(sorted(field_counts.items(), key=lambda kv: -kv[1])))
     write_json("data/changes.json", out)
     return out
@@ -184,6 +285,22 @@ def selftest():
     ok = last_changed(["x", "y", "z"], gone.get) == {"s": "z"}
     bad += not ok
     print(f"  {'ok  ' if ok else 'FAIL'} a removed record that returns is dated by its return")
+
+    for label, got, want in [
+            ("quiet since the snapshot after the last difference",
+             quiet_since(sorted(snaps), snaps.get), "2026-09-02"),
+            ("a source whose newest snapshot moved is quiet since that one",
+             quiet_since(["x", "y"], gone.get), "y"),
+            ("one snapshot cannot show quiet", quiet_since(["x"], gone.get), None),
+            ("compare: added, removed, and only the fields that differ",
+             compare({1: {"t": "a", "u": 1}, 2: {"t": "b"}},
+                     {1: {"t": "A", "u": 1}, 3: {"t": "c"}}, ("t", "u")),
+             ([3], [2], {1: [("t", "a", "A")]})),
+            ("compare without fields watches every field of the older record",
+             compare({1: {"t": "a"}}, {1: {"t": "b"}}), ([], [], {1: [("t", "a", "b")]}))]:
+        ok = got == want
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}" + ("" if ok else f": want {want} got {got}"))
     return bad
 
 

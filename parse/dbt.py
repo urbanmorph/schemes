@@ -54,20 +54,17 @@ def count_from(html):
     return None
 
 
-def parse(date):
+def read(date):
+    """One snapshot's scheme count per state (None where unreadable) and its central rows."""
     src = os.path.join(ROOT, "archive", "dbt", date)
     if not os.path.isdir(src):
         raise SystemExit(f"no archive at archive/dbt/{date}")
 
-    states, unreadable = {}, []
+    states = {}
     for path in sorted(glob.glob(os.path.join(src, "state-*.html.gz"))):
         code = int(os.path.basename(path).split("-")[1].split(".")[0])
         with gzip.open(path, "rb") as fh:
-            n = count_from(fh.read())
-        name = STATES.get(code, f"code {code}")
-        states[name] = n
-        if n is None:
-            unreadable.append(name)
+            states[STATES.get(code, f"code {code}")] = count_from(fh.read())
 
     central = None
     cpath = os.path.join(src, "central-list.html.gz")
@@ -77,7 +74,12 @@ def parse(date):
         # Rows in the central scheme table; the page has no headline count of its own.
         central = len(re.findall(rb"<tr[\s>]", html, re.I)) - 1
         central = max(central, 0) or None
+    return states, central
 
+
+def parse(date):
+    states, central = read(date)
+    unreadable = [name for name, n in states.items() if n is None]
     out = {
         "snapshot": date,
         "states": states,
