@@ -42,6 +42,7 @@ jobs:
     timeout-minutes: 350
     outputs:
       committed: ${{ steps.save.outputs.committed }}
+      verified: ${{ steps.save.outputs.verified }}
     env:
       GIT_AUTHOR_NAME: schemes-collector
       GIT_AUTHOR_EMAIL: noreply@users.noreply.github.com
@@ -106,7 +107,10 @@ jobs:
           saver=$!
           ./run.sh --resume-month --if-needed --deadline-min 300 --pace "$PACE"
           code=$?
+          # Killing the loop does not kill a save already under way, which would then race
+          # Save's own checkpoint on the same index. Let it finish first.
           kill "$saver" 2>/dev/null
+          wait "$saver" 2>/dev/null
           echo "code=$code" >> "$GITHUB_OUTPUT"
 
       - name: Save
@@ -127,6 +131,8 @@ jobs:
         run: |
           echo "committed=false" >> "$GITHUB_OUTPUT"
           SNAP=$(python3 progress.py month-date)
+          VERDICT=$(python3 -c "import json;print(json.load(open('status.json')).get('verdict',''))" 2>/dev/null)
+          echo "verified=$([ "$VERDICT" = COMPLETE ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
           for d in archive/cag/*/; do [ -f "$d/_manifest.json" ] || rm -rf "$d"; done
           if [ "$CODE" = 0 ] || [ "$CODE" = 1 ] || python3 progress.py finished myscheme "$SNAP"; then
             git add -A -- archive data status.json
@@ -134,16 +140,23 @@ jobs:
             if git diff --cached --quiet; then
               echo "nothing changed"
             else
-              VERDICT=$(python3 -c "import json;print(json.load(open('status.json'))['verdict'])")
               # The message says what the snapshot was, not what the run did, because a
               # run that half-failed still commits the archive it managed to fetch.
               # Whether the run was clean is the job's exit status and the step below.
               git commit -q -m "snapshot $SNAP — $VERDICT"
               # main can move during a run that lasts hours; without this a code push
               # made meanwhile rejects this one and the month never reaches main.
-              git pull -q --rebase origin main
-              git push -q
-              echo "committed=true" >> "$GITHUB_OUTPUT"
+              # If either fails (a conflicting push made meanwhile), the snapshot commit
+              # goes to the side branch instead of dying with the runner; restore brings
+              # it back tomorrow, since it diffs the checkpoint against its own parent.
+              if git pull -q --rebase origin main && git push -q; then
+                echo "committed=true" >> "$GITHUB_OUTPUT"
+              else
+                git rebase --abort 2>/dev/null
+                git push -q -f origin "HEAD:refs/heads/$WIP"
+                echo "::error::could not push the snapshot to main; it is on $WIP"
+                exit 1
+              fi
             fi
             if python3 progress.py finished myscheme "$SNAP"; then ./checkpoint.sh drop "$WIP"; fi
           else
@@ -194,11 +207,12 @@ jobs:
   # and attempts that only checkpointed, have nothing new to publish.
   deploy:
     needs: collect
-    if: always() && needs.collect.outputs.committed == 'true'
+    if: always() && needs.collect.outputs.committed == 'true' && needs.collect.outputs.verified == 'true'
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
     with:
       reason: monthly snapshot
+      ref: main
 
   # Repair runs only when collection failed, and only when a key is configured — so it
   # is inert until you opt in. It may propose changes to parse/ and open a PR. It must

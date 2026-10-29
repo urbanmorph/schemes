@@ -15,7 +15,7 @@
 # untouched, and it pushes only when the content differs from the last push. archive/cag
 # is left out: that walk cannot resume, so a partial one is worth nothing to a restart.
 #
-# restore takes only archive/ files the branch added or changed. Not status.json or
+# restore takes only archive/ files the checkpoint itself added or changed. Not status.json or
 # run.json: those are verdicts about a run that did not finish, and the run being resumed
 # writes its own.
 set -euo pipefail
@@ -49,10 +49,13 @@ restore)
     echo "  no $branch: starting from main"
     exit 0
   fi
-  git fetch -q --depth=1 origin "$branch"
+  # Against the checkpoint's own parent (main when it was saved), not against main now.
+  # Diffed against HEAD, a file main corrected after the save came back as the older copy
+  # and the next save committed that regression to main.
+  git fetch -q --depth=2 origin "$branch"
   files=()
   while IFS= read -r f; do files+=("$f"); done < <(
-    git diff --name-only --diff-filter=AM HEAD FETCH_HEAD -- archive)
+    git diff --name-only --diff-filter=AM FETCH_HEAD^ FETCH_HEAD -- archive)
   if [ "${#files[@]}" -gt 0 ]; then
     git restore --source=FETCH_HEAD --worktree -- "${files[@]}"
   fi

@@ -4,6 +4,7 @@
 set -uo pipefail
 SRC="$(cd "$(dirname "$0")/.." && pwd)/checkpoint.sh"
 T=$(mktemp -d); fails=0
+trap 'rm -rf "$T"' EXIT
 ok()   { echo "  ok   $1"; }
 bad()  { echo "  FAIL $1"; fails=$((fails+1)); }
 want() { if [ "$2" = "$3" ]; then ok "$1"; else bad "$1 (want '$3', got '$2')"; fi; }
@@ -36,11 +37,17 @@ echo part2 >> archive/myscheme/2026-10-03/details
 out=$(./checkpoint.sh save wip/collect-2026-10)
 want "changed save pushes again" "$(echo "$out" | grep -c pushed)" 1
 
+# main moves on after the checkpoint: someone corrects last month's snapshot
+git stash -q -u
+echo corrected > archive/myscheme/2026-09-03/details
+git commit -qam "correct September" && git push -q origin main
+git stash pop -q
+
 # the next day: a fresh checkout of main, as a runner gets
 git clone -q --depth=1 --branch main "file://$T/remote.git" "$T/b" 2>/dev/null && cd "$T/b" || exit 1
 ./checkpoint.sh restore wip/collect-2026-10 >/dev/null
 want "restore brings back the snapshot" "$(cat archive/myscheme/2026-10-03/details 2>/dev/null | tr '\n' ' ')" "part1 part2 "
-want "restore leaves older snapshots alone" "$(cat archive/myscheme/2026-09-03/details)" "old"
+want "restore keeps what main changed after the checkpoint" "$(cat archive/myscheme/2026-09-03/details)" "corrected"
 want "restore does not bring run.json (a stale verdict)" "$([ -f run.json ] && echo yes || echo no)" "no"
 want "restore stages nothing" "$(git diff --cached --name-only | wc -l | tr -d ' ')" 0
 out=$(./checkpoint.sh restore wip/collect-2099-01); rc=$?
@@ -51,5 +58,4 @@ want "drop removes the branch" "$(git ls-remote "$T/remote.git" refs/heads/wip/c
 out=$(./checkpoint.sh drop wip/collect-2026-10); rc=$?
 want "dropping a missing branch succeeds" "$rc" 0
 
-rm -rf "$T"
 [ "$fails" = 0 ] && echo "all checkpoint tests pass" || { echo "$fails failed"; exit 1; }

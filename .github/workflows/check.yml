@@ -15,7 +15,12 @@ on:
 
 concurrency:
   group: checks-${{ github.ref }}
-  cancel-in-progress: true
+  # Pull requests only. On main a newer push would cancel this whole run, and with it a
+  # deploy midway through its upload, which deploy.yml exists to never do.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
 
 jobs:
   check:
@@ -35,6 +40,11 @@ jobs:
 
       - name: check.sh
         run: ./check.sh
+
+      # run.sh itself, through a stopped, resumed and repeated month with every collector
+      # stubbed. A minute, no network; until now nothing ran it.
+      - name: run.sh chunks
+        run: bash tests/run_chunks.sh
 
   # Deploy only what passed. A push to main that fails a check never reaches the public
   # site, and a pull request never deploys at all.

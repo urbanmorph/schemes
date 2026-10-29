@@ -20,7 +20,15 @@ on:
         required: false
         type: string
         default: "push to main"
+      ref:
+        description: "What to check out. Empty means the commit that triggered the caller."
+        required: false
+        type: string
+        default: ""
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 concurrency:
   # Never two deploys at once, and never cancel one midway: a half-uploaded site is worse
@@ -34,6 +42,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # A called workflow shares its caller's github.sha. For the monthly run that is
+          # the commit the schedule started on, before Save pushed the month's snapshot,
+          # so without a ref the monthly deploy published last month's data/.
+          ref: ${{ inputs.ref }}
           # The site build reads data/ only. archive/ is 0.69 GB and not needed to publish.
           filter: blob:none
 

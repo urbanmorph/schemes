@@ -7,6 +7,7 @@ one finished, and so that a run stopped at its time limit continues where it sto
 
     python3 progress.py month-date            the snapshot date this month's run uses
     python3 progress.py finished SOURCE DATE  exit 0 if SOURCE is finished for DATE
+                                              (for budget, DATE is the budget year)
     python3 progress.py held STATE CYCLE      exit 0 if STATE's budget book for CYCLE is archived
     python3 progress.py run-ok DATE           exit 0 if the whole run for DATE finished clean
     python3 progress.py parsed STATE          exit 0 if data/STATE is current with its inputs
@@ -66,6 +67,12 @@ def finished(source, date, root=ROOT):
             if (_read(p) or {}).get("complete"):
                 return True
         return False
+    if source == "budget":
+        # DATE is the budget year. collect/budget.py makes the folder before its first
+        # fetch, so the folder alone said "archived" after a failed collection and the
+        # Union Budget was never retried that cycle.
+        m = _read(os.path.join(root, "archive", "budget", date, "_manifest.json")) or {}
+        return m.get("error_count") == 0 and len(m.get("docs") or {}) == 3
     raise SystemExit(f"unknown source {source!r}")
 
 
@@ -91,6 +98,11 @@ def held(state, cycle, root=ROOT):
     want = _cycle(cycle)
     for p in glob.glob(os.path.join(root, "archive", state, "*", "_manifest.json")):
         m = _read(p) or {}
+        # Eight collectors write `cycle` before fetching anything, so a walk whose index
+        # failed recorded the cycle with no book, and blocked the state for the year. Not
+        # "no errors": Uttar Pradesh lists five grants that answer 404 every month.
+        if not (m.get("books_collected") or m.get("grants_collected") or m.get("books")):
+            continue
         if m.get("cycle"):
             ok = _cycle(m["cycle"]) == want
         elif m.get("cycle_wanted"):
@@ -199,7 +211,8 @@ def selftest():
         with open(p, "w", encoding="utf-8") as fh:
             json.dump(obj, fh)
 
-    r = tempfile.mkdtemp()
+    tmp = tempfile.TemporaryDirectory()
+    r = tmp.name
     check("no snapshot this month: today", month_date(r, "2026-10-03"), "2026-10-03")
     put(r, "archive/myscheme/2026-09-03/_manifest.json", {})
     check("last month's snapshot is not reused", month_date(r, "2026-10-03"), "2026-10-03")
@@ -228,12 +241,12 @@ def selftest():
     check("any complete CAG walk this month is done", finished("cag", "2026-10-03", r), True)
 
     check("a state never collected is not held", held("kerala", "2026-27", r), False)
-    put(r, "archive/kerala/2026-09-02/_manifest.json", {"cycle": "2026-27"})
+    put(r, "archive/kerala/2026-09-02/_manifest.json", {"cycle": "2026-27", "books_collected": 4})
     check("cycle recorded as 2026-27 is held", held("kerala", "2026-27", r), True)
     check("last cycle's book does not hold the next one", held("kerala", "2027-28", r), False)
-    put(r, "archive/maharashtra/2026-09-02/_manifest.json", {"cycle": "2026-2027"})
+    put(r, "archive/maharashtra/2026-09-02/_manifest.json", {"cycle": "2026-2027", "books_collected": 5})
     check("cycle spelled 2026-2027 is the same cycle", held("maharashtra", "2026-27", r), True)
-    put(r, "archive/delhi/2026-09-03/_manifest.json", {"cycle_wanted": "2026-27", "errors": []})
+    put(r, "archive/delhi/2026-09-03/_manifest.json", {"cycle_wanted": "2026-27", "errors": [], "books_collected": 1})
     check("a clean walk for the cycle it wanted is held", held("delhi", "2026-27", r), True)
     put(r, "archive/tripura/2026-09-03/_manifest.json", {"cycle_wanted": "2026-27", "errors": [{"x": 1}]})
     check("a walk with errors is not", held("tripura", "2026-27", r), False)
@@ -244,8 +257,25 @@ def selftest():
     put(r, "archive/jharkhand/2026-09-03/_manifest.json",
         {"books": {"a": {"url": "https://x/Child%20Budget%202026-27.pdf"}}})
     check("a cycle inside a percent-encoded URL counts", held("jharkhand", "2026-27", r), True)
-    put(r, "archive/punjab/2026-09-03/_manifest.json", {"cycle": "2025-26", "note": "2026-27 RE"})
+    put(r, "archive/punjab/2026-09-03/_manifest.json", {"cycle": "2025-26", "note": "2026-27 RE",
+                                                          "books_collected": 6})
     check("a recorded cycle is not overridden by a mention", held("punjab", "2026-27", r), False)
+    put(r, "archive/karnataka/2026-09-03/_manifest.json",
+        {"cycle": "2026-27", "books_collected": 0, "errors": [{"stage": "index"}]})
+    check("a cycle whose index failed, with no book, is not held", held("karnataka", "2026-27", r), False)
+    put(r, "archive/uttarpradesh/2026-09-03/_manifest.json",
+        {"cycle": "2026-27", "grants_collected": 91, "errors": [{"stage": "Gr56", "why": "http 404"}]})
+    check("grants that answer 404 every month do not unhold the rest",
+          held("uttarpradesh", "2026-27", r), True)
+
+    check("no Union Budget archive is not done", finished("budget", "2026", r), False)
+    os.makedirs(os.path.join(r, "archive/budget/2026"))
+    check("a budget folder made before any fetch is not done", finished("budget", "2026", r), False)
+    put(r, "archive/budget/2026/_manifest.json", {"docs": {"stat4a": {}, "stat4b": {}}, "error_count": 1})
+    check("a budget with a document missing is not done", finished("budget", "2026", r), False)
+    put(r, "archive/budget/2026/_manifest.json",
+        {"docs": {"stat4a": {}, "stat4b": {}, "outcome": {}}, "error_count": 0})
+    check("all three budget documents, no errors, is done", finished("budget", "2026", r), True)
 
     check("no run.json: run needed", run_ok("2026-10-03", r), False)
     put(r, "run.json", {"date": "2026-10-03", "ok": False})
@@ -298,6 +328,7 @@ def selftest():
     check("Uttar Pradesh, unchanged, is current", parsed("uttarpradesh", r), True)
     write("data/myscheme/schemes/a.json", '{"changed": 1}')
     check("...but not once the myScheme records it reads change", parsed("uttarpradesh", r), False)
+    tmp.cleanup()
     return bad
 
 

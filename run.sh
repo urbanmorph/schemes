@@ -135,7 +135,20 @@ budgeted() {
 # of state budget PDFs twelve times a year to watch them not change is rude to a source
 # this project depends on. These collect once per cycle and are skipped once the archive
 # holds them, which --refresh-annual overrides when a state republishes mid-year.
-have_annual() { [ "$REFRESH_ANNUAL" = "0" ] && compgen -G "$1" > /dev/null; }
+
+# A collector that exits 0 without finishing: CAG short of its total, DBT or the Union
+# Budget with errors in the manifest. Recorded as FAILED unless it was stopped at its
+# budget, which STOPPED already says. Without this the month's catalogue went missing
+# and run.json could still say ok.
+unfinished() {
+  local src="$1" date="$2" label="$3" s
+  python3 progress.py finished "$src" "$date" && return 0
+  for s in "${STOPPED[@]+"${STOPPED[@]}"}" "${FAILED[@]+"${FAILED[@]}"}"; do
+    [ "$s" = "$label" ] && return 0
+  done
+  FAILED+=("$label")
+  printf '  \033[31m!! FAILED\033[0m %s: finished without a complete archive\n' "$label" >&2
+}
 
 # The same question for a STATE budget, and it has to be asked differently. A state's
 # archive is keyed on the date it was collected, not on the cycle it covers, so
@@ -171,6 +184,8 @@ if [ "$SKIP_COLLECT" = "0" ]; then
     echo "  DBT for $DATE is archived, skipping"
   else
     budgeted "collect/dbt" 15 python3 collect/dbt.py --date "$DATE"
+    # collect/dbt.py exits 0 with errors in its manifest. A walk that errs is not done.
+    unfinished dbt "$DATE" "collect/dbt"
   fi
 
   # The audit catalogue is append-mostly and grows a few reports a month, so unlike the
@@ -187,19 +202,23 @@ if [ "$SKIP_COLLECT" = "0" ]; then
     echo "  a complete CAG walk for ${DATE:0:7} is archived, skipping"
   else
     budgeted "collect/cag" 120 python3 collect/cag.py --date "$DATE"
-    if [ -d "archive/cag/$DATE" ] && [ ! -f "archive/cag/$DATE/_manifest.json" ]; then
+    # A walk that ends short of the claimed total writes complete:false and exits 0, so
+    # it is checked here: discarded like a stopped one, and named as a failure.
+    if [ -d "archive/cag/$DATE" ] && ! python3 progress.py finished cag "$DATE"; then
       echo "  discarding the unfinished CAG walk for $DATE"
       rm -rf "archive/cag/$DATE"
     fi
+    unfinished cag "$DATE" "collect/cag"
   fi
 
   say "collect · annual sources"
   # These used to run bare under `set -e`, so one state's site being down ended the whole
   # month's run before verification. They are budgeted steps now, like everything else.
-  if have_annual "archive/budget/$CYCLE_YEAR"; then
+  if [ "$REFRESH_ANNUAL" = "0" ] && python3 progress.py finished budget "$CYCLE_YEAR"; then
     echo "  Union Budget $CYCLE_YEAR already archived, skipping"
   else
     budgeted "collect/budget" 20 python3 collect/budget.py --year "$CYCLE_YEAR"
+    unfinished budget "$CYCLE_YEAR" "collect/budget"
   fi
   for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
             telangana punjab jharkhand tripura delhi haryana uttarakhand uttarpradesh \
@@ -246,6 +265,20 @@ step "parse/outcome" python3 parse/outcome.py --year "$CYCLE_YEAR"
 # snapshot, so passing this run's date asks it for an archive that does not exist.
 step "parse/cag" python3 parse/cag.py
 
+# myScheme's records are unpacked BEFORE the states, because two steps below read them:
+# Uttar Pradesh joins its budget names to them, and the legibility scoreboard counts each
+# state's records in census.json. Unpacked after, both read last month's.
+EXPLODED=0
+if [ "$VERIFY_OK" = "1" ]; then
+  say "parse · myScheme"
+  if python3 parse/explode.py --date "$DATE"; then
+    EXPLODED=1
+  else
+    FAILED+=("parse/explode")
+    printf '  \033[31m!! FAILED\033[0m parse/explode\n' >&2
+  fi
+fi
+
 # States are parsed whether or not the myScheme snapshot verified, because they are
 # derived from their own archives and nothing about a throttled myScheme crawl makes the
 # Karnataka budget less true. Their absence claims are not, and those wait below.
@@ -276,21 +309,20 @@ done
 # the step; that is the signal to look before trusting the scoreboard.
 step "parse/legibility" python3 parse/legibility.py
 
-if [ "$VERIFY_OK" = "1" ]; then
-  say "parse · myScheme"
-  python3 parse/explode.py --date "$DATE"
-  python3 parse/checks.py --snapshot "$DATE"
+if [ "$EXPLODED" = "1" ]; then
+  say "parse · checks"
+  step "parse/checks" python3 parse/checks.py --snapshot "$DATE"
 
   # Order is a dependency chain, not a preference. registry joins the four sources and
   # needs checks.json; classify scores the registry's budget lines; the state classifiers
   # decide absence against the myScheme records explode has just written.
   say "parse · union registry"
-  python3 parse/registry.py
+  step "parse/registry" python3 parse/registry.py --year "$CYCLE_YEAR"
   # The CAG join needs the registry, which is why it is here and not in the sources stage
   # beside parse/cag.py. Reading last month's registry.json would publish a join that looks
   # current and is not.
   step "parse/cag_join" python3 parse/cag_join.py
-  python3 parse/classify.py
+  step "parse/classify" python3 parse/classify.py --year "$CYCLE_YEAR"
   # Every state has one now. A classifier that fails is a state that stops publishing
   # absence claims, which the run must SAY rather than either hide or die on.
   for st in karnataka andhra kerala tamilnadu maharashtra odisha westbengal \
@@ -306,7 +338,7 @@ if [ "$VERIFY_OK" = "1" ]; then
   step "enrich/budget" python3 enrich/budget.py --year "$CYCLE_YEAR"
   step "enrich/outcome" python3 enrich/outcome.py --year "$CYCLE_YEAR"
 else
-  echo "snapshot is INCOMPLETE — skipping everything downstream of it, as the design requires."
+  echo "snapshot is INCOMPLETE or did not unpack — skipping everything downstream of it, as the design requires."
 fi
 
 # The change feed reads two archived snapshots and never the working tree, so it is safe
@@ -329,7 +361,7 @@ step "parse/watchlist" python3 parse/watchlist.py --date "$DATE"
 step "parse/ratios" python3 parse/ratios.py
 
 say "build"
-python3 site/build.py
+step "site/build" python3 site/build.py
 
 # What the archive costs, printed every run so its growth is never a surprise. The archive
 # is the evidence and stays in git, so it only grows; the question is when that stops being
