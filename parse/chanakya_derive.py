@@ -45,10 +45,13 @@ outside the corpus reading as Hindi to somebody who reads Hindi. The first is au
 and the second is not. A table that is 95% right puts wrong Hindi names on a state page,
 and this register exists to point at exactly that kind of error in other people.
 """
-import json, collections, math, re
+import json, collections, math, os, re
 
-CORP = json.load(open("/Users/sathya/GitHub/schemes/data/chhattisgarh/chanakya_corpus.json",
-                      encoding="utf-8"))["entries"]
+# From this file's place in the repository, not one laptop's absolute path.
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+with open(os.path.join(_ROOT, "data", "chhattisgarh", "chanakya_corpus.json"),
+          encoding="utf-8") as _fh:
+    CORP = json.load(_fh)["entries"]
 C = "क-हक़-य़"
 CLUS = f"((?:[{C}]्)*[{C}])"
 def visual(s):
@@ -154,11 +157,10 @@ for bpen in (0.0,):
         if it % 5 == 4 or it == 29:
             print(f"  bpen={bpen} iter {it+1:2d}: {ok}/{len(PAIRS)} exact, {len(best)} keys")
 # Written beside the corpus so a later pass can diff against it. Nothing reads it.
-import os as _os
-_out = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),
-                     "data", "chhattisgarh", "chanakya_table_draft.json")
-json.dump({(kb.hex() if isinstance(kb, bytes) else str(kb)): kt for kb, kt in best.items()},
-          open(_out, "w", encoding="utf-8"), ensure_ascii=False, indent=1, sort_keys=True)
+_out = os.path.join(_ROOT, "data", "chhattisgarh", "chanakya_table_draft.json")
+with open(_out, "w", encoding="utf-8") as _fh:
+    json.dump({(kb.hex() if isinstance(kb, bytes) else str(kb)): kt for kb, kt in best.items()},
+              _fh, ensure_ascii=False, indent=1, sort_keys=True)
 bad = [(u, decode(b, best)) for b, t, u in PAIRS if decode(b, best) != u]
 print(f"\n{len(bad)} still wrong; first 6:")
 for w, g in bad[:6]:
