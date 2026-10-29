@@ -56,6 +56,23 @@ QUALIFIERS = [
 ]
 
 
+# What kind of programme a name says it is. These are stop words, so the content-word
+# rules never see them, and a containment match could join a Mission to a Scheme that
+# shares its subject: the Union Budget's Export Promotion Mission was joined to myScheme's
+# Export Promotion Capital Goods Scheme, a duty-exemption licence. Mission and abhiyan are
+# one kind (Poshan Abhiyaan is the National Nutrition Mission); scheme, yojana and
+# programme are the other.
+KINDS = [{"mission", "abhiyan", "abhiyaan"},
+         {"scheme", "schemes", "yojana", "yojna", "programme", "program"}]
+
+
+def kind_conflict(a, b):
+    """Both names declare a kind, and no kind is common to them."""
+    ka = {i for i, k in enumerate(KINDS) if k & set(norm(a).split())}
+    kb = {i for i, k in enumerate(KINDS) if k & set(norm(b).split())}
+    return bool(ka and kb and not ka & kb)
+
+
 def norm(s):
     s = (s or "").lower()
     s = re.sub(r"[^a-z0-9]+", " ", s)
@@ -354,7 +371,7 @@ def probably_same(a, b, floor=0.75):
         # Jeevan Mission against its own longer title is unaffected: it matches on the
         # prefix rule above, which fires first.
         adds_qualifier = bool(qualifier_groups(a) ^ qualifier_groups(b))
-        if small <= large and not adds_qualifier and (
+        if small <= large and not adds_qualifier and not kind_conflict(a, b) and (
                 len(small) >= 3 or (len(small) >= 2 and len(large) <= 2 * len(small))):
             return True, f"all {len(small)} content words of the shorter name are present"
 
@@ -395,7 +412,8 @@ def probably_same(a, b, floor=0.75):
         # The same variant guard as the content-word rule below. Folding transliteration
         # does not make a Scheduled Tribe scholarship into its parent scheme, and without
         # this the skeleton rule simply catches what containment now rejects.
-        if small <= large and not qualifier_groups(a) ^ qualifier_groups(b):
+        if small <= large and not qualifier_groups(a) ^ qualifier_groups(b) \
+                and not kind_conflict(a, b):
             if len(small) >= 3 or (len(small) >= 2 and len(large) <= 2 * len(small)):
                 return True, f"transliteration variant: {sorted(small)[:3]}"
             if len(ta_) == 1 and len(tb_) == 1 and \
@@ -575,6 +593,10 @@ SELFTEST += [
     ("Shakthi Scheme", "Shrama Shakthi Scheme", False),
     ("Gruha Jyothi", "Griha Lakshmi Scheme", False),
     ("Anna Bhagya", "Ksheera Bhagya", False),
+    # Two words of a short name inside a longer one is weak evidence when the longer name
+    # adds two more words that say what it is. The Union Budget's Export Promotion Mission
+    # (a 2,300-crore line) was joined to myScheme's EPCG, a duty-exemption licence.
+    ("Export Promotion Mission", "Export Promotion Capital Goods Scheme", False),
 ]
 
 

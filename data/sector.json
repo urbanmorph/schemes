@@ -1,13 +1,13 @@
 {
- "built": "2026-10-18T01:02:25Z",
+ "built": "2026-10-29T04:25:13Z",
  "by_family": {
   "andhra": {
    "classified": 235,
    "rows": 246
   },
   "central": {
-   "classified": 592,
-   "rows": 707
+   "classified": 593,
+   "rows": 708
   },
   "karnataka": {
    "classified": 293,
@@ -37,7 +37,7 @@
  "by_sector": {
   "Agriculture,Rural & Environment": 826,
   "Banking,Financial Services and Insurance": 117,
-  "Business & Entrepreneurship": 234,
+  "Business & Entrepreneurship": 235,
   "Education & Learning": 633,
   "Health & Wellness": 177,
   "Housing & Shelter": 254,
@@ -52,11 +52,11 @@
   "Women and Child": 523,
   "not stated": 821
  },
- "classified": 4114,
+ "classified": 4115,
  "counting_basis": "One row per key. A state votes a scheme's revenue head and its capital head separately and both are separate rows here, exactly as they are separate rows in the register.",
  "coverage": 0.834,
  "deciding_signal": {
-  "a benefit phrase in the name": 3006,
+  "a benefit phrase in the name": 3007,
   "a topic word in the name": 296,
   "the department or ministry": 799,
   "the purpose line": 13
@@ -225,7 +225,7 @@
   "why": "Chosen for usefulness, not for safety. A wrong sector is a browsing annoyance, not a false accusation, so this file does not run at the 0.95 precision bar the scheme-or-not classifiers in this directory use. It still abstains where nothing but one weak signal fires, because a wrong sector is worse than a missing one for a reader filtering by it."
  },
  "question": "Which of the 15 myScheme sectors does each register row belong to, for the rows myScheme does not list and which therefore carry no sector of their own?",
- "rows": 4935,
+ "rows": 4936,
  "scope": "The 680 registry entries with no myScheme source, plus every state classification row at or above site/build.py's listing bar that myScheme does not list. A superset of what the site shows by 366 centrally sponsored state shares that site/build.py folds into their parent scheme.",
  "sectors": {
   "andhra|Agriculture Department | Annadata Sukhibhava": {
@@ -29901,6 +29901,23 @@
    "family": "central",
    "name": "Expansion of Supreme Court Building CENTRAL SECTOR SCHEMES",
    "sector": "Public Safety,Law & Justice"
+  },
+  "registry|Export Promotion Mission": {
+   "evidence": [
+    [
+     "+2",
+     "Business & Entrepreneurship",
+     "the department or ministry: Department of Commerce"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Export Promotion Mission",
+   "sector": "Business & Entrepreneurship"
   },
   "registry|Family Pension-cum-Life Assurance and Deposit Linked Insurance Schemes for the Plantation Workers in Assam": {
    "evidence": [

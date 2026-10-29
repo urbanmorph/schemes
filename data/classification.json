@@ -670,24 +670,6 @@
    "verdict": "scheme"
   },
   {
-   "be_cr": 2300.0,
-   "demand_no": 10,
-   "evidence": [
-    [
-     "+2",
-     "benefit words in the name: mission"
-    ]
-   ],
-   "in_dbt": false,
-   "in_myscheme": true,
-   "in_outcome": false,
-   "ministry": "M/o Commerce and Industry",
-   "name": "Export Promotion Mission",
-   "score": 2,
-   "statement": "stat4b",
-   "verdict": "scheme"
-  },
-  {
    "be_cr": 11144.0,
    "demand_no": 64,
    "evidence": [
@@ -5346,6 +5328,24 @@
    "in_outcome": false,
    "ministry": "M/o Commerce and Industry",
    "name": "Interest Equalisation Scheme",
+   "score": 2,
+   "statement": "stat4b",
+   "verdict": "scheme"
+  },
+  {
+   "be_cr": 2300.0,
+   "demand_no": 10,
+   "evidence": [
+    [
+     "+2",
+     "benefit words in the name: mission"
+    ]
+   ],
+   "in_dbt": false,
+   "in_myscheme": false,
+   "in_outcome": false,
+   "ministry": "M/o Commerce and Industry",
+   "name": "Export Promotion Mission",
    "score": 2,
    "statement": "stat4b",
    "verdict": "scheme"
@@ -12655,7 +12655,7 @@
    "verdict": "budget head"
   }
  ],
- "built": "2026-10-18T00:58:52Z",
+ "built": "2026-10-29T04:23:18Z",
  "classified_head": 399,
  "classified_scheme": 295,
  "cycle": "2026-27",
@@ -12673,45 +12673,45 @@
  "threshold": 2,
  "threshold_sweep": [
   {
-   "f1": 0.364,
-   "precision": 0.224,
+   "f1": 0.362,
+   "precision": 0.222,
    "recall_floor": 0.985,
    "threshold": 0
   },
   {
-   "f1": 0.461,
-   "precision": 0.317,
-   "recall_floor": 0.844,
+   "f1": 0.457,
+   "precision": 0.314,
+   "recall_floor": 0.843,
    "threshold": 1
   },
   {
-   "f1": 0.479,
-   "precision": 0.349,
-   "recall_floor": 0.763,
+   "f1": 0.476,
+   "precision": 0.346,
+   "recall_floor": 0.761,
    "threshold": 2
   },
   {
-   "f1": 0.533,
+   "f1": 0.535,
    "precision": 0.485,
-   "recall_floor": 0.593,
+   "recall_floor": 0.597,
    "threshold": 3
   },
   {
-   "f1": 0.476,
+   "f1": 0.478,
    "precision": 0.573,
-   "recall_floor": 0.407,
+   "recall_floor": 0.41,
    "threshold": 4
   },
   {
-   "f1": 0.463,
+   "f1": 0.465,
    "precision": 0.617,
-   "recall_floor": 0.37,
+   "recall_floor": 0.373,
    "threshold": 5
   },
   {
-   "f1": 0.339,
+   "f1": 0.341,
    "precision": 0.646,
-   "recall_floor": 0.23,
+   "recall_floor": 0.231,
    "threshold": 6
   }
  ],
@@ -13655,12 +13655,12 @@
  "unlisted_schemes_total": 37,
  "validation": {
   "false_negative": 32,
-  "false_positive": 192,
+  "false_positive": 193,
   "ground_truth": "myScheme membership",
   "note": "Recall is a floor, not a measurement: a line called a scheme that myScheme lacks may be the classifier being right and the portal being incomplete, which is the thing this project documents. Precision is the metric worth reading.",
-  "precision": 0.349,
-  "recall_floor": 0.763,
+  "precision": 0.346,
+  "recall_floor": 0.761,
   "true_negative": 367,
-  "true_positive": 103
+  "true_positive": 102
  }
 }

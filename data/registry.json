@@ -1,10 +1,10 @@
 {
  "added_by": {
-  "budget": 559,
+  "budget": 560,
   "dbt": 138,
   "outcome": 10
  },
- "built": "2026-10-18T00:56:38Z",
+ "built": "2026-10-29T04:22:10Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -13952,14 +13952,6 @@
   {
    "name": "Export Promotion Capital Goods Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 2300.0,
-     "cycle": "2026-27",
-     "demand_no": 10,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "Export Promotion Mission",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Commerce And Industry",
@@ -61409,6 +61401,18 @@
    }
   },
   {
+   "name": "Export Promotion Mission",
+   "sources": {
+    "budget": {
+     "be_cr": 2300.0,
+     "cycle": "2026-27",
+     "demand_no": 10,
+     "name": "Export Promotion Mission",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "National Export Insurance Account",
    "sources": {
     "budget": {
@@ -68570,15 +68574,15 @@
   }
  ],
  "in_n_sources": {
-  "1": 5099,
-  "2": 307,
+  "1": 5101,
+  "2": 306,
   "3": 50,
   "4": 22
  },
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
  "snapshot": "2026-08-30",
- "total_entries": 5478,
+ "total_entries": 5479,
  "unlisted_but_funded": [
   {
    "also_in": [],
@@ -69211,6 +69215,13 @@
    "be_cr": 2306.0,
    "demand_no": 23,
    "name": "Prime Minister's Development Initiative for North East Region (PM-DevINE)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 2300.0,
+   "demand_no": 10,
+   "name": "Export Promotion Mission",
    "statement": "stat4b"
   },
   {
@@ -71621,15 +71632,8 @@
    "demand_no": 7,
    "name": "Scheme of Programme Management",
    "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 25.0,
-   "demand_no": 29,
-   "name": "Mongolia",
-   "statement": "stat4b"
   }
  ],
- "unlisted_but_funded_cr": 1362620.86,
- "unlisted_but_funded_total": 500
+ "unlisted_but_funded_cr": 1364920.86,
+ "unlisted_but_funded_total": 501
 }
