@@ -31,6 +31,7 @@ import json
 import os
 import re
 import sys
+from urllib.parse import urljoin
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
@@ -185,7 +186,7 @@ def parse_page(body):
             "report_no": rno.group(1) if rno else None,
             "report_year": int(rno.group(2)) if rno else None,
             "detail_url": BASE + m.group(1),
-            "pdf_url": (BASE + pdf.group(1)) if pdf else None,
+            "pdf_url": urljoin(BASE, pdf.group(1)) if pdf else None,
             "pdf_size": f"{size.group(1)} {size.group(2)}" if size else None,
         })
     return out
@@ -262,10 +263,32 @@ def run(date=None):
     return reports, pages, claimed
 
 
+def selftest():
+    def block(href):
+        return ('<div class="AuditReportlisting"><a href="/en/audit-report/details/7">T</a>'
+                f'<div class="pdfBottomReport"><a href="{href}">PDF</a></div></section>')
+    bad = 0
+    for href, want in [
+            ("/webroot/uploads/a.pdf", "https://cag.gov.in/webroot/uploads/a.pdf"),
+            # From October 2026 the index links its PDFs on a CDN with a full URL, and
+            # prefixing the host to those made 2,726 of 2,753 links unusable.
+            ("https://d7i5wg8xwe4hf.cloudfront.net/uploads/b.pdf",
+             "https://d7i5wg8xwe4hf.cloudfront.net/uploads/b.pdf")]:
+        got = parse_page(block(href))[0]["pdf_url"]
+        ok = got == want
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {href} -> {got}")
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Parse the archived CAG report catalogue.")
     ap.add_argument("--date")
+    ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
+    if a.self_test:
+        print("pdf_url self-test")
+        sys.exit(1 if selftest() else 0)
     reports, pages, claimed = run(a.date)
     ok = claimed is not None and len(reports) == claimed
     print(f"CAG catalogue: {len(reports):,} reports from {pages} pages")

@@ -1284,15 +1284,19 @@ def page_audit(cag, audited):
     # who can see that Kerala has 103 reports could not ask to see them.
     def rowdict(r):
         return [e(r["title"])[:220], r.get("government") or "", r.get("audit_type") or "",
-                r.get("sector") or "", r.get("tabled") or "", r.get("pdf_url") or ""]
+                r.get("sector") or "", r.get("tabled") or "", r.get("detail_url") or ""]
 
     page_audit.rowdata = [rowdict(r) for r in reports]
 
+    # The report's own page on cag.gov.in, not its PDF. The CAG moves its PDFs between
+    # CDN hosts: the host in the 17 October 2026 archive stopped resolving within two weeks,
+    # and the same files reappeared on another. The page is keyed on the report's id and
+    # always links the current file.
     def rowhtml(d):
-        title, gov, kind, sec, tab, pdf = d
+        title, gov, kind, sec, tab, url = d
         return (f'<tr><td>{title}</td><td>{e(gov)}</td><td>{e(kind)}</td>'
                 f'<td>{e(sec)}</td><td class="nowrap">{e(tab)}</td>'
-                f'<td>{f"""<a href="{e(pdf)}" rel="noopener">PDF</a>""" if pdf else NIL}</td></tr>')
+                f'<td>{f"""<a href="{e(url)}" rel="noopener">CAG</a>""" if url else NIL}</td></tr>')
 
     rows = "".join(rowhtml(d) for d in page_audit.rowdata[:SEED_ROWS])
 
@@ -1353,7 +1357,7 @@ which of them are about a scheme, and there is no way to ask it. This page is th
     <div class="cell"><div class="k">Reports</div><div class="v">{num(total)}</div>
       <div class="n">tabled, all years</div></div>
     <div class="cell"><div class="k">With a PDF</div>
-      <div class="v">{num(cag.get("with_a_pdf"))}</div><div class="n">linked to read</div></div>
+      <div class="v">{num(cag.get("with_a_pdf"))}</div><div class="n">linked from its CAG page</div></div>
     <div class="cell"><div class="k">Could name a scheme</div>
       <div class="v">{num(cag.get("with_a_subject"))}</div>
       <div class="n">title minus its boilerplate</div></div>
@@ -1410,7 +1414,7 @@ which of them are about a scheme, and there is no way to ask it. This page is th
   function html(r){{
     return '<tr><td>'+r[0]+'</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td>'
       +'<td>'+esc(r[3])+'</td><td class="nowrap">'+esc(r[4])+'</td>'
-      +'<td>'+(r[5]?'<a href="'+esc(r[5])+'" rel="noopener">PDF</a>'
+      +'<td>'+(r[5]?'<a href="'+esc(r[5])+'" rel="noopener">CAG</a>'
                    :'<span class="nil">&middot;&middot;&middot;</span>')+'</td></tr>';
   }}
   function draw(reset){{
@@ -3132,10 +3136,8 @@ def audit_block(name):
         f'<td class="nowrap">{e(r.get("audit_type") or "")}</td>'
         f'<td class="nowrap">{e(r.get("government") or "")}</td>'
         f'<td class="nowrap">{e(r.get("tabled") or "")}</td>'
-        f'<td><a href="{e(r["detail_url"])}" rel="noopener">CAG</a>'
-        + (f' &middot; <a href="{e(r["pdf_url"])}" rel="noopener">PDF</a>'
-           if r.get("pdf_url") else "")
-        + "</td></tr>" for r in rows)
+        f'<td><a href="{e(r["detail_url"])}" rel="noopener">CAG</a></td></tr>'
+        for r in rows)
     return f"""
 <section class="sec">
   <h2>The CAG has audited this</h2>
@@ -3688,7 +3690,7 @@ def build():
     # positional, no indentation, because nobody reads it and 2,804 copies of six field
     # names is the kind of weight that made this page 1,074 KB in the first place.
     with open(os.path.join(OUT, "audit.json"), "w", encoding="utf-8") as fh:
-        json.dump({"cols": ["title", "government", "kind", "sector", "tabled", "pdf"],
+        json.dump({"cols": ["title", "government", "kind", "sector", "tabled", "url"],
                    "rows": getattr(page_audit, "rowdata", [])},
                   fh, separators=(",", ":"), ensure_ascii=False)
 
