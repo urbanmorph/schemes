@@ -94,7 +94,7 @@ SURVEY = [
      "Gurmukhi cannot share a codepoint with Latin, and the books check their own "
      "arithmetic at every level of the head of account."),
     ("Jharkhand", "jharkhand", dict(list=True, text=True, bounded=True, english=True, closes=True),
-     "It prints STATE SCHEME &lt;name&gt;(&lt;code&gt;) in English capitals, and the "
+     "It prints STATE SCHEME <name>(<code>) in English capitals, and the "
      "Hindi and English are separated by a slash."),
     ("Delhi", "delhi", dict(list=True, text=True, bounded=True, english=True, closes=False),
      "The whole scheme budget is one plain English file. Its Grand Total does not close: "

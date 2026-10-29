@@ -1,8 +1,8 @@
 """
 Static site generator. Reads data/, writes site/_out/. Never fetches.
 
-Local only for now — `./serve.sh` builds and serves at 127.0.0.1:8788. Nothing here
-deploys anywhere.
+`./serve.sh` builds and serves at 127.0.0.1:8788. .github/workflows/deploy.yml publishes
+site/_out to Cloudflare Pages after checks pass on main.
 
 Every figure rendered comes from a file under data/, which is derived from bytes under
 archive/, which carry the fetch that produced them. If a number cannot be traced back
@@ -283,11 +283,11 @@ def shell(title, active, body, depth=0, desc="", canon="", ld=None):
     st = shell.status or {}
     verdict = st.get("verdict")
     if verdict == "COMPLETE":
-        dot, word = "", "COMPLETE"
+        dot, verdict_word = "", "COMPLETE"
     elif verdict:
-        dot, word = " bad", verdict
+        dot, verdict_word = " bad", verdict
     else:
-        dot, word = " warn", "no run yet"
+        dot, verdict_word = " warn", "no run yet"
 
     # The collection's own finish time where the snapshot records it, falling back to the
     # verify time for snapshots archived before that field existed.
@@ -350,7 +350,7 @@ def shell(title, active, body, depth=0, desc="", canon="", ld=None):
   <span class="sep">&middot;</span>
   <span>{num(st.get('records_parsed'))} of {num(st.get('expected_total'))} records
         &middot; {num(st.get('pages_written'))}/{num(st.get('pages_expected'))} pages</span>
-  <span class="sep">&middot;</span><span>verdict <b>{e(word)}</b></span>
+  <span class="sep">&middot;</span><span>verdict <b>{e(verdict_word)}</b></span>
   <span class="sep">&middot;</span><span>{num(st.get('snapshots'))} snapshot(s) held</span>
 </div></div>
 <main id="main" tabindex="-1"><div class="wrap">{body}</div></main>
@@ -366,7 +366,7 @@ def shell(title, active, body, depth=0, desc="", canon="", ld=None):
     <a href="https://dbtbharat.gov.in/" target="_blank" rel="noopener">DBT Bharat</a>
     <span>direct benefit transfer listings</span>
     <a href="{up}states">State budget books</a>
-    <span>fifteen states&rsquo; own scheme lines</span>
+    <span>{word(len(STATE_OF)).lower()} states&rsquo; own scheme lines</span>
     <a href="https://cag.gov.in/en/audit-report" target="_blank" rel="noopener">CAG audit reports</a>
     <span>which schemes have been audited</span>
     <p>Collected {e(st.get('snapshot') or '')}. The archive keeps every answer byte for
@@ -374,7 +374,7 @@ def shell(title, active, body, depth=0, desc="", canon="", ld=None):
     calculates nothing from a source that is not named above.</p>
   </div>
   <div class="foot">
-    <span>The Schemes Register &middot; local build, not deployed</span>
+    <span>The Schemes Register</span>
     <span><a href="{ISSUE_URL}?template=missing-figure.yml" target="_blank" rel="noopener">Report a wrong or missing figure</a>
       &middot; code MIT, data CC BY 4.0</span>
   </div>
@@ -585,13 +585,14 @@ def page_findings(census, checks, dbt, entries):
         ("Central", num(lvl.get("Central")), "level facet"),
         ("State", num(ms_state), "level facet"),
         ("DBT state schemes", num(dbt_total), "36 dashboards"),
-        ("Outcome framework", '<span class="nil">...</span>', "not yet parsed"),
+        ("Outcome framework", num(sum(1 for en in (entries or []) if "outcome" in en.get("sources", ()))),
+         "schemes with targets"),
     ]
     strip = "".join(f'<div class="cell"><div class="k">{e(k)}</div>'
                     f'<div class="v">{v}</div><div class="n">{e(n)}</div></div>'
                     for k, v, n in cells)
 
-    kar_ms = facets.get("beneficiaryState", {}).get("Karnataka")
+    kar_ms = myscheme_state_counts(entries, census).get("Karnataka")
     kar_dbt = (dbt or {}).get("states", {}).get("Karnataka")
 
     qrows = ""
@@ -746,7 +747,7 @@ def legibility_section(leg, ms=None):
                 f'<td class="num">{r["cleared"]}<span class="of"> of '
                 f'{r["tests_run"]}</span></td>'
                 f'<td class="num">{named}</td>'
-                f'<td class="muted lg-why">{r["why"]}</td></tr>')
+                f'<td class="muted lg-why">{e(r["why"])}</td></tr>')
 
     # Ordered by what the reader is being told: the states that yielded, best first and
     # largest first within a score, then the states that did not, in the order they gave up.
@@ -907,7 +908,7 @@ def absent_rows(cls, limit=None):
         rows = rows[:limit]
     out = []
     for r in rows:
-        why = "; ".join(w for _, w in (r.get("evidence") or []) if w) or "&mdash;"
+        why = "; ".join(w for _, w in (r.get("evidence") or []) if w)
         ident = r.get("code") or r.get("key") or ""
         money = inr(round((r["be_lakh"] or 0) / 100)) if r.get("be_lakh") else NIL
         out.append(
@@ -915,7 +916,7 @@ def absent_rows(cls, limit=None):
             + (f' <span class="acr">{e(str(ident))}</span>' if ident else "")
             + f'</td><td class="num">{money}</td>'
             f'<td class="num">{r.get("score")}</td>'
-            f'<td class="lg-why">{e(why)}</td></tr>')
+            f'<td class="lg-why">{e(why) if why else NIL}</td></tr>')
     return "".join(out), len(cls.get("absent_distinct") or [])
 
 
@@ -1126,21 +1127,26 @@ def page_states(leg):
     refused.sort(key=lambda r: (-(r.get("cleared") or 0), r.get("state") or ""))
 
     built.sort(key=lambda r: -r["absent"])
-    # Row by row rather than a comprehension: two of the eight cells are conditional and
-    # a conditional expression inside one join loses the rest of the row.
+    # Counted, not typed: the warnboxes below quote Kerala and two refused states, and the
+    # typed figures (37 of Kerala's lines, Gujarat's 394, Himachal's 174) had gone stale.
+    kl = next((b for b in built if b["key"] == "kerala"), {})
+    by_name = {r.get("state"): r for r in states}
+    gj, hp = by_name.get("Gujarat") or {}, by_name.get("Himachal Pradesh") or {}
+    # The two conditional cells are computed first. Written inline, Python joined the
+    # adjacent f-strings before the conditional, so a state with no precision lost its
+    # <tr>, name and counts along with the cell.
     brows = ""
     for b in built:
+        prec = f'{b["precision"]:.1%}' if b["precision"] is not None else NIL
+        rec = f'{b["recall"]:.0%}' if b["recall"] is not None else NIL
         brows += (
             f'<tr><td><a href="{link("state/" + b["key"] + ".html")}">{e(b["name"])}</a></td>'
             f'<td class="num">{num(b["lines"])}</td>'
             f'<td class="num">{num(b["bar"])}</td>'
             f'<td class="num hi">{num(b["absent"])}</td>'
             f'<td class="num">{inr(round(b["cr"])) if b["cr"] else NIL}</td>'
-            f'<td class="num">{b["precision"]:.1%}' if b["precision"] is not None
-            else f'<td class="num">{NIL}')
-        brows += (f'</td><td class="num">{b["recall"]:.0%}</td>' if b["recall"] is not None
-                  else f'</td><td class="num">{NIL}</td>')
-        brows += f'<td class="lg-why">{e(b["why"])}</td></tr>'
+            f'<td class="num">{prec}</td><td class="num">{rec}</td>'
+            f'<td class="lg-why">{e(b["why"])}</td></tr>')
 
     # NOT A TABLE. A refusal is the most important thing on this page and it was a cell
     # four columns wide: the state, a score, a word, and a sentence squeezed against the
@@ -1208,7 +1214,7 @@ is a finding and not an omission.</p>
   <div class="warnbox">
     <b>Do not rank the states by the fourth column</b>
     It is a floor set by how much evidence a state prints, not a measure of how much it
-    hides. Kerala publishes 2,629 plan lines and this register will stand behind 37 of them;
+    hides. Kerala publishes {num(kl.get("lines"))} plan lines and this register will stand behind {num(kl.get("absent"))} of them;
     that is a fact about how much the Kerala plan document proves, not about Kerala.
     Precision is a count in every row, recall is measured on each state&rsquo;s stratified
     sample alone, and both are explained on the state&rsquo;s own page.
@@ -1229,8 +1235,9 @@ is a finding and not an omission.</p>
     When a machine can read a state&rsquo;s budget, this register is a third source. It can
     then say which of the other two is closer. For these states that is not possible. Only
     DBT Bharat&rsquo;s count and myScheme&rsquo;s remain, and they disagree about every
-    state. myScheme lists 643 schemes for Gujarat and DBT counts 394. For Himachal Pradesh
-    the numbers are 75 and 174. Each budget holds the number that would settle the
+    state. myScheme lists {num(gj.get("myscheme_records"))} schemes for Gujarat and DBT counts
+    {num(gj.get("dbt_state_schemes"))}. For Himachal Pradesh the numbers are
+    {num(hp.get("myscheme_records"))} and {num(hp.get("dbt_state_schemes"))}. Each budget holds the number that would settle the
     question, and a machine cannot read it.
     <p style="margin:8px 0 0">A refusal is about the DOCUMENT. This register does not
     accuse any of these states of hiding anything, and it makes no claim about what the
@@ -1293,7 +1300,7 @@ def page_audit(cag, audited):
     # filters the page was already computing tallies for and then not offering: a reader
     # who can see that Kerala has 103 reports could not ask to see them.
     def rowdict(r):
-        return [e(r["title"])[:220], r.get("government") or "", r.get("audit_type") or "",
+        return [e(r["title"][:220]), r.get("government") or "", r.get("audit_type") or "",
                 r.get("sector") or "", r.get("tabled") or "", r.get("detail_url") or ""]
 
     page_audit.rowdata = [rowdict(r) for r in reports]
@@ -1476,6 +1483,30 @@ list.</p>
 </script>"""
 
 
+def myscheme_state_counts(entries, census=None):
+    """State -> how many STATE schemes myScheme lists for it.
+
+    Count state schemes, not state TAGS. The census facet is a beneficiary tag and all
+    711 central schemes carry one, so reading it as a per-state scheme count folds
+    central schemes into every state's number. Almost all are tagged "All" and drop out
+    here, but a few are pinned to named states: Karnataka's facet of 60 is 56 state
+    schemes plus 4 central ones. Comparing a mixed number against DBT's state-scheme
+    count compares different things while claiming to expose exactly that error. /findings
+    read the facet while /divergence counted, and the two pages disagreed (60 against 56).
+    """
+    ms = {}
+    for en in (entries or []):
+        if en.get("level_value") == "central" or not en.get("on_myscheme"):
+            continue
+        st = en.get("state")
+        for n in (st if isinstance(st, list) else [st] if st else []):
+            if n and n != "All":
+                ms[n] = ms.get(n, 0) + 1
+    if not ms:   # no unified entries passed; fall back to the facet rather than blank
+        ms = dict((census or {}).get("facets", {}).get("beneficiaryState", {}))
+    return ms
+
+
 def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
     """Two questions, kept apart: how many schemes a state has, and which are unlisted.
 
@@ -1487,23 +1518,7 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
     """
     ds = (dbt or {}).get("states", {})
 
-    # Count state schemes, not state TAGS. The census facet is a beneficiary tag and all
-    # 711 central schemes carry one, so reading it as a per-state scheme count folds
-    # central schemes into every state's number. Almost all are tagged "All" and drop out
-    # here, but a few are pinned to named states: Karnataka's facet of 60 is 56 state
-    # schemes plus 4 central ones. Comparing a mixed number against DBT's state-scheme
-    # count compares different things while claiming to expose exactly that error.
-    ms = {}
-    for en in (entries or []):
-        if en.get("level_value") == "central" or not en.get("on_myscheme"):
-            continue
-        st = en.get("state")
-        for n in (st if isinstance(st, list) else [st] if st else []):
-            if n and n != "All":
-                ms[n] = ms.get(n, 0) + 1
-    if not ms:   # no unified entries passed; fall back to the facet rather than blank
-        ms = {k: v for k, v in
-              (census or {}).get("facets", {}).get("beneficiaryState", {}).items()}
+    ms = myscheme_state_counts(entries, census)
 
     state_rows = ""
     for n in sorted(set(ms) | set(ds)):
@@ -1593,7 +1608,7 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
     every line, so anyone can check the verdict.
     <p style="margin:8px 0 0">We tested the classifier against myScheme membership. At the
     F1-optimal threshold of 2, precision is {v.get('precision', 0):.0%}. This table uses the
-    stricter threshold of {thr}, where precision is {prec:.0%}. To name a scheme as missing
+    stricter threshold of {thr}, where precision is {f"{prec:.0%}" if prec is not None else "&hellip;"}. To name a scheme as missing
     is an accusation, so the table uses the high-precision end. The recall figure is a
     floor. When the classifier calls a line a scheme and myScheme lacks it, the classifier
     can be right and the portal incomplete. That is the subject of this page. Some errors
@@ -1673,7 +1688,7 @@ and be done.</p>
 </section>
 
 <section class="sec">
-  <h2>The same claim, for fifteen states, on fifteen pages</h2>
+  <h2>The same claim, for {word(states_built).lower()} states, on {word(states_built).lower()} pages</h2>
   <div class="sec-note">{num(states_built)} states read &middot; {num(states_absent)} schemes
     funded and listed by no national portal &middot; {inr(round(states_cr))} crore</div>
   <p class="standfirst">Each state&rsquo;s absence claim is on that state&rsquo;s own page,
@@ -2455,7 +2470,7 @@ def index_section(entries):
 <section class="sec schemes" id="schemes">
 <div class="sec-note">{n:,} schemes: {nat:,} from the four national sources, myScheme,
   the Union Budget, the Outcome Budget and DBT Bharat, and {st_only:,} that no national
-  source names, read out of fifteen state budget books. Open a scheme to see which checks it
+  source names, read out of {word(len(STATE_OF)).lower()} state budget books. Open a scheme to see which checks it
   fails and why. Entries with no myScheme record have nothing to check, which is itself the
   finding.</div>
 <div class="filters">
@@ -2672,7 +2687,7 @@ def index_section(entries):
     set('rNoMs',(shown-src.myscheme).toLocaleString());
     set('rUnj',unjudged.toLocaleString());
     set('rMed', med===null ? '...' : Math.round(med*100/9));
-    set('rMoney', money ? '₹'+Math.round(money).toLocaleString('en-IN')+' cr' : '—');
+    set('rMoney', money ? '₹'+Math.round(money).toLocaleString('en-IN')+' cr' : '...');
     set('rSms',src.myscheme.toLocaleString()); set('rSbu',src.budget.toLocaleString());
     set('rSdb',src.dbt.toLocaleString()); set('rSoc',src.outcome.toLocaleString());
   }}
@@ -2688,6 +2703,7 @@ def index_section(entries):
     if(skip!=='lvl' && state.lvl && r._f.l!==state.lvl) return false;
     if(skip!=='aud' && state.aud && r._f.a!==state.aud) return false;
     if(skip!=='doc' && !docOk(r,state.doc)) return false;
+    if(skip!=='cat' && state.cat && !matchOne(r,'cat',state.cat)) return false;
     for(var i=0;i<ts.length;i++) if(r._h.indexOf(ts[i])<0) return false;
     return true;
   }}
@@ -2738,7 +2754,7 @@ def index_section(entries):
       if(n>0) bits.push('drop '+t[1]+' and '+n.toLocaleString()+' match');
     }});
     var el=document.getElementById('whyempty');
-    el.innerHTML = bits.length
+    el.textContent = bits.length
       ? 'Try one of these: '+bits.join('; ')+'.'
       : 'No single filter explains it. Several are narrowing at once.';
   }}
@@ -2943,15 +2959,20 @@ def watchlist_section(wl):
     listed = wl.get("since_listed", 0)
     still = wl.get("still_absent", 0)
     gone = wl.get("no_longer_named", 0)
+    withdrawn = wl.get("withdrawn", 0)
     first = wl.get("first_snapshot") or wl.get("snapshot")
 
     rows = ""
-    shown = [x for x in wl["entries"] if x.get("status") in ("listed", "no longer named at the bar")]
-    shown.sort(key=lambda x: (x.get("listed_on") or x.get("left_the_books") or "", x["name"]))
+    what_of = {"listed": "myScheme now lists it",
+               "no longer named at the bar": "the state's book no longer names it at the bar",
+               "withdrawn": "withdrawn: this register's own error, corrected"}
+    shown = [x for x in wl["entries"] if x.get("status") in what_of]
+
+    def when_of(x):
+        return x.get("listed_on") or x.get("left_the_books") or x.get("withdrawn_on") or ""
+    shown.sort(key=lambda x: (when_of(x), x["name"]))
     for x in shown[:60]:
-        when = x.get("listed_on") or x.get("left_the_books") or ""
-        what = ("myScheme now lists it" if x["status"] == "listed"
-                else "the state's book no longer names it at the bar")
+        when, what = when_of(x), what_of[x["status"]]
         rows += (f'<tr><td>{e(x.get("name") or "")}</td>'
                  f'<td>{e(x.get("state") or "")}</td>'
                  f'<td class="num">{e(str(x.get("first_named") or ""))}</td>'
@@ -2986,6 +3007,8 @@ def watchlist_section(wl):
       <div class="n">myScheme carries it now</div></div>
     <div class="cell"><div class="k">No longer named</div><div class="v">{num(gone)}</div>
       <div class="n">left the state&rsquo;s book</div></div>
+    <div class="cell"><div class="k">Withdrawn</div><div class="v">{num(withdrawn)}</div>
+      <div class="n">this register&rsquo;s error, corrected</div></div>
   </div>
 
   {table}
@@ -3095,7 +3118,7 @@ def cag_changes(c):
 
     def table(rows, label):
         body = "".join(
-            f'<tr><td><a href="{e(r.get("detail_url"))}" rel="noopener">{e(r.get("title"))[:220]}</a></td>'
+            f'<tr><td><a href="{e(r.get("detail_url"))}" rel="noopener">{e((r.get("title") or "")[:220])}</a></td>'
             f'<td>{e(r.get("government") or "")}</td>'
             f'<td class="nowrap">{e(r.get("tabled") or "")}</td></tr>' for r in rows)
         return (f'<h3>{label}</h3><div class="tscroll"><table>'
@@ -3229,7 +3252,7 @@ def audit_block(name):
     if not rows:
         return ""
     body = "".join(
-        f'<tr><td>{e(r["title"])[:260]}</td>'
+        f'<tr><td>{e(r["title"][:260])}</td>'
         f'<td class="nowrap">{e(r.get("audit_type") or "")}</td>'
         f'<td class="nowrap">{e(r.get("government") or "")}</td>'
         f'<td class="nowrap">{e(r.get("tabled") or "")}</td>'
@@ -3509,11 +3532,11 @@ def page_scheme(s, status, enrich=None, entry=None):
   <h2>Provenance</h2>
   <div class="sec-note">Every field above, and where it came from</div>
   <div class="tscroll"><table class="prov">
-    {prov("schemeName", s["name"], f"myScheme &middot; {snap}")}
-    {prov("schemeOpenDate", s.get("open_date"), f"myScheme &middot; {snap}" if s.get("open_date") else "not published at source")}
-    {prov("schemeCloseDate", s.get("close_date"), f"myScheme &middot; {snap}" if s.get("close_date") else "not published at source")}
-    {prov("nodalMinistryName", s.get("ministry"), f"myScheme &middot; {snap}")}
-    {prov("dbtScheme", str(s.get("dbt")) if s.get("dbt") is not None else None, f"myScheme &middot; {snap}")}
+    {prov("schemeName", s["name"], f"myScheme · {snap}")}
+    {prov("schemeOpenDate", s.get("open_date"), f"myScheme · {snap}" if s.get("open_date") else "not published at source")}
+    {prov("schemeCloseDate", s.get("close_date"), f"myScheme · {snap}" if s.get("close_date") else "not published at source")}
+    {prov("nodalMinistryName", s.get("ministry"), f"myScheme · {snap}")}
+    {prov("dbtScheme", str(s.get("dbt")) if s.get("dbt") is not None else None, f"myScheme · {snap}")}
     {prov("achievement data", None, "no source publishes this for any central scheme")}
   </table></div>
 </section>
@@ -3684,7 +3707,7 @@ def build():
     # changed, and saying otherwise is how a sitemap's dates come to be ignored.
     snap = status.get("snapshot") or datetime.now().strftime("%Y-%m-%d")
     home_desc = (f"{len(entries):,} Indian government schemes from four national sources and "
-                 "fifteen state budget books, with what each source publishes and what it "
+                 f"{word(len(STATE_OF)).lower()} state budget books, with what each source publishes and what it "
                  "leaves out.")
     # Dataset, so the register can be found where people look for data rather than pages
     # (Google Dataset Search reads exactly this). It describes the CSV, which is the form
@@ -3744,8 +3767,10 @@ def build():
         page_divergence(census, dbt, load("data/registry.json", {}),
                         load("data/classification.json", {}), entries=entries,
                         leg=load("data/legibility.json", {})),
-        desc=("Karnataka runs 60 welfare schemes, or 501, depending which government "
-              "portal you ask. Three official sources, counted side by side."),
+        desc=(f"Karnataka runs {myscheme_state_counts(entries, census).get('Karnataka', 0):,} "
+              f"welfare schemes, or {(dbt or {}).get('states', {}).get('Karnataka') or 0:,}, "
+              "depending which government portal you ask. Three official sources, counted "
+              "side by side."),
         canon=SITE_BASE + "/divergence"))
     w("audit.html", shell(
         "Audit", "/audit",
