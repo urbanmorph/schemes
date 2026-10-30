@@ -101,7 +101,6 @@ only an omission, so this runs at 7 and gives up recall for it.
 """
 
 import argparse
-import importlib.util
 import json
 import os
 import re
@@ -111,21 +110,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule, myscheme_records  # noqa: E402
+from classify_common import excluded_by_rule, myscheme_hits, myscheme_index, \
+    myscheme_records  # noqa: E402
 
-
-def _load(name, path):
-    spec = importlib.util.spec_from_file_location(name, path)
-    m = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(m)
-    return m
-
-
-# Absence claims use the generous matcher, per parse/match.py's own argument. It returns
-# a TUPLE (bool, why) and a tuple is always truthy, so the [0] is load bearing: without it
-# every comparison matches and the absence list empties out silently.
-_m = _load("scheme_match", os.path.join(HERE, "match.py"))
-probably_same = _m.probably_same
 
 PUBLISH_THRESHOLD = 7
 
@@ -489,6 +476,7 @@ def run(threshold=PUBLISH_THRESHOLD):
     by_hoa = {x["hoa"]: x for x in labels["labels"]}
 
     listed = myscheme_karnataka()
+    idx = myscheme_index(listed)
     # The confirmed entries above, applied. The list was written and never read, so
     # Bhagya Lakshmi, Udyogini and Vidyasiri went on being published as absent from a
     # portal that lists them. Only while the myScheme record it names is still there.
@@ -499,8 +487,7 @@ def run(threshold=PUBLISH_THRESHOLD):
     rows = []
     for r in entries:
         total, ev = score_entry(r["hoa"], r["name"], r.get("purpose"))
-        # [0] because probably_same returns (bool, why) and a tuple is always truthy.
-        in_ms = r["name"] in known or any(probably_same(r["name"], k)[0] for k in listed)
+        in_ms = r["name"] in known or bool(myscheme_hits(r["name"], idx))
         rows.append({
             "hoa": r["hoa"], "name": r["name"], "purpose": r.get("purpose"),
             "be_lakh": r.get("be_lakh"), "books": sorted(r.get("books") or []),

@@ -234,7 +234,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule, myscheme_records  # noqa: E402
+from classify_common import excluded_by_rule, myscheme_hits, myscheme_index, \
+    myscheme_records  # noqa: E402
 
 
 def _load(name, path):
@@ -243,12 +244,6 @@ def _load(name, path):
     spec.loader.exec_module(m)
     return m
 
-
-# Absence claims use the generous matcher, per parse/match.py's own argument. It returns
-# a TUPLE (bool, why) and a tuple is always truthy, so the [0] is load bearing: without it
-# every comparison matches and the absence list empties out silently.
-_m = _load("scheme_match", os.path.join(HERE, "match.py"))
-probably_same = _m.probably_same
 
 PUBLISH_THRESHOLD = 10
 
@@ -951,64 +946,6 @@ def myscheme_tamilnadu():
     return myscheme_records("Tamil Nadu")
 
 
-def myscheme_index(listed):
-    """Token, skeleton and acronym indexes over the myScheme names.
-
-    6,220 heads against 234 records is 1.46 million calls to probably_same, and each one
-    re-tokenises, re-skeletonises and re-derives the acronyms of both names from scratch.
-    Naively that is four minutes of a run that otherwise takes forty seconds. This is the
-    same indexed join parse/tamilnadu.py describes doing, and it is an EXACT superset
-    rather than a speed-for-accuracy trade: every branch in probably_same that can return
-    True requires the pair to share a content token, share a transliteration skeleton, or
-    stand in an acronym relation, so a pair that shares none of the three cannot match.
-
-      similarity >= 0.75      similarity is min(ratio, (overlap + ratio) / 2) and ratio
-                              cannot exceed 1, so an overlap of zero caps it at 0.5.
-      content word containment  the smaller token set is non-empty and inside the larger.
-      one name begins with the other  the shorter name's content words are all in the longer.
-      transliteration variant   the smaller skeleton set is inside the larger.
-      acronym match             an acronym of one is a token or an acronym of the other.
-      acronym containment       one acronym is a substring of the other.
-
-    The one branch this does not index exactly is the prefix rule for a name made entirely
-    of stop words, which cannot occur in a scheme name.
-    """
-    tok, skel, acro = {}, {}, {}
-    facts = {}
-    for n in listed:
-        t = set(_m.tokens(n))
-        s = set(_m.skeletons(n))
-        a = set(_m.acronyms(n))
-        facts[n] = (t, s, a)
-        for k in t:
-            tok.setdefault(k, set()).add(n)
-        for k in s:
-            skel.setdefault(k, set()).add(n)
-        for k in a:
-            acro.setdefault(k, set()).add(n)
-    return {"tok": tok, "skel": skel, "acro": acro, "facts": facts,
-            "acronyms": sorted(acro)}
-
-
-def myscheme_candidates(name, idx):
-    """Every myScheme name that could possibly match this one, sorted."""
-    t = set(_m.tokens(name))
-    s = set(_m.skeletons(name))
-    a = set(_m.acronyms(name))
-    out = set()
-    for k in t:
-        out |= idx["tok"].get(k, set())
-        out |= idx["acro"].get(k, set())
-    for k in s:
-        out |= idx["skel"].get(k, set())
-    for k in a:
-        out |= idx["tok"].get(k, set())
-        for other in idx["acronyms"]:
-            if k in other or other in k:
-                out |= idx["acro"][other]
-    return sorted(out)
-
-
 def sweep(rows, lo, hi):
     """Precision and recall at every threshold, so the operating point is visible."""
     out = []
@@ -1042,9 +979,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
     for r in entries:
         heads = obj.get(r["hoa"], [])
         total, ev = score_entry(r["name"], r["hoa"], heads)
-        # [0] because probably_same returns (bool, why) and a tuple is always truthy.
-        hit = [n for n in myscheme_candidates(r["name"], idx)
-               if probably_same(r["name"], n)[0]]
+        hit = myscheme_hits(r["name"], idx)
         rows.append({
             "key": r["hoa"],
             "hoa": r["hoa"],

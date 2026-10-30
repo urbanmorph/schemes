@@ -67,7 +67,6 @@ weak to carry a positive when "Assistance to States for Conduct of Livestock Cen
 """
 
 import argparse
-import collections
 import json
 import os
 import re
@@ -76,9 +75,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from match import probably_same, tokens as m_tokens, skeleton as m_skeleton, \
-    acronyms as m_acronyms  # noqa: E402
-from classify_common import excluded_by_rule, myscheme_records  # noqa: E402
+from classify_common import excluded_by_rule, joiner, myscheme_records  # noqa: E402
 
 # A benefit a person, household, farmer, student, worker or firm receives. "assistance" is
 # deliberately absent and "mission" deliberately present; both are measured in
@@ -177,21 +174,7 @@ def run():
     lab = {c: labels[c] == "scheme" for c in sampled}
 
     ms = myscheme_haryana()
-    idx = collections.defaultdict(set)
-    for i, n in enumerate(ms):
-        for k in (set(m_tokens(n)) | {m_skeleton(t) for t in m_tokens(n)}
-                  | {a for a in m_acronyms(n) if len(a) >= 5}):
-            idx[k].add(i)
-
-    def in_myscheme(name):
-        hits = collections.Counter()
-        for k in sorted(set(m_tokens(name)) | {m_skeleton(t) for t in m_tokens(name)}
-                        | {a for a in m_acronyms(name) if len(a) >= 5}):
-            hits.update(idx.get(k, ()))
-        for i, n in sorted(hits.items(), key=lambda kv: (-kv[1], kv[0]))[:40]:
-            if n >= 2 and probably_same(name, ms[i])[0]:
-                return ms[i]
-        return None
+    in_myscheme = joiner(ms)
 
     out = []
     for r in sorted(rows, key=lambda x: x["code"]):

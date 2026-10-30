@@ -41,7 +41,6 @@ the last error in the file: names are normalised before matching now.
 """
 
 import argparse
-import collections
 import json
 import os
 import re
@@ -50,9 +49,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from match import probably_same, tokens as m_tokens, skeleton as m_skeleton, \
-    acronyms as m_acronyms  # noqa: E402
-from classify_common import excluded_by_rule, myscheme_records  # noqa: E402
+from classify_common import excluded_by_rule, joiner, myscheme_records  # noqa: E402
 
 BENEFIT = re.compile(
     r"\b(yojana|yojna|scholarship|pension|insurance|awas|meal|nutrition|poshan|anganwadi|"
@@ -114,25 +111,6 @@ def score(r):
         s += 1
         ev.append(("+1", "the Social Welfare department funds it"))
     return s, ev
-
-
-def joiner(names):
-    idx = collections.defaultdict(set)
-    for i, n in enumerate(names):
-        for k in (set(m_tokens(n)) | {m_skeleton(t) for t in m_tokens(n)}
-                  | {a for a in m_acronyms(n) if len(a) >= 5}):
-            idx[k].add(i)
-
-    def hit(name):
-        c = collections.Counter()
-        for k in sorted(set(m_tokens(name)) | {m_skeleton(t) for t in m_tokens(name)}
-                        | {a for a in m_acronyms(name) if len(a) >= 5}):
-            c.update(idx.get(k, ()))
-        for i, n in sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))[:40]:
-            if n >= 2 and probably_same(name, names[i])[0]:
-                return names[i]
-        return None
-    return hit
 
 
 def run():

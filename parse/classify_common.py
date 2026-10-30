@@ -27,7 +27,6 @@ reason this file exists:
               head is an annoyance; naming one as hidden is a false accusation.
 """
 
-import collections
 import glob
 import json
 import os
@@ -37,7 +36,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from match import probably_same, tokens, skeleton, acronyms  # noqa: E402
+from match import probably_same, similarity, tokens, skeletons, acronyms  # noqa: E402
 
 # Underscores and slashes are word characters to a regex and word breaks to a reader.
 # TRIPURA_NATIONAL HEALTH MISSION did not match \bnational health mission\b for exactly
@@ -98,29 +97,71 @@ def myscheme_records(state):
     return sorted(out)
 
 
-def joiner(names, cap=40):
-    """A name -> matching myScheme record, or None.
+def myscheme_index(listed):
+    """Token, skeleton and acronym indexes over the myScheme names.
 
-    Candidates are ranked on (shared index keys, index) and capped. Never on
-    Counter.most_common: its tie-break is insertion order, insertion order comes from
-    iterating a set of strings, and hash randomisation reorders that every run. The site
-    build had this bug and its page count moved on its own between builds.
+    An EXACT superset of the pairs probably_same can accept, not a speed-for-accuracy
+    trade: every branch in probably_same that can return True needs the pair to share a
+    content token, share a transliteration skeleton, or stand in an acronym relation.
+
+      similarity >= 0.75      similarity is min(ratio, (overlap + ratio) / 2) and ratio
+                              cannot exceed 1, so an overlap of zero caps it at 0.5.
+      content word containment  the smaller token set is non-empty and inside the larger.
+      one name begins with the other  the shorter name's content words are all in the longer.
+      transliteration variant   the smaller skeleton set is inside the larger.
+      acronym match             an acronym of one is a token or an acronym of the other.
+      acronym containment       one acronym is a substring of the other.
+
+    The one branch this does not index exactly is the prefix rule for a name made entirely
+    of stop words, which cannot occur in a scheme name.
+
+    It replaced a joiner that ranked records by how many index keys they shared, kept the
+    top 40 and required two shared keys. That changed the answer, not only the speed:
+    "Shakthi Scheme" shares one skeleton with "Shakti Scheme" and never reached
+    probably_same, which accepts the pair.
     """
-    idx = collections.defaultdict(set)
-    for i, n in enumerate(names):
-        for k in (set(tokens(n)) | {skeleton(t) for t in tokens(n)}
-                  | {a for a in acronyms(n) if len(a) >= 5}):
-            idx[k].add(i)
+    tok, skel, acro = {}, {}, {}
+    for n in listed:
+        for k in set(tokens(n)):
+            tok.setdefault(k, set()).add(n)
+        for k in set(skeletons(n)):
+            skel.setdefault(k, set()).add(n)
+        for k in set(acronyms(n)):
+            acro.setdefault(k, set()).add(n)
+    return {"tok": tok, "skel": skel, "acro": acro, "acronyms": sorted(acro)}
+
+
+def myscheme_candidates(name, idx):
+    """Every myScheme name that could possibly match this one, sorted."""
+    out = set()
+    for k in set(tokens(name)):
+        out |= idx["tok"].get(k, set())
+        out |= idx["acro"].get(k, set())
+    for k in set(skeletons(name)):
+        out |= idx["skel"].get(k, set())
+    for k in set(acronyms(name)):
+        out |= idx["tok"].get(k, set())
+        for other in idx["acronyms"]:
+            if k in other or other in k:
+                out |= idx["acro"][other]
+    return sorted(out)
+
+
+def myscheme_hits(name, idx):
+    """Every myScheme name probably_same accepts for this one, sorted."""
+    # [0] because probably_same returns (bool, why) and a tuple is always truthy.
+    return [n for n in myscheme_candidates(name, idx) if probably_same(name, n)[0]]
+
+
+def joiner(names):
+    """A name -> its matching myScheme record, or None. The same pairs as calling
+    probably_same against every record; where several match, the most similar, then the
+    first by name, so the answer does not depend on set order."""
+    idx = myscheme_index(names)
 
     def hit(name):
-        c = collections.Counter()
-        for k in sorted(set(tokens(name)) | {skeleton(t) for t in tokens(name)}
-                        | {a for a in acronyms(name) if len(a) >= 5}):
-            c.update(idx.get(k, ()))
-        for i, n in sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))[:cap]:
-            if n >= 2 and probably_same(name, names[i])[0]:
-                return names[i]
-        return None
+        hits = myscheme_hits(name, idx)
+        return min(hits, key=lambda n: (-similarity(name, n), n)) if hits else None
     return hit
 
 
@@ -283,3 +324,32 @@ def report(key, out, census, right, errors, ms, unlabelled, publish):
         print(f"     not a scheme: {e[:68]}")
     print(f"  myScheme lists {len(ms)}; "
           f"{sum(1 for o in census if not o.get('myscheme_name'))} of these reach it nowhere")
+
+
+def selftest():
+    bad = 0
+    ms = ["Shakti Scheme", "Pre-Matric Scholarship to Scheduled Caste Students",
+          "Jal Jeevan Mission", "Mukhya Mantri Kanya Utthan Yojana", "Old Age Pension"]
+    hit = joiner(ms)
+    rows = ["Shakthi Scheme", "Pre-Matric Scholarship Scheme", "Jal Jeevan Mission (JJM)",
+            "Kanya Utthan Yojana", "Buildings- Animal Husbandry", "Old Age Pension Scheme"]
+    for label, got, want in [
+            ("a transliteration variant joins (Shakthi / Shakti)",
+             hit("Shakthi Scheme"), "Shakti Scheme"),
+            ("a generic name does not join a qualified sibling",
+             hit("Pre-Matric Scholarship Scheme"), None),
+            ("an unrelated head joins nothing", hit("Buildings- Animal Husbandry"), None),
+            ("the joiner agrees with probably_same over every record",
+             [hit(r) for r in rows],
+             [next((n for n in ms if probably_same(r, n)[0]), None) for r in rows])]:
+        ok = got == want
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}" + ("" if ok else f": want {want!r} got {got!r}"))
+    return bad
+
+
+if __name__ == "__main__":
+    if sys.argv[1:] == ["--self-test"]:
+        print("classify_common self-test")
+        sys.exit(1 if selftest() else 0)
+    sys.exit("usage: python3 parse/classify_common.py --self-test")
