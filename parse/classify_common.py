@@ -84,16 +84,18 @@ def excluded_by_rule(name):
 
 
 def myscheme_records(state):
-    """myScheme's own state-level records for one state, from the archived snapshot."""
-    out = []
+    """myScheme's own state-level records for one state, from the archived snapshot. Names
+    are stripped: myScheme stores some with stray spaces ("Arivu Education Loan Scheme ")."""
+    out = set()
     for f in glob.glob(os.path.join(ROOT, "data", "myscheme", "schemes", "*.json")):
-        d = json.load(open(f, encoding="utf-8"))
+        with open(f, encoding="utf-8") as fh:
+            d = json.load(fh)
         if state not in ((d.get("_list") or {}).get("beneficiaryState") or []):
             continue
-        b = (d.get("en") or {}).get("basicDetails") or {}
-        if b.get("schemeName"):
-            out.append(b["schemeName"])
-    return sorted(set(out))
+        n = ((d.get("en") or {}).get("basicDetails") or {}).get("schemeName")
+        if n and n.strip():
+            out.add(n.strip())
+    return sorted(out)
 
 
 def joiner(names, cap=40):

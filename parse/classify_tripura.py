@@ -52,7 +52,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
 from match import probably_same, tokens as m_tokens, skeleton as m_skeleton, \
     acronyms as m_acronyms  # noqa: E402
-from classify_common import excluded_by_rule  # noqa: E402
+from classify_common import excluded_by_rule, myscheme_records  # noqa: E402
 
 BENEFIT = re.compile(
     r"\b(yojana|yojna|scholarship|pension|insurance|awas|meal|nutrition|poshan|anganwadi|"
@@ -114,19 +114,6 @@ def score(r):
         s += 1
         ev.append(("+1", "the Social Welfare department funds it"))
     return s, ev
-
-
-def myscheme_records(state):
-    import glob
-    out = []
-    for f in glob.glob(os.path.join(ROOT, "data", "myscheme", "schemes", "*.json")):
-        d = json.load(open(f, encoding="utf-8"))
-        if state not in ((d.get("_list") or {}).get("beneficiaryState") or []):
-            continue
-        b = (d.get("en") or {}).get("basicDetails") or {}
-        if b.get("schemeName"):
-            out.append(b["schemeName"])
-    return sorted(set(out))
 
 
 def joiner(names):

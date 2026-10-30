@@ -182,7 +182,6 @@ keeps in BEAMS beside each scheme code, which is what Tamil Nadu does.
 """
 
 import argparse
-import glob
 import importlib.util
 import json
 import os
@@ -193,7 +192,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule  # noqa: E402
+from classify_common import excluded_by_rule, myscheme_records  # noqa: E402
 
 
 def _load(name, path):
@@ -750,17 +749,7 @@ def stratify(entries, target=380):
 
 
 def myscheme_maharashtra():
-    """Scheme names myScheme lists for Maharashtra. Sorted, so absence is reproducible."""
-    names = set()
-    for p in sorted(glob.glob(os.path.join(ROOT, "data", "myscheme", "schemes", "*.json"))):
-        d = json.load(open(p, encoding="utf-8"))
-        states = d.get("_list", {}).get("beneficiaryState") or []
-        if not any("maharashtra" in (s or "").lower() for s in states):
-            continue
-        n = ((d.get("en") or {}).get("basicDetails") or {}).get("schemeName")
-        if n and n.strip():
-            names.add(n.strip())
-    return sorted(names)
+    return myscheme_records("Maharashtra")
 
 
 def myscheme_index(listed):

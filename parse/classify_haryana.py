@@ -78,7 +78,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
 from match import probably_same, tokens as m_tokens, skeleton as m_skeleton, \
     acronyms as m_acronyms  # noqa: E402
-from classify_common import excluded_by_rule  # noqa: E402
+from classify_common import excluded_by_rule, myscheme_records  # noqa: E402
 
 # A benefit a person, household, farmer, student, worker or firm receives. "assistance" is
 # deliberately absent and "mission" deliberately present; both are measured in
@@ -158,16 +158,7 @@ def score(r):
 
 
 def myscheme_haryana():
-    import glob
-    out = []
-    for f in glob.glob(os.path.join(ROOT, "data", "myscheme", "schemes", "*.json")):
-        d = json.load(open(f, encoding="utf-8"))
-        if "Haryana" not in ((d.get("_list") or {}).get("beneficiaryState") or []):
-            continue
-        b = (d.get("en") or {}).get("basicDetails") or {}
-        if b.get("schemeName"):
-            out.append(b["schemeName"])
-    return sorted(set(out))
+    return myscheme_records("Haryana")
 
 
 def run():
