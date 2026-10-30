@@ -465,29 +465,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 100.0,
-   "code": "TR288",
-   "department": "Horticulture & Soil Conservation",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoas": [
-    "2402-00-102-87-61-49",
-    "2402-00-789-87-61-49",
-    "2402-00-796-87-61-49"
-   ],
-   "in_myscheme_tripura": false,
-   "key": "TR288",
-   "myscheme_name": null,
-   "name": "National Mission on Edible Oil - Oil Palm - Tripura (100 Percent Central Share)",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 4500.0,
    "code": "TR3",
    "department": "Agriculture and Farmers Welfare",
@@ -680,32 +657,6 @@
    "key": "TR68",
    "myscheme_name": null,
    "name": "RASHTRIYA KRISHI VIKAS YOJANA TRIPURA",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 4788.89,
-   "code": "TR70",
-   "department": "Horticulture & Soil Conservation",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoas": [
-    "2402-00-102-90-34-49",
-    "2402-00-102-91-34-49",
-    "2402-00-789-90-34-49",
-    "2402-00-789-91-34-49",
-    "2402-00-796-90-34-49",
-    "2402-00-796-91-34-49"
-   ],
-   "in_myscheme_tripura": false,
-   "key": "TR70",
-   "myscheme_name": null,
-   "name": "National Mission on Edible Oil - Oil Palm. (Krishionnati Yojana) Tripura",
    "score": 3,
    "verdict": "scheme"
   },
@@ -1177,32 +1128,6 @@
    "key": "TR68",
    "myscheme_name": null,
    "name": "RASHTRIYA KRISHI VIKAS YOJANA TRIPURA",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 4788.89,
-   "code": "TR70",
-   "department": "Horticulture & Soil Conservation",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoas": [
-    "2402-00-102-90-34-49",
-    "2402-00-102-91-34-49",
-    "2402-00-789-90-34-49",
-    "2402-00-789-91-34-49",
-    "2402-00-796-90-34-49",
-    "2402-00-796-91-34-49"
-   ],
-   "in_myscheme_tripura": false,
-   "key": "TR70",
-   "myscheme_name": null,
-   "name": "National Mission on Edible Oil - Oil Palm. (Krishionnati Yojana) Tripura",
    "score": 3,
    "verdict": "scheme"
   },
@@ -1710,29 +1635,6 @@
    "key": "TR281",
    "myscheme_name": null,
    "name": "Tripura Deendayal Jan Aajeevika Yojana (Shehari)",
-   "score": 3,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 100.0,
-   "code": "TR288",
-   "department": "Horticulture & Soil Conservation",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoas": [
-    "2402-00-102-87-61-49",
-    "2402-00-789-87-61-49",
-    "2402-00-796-87-61-49"
-   ],
-   "in_myscheme_tripura": false,
-   "key": "TR288",
-   "myscheme_name": null,
-   "name": "National Mission on Edible Oil - Oil Palm - Tripura (100 Percent Central Share)",
    "score": 3,
    "verdict": "scheme"
   },
@@ -4228,9 +4130,9 @@
     "2402-00-789-87-61-49",
     "2402-00-796-87-61-49"
    ],
-   "in_myscheme_tripura": false,
+   "in_myscheme_tripura": true,
    "key": "TR288",
-   "myscheme_name": null,
+   "myscheme_name": "National Mission on Edible Oils- Oil Palm",
    "name": "National Mission on Edible Oil - Oil Palm - Tripura (100 Percent Central Share)",
    "score": 3,
    "verdict": "scheme"
@@ -4738,9 +4640,9 @@
     "2402-00-796-90-34-49",
     "2402-00-796-91-34-49"
    ],
-   "in_myscheme_tripura": false,
+   "in_myscheme_tripura": true,
    "key": "TR70",
-   "myscheme_name": null,
+   "myscheme_name": "National Mission on Edible Oils- Oil Palm",
    "name": "National Mission on Edible Oil - Oil Palm. (Krishionnati Yojana) Tripura",
    "score": 3,
    "verdict": "scheme"
@@ -5090,7 +4992,7 @@
    "verdict": "scheme"
   }
  ],
- "built": "2026-10-29T04:24:53Z",
+ "built": "2026-10-30T16:43:36Z",
  "caveat": "One row here is one State Level Scheme code as Tripura's own budget system numbers them. A scheme funded under more than one demand has its provisions ADDED and every demand recorded. This book covers the schemes onboarded on SNS SPARSH, which is the single-nodal-agency route through which centrally sponsored money flows, so a purely state-funded scheme outside that route does not appear here and this is a floor on Tripura's schemes rather than a count of them. The centrally sponsored schemes are published separately under centrally_sponsored_schemes, because a CSS name is the Government of India's name for a scheme and not Tripura's.",
  "classified_not_scheme": 100,
  "classified_scheme": 34,

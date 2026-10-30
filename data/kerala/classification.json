@@ -3059,7 +3059,7 @@
   }
  ],
  "absent_distinct_names": 96,
- "absent_from_myscheme_all_rows": 2610,
+ "absent_from_myscheme_all_rows": 2615,
  "absent_from_myscheme_and_classified_scheme": 97,
  "absent_lakh": 108875.24,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Kerala, because claiming absence should require that even a generous matcher finds nothing. The list is a floor twice over. Once because the matcher over-joins: 8 of its 21 joins are wrong, so a row counted present may not be. And once because recall at the published bar is 12%: a real scheme with a Malayalam name, no benefit word and a head of account outside 2225 and 2235 cannot clear a high bar on the evidence the Annual Plan prints.",
@@ -56090,7 +56090,7 @@
    "hoas": [
     "2810-00-800-79"
    ],
-   "in_myscheme_kerala": true,
+   "in_myscheme_kerala": false,
    "key": "code:NRE 003",
    "major_heads": [
     "2810"
@@ -56098,13 +56098,7 @@
    "minor_heads": [
     "800"
    ],
-   "myscheme_match": [
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom : Small Cardamom Irrigation Land Development : Irrigation / Water Storage Structure (nos)",
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom:  Small Cardamom Irrigation Land Development : Irrigation equipment (Nos.)",
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom: Post-Harvest Improvement: ICCD for Small Cardamom (nos) (Improved Cardamom Curing Devices)",
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom: \\Small Cardamom Replanting/New Planting: For Kerala & Tamilnadu",
-    "Pension Scheme for the Tappers in Small Rubber Plantations"
-   ],
+   "myscheme_match": null,
    "name": "Kerala (Training to Kudumbashree workers) MINERALS & SMALL INDUSTRIES",
    "score": 0,
    "sector": "VILLAGE AND SMALL INDUSTRIES",
@@ -77666,7 +77660,7 @@
    "hoas": [
     "3425-60-200-71-01"
    ],
-   "in_myscheme_kerala": true,
+   "in_myscheme_kerala": false,
    "key": "code:SSR 002",
    "major_heads": [
     "3425"
@@ -77674,11 +77668,7 @@
    "minor_heads": [
     "200"
    ],
-   "myscheme_match": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ],
+   "myscheme_match": null,
    "name": "Research and Development Institutions under Kerala State Council for Science, Technology and Environment",
    "score": -4,
    "sector": "Scientific Services and Research",
@@ -77742,7 +77732,7 @@
    "hoas": [
     "3425-60-200-71-02"
    ],
-   "in_myscheme_kerala": true,
+   "in_myscheme_kerala": false,
    "key": "code:SSR 023",
    "major_heads": [
     "3425"
@@ -77750,11 +77740,7 @@
    "minor_heads": [
     "200"
    ],
-   "myscheme_match": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ],
+   "myscheme_match": null,
    "name": "Infrastructure strengthening of Kerala State Council for Science, Technology and Environment",
    "score": -7,
    "sector": "Scientific Services and Research",
@@ -77788,7 +77774,7 @@
     "2210-05-105-52",
     "3425-60-200-71-03"
    ],
-   "in_myscheme_kerala": true,
+   "in_myscheme_kerala": false,
    "key": "code:SSR 024",
    "major_heads": [
     "2210",
@@ -77798,11 +77784,7 @@
     "105",
     "200"
    ],
-   "myscheme_match": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ],
+   "myscheme_match": null,
    "name": "Schemes and Programmes - Kerala State Council for Science, Technology and Environment",
    "score": -3,
    "sector": "Scientific Services and Research",
@@ -77891,7 +77873,7 @@
    "hoas": [
     "3425-60-200-67"
    ],
-   "in_myscheme_kerala": true,
+   "in_myscheme_kerala": false,
    "key": "code:SSR 046",
    "major_heads": [
     "3425"
@@ -77899,11 +77881,7 @@
    "minor_heads": [
     "200"
    ],
-   "myscheme_match": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ],
+   "myscheme_match": null,
    "name": "Special Programmes of Kerala State Council for Science,Technology and Environment",
    "score": -4,
    "sector": "Scientific Services and Research",
@@ -110968,7 +110946,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T18:04:29Z",
+ "built": "2026-10-30T16:43:14Z",
  "classified_not_scheme": 2531,
  "classified_scheme": 98,
  "classified_scheme_distinct_names": 97,
@@ -123095,53 +123073,6 @@
    ]
   },
   {
-   "code": "NRE 003",
-   "kerala": "Kerala (Training to Kudumbashree workers) MINERALS & SMALL INDUSTRIES",
-   "myscheme": [
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom : Small Cardamom Irrigation Land Development : Irrigation / Water Storage Structure (nos)",
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom:  Small Cardamom Irrigation Land Development : Irrigation equipment (Nos.)",
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom: Post-Harvest Improvement: ICCD for Small Cardamom (nos) (Improved Cardamom Curing Devices)",
-    "Integrated Scheme for Export Promotion & Quality Improvement in Spices and Research and Development of Cardamom: \\Small Cardamom Replanting/New Planting: For Kerala & Tamilnadu",
-    "Pension Scheme for the Tappers in Small Rubber Plantations"
-   ]
-  },
-  {
-   "code": "SSR 002",
-   "kerala": "Research and Development Institutions under Kerala State Council for Science, Technology and Environment",
-   "myscheme": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ]
-  },
-  {
-   "code": "SSR 023",
-   "kerala": "Infrastructure strengthening of Kerala State Council for Science, Technology and Environment",
-   "myscheme": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ]
-  },
-  {
-   "code": "SSR 024",
-   "kerala": "Schemes and Programmes - Kerala State Council for Science, Technology and Environment",
-   "myscheme": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ]
-  },
-  {
-   "code": "SSR 046",
-   "kerala": "Special Programmes of Kerala State Council for Science,Technology and Environment",
-   "myscheme": [
-    "KSCSTE Emeritus Scientist Scheme",
-    "KSCSTE Post-Doctoral Fellowship Programme",
-    "KSCSTE Research Fellowship"
-   ]
-  },
-  {
    "code": "SWE 093 (11)",
    "kerala": "Snehapoorvam",
    "myscheme": [
@@ -123198,10 +123129,10 @@
    ]
   }
  ],
- "myscheme_join_defects_note": "All 19 joins, listed so a reader can check them rather than take the absence count on trust. Eight are wrong: the four Kerala State Council for Science, Technology and Environment rows join three KSCSTE fellowships on the shared acronym, 'Financial Assistance to SI-MET' joins 'Financial Assistance To Ex-Convicts' on two content words, and the garbled row 'Kerala (Training to Kudumbashree workers) MINERALS & SMALL I...' joins five cardamom schemes. parse/kerala.py records one of these in its own known_bad_joins and argues there, correctly, that the direction of the error is the safe one: a false match means a Kerala scheme is treated as PRESENT on myScheme and is therefore not claimed absent, so it costs an under-reported absence rather than a false accusation.",
- "myscheme_joins": 19,
+ "myscheme_join_defects_note": "All 14 joins, listed so a reader can check them rather than take the absence count on trust. Eight are wrong: the four Kerala State Council for Science, Technology and Environment rows join three KSCSTE fellowships on the shared acronym, 'Financial Assistance to SI-MET' joins 'Financial Assistance To Ex-Convicts' on two content words, and the garbled row 'Kerala (Training to Kudumbashree workers) MINERALS & SMALL I...' joins five cardamom schemes. parse/kerala.py records one of these in its own known_bad_joins and argues there, correctly, that the direction of the error is the safe one: a false match means a Kerala scheme is treated as PRESENT on myScheme and is therefore not claimed absent, so it costs an under-reported absence rather than a false accusation.",
+ "myscheme_joins": 14,
  "myscheme_kerala_records": 87,
- "myscheme_record_count_note": "Counted live off data/myscheme/schemes/, every record whose beneficiaryState list mentions Kerala. parse/kerala.py's own run over the same directory found eleven joins where this one finds 19, because the myScheme snapshot has grown since. Both numbers are reported rather than reconciled, because a silently moving denominator is exactly the kind of thing a register should show rather than smooth over.",
+ "myscheme_record_count_note": "Counted live off data/myscheme/schemes/, every record whose beneficiaryState list mentions Kerala. parse/kerala.py's own run over the same directory found eleven joins where this one finds 14, because the myScheme snapshot has grown since. Both numbers are reported rather than reconciled, because a silently moving denominator is exactly the kind of thing a register should show rather than smooth over.",
  "no_figure_at_all": 3,
  "publish_threshold": 9,
  "question": "Which of Kerala's 2,629 Annual Plan rows are welfare schemes, and which are institutions, works heads, departmental programmes or accounting heads?",

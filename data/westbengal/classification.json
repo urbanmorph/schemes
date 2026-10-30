@@ -3890,7 +3890,7 @@
   }
  ],
  "absent_distinct_names": 136,
- "absent_from_myscheme_all_rows": 8917,
+ "absent_from_myscheme_all_rows": 8926,
  "absent_from_myscheme_and_classified_scheme": 179,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged West Bengal, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 126 joins over the whole corpus and 51 of them are wrong, so a row counted present may not be, and the absent count here is if anything an understatement. The surviving list is a floor for the opposite reason too: no book prints a purpose line, recall at the published bar is 21%, and a scheme the state names Lakshmir Bhandar and books as a plain grant-in-aid cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
@@ -169179,13 +169179,15 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235-60-200-096",
-   "in_myscheme_westbengal": false,
+   "in_myscheme_westbengal": true,
    "key": "2235-60-200-096",
    "letter_spaced": false,
    "major_head": "2235",
    "minor_head": "200",
    "minor_head_name": "OTHER PROGRAMMES",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Death Benefit"
+   ],
    "name": "One-time Assistance under FPS Dealer Bandhu (Death Benefit) Scheme 2021 [FS]",
    "object_heads": [
     "31"
@@ -209503,13 +209505,15 @@
    ],
    "hand_label": null,
    "hoa": "2405-00-121-001",
-   "in_myscheme_westbengal": false,
+   "in_myscheme_westbengal": true,
    "key": "2405-00-121-001",
    "letter_spaced": false,
    "major_head": "2405",
    "minor_head": "121",
    "minor_head_name": "WELFARE SCHEMES FOR FISHERMEN",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Death Benefit"
+   ],
    "name": "State contribution as grants to Fishermen for Matsyajeebi Bandhu (Death Benefit) Scheme” [FI]",
    "object_heads": [
     "31"
@@ -250500,15 +250504,13 @@
    ],
    "hand_label": null,
    "hoa": "2851-00-101-001",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2851-00-101-001",
    "letter_spaced": false,
    "major_head": "2851",
    "minor_head": "101",
    "minor_head_name": "INDUSTRIAL ESTATES",
-   "myscheme_match": [
-    "West Bengal Incentive Scheme for Approved Industrial Park (SAIP) for MSMEs: Incentive for Common Effluent Treatment Plant (CETP)"
-   ],
+   "myscheme_match": null,
    "name": "Upgradation/Renovation/Maintenace of existing CETP & its Network at Calcutta Leather Complex [CS]",
    "object_heads": [
     "13",
@@ -251007,17 +251009,13 @@
    "evidence": [],
    "hand_label": null,
    "hoa": "2851-00-102-039",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2851-00-102-039",
    "letter_spaced": false,
    "major_head": "2851",
    "minor_head": "102",
    "minor_head_name": "SMALL SCALE INDUSTRIES",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Power Subsidy (PS)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Energy Efficiency (EES)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Patent Registration (PRS)"
-   ],
+   "myscheme_match": null,
    "name": "State Contribution towards Raising and Accelerating MSME Programe (RAMP) (RA-MSME) [CS]",
    "object_heads": [
     "31"
@@ -252384,16 +252382,13 @@
    ],
    "hand_label": null,
    "hoa": "2851-00-110-007",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2851-00-110-007",
    "letter_spaced": true,
    "major_head": "2851",
    "minor_head": "110",
    "minor_head_name": "COMPOSITE VILLAGE AND SMALL INDUSTRIES AND CO-OPERATIVES",
-   "myscheme_match": [
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Assistance to Viable and Potentially Viable PWCS",
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Support for One Time Settlement (OTS) of NPA Accounts of PWCS"
-   ],
+   "myscheme_match": null,
    "name": "E x p e n d i t u r e f o r p a y m e n t o f o u t s t a n d i n g d u e s o f Tantuja/Tantusree/Manjusha to the Primary Weavers Cooperative Societies [CS]",
    "object_heads": [
     "50"
@@ -252874,16 +252869,13 @@
    ],
    "hand_label": "not_scheme",
    "hoa": "2851-00-110-067",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2851-00-110-067",
    "letter_spaced": false,
    "major_head": "2851",
    "minor_head": "110",
    "minor_head_name": "COMPOSITE VILLAGE AND SMALL INDUSTRIES AND CO-OPERATIVES",
-   "myscheme_match": [
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Assistance to Viable and Potentially Viable PWCS",
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Support for One Time Settlement (OTS) of NPA Accounts of PWCS"
-   ],
+   "myscheme_match": null,
    "name": "Incentives to the PWCSS/Handloom Clusters/Handloom SHG/Handloom Fabtics exporters etc.under Textiles policy",
    "object_heads": [
     "31",
@@ -255829,16 +255821,13 @@
    ],
    "hand_label": null,
    "hoa": "2851-00-800-007",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2851-00-800-007",
    "letter_spaced": true,
    "major_head": "2851",
    "minor_head": "800",
    "minor_head_name": "OTHER EXPENDITURE",
-   "myscheme_match": [
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Assistance to Viable and Potentially Viable PWCS",
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Support for One Time Settlement (OTS) of NPA Accounts of PWCS"
-   ],
+   "myscheme_match": null,
    "name": "E x p e n d i t u r e f o r p a y m e n t o f o u t s t a n d i n g d u e s o f Tantuja/Tantusree/Manjusha to the Primary Weavers Cooperative Societies [CS]",
    "object_heads": [
     "70"
@@ -257030,16 +257019,13 @@
    ],
    "hand_label": null,
    "hoa": "2851-00-800-064",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "2851-00-800-064",
    "letter_spaced": true,
    "major_head": "2851",
    "minor_head": "800",
    "minor_head_name": "OTHER EXPENDITURE",
-   "myscheme_match": [
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Assistance to Viable and Potentially Viable PWCS",
-    "West Bengal Handloom and Khadi Weavers Financial Benefit Scheme 2024: Support for One Time Settlement (OTS) of NPA Accounts of PWCS"
-   ],
+   "myscheme_match": null,
    "name": "E x p e n d i t u r e f o r p a y m e n t o f o u t s t a n d i n g d u e s o f Tantuja/Tantusree/Manjusha to the Primary Weavers Cooperative Societies [CS]",
    "object_heads": [
     "70"
@@ -282786,17 +282772,13 @@
    ],
    "hand_label": null,
    "hoa": "4070-00-001-022",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "4070-00-001-022",
    "letter_spaced": false,
    "major_head": "4070",
    "minor_head": "001",
    "minor_head_name": "DIRECTION AND ADMINISTRATION",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Power Subsidy (PS)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Energy Efficiency (EES)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Patent Registration (PRS)"
-   ],
+   "myscheme_match": null,
    "name": "Creation of IT Infrastructure and Computerization of MSME&T Department [CS]",
    "object_heads": [
     "60"
@@ -284335,17 +284317,13 @@
    ],
    "hand_label": null,
    "hoa": "4070-00-001-058",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "4070-00-001-058",
    "letter_spaced": false,
    "major_head": "4070",
    "minor_head": "001",
    "minor_head_name": "DIRECTION AND ADMINISTRATION",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Power Subsidy (PS)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Energy Efficiency (EES)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Patent Registration (PRS)"
-   ],
+   "myscheme_match": null,
    "name": "IT Infrastructure & computerisation of MSME Directorate [CS]",
    "object_heads": [
     "60"
@@ -285058,17 +285036,13 @@
    ],
    "hand_label": null,
    "hoa": "4070-00-800-023",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "4070-00-800-023",
    "letter_spaced": false,
    "major_head": "4070",
    "minor_head": "800",
    "minor_head_name": "OTHER EXPENDITURE",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Power Subsidy (PS)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Energy Efficiency (EES)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Patent Registration (PRS)"
-   ],
+   "myscheme_match": null,
    "name": "IT Infrastructure & computerization of MSME Directorate [CS]",
    "object_heads": [
     "60"
@@ -331140,15 +331114,13 @@
    ],
    "hand_label": null,
    "hoa": "4851-00-101-002",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "4851-00-101-002",
    "letter_spaced": false,
    "major_head": "4851",
    "minor_head": "101",
    "minor_head_name": "INDUSTRIAL ESTATES",
-   "myscheme_match": [
-    "West Bengal Incentive Scheme for Approved Industrial Park (SAIP) for MSMEs: Incentive for Common Effluent Treatment Plant (CETP)"
-   ],
+   "myscheme_match": null,
    "name": "Setting up of CETP & its Network at Calcutta Leather Complex [CS]",
    "object_heads": [
     "52",
@@ -331333,17 +331305,13 @@
    ],
    "hand_label": null,
    "hoa": "4851-00-102-025",
-   "in_myscheme_westbengal": true,
+   "in_myscheme_westbengal": false,
    "key": "4851-00-102-025",
    "letter_spaced": false,
    "major_head": "4851",
    "minor_head": "102",
    "minor_head_name": "SMALL SCALE INDUSTRIES",
-   "myscheme_match": [
-    "Banglashree for Micro, Small and Medium Enterprises: Power Subsidy (PS)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Energy Efficiency (EES)",
-    "Banglashree for Micro, Small and Medium Enterprises: Subsidy for Patent Registration (PRS)"
-   ],
+   "myscheme_match": null,
    "name": "WB MSME Venture Capital Fund [CS]",
    "object_heads": [
     "54"
@@ -351510,7 +351478,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T18:05:40Z",
+ "built": "2026-10-30T16:43:56Z",
  "classified_not_scheme": 8807,
  "classified_scheme": 217,
  "classified_scheme_distinct_names": 153,

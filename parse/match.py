@@ -205,7 +205,11 @@ NOT_ACRONYMS = ({w for group in QUALIFIERS for w in group} |
                 # that name; "e-Courts Phase II" was merged into "Swachh Bharat Mission
                 # Grameen PHASE I".
                 | {"power", "phase", "grid", "energy", "solar", "wind", "water",
-                   "health", "roads", "authority", "council", "committee", "society"})
+                   "health", "roads", "authority", "council", "committee", "society"}
+                # Tenth, from the acronym rewrite of 2026-10-30. SEED is the DNT scheme's
+                # acronym and also the word in "Seed Program", a record that is nothing but
+                # the word: Rs 101 cr moved between two unrelated Seed schemes on it.
+                | {"seed"})
 
 
 @_as_set
@@ -352,6 +356,341 @@ def _same_axis(g1, g2):
     return False
 
 
+# THE ACRONYM RULE, REWRITTEN ON 2026-10-30 AGAINST 1,310 HAND-LABELLED PAIRS.
+#
+# The rules this replaced accepted a pair whenever some acronym lined up: a capitalised
+# word against the same word in another name (MANTRI, POSHAN, BIRSA), two initialisms that
+# happen to coincide (PMSS is both "Prime Ministers Scholarship Scheme" and "Post Matric
+# Scholarship Scheme"), or an umbrella acronym shared by siblings (two AICTE scholarships,
+# 131 pairs of MSME schemes). Of the 1,310 pairs they accepted alone, 912 were different
+# schemes. tests/test_match_acronyms.py holds the labels and holds this rule to them.
+#
+# An acronym is evidence of exactly one thing: that a short form and a long form name the
+# same words. So it counts only when one name WRITES it (bracketed, in capitals, or is
+# nothing but it, "Svamitva") and the other writes it too or spells it out, and then two
+# things must hold:
+#
+#   1. If both names spell it out, the spellings agree word for word, allowing for
+#      transliteration (Maatru / Matru) and a word inside a longer one (Dayal / Deendayal).
+#      That is what rejects PMSS, STARS, and Silk against Sugar.
+#   2. What is left of the two names once the acronym and its spelling are removed agrees:
+#      empty on one side (the parent and its component, "PMMSY: Insulated Vehicles"), or one
+#      inside the other. That is what rejects the umbrella siblings and the names that only
+#      mention a body, an Act or a person.
+#
+# A qualifier left over on one side (Mukhyamantri, Urban) is a variant unless the other name
+# carries it too; that is what rejects the state's Mukhyamantri Rajya Krishi Vikas Yojana
+# against the Union's RKVY, which spell RKVY the same way. And a body (an agency, a
+# university, a corporation) is not the schemes it runs.
+
+# Words a budget line adds that say nothing about which scheme it is.
+_LEFTOVER_NOISE = ({"share", "central", "centre", "state", "states", "general", "scsp", "scp",
+                    "tsp", "css", "gia", "salary", "capital", "centrally", "sponsored",
+                    "assisted", "sector", "ocasps", "sna", "committed", "liabilities", "under",
+                    "including", "with", "through", "from", "amount", "met", "transfer",
+                    "transfers", "deduct", "payment", "grant", "grants", "erstwhile",
+                    "india", "union", "territory", "chandigarh", "puducherry", "pondicherry",
+                    "daman", "diu", "dadra", "nagar", "haveli", "dnh", "lakshadweep",
+                    "andaman", "nicobar", "jammu", "uttar", "madhya", "himachal", "arunachal",
+                    "west", "sca", "yojan", "yojane", "yojona", "plan", "sparsh"}
+                   | {w for w in NOT_ACRONYMS if w in {
+                       "odisha", "orissa", "bengal", "maharashtra", "karnataka", "kerala",
+                       "gujarat", "rajasthan", "punjab", "haryana", "assam", "bihar",
+                       "telangana", "andhra", "tamil", "nadu", "pradesh", "delhi", "goa",
+                       "sikkim", "manipur", "mizoram", "tripura", "meghalaya", "nagaland",
+                       "jharkhand", "chhattisgarh", "uttarakhand", "ladakh", "kashmir"}})
+
+
+_CODE = re.compile(r"\b[A-Z]{2,}(?:-[A-Z]{2,})+\b")
+
+
+def _codes(s):
+    """Codes written in capitals with hyphens, "DAY-NRLM", joined: daynrlm."""
+    return {c.replace("-", "").lower() for c in _CODE.findall(s or "")}
+
+
+def _code_parts(s):
+    """The pieces of those codes: day, nrlm."""
+    return {part.lower() for c in _CODE.findall(s or "") for part in c.split("-")}
+
+
+@functools.lru_cache(maxsize=_CACHE)
+def _words(s, joined=False):
+    """The words of a name with the acronyms it prints taken out, as acronyms() does.
+    joined reads a hyphenated word as one ("Ex-servicemen"), which is how RMEWF spells."""
+    printed = {norm(m).replace(" ", "") for m in
+               re.findall(r"\(([A-Za-z][A-Za-z0-9\-]{2,12})\)", s or "") if m == m.upper()}
+    printed |= {w.lower() for w in re.findall(r"\b([A-Z][A-Z0-9]{3,})\b", s or "")}
+    printed |= _code_parts(s)
+    text = re.sub(r"(?<=[A-Za-z])-(?=[A-Za-z])", "", s or "") if joined else s
+    out = []
+    for w in norm(text).split():
+        if w == "pm":
+            out += ["pradhan", "mantri"]       # PM-USP spells Pradhan Mantri, two letters
+        elif w not in printed:
+            out.append(w)
+    return tuple(out)
+
+
+def _spelling(words, x, whole=frozenset()):
+    """The run of words whose initials spell x, or None. Four readings: every word; every
+    word but the stop words; every word but stop words and words of two letters (the ka of
+    "Ude Desh ka Aam Nagrik"); and every word but of, for, and (YASASVI keeps its Scheme)."""
+    for skip in (lambda w: len(w) < 2, lambda w: w in STOP or len(w) < 2,
+                 lambda w: w in STOP or len(w) < 3, lambda w: w in _FUNCTION or len(w) < 2):
+        for i, first in enumerate(words):
+            if skip(first) or first[0] != x[0]:
+                continue
+            got, j = "", i
+            while j < len(words) and len(got) < len(x):
+                if not skip(words[j]):
+                    # A word that is itself a written acronym gives all its letters: "Mahatma
+                    # Gandhi NREGA" spells MGNREGA.
+                    got += words[j] if words[j] in whole else words[j][0]
+                    if not x.startswith(got):
+                        break
+                j += 1
+            if got == x:
+                return words[i:j]
+    return None
+
+
+_FUNCTION = {"the", "of", "for", "and", "a", "an", "in", "to", "on"}
+_SYNONYMS = [{"prime", "pradhan", "pradhana"}, {"minister", "ministers", "mantri", "manthri"},
+             {"rural", "gramin", "grameen", "grameena", "gramina"}, {"urban", "shahari", "shehari"}]
+
+
+@functools.lru_cache(maxsize=_CACHE)
+def _letters(s):
+    """Every letter a spelling of s could use, in order: the first of each word, all of a
+    written acronym, and both of PM. A spelling of x needs x in order among them."""
+    whole = written_acronyms(s)
+    return "".join(w if w in whole else "pm" if w == "pm" else w[0] for w in norm(s).split())
+
+
+def _in_order(x, letters):
+    it = iter(letters)
+    return all(c in it for c in x)
+
+
+@functools.lru_cache(maxsize=1 << 18)
+def _spelt(s, x):
+    """x spelt out in s, as a tuple of words, or None: the three readings of s in turn."""
+    if not _in_order(x, _letters(s)):
+        return None
+    whole = frozenset(w for w in written_acronyms(s) if x not in w)
+    got = (_spelling(_words(s), x) or _spelling(_words(s, True), x)
+           or _spelling(norm(s).split(), x, whole))
+    return tuple(got) if got else None
+
+
+@functools.lru_cache(maxsize=1 << 18)
+def _word_like(u, v):
+    return (u == v or any(u in g and v in g for g in _SYNONYMS) or skeleton(u) == skeleton(v)
+            or (min(len(u), len(v)) >= 4 and (u in v or v in u))
+            or difflib.SequenceMatcher(None, u, v).ratio() >= 0.75)
+
+
+def _inside(small, large):
+    """Every word of small has a counterpart in large."""
+    return all(any(_word_like(u, v) for v in large) for u in small)
+
+
+def _content(words):
+    return [_singular(w) for w in words if w not in STOP and len(w) > 2]
+
+
+@functools.lru_cache(maxsize=1 << 18)
+def _leftover(s, x, spelt):
+    """The content words of s that are neither the acronym nor its spelling."""
+    n = norm(s)
+    for cut in ("special component plan", "tribal area sub plan", "tribal sub plan",
+                "scheduled caste sub plan", "scheduled tribe sub plan"):
+        n = n.replace(cut, " ")
+    if " renamed as " in f" {n} ":
+        # "Development of Fresh Water Aquaculture Renamed as Pradhan Mantri Matsya Sampada
+        # Yojana": a line that says it was renamed is its new name.
+        n = n.split(" renamed as ", 1)[1]
+    used = {_singular(w) for w in spelt or ()}
+    codes = _code_parts(s)
+    words = [_singular(w) for w in n.split()
+             if (w not in STOP and len(w) > 2) or w in _SHORT_QUALIFIERS]
+    return frozenset(w for w in words
+                     if w not in used and x not in w and not (w in codes and w in x)
+                     and w not in _LEFTOVER_NOISE and not w.isdigit())
+
+
+# Qualifiers too short for a content word, which are exactly the ones that matter: "for ST
+# students" against a generic Post-Matric Scholarship.
+_SHORT_QUALIFIERS = {q for g in QUALIFIERS for q in g if len(q) <= 2}
+
+_BODY = {"agency", "authority", "corporation", "council", "university", "board", "society",
+         "department", "directorate", "institute", "institutes", "organisation",
+         "organization", "trust", "limited", "ltd", "commission", "federation", "academy"}
+
+
+def _added_qualifier(left, other, other_left):
+    """A qualifier in what is left of one name that the other name does not carry.
+    Who announced it (Mukhyamantri against the Union's RKVY), who it is for (ST against a
+    generic Post-Matric Scholarship) and Special (against the plain CLCS) always make a
+    different scheme. Urban does only when the other name adds something of its own:
+    "PMAY Urban" is a component of plain PMAY."""
+    if "special" in left and "special" not in norm(other).split():
+        return True
+    on = " " + norm(other) + " "
+    if re.search(r" (pm|pradhanmantri|pradhanamantri|prime minister) ", on):
+        on += " pradhan "
+    if re.search(r" (cm|chief minister) ", on):
+        on += " mukhya "
+    text = " " + " ".join(sorted(left)) + " "
+    # Who announced it, and the community, stage or sex a scheme is for, always make a
+    # variant (the comment on probably_same's containment rule has the history). Rural and
+    # urban make one only when the other side adds something of its own.
+    # Pradhan Mantri added to a name silent on who announced it is the same Union scheme
+    # written in full (KUSUM against PM-KUSUM); Mukhyamantri added is the state's own.
+    always = [g for g in QUALIFIERS if not g & {"rural", "urban", "pradhan"}]
+    return any(any(f" {q} " in text for q in g) and not any(f" {q} " in on for q in g)
+               for g in (QUALIFIERS if other_left else always))
+
+
+_FILLER = {"state", "central", "share", "general"}
+
+
+def _bare(s):
+    """A short name read as one word: "PM KISAN" -> pmkisan, "Svamitva Yojana" -> svamitva.
+    Empty when that word is one NOT_ACRONYMS lists: "Seed Program" is not SEED."""
+    b = "".join(w for w in norm(s).split() if w not in STOP and w not in _FILLER)
+    return "" if b in NOT_ACRONYMS else b
+
+
+def _side_by_side(s, x):
+    """The words of a bare name stand next to each other in s: "PM KISAN" in "Pradhan
+    Mantri Kisan Samman Nidhi (PM-Kisan)"."""
+    words = norm(s).split()
+    return any("".join(words[i:j]) == x for i in range(len(words))
+               for j in range(i + 2, min(i + 4, len(words)) + 1))
+
+
+def _stands_alone(s, x):
+    """x is written as a name of its own somewhere in s, not as the tail of another name:
+    "SAHAKAR MITRA" does not write MITRA the way "PM - MITRA" does."""
+    for seg in re.split(r"[-:(),/\u2013\[\]]", s or ""):
+        words = norm(seg).split()
+        for i, w in enumerate(words):
+            if w == x and (i == 0 or words[i - 1] in _FUNCTION | _FILLER | STOP
+                           | {"pm", "pradhan", "mantri", "under", "through", "by", "national",
+                              "rashtriya"}):
+                return True
+    return x in _codes(s) or x in {norm(m).replace(" ", "") for m in
+                                   re.findall(r"\(([A-Za-z][A-Za-z0-9\- ]{2,14})\)", s or "")}
+
+
+@functools.lru_cache(maxsize=_CACHE)
+def _plain_initials(s):
+    """Initials of a name without the words that say nothing about which scheme it is:
+    "Paramparagat Krishi Vikas Yojana - Uttarakhand" is PKVY, not PKVYU."""
+    words = [w for w in norm(s).split() if w not in _LEFTOVER_NOISE and len(w) > 1]
+    out = {"".join(w[0] for w in words), "".join(w[0] for w in words if w not in STOP)}
+    return frozenset(x for x in out if len(x) >= 4)
+
+
+def _long_form(s, x):
+    """The phrase a name brackets x after, "Strengthening Teaching-Learning and Results for
+    States (STARS)": the words back to the previous dash, colon or bracket. None if x is not
+    bracketed."""
+    for m in re.finditer(r"\(([A-Za-z][A-Za-z0-9\- ]{2,14})\)", s or ""):
+        if norm(m.group(1)).replace(" ", "") == x:
+            before = re.split(r"[-:(/\u2013]", s[:m.start()])[-1]
+            words = [w for w in _content(norm(before).split()) if w not in _LEFTOVER_NOISE]
+            return words or None
+    return None
+
+
+def acronym_evidence(a, b):
+    """The reason an acronym shows a and b to be one scheme, or None. See above."""
+    wa, wb = written_acronyms(a), written_acronyms(b)
+    for p, q, wp, wq in ((a, b, wa, wb), (b, a, wb, wa)):
+        short = [w for w in norm(p).split() if w not in STOP and w not in _FILLER]
+        mine = set(wp) | _codes(p)
+        if 1 <= len(short) <= 2 and _bare(p):
+            mine.add(_bare(p))                # "PM KISAN", "Svamitva": the name is the acronym
+        cands = set(mine)
+        cands |= {x for x in acronyms(p) if len(x) >= 5}    # initialisms, spellings checked below
+        cands |= _plain_initials(p)
+        for x in sorted(cands):
+            if len(x) < 4:
+                continue
+            spelt_p, spelt_q = _spelt(p, x), _spelt(q, x)
+            q_writes = x in wq or x in _codes(q) or x == _bare(q) or (
+                x == _bare(p) and _side_by_side(q, x))
+            if x in mine:
+                if not (q_writes or spelt_q):
+                    continue
+                # Written by both and spelt out by neither: each must write it as a name of
+                # its own, or "PM - MITRA" is the same scheme as "SAHAKAR MITRA".
+                if not (spelt_p or spelt_q) and not (
+                        (_stands_alone(p, x) or x == _bare(p)) and
+                        (_stands_alone(q, x) or x == _bare(q))):
+                    continue
+            elif not (spelt_p and spelt_q):
+                continue                       # an initialism only counts if both spell it
+            if spelt_p and spelt_q:
+                cp = [w for w in spelt_p if len(w) > 2 and w not in _FUNCTION]
+                cq = [w for w in spelt_q if len(w) > 2 and w not in _FUNCTION]
+                if not (cp and cq and _inside(cp, cq) and _inside(cq, cp)):
+                    continue
+            elif spelt_p or spelt_q:
+                # One spells x out and the other only brackets it after a phrase of its own:
+                # that phrase is its long form, and the two long forms must agree.
+                known = _content(spelt_p or spelt_q)
+                other = _long_form(q if spelt_p else p, x)
+                if other:
+                    shared = sum(1 for u in known if any(_word_like(u, v) for v in other))
+                    if shared < min(2, len(known)) or shared * 2 < min(len(known), len(other)):
+                        continue
+            # A name that brackets x after a phrase gives that phrase as its long form even
+            # when its initials do not spell x, as a backronym's do not: "Atal Vayo Abhyuday
+            # Yojana (AVYAY)". Two such phrases must agree, which is what rejects STARS.
+            long_p = None if spelt_p else _long_form(p, x)
+            long_q = None if spelt_q else _long_form(q, x)
+            # ...giving up only words whose initials x uses: "Pradhanmanthri Awas Yojna Grami
+            # (PMAY)" keeps Grami, which is what tells it from PMAY-Urban.
+            long_p = [w for w in long_p if w[0] in x] if long_p else None
+            long_q = [w for w in long_q if w[0] in x] if long_q else None
+            if long_p and long_q and not (_inside(long_p, long_q) or _inside(long_q, long_p)):
+                continue
+            rp = _leftover(p, x, spelt_p or (tuple(long_p) if long_p else None))
+            rq = _leftover(q, x, spelt_q or (tuple(long_q) if long_q else None))
+            if rp and rq and not (_inside(rp, rq) or _inside(rq, rp)):
+                continue
+            adds_p = {u for u in rp if not any(_word_like(u, v) for v in rq)}
+            adds_q = {u for u in rq if not any(_word_like(u, v) for v in rp)}
+            if _added_qualifier(rp, q, adds_q) or _added_qualifier(rq, p, adds_p):
+                continue
+            # An initialism nobody wrote compares two spellings of one name. It may still
+            # join a name to a longer one that OPENS with it, as the prefix rule above does
+            # ("PKVY - RKVY (Green Revolution)"), but not to a component named at the end of
+            # an umbrella: "Saksham Anganwadi and POSHAN 2.0 (..., Scheme for Adolescent
+            # Girls)" is not the Scheme for Adolescent Girls.
+            if x not in mine and x not in wq and bool(rp) != bool(rq):
+                longer, spelt = (p, spelt_p) if rp else (q, spelt_q)
+                opening = [w for w in norm(longer).split() if w not in _LEFTOVER_NOISE]
+                if tuple(opening[:len(spelt)]) != tuple(spelt):
+                    continue
+            # A body is not a scheme it runs. "Grants to Tamil Nadu Agricultural University"
+            # is not "Organizing Block Demonstration Through ... TNAU", so a name that is only
+            # the body matches only another name that is only the body.
+            body = any(w in _BODY for w in (spelt_p or ())[-1:] + (spelt_q or ())[-1:])
+            if body and bool(rp) != bool(rq):
+                continue
+            how = ("spelt out by both" if spelt_p and spelt_q else
+                   "written by one, spelt out by the other" if spelt_p or spelt_q else
+                   "written by both")
+            rest = ", the rest agrees" if rp and rq else ", nothing else on one side"
+            return f"acronym {x}: {how}{rest}"
+    return None
+
+
 @functools.lru_cache(maxsize=1 << 18)
 def similarity(a, b):
     """Conservative score — the one to use when ATTACHING data to a scheme."""
@@ -447,41 +786,9 @@ def probably_same(a, b, floor=0.75):
                     difflib.SequenceMatcher(None, ta_[0], tb_[0]).ratio() >= 0.8:
                 return True, f"transliteration variant: {ta_[0]} / {tb_[0]}"
 
-    aa, ab = acronyms(a), acronyms(b)
-    shared = (aa & set(tokens(b))) | (ab & set(tokens(a))) | (aa & ab)
-    shared = {x for x in shared if len(x) >= 5}
-    if shared:
-        return True, f"acronym match: {sorted(shared)[0]}"
-
-    # One acronym contained in another. "DAY-NRLM" yields NRLM; the expansion
-    # "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission" yields DAYNRLM.
-    # Neither is a token of the other and they are not equal, but one is plainly the
-    # other's tail — which is how these schemes are actually written down.
-    # Containment needs at least one side to be an acronym somebody actually wrote. The
-    # rule exists for DAY-NRLM against its expansion, where NRLM is written in capitals and
-    # DAYNRLM is derived, and that still fires. Two DERIVED initialisms containing one
-    # another is not evidence: famhev from the FAME expansion contains famh from "Financial
-    # Assistance for Marriage (HPBOCWWB)", and no human ever wrote either.
-    wa, wb = written_acronyms(a), written_acronyms(b)
-    # SORTED, because more than one pair can satisfy every test below and the first one
-    # found is the one named in the reason. aa and ab are sets, set order comes from hash
-    # randomisation, and the registry recorded "iccr / ipiccr" one month and "iccr / iccr"
-    # the next on identical bytes. The verdict was never in doubt; the sentence explaining
-    # it was, and an explanation that moves on its own is not evidence.
-    for x in sorted(aa):
-        for y in sorted(ab):
-            if len(x) < 4 or len(y) < 4 or not (x in y or y in x):
-                continue
-            if not (x in wa or y in wb):
-                continue
-            # ...and the shorter must account for most of the longer. NRLM is the tail of
-            # DAYNRLM and covers 4 of its 7 letters, which is why that pair is evidence.
-            # SMAM sits inside SMAMOFGIFCOI covering 4 of 13, PACS inside PPPPACSIAM, and
-            # "ubha" inside the ordinary word SAUBHAGYA: those are coincidences of spelling,
-            # and they produced 150 wrong joins on the CAG corpus.
-            if min(len(x), len(y)) / max(len(x), len(y)) < 0.5:
-                continue
-            return True, f"acronym containment: {x} / {y}"
+    why = acronym_evidence(a, b)
+    if why:
+        return True, why
 
     return False, "no match"
 

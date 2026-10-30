@@ -3039,7 +3039,7 @@
    "verdict": "scheme"
   }
  ],
- "absent_from_myscheme_all_rows": 958,
+ "absent_from_myscheme_all_rows": 956,
  "absent_from_myscheme_and_classified_scheme": 99,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Karnataka, because claiming absence should require that even a generous matcher finds nothing. The surviving list is a floor: 580 of the 969 rows carry no purpose line, and a real scheme with a plain name and no purpose line cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
@@ -19027,7 +19027,7 @@
    ],
    "hand_label": "scheme",
    "hoa": "2401-00-108-2-18",
-   "in_myscheme_karnataka": false,
+   "in_myscheme_karnataka": true,
    "name": "CSS-State Share-National Mission on Edible Oil- Oil Palm (Krishonnati Yojane)",
    "purpose": "Financial assistance to farmers to increase production of palm oil",
    "score": 6,
@@ -19046,7 +19046,7 @@
    ],
    "hand_label": null,
    "hoa": "2401-00-108-2-20",
-   "in_myscheme_karnataka": false,
+   "in_myscheme_karnataka": true,
    "name": "CSS-Central Share-National Mission on Edible Oil- Oil Palm (Krishonnati Yojane)",
    "purpose": null,
    "score": 1,
@@ -28218,7 +28218,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T18:04:19Z",
+ "built": "2026-10-30T16:43:12Z",
  "classified_not_scheme": 865,
  "classified_scheme": 104,
  "cycle": "2026-27",

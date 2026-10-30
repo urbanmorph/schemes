@@ -1,10 +1,10 @@
 {
  "added_by": {
-  "budget": 588,
-  "dbt": 138,
+  "budget": 602,
+  "dbt": 151,
   "outcome": 11
  },
- "built": "2026-10-29T18:07:05Z",
+ "built": "2026-10-30T16:42:34Z",
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -2058,7 +2058,7 @@
      "be_cr": 2.18,
      "cycle": "2026-27",
      "demand_no": 26,
-     "merge_reason": "acronym match: asean",
+     "merge_reason": "acronym asean: written by both, the rest agrees",
      "name": "ASEAN Fellowship",
      "statement": "stat4b"
     },
@@ -2118,11 +2118,6 @@
   {
    "name": "AICTE-Swanath Scholarship Scheme For Students",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: aicte",
-     "name": "AICTE - Swanath Scholarship Scheme - Degree"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Education",
@@ -2159,28 +2154,12 @@
   {
    "name": "AICTE-IDEA (Idea Development, Evaluation & Application) LAB SCHEME",
    "sources": {
-    "budget": {
-     "be_cr": 1675.18,
-     "cycle": "2026-27",
-     "demand_no": 30,
-     "merge_reason": "acronym containment: ideas / idea",
-     "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Education",
      "passed": 5,
      "slug": "aiideals",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "acronym containment: ideas / idea",
-     "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
-     "outlay_cr": 1675.18,
-     "page": 120,
-     "targets": 7
     }
    }
   },
@@ -2355,14 +2334,6 @@
   {
    "name": "Aaloo Ke Kufri Chipsona-1 Prabhed Ke Kshetra Vistaar Yojana",
    "sources": {
-    "budget": {
-     "be_cr": 150.0,
-     "cycle": "2026-27",
-     "demand_no": 1,
-     "merge_reason": "acronym match: vistaar",
-     "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Agriculture Department",
@@ -4064,11 +4035,6 @@
   {
    "name": "AICTE-SHORT TERM TRAINING PROGRAMME (STTP) (UT-J&K,LADAKH AND NER)",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: sttpcohp / sttp",
-     "name": "Short Term Training Programme component of HRD Programme"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Education",
@@ -4735,13 +4701,13 @@
      "be_cr": 355.0,
      "cycle": "2026-27",
      "demand_no": 93,
-     "merge_reason": "acronym match: avyay",
+     "merge_reason": "acronym avyay: written by both, nothing else on one side",
      "name": "Atal Vayo Abhyuday Yojana (AVYAY)",
      "statement": "stat4a"
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: avyay",
+     "merge_reason": "acronym avyay: written by both, nothing else on one side",
      "name": "Atal Vayo Abhyuday Yojana (AVYAY)"
     },
     "myscheme": {
@@ -6802,7 +6768,7 @@
      "be_cr": 30000.0,
      "cycle": "2026-27",
      "demand_no": 87,
-     "merge_reason": "acronym match: mgnrega",
+     "merge_reason": "acronym mgnrega: written by both, nothing else on one side",
      "name": "MGNREGA-Programme Component",
      "statement": "stat4a"
     },
@@ -7339,14 +7305,6 @@
   {
    "name": "COP-5 Financial Assistance to Agricultural Credit Co-operative Banks (PACS/LAMPS) for Reconstruction and Reestablishment (General/Tribal Area)",
    "sources": {
-    "budget": {
-     "be_cr": 364.0,
-     "cycle": "2026-27",
-     "demand_no": 16,
-     "merge_reason": "acronym containment: copacs / pacs",
-     "name": "Computerization of Primary Agricultural Credit Societies",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Agriculture, Farmers Welfare and Cooperation Department",
@@ -8226,14 +8184,6 @@
   {
    "name": "Chief Minister's COVID-19 Affected Livelihood Support Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 0.01,
-     "cycle": "2026-27",
-     "demand_no": 32,
-     "merge_reason": "acronym match: covid",
-     "name": "Loan Guarantee Scheme for Covid Affected Sectors (LGSCAS)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State",
      "org": "Family Welfare Department",
@@ -9590,14 +9540,6 @@
   {
    "name": "Centrally Sponsored Scheme of Upgradation of Merit of Scheduled Caste Students",
    "sources": {
-    "budget": {
-     "be_cr": null,
-     "cycle": "2026-27",
-     "demand_no": 60,
-     "merge_reason": "acronym match: centrally",
-     "name": "Smart Cities Mission CENTRALLY SPONSORED SCHEMES",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Social Justice and Empowerment",
@@ -9634,14 +9576,6 @@
   {
    "name": "Centrally Sponsored Scheme of Post-Matric Scholarship for OBC Students for studying in India",
    "sources": {
-    "budget": {
-     "be_cr": 160.0,
-     "cycle": "2026-27",
-     "demand_no": 25,
-     "merge_reason": "acronym match: centrally",
-     "name": "New India Literacy Programme (NILP) CENTRALLY SPONSORED SCHEMES",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Social Justice and Empowerment",
@@ -9690,14 +9624,6 @@
   {
    "name": "Pradhan Mantri Uchchatar Shiksha Protsahan (PM-USP) Central Sector Scheme of Scholarship for College and University students",
    "sources": {
-    "budget": {
-     "be_cr": 1850.0,
-     "cycle": "2026-27",
-     "demand_no": 26,
-     "merge_reason": "acronym match: pmusp",
-     "name": "Pradhan Mantri Uchchatar Shiksha Abhiyan (PM-USHA)",
-     "statement": "stat4a"
-    },
     "dbt": {
      "list": "central",
      "merge_reason": "similarity 1.00",
@@ -9709,14 +9635,6 @@
      "passed": 5,
      "slug": "csss-cus",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CSS",
-     "merge_reason": "acronym match: pmusp",
-     "name": "Pradhan Mantri Uchchatar Shiksha Abhiyan (PM USHA)",
-     "outlay_cr": 1850.0,
-     "page": 97,
-     "targets": 14
     }
    }
   },
@@ -10400,7 +10318,7 @@
      "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 60,
-     "merge_reason": "acronym match: daynulm",
+     "merge_reason": "acronym danuld: spelt out by both, the rest agrees",
      "name": "Deendayal Antyodaya Yojana-National Urban Livelihood Mission (DAY-NULM)",
      "statement": "stat4a"
     },
@@ -11175,14 +11093,6 @@
   {
    "name": "Disha - Early Intervention and School Readiness Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 40.0,
-     "cycle": "2026-27",
-     "demand_no": 65,
-     "merge_reason": "acronym match: disha",
-     "name": "Designing Innovative Solutions for Holistic Access to Justice in India(DISHA)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Social Justice and Empowerment",
@@ -13255,6 +13165,14 @@
   {
    "name": "Electronics Component Manufacturing Scheme",
    "sources": {
+    "budget": {
+     "be_cr": 1500.0,
+     "cycle": "2026-27",
+     "demand_no": 27,
+     "merge_reason": "acronym ecms: spelt out by both, nothing else on one side",
+     "name": "Electronics Components Manufacturing Scheme CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Electronics and Information Technology",
@@ -14105,6 +14023,19 @@
   {
    "name": "esdp",
    "sources": {
+    "budget": {
+     "be_cr": 96.0,
+     "cycle": "2026-27",
+     "demand_no": 68,
+     "merge_reason": "acronym esdp: written by both, nothing else on one side",
+     "name": "Entrepreneurship cum Skill Development Programme (ESDP)",
+     "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "acronym esdp: written by one, spelt out by the other, nothing else on one side",
+     "name": "Entrepreneurship and Skill Develoment Programme (ESDP)"
+    },
     "myscheme": {
      "level": null,
      "org": null,
@@ -14609,6 +14540,14 @@
   {
    "name": "Finance Assistant to PACS for Computerization and Integration of PACS through Core Banking System with District Cooperative Banks",
    "sources": {
+    "budget": {
+     "be_cr": 364.0,
+     "cycle": "2026-27",
+     "demand_no": 16,
+     "merge_reason": "acronym pacs: written by one, spelt out by the other, the rest agrees",
+     "name": "Computerization of Primary Agricultural Credit Societies",
+     "statement": "stat4a"
+    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Agriculture, Farmers Welfare and Cooperation Department",
@@ -15718,6 +15657,11 @@
   {
    "name": "Financial Assistance For Promotion Of Guru-Shishya Parampara (Repertory Grant)",
    "sources": {
+    "dbt": {
+     "list": "central",
+     "merge_reason": "acronym repertorygrant: written by both, the rest agrees",
+     "name": "Repertory Grant"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Culture",
@@ -16959,11 +16903,6 @@
   {
    "name": "Free Coaching for SCs, OBCs and beneficiaries of PM CARES Children Scheme",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: cares",
-     "name": "Special Scholarship Scheme under &#039;PM CARES for Children Scheme&#039;"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Social Justice and Empowerment",
@@ -17344,19 +17283,6 @@
   {
    "name": "Agriculture And Processed Foods Export Promotion Scheme Of APEDA For The 15th Finance Commission Cycle (2021-22 To 2025-26)",
    "sources": {
-    "budget": {
-     "be_cr": 81.6,
-     "cycle": "2026-27",
-     "demand_no": 10,
-     "merge_reason": "acronym match: apeda",
-     "name": "Agricultural Product Export Development Authority (APEDA)",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: apeda",
-     "name": "APEDA"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Commerce And Industry",
@@ -17981,11 +17907,6 @@
   {
    "name": "FutureSkills Prime Incentive Program",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: prime",
-     "name": "FutureSkills PRIME (Programme for Re-skilling/Up-skilling of IT Manpower for Employability)"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Electronics and Information Technology",
@@ -20339,14 +20260,6 @@
   {
    "name": "Gaura Shakti Yojana",
    "sources": {
-    "budget": {
-     "be_cr": 500.0,
-     "cycle": "2026-27",
-     "demand_no": 7,
-     "merge_reason": "acronym match: shakti",
-     "name": "Bio-pharma SHAKTI",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Department of Home",
@@ -21252,6 +21165,11 @@
   {
    "name": "Haryana Post Matric Scholarship For Minority",
    "sources": {
+    "dbt": {
+     "list": "central",
+     "merge_reason": "acronym pmsfm: spelt out by both, nothing else on one side",
+     "name": "Post-Matric Scholarship for Minorities"
+    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Social Justice and Empowerment Department",
@@ -21766,7 +21684,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: iari / iaris",
+     "merge_reason": "acronym iari: written by one, spelt out by the other, the rest agrees",
      "name": "CS- IARI Scholarship"
     },
     "myscheme": {
@@ -21925,11 +21843,6 @@
   {
    "name": "ICAR Senior Research Fellowship For Post-Graduate Studies In Agricultural Sciences",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: icar / icar",
-     "name": "AgEdn - ICAR Senior Research Fellowship"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Agriculture and Farmers Welfare",
@@ -21966,12 +21879,28 @@
   {
    "name": "Integrated Child Development Services Scheme",
    "sources": {
+    "budget": {
+     "be_cr": 23100.0,
+     "cycle": "2026-27",
+     "demand_no": 101,
+     "merge_reason": "acronym icds: written by one, spelt out by the other, nothing else on one side",
+     "name": "Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS - Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)",
+     "statement": "stat4a"
+    },
     "myscheme": {
      "level": "State",
      "org": "Social Welfare Department, Nagaland",
      "passed": 7,
      "slug": "icdss",
      "total": 9
+    },
+    "outcome": {
+     "classification": "CSS",
+     "merge_reason": "acronym icds: written by one, spelt out by the other, nothing else on one side",
+     "name": "Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS- Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)",
+     "outlay_cr": 23100.0,
+     "page": 289,
+     "targets": 2
     }
    }
   },
@@ -23323,11 +23252,6 @@
   {
    "name": "Innovation In Science Pursuit For Inspired Research (INSPIRE) - Faculty Fellowship",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: inspire",
-     "name": "Vigyan Dhara - INSPIRE Faculty Award"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Science And Technology",
@@ -23524,11 +23448,6 @@
   {
    "name": "Internship Policy Of Indian Council For Cultural Relations (ICCR)",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: iccr / iccr",
-     "name": "ICCR Scholarship"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of External Affairs",
@@ -30905,7 +30824,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: nrega / mgnrega",
+     "merge_reason": "acronym nrega: written by one, spelt out by the other, the rest agrees",
      "name": "Mahatma Gandhi NREGA"
     },
     "myscheme": {
@@ -33828,14 +33747,6 @@
   {
    "name": "MSME Sustainable (ZED) Certification Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 54.72,
-     "cycle": "2026-27",
-     "demand_no": 68,
-     "merge_reason": "acronym containment: msme / msme",
-     "name": "MSME Champions Scheme",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Micro, Small and Medium Enterprises",
@@ -34552,7 +34463,7 @@
      "be_cr": 3477.0,
      "cycle": "2026-27",
      "demand_no": 46,
-     "merge_reason": "acronym containment: aids / aids",
+     "merge_reason": "acronym aids: written by both, the rest agrees",
      "name": "National AIDS and STD Control Programme",
      "statement": "stat4b"
     },
@@ -34565,7 +34476,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "acronym containment: aids / aids",
+     "merge_reason": "acronym aids: written by both, the rest agrees",
      "name": "National AIDS and STD Control Programme",
      "outlay_cr": 3477.0,
      "page": 156,
@@ -34598,7 +34509,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: namaste",
+     "merge_reason": "acronym namaste: written by both, nothing else on one side",
      "name": "NAMASTE"
     },
     "myscheme": {
@@ -35440,7 +35351,7 @@
      "be_cr": 205.0,
      "cycle": "2026-27",
      "demand_no": 98,
-     "merge_reason": "acronym containment: nhdp / nhdprds",
+     "merge_reason": "acronym nhdp: spelt out by both, nothing else on one side",
      "name": "National Handicrafts Development Programme (NHDP)",
      "statement": "stat4b"
     },
@@ -35546,11 +35457,6 @@
   {
    "name": "Nikshay Poshan Yojana",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: nikshay",
-     "name": "NIKSHAY - DOT Provider Honorarium"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Health & Family Welfare",
@@ -35587,11 +35493,6 @@
   {
    "name": "NEET/JEE Coaching For Tribal Students",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: neet / neet",
-     "name": "SECL ke Sushrut (Free residential Coaching for NEET Examination) at Bilaspur, Chhattisgarh"
-    },
     "myscheme": {
      "level": "State",
      "org": "Tribal Area Development Department",
@@ -36122,7 +36023,7 @@
      "be_cr": 9671.0,
      "cycle": "2026-27",
      "demand_no": 87,
-     "merge_reason": "acronym containment: nsap / nsap",
+     "merge_reason": "acronym nsap: written by one, spelt out by the other, nothing else on one side",
      "name": "National Social Assistance Progamme",
      "statement": "stat4a"
     },
@@ -36135,7 +36036,7 @@
     },
     "outcome": {
      "classification": "CSS",
-     "merge_reason": "acronym containment: nsap / nsap",
+     "merge_reason": "acronym nsap: written by one, spelt out by the other, nothing else on one side",
      "name": "National Social Assistance Programme (NSAP)",
      "outlay_cr": 9671.0,
      "page": 243,
@@ -39005,11 +38906,6 @@
   {
    "name": "Post Graduate Scholarship for GATE/GPAT Qualified Students for Pursuing M.Tech/M.E./M.Pharm-UGC ",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: gate / gate",
-     "name": "P.G. Scholarship For GATE/GPAT Qualified Students For Pursuing M.Tech/ M.E./M.Pharma - AICTE"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Education",
@@ -39641,7 +39537,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: daksh",
+     "merge_reason": "acronym daksh: written by one, spelt out by the other, nothing else on one side",
      "name": "PM DAKSH Scheme"
     },
     "myscheme": {
@@ -39673,7 +39569,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "acronym match: pmgka",
+     "merge_reason": "acronym pmgka: spelt out by both, nothing else on one side",
      "name": "Pradhan Mantri Garib Kalyan Ann Yojana (PMGKAY)",
      "outlay_cr": 227429.0,
      "page": 65,
@@ -39706,7 +39602,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: kisan",
+     "merge_reason": "acronym kisan: written by both, nothing else on one side",
      "name": "PM KISAN"
     },
     "myscheme": {
@@ -39733,7 +39629,7 @@
      "be_cr": 5000.0,
      "cycle": "2026-27",
      "demand_no": 71,
-     "merge_reason": "acronym match: kusum",
+     "merge_reason": "acronym kuseum: spelt out by both, the rest agrees",
      "name": "Kisan Urja Suraksha evam Utthaan Mahabhiyan (KUSUM )",
      "statement": "stat4b"
     },
@@ -39751,7 +39647,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "acronym match: kusum",
+     "merge_reason": "acronym kusum: written by both, the rest agrees",
      "name": "PM-Kisan Urja Suraksha Evam Utthaan Mahabhiyan (KUSUM)",
      "outlay_cr": 5000.0,
      "page": 210,
@@ -39826,14 +39722,6 @@
      "passed": 7,
      "slug": "pm-svanidhi",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "acronym match: svanidhi",
-     "name": "PM-SVANIDHI- Pradhan Mantri Street Vendors AtmaNirbhar Nidhi",
-     "outlay_cr": 900.0,
-     "page": 181,
-     "targets": 2
     }
    }
   },
@@ -39886,7 +39774,7 @@
      "be_cr": 1560.0,
      "cycle": "2026-27",
      "demand_no": 26,
-     "merge_reason": "acronym containment: pmusp / pmuspcsis",
+     "merge_reason": "acronym pmusp: spelt out by both, nothing else on one side",
      "name": "PM Uchchatar Shiksha Protsahan (PM-USP) Yojna",
      "statement": "stat4b"
     },
@@ -39904,7 +39792,7 @@
     },
     "outcome": {
      "classification": "CS",
-     "merge_reason": "acronym containment: pmusp / pmuspcsis",
+     "merge_reason": "acronym pmusp: spelt out by both, nothing else on one side",
      "name": "PM Uchchatar Shiksha Protsahan (PM-USP) Yojna",
      "outlay_cr": 1560.0,
      "page": 101,
@@ -40092,13 +39980,13 @@
      "be_cr": 54916.7,
      "cycle": "2026-27",
      "demand_no": 87,
-     "merge_reason": "acronym containment: pmay / pmayg",
+     "merge_reason": "acronym pmay: spelt out by both, the rest agrees",
      "name": "Pradhan Mantri Awas Yojna (PMAY)- Rural",
      "statement": "stat4a"
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: pmayg",
+     "merge_reason": "acronym pmag: spelt out by both, nothing else on one side",
      "name": "Pradhan Mantri Awas Yojna Grameen"
     },
     "myscheme": {
@@ -40110,7 +39998,7 @@
     },
     "outcome": {
      "classification": "CSS",
-     "merge_reason": "acronym match: pmayg",
+     "merge_reason": "acronym pmay: spelt out by both, the rest agrees",
      "name": "Pradhan Mantri Awas Yojana – Grameen (PMAY-G)",
      "outlay_cr": 54916.7,
      "page": 240,
@@ -40125,7 +40013,7 @@
      "be_cr": 18625.05,
      "cycle": "2026-27",
      "demand_no": 60,
-     "merge_reason": "acronym containment: pmay / pmayu",
+     "merge_reason": "acronym pmay: written by one, spelt out by the other, the rest agrees",
      "name": "PMAY-Urban",
      "statement": "stat4a"
     },
@@ -40155,7 +40043,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: pmbjp",
+     "merge_reason": "acronym pmbjp: written by one, spelt out by the other, nothing else on one side",
      "name": "Pardhan Mantri Bhartiya Jan Aushadhi Pariyojana (PMBJP)"
     },
     "myscheme": {
@@ -40280,12 +40168,28 @@
   {
    "name": "Pradhan Mantri Formalisation Of Micro Food Processing Enterprises",
    "sources": {
+    "budget": {
+     "be_cr": 1700.0,
+     "cycle": "2026-27",
+     "demand_no": 45,
+     "merge_reason": "acronym pmfmfpe: spelt out by both, nothing else on one side",
+     "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
+     "statement": "stat4a"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Food Processing Industries",
      "passed": 4,
      "slug": "pmfmpe",
      "total": 9
+    },
+    "outcome": {
+     "classification": "CSS",
+     "merge_reason": "acronym pmfmfpe: spelt out by both, nothing else on one side",
+     "name": "Prime Minister Formalisation of Micro Food Processing Enterprises Scheme (PM FME)",
+     "outlay_cr": 1700.0,
+     "page": 134,
+     "targets": 0
     }
    }
   },
@@ -40421,14 +40325,6 @@
   {
    "name": "Pradhan Mantri Janjatiya Vikas Mission (PMJVM)",
    "sources": {
-    "budget": {
-     "be_cr": 196.94,
-     "cycle": "2026-27",
-     "demand_no": 76,
-     "merge_reason": "acronym containment: pmjv / pmjvm",
-     "name": "Pradhan Mantri JI-VAN Yojana CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Tribal Affairs",
@@ -40498,6 +40394,14 @@
   {
    "name": "Pradhan Mantri Krishi Sinchayee Yojana: Per Drop More Crop",
    "sources": {
+    "budget": {
+     "be_cr": 6587.0,
+     "cycle": "2026-27",
+     "demand_no": 62,
+     "merge_reason": "acronym pmks: spelt out by both, nothing else on one side",
+     "name": "Pradhan Mantri Krishi Sinchai Yojna",
+     "statement": "stat4a"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Agriculture and Farmers Welfare",
@@ -41186,7 +41090,7 @@
     },
     "outcome": {
      "classification": "CSS",
-     "merge_reason": "acronym containment: setu / setu",
+     "merge_reason": "acronym setu: written by both, nothing else on one side",
      "name": "PM SETU Scheme",
      "outlay_cr": 6140.5,
      "page": 262,
@@ -41724,7 +41628,7 @@
      "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 72,
-     "merge_reason": "acronym match: svamitva",
+     "merge_reason": "acronym svamitva: written by both, nothing else on one side",
      "name": "Svamitva",
      "statement": "stat4b"
     },
@@ -42362,11 +42266,11 @@
    "name": "Pilgrimage Rejuvenation and Spiritual Augmentation Drive (PRASHAD)",
    "sources": {
     "budget": {
-     "be_cr": 1500.0,
+     "be_cr": 245.0,
      "cycle": "2026-27",
-     "demand_no": 48,
-     "merge_reason": "acronym match: drive",
-     "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement (PM E-DRIVE) Scheme",
+     "demand_no": 99,
+     "merge_reason": "similarity 0.90",
+     "name": "Pilgrimage Rejuvenation and Spiritual, Heritage Augmentation Drive (PRASHAD)",
      "statement": "stat4b"
     },
     "myscheme": {
@@ -42375,14 +42279,6 @@
      "passed": 4,
      "slug": "prashad",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CS",
-     "merge_reason": "acronym match: drive",
-     "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement (PM E-DRIVE) Scheme",
-     "outlay_cr": 1500.0,
-     "page": 162,
-     "targets": 4
     }
    }
   },
@@ -42591,14 +42487,6 @@
   {
    "name": "Project Sankalp",
    "sources": {
-    "budget": {
-     "be_cr": null,
-     "cycle": "2026-27",
-     "demand_no": 92,
-     "merge_reason": "acronym match: sankalp",
-     "name": "Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP)-EAP",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Labour and Employment Department",
@@ -42743,19 +42631,6 @@
   {
    "name": "Prime Small Enterprise Empowerment and Development(SEED) Scheme",
    "sources": {
-    "budget": {
-     "be_cr": 101.0,
-     "cycle": "2026-27",
-     "demand_no": 93,
-     "merge_reason": "acronym containment: seed / pseed",
-     "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: seed / pseed",
-     "name": "Scheme for Economic Empowerment of DNTs (SEED)"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Planning Department",
@@ -42864,11 +42739,6 @@
   {
    "name": "Poshan Sudha",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: poshan",
-     "name": "PM POSHAN - Cook-cum-Helper Honorarium"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Women and Child Development Department",
@@ -44188,11 +44058,6 @@
   {
    "name": "Rajiv Gandhi National Fellowship For Scheduled Caste Candidates",
    "sources": {
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: nfsc / rgnfscc",
-     "name": "National Fellowship for Scheduled Caste Students (NFSC)"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Education",
@@ -44221,7 +44086,7 @@
      "be_cr": 1142.31,
      "cycle": "2026-27",
      "demand_no": 72,
-     "merge_reason": "acronym containment: rgsa / rgsaip",
+     "merge_reason": "acronym rgsa: spelt out by both, nothing else on one side",
      "name": "Rashtriya Gram Swaraj Abhiyan (RGSA)",
      "statement": "stat4a"
     },
@@ -44234,7 +44099,7 @@
     },
     "outcome": {
      "classification": "CSS",
-     "merge_reason": "acronym containment: rgsa / rgsaip",
+     "merge_reason": "acronym rgsa: spelt out by both, nothing else on one side",
      "name": "Rashtriya Gram Swaraj Abhiyan (RGSA)",
      "outlay_cr": 1142.31,
      "page": 216,
@@ -44463,7 +44328,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: rmewf",
+     "merge_reason": "acronym rmewf: written by one, spelt out by the other, the rest agrees",
      "name": "Raksha Mantri Ex-servicemen Welfare Fund (RMEWF)"
     },
     "myscheme": {
@@ -45906,14 +45771,6 @@
   {
    "name": "Scheme for Assistance for Research & Development Activities: Assistance for Contract/Sponsored Research Work",
    "sources": {
-    "budget": {
-     "be_cr": 31820.0,
-     "cycle": "2026-27",
-     "demand_no": 46,
-     "merge_reason": "acronym match: sponsored",
-     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Industries and Mines Department",
@@ -46666,14 +46523,6 @@
   {
    "name": "Special Credit Linked Capital Subsidy Scheme (SCLCSS) for Scheduled Caste/Scheduled Tribe",
    "sources": {
-    "budget": {
-     "be_cr": 0.01,
-     "cycle": "2026-27",
-     "demand_no": 68,
-     "merge_reason": "acronym containment: clcs / sclcss",
-     "name": "Credit Linked Capital Subsidy (CLCS)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Micro, Small and Medium Enterprises",
@@ -47995,14 +47844,6 @@
   {
    "name": "Scheme of Financial Assistance to IHMs/FCIs/IITTM/ICI/NCHMCT/PSUs",
    "sources": {
-    "budget": {
-     "be_cr": 45.0,
-     "cycle": "2026-27",
-     "demand_no": 99,
-     "merge_reason": "acronym match: iittm",
-     "name": "Assistance to IHMS/FCIs/IITTM/NIWS",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Tourism",
@@ -48496,14 +48337,6 @@
   {
    "name": "Scheme for Integrated Development for Horticulture (HRT-2)",
    "sources": {
-    "budget": {
-     "be_cr": 30.3,
-     "cycle": "2026-27",
-     "demand_no": 43,
-     "merge_reason": "acronym containment: fidf / sfidfhh",
-     "name": "Fisheries and Aquaculture Infrastructure Development Fund (FIDF)",
-     "statement": "stat4b"
-    },
     "dbt": {
      "list": "central",
      "merge_reason": "similarity 0.78",
@@ -49417,6 +49250,14 @@
   {
    "name": "Scheme of Human Resources Development in Sports- Fellowship Programme",
    "sources": {
+    "budget": {
+     "be_cr": 5.0,
+     "cycle": "2026-27",
+     "demand_no": 102,
+     "merge_reason": "acronym sohrdis: spelt out by both, nothing else on one side",
+     "name": "Scheme of Human Resource Development in Sports CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    },
     "dbt": {
      "list": "central",
      "merge_reason": "similarity 0.78",
@@ -49666,14 +49507,6 @@
   {
    "name": "SAHAKAR MITRA: NCDC’s Scheme on Internship Programme",
    "sources": {
-    "budget": {
-     "be_cr": 500.0,
-     "cycle": "2026-27",
-     "demand_no": 16,
-     "merge_reason": "acronym containment: gancdc / ncdc",
-     "name": "Grant-in-aid to National Cooperative Development Corporation (NCDC)",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Agriculture and Farmers Welfare",
@@ -51358,14 +51191,6 @@
   {
    "name": "Scheme for Promotion of Affordable Rental Smart Housing (SPARSH 2.0): Rent Subsidy",
    "sources": {
-    "budget": {
-     "be_cr": 77.0,
-     "cycle": "2026-27",
-     "demand_no": 15,
-     "merge_reason": "acronym match: smart",
-     "name": "Scheme for Modernization and Reforms through Technology in Public Distribution System (SMART-PDS)",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Labour & Employment Department",
@@ -52220,7 +52045,7 @@
    "sources": {
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: ready",
+     "merge_reason": "acronym ready: written by one, spelt out by the other, the rest agrees",
      "name": "AgEdn - Students READY"
     },
     "myscheme": {
@@ -52516,28 +52341,12 @@
   {
    "name": "Mission Saksham Anganwadi & Poshan 2.0, DNH & DD",
    "sources": {
-    "budget": {
-     "be_cr": 23100.0,
-     "cycle": "2026-27",
-     "demand_no": 101,
-     "merge_reason": "acronym match: poshan",
-     "name": "Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS - Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)",
-     "statement": "stat4a"
-    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Social Welfare Department",
      "passed": 8,
      "slug": "ss-dadra-and-nagar-haveli-and-daman-and-diu",
      "total": 9
-    },
-    "outcome": {
-     "classification": "CSS",
-     "merge_reason": "acronym match: poshan",
-     "name": "Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS- Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)",
-     "outlay_cr": 23100.0,
-     "page": 289,
-     "targets": 2
     }
    }
   },
@@ -52996,14 +52805,6 @@
   {
    "name": "Scholarship Scheme for Girl Children of Workers of Jute Mills/MSME JDP Units",
    "sources": {
-    "budget": {
-     "be_cr": 9000.0,
-     "cycle": "2026-27",
-     "demand_no": 68,
-     "merge_reason": "acronym containment: msme / msme",
-     "name": "Guarantee Emergency Credit Line (GECL) facility to eligible MSME borrowers",
-     "statement": "stat4b"
-    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Textiles",
@@ -53657,6 +53458,11 @@
   {
    "name": "Swanath Scholarship Scheme",
    "sources": {
+    "dbt": {
+     "list": "central",
+     "merge_reason": "all 2 content words of the shorter name are present",
+     "name": "AICTE - Swanath Scholarship Scheme - Degree"
+    },
     "myscheme": {
      "level": "State/ UT",
      "org": "Directorate of Technical Education ",
@@ -53693,6 +53499,14 @@
   {
    "name": "Production Linked Incentive (PLI) Scheme (PLI 1.2) for Specialty Steel",
    "sources": {
+    "budget": {
+     "be_cr": 380.0,
+     "cycle": "2026-27",
+     "demand_no": 97,
+     "merge_reason": "acronym plisfss: spelt out by both, the rest agrees",
+     "name": "Product Linked Incentive (PLI) Scheme for Specialty Steel in India CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Steel",
@@ -57743,7 +57557,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: visvas",
+     "merge_reason": "acronym visvas: written by both, the rest agrees",
      "name": "VISVAS"
     },
     "myscheme": {
@@ -59587,6 +59401,18 @@
    }
   },
   {
+   "name": "Scheme for Modernization and Reforms through Technology in Public Distribution System (SMART-PDS)",
+   "sources": {
+    "budget": {
+     "be_cr": 77.0,
+     "cycle": "2026-27",
+     "demand_no": 15,
+     "name": "Scheme for Modernization and Reforms through Technology in Public Distribution System (SMART-PDS)",
+     "statement": "stat4a"
+    }
+   }
+  },
+  {
    "name": "Centrally Sponsored Project for Strengthening of Cooperatives through IT Interventions",
    "sources": {
     "budget": {
@@ -59664,6 +59490,38 @@
    }
   },
   {
+   "name": "New India Literacy Programme (NILP) CENTRALLY SPONSORED SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": 160.0,
+     "cycle": "2026-27",
+     "demand_no": 25,
+     "name": "New India Literacy Programme (NILP) CENTRALLY SPONSORED SCHEMES",
+     "statement": "stat4a"
+    }
+   }
+  },
+  {
+   "name": "Pradhan Mantri Uchchatar Shiksha Abhiyan (PM-USHA)",
+   "sources": {
+    "budget": {
+     "be_cr": 1850.0,
+     "cycle": "2026-27",
+     "demand_no": 26,
+     "name": "Pradhan Mantri Uchchatar Shiksha Abhiyan (PM-USHA)",
+     "statement": "stat4a"
+    },
+    "outcome": {
+     "classification": "CSS",
+     "merge_reason": "similarity 1.00",
+     "name": "Pradhan Mantri Uchchatar Shiksha Abhiyan (PM USHA)",
+     "outlay_cr": 1850.0,
+     "page": 97,
+     "targets": 14
+    }
+   }
+  },
+  {
    "name": "National Mission for a Green India",
    "sources": {
     "budget": {
@@ -59729,22 +59587,22 @@
    }
   },
   {
-   "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
+   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
    "sources": {
     "budget": {
-     "be_cr": 1700.0,
+     "be_cr": 31820.0,
      "cycle": "2026-27",
-     "demand_no": 45,
-     "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
+     "demand_no": 46,
+     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
      "statement": "stat4a"
     },
     "outcome": {
      "classification": "CSS",
-     "merge_reason": "similarity 0.88",
-     "name": "Prime Minister Formalisation of Micro Food Processing Enterprises Scheme (PM FME)",
-     "outlay_cr": 1700.0,
-     "page": 134,
-     "targets": 0
+     "merge_reason": "similarity 0.84",
+     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
+     "outlay_cr": 31820.0,
+     "page": 136,
+     "targets": 43
     }
    }
   },
@@ -59914,6 +59772,18 @@
    }
   },
   {
+   "name": "Smart Cities Mission CENTRALLY SPONSORED SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 60,
+     "name": "Smart Cities Mission CENTRALLY SPONSORED SCHEMES",
+     "statement": "stat4a"
+    }
+   }
+  },
+  {
    "name": "City Investment to Innovate, Integrate and",
    "sources": {
     "budget": {
@@ -59965,18 +59835,6 @@
      "cycle": "2026-27",
      "demand_no": 60,
      "name": "Urban Challenge Fund",
-     "statement": "stat4a"
-    }
-   }
-  },
-  {
-   "name": "Pradhan Mantri Krishi Sinchai Yojna",
-   "sources": {
-    "budget": {
-     "be_cr": 6587.0,
-     "cycle": "2026-27",
-     "demand_no": 62,
-     "name": "Pradhan Mantri Krishi Sinchai Yojna",
      "statement": "stat4a"
     }
    }
@@ -60163,6 +60021,18 @@
    }
   },
   {
+   "name": "Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP)-EAP",
+   "sources": {
+    "budget": {
+     "be_cr": null,
+     "cycle": "2026-27",
+     "demand_no": 92,
+     "name": "Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP)-EAP",
+     "statement": "stat4a"
+    }
+   }
+  },
+  {
    "name": "Skill Strengthening for Industrial Value Enhancements (STRIVE)-EAP CENTRALLY SPONSORED SCHEMES",
    "sources": {
     "budget": {
@@ -60269,11 +60139,6 @@
      "name": "Programme for Development of Scheduled Tribes (PM Vanbandhu Kalyan Yojna) CENTRALLY SPONSORED SCHEMES",
      "statement": "stat4a"
     },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: sponsored",
-     "name": "Fellowship component of R and D projects sponsored by the Ministry"
-    },
     "outcome": {
      "classification": "CSS",
      "merge_reason": "similarity 0.77",
@@ -60349,11 +60214,6 @@
      "demand_no": 1,
      "name": "Pradhan Mantri Annadata Aay Sanrakshan Yojna (PM- AASHA)",
      "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: asha / aasha",
-     "name": "ASHA incentives"
     }
    }
   },
@@ -60545,6 +60405,18 @@
      "cycle": "2026-27",
      "demand_no": 1,
      "name": "Additional amount met from Reserve Fund",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": 150.0,
+     "cycle": "2026-27",
+     "demand_no": 1,
+     "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
      "statement": "stat4b"
     }
    }
@@ -61046,7 +60918,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: niper",
+     "merge_reason": "acronym niper: written by one, spelt out by the other, nothing else on one side",
      "name": "Scholarship to NIPER Students"
     }
    }
@@ -61135,6 +61007,18 @@
      "cycle": "2026-27",
      "demand_no": 7,
      "name": "Scheme of Programme Management",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Bio-pharma SHAKTI",
+   "sources": {
+    "budget": {
+     "be_cr": 500.0,
+     "cycle": "2026-27",
+     "demand_no": 7,
+     "name": "Bio-pharma SHAKTI",
      "statement": "stat4b"
     }
    }
@@ -61260,6 +61144,23 @@
    }
   },
   {
+   "name": "Agricultural Product Export Development Authority (APEDA)",
+   "sources": {
+    "budget": {
+     "be_cr": 81.6,
+     "cycle": "2026-27",
+     "demand_no": 10,
+     "name": "Agricultural Product Export Development Authority (APEDA)",
+     "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "acronym apeda: written by one, spelt out by the other, nothing else on one side",
+     "name": "APEDA"
+    }
+   }
+  },
+  {
    "name": "Marine Product Export Development Authority (MPEDA)",
    "sources": {
     "budget": {
@@ -61271,7 +61172,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: mpeda",
+     "merge_reason": "acronym mpeda: written by one, spelt out by the other, nothing else on one side",
      "name": "MPEDA"
     }
    }
@@ -62205,11 +62106,6 @@
      "demand_no": 15,
      "name": "Schemes for Development of Sugar Industries",
      "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym match: sfdosi",
-     "name": "Scheme for Development of Silk Industry"
     }
    }
   },
@@ -62233,6 +62129,18 @@
      "cycle": "2026-27",
      "demand_no": 16,
      "name": "Cooperative Training",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Grant-in-aid to National Cooperative Development Corporation (NCDC)",
+   "sources": {
+    "budget": {
+     "be_cr": 500.0,
+     "cycle": "2026-27",
+     "demand_no": 16,
+     "name": "Grant-in-aid to National Cooperative Development Corporation (NCDC)",
      "statement": "stat4b"
     }
    }
@@ -63234,18 +63142,6 @@
    }
   },
   {
-   "name": "Electronics Components Manufacturing Scheme CENTRAL SECTOR SCHEMES",
-   "sources": {
-    "budget": {
-     "be_cr": 1500.0,
-     "cycle": "2026-27",
-     "demand_no": 27,
-     "name": "Electronics Components Manufacturing Scheme CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
-    }
-   }
-  },
-  {
    "name": "Environmental Knowledge and Capacity Building",
    "sources": {
     "budget": {
@@ -63542,6 +63438,26 @@
    }
   },
   {
+   "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
+   "sources": {
+    "budget": {
+     "be_cr": 1675.18,
+     "cycle": "2026-27",
+     "demand_no": 30,
+     "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
+     "statement": "stat4b"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 1.00",
+     "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
+     "outlay_cr": 1675.18,
+     "page": 120,
+     "targets": 7
+    }
+   }
+  },
+  {
    "name": "India Infrastructure Project Development Fund (IIPDF)",
    "sources": {
     "budget": {
@@ -63662,6 +63578,18 @@
    }
   },
   {
+   "name": "Loan Guarantee Scheme for Covid Affected Sectors (LGSCAS)",
+   "sources": {
+    "budget": {
+     "be_cr": 0.01,
+     "cycle": "2026-27",
+     "demand_no": 32,
+     "name": "Loan Guarantee Scheme for Covid Affected Sectors (LGSCAS)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Pradhan Mantri Vaya Vandana Yojana (PMVVY)",
    "sources": {
     "budget": {
@@ -63770,7 +63698,7 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: rdcr / rdcr",
+     "merge_reason": "acronym rdcr: spelt out by both, nothing else on one side",
      "name": "Scheme of Research, Development, Consultancies and Reorientation"
     }
    }
@@ -63816,6 +63744,18 @@
      "outlay_cr": 5000.0,
      "page": 278,
      "targets": 0
+    }
+   }
+  },
+  {
+   "name": "Fisheries and Aquaculture Infrastructure Development Fund (FIDF)",
+   "sources": {
+    "budget": {
+     "be_cr": 30.3,
+     "cycle": "2026-27",
+     "demand_no": 43,
+     "name": "Fisheries and Aquaculture Infrastructure Development Fund (FIDF)",
+     "statement": "stat4b"
     }
    }
   },
@@ -64140,11 +64080,31 @@
      "demand_no": 48,
      "name": "Scheme for Faster Adoption and Manufacturing of (Hybrid and) Electric Vehicle in India - (FAME - India).",
      "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement (PM E-DRIVE) Scheme",
+   "sources": {
+    "budget": {
+     "be_cr": 1500.0,
+     "cycle": "2026-27",
+     "demand_no": 48,
+     "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement (PM E-DRIVE) Scheme",
+     "statement": "stat4b"
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym containment: fame / fame",
-     "name": "Demand Incentive Delivery Mechanism under FAME India Scheme"
+     "merge_reason": "similarity 0.87",
+     "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement"
+    },
+    "outcome": {
+     "classification": "CS",
+     "merge_reason": "similarity 1.00",
+     "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement (PM E-DRIVE) Scheme",
+     "outlay_cr": 1500.0,
+     "page": 162,
+     "targets": 4
     }
    }
   },
@@ -64818,6 +64778,18 @@
    }
   },
   {
+   "name": "Designing Innovative Solutions for Holistic Access to Justice in India(DISHA)",
+   "sources": {
+    "budget": {
+     "be_cr": 40.0,
+     "cycle": "2026-27",
+     "demand_no": 65,
+     "name": "Designing Innovative Solutions for Holistic Access to Justice in India(DISHA)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "e-Courts Phase II",
    "sources": {
     "budget": {
@@ -64886,6 +64858,18 @@
    }
   },
   {
+   "name": "MSME Champions Scheme",
+   "sources": {
+    "budget": {
+     "be_cr": 54.72,
+     "cycle": "2026-27",
+     "demand_no": 68,
+     "name": "MSME Champions Scheme",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Credit Support Programme",
    "sources": {
     "budget": {
@@ -64893,6 +64877,30 @@
      "cycle": "2026-27",
      "demand_no": 68,
      "name": "Credit Support Programme",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Guarantee Emergency Credit Line (GECL) facility to eligible MSME borrowers",
+   "sources": {
+    "budget": {
+     "be_cr": 9000.0,
+     "cycle": "2026-27",
+     "demand_no": 68,
+     "name": "Guarantee Emergency Credit Line (GECL) facility to eligible MSME borrowers",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Credit Linked Capital Subsidy (CLCS)",
+   "sources": {
+    "budget": {
+     "be_cr": 0.01,
+     "cycle": "2026-27",
+     "demand_no": 68,
+     "name": "Credit Linked Capital Subsidy (CLCS)",
      "statement": "stat4b"
     }
    }
@@ -64938,23 +64946,6 @@
      "outlay_cr": 1200.0,
      "page": 53,
      "targets": 3
-    }
-   }
-  },
-  {
-   "name": "Entrepreneurship cum Skill Development Programme (ESDP)",
-   "sources": {
-    "budget": {
-     "be_cr": 96.0,
-     "cycle": "2026-27",
-     "demand_no": 68,
-     "name": "Entrepreneurship cum Skill Development Programme (ESDP)",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "acronym containment: esdp / esdp",
-     "name": "Entrepreneurship and Skill Develoment Programme (ESDP)"
     }
    }
   },
@@ -65515,6 +65506,18 @@
      "cycle": "2026-27",
      "demand_no": 76,
      "name": "Amount met from Oil Industry Development Fund (OIDF)",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Pradhan Mantri JI-VAN Yojana CENTRAL SECTOR SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": 196.94,
+     "cycle": "2026-27",
+     "demand_no": 76,
+     "name": "Pradhan Mantri JI-VAN Yojana CENTRAL SECTOR SCHEMES",
      "statement": "stat4b"
     }
    }
@@ -66858,11 +66861,23 @@
      "demand_no": 93,
      "name": "Scholarships for Higher Education for Young Achievers Scheme (SHREYAS) for OBCs and EBCs",
      "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
+   "sources": {
+    "budget": {
+     "be_cr": 101.0,
+     "cycle": "2026-27",
+     "demand_no": 93,
+     "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
+     "statement": "stat4b"
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "acronym match: shreyas",
-     "name": "SHREYAS (OBC) - Dr. Ambedkar Interest Subsidy on Educational Loan for Overseas Studies for OBCs and EBCs"
+     "merge_reason": "acronym sfeeod: spelt out by both, the rest agrees",
+     "name": "Scheme for Economic Empowerment of DNTs (SEED)"
     }
    }
   },
@@ -67027,18 +67042,6 @@
      "outlay_cr": 600.0,
      "page": 116,
      "targets": 2
-    }
-   }
-  },
-  {
-   "name": "Product Linked Incentive (PLI) Scheme for Specialty Steel in India CENTRAL SECTOR SCHEMES",
-   "sources": {
-    "budget": {
-     "be_cr": 380.0,
-     "cycle": "2026-27",
-     "demand_no": 97,
-     "name": "Product Linked Incentive (PLI) Scheme for Specialty Steel in India CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
     }
    }
   },
@@ -67280,18 +67283,6 @@
    }
   },
   {
-   "name": "Pilgrimage Rejuvenation and Spiritual, Heritage Augmentation Drive (PRASHAD)",
-   "sources": {
-    "budget": {
-     "be_cr": 245.0,
-     "cycle": "2026-27",
-     "demand_no": 99,
-     "name": "Pilgrimage Rejuvenation and Spiritual, Heritage Augmentation Drive (PRASHAD)",
-     "statement": "stat4b"
-    }
-   }
-  },
-  {
    "name": "Assistance to Central Agencies for Tourism Infrastructure Development",
    "sources": {
     "budget": {
@@ -67323,6 +67314,18 @@
      "cycle": "2026-27",
      "demand_no": 99,
      "name": "Domestic Promotion and Publicity including Market Development Assistance",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
+   "name": "Assistance to IHMS/FCIs/IITTM/NIWS",
+   "sources": {
+    "budget": {
+     "be_cr": 45.0,
+     "cycle": "2026-27",
+     "demand_no": 99,
+     "name": "Assistance to IHMS/FCIs/IITTM/NIWS",
      "statement": "stat4b"
     }
    }
@@ -67462,18 +67465,6 @@
    }
   },
   {
-   "name": "Scheme of Human Resource Development in Sports CENTRAL SECTOR SCHEMES",
-   "sources": {
-    "budget": {
-     "be_cr": 5.0,
-     "cycle": "2026-27",
-     "demand_no": 102,
-     "name": "Scheme of Human Resource Development in Sports CENTRAL SECTOR SCHEMES",
-     "statement": "stat4b"
-    }
-   }
-  },
-  {
    "name": "National Centre of Sports Science & Research",
    "sources": {
     "budget": {
@@ -67575,18 +67566,6 @@
    }
   },
   {
-   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
-   "sources": {
-    "outcome": {
-     "classification": "CSS",
-     "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission",
-     "outlay_cr": 31820.0,
-     "page": 136,
-     "targets": 43
-    }
-   }
-  },
-  {
    "name": "MRTS (Mass Rapid Transit System) and Metro Projects",
    "sources": {
     "outcome": {
@@ -67594,6 +67573,18 @@
      "name": "MRTS (Mass Rapid Transit System) and Metro Projects",
      "outlay_cr": 30940.0,
      "page": 171,
+     "targets": 2
+    }
+   }
+  },
+  {
+   "name": "PM-SVANIDHI- Pradhan Mantri Street Vendors AtmaNirbhar Nidhi",
+   "sources": {
+    "outcome": {
+     "classification": "CS",
+     "name": "PM-SVANIDHI- Pradhan Mantri Street Vendors AtmaNirbhar Nidhi",
+     "outlay_cr": 900.0,
+     "page": 181,
      "targets": 2
     }
    }
@@ -67667,6 +67658,15 @@
      "outlay_cr": 570.0,
      "page": 274,
      "targets": 4
+    }
+   }
+  },
+  {
+   "name": "AgEdn - ICAR Senior Research Fellowship",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "AgEdn - ICAR Senior Research Fellowship"
     }
    }
   },
@@ -67869,11 +67869,29 @@
    }
   },
   {
+   "name": "ASHA incentives",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "ASHA incentives"
+    }
+   }
+  },
+  {
    "name": "Family Planning Compensation schemes",
    "sources": {
     "dbt": {
      "list": "central",
      "name": "Family Planning Compensation schemes"
+    }
+   }
+  },
+  {
+   "name": "NIKSHAY - DOT Provider Honorarium",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "NIKSHAY - DOT Provider Honorarium"
     }
    }
   },
@@ -67955,6 +67973,15 @@
     "dbt": {
      "list": "central",
      "name": "National Doctoral Fellowship (NDF)"
+    }
+   }
+  },
+  {
+   "name": "P.G. Scholarship For GATE/GPAT Qualified Students For Pursuing M.Tech/ M.E./M.Pharma - AICTE",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "P.G. Scholarship For GATE/GPAT Qualified Students For Pursuing M.Tech/ M.E./M.Pharma - AICTE"
     }
    }
   },
@@ -68085,6 +68112,15 @@
    }
   },
   {
+   "name": "PM POSHAN - Cook-cum-Helper Honorarium",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "PM POSHAN - Cook-cum-Helper Honorarium"
+    }
+   }
+  },
+  {
    "name": "Prime Minister School for Rising India",
    "sources": {
     "dbt": {
@@ -68117,6 +68153,15 @@
     "dbt": {
      "list": "central",
      "name": "Disha Programme for women in science"
+    }
+   }
+  },
+  {
+   "name": "Vigyan Dhara - INSPIRE Faculty Award",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Vigyan Dhara - INSPIRE Faculty Award"
     }
    }
   },
@@ -68166,11 +68211,38 @@
    }
   },
   {
+   "name": "National Fellowship for Scheduled Caste Students (NFSC)",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "National Fellowship for Scheduled Caste Students (NFSC)"
+    }
+   }
+  },
+  {
    "name": "National Overseas Scholarship (NOS)",
    "sources": {
     "dbt": {
      "list": "central",
      "name": "National Overseas Scholarship (NOS)"
+    }
+   }
+  },
+  {
+   "name": "SHREYAS (OBC) - Dr. Ambedkar Interest Subsidy on Educational Loan for Overseas Studies for OBCs and EBCs",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "SHREYAS (OBC) - Dr. Ambedkar Interest Subsidy on Educational Loan for Overseas Studies for OBCs and EBCs"
+    }
+   }
+  },
+  {
+   "name": "Special Scholarship Scheme under &#039;PM CARES for Children Scheme&#039;",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Special Scholarship Scheme under &#039;PM CARES for Children Scheme&#039;"
     }
    }
   },
@@ -68445,20 +68517,20 @@
    }
   },
   {
+   "name": "SECL ke Sushrut (Free residential Coaching for NEET Examination) at Bilaspur, Chhattisgarh",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "SECL ke Sushrut (Free residential Coaching for NEET Examination) at Bilaspur, Chhattisgarh"
+    }
+   }
+  },
+  {
    "name": "Award of Senior Fellowship to Outstanding Artistes/Persons in the field of Culture",
    "sources": {
     "dbt": {
      "list": "central",
      "name": "Award of Senior Fellowship to Outstanding Artistes/Persons in the field of Culture"
-    }
-   }
-  },
-  {
-   "name": "Repertory Grant",
-   "sources": {
-    "dbt": {
-     "list": "central",
-     "name": "Repertory Grant"
     }
    }
   },
@@ -68477,6 +68549,15 @@
     "dbt": {
      "list": "central",
      "name": "Research, Education and Training Outreach - REACHOUT"
+    }
+   }
+  },
+  {
+   "name": "FutureSkills PRIME (Programme for Re-skilling/Up-skilling of IT Manpower for Employability)",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "FutureSkills PRIME (Programme for Re-skilling/Up-skilling of IT Manpower for Employability)"
     }
    }
   },
@@ -68526,11 +68607,20 @@
    }
   },
   {
-   "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement",
+   "name": "ICCR Scholarship",
    "sources": {
     "dbt": {
      "list": "central",
-     "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement"
+     "name": "ICCR Scholarship"
+    }
+   }
+  },
+  {
+   "name": "Demand Incentive Delivery Mechanism under FAME India Scheme",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Demand Incentive Delivery Mechanism under FAME India Scheme"
     }
    }
   },
@@ -68679,11 +68769,11 @@
    }
   },
   {
-   "name": "Post-Matric Scholarship for Minorities",
+   "name": "Fellowship component of R and D projects sponsored by the Ministry",
    "sources": {
     "dbt": {
      "list": "central",
-     "name": "Post-Matric Scholarship for Minorities"
+     "name": "Fellowship component of R and D projects sponsored by the Ministry"
     }
    }
   },
@@ -68693,6 +68783,15 @@
     "dbt": {
      "list": "central",
      "name": "New National Biogas and Organic Manure Programme (NNBOMP)"
+    }
+   }
+  },
+  {
+   "name": "Short Term Training Programme component of HRD Programme",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Short Term Training Programme component of HRD Programme"
     }
    }
   },
@@ -68756,6 +68855,15 @@
     "dbt": {
      "list": "central",
      "name": "Samarth Scheme"
+    }
+   }
+  },
+  {
+   "name": "Scheme for Development of Silk Industry",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "name": "Scheme for Development of Silk Industry"
     }
    }
   },
@@ -68914,15 +69022,15 @@
   }
  ],
  "in_n_sources": {
-  "1": 5131,
-  "2": 305,
+  "1": 5181,
+  "2": 284,
   "3": 50,
-  "4": 22
+  "4": 20
  },
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
  "snapshot": "2026-10-17",
- "total_entries": 5508,
+ "total_entries": 5535,
  "unlisted_but_funded": [
   {
    "also_in": [],
@@ -69020,6 +69128,15 @@
    "demand_no": 85,
    "name": "New Lines",
    "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 31820.0,
+   "demand_no": 46,
+   "name": "Flexible Pool for RCH & Health System Strengthening, National Health Programme and National Urban Health Mission CENTRALLY SPONSORED SCHEMES",
+   "statement": "stat4a"
   },
   {
    "also_in": [],
@@ -69185,6 +69302,13 @@
    "statement": "stat4b"
   },
   {
+   "also_in": [],
+   "be_cr": 9000.0,
+   "demand_no": 68,
+   "name": "Guarantee Emergency Credit Line (GECL) facility to eligible MSME borrowers",
+   "statement": "stat4b"
+  },
+  {
    "also_in": [
     "outcome"
    ],
@@ -69253,9 +69377,7 @@
    "statement": "stat4a"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
+   "also_in": [],
    "be_cr": 7200.0,
    "demand_no": 1,
    "name": "Pradhan Mantri Annadata Aay Sanrakshan Yojna (PM- AASHA)",
@@ -69276,13 +69398,6 @@
    "demand_no": 100,
    "name": "Eklavya Model Residential Schools (EMRS)",
    "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 6587.0,
-   "demand_no": 62,
-   "name": "Pradhan Mantri Krishi Sinchai Yojna",
-   "statement": "stat4a"
   },
   {
    "also_in": [
@@ -69311,8 +69426,7 @@
   },
   {
    "also_in": [
-    "outcome",
-    "dbt"
+    "outcome"
    ],
    "be_cr": 5700.01,
    "demand_no": 100,
@@ -69663,6 +69777,15 @@
    "statement": "stat4b"
   },
   {
+   "also_in": [
+    "outcome"
+   ],
+   "be_cr": 1850.0,
+   "demand_no": 26,
+   "name": "Pradhan Mantri Uchchatar Shiksha Abhiyan (PM-USHA)",
+   "statement": "stat4a"
+  },
+  {
    "also_in": [],
    "be_cr": 1800.0,
    "demand_no": 3,
@@ -69700,10 +69823,10 @@
    "also_in": [
     "outcome"
    ],
-   "be_cr": 1700.0,
-   "demand_no": 45,
-   "name": "Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
-   "statement": "stat4a"
+   "be_cr": 1675.18,
+   "demand_no": 30,
+   "name": "Lines of Credit under Indian Development and Economic Assistance Scheme (IDEAS)",
+   "statement": "stat4b"
   },
   {
    "also_in": [],
@@ -69713,10 +69836,13 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [],
+   "also_in": [
+    "outcome",
+    "dbt"
+   ],
    "be_cr": 1500.0,
-   "demand_no": 27,
-   "name": "Electronics Components Manufacturing Scheme CENTRAL SECTOR SCHEMES",
+   "demand_no": 48,
+   "name": "PM Electric Drive Revolution in Innovative Vehicle Enhancement (PM E-DRIVE) Scheme",
    "statement": "stat4b"
   },
   {
@@ -70453,6 +70579,20 @@
   {
    "also_in": [],
    "be_cr": 500.0,
+   "demand_no": 7,
+   "name": "Bio-pharma SHAKTI",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 500.0,
+   "demand_no": 16,
+   "name": "Grant-in-aid to National Cooperative Development Corporation (NCDC)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 500.0,
    "demand_no": 30,
    "name": "SME Growth Fund",
    "statement": "stat4b"
@@ -70634,13 +70774,6 @@
    "be_cr": 380.0,
    "demand_no": 10,
    "name": "Tea Board",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 380.0,
-   "demand_no": 97,
-   "name": "Product Linked Incentive (PLI) Scheme for Specialty Steel in India CENTRAL SECTOR SCHEMES",
    "statement": "stat4b"
   },
   {
@@ -70882,13 +71015,6 @@
   },
   {
    "also_in": [],
-   "be_cr": 245.0,
-   "demand_no": 99,
-   "name": "Pilgrimage Rejuvenation and Spiritual, Heritage Augmentation Drive (PRASHAD)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
    "be_cr": 243.48,
    "demand_no": 62,
    "name": "Research and Development and Implementation of National Water Mission",
@@ -71035,6 +71161,13 @@
   },
   {
    "also_in": [],
+   "be_cr": 196.94,
+   "demand_no": 76,
+   "name": "Pradhan Mantri JI-VAN Yojana CENTRAL SECTOR SCHEMES",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
    "be_cr": 192.8,
    "demand_no": 13,
    "name": "SATCOM Monitoring-Facility",
@@ -71048,9 +71181,7 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
+   "also_in": [],
    "be_cr": 181.25,
    "demand_no": 93,
    "name": "Scholarships for Higher Education for Young Achievers Scheme (SHREYAS) for OBCs and EBCs",
@@ -71115,6 +71246,13 @@
   {
    "also_in": [],
    "be_cr": 160.0,
+   "demand_no": 25,
+   "name": "New India Literacy Programme (NILP) CENTRALLY SPONSORED SCHEMES",
+   "statement": "stat4a"
+  },
+  {
+   "also_in": [],
+   "be_cr": 160.0,
    "demand_no": 32,
    "name": "Interest Subsidy to LIC for Pension Plan for Senior Citizens",
    "statement": "stat4b"
@@ -71147,6 +71285,13 @@
    "be_cr": 152.0,
    "demand_no": 47,
    "name": "Human Resource and Capacity Development",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 150.0,
+   "demand_no": 1,
+   "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
    "statement": "stat4b"
   },
   {
@@ -71303,6 +71448,15 @@
    "statement": "stat4b"
   },
   {
+   "also_in": [
+    "dbt"
+   ],
+   "be_cr": 101.0,
+   "demand_no": 93,
+   "name": "Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES",
+   "statement": "stat4b"
+  },
+  {
    "also_in": [],
    "be_cr": 100.01,
    "demand_no": 30,
@@ -71408,15 +71562,6 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
-   "be_cr": 96.0,
-   "demand_no": 68,
-   "name": "Entrepreneurship cum Skill Development Programme (ESDP)",
-   "statement": "stat4b"
-  },
-  {
    "also_in": [],
    "be_cr": 95.05,
    "demand_no": 51,
@@ -71503,6 +71648,15 @@
    "statement": "stat4b"
   },
   {
+   "also_in": [
+    "dbt"
+   ],
+   "be_cr": 81.6,
+   "demand_no": 10,
+   "name": "Agricultural Product Export Development Authority (APEDA)",
+   "statement": "stat4b"
+  },
+  {
    "also_in": [],
    "be_cr": 81.0,
    "demand_no": 62,
@@ -71529,6 +71683,13 @@
    "demand_no": 29,
    "name": "Disaster Relief",
    "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 77.0,
+   "demand_no": 15,
+   "name": "Scheme for Modernization and Reforms through Technology in Public Distribution System (SMART-PDS)",
+   "statement": "stat4a"
   },
   {
    "also_in": [],
@@ -71675,6 +71836,13 @@
    "be_cr": 55.0,
    "demand_no": 26,
    "name": "Scheme for Promotion of Academic and Research Collaboration (SPARC)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 54.72,
+   "demand_no": 68,
+   "name": "MSME Champions Scheme",
    "statement": "stat4b"
   },
   {
@@ -71833,6 +72001,13 @@
   },
   {
    "also_in": [],
+   "be_cr": 45.0,
+   "demand_no": 99,
+   "name": "Assistance to IHMS/FCIs/IITTM/NIWS",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
    "be_cr": 40.0,
    "demand_no": 3,
    "name": "Improvement/Modifications of Heavy water projects CENTRAL SECTOR SCHEMES",
@@ -71857,6 +72032,13 @@
    "be_cr": 40.0,
    "demand_no": 26,
    "name": "Scheme for Transformational and Advanced Research in Sciences (STARS)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 40.0,
+   "demand_no": 65,
+   "name": "Designing Innovative Solutions for Holistic Access to Justice in India(DISHA)",
    "statement": "stat4b"
   },
   {
@@ -71902,80 +72084,8 @@
    "demand_no": 29,
    "name": "Eurasian Countries",
    "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 35.0,
-   "demand_no": 12,
-   "name": "Human Resource Management",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [
-    "dbt"
-   ],
-   "be_cr": 35.0,
-   "demand_no": 26,
-   "name": "Indian Knowledge Systems",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 34.06,
-   "demand_no": 28,
-   "name": "Conservation of Natural Resources and Ecosystems",
-   "statement": "stat4a"
-  },
-  {
-   "also_in": [],
-   "be_cr": 32.0,
-   "demand_no": 70,
-   "name": "Quami Waqf Board Taraqqiati Scheme and Sahari Waqf Sampati Vikas Yojna",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 31.0,
-   "demand_no": 76,
-   "name": "Scheme for promotion of flagging of merchant ships in India",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 30.0,
-   "demand_no": 18,
-   "name": "Global Engagement and International Cooperation",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 30.0,
-   "demand_no": 71,
-   "name": "Bio Power (Grid)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 30.0,
-   "demand_no": 78,
-   "name": "Cargo Promotion Scheme - JALVAHAK",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 28.59,
-   "demand_no": 13,
-   "name": "Unified Portal",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 28.0,
-   "demand_no": 64,
-   "name": "Shram Registration, Inspection, Samadhan and Transparency Initiative (SRISTI)",
-   "statement": "stat4b"
   }
  ],
- "unlisted_but_funded_cr": 1382288.11,
- "unlisted_but_funded_total": 505
+ "unlisted_but_funded_cr": 1419556.87,
+ "unlisted_but_funded_total": 517
 }

@@ -853,7 +853,7 @@
   }
  ],
  "absent_distinct_names": 27,
- "absent_from_myscheme_all_rows": 1606,
+ "absent_from_myscheme_all_rows": 1614,
  "absent_from_myscheme_and_classified_scheme": 27,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Odisha, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 37 joins over the whole corpus and 22 of them are wrong, so a row counted present may not be. The surviving list is a floor and a weak one: counted precision at the bar is 90.3%, the lowest of the five states, and recall is 25.0%. Read can_this_state_support_a_high_precision_classifier before quoting any number from this file.",
  "absent_schemes": [
@@ -72032,7 +72032,7 @@
     "2702-03-789",
     "2702-03-796"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3534",
    "major_heads": [
     "2702"
@@ -72041,9 +72041,7 @@
     "789",
     "796"
    ],
-   "myscheme_match": [
-    "Mukhyamantri Kalakar Sahayata Yojana"
-   ],
+   "myscheme_match": null,
    "name": "PMKSY-Har Khet Ko Pani(Ground Water)",
    "object_heads": [
     "37"
@@ -73359,7 +73357,7 @@
     "4875-60-800",
     "5452-01-102"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3566",
    "major_heads": [
     "4401",
@@ -73373,9 +73371,7 @@
     "789",
     "800"
    ],
-   "myscheme_match": [
-    "Semi-Commercial Duck Farming"
-   ],
+   "myscheme_match": null,
    "name": "SIDBI Cluster Developement Fund (SCDF)",
    "object_heads": [
     "20",
@@ -76749,7 +76745,7 @@
    "hoas": [
     "2235-02-103"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3667",
    "major_heads": [
     "2235"
@@ -76757,9 +76753,7 @@
    "minor_heads": [
     "103"
    ],
-   "myscheme_match": [
-    "Bhima Bhoi Bhinnakshyama Samarthya Abhiyan"
-   ],
+   "myscheme_match": null,
    "name": "Shakti Sadan (SAMARTHYA)",
    "object_heads": [
     "20",
@@ -76790,7 +76784,7 @@
    "hoas": [
     "2235-02-103"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3668",
    "major_heads": [
     "2235"
@@ -76798,9 +76792,7 @@
    "minor_heads": [
     "103"
    ],
-   "myscheme_match": [
-    "Bhima Bhoi Bhinnakshyama Samarthya Abhiyan"
-   ],
+   "myscheme_match": null,
    "name": "State Hub for Empowerment of Women (SAMARTHYA)",
    "object_heads": [
     "20"
@@ -76884,7 +76876,7 @@
     "2235-02-103",
     "4235-02-102"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3670",
    "major_heads": [
     "2235",
@@ -76894,9 +76886,7 @@
     "102",
     "103"
    ],
-   "myscheme_match": [
-    "Bhima Bhoi Bhinnakshyama Samarthya Abhiyan"
-   ],
+   "myscheme_match": null,
    "name": "Shakhi Niwas (SAMARTHYA)",
    "object_heads": [
     "20",
@@ -76927,7 +76917,7 @@
    "hoas": [
     "2235-02-102"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3671",
    "major_heads": [
     "2235"
@@ -76935,9 +76925,7 @@
    "minor_heads": [
     "102"
    ],
-   "myscheme_match": [
-    "Bhima Bhoi Bhinnakshyama Samarthya Abhiyan"
-   ],
+   "myscheme_match": null,
    "name": "Palna (SAMARTHYA)",
    "object_heads": [
     "20"
@@ -77916,7 +77904,10 @@
    ],
    "myscheme_match": [
     "Mukhyamantri Sampoorna Pushti Yojana: Adolescent Girls Nutrition",
-    "Mukhyamantri Sampoorna Pushti Yojana: Kishori Mela"
+    "Mukhyamantri Sampoorna Pushti Yojana: Kishori Mela",
+    "Mukhyamantri Sampoorna Pushti Yojana: Nutrition for Severely Underweight and Moderately Acute Malnourished Children (3 years - 6 years)",
+    "Mukhyamantri Sampoorna Pushti Yojana: Nutrition for Severely Underweight and Moderately Acute Malnourished Children (6 months - 3 years)",
+    "Mukhyamantri Sampoorna Pushti Yojana: Purna Aahaara for Children (6 months - 5 years)"
    ],
    "name": "Mukhyamantri Sampoorna Pushti Yojana (MSPY)",
    "object_heads": [
@@ -79665,6 +79656,8 @@
     "796"
    ],
    "myscheme_match": [
+    "\"Input Assistance to Farmers for Taking up Fish Farming in Farm Ponds\" Component of the \"Mukhyamantri Maschyajibi Kalyan Yojana\" Scheme",
+    "\"Reactivation Of Fisheries Cooperative Societies\" Component of the \"Mukhyamantri Maschyajibi Kalyan Yojana\" Scheme",
     "MMKY-Financial Assistance for New Boat, Engine, and Net",
     "MMKY-New Tank Excavation Under Brackish Water Aquaculture"
    ],
@@ -87520,7 +87513,7 @@
     "2055-00-101",
     "4059-60-051"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3900",
    "major_heads": [
     "2055",
@@ -87530,9 +87523,7 @@
     "051",
     "101"
    ],
-   "myscheme_match": [
-    "SUBHADRA"
-   ],
+   "myscheme_match": null,
    "name": "Subhadra Surakhya Yojana",
    "object_heads": [
     "08",
@@ -89561,7 +89552,7 @@
    "hoas": [
     "2235-02-103"
    ],
-   "in_myscheme_odisha": true,
+   "in_myscheme_odisha": false,
    "key": "3940",
    "major_heads": [
     "2235"
@@ -89569,9 +89560,7 @@
    "minor_heads": [
     "103"
    ],
-   "myscheme_match": [
-    "SUBHADRA"
-   ],
+   "myscheme_match": null,
    "name": "Subhadra Sambedna",
    "object_heads": [
     "20"
@@ -93394,7 +93383,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T18:04:35Z",
+ "built": "2026-10-30T16:43:18Z",
  "can_this_state_support_a_high_precision_classifier": "Not to the standard the strongest states reach, and the honest answer is published rather than engineered around. Counted precision at the publishing bar is 90.3% on 31 codes, the lowest in the register and its floor, against West Bengal's 90.4%, Kerala's 90.9%, Tamil Nadu's 91.2%, Karnataka's 93.8%, Andhra Pradesh's 95.7% and Maharashtra's 96.9%. Three of the 31 published codes are not schemes and all three are named in known_errors. The cause is measured and not guessed: Odisha prints no purpose line, and the chart of accounts that substituted for one in Tamil Nadu is present here but says nothing, because its benefit-type classes are the standing lines inside jails, hospitals and homes rather than transfers to citizens (0.125 over 8 development rows, against Tamil Nadu's 0.895 over 19). What is left is short English names over a base rate of 10%, and the strongest positive signal in the file measures 0.389. Cumulative precision is also not monotone above the bar, which is direct evidence that the score does not rank the top of the list. A reader who requires better than nine in ten should read the band at 12 and above, which is two rows and not a register. The published 31 are a floor and a weak one.",
  "charged_and_classified_scheme": 0,
  "charged_rows": 90,

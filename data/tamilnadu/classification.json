@@ -1,5 +1,5 @@
 {
- "absent_cr": 29747.26,
+ "absent_cr": 29540.32,
  "absent_distinct": [
   {
    "be_lakh": 733763.0,
@@ -954,47 +954,6 @@
    ],
    "name": "Supply of Uniforms to Students under Special Component Plan",
    "score": 16
-  },
-  {
-   "be_lakh": 16588.57,
-   "departments": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 793"
-    ],
-    [
-     "+1",
-     "sub-head code UG, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: widow"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
-    ]
-   ],
-   "heads": [
-    "2235 60 793 UG"
-   ],
-   "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan - State Share",
-   "score": 14
   },
   {
    "be_lakh": 15463.32,
@@ -2110,47 +2069,6 @@
    ],
    "name": "Indira Gandhi National Disabled Pension Scheme under Special Component Plan - State Share",
    "score": 14
-  },
-  {
-   "be_lakh": 3317.71,
-   "departments": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 327"
-    ],
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 793"
-    ],
-    [
-     "+1",
-     "sub-head code UC, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: widow"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
-    ]
-   ],
-   "heads": [
-    "2235 60 793 UC"
-   ],
-   "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan",
-   "score": 17
   },
   {
    "be_lakh": 3312.74,
@@ -3357,47 +3275,6 @@
    ],
    "name": "Financial Assistance for Marriage - \"Annan Seer\" Scheme - Tribal Sub-Plan",
    "score": 11
-  },
-  {
-   "be_lakh": 787.66,
-   "departments": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 794"
-    ],
-    [
-     "+1",
-     "sub-head code UG, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: widow"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
-    ]
-   ],
-   "heads": [
-    "2235 60 794 UG"
-   ],
-   "name": "Indira Gandhi National Widow Pension Scheme - State Share",
-   "score": 14
   },
   {
    "be_lakh": 784.44,
@@ -6468,41 +6345,6 @@
     "2401 00 794 VD"
    ],
    "name": "Micro Irrigation Scheme - State Share",
-   "score": 12
-  },
-  {
-   "be_lakh": 0.03,
-   "departments": [
-    "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
-   ],
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 311"
-    ],
-    [
-     "+4",
-     "welfare function major head 2401"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 793"
-    ],
-    [
-     "+1",
-     "sub-head code WC, one of the scheme blocks"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: mission"
-    ]
-   ],
-   "heads": [
-    "2401 00 114 UL",
-    "2401 00 793 WC",
-    "2401 00 794 VW"
-   ],
-   "name": "National Mission on Edible Oil - Oil Palm - State Share",
    "score": 12
   },
   {
@@ -9950,9 +9792,9 @@
    "score": 12
   }
  ],
- "absent_distinct_names": 299,
- "absent_from_myscheme_all_rows": 6115,
- "absent_from_myscheme_and_classified_scheme": 383,
+ "absent_distinct_names": 295,
+ "absent_from_myscheme_all_rows": 6116,
+ "absent_from_myscheme_and_classified_scheme": 377,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Tamil Nadu, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 201 joins over the whole corpus and 118 of them are wrong, so a row counted present may not be, and the absent count here is if anything an understatement. The surviving list is a floor for the opposite reason too: no book prints a purpose line, recall at the published bar is 41%, and a real scheme booked as a plain grant-in-aid with a Tamil name cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
   {
@@ -11092,57 +10934,6 @@
     "346"
    ],
    "score": 16,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 16588.57,
-   "books": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "code": "UG",
-   "department": "REVENUE AND DISASTER MANAGEMENT DEPARTMENT",
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 793"
-    ],
-    [
-     "+1",
-     "sub-head code UG, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: widow"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2235 60 793 UG",
-   "in_myscheme_tamilnadu": false,
-   "key": "2235 60 793 UG",
-   "major_head": "2235",
-   "myscheme_match": null,
-   "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan - State Share",
-   "object_heads": [
-    "327",
-    "377"
-   ],
-   "score": 14,
    "verdict": "scheme"
   },
   {
@@ -12852,56 +12643,6 @@
     "377"
    ],
    "score": 14,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 3317.71,
-   "books": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "code": "UC",
-   "department": "REVENUE AND DISASTER MANAGEMENT DEPARTMENT",
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 327"
-    ],
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 793"
-    ],
-    [
-     "+1",
-     "sub-head code UC, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: widow"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2235 60 793 UC",
-   "in_myscheme_tamilnadu": false,
-   "key": "2235 60 793 UC",
-   "major_head": "2235",
-   "myscheme_match": null,
-   "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan",
-   "object_heads": [
-    "327"
-   ],
-   "score": 17,
    "verdict": "scheme"
   },
   {
@@ -14713,57 +14454,6 @@
     "309"
    ],
    "score": 11,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 787.66,
-   "books": [
-    "REVENUE AND DISASTER MANAGEMENT DEPARTMENT"
-   ],
-   "code": "UG",
-   "department": "REVENUE AND DISASTER MANAGEMENT DEPARTMENT",
-   "evidence": [
-    [
-     "+2",
-     "a benefit transfer object head: 327"
-    ],
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 794"
-    ],
-    [
-     "+1",
-     "sub-head code UG, one of the scheme blocks"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: widow"
-    ],
-    [
-     "+2",
-     "benefit word in the name: pension"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: scheme"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2235 60 794 UG",
-   "in_myscheme_tamilnadu": false,
-   "key": "2235 60 794 UG",
-   "major_head": "2235",
-   "myscheme_match": null,
-   "name": "Indira Gandhi National Widow Pension Scheme - State Share",
-   "object_heads": [
-    "327",
-    "377"
-   ],
-   "score": 14,
    "verdict": "scheme"
   },
   {
@@ -21613,44 +21303,6 @@
    "books": [
     "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
    ],
-   "code": "UL",
-   "department": "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT",
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 311"
-    ],
-    [
-     "+4",
-     "welfare function major head 2401"
-    ],
-    [
-     "+1",
-     "sub-head code UL, one of the scheme blocks"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: mission"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2401 00 114 UL",
-   "in_myscheme_tamilnadu": false,
-   "key": "2401 00 114 UL",
-   "major_head": "2401",
-   "myscheme_match": null,
-   "name": "National Mission on Edible Oil - Oil Palm - State Share",
-   "object_heads": [
-    "311"
-   ],
-   "score": 11,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.01,
-   "books": [
-    "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
-   ],
    "code": "UM",
    "department": "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT",
    "evidence": [
@@ -22193,48 +21845,6 @@
    "books": [
     "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
    ],
-   "code": "WC",
-   "department": "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT",
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 311"
-    ],
-    [
-     "+4",
-     "welfare function major head 2401"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 793"
-    ],
-    [
-     "+1",
-     "sub-head code WC, one of the scheme blocks"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: mission"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2401 00 793 WC",
-   "in_myscheme_tamilnadu": false,
-   "key": "2401 00 793 WC",
-   "major_head": "2401",
-   "myscheme_match": null,
-   "name": "National Mission on Edible Oil - Oil Palm - State Share",
-   "object_heads": [
-    "311"
-   ],
-   "score": 12,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.01,
-   "books": [
-    "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
-   ],
    "code": "WD",
    "department": "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT",
    "evidence": [
@@ -22538,48 +22148,6 @@
     "311"
    ],
    "score": 14,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.01,
-   "books": [
-    "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT"
-   ],
-   "code": "VW",
-   "department": "AGRICULTURE AND FARMER’S WELFARE DEPARTMENT",
-   "evidence": [
-    [
-     "+5",
-     "every object head on this row is a benefit transfer head: 311"
-    ],
-    [
-     "+4",
-     "welfare function major head 2401"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 794"
-    ],
-    [
-     "+1",
-     "sub-head code VW, one of the scheme blocks"
-    ],
-    [
-     "+1",
-     "scheme marker word in the name: mission"
-    ]
-   ],
-   "hand_label": "scheme",
-   "hoa": "2401 00 794 VW",
-   "in_myscheme_tamilnadu": false,
-   "key": "2401 00 794 VW",
-   "major_head": "2401",
-   "myscheme_match": null,
-   "name": "National Mission on Edible Oil - Oil Palm - State Share",
-   "object_heads": [
-    "311"
-   ],
-   "score": 12,
    "verdict": "scheme"
   },
   {
@@ -27581,13 +27149,10 @@
    ],
    "hand_label": null,
    "hoa": "2014 00 103 AD",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2014 00 103 AD",
    "major_head": "2014",
-   "myscheme_match": [
-    "Production Of Certified Seeds",
-    "Production of Certified Seeds of Maize"
-   ],
+   "myscheme_match": null,
    "name": "Special Court to Try the Cases under POCSO Act",
    "object_heads": [
     "301",
@@ -27627,13 +27192,10 @@
    ],
    "hand_label": null,
    "hoa": "2014 00 103 UA",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2014 00 103 UA",
    "major_head": "2014",
-   "myscheme_match": [
-    "Production Of Certified Seeds",
-    "Production of Certified Seeds of Maize"
-   ],
+   "myscheme_match": null,
    "name": "Special Court to Try the Cases under POCSO Act",
    "object_heads": [
     "309"
@@ -27660,13 +27222,10 @@
    ],
    "hand_label": null,
    "hoa": "2014 00 103 UB",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2014 00 103 UB",
    "major_head": "2014",
-   "myscheme_match": [
-    "Production Of Certified Seeds",
-    "Production of Certified Seeds of Maize"
-   ],
+   "myscheme_match": null,
    "name": "Special Court to Try the Cases under POCSO Act, 2012 - State Share",
    "object_heads": [
     "309"
@@ -40284,12 +39843,10 @@
    ],
    "hand_label": null,
    "hoa": "2055 00 001 AP",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2055 00 001 AP",
    "major_head": "2055",
-   "myscheme_match": [
-    "Calipers and Crutches - Tamil Nadu"
-   ],
+   "myscheme_match": null,
    "name": "Development of Information Technology Infrastructure from the Crime and Criminal Tracking Network and Systems Services Fund (CCTNS)",
    "object_heads": [
     "305",
@@ -40318,12 +39875,10 @@
    ],
    "hand_label": null,
    "hoa": "2055 00 001 AS",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2055 00 001 AS",
    "major_head": "2055",
-   "myscheme_match": [
-    "Calipers and Crutches - Tamil Nadu"
-   ],
+   "myscheme_match": null,
    "name": "Crime and Criminal Tracking Network Systems (CCTNS) under State fund",
    "object_heads": [
     "376",
@@ -42968,12 +42523,10 @@
    ],
    "hand_label": null,
    "hoa": "2055 00 797 AA",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2055 00 797 AA",
    "major_head": "2055",
-   "myscheme_match": [
-    "Calipers and Crutches - Tamil Nadu"
-   ],
+   "myscheme_match": null,
    "name": "Amount transferred to Crime and Criminal Tracking Network and Systems Fund Account (CCTNS)",
    "object_heads": [
     "330"
@@ -43034,12 +42587,10 @@
    ],
    "hand_label": null,
    "hoa": "2055 00 902 AB",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2055 00 902 AB",
    "major_head": "2055",
-   "myscheme_match": [
-    "Calipers and Crutches - Tamil Nadu"
-   ],
+   "myscheme_match": null,
    "name": "Deduct - Amount met from Crime and Criminal Tracking Network and Systems Service Fund (CCTNS)",
    "object_heads": [
     "330"
@@ -92005,7 +91556,8 @@
    "key": "2210 80 800 UC",
    "major_head": "2210",
    "myscheme_match": [
-    "Chief Minister's Comprehensive Health Insurance Scheme"
+    "Chief Minister's Comprehensive Health Insurance Scheme",
+    "Chief Minister’s Comprehensive Health Insurance Scheme - Tamil Nadu"
    ],
    "name": "Chief Minister's Comprehensive Health Insurance Scheme converged with Pradhan Mantri Jan Arogya Yojana",
    "object_heads": [
@@ -92042,7 +91594,8 @@
    "key": "2210 80 800 UE",
    "major_head": "2210",
    "myscheme_match": [
-    "Chief Minister's Comprehensive Health Insurance Scheme"
+    "Chief Minister's Comprehensive Health Insurance Scheme",
+    "Chief Minister’s Comprehensive Health Insurance Scheme - Tamil Nadu"
    ],
    "name": "Chief Minister's Comprehensive Health Insurance Scheme converged with Pradhan Mantri Jan Arogya Yojana - State Share",
    "object_heads": [
@@ -112237,10 +111790,12 @@
    ],
    "hand_label": null,
    "hoa": "2225 03 277 BX",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2225 03 277 BX",
    "major_head": "2225",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Chief Minister Merit Award"
+   ],
    "name": "Chief Minister's Meritorious Awards for Students",
    "object_heads": [
     "359"
@@ -125091,13 +124646,10 @@
    ],
    "hand_label": null,
    "hoa": "2235 02 102 SI",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2235 02 102 SI",
    "major_head": "2235",
-   "myscheme_match": [
-    "Production Of Certified Seeds",
-    "Production of Certified Seeds of Maize"
-   ],
+   "myscheme_match": null,
    "name": "Scheme for Care and Support to Victims under Section 4 & 6 of the Protection of Children from Sexual Offences (POCSO) Act,2012",
    "object_heads": [
     "309"
@@ -134089,15 +133641,10 @@
    ],
    "hand_label": null,
    "hoa": "2235 60 200 BC",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2235 60 200 BC",
    "major_head": "2235",
-   "myscheme_match": [
-    "Promotion of Energy Audit and Conservation of Energy (PEACE): Awareness Programme",
-    "Promotion of Energy Audit and Conservation of Energy (PEACE): Detailed Energy Audit",
-    "Promotion of Energy Audit and Conservation of Energy (PEACE): Incentive for Implementing Energy Audit Recommendations",
-    "Promotion of Energy Audit and Conservation of Energy (PEACE): Training Programme"
-   ],
+   "myscheme_match": null,
    "name": "Extension of Battle casuality facilities to the dependants of those killed, disabled while performing duties in aid to Civil Power during peace time",
    "object_heads": [
     "309"
@@ -136264,10 +135811,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 60 793 UC",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 793 UC",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Indira Gandhi National Widow Pension Scheme - Tamil Nadu"
+   ],
    "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan",
    "object_heads": [
     "327"
@@ -136408,10 +135957,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 60 793 UG",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 793 UG",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Indira Gandhi National Widow Pension Scheme - Tamil Nadu"
+   ],
    "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan - State Share",
    "object_heads": [
     "327",
@@ -136782,10 +136333,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2235 60 794 UG",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 794 UG",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Indira Gandhi National Widow Pension Scheme - Tamil Nadu"
+   ],
    "name": "Indira Gandhi National Widow Pension Scheme - State Share",
    "object_heads": [
     "327",
@@ -139070,10 +138623,12 @@
    ],
    "hand_label": null,
    "hoa": "2235 60 911 JW",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 911 JW",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Indira Gandhi National Widow Pension Scheme - Tamil Nadu"
+   ],
    "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan",
    "object_heads": [
     "377"
@@ -139798,10 +139353,12 @@
    ],
    "hand_label": null,
    "hoa": "2235 60 911 UJ",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 911 UJ",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Indira Gandhi National Widow Pension Scheme - Tamil Nadu"
+   ],
    "name": "Indira Gandhi National Widow Pension Scheme under Special Component Plan",
    "object_heads": [
     "377"
@@ -139942,10 +139499,12 @@
    ],
    "hand_label": null,
    "hoa": "2235 60 911 UN",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2235 60 911 UN",
    "major_head": "2235",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Indira Gandhi National Widow Pension Scheme - Tamil Nadu"
+   ],
    "name": "Indira Gandhi National Widow Pension Scheme - State Share",
    "object_heads": [
     "377"
@@ -160361,10 +159920,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2401 00 114 UL",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2401 00 114 UL",
    "major_head": "2401",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "National Mission on Edible Oils- Oil Palm"
+   ],
    "name": "National Mission on Edible Oil - Oil Palm - State Share",
    "object_heads": [
     "311"
@@ -163628,10 +163189,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2401 00 793 WC",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2401 00 793 WC",
    "major_head": "2401",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "National Mission on Edible Oils- Oil Palm"
+   ],
    "name": "National Mission on Edible Oil - Oil Palm - State Share",
    "object_heads": [
     "311"
@@ -165312,10 +164875,12 @@
    ],
    "hand_label": "scheme",
    "hoa": "2401 00 794 VW",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2401 00 794 VW",
    "major_head": "2401",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "National Mission on Edible Oils- Oil Palm"
+   ],
    "name": "National Mission on Edible Oil - Oil Palm - State Share",
    "object_heads": [
     "311"
@@ -183758,12 +183323,10 @@
    ],
    "hand_label": null,
    "hoa": "2415 01 120 AB",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2415 01 120 AB",
    "major_head": "2415",
-   "myscheme_match": [
-    "Organizing Block Demonstration Through Department And Also Through TNAU"
-   ],
+   "myscheme_match": null,
    "name": "Grants to Tamil Nadu Agricultural University",
    "object_heads": [
     "309",
@@ -183883,12 +183446,10 @@
    ],
    "hand_label": null,
    "hoa": "2415 01 120 AL",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2415 01 120 AL",
    "major_head": "2415",
-   "myscheme_match": [
-    "Organizing Block Demonstration Through Department And Also Through TNAU"
-   ],
+   "myscheme_match": null,
    "name": "Creation of Corpus Fund for Research in Tamil Nadu Agricultural University",
    "object_heads": [
     "309"
@@ -188972,12 +188533,10 @@
    ],
    "hand_label": null,
    "hoa": "2505 02 101 SA",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "2505 02 101 SA",
    "major_head": "2505",
-   "myscheme_match": [
-    "Scholarship (Above VIII Standard) - Tamil Nadu"
-   ],
+   "myscheme_match": null,
    "name": "Social Audit Society of Tamil Nadu",
    "object_heads": [
     "309"
@@ -197268,10 +196827,12 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 102 LN",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2851 00 102 LN",
    "major_head": "2851",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Back Ended Interest Subsidy (BEIS)"
+   ],
    "name": "Back Ended Interest Subsidy to Micro and Small Enterprises towards term loan obtained for Technology Upgradation / Modernisation",
    "object_heads": [
     "311"
@@ -197302,10 +196863,12 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 102 LP",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2851 00 102 LP",
    "major_head": "2851",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Back Ended Interest Subsidy (BEIS)"
+   ],
    "name": "Back Ended Interest Subsidy to Micro and Small Enterprises towards term loan obtained under credit Guarantee Fund Trust for Micro and Small Enterprises",
    "object_heads": [
     "311"
@@ -201480,10 +201043,12 @@
    ],
    "hand_label": null,
    "hoa": "2851 00 911 LP",
-   "in_myscheme_tamilnadu": false,
+   "in_myscheme_tamilnadu": true,
    "key": "2851 00 911 LP",
    "major_head": "2851",
-   "myscheme_match": null,
+   "myscheme_match": [
+    "Back Ended Interest Subsidy (BEIS)"
+   ],
    "name": "Back Ended Interest Subsidy to Micro and Small Enterprises towards term loan obtained under credit Guarantee Fund Trust for Micro and Small Enterprises",
    "object_heads": [
     "377"
@@ -213264,12 +212829,10 @@
    ],
    "hand_label": null,
    "hoa": "3456 00 102 UG",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "3456 00 102 UG",
    "major_head": "3456",
-   "myscheme_match": [
-    "Smart Phone for Hearing and Visually Impaired Persons"
-   ],
+   "myscheme_match": null,
    "name": "Implementation of the Scheme of Modernization and Reforms through Technology in Public Distribution System (SMART-PDS)",
    "object_heads": [
     "309"
@@ -260271,13 +259834,10 @@
    ],
    "hand_label": null,
    "hoa": "7610 00 202 AB",
-   "in_myscheme_tamilnadu": true,
+   "in_myscheme_tamilnadu": false,
    "key": "7610 00 202 AB",
    "major_head": "7610",
-   "myscheme_match": [
-    "Production Of Certified Seeds",
-    "Production of Certified Seeds of Maize"
-   ],
+   "myscheme_match": null,
    "name": "Conveyance Advance to Government Servants in lieu of Government Vehicles (POCS)",
    "object_heads": [
     "502"
@@ -260888,7 +260448,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-29T18:05:08Z",
+ "built": "2026-10-30T16:43:35Z",
  "classified_not_scheme": 5809,
  "classified_scheme": 411,
  "classified_scheme_distinct_names": 323,
