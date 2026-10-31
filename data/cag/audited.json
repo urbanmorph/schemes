@@ -1,15 +1,29 @@
 {
- "built": "2026-10-30T16:42:40Z",
- "joins_considered": 142,
- "joins_published": 22,
+ "built": "2026-10-31T13:09:02Z",
+ "joins_considered": 167,
+ "joins_published": 27,
  "method_note": "Every one of the joins any rule produced was read by eye. The similarity tier was correct in all of them and is published; containment and the acronym rules were wrong often enough to reject, and the module records which errors decided that. A CAG title is a phrase and not a name, which is why containment fails here and works elsewhere: 'Employees' Provident Fund Organisation' contains every content word of 'Internship Scheme Of Employees' Provident Fund Organisation', and an audit of the organisation is not an audit of that scheme.",
- "pool_note": "Both halves of the register: every name from the four national sources, joinable to any government, plus each state's own budget schemes, joinable only to that state's reports. A Karnataka report cannot be an audit of a Kerala scheme.",
- "register_names": 10501,
- "register_names_national": 5504,
- "register_names_state": 4997,
+ "pool_note": "Both halves of the register: every name from the four national sources and the Union schemes only a CAG report names, joinable to any government, plus each state's own budget schemes and the state schemes only its CAG reports name, joinable only to that state's reports. A Karnataka report cannot be an audit of a Kerala scheme.",
+ "register_names": 10691,
+ "register_names_national": 5619,
+ "register_names_state": 5072,
  "reports_in_catalogue": 2753,
  "rule": "similarity >= 0.85, and no other rule",
  "schemes": {
+  "Accelerated Irrigation Benefits Programme (AIBP)": [
+   {
+    "audit_type": "Performance",
+    "detail_url": "https://cag.gov.in/en/audit-report/details/2273",
+    "government": "Union",
+    "id": 2273,
+    "pdf_url": "https://d7i5wg8xwe4hf.cloudfront.net/uploads/download_audit_report/2010/Union_Performance_Civil_AIBP_Ministry_of_Water_Resources_4_2010.pdf",
+    "sector": "Agriculture and Rural Development",
+    "similarity": 1.0,
+    "subject": "Accelerated Irrigation Benefits Programme AIBP",
+    "tabled": "07 May 2010",
+    "title": "Report No. 4 of 2010 - Performance Audit of Accelerated Irrigation Benefits Programme AIBP of Union Government, Ministry of Water Resources"
+   }
+  ],
   "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana": [
    {
     "audit_type": "Performance",
@@ -22,6 +36,20 @@
     "subject": "Ayushman Bharat-Pradhan Mantri Jan Arogya Yojana –",
     "tabled": "08 August 2023",
     "title": "Report No. 11 of 2023- Performance Audit of Ayushman Bharat-Pradhan Mantri Jan Arogya Yojana – Union Government (Civil) National Health Authority Ministry of Health and Family Welfare"
+   }
+  ],
+  "Border Area Development Program": [
+   {
+    "audit_type": "Performance",
+    "detail_url": "https://cag.gov.in/en/audit-report/details/121917",
+    "government": "Gujarat",
+    "id": 121917,
+    "pdf_url": "https://d7i5wg8xwe4hf.cloudfront.net/uploads/download_audit_report/2024/Audit-Report-No.-02-of-2024--PA-BADP--English-067ece4044696e7.62685579.pdf",
+    "sector": "Social Infrastructure",
+    "similarity": 0.97,
+    "subject": "Border Area Development Programme (",
+    "tabled": "28 March 2025",
+    "title": "Performance Audit of Implementation of Border Area Development Programme (Report No 02 of 2024)"
    }
   ],
   "Commonwealth Games": [
@@ -64,6 +92,20 @@
     "subject": "Ex-servicemen Contributory Health Scheme",
     "tabled": "22 December 2015",
     "title": "Report No. 51 of 2015 - Performance Audit on Implementation of Ex-servicemen Contributory Health Scheme, Union Government, Defence Services - Army"
+   }
+  ],
+  "Export Oriented Unit Scheme": [
+   {
+    "audit_type": "Performance",
+    "detail_url": "https://cag.gov.in/en/audit-report/details/1754",
+    "government": "Union",
+    "id": 1754,
+    "pdf_url": "https://d7i5wg8xwe4hf.cloudfront.net/uploads/download_audit_report/2015/Union_Performance_Indirect_Tax_EOU_Scheme_Revenue_Dept_9_2015.pdf",
+    "sector": "Taxes and Duties",
+    "similarity": 1.0,
+    "subject": "Export Oriented Unit scheme",
+    "tabled": "05 May 2015",
+    "title": "Report No. 9 of 2015 - Performance Audit on Export Oriented Unit scheme Union Government, Department of Revenue-Indirect Taxes,Customs"
    }
   ],
   "Export Promotion Capital Goods Scheme": [
@@ -230,6 +272,20 @@
     "title": "Report of the Comptroller and Auditor General of India on Mahatma Gandhi National Rural Employment Guarantee Scheme (Report No. 6 of 2025)"
    }
   ],
+  "National Pension System": [
+   {
+    "audit_type": "Performance",
+    "detail_url": "https://cag.gov.in/en/audit-report/details/112173",
+    "government": "Union",
+    "id": 112173,
+    "pdf_url": "https://d7i5wg8xwe4hf.cloudfront.net/uploads/download_audit_report/2020/Report No. 13 of 2020_NPS_English-05f8952c04a4417.54539256.pdf",
+    "sector": "General Sector Ministries and Constitutional Bodies",
+    "similarity": 1.0,
+    "subject": "National Pension System",
+    "tabled": "23 September 2020",
+    "title": "Report No.13 of 2020 - Performance Audit on National Pension System, Union Government"
+   }
+  ],
   "Pradhan Mantri Awaas Yojana (Gramin)": [
    {
     "audit_type": "Performance",
@@ -282,6 +338,20 @@
     "title": "Report No.6 of 2022- Report of the Comptroller and Auditor General of India Performance Audit on implementation of Pradhan Mantri Awaas Yojana-Gramin (Tamil)"
    }
   ],
+  "Rajiv Gandhi Grameen Vidyutikaran Yojana (RGGVY)": [
+   {
+    "audit_type": "Performance",
+    "detail_url": "https://cag.gov.in/en/audit-report/details/913",
+    "government": "Union",
+    "id": 913,
+    "pdf_url": "https://d7i5wg8xwe4hf.cloudfront.net/uploads/download_audit_report/2013/union_performance_commercial_ministry_power_27_2013.pdf",
+    "sector": "Power & Energy",
+    "similarity": 0.87,
+    "subject": "Rajiv Gandhi Grameen Vidyutikaran Yojana",
+    "tabled": "11 February 2014",
+    "title": "Report No. 27 of 2013 - Performance Audit of Rajiv Gandhi Grameen Vidyutikaran Yojana of Union Government, Ministry of Power"
+   }
+  ],
   "Samagra Shiksha": [
    {
     "audit_type": "Performance",
@@ -297,7 +367,7 @@
    }
   ]
  },
- "schemes_audited": 11,
+ "schemes_audited": 16,
  "scope_note": "That a report exists on this scheme, and nothing about what it found. The CAG's conclusions are the CAG's to publish.",
  "snapshot": "2026-10-17",
  "source": "Comptroller and Auditor General of India, audit report index",

@@ -81,6 +81,23 @@ that decided it, and refusals are published beside the states that yielded.
 ### §3.6 The CAG audit catalogue
 A catalogue and never a finding. See §1.
 
+The reports also state how schemes were set up: when one began or ended, what it was renamed
+or merged into, its type, funding pattern, implementing agency, outlay, coverage, benefit and
+eligibility. Those are facts about the scheme's design that the report is quoting from the
+government, not conclusions of the audit, and they are published from `data/cag/facts.json`:
+
+- setup facts only, never a finding, and never the report's own sentence;
+- each cited in the report's printed form (report number, title, government, para, page),
+  every citation checked by hand against the page;
+- each matched to its register entry by hand and named by the source that entry holds (a
+  myScheme slug or a Budget line), never by the entry's name, which moves when merges change;
+- where the CAG and the register's other sources disagree, the CAG's value is shown and the
+  other source's is noted beside it;
+- a scheme only the CAG names becomes an entry of its own, many of them ended.
+
+The PDFs and the extraction stay out of the repository (`local/cag`, gitignored);
+`local/cag/extraction/export.py` writes the one file that is published.
+
 ---
 
 ## §4 — What a scheme is, and the two bars

@@ -22,6 +22,10 @@ false accusation, published.
 
 Samagra Shiksha (Rs 42,100 cr) survives the generous matcher and is genuinely absent.
 
+The CAG's setup facts (data/cag/facts.json) join last and by hand, not by this matcher: each
+fact names the source its entry holds, and the schemes the register lacks come in as entries
+of their own, many of them ended. See attach_cag().
+
 Names are compared only against entries sharing a content word or acronym, via a token
 index. Comparing every name against every entry took six minutes; this takes ten
 seconds and makes the same comparisons.
@@ -67,6 +71,89 @@ def same_line(held, name, detail):
     "Research and Development" is voted in demands 9, 21, 71 and 89, and comparing names
     alone kept demand 9's Rs 21 crore and dropped demand 21's Rs 17,250 crore."""
     return held.get("name") == name and all(held.get(k) == v for k, v in detail.items())
+
+
+def state_page(en):
+    """A state's or UT's myScheme record. None is an unrecorded level, not a state."""
+    return (en["sources"].get("myscheme") or {}).get("level") not in (None, "Central")
+
+
+def pick(cands):
+    """The entry a national line merges into, from (-similarity, name, entry, reason)
+    candidates: (entry, reason, state page it resembles).
+
+    Every line merged here is a Union one (Budget, Outcome Budget, DBT's central list), and
+    a state's myScheme page is that state's record, not the Union scheme. Letting them merge
+    filed Nutrient Based Subsidy under Goa's "Internet Subsidy Scheme" and the National AIDS
+    Control Programme under "... - Uttarakhand": 63 Union lines in all, each shown on a state
+    page under a name that is not its own. So a Union line merges only into a national
+    entry, and one that resembles only a state page gets its own entry with that page
+    noted, because the resemblance is still the evidence that myScheme lists the scheme
+    somewhere and must keep the line out of the absence count."""
+    cands = sorted(cands, key=lambda c: (c[0], c[1]))
+    national = [c for c in cands if not state_page(c[2])]
+    if national:
+        return national[0][2], national[0][3], None
+    if cands:
+        _, name, en, why = cands[0]
+        return None, "", {"slug": en["sources"]["myscheme"]["slug"], "name": name,
+                          "merge_reason": why}
+    return None, "", None
+
+
+def on_myscheme(en):
+    """Does myScheme list this scheme, for every absence claim made from the register? Its
+    own record, or a state's page its Union lines resemble (pick()): before pick() those
+    lines merged into the state page and counted as listed, and keeping them on their own
+    entry must not turn the resemblance into an accusation. Without this, classify.py
+    newly called PM POSHAN and Saksham Anganwadi funded-but-unlisted."""
+    return "myscheme" in en["sources"] or any(
+        "state_page" in en["sources"].get(k, {}) for k in ("budget", "outcome", "dbt"))
+
+
+def source_keys(en):
+    """Every source key an entry holds, in the form data/cag/facts.json names entries by."""
+    src = en["sources"]
+    if "myscheme" in src:
+        yield {"myscheme": src["myscheme"]["slug"]}
+    if "budget" in src:
+        b = src["budget"]
+        yield {"budget": [b["name"], b.get("statement"), b.get("demand_no")]}
+    for k in ("outcome", "dbt"):
+        if k in src:
+            yield {k: src[k]["name"]}
+
+
+def attach_cag(entries, cag):
+    """Add the CAG's setup facts (data/cag/facts.json, local/cag/extraction/export.py): each
+    attached fact to the entry holding its source, each draft as an entry of its own. Returns
+    how many attached facts found no entry, which happens when a source leaves the register;
+    they are counted in the output rather than dropped unseen.
+
+    The facts are keyed by source rather than by entry name because names move when the merge
+    changes: Nutrient Based Subsidy was filed under Goa's "Internet Subsidy Scheme" until pick()
+    stopped Union lines merging into state pages."""
+    by_key = {json.dumps(k): en for en in entries for k in source_keys(en)}
+    lost = 0
+    for f in cag.get("attached", []):
+        en = by_key.get(json.dumps(f["entry"]))
+        if en is None:
+            lost += 1
+            continue
+        en["sources"].setdefault("cag", {"facts": []})["facts"].append(
+            {k: v for k, v in f.items() if k != "entry"})
+
+    def name(link):
+        en = by_key.get(json.dumps(link.get("entry")))
+        return link.get("draft") or (en and en["name"])
+
+    for d in cag.get("drafts", []):
+        rec = {k: v for k, v in d.items() if k != "name"}
+        for r in ("replaced_by", "part_of"):
+            if r in rec:
+                rec[r] = [n for n in map(name, rec[r]) if n]
+        entries.append({"name": d["name"], "sources": {"cag": rec}})
+    return lost
 
 
 def dbt_central(date):
@@ -147,10 +234,7 @@ def build(snapshot, year):
                     if same:
                         cands.append((-m_similarity(name, en["name"]), en["name"],
                                       en, reason))
-            hit, why = None, ""
-            if cands:
-                cands.sort(key=lambda c: (c[0], c[1]))
-                hit, why = cands[0][2], cands[0][3]
+            hit, why, near = pick(cands)
             # setdefault silently discarded a second line matching the same entry, and
             # umbrella schemes routinely have several: 721 budget lines became 493
             # registry sources, losing 228 of them including FAME. If the slot is taken
@@ -160,7 +244,8 @@ def build(snapshot, year):
             elif hit is not None and same_line(hit["sources"][key], name, detail):
                 pass
             else:
-                en = {"name": name, "sources": {key: {**detail, "name": name}}}
+                en = {"name": name, "sources": {key: {**detail, "name": name,
+                                                      **({"state_page": near} if near else {})}}}
                 entries.append(en)
                 register(en)
                 added += 1
@@ -189,6 +274,9 @@ def build(snapshot, year):
 
     new_dbt = add([(n, {"list": "central"}) for n in dbt_central(snapshot)], "dbt")
 
+    cag = read_json("data/cag/facts.json", {}) or {}
+    cag_lost = attach_cag(entries, cag)
+
     # Funded but never announced: a Budget line with money and no myScheme entry.
     unlisted = sorted(
         ({"name": en["name"],
@@ -197,7 +285,7 @@ def build(snapshot, year):
           "demand_no": en["sources"]["budget"].get("demand_no"),
           "also_in": [k for k in en["sources"] if k not in ("budget",)]}
          for en in entries
-         if "budget" in en["sources"] and "myscheme" not in en["sources"]
+         if "budget" in en["sources"] and not on_myscheme(en)
          and isinstance(en["sources"]["budget"].get("be_cr"), (int, float))),
         key=lambda x: -(x["be_cr"] or 0))
 
@@ -210,7 +298,9 @@ def build(snapshot, year):
         "merge_rule": "parse/match.py probably_same, generous, for absence claims",
         "total_entries": len(entries),
         "myscheme_entries": len(checks),
-        "added_by": {"budget": new_budget, "outcome": new_outcome, "dbt": new_dbt},
+        "added_by": {"budget": new_budget, "outcome": new_outcome, "dbt": new_dbt,
+                     "cag": len(cag.get("drafts", []))},
+        "cag_facts_unattached": cag_lost,
         "in_n_sources": dict(sorted(by_count.items())),
         "unlisted_but_funded": unlisted[:400],
         "unlisted_but_funded_total": len(unlisted),
@@ -240,6 +330,42 @@ def latest_dbt():
 
 
 def selftest():
+    def entry(name, slug, level):
+        return {"name": name, "sources": {"myscheme": {"slug": slug, "level": level}}}
+    goa = entry("Internet Subsidy Scheme", "internet-subsidy-scheme", "State/ UT")
+    central = entry("Nutrient Based Subsidy Scheme", "nbs", "Central")
+    picks = [
+        ("a Union line never lands on a state's page, however alike the names",
+         pick([(-0.9, goa["name"], goa, "transliteration variant")]),
+         (None, "", {"slug": "internet-subsidy-scheme", "name": "Internet Subsidy Scheme",
+                     "merge_reason": "transliteration variant"})),
+        ("a national entry is chosen over a closer state page",
+         pick([(-0.9, goa["name"], goa, "x"), (-0.5, central["name"], central, "y")]),
+         (central, "y", None)),
+        ("no candidate, no state page", pick([]), (None, "", None))]
+    nbs = {"name": "Nutrient Based Subsidy", "sources": {"budget": {
+        "name": "Nutrient Based Subsidy", "statement": "stat4b", "demand_no": 6}}}
+    pm = {"name": "PM POSHAN", "sources": {"myscheme": {"slug": "pm-poshan", "level": "Central"}}}
+    fact = {"field": "start", "value": "1992", "citation": "CAG, p. 1."}
+    cag = {"attached": [{"entry": {"myscheme": "pm-poshan"}, "relation": "same", **fact},
+                        {"entry": {"myscheme": "gone"}, "relation": "same", **fact}],
+           "drafts": [{"name": "Concession Scheme", "government": "Central", "facts": [fact],
+                       "replaced_by": [{"entry": {"budget": ["Nutrient Based Subsidy", "stat4b", 6]}},
+                                       {"draft": "Later"}]}]}
+    entries = [nbs, pm]
+    lost = attach_cag(entries, cag)
+    picks += [
+        ("a CAG fact attaches to the entry holding its source",
+         pm["sources"].get("cag"), {"facts": [{"relation": "same", **fact}]}),
+        ("a fact whose source has gone is counted, not dropped silently", lost, 1),
+        ("a line resembling a state's page counts as on myScheme, so it is never called absent",
+         on_myscheme({"sources": {"budget": {"state_page": {"slug": "x"}}}}), True),
+        ("a line with no myScheme record or resemblance is not on it",
+         on_myscheme({"sources": {"budget": {}}}), False),
+        ("a draft is an entry of its own, its links named by the entries' current names",
+         entries[2], {"name": "Concession Scheme", "sources": {"cag": {
+             "government": "Central", "facts": [fact],
+             "replaced_by": ["Nutrient Based Subsidy", "Later"]}}})]
     held = {"name": "Research and Development", "statement": "stat4b", "demand_no": 9,
             "be_cr": 21.0, "merge_reason": "exact"}
     bad = 0
@@ -251,7 +377,7 @@ def selftest():
              same_line(held, "Research and Development",
                        {"statement": "stat4b", "demand_no": 21, "be_cr": 17250.25}), False),
             ("a different name is another line",
-             same_line(held, "Research", {"statement": "stat4b", "demand_no": 9}), False)]:
+             same_line(held, "Research", {"statement": "stat4b", "demand_no": 9}), False)] + picks:
         ok = got == want
         bad += not ok
         print(f"  {'ok  ' if ok else 'FAIL'} {label}")
@@ -272,6 +398,8 @@ def main():
           f"(myScheme alone: {o['myscheme_entries']:,})")
     for k, v in o["added_by"].items():
         print(f"    + {v:>4} from {k}")
+    if o["cag_facts_unattached"]:
+        print(f"    !! {o['cag_facts_unattached']} CAG facts name a source no longer in the register")
     print(f"\n  entries by number of sources naming them: {o['in_n_sources']}")
     print(f"\n  funded in the Budget, absent from myScheme: "
           f"{o['unlisted_but_funded_total']} schemes, "

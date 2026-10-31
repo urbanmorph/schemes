@@ -368,7 +368,7 @@ def shell(title, active, body, depth=0, desc="", canon="", ld=None):
     <a href="{up}states">State budget books</a>
     <span>{word(len(STATE_OF)).lower()} states&rsquo; own scheme lines</span>
     <a href="https://cag.gov.in/en/audit-report" target="_blank" rel="noopener">CAG audit reports</a>
-    <span>which schemes have been audited</span>
+    <span>which schemes were audited, and how each was set up</span>
     <p>Collected {e(st.get('snapshot') or '')}. The archive keeps every answer byte for
     byte, so you can trace any figure here to the request that produced it. This site
     calculates nothing from a source that is not named above.</p>
@@ -1801,7 +1801,7 @@ _m_skeleton, _m_acronyms = _M.skeleton, _M.acronyms
 # from: keeping two hand-written lists is how Delhi reached the register and crashed the
 # build on a KeyError.
 SOURCE_LABEL = {"myscheme": "myScheme", "budget": "Union Budget",
-                "outcome": "Outcome Budget", "dbt": "DBT Bharat"}
+                "outcome": "Outcome Budget", "dbt": "DBT Bharat", "cag": "CAG audit reports"}
 
 
 def slug_for(name):
@@ -1835,6 +1835,7 @@ def unify(checks, registry, classification):
                 i += 1
             sl = f"{sl}-{i}"
         used.add(sl)
+        gov = (srcs.get("cag") or {}).get("government") if not base else None
         out.append({
             "name": en["name"],
             "slug": sl,
@@ -1844,8 +1845,9 @@ def unify(checks, registry, classification):
             "level": (base or {}).get("level") or ((ms or {}).get("level")),
             "org": (base or {}).get("org"),
             "category": (base or {}).get("category"),
-            "level_value": (base or {}).get("level_value"),
-            "state": (base or {}).get("state"),
+            "level_value": (base or {}).get("level_value")
+                           or {None: None, "Central": "central"}.get(gov, "state"),
+            "state": (base or {}).get("state") or ([gov] if gov not in (None, "Central") else None),
             "audience": (base or {}).get("audience"),
             "beneficiaries": (base or {}).get("beneficiaries") or [],
             "be_cr": bud.get("be_cr"),
@@ -2858,6 +2860,19 @@ def index_section(entries):
 """
 
 
+def state_pages(en):
+    """The state myScheme pages a Union line resembles (parse/registry.py pick()). The line
+    keeps its own page, because a state's record is not the Union scheme, but a page that
+    resembles it is evidence myScheme lists the scheme somewhere, so it must not be called
+    unlisted."""
+    out = []
+    for k in ("budget", "outcome", "dbt"):
+        p = (en["detail"].get(k) or {}).get("state_page")
+        if p and p not in out:
+            out.append(p)
+    return out
+
+
 def page_unlisted(en, status):
     """A scheme other government sources name and myScheme does not list.
 
@@ -2896,15 +2911,34 @@ def page_unlisted(en, status):
                     if d.get("name") and d.get("name") != en["name"] else "")
                  + '</td></tr>')
 
+    near = state_pages(en)
     chips = "".join(f'<span class="chip">{e(SOURCE_LABEL[k])}</span>' for k in en["sources"])
-    chips += '<span class="chip flag">Not on myScheme</span>'
+    chips += ("" if near else '<span class="chip flag">Not on myScheme</span>')
+    listed = ("; a state&rsquo;s myScheme page has a similar name" if near
+              else ", and not listed on myScheme")
+    # A state's record is that state's and not the Union scheme, so it keeps its own page;
+    # the similar name is only a rule's match, and some are plainly another scheme.
+    ms_row = ("".join(f'<tr><td>A state&rsquo;s page with a similar name</td>'
+                      f'<td><a href="/scheme/{e(p["slug"])}">{e(p["name"])}</a>'
+                      f'<div class="muted" style="margin-top:3px">matched by rule, not read by '
+                      f'hand: {e(p["merge_reason"])}</div></td><td class="ts"></td></tr>'
+                      for p in near)
+              or f"""<tr><td>myScheme record</td>
+      <td><span class="nil">...</span> <span class="muted">no entry found in the
+        {e(status.get('snapshot') or '')} snapshot, under a generous name match</span></td>
+      <td class="ts">...</td></tr>""")
+    sources_block = "" if not rows else f"""
+<section class="sec">
+  <h2>What each source says</h2>
+  <div class="sec-note">Every figure below is from a government document, named and dated</div>
+  <div class="tscroll"><table class="prov">{rows}</table></div>
+</section>"""
     verdict = en.get("classified")
     return f"""
 <div class="eyebrow">Route &middot; /scheme/{e(en["slug"])}</div>
 <div class="shead">
   <h1>{e(en["name"])}</h1>
-  <div class="full">Named by {len(en["sources"])} government source(s), and not listed
-    on myScheme</div>
+  <div class="full">Named by {len(en["sources"])} government source(s){listed}</div>
   <div class="chips">{chips}</div>
 </div>
 
@@ -2917,21 +2951,12 @@ def page_unlisted(en, status):
 </div>
 {state_block_for(en)}
 {audit_block(en.get("name"))}
-
-<section class="sec">
-  <h2>What each source says</h2>
-  <div class="sec-note">Every figure below is from a government document, named and dated</div>
-  <div class="tscroll"><table class="prov">{rows}</table></div>
-</section>
+{cag_block(en)}
+{sources_block}
 
 <section class="sec">
   <h2>What myScheme says</h2>
-  <div class="tscroll"><table class="prov">
-    <tr><td>myScheme record</td>
-      <td><span class="nil">...</span> <span class="muted">no entry found in the
-        {e(status.get('snapshot') or '')} snapshot, under a generous name match</span></td>
-      <td class="ts">...</td></tr>
-  </table></div>
+  <div class="tscroll"><table class="prov">{ms_row}</table></div>
 </section>
 """
 
@@ -3274,6 +3299,77 @@ def audit_block(name):
 </section>"""
 
 
+# Filled in by build(): every page's slug by entry name, for links between schemes, and the
+# CAG drafts that name an entry as their successor or parent, for the link back.
+SLUG = {}
+CAG_LINKS = collections.defaultdict(list)
+
+CAG_FIELD = {"start": "Began", "end": "Ended", "renamed": "Renamed", "subsumed": "Merged into",
+             "parent": "Part of", "type": "Type", "funding": "Funding", "agency": "Implemented by",
+             "outlay": "Outlay", "coverage": "Coverage", "benefit": "Benefit",
+             "eligibility": "Eligibility"}
+CAG_HEAD = {"predecessor_of": "{}, replaced by this", "part_of": "{}, a programme within this",
+            "components": "{}, of which this is a part"}
+
+
+def scheme_link(name):
+    sl = SLUG.get(name)
+    return f'<a href="/scheme/{e(sl)}">{e(name)}</a>' if sl else e(name)
+
+
+def cag_block(entry):
+    """What the CAG's reports record about how a scheme was set up: when it began or ended,
+    what it became, its type, funding, agency, outlay, coverage, benefit and eligibility.
+    Never what an audit found (PLAN.md §1). Each fact is cited to the report's printed page,
+    which is checked by hand; facts about a predecessor or a programme within the scheme are
+    headed by that scheme's own name, because a predecessor's start date is not this one's.
+    """
+    c = entry.get("detail", {}).get("cag") or {}
+    back = CAG_LINKS.get(entry.get("name"), [])
+    if not c.get("facts") and not back:
+        return ""
+    groups = collections.defaultdict(list)
+    for f in c.get("facts", []):
+        r = f.get("relation", "same")
+        groups[(r != "same", r, f["as_named"] if r != "same" else "")].append(f)
+    rows = ""
+    for (_, r, named), fs in sorted(groups.items()):
+        if r != "same":
+            basis = fs[0].get("basis")
+            rows += (f'<tr><th colspan="3">{e(CAG_HEAD[r].format(named))}'
+                     + (f' <span class="muted">&middot; {e(basis)}</span>' if basis else "")
+                     + '</th></tr>')
+        order = list(CAG_FIELD)
+        for f in sorted(fs, key=lambda f: (order.index(f["field"]) if f["field"] in order else 99,
+                                           f["as_named"], f["value"])):
+            notes = []
+            if r == "same" and f["as_named"] != entry.get("name"):
+                notes.append(f'named in the report &ldquo;{e(f["as_named"])}&rdquo;')
+            if f.get("host"):
+                notes.append(f'under {e(f["host"])}')
+            if f.get("compared") == "differs":
+                notes.append("the register&rsquo;s sources differ: " + e(f.get("other") or "")
+                             + (f' ({e(f["note"])})' if f.get("note") else ""))
+            rows += (f'<tr><td class="nowrap">{e(CAG_FIELD.get(f["field"], f["field"]))}</td>'
+                     f'<td>{e(f["value"])}'
+                     + "".join(f'<div class="muted" style="margin-top:3px">{n}</div>' for n in notes)
+                     + f'</td><td class="muted">{e(f["citation"])}</td></tr>')
+    links = [f'{lab}: {", ".join(scheme_link(t) for t in c[k])}'
+             for k, lab in (("replaced_by", "Replaced by"), ("part_of", "Part of")) if c.get(k)]
+    links += [f'{"Replaced" if k == "replaced_by" else "Includes"}: {scheme_link(n)}'
+              for n, k in back]
+    if c.get("note"):
+        links.append(e(c["note"]))
+    return f"""
+<section class="sec">
+  <h2>What the CAG&rsquo;s reports record</h2>
+  <div class="sec-note">How the scheme was set up, as the Comptroller and Auditor General&rsquo;s
+    reports state it, cited to the printed page. Never what an audit found.</div>
+  {"".join(f'<p>{x}</p>' for x in links)}
+  {f'<div class="tscroll"><table class="prov">{rows}</table></div>' if rows else ""}
+</section>"""
+
+
 def state_block_for(entry):
     """What a state's own budget publishes about a scheme, for pages that have no
     myScheme record to show. Used by both page builders: a state scheme reaches
@@ -3409,7 +3505,8 @@ def page_scheme(s, status, enrich=None, entry=None):
                  'wording, reproduced in full. Where it is thin, that is the finding, and '
                  'the completeness checks are below.</div>' + about)
 
-    state_block = state_block_for(entry) + audit_block((entry or {}).get("name") or s.get("name"))
+    state_block = (state_block_for(entry) + audit_block((entry or {}).get("name") or s.get("name"))
+                   + cag_block(entry or {}))
 
     # Found elsewhere. Deliberately separate from the checks above and never counted in
     # them: this is what a *different* government document says, not what this portal
@@ -3635,6 +3732,11 @@ def build():
     classification = load("data/classification.json", {})
     AUDITED.update((load("data/cag/audited.json", {}) or {}).get("schemes") or {})
     entries = unify(checks, registry, classification)
+    SLUG.update({en["name"]: en["slug"] for en in reversed(entries)})
+    for en in entries:
+        for k in ("replaced_by", "part_of"):
+            for t in (en["detail"].get("cag") or {}).get(k, []):
+                CAG_LINKS[t].append((en["name"], k))
     # Values carry their evidence; the site wants the verdict. Keeping the evidence out of
     # the entry deliberately: a derived sector is a convenience for filtering and should not
     # look like something the government published, which is what a provenance row implies.
@@ -3844,8 +3946,9 @@ def build():
                  f"passed on myScheme.")
         else:
             d = (f"{en['name']} is named by "
-                 f"{', '.join(SOURCE_LABEL[k] for k in en['sources'])} and is not "
-                 f"listed on myScheme.")
+                 f"{', '.join(SOURCE_LABEL[k] for k in en['sources'])}"
+                 + (" and resembles a state's page on myScheme." if state_pages(en)
+                    else " and is not listed on myScheme."))
         canon = f"{SITE_BASE}/scheme/{en['slug']}"
         # A myScheme record is dated by the snapshot it last changed in; anything else
         # changes only when a new snapshot is parsed, so it carries that snapshot's date.
@@ -3964,6 +4067,27 @@ def selftest():
     check("yojana in Devanagari is already a scheme",
           seo_title("कृषक योजना", None, {"state": ["Uttar Pradesh"]}),
           "कृषक योजना, Uttar Pradesh")
+    near = {"slug": "sduk", "name": "Skill Development", "merge_reason": "x"}
+    check("a Union line resembling a state's page names that page once",
+          state_pages({"detail": {"budget": {"state_page": near}, "outcome": {"state_page": near},
+                                  "dbt": {}}}), [near])
+    check("a line resembling no state page names none", state_pages({"detail": {"budget": {}}}), [])
+    cite = "Comptroller and Auditor General of India, Report No. 4 of 2010, X, Union Government, p. 3."
+    f = {"field": "start", "value": "1995", "as_named": "Mid-Day Meal", "government": "Central",
+         "host": "Ministry of Education", "citation": cite}
+    block = cag_block({"name": "PM POSHAN", "detail": {"cag": {"facts": [
+        dict(f, relation="same", compared="differs", other="myScheme: open date 2018-03-08"),
+        dict(f, relation="predecessor_of", as_named="NGRBA", basis="not stated in the report")]}}})
+    check("CAG facts carry the printed citation", cite in block, True)
+    check("a differing fact notes what the register's source says", "open date 2018-03-08" in block, True)
+    check("a predecessor's facts are headed by its own name", "NGRBA" in block and "replaced by this" in block, True)
+    check("a link from outside the report says so", "not stated in the report" in block, True)
+    check("an entry with no CAG facts gets no block", cag_block({"name": "x", "detail": {}}), "")
+    SLUG.update({"Nutrient Based Subsidy": "nutrient-based-subsidy"})
+    draft = cag_block({"name": "Concession Scheme", "detail": {"cag": {
+        "government": "Central", "facts": [f], "replaced_by": ["Nutrient Based Subsidy"], "note": "n"}}})
+    check("a draft links to the scheme that replaced it",
+          '<a href="/scheme/nutrient-based-subsidy">Nutrient Based Subsidy</a>' in draft, True)
     tag = ld_script({"name": "a </script><b> — b"})
     check("structured data cannot close its own script tag", "</script><b>" in tag[:-9], False)
     check("structured data stays valid JSON",

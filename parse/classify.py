@@ -172,7 +172,7 @@ def run(snapshot, year, threshold):
         lines.append({
             "name": name, "statement": b.get("statement"), "demand_no": b.get("demand_no"),
             "ministry": ministry, "be_cr": b.get("be_cr"),
-            "in_myscheme": "myscheme" in en["sources"],
+            "in_myscheme": _reg.on_myscheme(en),
             "in_dbt": in_dbt, "in_outcome": in_ob,
             "score": total, "evidence": ev,
             "verdict": "scheme" if total >= threshold else "budget head",

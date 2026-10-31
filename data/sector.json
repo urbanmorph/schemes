@@ -1,13 +1,13 @@
 {
- "built": "2026-10-30T16:43:58Z",
+ "built": "2026-10-31T13:09:04Z",
  "by_family": {
   "andhra": {
    "classified": 225,
    "rows": 236
   },
   "central": {
-   "classified": 640,
-   "rows": 764
+   "classified": 740,
+   "rows": 955
   },
   "chhattisgarh": {
    "classified": 0,
@@ -71,30 +71,30 @@
   }
  },
  "by_sector": {
-  "Agriculture,Rural & Environment": 1114,
-  "Banking,Financial Services and Insurance": 153,
-  "Business & Entrepreneurship": 283,
-  "Education & Learning": 814,
-  "Health & Wellness": 237,
-  "Housing & Shelter": 297,
-  "Public Safety,Law & Justice": 87,
-  "Science, IT & Communications": 74,
-  "Skills & Employment": 170,
-  "Social welfare & Empowerment": 1002,
-  "Sports & Culture": 73,
-  "Transport & Infrastructure": 78,
+  "Agriculture,Rural & Environment": 1139,
+  "Banking,Financial Services and Insurance": 160,
+  "Business & Entrepreneurship": 294,
+  "Education & Learning": 823,
+  "Health & Wellness": 249,
+  "Housing & Shelter": 302,
+  "Public Safety,Law & Justice": 88,
+  "Science, IT & Communications": 76,
+  "Skills & Employment": 173,
+  "Social welfare & Empowerment": 1013,
+  "Sports & Culture": 75,
+  "Transport & Infrastructure": 80,
   "Travel & Tourism": 19,
-  "Utility & Sanitation": 106,
-  "Women and Child": 469,
-  "not stated": 1775
+  "Utility & Sanitation": 111,
+  "Women and Child": 474,
+  "not stated": 1866
  },
- "classified": 4976,
+ "classified": 5076,
  "counting_basis": "One row per key. A state votes a scheme's revenue head and its capital head separately and both are separate rows here, exactly as they are separate rows in the register.",
- "coverage": 0.737,
+ "coverage": 0.731,
  "deciding_signal": {
-  "a benefit phrase in the name": 3704,
-  "a topic word in the name": 325,
-  "the department or ministry": 935,
+  "a benefit phrase in the name": 3788,
+  "a topic word in the name": 337,
+  "the department or ministry": 939,
   "the purpose line": 12
  },
  "known_errors": [
@@ -247,7 +247,7 @@
   "right_if_each_organisation_took_its_modal_sector": 3314,
   "why": "A ceiling for any department-only rule, measured on myScheme's own records with its own answers in hand. A department is not a sector."
  },
- "not_stated": 1775,
+ "not_stated": 1866,
  "operating_point": {
   "margin": 1,
   "min_score": 2,
@@ -261,7 +261,7 @@
   "why": "Chosen for usefulness, not for safety. A wrong sector is a browsing annoyance, not a false accusation, so this file does not run at the 0.95 precision bar the scheme-or-not classifiers in this directory use. It still abstains where nothing but one weak signal fires, because a wrong sector is worse than a missing one for a reader filtering by it."
  },
  "question": "Which of the 15 myScheme sectors does each register row belong to, for the rows myScheme does not list and which therefore carry no sector of their own?",
- "rows": 6751,
+ "rows": 6942,
  "scope": "The 680 registry entries with no myScheme source, plus every state classification row at or above site/build.py's listing bar that myScheme does not list. A superset of what the site shows by 366 centrally sponsored state shares that site/build.py folds into their parent scheme.",
  "sectors": {
   "andhra|Agriculture Department | Annadata Sukhibhava": {
@@ -34054,6 +34054,18 @@
    "name": "Strengthening of Apprenticeship Scheme Thro PSSDS-Reimbursement of Stipend and BT Cost",
    "sector": "Skills & Employment"
   },
+  "registry|18th Livestock Census": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "18th Livestock Census",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|5G Connectivity Test Bed": {
    "evidence": [
     [
@@ -34070,6 +34082,18 @@
    "family": "central",
    "name": "5G Connectivity Test Bed",
    "sector": "Science, IT & Communications"
+  },
+  "registry|AICTE - Swanath Scholarship Scheme - Degree": {
+   "evidence": [
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "AICTE - Swanath Scholarship Scheme - Degree",
+   "sector": "Education & Learning"
   },
   "registry|AICTE - Swanath Scholarship Scheme - Diploma": {
    "evidence": [
@@ -34128,6 +34152,30 @@
    "family": "central",
    "name": "Academic Bank of Credits (ABC)",
    "sector": "Education & Learning"
+  },
+  "registry|Accelerated Generation and Supply Programme (AG&SP) Interest Subsidy Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Accelerated Generation and Supply Programme (AG&SP) Interest Subsidy Scheme",
+   "sector": "Banking,Financial Services and Insurance"
+  },
+  "registry|Accelerated Irrigation Benefits Programme (AIBP)": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Accelerated Irrigation Benefits Programme (AIBP)",
+   "sector": "Agriculture,Rural & Environment"
   },
   "registry|Activities performed under NCMM through National Mineral Exploration and Development Trust (NMEDT) Fund": {
    "evidence": [
@@ -34571,6 +34619,18 @@
    "name": "AgEdn - Post Matric Scholarship",
    "sector": "Education & Learning"
   },
+  "registry|Agricultural Debt Waiver and Debt Relief Scheme (ADWDRS), 2008": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Agricultural Debt Waiver and Debt Relief Scheme (ADWDRS), 2008",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Agricultural Product Export Development Authority (APEDA)": {
    "evidence": [
     [
@@ -34742,6 +34802,18 @@
    "name": "Anganwadi Services - Training Program",
    "sector": "Women and Child"
   },
+  "registry|Antyodaya Anna Yojana": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Antyodaya Anna Yojana",
+   "sector": "Social welfare & Empowerment"
+  },
   "registry|Appraisal of areas in India's Extended Continental Shelf (ECS)": {
    "evidence": [
     [
@@ -34901,6 +34973,18 @@
    "name": "Ayurswasthay Yojana",
    "sector": "Health & Wellness"
   },
+  "registry|Ayushman Bharat - Arogya Karnataka": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Ayushman Bharat - Arogya Karnataka",
+   "sector": "Health & Wellness"
+  },
   "registry|BSF Air Wing, Aircrafts, River Boats and Helibase": {
    "evidence": [
     [
@@ -34925,6 +35009,18 @@
    "name": "BSR Fellowship",
    "sector": "Education & Learning"
   },
+  "registry|Bhamashah Swasthya Bima Yojana (BSBY)": {
+   "evidence": [
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Bhamashah Swasthya Bima Yojana (BSBY)",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "registry|Bharat-VISTAAR CENTRAL SECTOR SCHEMES": {
    "evidence": [
     [
@@ -34935,6 +35031,23 @@
    ],
    "family": "central",
    "name": "Bharat-VISTAAR CENTRAL SECTOR SCHEMES",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Bihar Rural Employment Guarantee Scheme (BREGS)": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Bihar Rural Employment Guarantee Scheme (BREGS)",
    "sector": "Agriculture,Rural & Environment"
   },
   "registry|Bio Power (Grid)": {
@@ -35029,6 +35142,18 @@
    "name": "Blended Capital Support to Finance Startups for Agriculture and Rural Enterprise Relevant for Farm Produce Value Chain",
    "sector": "Agriculture,Rural & Environment"
   },
+  "registry|Border Area Development Program": {
+   "evidence": [
+    [
+     "+2",
+     "Public Safety,Law & Justice",
+     "the department or ministry: Police"
+    ]
+   ],
+   "family": "central",
+   "name": "Border Area Development Program",
+   "sector": "Public Safety,Law & Justice"
+  },
   "registry|Border Infrastructure and Management": {
    "evidence": [
     [
@@ -35094,6 +35219,23 @@
    "name": "CONFONET CENTRAL SECTOR SCHEMES",
    "sector": "Public Safety,Law & Justice"
   },
+  "registry|Capacity Building and Skill Development Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Science, IT & Communications",
+     "the department or ministry: Ministry of Electronics and Information Technology"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Capacity Building and Skill Development Scheme",
+   "sector": "Skills & Employment"
+  },
   "registry|Capacity Development (CD)": {
    "evidence": [
     [
@@ -35129,6 +35271,35 @@
    "family": "central",
    "name": "Cargo Promotion Scheme - JALVAHAK",
    "sector": "Transport & Infrastructure"
+  },
+  "registry|Central Government Health Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Central Government Health Scheme",
+   "sector": "Health & Wellness"
+  },
+  "registry|Central Rural Sanitation Programme": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Central Rural Sanitation Programme",
+   "sector": "Utility & Sanitation"
   },
   "registry|Central Scheme for Assistance to Civilian Victims (CSACV)": {
    "evidence": [
@@ -35359,6 +35530,18 @@
    "name": "Commonwealth Games",
    "sector": "Sports & Culture"
   },
+  "registry|Compensation for Relocation of Villages": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Compensation for Relocation of Villages",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Compensation to Service Providers for creation and augmentation of telecom infrastructure": {
    "evidence": [
     [
@@ -35376,6 +35559,18 @@
    "name": "Compensation to Service Providers for creation and augmentation of telecom infrastructure",
    "sector": "Science, IT & Communications"
   },
+  "registry|Comprehensive Road Infrastructure Development Programme (CRIDP)": {
+   "evidence": [
+    [
+     "+5",
+     "Transport & Infrastructure",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Comprehensive Road Infrastructure Development Programme (CRIDP)",
+   "sector": "Transport & Infrastructure"
+  },
   "registry|Computerisation": {
    "evidence": [
     [
@@ -35388,6 +35583,35 @@
    "name": "Computerisation",
    "sector": "Transport & Infrastructure"
   },
+  "registry|Computerization of Primary Agricultural Credit Societies": {
+   "evidence": [
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "the department or ministry: Ministry of Cooperation"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Computerization of Primary Agricultural Credit Societies",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Concession Scheme for decontrolled P&K fertilizers": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Concession Scheme for decontrolled P&K fertilizers",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Conservation of Natural Resources and Ecosystems": {
    "evidence": [
     [
@@ -35399,6 +35623,35 @@
    "family": "central",
    "name": "Conservation of Natural Resources and Ecosystems",
    "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Construction Workers Daughter Marriage Assistance Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Construction Workers Daughter Marriage Assistance Scheme",
+   "sector": "Social welfare & Empowerment"
+  },
+  "registry|Construction Workers Girl Child Help Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Construction Workers Girl Child Help Scheme",
+   "sector": "Women and Child"
   },
   "registry|Consumer Awareness (Advertising and Publicity)": {
    "evidence": [
@@ -35435,6 +35688,18 @@
    "family": "central",
    "name": "Consumer Protection Cell",
    "sector": "Public Safety,Law & Justice"
+  },
+  "registry|Continuing Education Programme for neo-literates": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Continuing Education Programme for neo-literates",
+   "sector": "Education & Learning"
   },
   "registry|Control of Pollution": {
    "evidence": [
@@ -35523,6 +35788,23 @@
    "name": "Credit Guarantee Fund",
    "sector": "Banking,Financial Services and Insurance"
   },
+  "registry|Credit Guarantee Scheme for Micro Finance Institutions (CGSMFI)": {
+   "evidence": [
+    [
+     "+2",
+     "Banking,Financial Services and Insurance",
+     "the department or ministry: Department of Financial Services"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Credit Guarantee Scheme for Micro Finance Institutions (CGSMFI)",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "registry|Credit Guarantee Scheme for electronic Negotiable Warehouse Receipts (e-NWR) based Pledge Financing ( CGS- NPF)": {
    "evidence": [
     [
@@ -35573,6 +35855,23 @@
    "family": "central",
    "name": "Credit Support Programme",
    "sector": "Banking,Financial Services and Insurance"
+  },
+  "registry|Crop Insurance Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: Department of Agriculture and Farmers Welfare"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Crop Insurance Scheme",
+   "sector": "Agriculture,Rural & Environment"
   },
   "registry|Crop Science for Food and Nutritional Security": {
    "evidence": [
@@ -35649,6 +35948,35 @@
    "name": "DAY-NRLM",
    "sector": "Social welfare & Empowerment"
   },
+  "registry|Dairy Development": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: Department of Animal Husbandry and Dairying"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Dairy Development",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Dairy Unit Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Dairy Unit Scheme",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Dam Rehabilitation and Improvement Programme": {
    "evidence": [
     [
@@ -35660,6 +35988,23 @@
    "family": "central",
    "name": "Dam Rehabilitation and Improvement Programme",
    "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Deendayal Antyodaya Yojana-National Urban Livelihood Mission (DAY-NULM)": {
+   "evidence": [
+    [
+     "+2",
+     "Housing & Shelter",
+     "the department or ministry: Ministry of Housing and Urban Affairs"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Deendayal Antyodaya Yojana-National Urban Livelihood Mission (DAY-NULM)",
+   "sector": "Social welfare & Empowerment"
   },
   "registry|Deendayal Disabled Rehabilitation Scheme": {
    "evidence": [
@@ -35719,6 +36064,18 @@
    "name": "Designing Innovative Solutions for Holistic Access to Justice in India(DISHA)",
    "sector": "Public Safety,Law & Justice"
   },
+  "registry|Development Communication and Dissemination of Filmic Content": {
+   "evidence": [
+    [
+     "+2",
+     "Science, IT & Communications",
+     "the department or ministry: Ministry of Information and Broadcasting"
+    ]
+   ],
+   "family": "central",
+   "name": "Development Communication and Dissemination of Filmic Content",
+   "sector": "Science, IT & Communications"
+  },
   "registry|Development Communication and Information Dissemination": {
    "evidence": [
     [
@@ -35775,6 +36132,23 @@
    ],
    "family": "central",
    "name": "Development of Libraries and Archives",
+   "sector": "Sports & Culture"
+  },
+  "registry|Development of Museums": {
+   "evidence": [
+    [
+     "+2",
+     "Sports & Culture",
+     "the department or ministry: Ministry of Culture"
+    ],
+    [
+     "+5",
+     "Sports & Culture",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Development of Museums",
    "sector": "Sports & Culture"
   },
   "registry|Development of Nursing Services": {
@@ -35870,6 +36244,35 @@
    "family": "central",
    "name": "Disaster Relief",
    "sector": "Social welfare & Empowerment"
+  },
+  "registry|Disaster Relief Aid Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Disaster Relief Aid Scheme",
+   "sector": "Social welfare & Empowerment"
+  },
+  "registry|Distribution of Pulses to State / Union Territories for Welfare Schemes": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: Department of Agriculture and Farmers Welfare"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Distribution of Pulses to State / Union Territories for Welfare Schemes",
+   "sector": "Agriculture,Rural & Environment"
   },
   "registry|Divyangjan Sahara Yojana": {
    "evidence": [
@@ -36019,6 +36422,18 @@
    "family": "central",
    "name": "Employees Pension Scheme for EPF Pensioners",
    "sector": "Social welfare & Empowerment"
+  },
+  "registry|Employees' State Insurance Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Employees' State Insurance Scheme",
+   "sector": "Banking,Financial Services and Insurance"
   },
   "registry|Energy Efficiency Financing Facility -ADEETIE (Assistance in Deploying Energy Efficient Technologies in Industries & Establishments)": {
    "evidence": [
@@ -36180,6 +36595,23 @@
    "name": "Establishment of New Technology Centres",
    "sector": "Business & Entrepreneurship"
   },
+  "registry|Establishment of new medical colleges attached with district/referral hospitals": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Establishment of new medical colleges attached with district/referral hospitals",
+   "sector": "Health & Wellness"
+  },
   "registry|Estates Management": {
    "evidence": [
     [
@@ -36221,6 +36653,30 @@
    "name": "Expansion of Supreme Court Building CENTRAL SECTOR SCHEMES",
    "sector": "Public Safety,Law & Justice"
   },
+  "registry|Export Oriented Unit Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Export Oriented Unit Scheme",
+   "sector": "Business & Entrepreneurship"
+  },
+  "registry|Export Promotion Industrial Parks (EPIP)": {
+   "evidence": [
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Export Promotion Industrial Parks (EPIP)",
+   "sector": "Business & Entrepreneurship"
+  },
   "registry|Export Promotion Mission": {
    "evidence": [
     [
@@ -36236,6 +36692,18 @@
    ],
    "family": "central",
    "name": "Export Promotion Mission",
+   "sector": "Business & Entrepreneurship"
+  },
+  "registry|Export Promotion Zones (EPZ)": {
+   "evidence": [
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Export Promotion Zones (EPZ)",
    "sector": "Business & Entrepreneurship"
   },
   "registry|Family Pension-cum-Life Assurance and Deposit Linked Insurance Schemes for the Plantation Workers in Assam": {
@@ -36397,6 +36865,18 @@
    "name": "Fisheries and Aquaculture for Sustainable Development",
    "sector": "Agriculture,Rural & Environment"
   },
+  "registry|Fixed Day Health Services (FDHS)": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Fixed Day Health Services (FDHS)",
+   "sector": "Health & Wellness"
+  },
   "registry|Flagging of Merchant Ships in India": {
    "evidence": [
     [
@@ -36483,6 +36963,18 @@
    "family": "central",
    "name": "Free Coaching for SC, OBC and PM Care Students",
    "sector": "Education & Learning"
+  },
+  "registry|Free Medicine Distribution Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Free Medicine Distribution Scheme",
+   "sector": "Health & Wellness"
   },
   "registry|Freedom Fighters (pension and other benefits)": {
    "evidence": [
@@ -36793,6 +37285,35 @@
    "name": "Guarantee Emergency Credit Line (GECL) facility to eligible MSME borrowers",
    "sector": "Banking,Financial Services and Insurance"
   },
+  "registry|Handicraft Cluster Development Program - Handicraft Mega Cluster": {
+   "evidence": [
+    [
+     "+2",
+     "Business & Entrepreneurship",
+     "the department or ministry: Ministry of Textiles"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Handicraft Cluster Development Program - Handicraft Mega Cluster",
+   "sector": "Business & Entrepreneurship"
+  },
+  "registry|Health Insurance Scheme for Building and Other Construction Workers": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Health Insurance Scheme for Building and Other Construction Workers",
+   "sector": "Health & Wellness"
+  },
   "registry|Health Sector Disaster Preparedness and Response and Human Resources Development for Emergency Medical Services": {
    "evidence": [
     [
@@ -37102,6 +37623,18 @@
    ],
    "family": "central",
    "name": "Improving Pensioners' Welfare",
+   "sector": "Social welfare & Empowerment"
+  },
+  "registry|Incentive Scheme for providing employment to persons with disabilities in the private sector": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Incentive Scheme for providing employment to persons with disabilities in the private sector",
    "sector": "Social welfare & Empowerment"
   },
   "registry|Incentive scheme for promotion of RuPay Debit Cards and low-value BHIM-UPI transactions (person-to-merchant) CENTRAL SECTOR SCHEMES": {
@@ -37490,6 +38023,18 @@
    "name": "Integrated Development of Wildlife Habitats",
    "sector": "Agriculture,Rural & Environment"
   },
+  "registry|Integrated Housing and Slum Development Programme (IHSDP)": {
+   "evidence": [
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Integrated Housing and Slum Development Programme (IHSDP)",
+   "sector": "Housing & Shelter"
+  },
   "registry|Integrated Processing Development Scheme": {
    "evidence": [
     [
@@ -37500,6 +38045,23 @@
    ],
    "family": "central",
    "name": "Integrated Processing Development Scheme",
+   "sector": "Business & Entrepreneurship"
+  },
+  "registry|Integrated Scheme for Entrepreneurship Development": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: Department of Animal Husbandry and Dairying"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Integrated Scheme for Entrepreneurship Development",
    "sector": "Business & Entrepreneurship"
   },
   "registry|Integrated Scheme for Skill Development": {
@@ -37695,6 +38257,18 @@
    "name": "Jan Shikshan Sansthan",
    "sector": "Education & Learning"
   },
+  "registry|Janashree Bima Yojana (JBY)": {
+   "evidence": [
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Janashree Bima Yojana (JBY)",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "registry|Junior Research Fellowship": {
    "evidence": [
     [
@@ -37730,6 +38304,35 @@
    "family": "central",
    "name": "Kind Benefit under IEDSS component of Samagra Shiksha",
    "sector": "Education & Learning"
+  },
+  "registry|Kisan Mitra Yojana": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Kisan Mitra Yojana",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Kisan Urja Suraksha evam Utthaan Mahabhiyan (KUSUM )": {
+   "evidence": [
+    [
+     "+2",
+     "Utility & Sanitation",
+     "the department or ministry: Ministry of New and Renewable Energy"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Kisan Urja Suraksha evam Utthaan Mahabhiyan (KUSUM )",
+   "sector": "Agriculture,Rural & Environment"
   },
   "registry|Krishi Unnati Yojana (KUY)-MOVCDNER": {
    "evidence": [
@@ -37936,6 +38539,54 @@
    "name": "Machinery and Plant",
    "sector": "Transport & Infrastructure"
   },
+  "registry|Macro Management of Agriculture (MMA)": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Macro Management of Agriculture (MMA)",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Madhya Pradesh Building and Other Construction Workers Skill Training Scheme, 2012": {
+   "evidence": [
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Madhya Pradesh Building and Other Construction Workers Skill Training Scheme, 2012",
+   "sector": "Skills & Employment"
+  },
+  "registry|Maharashtra Employment Guarantee Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Maharashtra Employment Guarantee Scheme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Mahatma Gandhi Gramin Basti Yojana": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Mahatma Gandhi Gramin Basti Yojana",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Malaviya Mission Teacher Training Programme (MMTTP)": {
    "evidence": [
     [
@@ -37998,6 +38649,18 @@
    "family": "central",
    "name": "Manufacturing Suspense",
    "sector": "Business & Entrepreneurship"
+  },
+  "registry|Manyavar Kanshiram Ji Shahri Garib Awas Yojana": {
+   "evidence": [
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Manyavar Kanshiram Ji Shahri Garib Awas Yojana",
+   "sector": "Housing & Shelter"
   },
   "registry|Marine Product Export Development Authority (MPEDA)": {
    "evidence": [
@@ -38068,6 +38731,18 @@
    "family": "central",
    "name": "Master Control Facility - Scholarships and Stipends",
    "sector": "Education & Learning"
+  },
+  "registry|Megha Health Insurance Scheme (MHIS)": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Megha Health Insurance Scheme (MHIS)",
+   "sector": "Health & Wellness"
   },
   "registry|Member of Parliament Local Area Development Scheme (MPLAD)": {
    "evidence": [
@@ -38264,6 +38939,30 @@
    "name": "Mission for Vegetables and Fruits",
    "sector": "Agriculture,Rural & Environment"
   },
+  "registry|Model School Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Model School Scheme",
+   "sector": "Education & Learning"
+  },
+  "registry|Model Villages in each Rural Development Block (Prime Minister's Reconstruction Programme)": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Model Villages in each Rural Development Block (Prime Minister's Reconstruction Programme)",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Modernisation of Police Forces": {
    "evidence": [
     [
@@ -38327,6 +39026,23 @@
    "name": "Modernization of Prisons",
    "sector": "Public Safety,Law & Justice"
   },
+  "registry|Modified Interest Subvention Scheme (MISS)": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "the department or ministry: Department of Agriculture and Farmers Welfare"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Modified Interest Subvention Scheme (MISS)",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "registry|Modified Programme for Development of Semiconductors and Display Manufacturing Ecosystem in India": {
    "evidence": [
     [
@@ -38343,6 +39059,30 @@
    "family": "central",
    "name": "Modified Programme for Development of Semiconductors and Display Manufacturing Ecosystem in India",
    "sector": "Business & Entrepreneurship"
+  },
+  "registry|Mukhya Mantri Jan Arogya Yojana": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Mukhya Mantri Jan Arogya Yojana",
+   "sector": "Health & Wellness"
+  },
+  "registry|Mukhyamantri Kisan Mitra Yojana": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Mukhyamantri Kisan Mitra Yojana",
+   "sector": "Agriculture,Rural & Environment"
   },
   "registry|Multidisciplinary Education and Research Improvement in Technical Education-EAP (MERITE) CENTRAL SECTOR SCHEMES": {
    "evidence": [
@@ -38402,6 +39142,30 @@
    "name": "NIKSHAY - Tribal TB Patients",
    "sector": "Social welfare & Empowerment"
   },
+  "registry|Nagariy Sewerage Yojna": {
+   "evidence": [
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Nagariy Sewerage Yojna",
+   "sector": "Utility & Sanitation"
+  },
+  "registry|National AIDS and STD Control Programme": {
+   "evidence": [
+    [
+     "+2",
+     "Health & Wellness",
+     "the department or ministry: Department of Health and Family Welfare"
+    ]
+   ],
+   "family": "central",
+   "name": "National AIDS and STD Control Programme",
+   "sector": "Health & Wellness"
+  },
   "registry|National AYUSH Mission": {
    "evidence": [
     [
@@ -38437,6 +39201,18 @@
    "family": "central",
    "name": "National Beekeeping Honey Mission (NBHM)",
    "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|National Cancer Control Programme": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "National Cancer Control Programme",
+   "sector": "Health & Wellness"
   },
   "registry|National Capital Region Transport Corporation CENTRAL SECTOR SCHEMES": {
    "evidence": [
@@ -38680,6 +39456,18 @@
    "name": "National Highways Authority of India",
    "sector": "Transport & Infrastructure"
   },
+  "registry|National Highways Development Program (NHDP)": {
+   "evidence": [
+    [
+     "+5",
+     "Transport & Infrastructure",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "National Highways Development Program (NHDP)",
+   "sector": "Transport & Infrastructure"
+  },
   "registry|National Hydrology Project": {
    "evidence": [
     [
@@ -38900,6 +39688,18 @@
    "name": "National Overseas Scholarship Scheme",
    "sector": "Education & Learning"
   },
+  "registry|National Pension System": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "National Pension System",
+   "sector": "Social welfare & Empowerment"
+  },
   "registry|National Pharmacovigilance Programme": {
    "evidence": [
     [
@@ -38975,6 +39775,18 @@
    ],
    "family": "central",
    "name": "National Service Scheme",
+   "sector": "Sports & Culture"
+  },
+  "registry|National Sports Awards": {
+   "evidence": [
+    [
+     "+5",
+     "Sports & Culture",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "National Sports Awards",
    "sector": "Sports & Culture"
   },
   "registry|National Sports Development Fund": {
@@ -39087,6 +39899,18 @@
    "family": "central",
    "name": "National database for Unorganized Workers",
    "sector": "Skills & Employment"
+  },
+  "registry|National e-Governance Plan (NeGP)": {
+   "evidence": [
+    [
+     "+5",
+     "Science, IT & Communications",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "National e-Governance Plan (NeGP)",
+   "sector": "Science, IT & Communications"
   },
   "registry|National welfare fund for sportspersons": {
    "evidence": [
@@ -39204,6 +40028,18 @@
    "name": "New Scheme for Plug and Play Industrial Parks",
    "sector": "Business & Entrepreneurship"
   },
+  "registry|Niradhar Pension Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Niradhar Pension Scheme",
+   "sector": "Social welfare & Empowerment"
+  },
   "registry|Non-residential": {
    "evidence": [
     [
@@ -39309,6 +40145,18 @@
    "family": "central",
    "name": "Numaligarh Refinery Expansion Project",
    "sector": "Business & Entrepreneurship"
+  },
+  "registry|Odisha PVTG Empowerment and Livelihood Improvement Programme": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Odisha PVTG Empowerment and Livelihood Improvement Programme",
+   "sector": "Social welfare & Empowerment"
   },
   "registry|One Stop Centre - (payment of Salary of Staff)": {
    "evidence": [
@@ -39534,6 +40382,23 @@
    "name": "PM Schools for Rising India (PM SHRI)",
    "sector": "Education & Learning"
   },
+  "registry|PM Young Achievers Scholarship Award Scheme for Vibrant India (PM YASASVI) for OBCs, EBCs and DNTs": {
+   "evidence": [
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: Department of Social Justice and Empowerment"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "PM Young Achievers Scholarship Award Scheme for Vibrant India (PM YASASVI) for OBCs, EBCs and DNTs",
+   "sector": "Education & Learning"
+  },
   "registry|PM-SVANIDHI- Pradhan Mantri Street Vendors AtmaNirbhar Nidhi": {
    "evidence": [
     [
@@ -39587,6 +40452,18 @@
    "name": "PM-eBus Sewa-Payment Security Mechanism (PSM) for procurement and operation of e-Buses by Public Transport Authorities (PTAs)",
    "sector": "Transport & Infrastructure"
   },
+  "registry|POSHAN Abhiyaan (National Nutrition Mission)": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "POSHAN Abhiyaan (National Nutrition Mission)",
+   "sector": "Women and Child"
+  },
   "registry|Package for Special Catagory States for Jammu and Kashmir, Himachal Pradesh and Uttarakhand": {
    "evidence": [
     [
@@ -39598,6 +40475,23 @@
    "family": "central",
    "name": "Package for Special Catagory States for Jammu and Kashmir, Himachal Pradesh and Uttarakhand",
    "sector": "Business & Entrepreneurship"
+  },
+  "registry|Padho Predesh - Interest subsidy on educational loans for Overseas Studies": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Padho Predesh - Interest subsidy on educational loans for Overseas Studies",
+   "sector": "Banking,Financial Services and Insurance"
   },
   "registry|Pandit Deendayal Upadhyay National Welfare for Sportspersons": {
    "evidence": [
@@ -39664,6 +40558,18 @@
    "name": "Payment to Indian Strategic Petroleum Reserve Limited (ISPRL) for Crude Oil Reserve",
    "sector": "Business & Entrepreneurship"
   },
+  "registry|Pension Scheme (Building and Other Construction Workers Welfare Board)": {
+   "evidence": [
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Pension Scheme (Building and Other Construction Workers Welfare Board)",
+   "sector": "Social welfare & Empowerment"
+  },
   "registry|Pension to meritorious sportspersons": {
    "evidence": [
     [
@@ -39729,6 +40635,18 @@
    "name": "Policy on Promotion of Organic Fertilizers CENTRAL SECTOR SCHEMES",
    "sector": "Agriculture,Rural & Environment"
   },
+  "registry|Pondicherry Chief Minister's Sanitation Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Pondicherry Chief Minister's Sanitation Scheme",
+   "sector": "Utility & Sanitation"
+  },
   "registry|Post Matric Scholarship for SCs": {
    "evidence": [
     [
@@ -39756,6 +40674,23 @@
    ],
    "family": "central",
    "name": "Post-Doctoral Fellowship for SC/ST Candidates",
+   "sector": "Education & Learning"
+  },
+  "registry|Post-Matric Scholarship for Minorities": {
+   "evidence": [
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Post-Matric Scholarship for Minorities",
    "sector": "Education & Learning"
   },
   "registry|Postal Logistics Infrastructure Project": {
@@ -39927,6 +40862,47 @@
    "name": "Pradhan Mantri Kisan Man Dhan Yojna",
    "sector": "Agriculture,Rural & Environment"
   },
+  "registry|Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan Scheme": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan Scheme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "the department or ministry: Department of School Education and Literacy"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN)",
+   "sector": "Women and Child"
+  },
+  "registry|Pradhan Mantri Sahaj Bijli Har Ghar Yojana (SAUBHAGYA)": {
+   "evidence": [
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Pradhan Mantri Sahaj Bijli Har Ghar Yojana (SAUBHAGYA)",
+   "sector": "Housing & Shelter"
+  },
   "registry|Pradhan Mantri Swasthya Suraksha Yojana": {
    "evidence": [
     [
@@ -39997,11 +40973,28 @@
    "name": "Pragati Scholarship for girls in Degree Colleges",
    "sector": "Education & Learning"
   },
-  "registry|Pre-Matric Scholarship Scheme for ST students": {
+  "registry|Pre Matric Scholarship for SCs and Others": {
    "evidence": [
     [
      "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: Department of Social Justice and Empowerment"
+    ],
+    [
+     "+5",
      "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Pre Matric Scholarship for SCs and Others",
+   "sector": "Education & Learning"
+  },
+  "registry|Pre- Matric Scholarship for Minorities": {
+   "evidence": [
+    [
+     "+2",
+     "Social welfare & Empowerment",
      "a topic word in the name"
     ],
     [
@@ -40011,7 +41004,7 @@
     ]
    ],
    "family": "central",
-   "name": "Pre-Matric Scholarship Scheme for ST students",
+   "name": "Pre- Matric Scholarship for Minorities",
    "sector": "Education & Learning"
   },
   "registry|Prevention of Spoofed Incoming International Calls System": {
@@ -40281,6 +41274,23 @@
    "name": "Promotion of Electronics and IT HW Manufacturing (MSIPS, EDF and Manufacturing Clusters)",
    "sector": "Business & Entrepreneurship"
   },
+  "registry|Promotion of IT/ITeS Industries": {
+   "evidence": [
+    [
+     "+2",
+     "Science, IT & Communications",
+     "the department or ministry: Ministry of Electronics and Information Technology"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Promotion of IT/ITeS Industries",
+   "sector": "Business & Entrepreneurship"
+  },
   "registry|Promotion of International Co-operation in AYUSH": {
    "evidence": [
     [
@@ -40527,6 +41537,35 @@
    "name": "Railway Research",
    "sector": "Transport & Infrastructure"
   },
+  "registry|Raising and Accelerating MSME Performance - RAMP": {
+   "evidence": [
+    [
+     "+2",
+     "Business & Entrepreneurship",
+     "the department or ministry: Ministry of Micro, Small and Medium Enterprises"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Raising and Accelerating MSME Performance - RAMP",
+   "sector": "Business & Entrepreneurship"
+  },
+  "registry|Rajiv Gandhi Grameen Vidyutikaran Yojana (RGGVY)": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Rajiv Gandhi Grameen Vidyutikaran Yojana (RGGVY)",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Rashtriya Gokul Mission": {
    "evidence": [
     [
@@ -40710,6 +41749,35 @@
    "name": "Relief and Rehabilitation for migrants and repatriates",
    "sector": "Social welfare & Empowerment"
   },
+  "registry|Remote Village Electrification Programme": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Remote Village Electrification Programme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Reproductive and Child Health Programme, Phase I (RCH-I)": {
+   "evidence": [
+    [
+     "+2",
+     "Women and Child",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Reproductive and Child Health Programme, Phase I (RCH-I)",
+   "sector": "Health & Wellness"
+  },
   "registry|Research and Development (Ports)": {
    "evidence": [
     [
@@ -40751,7 +41819,7 @@
    "name": "Research and Development and Implementation of National Water Mission",
    "sector": "Agriculture,Rural & Environment"
   },
-  "registry|Research and Development|2": {
+  "registry|Research and Development|3": {
    "evidence": [
     [
      "+2",
@@ -40763,7 +41831,7 @@
    "name": "Research and Development",
    "sector": "Utility & Sanitation"
   },
-  "registry|Research and Development|3": {
+  "registry|Research and Development|4": {
    "evidence": [
     [
      "+2",
@@ -40861,6 +41929,18 @@
    "family": "central",
    "name": "Residential",
    "sector": "Housing & Shelter"
+  },
+  "registry|Residential Schools Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Residential Schools Scheme",
+   "sector": "Education & Learning"
   },
   "registry|Revised Integrated Housing Scheme (RIHS)-2016 for Beedi, IOMC,LSDM,CINE Workes": {
    "evidence": [
@@ -41118,6 +42198,40 @@
    "name": "Sagarmala Schemes and Projects",
    "sector": "Transport & Infrastructure"
   },
+  "registry|Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS - Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)": {
+   "evidence": [
+    [
+     "+2",
+     "Women and Child",
+     "the department or ministry: Ministry of Women and Child Development"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Saksham Anganwadi and POSHAN 2.0 (Umbrella ICDS - Anganwadi Services, Poshan Abhiyan, Scheme for Adolescent Girls)",
+   "sector": "Women and Child"
+  },
+  "registry|Saksham scholarship for differently abled students of Degree Colleges": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Saksham scholarship for differently abled students of Degree Colleges",
+   "sector": "Education & Learning"
+  },
   "registry|Saksham scholarship for differently abled students of Diploma Institutes": {
    "evidence": [
     [
@@ -41246,6 +42360,18 @@
    "name": "Scheme for Development of Pipeline infrastructure for injection of Compressed Bio Gas (CBG) in City Gas Distribution (CGD) Network",
    "sector": "Business & Entrepreneurship"
   },
+  "registry|Scheme for Development of Solar Parks and Ultra Mega Solar Power Projects": {
+   "evidence": [
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Scheme for Development of Solar Parks and Ultra Mega Solar Power Projects",
+   "sector": "Utility & Sanitation"
+  },
   "registry|Scheme for Economic Empowerment of DNT/NT/SNTs (SEED) CENTRAL SECTOR SCHEMES": {
    "evidence": [
     [
@@ -41308,6 +42434,18 @@
    "family": "central",
    "name": "Scheme for Industrial Housing",
    "sector": "Housing & Shelter"
+  },
+  "registry|Scheme for Integrated Textile Parks (SITP)": {
+   "evidence": [
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Scheme for Integrated Textile Parks (SITP)",
+   "sector": "Business & Entrepreneurship"
   },
   "registry|Scheme for Investment Promotion CENTRAL SECTOR SCHEMES": {
    "evidence": [
@@ -41555,6 +42693,18 @@
    "name": "Scholarships for Higher Education for Young Achievers Scheme (SHREYAS) for OBCs and EBCs",
    "sector": "Education & Learning"
   },
+  "registry|School Safety Initiative": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "School Safety Initiative",
+   "sector": "Education & Learning"
+  },
   "registry|Science and Technology Institutional and Human Capacity Building": {
    "evidence": [
     [
@@ -41571,6 +42721,64 @@
    "family": "central",
    "name": "Science and Technology Institutional and Human Capacity Building",
    "sector": "Science, IT & Communications"
+  },
+  "registry|Seed Village Scheme (SVS)": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Seed Village Scheme (SVS)",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Self Defence Skill Programme": {
+   "evidence": [
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Self Defence Skill Programme",
+   "sector": "Skills & Employment"
+  },
+  "registry|Semi Permanent Rural Housing Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Semi Permanent Rural Housing Scheme",
+   "sector": "Housing & Shelter"
+  },
+  "registry|Service Exports from India Scheme (SEIS)": {
+   "evidence": [
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Service Exports from India Scheme (SEIS)",
+   "sector": "Business & Entrepreneurship"
   },
   "registry|Setting up of nation wide network of laboratories for managing epidemics and national calamities": {
    "evidence": [
@@ -41728,6 +42936,23 @@
    "family": "central",
    "name": "Smart Cities Mission CENTRALLY SPONSORED SCHEMES",
    "sector": "Housing & Shelter"
+  },
+  "registry|Solar Power (Grid)": {
+   "evidence": [
+    [
+     "+2",
+     "Utility & Sanitation",
+     "the department or ministry: Ministry of New and Renewable Energy"
+    ],
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Solar Power (Grid)",
+   "sector": "Utility & Sanitation"
   },
   "registry|Solar Power (Off-Grid)": {
    "evidence": [
@@ -41978,6 +43203,18 @@
    "name": "Stipend to students in Indian Statistical Institute",
    "sector": "Education & Learning"
   },
+  "registry|Storage and Godowns": {
+   "evidence": [
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "the department or ministry: Department of Food and Public Distribution"
+    ]
+   ],
+   "family": "central",
+   "name": "Storage and Godowns",
+   "sector": "Social welfare & Empowerment"
+  },
   "registry|Stores Suspense CENTRAL SECTOR SCHEMES": {
    "evidence": [
     [
@@ -42150,6 +43387,18 @@
    ],
    "family": "central",
    "name": "Strengthening of State Drug Regulatory System",
+   "sector": "Health & Wellness"
+  },
+  "registry|Strengthening of State Drug Testing Laboratories and Government pharmacies of ISM&H": {
+   "evidence": [
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Strengthening of State Drug Testing Laboratories and Government pharmacies of ISM&H",
    "sector": "Health & Wellness"
   },
   "registry|Strengthening of Weights and Measures Infrastructure and Strengthening of Regional Reference Standard Laboratories and Indian Institute of Legal Metrology": {
@@ -42413,6 +43662,35 @@
    "name": "Tertiary Care Programme",
    "sector": "Health & Wellness"
   },
+  "registry|Textile Centres Infrastructure Development Scheme (TCIDS)": {
+   "evidence": [
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Textile Centres Infrastructure Development Scheme (TCIDS)",
+   "sector": "Business & Entrepreneurship"
+  },
+  "registry|Textile Cluster Development Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Business & Entrepreneurship",
+     "the department or ministry: Ministry of Textiles"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Textile Cluster Development Scheme",
+   "sector": "Business & Entrepreneurship"
+  },
   "registry|Textiles Focused Research, Assessment, Monitoring and Promotion Scheme (Tex-RAMPS)": {
    "evidence": [
     [
@@ -42594,6 +43872,18 @@
    "name": "Transport/Freight Subsidy Scheme",
    "sector": "Business & Entrepreneurship"
   },
+  "registry|Tribal Area Sub Plan (TASP)": {
+   "evidence": [
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Tribal Area Sub Plan (TASP)",
+   "sector": "Social welfare & Empowerment"
+  },
   "registry|UR Rao Satellite Centre-Scholarships and Stipends": {
    "evidence": [
     [
@@ -42640,6 +43930,18 @@
    ],
    "family": "central",
    "name": "Urban Challenge Fund",
+   "sector": "Housing & Shelter"
+  },
+  "registry|Valmiki Ambedkar Malin Basti Awas Yojana (VAMBAY)": {
+   "evidence": [
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Valmiki Ambedkar Malin Basti Awas Yojana (VAMBAY)",
    "sector": "Housing & Shelter"
   },
   "registry|Varishtha Pension Bima Yojana": {
@@ -42748,6 +44050,18 @@
    "name": "Viksit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin)-VB-G RAM G Scheme",
    "sector": "Social welfare & Empowerment"
   },
+  "registry|Village Grain Bank Scheme": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Village Grain Bank Scheme",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "registry|Watershed Development Component-Pradhan Mantri Krishi Sinchai Yojna": {
    "evidence": [
     [
@@ -42763,6 +44077,42 @@
    ],
    "family": "central",
    "name": "Watershed Development Component-Pradhan Mantri Krishi Sinchai Yojna",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|West Bengal Rural Electrification Programme": {
+   "evidence": [
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "West Bengal Rural Electrification Programme",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "registry|Wheat Based Nutrition Programme": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Wheat Based Nutrition Programme",
+   "sector": "Women and Child"
+  },
+  "registry|Wildlife Management outside Protected Areas": {
+   "evidence": [
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "Wildlife Management outside Protected Areas",
    "sector": "Agriculture,Rural & Environment"
   },
   "registry|Wind Power (Grid)": {
@@ -89315,7 +90665,7 @@
     },
     "dropped_because_the_answer_changed_after_the_audit": 0,
     "precision_over_the_audited_rows": 0.855,
-    "precision_reweighted_to_the_published_rows": 0.882,
+    "precision_reweighted_to_the_published_rows": 0.883,
     "right": 148,
     "wrong": 25
    }

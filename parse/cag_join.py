@@ -120,7 +120,13 @@ def run():
         if n and n not in seen:
             seen.add(n)
             names.append(n)
-            scope.append(None)          # joinable to any government
+            # A scheme only a state's CAG report names (parse/registry.py attach_cag) is
+            # that state's, and is scoped like a state budget line. Its government is
+            # spelt as this register spells it, so a report filed under "Pondicherry" or
+            # "Jammu and Kashmir State (Upto 30-Oct-2019)" is not offered it: a missed join
+            # rather than a wrong one.
+            gov = (e["sources"].get("cag") or {}).get("government") if len(e["sources"]) == 1 else None
+            scope.append(gov if gov not in (None, "Central") else None)
     for f in sorted(glob.glob(os.path.join(ROOT, "data", "*", "classification.json"))):
         d = load(os.path.relpath(f, ROOT)) or {}
         if not d.get("all_entries"):
@@ -198,9 +204,10 @@ def run():
         "register_names_national": sum(1 for x in scope if x is None),
         "register_names_state": sum(1 for x in scope if x is not None),
         "pool_note": ("Both halves of the register: every name from the four national "
-                      "sources, joinable to any government, plus each state's own budget "
-                      "schemes, joinable only to that state's reports. A Karnataka report "
-                      "cannot be an audit of a Kerala scheme."),
+                      "sources and the Union schemes only a CAG report names, joinable to any "
+                      "government, plus each state's own budget schemes and the state schemes "
+                      "only its CAG reports name, joinable only to that state's reports. A "
+                      "Karnataka report cannot be an audit of a Kerala scheme."),
         "joins_considered": considered,
         "joins_published": published,
         "schemes_audited": len(out),
