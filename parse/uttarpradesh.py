@@ -50,19 +50,17 @@ import collections
 import glob
 import gzip
 import html
-import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from pdf import bbox_xml, snapshot  # noqa: E402
 from devanagari import transliterate, has_devanagari  # noqa: E402
-from match import probably_same, tokens as m_tokens, skeleton as m_skeleton, \
-    acronyms as m_acronyms  # noqa: E402
+from match import probably_same  # noqa: E402
+from classify_common import myscheme_hits, myscheme_index, myscheme_records  # noqa: E402
 
 WORD = re.compile(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="[\d.]+">([^<]*)</word>')
 PAGE = re.compile(r'<page width="[\d.]+" height="[\d.]+">(.*?)</page>', re.S)
@@ -149,18 +147,6 @@ X_MARKER_MAX = 240.0
 # its edge.
 ROW_TOL = 9.0
 JOIN_GAP = 2.0       # below this, two Devanagari words are one word split by the renderer
-
-
-def pdf_bbox(pdf_bytes):
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        r = subprocess.run(["pdftotext", "-bbox-layout", p, "-"],
-                           capture_output=True, timeout=1200)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        return r.stdout.decode("utf-8", "replace")
 
 
 def repair(words):
@@ -407,58 +393,26 @@ def parse_volume(xml, grant, department):
 
 
 
-def myscheme_records():
-    """myScheme's own state-level records for Uttar Pradesh, from the archived snapshot."""
-    out = []
-    for f in glob.glob(os.path.join(ROOT, "data", "myscheme", "schemes", "*.json")):
-        d = json.load(open(f, encoding="utf-8"))
-        if "Uttar Pradesh" not in ((d.get("_list") or {}).get("beneficiaryState") or []):
-            continue
-        b = (d.get("en") or {}).get("basicDetails") or {}
-        if b.get("schemeName"):
-            out.append(b["schemeName"])
-    return sorted(set(out))
-
-
 def join_to_myscheme(schemes):
     """Every join between the register's romanised names and myScheme's Uttar Pradesh list.
 
-    Indexed on the register side, because 47 records against 5,831 names with a slow
-    comparator on every pair is 274,000 calls to a function that does string similarity.
-    The index is the same one parse/registry.py uses, keyed on tokens, skeletons and
-    acronyms, so it cannot under-retrieve in a way the comparator would have caught.
+    Through classify_common's index, the one every classifier uses: an exact superset of
+    the pairs probably_same accepts. This file had its own copy, which indexed acronyms of
+    five letters or more only and so never offered a four-letter one such as PMAY, the
+    under-retrieval 525e5d8a removed everywhere else; and it did not strip myScheme's names.
     """
-    names = myscheme_records()
-    idx = collections.defaultdict(set)
-    for i, e in enumerate(schemes):
-        lat = e["name_latin"]
-        for k in (set(m_tokens(lat)) | {m_skeleton(t) for t in m_tokens(lat)}
-                  | {a for a in m_acronyms(lat) if len(a) >= 5}):
-            idx[k].add(i)
-    joins = []
-    for m in names:
-        cand = set()
-        for k in (set(m_tokens(m)) | {m_skeleton(t) for t in m_tokens(m)}
-                  | {a for a in m_acronyms(m) if len(a) >= 5}):
-            cand |= idx.get(k, set())
-        for i in sorted(cand):
-            ok, why = probably_same(schemes[i]["name_latin"], m)
-            if ok:
-                joins.append({"myscheme": m, "grant": schemes[i]["grant"],
-                              "code": schemes[i]["code"], "name": schemes[i]["name"],
-                              "name_latin": schemes[i]["name_latin"], "why": why})
+    names = myscheme_records("Uttar Pradesh")
+    idx = myscheme_index(names)
+    hits = {i: set(myscheme_hits(e["name_latin"], idx)) for i, e in enumerate(schemes)}
+    joins = [{"myscheme": m, "grant": schemes[i]["grant"], "code": schemes[i]["code"],
+              "name": schemes[i]["name"], "name_latin": schemes[i]["name_latin"],
+              "why": probably_same(schemes[i]["name_latin"], m)[1]}
+             for m in names for i in sorted(hits) if m in hits[i]]
     return joins, names
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "uttarpradesh", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/uttarpradesh/ — run collect/uttarpradesh.py")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "uttarpradesh", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("uttarpradesh", date)
 
     all_schemes, stats = [], collections.Counter()
     per_grant, recon = {}, {}
@@ -466,7 +420,7 @@ def run(date=None):
         grant = os.path.basename(p)[2:4]
         dept = (man.get("grants", {}).get(grant) or {}).get("department", "")
         with gzip.open(p, "rb") as fh:
-            xml = pdf_bbox(fh.read())
+            xml = bbox_xml(fh.read(), timeout=1200)
         sch, rc, st = parse_volume(xml, grant, dept)
         per_grant[grant] = len(sch)
         recon[grant] = rc

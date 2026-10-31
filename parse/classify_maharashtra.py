@@ -182,7 +182,6 @@ keeps in BEAMS beside each scheme code, which is what Tamil Nadu does.
 """
 
 import argparse
-import json
 import os
 import re
 import sys
@@ -190,9 +189,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule, myscheme_hits, myscheme_index, \
-    myscheme_records  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, \
+    quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
 PUBLISH_THRESHOLD = 8
@@ -326,10 +325,6 @@ THROUGH = re.compile(r"\bthrough\b", re.I)
 ESTAB_LEAD = re.compile(
     r"^\s*(directorate|director\b|estt\b|establishment of|office of|headquarters|"
     r"head office|regional office|jail department|strengthening of office)", re.I)
-
-
-def tokens(s):
-    return set(re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).split())
 
 
 def major_heads(budget_codes):
@@ -704,147 +699,38 @@ def family(dept):
     return "GOVERNANCE"
 
 
-def stratify(entries, target=380):
-    """Deterministic stratified sample: department family crossed with allocation band.
+def code(r):
+    return r["code"]
 
-    No random seed anywhere. Rows inside a stratum are sorted by scheme code and picked
-    at even spacing, so this returns the same rows on every machine and every run.
-    """
-    alloc = sorted(r["be_lakh"] for r in entries if r.get("be_lakh"))
-    cuts = [alloc[int(len(alloc) * f)] for f in (0.25, 0.5, 0.75)] if alloc else [0, 0, 0]
+
+def stratify(entries, target=380):
+    """Deterministic stratified sample: department family crossed with allocation band, a
+    floor of 6 per stratum. classify_common.stratified_sample draws it."""
+    cuts = quartile_cuts(r["be_lakh"] for r in entries if r.get("be_lakh"))
 
     def band(r):
         v = r.get("be_lakh")
-        if not v:
-            return "nil"
-        return "q1" if v < cuts[0] else "q2" if v < cuts[1] else "q3" if v < cuts[2] else "q4"
-
-    cells = {}
-    for r in entries:
-        cells.setdefault((family(r["department"]), band(r)), []).append(r)
-    out = []
-    for k in sorted(cells):
-        rows = sorted(cells[k], key=lambda x: x["code"])
-        # Proportional allocation with a floor of 6, so the sample is close to self
-        # weighting and every stratum still gets enough rows to say anything about.
-        n = min(len(rows), max(6, round(len(rows) * target / len(entries))))
-        idx = sorted({round(i * (len(rows) - 1) / (n - 1)) if n > 1 else 0
-                      for i in range(n)})
-        for i in idx:
-            out.append((rows[i], "%s/%s" % k, len(rows), len(idx)))
-    return sorted(out, key=lambda t: t[0]["code"])
+        return quartile(v, cuts) if v else "nil"
+    return stratified_sample(entries, lambda r: (family(r["department"]), band(r)), code,
+                             target, 6)
 
 
-def myscheme_maharashtra():
-    return myscheme_records("Maharashtra")
-
-
-def sweep(rows, lo, hi):
-    """Precision and recall at every threshold, so the operating point is visible."""
-    out = []
-    for t in range(lo, hi + 1):
-        tp = sum(1 for x in rows if x["score"] >= t and x["label"] == "scheme")
-        fp = sum(1 for x in rows if x["score"] >= t and x["label"] != "scheme")
-        fn = sum(1 for x in rows if x["score"] < t and x["label"] == "scheme")
-        pr = tp / (tp + fp) if tp + fp else 0.0
-        rc = tp / (tp + fn) if tp + fn else 0.0
-        out.append({"threshold": t, "called_scheme": tp + fp,
-                    "true_positive": tp, "false_positive": fp, "false_negative": fn,
-                    "precision": round(pr, 3), "recall": round(rc, 3),
-                    "f1": round(2 * pr * rc / (pr + rc), 3) if pr + rc else 0.0})
-    return out
+def score(r):
+    return score_entry(r["name"], major_heads(r.get("budget_codes")))
 
 
 def run(threshold=PUBLISH_THRESHOLD, verbose=False):
-    mh = json.load(open(os.path.join(ROOT, "data", "maharashtra", "schemes.json"),
-                        encoding="utf-8"))
-    entries = sorted(mh["entries"], key=lambda x: x["code"])
-
-    labels = json.load(open(os.path.join(ROOT, "data", "maharashtra", "labels.json"),
-                            encoding="utf-8"))
-    by_key = {x["key"]: x for x in labels["labels"]}
-
-    listed = myscheme_maharashtra()
-    idx = myscheme_index(listed)
-
-    rows = []
-    for r in entries:
-        maj = major_heads(r.get("budget_codes"))
-        total, ev = score_entry(r["name"], maj)
-        hit = myscheme_hits(r["name"], idx)
-        rows.append({
-            "key": r["code"],
-            "code": r["code"],
-            "name": r["name"],
-            "department": r["department"],
-            "sector": r["sector"],
-            "sub_sector": r["sub_sector"],
-            "component": r["component"],
-            "statement": r["statement"],
-            "sources": sorted(r.get("sources") or []),
-            "budget_codes": sorted(r.get("budget_codes") or []),
-            "major_heads": maj,
-            "be_lakh": r.get("be_lakh"),
-            "score": total,
-            "evidence": ev,
-            "verdict": "scheme" if total >= threshold else "not a scheme",
-            "in_myscheme_maharashtra": bool(hit),
-            "myscheme_match": sorted(hit) or None,
-            "hand_label": by_key[r["code"]]["label"] if r["code"] in by_key else None,
-        })
-
-    # Validation on the probability sample. The audit set is a census of the published
-    # region, so mixing it in would inflate precision at exactly the thresholds that
-    # matter; it gets its own count below.
-    scored = [{"key": x["key"], "name": x["name"], "score": x["score"],
-               "label": by_key[x["key"]]["label"]}
-              for x in rows
-              if x["key"] in by_key and by_key[x["key"]].get("sample") == "stratified"]
-    scored.sort(key=lambda x: x["key"])
-    lo = min(x["score"] for x in scored)
-    hi = max(x["score"] for x in scored)
-
-    # The held-out half. Labels were made before any weight was chosen, and the weights
-    # were then fitted looking only at the even-indexed half, so the odd-indexed half is
-    # the honest estimate. Reporting only the full-set number would flatter the classifier.
-    dev = [x for i, x in enumerate(scored) if i % 2 == 0]
-    held = [x for i, x in enumerate(scored) if i % 2 == 1]
-
-    full_sweep = sweep(scored, lo, hi)
-    held_sweep = sweep(held, lo, hi)
-    at = next(x for x in full_sweep if x["threshold"] == threshold)
-    at_held = next(x for x in held_sweep if x["threshold"] == threshold)
-
-    # The audited census. Every row scoring CENSUS_FROM or more carries a hand label, from
-    # one set or the other, so at those thresholds these are counts and not estimates.
-    audited = sorted((x for x in rows if x["key"] in by_key), key=lambda x: x["key"])
-    census = []
-    top = max(x["score"] for x in rows)
-    for t in range(CENSUS_FROM, top + 1):
-        pub = [x for x in audited if x["score"] >= t]
-        corpus = [x for x in rows if x["score"] >= t]
-        bad = [x for x in pub if by_key[x["key"]]["label"] != "scheme"]
-        band = [x for x in pub if x["score"] == t]
-        band_bad = [x for x in band if by_key[x["key"]]["label"] != "scheme"]
-        census.append({
-            "threshold": t,
-            "rows_in_corpus": len(corpus),
-            "rows_hand_labelled": len(pub),
-            "published": len(pub),
-            "not_schemes": len(bad),
-            "precision": round((len(pub) - len(bad)) / len(pub), 3) if pub else 0.0,
-            "band_at_exactly_this_score": len(band),
-            "band_not_schemes": len(band_bad),
-            "band_precision": round((len(band) - len(band_bad)) / len(band), 3)
-            if band else 0.0,
-            "the_errors": sorted("%s [%s]" % (x["name"], x["code"]) for x in bad),
-        })
-    at_census = next(x for x in census if x["threshold"] == threshold)
-
-    schemes = [x for x in rows if x["verdict"] == "scheme"]
-    absent_all = [x for x in rows if not x["in_myscheme_maharashtra"]]
-    absent = sorted((x for x in schemes if not x["in_myscheme_maharashtra"]),
-                    key=lambda x: (-(x["be_lakh"] or 0), x["key"]))
+    a = assess("maharashtra", "Maharashtra", code, score, lambda r: {
+        "key": r["code"], "code": r["code"], "name": r["name"],
+        "department": r["department"], "sector": r["sector"],
+        "sub_sector": r["sub_sector"], "component": r["component"],
+        "statement": r["statement"], "sources": sorted(r.get("sources") or []),
+        "budget_codes": sorted(r.get("budget_codes") or []),
+        "major_heads": major_heads(r.get("budget_codes")), "be_lakh": r.get("be_lakh")},
+        threshold, CENSUS_FROM,
+        error=lambda x: "%s [%s]" % (x["name"], x["code"]))
+    mh, labels, listed, rows = a["data"], a["labels"], a["listed"], a["rows"]
+    schemes, absent = a["schemes"], a["absent"]
 
     # One row per NAME as well as per scheme code, because Maharashtra votes the same
     # scheme separately in the GENERAL, Scheduled Caste Component and Tribal Component
@@ -934,17 +820,13 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
         },
         "signals": SIGNALS,
         "signals_rejected": REJECTED_SIGNALS,
-        "threshold_sweep": full_sweep,
-        "threshold_sweep_held_out": held_sweep,
-        "threshold_sweep_census": census,
+        "threshold_sweep": a["threshold_sweep"],
+        "threshold_sweep_held_out": a["threshold_sweep_held_out"],
+        "threshold_sweep_census": a["threshold_sweep_census"],
         "validation": {
-            "n_labelled": len(scored),
-            "n_development": len(dev),
-            "n_held_out": len(held),
-            "base_rate_stratified": round(
-                sum(1 for x in scored if x["label"] == "scheme") / len(scored), 3),
-            "base_rate_development_half": round(
-                sum(1 for x in dev if x["label"] == "scheme") / len(dev), 3),
+            **a["counts"],
+            "base_rate_stratified": base_rate(a["scored"]),
+            "base_rate_development_half": base_rate(a["dev"]),
             "base_rate_note": (
                 "About one Maharashtra Annual Scheme row in four is a welfare scheme, "
                 "against 16% of Tamil Nadu's Demand Book sub-heads, 41% of Andhra Pradesh's "
@@ -953,21 +835,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
                 "cleaner than Tamil Nadu's full detailed estimates and dirtier than "
                 "Karnataka's Gender and Child annexures, which are already filtered to "
                 "beneficiary-facing rows."),
-            "at_publish_threshold": {
-                "threshold": threshold,
-                "precision": at["precision"],
-                "recall": at["recall"],
-                "true_positive": at["true_positive"],
-                "false_positive": at["false_positive"],
-                "false_negative": at["false_negative"],
-            },
-            "at_publish_threshold_held_out": {
-                "threshold": threshold,
-                "precision": at_held["precision"],
-                "recall": at_held["recall"],
-                "true_positive": at_held["true_positive"],
-                "false_positive": at_held["false_positive"],
-            },
+            **a["points"],
             "census_note": (
                 "Every row at or above score %d is hand labelled, so precision at these "
                 "thresholds is counted rather than estimated. The census starts at %d and not "
@@ -976,8 +844,8 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
                 "largest set that can be read one by one and labelled reliably. Recall still "
                 "comes from the stratified sample, because the rows the classifier rejects "
                 "are too many to label exhaustively." % (CENSUS_FROM, CENSUS_FROM)),
-            "at_publish_threshold_census": at_census,
-            "f1_optimal_threshold": max(full_sweep, key=lambda x: x["f1"])["threshold"],
+            "at_publish_threshold_census": a["at_census"],
+            **a["f1"],
             "why_not_f1": (
                 "F1 peaks at threshold 2, where the sample says precision is 64.0% and one "
                 "published name in three is not a scheme. Naming a scheme as hidden by a "
@@ -1017,7 +885,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "thing a register should show rather than smooth over."),
         "myscheme_join_defects": mh.get("myscheme_join_defects"),
         "myscheme_join_summary": mh.get("myscheme_join_summary"),
-        "absent_from_myscheme_all_rows": len(absent_all),
+        "absent_from_myscheme_all_rows": len(a["absent_all"]),
         "absent_from_myscheme_and_classified_scheme": len(absent),
         "absent_distinct_names": len({x["name"].lower() for x in absent}),
         "absent_cr": round(sum(x["be_lakh"] or 0 for x in absent) / 100.0, 2),
@@ -1041,25 +909,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
 
 def check_sample():
     """Report which sampled or census rows have no hand label yet."""
-    mh = json.load(open(os.path.join(ROOT, "data", "maharashtra", "schemes.json"),
-                        encoding="utf-8"))
-    labels = json.load(open(os.path.join(ROOT, "data", "maharashtra", "labels.json"),
-                            encoding="utf-8"))
-    have = {x["key"] for x in labels["labels"]}
-    entries = sorted(mh["entries"], key=lambda x: x["code"])
-    frame = stratify(entries)
-    missing = [(r["code"], st, r["name"]) for r, st, _, _ in frame if r["code"] not in have]
-    print("sampling frame %d rows, labelled %d, unlabelled %d"
-          % (len(frame), len(have), len(missing)))
-    for k, st, name in missing:
-        print("  [%s]  %s  %s" % (st, k, name[:80]))
-    uncovered = [r["code"] for r in entries
-                 if score_entry(r["name"], major_heads(r["budget_codes"]))[0] >= CENSUS_FROM
-                 and r["code"] not in have]
-    print("census at score >= %d: %d rows unlabelled" % (CENSUS_FROM, len(uncovered)))
-    for k in uncovered:
-        print("  %s" % k)
-    return missing, uncovered
+    return check("maharashtra", code, stratify, score, CENSUS_FROM)
 
 
 def main():

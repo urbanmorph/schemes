@@ -41,15 +41,12 @@ the last error in the file: names are normalised before matching now.
 """
 
 import argparse
-import json
 import os
 import re
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule, joiner, myscheme_records  # noqa: E402
+from classify_common import classify, norm, report  # noqa: E402
 
 BENEFIT = re.compile(
     r"\b(yojana|yojna|scholarship|pension|insurance|awas|meal|nutrition|poshan|anganwadi|"
@@ -80,19 +77,7 @@ PUBLISH_THRESHOLD = 2
 LISTING_THRESHOLD = 1
 
 
-def norm(name):
-    """Underscores and slashes are word characters to a regex and word breaks to a reader."""
-    return re.sub(r"[_/]+", " ", name or "")
-
-
 def score(r):
-    # The register's definition, held in classify_common because it is the rule and not a
-    # signal: money that buys the capacity of a delivery system is not a scheme however
-    # strongly this state's own evidence reads it. This file predates that harness and has
-    # to reach for it explicitly.
-    if excluded_by_rule(r["name"]):
-        return -99, [("rule", "buys the capacity of the delivery system, not the benefit")]
-
     n = norm(r["name"])
     s, ev = 0, []
     if BENEFIT.search(n):
@@ -113,107 +98,37 @@ def score(r):
     return s, ev
 
 
-def run():
-    d = json.load(open(os.path.join(ROOT, "data", "tripura", "schemes.json"), encoding="utf-8"))
-    lj = json.load(open(os.path.join(ROOT, "data", "tripura", "labels.json"), encoding="utf-8"))
-    labels = {c: v["label"] for c, v in lj["labels"].items()}
-    lab = {c: v == "scheme" for c, v in labels.items()}
-    ms = myscheme_records("Tripura")
-    hit = joiner(ms)
-
-    out = []
-    for r in sorted(d["entries"], key=lambda x: x["code"]):
-        s, ev = score(r)
-        m = hit(r["name"])
-        out.append({
-            "key": r["code"], "code": r["code"], "name": r["name"],
-            "department": (r.get("departments") or [None])[0],
-            "hoas": r.get("hoas") or [], "be_lakh": r.get("be_lakh"),
-            "score": s, "evidence": ev,
-            "verdict": "scheme" if s >= PUBLISH_THRESHOLD else "not_scheme",
-            "hand_label": labels.get(r["code"]),
-            "in_myscheme_tripura": bool(m), "myscheme_name": m,
-        })
-
-    def sweep(t):
-        h = [o for o in out if o["score"] >= t and o["hand_label"]]
-        if not h:
-            return None
-        tp = sum(1 for o in h if o["hand_label"] == "scheme")
-        return {"threshold": t, "n_labelled": len(h), "precision": round(tp / len(h), 3),
-                "recall": round(tp / sum(lab.values()), 3)}
-
-    census = [o for o in out if o["score"] >= PUBLISH_THRESHOLD]
-    right = sum(1 for o in census if o["hand_label"] == "scheme")
-    errors = [o["name"] for o in census if o["hand_label"] == "not_scheme"]
-    # Counted, not assumed. Every line carries a label today; the first new line that does
-    # not would otherwise be published as a hand-labelled count.
-    unlabelled = [o["name"] for o in census if o["hand_label"] is None]
-    absent = [o for o in census if not o["in_myscheme_tripura"]]
-
-    write_json("data/tripura/classification.json", {
-        "built": utcnow(), "snapshot": d["snapshot"], "state": "Tripura",
-        "cycle": d.get("cycle"), "source": d.get("source"),
-        "publish_threshold": PUBLISH_THRESHOLD, "listing_threshold": LISTING_THRESHOLD,
-        "myscheme_tripura_records": len(ms),
-        "classified_scheme": len(census),
-        "classified_not_scheme": len(out) - len(census),
-        "ground_truth": {"labelled": len(labels),
-                         "scheme": sum(1 for v in labels.values() if v == "scheme"),
-                         "not_scheme": sum(1 for v in labels.values() if v == "not_scheme"),
-                         "question": lj.get("question"), "sampling": lj.get("sampling")},
-        "threshold_sweep": [x for x in (sweep(t) for t in range(0, 6)) if x],
-        "validation": {
-            "at_publish_threshold_census": {
-                "rows": len(census), "rows_hand_labelled": len(census) - len(unlabelled),
-                "unlabelled": len(unlabelled), "schemes": right, "not_schemes": len(errors),
-                "precision": round(right / len(census), 3) if census else None,
-                "what": ("Every line in Tripura's book carries a hand label, so this is a "
-                         "count over the whole population and not over a sample. There is "
-                         "no estimate anywhere in this file."),
-            },
-            "at_publish_threshold": sweep(PUBLISH_THRESHOLD) or {},
-        },
-        "known_errors": errors,
-        "signals_rejected": [
-            {"signal": "the word abhiyan in the name",
-             "measured": {"P_scheme": 0.333, "base_rate": 0.463, "n": 6},
-             "why": ("It looks like yojana, which measures 0.750, and it lands on the "
-                     "other side of the base rate. Tripura's abhiyans are Rashtriya Gram "
-                     "Swaraj, Swachh Bharat and Dharti Aaba Janjatiya Gram Utkarsh, and "
-                     "those develop a place or build a capability rather than paying "
-                     "anybody.")},
-            {"signal": "the Welfare of SC / ST / OBC / Tribal departments",
-             "measured": {"P_scheme": 0.400, "base_rate": 0.463, "n": 15},
-             "why": ("Below the base rate. A welfare department funds hostels and "
-                     "research institutes as readily as it funds scholarships, so who "
-                     "pays says nothing here.")},
-            {"signal": "the Public Works and Urban Development departments",
-             "measured": {"P_scheme": 0.316, "base_rate": 0.463, "n": 19},
-             "why": ("A real negative but a weak one, and every row it would catch is "
-                     "already caught by a word in its own name. Left out rather than "
-                     "double-counted.")},
-        ],
-        "caveat": d.get("caveat"),
-        "absent_schemes": sorted(absent, key=lambda o: -(o["be_lakh"] or 0))[:60],
-        "absent_distinct": absent,
-        "all_entries": out,
-    })
-    return out, census, right, errors, ms
+REJECTED = [
+    {"signal": "the word abhiyan in the name",
+     "measured": {"P_scheme": 0.333, "base_rate": 0.463, "n": 6},
+     "why": ("It looks like yojana, which measures 0.750, and it lands on the "
+             "other side of the base rate. Tripura's abhiyans are Rashtriya Gram "
+             "Swaraj, Swachh Bharat and Dharti Aaba Janjatiya Gram Utkarsh, and "
+             "those develop a place or build a capability rather than paying "
+             "anybody.")},
+    {"signal": "the Welfare of SC / ST / OBC / Tribal departments",
+     "measured": {"P_scheme": 0.400, "base_rate": 0.463, "n": 15},
+     "why": ("Below the base rate. A welfare department funds hostels and "
+             "research institutes as readily as it funds scholarships, so who "
+             "pays says nothing here.")},
+    {"signal": "the Public Works and Urban Development departments",
+     "measured": {"P_scheme": 0.316, "base_rate": 0.463, "n": 19},
+     "why": ("A real negative but a weak one, and every row it would catch is "
+             "already caught by a word in its own name. Left out rather than "
+             "double-counted.")},
+]
 
 
 def main():
     argparse.ArgumentParser(description="Classify Tripura's scheme lines.").parse_args()
-    out, census, right, errors, ms = run()
-    print(f"tripura: {len(out)} lines, {len(census)} clear the publishing bar of {PUBLISH_THRESHOLD}")
-    if census:
-        print(f"  counted precision {right/len(census):.3f} over the WHOLE corpus, "
-              f"{len(errors)} errors")
-    gaps = sum(1 for o in census if o["hand_label"] is None)
-    if gaps:
-        print(f"  {gaps} rows at the bar carry NO hand label; label them before publishing.")
-    print(f"  myScheme lists {len(ms)} Tripura schemes; "
-          f"{sum(1 for o in census if not o['in_myscheme_tripura'])} of these reach it nowhere")
+    report("tripura",
+           *classify("tripura", "Tripura", score, PUBLISH_THRESHOLD, LISTING_THRESHOLD,
+                     REJECTED,
+                     row_fields=lambda r: {"department": (r.get("departments") or [None])[0]},
+                     what=("Every line in Tripura's book carries a hand label, so this is a "
+                           "count over the whole population and not over a sample. There is "
+                           "no estimate anywhere in this file.")),
+           publish=PUBLISH_THRESHOLD)
 
 
 if __name__ == "__main__":

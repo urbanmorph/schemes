@@ -57248,7 +57248,7 @@
    "verdict": "scheme"
   }
  ],
- "built": "2026-10-30T16:43:36Z",
+ "built": "2026-10-31T15:18:54Z",
  "caveat": "The Pragathi Paddu is Telangana's scheme expenditure volume and it files establishment heads at the same level as schemes: Governor Secretariat, Raj Bhavan Gardens, Furniture Estt, Public Service Commission. They are kept, because the state files them here and dropping them would be this project editing a state's own list; a reader counting welfare schemes should discount them. Allocations are not summed across books: the SCSDF and STSDF report the Scheduled Caste and Scheduled Tribe slices of provisions the Pragathi Paddu states in full, so the Pragathi Paddu figure wins and the fund figures are published separately as earmarks. The number here is a floor on Telangana's schemes, never a total.",
  "classified_not_scheme": 1764,
  "classified_scheme": 275,
@@ -57306,6 +57306,7 @@
  "state": "Telangana",
  "threshold_sweep": [
   {
+   "f1": 0.619,
    "measured_on": "the stratified sample only",
    "n_labelled": 152,
    "precision": 0.461,
@@ -57313,6 +57314,7 @@
    "threshold": -2
   },
   {
+   "f1": 0.619,
    "measured_on": "the stratified sample only",
    "n_labelled": 152,
    "precision": 0.461,
@@ -57320,6 +57322,7 @@
    "threshold": -1
   },
   {
+   "f1": 0.626,
    "measured_on": "the stratified sample only",
    "n_labelled": 140,
    "precision": 0.479,
@@ -57327,6 +57330,7 @@
    "threshold": 0
   },
   {
+   "f1": 0.767,
    "measured_on": "the stratified sample only",
    "n_labelled": 46,
    "precision": 1.0,
@@ -57334,6 +57338,7 @@
    "threshold": 1
   },
   {
+   "f1": 0.767,
    "measured_on": "the stratified sample only",
    "n_labelled": 46,
    "precision": 1.0,
@@ -57341,6 +57346,7 @@
    "threshold": 2
   },
   {
+   "f1": 0.767,
    "measured_on": "the stratified sample only",
    "n_labelled": 46,
    "precision": 1.0,
@@ -57350,6 +57356,7 @@
  ],
  "validation": {
   "at_publish_threshold": {
+   "f1": 0.767,
    "measured_on": "the stratified sample only",
    "n_labelled": 46,
    "precision": 1.0,
@@ -57364,6 +57371,12 @@
    "schemes": 272,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors below are named ones."
-  }
+  },
+  "f1_optimal_threshold": 1,
+  "f1_optimal_thresholds": [
+   1,
+   2,
+   3
+  ]
  }
 }

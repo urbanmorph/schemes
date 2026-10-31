@@ -59,7 +59,6 @@ character offsets `-layout` chooses, which move from page to page: the ruler row
 
 import argparse
 import collections
-import glob
 import gzip
 import json
 import os
@@ -67,8 +66,9 @@ import re
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext, snapshot  # noqa: E402
+from text import joined as text_joined  # noqa: E402
 
 # One money cell. The book prints plain two-decimal figures; a nil provision is 0.00 and
 # a negative one is real (a recovery head) so the sign is kept. Commas are accepted
@@ -117,25 +117,11 @@ def money(tok):
 
 
 def joined(parts):
-    """Join wrapped name fragments. A fragment ending in a hyphen against a letter is one
-    word broken over a line and must not gain a space; a hyphen used as punctuation keeps
-    its spaces. Same rule as parse/andhra.py and parse/kerala.py."""
-    out = ""
-    for p in parts:
-        p = p.strip()
-        if not p:
-            continue
-        if not out:
-            out = p
-        elif re.search(r"\w-$", out):
-            out += p
-        else:
-            out += " " + p
-    # The book writes "( Umbrella 5 )" with spaces inside the brackets and wraps after
-    # the number often enough that the closing bracket lands on its own line. Tidying the
-    # spacing here rather than in the join keeps the join rule about hyphens only.
-    out = re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", out))
-    return re.sub(r"\s+", " ", out).strip()
+    """text.joined, the shared hyphen rule, plus one tidy this book needs: it writes
+    "( Umbrella 5 )" with spaces inside the brackets and wraps after the number often enough
+    that the closing bracket lands on its own line."""
+    out = text_joined(parts)
+    return re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", out))
 
 
 # The scheme code with the first word of the name run into it, with no space between
@@ -374,15 +360,7 @@ def reconcile_gn2_gn4(gn2, gn4):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "maharashtra", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/maharashtra/: "
-                         "run collect/maharashtra.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "maharashtra", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("maharashtra", date)
 
     book = os.path.join(src, "annual-scheme-en.pdf.gz")
     if not os.path.exists(book):

@@ -79,17 +79,15 @@ slice is kept, which makes be_lakh a floor on what the scheme gets and never a t
 """
 
 import argparse
-import glob
 import gzip
-import json
 import os
 import re
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
 from text import clean  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from pdf import layout_text as pdftotext, require_books, snapshot  # noqa: E402
 
 BOOK_LABEL = {
     "Gender-Budget": "Gender Budget",
@@ -166,13 +164,14 @@ def key(s):
 
 
 def amount(cell):
-    """One figure cell to lakh. `28,15.01` is 2815.01: the commas are Indian grouping."""
-    if not cell or cell.startswith(".") or cell.startswith("-"):
-        return None
-    try:
-        return float(cell.replace(",", ""))
-    except ValueError:
-        return None
+    """One figure cell to lakh. `28,15.01` is 2815.01: the commas are Indian grouping.
+
+    Only cells MONEY accepted arrive here, so `..` is the one nil and every other cell is
+    a figure. It used to return None for anything starting "-" or failing float(), which
+    no MONEY cell can do; a cell that is not one now raises instead of becoming a nil."""
+    if not MONEY.match(cell):
+        raise SystemExit(f"andhra: {cell!r} is not a figure cell")
+    return None if cell.startswith(".") else float(cell.replace(",", ""))
 
 
 def cells(s):
@@ -421,14 +420,8 @@ def fold_book(rows):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "andhra", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/andhra/: run collect/andhra.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "andhra", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("andhra", date)
+    require_books(src, man)
 
     merged, per_book, per_book_schemes, checks = {}, {}, {}, {}
     # sorted(), not dict order: a set or a dict iterated in insertion order is how
@@ -511,6 +504,10 @@ def run(date=None):
     # saying only that the scale "will be notified by the Government of Andhra Pradesh",
     # and one of them describes itself as a different scheme than its own title.
     write_json("data/andhra/schemes.json", {
+        # Each book's rows against the total it prints. The run exits 1 when one fails,
+        # but the file is written first, so the file must say so itself, as Punjab's and
+        # Telangana's do.
+        "reconciliation": dict(sorted(checks.items())),
         "decisions": [{
             "question": ("Are myScheme's eight INDIRAMMA pensions the same provision as "
                          "the budget's NTR Bharosa Pension Scheme, renamed?"),

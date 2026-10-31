@@ -11,7 +11,7 @@ myScheme's 4,771 — 343 added by the Budget statements, 75 by DBT Bharat, 12 by
 Outcome Budget.
 
 Absences here are claimed only when parse/match.py's GENEROUS matcher finds nothing.
-An earlier version reused the conservative matcher from enrich/budget.py and inflated
+An earlier version reused the conservative matcher (now enrich/similarity.py) and inflated
 every count: it reported 5,621 entries and 570 funded-but-unlisted lines worth
 Rs 18.5 lakh cr, when the true figures are 5,201 and 311 worth Rs 10.4 lakh cr. The
 difference was false absences — "Jal Jeevan Mission (JJM) / National Rural Drinking
@@ -53,24 +53,51 @@ def _load(name, path):
 
 
 _m = _load("scheme_match", os.path.join(HERE, "match.py"))
-probably_same, m_tokens, m_acronyms = _m.probably_same, _m.tokens, _m.acronyms
+probably_same, m_index_keys = _m.probably_same, _m.index_keys
 # By path: collect/dbt.py is the collector and comes first on sys.path.
 _dbt = _load("parse_dbt", os.path.join(HERE, "dbt.py"))
-m_skeleton, m_similarity = _m.skeleton, _m.similarity
+m_similarity = _m.similarity
 
-# Merging uses parse/match.py's GENEROUS matcher, not enrich/budget.py's conservative
+# Merging uses parse/match.py's GENEROUS matcher, not enrich/similarity.py's conservative
 # one. The two answer different questions and the earlier code used the wrong one here:
 # a name that fails to merge becomes a claim that myScheme omits the scheme, so a
 # conservative matcher inflates every absence. It cost us "Jal Jeevan Mission" and
 # "MGNREGA" as false absences before this was caught.
 
 
-def same_line(held, name, detail):
-    """Is (name, detail) the source line an entry already holds? Name AND every field the
-    source records about it. Two lines named alike in different demands are two lines:
-    "Research and Development" is voted in demands 9, 21, 71 and 89, and comparing names
-    alone kept demand 9's Rs 21 crore and dropped demand 21's Rs 17,250 crore."""
-    return held.get("name") == name and all(held.get(k) == v for k, v in detail.items())
+# Pairs the matcher accepts that were read and rejected: (source line, entry name), each
+# with why. A line that money attaches to is published on that scheme's page, so a wrong
+# merge puts another scheme's allocation there. Kept short and specific; a rule that
+# would have to grow here is a matcher defect for parse/match.py.
+REJECTED = {
+    ("Startup India Fund of Funds 2.0", "Startup India Seed Fund Scheme- For Startups"):
+        "a fund of funds for venture funds, not the seed fund for startups; containment "
+        "of 'startup india fund' put Rs 900 cr on the seed fund's page",
+    ("Startup India Fund of Funds 2.0", "Startup India Seed Fund Scheme- For Incubators"):
+        "the same fund of funds, which moved to the seed fund's other page once the first "
+        "pair was rejected",
+}
+
+
+def candidates(name, pool):
+    """Every entry in `pool` the generous matcher accepts for `name`, as (-similarity,
+    entry name, entry, reason), leaving out REJECTED pairs."""
+    out = []
+    for en in pool:
+        if (name, en["name"]) in REJECTED:
+            continue
+        same, reason = probably_same(name, en["name"])
+        if same:
+            out.append((-m_similarity(name, en["name"]), en["name"], en, reason))
+    return out
+
+
+def line_key(name, detail):
+    """A source line's identity: its name AND every field the source records about it. Two
+    lines named alike in different demands are two lines: "Research and Development" is
+    voted in demands 9, 21, 71 and 89, and comparing names alone kept demand 9's Rs 21 crore
+    and dropped demand 21's Rs 17,250 crore."""
+    return json.dumps([name, detail], sort_keys=True)
 
 
 def state_page(en):
@@ -101,6 +128,46 @@ def pick(cands):
     return None, "", None
 
 
+def assign(lines, key):
+    """Each (name, detail, candidates) line's entry, as (index, entry or None, reason, note).
+
+    Exact names join first; every other line then takes its best candidate in the order
+    the source lists them, each entry holding at most one line of a source. Line by line
+    alone let the first plausible line take the slot: "National Career Services" (Rs 80 cr)
+    took myScheme's National Service Scheme, and the exactly named National Service Scheme
+    line (Rs 357 cr) was then published as funded and unlisted. Ranking every pair by
+    similarity instead was tried and rejected: it moved 23 lines, among them PMAY-Urban
+    (Rs 18,625 cr) off PMAY-U for the 2.0 line and the SC/ST post-doctoral fellowship onto
+    the women's, because an acronym match scores low however right it is.
+
+    A line left without an entry is noted with what it still resembles: a state's page
+    (pick()) or a national myScheme record another line holds ("listed_as"). Either keeps
+    it out of every absence claim (on_myscheme())."""
+    taken = {id(c[2]) for _, _, cands in lines for c in cands if key in c[2]["sources"]}
+    out = {}
+    exact = sorted((name, c[1], i, j) for i, (name, _, cands) in enumerate(lines)
+                   for j, c in enumerate(cands) if c[0] <= -1.0 and not state_page(c[2]))
+    for _, _, i, j in exact:
+        en = lines[i][2][j][2]
+        if i not in out and id(en) not in taken:
+            out[i] = (i, en, lines[i][2][j][3], {})
+            taken.add(id(en))
+    for i, (name, _, cands) in enumerate(lines):
+        if i in out:
+            continue
+        hit, why, near = pick(cands)
+        if hit is not None and id(hit) not in taken:
+            out[i] = (i, hit, why, {})
+            taken.add(id(hit))
+            continue
+        ms = hit if hit is not None and "myscheme" in hit["sources"] else None
+        note = ({"state_page": near} if near else
+                {"listed_as": {"slug": ms["sources"]["myscheme"]["slug"], "name": ms["name"],
+                               "merge_reason": why}} if ms else {})
+        out[i] = (i, None, "", note)
+    return [out[i] for i in range(len(lines))]
+
+
 def on_myscheme(en):
     """Does myScheme list this scheme, for every absence claim made from the register? Its
     own record, or a state's page its Union lines resemble (pick()): before pick() those
@@ -108,7 +175,7 @@ def on_myscheme(en):
     entry must not turn the resemblance into an accusation. Without this, classify.py
     newly called PM POSHAN and Saksham Anganwadi funded-but-unlisted."""
     return "myscheme" in en["sources"] or any(
-        "state_page" in en["sources"].get(k, {}) for k in ("budget", "outcome", "dbt"))
+        en["sources"].get(k, {}).keys() & {"state_page", "listed_as"} for k in ("budget", "outcome", "dbt"))
 
 
 def source_keys(en):
@@ -124,6 +191,18 @@ def source_keys(en):
             yield {k: src[k]["name"]}
 
 
+def national_counts(entries):
+    """(entries a national source names, {number of national sources: entries}). The CAG is
+    not one of the four national lists, and a scheme only its reports name, many of them
+    ended, must not be counted as one the four sources name."""
+    n = {}
+    for en in entries:
+        k = len(en["sources"].keys() - {"cag"})
+        if k:
+            n[k] = n.get(k, 0) + 1
+    return sum(n.values()), dict(sorted(n.items()))
+
+
 def attach_cag(entries, cag):
     """Add the CAG's setup facts (data/cag/facts.json, local/cag/extraction/export.py): each
     attached fact to the entry holding its source, each draft as an entry of its own. Returns
@@ -133,7 +212,15 @@ def attach_cag(entries, cag):
     The facts are keyed by source rather than by entry name because names move when the merge
     changes: Nutrient Based Subsidy was filed under Goa's "Internet Subsidy Scheme" until pick()
     stopped Union lines merging into state pages."""
-    by_key = {json.dumps(k): en for en in entries for k in source_keys(en)}
+    # A key two entries hold names neither: the last one would win, silently.
+    by_key, shared = {}, set()
+    for en in entries:
+        for k in map(json.dumps, source_keys(en)):
+            if k in by_key and by_key[k] is not en:
+                shared.add(k)
+            by_key[k] = en
+    for k in shared:
+        del by_key[k]
     lost = 0
     for f in cag.get("attached", []):
         en = by_key.get(json.dumps(f["entry"]))
@@ -183,18 +270,7 @@ def build(snapshot, year):
     # and took six minutes; this makes the same comparisons on a few dozen candidates.
     index = {}
 
-    def keys_for(name):
-        # Skeletons as well as raw tokens, or the index silently cancels the matcher's
-        # transliteration rule: probably_same knows Gruha and Griha are the same word,
-        # but they are different index keys, so the pair is never made a candidate and
-        # the match never gets the chance to happen. An index that under-retrieves does
-        # not merely slow the join down, it decides it — every pair it fails to offer is
-        # reported as an absence, which here is an accusation. Measured on the Karnataka
-        # join: a skeleton-only index retrieved 504 matches where exhaustive comparison
-        # found 564.
-        t = set(m_tokens(name))
-        return (t | {m_skeleton(x) for x in t}
-                | {a for a in m_acronyms(name) if len(a) >= 5})
+    keys_for = m_index_keys
 
     def register(en):
         for k in keys_for(en["name"]):
@@ -222,33 +298,33 @@ def build(snapshot, year):
         the choice the best available one rather than whichever the hash offered first,
         with the name as tie-breaker so equal scores still resolve the same way.
         """
-        added = 0
+        lines, held = [], set()
         for name, detail in names_with_detail:
-            seen, cands = set(), []
+            # The same line read twice is one line.
+            if line_key(name, detail) in held:
+                continue
+            held.add(line_key(name, detail))
+            seen, pool = set(), []
             for k in sorted(keys_for(name)):
                 for en in index.get(k, ()):
-                    if id(en) in seen:
-                        continue
-                    seen.add(id(en))
-                    same, reason = probably_same(name, en["name"])
-                    if same:
-                        cands.append((-m_similarity(name, en["name"]), en["name"],
-                                      en, reason))
-            hit, why, near = pick(cands)
-            # setdefault silently discarded a second line matching the same entry, and
-            # umbrella schemes routinely have several: 721 budget lines became 493
-            # registry sources, losing 228 of them including FAME. If the slot is taken
-            # by a DIFFERENT line, this is a distinct thing and gets its own entry.
-            if hit is not None and key not in hit["sources"]:
+                    if id(en) not in seen:
+                        seen.add(id(en))
+                        pool.append(en)
+            lines.append((name, detail, candidates(name, pool)))
+        # setdefault silently discarded a second line matching the same entry, and umbrella
+        # schemes routinely have several: 721 budget lines became 493 registry sources,
+        # losing 228 of them including FAME. A line whose entry is taken by a closer line is
+        # a distinct thing and gets its own entry.
+        added = 0
+        for i, hit, why, note in assign(lines, key):
+            name, detail, _ = lines[i]
+            if hit is not None:
                 hit["sources"][key] = {**detail, "name": name, "merge_reason": why}
-            elif hit is not None and same_line(hit["sources"][key], name, detail):
-                pass
-            else:
-                en = {"name": name, "sources": {key: {**detail, "name": name,
-                                                      **({"state_page": near} if near else {})}}}
-                entries.append(en)
-                register(en)
-                added += 1
+                continue
+            en = {"name": name, "sources": {key: {**detail, "name": name, **note}}}
+            entries.append(en)
+            register(en)
+            added += 1
         return added
 
     budget = []
@@ -289,9 +365,7 @@ def build(snapshot, year):
          and isinstance(en["sources"]["budget"].get("be_cr"), (int, float))),
         key=lambda x: -(x["be_cr"] or 0))
 
-    by_count = {}
-    for en in entries:
-        by_count[len(en["sources"])] = by_count.get(len(en["sources"]), 0) + 1
+    national, by_count = national_counts(entries)
 
     out = {
         "snapshot": snapshot, "cycle": f"{year}-{str(year+1)[2:]}", "built": utcnow(),
@@ -301,7 +375,9 @@ def build(snapshot, year):
         "added_by": {"budget": new_budget, "outcome": new_outcome, "dbt": new_dbt,
                      "cag": len(cag.get("drafts", []))},
         "cag_facts_unattached": cag_lost,
-        "in_n_sources": dict(sorted(by_count.items())),
+        "national_entries": national,
+        "cag_only_entries": len(entries) - national,
+        "in_n_sources": by_count,
         "unlisted_but_funded": unlisted[:400],
         "unlisted_but_funded_total": len(unlisted),
         "unlisted_but_funded_cr": round(sum(u["be_cr"] or 0 for u in unlisted), 2),
@@ -343,6 +419,19 @@ def selftest():
          pick([(-0.9, goa["name"], goa, "x"), (-0.5, central["name"], central, "y")]),
          (central, "y", None)),
         ("no candidate, no state page", pick([]), (None, "", None))]
+    nss = {"name": "National Service Scheme", "sources": {"myscheme": {"slug": "nssc", "level": "Central"}}}
+    career = ("National Career Services", {"be_cr": 80.0},
+              [(-0.6, nss["name"], nss, "all 2 content words of the shorter name are present")])
+    service = ("National Service Scheme", {"be_cr": 357.39}, [(-1.0, nss["name"], nss, "exact")])
+    got = assign([career, service], "budget")
+    picks += [
+        ("the closest line takes an entry, whichever line arrives first",
+         [(g[1] and g[1]["name"], g[2]) for g in got], [(None, ""), ("National Service Scheme", "exact")]),
+        ("a line that loses the entry to a closer one still resembles that myScheme record",
+         got[0][3], {"listed_as": {"slug": "nssc", "name": "National Service Scheme",
+                                   "merge_reason": "all 2 content words of the shorter name are present"}}),
+        ("an entry already holding this source takes no second line",
+         assign([service], "myscheme")[0][1], None)]
     nbs = {"name": "Nutrient Based Subsidy", "sources": {"budget": {
         "name": "Nutrient Based Subsidy", "statement": "stat4b", "demand_no": 6}}}
     pm = {"name": "PM POSHAN", "sources": {"myscheme": {"slug": "pm-poshan", "level": "Central"}}}
@@ -358,6 +447,17 @@ def selftest():
         ("a CAG fact attaches to the entry holding its source",
          pm["sources"].get("cag"), {"facts": [{"relation": "same", **fact}]}),
         ("a fact whose source has gone is counted, not dropped silently", lost, 1),
+        ("a pair read and rejected never merges, however the matcher scores it",
+         [c[1] for c in candidates("Startup India Fund of Funds 2.0",
+                                   [{"name": "Startup India Seed Fund Scheme- For Startups", "sources": {}},
+                                    {"name": "Fund of Funds for Startups", "sources": {}}])],
+         ["Fund of Funds for Startups"]),
+        ("a fact keyed to a source two entries hold attaches to neither, and is counted",
+         attach_cag([{"name": "A", "sources": {"outcome": {"name": "Fund of Funds"}}},
+                     {"name": "B", "sources": {"outcome": {"name": "Fund of Funds"}}}],
+                    {"attached": [{"entry": {"outcome": "Fund of Funds"}, **fact}]}), 1),
+        ("the national counts leave out what only the CAG names, and the CAG as a source",
+         national_counts(entries), (2, {1: 2})),
         ("a line resembling a state's page counts as on myScheme, so it is never called absent",
          on_myscheme({"sources": {"budget": {"state_page": {"slug": "x"}}}}), True),
         ("a line with no myScheme record or resemblance is not on it",
@@ -366,18 +466,17 @@ def selftest():
          entries[2], {"name": "Concession Scheme", "sources": {"cag": {
              "government": "Central", "facts": [fact],
              "replaced_by": ["Nutrient Based Subsidy", "Later"]}}})]
-    held = {"name": "Research and Development", "statement": "stat4b", "demand_no": 9,
-            "be_cr": 21.0, "merge_reason": "exact"}
+    held = line_key("Research and Development", {"statement": "stat4b", "demand_no": 9, "be_cr": 21.0})
     bad = 0
     for label, got, want in [
             ("the same line read twice is one line",
-             same_line(held, "Research and Development",
-                       {"statement": "stat4b", "demand_no": 9, "be_cr": 21.0}), True),
+             line_key("Research and Development",
+                      {"be_cr": 21.0, "demand_no": 9, "statement": "stat4b"}) == held, True),
             ("the same name in another demand is another line",
-             same_line(held, "Research and Development",
-                       {"statement": "stat4b", "demand_no": 21, "be_cr": 17250.25}), False),
+             line_key("Research and Development",
+                      {"statement": "stat4b", "demand_no": 21, "be_cr": 17250.25}) == held, False),
             ("a different name is another line",
-             same_line(held, "Research", {"statement": "stat4b", "demand_no": 9}), False)] + picks:
+             line_key("Research", {"statement": "stat4b", "demand_no": 9, "be_cr": 21.0}) == held, False)] + picks:
         ok = got == want
         bad += not ok
         print(f"  {'ok  ' if ok else 'FAIL'} {label}")
@@ -400,7 +499,7 @@ def main():
         print(f"    + {v:>4} from {k}")
     if o["cag_facts_unattached"]:
         print(f"    !! {o['cag_facts_unattached']} CAG facts name a source no longer in the register")
-    print(f"\n  entries by number of sources naming them: {o['in_n_sources']}")
+    print(f"\n  entries by number of national sources naming them: {o['in_n_sources']}")
     print(f"\n  funded in the Budget, absent from myScheme: "
           f"{o['unlisted_but_funded_total']} schemes, "
           f"Rs {o['unlisted_but_funded_cr']:,.0f} cr")

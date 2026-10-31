@@ -123,9 +123,11 @@ def _base(r):
 # already unique is unchanged and the labels written against it still match. Occurrences are
 # ordered by the row's own printed content rather than by position in the file, because
 # classify_common sorts on the identifier and so calls this during the sort, when file order
-# is not available. Two rows identical in every field -- there are 8 such pairs -- are
-# indistinguishable in the data and are left sharing an identifier rather than separated by
-# an ordinal the book does not support.
+# is not available. Two rows identical in every field -- there are 8 such pairs -- cannot be
+# told apart by anything in the row, so this returns the same identifier for both and
+# classify_common.classify breaks the tie by position in the book: the first keeps the
+# identifier (and the label written against it), the second becomes `<identifier>@2`. One
+# label had been landing on two rows that way, 40|0301|28.
 def _ordinals():
     import collections
     d = json.load(open(os.path.join(ROOT, "data", "uttarpradesh", "schemes.json"),

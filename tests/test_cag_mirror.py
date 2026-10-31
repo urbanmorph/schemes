@@ -114,6 +114,19 @@ class Run(unittest.TestCase):
             self.run_once(limit=1)
         self.assertIn("2 reports, 0 held, 1 to fetch", buf.getvalue())
 
+    def test_a_report_with_no_pdf_anywhere_is_not_asked_again_soon(self):
+        def fetch(url):
+            self.calls.append(url)
+            return 404, b"", url
+        run = lambda **kw: m.mirror(self.reports()[:1], self.dir, "https://new.cloudfront.net",  # noqa: E731
+                                    fetch=fetch, sleep=lambda s: None, free_gb=lambda p: 500, **kw)
+        run()
+        self.calls.clear()
+        run()
+        self.assertEqual(self.calls, [])
+        run(retry_missing=True)
+        self.assertNotEqual(self.calls, [])
+
     def test_a_non_pdf_answer_is_not_saved(self):
         def fetch(url):
             return 200, b"<html>not found</html>", url

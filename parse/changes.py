@@ -62,12 +62,21 @@ def snapshots(root=ROOT, finished=None):
 
     Finished by progress.py's test, the one run.sh uses: a resumed or stopped snapshot
     has a details file too, and diffed it shows every scheme it has not reached yet as
-    removed."""
+    removed. And not called INCOMPLETE by verify/verify.py (data/verdicts.json): the
+    collector's own counts can agree while the bodies are 401 pages, and PLAN §8 says an
+    incomplete snapshot manufactures changes. Snapshots verified before verdicts were
+    recorded have none and are kept."""
     finished = finished or _progress().finished
+    try:
+        with open(os.path.join(root, "data", "verdicts.json"), encoding="utf-8") as fh:
+            verdicts = json.load(fh)
+    except FileNotFoundError:
+        verdicts = {}
     out = []
     for p in sorted(glob.glob(os.path.join(root, "archive", "myscheme", "*"))):
         d = os.path.basename(p)
-        if os.path.isfile(os.path.join(p, "details.ndjson.gz")) and finished("myscheme", d, root):
+        if (os.path.isfile(os.path.join(p, "details.ndjson.gz")) and finished("myscheme", d, root)
+                and verdicts.get(d) != "INCOMPLETE"):
             out.append(d)
     return out
 
@@ -270,6 +279,9 @@ def run(older=None, newer=None):
         return out
     older = older or snaps[-2]
     newer = newer or snaps[-1]
+    unusable = [d for d in (older, newer) if d not in snaps]
+    if unusable:
+        raise SystemExit(f"not a finished, verified snapshot: {', '.join(unusable)}")
     a, b = (tail.get(d) or load(d) for d in (older, newer))
     added, removed, changed = diff(a, b)
     field_counts = {}
@@ -312,6 +324,11 @@ def selftest():
                 fh.write(b'{"slug": "a", "body": {"data": {}}}\n{"body": {}}\n')
         done = lambda src, d, r: d == "2026-09-03"  # noqa: E731
         held = snapshots(root, done)
+        everything = lambda src, d, r: True  # noqa: E731
+        os.makedirs(os.path.join(root, "data"))
+        with open(os.path.join(root, "data", "verdicts.json"), "w") as fh:
+            json.dump({"2026-10-03": "INCOMPLETE"}, fh)
+        refused = snapshots(root, everything)
         rows = load("2026-09-03", root)
         with gzip.open(os.path.join(root, "archive", "myscheme", "2026-09-03",
                                     "details.ndjson.gz"), "ab") as fh:
@@ -324,6 +341,8 @@ def selftest():
 
     for label, got, want in [
             ("an unfinished snapshot is not compared", held, ["2026-09-03"]),
+            ("a snapshot the verifier called INCOMPLETE is not compared, however finished",
+             refused, ["2026-09-03"]),
             ("a row with no slug is not a record", sorted(rows), ["a"]),
             ("a corrupt line stops the comparison, not drops a scheme", corrupt, "refused"),
             ("a removed record that returns is dated by its return",

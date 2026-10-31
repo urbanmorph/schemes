@@ -2,10 +2,10 @@
  "books": {
   "child": 18,
   "gender": 3,
-  "outcome": 513,
+  "outcome": 515,
   "youth": 40
  },
- "built": "2026-10-29T18:21:38Z",
+ "built": "2026-10-31T15:21:49Z",
  "caveat": "One row is one scheme as Chhattisgarh's Outcome, Gender, Youth or Child budget names it, with the objective and the provision the state prints beside it. These are NOT all of Chhattisgarh's schemes. Its 44 department scheme books name 2,562 more and set every name in the Chanakya legacy font, whose encoding cannot be recovered from the PDF, so this register cannot read them and will not publish names it cannot read. The names here are in Kruti Dev, whose table is fixed and checked against the state's own Unicode department index.",
  "cycle": "2026-27",
  "departments": 33,
@@ -782,6 +782,17 @@
    "objective": "कृषकों को उनकी निजी पड़त भूमि में वृक्षारोपण् करने के लिए प्रोत्साहित करना ।"
   },
   {
+   "be_lakh": 8000.0,
+   "book": "Outcome Budget",
+   "code": null,
+   "department": "वन एवं जलवायु परिवर्तन विभाग",
+   "department_no": "10",
+   "key": "10|outcome|ckal ouksa dk iqujks)kj#2",
+   "name": "बांस वनों का पुनरो)ार",
+   "name_kruti_dev": "ckal ouksa dk iqujks)kj",
+   "objective": "जिन क्षेत्रों में पर्याप्त पुराने भिर्रे होते हैं वहां भिर्रा सफाई एवं मिट्टी चढ़ाई का कार्य कराया जाकर भिर्रो का पुनरो)ार किया जाता है । रिक्त क्षेत्रों में वृक्षारोपण का कार्य किया जाता है। जल एवं मृदा संरक्षण के कार्य कराए जाते है।"
+  },
+  {
    "be_lakh": 1500.0,
    "book": "Outcome Budget",
    "code": null,
@@ -1505,6 +1516,17 @@
    "key": "14|outcome|fe'ku Qkj vkRefuHkZrrk bu Iysll",
    "name": "मिशन फार आत्मनिर्भतता इन प्लेसस",
    "name_kruti_dev": "fe'ku Qkj vkRefuHkZrrk bu Iysll",
+   "objective": null
+  },
+  {
+   "be_lakh": 40.0,
+   "book": "Outcome Budget",
+   "code": null,
+   "department": "कृषि विकास एवं किसान कल्याण तथा जैव प्रौद्योगिकी",
+   "department_no": "14",
+   "key": "14|outcome|iz/kkuea=h d`f\"k flapkbZ ;kstuk#2",
+   "name": "प्रधानमंत्री कृषि सिंचाई योजना",
+   "name_kruti_dev": "iz/kkuea=h d`f\"k flapkbZ ;kstuk",
    "objective": null
   },
   {
@@ -6326,7 +6348,11 @@
    "objective": "चिकित्सा, दंत एवं चिकित्सा महाविद्यालय की स्थापन फिजियोथेरेपी महाविद्यालय"
   }
  ],
+ "reconciliation": null,
+ "reconciliation_note": "Not possible: none of these books prints a total. Searched across every book read for योग, कुल योग, महायोग and 'Total'; कुल appears only in the Gender books' column header कुल लाभान्वित and in objectives. The parser refuses a book that starts printing one, so the check is added the year there is something to check against.",
  "snapshot": "2026-09-05",
  "source": "Chhattisgarh Budget 2026-27, Outcome, Gender, Youth and Child budgets, one set per department",
- "state": "Chhattisgarh"
+ "state": "Chhattisgarh",
+ "unit": "thousand rupees, published as lakh",
+ "unit_note": "Every book's header prints राशि हजार में (amount in thousands) and none names another unit; the parser refuses a book that does not."
 }

@@ -74,7 +74,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from match import probably_same, tokens, skeleton, acronyms  # noqa: E402
+from match import index_keys, probably_same, similarity  # noqa: E402
 
 # The similarity floor. 0.85 is where the hand-read tier ends, not a round number: the
 # lowest correct join is Mahatama Gandhi National Rural Employment Guarantee Act against
@@ -146,8 +146,7 @@ def run():
             scope.append(st)
     idx = collections.defaultdict(set)
     for i, n in enumerate(names):
-        for k in (set(tokens(n)) | {skeleton(t) for t in tokens(n)}
-                  | {a for a in acronyms(n) if len(a) >= 5}):
+        for k in index_keys(n):
             idx[k].add(i)
 
     subjects = [r for r in cag["entries"] if r.get("subject")]
@@ -156,19 +155,18 @@ def run():
     for r in subjects:
         sub = r["subject"]
         hits = collections.Counter()
-        for k in sorted(set(tokens(sub)) | {skeleton(t) for t in tokens(sub)}
-                        | {a for a in acronyms(sub) if len(a) >= 5}):
+        for k in sorted(index_keys(sub)):
             hits.update(idx.get(k, ()))
         # Sorted on (shared keys, index), never on most_common: its tie-break is insertion
         # order, which comes from iterating a set of strings and therefore changes between
         # runs. A join that is published on Tuesday and not on Wednesday is worse than no
         # join at all.
-        for i, n in sorted(hits.items(), key=lambda kv: (-kv[1], kv[0]))[:CAND_CAP]:
-            if n < 2:
-                continue
-            # A state's scheme is only ever a candidate for that state's own reports.
-            if scope[i] is not None and scope[i] != r.get("government"):
-                continue
+        # A state's scheme is only ever a candidate for that state's own reports, and that
+        # filter runs before the cap: capped first, out-of-scope state names took slots a
+        # national name ranked lower would have had.
+        ranked = [(i, n) for i, n in sorted(hits.items(), key=lambda kv: (-kv[1], kv[0]))
+                  if n >= 2 and (scope[i] is None or scope[i] == r.get("government"))]
+        for i, n in ranked[:CAND_CAP]:
             ok, why = probably_same(sub, names[i])
             if not ok:
                 continue
@@ -177,10 +175,9 @@ def run():
             # module docstring and it is a measurement, not a preference.
             if not why.startswith("similarity"):
                 continue
-            try:
-                score = float(why.rsplit(" ", 1)[1])
-            except (IndexError, ValueError):
-                continue
+            # The score itself, not the two decimals the reason prints: read back from the
+            # string, a true 0.846 published as 0.85, above the floor.
+            score = round(similarity(sub, names[i]), 3)
             if score < FLOOR:
                 continue
             published += 1

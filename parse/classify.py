@@ -47,11 +47,11 @@ def _load(name, path):
     return m
 
 
-# Absence and membership questions use the generous matcher; see parse/match.py.
-_m = _load("scheme_match", os.path.join(HERE, "match.py"))
-probably_same = _m.probably_same
+# Absence and membership questions use the generous matcher (parse/match.py), through
+# classify_common's exact index.
 _reg = _load("parse_registry", os.path.join(HERE, "registry.py"))
 latest_dbt = _reg.latest_dbt
+_cc = _load("classify_common", os.path.join(HERE, "classify_common.py"))
 
 # Words that name a benefit delivered to a person.
 SCHEME_WORDS = {
@@ -111,7 +111,7 @@ def demand_ministry_map(year):
     return out
 
 
-def score_line(name, statement, demand_no, in_dbt, in_outcome, ministry):
+def score_line(name, statement, in_dbt, in_outcome, ministry):
     """Additive, auditable. Every component is returned so the total can be rechecked."""
     tk = tokens(name)
     ev = []
@@ -157,6 +157,7 @@ def run(snapshot, year, threshold):
     with open(obp, encoding="utf-8") as fh:
         ob = json.load(fh)["schemes"]
     ob_names = [f["name"] for f in ob]
+    dbt_hit, ob_hit = _cc.joiner(dbt), _cc.joiner(ob_names)
 
     lines = []
     for en in reg["entries"]:
@@ -164,15 +165,21 @@ def run(snapshot, year, threshold):
         if not b:
             continue
         name = b.get("name") or en["name"]
-        in_dbt = any(probably_same(name, d)[0] for d in dbt)
-        in_ob = "outcome" in en["sources"] or any(probably_same(name, o)[0] for o in ob_names)
+        # The exact index (classify_common.joiner): the same answers as probably_same
+        # against every name, which was 721 x 487 calls and about a minute of the run.
+        in_dbt = dbt_hit(name) is not None
+        in_ob = "outcome" in en["sources"] or ob_hit(name) is not None
         ministry = dmap.get(b.get("demand_no"))
-        total, ev = score_line(name, b.get("statement"), b.get("demand_no"),
+        total, ev = score_line(name, b.get("statement"),
                                in_dbt, in_ob, ministry)
         lines.append({
             "name": name, "statement": b.get("statement"), "demand_no": b.get("demand_no"),
             "ministry": ministry, "be_cr": b.get("be_cr"),
-            "in_myscheme": _reg.on_myscheme(en),
+            # Strict membership: the validation below scores the classifier against it, and a
+            # state page or another line's record that merely resembles this one is not
+            # evidence the classifier was right. on_myscheme() decides the absence list.
+            "in_myscheme": "myscheme" in en["sources"],
+            "on_myscheme": _reg.on_myscheme(en),
             "in_dbt": in_dbt, "in_outcome": in_ob,
             "score": total, "evidence": ev,
             "verdict": "scheme" if total >= threshold else "budget head",
@@ -207,7 +214,7 @@ def run(snapshot, year, threshold):
     # of the sweep rather than the F1-optimal one.
     PUBLISH_AT = 4
     unlisted = sorted((x for x in lines
-                       if x["score"] >= PUBLISH_AT and not x["in_myscheme"]
+                       if x["score"] >= PUBLISH_AT and not x["on_myscheme"]
                        and isinstance(x["be_cr"], (int, float))),
                       key=lambda x: -(x["be_cr"] or 0))
 

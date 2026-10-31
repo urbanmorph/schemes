@@ -94,22 +94,16 @@ in the output says so. A reader counting welfare schemes should discount them.
 
 import argparse
 import collections
-import glob
 import gzip
-import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
-import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
-from text import joined  # noqa: E402
-
-NS = "{http://www.w3.org/1999/xhtml}"
+from common import utcnow, write_json  # noqa: E402
+from text import clean as text_clean, joined  # noqa: E402
+from pdf import bbox_pages, require_books, snapshot  # noqa: E402
 
 # One money cell. Telangana prints plain figures with the Indian digit grouping, which is
 # not three-digit: `14874,41.29` and `14,87,441.29` are the same number in the same book,
@@ -199,51 +193,11 @@ EARMARK = {"scsdf": "Scheduled Castes", "stsdf": "Scheduled Tribes"}
 # ------------------------------------------------------------------ pdf geometry
 
 def pdf_pages(pdf_bytes, timeout=900):
-    """Yield one list of rows per page, from pdftotext -bbox-layout.
-
-    A row is [top, bottom, [(left, right, word), ...]] in reading order. Rows are built
-    by merging poppler's lines, which are runs of adjacent words and not table rows:
-    every figure in these books is its own line. Two lines are the same table row when
-    their tops agree to within 2.5 points, against a line pitch of about 9.4.
+    """One list of rows per page; see pdf.page_rows. Every figure in these books is its
+    own poppler line; two lines are the same table row when their tops agree to within
+    2.5 points, against a line pitch of about 9.4.
     """
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        x = os.path.join(d, "b.xml")
-        r = subprocess.run(["pdftotext", "-bbox-layout", p, x],
-                           capture_output=True, timeout=timeout)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        for page in _pages_of(x):
-            yield page
-
-
-def _pages_of(path, tol=2.5):
-    for _, el in ET.iterparse(path, events=("end",)):
-        if el.tag != NS + "page":
-            continue
-        lines = []
-        for ln in el.iter(NS + "line"):
-            ws = [(float(w.get("xMin")), float(w.get("xMax")),
-                   float(w.get("yMin")), float(w.get("yMax")), w.text or "")
-                  for w in ln.iter(NS + "word")]
-            if not ws:
-                continue
-            cells = sorted((w[0], w[1], w[4]) for w in ws)
-            lines.append([min(w[2] for w in ws), max(w[3] for w in ws), cells])
-        lines.sort(key=lambda t: (t[0], t[2][0][0]))
-        rows = []
-        for a, b, cells in lines:
-            if rows and abs(rows[-1][0] - a) <= tol:
-                rows[-1][1] = max(rows[-1][1], b)
-                rows[-1][2].extend(cells)
-            else:
-                rows.append([a, b, list(cells)])
-        for r in rows:
-            r[2].sort(key=lambda c: c[0])
-        yield rows
-        el.clear()
+    return bbox_pages(pdf_bytes, 2.5, timeout=timeout)
 
 
 def text_of(cells):
@@ -255,7 +209,7 @@ def page_text(rows, n=6):
 
 
 def clean(s):
-    return re.sub(r"\s+", " ", s or "").strip(" .,;:")
+    return text_clean(s, strip=" .,;:")
 
 
 def money(tok):
@@ -869,6 +823,7 @@ def read_fund(pages, book, ncols):
     run = [0.0] * len(cols)
     book_run = [0.0] * len(cols)
     seen, book_seen = 0, 0
+    group, group_n = [0.0] * len(cols), 0     # leaf totals since the last total of totals
     for rows in wanted:
         stats["pages_table"] += 1
         bound = serial_boundary(rows)
@@ -920,10 +875,12 @@ def read_fund(pages, book, ncols):
                 # department, one for the fund, and one for the fund plus the
                 # non-divisible allocation. A printed total is therefore the sum of the
                 # rows since the previous total, or the sum of every row in the book, or
-                # a sum of other totals with nothing underneath it to check against. The
-                # leaf reading is tried first, the book-wide reading second, and only a
-                # total that is neither is counted as unchecked. A total that should be
-                # a leaf sum and is not still fails, which is the point.
+                # a sum of the totals printed since the last such total. The leaf reading
+                # is tried first, the book-wide reading second, and a total with no rows
+                # under it that is not the whole book is checked against the totals
+                # above it. In the STSDF that is 16 "Department Total" lines, each the
+                # sum of its "HOD Total" lines; they used to be counted and never
+                # compared. A total that matches none of these fails, which is the point.
                 printed = [f or 0.0 for f in figs]
                 leaf = seen and all(abs(printed[i] - run[i]) <= 0.02
                                     for i in range(len(cols)))
@@ -933,12 +890,18 @@ def read_fund(pages, book, ncols):
                     checks.append({"label": name, "printed": printed,
                                    "parsed": [round(x, 2) for x in run],
                                    "rows": seen})
-                elif whole:
-                    checks.append({"label": name, "printed": printed,
-                                   "parsed": [round(x, 2) for x in book_run],
-                                   "rows": book_seen, "scope": "whole book"})
+                    group = [g + x for g, x in zip(group, printed)]
+                    group_n += 1
                 else:
-                    stats["totals_of_totals_not_checked"] += 1
+                    if whole:
+                        checks.append({"label": name, "printed": printed,
+                                       "parsed": [round(x, 2) for x in book_run],
+                                       "rows": book_seen, "scope": "whole book"})
+                    else:
+                        checks.append({"label": name, "printed": printed,
+                                       "parsed": [round(x, 2) for x in group],
+                                       "totals": group_n, "scope": "the totals above"})
+                    group, group_n = [0.0] * len(cols), 0
                 run, seen = [0.0] * len(cols), 0
                 continue
             if not has_money:
@@ -1041,26 +1004,17 @@ def merge(rows_by_book):
 # ------------------------------------------------------------------ driver
 
 def failed(checks, tol=0.02):
-    bad = []
-    for c in checks:
-        for p, q in zip(c["printed"], c["parsed"]):
-            if abs((p or 0.0) - (q or 0.0)) > tol:
-                bad.append(c)
-                break
-    return bad
+    """A check fails when a printed total and the rows under it differ, or when they do not
+    even have the same number of columns: zip() stopped at the shorter list, so a column
+    the parse lost was never compared."""
+    return [c for c in checks
+            if len(c["printed"]) != len(c["parsed"])
+            or any(abs((p or 0.0) - (q or 0.0)) > tol for p, q in zip(c["printed"], c["parsed"]))]
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "telangana", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/telangana/: "
-                         "run collect/telangana.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "telangana", date)
-    with open(os.path.join(src, "_manifest.json"), encoding="utf-8") as fh:
-        man = json.load(fh)
+    date, src, man = snapshot("telangana", date)
+    require_books(src, man)
 
     readers = {
         "pragathi": lambda pages: read_pragathi(pages, "pragathi"),

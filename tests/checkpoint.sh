@@ -34,6 +34,7 @@ want "run.json saved" "$(echo "$files" | grep -c '^run.json$')" 1
 out=$(./checkpoint.sh save wip/collect-2026-10)
 want "unchanged save does not push" "$(echo "$out" | grep -c pushed)" 0
 echo part2 >> archive/myscheme/2026-10-03/details
+echo v1 > archive/myscheme/2026-10-03/_manifest
 out=$(./checkpoint.sh save wip/collect-2026-10)
 want "changed save pushes again" "$(echo "$out" | grep -c pushed)" 1
 
@@ -42,12 +43,20 @@ git stash -q -u
 echo corrected > archive/myscheme/2026-09-03/details
 git commit -qam "correct September" && git push -q origin main
 git stash pop -q
+# ...and Save commits a newer manifest of the month itself to main without refreshing the
+# checkpoint (a code change committed while the month is unfinished)
+git stash -q -u
+mkdir -p archive/myscheme/2026-10-03 && echo v2 > archive/myscheme/2026-10-03/_manifest
+git add archive/myscheme/2026-10-03/_manifest && git commit -qm "code change mid-month" && git push -q origin main
+git stash pop -q 2>/dev/null || true
 
 # the next day: a fresh checkout of main, as a runner gets
 git clone -q --depth=1 --branch main "file://$T/remote.git" "$T/b" 2>/dev/null && cd "$T/b" || exit 1
 ./checkpoint.sh restore wip/collect-2026-10 >/dev/null
 want "restore brings back the snapshot" "$(cat archive/myscheme/2026-10-03/details 2>/dev/null | tr '\n' ' ')" "part1 part2 "
 want "restore keeps what main changed after the checkpoint" "$(cat archive/myscheme/2026-09-03/details)" "corrected"
+want "restore keeps main's newer copy of a file the checkpoint also holds" \
+  "$(cat archive/myscheme/2026-10-03/_manifest)" "v2"
 want "restore does not bring run.json (a stale verdict)" "$([ -f run.json ] && echo yes || echo no)" "no"
 want "restore stages nothing" "$(git diff --cached --name-only | wc -l | tr -d ' ')" 0
 out=$(./checkpoint.sh restore wip/collect-2099-01); rc=$?

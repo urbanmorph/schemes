@@ -96,21 +96,15 @@ scheme list because of this; what is missing is one more sentence of description
 
 import argparse
 import collections
-import glob
 import gzip
-import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
-import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
 from text import joined, clean  # noqa: E402
-
-NS = "{http://www.w3.org/1999/xhtml}"
+from pdf import bbox_pages, require_books, snapshot  # noqa: E402
 
 # Malayalam block, plus the Private Use Area the typesetter spills into, plus the two
 # joiners. Anything matching this is "not English", which is the only judgement needed.
@@ -142,72 +136,16 @@ BOOK_LABEL = {
 # ------------------------------------------------------------------ pdf geometry
 
 def pdf_pages(pdf_bytes, timeout=900):
-    """Yield one list of rows per page, from pdftotext -bbox-layout.
+    """One list of rows per page; see pdf.page_rows, with the page's rotation normalised
+    away: the Gender, Child and Elderly statements are typeset sideways on a portrait
+    page, so their word coordinates arrive transposed.
 
-    A row is [top, bottom, [(left, right, word), ...]] in reading order, with the page's
-    rotation normalised away: the Gender, Child and Elderly statements are typeset
-    sideways on a portrait page, so their word coordinates arrive transposed.
-
-    Rows are built by merging poppler's lines, which are runs of adjacent words and NOT
-    table rows: every figure in the Annual Plan is its own line. Two lines are the same
-    table row when their tops agree to within 2.5 points, which is tight enough to keep a
+    Every figure in the Annual Plan is its own poppler line. Two lines are the same table
+    row when their tops agree to within 2.5 points, which is tight enough to keep a
     vertically centred Objectives cell out of the row it overlaps and loose enough to
     hold a Malayalam word and a Latin word typeset in different fonts.
     """
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        x = os.path.join(d, "b.xml")
-        r = subprocess.run(["pdftotext", "-bbox-layout", p, x],
-                           capture_output=True, timeout=timeout)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        for page in _pages_of(x):
-            yield page
-
-
-def _pages_of(path, tol=2.5):
-    for _, el in ET.iterparse(path, events=("end",)):
-        if el.tag != NS + "page":
-            continue
-        height = float(el.get("height"))
-        raw = []
-        for ln in el.iter(NS + "line"):
-            ws = [(float(w.get("xMin")), float(w.get("xMax")),
-                   float(w.get("yMin")), float(w.get("yMax")), w.text or "")
-                  for w in ln.iter(NS + "word")]
-            if ws:
-                raw.append(ws)
-        # A sideways page shows up as lines that are taller than they are wide. Deciding
-        # per page rather than per document because the Gender & Child book mixes upright
-        # prose chapters with sideways statement pages.
-        tall = sum(1 for ws in raw
-                   if max(w[3] for w in ws) - min(w[2] for w in ws) >
-                      max(w[1] for w in ws) - min(w[0] for w in ws))
-        rot = bool(raw) and tall * 2 > len(raw)
-        lines = []
-        for ws in raw:
-            if rot:
-                cells = [(height - w[3], height - w[2], w[4]) for w in ws]
-                a, b = min(w[0] for w in ws), max(w[1] for w in ws)
-            else:
-                cells = [(w[0], w[1], w[4]) for w in ws]
-                a, b = min(w[2] for w in ws), max(w[3] for w in ws)
-            cells.sort(key=lambda c: c[0])
-            lines.append([a, b, cells])
-        lines.sort(key=lambda t: (t[0], t[2][0][0]))
-        rows = []
-        for a, b, cells in lines:
-            if rows and abs(rows[-1][0] - a) <= tol:
-                rows[-1][1] = max(rows[-1][1], b)
-                rows[-1][2].extend(cells)
-            else:
-                rows.append([a, b, list(cells)])
-        for r in rows:
-            r[2].sort(key=lambda c: c[0])
-        yield rows
-        el.clear()
+    return bbox_pages(pdf_bytes, 2.5, rotate=True, timeout=timeout)
 
 
 def text_of(cells):
@@ -412,11 +350,11 @@ def parse_annual(pages, book):
             units = column_units(centres[3:], unit_markers(header))
         except ValueError as e:
             raise SystemExit(f"{book} page {pno + 1}: {e}")
-        be_unit = units[-1] if ncols == 9 else units[5]
-        # Statement IV's last column is the 2026-27 estimate; V, VI and V A put three
-        # more columns of anticipated central assistance after it, so the wanted column
-        # is the sixth of the nine and never the last.
-        be_index = (ncols - 3) - 1 if ncols == 9 else 5
+        # The 2026-27 estimate is the sixth money column on both layouts: the last of
+        # Statement IV's six, and on V, VI and V A followed by three more columns of
+        # anticipated central assistance, so the sixth of nine and never the last.
+        be_index = 5
+        be_unit = units[be_index]
         stats["pages_cols%d" % ncols] += 1
         stats["unit_" + be_unit] += 1
 
@@ -848,14 +786,8 @@ BOOK_READER = {
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "kerala", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/kerala/: run collect/kerala.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "kerala", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("kerala", date)
+    require_books(src, man)
 
     rows_by_book, per_book, checks, stats = {}, {}, {}, {}
     for book in sorted(BOOK_READER):

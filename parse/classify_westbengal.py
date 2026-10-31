@@ -299,8 +299,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule, myscheme_hits, myscheme_index, \
-    myscheme_records  # noqa: E402
+from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, \
+    quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
 def _load(name, path):
@@ -606,10 +606,6 @@ ESTAB_LEAD = re.compile(
     r"chief engineer|superintending engineer|executive engineer|district head)", re.I)
 # "Deduct Recoveries of Overpayments", "Deduct - Amount met from the Reserve Fund".
 ADD_DEDUCT = re.compile(r"^\s*(deduct|add)\b", re.I)
-
-
-def tokens(s):
-    return set(re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).split())
 
 
 # 66 of the 9,024 names are LETTER-SPACED by the state itself, so "Expenditure for
@@ -1118,147 +1114,40 @@ def stratify(entries, target=400):
     of these rows carry one and they are a distinct population, the Deduct Recoveries
     heads. Folding them into the bottom quartile would have hidden them.
 
-    No random seed anywhere. Rows inside a stratum are sorted by head of account and
-    picked at even spacing, so this returns the same rows on every machine and every run.
+    A floor of 6 per stratum. classify_common.stratified_sample draws it.
     """
-    pos = sorted(r["be_lakh"] for r in entries if (r.get("be_lakh") or 0) > 0)
-    cuts = [pos[int(len(pos) * f)] for f in (0.25, 0.5, 0.75)] if pos else [0, 0, 0]
+    cuts = quartile_cuts(r["be_lakh"] for r in entries if (r.get("be_lakh") or 0) > 0)
 
     def band(r):
         v = r.get("be_lakh") or 0.0
         if v < 0:
             return "neg"
-        if v == 0:
-            return "nil"
-        return "q1" if v < cuts[0] else "q2" if v < cuts[1] else "q3" if v < cuts[2] else "q4"
-
-    cells = {}
-    for r in entries:
-        cells.setdefault((family(r["major_head"]), band(r)), []).append(r)
-    out = []
-    for k in sorted(cells):
-        rows = sorted(cells[k], key=lambda x: x["hoa"])
-        # Proportional allocation with a floor of 6, so the sample is close to self
-        # weighting and every stratum still gets enough rows to say anything about.
-        n = min(len(rows), max(6, round(len(rows) * target / len(entries))))
-        idx = sorted({round(i * (len(rows) - 1) / (n - 1)) if n > 1 else 0
-                      for i in range(n)})
-        for i in idx:
-            out.append((rows[i], "%s/%s" % k, len(rows), len(idx)))
-    return sorted(out, key=lambda t: t[0]["hoa"])
+        return quartile(v, cuts) if v else "nil"
+    return stratified_sample(entries, lambda r: (family(r["major_head"]), band(r)), hoa,
+                             target, 6)
 
 
-def myscheme_westbengal():
-    return myscheme_records("West Bengal")
+def hoa(r):
+    return r["hoa"]
 
 
-def sweep(rows, lo, hi):
-    """Precision and recall at every threshold, so the operating point is visible."""
-    out = []
-    for t in range(lo, hi + 1):
-        tp = sum(1 for x in rows if x["score"] >= t and x["label"] == "scheme")
-        fp = sum(1 for x in rows if x["score"] >= t and x["label"] != "scheme")
-        fn = sum(1 for x in rows if x["score"] < t and x["label"] == "scheme")
-        pr = tp / (tp + fp) if tp + fp else 0.0
-        rc = tp / (tp + fn) if tp + fn else 0.0
-        out.append({"threshold": t, "called_scheme": tp + fp,
-                    "true_positive": tp, "false_positive": fp, "false_negative": fn,
-                    "precision": round(pr, 3), "recall": round(rc, 3),
-                    "f1": round(2 * pr * rc / (pr + rc), 3) if pr + rc else 0.0})
-    return out
+def scorer(obj):
+    return lambda r: score_entry(r["name"], r["hoa"], obj.get(r["hoa"], []))
 
 
 def run(threshold=PUBLISH_THRESHOLD, verbose=False):
-    wb = json.load(open(os.path.join(ROOT, "data", "westbengal", "schemes.json"),
-                        encoding="utf-8"))
-    entries = sorted(wb["entries"], key=lambda x: x["hoa"])
     obj, mnr = heads(verbose=verbose)
-
-    labels = json.load(open(os.path.join(ROOT, "data", "westbengal", "labels.json"),
-                            encoding="utf-8"))
-    by_key = {x["key"]: x for x in labels["labels"]}
-
-    listed = myscheme_westbengal()
-    idx = myscheme_index(listed)
-
-    rows = []
-    for r in entries:
-        oh = obj.get(r["hoa"], [])
-        total, ev = score_entry(r["name"], r["hoa"], oh)
-        hit = myscheme_hits(r["name"], idx)
-        rows.append({
-            "key": r["hoa"],
-            "hoa": r["hoa"],
-            "name": r["name"],
-            "major_head": r["major_head"],
-            "minor_head": r["hoa"].split("-")[2],
-            "minor_head_name": mnr.get("-".join(r["hoa"].split("-")[:3])),
-            "sub_head": r["sub_head"],
-            "be_lakh": r.get("be_lakh"),
-            "object_heads": oh,
-            "books": sorted(r.get("books") or []),
-            "demands": sorted(r.get("demands") or []),
-            "letter_spaced": letter_spaced(r["name"]) is not None,
-            "score": total,
-            "evidence": ev,
-            "verdict": "scheme" if total >= threshold else "not a scheme",
-            "in_myscheme_westbengal": bool(hit),
-            "myscheme_match": sorted(hit) or None,
-            "hand_label": by_key[r["hoa"]]["label"] if r["hoa"] in by_key else None,
-        })
-
-    # Validation on the probability sample. The audit set is a census of the published
-    # region, so mixing it in would inflate precision at exactly the thresholds that
-    # matter; it gets its own count below.
-    scored = [{"key": x["key"], "name": x["name"], "score": x["score"],
-               "label": by_key[x["key"]]["label"]}
-              for x in rows
-              if x["key"] in by_key and by_key[x["key"]].get("sample") == "stratified"]
-    scored.sort(key=lambda x: x["key"])
-    lo = min(x["score"] for x in scored)
-    hi = max(x["score"] for x in scored)
-
-    # The held-out half. Labels were made before any weight was chosen, and the weights
-    # were then fitted looking only at the even-indexed half, so the odd-indexed half is
-    # the honest estimate. Reporting only the full-set number would flatter the classifier.
-    dev = [x for i, x in enumerate(scored) if i % 2 == 0]
-    held = [x for i, x in enumerate(scored) if i % 2 == 1]
-
-    full_sweep = sweep(scored, max(lo, -10), hi)
-    held_sweep = sweep(held, max(lo, -10), hi)
-    at = next(x for x in full_sweep if x["threshold"] == threshold)
-    at_held = next(x for x in held_sweep if x["threshold"] == threshold)
-
-    # The audited census. Every row scoring CENSUS_FROM or more carries a hand label, from
-    # one set or the other, so at those thresholds these are counts and not estimates.
-    audited = sorted((x for x in rows if x["key"] in by_key), key=lambda x: x["key"])
-    census = []
-    top = max(x["score"] for x in rows)
-    for t in range(CENSUS_FROM, top + 1):
-        pub = [x for x in audited if x["score"] >= t]
-        corpus = [x for x in rows if x["score"] >= t]
-        bad = [x for x in pub if by_key[x["key"]]["label"] != "scheme"]
-        band = [x for x in pub if x["score"] == t]
-        band_bad = [x for x in band if by_key[x["key"]]["label"] != "scheme"]
-        census.append({
-            "threshold": t,
-            "rows_in_corpus": len(corpus),
-            "rows_hand_labelled": len(pub),
-            "published": len(pub),
-            "not_schemes": len(bad),
-            "precision": round((len(pub) - len(bad)) / len(pub), 3) if pub else 0.0,
-            "band_at_exactly_this_score": len(band),
-            "band_not_schemes": len(band_bad),
-            "band_precision": round((len(band) - len(band_bad)) / len(band), 3)
-            if band else 0.0,
-            "the_errors": sorted("%s [%s]" % (x["name"], x["hoa"]) for x in bad),
-        })
-    at_census = next(x for x in census if x["threshold"] == threshold)
-
-    schemes = [x for x in rows if x["verdict"] == "scheme"]
-    absent_all = [x for x in rows if not x["in_myscheme_westbengal"]]
-    absent = sorted((x for x in schemes if not x["in_myscheme_westbengal"]),
-                    key=lambda x: (-(x["be_lakh"] or 0), x["key"]))
+    a = assess("westbengal", "West Bengal", hoa, scorer(obj), lambda r: {
+        "key": r["hoa"], "hoa": r["hoa"], "name": r["name"], "major_head": r["major_head"],
+        "minor_head": r["hoa"].split("-")[2],
+        "minor_head_name": mnr.get("-".join(r["hoa"].split("-")[:3])),
+        "sub_head": r["sub_head"], "be_lakh": r.get("be_lakh"),
+        "object_heads": obj.get(r["hoa"], []), "books": sorted(r.get("books") or []),
+        "demands": sorted(r.get("demands") or []),
+        "letter_spaced": letter_spaced(r["name"]) is not None},
+        threshold, CENSUS_FROM, floor=-10, error=lambda x: "%s [%s]" % (x["name"], x["hoa"]))
+    wb, labels, listed, rows = a["data"], a["labels"], a["listed"], a["rows"]
+    schemes, absent = a["schemes"], a["absent"]
 
     # One row per NAME as well as per head of account, because the same scheme is voted
     # under several heads: the general head, the Scheduled Caste head under minor head
@@ -1363,15 +1252,12 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
         },
         "signals": SIGNALS,
         "signals_rejected": REJECTED_SIGNALS,
-        "threshold_sweep": full_sweep,
-        "threshold_sweep_held_out": held_sweep,
-        "threshold_sweep_census": census,
+        "threshold_sweep": a["threshold_sweep"],
+        "threshold_sweep_held_out": a["threshold_sweep_held_out"],
+        "threshold_sweep_census": a["threshold_sweep_census"],
         "validation": {
-            "n_labelled": len(scored),
-            "n_development": len(dev),
-            "n_held_out": len(held),
-            "base_rate_stratified": round(
-                sum(1 for x in scored if x["label"] == "scheme") / len(scored), 3),
+            **a["counts"],
+            "base_rate_stratified": base_rate(a["scored"]),
             "base_rate_note": (
                 "About one West Bengal sub-head in twelve is a welfare scheme, against "
                 "one in six for Tamil Nadu's Demand Books, 41% of Andhra Pradesh's "
@@ -1381,21 +1267,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
                 "volumes, 3,758 of the 9,024 sub-heads carry a Deduct Recoveries object "
                 "head, 688 are the state's own borrowing, 1,820 are capital or loan heads "
                 "and 2,115 name a body rather than a person."),
-            "at_publish_threshold": {
-                "threshold": threshold,
-                "precision": at["precision"],
-                "recall": at["recall"],
-                "true_positive": at["true_positive"],
-                "false_positive": at["false_positive"],
-                "false_negative": at["false_negative"],
-            },
-            "at_publish_threshold_held_out": {
-                "threshold": threshold,
-                "precision": at_held["precision"],
-                "recall": at_held["recall"],
-                "true_positive": at_held["true_positive"],
-                "false_positive": at_held["false_positive"],
-            },
+            **a["points"],
             "census_note": (
                 "Every row at or above score %d is hand labelled, so precision at these "
                 "thresholds is counted rather than estimated. The census starts at %d and "
@@ -1408,8 +1280,8 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
                 "always comes from the stratified sample, because the rows the classifier "
                 "rejects are too many to label exhaustively."
                 % (CENSUS_FROM, CENSUS_FROM, CENSUS_FROM)),
-            "at_publish_threshold_census": at_census,
-            "f1_optimal_threshold": max(full_sweep, key=lambda x: x["f1"])["threshold"],
+            "at_publish_threshold_census": a["at_census"],
+            **a["f1"],
             "why_not_f1": (
                 "F1 peaks at threshold 3 on the stratified sample, where precision is "
                 "59.3% and two published names in five are not schemes. Naming a scheme as "
@@ -1461,7 +1333,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "kind of thing a register should show rather than smooth over."),
         "myscheme_join_defects": wb.get("myscheme_join_defects"),
         "myscheme_join_summary": wb.get("myscheme_join_summary"),
-        "absent_from_myscheme_all_rows": len(absent_all),
+        "absent_from_myscheme_all_rows": len(a["absent_all"]),
         "absent_from_myscheme_and_classified_scheme": len(absent),
         "absent_distinct_names": len({x["name"].lower() for x in absent}),
         "absent_cr": round(sum(x["be_lakh"] or 0 for x in absent) / 100.0, 2),
@@ -1486,27 +1358,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
 
 def check_sample():
     """Report which sampled or census rows have no hand label yet."""
-    wb = json.load(open(os.path.join(ROOT, "data", "westbengal", "schemes.json"),
-                        encoding="utf-8"))
-    labels = json.load(open(os.path.join(ROOT, "data", "westbengal", "labels.json"),
-                            encoding="utf-8"))
-    obj, _mnr = heads()
-    have = {x["key"] for x in labels["labels"]}
-    entries = sorted(wb["entries"], key=lambda x: x["hoa"])
-    frame = stratify(entries)
-    missing = [(r["hoa"], st, r["name"]) for r, st, _, _ in frame if r["hoa"] not in have]
-    print("sampling frame %d rows, labelled %d, unlabelled %d"
-          % (len(frame), len(have), len(missing)))
-    for k, st, name in missing:
-        print("  [%s]  %s  %s" % (st, k, name[:80]))
-    # The census half of the contract: nothing at or above CENSUS_FROM may be unlabelled.
-    uncovered = [r["hoa"] for r in entries
-                 if score_entry(r["name"], r["hoa"], obj.get(r["hoa"], []))[0] >= CENSUS_FROM
-                 and r["hoa"] not in have]
-    print("census at score >= %d: %d rows unlabelled" % (CENSUS_FROM, len(uncovered)))
-    for k in uncovered:
-        print("  %s" % k)
-    return missing, uncovered
+    return check("westbengal", hoa, stratify, scorer(heads()[0]), CENSUS_FROM)
 
 
 def main():

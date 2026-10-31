@@ -118,7 +118,9 @@ budgeted() {
   else
     "$@" || rc=$?
   fi
-  if [ "$rc" = 124 ] || [ "$rc" = 137 ]; then
+  # 124/137 mean "out of time" only under our own timeout. Without one, 137 is a kill from
+  # outside (the OOM killer), which is a failure, not an unfinished step.
+  if [ -n "$DEADLINE" ] && [ -n "$TIMEOUT" ] && { [ "$rc" = 124 ] || [ "$rc" = 137 ]; }; then
     STOPPED+=("$label")
     printf '  \033[33m.. STOPPED\033[0m %s at its %ss budget; what it archived stays for the next run\n' \
       "$label" "$secs"
@@ -335,7 +337,6 @@ if [ "$EXPLODED" = "1" ]; then
   step "parse/sector" python3 parse/sector.py
 
   say "enrich"
-  step "enrich/budget" python3 enrich/budget.py --year "$CYCLE_YEAR"
   step "enrich/outcome" python3 enrich/outcome.py --year "$CYCLE_YEAR"
 else
   echo "snapshot is INCOMPLETE or did not unpack — skipping everything downstream of it, as the design requires."
@@ -413,7 +414,10 @@ with open("run.json", "w", encoding="utf-8") as fh:
     fh.write("\n")
 EOF
 
-if [ "${#STOPPED[@]}" -gt 0 ]; then
+# Unfinished is a warning only when nothing is broken: a step that FAILED while another ran
+# out of time used to exit 75 too, and the workflow downgrades 75 to a warning until the
+# 7th, so a broken parser went unreported for days behind a slow collector.
+if [ "${#STOPPED[@]}" -gt 0 ] && [ "${#FAILED[@]}" -eq 0 ]; then
   echo "the next run (./run.sh --resume-month) continues from here."
   exit 75                 # EX_TEMPFAIL: not broken, unfinished
 fi

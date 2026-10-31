@@ -79,3 +79,15 @@ one of these blocks anyway.
 ## 7. Small
 
 - collect/jharkhand.py imports `common` and does not use it.
+
+## 8. The myScheme key is partly printed and committed
+
+`collect/myscheme.py:144` prints the first eight characters of the old and new key to the
+Actions log when the key rotates, and `:164` writes the first and last four into every
+committed manifest as `key_fingerprint`. The key is public by construction (PLAN §3.1, read
+from the JS bundle), so this is low risk; but it is also a repository secret, and GitHub
+masks only the exact secret value in logs, never a prefix of it.
+
+Proposed: log and record a short hash of the key instead (for example the first eight hex
+characters of its SHA-256), which still shows a rotation and when it happened. This changes
+what the manifest records, so it belongs in a reviewed change that says so in its commit.

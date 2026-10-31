@@ -260448,7 +260448,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-30T16:43:35Z",
+ "built": "2026-10-31T15:19:10Z",
  "classified_not_scheme": 5809,
  "classified_scheme": 411,
  "classified_scheme_distinct_names": 323,
@@ -276703,6 +276703,9 @@
   "base_rate_stratified": 0.153,
   "census_note": "Every row at or above score 8 is hand labelled, so precision at these thresholds is counted rather than estimated. The census starts at 8 and not lower because of the scale: 6,220 rows put 972 rows above score 5 and 640 above 7, and 462 is the largest set that can be read one by one and labelled reliably. Recall still comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
   "f1_optimal_threshold": 5,
+  "f1_optimal_thresholds": [
+   5
+  ],
   "n_development": 200,
   "n_held_out": 199,
   "n_labelled": 399,

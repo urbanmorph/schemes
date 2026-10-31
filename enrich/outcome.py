@@ -14,12 +14,11 @@ It also makes the coverage claim concrete per scheme rather than in aggregate. 1
 711 central schemes have a framework at all; the rest have no published target of any
 kind, which is a statement about the Outcome Budget's scope and not about them.
 
-Matching reuses enrich/budget.py's conservative similarity, for the same reason: a wrong
+Matching uses enrich/similarity.py's conservative similarity, for the same reason: a wrong
 join here attributes one scheme's promise to another.
 """
 
 import argparse
-import importlib.util
 import json
 import os
 import sys
@@ -29,18 +28,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(HERE), "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
 
 
-def _load(name, path):
-    """Import by path. `collect/budget.py` and `enrich/budget.py` share a module name,
-    and collect/ is on sys.path for common.py — so a plain `import budget` resolves to
-    the collector, not the matcher."""
-    spec = importlib.util.spec_from_file_location(name, path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
-
-
-_b = _load("enrich_budget", os.path.join(HERE, "budget.py"))
-band, similarity = _b.band, _b.similarity
+sys.path.insert(0, HERE)
+from similarity import band, similarity  # noqa: E402
 
 
 def run(year):

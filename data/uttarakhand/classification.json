@@ -58622,7 +58622,7 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-10-30T16:43:42Z",
+ "built": "2026-10-31T15:19:01Z",
  "caveat": "One row here is one node of Uttarakhand's own account tree that the book prints a total for and that sits below a minor head, keyed on the 13-digit scheme code the state's own Volume 5 front matter uses. That is a superset of the schemes a citizen can apply to: establishment heads such as 'Establishment of Departmental Accounts' sit at the same level as 'Grant for rainwater harvesting'. Items of expenditure below it (Pay, Dearness Allowance, Office Expenses) are excluded, and the test is the document's own: the book prints a total for a level with children and never for an item of expenditure. Names are Uttarakhand's own English, printed under the Hindi on every line. be_lakh is the figure the book prints on that node's own Total line; total_reconciled says whether the rows beneath it add up to it, and 82 per cent of them do. See reconciliation.printed_totals.",
  "classified_not_scheme": 2228,
  "classified_scheme": 96,
@@ -58678,6 +58678,7 @@
  "state": "Uttarakhand",
  "threshold_sweep": [
   {
+   "f1": 0.559,
    "measured_on": "the stratified sample only",
    "n_labelled": 114,
    "precision": 0.395,
@@ -58685,6 +58686,7 @@
    "threshold": -2
   },
   {
+   "f1": 0.553,
    "measured_on": "the stratified sample only",
    "n_labelled": 112,
    "precision": 0.393,
@@ -58692,6 +58694,7 @@
    "threshold": -1
   },
   {
+   "f1": 0.557,
    "measured_on": "the stratified sample only",
    "n_labelled": 111,
    "precision": 0.396,
@@ -58699,6 +58702,7 @@
    "threshold": 0
   },
   {
+   "f1": 0.681,
    "measured_on": "the stratified sample only",
    "n_labelled": 47,
    "precision": 0.681,
@@ -58706,6 +58710,7 @@
    "threshold": 1
   },
   {
+   "f1": 0.587,
    "measured_on": "the stratified sample only",
    "n_labelled": 28,
    "precision": 0.786,
@@ -58713,6 +58718,7 @@
    "threshold": 2
   },
   {
+   "f1": 0.6,
    "measured_on": "the stratified sample only",
    "n_labelled": 23,
    "precision": 0.913,
@@ -58720,6 +58726,7 @@
    "threshold": 3
   },
   {
+   "f1": 0.508,
    "measured_on": "the stratified sample only",
    "n_labelled": 16,
    "precision": 1.0,
@@ -58727,6 +58734,7 @@
    "threshold": 4
   },
   {
+   "f1": 0.291,
    "measured_on": "the stratified sample only",
    "n_labelled": 8,
    "precision": 1.0,
@@ -58734,6 +58742,7 @@
    "threshold": 5
   },
   {
+   "f1": 0.192,
    "measured_on": "the stratified sample only",
    "n_labelled": 5,
    "precision": 1.0,
@@ -58743,6 +58752,7 @@
  ],
  "validation": {
   "at_publish_threshold": {
+   "f1": 0.508,
    "measured_on": "the stratified sample only",
    "n_labelled": 16,
    "precision": 1.0,
@@ -58757,6 +58767,10 @@
    "schemes": 95,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors below are named ones."
-  }
+  },
+  "f1_optimal_threshold": 1,
+  "f1_optimal_thresholds": [
+   1
+  ]
  }
 }

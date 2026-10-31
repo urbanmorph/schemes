@@ -29,6 +29,7 @@ import json
 import os
 import re
 import shutil
+import signal
 import sys
 import time
 import urllib.error
@@ -114,8 +115,21 @@ def first_pdf(urls, fetch, sleep, pace, tried):
     return b"", None
 
 
+RETRY_DAYS = 30
+
+
+def recently_missing(rec, now, days=RETRY_DAYS):
+    """A report checked within `days` and found to have no PDF anywhere. About 49 of the
+    newest reports have been taken down; asked again on every run, they came first in
+    newest-first order and spent a whole --limit while the run fetched nothing."""
+    if rec.get("sha256") or not rec.get("checked"):
+        return False
+    when = datetime.strptime(rec["checked"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    return (now - when).days < days
+
+
 def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_free_gb=20,
-           pace=1.0, limit=None, deadline=None, verify=False):
+           pace=1.0, limit=None, deadline=None, verify=False, retry_missing=False):
     os.makedirs(out, exist_ok=True)
     free_gb = free_gb or (lambda p: shutil.disk_usage(p).free / 2 ** 30)
     mp = os.path.join(out, "manifest.json")
@@ -123,16 +137,19 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
     if os.path.exists(mp):
         with open(mp, encoding="utf-8") as fh:
             man = json.load(fh)
+    now = datetime.now(timezone.utc)
     todo = [r for r in sorted(reports, key=lambda r: -r["id"])
             if not held(man.get(str(r["id"])) or {}, os.path.join(out, f"{r['id']}.pdf"), verify)]
     have = len(reports) - len(todo)
+    if not retry_missing:
+        todo = [r for r in todo if not recently_missing(man.get(str(r["id"])) or {}, now)]
     if limit:
         todo = todo[:limit]
     log(f"cag mirror: {len(reports):,} reports, {have:,} held, {len(todo):,} to fetch -> {out}")
 
     got = bytes_ = 0
     stopped = None
-    t0 = time.time()
+    t0 = saved = time.time()
     try:
         for n, r in enumerate(todo, 1):
             if free_gb(out) < min_free_gb:
@@ -167,8 +184,11 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
                 got += 1
                 bytes_ += len(body)
             man[str(r["id"])] = rec
-            if n % 25 == 0:
+            # Every 25 files or ten minutes, whichever comes first: large PDFs can take far
+            # longer than ten minutes for 25.
+            if n % 25 == 0 or time.time() - saved > 600:
                 save_manifest(out, man)
+                saved = time.time()
             if n % 10 == 0 or n == len(todo):
                 rate = n / max(time.time() - t0, 1)
                 log(f"  {n:,}/{len(todo):,}  saved {got:,} ({bytes_ / 2 ** 30:.2f} GB)  "
@@ -199,6 +219,8 @@ def main():
     ap.add_argument("--min-free-gb", type=float, default=20)
     ap.add_argument("--deadline-min", type=float)
     ap.add_argument("--verify", action="store_true", help="re-hash every held file")
+    ap.add_argument("--retry-missing", action="store_true",
+                    help=f"ask again for reports found to have no PDF in the last {RETRY_DAYS} days")
     a = ap.parse_args()
     reports, crawl = latest_reports()
     with_pdf = [r for r in reports if r.get("pdf_url")]
@@ -212,8 +234,11 @@ def main():
         sys.exit(f"could not read the current PDF host from {newest['detail_url']} ({code})")
     log(f"current PDF host {host}")
     deadline = time.time() + a.deadline_min * 60 if a.deadline_min else None
+    # A kill (timeout, Ctrl-C from another shell) becomes SystemExit, so mirror()'s finally
+    # saves the manifest; without it a SIGTERM skipped finally and orphaned up to 24 files.
+    signal.signal(signal.SIGTERM, lambda *_: sys.exit(143))
     r = mirror(with_pdf, OUT, host, pace=a.pace, limit=a.limit, deadline=deadline,
-               min_free_gb=a.min_free_gb, verify=a.verify)
+               min_free_gb=a.min_free_gb, verify=a.verify, retry_missing=a.retry_missing)
     sys.exit(75 if r["stopped"] else 0)
 
 

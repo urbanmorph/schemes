@@ -217,12 +217,20 @@ def num(x):
     return f"{x:,}" if isinstance(x, (int, float)) else '<span class="nil">...</span>'
 
 
+_LOADED = {}
+
+
 def load(rel, default=None):
+    """A data file, parsed once per build. registry.json was read four times, checks.json
+    (19 MB) twice and each state's classification.json four times. Callers treat the result
+    as read-only; one that must change it copies first."""
     p = os.path.join(ROOT, rel)
-    if not os.path.exists(p):
-        return default
-    with open(p, encoding="utf-8") as fh:
-        return json.load(fh)
+    if p not in _LOADED:
+        if not os.path.exists(p):
+            return default
+        with open(p, encoding="utf-8") as fh:
+            _LOADED[p] = json.load(fh)
+    return _LOADED[p]
 
 
 # --------------------------------------------------------------------- chrome
@@ -253,6 +261,12 @@ def seo_title(name, short, entry):
     scheme it is. The place is what a searcher adds, so it goes in the title, and so does
     the word "scheme" unless the name already carries one.
     """
+    if (entry or {}).get("classified") == "budget head":
+        # "Actual Recoveries (CS)" is an accounting line, not a scheme, and twelve of them
+        # in twelve demands were each titled a Government of India scheme. The demand is
+        # what tells them apart.
+        demand = (((entry.get("detail") or {}).get("budget")) or {}).get("demand_no")
+        return f"{name}: Union Budget line" + (f", Demand No. {demand}" if demand else "")
     place = place_of(entry)
     if place and place.lower() in name.lower().replace("&", "and"):
         place = None                          # already in the name; once is enough
@@ -452,8 +466,9 @@ def state_of_schemes(entries):
     # `held` is the rendered list. `national` is the four-source union inside it, and the
     # remainder is what only a state's own book names.
     held = len(entries)
-    national = reg.get("total_entries") or len(reg.get("entries") or [])
-    state_only = max(0, held - national)
+    national = reg.get("national_entries") or 0
+    cag_only = reg.get("cag_only_entries") or 0
+    state_only = max(0, held - national - cag_only)
     one = int((reg.get("in_n_sources") or {}).get("1") or 0)
 
     absent = 0
@@ -491,7 +506,8 @@ def state_of_schemes(entries):
 
     steps = [
         (num(held), "schemes this register can name",
-         f"At least one of the four national sources names {num(national)} of them. The other "
+         f"At least one of the four national sources names {num(national)} of them, and "
+         f"{num(cag_only)} are named only in CAG audit reports, many of them ended. The other "
          f"{num(state_only)} are in no national list. They are lines in a state&rsquo;s own "
          f"budget book that the state files as schemes. Even this total is a floor. The union "
          f"merges too little on purpose, and a machine cannot read {word(refused).lower()} "
@@ -942,9 +958,21 @@ def page_state(key, state, d, leg_row, cls=None):
     checked, failed = total(rec, "checked"), total(rec, "failed")
     money = sum(r["be_lakh"] for r in rows if isinstance(r.get("be_lakh"), (int, float)))
 
+    # Anchors unique on the page: a Devanagari name strips to nothing in slug_for, which
+    # gave 5,153 of Uttar Pradesh's 5,831 rows the same few ids. The romanised name stands
+    # in for it, and rows that still collide are told apart by their own key.
+    def base_anchor(r):
+        name = r.get("name") or ""
+        if not re.search(r"[A-Za-z]", name):
+            name = r.get("name_latin") or name
+        return slug_for(f"{name} {one(r, 'ident') or ''}")
+    taken = collections.Counter(base_anchor(r) for r in rows)
+
     def line(r):
         ident = one(r, "ident") or ""
-        anchor = slug_for(f"{r.get('name') or ''} {ident}")
+        anchor = base_anchor(r)
+        if taken[anchor] > 1:
+            anchor = f"{anchor[:71]}-{hashlib.sha1(json.dumps(r.get('key') or r, sort_keys=True, default=str).encode()).hexdigest()[:8]}"
         sub = ""
         # Uttar Pradesh publishes only in Hindi, so the romanisation is what an English
         # reader can scan; Haryana prints a paragraph of purpose against most schemes.
@@ -1296,7 +1324,9 @@ def page_audit(cag, audited):
     # filters the page was already computing tallies for and then not offering: a reader
     # who can see that Kerala has 103 reports could not ask to see them.
     def rowdict(r):
-        return [e(r["title"][:220]), r.get("government") or "", r.get("audit_type") or "",
+        # Raw, escaped where it is drawn: escaped here, audit.json carried "&amp;" in 152
+        # titles and the page drew them unescaped.
+        return [r["title"][:220], r.get("government") or "", r.get("audit_type") or "",
                 r.get("sector") or "", r.get("tabled") or "", r.get("detail_url") or ""]
 
     page_audit.rowdata = [rowdict(r) for r in reports]
@@ -1307,7 +1337,7 @@ def page_audit(cag, audited):
     # always links the current file.
     def rowhtml(d):
         title, gov, kind, sec, tab, url = d
-        return (f'<tr><td>{title}</td><td>{e(gov)}</td><td>{e(kind)}</td>'
+        return (f'<tr><td>{e(title)}</td><td>{e(gov)}</td><td>{e(kind)}</td>'
                 f'<td>{e(sec)}</td><td class="nowrap">{e(tab)}</td>'
                 f'<td>{f"""<a href="{e(url)}" rel="noopener">CAG</a>""" if url else NIL}</td></tr>')
 
@@ -1426,7 +1456,7 @@ list.</p>
   var norm=function(v){{return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}};
 
   function html(r){{
-    return '<tr><td>'+r[0]+'</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td>'
+    return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td>'
       +'<td>'+esc(r[3])+'</td><td class="nowrap">'+esc(r[4])+'</td>'
       +'<td>'+(r[5]?'<a href="'+esc(r[5])+'" rel="noopener">CAG</a>'
                    :'<span class="nil">&middot;&middot;&middot;</span>')+'</td></tr>';
@@ -1582,7 +1612,7 @@ def page_divergence(census, dbt, reg=None, cls=None, entries=None, leg=None):
 <section class="sec">
   <h2>Funded, monitored, and never announced</h2>
   <div class="sec-note">Union registry across four government sources &middot;
-    {num(reg.get('total_entries'))} entries against myScheme's
+    {num(reg.get('national_entries'))} entries against myScheme's
     {num(reg.get('myscheme_entries'))}</div>
   <p class="standfirst">Some schemes are funded but never announced to citizens. That is a
   stronger finding than any missing field. A count that starts from myScheme&rsquo;s
@@ -1818,23 +1848,20 @@ def unify(checks, registry, classification):
     portal lists it.
     """
     by_slug = {c["slug"]: c for c in (checks or {}).get("schemes", [])}
-    cls = {c["name"]: c for c in (classification or {}).get("all_lines", [])}
-    out, used = [], set()
+    # Keyed on the line, not the name: twelve "Actual Recoveries (CS)" in twelve demands
+    # were given whichever one's verdict came last.
+    cls = {(c["name"], c.get("demand_no"), c.get("statement")): c
+           for c in (classification or {}).get("all_lines", [])}
+    out = []
     for en in (registry or {}).get("entries", []):
         srcs = en.get("sources", {})
         ms = srcs.get("myscheme")
         base = by_slug.get((ms or {}).get("slug")) if ms else None
         bud = srcs.get("budget") or {}
-        verdict = (cls.get(bud.get("name")) or {}).get("verdict")
-        # Slugs must be unique or one page silently overwrites another. Collisions are
-        # rare and usually mean a missed merge, so the suffix is a visible marker.
+        verdict = (cls.get((bud.get("name"), bud.get("demand_no"), bud.get("statement"))) or {}).get("verdict")
+        # Made unique once, in build(), after the state entries join: collisions are rare
+        # and usually mean a missed merge, so the suffix is a visible marker.
         sl = base["slug"] if base else slug_for(en["name"])
-        if sl in used:
-            i = 2
-            while f"{sl}-{i}" in used:
-                i += 1
-            sl = f"{sl}-{i}"
-        used.add(sl)
         gov = (srcs.get("cag") or {}).get("government") if not base else None
         out.append({
             "name": en["name"],
@@ -1930,6 +1957,48 @@ def field(row, which):
         # organisation index into a TypeError at build time.
         return str(v)
     return None
+
+
+def disambiguate(entries):
+    """Give every page whose slug another page shares a suffix from what identifies it:
+    a state row's own key, or a Budget line's demand and statement. Numbering collisions
+    by position (-2, -3) made a URL mean whichever row sorted second this month: 1,150
+    pages were renumbered on every build, among them twelve "Actual Recoveries (CS)"
+    lines in twelve demands. Whatever still collides is numbered by build() as before."""
+    groups = collections.defaultdict(list)
+    for en in entries:
+        groups[en["slug"]].append(en)
+    for sl, group in groups.items():
+        if len(group) < 2:
+            continue
+        for en in group:
+            b = (en.get("detail") or {}).get("budget") or {}
+            tag = en.get("row_key") or (
+                f"demand {b['demand_no']} {(b.get('statement') or '')[-2:]}" if b.get("demand_no") else "")
+            if tag:
+                # The suffix is kept whole and the name trimmed: slug_for stops at 80
+                # characters, and a long name lost the very suffix that told it apart.
+                suffix = slug_for(tag)
+                if len(suffix) > 24:
+                    # Andhra's key is department and name: as a suffix it doubled the URL.
+                    suffix = hashlib.sha1(str(tag).encode()).hexdigest()[:8]
+                en["slug"] = f"{sl[:79 - len(suffix)].rstrip('-')}-{suffix}"
+
+
+def state_slug(state, r):
+    """A state row's URL: state, name and identifier, all of them stable month to month.
+
+    The name is the romanised one where the printed name has no Latin letter: slug_for
+    strips Devanagari to nothing, so 5,153 of Uttar Pradesh's rows were "uttar-pradesh-"
+    plus a code that several share, and the build numbered the collisions by position. A
+    row added or dropped then moved every later URL onto a different scheme. The
+    identifier falls back to the row's key where it has no code: Chhattisgarh's rows have
+    only a key, and 149 of its pages were "chhattisgarh-N"."""
+    name = r.get("name") or ""
+    if not re.search(r"[A-Za-z]", name):
+        name = r.get("name_latin") or name
+    ident = r.get("code") or r.get("hoa") or (r.get("hoas") or [None])[0] or r.get("key")
+    return slug_for(f"{state} {name} {ident or ''}")
 
 
 def one(row, which):
@@ -2103,10 +2172,10 @@ def state_entries(load, known_names=(), sectors=None):
                 bare = strip_css(r["name"])
                 if not bare or already_held(bare):
                     continue
-            ident = r.get("code") or r.get("hoa") or (r.get("hoas") or [None])[0]
             out.append({
                 "name": r["name"],
-                "slug": slug_for(f"{state} {r['name']} {ident or ''}"),
+                "slug": state_slug(state, r),
+                "row_key": r.get("key") or r.get("code") or r.get("hoa"),
                 "on_myscheme": False,
                 "checks": None,
                 "sources": [key],
@@ -2142,6 +2211,9 @@ def state_entries(load, known_names=(), sectors=None):
                     "score": r.get("score"), "evidence": r.get("evidence") or [],
                     "publishable": r.get("verdict") == "scheme",
                     "bar": bar,
+                    # Carried as the unclassified path carries it: UP's 5,831 rows each
+                    # have a romanised name, and the state block's "Romanised" row was dead.
+                    "name_latin": r.get("name_latin"),
                 },
                 "detail": {},
             })
@@ -2461,13 +2533,15 @@ def index_section(entries):
     # The four national lists supply the registry union; the rest of this table is fifteen
     # state budget books, which is the half of it a national source never names, and calling
     # the whole thing four-source erased exactly the rows the register exists to surface.
-    nat = (load("data/registry.json", {}) or {}).get("total_entries") or 0
-    st_only = max(0, n - nat)
+    reg = load("data/registry.json", {}) or {}
+    nat, cag_only = reg.get("national_entries") or 0, reg.get("cag_only_entries") or 0
+    st_only = max(0, n - nat - cag_only)
     return f"""
 <section class="sec schemes" id="schemes">
 <div class="sec-note">{n:,} schemes: {nat:,} from the four national sources, myScheme,
-  the Union Budget, the Outcome Budget and DBT Bharat, and {st_only:,} that no national
-  source names, read out of {word(len(STATE_OF)).lower()} state budget books. Open a scheme to see which checks it
+  the Union Budget, the Outcome Budget and DBT Bharat, {cag_only:,} named only in CAG audit
+  reports, and {st_only:,} that no national source names, read out of
+  {word(len(STATE_OF)).lower()} state budget books. Open a scheme to see which checks it
   fails and why. Entries with no myScheme record have nothing to check, which is itself the
   finding.</div>
 <div class="filters">
@@ -2860,16 +2934,19 @@ def index_section(entries):
 """
 
 
-def state_pages(en):
-    """The state myScheme pages a Union line resembles (parse/registry.py pick()). The line
-    keeps its own page, because a state's record is not the Union scheme, but a page that
-    resembles it is evidence myScheme lists the scheme somewhere, so it must not be called
-    unlisted."""
+def similar_pages(en):
+    """The myScheme pages a Union line resembles without being joined to them, as (label,
+    page): a state's page (parse/registry.py pick()), or a national record a closer line
+    holds (assign()'s "listed_as"). A state's record is not the Union scheme and a taken
+    record is another line's, so the line keeps its own page; but the resemblance is
+    evidence myScheme lists the scheme somewhere, so it must not be called unlisted."""
     out = []
     for k in ("budget", "outcome", "dbt"):
-        p = (en["detail"].get(k) or {}).get("state_page")
-        if p and p not in out:
-            out.append(p)
+        d = en["detail"].get(k) or {}
+        for field, label in (("state_page", "A state&rsquo;s page with a similar name"),
+                             ("listed_as", "A myScheme page with a similar name")):
+            if d.get(field) and (label, d[field]) not in out:
+                out.append((label, d[field]))
     return out
 
 
@@ -2911,18 +2988,18 @@ def page_unlisted(en, status):
                     if d.get("name") and d.get("name") != en["name"] else "")
                  + '</td></tr>')
 
-    near = state_pages(en)
+    near = similar_pages(en)
     chips = "".join(f'<span class="chip">{e(SOURCE_LABEL[k])}</span>' for k in en["sources"])
     chips += ("" if near else '<span class="chip flag">Not on myScheme</span>')
-    listed = ("; a state&rsquo;s myScheme page has a similar name" if near
+    listed = ("; a myScheme page has a similar name" if near
               else ", and not listed on myScheme")
     # A state's record is that state's and not the Union scheme, so it keeps its own page;
     # the similar name is only a rule's match, and some are plainly another scheme.
-    ms_row = ("".join(f'<tr><td>A state&rsquo;s page with a similar name</td>'
+    ms_row = ("".join(f'<tr><td>{label}</td>'
                       f'<td><a href="/scheme/{e(p["slug"])}">{e(p["name"])}</a>'
                       f'<div class="muted" style="margin-top:3px">matched by rule, not read by '
                       f'hand: {e(p["merge_reason"])}</div></td><td class="ts"></td></tr>'
-                      for p in near)
+                      for label, p in near)
               or f"""<tr><td>myScheme record</td>
       <td><span class="nil">...</span> <span class="muted">no entry found in the
         {e(status.get('snapshot') or '')} snapshot, under a generous name match</span></td>
@@ -3336,7 +3413,7 @@ def cag_block(entry):
     for (_, r, named), fs in sorted(groups.items()):
         if r != "same":
             basis = fs[0].get("basis")
-            rows += (f'<tr><th colspan="3">{e(CAG_HEAD[r].format(named))}'
+            rows += (f'<tr><th colspan="3">{e(CAG_HEAD.get(r, "{}").format(named))}'
                      + (f' <span class="muted">&middot; {e(basis)}</span>' if basis else "")
                      + '</th></tr>')
         order = list(CAG_FIELD)
@@ -3539,19 +3616,25 @@ def page_scheme(s, status, enrich=None, entry=None):
     targets and <b>no achieved-versus-promised column</b>, for this scheme or any
     other.</div>"""
 
-    b = (enrich or {}).get("budget", {}).get(s["slug"])
+    # The register's join (parse/registry.py), the one the index, the CSV and the absence
+    # claims read. A second matcher here once showed PMAY-U the 2.0 line's Rs 3,000 cr while
+    # the index showed PMAY-Urban's Rs 18,625 cr.
+    b = ((entry or {}).get("detail") or {}).get("budget")
     if b or ob:
-        amt = (b or {}).get("be_next_year_cr")
+        amt = (b or {}).get("be_cr")
         amt_s = (f"&#8377;{inr(amt)} cr" if isinstance(amt, (int, float))
                  else '<span class="nil">...</span>')
+        stmt = (b or {}).get("statement") or ""
+        kind = {"stat4a": "Centrally Sponsored", "stat4b": "Central Sector"}.get(stmt, "")
+        line = (b or {}).get("name") or ""
+        why = (b or {}).get("merge_reason")
         money_row = f"""
     <tr><td>Budget allocation</td>
       <td><b>{amt_s}</b> for {e((b or {}).get('cycle') or '')}
-        <div class="muted" style="margin-top:3px">{e((b or {}).get('classification') or '')}
+        <div class="muted" style="margin-top:3px">{e(kind)}
           &middot; Demand No. {e((b or {}).get('demand_no'))}
-          &middot; matched to budget line &ldquo;{e((b or {}).get('budget_line') or '')}&rdquo;
-          at {(b or {}).get('match_score')} ({e((b or {}).get('confidence') or '')})</div></td>
-      <td class="ts">{e((b or {}).get('source') or '')}</td></tr>""" if b else ""
+          &middot; budget line &ldquo;{e(line)}&rdquo;{f' &middot; matched: {e(why)}' if why else ''}</div></td>
+      <td class="ts">Union Budget, Expenditure Profile Statement {e(stmt[-2:].upper())}</td></tr>""" if b else ""
         found_block = f"""
 <section class="sec">
   <h2>Found elsewhere in government</h2>
@@ -3644,8 +3727,7 @@ def build():
     census = load("data/myscheme/census.json", {})
     checks = load("data/checks.json", {})
     dbt = load("data/dbt/states.json", {})
-    enrich = {"budget": (load("data/enrichment/budget.json", {}) or {}).get("schemes", {}),
-              "outcome": (load("data/enrichment/outcome.json", {}) or {}).get("schemes", {})}
+    enrich = {"outcome": (load("data/enrichment/outcome.json", {}) or {}).get("schemes", {})}
 
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
@@ -3732,11 +3814,6 @@ def build():
     classification = load("data/classification.json", {})
     AUDITED.update((load("data/cag/audited.json", {}) or {}).get("schemes") or {})
     entries = unify(checks, registry, classification)
-    SLUG.update({en["name"]: en["slug"] for en in reversed(entries)})
-    for en in entries:
-        for k in ("replaced_by", "part_of"):
-            for t in (en["detail"].get("cag") or {}).get(k, []):
-                CAG_LINKS[t].append((en["name"], k))
     # Values carry their evidence; the site wants the verdict. Keeping the evidence out of
     # the entry deliberately: a derived sector is a convenience for filtering and should not
     # look like something the government published, which is what a provenance row implies.
@@ -3758,6 +3835,7 @@ def build():
     for en in entries:
         if en.get("category"):
             en["category"] = re.sub(r",(?=\S)", ", ", en["category"])
+    disambiguate(entries)
     seen_slugs = set()
     for en in entries:                       # slugs must be unique or pages overwrite
         sl, i = en["slug"], 2
@@ -3765,6 +3843,13 @@ def build():
             sl, i = f"{en['slug']}-{i}", i + 1
         en["slug"] = sl
         seen_slugs.add(sl)
+    # After the slugs are final: built earlier, a name could point at a slug that the pass
+    # above then renumbered.
+    SLUG.update({en["name"]: en["slug"] for en in reversed(entries) if not en.get("href")})
+    for en in entries:
+        for k in ("replaced_by", "part_of"):
+            for t in (en.get("detail", {}).get("cag") or {}).get(k, []):
+                CAG_LINKS[t].append((en["name"], k))
 
     # A downloadable table, because half the audience does not want pages at all.
     #
@@ -3793,7 +3878,7 @@ def build():
                 "; ".join(en.get("beneficiaries") or []),
                 en.get("be_cr") if en.get("be_cr") is not None else "",
                 " ".join(en.get("sources") or []),
-                "yes" if en.get("on_myscheme") else "no",
+                "yes" if en.get("on_myscheme") else "similar page" if similar_pages(en) else "no",
                 ck.get("passed", ""), ck.get("total", ""),
                 SITE_BASE + "/" + (en["href"] if en.get("href")
                                     else "scheme/" + str(en["slug"])),
@@ -3924,14 +4009,10 @@ def build():
         canon=SITE_BASE + "/changes"))
 
     n = 0
-    seen = set()
     for en in entries:
         # Rows that already point somewhere (a state register page) get no page here.
         if en.get("href"):
             continue
-        if en["slug"] in seen:
-            continue
-        seen.add(en["slug"])
         c = en["checks"]
         title = seo_title(en["name"], (c or {}).get("short"), en)
         body = (page_scheme(c, status, enrich, en) if c
@@ -3947,7 +4028,7 @@ def build():
         else:
             d = (f"{en['name']} is named by "
                  f"{', '.join(SOURCE_LABEL[k] for k in en['sources'])}"
-                 + (" and resembles a state's page on myScheme." if state_pages(en)
+                 + (" and resembles a page on myScheme." if similar_pages(en)
                     else " and is not listed on myScheme."))
         canon = f"{SITE_BASE}/scheme/{en['slug']}"
         # A myScheme record is dated by the snapshot it last changed in; anything else
@@ -4069,9 +4150,11 @@ def selftest():
           "कृषक योजना, Uttar Pradesh")
     near = {"slug": "sduk", "name": "Skill Development", "merge_reason": "x"}
     check("a Union line resembling a state's page names that page once",
-          state_pages({"detail": {"budget": {"state_page": near}, "outcome": {"state_page": near},
-                                  "dbt": {}}}), [near])
-    check("a line resembling no state page names none", state_pages({"detail": {"budget": {}}}), [])
+          [p for _, p in similar_pages({"detail": {"budget": {"state_page": near},
+                                                   "outcome": {"state_page": near}, "dbt": {}}})], [near])
+    check("a line whose record a closer line holds names that record",
+          [p for _, p in similar_pages({"detail": {"budget": {"listed_as": near}}})], [near])
+    check("a line resembling no page names none", similar_pages({"detail": {"budget": {}}}), [])
     cite = "Comptroller and Auditor General of India, Report No. 4 of 2010, X, Union Government, p. 3."
     f = {"field": "start", "value": "1995", "as_named": "Mid-Day Meal", "government": "Central",
          "host": "Ministry of Education", "citation": cite}
@@ -4088,6 +4171,23 @@ def selftest():
         "government": "Central", "facts": [f], "replaced_by": ["Nutrient Based Subsidy"], "note": "n"}}})
     check("a draft links to the scheme that replaced it",
           '<a href="/scheme/nutrient-based-subsidy">Nutrient Based Subsidy</a>' in draft, True)
+    rows = [{"slug": "x", "row_key": "2011 02 101 AA", "detail": {}},
+            {"slug": "x", "row_key": "2011 02 101 AB", "detail": {}},
+            {"slug": "y", "detail": {"budget": {"demand_no": 9, "statement": "stat4b"}}},
+            {"slug": "y", "detail": {"budget": {"demand_no": 21, "statement": "stat4b"}}},
+            {"slug": "z", "detail": {}}]
+    disambiguate(rows)
+    check("colliding pages are told apart by what identifies them, not by position",
+          [r["slug"] for r in rows],
+          ["x-2011-02-101-aa", "x-2011-02-101-ab", "y-demand-9-4b", "y-demand-21-4b", "z"])
+    long = [{"slug": "a" * 80, "row_key": k, "detail": {}} for k in ("K1", "K2")]
+    disambiguate(long)
+    check("a long name keeps the suffix that tells it apart",
+          [r["slug"][-3:] for r in long] + [len(long[0]["slug"]) <= 80], ["-k1", "-k2", True])
+    check("a line the classifier calls a budget head is not titled a scheme",
+          seo_title("Actual Recoveries (CS)", None, {"sources": ["budget"], "classified": "budget head",
+                                                     "detail": {"budget": {"demand_no": 12}}}),
+          "Actual Recoveries (CS): Union Budget line, Demand No. 12")
     tag = ld_script({"name": "a </script><b> — b"})
     check("structured data cannot close its own script tag", "</script><b>" in tag[:-9], False)
     check("structured data stays valid JSON",

@@ -40,23 +40,8 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT  # noqa: E402
-
-
-def provenance(v):
-    """Which set a hand label was drawn from. The two spellings are historical.
-
-    The seven oldest states record it per row as `sample`, the eight built on
-    classify_common as `how`. Both say the same thing and neither is preferred; what
-    matters is that a label whose provenance is unrecorded is never counted on either side.
-    """
-    h = str(v.get("how") or v.get("sample") or "")
-    if h.startswith(("audit census", "audit")):
-        return "audit"
-    if h.startswith("whole corpus"):
-        return "corpus"
-    if h.startswith("stratified"):
-        return "stratified"
-    return None
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from classify_common import f1_optimal, provenance  # noqa: E402
 
 
 def label_rows(lj):
@@ -69,6 +54,65 @@ def label_rows(lj):
         k = r.get("key") or r.get("code") or r.get("hoa") or r.get("name")
         out.append((k, r["label"], provenance(r)))
     return out
+
+
+def two_bars(key, d, listing, publish):
+    """PLAN §4's two bars: different claims, never one threshold, and the listing bar is the
+    F1 optimum of the sweep the file publishes. Ties count: on a coarse integer score two
+    thresholds often reach the same F1, and either is the optimum."""
+    bad = []
+    if listing is None or publish is None:
+        return bad
+    # The headline rule, which nothing checked.
+    if listing >= publish:
+        bad.append(f"{key}: listing_threshold {listing} is not below publish_threshold "
+                   f"{publish}")
+    sweep = d.get("threshold_sweep") or []
+    if not sweep or any("f1" not in x for x in sweep):
+        bad.append(f"{key}: the threshold sweep publishes no F1, so the listing bar cannot be "
+                   f"checked against the F1 optimum it claims to be")
+        return bad
+    best = f1_optimal(sweep)
+    if listing not in best:
+        f1 = {x["threshold"]: x["f1"] for x in sweep}
+        bad.append(f"{key}: listing_threshold {listing} (F1 {f1.get(listing)}) is not the F1 "
+                   f"optimum of its own sweep: {', '.join(map(str, best))} "
+                   f"(F1 {f1[best[0]]})")
+    return bad
+
+
+def check_union():
+    """data/classification.json, the Union Budget's lines. No hand labels: it validates
+    against myScheme membership, so there is no census or stratified recall to recount, but
+    the two bars and every published count are still checked against its own lines."""
+    p = os.path.join(ROOT, "data", "classification.json")
+    if not os.path.exists(p):
+        return None
+    with open(p, encoding="utf-8") as fh:
+        d = json.load(fh)
+    L = d.get("all_lines") or []
+    # The Union file calls its listing bar `threshold`: it predates the name.
+    listing, publish = d.get("listing_threshold", d.get("threshold")), d.get("publish_threshold")
+    bad = [f"union: publishes no {k}" for k, v in
+           (("listing threshold", listing), ("publish_threshold", publish)) if v is None]
+    bad += two_bars("union", d, listing, publish)
+    if listing is None or publish is None:
+        return bad
+    called = [x for x in L if x.get("score", -99) >= listing]
+    if len(called) != d.get("classified_scheme"):
+        bad.append(f"union: classified_scheme {d.get('classified_scheme')} but {len(called)} "
+                   f"lines score {listing} or more")
+    v = d.get("validation") or {}
+    tp = sum(1 for x in called if x.get("in_myscheme"))
+    if called and v.get("precision") is not None and abs(round(tp / len(called), 3) - v["precision"]) > 0.0015:
+        bad.append(f"union: precision {v['precision']} but its lines give "
+                   f"{round(tp / len(called), 3)} ({tp}/{len(called)})")
+    unlisted = [x for x in L if x.get("score", -99) >= publish and not x.get("on_myscheme")
+                and isinstance(x.get("be_cr"), (int, float))]
+    if len(unlisted) != d.get("unlisted_schemes_total"):
+        bad.append(f"union: unlisted_schemes_total {d.get('unlisted_schemes_total')} but "
+                   f"{len(unlisted)} lines clear the publishing bar {publish} off myScheme")
+    return bad
 
 
 def check_state(key):
@@ -91,6 +135,7 @@ def check_state(key):
             bad.append(f"{key}: publishes no {k}")
     if bar is None:
         return bad
+    bad += two_bars(key, d, d.get("listing_threshold"), bar)
 
     # 2. The absence claim under the name the site reads. Karnataka published only the
     #    other one and was counted as zero.
@@ -162,6 +207,11 @@ def main():
             checked += 1
             bad += out
 
+    union = check_union()
+    if union is not None:
+        checked += 1
+        bad += union
+
     # 5. One page, one denominator. The CAG join and the overview both divide by "the
     #    names this register holds", and for months they meant different things.
     cag = os.path.join(ROOT, "data", "cag", "audited.json")
@@ -175,11 +225,12 @@ def main():
             bad.append(f"cag: register_names {c.get('register_names')} != "
                        f"{nat} national + {st} state")
 
-    print(f"ratios: {checked} classified states checked")
+    print(f"ratios: {checked} classification files checked, the Union's among them")
     for b in bad:
         print(f"  FAIL {b}")
     if bad:
-        print(f"{len(bad)} published ratio(s) do not divide one list by itself.")
+        print(f"{len(bad)} check(s) failed: a ratio that does not divide one list by itself, "
+              f"or a bar that is not what PLAN §4 says it is.")
         return 1
     print("  every published ratio divides two counts of the same list")
     return 0

@@ -61,7 +61,6 @@ assumed.
 """
 
 import argparse
-import glob
 import gzip
 import json
 import os
@@ -70,8 +69,8 @@ import sys
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, read_json, utcnow, write_json  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext, snapshot  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -205,15 +204,9 @@ def read_book(text):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "tripura", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive/tripura snapshot; run collect/tripura.py first")
-    date = date or dates[-1]
-    man = read_json(f"archive/tripura/{date}/_manifest.json", {}) or {}
+    date, src, man = snapshot("tripura", date)
 
-    path = os.path.join(ROOT, "archive", "tripura", date, "css-sls.pdf.gz")
+    path = os.path.join(src, "css-sls.pdf.gz")
     if not os.path.exists(path):
         raise SystemExit(f"missing {path}")
     with gzip.open(path, "rb") as fh:

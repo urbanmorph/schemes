@@ -136,21 +136,15 @@ discount them. See `caveat` and `counts` in the output.
 
 import argparse
 import collections
-import glob
 import gzip
-import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
-import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
 from text import joined, clean  # noqa: E402
-
-NS = "{http://www.w3.org/1999/xhtml}"
+from pdf import bbox_pages, require_books, snapshot  # noqa: E402
 
 # One money cell. Tamil Nadu prints a nil provision as "..." and writes figures in the
 # Indian style, 3,016,24,99, where the commas are cosmetic grouping of a plain integer of
@@ -201,49 +195,9 @@ ROW_TOL = 4.0
 # ------------------------------------------------------------------ pdf geometry
 
 def pdf_pages(pdf_bytes, tol=ROW_TOL, timeout=900):
-    """Yield one list of rows per page, from pdftotext -bbox-layout.
-
-    A row is [top, bottom, [(left, right, word), ...]] in reading order. Poppler's lines
-    are runs of adjacent words and NOT table rows: the Tamil half of a row, its English
-    half, each figure and the head of account all arrive as separate lines.
-    """
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        x = os.path.join(d, "b.xml")
-        r = subprocess.run(["pdftotext", "-bbox-layout", p, x],
-                           capture_output=True, timeout=timeout)
-        if r.returncode != 0:
-            raise SystemExit("pdftotext failed: %r" % r.stderr[:200])
-        for page in _pages_of(x, tol):
-            yield page
-
-
-def _pages_of(path, tol):
-    for _, el in ET.iterparse(path, events=("end",)):
-        if el.tag != NS + "page":
-            continue
-        lines = []
-        for ln in el.iter(NS + "line"):
-            ws = [(float(w.get("xMin")), float(w.get("xMax")),
-                   float(w.get("yMin")), float(w.get("yMax")), w.text or "")
-                  for w in ln.iter(NS + "word")]
-            if ws:
-                lines.append([min(w[2] for w in ws), max(w[3] for w in ws),
-                              [(w[0], w[1], w[4]) for w in ws]])
-        lines.sort(key=lambda t: (t[0], t[2][0][0]))
-        rows = []
-        for a, b, cells in lines:
-            if rows and abs(rows[-1][0] - a) <= tol:
-                rows[-1][1] = max(rows[-1][1], b)
-                rows[-1][2].extend(cells)
-            else:
-                rows.append([a, b, list(cells)])
-        for r in rows:
-            r[2].sort(key=lambda c: c[0])
-        yield rows
-        el.clear()
+    """One list of rows per page; see pdf.page_rows. The Tamil half of a row, its English
+    half, each figure and the head of account all arrive as separate poppler lines."""
+    return bbox_pages(pdf_bytes, tol, timeout=timeout)
 
 
 def text_of(row):
@@ -695,14 +649,8 @@ def department_of(title):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "tamilnadu", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/tamilnadu/: run collect/tamilnadu.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "tamilnadu", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("tamilnadu", date)
+    require_books(src, man, lambda b: f"demand-{b:02d}.pdf.gz")
 
     rows_by_book, labels, per_book = {}, {}, {}
     scheme_checks, control_checks, stats = {}, {}, collections.Counter()

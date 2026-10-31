@@ -46,7 +46,6 @@ is a head in its own right.
 
 import argparse
 import collections
-import glob
 import gzip
 import json
 import os
@@ -54,9 +53,9 @@ import re
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
 from text import joined  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from pdf import layout_text as pdftotext, require_books, snapshot  # noqa: E402
 
 # One money cell. Indian digit grouping with an UNBOUNDED first group: the largest figure
 # in these books is 50427,79,53,000, whose first group is five digits. "..." is nil.
@@ -309,15 +308,8 @@ def parse_book(text, stats):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "westbengal", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/westbengal/: "
-                         "run collect/westbengal.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "westbengal", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("westbengal", date)
+    require_books(src, man)
 
     stats = collections.Counter()
     merged, per_book, sub_checks, minor_checks, wrong_cycle = {}, {}, [], [], []

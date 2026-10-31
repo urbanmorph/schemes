@@ -71037,7 +71037,7 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-10-30T16:43:21Z",
+ "built": "2026-10-31T15:18:58Z",
  "caveat": "The sub-head is the scheme and the object head is not, so Salaries, Wages and Office Expenses do not appear here. What does appear alongside real schemes are the establishment sub-heads the state files at the same level, Direction and Administration among them; they are kept because Punjab files them there and a reader counting welfare schemes should discount them. Allocations are not summed across books: the Gender Budget reports the women's share of provisions the demand books state in full, so the demand book figure wins and the Gender Budget figure is published as an earmark. The number here is a floor on Punjab's schemes, never a total.",
  "classified_not_scheme": 2817,
  "classified_scheme": 144,
@@ -71096,6 +71096,7 @@
  "state": "Punjab",
  "threshold_sweep": [
   {
+   "f1": 0.484,
    "measured_on": "the stratified sample only",
    "n_labelled": 114,
    "precision": 0.325,
@@ -71103,6 +71104,7 @@
    "threshold": -2
   },
   {
+   "f1": 0.484,
    "measured_on": "the stratified sample only",
    "n_labelled": 114,
    "precision": 0.325,
@@ -71110,6 +71112,7 @@
    "threshold": -1
   },
   {
+   "f1": 0.459,
    "measured_on": "the stratified sample only",
    "n_labelled": 109,
    "precision": 0.312,
@@ -71117,6 +71120,7 @@
    "threshold": 0
   },
   {
+   "f1": 0.697,
    "measured_on": "the stratified sample only",
    "n_labelled": 27,
    "precision": 0.852,
@@ -71124,6 +71128,7 @@
    "threshold": 1
   },
   {
+   "f1": 0.697,
    "measured_on": "the stratified sample only",
    "n_labelled": 27,
    "precision": 0.852,
@@ -71131,6 +71136,7 @@
    "threshold": 2
   },
   {
+   "f1": 0.697,
    "measured_on": "the stratified sample only",
    "n_labelled": 27,
    "precision": 0.852,
@@ -71140,6 +71146,7 @@
  ],
  "validation": {
   "at_publish_threshold": {
+   "f1": 0.697,
    "measured_on": "the stratified sample only",
    "n_labelled": 27,
    "precision": 0.852,
@@ -71154,6 +71161,12 @@
    "schemes": 140,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors below are named ones."
-  }
+  },
+  "f1_optimal_threshold": 1,
+  "f1_optimal_thresholds": [
+   1,
+   2,
+   3
+  ]
  }
 }

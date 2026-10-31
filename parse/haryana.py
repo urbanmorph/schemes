@@ -78,7 +78,6 @@ RECONCILIATION, three checks, all hard errors, and on the 2026-27 book all three
 """
 
 import argparse
-import glob
 import gzip
 import itertools
 import json
@@ -88,8 +87,8 @@ import sys
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, read_json, utcnow, write_json  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext, snapshot  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -414,15 +413,9 @@ def read_narratives(pages):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "haryana", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive/haryana snapshot; run collect/haryana.py first")
-    date = date or dates[-1]
-    man = read_json(f"archive/haryana/{date}/_manifest.json", {}) or {}
+    date, src, man = snapshot("haryana", date)
 
-    path = os.path.join(ROOT, "archive", "haryana", date, "plan-memo.pdf.gz")
+    path = os.path.join(src, "plan-memo.pdf.gz")
     if not os.path.exists(path):
         raise SystemExit(f"missing {path}")
     with gzip.open(path, "rb") as fh:

@@ -33,7 +33,6 @@ import argparse
 import collections
 import glob
 import gzip
-import json
 import os
 import re
 import sys
@@ -42,11 +41,22 @@ import fitz
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from pdf import snapshot  # noqa: E402
 from krutidev import decode  # noqa: E402
 
 KIND = {"outcome": "Outcome Budget", "gender": "Gender Budget",
         "youth": "Youth Budget", "child": "Child Budget"}
+
+# The unit, in Kruti Dev: "jkf'k gtkj esa" is राशि हजार में, amount in thousands. All 76 books
+# of the 2026-27 set print it in their column header, and none prints राशि लाख or राशि करोड़.
+UNIT = re.compile(r"jkf'k\s+gtkj")
+OTHER_UNIT = re.compile(r"jkf'k\s+(?:yk\[k|djksM)")
+# These books print NO total. Measured over all 76 of the 2026-27 set: no line reading
+# योग, कुल योग, महायोग or "Total" in any of them; कुल occurs only in the Gender books' column
+# header कुल लाभान्वित (total beneficiaries) and inside objectives. So there is nothing to
+# reconcile the rows against, and the output says so rather than inventing a check.
+PRINTED_TOTALS = re.compile(r"^\s*(?:dqy\s*;ksx|egk;ksx|;ksx)\s*[\d,]*\s*$|\bTotal\b", re.M)
 
 
 def bands_of(doc, tol=5.0):
@@ -76,6 +86,13 @@ def read_book(raw):
     """One book's schemes: (name, objective, provision in thousands)."""
     with fitz.open(stream=raw, filetype="pdf") as doc:
         bands = bands_of(doc)
+        text = "\n".join(p.get_text() for p in doc)
+    if not UNIT.search(text) or OTHER_UNIT.search(text):
+        raise SystemExit("chhattisgarh: a book without राशि हजार में in its header, or naming "
+                         "another unit; every provision here is read as thousands")
+    if PRINTED_TOTALS.search(text):
+        raise SystemExit("chhattisgarh: a book prints a total line, which these books never "
+                         "did; reconcile the rows against it before publishing")
     # TWO HEADER LAYOUTS. The Outcome books head the name column "yojana@karyakram ka
     # naam"; the Gender, Youth and Child books head it "yojana ka naam". Matching only the
     # first read the Outcome books and returned nothing at all from the other three, which
@@ -179,21 +196,13 @@ def read_book(raw):
 
 
 def run(date=None):
-    root = os.path.join(ROOT, "archive", "chhattisgarh")
-    dates = sorted(os.path.basename(p) for p in glob.glob(os.path.join(root, "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/chhattisgarh/")
-    if date and date not in dates:
-        raise SystemExit(f"no archive at archive/chhattisgarh/{date}")
-    date = date or dates[-1]
-    man = json.load(open(os.path.join(root, date, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("chhattisgarh", date)
 
     # Every book first, then the rows. Each book prints its department's name in its own
     # spelling, and taking whichever book was read last filed department 34 under two
     # names in one output. The name most of its books print wins; ties go to the first.
     books, spellings = [], collections.defaultdict(collections.Counter)
-    for f in sorted(glob.glob(os.path.join(root, date, "*.pdf.gz"))):
+    for f in sorted(glob.glob(os.path.join(src, "*.pdf.gz"))):
         kind, dep = os.path.basename(f)[:-7].split("-", 1)
         with gzip.open(f, "rb") as fh:
             rows, dept = read_book(fh.read())
@@ -217,9 +226,15 @@ def run(date=None):
             # Kruti Dev string is what Chhattisgarh printed and does not move when the
             # decoder gets better.
             key = f"{dep}|{kind}|{code or name_kd.strip()}"
-            if key in seen:
+            # The same row printed twice is one row. The same key with a different amount is
+            # a second row, and dropping it lost Rs 7,872 lakh in department 10's outcome book
+            # without a word; it keeps its own key, numbered, so the first row's label stands.
+            if (key, amt) in seen:
                 continue
-            seen.add(key)
+            n = sum(1 for k, _ in seen if k == key)
+            seen.add((key, amt))
+            if n:
+                key = f"{key}#{n + 1}"
             by_kind[kind] += 1
             entries.append({
                 "key": key, "code": code, "name": name,
@@ -244,7 +259,17 @@ def run(date=None):
                    "read. The names here are in Kruti Dev, whose table is fixed and checked "
                    "against the state's own Unicode department index."),
         "books": dict(by_kind), "departments": len(depts),
-        "documents_read": len(glob.glob(os.path.join(root, date, "*.pdf.gz"))),
+        "unit": "thousand rupees, published as lakh",
+        "unit_note": ("Every book's header prints राशि हजार में (amount in thousands) and none "
+                      "names another unit; the parser refuses a book that does not."),
+        "reconciliation": None,
+        "reconciliation_note": (
+            "Not possible: none of these books prints a total. Searched across every book "
+            "read for योग, कुल योग, महायोग and 'Total'; कुल appears only in the Gender books' "
+            "column header कुल लाभान्वित and in objectives. The parser refuses a book that "
+            "starts printing one, so the check is added the year there is something to "
+            "check against."),
+        "documents_read": len(glob.glob(os.path.join(src, "*.pdf.gz"))),
         "entries": entries,
     })
     return entries, by_kind, depts

@@ -28649,17 +28649,21 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-10-30T16:43:11Z",
+ "built": "2026-10-31T15:18:57Z",
  "caveat": "One row here is one line of Haryana's Plan Memo, keyed on the state's own scheme code. The book is a register of WELFARE AND DEVELOPMENT schemes and not of the whole budget, so establishment and pension heads are largely absent, which makes this a cleaner scheme list than most states publish and a smaller one than their total expenditure. purpose is Haryana's own description of the scheme, taken verbatim from the narrative half of the same book; it is present for most schemes and null for the rest.",
  "classified_not_scheme": 853,
  "classified_scheme": 117,
  "cycle": "2026-27",
  "ground_truth": {
+  "audit_census": 90,
   "labelled": 390,
   "not_scheme": 235,
   "question": "Superseded by `rule`, which is the register's single definition. Kept so the wording these labels were first made against is still on the record.",
+  "recall_measured_on": "The stratified sample alone. The audit census is selected on the classifier's own output -- every row in it is above the bar -- so counting it would raise recall with the size of the audit rather than with the quality of the classifier.",
   "sampling": "Stratified on (works money vs establishment money vs neither) x (Part-I state / Part-II shared / Part-III central), 28% of each stratum with a floor of 12, seed 20260903. The strata are the two things Haryana's own book publishes that could separate a scheme from a works line.",
-  "scheme": 155
+  "scheme": 155,
+  "stratified": 300,
+  "stratified_scheme": 84
  },
  "known_errors": [
   "Scheme for State level Task Force under Swachh Bharat Mission Gramin",
@@ -28711,6 +28715,23 @@
  "state": "Haryana",
  "threshold_sweep": [
   {
+   "f1": 0.673,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 142,
+   "precision": 0.535,
+   "recall": 0.905,
+   "threshold": -2
+  },
+  {
+   "f1": 0.704,
+   "measured_on": "the stratified sample only",
+   "n_labelled": 129,
+   "precision": 0.581,
+   "recall": 0.893,
+   "threshold": -1
+  },
+  {
+   "f1": 0.732,
    "measured_on": "the stratified sample only",
    "n_labelled": 121,
    "precision": 0.62,
@@ -28718,6 +28739,7 @@
    "threshold": 0
   },
   {
+   "f1": 0.733,
    "measured_on": "the stratified sample only",
    "n_labelled": 118,
    "precision": 0.627,
@@ -28725,6 +28747,7 @@
    "threshold": 1
   },
   {
+   "f1": 0.725,
    "measured_on": "the stratified sample only",
    "n_labelled": 76,
    "precision": 0.763,
@@ -28732,6 +28755,7 @@
    "threshold": 2
   },
   {
+   "f1": 0.712,
    "measured_on": "the stratified sample only",
    "n_labelled": 62,
    "precision": 0.839,
@@ -28739,6 +28763,7 @@
    "threshold": 3
   },
   {
+   "f1": 0.688,
    "measured_on": "the stratified sample only",
    "n_labelled": 44,
    "precision": 1.0,
@@ -28746,6 +28771,7 @@
    "threshold": 4
   },
   {
+   "f1": 0.385,
    "measured_on": "the stratified sample only",
    "n_labelled": 20,
    "precision": 1.0,
@@ -28753,6 +28779,7 @@
    "threshold": 5
   },
   {
+   "f1": 0.286,
    "measured_on": "the stratified sample only",
    "n_labelled": 14,
    "precision": 1.0,
@@ -28762,6 +28789,7 @@
  ],
  "validation": {
   "at_publish_threshold": {
+   "f1": 0.688,
    "measured_on": "the stratified sample only",
    "n_labelled": 44,
    "precision": 1.0,
@@ -28776,6 +28804,10 @@
    "schemes": 115,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors are named ones."
-  }
+  },
+  "f1_optimal_threshold": 1,
+  "f1_optimal_thresholds": [
+   1
+  ]
  }
 }

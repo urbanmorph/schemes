@@ -51,9 +51,9 @@ jobs:
       PYTHONUNBUFFERED: "1"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -103,12 +103,15 @@ jobs:
         # "finished, with failures" (1) from "unfinished" (75) from "killed" (no code).
         run: |
           set +e
-          ( while sleep 600; do ./checkpoint.sh save "$WIP"; done ) &
+          # The trap lets a save already under way finish before the loop exits: without it
+          # the kill ended only the loop, `wait` returned at once, and the orphaned save raced
+          # Save's own checkpoint on the same index. `sleep & wait` keeps the sleep
+          # interruptible, so the kill does not wait out ten minutes.
+          ( trap 'kill $! 2>/dev/null; exit 0' TERM
+            while true; do sleep 600 & wait $!; ./checkpoint.sh save "$WIP"; done ) &
           saver=$!
           ./run.sh --resume-month --if-needed --deadline-min 300 --pace "$PACE"
           code=$?
-          # Killing the loop does not kill a save already under way, which would then race
-          # Save's own checkpoint on the same index. Let it finish first.
           kill "$saver" 2>/dev/null
           wait "$saver" 2>/dev/null
           echo "code=$code" >> "$GITHUB_OUTPUT"
@@ -131,7 +134,9 @@ jobs:
         run: |
           echo "committed=false" >> "$GITHUB_OUTPUT"
           SNAP=$(python3 progress.py month-date)
-          VERDICT=$(python3 -c "import json;print(json.load(open('status.json')).get('verdict',''))" 2>/dev/null)
+          # The verdict counts only if it is THIS snapshot's: a verifier that crashed leaves
+          # last month's COMPLETE in status.json, which must not publish this month.
+          VERDICT=$(SNAP="$SNAP" python3 -c "import json,os;s=json.load(open('status.json'));print(s.get('verdict','') if s.get('snapshot')==os.environ['SNAP'] else 'STALE')" 2>/dev/null)
           echo "verified=$([ "$VERDICT" = COMPLETE ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
           for d in archive/cag/*/; do [ -f "$d/_manifest.json" ] || rm -rf "$d"; done
           if [ "$CODE" = 0 ] || [ "$CODE" = 1 ] || python3 progress.py finished myscheme "$SNAP"; then
@@ -232,7 +237,8 @@ jobs:
       # secrets) and test that instead.
       HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}
     steps:
-      - uses: actions/checkout@v4
+      # No checkout until the agent is wired: the echo below needs none, and a checkout here
+      # downloaded the whole repository on every failed month.
       - name: Diagnose and open a PR
         if: env.HAS_KEY == 'true'
         run: |

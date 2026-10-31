@@ -109,7 +109,7 @@ def explode(date):
         shutil.rmtree(out_dir)
     os.makedirs(out_dir, exist_ok=True)
 
-    n, skipped = 0, 0
+    n, skipped, written = 0, 0, {}
     details = os.path.join(src, "details.ndjson.gz")
     with gzip.open(details, "rb") as fh:
         for line in fh:
@@ -133,7 +133,13 @@ def explode(date):
                                 ("beneficiaryState", "schemeCategory", "tags",
                                  "schemeFor", "level", "nodalMinistryName")
                                 if k in lf}
-            write_json(f"data/myscheme/schemes/{safe_name(row['slug'])}.json", rec)
+            # Two slugs can make one file name ("a.b" and "a-b"), and the second would
+            # overwrite the first while both were counted.
+            fname = safe_name(row["slug"])
+            if fname in written:
+                raise SystemExit(f"slugs {written[fname]!r} and {row['slug']!r} both write {fname}.json")
+            written[fname] = row["slug"]
+            write_json(f"data/myscheme/schemes/{fname}.json", rec)
             n += 1
 
     return n, skipped, list_skipped
@@ -148,6 +154,10 @@ def main():
           + (f", {skipped} unparseable" if skipped else ""))
     if list_skipped:
         sys.exit(f"{list_skipped} list page(s) do not parse: their schemes have no state tag")
+    if skipped:
+        # A detail that does not parse is a scheme missing from data/, as surely as a list
+        # page that does not parse is a state tag missing; both fail the step.
+        sys.exit(f"{skipped} detail record(s) do not parse: those schemes are missing from data/")
 
 
 if __name__ == "__main__":

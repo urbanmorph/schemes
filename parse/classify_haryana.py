@@ -67,15 +67,12 @@ weak to carry a positive when "Assistance to States for Conduct of Livestock Cen
 """
 
 import argparse
-import json
 import os
 import re
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule, joiner, myscheme_records  # noqa: E402
+from classify_common import classify, report  # noqa: E402
 
 # A benefit a person, household, farmer, student, worker or firm receives. "assistance" is
 # deliberately absent and "mission" deliberately present; both are measured in
@@ -129,13 +126,6 @@ LISTING_THRESHOLD = 3
 
 
 def score(r):
-    # The register's definition, held in classify_common because it is the rule and not a
-    # signal: money that buys the capacity of a delivery system is not a scheme however
-    # strongly this state's own evidence reads it. This file predates that harness and has
-    # to reach for it explicitly.
-    if excluded_by_rule(r["name"]):
-        return -99, [("rule", "buys the capacity of the delivery system, not the benefit")]
-
     s, ev = 0, []
     for key, rx, pts, why in SIGNALS:
         hit = bool(r.get("works_lakh")) if key == "works_money" else bool(rx.search(r["name"]))
@@ -154,131 +144,43 @@ def score(r):
     return s, ev
 
 
-def myscheme_haryana():
-    return myscheme_records("Haryana")
-
-
-def run():
-    d = json.load(open(os.path.join(ROOT, "data", "haryana", "schemes.json"), encoding="utf-8"))
-    rows = d["entries"]
-    lj = json.load(open(os.path.join(ROOT, "data", "haryana", "labels.json"), encoding="utf-8"))
-    labels = {c: v["label"] for c, v in lj["labels"].items()}
-    # The sweep sees the stratified sample and not the audit census. The census is chosen
-    # on this classifier's own output -- every row in it is at or above the bar -- so
-    # letting it into recall raises the number with the size of the audit instead of with
-    # the quality of the scoring. classify_common carries the full note; this file predates
-    # that harness and has to say it again. Haryana's 90 audited rows had it reading 0.742.
-    sampled = {c for c, v in lj["labels"].items()
-               if not str(v.get("how") or v.get("sample") or "").startswith(
-                   ("audit census", "audit"))}
-    lab = {c: labels[c] == "scheme" for c in sampled}
-
-    ms = myscheme_haryana()
-    in_myscheme = joiner(ms)
-
-    out = []
-    for r in sorted(rows, key=lambda x: x["code"]):
-        s, ev = score(r)
-        m = in_myscheme(r["name"])
-        out.append({
-            "key": r["code"], "code": r["code"], "name": r["name"],
-            "department": r.get("department"), "purpose": r.get("purpose"),
-            "be_lakh": r.get("be_lakh"), "part": r.get("part"),
-            "score": s, "evidence": ev,
-            "verdict": "scheme" if s >= PUBLISH_THRESHOLD else "not_scheme",
-            "hand_label": labels.get(r["code"]),
-            "in_myscheme_haryana": bool(m), "myscheme_name": m,
-        })
-
-    by_code = {r["code"]: r for r in rows}
-
-    def sweep2(t):
-        hit = [c for c in lab if score(by_code[c])[0] >= t]
-        if not hit:
-            return None
-        tp = sum(lab[c] for c in hit)
-        return {"threshold": t, "n_labelled": len(hit),
-                "precision": round(tp / len(hit), 3),
-                "recall": round(tp / sum(lab.values()), 3),
-                "measured_on": "the stratified sample only"}
-
-    census = [o for o in out if o["score"] >= PUBLISH_THRESHOLD]
-    unlabelled = [o for o in census if o["hand_label"] is None]
-    right = sum(1 for o in census if o["hand_label"] == "scheme")
-    errors = [o["name"] for o in census if o["hand_label"] == "not_scheme"]
-
-    absent = [o for o in census if not o["in_myscheme_haryana"]]
-    write_json("data/haryana/classification.json", {
-        "built": utcnow(), "snapshot": d["snapshot"], "state": "Haryana",
-        "cycle": d.get("cycle"),
-        "source": d.get("source"),
-        "publish_threshold": PUBLISH_THRESHOLD,
-        "listing_threshold": LISTING_THRESHOLD,
-        "myscheme_haryana_records": len(ms),
-        "classified_scheme": sum(1 for o in out if o["score"] >= PUBLISH_THRESHOLD),
-        "classified_not_scheme": sum(1 for o in out if o["score"] < PUBLISH_THRESHOLD),
-        "ground_truth": {"labelled": len(labels),
-                         "scheme": sum(1 for v in labels.values() if v == "scheme"),
-                         "not_scheme": sum(1 for v in labels.values() if v == "not_scheme"),
-                         "question": lj.get("question"), "sampling": lj.get("sampling")},
-        "threshold_sweep": [x for x in (sweep2(t) for t in range(0, 8)) if x],
-        "validation": {
-            "at_publish_threshold_census": {
-                "rows_hand_labelled": len(census) - len(unlabelled),
-                "rows": len(census),
-                "unlabelled": len(unlabelled),
-                "schemes": right,
-                "not_schemes": len(errors),
-                "precision": round(right / len(census), 3) if census else None,
-                "what": ("Every row at or above the publishing bar carries a hand label, so "
-                         "this precision is a COUNT and the errors are named ones."),
-            },
-            "at_publish_threshold": next(
-                (x for x in (sweep2(t) for t in range(0, 8)) if x and x["threshold"] == PUBLISH_THRESHOLD), {}),
-        },
-        "known_errors": errors,
-        "signals_rejected": [
-            {"signal": "a purpose paragraph is present",
-             "measured": {"P_scheme": 0.288, "base_rate": 0.280, "n": 260},
-             "why": ("The strongest signal in the Karnataka classifier at 0.947, and worth "
-                     "nothing here. Haryana prints a paragraph for 824 of 970 lines and "
-                     "describes a works line as fully as a cash transfer: 'the funds are "
-                     "required for purchase of land and construction of the building' is "
-                     "one of them. A field present for everything says nothing about "
-                     "anything.")},
-            {"signal": "the purpose paragraph is longer than 200 characters",
-             "measured": {"P_scheme": 0.267, "base_rate": 0.280, "n": 221},
-             "why": "Slightly worse than the base rate. Length is not evidence."},
-            {"signal": "the word assistance in the name",
-             "measured": {"P_scheme": 0.385, "base_rate": 0.280, "n": 13},
-             "why": ("Too weak to carry a positive. 'Assistance to States for Conduct of "
-                     "Livestock Census' and 'Scouting & Guiding Assistance' are both filed "
-                     "under it, and both are budget heads.")},
-            {"signal": "Part-III, a 100% centrally sponsored scheme",
-             "measured": {"P_scheme": 0.306, "base_rate": 0.280, "n": 36},
-             "why": ("Almost exactly the base rate. Who pays says nothing about whether a "
-                     "citizen can apply, which Part-II at 0.483 only barely contradicts.")},
-        ],
-        "caveat": d.get("caveat"),
-        "absent_schemes": sorted(absent, key=lambda o: -(o["be_lakh"] or 0))[:60],
-        "absent_distinct": absent,
-        "all_entries": out,
-    })
-    return out, census, right, errors, ms
+REJECTED = [
+    {"signal": "a purpose paragraph is present",
+     "measured": {"P_scheme": 0.288, "base_rate": 0.280, "n": 260},
+     "why": ("The strongest signal in the Karnataka classifier at 0.947, and worth "
+             "nothing here. Haryana prints a paragraph for 824 of 970 lines and "
+             "describes a works line as fully as a cash transfer: 'the funds are "
+             "required for purchase of land and construction of the building' is "
+             "one of them. A field present for everything says nothing about "
+             "anything.")},
+    {"signal": "the purpose paragraph is longer than 200 characters",
+     "measured": {"P_scheme": 0.267, "base_rate": 0.280, "n": 221},
+     "why": "Slightly worse than the base rate. Length is not evidence."},
+    {"signal": "the word assistance in the name",
+     "measured": {"P_scheme": 0.385, "base_rate": 0.280, "n": 13},
+     "why": ("Too weak to carry a positive. 'Assistance to States for Conduct of "
+             "Livestock Census' and 'Scouting & Guiding Assistance' are both filed "
+             "under it, and both are budget heads.")},
+    {"signal": "Part-III, a 100% centrally sponsored scheme",
+     "measured": {"P_scheme": 0.306, "base_rate": 0.280, "n": 36},
+     "why": ("Almost exactly the base rate. Who pays says nothing about whether a "
+             "citizen can apply, which Part-II at 0.483 only barely contradicts.")},
+]
 
 
 def main():
     argparse.ArgumentParser(description="Classify Haryana's Plan Memo lines.").parse_args()
-    out, census, right, errors, ms = run()
-    print(f"haryana: {len(out)} lines, {len(census)} clear the publishing bar of {PUBLISH_THRESHOLD}")
-    labelled = sum(1 for o in census if o.get("hand_label") is not None)
-    if census:
-        print(f"  counted precision {right/len(census):.3f} on {labelled} hand-labelled rows, "
-              f"{len(errors)} named errors")
-    for e in errors:
-        print(f"     not a scheme: {e[:70]}")
-    print(f"  myScheme lists {len(ms)} Haryana schemes; "
-          f"{sum(1 for o in census if not o['in_myscheme_haryana'])} of these reach it nowhere")
+    # The sweep sees the stratified sample and not the audit census; classify_common
+    # carries the full note. Haryana's 90 audited rows once had it reading 0.742.
+    report("haryana",
+           *classify("haryana", "Haryana", score, PUBLISH_THRESHOLD, LISTING_THRESHOLD,
+                     REJECTED, omit=("hoas",),
+                     row_fields=lambda r: {"department": r.get("department"),
+                                           "purpose": r.get("purpose"),
+                                           "part": r.get("part")},
+                     what=("Every row at or above the publishing bar carries a hand label, "
+                           "so this precision is a COUNT and the errors are named ones.")),
+           publish=PUBLISH_THRESHOLD)
 
 
 if __name__ == "__main__":

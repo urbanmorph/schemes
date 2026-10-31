@@ -89,21 +89,16 @@ as fact with nothing behind it.
 
 import argparse
 import collections
-import glob
 import gzip
-import json
 import os
 import re
-import subprocess
 import sys
-import tempfile
-import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
 from text import joined, clean  # noqa: E402
-from pdf import layout_text  # noqa: E402
+from pdf import bbox_pages, layout_text, require_books, snapshot  # noqa: E402
 
 # Gurmukhi, plus the two joiners and the Indian rupee sign. Deleting this from a line
 # leaves the English column; nothing else is needed to separate the two scripts.
@@ -145,9 +140,6 @@ BOOK_LABEL = {
 BE_INDEX = 3
 
 
-NS = "{http://www.w3.org/1999/xhtml}"
-
-
 def pdftotext(pdf_bytes, timeout=1800):
     """Plain -layout text. Used for the Gender Budget, which has one script and no
     columns worth defending. Punjab's books are the slowest, hence the limit."""
@@ -155,47 +147,13 @@ def pdftotext(pdf_bytes, timeout=1800):
 
 
 def pdf_pages(pdf_bytes, timeout=1800, tol=4.0):
-    """One list of rows per page, from pdftotext -bbox-layout.
-
-    A row is [top, bottom, [(left, right, word), ...]] in reading order. The tolerance is
-    4 points against a line pitch of 12: the demand books typeset a total's label and its
-    figures 3 points apart, "Total 04" at y 287.4 and its 4,37,87 at 290.4, and at the
-    2.5 points that works for Telangana those arrive as two rows and every total in the
-    book loses either its name or its money.
+    """One list of rows per page; see pdf.page_rows. The tolerance is 4 points against a
+    line pitch of 12: the demand books typeset a total's label and its figures 3 points
+    apart, "Total 04" at y 287.4 and its 4,37,87 at 290.4, and at the 2.5 points that
+    works for Telangana those arrive as two rows and every total in the book loses either
+    its name or its money.
     """
-    with tempfile.TemporaryDirectory() as d:
-        p = os.path.join(d, "b.pdf")
-        with open(p, "wb") as fh:
-            fh.write(pdf_bytes)
-        x = os.path.join(d, "b.xml")
-        r = subprocess.run(["pdftotext", "-bbox-layout", p, x],
-                           capture_output=True, timeout=timeout)
-        if r.returncode != 0:
-            raise SystemExit(f"pdftotext failed: {r.stderr[:200]!r}")
-        for _, el in ET.iterparse(x, events=("end",)):
-            if el.tag != NS + "page":
-                continue
-            lines = []
-            for ln in el.iter(NS + "line"):
-                ws = [(float(w.get("xMin")), float(w.get("xMax")),
-                       float(w.get("yMin")), float(w.get("yMax")), w.text or "")
-                      for w in ln.iter(NS + "word")]
-                if not ws:
-                    continue
-                cells = sorted((w[0], w[1], w[4]) for w in ws)
-                lines.append([min(w[2] for w in ws), max(w[3] for w in ws), cells])
-            lines.sort(key=lambda t: (t[0], t[2][0][0]))
-            rows = []
-            for aa, bb, cells in lines:
-                if rows and abs(rows[-1][0] - aa) <= tol:
-                    rows[-1][1] = max(rows[-1][1], bb)
-                    rows[-1][2].extend(cells)
-                else:
-                    rows.append([aa, bb, list(cells)])
-            for row in rows:
-                row[2].sort(key=lambda c: c[0])
-            yield rows
-            el.clear()
+    return bbox_pages(pdf_bytes, tol, timeout=timeout)
 
 
 def english(line):
@@ -786,15 +744,8 @@ def failed(checks, tol=0.5):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "punjab", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/punjab/: run collect/punjab.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "punjab", date)
-    with open(os.path.join(src, "_manifest.json"), encoding="utf-8") as fh:
-        man = json.load(fh)
+    date, src, man = snapshot("punjab", date)
+    require_books(src, man)
 
     rows_by_book, per_book, checks, stats = {}, {}, {}, {}
     for book in sorted(BOOK_LABEL):

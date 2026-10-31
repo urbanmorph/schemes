@@ -1,5 +1,5 @@
 {
- "built": "2026-10-29T04:20:54Z",
+ "built": "2026-10-31T15:10:30Z",
  "caveat": "One row here is one node of Uttar Pradesh's account tree at the level the state files schemes at, so it is a superset of the schemes a citizen can apply to: a directorate sits at the same level as a cash transfer. Items of expenditure below it (Pay, Dearness Allowance, Office Expenses) are excluded. The number here is a floor on Uttar Pradesh's schemes, never a total.",
  "cycle": "2026-27",
  "entries": [
@@ -70035,14 +70035,6 @@
     "why": "all 2 content words of the shorter name are present"
    },
    {
-    "code": "21",
-    "grant": "14",
-    "myscheme": "Mukhyamantri Pragatishil Pashupalak Protsahan Yojana",
-    "name": "मुख्यमंत्री पंचायत प्रोत्साहन पुरस्कार योजना",
-    "name_latin": "mukhyamantri panchayat protsahan puraskar yojana",
-    "why": "acronym match: mpppy"
-   },
-   {
     "code": "12",
     "grant": "80",
     "myscheme": "Mukhyamantri Samuhik Vivah Yojana",
@@ -70051,10 +70043,10 @@
     "why": "similarity 1.00"
    }
   ],
-  "joins_produced": 5,
+  "joins_produced": 4,
   "joins_sound_on_inspection": 2,
   "joins_wrong_on_inspection": 3,
-  "myscheme_records_with_any_join": 4,
+  "myscheme_records_with_any_join": 3,
   "myscheme_uttar_pradesh_records": 47,
   "read_this_carefully": "The transliteration works and the join is still small, and those are two separate facts. Two joins are exact, at similarity 1.00: कन्या सुमंगला योजना to Kanya Sumangala Yojana and मुख्यमंत्री सामूहिक विवाह योजना to Mukhyamantri Samuhik Vivah Yojana. Neither was reachable at all before, because one is in Devanagari and the other in Latin. But only a handful of myScheme's 47 records reach this book, and the reason is not the script. Berojgari Bhatta, Gambhir Bimari Sahayata, Kanya Vivah Sahayta and Panchayat Kalyan Kosh return ZERO rows on a plain substring search of the Hindi, so they are not in the grant volumes under those names at all: like Tripura's, several are welfare-board benefits paid from a board's own fund rather than from a demand. Others are English descriptions rather than names, 'Marriage Grant Scheme' and 'Widow Pension', and no transliteration reaches those; matching them would be translation, which this register does not do. A third of myScheme's Uttar Pradesh list is one or the other.",
   "register_names": 5831

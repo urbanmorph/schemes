@@ -13,7 +13,7 @@ There are two different questions, and one threshold cannot answer both:
   i.e. match generously, and only claim absence when even a generous matcher finds
   nothing.
 
-enrich/budget.py's conservative similarity was correctly biased for the first question
+enrich/similarity.py's conservative similarity was correctly biased for the first question
 and then reused for the second, which inflated every absence claim. Measured failures
 that prompted this module:
 
@@ -692,6 +692,21 @@ def acronym_evidence(a, b):
 
 
 @functools.lru_cache(maxsize=1 << 18)
+def index_keys(name):
+    """The keys a name is filed under in a candidate index: its tokens, their skeletons, and
+    its acronyms of five letters or more. One definition for parse/registry.py and
+    parse/cag_join.py, which each wrote it out; an index that drifts under-retrieves, and
+    every pair it fails to offer is reported as an absence.
+
+    Skeletons as well as raw tokens, or the index silently cancels the matcher's
+    transliteration rule: probably_same knows Gruha and Griha are the same word, but they
+    are different index keys, so the pair is never made a candidate. Measured on the
+    Karnataka join: a token-only index retrieved 504 matches where exhaustive comparison
+    found 564."""
+    t = set(tokens(name))
+    return t | {skeleton(x) for x in t} | {a for a in acronyms(name) if len(a) >= 5}
+
+
 def similarity(a, b):
     """Conservative score — the one to use when ATTACHING data to a scheme."""
     na, nb = norm(a), norm(b)

@@ -60,20 +60,25 @@ RECONCILIATION, and this is the one place Delhi is weaker than the other states 
 register, because its book does not fully balance to itself.
 
   1. HARD. Every scheme row's own arithmetic: Total = Revenue + Capital/Loan, in all four
-     year blocks. 1,577 of 1,578 pass; the one failure is a printed "Sub Total" on page 38
+     year blocks. 1,574 of 1,575 pass; the one failure is a printed "Sub Total" on page 38
      where Delhi's own two columns add to 105,908.97 and its total says 105,844.11.
   2. REPORTED. Every printed total in the book, from "Sub Total" up to the Grand Total,
      against the longest run of items directly above it that adds up to it in all four
      year blocks at once. Delhi never says how deep a total reaches, so the depth is
-     recovered arithmetically rather than read. 263 of 282 resolve.
+     recovered arithmetically rather than read. 264 of 281 resolve. A total label printed
+     with no figures and nothing under it is listed apart, not passed as a zero.
   3. REPORTED. The Grand Total against every scheme row: 62,55,000.00 lakh printed against
-     64,55,956.00 lakh summed, 3.2 per cent over.
+     63,69,906.00 lakh summed, 1.8 per cent over.
 
 The gap in 3 is partly identified and partly not, and saying so is the point. Delhi prints
 `OAS(Other than Minorities)` directly under `TOTAL [OTHER ADMN. SERVICES]` as a
 restatement of part of it, with no word in its name to mark it as a total, so it is read
-as a scheme and its 1,14,031.00 lakh is counted twice. The rest of the gap sits in
-Transport, General Education and Urban Development, where the book also prints
+as a scheme and its 1,14,031.00 lakh is counted twice. That leaves 875.00 lakh. Three
+other total labels used to be read as schemes, because each prints "Total" on one line
+and the rest of its label with its figures on the next ("MLALAD Scheme SCSP", "2.0" and
+"& Child Development]", 86,050.00 lakh together); those lines now join their totals.
+The unresolved totals sit in Transport, General Education and Urban Development, where
+the book also prints
 cross-cutting subtotals that no contiguous rule can capture: page 41 closes with a
 "Sub -Total (GIA General to Degree College)" and a "Sub -Total (GIA Salary to Degree
 College)" that each sum every OTHER row of an interleaved list.
@@ -88,7 +93,6 @@ the state's defect and not as this parser's.
 """
 
 import argparse
-import glob
 import gzip
 import json
 import os
@@ -97,8 +101,8 @@ import sys
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, read_json, utcnow, write_json  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext, snapshot  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -235,6 +239,14 @@ def read_book(text):
             if sno:
                 current = Row(sno, name, pi)
                 seq.append(("total" if TOTAL_WORD.search(name) else "row", current))
+            elif name and figs and seq and seq[-1] == ("total", current) \
+                    and not current.figs and not current.unreadable:
+                # A total's label printed on one line and the rest of it, with its figures,
+                # on the next: "Total" then "MLALAD Scheme SCSP 35000.00", "Total- AMRUT 2
+                # CSS" then "2.0 34250.00". Read by the rule below, the second line was a
+                # scheme carrying the total's money, published twice over and leaving the
+                # total itself an empty zero.
+                current.add_name(name)
             elif name and TOTAL_WORD.search(name):
                 # A printed total, and this test comes BEFORE the continuation rule
                 # rather than after it. Delhi prints most of its totals with no serial and
@@ -310,7 +322,7 @@ def reconcile(seq, tol=0.05):
     treated as covering everything still open, so the failure is contained and the rest of
     the book still reconciles.
     """
-    stack, checks, ok_by_id = [], [], {}
+    stack, checks, ok_by_id, empty = [], [], {}, []
     for kind, r in seq:
         if kind == "row":
             stack.append(Node(r))
@@ -328,14 +340,32 @@ def reconcile(seq, tol=0.05):
                 break
         node = Node(r, stack[-hit:] if hit else [])
         matched = hit is not None
-        checks.append({
+        if hit == 0 and not r.figs and not r.unreadable:
+            # A total label with no figures and nothing beneath it, such as the
+            # "Sub-Total" printed at the head of page 8 for nothing (its section's Sub
+            # Total closed page 7). It cannot be checked, so it is listed apart instead
+            # of being passed, or failed, as a zero.
+            empty.append({"label": r.name[:90], "page": r.page})
+            ok_by_id[id(r)] = True
+            stack.append(node)
+            continue
+        check = {
             "label": r.name[:90], "page": r.page,
             "printed": [round(v, 2) for v in want],
             "items_covered": hit,
             "computed": ([round(sum(n.vec[i] for n in node.children), 2)
                           for i in range(4)] if node.children else [0.0] * 4),
-            "ok": matched,
-            "cell_unreadable_in_the_pdf": r.unreadable})
+            # A zero total over nothing still closes the tree (it takes nothing off the
+            # stack), but it is not a reconciliation. In the 2026-27 book all three are a
+            # total's LABEL line whose figures sit on the lines below or on the page
+            # before: "Total MLALAD Scheme SCSP" (35,000 lakh) and "Total- AMRUT 2 CSS"
+            # (34,250 lakh), whose figures were then read as scheme rows named "MLALAD
+            # Scheme SCSP" and "2.0", and a page-8 "Sub-Total" whose figures closed page 7.
+            "ok": matched and hit != 0,
+            "cell_unreadable_in_the_pdf": r.unreadable}
+        if hit == 0:
+            check["covers_nothing"] = True
+        checks.append(check)
         ok_by_id[id(r)] = matched
         if matched:
             if hit:
@@ -350,7 +380,7 @@ def reconcile(seq, tol=0.05):
         # is being tested.
         node.vec = [round(v, 2) for v in want]
         stack.append(node)
-    return checks, stack, ok_by_id
+    return checks, stack, ok_by_id, empty
 
 
 def label_rows(roots, ok_by_id):
@@ -380,15 +410,9 @@ def label_rows(roots, ok_by_id):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "delhi", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive/delhi snapshot; run collect/delhi.py first")
-    date = date or dates[-1]
-    man = read_json(f"archive/delhi/{date}/_manifest.json", {}) or {}
+    date, src, man = snapshot("delhi", date)
 
-    path = os.path.join(ROOT, "archive", "delhi", date, "scheme-wise.pdf.gz")
+    path = os.path.join(src, "scheme-wise.pdf.gz")
     if not os.path.exists(path):
         raise SystemExit(f"missing {path}")
     with gzip.open(path, "rb") as fh:
@@ -409,7 +433,7 @@ def run(date=None):
             f"delhi: {pages_read - unit_pages} of {pages_read} table pages do not print "
             "'(₹ in Lakh)' in their header; the unit cannot be assumed")
 
-    checks, roots, ok_by_id = reconcile(seq)
+    checks, roots, ok_by_id, empty_totals = reconcile(seq)
     label_rows(roots, ok_by_id)
 
     # ---------------------------------------------------------------- check 1, per row
@@ -524,12 +548,13 @@ def run(date=None):
                 "checked": (len(rows) + len(totals)) * 4,
                 "failed": len(arithmetic),
                 "failed_on_a_scheme_row": len(scheme_row_arithmetic),
-                "failures": arithmetic[:20] or None,
+                "failures": arithmetic or None,
                 "what": ("Total = Revenue + Capital/Loan on every row and every printed "
                          "total, in all four year blocks")},
             "printed_totals": {
                 "checked": len(checks), "failed": len(failed_totals),
-                "failures": failed_totals[:20] or None,
+                "failures": failed_totals or None,
+                "labels_with_no_figures": empty_totals or None,
                 "checks": checks,
                 "what": ("every printed total in the book, from 'Sub Total' up to the "
                          "Grand Total, against the longest run of items directly above it "
@@ -546,18 +571,16 @@ def run(date=None):
                          "double counted"),
                 "read_this": (
                     "It does not close. The 2026-27 column reads 62,55,000.00 lakh "
-                    "printed against 64,55,956.00 lakh summed, 3.2 per cent over, and at "
-                    "least 1,14,031.00 lakh of that gap is one identified memo line: the "
-                    "book prints 'OAS(Other than Minorities)' immediately under "
-                    "'TOTAL [OTHER ADMN. SERVICES]' as a restatement of part of it, with "
-                    "no word in its name to mark it as a total, so it is read as a "
-                    "scheme. The rest of the gap sits in Transport (pages 14 to 17), "
-                    "General Education (30 to 43) and Urban Development, which are also "
-                    "where the nineteen unresolved printed totals are, and it has NOT "
-                    "been traced to a single cause. Treat the money in this file as "
-                    "sound at the row level, where 1,577 of 1,578 scheme rows satisfy "
-                    "their own Total = Revenue + Capital, and as approximate in "
-                    "aggregate.")},
+                    "printed against 63,69,906.00 lakh summed, 1.8 per cent over, and "
+                    "1,14,031.00 lakh of that gap is one identified memo line: the book "
+                    "prints 'OAS(Other than Minorities)' immediately under 'TOTAL [OTHER "
+                    "ADMN. SERVICES]' as a restatement of part of it, with no word in its "
+                    "name to mark it as a total, so it is read as a scheme. The remaining "
+                    "875.00 lakh has NOT been traced; the seventeen unresolved printed "
+                    "totals sit in Transport (pages 14 to 17), General Education (30 to "
+                    "43) and Urban Development. Treat the money in this file as sound at "
+                    "the row level, where 1,574 of 1,575 scheme rows satisfy their own "
+                    "Total = Revenue + Capital, and as approximate in aggregate.")},
             "unreadable_cells": (
                 "Delhi's own PDF carries three cells Excel could not render, printed as "
                 "'####' twice and '#VALUE!' once, and one figure clipped to '129' on "
@@ -646,7 +669,44 @@ def run(date=None):
         headings, date, pages_read
 
 
+def selftest():
+    """read_book on lines laid out like the book's, column 15 being the 2026-27 total."""
+    strip = "      1        2" + f"{3:>45}" + "".join(f"{n:>9}" for n in range(4, 16))
+    mk = markers(strip)
+
+    def line(sno, name, **figs):
+        out = list(f"{sno:<{SNO_WIDTH}}{name}".ljust(len(strip) + 12))
+        for col, v in figs.items():
+            txt = f"{v:.2f}"
+            at = int(mk[int(col[1:]) - 1] - len(txt) / 2)
+            out[at:at + len(txt)] = txt
+        return "".join(out).rstrip()
+
+    page = "\n".join([
+        strip,
+        line("", "Sub-Total"),                         # a label printed with no figures
+        line("4.a", "Augmentation", c14=26250.0, c15=26250.0),
+        line("4.b", "Augmentation", c14=8750.0, c15=8750.0),
+        line("", "Total"),                             # the label, figures one line down
+        line("", "MLALAD Scheme SCSP", c14=35000.0, c15=35000.0),
+        line("5", "CM local Area Development", c15=1.0)])
+    seq = read_book(page)[0]
+    empty = reconcile(seq)[3]
+    got = [(k, r.name, r.figs.get(15)) for k, r in seq if r.name != "Sub-Total"]
+    want = [("row", "Augmentation", 26250.0), ("row", "Augmentation", 8750.0),
+            ("total", "Total MLALAD Scheme SCSP", 35000.0),
+            ("row", "CM local Area Development", 1.0)]
+    bad = got != want or [e["label"] for e in empty] != ["Sub-Total"]
+    print(f"  {'FAIL' if bad else 'ok  '} a total's figures on the line below its label "
+          "join the total, and a total label with no figures is set aside")
+    if bad:
+        print(f"       got  {got} {empty}\n       want {want}")
+    return bad
+
+
 def main():
+    if sys.argv[1:] == ["--self-test"]:
+        sys.exit(1 if selftest() else 0)
     ap = argparse.ArgumentParser(
         description="Parse the archived Delhi Scheme-wise Budget.")
     ap.add_argument("--date")

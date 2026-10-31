@@ -1,17 +1,17 @@
 {
- "built": "2026-10-31T13:09:04Z",
+ "built": "2026-10-31T15:32:05Z",
  "by_family": {
   "andhra": {
    "classified": 225,
    "rows": 236
   },
   "central": {
-   "classified": 740,
-   "rows": 955
+   "classified": 738,
+   "rows": 952
   },
   "chhattisgarh": {
    "classified": 0,
-   "rows": 151
+   "rows": 152
   },
   "delhi": {
    "classified": 57,
@@ -26,8 +26,8 @@
    "rows": 126
   },
   "karnataka": {
-   "classified": 272,
-   "rows": 360
+   "classified": 316,
+   "rows": 410
   },
   "kerala": {
    "classified": 351,
@@ -71,30 +71,30 @@
   }
  },
  "by_sector": {
-  "Agriculture,Rural & Environment": 1139,
-  "Banking,Financial Services and Insurance": 160,
-  "Business & Entrepreneurship": 294,
-  "Education & Learning": 823,
-  "Health & Wellness": 249,
-  "Housing & Shelter": 302,
+  "Agriculture,Rural & Environment": 1143,
+  "Banking,Financial Services and Insurance": 161,
+  "Business & Entrepreneurship": 299,
+  "Education & Learning": 843,
+  "Health & Wellness": 250,
+  "Housing & Shelter": 304,
   "Public Safety,Law & Justice": 88,
   "Science, IT & Communications": 76,
-  "Skills & Employment": 173,
-  "Social welfare & Empowerment": 1013,
-  "Sports & Culture": 75,
+  "Skills & Employment": 176,
+  "Social welfare & Empowerment": 1017,
+  "Sports & Culture": 74,
   "Transport & Infrastructure": 80,
   "Travel & Tourism": 19,
-  "Utility & Sanitation": 111,
-  "Women and Child": 474,
-  "not stated": 1866
+  "Utility & Sanitation": 112,
+  "Women and Child": 476,
+  "not stated": 1872
  },
- "classified": 5076,
+ "classified": 5118,
  "counting_basis": "One row per key. A state votes a scheme's revenue head and its capital head separately and both are separate rows here, exactly as they are separate rows in the register.",
- "coverage": 0.731,
+ "coverage": 0.732,
  "deciding_signal": {
-  "a benefit phrase in the name": 3788,
-  "a topic word in the name": 337,
-  "the department or ministry": 939,
+  "a benefit phrase in the name": 3826,
+  "a topic word in the name": 342,
+  "the department or ministry": 938,
   "the purpose line": 12
  },
  "known_errors": [
@@ -247,7 +247,7 @@
   "right_if_each_organisation_took_its_modal_sector": 3314,
   "why": "A ceiling for any department-only rule, measured on myScheme's own records with its own answers in hand. A department is not a sector."
  },
- "not_stated": 1866,
+ "not_stated": 1872,
  "operating_point": {
   "margin": 1,
   "min_score": 2,
@@ -261,7 +261,7 @@
   "why": "Chosen for usefulness, not for safety. A wrong sector is a browsing annoyance, not a false accusation, so this file does not run at the 0.95 precision bar the scheme-or-not classifiers in this directory use. It still abstains where nothing but one weak signal fires, because a wrong sector is worse than a missing one for a reader filtering by it."
  },
  "question": "Which of the 15 myScheme sectors does each register row belong to, for the rows myScheme does not list and which therefore carry no sector of their own?",
- "rows": 6942,
+ "rows": 6990,
  "scope": "The 680 registry entries with no myScheme source, plus every state classification row at or above site/build.py's listing bar that myScheme does not list. A superset of what the site shows by 366 centrally sponsored state shares that site/build.py folds into their parent scheme.",
  "sectors": {
   "andhra|Agriculture Department | Annadata Sukhibhava": {
@@ -4555,42 +4555,6 @@
    "name": "Subsidy to Women LPG Consumers of Poor Family",
    "sector": "Utility & Sanitation"
   },
-  "delhi|unsectored | Sub Total | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS": {
-   "evidence": [
-    [
-     "+5",
-     "Women and Child",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "delhi",
-   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS",
-   "sector": "Women and Child"
-  },
-  "delhi|unsectored | Sub Total | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS": {
-   "evidence": [
-    [
-     "+5",
-     "Women and Child",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "delhi",
-   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS",
-   "sector": "Women and Child"
-  },
-  "delhi|unsectored | Sub Total | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP": {
-   "evidence": [
-    [
-     "+5",
-     "Women and Child",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "delhi",
-   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP",
-   "sector": "Women and Child"
-  },
   "delhi|unsectored | Sub Total | Inclusive Education (earlier IEDSS- State Share) - Scholarship and Stipend SS": {
    "evidence": [
     [
@@ -4806,7 +4770,43 @@
    "name": "Pre-matric Scholarship for SC students CSS SCSP",
    "sector": "Education & Learning"
   },
-  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &": {
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS",
+   "sector": "Women and Child"
+  },
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS",
+   "sector": "Women and Child"
+  },
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP",
+   "sector": "Women and Child"
+  },
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &": {
    "evidence": [
     [
      "+5",
@@ -10389,6 +10389,23 @@
    "name": "Prisons and Correctional Services",
    "sector": "Public Safety,Law & Justice"
   },
+  "karnataka|2202-00-102-0-33": {
+   "evidence": [
+    [
+     "+1",
+     "Education & Learning",
+     "major head 2202"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Financial Assistance and Reimbursement of Fees (Including Anglo-Indian Students)",
+   "sector": "Education & Learning"
+  },
   "karnataka|2202-01-102-0-05": {
    "evidence": [
     [
@@ -11009,6 +11026,40 @@
    "name": "CSS-State Share-Ayushman Bharath - Pradhana Mantri Jana Arogya Yojane(PMJAY)",
    "sector": "Health & Wellness"
   },
+  "karnataka|2215-00-102-0-91": {
+   "evidence": [
+    [
+     "+1",
+     "Utility & Sanitation",
+     "major head 2215"
+    ],
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-Swachha Bharath Mission (Grameena)",
+   "sector": "Utility & Sanitation"
+  },
+  "karnataka|2215-00-102-0-93": {
+   "evidence": [
+    [
+     "+1",
+     "Utility & Sanitation",
+     "major head 2215"
+    ],
+    [
+     "+5",
+     "Utility & Sanitation",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-Swachha Bharath Mission (Grameena)",
+   "sector": "Utility & Sanitation"
+  },
   "karnataka|2215-01-102-3-01": {
    "evidence": [
     [
@@ -11132,6 +11183,40 @@
    "family": "karnataka",
    "name": "CSS-State Share-Swachha Bharath Mission (Grameena)-TSP",
    "sector": "Utility & Sanitation"
+  },
+  "karnataka|2216-00-102-0-14": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-Pradhan Mantri Awas Yojane Grameena",
+   "sector": "Housing & Shelter"
+  },
+  "karnataka|2216-00-102-0-15": {
+   "evidence": [
+    [
+     "+1",
+     "Housing & Shelter",
+     "major head 2216"
+    ],
+    [
+     "+5",
+     "Housing & Shelter",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-Pradhan Mantri Awas Yojane Grameena",
+   "sector": "Housing & Shelter"
   },
   "karnataka|2216-02-101-0-07": {
    "evidence": [
@@ -11444,6 +11529,389 @@
    "family": "karnataka",
    "name": "CSS-State Share-Pradhan Mantri Awas Yojane Grameena",
    "sector": "Housing & Shelter"
+  },
+  "karnataka|2225-00-101-0-07": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share- Post-Matric Scholarships to SC Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-101-0-29": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Maintenance of Post Matric Government Hostels(SC Welfare)",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-101-0-32": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Residential Schools for SC Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-101-0-37": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Assistance to College Students, Other Concessions & Assistance to Meritorious Scheduled Caste Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-101-0-61": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Maintenance of Pre-matric Hostels (SC Welfare)",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-101-0-68": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-101-0-69": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-Pre-Matric Scholarship to SC Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-101-0-70": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Pre-Matric Scholarship to SC Students (1st to 8th STD-State Scheme)",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-07": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-09": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-10": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-11": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-Pre-Matric Scholarship to ST Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-33": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Maintenance of Pre-Matric Hostels for ST Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-34": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Prize Money for Post Matric ST Students",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-35": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Maintenance of Aashram Schools(ST Welfare)",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-38": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Maintenance of Post-Matric Government Hostels(ST Welfare)",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-102-0-68": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Pre-Matric Scholarship for ST Students (1st to 8th STD)- State Scheme",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-103-0-26": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+2",
+     "Social welfare & Empowerment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Maintenance of Pre-Matric Backward Class Hostels",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2225-00-103-0-29": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2225"
+    ],
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Maintenance of Post Matric Hostels(BCW)",
+   "sector": "Education & Learning"
   },
   "karnataka|2225-01-102-0-11": {
    "evidence": [
@@ -12587,6 +13055,108 @@
    "family": "karnataka",
    "name": "Central Scheme-National Apprenticeship Promotion Scheme (NAPS)",
    "sector": "Skills & Employment"
+  },
+  "karnataka|2235-00-101-0-31": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Hostels for Disabled Women",
+   "sector": "Social welfare & Empowerment"
+  },
+  "karnataka|2235-00-101-0-32": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Aids and Appliances for the Disabled",
+   "sector": "Social welfare & Empowerment"
+  },
+  "karnataka|2235-00-101-0-33": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Financial Assistance to Special Schools for Physically Challenaged run by NGO's",
+   "sector": "Education & Learning"
+  },
+  "karnataka|2235-00-101-0-61": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-ICDS-SNP",
+   "sector": "Women and Child"
+  },
+  "karnataka|2235-00-101-0-62": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-ICDS-SNP",
+   "sector": "Women and Child"
+  },
+  "karnataka|2235-00-101-0-63": {
+   "evidence": [
+    [
+     "+1",
+     "Social welfare & Empowerment",
+     "major head 2235"
+    ],
+    [
+     "+5",
+     "Health & Wellness",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
+   "sector": "Health & Wellness"
   },
   "karnataka|2235-01-202-3-01": {
    "evidence": [
@@ -14263,6 +14833,40 @@
    "name": "Comprehensive Horiculture Development Programs",
    "sector": "Agriculture,Rural & Environment"
   },
+  "karnataka|2401-00-112-0-03": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share- KY-Mission for Aatmanirbharata in Pulses",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "karnataka|2401-00-112-0-04": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2401"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share- KY-Mission for Aatmanirbharata in Pulses",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "karnataka|2401-00-113-0-02": {
    "evidence": [
     [
@@ -14697,6 +15301,23 @@
    "name": "Comprehensive Fisheries Development Programs",
    "sector": "Agriculture,Rural & Environment"
   },
+  "karnataka|2405-00-101-0-28": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2405"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Assistance to Inland Fisheries Development",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "karnataka|2405-00-101-0-58": {
    "evidence": [
     [
@@ -14965,6 +15586,23 @@
    "name": "CSS-State Share-PM Formalisation of Micro food processing Enterprises(PMFME)",
    "sector": "Business & Entrepreneurship"
   },
+  "karnataka|2425-00-101-0-61": {
+   "evidence": [
+    [
+     "+1",
+     "Banking,Financial Services and Insurance",
+     "major head 2425"
+    ],
+    [
+     "+5",
+     "Banking,Financial Services and Insurance",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "SCP-Subsidy on Loans Sanctioned by PCARDB for Assets Creation",
+   "sector": "Banking,Financial Services and Insurance"
+  },
   "karnataka|2425-00-107-2-41": {
    "evidence": [
     [
@@ -15047,6 +15685,128 @@
    "family": "karnataka",
    "name": "Subsidy on Loans Sanctioned by PCARDB for Assets Creation (SCP)",
    "sector": "Banking,Financial Services and Insurance"
+  },
+  "karnataka|2501-00-101-0-05": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-National Rural Livelihood Mission (NRLM)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "karnataka|2501-00-101-0-07": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Social welfare & Empowerment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-National Rural Livelihood Mission (NRLM)",
+   "sector": "Social welfare & Empowerment"
+  },
+  "karnataka|2501-00-101-0-08": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-Start Up Village Entrepreneurship Program -SVEP (NRLM)",
+   "sector": "Business & Entrepreneurship"
+  },
+  "karnataka|2501-00-101-0-09": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+2",
+     "Agriculture,Rural & Environment",
+     "a topic word in the name"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-Start Up Village Entrepreneurship Program -SVEP (NRLM)",
+   "sector": "Business & Entrepreneurship"
+  },
+  "karnataka|2501-00-101-0-16": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-Deen Dayal Upadhaya Grameena Kaushalya Yojana -DDUGKY (NRLM)",
+   "sector": "Skills & Employment"
+  },
+  "karnataka|2501-00-101-0-17": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2501"
+    ],
+    [
+     "+5",
+     "Skills & Employment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-Deen Dayal Upadhaya Grameena Kaushalya Yojana DDUGKY - (NRLM)",
+   "sector": "Skills & Employment"
   },
   "karnataka|2501-06-198-6-01": {
    "evidence": [
@@ -15246,6 +16006,40 @@
    "name": "CSS-State Share-Deen Dayal Upadhaya Grameena Kaushalya Yojana DDUGKY - (NRLM)",
    "sector": "Skills & Employment"
   },
+  "karnataka|2505-00-101-0-11": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-Central Share-MGNREGA-Material Component",
+   "sector": "Agriculture,Rural & Environment"
+  },
+  "karnataka|2505-00-101-0-12": {
+   "evidence": [
+    [
+     "+1",
+     "Agriculture,Rural & Environment",
+     "major head 2505"
+    ],
+    [
+     "+5",
+     "Agriculture,Rural & Environment",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "CSS-State Share-MGNREGA-Material Component",
+   "sector": "Agriculture,Rural & Environment"
+  },
   "karnataka|2505-02-101-0-03": {
    "evidence": [
     [
@@ -15443,6 +16237,23 @@
    "name": "Weavers Package",
    "sector": "Business & Entrepreneurship"
   },
+  "karnataka|2851-00-104-0-30": {
+   "evidence": [
+    [
+     "+1",
+     "Business & Entrepreneurship",
+     "major head 2851"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Assistance to Sericulturists",
+   "sector": "Business & Entrepreneurship"
+  },
   "karnataka|2851-00-106-0-12": {
    "evidence": [
     [
@@ -15463,6 +16274,23 @@
    ],
    "family": "karnataka",
    "name": "Wage Incentive to Coir Sector",
+   "sector": "Business & Entrepreneurship"
+  },
+  "karnataka|2851-00-107-0-31": {
+   "evidence": [
+    [
+     "+1",
+     "Business & Entrepreneurship",
+     "major head 2851"
+    ],
+    [
+     "+5",
+     "Business & Entrepreneurship",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "karnataka",
+   "name": "Assistance to Handloom Industries",
    "sector": "Business & Entrepreneurship"
   },
   "karnataka|2851-00-107-1-35": {
@@ -15506,7 +16334,7 @@
     ]
    ],
    "family": "karnataka",
-   "name": "0.01 0.00 0.00 0.00 New Initiatives for Sericulture Development & Assesment to Stake holders",
+   "name": "New Initiatives for Sericulture Development & Assesment to Stake holders",
    "sector": "Business & Entrepreneurship"
   },
   "karnataka|2851-00-107-1-49": {
@@ -34559,6 +35387,18 @@
    "name": "Advanced Centre for Treatment, Research, and Education in Cancer ACTREC-Phd Programme",
    "sector": "Health & Wellness"
   },
+  "registry|AgEdn - ICAR Junior Research Fellowship": {
+   "evidence": [
+    [
+     "+5",
+     "Education & Learning",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "central",
+   "name": "AgEdn - ICAR Junior Research Fellowship",
+   "sector": "Education & Learning"
+  },
   "registry|AgEdn - ICAR Senior Research Fellowship": {
    "evidence": [
     [
@@ -37425,18 +38265,6 @@
    "name": "Human Resource and Capacity Development",
    "sector": "Health & Wellness"
   },
-  "registry|Human Resources Development and Training": {
-   "evidence": [
-    [
-     "+2",
-     "Utility & Sanitation",
-     "the department or ministry: Ministry of New and Renewable Energy"
-    ]
-   ],
-   "family": "central",
-   "name": "Human Resources Development and Training",
-   "sector": "Utility & Sanitation"
-  },
   "registry|Human Resources for Health and Medical Education": {
    "evidence": [
     [
@@ -38268,18 +39096,6 @@
    "family": "central",
    "name": "Janashree Bima Yojana (JBY)",
    "sector": "Banking,Financial Services and Insurance"
-  },
-  "registry|Junior Research Fellowship": {
-   "evidence": [
-    [
-     "+5",
-     "Education & Learning",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "central",
-   "name": "Junior Research Fellowship",
-   "sector": "Education & Learning"
   },
   "registry|Kala Sanskriti Vikas Yojana": {
    "evidence": [
@@ -39231,6 +40047,18 @@
    "name": "National Capital Region Transport Corporation CENTRAL SECTOR SCHEMES",
    "sector": "Transport & Infrastructure"
   },
+  "registry|National Career Services": {
+   "evidence": [
+    [
+     "+2",
+     "Skills & Employment",
+     "the department or ministry: Ministry of Labour and Employment"
+    ]
+   ],
+   "family": "central",
+   "name": "National Career Services",
+   "sector": "Skills & Employment"
+  },
   "registry|National Centre of Sports Science & Research": {
    "evidence": [
     [
@@ -39765,18 +40593,6 @@
    "name": "National Schedule Caste/Schedule Tribe Hub Centre",
    "sector": "Business & Entrepreneurship"
   },
-  "registry|National Service Scheme": {
-   "evidence": [
-    [
-     "+2",
-     "Sports & Culture",
-     "the department or ministry: Ministry of Youth Affairs and Sports"
-    ]
-   ],
-   "family": "central",
-   "name": "National Service Scheme",
-   "sector": "Sports & Culture"
-  },
   "registry|National Sports Awards": {
    "evidence": [
     [
@@ -40274,23 +41090,6 @@
    ],
    "family": "central",
    "name": "P.G. Scholarship For GATE/GPAT Qualified Students For Pursuing M.Tech/ M.E./M.Pharma - AICTE",
-   "sector": "Education & Learning"
-  },
-  "registry|P.G. Scholarship for GATE/GPAT qualified students for pursuing M.Tech/ M.E./M.Pharma- UGC": {
-   "evidence": [
-    [
-     "+2",
-     "Education & Learning",
-     "a topic word in the name"
-    ],
-    [
-     "+5",
-     "Education & Learning",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "central",
-   "name": "P.G. Scholarship for GATE/GPAT qualified students for pursuing M.Tech/ M.E./M.Pharma- UGC",
    "sector": "Education & Learning"
   },
   "registry|PALNA- Facilities to Beneficiaries": {
@@ -41819,7 +42618,7 @@
    "name": "Research and Development and Implementation of National Water Mission",
    "sector": "Agriculture,Rural & Environment"
   },
-  "registry|Research and Development|3": {
+  "registry|Research and Development|2": {
    "evidence": [
     [
      "+2",
@@ -41831,7 +42630,7 @@
    "name": "Research and Development",
    "sector": "Utility & Sanitation"
   },
-  "registry|Research and Development|4": {
+  "registry|Research and Development|3": {
    "evidence": [
     [
      "+2",
@@ -43128,7 +43927,7 @@
    "name": "Staff Welfare",
    "sector": "Transport & Infrastructure"
   },
-  "registry|Startup India Seed Fund Scheme (SISFS)": {
+  "registry|Startup India Fund of Funds 2.0": {
    "evidence": [
     [
      "+2",
@@ -43137,13 +43936,13 @@
     ],
     [
      "+5",
-     "Agriculture,Rural & Environment",
+     "Business & Entrepreneurship",
      "a benefit phrase in the name"
     ]
    ],
    "family": "central",
-   "name": "Startup India Seed Fund Scheme (SISFS)",
-   "sector": "Agriculture,Rural & Environment"
+   "name": "Startup India Fund of Funds 2.0",
+   "sector": "Business & Entrepreneurship"
   },
   "registry|Stipend for Disabled girls under IEDSS component of Samagra Shiksha": {
    "evidence": [
@@ -90635,17 +91434,17 @@
     },
     "dropped_because_the_answer_changed_after_the_audit": 64,
     "precision_over_the_audited_rows": 0.905,
-    "precision_reweighted_to_the_published_rows": 0.937,
+    "precision_reweighted_to_the_published_rows": 0.938,
     "right": 209,
     "wrong": 22
    },
    "audit_2": {
-    "audited": 173,
+    "audited": 172,
     "by_deciding_signal": {
      "a benefit phrase in the name": {
-      "audited": 96,
-      "precision": 0.927,
-      "right": 89
+      "audited": 95,
+      "precision": 0.926,
+      "right": 88
      },
      "a topic word in the name": {
       "audited": 24,
@@ -90665,8 +91464,8 @@
     },
     "dropped_because_the_answer_changed_after_the_audit": 0,
     "precision_over_the_audited_rows": 0.855,
-    "precision_reweighted_to_the_published_rows": 0.883,
-    "right": 148,
+    "precision_reweighted_to_the_published_rows": 0.882,
+    "right": 147,
     "wrong": 25
    }
   },
@@ -90675,6 +91474,18 @@
    "classified": 276,
    "coverage": 0.948,
    "labelled_with_a_sector": 291,
+   "labels_whose_row_left_the_universe": [
+    "andhra|Agriculture Department | PM RKVY - Sub Mission on Agricultural Extension [AP24]",
+    "andhra|Women Development and Child Welfare Department | Mission Vatsalya - Child Helpline",
+    "karnataka|2235-02-102-0-25",
+    "karnataka|2235-02-102-0-49",
+    "karnataka|2235-02-103-0-82",
+    "kerala|code:SWE 078",
+    "kerala|code:SWE 244 (2)",
+    "registry|Prime Minister Formalization of Micro Food Processing Enterprises Scheme (PM FME)",
+    "tamilnadu|2225 03 277 KE",
+    "tamilnadu|2401 00 794 VC"
+   ],
    "note": "Accuracy on a stratified sample of the population. The audits below count errors on the published answers instead.",
    "right": 259
   },

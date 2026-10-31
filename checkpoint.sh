@@ -53,9 +53,14 @@ restore)
   # Diffed against HEAD, a file main corrected after the save came back as the older copy
   # and the next save committed that regression to main.
   git fetch -q --depth=2 origin "$branch"
+  # And only where main still holds what the checkpoint started from: a file main has
+  # committed since (Save commits mid-month on a code change without re-saving the branch)
+  # is newer than the checkpoint's copy, which would put the month's progress backwards.
+  blob() { git rev-parse -q --verify "$1:$2" 2>/dev/null || true; }
   files=()
-  while IFS= read -r f; do files+=("$f"); done < <(
-    git diff --name-only --diff-filter=AM FETCH_HEAD^ FETCH_HEAD -- archive)
+  while IFS= read -r f; do
+    [ "$(blob HEAD "$f")" = "$(blob FETCH_HEAD^ "$f")" ] && files+=("$f")
+  done < <(git diff --name-only --diff-filter=AM FETCH_HEAD^ FETCH_HEAD -- archive)
   if [ "${#files[@]}" -gt 0 ]; then
     git restore --source=FETCH_HEAD --worktree -- "${files[@]}"
   fi

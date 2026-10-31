@@ -39,6 +39,7 @@ step "parse/match.py self-tests"    python3 parse/match.py
 step "acronym pairs (hand labels)"  python3 tests/test_match_acronyms.py
 step "parse/krutidev.py self-tests" python3 parse/krutidev.py
 step "parse/text.py self-tests"     python3 parse/text.py --self-test
+step "parse/pdf.py self-tests"      python3 parse/pdf.py --self-test
 step "parse/classify_common.py self-tests" python3 parse/classify_common.py --self-test
 [ -f parse/devanagari.py ] && step "parse/devanagari.py self-tests" python3 parse/devanagari.py
 step "parse/cag.py self-tests"      python3 parse/cag.py --self-test
@@ -46,6 +47,7 @@ step "parse/dbt.py self-tests"      python3 parse/dbt.py --self-test
 step "parse/registry.py self-tests" python3 parse/registry.py --self-test
 step "parse/watchlist.py self-tests" python3 parse/watchlist.py --self-test
 step "parse/changes.py self-tests"  python3 parse/changes.py --self-test
+step "verify/verify.py self-tests"  python3 verify/verify.py --self-test
 step "site/build.py self-tests"     python3 site/build.py --self-test
 
 # 2b. The monthly run's chunking: what counts as finished, and the side-branch checkpoint.
@@ -63,29 +65,7 @@ step "parse/ratios.py" python3 parse/ratios.py
 #    whole register under the wrong URL with HTTP 200, which is how 15,108 of them once
 #    stayed invisible.
 step "site builds" python3 site/build.py
-step "internal links resolve" python3 - <<'PY'
-import os, re, glob, sys
-out = "site/_out"
-have = set()
-for r, _, fs in os.walk(out):
-    for f in fs:
-        p = os.path.relpath(os.path.join(r, f), out)
-        have.add("/" + p)
-        if p.endswith(".html"):
-            have.add("/" + p[:-5])
-            if p == "index.html":
-                have.add("/")
-bad = {}
-pages = glob.glob(out + "/**/*.html", recursive=True)
-for p in pages:
-    for h in re.findall(r'href="(/[^"#?]*)', open(p, encoding="utf-8").read()):
-        if h not in have:
-            bad[h] = bad.get(h, 0) + 1
-print(f"   {len(pages):,} pages, {len(bad)} broken link target(s)")
-for h, n in list(bad.items())[:5]:
-    print(f"     {h}  ({n} references)")
-sys.exit(1 if bad else 0)
-PY
+step "internal links resolve" python3 tools/check_links.py
 
 echo
 if [ "${#FAILED[@]}" -gt 0 ]; then

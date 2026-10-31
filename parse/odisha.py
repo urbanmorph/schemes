@@ -50,7 +50,6 @@ Odisha writes its figures in Indian digit grouping with the LAST group of two, s
 
 import argparse
 import collections
-import glob
 import gzip
 import json
 import os
@@ -58,9 +57,9 @@ import re
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
 from text import joined  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from pdf import layout_text as pdftotext, require_books, snapshot  # noqa: E402
 
 # The Odia block plus the two joiners. Anything matching this is "not English", which is
 # the only judgement this parser needs to make about a line.
@@ -318,14 +317,8 @@ def parse_book(text, demand, stats):
 
 
 def run(date=None, verbose=False):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "odisha", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/odisha/: run collect/odisha.py first")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "odisha", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("odisha", date)
+    require_books(src, man)
 
     stats = collections.Counter()
     merged, per_book, all_checks, wrong_cycle = {}, {}, [], []

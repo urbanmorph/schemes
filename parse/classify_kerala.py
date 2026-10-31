@@ -206,7 +206,6 @@ in this file that counts errors instead of estimating them.
 
 
 import argparse
-import json
 import os
 import re
 import sys
@@ -214,9 +213,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import excluded_by_rule, myscheme_hits, myscheme_index, \
-    myscheme_records  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, load, \
+    quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
 PUBLISH_THRESHOLD = 9
@@ -323,10 +322,6 @@ OBJ_TRANSFER = re.compile(
     r"\b(financial assistance|assistance (is|for|to)|subsid|scholarship|stipend|"
     r"pension|incentive|free of cost|provided to|given to|reimburse|grant of|paid to|"
     r"loan)", re.I)
-
-
-def tokens(s):
-    return set(re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).split())
 
 
 def hoa_fields(hoas):
@@ -808,142 +803,31 @@ def band(r, cuts):
         return "nofig"
     if v == 0:
         return "nil"
-    return "q1" if v < cuts[0] else "q2" if v < cuts[1] else "q3" if v < cuts[2] else "q4"
+    return quartile(v, cuts)
 
 
 def stratify(entries, target=320):
-    """Deterministic stratified sample: sector family crossed with allocation band.
-
-    No random seed anywhere. Rows inside a stratum are sorted by key and picked at even
-    spacing, so this returns the same rows on every machine and every run.
-    """
-    alloc = sorted(r["be_lakh"] for r in entries if (r.get("be_lakh") or 0) > 0)
-    cuts = [alloc[int(len(alloc) * f)] for f in (0.25, 0.5, 0.75)] if alloc else [0, 0, 0]
-    cells = {}
-    for r in entries:
-        cells.setdefault((family(r["code"]), band(r, cuts)), []).append(r)
-    out = []
-    for k in sorted(cells):
-        rows = sorted(cells[k], key=lambda r: r["key"])
-        n = min(len(rows), max(4, round(len(rows) * target / len(entries))))
-        idx = sorted({round(i * (len(rows) - 1) / (n - 1)) if n > 1 else 0
-                      for i in range(n)})
-        for i in idx:
-            out.append((rows[i], "%s/%s" % k, len(rows), len(idx)))
-    return sorted(out, key=lambda t: t[0]["key"])
-
-
-def myscheme_kerala():
-    return myscheme_records("Kerala")
-
-
-def sweep(rows, lo, hi):
-    """Precision and recall at every threshold, so the operating point is visible."""
-    out = []
-    for t in range(lo, hi + 1):
-        tp = sum(1 for x in rows if x["score"] >= t and x["label"] == "scheme")
-        fp = sum(1 for x in rows if x["score"] >= t and x["label"] != "scheme")
-        fn = sum(1 for x in rows if x["score"] < t and x["label"] == "scheme")
-        pr = tp / (tp + fp) if tp + fp else 0.0
-        rc = tp / (tp + fn) if tp + fn else 0.0
-        out.append({"threshold": t, "called_scheme": tp + fp,
-                    "true_positive": tp, "false_positive": fp, "false_negative": fn,
-                    "precision": round(pr, 3), "recall": round(rc, 3),
-                    "f1": round(2 * pr * rc / (pr + rc), 3) if pr + rc else 0.0})
-    return out
+    """Deterministic stratified sample: sector family crossed with allocation band, a floor
+    of 4 per stratum. classify_common.stratified_sample draws it."""
+    cuts = quartile_cuts(r["be_lakh"] for r in entries if (r.get("be_lakh") or 0) > 0)
+    return stratified_sample(entries, lambda r: (family(r["code"]), band(r, cuts)),
+                             lambda r: r["key"], target, 4)
 
 
 def run(threshold=PUBLISH_THRESHOLD):
-    ke = json.load(open(os.path.join(ROOT, "data", "kerala", "schemes.json"),
-                        encoding="utf-8"))
-    entries = sorted(ke["entries"], key=lambda r: r["key"])
-
-    labels = json.load(open(os.path.join(ROOT, "data", "kerala", "labels.json"),
-                            encoding="utf-8"))
-    by_key = {x["key"]: x for x in labels["labels"]}
-
-    listed = myscheme_kerala()
-    idx = myscheme_index(listed)
-
-    rows = []
-    for r in entries:
-        total, ev = score_entry(r)
-        hit = myscheme_hits(r["name"], idx)
+    def fields(r):
         major, minor = hoa_fields(r.get("hoas"))
-        rows.append({
-            "key": r["key"],
-            "code": r["code"],
-            "name": r["name"],
-            "sector": r.get("sector"),
-            "code_prefix": code_prefix(r["code"]),
-            "family": family(r["code"]),
-            "hoas": sorted(r.get("hoas") or []),
-            "major_heads": sorted(major),
-            "minor_heads": sorted(minor),
-            "be_lakh": r.get("be_lakh"),
-            "books": sorted(r.get("books") or []),
-            "earmarks": r.get("earmarks") or None,
-            "has_objectives": bool((r.get("objectives") or "").strip()),
-            "score": total,
-            "evidence": ev,
-            "verdict": "scheme" if total >= threshold else "not a scheme",
-            "in_myscheme_kerala": bool(hit),
-            "myscheme_match": sorted(hit) or None,
-            "hand_label": by_key[r["key"]]["label"] if r["key"] in by_key else None,
-        })
-
-    # Validation on the probability sample. The audit set is a census of the published
-    # region, so mixing it in would inflate precision at exactly the thresholds that
-    # matter; it gets its own count below.
-    scored = [{"key": x["key"], "name": x["name"], "score": x["score"],
-               "label": by_key[x["key"]]["label"]}
-              for x in rows
-              if x["key"] in by_key and by_key[x["key"]].get("sample") == "stratified"]
-    scored.sort(key=lambda x: x["key"])
-    lo = min(x["score"] for x in scored)
-    hi = max(x["score"] for x in scored)
-
-    # The held-out half. Labels were made before any weight was chosen, and the weights
-    # were then fitted looking only at the even-indexed half, so the odd-indexed half is
-    # the honest estimate. Reporting only the full-set number would flatter the classifier.
-    dev = [x for i, x in enumerate(scored) if i % 2 == 0]
-    held = [x for i, x in enumerate(scored) if i % 2 == 1]
-
-    full_sweep = sweep(scored, lo, hi)
-    held_sweep = sweep(held, lo, hi)
-    at = next(x for x in full_sweep if x["threshold"] == threshold)
-    at_held = next(x for x in held_sweep if x["threshold"] == threshold)
-
-    # The audited census. Every row scoring CENSUS_FROM or more carries a hand label, from
-    # one set or the other, so at those thresholds these are counts and not estimates.
-    audited = sorted((x for x in rows if x["key"] in by_key), key=lambda x: x["key"])
-    census = []
-    top = max(x["score"] for x in rows)
-    for t in range(CENSUS_FROM, top + 1):
-        pub = [x for x in audited if x["score"] >= t]
-        corpus = [x for x in rows if x["score"] >= t]
-        bad = [x for x in pub if by_key[x["key"]]["label"] != "scheme"]
-        band = [x for x in pub if x["score"] == t]
-        band_bad = [x for x in band if by_key[x["key"]]["label"] != "scheme"]
-        census.append({
-            "threshold": t,
-            "rows_in_corpus": len(corpus),
-            "rows_hand_labelled": len(pub),
-            "published": len(pub),
-            "not_schemes": len(bad),
-            "precision": round((len(pub) - len(bad)) / len(pub), 3) if pub else 0.0,
-            "band_at_exactly_this_score": len(band),
-            "band_not_schemes": len(band_bad),
-            "band_precision": round((len(band) - len(band_bad)) / len(band), 3)
-            if band else 0.0,
-            "the_errors": sorted("%s [%s]" % (x["name"], x["code"]) for x in bad),
-        })
-    at_census = next(x for x in census if x["threshold"] == threshold)
-
-    schemes = [x for x in rows if x["verdict"] == "scheme"]
-    absent_all = [x for x in rows if not x["in_myscheme_kerala"]]
-    absent = sorted((x for x in schemes if not x["in_myscheme_kerala"]),
-                    key=lambda x: (-(x["be_lakh"] or 0), x["key"]))
+        return {"key": r["key"], "code": r["code"], "name": r["name"],
+                "sector": r.get("sector"), "code_prefix": code_prefix(r["code"]),
+                "family": family(r["code"]), "hoas": sorted(r.get("hoas") or []),
+                "major_heads": sorted(major), "minor_heads": sorted(minor),
+                "be_lakh": r.get("be_lakh"), "books": sorted(r.get("books") or []),
+                "earmarks": r.get("earmarks") or None,
+                "has_objectives": bool((r.get("objectives") or "").strip())}
+    a = assess("kerala", "Kerala", lambda r: r["key"], score_entry, fields, threshold,
+               CENSUS_FROM, error=lambda x: "%s [%s]" % (x["name"], x["code"]))
+    ke, labels, listed, rows = a["data"], a["labels"], a["listed"], a["rows"]
+    schemes, absent = a["schemes"], a["absent"]
 
     # One row per NAME as well as per scheme code, because Kerala votes the central share
     # and the state share of one scheme as two codes, and its Special Component and Tribal
@@ -1033,19 +917,14 @@ def run(threshold=PUBLISH_THRESHOLD):
         },
         "signals": SIGNALS,
         "signals_rejected": REJECTED_SIGNALS,
-        "threshold_sweep": full_sweep,
-        "threshold_sweep_held_out": held_sweep,
-        "threshold_sweep_census": census,
+        "threshold_sweep": a["threshold_sweep"],
+        "threshold_sweep_held_out": a["threshold_sweep_held_out"],
+        "threshold_sweep_census": a["threshold_sweep_census"],
         "validation": {
-            "n_labelled": len(scored),
-            "n_development": len(dev),
-            "n_held_out": len(held),
-            "base_rate_stratified": round(
-                sum(1 for x in scored if x["label"] == "scheme") / len(scored), 3),
-            "base_rate_development": round(
-                sum(1 for x in dev if x["label"] == "scheme") / len(dev), 3),
-            "base_rate_held_out": round(
-                sum(1 for x in held if x["label"] == "scheme") / len(held), 3),
+            **a["counts"],
+            "base_rate_stratified": base_rate(a["scored"]),
+            "base_rate_development": base_rate(a["dev"]),
+            "base_rate_held_out": base_rate(a["held"]),
             "base_rate_note": (
                 "About one Kerala Annual Plan row in six is a welfare scheme, against 41% of "
                 "Andhra Pradesh's scheme-wise rows and 55% of Karnataka's, and close to Tamil "
@@ -1053,21 +932,7 @@ def run(threshold=PUBLISH_THRESHOLD):
                 "welfare state: the Annual Plan is the state's plan PROVISION list and it "
                 "votes a wildlife sanctuary, a hydro-electric station and a post-matric "
                 "scholarship in the same series."),
-            "at_publish_threshold": {
-                "threshold": threshold,
-                "precision": at["precision"],
-                "recall": at["recall"],
-                "true_positive": at["true_positive"],
-                "false_positive": at["false_positive"],
-                "false_negative": at["false_negative"],
-            },
-            "at_publish_threshold_held_out": {
-                "threshold": threshold,
-                "precision": at_held["precision"],
-                "recall": at_held["recall"],
-                "true_positive": at_held["true_positive"],
-                "false_positive": at_held["false_positive"],
-            },
+            **a["points"],
             "census_note": (
                 "Every row at or above score %d is hand labelled, so precision at these "
                 "thresholds is counted rather than estimated. The census starts at %d "
@@ -1076,8 +941,8 @@ def run(threshold=PUBLISH_THRESHOLD):
                 "for. Recall still comes from the stratified sample, because the rows the "
                 "classifier rejects are too many to label exhaustively."
                 % (CENSUS_FROM, CENSUS_FROM)),
-            "at_publish_threshold_census": at_census,
-            "f1_optimal_threshold": max(full_sweep, key=lambda x: x["f1"])["threshold"],
+            "at_publish_threshold_census": a["at_census"],
+            **a["f1"],
             "why_not_f1": (
                 "F1 peaks at threshold 3, where the sample says precision is 74.5% and one "
                 "published name in four is not a scheme. Naming a scheme as hidden by a "
@@ -1137,7 +1002,7 @@ def run(threshold=PUBLISH_THRESHOLD):
             "match means a Kerala scheme is treated as PRESENT on myScheme and is therefore "
             "not claimed absent, so it costs an under-reported absence rather than a false "
             "accusation." % len(joined)),
-        "absent_from_myscheme_all_rows": len(absent_all),
+        "absent_from_myscheme_all_rows": len(a["absent_all"]),
         "absent_from_myscheme_and_classified_scheme": len(absent),
         "absent_distinct_names": len({x["name"].lower() for x in absent}),
         "absent_lakh": round(sum(x["be_lakh"] or 0 for x in absent), 2),
@@ -1160,25 +1025,7 @@ def run(threshold=PUBLISH_THRESHOLD):
 
 def check_sample():
     """Report which sampled or census rows have no hand label yet."""
-    ke = json.load(open(os.path.join(ROOT, "data", "kerala", "schemes.json"),
-                        encoding="utf-8"))
-    labels = json.load(open(os.path.join(ROOT, "data", "kerala", "labels.json"),
-                            encoding="utf-8"))
-    have = {x["key"] for x in labels["labels"]}
-    entries = sorted(ke["entries"], key=lambda r: r["key"])
-    frame = stratify(entries)
-    missing = [(r["key"], st, r["name"]) for r, st, _, _ in frame if r["key"] not in have]
-    print("sampling frame %d rows, labelled %d, unlabelled %d"
-          % (len(frame), len(have), len(missing)))
-    for k, st, name in missing:
-        print("  [%s]  %s  %s" % (st, k, name[:80]))
-    # The census half of the contract: nothing at or above CENSUS_FROM may be unlabelled.
-    uncovered = [r["key"] for r in entries
-                 if score_entry(r)[0] >= CENSUS_FROM and r["key"] not in have]
-    print("census at score >= %d: %d rows unlabelled" % (CENSUS_FROM, len(uncovered)))
-    for k in uncovered:
-        print("  %s" % k)
-    return missing, uncovered
+    return check("kerala", lambda r: r["key"], stratify, score_entry, CENSUS_FROM)
 
 
 def main():
@@ -1191,9 +1038,7 @@ def main():
                    help="print the stratified sampling frame, one row per line")
     args = a.parse_args()
     if args.dump_frame:
-        ke = json.load(open(os.path.join(ROOT, "data", "kerala", "schemes.json"),
-                            encoding="utf-8"))
-        entries = sorted(ke["entries"], key=lambda r: r["key"])
+        entries = sorted(load("kerala", "schemes.json")["entries"], key=lambda r: r["key"])
         for r, st, sz, sm in stratify(entries):
             print("%-16s|%-14s|%s|%s|%s|%s" % (
                 r["key"], st, r["be_lakh"], ",".join(sorted(r["hoas"] or [])),

@@ -26,12 +26,14 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           # The site build reads data/ only; archive/ is 0.69 GB and not needed here.
           filter: blob:none
+          # Nothing here pushes, and deploy runs npm code: keep the token out of .git/config.
+          persist-credentials: false
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 

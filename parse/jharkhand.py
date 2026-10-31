@@ -103,17 +103,15 @@ Estimate 2025-26, Revised Estimate 2025-26, Budget Estimate 2026-27.
 
 import argparse
 import collections
-import glob
 import gzip
-import json
 import os
 import re
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, utcnow, write_json  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
 from text import joined  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from pdf import layout_text as pdftotext, require_books, snapshot  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -546,14 +544,8 @@ def parse_book(text, stats):
 
 
 def run(date=None, verbose=False):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "jharkhand", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive at archive/jharkhand/: run collect/jharkhand.py")
-    date = date or dates[-1]
-    src = os.path.join(ROOT, "archive", "jharkhand", date)
-    man = json.load(open(os.path.join(src, "_manifest.json"), encoding="utf-8"))
+    date, src, man = snapshot("jharkhand", date)
+    require_books(src, man)
 
     stats = collections.Counter()
     merged, per_book, all_checks, wrong_cycle = {}, {}, [], []

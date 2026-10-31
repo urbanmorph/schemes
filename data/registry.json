@@ -1,12 +1,13 @@
 {
  "added_by": {
-  "budget": 629,
+  "budget": 627,
   "cag": 157,
-  "dbt": 159,
+  "dbt": 158,
   "outcome": 10
  },
- "built": "2026-10-31T13:08:19Z",
+ "built": "2026-10-31T15:31:54Z",
  "cag_facts_unattached": 0,
+ "cag_only_entries": 157,
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
  "cycle": "2026-27",
  "entries": [
@@ -4125,16 +4126,6 @@
    "sources": {
     "cag": {
      "facts": [
-      {
-       "as_named": "Shiksha and Kaushal Vikas Yojana; Sulabhya Awas Yojana; Jeevan and Bhavishya Suraksha Yojana; Shubh Shakti Yojana; Prasuti Sahayta Yojana; Natural or Accidental Death/Injury Assistance Scheme; Silicosis Yojana; Nirman Shramik Tool Kit Yojana (Rajasthan BOCW schemes)",
-       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2025, Welfare of Building and Other Construction Workers, Government of Rajasthan, para 1.1, p. 2.",
-       "compared": "agree",
-       "field": "agency",
-       "government": "Rajasthan",
-       "host": null,
-       "relation": "same",
-       "value": "implemented by the Building and Other Construction Workers Welfare Board, Rajasthan"
-      },
       {
        "as_named": "Shiksha and Kaushal Vikas Yojana; Sulabhya Awas Yojana; Jeevan and Bhavishya Suraksha Yojana; Shubh Shakti Yojana; Prasuti Sahayta Yojana; Natural or Accidental Death/Injury Assistance Scheme; Silicosis Yojana; Nirman Shramik Tool Kit Yojana (Rajasthan BOCW schemes)",
        "citation": "Comptroller and Auditor General of India, Report No. 3 of 2025, Welfare of Building and Other Construction Workers, Government of Rajasthan, para 1.1, p. 2.",
@@ -21738,6 +21729,14 @@
   {
    "name": "Scheme of Human Resources Development in Sports- Exchange of Knowledge / Research / Ideas for Holding Training Programmes, Seminars, Workshops, Clinics and Conferences Within the Country",
    "sources": {
+    "budget": {
+     "be_cr": 40.0,
+     "cycle": "2026-27",
+     "demand_no": 71,
+     "merge_reason": "all 4 content words of the shorter name are present",
+     "name": "Human Resources Development and Training",
+     "statement": "stat4b"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry Of Youth Affairs & Sports",
@@ -22973,6 +22972,46 @@
   {
    "name": "Indira Gandhi National Disability Pension Scheme",
    "sources": {
+    "cag": {
+     "facts": [
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report of 2016, General and Social (Non-PSUs) Sectors for the year ended 31 March 2015, Government of Madhya Pradesh, para 2.4.7.1, p. 69.",
+       "field": "type",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "Centrally sponsored again from 1 April 2014"
+      },
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report No. 10 of 2023, Performance Audit of National Social Assistance Programme, Union Government (Civil), Ministry of Rural Development, Preface, p. iii.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Rural Development",
+       "relation": "components",
+       "value": "15 August 1995"
+      },
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2024, Implementation of National Social Assistance Programme through Direct Benefit Transfer Scheme, Government of Gujarat, Executive Summary, p. vii.",
+       "field": "start",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "August 1995, fully funded centrally sponsored"
+      },
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2024, Implementation of National Social Assistance Programme through Direct Benefit Transfer Scheme, Government of Gujarat, Executive Summary, p. vii.",
+       "field": "eligibility",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "Below-poverty-line aged persons, widows, disabled persons, and families bereaved of the primary breadwinner"
+      }
+     ]
+    },
     "dbt": {
      "list": "central",
      "merge_reason": "similarity 0.88",
@@ -23230,6 +23269,46 @@
   {
    "name": "Indira Gandhi National Widow Pension Scheme",
    "sources": {
+    "cag": {
+     "facts": [
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report of 2016, General and Social (Non-PSUs) Sectors for the year ended 31 March 2015, Government of Madhya Pradesh, para 2.4.7.1, p. 69.",
+       "field": "type",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "Centrally sponsored again from 1 April 2014"
+      },
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report No. 10 of 2023, Performance Audit of National Social Assistance Programme, Union Government (Civil), Ministry of Rural Development, Preface, p. iii.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Rural Development",
+       "relation": "components",
+       "value": "15 August 1995"
+      },
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2024, Implementation of National Social Assistance Programme through Direct Benefit Transfer Scheme, Government of Gujarat, Executive Summary, p. vii.",
+       "field": "start",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "August 1995, fully funded centrally sponsored"
+      },
+      {
+       "as_named": "National Social Assistance Programme",
+       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2024, Implementation of National Social Assistance Programme through Direct Benefit Transfer Scheme, Government of Gujarat, Executive Summary, p. vii.",
+       "field": "eligibility",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "Below-poverty-line aged persons, widows, disabled persons, and families bereaved of the primary breadwinner"
+      }
+     ]
+    },
     "dbt": {
      "list": "central",
      "merge_reason": "similarity 0.88",
@@ -26060,8 +26139,8 @@
     },
     "dbt": {
      "list": "central",
-     "merge_reason": "all 3 content words of the shorter name are present",
-     "name": "AgEdn - ICAR Junior Research Fellowship"
+     "merge_reason": "similarity 1.00",
+     "name": "Junior Research Fellowship"
     },
     "myscheme": {
      "level": "Central",
@@ -37722,11 +37801,11 @@
    "name": "National Service Scheme",
    "sources": {
     "budget": {
-     "be_cr": 80.0,
+     "be_cr": 357.39,
      "cycle": "2026-27",
-     "demand_no": 64,
-     "merge_reason": "all 2 content words of the shorter name are present",
-     "name": "National Career Services",
+     "demand_no": 102,
+     "merge_reason": "similarity 1.00",
+     "name": "National Service Scheme",
      "statement": "stat4b"
     },
     "myscheme": {
@@ -40271,6 +40350,11 @@
   {
    "name": "Post Graduate Scholarship for GATE/GPAT Qualified Students for Pursuing M.Tech/M.E./M.Pharm-UGC ",
    "sources": {
+    "dbt": {
+     "list": "central",
+     "merge_reason": "similarity 0.80",
+     "name": "P.G. Scholarship for GATE/GPAT qualified students for pursuing M.Tech/ M.E./M.Pharma- UGC"
+    },
     "myscheme": {
      "level": "Central",
      "org": "Ministry of Education",
@@ -41744,6 +41828,15 @@
    "sources": {
     "cag": {
      "facts": [
+      {
+       "as_named": "Weather Based Crop Insurance Scheme",
+       "citation": "Comptroller and Auditor General of India, Report No. 7 of 2017, Performance Audit of Agriculture Crop Insurance Schemes, Union Government, Preface, p. iii.",
+       "field": "start",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "predecessor_of",
+       "value": "Pilot from Kharif 2007 in 20 States"
+      },
       {
        "as_named": "National Crop Insurance Programme",
        "citation": "Comptroller and Auditor General of India, Report No. 7 of 2017, Performance Audit of Agriculture Crop Insurance Schemes, Union Government, Preface, p. iii.",
@@ -44985,16 +45078,6 @@
        "host": null,
        "relation": "same",
        "value": "implemented by the Building and Other Construction Workers Welfare Board, Rajasthan"
-      },
-      {
-       "as_named": "Shiksha and Kaushal Vikas Yojana; Sulabhya Awas Yojana; Jeevan and Bhavishya Suraksha Yojana; Shubh Shakti Yojana; Prasuti Sahayta Yojana; Natural or Accidental Death/Injury Assistance Scheme; Silicosis Yojana; Nirman Shramik Tool Kit Yojana (Rajasthan BOCW schemes)",
-       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2025, Welfare of Building and Other Construction Workers, Government of Rajasthan, para 1.1, p. 2.",
-       "compared": "agree",
-       "field": "agency",
-       "government": "Rajasthan",
-       "host": null,
-       "relation": "same",
-       "value": "implemented by the Building and Other Construction Workers Welfare Board, Rajasthan"
       }
      ]
     },
@@ -45860,6 +45943,14 @@
   {
    "name": "Research and Development Programme in Water Sector",
    "sources": {
+    "budget": {
+     "be_cr": 21.0,
+     "cycle": "2026-27",
+     "demand_no": 9,
+     "merge_reason": "all 2 content words of the shorter name are present",
+     "name": "Research and Development",
+     "statement": "stat4b"
+    },
     "dbt": {
      "list": "central",
      "merge_reason": "all 2 content words of the shorter name are present",
@@ -51828,11 +51919,11 @@
    "name": "Startup India Seed Fund Scheme- For Startups",
    "sources": {
     "budget": {
-     "be_cr": 900.0,
+     "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 11,
-     "merge_reason": "all 3 content words of the shorter name are present",
-     "name": "Startup India Fund of Funds 2.0",
+     "merge_reason": "similarity 0.82",
+     "name": "Startup India Seed Fund Scheme (SISFS)",
      "statement": "stat4b"
     },
     "myscheme": {
@@ -53786,16 +53877,6 @@
    "sources": {
     "cag": {
      "facts": [
-      {
-       "as_named": "Shiksha and Kaushal Vikas Yojana; Sulabhya Awas Yojana; Jeevan and Bhavishya Suraksha Yojana; Shubh Shakti Yojana; Prasuti Sahayta Yojana; Natural or Accidental Death/Injury Assistance Scheme; Silicosis Yojana; Nirman Shramik Tool Kit Yojana (Rajasthan BOCW schemes)",
-       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2025, Welfare of Building and Other Construction Workers, Government of Rajasthan, para 1.1, p. 2.",
-       "compared": "agree",
-       "field": "agency",
-       "government": "Rajasthan",
-       "host": null,
-       "relation": "same",
-       "value": "implemented by the Building and Other Construction Workers Welfare Board, Rajasthan"
-      },
       {
        "as_named": "Shiksha and Kaushal Vikas Yojana; Sulabhya Awas Yojana; Jeevan and Bhavishya Suraksha Yojana; Shubh Shakti Yojana; Prasuti Sahayta Yojana; Natural or Accidental Death/Injury Assistance Scheme; Silicosis Yojana; Nirman Shramik Tool Kit Yojana (Rajasthan BOCW schemes)",
        "citation": "Comptroller and Auditor General of India, Report No. 3 of 2025, Welfare of Building and Other Construction Workers, Government of Rajasthan, para 1.1, p. 2.",
@@ -62991,8 +63072,26 @@
      "be_cr": 3000.0,
      "cycle": "2026-27",
      "demand_no": 60,
+     "listed_as": {
+      "merge_reason": "similarity 0.94",
+      "name": "Pradhan Mantri Awas Yojana - Urban",
+      "slug": "pmay-u"
+     },
      "name": "Pradhan Mantri Awas Yojana - Urban 2.0",
      "statement": "stat4a"
+    },
+    "cag": {
+     "facts": [
+      {
+       "as_named": "Pradhan Mantri Awas Yojana - Housing for All (Urban)",
+       "citation": "Comptroller and Auditor General of India, Report No. 4 of 2022, Performance Audit of Implementation of Housing Schemes for Urban Poor in Karnataka, Government of Karnataka, Executive Summary, p. vii.",
+       "field": "start",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "predecessor_of",
+       "value": "June 2015; housing for all urban poor by 2022"
+      }
+     ]
     },
     "outcome": {
      "classification": "CSS",
@@ -64819,23 +64918,6 @@
    }
   },
   {
-   "name": "Research and Development",
-   "sources": {
-    "budget": {
-     "be_cr": 21.0,
-     "cycle": "2026-27",
-     "demand_no": 9,
-     "name": "Research and Development",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "transliteration variant: ['dvlpmnt', 'rsrc']",
-     "name": "National S and T Human Resource Development"
-    }
-   }
-  },
-  {
    "name": "Conservation, Safety and Infrastructure Development in Coal Mines",
    "sources": {
     "budget": {
@@ -65204,6 +65286,23 @@
    }
   },
   {
+   "name": "Startup India Fund of Funds 2.0",
+   "sources": {
+    "budget": {
+     "be_cr": 900.0,
+     "cycle": "2026-27",
+     "demand_no": 11,
+     "listed_as": {
+      "merge_reason": "all 2 content words of the shorter name are present",
+      "name": "Fund of Funds for Startups",
+      "slug": "ffs"
+     },
+     "name": "Startup India Fund of Funds 2.0",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "Credit Guarantee Fund",
    "sources": {
     "budget": {
@@ -65211,18 +65310,6 @@
      "cycle": "2026-27",
      "demand_no": 11,
      "name": "Credit Guarantee Fund",
-     "statement": "stat4b"
-    }
-   }
-  },
-  {
-   "name": "Startup India Seed Fund Scheme (SISFS)",
-   "sources": {
-    "budget": {
-     "be_cr": null,
-     "cycle": "2026-27",
-     "demand_no": 11,
-     "name": "Startup India Seed Fund Scheme (SISFS)",
      "statement": "stat4b"
     }
    }
@@ -66136,8 +66223,18 @@
      "be_cr": 17250.25,
      "cycle": "2026-27",
      "demand_no": 21,
+     "listed_as": {
+      "merge_reason": "all 2 content words of the shorter name are present",
+      "name": "Research and Development Programme in Water Sector",
+      "slug": "rdpws"
+     },
      "name": "Research and Development",
      "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "transliteration variant: ['dvlpmnt', 'rsrc']",
+     "name": "National S and T Human Resource Development"
     }
    }
   },
@@ -67519,6 +67616,11 @@
      "be_cr": 0.01,
      "cycle": "2026-27",
      "demand_no": 32,
+     "listed_as": {
+      "merge_reason": "all 3 content words of the shorter name are present",
+      "name": "Pradhan Mantri Mudra Yojana",
+      "slug": "pmmy"
+     },
      "name": "Publicity and awareness for Pradhan Mantri Mudra Yojana (PMMY) and other initiatives by MUDRA Ltd.",
      "statement": "stat4b"
     }
@@ -68926,6 +69028,23 @@
    }
   },
   {
+   "name": "National Career Services",
+   "sources": {
+    "budget": {
+     "be_cr": 80.0,
+     "cycle": "2026-27",
+     "demand_no": 64,
+     "listed_as": {
+      "merge_reason": "all 2 content words of the shorter name are present",
+      "name": "National Service Scheme",
+      "slug": "nssc"
+     },
+     "name": "National Career Services",
+     "statement": "stat4b"
+    }
+   }
+  },
+  {
    "name": "New Employment Generation Scheme",
    "sources": {
     "budget": {
@@ -69120,6 +69239,11 @@
      "be_cr": 1900.0,
      "cycle": "2026-27",
      "demand_no": 68,
+     "listed_as": {
+      "merge_reason": "one name begins with the whole of the other",
+      "name": "Fund of Funds for Startups",
+      "slug": "ffs"
+     },
      "name": "Fund of Funds",
      "statement": "stat4b"
     },
@@ -69564,25 +69688,13 @@
      "be_cr": 46.0,
      "cycle": "2026-27",
      "demand_no": 71,
+     "listed_as": {
+      "merge_reason": "all 2 content words of the shorter name are present",
+      "name": "Research and Development Programme in Water Sector",
+      "slug": "rdpws"
+     },
      "name": "Research and Development",
      "statement": "stat4b"
-    }
-   }
-  },
-  {
-   "name": "Human Resources Development and Training",
-   "sources": {
-    "budget": {
-     "be_cr": 40.0,
-     "cycle": "2026-27",
-     "demand_no": 71,
-     "name": "Human Resources Development and Training",
-     "statement": "stat4b"
-    },
-    "dbt": {
-     "list": "central",
-     "merge_reason": "all 4 content words of the shorter name are present",
-     "name": "Human Resource Development (HRD) And Promotional Activities Scheme- Training Programme in Scientific sheep rearing/ artificial insemination /Manufacturing of woollen items/machine shearing etc."
     }
    }
   },
@@ -70892,8 +71004,18 @@
      "be_cr": 488.28,
      "cycle": "2026-27",
      "demand_no": 85,
+     "listed_as": {
+      "merge_reason": "all 4 content words of the shorter name are present",
+      "name": "Scheme of Human Resources Development in Sports- Exchange of Knowledge / Research / Ideas for Holding Training Programmes, Seminars, Workshops, Clinics and Conferences Within the Country",
+      "slug": "hrds-ekritpswccc"
+     },
      "name": "Training/Human Resource Development",
      "statement": "stat4b"
+    },
+    "dbt": {
+     "list": "central",
+     "merge_reason": "all 4 content words of the shorter name are present",
+     "name": "Human Resource Development (HRD) And Promotional Activities Scheme- Training Programme in Scientific sheep rearing/ artificial insemination /Manufacturing of woollen items/machine shearing etc."
     }
    }
   },
@@ -71146,6 +71268,11 @@
      "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 89,
+     "listed_as": {
+      "merge_reason": "all 2 content words of the shorter name are present",
+      "name": "Research and Development Programme in Water Sector",
+      "slug": "rdpws"
+     },
      "name": "Research and Development",
      "statement": "stat4b"
     }
@@ -71239,6 +71366,11 @@
      "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 90,
+     "listed_as": {
+      "merge_reason": "all 3 content words of the shorter name are present",
+      "name": "Biotechnology Research Innovation And Entrepreneurship Development (Bio-RIDE)",
+      "slug": "bio-ride"
+     },
      "name": "Biotechnology Research and Development",
      "statement": "stat4b"
     }
@@ -71252,6 +71384,11 @@
      "cycle": "2026-27",
      "demand_no": 91,
      "name": "Industrial Research and Development",
+     "state_page": {
+      "merge_reason": "all 3 content words of the shorter name are present",
+      "name": "Scheme for Assistance for Research & Development Activities: Assistance to Industrial Association for Establishment of R&D Laboratories",
+      "slug": "sardaia"
+     },
      "statement": "stat4b"
     }
    }
@@ -71889,6 +72026,11 @@
      "be_cr": null,
      "cycle": "2026-27",
      "demand_no": 99,
+     "listed_as": {
+      "merge_reason": "all 3 content words of the shorter name are present",
+      "name": "Market Development Assistance",
+      "slug": "mda-fert"
+     },
      "name": "Domestic Promotion and Publicity including Market Development Assistance",
      "statement": "stat4b"
     }
@@ -71955,18 +72097,6 @@
      "outlay_cr": 939.0,
      "page": 284,
      "targets": 6
-    }
-   }
-  },
-  {
-   "name": "National Service Scheme",
-   "sources": {
-    "budget": {
-     "be_cr": 357.39,
-     "cycle": "2026-27",
-     "demand_no": 102,
-     "name": "National Service Scheme",
-     "statement": "stat4b"
     }
    }
   },
@@ -72226,6 +72356,20 @@
    }
   },
   {
+   "name": "AgEdn - ICAR Junior Research Fellowship",
+   "sources": {
+    "dbt": {
+     "list": "central",
+     "listed_as": {
+      "merge_reason": "all 3 content words of the shorter name are present",
+      "name": "Junior Research Fellowship",
+      "slug": "jrfbio"
+     },
+     "name": "AgEdn - ICAR Junior Research Fellowship"
+    }
+   }
+  },
+  {
    "name": "AgEdn - ICAR Senior Research Fellowship",
    "sources": {
     "dbt": {
@@ -72416,6 +72560,11 @@
    "sources": {
     "dbt": {
      "list": "central",
+     "listed_as": {
+      "merge_reason": "all 3 content words of the shorter name are present",
+      "name": "Sub-mission On Agriculture Mechanization",
+      "slug": "smam"
+     },
      "name": "Sub Mission on Agriculture Mechanization-Centrally Sponsored"
     }
    }
@@ -72435,15 +72584,6 @@
     "dbt": {
      "list": "central",
      "name": "IMSc- Phd Programme"
-    }
-   }
-  },
-  {
-   "name": "Junior Research Fellowship",
-   "sources": {
-    "dbt": {
-     "list": "central",
-     "name": "Junior Research Fellowship"
     }
    }
   },
@@ -72597,6 +72737,11 @@
    "sources": {
     "dbt": {
      "list": "central",
+     "listed_as": {
+      "merge_reason": "all 2 content words of the shorter name are present",
+      "name": "UGC-BSR Faculty Fellowship Scheme",
+      "slug": "bsrs"
+     },
      "name": "BSR Fellowship"
     }
    }
@@ -72629,19 +72774,15 @@
    }
   },
   {
-   "name": "P.G. Scholarship for GATE/GPAT qualified students for pursuing M.Tech/ M.E./M.Pharma- UGC",
-   "sources": {
-    "dbt": {
-     "list": "central",
-     "name": "P.G. Scholarship for GATE/GPAT qualified students for pursuing M.Tech/ M.E./M.Pharma- UGC"
-    }
-   }
-  },
-  {
    "name": "Post-Doctoral Fellowship for SC/ST Candidates",
    "sources": {
     "dbt": {
      "list": "central",
+     "listed_as": {
+      "merge_reason": "similarity 0.83",
+      "name": "Post Doctoral Fellowship To Women Candidates",
+      "slug": "pdfwc"
+     },
      "name": "Post-Doctoral Fellowship for SC/ST Candidates"
     }
    }
@@ -72742,6 +72883,11 @@
    "sources": {
     "dbt": {
      "list": "central",
+     "listed_as": {
+      "merge_reason": "similarity 0.97",
+      "name": "Prime Minister's Scholarship Scheme",
+      "slug": "pmss"
+     },
      "name": "Prime Minister scholarship scheme"
     }
    }
@@ -73237,6 +73383,11 @@
    "sources": {
     "dbt": {
      "list": "central",
+     "listed_as": {
+      "merge_reason": "similarity 0.81",
+      "name": "Scheme For Award Of Senior/Junior Fellowships To Outstanding Persons In The Fields Of Culture",
+      "slug": "sasjfopfc"
+     },
      "name": "Award of Senior Fellowship to Outstanding Artistes/Persons in the field of Culture"
     }
    }
@@ -73392,6 +73543,11 @@
    "sources": {
     "dbt": {
      "list": "central",
+     "listed_as": {
+      "merge_reason": "all 2 content words of the shorter name are present",
+      "name": "Employees' Pension Scheme",
+      "slug": "eps"
+     },
      "name": "Employees Pension Scheme for EPF Pensioners"
     }
    }
@@ -73691,6 +73847,11 @@
    "sources": {
     "dbt": {
      "list": "central",
+     "listed_as": {
+      "merge_reason": "all 3 content words of the shorter name are present",
+      "name": "National Overseas Scholarship For Students With Disabilities",
+      "slug": "nos-swd"
+     },
      "name": "National Overseas Scholarship Scheme"
     }
    }
@@ -73719,6 +73880,24 @@
     "cag": {
      "facts": [
       {
+       "as_named": "Integrated Child Development Services (ICDS)",
+       "citation": "Comptroller and Auditor General of India, Report No. 22 of 2012-13, Performance Audit of Integrated Child Development Services (ICDS) Scheme, Union Government, Ministry of Women and Child Development, Executive Summary, p. v.",
+       "field": "start",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "2 October 1975, under the National Policy for Children, 1974"
+      },
+      {
+       "as_named": "Integrated Child Development Services (ICDS)",
+       "citation": "Comptroller and Auditor General of India, Report No. 22 of 2012-13, Performance Audit of Integrated Child Development Services (ICDS) Scheme, Union Government, Ministry of Women and Child Development, Executive Summary, p. v.",
+       "field": "type",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "centrally sponsored scheme"
+      },
+      {
        "as_named": "Anganwadi Services",
        "citation": "Comptroller and Auditor General of India, Report No. 2 of 2026, Establishment and Functioning of Anganwadi and Adequacy of Working Women Hostels and Child Care Institutions in Madhya Pradesh, Government of Madhya Pradesh, para 1.10.1, p. 24.",
        "field": "funding",
@@ -73735,6 +73914,69 @@
        "host": "Ministry of Women and Child Development",
        "relation": "components",
        "value": "Centrally Sponsored; 60:40 Centre:State, 90:10 for special category states"
+      },
+      {
+       "as_named": "Saksham Anganwadi and Poshan 2.0",
+       "citation": "Comptroller and Auditor General of India, Report No. 2 of 2026, Establishment and Functioning of Anganwadi and Adequacy of Working Women Hostels and Child Care Institutions in Madhya Pradesh, Government of Madhya Pradesh, para 1.1, p. 4.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "2021"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report of 2026, Performance Audit of Implementation of POSHAN including Integrated Child Development Services and Mid-Day Meal for the year ended March 2023, Government of Odisha, Chapter 2 (Integrated Child Development Services), p. 9.",
+       "field": "start",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "2 October 1975"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 6 of 2024, Implementation of Integrated Child Development Services Scheme, Government of Gujarat, para 1.2, p. 1.",
+       "field": "agency",
+       "government": "Gujarat",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "Women and Child Development Department, Government of Gujarat"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2016, Performance Audit on Empowerment of Women, Government of Uttar Pradesh, para 5.1.1, p. 40.",
+       "field": "funding",
+       "government": "Uttar Pradesh",
+       "host": null,
+       "relation": "components",
+       "value": "Centre 90 : State 10 except Supplementary Nutrition (as audited, 2016)"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report of 2026, Performance Audit of Implementation of POSHAN including Integrated Child Development Services and Mid-Day Meal for the year ended March 2023, Government of Odisha, Chapter 2 (Integrated Child Development Services), p. 9.",
+       "field": "parent",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "Brought under POSHAN Abhiyaan (8 March 2018)"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 1 of 2025, Land Management in Tribal Areas and Anganwadi Services under Integrated Child Development Services, Government of West Bengal, para 2.1, p. 39.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "October 1975"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 1 of 2025, Land Management in Tribal Areas and Anganwadi Services under Integrated Child Development Services, Government of West Bengal, para 2.1, p. 39.",
+       "field": "type",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "Centrally sponsored"
       }
      ]
     },
@@ -73749,6 +73991,24 @@
    "sources": {
     "cag": {
      "facts": [
+      {
+       "as_named": "Integrated Child Development Services (ICDS)",
+       "citation": "Comptroller and Auditor General of India, Report No. 22 of 2012-13, Performance Audit of Integrated Child Development Services (ICDS) Scheme, Union Government, Ministry of Women and Child Development, Executive Summary, p. v.",
+       "field": "start",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "2 October 1975, under the National Policy for Children, 1974"
+      },
+      {
+       "as_named": "Integrated Child Development Services (ICDS)",
+       "citation": "Comptroller and Auditor General of India, Report No. 22 of 2012-13, Performance Audit of Integrated Child Development Services (ICDS) Scheme, Union Government, Ministry of Women and Child Development, Executive Summary, p. v.",
+       "field": "type",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "centrally sponsored scheme"
+      },
       {
        "as_named": "Supplementary Nutrition Programme (ICDS)",
        "citation": "Comptroller and Auditor General of India, Report No. 1 of 2025, Land Management in Tribal Areas and Anganwadi Services under Integrated Child Development Services, Government of West Bengal, para 2.4, p. 45.",
@@ -73786,6 +74046,69 @@
        "host": "Ministry of Women and Child Development",
        "relation": "components",
        "value": "Centrally Sponsored; 60:40 Centre:State, 90:10 for special category states"
+      },
+      {
+       "as_named": "Saksham Anganwadi and Poshan 2.0",
+       "citation": "Comptroller and Auditor General of India, Report No. 2 of 2026, Establishment and Functioning of Anganwadi and Adequacy of Working Women Hostels and Child Care Institutions in Madhya Pradesh, Government of Madhya Pradesh, para 1.1, p. 4.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "2021"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report of 2026, Performance Audit of Implementation of POSHAN including Integrated Child Development Services and Mid-Day Meal for the year ended March 2023, Government of Odisha, Chapter 2 (Integrated Child Development Services), p. 9.",
+       "field": "start",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "2 October 1975"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 6 of 2024, Implementation of Integrated Child Development Services Scheme, Government of Gujarat, para 1.2, p. 1.",
+       "field": "agency",
+       "government": "Gujarat",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "Women and Child Development Department, Government of Gujarat"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2016, Performance Audit on Empowerment of Women, Government of Uttar Pradesh, para 5.1.1, p. 40.",
+       "field": "funding",
+       "government": "Uttar Pradesh",
+       "host": null,
+       "relation": "components",
+       "value": "Centre 90 : State 10 except Supplementary Nutrition (as audited, 2016)"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report of 2026, Performance Audit of Implementation of POSHAN including Integrated Child Development Services and Mid-Day Meal for the year ended March 2023, Government of Odisha, Chapter 2 (Integrated Child Development Services), p. 9.",
+       "field": "parent",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "Brought under POSHAN Abhiyaan (8 March 2018)"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 1 of 2025, Land Management in Tribal Areas and Anganwadi Services under Integrated Child Development Services, Government of West Bengal, para 2.1, p. 39.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "October 1975"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 1 of 2025, Land Management in Tribal Areas and Anganwadi Services under Integrated Child Development Services, Government of West Bengal, para 2.1, p. 39.",
+       "field": "type",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "Centrally sponsored"
       }
      ]
     },
@@ -73800,6 +74123,24 @@
    "sources": {
     "cag": {
      "facts": [
+      {
+       "as_named": "Integrated Child Development Services (ICDS)",
+       "citation": "Comptroller and Auditor General of India, Report No. 22 of 2012-13, Performance Audit of Integrated Child Development Services (ICDS) Scheme, Union Government, Ministry of Women and Child Development, Executive Summary, p. v.",
+       "field": "start",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "2 October 1975, under the National Policy for Children, 1974"
+      },
+      {
+       "as_named": "Integrated Child Development Services (ICDS)",
+       "citation": "Comptroller and Auditor General of India, Report No. 22 of 2012-13, Performance Audit of Integrated Child Development Services (ICDS) Scheme, Union Government, Ministry of Women and Child Development, Executive Summary, p. v.",
+       "field": "type",
+       "government": "Central",
+       "host": null,
+       "relation": "components",
+       "value": "centrally sponsored scheme"
+      },
       {
        "as_named": "Anganwadi Services",
        "citation": "Comptroller and Auditor General of India, Report No. 2 of 2026, Establishment and Functioning of Anganwadi and Adequacy of Working Women Hostels and Child Care Institutions in Madhya Pradesh, Government of Madhya Pradesh, para 1.10.1, p. 24.",
@@ -73817,6 +74158,69 @@
        "host": "Ministry of Women and Child Development",
        "relation": "components",
        "value": "Centrally Sponsored; 60:40 Centre:State, 90:10 for special category states"
+      },
+      {
+       "as_named": "Saksham Anganwadi and Poshan 2.0",
+       "citation": "Comptroller and Auditor General of India, Report No. 2 of 2026, Establishment and Functioning of Anganwadi and Adequacy of Working Women Hostels and Child Care Institutions in Madhya Pradesh, Government of Madhya Pradesh, para 1.1, p. 4.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "2021"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report of 2026, Performance Audit of Implementation of POSHAN including Integrated Child Development Services and Mid-Day Meal for the year ended March 2023, Government of Odisha, Chapter 2 (Integrated Child Development Services), p. 9.",
+       "field": "start",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "2 October 1975"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 6 of 2024, Implementation of Integrated Child Development Services Scheme, Government of Gujarat, para 1.2, p. 1.",
+       "field": "agency",
+       "government": "Gujarat",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "Women and Child Development Department, Government of Gujarat"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 3 of 2016, Performance Audit on Empowerment of Women, Government of Uttar Pradesh, para 5.1.1, p. 40.",
+       "field": "funding",
+       "government": "Uttar Pradesh",
+       "host": null,
+       "relation": "components",
+       "value": "Centre 90 : State 10 except Supplementary Nutrition (as audited, 2016)"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report of 2026, Performance Audit of Implementation of POSHAN including Integrated Child Development Services and Mid-Day Meal for the year ended March 2023, Government of Odisha, Chapter 2 (Integrated Child Development Services), p. 9.",
+       "field": "parent",
+       "government": "Central",
+       "host": "Government of India",
+       "relation": "components",
+       "value": "Brought under POSHAN Abhiyaan (8 March 2018)"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 1 of 2025, Land Management in Tribal Areas and Anganwadi Services under Integrated Child Development Services, Government of West Bengal, para 2.1, p. 39.",
+       "field": "start",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "October 1975"
+      },
+      {
+       "as_named": "Integrated Child Development Services",
+       "citation": "Comptroller and Auditor General of India, Report No. 1 of 2025, Land Management in Tribal Areas and Anganwadi Services under Integrated Child Development Services, Government of West Bengal, para 2.1, p. 39.",
+       "field": "type",
+       "government": "Central",
+       "host": "Ministry of Women and Child Development",
+       "relation": "components",
+       "value": "Centrally sponsored"
       }
      ]
     },
@@ -77414,16 +77818,16 @@
   }
  ],
  "in_n_sources": {
-  "1": 5335,
-  "2": 297,
-  "3": 66,
-  "4": 24,
-  "5": 4
+  "1": 5236,
+  "2": 265,
+  "3": 47,
+  "4": 18
  },
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
+ "national_entries": 5566,
  "snapshot": "2026-10-17",
- "total_entries": 5726,
+ "total_entries": 5723,
  "unlisted_but_funded": [
   {
    "also_in": [],
@@ -77601,13 +78005,6 @@
    "be_cr": 17251.0,
    "demand_no": 85,
    "name": "Investment in PSU/JV/SPV etc.",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 17250.25,
-   "demand_no": 21,
-   "name": "Research and Development",
    "statement": "stat4b"
   },
   {
@@ -78005,15 +78402,6 @@
     "outcome"
    ],
    "be_cr": 3000.0,
-   "demand_no": 60,
-   "name": "Pradhan Mantri Awas Yojana - Urban 2.0",
-   "statement": "stat4a"
-  },
-  {
-   "also_in": [
-    "outcome"
-   ],
-   "be_cr": 3000.0,
    "demand_no": 11,
    "name": "National Industrial Corridor Development and Implementation Trust (NICDIT)",
    "statement": "stat4b"
@@ -78172,15 +78560,6 @@
    "be_cr": 1905.0,
    "demand_no": 99,
    "name": "Integrated Development of Tourist Circuits around specific themes (Swadesh Darshan)",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [
-    "outcome"
-   ],
-   "be_cr": 1900.0,
-   "demand_no": 68,
-   "name": "Fund of Funds",
    "statement": "stat4b"
   },
   {
@@ -79060,13 +79439,6 @@
   },
   {
    "also_in": [],
-   "be_cr": 488.28,
-   "demand_no": 85,
-   "name": "Training/Human Resource Development",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
    "be_cr": 465.0,
    "demand_no": 44,
    "name": "Infrastructure Development Fund",
@@ -79199,13 +79571,6 @@
    "be_cr": 367.52,
    "demand_no": 10,
    "name": "Rubber Board",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
-   "be_cr": 357.39,
-   "demand_no": 102,
-   "name": "National Service Scheme",
    "statement": "stat4b"
   },
   {
@@ -80392,13 +80757,6 @@
   },
   {
    "also_in": [],
-   "be_cr": 46.0,
-   "demand_no": 71,
-   "name": "Research and Development",
-   "statement": "stat4b"
-  },
-  {
-   "also_in": [],
    "be_cr": 45.0,
    "demand_no": 4,
    "name": "Information, Education and Communication",
@@ -80461,15 +80819,6 @@
    "statement": "stat4b"
   },
   {
-   "also_in": [
-    "dbt"
-   ],
-   "be_cr": 40.0,
-   "demand_no": 71,
-   "name": "Human Resources Development and Training",
-   "statement": "stat4b"
-  },
-  {
    "also_in": [],
    "be_cr": 40.0,
    "demand_no": 74,
@@ -80510,8 +80859,59 @@
    "demand_no": 12,
    "name": "Human Resource Management",
    "statement": "stat4b"
+  },
+  {
+   "also_in": [
+    "dbt"
+   ],
+   "be_cr": 35.0,
+   "demand_no": 26,
+   "name": "Indian Knowledge Systems",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 34.06,
+   "demand_no": 28,
+   "name": "Conservation of Natural Resources and Ecosystems",
+   "statement": "stat4a"
+  },
+  {
+   "also_in": [],
+   "be_cr": 32.0,
+   "demand_no": 70,
+   "name": "Quami Waqf Board Taraqqiati Scheme and Sahari Waqf Sampati Vikas Yojna",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 31.0,
+   "demand_no": 76,
+   "name": "Scheme for promotion of flagging of merchant ships in India",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 30.3,
+   "demand_no": 43,
+   "name": "Fisheries and Aquaculture Infrastructure Development Fund (FIDF)",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 30.0,
+   "demand_no": 18,
+   "name": "Global Engagement and International Cooperation",
+   "statement": "stat4b"
+  },
+  {
+   "also_in": [],
+   "be_cr": 30.0,
+   "demand_no": 71,
+   "name": "Bio Power (Grid)",
+   "statement": "stat4b"
   }
  ],
- "unlisted_but_funded_cr": 1419272.91,
- "unlisted_but_funded_total": 516
+ "unlisted_but_funded_cr": 1396152.98,
+ "unlisted_but_funded_total": 506
 }

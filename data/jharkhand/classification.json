@@ -27628,7 +27628,7 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-10-30T16:43:12Z",
+ "built": "2026-10-31T15:18:55Z",
  "caveat": "This is a floor on Jharkhand's schemes and never a total. It counts what the 36 demand books print under STATE SCHEMES, CENTRAL ASSISTANCE SCHEMES and CENTRAL SECTOR SCHEMES; a benefit paid from a welfare board's own fund rather than from a demand does not appear. In the other direction some rows here are heads of expenditure rather than schemes a citizen can apply to, which is why the count is stated with the source and not as a headline.",
  "classified_not_scheme": 710,
  "classified_scheme": 142,
@@ -27689,6 +27689,7 @@
  "state": "Jharkhand",
  "threshold_sweep": [
   {
+   "f1": 0.67,
    "measured_on": "the stratified sample only",
    "n_labelled": 141,
    "precision": 0.504,
@@ -27696,6 +27697,7 @@
    "threshold": -2
   },
   {
+   "f1": 0.67,
    "measured_on": "the stratified sample only",
    "n_labelled": 141,
    "precision": 0.504,
@@ -27703,6 +27705,7 @@
    "threshold": -1
   },
   {
+   "f1": 0.705,
    "measured_on": "the stratified sample only",
    "n_labelled": 119,
    "precision": 0.563,
@@ -27710,6 +27713,7 @@
    "threshold": 0
   },
   {
+   "f1": 0.846,
    "measured_on": "the stratified sample only",
    "n_labelled": 52,
    "precision": 1.0,
@@ -27717,6 +27721,7 @@
    "threshold": 1
   },
   {
+   "f1": 0.846,
    "measured_on": "the stratified sample only",
    "n_labelled": 52,
    "precision": 1.0,
@@ -27724,6 +27729,7 @@
    "threshold": 2
   },
   {
+   "f1": 0.846,
    "measured_on": "the stratified sample only",
    "n_labelled": 52,
    "precision": 1.0,
@@ -27733,6 +27739,7 @@
  ],
  "validation": {
   "at_publish_threshold": {
+   "f1": 0.846,
    "measured_on": "the stratified sample only",
    "n_labelled": 52,
    "precision": 1.0,
@@ -27747,6 +27754,12 @@
    "schemes": 136,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors below are named ones."
-  }
+  },
+  "f1_optimal_threshold": 1,
+  "f1_optimal_thresholds": [
+   1,
+   2,
+   3
+  ]
  }
 }

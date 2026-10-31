@@ -1942,6 +1942,22 @@
    "verdict": "not_scheme"
   },
   {
+   "be_lakh": 8000.0,
+   "book": "Outcome Budget",
+   "code": null,
+   "department": "वन एवं जलवायु परिवर्तन विभाग",
+   "evidence": [],
+   "hand_label": null,
+   "hoas": [],
+   "in_myscheme_chhattisgarh": false,
+   "key": "10|outcome|ckal ouksa dk iqujks)kj#2",
+   "myscheme_name": null,
+   "name": "बांस वनों का पुनरो)ार",
+   "objective": "जिन क्षेत्रों में पर्याप्त पुराने भिर्रे होते हैं वहां भिर्रा सफाई एवं मिट्टी चढ़ाई का कार्य कराया जाकर भिर्रो का पुनरो)ार किया जाता है । रिक्त क्षेत्रों में वृक्षारोपण का कार्य किया जाता है। जल एवं मृदा संरक्षण के कार्य कराए जाते है।",
+   "score": 0,
+   "verdict": "not_scheme"
+  },
+  {
    "be_lakh": 95.0,
    "book": "Outcome Budget",
    "code": null,
@@ -3601,6 +3617,27 @@
    "hoas": [],
    "in_myscheme_chhattisgarh": false,
    "key": "14|outcome|iz/kkuea=h d`f\"k flapkbZ ;kstuk",
+   "myscheme_name": null,
+   "name": "प्रधानमंत्री कृषि सिंचाई योजना",
+   "objective": null,
+   "score": 1,
+   "verdict": "not_scheme"
+  },
+  {
+   "be_lakh": 40.0,
+   "book": "Outcome Budget",
+   "code": null,
+   "department": "कृषि विकास एवं किसान कल्याण तथा जैव प्रौद्योगिकी",
+   "evidence": [
+    [
+     "+1",
+     "the word yojana, which this book uses loosely"
+    ]
+   ],
+   "hand_label": null,
+   "hoas": [],
+   "in_myscheme_chhattisgarh": false,
+   "key": "14|outcome|iz/kkuea=h d`f\"k flapkbZ ;kstuk#2",
    "myscheme_name": null,
    "name": "प्रधानमंत्री कृषि सिंचाई योजना",
    "objective": null,
@@ -13048,9 +13085,9 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-10-30T16:43:07Z",
+ "built": "2026-10-31T15:18:54Z",
  "caveat": "One row is one scheme as Chhattisgarh's Outcome, Gender, Youth or Child budget names it, with the objective and the provision the state prints beside it. These are NOT all of Chhattisgarh's schemes. Its 44 department scheme books name 2,562 more and set every name in the Chanakya legacy font, whose encoding cannot be recovered from the PDF, so this register cannot read them and will not publish names it cannot read. The names here are in Kruti Dev, whose table is fixed and checked against the state's own Unicode department index.",
- "classified_not_scheme": 545,
+ "classified_not_scheme": 547,
  "classified_scheme": 29,
  "cycle": "2026-27",
  "ground_truth": {
@@ -13104,6 +13141,7 @@
  "state": "Chhattisgarh",
  "threshold_sweep": [
   {
+   "f1": 0.62,
    "measured_on": "the stratified sample only",
    "n_labelled": 107,
    "precision": 0.458,
@@ -13111,6 +13149,7 @@
    "threshold": -2
   },
   {
+   "f1": 0.628,
    "measured_on": "the stratified sample only",
    "n_labelled": 105,
    "precision": 0.467,
@@ -13118,6 +13157,7 @@
    "threshold": -1
   },
   {
+   "f1": 0.632,
    "measured_on": "the stratified sample only",
    "n_labelled": 104,
    "precision": 0.471,
@@ -13125,6 +13165,7 @@
    "threshold": 0
   },
   {
+   "f1": 0.692,
    "measured_on": "the stratified sample only",
    "n_labelled": 53,
    "precision": 0.679,
@@ -13132,6 +13173,7 @@
    "threshold": 1
   },
   {
+   "f1": 0.5,
    "measured_on": "the stratified sample only",
    "n_labelled": 17,
    "precision": 1.0,
@@ -13139,6 +13181,7 @@
    "threshold": 2
   },
   {
+   "f1": 0.5,
    "measured_on": "the stratified sample only",
    "n_labelled": 17,
    "precision": 1.0,
@@ -13146,6 +13189,7 @@
    "threshold": 3
   },
   {
+   "f1": 0.381,
    "measured_on": "the stratified sample only",
    "n_labelled": 12,
    "precision": 1.0,
@@ -13153,6 +13197,7 @@
    "threshold": 4
   },
   {
+   "f1": 0.211,
    "measured_on": "the stratified sample only",
    "n_labelled": 6,
    "precision": 1.0,
@@ -13162,6 +13207,7 @@
  ],
  "validation": {
   "at_publish_threshold": {
+   "f1": 0.381,
    "measured_on": "the stratified sample only",
    "n_labelled": 12,
    "precision": 1.0,
@@ -13176,6 +13222,10 @@
    "schemes": 28,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors below are named ones."
-  }
+  },
+  "f1_optimal_threshold": 1,
+  "f1_optimal_thresholds": [
+   1
+  ]
  }
 }

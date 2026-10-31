@@ -8,7 +8,9 @@ SP="$(mktemp -d)"
 W="$SP/wt-e2e"; fails=0
 want() { if [ "$2" = "$3" ]; then echo "  ok   $1"; else echo "  FAIL $1 (want '$3', got '$2')"; fails=$((fails+1)); fi; }
 
-git -C "$REPO" worktree remove --force "$W" 2>/dev/null; rm -rf "$W"
+# Removed on any exit, so an interrupted or failing run leaves no worktree registered in the
+# real repository.
+trap 'cd "$REPO" && git worktree remove --force "$W" 2>/dev/null; rm -rf "$SP"' EXIT
 git -C "$REPO" worktree add -q --detach "$W" HEAD
 cp "$REPO/run.sh" "$REPO/progress.py" "$REPO/checkpoint.sh" "$W/"
 cd "$W" || exit 1
@@ -130,5 +132,4 @@ want "a repeat exits 0" "$rc" 0
 want "a repeat says there is nothing to do" "$(grep -c 'nothing to do' "$SP/e2e-4.log")" 1
 want "a repeat changes no file" "$before" "$after"
 
-cd "$REPO" && git worktree remove --force "$W"
 if [ "$fails" = 0 ]; then echo "all e2e tests pass"; else echo "$fails failed"; exit 1; fi

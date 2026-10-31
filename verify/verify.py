@@ -217,14 +217,61 @@ def verify_budget():
     return checks
 
 
+def guarded(name, fn, *args):
+    """Run one verification, turning a crash into a failed check. A truncated manifest or
+    census raised out of main() before status.json was written, so the workflow read last
+    month's COMPLETE and published a month nobody had verified."""
+    try:
+        return fn(*args)
+    except Exception as e:
+        return {}, [{"check": f"{name} ran", "ok": False,
+                     "detail": f"{e.__class__.__name__}: {e}"[:160]}]
+
+
+def record_verdict(date, verdict, root=ROOT):
+    """Keep each snapshot's verdict in data/verdicts.json, for parse/changes.py: status.json
+    holds only the latest, and the change feed must refuse any INCOMPLETE snapshot."""
+    p = os.path.join(root, "data", "verdicts.json")
+    try:
+        with open(p, encoding="utf-8") as fh:
+            held = json.load(fh)
+    except FileNotFoundError:
+        held = {}
+    held[date] = verdict
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    with open(p + ".part", "w", encoding="utf-8") as fh:
+        json.dump(dict(sorted(held.items())), fh, indent=1)
+        fh.write("\n")
+    os.replace(p + ".part", p)
+
+
+def selftest():
+    import tempfile
+
+    def broken(_):
+        raise EOFError("Compressed file ended before the end-of-stream marker was reached")
+    out, checks = guarded("myScheme verification", broken, "2026-10-03")
+    bad = int(out != {} or len(checks) != 1 or checks[0]["ok"] or "EOFError" not in checks[0]["detail"])
+    with tempfile.TemporaryDirectory() as root:
+        record_verdict("2026-09-03", "COMPLETE", root)
+        record_verdict("2026-10-03", "INCOMPLETE", root)
+        with open(os.path.join(root, "data", "verdicts.json")) as fh:
+            bad += json.load(fh) != {"2026-09-03": "COMPLETE", "2026-10-03": "INCOMPLETE"}
+    print(f"  {'FAIL' if bad else 'ok  '} a crash is a failed check, and each verdict is kept")
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description="Verify a snapshot and write status.json.")
     ap.add_argument("--date", default=today())
+    ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
+    if args.self_test:
+        sys.exit(1 if selftest() else 0)
 
     prev = read_json("status.json", {})
-    ms, checks = verify_myscheme(args.date)
-    checks += verify_budget()
+    ms, checks = guarded("myScheme verification", verify_myscheme, args.date)
+    checks += guarded("Budget verification", lambda: ({}, verify_budget()))[1]
 
     # Only gating checks decide whether *this month's* snapshot is publishable. The
     # Budget statements are parsed annually and their defects are long-lived: a known row
@@ -268,6 +315,7 @@ def main():
         "attention": [[c["check"], args.date, c["detail"]] for c in failed],
     }
     write_json("status.json", status)
+    record_verdict(args.date, verdict)
 
     print(f"snapshot {args.date} — {verdict}")
     for c in checks:

@@ -618,22 +618,26 @@ def sweep(rows_by_key, labels):
     global MIN_SCORE, MARGIN
     keep, out = (MIN_SCORE, MARGIN), []
     graded = [x for x in labels if x["label"] not in ("none", "uncertain")]
-    for min_score in (2, 3, 4, 5, 7):
-        for margin in (0, 1, 3):
-            MIN_SCORE, MARGIN = min_score, margin
-            right = fired = 0
-            for x in graded:
-                got, _ = classify(rows_by_key[x["key"]])
-                if got is None:
-                    continue
-                fired += 1
-                right += got == x["label"]
-            out.append({"min_score": min_score, "margin": margin,
-                        "classified": fired, "of": len(graded),
-                        "right": right,
-                        "accuracy": round(right / fired, 3) if fired else None,
-                        "coverage": round(fired / len(graded), 3)})
-    MIN_SCORE, MARGIN = keep
+    # Restored in finally: an exception mid-sweep left the classifier at the last operating
+    # point tried, and every row classified after it used the wrong one.
+    try:
+        for min_score in (2, 3, 4, 5, 7):
+            for margin in (0, 1, 3):
+                MIN_SCORE, MARGIN = min_score, margin
+                right = fired = 0
+                for x in graded:
+                    got, _ = classify(rows_by_key[x["key"]])
+                    if got is None:
+                        continue
+                    fired += 1
+                    right += got == x["label"]
+                out.append({"min_score": min_score, "margin": margin,
+                            "classified": fired, "of": len(graded),
+                            "right": right,
+                            "accuracy": round(right / fired, 3) if fired else None,
+                            "coverage": round(fired / len(graded), 3)})
+    finally:
+        MIN_SCORE, MARGIN = keep
     return out
 
 
@@ -848,6 +852,9 @@ def build(write=True):
     by_key = {r["key"]: r for r in rows}
     labels = (read_json("data/sector_labels.json", {}) or {}).get("labels", [])
     labels = sorted(labels, key=lambda x: x["key"])
+    # A label whose row has left the universe (the capacity rule or the myScheme join moved
+    # it) is out of every figure below; counted and named, not dropped unseen.
+    orphaned = [x["key"] for x in labels if x["key"] not in by_key]
     labels = [x for x in labels if x["key"] in by_key]
 
     sectors, by_family, by_sector, deciding = {}, collections.Counter(), \
@@ -981,6 +988,7 @@ def build(write=True):
         "threshold_sweep": sweep(by_key, labels),
         "validation": {
             "hand_sample": {
+                "labels_whose_row_left_the_universe": orphaned,
                 "labelled_with_a_sector": len(graded),
                 "classified": fired,
                 "right": right,

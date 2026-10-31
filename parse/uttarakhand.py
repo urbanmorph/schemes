@@ -66,7 +66,6 @@ register publishes, and the count of totals checked and reconciled is reported i
 """
 
 import argparse
-import glob
 import gzip
 import json
 import os
@@ -75,8 +74,8 @@ import sys
 
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
-from common import ROOT, read_json, utcnow, write_json  # noqa: E402
-from pdf import layout_text as pdftotext  # noqa: E402
+from common import utcnow, write_json  # noqa: E402
+from pdf import layout_text as pdftotext, snapshot  # noqa: E402
 
 CYCLE_WANTED = "2026-27"
 
@@ -153,17 +152,24 @@ def header_end(lines):
     return end
 
 
+YEAR_RANGE = re.compile(r"^\d{4}-\d{2}$")
+
+
 def value(tok):
+    """One money cell in thousands: `1,234`, `--` for nil, `(-) 1234` for a negative.
+
+    A year range such as 2026-27 is not a figure and reads as 0. TOKEN never yields one
+    (it splits 2026-27 into 2026 and 27), so the guard is for any caller handing a raw
+    cell in. Anything else is a misread and raises: the earlier test, any "-" not opening
+    "(-)", turned every such misread into a silent zero."""
     t = tok.replace(",", "").replace(" ", "")
-    if "-" in t and not t.startswith("(-)") and t != "--":
-        # A year range such as 2026-27 is not a figure. It reaches here only from the
-        # summary pages, where the running header shares a line with the account totals.
+    if t == "--" or YEAR_RANGE.match(t):
         return 0.0
-    if t == "--":
-        return 0.0
-    if t.startswith("(-)"):
+    if re.fullmatch(r"\(-\)\d+", t):
         return -float(t[3:])
-    return float(t)
+    if t.isdigit():
+        return float(t)
+    raise SystemExit(f"uttarakhand: unreadable money cell {tok!r}")
 
 
 class Node:
@@ -430,20 +436,13 @@ def walk(node, path, out, minor_seen=False):
 
 
 def run(date=None):
-    dates = sorted(os.path.basename(p) for p in
-                   glob.glob(os.path.join(ROOT, "archive", "uttarakhand", "*"))
-                   if os.path.isdir(p))
-    if not dates:
-        raise SystemExit("no archive/uttarakhand snapshot; run "
-                         "collect/uttarakhand.py first")
-    date = date or dates[-1]
-    man = read_json(f"archive/uttarakhand/{date}/_manifest.json", {}) or {}
+    date, src, man = snapshot("uttarakhand", date)
 
     all_checks, per_book, entries, nodes_seen = [], {}, {}, 0
     cycles_all, grants_all, index_all = set(), set(), set()
     covers_all, accounts_all = {}, {}
     for book in BOOKS:
-        path = os.path.join(ROOT, "archive", "uttarakhand", date, f"{book}.pdf.gz")
+        path = os.path.join(src, f"{book}.pdf.gz")
         if not os.path.exists(path):
             raise SystemExit(f"missing {path}. The four Volume 5 parts and the Gender "
                              "Budget are all needed; a missing part is whole grants "

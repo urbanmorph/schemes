@@ -50048,11 +50048,11 @@
     ]
    ],
    "grant": "40",
-   "hand_label": "not_scheme",
+   "hand_label": null,
    "head_of_account": "4210-01-800-03",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "40|0301|28",
+   "key": "40|0301|28@2",
    "myscheme_name": null,
    "name": "भवनों के निर्माण / विस्तार के लियेएकमुश्त व्यवस्था",
    "name_latin": "bhavanon ke nirman / vistar ke liyeekamusht vyavastha",
@@ -117695,7 +117695,7 @@
    "head_of_account": "2701-04-101-03",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "94|0301|43",
+   "key": "94|0301|43@2",
    "myscheme_name": null,
    "name": "अनुरक्षण कार्य",
    "name_latin": "anurakshan kary",
@@ -118040,7 +118040,7 @@
    "head_of_account": "2701-04-101-03",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "94|0301|49#2",
+   "key": "94|0301|49#2@2",
    "myscheme_name": null,
    "name": "अनुरक्षण कार्य",
    "name_latin": "anurakshan kary",
@@ -120293,7 +120293,7 @@
    "head_of_account": "2701-04-101-03",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "94|0302|42",
+   "key": "94|0302|42@2",
    "myscheme_name": null,
    "name": "विशेष मरम्मत",
    "name_latin": "vishesh marammat",
@@ -120339,7 +120339,7 @@
    "head_of_account": "2701-04-101-03",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "94|0302|43",
+   "key": "94|0302|43@2",
    "myscheme_name": null,
    "name": "विशेष मरम्मत",
    "name_latin": "vishesh marammat",
@@ -124545,7 +124545,7 @@
    "head_of_account": "2701-04-101-03",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "94|0304|50",
+   "key": "94|0304|50@2",
    "myscheme_name": null,
    "name": "सिल्ट सफाई",
    "name_latin": "silt saphai",
@@ -125051,7 +125051,7 @@
    "head_of_account": "2701-04-101-03",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "94|0304|58#2",
+   "key": "94|0304|58#2@2",
    "myscheme_name": null,
    "name": "सिल्ट सफाई",
    "name_latin": "silt saphai",
@@ -130552,7 +130552,7 @@
    "head_of_account": "4700-04-050-10",
    "hoas": [],
    "in_myscheme_uttarpradesh": false,
-   "key": "94|1016|81",
+   "key": "94|1016|81@2",
    "myscheme_name": null,
    "name": "भू-प्रतिकर",
    "name_latin": "bhu-pratikar",
@@ -135642,7 +135642,7 @@
    "verdict": "not_scheme"
   }
  ],
- "built": "2026-10-30T16:43:43Z",
+ "built": "2026-10-31T15:18:54Z",
  "caveat": "One row here is one node of Uttar Pradesh's account tree at the level the state files schemes at, so it is a superset of the schemes a citizen can apply to: a directorate sits at the same level as a cash transfer. Items of expenditure below it (Pay, Dearness Allowance, Office Expenses) are excluded. The number here is a floor on Uttar Pradesh's schemes, never a total.",
  "classified_not_scheme": 5647,
  "classified_scheme": 184,
@@ -135708,6 +135708,7 @@
  "state": "Uttar Pradesh",
  "threshold_sweep": [
   {
+   "f1": 0.455,
    "measured_on": "the stratified sample only",
    "n_labelled": 106,
    "precision": 0.311,
@@ -135715,6 +135716,7 @@
    "threshold": -2
   },
   {
+   "f1": 0.455,
    "measured_on": "the stratified sample only",
    "n_labelled": 106,
    "precision": 0.311,
@@ -135722,6 +135724,7 @@
    "threshold": -1
   },
   {
+   "f1": 0.454,
    "measured_on": "the stratified sample only",
    "n_labelled": 102,
    "precision": 0.314,
@@ -135729,6 +135732,7 @@
    "threshold": 0
   },
   {
+   "f1": 0.583,
    "measured_on": "the stratified sample only",
    "n_labelled": 33,
    "precision": 0.636,
@@ -135736,6 +135740,7 @@
    "threshold": 1
   },
   {
+   "f1": 0.596,
    "measured_on": "the stratified sample only",
    "n_labelled": 18,
    "precision": 0.944,
@@ -135743,6 +135748,7 @@
    "threshold": 2
   },
   {
+   "f1": 0.596,
    "measured_on": "the stratified sample only",
    "n_labelled": 18,
    "precision": 0.944,
@@ -135750,6 +135756,7 @@
    "threshold": 3
   },
   {
+   "f1": 0.227,
    "measured_on": "the stratified sample only",
    "n_labelled": 5,
    "precision": 1.0,
@@ -135759,6 +135766,7 @@
  ],
  "validation": {
   "at_publish_threshold": {
+   "f1": 0.596,
    "measured_on": "the stratified sample only",
    "n_labelled": 18,
    "precision": 0.944,
@@ -135773,6 +135781,11 @@
    "schemes": 173,
    "unlabelled": 0,
    "what": "Every row at or above the publishing bar carries a hand label, so this precision is a COUNT and the errors below are named ones."
-  }
+  },
+  "f1_optimal_threshold": 2,
+  "f1_optimal_thresholds": [
+   2,
+   3
+  ]
  }
 }
