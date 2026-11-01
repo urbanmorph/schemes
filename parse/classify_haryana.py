@@ -11,7 +11,7 @@ classifiers established. THE PURPOSE LINE IS WORTHLESS HERE, and it was the stro
 signal in the file for Karnataka at P(scheme) 0.947.
 
 Haryana prints a paragraph of its own describing 824 of its 970 lines, which looked like
-the richest evidence any state in this register publishes. Measured against 300 hand
+the richest evidence any state in this register publishes. Measured against 300
 labels it is worth nothing at all:
 
     a purpose paragraph is present        P(scheme) 0.288   base rate 0.280   lift +0.008
@@ -117,12 +117,8 @@ SIGNALS = [
     ("admin_grant", ADMIN_GRANT, -4, "money for an institution's own running"),
 ]
 
-# Every row at or above this carries a hand label, so precision here is a COUNT.
+# Every row at or above this carries a label, so precision here is a COUNT.
 PUBLISH_THRESHOLD = 4
-# The weaker bar, for listing a row as something the state's budget names as a scheme. This
-# is the F1 optimum and it is NOT the bar above: listing a budget head is an annoyance,
-# naming one as hidden is a false accusation.
-LISTING_THRESHOLD = 3
 
 
 def score(r):
@@ -173,12 +169,11 @@ def main():
     # The sweep sees the stratified sample and not the audit census; classify_common
     # carries the full note. Haryana's 90 audited rows once had it reading 0.742.
     report("haryana",
-           *classify("haryana", "Haryana", score, PUBLISH_THRESHOLD, LISTING_THRESHOLD,
-                     REJECTED, omit=("hoas",),
+           *classify("haryana", "Haryana", score, PUBLISH_THRESHOLD, REJECTED, omit=("hoas",),
                      row_fields=lambda r: {"department": r.get("department"),
                                            "purpose": r.get("purpose"),
                                            "part": r.get("part")},
-                     what=("Every row at or above the publishing bar carries a hand label, "
+                     what=("Every row at or above the publishing bar carries a label, "
                            "so this precision is a COUNT and the errors are named ones.")),
            publish=PUBLISH_THRESHOLD)
 

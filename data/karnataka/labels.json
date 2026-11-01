@@ -1,7 +1,7 @@
 {
  "borderline": 88,
  "built_from": "data/karnataka/schemes.json",
- "labelled": 324,
+ "labelled": 336,
  "labels": [
   {
    "be_lakh": 1000.0,
@@ -5391,23 +5391,179 @@
    "stratum": "GB/q4",
    "stratum_sampled": 17,
    "stratum_size": 77
+  },
+  {
+   "be_lakh": 27300.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-101-0-07",
+   "label": "scheme",
+   "name": "CSS-State Share- Post-Matric Scholarships to SC Students",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2225-01-197-6-09, labelled a scheme there: post-matric scholarship to SC students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 9000.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-101-0-68",
+   "label": "scheme",
+   "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2225-01-197-6-07, labelled a scheme there: pre-matric scholarship to SC students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 7000.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-101-0-69",
+   "label": "scheme",
+   "name": "CSS-State Share-Pre-Matric Scholarship to SC Students",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2225-01-197-6-08, labelled a scheme there: state share of the pre-matric scholarship to SC students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 6600.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-101-0-70",
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship to SC Students (1st to 8th STD-State Scheme)",
+   "purpose": null,
+   "reason": "pre-matric scholarship paid to SC students in classes 1 to 8",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 1500.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-101-0-80",
+   "label": "scheme",
+   "name": "Incentive to SC Law Graduates",
+   "purpose": null,
+   "reason": "an incentive paid to individual SC law graduates",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 15000.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-102-0-07",
+   "label": "scheme",
+   "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-03, labelled a scheme there: post-matric scholarships to ST students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 2159.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-102-0-09",
+   "label": "scheme",
+   "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-05, labelled a scheme there: pre-matric scholarship to ST students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 5000.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-102-0-10",
+   "label": "scheme",
+   "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-04, labelled a scheme there: state share of post-matric scholarships to ST students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 720.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-102-0-11",
+   "label": "scheme",
+   "name": "CSS-State Share-Pre-Matric Scholarship to ST Students",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-06, labelled a scheme there: state share of pre-matric scholarship to ST students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 3000.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2225-00-102-0-68",
+   "label": "scheme",
+   "name": "Pre-Matric Scholarship for ST Students (1st to 8th STD)- State Scheme",
+   "purpose": null,
+   "reason": "pre-matric scholarship paid to ST students in classes 1 to 8",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 28000.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2235-00-101-0-63",
+   "label": "scheme",
+   "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2236-02-197-1-02, labelled a scheme there: hot meal and milk to school students",
+   "sample": "audit"
+  },
+  {
+   "be_lakh": 161200.0,
+   "books": [
+    "SCSP/TSP Allocations"
+   ],
+   "borderline": false,
+   "hoa": "2408-00-101-0-01",
+   "label": "scheme",
+   "name": "DBT under Annabhagya Scheme",
+   "purpose": null,
+   "reason": "the SCSP/TSP book's earmark of 2408-01-102-0-09, labelled a scheme there: direct benefit transfer to Annabhagya cardholders",
+   "sample": "audit"
   }
  ],
  "not_scheme": 147,
  "rule": {
+  "adopted": "This is the register's SINGLE definition, taken from the wording the first seven states were labelled against because it is the more carefully drawn of the two that existed. The eight states labelled later used a looser one that admitted 'a service', which pulled in the capacity of a delivery system: a helpline, a creche, an anganwadi's running costs, an agricultural extension wing. 69 published rows were re-read against this wording and 56 changed side. The register's headline number counted two different things before that and said so nowhere.",
   "borderline_note": "Rows flagged borderline are the ones where the two readings genuinely compete. Every one carries the reasoning that decided it, so a human can flip it and rerun.",
   "not_scheme": "the money runs, builds, staffs or maintains an organisation or an asset (college, hospital, directorate, board, corporation, building, vehicle, office), devolves general purpose funds to another tier of government, or is an accounting or adjustment head",
-  "scheme": "the money buys an identifiable benefit received by a person or household: cash, kit, food, scholarship, fee waiver, pension, insurance, subsidy, loan, free travel, a house, treatment for a named beneficiary class, or training given to people",
-  "adopted": "This is the register's SINGLE definition, taken from the wording the first seven states were labelled against because it is the more carefully drawn of the two that existed. The eight states labelled later used a looser one that admitted 'a service', which pulled in the capacity of a delivery system: a helpline, a creche, an anganwadi's running costs, an agricultural extension wing. 69 published rows were re-read against this wording and 56 changed side. The register's headline number counted two different things before that and said so nowhere."
+  "scheme": "the money buys an identifiable benefit received by a person or household: cash, kit, food, scholarship, fee waiver, pension, insurance, subsidy, loan, free travel, a house, treatment for a named beneficiary class, or training given to people"
  },
  "sampling": "Stratified by book (SCSP/TSP, else Child, else Gender) crossed with allocation band (none, and quartiles of the 865 rows that carry an allocation), 15 strata. Within a stratum rows are sorted by head of account and picked at even spacing, so the sample is reproducible without a random seed. Allocation is proportional to stratum size with a floor of 4, so the sample is close to self weighting; stratum_size and stratum_sampled are carried on every row so a weighted estimate can be recomputed.",
- "scheme": 177,
+ "scheme": 189,
  "sets": {
   "audit": {
    "borderline": 26,
-   "n": 109,
+   "n": 121,
    "not_scheme": 11,
-   "scheme": 98,
+   "scheme": 110,
    "what": "Every row the classifier calls a scheme at score 5 or above that the stratified sample had not already covered. Together the two sets are a census of the published region, so the published list's precision is counted rather than estimated. The audit was made after the weights were fixed and was not fed back into them."
   },
   "stratified": {
@@ -5419,5 +5575,5 @@
   }
  },
  "snapshot": "2026-09-01",
- "what": "Hand labels for a stratified sample of Karnataka's scheme-wise budget rows. Ground truth for parse/classify_karnataka.py. Audit and correct these: the classifier is only as good as they are."
+ "what": "Labels for a stratified sample of Karnataka's scheme-wise budget rows. Ground truth for parse/classify_karnataka.py. Audit and correct these: the classifier is only as good as they are."
 }

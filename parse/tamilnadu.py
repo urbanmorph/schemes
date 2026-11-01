@@ -768,7 +768,7 @@ def run(date=None):
                       "Nadu's own public figure of about Rs 14,000 crore. Read as lakh it "
                       "would have been Rs 1.44 lakh crore."),
         # Every join this corpus produces against myScheme's 234 Tamil Nadu records was
-        # read by hand: 201 joins over 56 records, of which 118 are wrong. The defects are
+        # read by a model (Claude): 201 joins over 56 records, of which 118 are wrong. The defects are
         # recorded here and parse/match.py is deliberately NOT changed, because it feeds
         # published absence claims elsewhere and the evidence should land before the
         # numbers move. Direction of harm matters and is not symmetric: a false match makes
@@ -873,7 +873,7 @@ def run(date=None):
             "heads_of_account_with_a_sound_join": 78,
             "how": ("indexed on match.tokens, match.skeleton and match.acronyms, then "
                     "match.probably_same on every candidate pair, then every join read "
-                    "by eye"),
+                    "by a model (Claude)"),
         },
         "caveat": (
             "One row here is one SUB-HEAD of a demand for grant, keyed on its head of "

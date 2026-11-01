@@ -5,7 +5,7 @@ AGENT-EDITABLE (PLAN.md §7). Reads data/ only. Never fetches.
 
 WHAT BELONGS HERE and what does not. Every classifier in this directory does the same four
 things with its verdicts: join them to myScheme so a row already on the portal is not
-reported as absent from it, sweep a threshold against hand labels, count precision over an
+reported as absent from it, sweep a threshold against labels, count precision over an
 audit census at the publishing bar, and write one classification.json the site can read.
 None of that is state-specific and all of it was being copied.
 
@@ -21,10 +21,11 @@ THE TWO BARS, once, here, because getting them the same way in every state is th
 reason this file exists:
 
     publish   the accusation bar. "This is funded and no portal lists it." Every row at or
-              above it carries a hand label, so precision is a COUNT and the errors are
+              above it carries a label, so precision is a COUNT and the errors are
               named. Set high; recall is sacrificed on purpose.
-    listing   the F1 optimum. "The state's budget names this as a scheme." Listing a budget
-              head is an annoyance; naming one as hidden is a false accusation.
+    listing   the F1 optimum, computed (listing_bar). "The state's budget names this as a
+              scheme." Listing a budget head is an annoyance; naming one as hidden is a
+              false accusation.
 """
 
 import glob
@@ -166,7 +167,7 @@ def joiner(names):
 
 
 def provenance(v):
-    """Which set a hand label was drawn from: "audit", "corpus", "stratified", or None when
+    """Which set a label was drawn from: "audit", "corpus", "stratified", or None when
     unrecorded. The seven oldest states record it per row as `sample`, the others as `how`.
 
     One copy for every classifier and parse/ratios.py. There were five, and three of them
@@ -218,8 +219,27 @@ def f1_optimal(sweep):
     return [x["threshold"] for x in sweep if x["f1"] == best]
 
 
+def listing_bar(sweep, publish):
+    """The listing bar: the lowest threshold at the sweep's F1 optimum. PLAN.md §4 says the
+    bar IS the optimum; it was typed into each classifier as a literal, and five of them
+    drifted off it as the data moved. Computed, it cannot. Refused when the optimum is not
+    below the publishing bar, since the two bars make different claims."""
+    best = f1_optimal(sweep)
+    if not best or best[0] >= publish:
+        raise SystemExit(f"the F1 optimum {best} is not below the publishing bar {publish}")
+    return best[0]
+
+
+def accusable(row, flag):
+    """Whether a row at the publishing bar may be named as funded and absent from myScheme:
+    not on it, and not labelled "not a scheme". A labelled error still counts against the
+    bar's precision, which measures the classifier; it is not published as an accusation
+    the label says is wrong."""
+    return not row.get(flag) and row.get("hand_label") != "not_scheme"
+
+
 def label_sweep(rows, lo, hi):
-    """Precision and recall over hand-labelled rows at every threshold, so the operating
+    """Precision and recall over labelled rows at every threshold, so the operating
     point is visible. One copy: it was written out identically in seven classifiers."""
     out = []
     for t in range(lo, hi + 1):
@@ -305,11 +325,27 @@ def sample_sweeps(scored, threshold, floor=-8):
             "at_held": next(x for x in held_sweep if x["threshold"] == threshold)}
 
 
+def census_claim(rows, start, publish):
+    """The sentence saying what the census counts, from the rows rather than typed in.
+
+    Seven states published "every row at or above score N is labelled" for a census floor N
+    below the bar, and four of them were false: Karnataka, Kerala, Tamil Nadu and West
+    Bengal each had 41 to 152 unlabelled rows between the floor and the bar."""
+    gap = sum(1 for x in rows if start <= x["score"] < publish and x.get("hand_label") is None)
+    if not gap:
+        return (f"Every row at or above score {start} is labelled, so precision at these "
+                "thresholds is counted rather than estimated.")
+    return (f"Every row at or above the publishing bar of {publish} is labelled, so precision "
+            f"there is counted rather than estimated. Between score {start} and the bar {gap} "
+            f"row{'s carry' if gap > 1 else ' carries'} no label, so precision there counts the "
+            "labelled rows only.")
+
+
 def census_sweep(rows, audited, start, stop, corpus=True, bands=True,
                  error=lambda x: x["name"]):
     """Counted precision at every threshold from `start` to `stop` over the audit census.
 
-    Every row scoring `start` or more carries a hand label, from one set or the other, so at
+    Every row scoring `start` or more carries a label, from one set or the other, so at
     those thresholds these are counts and not estimates. `bands` adds the band at exactly
     each score, which is where a bar is argued for; `corpus` adds the rows the corpus holds
     there, labelled or not."""
@@ -395,7 +431,7 @@ def assess(key, state, ident, score, fields, threshold, census_from, label_key="
         "at_census": next(x for x in census if x["threshold"] == threshold),
         "schemes": schemes,
         "absent_all": [x for x in rows if not x[flag]],
-        "absent": sorted((x for x in schemes if not x[flag]),
+        "absent": sorted((x for x in schemes if accusable(x, flag)),
                          key=lambda x: (-(x["be_lakh"] or 0), order[id(x)])),
         "counts": {"n_labelled": len(scored), "n_development": len(v["dev"]),
                    "n_held_out": len(v["held"])},
@@ -416,12 +452,12 @@ def assess(key, state, ident, score, fields, threshold, census_from, label_key="
 
 
 def base_rate(rows):
-    """The share of hand-labelled rows labelled a scheme, to three places."""
+    """The share of labelled rows labelled a scheme, to three places."""
     return round(sum(1 for x in rows if x["label"] == "scheme") / len(rows), 3)
 
 
 def check_sample(key, ident, stratify, score, census_from, label_key="key"):
-    """Report which sampled rows, and which census rows, have no hand label yet, so the
+    """Report which sampled rows, and which census rows, have no label yet, so the
     label set can be extended. Nothing at or above census_from may be unlabelled."""
     entries = sorted(load(key, "schemes.json")["entries"], key=ident)
     have = {x[label_key] for x in load(key, "labels.json")["labels"]}
@@ -456,7 +492,7 @@ def unique_idents(ids):
     return out
 
 
-def classify(key, state, score, publish, listing, rejected, row_fields=None,
+def classify(key, state, score, publish, rejected, row_fields=None,
              ident=None, omit=(), what=None):
     """Score one state's rows, validate against its labels, and write its verdicts.
 
@@ -501,7 +537,7 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
 
     # `key` first, then `code`. Punjab publishes BOTH and its labels are keyed on the
     # first; most states have one or the other, so this order is safe for them and wrong
-    # for none. Getting it backwards silently drops every hand label: Punjab reported 127
+    # for none. Getting it backwards silently drops every label: Punjab reported 127
     # of 154 census rows unlabelled and a precision of 0.175.
     #
     # A state whose identifier is neither passes its own. Uttar Pradesh's scheme code is
@@ -571,7 +607,7 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
     unlabelled = [o for o in census if o["hand_label"] is None]
     right = sum(1 for o in census if o["hand_label"] == "scheme")
     errors = [o["name"] for o in census if o["hand_label"] == "not_scheme"]
-    absent = [o for o in census if not o[flag]]
+    absent = [o for o in census if accusable(o, flag)]
 
     ground = {"labelled": len(labels),
               "scheme": sum(1 for v in labels.values() if v == "scheme"),
@@ -589,6 +625,7 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
     ground.update({"question": lj.get("question"), "sampling": lj.get("sampling")})
     swept = [x for x in (sweep(t) for t in range(lo, hi + 1)) if x]
     best = f1_optimal(swept)
+    listing = listing_bar(swept, publish)
 
     write_json(f"data/{key}/classification.json", {
         "built": utcnow(), "snapshot": d.get("snapshot"), "state": state,
@@ -627,11 +664,11 @@ def classify(key, state, score, publish, listing, rejected, row_fields=None,
 def report(key, out, census, right, errors, ms, unlabelled, publish):
     print(f"{key}: {len(out):,} lines, {len(census)} clear the publishing bar of {publish}")
     if unlabelled:
-        print(f"  {len(unlabelled)} rows at the bar carry NO hand label. Precision below is "
+        print(f"  {len(unlabelled)} rows at the bar carry NO label. Precision below is "
               f"not yet a count; label them before publishing.")
     if census:
         print(f"  counted precision {right/len(census):.3f} on {len(census)-len(unlabelled)} "
-              f"hand-labelled rows, {len(errors)} named errors")
+              f"labelled rows, {len(errors)} named errors")
     for e in errors[:6]:
         print(f"     not a scheme: {e[:68]}")
     print(f"  myScheme lists {len(ms)}; "
@@ -687,6 +724,24 @@ def selftest_mechanics():
     out.append(("a census without the corpus or band columns publishes neither",
                 sorted(census_sweep(rows, rows[:3], 5, 5, corpus=False, bands=False)[0]),
                 ["not_schemes", "precision", "published", "the_errors", "threshold"]))
+    out.append(("a row labelled not a scheme is never named as absent, whatever its score",
+                [r["name"] for r in rows if accusable(r, "listed")], ["A", "C", "D"]))
+    out.append(("a row on myScheme is never named as absent",
+                accusable({"listed": True, "hand_label": "scheme"}, "listed"), False))
+    out.append(("listing bar: the lowest tied F1 optimum",
+                listing_bar([{"threshold": 1, "f1": 0.6}, {"threshold": 2, "f1": 0.7},
+                             {"threshold": 3, "f1": 0.7}], 4), 2))
+    claim = [{"score": 9, "hand_label": "scheme"}, {"score": 6, "hand_label": None},
+             {"score": 5, "hand_label": "not_scheme"}, {"score": 2, "hand_label": None}]
+    out.append(("the census claim names the unlabelled rows between the census floor and the bar",
+                census_claim(claim, 5, 8),
+                "Every row at or above the publishing bar of 8 is labelled, so precision there "
+                "is counted rather than estimated. Between score 5 and the bar 1 row carries no "
+                "label, so precision there counts the labelled rows only."))
+    out.append(("with no gap, the census claim is the plain one",
+                census_claim(claim, 7, 8),
+                "Every row at or above score 7 is labelled, so precision at these thresholds "
+                "is counted rather than estimated."))
     out.append(("an identifier shared by two rows: the first keeps it, the second is suffixed",
                 unique_idents(["a", "b", "a", "a@2", "a"]), ["a", "b", "a@3", "a@2", "a@4"]))
     out.append(("unique identifiers are left alone", unique_idents(["x", "y"]), ["x", "y"]))

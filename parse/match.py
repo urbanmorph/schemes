@@ -356,7 +356,7 @@ def _same_axis(g1, g2):
     return False
 
 
-# THE ACRONYM RULE, REWRITTEN ON 2026-10-30 AGAINST 1,310 HAND-LABELLED PAIRS.
+# THE ACRONYM RULE, REWRITTEN ON 2026-10-30 AGAINST 1,310 LABELLED PAIRS (READ BY CLAUDE, AN AI MODEL).
 #
 # The rules this replaced accepted a pair whenever some acronym lined up: a capitalised
 # word against the same word in another name (MANTRI, POSHAN, BIRSA), two initialisms that

@@ -436,7 +436,7 @@ def run(date=None):
             "heads_of_account_with_a_sound_join": 66,
             "how": ("indexed on match.tokens, match.skeleton and match.acronyms, then "
                     "match.probably_same on every candidate pair, then every join read "
-                    "by eye"),
+                    "by a model (Claude)"),
             "uncertain": (
                 "myScheme's 'Old Age Pension' record fanned out to 44 register rows and "
                 "the split between right and wrong there is a JUDGEMENT, not a fact. "

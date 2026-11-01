@@ -33,7 +33,7 @@ name a university, a college, a dispensary, a laboratory or a centre. Chhattisga
 the institution that delivers a service at the same level as the benefit, exactly as
 Telangana's Pragathi Paddu does, and the register's rule separates them.
 
-214 hand labels: a 197-row stratified sample on the book crossed with allocation quartile,
+214 labels: a 197-row stratified sample on the book crossed with allocation quartile,
 then every row at the publishing bar labelled so precision is a COUNT. 29 of 574 lines
 clear it, precision 0.966 with one named error, recall 0.268 on the stratified sample alone.
 
@@ -89,7 +89,6 @@ WATER = re.compile(r"जल प्रदाय|जल निकास|पेय�
 NOT_A_PERSON = re.compile(r"निवेश प्रोत्साहन|नवाचार|औद्योगिक|उद्योग")
 
 PUBLISH_THRESHOLD = 4
-LISTING_THRESHOLD = 1
 
 
 def score(r):
@@ -147,8 +146,7 @@ REJECTED = [
 def main():
     argparse.ArgumentParser(description="Classify Chhattisgarh's outcome budget lines.").parse_args()
     report("chhattisgarh",
-           *classify("chhattisgarh", "Chhattisgarh", score, PUBLISH_THRESHOLD,
-                     LISTING_THRESHOLD, REJECTED,
+           *classify("chhattisgarh", "Chhattisgarh", score, PUBLISH_THRESHOLD, REJECTED,
                      row_fields=lambda r: {
                          "department": r.get("department"),
                          "book": r.get("book"),

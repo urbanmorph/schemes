@@ -88,7 +88,7 @@ government, not conclusions of the audit, and they are published from `data/cag/
 
 - setup facts only, never a finding, and never the report's own sentence;
 - each cited in the report's printed form (report number, title, government, para, page),
-  every citation checked by hand against the page;
+  every citation checked by a model (Claude) against the page;
 - each matched to its register entry by hand and named by the source that entry holds (a
   myScheme slug or a Budget line), never by the entry's name, which moves when merges change;
 - where the CAG and the register's other sources disagree, the CAG's value is shown and the
@@ -130,8 +130,15 @@ admitting "a service". Sixty-nine published rows were re-read and fifty-six chan
 Listing a budget head is an annoyance. Naming one as hidden is a false accusation. Using one
 threshold for both inflated every absence claim here until it was caught.
 
-Every row at or above the publishing bar carries a hand label, so precision is a **count**
-and the errors are **named** in `known_errors`. Recall is measured on the **stratified sample
+Every row at or above the publishing bar carries a label, so precision is a **count**
+and the errors are **named** in `known_errors`. **The labels were read by Claude, an AI model, not by a
+person**, in the sessions that built each classifier, and no person has checked them; they
+were long called "hand labels", which overstated them. The same is true of every myScheme
+join and CAG citation this repository says was "read". The JSON key `hand_label` keeps its
+old name so that nothing reading the data breaks. A row labelled `not_scheme` still counts
+against its state's precision but is never published as an absence
+(`classify_common.accusable`). The listing bar is computed from the sweep
+(`classify_common.listing_bar`), the lowest threshold at the F1 optimum. Recall is measured on the **stratified sample
 alone**: the audit census is selected on the classifier's own output, so counting it there
 raises the number with the size of the audit rather than the quality of the classifier.
 `parse/ratios.py` asserts all of this and fails the run if any published ratio divides two

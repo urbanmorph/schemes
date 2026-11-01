@@ -32,7 +32,7 @@ The dates are the finding. What caused them is somebody else's research.
 WHY THE KEY IS (state, identifier) AND NOT THE NAME. A state renames a scheme between
 cycles more often than it renumbers it, and a name-keyed watchlist would read a rename as
 one scheme disappearing and another being accused for the first time. The identifier is
-whatever that state's classifier uses as its own key, which is the same thing the hand
+whatever that state's classifier uses as its own key, which is the same thing the
 labels are keyed on.
 """
 

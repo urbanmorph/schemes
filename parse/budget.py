@@ -105,7 +105,7 @@ def parse_statement(text):
     # from it, the extraction lost a row that is there.
     #
     # Statement 4A 2026-27 numbers its rows 1-27, 29, 30, 32-86: it skips 28 and 31, and
-    # "28." and "31." occur nowhere in the file. VERIFIED BY EYE, page 3 rendered at 130
+    # "28." and "31." occur nowhere in the file. VERIFIED BY A MODEL (CLAUDE), page 3 rendered at 130
     # dpi: the printed list runs 25, 26, 27, 29, 30, Demand No. 51 total, Police, 32, 33.
     # There is no row 28 and no row 31 on the page.
     #

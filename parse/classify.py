@@ -142,7 +142,14 @@ def score_line(name, statement, in_dbt, in_outcome, ministry):
     return total, ev
 
 
-def run(snapshot, year, threshold):
+# The PUBLISHED absence list uses a stricter bar than the general classification. Naming a
+# scheme as missing from a government portal is an accusation; being wrong about it is worse
+# than omitting a true case, so it runs at the high-precision end of the sweep rather than
+# the F1-optimal one.
+PUBLISH_AT = 4
+
+
+def run(snapshot, year):
     reg = json.load(open(os.path.join(ROOT, "data", "registry.json"), encoding="utf-8"))
     # Each of these is a scoring signal, and a missing one used to read as empty: every
     # line lost its +3 for DBT, or its ministry, with no message. Missing is an error.
@@ -182,17 +189,7 @@ def run(snapshot, year, threshold):
             "on_myscheme": _reg.on_myscheme(en),
             "in_dbt": in_dbt, "in_outcome": in_ob,
             "score": total, "evidence": ev,
-            "verdict": "scheme" if total >= threshold else "budget head",
         })
-
-    # Validation against myScheme membership. See the module docstring for why precision
-    # is the metric that means something here and recall is only a floor.
-    tp = sum(1 for x in lines if x["verdict"] == "scheme" and x["in_myscheme"])
-    fp = sum(1 for x in lines if x["verdict"] == "scheme" and not x["in_myscheme"])
-    fn = sum(1 for x in lines if x["verdict"] != "scheme" and x["in_myscheme"])
-    tn = sum(1 for x in lines if x["verdict"] != "scheme" and not x["in_myscheme"])
-    precision = tp / (tp + fp) if tp + fp else 0
-    recall = tp / (tp + fn) if tp + fn else 0
 
     # Threshold sweep, published so the operating point is a choice a reader can see
     # rather than a number chosen by feel.
@@ -207,12 +204,21 @@ def run(snapshot, year, threshold):
                       "recall_floor": round(rc, 3),
                       "f1": round(2 * pr * rc / (pr + rc), 3) if pr + rc else 0})
 
+    # The listing bar is the sweep's F1 optimum (PLAN.md §4), computed so it cannot drift.
+    threshold = _cc.listing_bar(sweep, PUBLISH_AT)
+    for x in lines:
+        x["verdict"] = "scheme" if x["score"] >= threshold else "budget head"
+
+    # Validation against myScheme membership. See the module docstring for why precision
+    # is the metric that means something here and recall is only a floor.
+    tp = sum(1 for x in lines if x["verdict"] == "scheme" and x["in_myscheme"])
+    fp = sum(1 for x in lines if x["verdict"] == "scheme" and not x["in_myscheme"])
+    fn = sum(1 for x in lines if x["verdict"] != "scheme" and x["in_myscheme"])
+    tn = sum(1 for x in lines if x["verdict"] != "scheme" and not x["in_myscheme"])
+    precision = tp / (tp + fp) if tp + fp else 0
+    recall = tp / (tp + fn) if tp + fn else 0
+
     schemes = [x for x in lines if x["verdict"] == "scheme"]
-    # The PUBLISHED absence list uses a stricter bar than the general classification.
-    # Naming a scheme as missing from a government portal is an accusation; being wrong
-    # about it is worse than omitting a true case, so it runs at the high-precision end
-    # of the sweep rather than the F1-optimal one.
-    PUBLISH_AT = 4
     unlisted = sorted((x for x in lines
                        if x["score"] >= PUBLISH_AT and not x["on_myscheme"]
                        and isinstance(x["be_cr"], (int, float))),
@@ -234,7 +240,7 @@ def run(snapshot, year, threshold):
                      "being incomplete, which is the thing this project documents. "
                      "Precision is the metric worth reading."),
         },
-        "publish_threshold": 4,
+        "publish_threshold": PUBLISH_AT,
         "threshold_sweep": sweep,
         "unlisted_schemes": unlisted[:300],
         "unlisted_schemes_total": len(unlisted),
@@ -254,14 +260,13 @@ def main():
     ap = argparse.ArgumentParser(description="Classify budget lines as scheme or head.")
     ap.add_argument("--snapshot", help="DBT snapshot date (default: the newest clean one)")
     ap.add_argument("--year", type=int, default=2026)
-    ap.add_argument("--threshold", type=int, default=2)
     a = ap.parse_args()
-    o = run(a.snapshot or latest_dbt(), a.year, a.threshold)
+    o = run(a.snapshot or latest_dbt(), a.year)
     v = o["validation"]
     print(f"budget lines classified: {o['lines']}")
     print(f"  scheme       {o['classified_scheme']:>5}")
     print(f"  budget head  {o['classified_head']:>5}\n")
-    print(f"validated against myScheme membership (threshold {a.threshold}):")
+    print(f"validated against myScheme membership (threshold {o['threshold']}):")
     print(f"  precision      {v['precision']:.1%}   of lines called schemes, "
           f"myScheme agrees on {v['true_positive']}/{v['true_positive']+v['false_positive']}")
     print(f"  recall (floor) {v['recall_floor']:.1%}   {v['false_negative']} myScheme "

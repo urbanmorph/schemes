@@ -67,7 +67,7 @@ WHY THE CENSUS STARTS AT 8 AND NOT LOWER. This is the one methodological choice 
 forces. Karnataka censused 969 rows from score 5 and Andhra Pradesh 552 rows from score 3.
 Tamil Nadu has 6,220 rows, and the census sets at the lower thresholds are: 972 rows at
 score 5, 640 at 7, 462 at 8, 376 at 9. 462 rows is the largest set that can be read one by
-one and labelled reliably by hand, and it covers the published region plus the two bands
+one and labelled reliably one at a time, and it covers the published region plus the two bands
 below it, which is what the threshold argument needs. Below 8 the precision numbers in this
 file are estimates from the stratified sample and are labelled as such.
 
@@ -161,7 +161,7 @@ moved, which is the same thing as lowering the bar and is described that way rat
 presented as free recall.
 
 What stopped it at 4 points was not precision. At 5 the published list is 520 rows reading
-92.7%, better than what is published here, and 94 of those rows carry no hand label, so that
+92.7%, better than what is published here, and 94 of those rows carry no label, so that
 92.7% is an estimate over the labelled remainder while 91.2% is a count of the whole list.
 
 Read the bands rather than the cumulative column: the band at exactly 8 is 37 rows of which
@@ -234,7 +234,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, \
+from classify_common import assess, census_claim, listing_bar, base_rate, check_sample as check, excluded_by_rule, \
     quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
@@ -247,7 +247,7 @@ def _load(name, path):
 
 PUBLISH_THRESHOLD = 10
 
-# Every row at or above this score carries a hand label, from the stratified set or the
+# Every row at or above this score carries a label, from the stratified set or the
 # audit set. Precision at or above it is counted; below it, it is estimated from the
 # stratified sample only. See the docstring for why this is 8 and not 5.
 CENSUS_FROM = 8
@@ -730,7 +730,7 @@ REJECTED_SIGNALS = [
      "measured": ("parse/tamilnadu.py already measured this and recorded the result in "
                   "myscheme_join_defects: 201 joins produced, 118 wrong on inspection. Of "
                   "234 Tamil Nadu myScheme records only 32 have a sound join at all."),
-     "why": ("This is the borrowed ground truth the hand labels replace, and here it is "
+     "why": ("This is the borrowed ground truth the labels replace, and here it is "
              "both bad and circular. Bad, because the matcher joins 'Buildings - Animal "
              "Husbandry' to a livestock subsidy on two shared content words, 63 times. "
              "Circular, because the question the register asks is which budget rows are "
@@ -870,7 +870,7 @@ KNOWN_ERRORS = [
              "saying what the money is for, which is what Karnataka does.")},
 ]
 
-# parse/tamilnadu.py already read every myScheme join this corpus produces, by eye, and
+# parse/tamilnadu.py already read every myScheme join this corpus produces, by a model (Claude), and
 # recorded what it found in myscheme_join_defects: 201 joins, 118 wrong. Those findings are
 # reproduced in the output rather than restated here, because they are evidence about
 # parse/match.py and belong with the parser that measured them.
@@ -882,7 +882,7 @@ KNOWN_ERRORS = [
 
 # Five department families, a fixed partition of the 55 demand books. The books cannot each
 # be a stratum: 55 books crossed with 5 allocation bands is 275 cells, and a sample large
-# enough to fill them could not be labelled by hand. The partition is by what the
+# enough to fill them could not be read one by one. The partition is by what the
 # department does, written before the labels were made, and the five families come out at
 # 898 to 1,537 rows each, which is close enough to even that no stratum dominates.
 FAMILIES = [
@@ -992,10 +992,8 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "absent_distinct is the de-duplicated view of the same list."),
         "publish_threshold": threshold,
         # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
-        # this as a scheme". It lived only in site/build.py, so the data could not
-        # say which rows the site lists and anything else reading this file had to
-        # guess. parse/cag_join.py guessed by skipping this state entirely.
-        "listing_threshold": 5,
+        # this as a scheme". Computed from the sweep: typed in, it drifted off it.
+        "listing_threshold": listing_bar(a["threshold_sweep"], threshold),
         "classified_scheme": len(schemes),
         "classified_scheme_distinct_names": len({x["name"].lower() for x in schemes}),
         "classified_not_scheme": len(rows) - len(schemes),
@@ -1016,7 +1014,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "why_not_myscheme": (
                 "myScheme membership cannot be the ground truth here, and it was not a "
                 "close call. parse/tamilnadu.py produced 201 joins between these 6,220 "
-                "heads and the 234 Tamil Nadu myScheme records and read every one by eye: "
+                "heads and the 234 Tamil Nadu myScheme records and had a model (Claude) read every one: "
                 "118 are wrong. 63 of them come from a single defect, containment on two "
                 "generic content words, which joined a livestock subsidy to every head of "
                 "the Animal Husbandry department including its recovery and buildings "
@@ -1043,13 +1041,13 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
                 "books are scheme-wise annexures."),
             **a["points"],
             "census_note": (
-                "Every row at or above score %d is hand labelled, so precision at these "
-                "thresholds is counted rather than estimated. The census starts at %d and "
+                census_claim(rows, CENSUS_FROM, threshold) + " " + (
+                "The census starts at %d and "
                 "not lower because of the scale: 6,220 rows put 972 rows above score 5 and "
                 "640 above 7, and 462 is the largest set that can be read one by one and "
                 "labelled reliably. Recall still comes from the stratified sample, because "
                 "the rows the classifier rejects are too many to label exhaustively."
-                % (CENSUS_FROM, CENSUS_FROM)),
+                % CENSUS_FROM)),
             "at_publish_threshold_census": a["at_census"],
             **a["f1"],
             "why_not_f1": (
@@ -1116,7 +1114,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
 
 
 def check_sample():
-    """Report which sampled or census rows have no hand label yet."""
+    """Report which sampled or census rows have no label yet."""
     return check("tamilnadu", hoa, stratify, scorer(object_heads()), CENSUS_FROM)
 
 
@@ -1126,7 +1124,7 @@ def main():
                     "budget head.")
     a.add_argument("--threshold", type=int, default=PUBLISH_THRESHOLD)
     a.add_argument("--check-sample", action="store_true",
-                   help="list sampled or census rows that carry no hand label yet")
+                   help="list sampled or census rows that carry no label yet")
     a.add_argument("--rebuild-object-heads", action="store_true",
                    help="drop the object head cache and read the archive again")
     a.add_argument("--verbose", action="store_true")
@@ -1148,7 +1146,7 @@ def main():
     print("  of which recovery heads under minor head 911 or 902: %d\n"
           % o["recovery_heads"])
     g = o["ground_truth"]
-    print("ground truth: %d hand labels, %d scheme / %d not_scheme, %d borderline"
+    print("ground truth: %d labels, %d scheme / %d not_scheme, %d borderline"
           % (g["labelled"], g["scheme"], g["not_scheme"], g["borderline"]))
     print("              %d stratified, %d audit census\n"
           % (g["sets"]["stratified"]["n"], g["sets"]["audit"]["n"]))
@@ -1161,7 +1159,7 @@ def main():
         print("   %3d  called %4d  precision %.3f  recall %.3f  f1 %.3f%s"
               % (s["threshold"], s["called_scheme"], s["precision"], s["recall"],
                  s["f1"], mark))
-    print("\naudit census (every row at or above %d is hand labelled, so these are counts):"
+    print("\naudit census (every row at or above %d is labelled, so these are counts):"
           % CENSUS_FROM)
     print("   %3s  %8s %11s %10s | %8s %11s %10s"
           % ("t", "published", "not schemes", "precision", "band", "not schemes",

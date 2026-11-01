@@ -1,5 +1,5 @@
 {
- "absent_cr": 12525.79,
+ "absent_cr": 12257.95,
  "absent_distinct": [
   {
    "be_lakh": 680496.06,
@@ -126,37 +126,6 @@
    "score": 11
   },
   {
-   "be_lakh": 18200.0,
-   "evidence": [
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: distribution, rice, subsidy"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ]
-   ],
-   "heads": [
-    "2408-01-102-007",
-    "2408-01-789-010",
-    "2408-01-796-012"
-   ],
-   "major_heads": [
-    "2408"
-   ],
-   "name": "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidized Price [FS]",
-   "score": 13
-  },
-  {
    "be_lakh": 16561.01,
    "evidence": [
     [
@@ -272,32 +241,6 @@
    ],
    "name": "Post Matric Scholarship for OBCs, EBCs and DNTs- PM YASASVI (SNA-SPARSH) (SPARSH) [SC]",
    "score": 15
-  },
-  {
-   "be_lakh": 8176.0,
-   "evidence": [
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+3",
-     "benefit word in the name: subsidy"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ]
-   ],
-   "heads": [
-    "2408-01-789-008",
-    "2408-01-796-010"
-   ],
-   "major_heads": [
-    "2408"
-   ],
-   "name": "State Subsidy for payment of FPS Dealers claim of Margin and Distributors claim of Margin [FS]",
-   "score": 10
   },
   {
    "be_lakh": 7980.0,
@@ -932,31 +875,6 @@
    "score": 14
   },
   {
-   "be_lakh": 279.4,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: victims"
-    ],
-    [
-     "+3",
-     "benefit word in the name: compensation, gratia"
-    ]
-   ],
-   "heads": [
-    "2235-60-200-076"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH]",
-   "score": 11
-  },
-  {
    "be_lakh": 206.0,
    "evidence": [
     [
@@ -1157,31 +1075,6 @@
    "score": 17
   },
   {
-   "be_lakh": 89.18,
-   "evidence": [
-    [
-     "+3",
-     "a benefit transfer object head: 33"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "benefit word in the name: subsidy"
-    ]
-   ],
-   "heads": [
-    "2235-60-200-002"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Transport cost subsidy for carrying foodgrains throughout the State for smooth functioning of PDS [FS]",
-   "score": 11
-  },
-  {
    "be_lakh": 70.15,
    "evidence": [
     [
@@ -1259,31 +1152,6 @@
    ],
    "name": "Education- Pre-examination Training Centres for Scheduled Caste and Scheduled Tribe Students apearing at the Competitive Examination [SC]",
    "score": 10
-  },
-  {
-   "be_lakh": 38.11,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: disabled, families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: gratia"
-    ]
-   ],
-   "heads": [
-    "2235-60-200-014"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Payment of ex-gratia grant by the State Government to the families of service personnel killed, missing, taken as prisoner of war or disabled in acition [HH]",
-   "score": 11
   },
   {
    "be_lakh": 15.0,
@@ -1616,39 +1484,6 @@
    "be_lakh": 1.0,
    "evidence": [
     [
-     "-3",
-     "asset or works word in the name: improvement"
-    ],
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 34"
-    ],
-    [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: girls"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ]
-   ],
-   "heads": [
-    "2225-02-796-023"
-   ],
-   "major_heads": [
-    "2225"
-   ],
-   "name": "Improvement of residential schools for Girls at Belpahari [TW]",
-   "score": 12
-  },
-  {
-   "be_lakh": 1.0,
-   "evidence": [
-    [
      "+6",
      "every object head on this row is a benefit transfer head: 34"
     ],
@@ -1789,35 +1624,6 @@
    ],
    "name": "National scholarship at the secondary stage for talented children from rural areas [MD]",
    "score": 11
-  },
-  {
-   "be_lakh": 0.09,
-   "evidence": [
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
-    ],
-    [
-     "+3",
-     "a benefit transfer object head: 34"
-    ],
-    [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: backward"
-    ]
-   ],
-   "heads": [
-    "2225-80-800-049"
-   ],
-   "major_heads": [
-    "2225"
-   ],
-   "name": "Expenditure for promotion of education amongst educationally Backward Classes [SC]",
-   "score": 10
   },
   {
    "be_lakh": 0.03,
@@ -1981,114 +1787,6 @@
    "be_lakh": 0.0,
    "evidence": [
     [
-     "-3",
-     "asset or works word in the name: procurement"
-    ],
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "benefit word in the name: ration, subsidy"
-    ]
-   ],
-   "heads": [
-    "2235-60-200-041"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS]",
-   "score": 11
-  },
-  {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: workers"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "heads": [
-    "2235-02-102-124"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC]",
-   "score": 12
-  },
-  {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: workers"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ]
-   ],
-   "heads": [
-    "2235-02-102-083"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (Central Share) (OCASPS) [WC]",
-   "score": 11
-  },
-  {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: workers"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ]
-   ],
-   "heads": [
-    "2235-02-102-086"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (State Share) (OCASPS) [WC]",
-   "score": 11
-  },
-  {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
      "+5",
      "welfare function major head 2235"
     ],
@@ -2188,35 +1886,6 @@
    ],
    "name": "Compensation under the Victim Compensation Scheme [FD]",
    "score": 11
-  },
-  {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: tribal"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "heads": [
-    "2225-02-796-135"
-   ],
-   "major_heads": [
-    "2225"
-   ],
-   "name": "Development of Particularly Vulnerable Tribal Groups (100% Central Share) (SNA-SPARSH) (SPARSH) [TW]",
-   "score": 10
   },
   {
    "be_lakh": 0.0,
@@ -3302,31 +2971,6 @@
    "be_lakh": 0.0,
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: destitute, minority, women"
-    ],
-    [
-     "+3",
-     "benefit word in the name: rehabilitation"
-    ]
-   ],
-   "heads": [
-    "2235-02-200-020"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Scheme for empowerment of minority women under Destitute Minority Women Rehabilitation Programe [MD]",
-   "score": 11
-  },
-  {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
      "-1",
      "minor head 800 Other Expenditure"
     ],
@@ -3380,31 +3024,6 @@
    ],
    "name": "Scholarship for students belonging to Jain Community [MD]",
    "score": 17
-  },
-  {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: tribal"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ]
-   ],
-   "heads": [
-    "2225-02-794-003"
-   ],
-   "major_heads": [
-    "2225"
-   ],
-   "name": "Special Central Assistance to Tribal Sub-Schemes (Central Share) (TSP) [TW]",
-   "score": 11
   },
   {
    "be_lakh": 0.0,
@@ -3706,64 +3325,6 @@
    "score": 18
   },
   {
-   "be_lakh": 0.0,
-   "evidence": [
-    [
-     "+3",
-     "a benefit transfer object head: 33"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: distribution, rice, subsidy"
-    ]
-   ],
-   "heads": [
-    "2235-60-200-053"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidised Price [FS]",
-   "score": 14
-  },
-  {
-   "be_lakh": -0.02,
-   "evidence": [
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: affected, family"
-    ],
-    [
-     "+3",
-     "benefit word in the name: compensation"
-    ]
-   ],
-   "heads": [
-    "2235-60-800-009"
-   ],
-   "major_heads": [
-    "2235"
-   ],
-   "name": "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD]",
-   "score": 10
-  },
-  {
    "be_lakh": -0.02,
    "evidence": [
     [
@@ -3889,9 +3450,9 @@
    "score": 13
   }
  ],
- "absent_distinct_names": 136,
+ "absent_distinct_names": 120,
  "absent_from_myscheme_all_rows": 8926,
- "absent_from_myscheme_and_classified_scheme": 179,
+ "absent_from_myscheme_and_classified_scheme": 160,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged West Bengal, because claiming absence should require that even a generous matcher finds nothing. Read that number against myscheme_join_summary: the matcher produced 126 joins over the whole corpus and 51 of them are wrong, so a row counted present may not be, and the absent count here is if anything an understatement. The surviving list is a floor for the opposite reason too: no book prints a purpose line, recall at the published bar is 21%, and a scheme the state names Lakshmir Bhandar and books as a plain grant-in-aid cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
   {
@@ -4283,45 +3844,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 13104.0,
-   "books": [
-    "bp-15"
-   ],
-   "demands": [
-    21
-   ],
-   "evidence": [
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: distribution, rice, subsidy"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2408-01-102-007",
-   "in_myscheme_westbengal": false,
-   "key": "2408-01-102-007",
-   "letter_spaced": false,
-   "major_head": "2408",
-   "minor_head": "102",
-   "minor_head_name": "FOOD SUBSIDIES",
-   "myscheme_match": null,
-   "name": "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidized Price [FS]",
-   "object_heads": [
-    "33"
-   ],
-   "score": 12,
-   "sub_head": "007",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 13050.0,
    "books": [
     "bp-24"
@@ -4584,45 +4106,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 6424.0,
-   "books": [
-    "bp-15"
-   ],
-   "demands": [
-    21
-   ],
-   "evidence": [
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+3",
-     "benefit word in the name: subsidy"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2408-01-789-008",
-   "in_myscheme_westbengal": false,
-   "key": "2408-01-789-008",
-   "letter_spaced": false,
-   "major_head": "2408",
-   "minor_head": "789",
-   "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED CASTES (DAPSC)",
-   "myscheme_match": null,
-   "name": "State Subsidy for payment of FPS Dealers claim of Margin and Distributors claim of Margin [FS]",
-   "object_heads": [
-    "33"
-   ],
-   "score": 10,
-   "sub_head": "008",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 6270.0,
    "books": [
     "bp-15"
@@ -4869,49 +4352,6 @@
    ],
    "score": 12,
    "sub_head": "021",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 4004.0,
-   "books": [
-    "bp-15"
-   ],
-   "demands": [
-    21
-   ],
-   "evidence": [
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: distribution, rice, subsidy"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 789"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2408-01-789-010",
-   "in_myscheme_westbengal": false,
-   "key": "2408-01-789-010",
-   "letter_spaced": false,
-   "major_head": "2408",
-   "minor_head": "789",
-   "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED CASTES (DAPSC)",
-   "myscheme_match": null,
-   "name": "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidized Price [FS]",
-   "object_heads": [
-    "33"
-   ],
-   "score": 13,
-   "sub_head": "010",
    "verdict": "scheme"
   },
   {
@@ -5258,45 +4698,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 1752.0,
-   "books": [
-    "bp-15"
-   ],
-   "demands": [
-    21
-   ],
-   "evidence": [
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+3",
-     "benefit word in the name: subsidy"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2408-01-796-010",
-   "in_myscheme_westbengal": false,
-   "key": "2408-01-796-010",
-   "letter_spaced": false,
-   "major_head": "2408",
-   "minor_head": "796",
-   "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED TRIBES (DAPST)",
-   "myscheme_match": null,
-   "name": "State Subsidy for payment of FPS Dealers claim of Margin and Distributors claim of Margin [FS]",
-   "object_heads": [
-    "33"
-   ],
-   "score": 10,
-   "sub_head": "010",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 1710.0,
    "books": [
     "bp-15"
@@ -5556,49 +4957,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 1092.0,
-   "books": [
-    "bp-15"
-   ],
-   "demands": [
-    21
-   ],
-   "evidence": [
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: distribution, rice, subsidy"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2408-01-796-012",
-   "in_myscheme_westbengal": false,
-   "key": "2408-01-796-012",
-   "letter_spaced": false,
-   "major_head": "2408",
-   "minor_head": "796",
-   "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED TRIBES (DAPST)",
-   "myscheme_match": null,
-   "name": "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidized Price [FS]",
-   "object_heads": [
-    "33"
-   ],
-   "score": 13,
-   "sub_head": "012",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 1000.0,
    "books": [
     "bp-12"
@@ -5812,48 +5170,6 @@
    ],
    "score": 12,
    "sub_head": "079",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 279.4,
-   "books": [
-    "bp-22",
-    "bp-24"
-   ],
-   "demands": [
-    68,
-    73
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: victims"
-    ],
-    [
-     "+3",
-     "benefit word in the name: compensation, gratia"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-60-200-076",
-   "in_myscheme_westbengal": false,
-   "key": "2235-60-200-076",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "200",
-   "minor_head_name": "OTHER PROGRAMMES",
-   "myscheme_match": null,
-   "name": "Compensation for Police Personnel Killed/Injured on duty and other Ex-gratia Payments (other than Acid Victims) [HH]",
-   "object_heads": [
-    "31",
-    "70"
-   ],
-   "score": 11,
-   "sub_head": "076",
    "verdict": "scheme"
   },
   {
@@ -6195,62 +5511,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 89.18,
-   "books": [
-    "bp-15",
-    "bp-17",
-    "bp-24",
-    "bp-26"
-   ],
-   "demands": [
-    21,
-    30,
-    73,
-    74
-   ],
-   "evidence": [
-    [
-     "+3",
-     "a benefit transfer object head: 33"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "benefit word in the name: subsidy"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-60-200-002",
-   "in_myscheme_westbengal": false,
-   "key": "2235-60-200-002",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "200",
-   "minor_head_name": "OTHER PROGRAMMES",
-   "myscheme_match": null,
-   "name": "Transport cost subsidy for carrying foodgrains throughout the State for smooth functioning of PDS [FS]",
-   "object_heads": [
-    "01",
-    "02",
-    "07",
-    "11",
-    "12",
-    "13",
-    "14",
-    "27",
-    "33",
-    "50",
-    "70",
-    "77"
-   ],
-   "score": 11,
-   "sub_head": "002",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 70.15,
    "books": [
     "bp-22"
@@ -6503,46 +5763,6 @@
    ],
    "score": 13,
    "sub_head": "103",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 38.11,
-   "books": [
-    "bp-22"
-   ],
-   "demands": [
-    68
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: disabled, families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: gratia"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-60-200-014",
-   "in_myscheme_westbengal": false,
-   "key": "2235-60-200-014",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "200",
-   "minor_head_name": "OTHER PROGRAMMES",
-   "myscheme_match": null,
-   "name": "Payment of ex-gratia grant by the State Government to the families of service personnel killed, missing, taken as prisoner of war or disabled in acition [HH]",
-   "object_heads": [
-    "31",
-    "70"
-   ],
-   "score": 11,
-   "sub_head": "014",
    "verdict": "scheme"
   },
   {
@@ -6970,53 +6190,6 @@
    ],
    "evidence": [
     [
-     "-3",
-     "asset or works word in the name: improvement"
-    ],
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 34"
-    ],
-    [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: girls"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2225-02-796-023",
-   "in_myscheme_westbengal": false,
-   "key": "2225-02-796-023",
-   "letter_spaced": false,
-   "major_head": "2225",
-   "minor_head": "796",
-   "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED TRIBES (DAPST)",
-   "myscheme_match": null,
-   "name": "Improvement of residential schools for Girls at Belpahari [TW]",
-   "object_heads": [
-    "34"
-   ],
-   "score": 12,
-   "sub_head": "023",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 1.0,
-   "books": [
-    "bp-12"
-   ],
-   "demands": [
-    65
-   ],
-   "evidence": [
-    [
      "+6",
      "every object head on this row is a benefit transfer head: 34"
     ],
@@ -7385,51 +6558,6 @@
    ],
    "score": 11,
    "sub_head": "008",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.09,
-   "books": [
-    "bp-12"
-   ],
-   "demands": [
-    7
-   ],
-   "evidence": [
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
-    ],
-    [
-     "+3",
-     "a benefit transfer object head: 34"
-    ],
-    [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: backward"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2225-80-800-049",
-   "in_myscheme_westbengal": false,
-   "key": "2225-80-800-049",
-   "letter_spaced": false,
-   "major_head": "2225",
-   "minor_head": "800",
-   "minor_head_name": "OTHER EXPENDITURE",
-   "myscheme_match": null,
-   "name": "Expenditure for promotion of education amongst educationally Backward Classes [SC]",
-   "object_heads": [
-    "14",
-    "34",
-    "70"
-   ],
-   "score": 10,
-   "sub_head": "049",
    "verdict": "scheme"
   },
   {
@@ -8249,46 +7377,6 @@
    ],
    "evidence": [
     [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: tribal"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2225-02-794-003",
-   "in_myscheme_westbengal": false,
-   "key": "2225-02-794-003",
-   "letter_spaced": false,
-   "major_head": "2225",
-   "minor_head": "794",
-   "minor_head_name": "SPECIAL CENTRAL ASSISTANCE FOR TRIBAL SUB-PLAN",
-   "myscheme_match": null,
-   "name": "Special Central Assistance to Tribal Sub-Schemes (Central Share) (TSP) [TW]",
-   "object_heads": [
-    "31",
-    "35"
-   ],
-   "score": 11,
-   "sub_head": "003",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "bp-12"
-   ],
-   "demands": [
-    65
-   ],
-   "evidence": [
-    [
      "-3",
      "accounting word in the name: charges"
     ],
@@ -8324,50 +7412,6 @@
    ],
    "score": 12,
    "sub_head": "016",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "bp-12"
-   ],
-   "demands": [
-    65
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2225"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: tribal"
-    ],
-    [
-     "+1",
-     "sub-plan minor head 796"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2225-02-796-135",
-   "in_myscheme_westbengal": false,
-   "key": "2225-02-796-135",
-   "letter_spaced": false,
-   "major_head": "2225",
-   "minor_head": "796",
-   "minor_head_name": "DEVELOPMENT ACTION PLAN FOR SCHEDULED TRIBES (DAPST)",
-   "myscheme_match": null,
-   "name": "Development of Particularly Vulnerable Tribal Groups (100% Central Share) (SNA-SPARSH) (SPARSH) [TW]",
-   "object_heads": [
-    "31",
-    "35"
-   ],
-   "score": 10,
-   "sub_head": "135",
    "verdict": "scheme"
   },
   {
@@ -9034,86 +8078,6 @@
     ],
     [
      "+3",
-     "named beneficiary class in the name: workers"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-083",
-   "in_myscheme_westbengal": false,
-   "key": "2235-02-102-083",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "102",
-   "minor_head_name": "CHILD WELFARE",
-   "myscheme_match": null,
-   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (Central Share) (OCASPS) [WC]",
-   "object_heads": [
-    "31",
-    "50"
-   ],
-   "score": 11,
-   "sub_head": "083",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "bp-26"
-   ],
-   "demands": [
-    74
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: workers"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-086",
-   "in_myscheme_westbengal": false,
-   "key": "2235-02-102-086",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "102",
-   "minor_head_name": "CHILD WELFARE",
-   "myscheme_match": null,
-   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0) (60:40) (State Share) (OCASPS) [WC]",
-   "object_heads": [
-    "31",
-    "50"
-   ],
-   "score": 11,
-   "sub_head": "086",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "bp-26"
-   ],
-   "demands": [
-    74
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
      "named beneficiary class in the name: victims"
     ],
     [
@@ -9136,50 +8100,6 @@
    ],
    "score": 11,
    "sub_head": "115",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "bp-26"
-   ],
-   "demands": [
-    74
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: workers"
-    ],
-    [
-     "+3",
-     "benefit word in the name: assistance"
-    ],
-    [
-     "+1",
-     "the SPARSH single nodal agency route"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-124",
-   "in_myscheme_westbengal": false,
-   "key": "2235-02-102-124",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "102",
-   "minor_head_name": "CHILD WELFARE",
-   "myscheme_match": null,
-   "name": "Assistance for Continuation of ICDS Training Programme - Anganwadi Workers(Saksham Anganwadi and POSHAN 2.0 (SNA-SPARSH) (SPARSH) [WC]",
-   "object_heads": [
-    "31",
-    "50"
-   ],
-   "score": 12,
-   "sub_head": "124",
    "verdict": "scheme"
   },
   {
@@ -9421,46 +8341,6 @@
    ],
    "score": 11,
    "sub_head": "019",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "bp-19"
-   ],
-   "demands": [
-    38
-   ],
-   "evidence": [
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: destitute, minority, women"
-    ],
-    [
-     "+3",
-     "benefit word in the name: rehabilitation"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-200-020",
-   "in_myscheme_westbengal": false,
-   "key": "2235-02-200-020",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "200",
-   "minor_head_name": "OTHER PROGRAMMES",
-   "myscheme_match": null,
-   "name": "Scheme for empowerment of minority women under Destitute Minority Women Rehabilitation Programe [MD]",
-   "object_heads": [
-    "31",
-    "35"
-   ],
-   "score": 11,
-   "sub_head": "020",
    "verdict": "scheme"
   },
   {
@@ -10479,95 +9359,6 @@
   {
    "be_lakh": 0.0,
    "books": [
-    "bp-15"
-   ],
-   "demands": [
-    21
-   ],
-   "evidence": [
-    [
-     "-3",
-     "asset or works word in the name: procurement"
-    ],
-    [
-     "+6",
-     "every object head on this row is a benefit transfer head: 33"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "benefit word in the name: ration, subsidy"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-60-200-041",
-   "in_myscheme_westbengal": false,
-   "key": "2235-60-200-041",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "200",
-   "minor_head_name": "OTHER PROGRAMMES",
-   "myscheme_match": null,
-   "name": "Antyodaya Anna Yojana - Cost towards - a) Initial foodgrain procurement b) Transport subsidy including margin for wholesellers and retailers c) Printing of Antyodaya Ration Cards [FS]",
-   "object_heads": [
-    "33"
-   ],
-   "score": 11,
-   "sub_head": "041",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "bp-15",
-    "bp-17"
-   ],
-   "demands": [
-    21,
-    30
-   ],
-   "evidence": [
-    [
-     "+3",
-     "a benefit transfer object head: 33"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: families"
-    ],
-    [
-     "+3",
-     "benefit word in the name: distribution, rice, subsidy"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-60-200-053",
-   "in_myscheme_westbengal": false,
-   "key": "2235-60-200-053",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "200",
-   "minor_head_name": "OTHER PROGRAMMES",
-   "myscheme_match": null,
-   "name": "Transport Subsidy on Distribution of Rice and Wheat to APL and BPL Families at Subsidised Price [FS]",
-   "object_heads": [
-    "33",
-    "70"
-   ],
-   "score": 14,
-   "sub_head": "053",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
     "bp-14"
    ],
    "demands": [
@@ -11292,54 +10083,6 @@
    ],
    "score": 13,
    "sub_head": "053",
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": -0.02,
-   "books": [
-    "bp-14",
-    "bp-19",
-    "bp-26"
-   ],
-   "demands": [
-    18,
-    40,
-    74
-   ],
-   "evidence": [
-    [
-     "-1",
-     "minor head 800 Other Expenditure"
-    ],
-    [
-     "+5",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "named beneficiary class in the name: affected, family"
-    ],
-    [
-     "+3",
-     "benefit word in the name: compensation"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-60-800-009",
-   "in_myscheme_westbengal": false,
-   "key": "2235-60-800-009",
-   "letter_spaced": false,
-   "major_head": "2235",
-   "minor_head": "800",
-   "minor_head_name": "OTHER EXPENDITURE",
-   "myscheme_match": null,
-   "name": "Compensation payable to the affected Covid Warrior or to the family member of deceased Covid Warrior [FD]",
-   "object_heads": [
-    "31",
-    "70"
-   ],
-   "score": 10,
-   "sub_head": "009",
    "verdict": "scheme"
   },
   {
@@ -351478,7 +350221,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-31T15:19:09Z",
+ "built": "2026-11-01T09:23:11Z",
  "classified_not_scheme": 8807,
  "classified_scheme": 217,
  "classified_scheme_distinct_names": 153,
@@ -368422,7 +367165,7 @@
     "what": "A probability sample of all 9,024 heads of account, stratified by major head function family crossed with allocation band. This is the only set the threshold sweep uses, because precision and recall estimated on anything else would not generalise to the rows the classifier has not seen."
    }
   },
-  "why_not_myscheme": "myScheme membership cannot be the ground truth here, and it was not a close call. parse/westbengal.py produced 126 joins between these 9,024 heads and the West Bengal myScheme records and read every one by eye: 51 are wrong, and the defects are reproduced in myscheme_join_defects below. Of 109 myScheme records only 21 have a join that survived inspection. The parser also refused to settle the largest question in its own join and said so in myscheme_join_summary.uncertain: 44 heads matched a single \"Old Age Pension\" record, 16 were counted sound and 28 wrong, and whether West Bengal runs one old age pension or nine is not decided by anything in these books. That judgement is not treated as ground truth here and no label in labels.json depends on it. Worse than bad, the signal would be circular: the question is which heads are absent from myScheme, so scoring presence would push down exactly the rows the answer is made of."
+  "why_not_myscheme": "myScheme membership cannot be the ground truth here, and it was not a close call. parse/westbengal.py produced 126 joins between these 9,024 heads and the West Bengal myScheme records and had a model (Claude) read every one: 51 are wrong, and the defects are reproduced in myscheme_join_defects below. Of 109 myScheme records only 21 have a join that survived inspection. The parser also refused to settle the largest question in its own join and said so in myscheme_join_summary.uncertain: 44 heads matched a single \"Old Age Pension\" record, 16 were counted sound and 28 wrong, and whether West Bengal runs one old age pension or nine is not decided by anything in these books. That judgement is not treated as ground truth here and no label in labels.json depends on it. Worse than bad, the signal would be circular: the question is which heads are absent from myScheme, so scoring presence would push down exactly the rows the answer is made of."
  },
  "known_errors": [
   {
@@ -368500,7 +367243,7 @@
  ],
  "letter_spaced_names": 62,
  "letter_spaced_note": "The state printed 66 names letter-spaced and parse/westbengal.py counts them that way. The detector here fires on 62, and the four it does not are names where only a bracketed acronym is spaced, \"(F A W L O I)\" inside an otherwise normal name, which needs no run-on matching. Every name is published exactly as the state printed it; the run-on collapse is used for scoring only and never rewrites the name.",
- "listing_threshold": 3,
+ "listing_threshold": 6,
  "myscheme_join_defects": [
   {
    "defect": "containment on a generic domain phrase, at the largest scale this register has seen it. 'Old Age Pension' is three content words and every one of the 44 rows in these books whose name contains them satisfies the rule",
@@ -368708,7 +367451,7 @@
   {
    "measured": "parse/westbengal.py already measured this and recorded the result in myscheme_join_summary: 126 joins produced, 51 wrong on inspection. Of the 109 West Bengal myScheme records only 21 have a join that survived inspection, and 66 heads of account out of 9,024 have one.",
    "signal": "the name matches a myScheme record tagged West Bengal",
-   "why": "This is the borrowed ground truth the hand labels replace, and here it is both bad and circular. Bad, because the defects are catalogued: a four letter acronym matching the five letter one it is a prefix of joined the State Disaster Response Fund to a stamp duty subsidy five times, and the state's own name reduced to two transliteration skeletons joined three myScheme records to an 8.00% government bond. Worse, the parser refused to settle the biggest question in its own join and said so: 44 heads matched myScheme's single \"Old Age Pension\" record and whether West Bengal runs one old age pension or nine is not decided by anything in these books. Circular, because the question this file answers is which heads are ABSENT from myScheme, so scoring presence would push down exactly the rows the answer is made of. Karnataka measured the same signal at a lift of 0.047 and rejected it."
+   "why": "This is the borrowed ground truth the labels replace, and here it is both bad and circular. Bad, because the defects are catalogued: a four letter acronym matching the five letter one it is a prefix of joined the State Disaster Response Fund to a stamp duty subsidy five times, and the state's own name reduced to two transliteration skeletons joined three myScheme records to an 8.00% government bond. Worse, the parser refused to settle the biggest question in its own join and said so: 44 heads matched myScheme's single \"Old Age Pension\" record and whether West Bengal runs one old age pension or nine is not decided by anything in these books. Circular, because the question this file answers is which heads are ABSENT from myScheme, so scoring presence would push down exactly the rows the answer is made of. Karnataka measured the same signal at a lift of 0.047 and rejected it."
   }
  ],
  "snapshot": "2026-09-02",
@@ -369951,7 +368694,7 @@
   },
   "base_rate_note": "About one West Bengal sub-head in twelve is a welfare scheme, against one in six for Tamil Nadu's Demand Books, 41% of Andhra Pradesh's scheme-wise rows and 55% of Karnataka's. This is the lowest base rate in the register and it is a fact about the document rather than about West Bengal's schemes: these are the full detailed estimates of sixteen volumes, 3,758 of the 9,024 sub-heads carry a Deduct Recoveries object head, 688 are the state's own borrowing, 1,820 are capital or loan heads and 2,115 name a body rather than a person.",
   "base_rate_stratified": 0.084,
-  "census_note": "Every row at or above score 6 is hand labelled, so precision at these thresholds is counted rather than estimated. The census starts at 6 and not lower because of the scale: 9,024 rows put 532 rows at score 6 or above, 918 at score 4 and 1,482 at score 2. 532 rows is the largest set that can be read one by one and labelled reliably by hand, and it covers the published region plus the four bands below it, which is what the threshold argument needs. Below 6 the precision numbers in this file are estimates from the stratified sample and are labelled as such. Recall always comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
+  "census_note": "Every row at or above the publishing bar of 10 is labelled, so precision there is counted rather than estimated. Between score 6 and the bar 123 rows carry no label, so precision there counts the labelled rows only. The census starts at 6 and not lower because of the scale: 9,024 rows put 532 rows at score 6 or above, 918 at score 4 and 1,482 at score 2. 532 rows is the largest set that can be read one by one and labelled reliably, and it covers the published region plus the four bands below it, which is what the threshold argument needs. Below 6 the precision numbers in this file are estimates from the stratified sample and are labelled as such. Recall always comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
   "f1_optimal_threshold": 6,
   "f1_optimal_thresholds": [
    6

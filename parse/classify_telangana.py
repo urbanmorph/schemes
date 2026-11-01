@@ -7,7 +7,7 @@ classify_common.py; every signal below is Telangana's own.
     data/telangana/labels.json          hand ground truth, the input
     data/telangana/classification.json  the verdicts, the output
 
-566 hand labels: a 287-row stratified sample on the plan group the book files each line
+566 labels: a 287-row stratified sample on the plan group the book files each line
 under, then every row at the publishing bar labelled so precision is a COUNT. 275 of 2,039
 lines clear it, precision 0.989 with three named errors, recall 0.622.
 
@@ -96,7 +96,6 @@ CENSUS_FOUND = re.compile(
     r"supply of medicines", re.I)
 
 PUBLISH_THRESHOLD = 3
-LISTING_THRESHOLD = 1
 
 
 def score(r):
@@ -139,8 +138,7 @@ REJECTED = [
 
 def main():
     argparse.ArgumentParser(description="Classify Telangana's Pragathi Paddu lines.").parse_args()
-    report("telangana", *classify("telangana", "Telangana", score, PUBLISH_THRESHOLD,
-                                  LISTING_THRESHOLD, REJECTED,
+    report("telangana", *classify("telangana", "Telangana", score, PUBLISH_THRESHOLD, REJECTED,
                                   row_fields=lambda r: {
                                       "department": r.get("department"),
                                       "sector": r.get("sector"),

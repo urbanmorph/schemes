@@ -136,13 +136,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import utcnow, write_json  # noqa: E402
-from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, \
+from classify_common import assess, census_claim, listing_bar, base_rate, check_sample as check, excluded_by_rule, \
     quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
 PUBLISH_THRESHOLD = 4
 
-# Every row at or above this score carries a hand label, from the stratified set or the
+# Every row at or above this score carries a label, from the stratified set or the
 # audit set. Precision at or above it is counted; below it, it is estimated from the
 # stratified sample only.
 CENSUS_FROM = 3
@@ -400,7 +400,7 @@ REJECTED_SIGNALS = [
     {"signal": "the name matches a myScheme record tagged Andhra Pradesh",
      "measured": ("5 of the 552 rows join at all, and reading the five, only one join is "
                   "real. It cannot be measured as a signal because it barely fires."),
-     "why": ("This is the borrowed ground truth the hand labels replace, and here it is "
+     "why": ("This is the borrowed ground truth the labels replace, and here it is "
              "not merely weak, it is circular. The question the register asks is which "
              "budget rows are ABSENT from myScheme, so scoring a row higher for being "
              "present on myScheme would systematically push down exactly the rows the "
@@ -647,10 +647,8 @@ def run(threshold=PUBLISH_THRESHOLD):
                            "erase four."),
         "publish_threshold": threshold,
         # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
-        # this as a scheme". It lived only in site/build.py, so the data could not
-        # say which rows the site lists and anything else reading this file had to
-        # guess. parse/cag_join.py guessed by skipping this state entirely.
-        "listing_threshold": 0,
+        # this as a scheme". Computed from the sweep: typed in, it drifted off it.
+        "listing_threshold": listing_bar(a["threshold_sweep"], threshold),
         "classified_scheme": len(schemes),
         "classified_scheme_distinct_names": len({x["name"] for x in schemes}),
         "classified_not_scheme": len(rows) - len(schemes),
@@ -682,15 +680,14 @@ def run(threshold=PUBLISH_THRESHOLD):
             "base_rate_stratified": base_rate(a["scored"]),
             **a["points"],
             # The census is the number that decides the threshold, and it is a count
-            # rather than an estimate: every row scoring 3 or more carries a hand label,
+            # rather than an estimate: every row scoring 3 or more carries a label,
             # so the errors in the published list are enumerated, not inferred. The
             # stratified sample alone would have claimed 93.9% precision at threshold 4 on
             # the strength of 33 rows; the census says 95.7%. It erred pessimistically
             # here and flatteringly in Karnataka, which is the same lesson either way: a
             # probability sample is the right tool for recall, which cannot be censused,
             # and the wrong one for counting mistakes in a list short enough to read.
-            "census_note": ("Every row at or above score 3 is hand labelled, so precision "
-                            "at these thresholds is counted rather than estimated. Recall "
+            "census_note": (census_claim(rows, CENSUS_FROM, threshold) + " Recall "
                             "still comes from the stratified sample, because the rows the "
                             "classifier rejects are too many to label exhaustively."),
             "at_publish_threshold_census": a["at_census"],
@@ -746,7 +743,7 @@ def run(threshold=PUBLISH_THRESHOLD):
 
 
 def check_sample():
-    """Report which sampled or census rows carry no hand label yet."""
+    """Report which sampled or census rows carry no label yet."""
     return check("andhra", entry_key, stratify, score, CENSUS_FROM)
 
 
@@ -755,7 +752,7 @@ def main():
         description="Classify Andhra Pradesh budget rows as welfare scheme or budget head.")
     a.add_argument("--threshold", type=int, default=PUBLISH_THRESHOLD)
     a.add_argument("--check-sample", action="store_true",
-                   help="list sampled or census rows that carry no hand label yet")
+                   help="list sampled or census rows that carry no label yet")
     args = a.parse_args()
     if args.check_sample:
         check_sample()
@@ -768,7 +765,7 @@ def main():
           f"({o['classified_scheme_distinct_names']} distinct names)")
     print(f"  not a scheme   {o['classified_not_scheme']:>5}\n")
     g = o["ground_truth"]
-    print(f"ground truth: {g['labelled']} hand labels, {g['scheme']} scheme / "
+    print(f"ground truth: {g['labelled']} labels, {g['scheme']} scheme / "
           f"{g['not_scheme']} not_scheme, {g['borderline']} borderline\n")
     print(f"threshold sweep (precision, recall on the {v['n_labelled']} stratified labels):")
     for s in o["threshold_sweep"]:
@@ -776,7 +773,7 @@ def main():
         print(f"   {s['threshold']:>3}  called {s['called_scheme']:>4}  "
               f"precision {s['precision']:.3f}  recall {s['recall']:.3f}  "
               f"f1 {s['f1']:.3f}{mark}")
-    print(f"\naudit census (every row at or above {CENSUS_FROM} is hand labelled, "
+    print(f"\naudit census (every row at or above {CENSUS_FROM} is labelled, "
           f"so these are counts):")
     for s in o["threshold_sweep_census"]:
         mark = "  <- published" if s["threshold"] == o["publish_threshold"] else ""

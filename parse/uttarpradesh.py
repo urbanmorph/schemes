@@ -471,7 +471,7 @@ def run(date=None):
         "myscheme_join_summary": {
             "how": ("Names romanised by parse/devanagari.py, then indexed on match.tokens, "
                     "match.skeleton and match.acronyms, then match.probably_same on every "
-                    "candidate pair, then every join read by eye."),
+                    "candidate pair, then every join read by a model (Claude)."),
             "myscheme_uttar_pradesh_records": len(ms_names),
             "register_names": len(all_schemes),
             "joins_produced": len(joins),

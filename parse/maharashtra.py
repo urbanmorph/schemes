@@ -478,7 +478,7 @@ def run(date=None):
             "scheme_codes_with_a_sound_join": 36,
             "how": ("indexed on match.tokens, match.skeleton and match.acronyms, then "
                     "match.probably_same on every candidate pair, then every join read "
-                    "by eye"),
+                    "by a model (Claude)"),
             "read_this_carefully": (
                 "17 of myScheme's 84 Maharashtra records were found in a book that names "
                 "1,956 schemes. That is NOT evidence that the other 67 are invented. The "

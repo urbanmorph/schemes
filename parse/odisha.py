@@ -469,7 +469,7 @@ def run(date=None, verbose=False):
             "scheme_codes_with_a_sound_join": 12,
             "how": ("indexed on match.tokens, match.skeleton and match.acronyms, then "
                     "match.probably_same on every candidate pair, then every join read "
-                    "by eye"),
+                    "by a model (Claude)"),
             "read_this_carefully": (
                 "15 of myScheme's 83 Odisha records were found in a book that names "
                 "1,628 schemes, and that is not evidence the other 68 are invented. "

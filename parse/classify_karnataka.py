@@ -15,13 +15,13 @@ Services Authority" and "Unspent SCSP-TSP Amount as per the SCSP-TSP Act 2013" a
 that list. Naming an accounting head as a scheme the government hid is an accusation
 against a government that did nothing of the kind.
 
-WHY THERE IS A HAND LABEL SET AND NOT A BORROWED ONE. parse/classify.py can score itself
+WHY THERE IS A LABEL SET AND NOT A BORROWED ONE. parse/classify.py can score itself
 against myScheme membership because the Union Budget lines it reads are mostly national
 schemes a portal would list. That proxy collapses here. Measured on the 108 rows of the
 development half: a Karnataka row whose name matches any myScheme record anywhere in India
 is a scheme 38.8% of the time, against 34.1% for rows that match nothing, a lift of +0.05.
 The signal is worthless because the matches are cross-state coincidences. So the ground
-truth is hand labels in data/karnataka/labels.json, where a human can read the reasoning on
+truth is labels in data/karnataka/labels.json, where a human can read the reasoning on
 each one and correct it. The labels are the project. Everything below is only as good as
 they are.
 
@@ -65,7 +65,7 @@ against a base rate of 37.0%:
 
 The purpose line result is worth pausing on. Whether a row HAS a purpose line does not
 separate rows that match a myScheme record from rows that do not (43% against 37%), which
-is why that test looked dead. Against hand labels the mere presence of a purpose line is
+is why that test looked dead. Against labels the mere presence of a purpose line is
 already worth +0.49, and what the purpose line SAYS is worth +0.70. The signal was there;
 the myScheme proxy was hiding it.
 
@@ -88,7 +88,7 @@ beneath it moved, which is the same thing as lowering the bar and is described t
 rather than presented as free recall.
 
 What stopped it at 4 points was not precision. At 5 the published list is 154 rows reading
-94.8%, better than what is published here, and 37 of those rows carry no hand label at all,
+94.8%, better than what is published here, and 37 of those rows carry no label at all,
 so that 94.8% is an estimate over the labelled remainder while 93.8% is a count of the whole
 list. The register publishes counts.
 
@@ -109,7 +109,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import utcnow, write_json  # noqa: E402
-from classify_common import assess, check_sample as check, excluded_by_rule, quartile, \
+from classify_common import assess, census_claim, listing_bar, check_sample as check, excluded_by_rule, quartile, \
     quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
@@ -446,6 +446,8 @@ def run(threshold=PUBLISH_THRESHOLD):
         census_bands=False, myscheme=known_absences)
     ka, labels, listed, rows = a["data"], a["labels"], a["listed"], a["rows"]
     schemes, absent = a["schemes"], a["absent"]
+    distinct = fold_scsp(absent)
+    no_purpose = sum(1 for x in rows if not x.get("purpose"))
 
     out = {
         "built": utcnow(),
@@ -453,16 +455,14 @@ def run(threshold=PUBLISH_THRESHOLD):
         "state": "Karnataka",
         "cycle": ka.get("cycle"),
         "source": "data/karnataka/schemes.json",
-        "question": ("Which of Karnataka's 969 scheme-wise budget rows are welfare "
+        "question": (f"Which of Karnataka's {len(rows):,} scheme-wise budget rows are welfare "
                      "schemes, and which are institutions, establishment heads, asset "
                      "heads or accounting heads?"),
         "entries": len(rows),
         "publish_threshold": threshold,
         # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
-        # this as a scheme". It lived only in site/build.py, so the data could not
-        # say which rows the site lists and anything else reading this file had to
-        # guess. parse/cag_join.py guessed by skipping this state entirely.
-        "listing_threshold": 1,
+        # this as a scheme". Computed from the sweep: typed in, it drifted off it.
+        "listing_threshold": listing_bar(a["threshold_sweep"], threshold),
         "classified_scheme": len(schemes),
         "classified_not_scheme": len(rows) - len(schemes),
         "ground_truth": {
@@ -489,14 +489,13 @@ def run(threshold=PUBLISH_THRESHOLD):
             **a["counts"],
             **a["points"],
             # The census is the number that decides the threshold, and it is a count
-            # rather than an estimate: every row scoring 5 or more carries a hand label,
+            # rather than an estimate: every row scoring 5 or more carries a label,
             # so the errors in the published list are enumerated, not inferred. The
             # stratified sample alone would have claimed 97.5% precision at threshold 5
             # on the strength of 40 rows; the census says 91.9%. A probability sample is
             # the right tool for recall, which cannot be censused, and the wrong one for
             # counting mistakes in a list short enough to read.
-            "census_note": ("Every row at or above score 5 is hand labelled, so precision "
-                            "at these thresholds is counted rather than estimated. Recall "
+            "census_note": (census_claim(rows, 5, threshold) + " Recall "
                             "still comes from the stratified sample, because the rows the "
                             "classifier rejects are too many to label exhaustively."),
             "at_publish_threshold_census": a["at_census"],
@@ -510,40 +509,107 @@ def run(threshold=PUBLISH_THRESHOLD):
         "myscheme_karnataka_records": len(listed),
         "absent_from_myscheme_all_rows": len(a["absent_all"]),
         "absent_from_myscheme_and_classified_scheme": len(absent),
-        "absent_cr": round(sum(x["be_lakh"] or 0 for x in absent) / 100.0, 2),
+        "absent_distinct_names": len(distinct),
+        "absent_cr": round(sum(x["be_lakh"] or 0 for x in distinct) / 100.0, 2),
         "absent_note": ("Absence is decided by parse/match.py's generous matcher against "
                         "the myScheme records tagged Karnataka, because claiming absence "
                         "should require that even a generous matcher finds nothing. The "
-                        "surviving list is a floor: 580 of the 969 rows carry no purpose "
-                        "line, and a real scheme with a plain name and no purpose line "
+                        f"surviving list is a floor: {no_purpose:,} of the {len(rows):,} rows "
+                        "carry no purpose line, and a real scheme with a plain name and no "
+                        "purpose line "
                         "cannot clear a high bar on the evidence the books print."),
         "absent_schemes": absent,
         # absent_distinct is the key every other state publishes and the one the site reads.
         # This file predates it and emitted only absent_schemes, so the site counted
         # Karnataka's absence claim as zero while still rendering its table from the other
         # key: the register's own headline was missing a state it was publishing on the
-        # page below it. Karnataka's 72 rows carry 72 distinct names, so the de-duplicated
-        # view and the full list are the same list, and it is written out under both names
-        # rather than left for a reader of the JSON to work out.
-        "absent_distinct": absent,
+        # page below it. Since the SCSP/TSP book was read in full the two differ: that book
+        # repeats schemes the others carry (fold_scsp).
+        "absent_distinct": distinct,
         "all_entries": rows,
     }
     write_json("data/karnataka/classification.json", out)
     return out
 
 
+SCSP_BOOK = "SCSP/TSP Allocations"
+
+
+def fold_key(name):
+    """Letters and digits, lower case, doubled letters single: the Gender Budget prints
+    "Studentss" where SCSP/TSP prints "Students"."""
+    return re.sub(r"(.)\1+", r"\1", re.sub(r"[^a-z0-9]", "", name.lower()))
+
+
+def fold_scsp(absent):
+    """The absence list with each SCSP/TSP copy folded into the row it repeats.
+
+    The SCSP/TSP book prints the SC/ST earmark of provisions the Gender and Child books
+    already carry, under a different head of account: the post-matric scholarship to SC
+    students is 2225-01-197-6-09 in one and 2225-00-101-0-07 in the other, Rs 27,300 lakh
+    in both. Listed separately they were the same accusation twice and the same money
+    twice. A copy folds into the first row of the same name from another book, adds its
+    head to that row's `scsp_hoas` and nothing to its allocation, being a cut of the same
+    money. Every other row stands as it was, one per head of account, so its identity on
+    the watchlist does not change; an SCSP/TSP row with no counterpart stands too."""
+    out, by = [], {}
+    for x in sorted(absent, key=lambda x: (x["books"] == [SCSP_BOOK], x["hoa"])):
+        twin = by.get(fold_key(x["name"])) if x["books"] == [SCSP_BOOK] else None
+        if twin is None:
+            out.append(dict(x))
+            by.setdefault(fold_key(x["name"]), out[-1])
+        else:
+            twin.setdefault("scsp_hoas", []).append(x["hoa"])
+    return sorted(out, key=lambda r: (-(r["be_lakh"] or 0), r["hoa"]))
+
+
 def check_sample():
-    """Report which sampled or census rows carry no hand label yet."""
+    """Report which sampled or census rows carry no label yet."""
     return check("karnataka", hoa, stratify, score, 5, label_key="hoa")
+
+
+def selftest():
+    gb, ch = ["Gender Budget"], ["Child Budget", "Gender Budget"]
+    rows = [{"score": 8, "evidence": [], **r} for r in [
+        {"hoa": "A1", "name": "CSS-State Share- Post-Matric Scholarships to SC Studentss",
+         "books": ch, "be_lakh": 27300.0},
+        {"hoa": "S1", "name": "CSS-State Share- Post-Matric Scholarships to SC Students",
+         "books": [SCSP_BOOK], "be_lakh": 27300.0},
+        {"hoa": "A2", "name": "DBT Under Annabhagya Scheme", "books": gb, "be_lakh": 620000.0},
+        {"hoa": "A3", "name": "DBT under Annabhagya Scheme", "books": gb, "be_lakh": 0.0},
+        {"hoa": "S2", "name": "DBT under Annabhagya Scheme", "books": [SCSP_BOOK],
+         "be_lakh": 161200.0},
+        {"hoa": "S3", "name": "Incentive to SC Law Graduates", "books": [SCSP_BOOK],
+         "be_lakh": 1500.0}]]
+    got = fold_scsp(rows)
+    bad = 0
+    for label, g, want in [
+            ("an SCSP/TSP copy folds into the other book's row, a typo apart",
+             [(r["hoa"], r.get("scsp_hoas"), r["be_lakh"]) for r in got if "Matric" in r["name"]],
+             [("A1", ["S1"], 27300.0)]),
+            ("the earmark adds no money, and the other books' rows stay one per head",
+             [(r["hoa"], r.get("scsp_hoas"), r["be_lakh"]) for r in got
+              if "Annabhagya" in r["name"]],
+             [("A2", ["S2"], 620000.0), ("A3", None, 0.0)]),
+            ("an SCSP/TSP row with no counterpart stands, with its own allocation",
+             [(r["hoa"], r.get("scsp_hoas"), r["be_lakh"]) for r in got if "Law" in r["name"]],
+             [("S3", None, 1500.0)])]:
+        ok = g == want
+        bad += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'} {label}" + ("" if ok else f": want {want!r} got {g!r}"))
+    return bad
 
 
 def main():
     ap = argparse.ArgumentParser(
         description="Classify Karnataka budget rows as welfare scheme or budget head.")
+    ap.add_argument("--self-test", action="store_true")
     ap.add_argument("--threshold", type=int, default=PUBLISH_THRESHOLD)
     ap.add_argument("--check-sample", action="store_true",
-                    help="list sampled rows that carry no hand label yet")
+                    help="list sampled rows that carry no label yet")
     a = ap.parse_args()
+    if a.self_test:
+        sys.exit(1 if selftest() else 0)
     if a.check_sample:
         check_sample()
         return
@@ -553,7 +619,7 @@ def main():
     print(f"  scheme         {o['classified_scheme']:>5}")
     print(f"  not a scheme   {o['classified_not_scheme']:>5}\n")
     g = o["ground_truth"]
-    print(f"ground truth: {g['labelled']} hand labels, {g['scheme']} scheme / "
+    print(f"ground truth: {g['labelled']} labels, {g['scheme']} scheme / "
           f"{g['not_scheme']} not_scheme, {g['borderline']} borderline\n")
     print(f"threshold sweep (precision, recall on all {v['n_labelled']} labels):")
     for s in o["threshold_sweep"]:

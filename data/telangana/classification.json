@@ -1659,32 +1659,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 0.0,
-   "books": [
-    "Pragathi Paddu (Scheme Expenditure)"
-   ],
-   "code": null,
-   "department": "Commr. Panchayat Raj",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "State Sector Schemes",
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2515-196-25-75"
-   ],
-   "in_myscheme_telangana": false,
-   "key": "dept:commr. panchayat raj|name:assiatance to non-provincialized pensions",
-   "myscheme_name": null,
-   "name": "Assiatance to Non-Provincialized Pensions",
-   "score": 3,
-   "sector": "RURAL DEVELOPMENT",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 3590.5,
    "books": [
     "Pragathi Paddu (Scheme Expenditure)"
@@ -2732,32 +2706,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 196649.55,
-   "books": [
-    "Pragathi Paddu (Scheme Expenditure)"
-   ],
-   "code": null,
-   "department": "Educational Institutions Society",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "State Sector Schemes",
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2225-01-277-25-30"
-   ],
-   "in_myscheme_telangana": false,
-   "key": "dept:educational institutions society|name:govt residential centralised schools-new scheme",
-   "myscheme_name": null,
-   "name": "Govt Residential Centralised Schools-New Scheme",
-   "score": 3,
-   "sector": "WEAKER SECTION HOUSING PROGRAMME",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 3741.28,
    "books": [
     "Pragathi Paddu (Scheme Expenditure)"
@@ -2885,32 +2833,6 @@
    "name": "Gruha jyothi Scheme",
    "score": 3,
    "sector": null,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 32.87,
-   "books": [
-    "Pragathi Paddu (Scheme Expenditure)"
-   ],
-   "code": null,
-   "department": "Finance Department",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "State Sector Schemes",
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2071-01-800-25-08"
-   ],
-   "in_myscheme_telangana": false,
-   "key": "dept:finance department|name:new web based pension application",
-   "myscheme_name": null,
-   "name": "New Web based Pension Application",
-   "score": 3,
-   "sector": "SCIENCE, TECHNOLOGY & ENVIRONMENT",
    "verdict": "scheme"
   },
   {
@@ -7164,32 +7086,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 196649.55,
-   "books": [
-    "Pragathi Paddu (Scheme Expenditure)"
-   ],
-   "code": null,
-   "department": "Educational Institutions Society",
-   "evidence": [
-    [
-     "+3",
-     "a benefit word in the name"
-    ]
-   ],
-   "group": "State Sector Schemes",
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2225-01-277-25-30"
-   ],
-   "in_myscheme_telangana": false,
-   "key": "dept:educational institutions society|name:govt residential centralised schools-new scheme",
-   "myscheme_name": null,
-   "name": "Govt Residential Centralised Schools-New Scheme",
-   "score": 3,
-   "sector": "WEAKER SECTION HOUSING PROGRAMME",
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 195048.0,
    "books": [
     "Pragathi Paddu (Scheme Expenditure)"
@@ -8538,6 +8434,37 @@
    "name": "Integrated Child Development Services Schemes",
    "score": 3,
    "sector": "MINORITIES WELFARE",
+   "verdict": "scheme"
+  },
+  {
+   "be_lakh": 15629.18,
+   "books": [
+    "Pragathi Paddu (Scheme Expenditure)"
+   ],
+   "code": null,
+   "department": "Commissioner Rural Development",
+   "evidence": [
+    [
+     "+3",
+     "a benefit word in the name"
+    ]
+   ],
+   "group": "Centrally Sponsored Schemes",
+   "hand_label": "scheme",
+   "hoas": [
+    "2235-03-101-12-09",
+    "2235-03-101-15-09",
+    "2235-03-789-12-09",
+    "2235-03-789-15-09",
+    "2235-03-796-12-09",
+    "2235-03-796-15-09"
+   ],
+   "in_myscheme_telangana": false,
+   "key": "dept:commissioner rural development|name:indra gandhi national old pension scheme (ignoap)",
+   "myscheme_name": null,
+   "name": "Indra Gandhi National Old Pension Scheme (IGNOAP)",
+   "score": 3,
+   "sector": "RURAL DEVELOPMENT",
    "verdict": "scheme"
   }
  ],
@@ -57248,7 +57175,7 @@
    "verdict": "scheme"
   }
  ],
- "built": "2026-10-31T15:18:54Z",
+ "built": "2026-11-01T09:22:48Z",
  "caveat": "The Pragathi Paddu is Telangana's scheme expenditure volume and it files establishment heads at the same level as schemes: Governor Secretariat, Raj Bhavan Gardens, Furniture Estt, Public Service Commission. They are kept, because the state files them here and dropping them would be this project editing a state's own list; a reader counting welfare schemes should discount them. Allocations are not summed across books: the SCSDF and STSDF report the Scheduled Caste and Scheduled Tribe slices of provisions the Pragathi Paddu states in full, so the Pragathi Paddu figure wins and the fund figures are published separately as earmarks. The number here is a floor on Telangana's schemes, never a total.",
  "classified_not_scheme": 1764,
  "classified_scheme": 275,

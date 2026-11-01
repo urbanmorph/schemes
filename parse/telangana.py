@@ -1068,7 +1068,7 @@ def run(date=None):
                       "one book but the Indian digit grouping: the STSDF prints "
                       "1487441.29 as 14874,41.29 on page 15 and as 14,87,441.29 on page "
                       "9, so commas are stripped rather than counted."),
-        # Read by eye, all five joins against the 22 myScheme records for Telangana.
+        # Read by a model (Claude), all five joins against the 22 myScheme records for Telangana.
         # Recorded rather than patched: parse/match.py is not edited from here, and the
         # direction of the error is the safe one. A false MATCH means a scheme is treated
         # as present on myScheme and is therefore NOT claimed absent, so it costs one

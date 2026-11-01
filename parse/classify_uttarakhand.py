@@ -7,7 +7,7 @@ classify_common.py; every signal below is Uttarakhand's own.
     data/uttarakhand/labels.json          hand ground truth, the input
     data/uttarakhand/classification.json  the verdicts, the output
 
-373 hand labels: a 265-row stratified sample on whether the major head is revenue or
+373 labels: a 265-row stratified sample on whether the major head is revenue or
 capital, then every row at the publishing bar labelled so precision is a COUNT. 96 of
 2,324 lines clear it, precision 0.990 with one named error, recall 0.340.
 
@@ -89,7 +89,6 @@ SUBTITLE = re.compile(
     r"payment of gst|information, education)", re.I)
 
 PUBLISH_THRESHOLD = 4
-LISTING_THRESHOLD = 1
 
 
 def score(r):
@@ -139,8 +138,7 @@ REJECTED = [
 
 def main():
     argparse.ArgumentParser(description="Classify Uttarakhand's Volume 5 lines.").parse_args()
-    report("uttarakhand", *classify("uttarakhand", "Uttarakhand", score, PUBLISH_THRESHOLD,
-                                    LISTING_THRESHOLD, REJECTED,
+    report("uttarakhand", *classify("uttarakhand", "Uttarakhand", score, PUBLISH_THRESHOLD, REJECTED,
                                     row_fields=lambda r: {
                                         "major_head": r.get("major_head"),
                                         "minor_head": r.get("minor_head"),

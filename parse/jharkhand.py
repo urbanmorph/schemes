@@ -705,7 +705,7 @@ def run(date=None, verbose=False):
             "how": ("myScheme records whose beneficiaryState names Jharkhand and whose "
                     "level is not Central; indexed on match.tokens, match.skeleton and "
                     "match.acronyms, then match.probably_same on every candidate pair, "
-                    "then every join read by eye"),
+                    "then every join read by a model (Claude)"),
             "read_this_carefully": (
                 "26 of myScheme's 96 Jharkhand records were found in books that name 852 "
                 "schemes, and that is not evidence the other 70 are invented. Several are "

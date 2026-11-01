@@ -54,7 +54,7 @@ out of different numbers.
 
 16 of 22 states surveyed yield a machine-readable scheme list, between them naming
 40,241 lines. All 16 carry a classifier built and validated against
-that state's own hand labels, so every absence claim on the site has counted precision
+that state's own labels, so every absence claim on the site has counted precision
 behind it and named errors beside it.
 
 ---
@@ -1259,7 +1259,7 @@ national portal it would be compared against lists in English.
 
 ## What the Telangana and Punjab joins say about `parse/match.py`
 
-Every join was read by eye, against the version of `parse/match.py` standing at the end of
+Every join was read by a model (Claude), against the version of `parse/match.py` standing at the end of
 this round. Telangana produced **5** pairs against myScheme's 22 non-central records and
 **1 is wrong**; Punjab produced **16** against 41 and **8 are wrong**. Three holes in the
 acronym rules and one in containment.

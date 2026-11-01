@@ -797,7 +797,7 @@ def run(date=None):
             "pages that name thousands in their own header are read. The digit grouping "
             "is Indian and not three-digit, 4,25,77,24 being 4257724, so commas are "
             "stripped rather than counted."),
-        # Read by eye, all sixteen joins against the 41 myScheme records for Punjab.
+        # Read by a model (Claude), all sixteen joins against the 41 myScheme records for Punjab.
         # Recorded rather than patched: parse/match.py is not edited from here, and every
         # one of these is a false MATCH, which means a scheme is treated as present on
         # myScheme and is therefore NOT claimed absent. The cost is under-reported

@@ -98,9 +98,9 @@ Two claims, two thresholds, and confusing them was the project's worst bug.
 - **"This is funded and no portal lists it."** An accusation about a government portal.
   Being wrong is a false accusation. Tuned for precision; recall is deliberately sacrificed.
 
-Every row at or above the second bar carries a **hand label**, so the precision printed on
+Every row at or above the second bar carries a **label**, so the precision printed on
 the site is a *count*, not an estimate, and the errors are *named* rather than described.
-That is why adding a state means writing a few hundred hand labels, and why a state cannot
+That is why adding a state means writing a few hundred labels, and why a state cannot
 be added without them.
 
 The corollary, which `parse/ratios.py` enforces: **a number and its denominator must come
@@ -156,7 +156,7 @@ reason it is not shipped.
 - Say whether a scheme works, or characterise what an audit found.
 - Publish a name it cannot read, or a number it cannot reproduce.
 - Adapt a collector to keep a run green.
-- Add a state without hand labels.
+- Add a state without labels.
 - Translate. Decoding a font recovers the characters on the page and is a reading.
   Rendering Hindi into English is a claim about meaning, and this register does not make one.
 

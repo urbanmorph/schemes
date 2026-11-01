@@ -67,7 +67,7 @@ There are two label sets and they answer different questions.
 
 WHY THE CENSUS STARTS AT 5. The corpus puts 300 rows at score 5 or above, 386 at 4 and 425
 at 3. 300 rows, of which 240 needed a new label, is the largest set that can be read one by
-one and labelled reliably by hand, and it covers the published region plus the three bands
+one and labelled reliably one at a time, and it covers the published region plus the three bands
 below it, which is what the threshold argument needs. Below 5 the precision numbers in this
 file are estimates from the stratified sample and are labelled as such.
 
@@ -190,13 +190,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import utcnow, write_json  # noqa: E402
-from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, \
+from classify_common import assess, census_claim, listing_bar, base_rate, check_sample as check, excluded_by_rule, \
     quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
 PUBLISH_THRESHOLD = 8
 
-# Every row at or above this score carries a hand label, from the stratified set or the
+# Every row at or above this score carries a label, from the stratified set or the
 # audit set. Precision at or above it is counted; below it, it is estimated from the
 # stratified sample only. See the docstring for why this is 5 and not lower.
 CENSUS_FROM = 5
@@ -567,7 +567,7 @@ REJECTED_SIGNALS = [
                   "125 of the 131 wrong joins come from one hole, the community abbreviation "
                   "VJNT being read as a scheme acronym, which fanned six myScheme records "
                   "out to every one of the 21 register rows whose name contains it."),
-     "why": ("This is the borrowed ground truth the hand labels replace, and here it is both "
+     "why": ("This is the borrowed ground truth the labels replace, and here it is both "
              "bad and circular. Bad, because a matcher that joins 'Tanda Vasti Sudhar Yojana "
              "For VJNT And SBC' to 'Training Of Motor Driving To VJNT, SBS & OBC' 125 times "
              "is measuring its own acronym rule and not the schemes. Circular, because the "
@@ -667,7 +667,7 @@ KNOWN_ERRORS = [
 
 # Five department families, a fixed partition of the 56 departments the book names. The
 # departments cannot each be a stratum: 56 crossed with 5 allocation bands is 280 cells,
-# and a sample large enough to fill them could not be labelled by hand. The partition is
+# and a sample large enough to fill them could not be read one by one. The partition is
 # by what the department does, written before the labels were made, and the five families
 # come out at 179 to 513 rows each.
 FAMILIES = [
@@ -784,10 +784,8 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "de-duplicated view of the same list and its allocations add."),
         "publish_threshold": threshold,
         # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
-        # this as a scheme". It lived only in site/build.py, so the data could not
-        # say which rows the site lists and anything else reading this file had to
-        # guess. parse/cag_join.py guessed by skipping this state entirely.
-        "listing_threshold": 2,
+        # this as a scheme". Computed from the sweep: typed in, it drifted off it.
+        "listing_threshold": listing_bar(a["threshold_sweep"], threshold),
         "classified_scheme": len(schemes),
         "classified_scheme_distinct_names": len({x["name"].lower() for x in schemes}),
         "classified_not_scheme": len(rows) - len(schemes),
@@ -808,7 +806,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "why_not_myscheme": (
                 "myScheme membership cannot be the ground truth here, and it was not a close "
                 "call. parse/maharashtra.py produced 167 joins between these 1,956 codes and "
-                "the Maharashtra myScheme records and read every one by eye: 131 are wrong. "
+                "the Maharashtra myScheme records and had a model (Claude) read every one: 131 are wrong. "
                 "125 of them come from a single defect, the community abbreviation VJNT being "
                 "read as a scheme acronym, which fanned six myScheme records out to every one "
                 "of the 21 register rows whose name contains it. The defects are reproduced "
@@ -837,13 +835,13 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
                 "beneficiary-facing rows."),
             **a["points"],
             "census_note": (
-                "Every row at or above score %d is hand labelled, so precision at these "
-                "thresholds is counted rather than estimated. The census starts at %d and not "
+                census_claim(rows, CENSUS_FROM, threshold) + " " + (
+                "The census starts at %d and not "
                 "lower because of the scale: the corpus puts 300 rows at score 5 or above, "
                 "386 at 4 and 425 at 3, and 300 rows, of which 240 needed a new label, is the "
                 "largest set that can be read one by one and labelled reliably. Recall still "
                 "comes from the stratified sample, because the rows the classifier rejects "
-                "are too many to label exhaustively." % (CENSUS_FROM, CENSUS_FROM)),
+                "are too many to label exhaustively." % CENSUS_FROM)),
             "at_publish_threshold_census": a["at_census"],
             **a["f1"],
             "why_not_f1": (
@@ -908,7 +906,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
 
 
 def check_sample():
-    """Report which sampled or census rows have no hand label yet."""
+    """Report which sampled or census rows have no label yet."""
     return check("maharashtra", code, stratify, score, CENSUS_FROM)
 
 
@@ -918,7 +916,7 @@ def main():
                     "expenditure.")
     a.add_argument("--threshold", type=int, default=PUBLISH_THRESHOLD)
     a.add_argument("--check-sample", action="store_true",
-                   help="list sampled or census rows that carry no hand label yet")
+                   help="list sampled or census rows that carry no label yet")
     a.add_argument("--verbose", action="store_true")
     args = a.parse_args()
     if args.check_sample:
@@ -934,7 +932,7 @@ def main():
     print("  of which on a capital outlay or loan major head: %d\n"
           % o["capital_or_loan_head_rows"])
     g = o["ground_truth"]
-    print("ground truth: %d hand labels, %d scheme / %d not_scheme, %d borderline"
+    print("ground truth: %d labels, %d scheme / %d not_scheme, %d borderline"
           % (g["labelled"], g["scheme"], g["not_scheme"], g["borderline"]))
     print("              %d stratified, %d audit census\n"
           % (g["sets"]["stratified"]["n"], g["sets"]["audit"]["n"]))
@@ -947,7 +945,7 @@ def main():
         print("   %3d  called %4d  precision %.3f  recall %.3f  f1 %.3f%s"
               % (s["threshold"], s["called_scheme"], s["precision"], s["recall"],
                  s["f1"], mark))
-    print("\naudit census (every row at or above %d is hand labelled, so these are counts):"
+    print("\naudit census (every row at or above %d is labelled, so these are counts):"
           % CENSUS_FROM)
     print("   %3s  %8s %11s %10s | %8s %11s %10s"
           % ("t", "published", "not schemes", "precision", "band", "not schemes",

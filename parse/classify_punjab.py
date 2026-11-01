@@ -7,7 +7,7 @@ classify_common.py; every signal below is Punjab's own.
     data/punjab/labels.json          hand ground truth, the input
     data/punjab/classification.json  the verdicts, the output
 
-457 hand labels: a 302-row stratified sample on the level of the head of account, then
+457 labels: a 302-row stratified sample on the level of the head of account, then
 every row at the publishing bar labelled so precision is a COUNT. 144 of 2,961 lines clear
 it, precision 0.972 with four named errors, recall 0.590.
 
@@ -87,7 +87,6 @@ CENSUS_FOUND = re.compile(
     r"uday bonds|off budget borrowing|election expenditure)", re.I)
 
 PUBLISH_THRESHOLD = 3
-LISTING_THRESHOLD = 1
 
 
 def score(r):
@@ -128,8 +127,7 @@ REJECTED = [
 
 def main():
     argparse.ArgumentParser(description="Classify Punjab's demand-book sub-heads.").parse_args()
-    report("punjab", *classify("punjab", "Punjab", score, PUBLISH_THRESHOLD,
-                               LISTING_THRESHOLD, REJECTED,
+    report("punjab", *classify("punjab", "Punjab", score, PUBLISH_THRESHOLD, REJECTED,
                                row_fields=lambda r: {
                                    "demand": r.get("demand"),
                                    "minor_head_name": r.get("minor_head_name"),

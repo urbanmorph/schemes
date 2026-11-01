@@ -7,7 +7,7 @@ classify_common.py; every signal below is Delhi's own.
     data/delhi/labels.json          hand ground truth, the input
     data/delhi/classification.json  the verdicts, the output
 
-373 hand labels: a 282-row stratified sample on the shape of the provision, then every row
+373 labels: a 282-row stratified sample on the shape of the provision, then every row
 at the publishing bar labelled so precision is a COUNT. 97 of 1,578 lines clear it,
 precision 0.948 with five named errors, recall 0.513.
 
@@ -79,7 +79,6 @@ TO_ORGANISATION = re.compile(
     r".*?organisation|local bod)|extension reform|\bATMA\b|\b(poetry|literature)\b", re.I)
 
 PUBLISH_THRESHOLD = 3
-LISTING_THRESHOLD = 1
 
 
 def score(r):
@@ -130,8 +129,7 @@ REJECTED = [
 
 def main():
     argparse.ArgumentParser(description="Classify Delhi's scheme-wise budget lines.").parse_args()
-    report("delhi", *classify("delhi", "Delhi", score, PUBLISH_THRESHOLD,
-                              LISTING_THRESHOLD, REJECTED,
+    report("delhi", *classify("delhi", "Delhi", score, PUBLISH_THRESHOLD, REJECTED,
                               row_fields=lambda r: {"group": r.get("group")}),
            publish=PUBLISH_THRESHOLD)
 

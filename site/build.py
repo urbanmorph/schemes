@@ -37,6 +37,11 @@ OUT = os.path.join(HERE, "_out")
 SITE_BASE = os.environ.get("SITE_BASE", "https://india-schemes.pages.dev").rstrip("/")
 
 ISSUE_URL = "https://github.com/urbanmorph/schemes/issues/new"
+# Who read the labels every precision here is counted against. They were written in the
+# sessions that built each classifier, by Claude, and long described as "hand labels",
+# which a reader takes to mean a person. No person has checked them.
+LABELLED_BY = ("The labels were read by Claude, an AI model, not by a person, and no person "
+               "has checked them.")
 
 # display=optional, not swap. With swap the browser paints in the fallback and then
 # re-lays-out the page when each webfont arrives, and a trace named exactly that as the
@@ -521,7 +526,7 @@ def state_of_schemes(entries):
         (num(absent), "are funded by a state budget and listed by no national portal",
          f"Across the {num(states_classified)} states this register reads closely, worth "
          f"&#8377;{inr(round(absent_lakh / 100))} crore of provision in the current cycle. "
-         f"Each one has its name, its score and the hand label that judged it.",
+         f"Each one has its name, its score and the label that judged it.",
          "/states", "See them state by state"),
         (f"{refused} of {surveyed}", "states publish a budget no machine can read",
          f"DBT Bharat counts {num(ref_dbt)} state schemes between those {word(refused).lower()} and "
@@ -859,8 +864,8 @@ def legibility_section(leg, ms=None):
     <p style="margin:8px 0 0"><b style="display:inline;color:var(--ink);font-family:inherit;
     font-size:inherit;text-transform:none;letter-spacing:0">Listing a state and accusing a
     portal are different claims, and all {word(leg.get("states_built")).lower()} states now
-    make both.</b> Each state has a classifier, tested against that state&rsquo;s own hand
-    labels. Every row at the state&rsquo;s publishing bar has a hand label. So the precision
+    make both.</b> Each state has a classifier, tested against that state&rsquo;s own
+    labels. Every row at the state&rsquo;s publishing bar has a label. {LABELLED_BY} So the precision
     behind an absence claim is a count, and each error has a name. To call a directorate a
     hidden scheme is a false accusation, and these states clear that bar. The table above
     links each state&rsquo;s full budget book. The classifier decides which lines this
@@ -898,9 +903,10 @@ def classifier_note(cls, floor_sentence):
     cen = v.get("at_publish_threshold_census", {})
     return (f'Precision at the published bar is {cen.get("precision", 0):.1%}, and that is a '
             f'count rather than an estimate: every row scoring at or above the coverage '
-            f'threshold carries a hand label, so the errors in this table are '
+            f'threshold carries a label, so the errors in this table are '
             f'{num(cen.get("not_schemes"))} named ones. Validated against '
-            f'{num((cls.get("ground_truth") or {}).get("labelled"))} hand labels in all. '
+            f'{num((cls.get("ground_truth") or {}).get("labelled"))} labels in all. '
+            f'{LABELLED_BY} '
             f'Recall is {v.get("at_publish_threshold", {}).get("recall", 0):.0%}, measured on '
             f'the stratified sample alone, so this is a floor and never a total. '
             f'{floor_sentence}')
@@ -1010,10 +1016,10 @@ def page_state(key, state, d, leg_row, cls=None):
         scored_note = (
             f'{num(cls.get("classified_scheme"))} of these {num(len(rows))} lines clear the '
             f'bar this register uses before it will call a line a scheme, and every one at '
-            f'or above that bar carries a hand label, so its precision is a count rather '
+            f'or above that bar carries a label, so its precision is a count rather '
             f'than an estimate: {v.get("precision", 0):.1%} on '
-            f'{num(v.get("rows"))} rows, with {num(v.get("not_schemes"))} named errors.'
-            f'{recall_note} '
+            f'{num(v.get("rows"))} rows, with {num(v.get("not_schemes"))} named errors. '
+            f'{LABELLED_BY}{recall_note} '
             f'The rest of the book is on this page because {e(state)} published it, not '
             f'because this register calls it anything.')
     else:
@@ -1364,7 +1370,7 @@ list.</p>
   <div class="big">{num((audited or {}).get("schemes_audited"))} schemes in this register
   have been audited by the CAG, across {num((audited or {}).get("joins_published"))}
   reports.</div>
-  <div class="cite">{e((audited or {}).get("rule", ""))} &middot; every join read by eye
+  <div class="cite">{e((audited or {}).get("rule", ""))} &middot; every join read by a model (Claude)
   &middot; the catalogue&rsquo;s row count reconciles against the total the CAG&rsquo;s own
   site prints</div>
 </div>
@@ -1725,7 +1731,7 @@ and be done.</p>
 <div class="warnbox">
   <b>This register published its own recall too high, and this is the corrected number</b>
   We measure every state twice. The first measure is a stratified probability sample of the
-  whole budget book. The second is an <em>audit census</em>: we hand-label every row at or
+  whole budget book. The second is an <em>audit census</em>: Claude, an AI model, labels every row at or
   above the publishing bar. The census makes the precision above a count, not an estimate.
   Until this month, seven states divided their recall by both sets together. Every row in
   an audit census is above the bar, so each one added a hit to the top and the bottom of
@@ -3370,7 +3376,7 @@ def audit_block(name):
     This register records which schemes have been audited, which the CAG does not publish
     as a list. It does not read, quote or summarise an audit&rsquo;s conclusions: those are
     the CAG&rsquo;s to publish and the reports are linked above. The match is on the
-    report&rsquo;s subject at high similarity and every one was read by eye; the rules that
+    report&rsquo;s subject at high similarity and every one was read by a model (Claude); the rules that
     were tried and rejected are named on <a href="/audit">/audit</a>.
   </div>
 </section>"""
@@ -3398,7 +3404,7 @@ def cag_block(entry):
     """What the CAG's reports record about how a scheme was set up: when it began or ended,
     what it became, its type, funding, agency, outlay, coverage, benefit and eligibility.
     Never what an audit found (PLAN.md §1). Each fact is cited to the report's printed page,
-    which is checked by hand; facts about a predecessor or a programme within the scheme are
+    which is checked by a model (Claude); facts about a predecessor or a programme within the scheme are
     headed by that scheme's own name, because a predecessor's start date is not this one's.
     """
     c = entry.get("detail", {}).get("cag") or {}

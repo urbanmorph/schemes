@@ -74,7 +74,7 @@ out: whatever this signal is measuring, it is not measuring it there.
 ## What adopting it would cost
 
 Simulated as a flat bonus on the existing score, with precision counted on rows that already
-carry a hand label:
+carry a label:
 
 | state | now | +2 for a welfare head |
 |---|---|---|
@@ -123,7 +123,7 @@ each other. That was measured at a weight none of them could publish at, and it 
 ### The sweep
 
 Every weight from 1 to 8, scored over every row in the state, read at that state's
-publishing bar, counting errors against hand labels rather than estimating them:
+publishing bar, counting errors against labels rather than estimating them:
 
 | state | bar | weight was | published | precision | weight now | published | precision | what stopped it |
 |---|---|---|---|---|---|---|---|---|
@@ -143,7 +143,7 @@ out of precision, Karnataka and Tamil Nadu run out of labels.
 **The floor.** The register's precision floor is 0.903, which is Odisha's, and nothing
 publishes below it.
 
-**The count.** Precision here is a COUNT: every row at or above the bar carries a hand
+**The count.** Precision here is a COUNT: every row at or above the bar carries a
 label and every error is named in `known_errors` (`PLAN.md` §4). Raising a weight pushes
 rows up across the bar, and rows nobody ever labelled come up with them. Karnataka at
 weight 5 reads 0.948, *better* than the 0.938 it publishes at — but 37 of those 154 rows

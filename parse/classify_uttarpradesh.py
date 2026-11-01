@@ -7,7 +7,7 @@ classify_common.py; every signal below is Uttar Pradesh's own.
     data/uttarpradesh/labels.json          hand ground truth, the input
     data/uttarpradesh/classification.json  the verdicts, the output
 
-528 hand labels: a 289-row stratified sample on whether the scheme code is two digits or
+528 labels: a 289-row stratified sample on whether the scheme code is two digits or
 four, then every row at the publishing bar labelled so precision is a COUNT. 184 of 5,831
 lines clear it, precision 0.940 with eleven named errors, recall 0.436.
 
@@ -15,7 +15,7 @@ BOTH OF THOSE NUMBERS MOVED, AND FOR THE SAME REASON. Recall was published as 0.
 the sweep was counting the audit census, which is chosen on this classifier's own output;
 classify_common now sweeps the stratified sample alone and the honest figure is 0.436.
 Precision was published as 0.935 as though it were a count, and it was not: grant, code and
-page do not identify a row here, so 15 rows at the bar were being given a hand label
+page do not identify a row here, so 15 rows at the bar were being given a label
 somebody wrote about a different line. They are labelled now, and 0.940 is a count.
 
 THIS FILE IS WRITTEN IN DEVANAGARI AND THAT IS THE POINT. Uttar Pradesh publishes its
@@ -98,7 +98,6 @@ CENSUS_FOUND = re.compile(
     "विस्तारीकरण|नमामि गंगे")
 
 PUBLISH_THRESHOLD = 3
-LISTING_THRESHOLD = 1
 
 
 def _base(r):
@@ -112,7 +111,7 @@ def _base(r):
 # adding the NAME as well, 132 differ only in the amount and 44 in the amount and the head
 # it sits under. Two provisions, not one printed twice.
 #
-# The cost was silent and it was in the ground truth. classify_common assigns hand labels by
+# The cost was silent and it was in the ground truth. classify_common assigns labels by
 # looking the identifier up, so every row sharing an identifier was given the label somebody
 # wrote for ONE of them: 289 sampled labels were landing on 370 rows, so 81 rows in the
 # threshold sweep -- 22% of it -- carried a verdict written about a different line. At the
@@ -203,8 +202,7 @@ REJECTED = [
 def main():
     argparse.ArgumentParser(description="Classify Uttar Pradesh's grant-volume lines.").parse_args()
     report("uttarpradesh",
-           *classify("uttarpradesh", "Uttar Pradesh", score, PUBLISH_THRESHOLD,
-                     LISTING_THRESHOLD, REJECTED, ident=ident,
+           *classify("uttarpradesh", "Uttar Pradesh", score, PUBLISH_THRESHOLD, REJECTED, ident=ident,
                      row_fields=lambda r: {
                          "name_latin": r.get("name_latin"),
                          "department": r.get("department"),

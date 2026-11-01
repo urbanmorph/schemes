@@ -37,7 +37,7 @@ missing, a wrong one is silently wrong.
 
 WHAT ACTUALLY DISCRIMINATES, and the first finding is that the expected order is
 backwards. The ministry or department name looks like the strongest signal and is not.
-Each signal used ALONE, on the hand-labelled rows where it fires. Alone and not in the
+Each signal used ALONE, on the labelled rows where it fires. Alone and not in the
 cascade, because a signal measured only on the rows the stronger ones left behind is
 measured on the hardest rows there are, which flatters the strong one and buries the weak:
 
@@ -48,7 +48,7 @@ measured on the hardest rows there are, which flatters the strong one and buries
     the major head of account                      0.648  fires on 210 of 301
     Kerala's own sector string                     0.444  fires on  45 of 301
 
-And counted, not estimated, on audit 2's 178 hand-read published answers, by the signal
+And counted, not estimated, on audit 2's 178 model-read published answers, by the signal
 that actually decided each one:
 
     a benefit phrase in the name       93 right of 100 audited   0.930
@@ -73,7 +73,7 @@ reason for the ceiling is structural: a department is not a sector. The biggest 
 is that welfare departments pay scholarships. myScheme files 79 of the 212 schemes of the
 "Social Justice and Empowerment Department" under Education & Learning and 65 under Social
 welfare & Empowerment; "Labour Department" is 53% Social welfare, not Skills & Employment.
-The state books do the same thing under major head 2225: 22 of the hand-labelled
+The state books do the same thing under major head 2225: 22 of the labelled
 Education & Learning rows carry a head of account that says Social welfare & Empowerment,
 and 20 of those 22 are under 2225.
 
@@ -135,7 +135,7 @@ under threshold_sweep. The chosen point is not the accuracy-optimal one: on the 
 sample, 7 and 1 scores 0.975 over 40% of the rows, and at that setting most of the gap
 this file exists to close stays open.
 
-THE LABELLING RULE, applied to every hand label and recorded in data/sector_labels.json:
+THE LABELLING RULE, applied to every label and recorded in data/sector_labels.json:
 the sector is the domain of the benefit the row buys, chosen from the 15 and following
 myScheme's own conventions where they are consistent, which were read off its 4,771
 records before labelling began:
@@ -154,7 +154,7 @@ records before labelling began:
 Two conventions were genuinely undecidable and are recorded as such rather than hidden.
 SCHOOL FEEDING: myScheme's own 12 mid-day-meal records split 4 Women and Child, 3 Health,
 2 Social welfare, 2 Education with no majority, so the rule here is that feeding a child is
-Women and Child and feeding an old age pensioner is Social welfare. Two hand labels were
+Women and Child and feeding an old age pensioner is Social welfare. Two labels were
 corrected mid-development to make the sample obey that rule, and both are flagged in
 data/sector_labels.json. LIVELIHOOD MISSIONS: myScheme files "Deendayal Antyodaya Yojana -
 National Rural Livelihoods Mission" itself under Social welfare & Empowerment, so NRLM,
@@ -373,7 +373,7 @@ WEAK_NAME_RULES = [
 ]
 
 # ---------------------------------------------------------------------------
-# What the ministry or department says. Measured 0.659 over the 179 hand-labelled rows
+# What the ministry or department says. Measured 0.659 over the 179 labelled rows
 # where it fires, against a memorised ceiling of 0.695 on myScheme's own 4,767 records.
 # ---------------------------------------------------------------------------
 DEPT_RULES = [
@@ -642,7 +642,7 @@ def sweep(rows_by_key, labels):
 
 
 def per_signal(rows_by_key, labels):
-    """Each signal used ALONE, on the hand-labelled rows where it fires.
+    """Each signal used ALONE, on the labelled rows where it fires.
 
     Alone, not in the cascade: a signal measured only on the rows the stronger signals
     left behind is measured on the hardest rows there are, which flatters the strong one
@@ -955,7 +955,7 @@ def build(write=True):
         "signals": per_signal(by_key, labels),
         "signals_rejected": [
             {"signal": "Kerala's own sector string, its 36 values mapped onto the 15",
-             "measured": "0.444 over the 45 hand-labelled Kerala rows where it fires, "
+             "measured": "0.444 over the 45 labelled Kerala rows where it fires, "
                          "against 0.865 for the name; and once the name, department and "
                          "head are in place it was the deciding signal on 1 row in 2,599",
              "why": "Kerala's axis is WHO the money is for and myScheme's is WHAT it "
@@ -1000,7 +1000,7 @@ def build(write=True):
             "rows_no_sector_fits": {
                 "hand_labelled_none_or_uncertain": len(ungradeable),
                 "given_a_sector_anyway": assigned_anyway,
-                "note": "10 of the 320 hand-labelled rows are budget lines no sector "
+                "note": "10 of the 320 labelled rows are budget lines no sector "
                         "fits ('Actual Recoveries', 'Mauritius', 'Other works') and 9 "
                         "could not be settled from the row's own evidence. They are out "
                         "of the accuracy figure and counted here instead, because a "
@@ -1008,7 +1008,7 @@ def build(write=True):
                         "sector is wrong in a way accuracy hides.",
             },
             "audits": audit_out,
-            "audit_note": "Both audits are hand readings of the classifier's own published "
+            "audit_note": "Both audits are readings by a model (Claude) of the classifier's own published "
                           "answer, drawn stratified by DECIDING SIGNAL so that each "
                           "signal's precision is a count. Audit 1 was read against the "
                           "first working version and its findings WERE fed back: eight "
@@ -1039,7 +1039,7 @@ def main():
     for fam, v in sorted(out["by_family"].items()):
         print("  %-12s %5d rows  %5d classified" % (fam, v["rows"], v["classified"]))
     print()
-    print("each signal alone, on the hand-labelled rows where it fires")
+    print("each signal alone, on the labelled rows where it fires")
     for s in out["signals"]:
         print("  %-34s %.3f  fires on %3d of %d"
               % (s["signal"], s["accuracy"] or 0, s["fires_on"], s["of"]))

@@ -299,7 +299,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
-from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, \
+from classify_common import assess, census_claim, listing_bar, base_rate, check_sample as check, excluded_by_rule, \
     quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
@@ -312,7 +312,7 @@ def _load(name, path):
 
 PUBLISH_THRESHOLD = 10
 
-# Every row at or above this score carries a hand label, from the stratified set or the
+# Every row at or above this score carries a label, from the stratified set or the
 # audit set. Precision at or above it is counted; below it, it is estimated from the
 # stratified sample only. See the docstring for why this is 6 and not lower.
 CENSUS_FROM = 6
@@ -962,7 +962,7 @@ REJECTED_SIGNALS = [
                   "myscheme_join_summary: 126 joins produced, 51 wrong on inspection. Of "
                   "the 109 West Bengal myScheme records only 21 have a join that survived "
                   "inspection, and 66 heads of account out of 9,024 have one."),
-     "why": ("This is the borrowed ground truth the hand labels replace, and here it is "
+     "why": ("This is the borrowed ground truth the labels replace, and here it is "
              "both bad and circular. Bad, because the defects are catalogued: a four "
              "letter acronym matching the five letter one it is a prefix of joined the "
              "State Disaster Response Fund to a stamp duty subsidy five times, and the "
@@ -1204,10 +1204,8 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "absent_distinct is the de-duplicated view of the same list."),
         "publish_threshold": threshold,
         # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
-        # this as a scheme". It lived only in site/build.py, so the data could not
-        # say which rows the site lists and anything else reading this file had to
-        # guess. parse/cag_join.py guessed by skipping this state entirely.
-        "listing_threshold": 3,
+        # this as a scheme". Computed from the sweep: typed in, it drifted off it.
+        "listing_threshold": listing_bar(a["threshold_sweep"], threshold),
         "classified_scheme": len(schemes),
         "classified_scheme_distinct_names": len({x["name"].lower() for x in schemes}),
         "classified_not_scheme": len(rows) - len(schemes),
@@ -1236,7 +1234,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
             "why_not_myscheme": (
                 "myScheme membership cannot be the ground truth here, and it was not a "
                 "close call. parse/westbengal.py produced 126 joins between these 9,024 "
-                "heads and the West Bengal myScheme records and read every one by eye: 51 "
+                "heads and the West Bengal myScheme records and had a model (Claude) read every one: 51 "
                 "are wrong, and the defects are reproduced in myscheme_join_defects below. "
                 "Of 109 myScheme records only 21 have a join that survived inspection. The "
                 "parser also refused to settle the largest question in its own join and "
@@ -1269,17 +1267,17 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
                 "and 2,115 name a body rather than a person."),
             **a["points"],
             "census_note": (
-                "Every row at or above score %d is hand labelled, so precision at these "
-                "thresholds is counted rather than estimated. The census starts at %d and "
+                census_claim(rows, CENSUS_FROM, threshold) + " " + (
+                "The census starts at %d and "
                 "not lower because of the scale: 9,024 rows put 532 rows at score 6 or "
                 "above, 918 at score 4 and 1,482 at score 2. 532 rows is the largest set "
-                "that can be read one by one and labelled reliably by hand, and it covers "
+                "that can be read one by one and labelled reliably, and it covers "
                 "the published region plus the four bands below it, which is what the "
                 "threshold argument needs. Below %d the precision numbers in this file are "
                 "estimates from the stratified sample and are labelled as such. Recall "
                 "always comes from the stratified sample, because the rows the classifier "
                 "rejects are too many to label exhaustively."
-                % (CENSUS_FROM, CENSUS_FROM, CENSUS_FROM)),
+                % (CENSUS_FROM, CENSUS_FROM))),
             "at_publish_threshold_census": a["at_census"],
             **a["f1"],
             "why_not_f1": (
@@ -1357,7 +1355,7 @@ def run(threshold=PUBLISH_THRESHOLD, verbose=False):
 
 
 def check_sample():
-    """Report which sampled or census rows have no hand label yet."""
+    """Report which sampled or census rows have no label yet."""
     return check("westbengal", hoa, stratify, scorer(heads()[0]), CENSUS_FROM)
 
 
@@ -1367,7 +1365,7 @@ def main():
                     "or budget head.")
     a.add_argument("--threshold", type=int, default=PUBLISH_THRESHOLD)
     a.add_argument("--check-sample", action="store_true",
-                   help="list sampled or census rows that carry no hand label yet")
+                   help="list sampled or census rows that carry no label yet")
     a.add_argument("--rebuild-heads", action="store_true",
                    help="drop the object head cache and read the archive again")
     a.add_argument("--verbose", action="store_true")
@@ -1389,7 +1387,7 @@ def main():
     print("  of which carry a negative provision: %d, funded at nil: %d\n"
           % (o["negative_provision"], o["funded_at_nil"]))
     g = o["ground_truth"]
-    print("ground truth: %d hand labels, %d scheme / %d not_scheme, %d borderline"
+    print("ground truth: %d labels, %d scheme / %d not_scheme, %d borderline"
           % (g["labelled"], g["scheme"], g["not_scheme"], g["borderline"]))
     print("              %d stratified, %d audit census\n"
           % (g["sets"]["stratified"]["n"], g["sets"]["audit"]["n"]))
@@ -1402,7 +1400,7 @@ def main():
         print("   %3d  called %4d  precision %.3f  recall %.3f  f1 %.3f%s"
               % (s["threshold"], s["called_scheme"], s["precision"], s["recall"],
                  s["f1"], mark))
-    print("\naudit census (every row at or above %d is hand labelled, so these are counts):"
+    print("\naudit census (every row at or above %d is labelled, so these are counts):"
           % CENSUS_FROM)
     print("   %3s  %8s %11s %10s | %8s %11s %10s"
           % ("t", "published", "not schemes", "precision", "band", "not schemes",

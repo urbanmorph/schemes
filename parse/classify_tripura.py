@@ -74,7 +74,6 @@ SYSTEM = re.compile(
 GRAM = re.compile(r"\bgram\b", re.I)
 
 PUBLISH_THRESHOLD = 2
-LISTING_THRESHOLD = 1
 
 
 def score(r):
@@ -122,10 +121,9 @@ REJECTED = [
 def main():
     argparse.ArgumentParser(description="Classify Tripura's scheme lines.").parse_args()
     report("tripura",
-           *classify("tripura", "Tripura", score, PUBLISH_THRESHOLD, LISTING_THRESHOLD,
-                     REJECTED,
+           *classify("tripura", "Tripura", score, PUBLISH_THRESHOLD, REJECTED,
                      row_fields=lambda r: {"department": (r.get("departments") or [None])[0]},
-                     what=("Every line in Tripura's book carries a hand label, so this is a "
+                     what=("Every line in Tripura's book carries a label, so this is a "
                            "count over the whole population and not over a sample. There is "
                            "no estimate anywhere in this file.")),
            publish=PUBLISH_THRESHOLD)

@@ -1,5 +1,5 @@
 {
- "absent_cr": 22392.4,
+ "absent_cr": 19835.5,
  "absent_distinct": [
   {
    "be_lakh": 620000.0,
@@ -83,33 +83,6 @@
    "in_myscheme_karnataka": false,
    "name": "Interest Subsidy for Crop Loan, Pledge Loan, SHGs",
    "purpose": "Credit facility and interest subsidy to socially and economically backward sections, especially women",
-   "score": 7,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 161200.0,
-   "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2408"
-    ],
-    [
-     "+2",
-     "benefit words in the name: dbt"
-    ],
-    [
-     "+1",
-     "scheme-name marker in the name: scheme"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2408-00-101-0-01",
-   "in_myscheme_karnataka": false,
-   "name": "DBT under Annabhagya Scheme",
-   "purpose": null,
    "score": 7,
    "verdict": "scheme"
   },
@@ -240,6 +213,9 @@
    "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
    "purpose": "One hot meal on school days and milk to students (three days a week) in government and aided schools up to 10th standard",
    "score": 9,
+   "scsp_hoas": [
+    "2235-00-101-0-63"
+   ],
    "verdict": "scheme"
   },
   {
@@ -368,60 +344,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 28000.0,
-   "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "benefit words in the name: bhagya, nutrition"
-    ],
-    [
-     "+1",
-     "scheme-name marker in the name: bhagya"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2235-00-101-0-63",
-   "in_myscheme_karnataka": false,
-   "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
-   "purpose": null,
-   "score": 7,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 27300.0,
-   "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2225"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scholarships"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: students"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2225-00-101-0-07",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-State Share- Post-Matric Scholarships to SC Students",
-   "purpose": null,
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 27300.0,
    "books": [
     "Child Budget",
@@ -447,6 +369,9 @@
    "name": "CSS-State Share- Post-Matric Scholarships to SC Studentss",
    "purpose": "Financial support for education to post-matric SC students.",
    "score": 8,
+   "scsp_hoas": [
+    "2225-00-101-0-07"
+   ],
    "verdict": "scheme"
   },
   {
@@ -599,33 +524,6 @@
   {
    "be_lakh": 15000.0,
    "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2225"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scholarships"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: students"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2225-00-102-0-07",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
-   "purpose": null,
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 15000.0,
-   "books": [
     "Child Budget",
     "Gender Budget"
    ],
@@ -657,6 +555,9 @@
    "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
    "purpose": "Scholarships to post-matric ST students.",
    "score": 13,
+   "scsp_hoas": [
+    "2225-00-102-0-07"
+   ],
    "verdict": "scheme"
   },
   {
@@ -822,33 +723,6 @@
   {
    "be_lakh": 9000.0,
    "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2225"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scholarship"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: students"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2225-00-101-0-68",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
-   "purpose": null,
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 9000.0,
-   "books": [
     "Child Budget",
     "Gender Budget"
    ],
@@ -880,6 +754,9 @@
    "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
    "purpose": "Pre-Matric scholarships to students belonging to Scheduled Caste (SC)",
    "score": 13,
+   "scsp_hoas": [
+    "2225-00-101-0-68"
+   ],
    "verdict": "scheme"
   },
   {
@@ -984,33 +861,6 @@
   {
    "be_lakh": 7000.0,
    "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2225"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scholarship"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: students"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2225-00-101-0-69",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-State Share-Pre-Matric Scholarship to SC Students",
-   "purpose": null,
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 7000.0,
-   "books": [
     "Child Budget",
     "Gender Budget"
    ],
@@ -1034,6 +884,9 @@
    "name": "CSS-State Share- Pre-Matric Scholarship to SC Students",
    "purpose": null,
    "score": 8,
+   "scsp_hoas": [
+    "2225-00-101-0-69"
+   ],
    "verdict": "scheme"
   },
   {
@@ -1091,7 +944,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-70",
    "in_myscheme_karnataka": false,
    "name": "Pre-Matric Scholarship to SC Students (1st to 8th STD-State Scheme)",
@@ -1430,33 +1283,6 @@
   {
    "be_lakh": 5000.0,
    "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2225"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scholarships"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: students"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2225-00-102-0-10",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
-   "purpose": null,
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 5000.0,
-   "books": [
     "Child Budget",
     "Gender Budget",
     "SCSP/TSP Allocations"
@@ -1513,6 +1339,9 @@
    "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
    "purpose": null,
    "score": 8,
+   "scsp_hoas": [
+    "2225-00-102-0-10"
+   ],
    "verdict": "scheme"
   },
   {
@@ -1940,7 +1769,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-68",
    "in_myscheme_karnataka": false,
    "name": "Pre-Matric Scholarship for ST Students (1st to 8th STD)- State Scheme",
@@ -2075,33 +1904,6 @@
   {
    "be_lakh": 2159.0,
    "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2225"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scholarship"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: students"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2225-00-102-0-09",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
-   "purpose": null,
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 2159.0,
-   "books": [
     "Child Budget",
     "Gender Budget"
    ],
@@ -2133,6 +1935,9 @@
    "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
    "purpose": "Scholarship to eligible Scheduled Tribe (ST) students in Classes IX and X to attain progression to the post-matric stage.",
    "score": 13,
+   "scsp_hoas": [
+    "2225-00-102-0-09"
+   ],
    "verdict": "scheme"
   },
   {
@@ -2259,7 +2064,7 @@
      "named beneficiary class in the name: graduates"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-80",
    "in_myscheme_karnataka": false,
    "name": "Incentive to SC Law Graduates",
@@ -2543,33 +2348,6 @@
   {
    "be_lakh": 720.0,
    "books": [
-    "SCSP/TSP Allocations"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2225"
-    ],
-    [
-     "+2",
-     "benefit words in the name: scholarship"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: students"
-    ]
-   ],
-   "hand_label": null,
-   "hoa": "2225-00-102-0-11",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-State Share-Pre-Matric Scholarship to ST Students",
-   "purpose": null,
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 720.0,
-   "books": [
     "Child Budget",
     "Gender Budget"
    ],
@@ -2593,6 +2371,9 @@
    "name": "CSS-State Share- Pre-Matric Scholarship to ST Students",
    "purpose": null,
    "score": 8,
+   "scsp_hoas": [
+    "2225-00-102-0-11"
+   ],
    "verdict": "scheme"
   },
   {
@@ -2797,38 +2578,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 281.21,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "the purpose line names a benefit: free"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: children"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: blind"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-101-0-02",
-   "in_myscheme_karnataka": false,
-   "name": "Government Schools for the Deaf and Blind",
-   "purpose": "Free accommodation, meals and education to deaf & dum children",
-   "score": 11,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 200.0,
    "books": [
     "Child Budget",
@@ -2987,61 +2736,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 25.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: children, women"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: children, women"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-0-24",
-   "in_myscheme_karnataka": false,
-   "name": "Prevention of Trafficking in Women & Children",
-   "purpose": "Create awareness for combating trafficking of women and children.",
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 3.0,
-   "books": [
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "the purpose line names a benefit: allowance"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: persons"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-101-0-55",
-   "in_myscheme_karnataka": false,
-   "name": "Placement Cell of the Different Abled",
-   "purpose": "Unemployment allowance to educated unemployed and differently abled persons.",
-   "score": 9,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 2.0,
    "books": [
     "Gender Budget"
@@ -3070,62 +2764,6 @@
    "name": "Free Bus Pass To Widows Of Freedom Fighters",
    "purpose": "Free bus passes to wives and widows of freedom fighters.",
    "score": 9,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 1.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: workers"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: workers"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-0-05",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-Central Share-Training of Anganwadi Workers & Helpers",
-   "purpose": "Training of Anganwadi workers at all levels of ICDS functionaries.",
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 1.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: workers"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: workers"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-0-19",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-State Share-Training of Anganwadi Workers & Helpers",
-   "purpose": "For tarining of Anganwadi workers and helpers.",
-   "score": 8,
    "verdict": "scheme"
   },
   {
@@ -3327,34 +2965,6 @@
    "evidence": [
     [
      "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: children"
-    ],
-    [
-     "+2",
-     "benefit words in the name: assistance"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-104-2-06",
-   "in_myscheme_karnataka": false,
-   "name": "Financial Assistance to Special Schools for Physically Challenaged run by NGO's",
-   "purpose": "Grants-in-aid to NGOs for mentally challenged, visually impaired and hearing impaired children.",
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
      "welfare function major head 2408"
     ],
     [
@@ -3376,12 +2986,16 @@
    "name": "DBT under Annabhagya Scheme",
    "purpose": "DBT to AAY & PHH cards holders",
    "score": 10,
+   "scsp_hoas": [
+    "2408-00-101-0-01"
+   ],
    "verdict": "scheme"
   }
  ],
+ "absent_distinct_names": 96,
  "absent_from_myscheme_all_rows": 1031,
- "absent_from_myscheme_and_classified_scheme": 111,
- "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Karnataka, because claiming absence should require that even a generous matcher finds nothing. The surviving list is a floor: 580 of the 969 rows carry no purpose line, and a real scheme with a plain name and no purpose line cannot clear a high bar on the evidence the books print.",
+ "absent_from_myscheme_and_classified_scheme": 105,
+ "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Karnataka, because claiming absence should require that even a generous matcher finds nothing. The surviving list is a floor: 656 of the 1,045 rows carry no purpose line, and a real scheme with a plain name and no purpose line cannot clear a high bar on the evidence the books print.",
  "absent_schemes": [
   {
    "be_lakh": 620000.0,
@@ -3487,7 +3101,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2408-00-101-0-01",
    "in_myscheme_karnataka": false,
    "name": "DBT under Annabhagya Scheme",
@@ -3768,7 +3382,7 @@
      "scheme-name marker in the name: bhagya"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2235-00-101-0-63",
    "in_myscheme_karnataka": false,
    "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
@@ -3795,7 +3409,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-07",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share- Post-Matric Scholarships to SC Students",
@@ -3997,7 +3611,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-07",
    "in_myscheme_karnataka": false,
    "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
@@ -4220,7 +3834,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-68",
    "in_myscheme_karnataka": false,
    "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
@@ -4382,7 +3996,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-69",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share-Pre-Matric Scholarship to SC Students",
@@ -4473,7 +4087,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-70",
    "in_myscheme_karnataka": false,
    "name": "Pre-Matric Scholarship to SC Students (1st to 8th STD-State Scheme)",
@@ -4828,7 +4442,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-10",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
@@ -5322,7 +4936,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-68",
    "in_myscheme_karnataka": false,
    "name": "Pre-Matric Scholarship for ST Students (1st to 8th STD)- State Scheme",
@@ -5473,7 +5087,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-09",
    "in_myscheme_karnataka": false,
    "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
@@ -5641,7 +5255,7 @@
      "named beneficiary class in the name: graduates"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-80",
    "in_myscheme_karnataka": false,
    "name": "Incentive to SC Law Graduates",
@@ -5941,7 +5555,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-11",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share-Pre-Matric Scholarship to ST Students",
@@ -6179,38 +5793,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 281.21,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "the purpose line names a benefit: free"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: children"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: blind"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-101-0-02",
-   "in_myscheme_karnataka": false,
-   "name": "Government Schools for the Deaf and Blind",
-   "purpose": "Free accommodation, meals and education to deaf & dum children",
-   "score": 11,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 200.0,
    "books": [
     "Child Budget",
@@ -6369,61 +5951,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 25.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: children, women"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: children, women"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-0-24",
-   "in_myscheme_karnataka": false,
-   "name": "Prevention of Trafficking in Women & Children",
-   "purpose": "Create awareness for combating trafficking of women and children.",
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 3.0,
-   "books": [
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+3",
-     "the purpose line names a benefit: allowance"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: persons"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-101-0-55",
-   "in_myscheme_karnataka": false,
-   "name": "Placement Cell of the Different Abled",
-   "purpose": "Unemployment allowance to educated unemployed and differently abled persons.",
-   "score": 9,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 2.0,
    "books": [
     "Gender Budget"
@@ -6452,62 +5979,6 @@
    "name": "Free Bus Pass To Widows Of Freedom Fighters",
    "purpose": "Free bus passes to wives and widows of freedom fighters.",
    "score": 9,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 1.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: workers"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: workers"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-0-05",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-Central Share-Training of Anganwadi Workers & Helpers",
-   "purpose": "Training of Anganwadi workers at all levels of ICDS functionaries.",
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 1.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: workers"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: workers"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-102-0-19",
-   "in_myscheme_karnataka": false,
-   "name": "CSS-State Share-Training of Anganwadi Workers & Helpers",
-   "purpose": "For tarining of Anganwadi workers and helpers.",
-   "score": 8,
    "verdict": "scheme"
   },
   {
@@ -6697,34 +6168,6 @@
    "in_myscheme_karnataka": false,
    "name": "Aids and Appliances for the Disabled",
    "purpose": "Hearing aids, and other appliances to differently-abled and economically weaker children.",
-   "score": 8,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 0.0,
-   "books": [
-    "Child Budget",
-    "Gender Budget"
-   ],
-   "evidence": [
-    [
-     "+4",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "the purpose line names who receives it: children"
-    ],
-    [
-     "+2",
-     "benefit words in the name: assistance"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoa": "2235-02-104-2-06",
-   "in_myscheme_karnataka": false,
-   "name": "Financial Assistance to Special Schools for Physically Challenaged run by NGO's",
-   "purpose": "Grants-in-aid to NGOs for mentally challenged, visually impaired and hearing impaired children.",
    "score": 8,
    "verdict": "scheme"
   },
@@ -12899,7 +12342,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-07",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share- Post-Matric Scholarships to SC Students",
@@ -13045,7 +12488,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-68",
    "in_myscheme_karnataka": false,
    "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
@@ -13072,7 +12515,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-69",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share-Pre-Matric Scholarship to SC Students",
@@ -13103,7 +12546,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-70",
    "in_myscheme_karnataka": false,
    "name": "Pre-Matric Scholarship to SC Students (1st to 8th STD-State Scheme)",
@@ -13130,7 +12573,7 @@
      "named beneficiary class in the name: graduates"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-101-0-80",
    "in_myscheme_karnataka": false,
    "name": "Incentive to SC Law Graduates",
@@ -13180,7 +12623,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-07",
    "in_myscheme_karnataka": false,
    "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
@@ -13207,7 +12650,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-09",
    "in_myscheme_karnataka": false,
    "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
@@ -13234,7 +12677,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-10",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
@@ -13261,7 +12704,7 @@
      "named beneficiary class in the name: students"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-11",
    "in_myscheme_karnataka": false,
    "name": "CSS-State Share-Pre-Matric Scholarship to ST Students",
@@ -13407,7 +12850,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2225-00-102-0-68",
    "in_myscheme_karnataka": false,
    "name": "Pre-Matric Scholarship for ST Students (1st to 8th STD)- State Scheme",
@@ -17102,7 +16545,7 @@
      "scheme-name marker in the name: bhagya"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2235-00-101-0-63",
    "in_myscheme_karnataka": false,
    "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
@@ -22492,7 +21935,7 @@
      "scheme-name marker in the name: scheme"
     ]
    ],
-   "hand_label": null,
+   "hand_label": "scheme",
    "hoa": "2408-00-101-0-01",
    "in_myscheme_karnataka": false,
    "name": "DBT under Annabhagya Scheme",
@@ -30663,7 +30106,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-31T15:29:12Z",
+ "built": "2026-11-01T09:22:22Z",
  "classified_not_scheme": 929,
  "classified_scheme": 116,
  "cycle": "2026-27",
@@ -30671,7 +30114,7 @@
  "ground_truth": {
   "borderline": 88,
   "file": "data/karnataka/labels.json",
-  "labelled": 324,
+  "labelled": 336,
   "labels": [
    {
     "be_lakh": 200.0,
@@ -32050,6 +31493,136 @@
     "stratum_size": 99
    },
    {
+    "be_lakh": 27300.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-101-0-07",
+    "label": "scheme",
+    "name": "CSS-State Share- Post-Matric Scholarships to SC Students",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2225-01-197-6-09, labelled a scheme there: post-matric scholarship to SC students",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 9000.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-101-0-68",
+    "label": "scheme",
+    "name": "CSS-Central Share- Pre-Matric Scholarship to SC Students",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2225-01-197-6-07, labelled a scheme there: pre-matric scholarship to SC students",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 7000.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-101-0-69",
+    "label": "scheme",
+    "name": "CSS-State Share-Pre-Matric Scholarship to SC Students",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2225-01-197-6-08, labelled a scheme there: state share of the pre-matric scholarship to SC students",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 6600.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-101-0-70",
+    "label": "scheme",
+    "name": "Pre-Matric Scholarship to SC Students (1st to 8th STD-State Scheme)",
+    "purpose": null,
+    "reason": "pre-matric scholarship paid to SC students in classes 1 to 8",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 1500.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-101-0-80",
+    "label": "scheme",
+    "name": "Incentive to SC Law Graduates",
+    "purpose": null,
+    "reason": "an incentive paid to individual SC law graduates",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 15000.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-102-0-07",
+    "label": "scheme",
+    "name": "CSS-Central Share-Post-Matric Scholarships to ST Students",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-03, labelled a scheme there: post-matric scholarships to ST students",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 2159.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-102-0-09",
+    "label": "scheme",
+    "name": "CSS-Central Share- Pre-Matric Scholarship to ST Students",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-05, labelled a scheme there: pre-matric scholarship to ST students",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 5000.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-102-0-10",
+    "label": "scheme",
+    "name": "CSS-State Share-Post-Matric Scholarships to ST Students",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-04, labelled a scheme there: state share of post-matric scholarships to ST students",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 720.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-102-0-11",
+    "label": "scheme",
+    "name": "CSS-State Share-Pre-Matric Scholarship to ST Students",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2225-02-197-6-06, labelled a scheme there: state share of pre-matric scholarship to ST students",
+    "sample": "audit"
+   },
+   {
+    "be_lakh": 3000.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2225-00-102-0-68",
+    "label": "scheme",
+    "name": "Pre-Matric Scholarship for ST Students (1st to 8th STD)- State Scheme",
+    "purpose": null,
+    "reason": "pre-matric scholarship paid to ST students in classes 1 to 8",
+    "sample": "audit"
+   },
+   {
     "be_lakh": 77.41,
     "books": [
      "Gender Budget",
@@ -32953,6 +32526,19 @@
     "stratum": "CB/q2",
     "stratum_sampled": 16,
     "stratum_size": 73
+   },
+   {
+    "be_lakh": 28000.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2235-00-101-0-63",
+    "label": "scheme",
+    "name": "Nutrition Program:Additional Grants from GoK(Ksheera Bhagya,Srusti ,Maatru Poorna)",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2236-02-197-1-02, labelled a scheme there: hot meal and milk to school students",
+    "sample": "audit"
    },
    {
     "be_lakh": 583.44,
@@ -34577,6 +34163,19 @@
     "stratum_size": 59
    },
    {
+    "be_lakh": 161200.0,
+    "books": [
+     "SCSP/TSP Allocations"
+    ],
+    "borderline": false,
+    "hoa": "2408-00-101-0-01",
+    "label": "scheme",
+    "name": "DBT under Annabhagya Scheme",
+    "purpose": null,
+    "reason": "the SCSP/TSP book's earmark of 2408-01-102-0-09, labelled a scheme there: direct benefit transfer to Annabhagya cardholders",
+    "sample": "audit"
+   },
+   {
     "be_lakh": 0.05,
     "books": [
      "Gender Budget"
@@ -36071,7 +35670,7 @@
    "scheme": "the money buys an identifiable benefit received by a person or household: cash, kit, food, scholarship, fee waiver, pension, insurance, subsidy, loan, free travel, a house, treatment for a named beneficiary class, or training given to people"
   },
   "sampling": "Stratified by book (SCSP/TSP, else Child, else Gender) crossed with allocation band (none, and quartiles of the 865 rows that carry an allocation), 15 strata. Within a stratum rows are sorted by head of account and picked at even spacing, so the sample is reproducible without a random seed. Allocation is proportional to stratum size with a floor of 4, so the sample is close to self weighting; stratum_size and stratum_sampled are carried on every row so a weighted estimate can be recomputed.",
-  "scheme": 177,
+  "scheme": 189,
   "why_not_myscheme": "myScheme membership cannot be the ground truth here. A Karnataka row that matches a myScheme record from any state is a scheme 38.8% of the time against 34.1% for rows that match nothing, a lift of +0.047. The matches are coincidences of wording."
  },
  "known_errors": [
@@ -36115,7 +35714,7 @@
  "listing_threshold": 1,
  "myscheme_karnataka_records": 60,
  "publish_threshold": 7,
- "question": "Which of Karnataka's 969 scheme-wise budget rows are welfare schemes, and which are institutions, establishment heads, asset heads or accounting heads?",
+ "question": "Which of Karnataka's 1,045 scheme-wise budget rows are welfare schemes, and which are institutions, establishment heads, asset heads or accounting heads?",
  "signals": [
   {
    "measured": "P(scheme) 0.000 over 23 development rows, base rate 0.370",
@@ -36428,8 +36027,8 @@
  "threshold_sweep_census": [
   {
    "not_schemes": 14,
-   "precision": 0.907,
-   "published": 151,
+   "precision": 0.914,
+   "published": 163,
    "the_errors": [
     "Assistance to KHDC",
     "CSS-Central (100% GoI) -Special Central Assistance For Tribal Sub Plan",
@@ -36450,8 +36049,8 @@
   },
   {
    "not_schemes": 7,
-   "precision": 0.941,
-   "published": 118,
+   "precision": 0.946,
+   "published": 130,
    "the_errors": [
     "CSS-Central (100% GoI) -Special Central Assistance For Tribal Sub Plan",
     "CSS-Central Share-Training of Anganwadi Workers & Helpers",
@@ -36465,8 +36064,8 @@
   },
   {
    "not_schemes": 6,
-   "precision": 0.942,
-   "published": 104,
+   "precision": 0.948,
+   "published": 116,
    "the_errors": [
     "CSS-Central Share-Training of Anganwadi Workers & Helpers",
     "CSS-State Share-Training of Anganwadi Workers & Helpers",
@@ -36479,8 +36078,8 @@
   },
   {
    "not_schemes": 6,
-   "precision": 0.929,
-   "published": 84,
+   "precision": 0.936,
+   "published": 94,
    "the_errors": [
     "CSS-Central Share-Training of Anganwadi Workers & Helpers",
     "CSS-State Share-Training of Anganwadi Workers & Helpers",
@@ -36493,8 +36092,8 @@
   },
   {
    "not_schemes": 2,
-   "precision": 0.967,
-   "published": 60,
+   "precision": 0.968,
+   "published": 62,
    "the_errors": [
     "Government Schools for the Deaf and Blind",
     "Placement Cell of the Different Abled"
@@ -36767,8 +36366,8 @@
   },
   "at_publish_threshold_census": {
    "not_schemes": 6,
-   "precision": 0.942,
-   "published": 104,
+   "precision": 0.948,
+   "published": 116,
    "the_errors": [
     "CSS-Central Share-Training of Anganwadi Workers & Helpers",
     "CSS-State Share-Training of Anganwadi Workers & Helpers",
@@ -36786,7 +36385,7 @@
    "threshold": 7,
    "true_positive": 15
   },
-  "census_note": "Every row at or above score 5 is hand labelled, so precision at these thresholds is counted rather than estimated. Recall still comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
+  "census_note": "Every row at or above the publishing bar of 7 is labelled, so precision there is counted rather than estimated. Between score 5 and the bar 52 rows carry no label, so precision there counts the labelled rows only. Recall still comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
   "f1_optimal_threshold": 1,
   "f1_optimal_thresholds": [
    1

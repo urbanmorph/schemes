@@ -221,7 +221,7 @@ def run(date=None):
                 continue
             # KEYED ON THE STATE'S OWN BYTES, not on this register's reading of them. The
             # first version keyed on the decoded name, and improving parse/krutidev.py by
-            # one letter then orphaned fifteen hand labels: their rows still existed and
+            # one letter then orphaned fifteen labels: their rows still existed and
             # were suddenly unlabelled, because the identifier was a derived field. The
             # Kruti Dev string is what Chhattisgarh printed and does not move when the
             # decoder gets better.

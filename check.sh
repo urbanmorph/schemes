@@ -36,11 +36,12 @@ PY
 # 2. The self-tests. Each of these exists because the thing it tests was wrong once and
 #    the failure was invisible in the output.
 step "parse/match.py self-tests"    python3 parse/match.py
-step "acronym pairs (hand labels)"  python3 tests/test_match_acronyms.py
+step "acronym pairs (labels)"  python3 tests/test_match_acronyms.py
 step "parse/krutidev.py self-tests" python3 parse/krutidev.py
 step "parse/text.py self-tests"     python3 parse/text.py --self-test
 step "parse/pdf.py self-tests"      python3 parse/pdf.py --self-test
 step "parse/classify_common.py self-tests" python3 parse/classify_common.py --self-test
+step "parse/classify_karnataka.py self-tests" python3 parse/classify_karnataka.py --self-test
 [ -f parse/devanagari.py ] && step "parse/devanagari.py self-tests" python3 parse/devanagari.py
 step "parse/cag.py self-tests"      python3 parse/cag.py --self-test
 step "parse/dbt.py self-tests"      python3 parse/dbt.py --self-test

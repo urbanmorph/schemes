@@ -5,9 +5,10 @@ sources, recording what each source publishes and what it leaves out.
 
 > Karnataka runs 60 welfare schemes. Or 501. It depends which government portal you ask.
 
-**11,079 schemes.** 5,478 named by at least one of the four national sources; the other
-5,601 read out of sixteen state budget books, where no national source names them at all.
-**1,884 are funded by a state and listed by no national portal**, worth ₹3.50 lakh crore.
+**10,493 schemes.** 5,566 named by at least one of the four national sources, 157 named
+only in CAG audit reports, and 4,770 read out of sixteen state budget books, where no
+national source names them at all. **1,756 are funded by a state and listed by no national
+portal**, worth ₹3.44 lakh crore.
 
 Live at **<https://india-schemes.pages.dev>**.
 
@@ -54,15 +55,17 @@ Budget line and an Outcome Budget framework, and none appears on myScheme. 36 su
 schemes, ₹2,20,750 cr, published at the classifier's high-precision threshold.
 
 **A state's own budget names schemes its citizens cannot look up.** Karnataka publishes
-Gender, Child and SCSP/TSP budgets naming 969 heads. myScheme lists 60 schemes for
-Karnataka. 110 of the state's own, worth ₹20,362 cr, read as schemes and appear on the
-national portal nowhere, at 93.8% precision counted against hand labels rather than
-estimated. That is a floor: Gruha Lakshmi, the state's largest welfare scheme, is not in
-it, because 580 of the 969 rows carry no purpose line for a classifier to read.
+Gender, Child and SCSP/TSP budgets naming 1,045 heads. myScheme lists 60 schemes for
+Karnataka. 96 of the state's own, worth ₹19,836 cr, read as schemes and appear on the
+national portal nowhere, at 94.8% precision counted against labels rather than estimated.
+The labels were read by Claude, an AI model, not by a person, and no person has checked
+them. That is a floor: Gruha Lakshmi, the state's largest welfare scheme, is not in it,
+because most rows carry no purpose line for a classifier to read.
 
-**Sixteen states now have their own budgets read against the portal**, and 1,884 of their
-schemes reach no national portal at all: Tamil Nadu 307, Telangana 267, Uttar Pradesh 184,
-West Bengal 140, Punjab 140, Jharkhand 124, Karnataka 110, Haryana 108, and eight more. Those numbers are floors set by how
+**Sixteen states now have their own budgets read against the portal**, and 1,756 of their
+schemes reach no national portal at all: Tamil Nadu 269, Telangana 264, Uttar Pradesh 173,
+Punjab 136, West Bengal 122, Jharkhand 120, Haryana 105, Karnataka 96, and eight more.
+No row whose label says it is not a scheme is counted. Those numbers are floors set by how
 much evidence each state prints and must not be added or ranked against each other, which
 the site says wherever it shows them.
 

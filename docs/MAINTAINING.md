@@ -29,7 +29,7 @@ laptop in India). That is close enough to any single limit that the run is built
 - **A state is re-parsed only when something it reads has changed.** `data/<state>/inputs.json`
   holds a checksum of the state's archive, its parser and every repository module that
   parser imports, plus its output. The runner's `pdftotext` is not the one the committed data
-  and hand labels were built with, and it reads two states' books differently, so a parse
+  and labels were built with, and it reads two states' books differently, so a parse
   the runner did not need to do is a parse it can only get wrong. After changing a state
   parser, run it locally and commit its output with the new `inputs.json`
   (`python3 progress.py stamp <state>`); `run.sh` does both.
@@ -96,7 +96,7 @@ There is no generic state parser and there should not be one. Each state is:
    one row is in that state's own terms.
    If it reads anything outside `archive/<state>/` and the modules it imports, add that to
    `EXTRA_INPUTS` in `progress.py`, or a change to it will not trigger a re-parse.
-3. `data/<state>/labels.json` — hand labels. A stratified probability sample of the whole
+3. `data/<state>/labels.json` — labels. A stratified probability sample of the whole
    book, **plus an audit census of every row at the publishing bar**, each row carrying its
    `how`. The census is what makes precision a count; the sample is what makes recall
    honest. They must never be mixed in one denominator.
@@ -109,7 +109,7 @@ There is no generic state parser and there should not be one. Each state is:
 Chhattisgarh's labels were keyed on the decoded Hindi name, and improving the decoder by one
 letter orphaned fifteen of them.
 
-Budget: a state is a day or two, and the hand labels are most of it.
+Budget: a state is a day or two, and the labels are most of it.
 
 ---
 
@@ -169,4 +169,4 @@ measurement.
 - Publish a name it cannot read.
 - Publish a ratio whose numerator and denominator come from different populations.
 - Adapt a collector to keep a run green.
-- Add a state without hand labels.
+- Add a state without labels.

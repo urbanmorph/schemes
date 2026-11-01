@@ -40,7 +40,7 @@ slow. `git clone --filter=blob:none` if you only want the code.
 Read a few classifiers before writing one. The conventions carry the argument:
 
 **A signal must be published with the number that earned it.** Every classifier has a
-docstring listing what each signal measured over the hand labels, and a `signals_rejected`
+docstring listing what each signal measured over the labels, and a `signals_rejected`
 block naming what was tried and the measurement that killed it. A signal added without a
 measurement is an opinion, and a signal removed without one is worse.
 
@@ -98,7 +98,7 @@ published schemes to 849. Kerala alone went from 38 to 99, and its recall from 1
 **Twelve states have not been measured, and that is the work.** The method is in the finding
 note under "Reproducing this". Two rules matter and the second is the one that is easy to
 miss: stop at the largest weight that keeps counted precision at or above 0.903, the
-register's floor, AND leaves no row at the bar without a hand label. Karnataka and Tamil
+register's floor, AND leaves no row at the bar without a label. Karnataka and Tamil
 Nadu both had a weight that read as *more* precise and was rejected, because the extra
 precision was an estimate over the labelled subset rather than a count of the published
 list. If the weight that helps needs labels that do not exist yet, label rows; do not lower
@@ -144,7 +144,7 @@ badly enough. If you are going to live in it, this is worth doing first.
 
 - **Do not touch `collect/`** to make a run go green. `PLAN.md` §7 is the whole argument and
   it is the one rule with no exceptions.
-- **Do not add a state without hand labels.** The precision claims are counts because every
+- **Do not add a state without labels.** The precision claims are counts because every
   row at the publishing bar carries one. A state added without them publishes an estimate
   dressed as a count.
 - **Do not translate.** Decoding a font encoding recovers the characters on the page and is a

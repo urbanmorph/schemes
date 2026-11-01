@@ -1,6 +1,6 @@
 {
  "absent_and_classified_scheme_after_reading_the_joins": 90,
- "absent_cr": 47599.54,
+ "absent_cr": 47287.66,
  "absent_distinct": [
   {
    "be_lakh": 2771894.53,
@@ -394,31 +394,6 @@
    ],
    "name": "Economic Support Schemes through AP Scheduled Castes Corporation",
    "score": 6
-  },
-  {
-   "be_lakh": 30000.0,
-   "books": [
-    "Minorities Component"
-   ],
-   "departments": [
-    "Minorities Welfare Department"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "every object head on this row is a transfer head 310"
-    ],
-    [
-     "+1",
-     "welfare function major head 2225"
-    ],
-    [
-     "+1",
-     "scheme-name marker in the name: karyakram"
-    ]
-   ],
-   "name": "Pradhan Mantri Jan Vikas Karyakram (PMJVK) [AP238]",
-   "score": 4
   },
   {
    "be_lakh": 30000.0,
@@ -1357,32 +1332,6 @@
    "score": 6
   },
   {
-   "be_lakh": 914.25,
-   "books": [
-    "Backward Classes Component",
-    "Child Budget",
-    "Gender Budget",
-    "Minorities Component",
-    "Scheduled Castes Component",
-    "Scheduled Tribes Component"
-   ],
-   "departments": [
-    "School Education Department"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "every object head on this row is a transfer head 310"
-    ],
-    [
-     "+3",
-     "benefit words in the name: assistance"
-    ]
-   ],
-   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Transportation Assistance [AP75]",
-   "score": 5
-  },
-  {
    "be_lakh": 800.0,
    "books": [
     "Backward Classes Component",
@@ -1575,36 +1524,6 @@
     ]
    ],
    "name": "National Livestock Mission - Livestock Insurance [AP427]",
-   "score": 6
-  },
-  {
-   "be_lakh": 274.0,
-   "books": [
-    "Backward Classes Component",
-    "Gender Budget"
-   ],
-   "departments": [
-    "Women Development and Child Welfare Department"
-   ],
-   "evidence": [
-    [
-     "+2",
-     "every object head on this row is a transfer head 310"
-    ],
-    [
-     "+1",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
-    ],
-    [
-     "+1",
-     "scheme-name marker in the name: mission"
-    ]
-   ],
-   "name": "Mission Shakti - SAMARTHYA - NATIONAL HUB FOR WOMEN EMPOWERMENT [AP359]",
    "score": 6
   },
   {
@@ -1884,9 +1803,9 @@
    "score": 4
   }
  ],
- "absent_distinct_names": 69,
+ "absent_distinct_names": 66,
  "absent_from_myscheme_all_rows": 551,
- "absent_from_myscheme_and_classified_scheme": 90,
+ "absent_from_myscheme_and_classified_scheme": 87,
  "absent_note": "Absence is decided by parse/match.py's generous matcher against the myScheme records tagged Andhra Pradesh, because claiming absence should require that even a generous matcher finds nothing. Here the matcher is too generous rather than too strict: 5 of 552 rows join and four of the five joins are wrong, listed in known_false_matches. Two of those false joins sit inside the published list, so the count above says 90 where reading the joins says 92, and the one real join, an oil palm mission row, scores 3 and is not published anyway. The surviving list is a floor: no book prints a purpose line, 150 of the 552 rows print no head of account either, and a real scheme with a Telugu name and neither cannot clear a high bar on the evidence the books print. be_lakh is itself a floor, the largest single-book slice of the provision, so absent_cr understates too.",
  "absent_schemes": [
   {
@@ -2596,37 +2515,6 @@
    "myscheme_match": null,
    "name": "Economic Support Schemes through AP Scheduled Castes Corporation",
    "score": 6,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 30000.0,
-   "books": [
-    "Minorities Component"
-   ],
-   "department": "Minorities Welfare Department",
-   "evidence": [
-    [
-     "+2",
-     "every object head on this row is a transfer head 310"
-    ],
-    [
-     "+1",
-     "welfare function major head 2225"
-    ],
-    [
-     "+1",
-     "scheme-name marker in the name: karyakram"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2225-04-102-27-19-310-312-V"
-   ],
-   "in_myscheme_andhra": false,
-   "key": "Minorities Welfare Department | Pradhan Mantri Jan Vikas Karyakram (PMJVK) [AP238]",
-   "myscheme_match": null,
-   "name": "Pradhan Mantri Jan Vikas Karyakram (PMJVK) [AP238]",
-   "score": 4,
    "verdict": "scheme"
   },
   {
@@ -3992,42 +3880,6 @@
    "verdict": "scheme"
   },
   {
-   "be_lakh": 914.25,
-   "books": [
-    "Backward Classes Component",
-    "Child Budget",
-    "Gender Budget",
-    "Minorities Component",
-    "Scheduled Castes Component",
-    "Scheduled Tribes Component"
-   ],
-   "department": "School Education Department",
-   "evidence": [
-    [
-     "+2",
-     "every object head on this row is a transfer head 310"
-    ],
-    [
-     "+3",
-     "benefit words in the name: assistance"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2202-01-112-12-17-310-312-V",
-    "2202-01-789-12-17-310-312-V",
-    "2202-01-789-22-17-310-312-V",
-    "2202-01-796-12-17-310-312-V",
-    "2202-01-796-22-17-310-312-V"
-   ],
-   "in_myscheme_andhra": false,
-   "key": "School Education Department | Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Transportation Assistance [AP75]",
-   "myscheme_match": null,
-   "name": "Pradhan Mantri Poshan Shakti Nirman (PM POSHAN) - Transportation Assistance [AP75]",
-   "score": 5,
-   "verdict": "scheme"
-  },
-  {
    "be_lakh": 800.0,
    "books": [
     "Backward Classes Component",
@@ -4319,42 +4171,6 @@
    "key": "Animal Husbandry Department | National Livestock Mission - Livestock Insurance [AP427]",
    "myscheme_match": null,
    "name": "National Livestock Mission - Livestock Insurance [AP427]",
-   "score": 6,
-   "verdict": "scheme"
-  },
-  {
-   "be_lakh": 274.0,
-   "books": [
-    "Backward Classes Component",
-    "Gender Budget"
-   ],
-   "department": "Women Development and Child Welfare Department",
-   "evidence": [
-    [
-     "+2",
-     "every object head on this row is a transfer head 310"
-    ],
-    [
-     "+1",
-     "welfare function major head 2235"
-    ],
-    [
-     "+2",
-     "named beneficiary class in the name: women"
-    ],
-    [
-     "+1",
-     "scheme-name marker in the name: mission"
-    ]
-   ],
-   "hand_label": "not_scheme",
-   "hoas": [
-    "2235-02-103-27-07-310-312-V"
-   ],
-   "in_myscheme_andhra": false,
-   "key": "Women Development and Child Welfare Department | Mission Shakti - SAMARTHYA - NATIONAL HUB FOR WOMEN EMPOWERMENT [AP359]",
-   "myscheme_match": null,
-   "name": "Mission Shakti - SAMARTHYA - NATIONAL HUB FOR WOMEN EMPOWERMENT [AP359]",
    "score": 6,
    "verdict": "scheme"
   },
@@ -21752,7 +21568,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-10-31T15:19:45Z",
+ "built": "2026-11-01T09:22:16Z",
  "classified_not_scheme": 462,
  "classified_scheme": 90,
  "classified_scheme_distinct_names": 69,
@@ -27362,7 +27178,7 @@
   {
    "measured": "5 of the 552 rows join at all, and reading the five, only one join is real. It cannot be measured as a signal because it barely fires.",
    "signal": "the name matches a myScheme record tagged Andhra Pradesh",
-   "why": "This is the borrowed ground truth the hand labels replace, and here it is not merely weak, it is circular. The question the register asks is which budget rows are ABSENT from myScheme, so scoring a row higher for being present on myScheme would systematically push down exactly the rows the answer is made of."
+   "why": "This is the borrowed ground truth the labels replace, and here it is not merely weak, it is circular. The question the register asks is which budget rows are ABSENT from myScheme, so scoring a row higher for being present on myScheme would systematically push down exactly the rows the answer is made of."
   },
   {
    "measured": "P(scheme) 0.542 with, 0.296 without, lift +0.245 over 102 development rows",
@@ -27856,7 +27672,7 @@
    "true_positive": 15
   },
   "base_rate_stratified": 0.419,
-  "census_note": "Every row at or above score 3 is hand labelled, so precision at these thresholds is counted rather than estimated. Recall still comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
+  "census_note": "Every row at or above score 3 is labelled, so precision at these thresholds is counted rather than estimated. Recall still comes from the stratified sample, because the rows the classifier rejects are too many to label exhaustively.",
   "f1_optimal_threshold": 0,
   "f1_optimal_thresholds": [
    0

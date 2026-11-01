@@ -45,7 +45,7 @@ from classify_common import f1_optimal, provenance  # noqa: E402
 
 
 def label_rows(lj):
-    """(key, label, provenance) for every hand label, whatever shape the file is."""
+    """(key, label, provenance) for every label, whatever shape the file is."""
     L = lj["labels"]
     if isinstance(L, dict):
         return [(k, v["label"], provenance(v)) for k, v in L.items()]
@@ -82,7 +82,7 @@ def two_bars(key, d, listing, publish):
 
 
 def check_union():
-    """data/classification.json, the Union Budget's lines. No hand labels: it validates
+    """data/classification.json, the Union Budget's lines. No labels: it validates
     against myScheme membership, so there is no census or stratified recall to recount, but
     the two bars and every published count are still checked against its own lines."""
     p = os.path.join(ROOT, "data", "classification.json")
@@ -162,7 +162,7 @@ def check_state(key):
     labs = label_rows(lj)
     if any(pv is None for _, _, pv in labs):
         n = sum(1 for _, _, pv in labs if pv is None)
-        bad.append(f"{key}: {n} hand labels record no provenance, so recall cannot be checked")
+        bad.append(f"{key}: {n} labels record no provenance, so recall cannot be checked")
     else:
         # A whole-corpus state has no sample and no census: every row carries a label, so
         # both precision and recall are counts over the population. Tripura is the only one,

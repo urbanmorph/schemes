@@ -214,13 +214,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import utcnow, write_json  # noqa: E402
-from classify_common import assess, base_rate, check_sample as check, excluded_by_rule, load, \
+from classify_common import assess, census_claim, listing_bar, base_rate, check_sample as check, excluded_by_rule, load, \
     quartile, quartile_cuts, stratified_sample, words as tokens  # noqa: E402
 
 
 PUBLISH_THRESHOLD = 9
 
-# Every row at or above this score carries a hand label, from the stratified set or the
+# Every row at or above this score carries a label, from the stratified set or the
 # audit set. Precision at or above it is COUNTED; below it, it is estimated from the
 # stratified sample only. See the docstring for why this is 4.
 CENSUS_FROM = 4
@@ -744,7 +744,7 @@ KNOWN_ERRORS = [
      "why": ("The Annual Plan's two-column and nine-column table pages sometimes run one "
              "row's name into the next, and parse/kerala.py's extraction_stats record 420 "
              "orphan cells in the Gender & Child book and 84 in the Elderly book. The "
-             "classifier scores the merged string as one row and the hand label reads the "
+             "classifier scores the merged string as one row and the label reads the "
              "provision the head of account belongs to, which is recorded in the reason on "
              "each of those labels. It is named here rather than repaired because repairing "
              "it belongs in parse/kerala.py, not in a classifier.")},
@@ -774,7 +774,7 @@ KNOWN_ERRORS = [
 # "(KILA)", "(100% CSS)" and "(60% - Mission (Urban) 2.0 2217-05-191-48", which are page
 # artefacts rather than sectors. The 50 prefixes cannot each be a stratum: 50 crossed
 # with 6 allocation bands is 300 cells and a sample large enough to fill them could not
-# be labelled by hand.
+# be read one by one.
 FAMILIES = [
     ("WELFARE", ["WBC", "SWE", "SJP", "NUT", "LLW", "HSG"]),
     ("SERVICE", ["MPS", "GEN", "TEN", "ATC", "SYS", "CS", "IAP"]),
@@ -876,10 +876,8 @@ def run(threshold=PUBLISH_THRESHOLD):
             "than one. absent_distinct is the de-duplicated view of the same list."),
         "publish_threshold": threshold,
         # The F1 optimum, the bar for the WEAKER claim: "this state's budget names
-        # this as a scheme". It lived only in site/build.py, so the data could not
-        # say which rows the site lists and anything else reading this file had to
-        # guess. parse/cag_join.py guessed by skipping this state entirely.
-        "listing_threshold": 3,
+        # this as a scheme". Computed from the sweep: typed in, it drifted off it.
+        "listing_threshold": listing_bar(a["threshold_sweep"], threshold),
         "classified_scheme": len(schemes),
         "classified_scheme_distinct_names": len({x["name"].lower() for x in schemes}),
         "classified_not_scheme": len(rows) - len(schemes),
@@ -934,13 +932,13 @@ def run(threshold=PUBLISH_THRESHOLD):
                 "scholarship in the same series."),
             **a["points"],
             "census_note": (
-                "Every row at or above score %d is hand labelled, so precision at these "
-                "thresholds is counted rather than estimated. The census starts at %d "
+                census_claim(rows, CENSUS_FROM, threshold) + " " + (
+                "The census starts at %d "
                 "because 289 rows score 4 or more and that covers the published band and the "
                 "five bands beneath it, which is every band a reader could reasonably argue "
                 "for. Recall still comes from the stratified sample, because the rows the "
                 "classifier rejects are too many to label exhaustively."
-                % (CENSUS_FROM, CENSUS_FROM)),
+                % CENSUS_FROM)),
             "at_publish_threshold_census": a["at_census"],
             **a["f1"],
             "why_not_f1": (
@@ -1024,7 +1022,7 @@ def run(threshold=PUBLISH_THRESHOLD):
 
 
 def check_sample():
-    """Report which sampled or census rows have no hand label yet."""
+    """Report which sampled or census rows have no label yet."""
     return check("kerala", lambda r: r["key"], stratify, score_entry, CENSUS_FROM)
 
 
@@ -1033,7 +1031,7 @@ def main():
         description="Classify Kerala Annual Plan rows as welfare scheme or budget head.")
     a.add_argument("--threshold", type=int, default=PUBLISH_THRESHOLD)
     a.add_argument("--check-sample", action="store_true",
-                   help="list sampled or census rows that carry no hand label yet")
+                   help="list sampled or census rows that carry no label yet")
     a.add_argument("--dump-frame", action="store_true",
                    help="print the stratified sampling frame, one row per line")
     args = a.parse_args()

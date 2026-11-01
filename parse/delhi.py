@@ -46,7 +46,7 @@ them, in which case it is a heading:
 Without the blank-line rule `AGRICULTURE & ALLIED ACTIVITIES` is appended to the last
 scheme of the previous sector, which is exactly the Karnataka "Helpers" failure. Measured
 on the 2026-27 book: 1,156 name-column lines follow content and are continuations, and
-134 follow a blank line and are headings. Read by eye, about ten of those 134 are really
+134 follow a blank line and are headings. Read by a model (Claude), about ten of those 134 are really
 nil-provision scheme rows (`Ground Water Recharge & Water Conservation`, `Tourism
 Infrastructure development`) and are published here as headings rather than as schemes.
 That direction is deliberate: this register's claim is that a state funds something

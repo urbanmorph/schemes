@@ -7,7 +7,7 @@ classify_common.py; every signal below is Jharkhand's own.
     data/jharkhand/labels.json          hand ground truth, the input
     data/jharkhand/classification.json  the verdicts, the output
 
-374 hand labels: a 249-row stratified sample on the statement each line appears under
+374 labels: a 249-row stratified sample on the statement each line appears under
 (State Schemes, Central Assistance, Central Sector), then every row at the publishing bar
 labelled so precision is a COUNT. 142 of 852 lines clear it, precision 0.958 with six
 named errors, recall 0.732.
@@ -83,7 +83,6 @@ PLACE = re.compile(
     re.I)
 
 PUBLISH_THRESHOLD = 3
-LISTING_THRESHOLD = 1
 
 
 def score(r):
@@ -124,8 +123,7 @@ REJECTED = [
 
 def main():
     argparse.ArgumentParser(description="Classify Jharkhand's scheme codes.").parse_args()
-    report("jharkhand", *classify("jharkhand", "Jharkhand", score, PUBLISH_THRESHOLD,
-                                  LISTING_THRESHOLD, REJECTED,
+    report("jharkhand", *classify("jharkhand", "Jharkhand", score, PUBLISH_THRESHOLD, REJECTED,
                                   row_fields=lambda r: {
                                       "department": (r.get("departments") or [None])[0],
                                       "statements": r.get("statements") or [],

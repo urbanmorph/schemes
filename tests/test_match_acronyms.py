@@ -1,4 +1,4 @@
-"""probably_same against hand labels for every pair it once accepted on an acronym alone.
+"""probably_same against labels for every pair it once accepted on an acronym alone.
 
 tests/fixtures/acronym_pairs.json holds 1,310 pairs, collected on 2026-10-30 by logging
 every True verdict that came from an acronym rule while the registry, the CAG join, the
