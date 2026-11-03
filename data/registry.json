@@ -5,7 +5,7 @@
   "dbt": 158,
   "outcome": 10
  },
- "built": "2026-10-31T15:31:54Z",
+ "built": "2026-11-03T13:42:42Z",
  "cag_facts_unattached": 0,
  "cag_only_entries": 157,
  "caveat": "Clustered by name similarity at a deliberately high floor, so the union under-merges: one scheme appearing twice is a visible and fixable error, while two different schemes silently collapsed into one is not. Counts here are a floor on how many schemes exist, never a ceiling.",
@@ -77826,7 +77826,7 @@
  "merge_rule": "parse/match.py probably_same, generous, for absence claims",
  "myscheme_entries": 4771,
  "national_entries": 5566,
- "snapshot": "2026-10-17",
+ "snapshot": "2026-11-03",
  "total_entries": 5723,
  "unlisted_but_funded": [
   {

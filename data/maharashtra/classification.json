@@ -73891,7 +73891,7 @@
    "verdict": "not a scheme"
   }
  ],
- "built": "2026-11-01T09:22:26Z",
+ "built": "2026-11-03T13:43:39Z",
  "capital_or_loan_head_rows": 450,
  "classified_not_scheme": 1861,
  "classified_scheme": 95,
@@ -86656,7 +86656,7 @@
   }
  ],
  "myscheme_join_summary": {
-  "how": "indexed on match.tokens, match.skeleton and match.acronyms, then match.probably_same on every candidate pair, then every join read by eye",
+  "how": "indexed on match.tokens, match.skeleton and match.acronyms, then match.probably_same on every candidate pair, then every join read by a model (Claude)",
   "joins_produced": 167,
   "joins_sound_on_inspection": 36,
   "joins_wrong_on_inspection": 131,
