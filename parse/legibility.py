@@ -67,9 +67,9 @@ TESTS = [
 # and for a refusal it must name the MEASUREMENT that decided it rather than an impression.
 SURVEY = [
     # ---- built -------------------------------------------------------------------
-    ("Karnataka", "karnataka", dict(list=True, text=True, bounded=True, english=True, closes=False),
-     "The Gender, Child and SCSP/TSP books print no totals at any level, so the reading "
-     "has nothing to check itself against."),
+    ("Karnataka", "karnataka", dict(list=True, text=True, bounded=True, english=True, closes=True),
+     "The Gender, Child and SCSP/TSP books print part and grand totals, and all 187 of them "
+     "reconcile against the rows beneath them."),
     ("Andhra Pradesh", "andhra", dict(list=True, text=True, bounded=True, english=True, closes=False),
      "Plain English and a single script, and the Gender Budget prints no totals to check "
      "a reading against."),

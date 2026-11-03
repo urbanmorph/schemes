@@ -63,9 +63,6 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install poppler
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
-
       # Rebuilt here rather than carried from another job, because site/_out is not
       # committed and a deploy that publishes a stale artefact is the failure this is
       # meant to prevent.

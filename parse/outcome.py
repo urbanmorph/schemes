@@ -31,16 +31,13 @@ and what the government is on the hook for, are extracted in full.
 """
 
 import argparse
-import gzip
 import os
 import re
-import shutil
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, write_json  # noqa: E402
+from pdf import gz_layout_text  # noqa: E402
 
 HEADER = re.compile(r"^\s*(\d{1,3})\.\s+(.{6,150}?)\s*\((CS|CSS|CS/CSS)\)\s*$", re.M)
 # An indicator: "1.1", then wrapped text, then its target. Deliberately NOT anchored to
@@ -55,16 +52,7 @@ OUTLAY_HINT = re.compile(r"^\s{0,12}([\d,]{3,}(?:\.\d+)?)\s{2,}")
 
 
 def to_text(gz_path):
-    if not shutil.which("pdftotext"):
-        raise SystemExit("pdftotext not found — install poppler-utils")
-    with tempfile.TemporaryDirectory() as td:
-        pdf = os.path.join(td, "d.pdf")
-        with gzip.open(gz_path, "rb") as s, open(pdf, "wb") as d:
-            shutil.copyfileobj(s, d)
-        txt = os.path.join(td, "d.txt")
-        subprocess.run(["pdftotext", "-layout", pdf, txt],
-                       check=True, capture_output=True, timeout=300)
-        return open(txt, encoding="utf-8", errors="replace").read()
+    return gz_layout_text(gz_path, timeout=300)
 
 
 def split_column(block):

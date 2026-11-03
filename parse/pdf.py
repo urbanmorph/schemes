@@ -12,8 +12,11 @@ so one stray byte raised where the other copies replaced it. The -bbox-layout re
 tolerance and the time limit, which each state measured against its own books.
 """
 import contextlib
+import functools
+import gzip
 import json
 import os
+import re
 import subprocess
 import tempfile
 import xml.etree.ElementTree as ET
@@ -21,9 +24,46 @@ import xml.etree.ElementTree as ET
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NS = "{http://www.w3.org/1999/xhtml}"
 
+# THE ONE POPPLER EVERY PARSE RUNS ON. pdftotext's layout differs between versions, and
+# the labels are keyed on what it prints. The runner had Ubuntu's 24.02 and the data was
+# built on 26.04: on 2026-11-03 the runner re-parsed Delhi, 34 of its 1,575 keys came out
+# different, five rows at the publishing bar lost their labels and the ratios check
+# failed. Both machines now install this build from conda-forge (.github/actions/poppler,
+# docs/START-HERE.md), and a parse on any other refuses rather than rekeying rows. The
+# version lives in POPPLER_VERSION, which the action and progress.py read too.
+with open(os.path.join(ROOT, "POPPLER_VERSION"), encoding="utf-8") as _fh:
+    POPPLER = _fh.read().strip()
+
+
+def poppler_version(banner):
+    """The version in `pdftotext -v`'s banner, or None."""
+    m = re.search(r"pdftotext version (\S+)", banner or "")
+    return m[1] if m else None
+
+
+def check_poppler(version):
+    if version != POPPLER:
+        raise SystemExit(
+            f"pdftotext is {version or 'missing'}, and every parse here runs on poppler "
+            f"{POPPLER}: another version lays the books out differently and rekeys rows. "
+            f"Install it with `mamba create -n poppler -c conda-forge poppler={POPPLER}` and "
+            "put that environment's bin/ first on PATH (docs/START-HERE.md).")
+
+
+@functools.lru_cache(maxsize=None)
+def require_poppler():
+    """Refuse to parse on any poppler but POPPLER. Checked once per process."""
+    try:
+        r = subprocess.run(["pdftotext", "-v"], capture_output=True, text=True, timeout=30)
+        banner = r.stderr + r.stdout
+    except OSError:
+        banner = ""
+    check_poppler(poppler_version(banner))
+
 
 def layout_text(pdf_bytes, timeout=900):
     """pdftotext -layout on raw bytes: the text, pages separated by form feeds."""
+    require_poppler()
     with tempfile.TemporaryDirectory() as d:
         p = os.path.join(d, "a.pdf")
         with open(p, "wb") as fh:
@@ -35,9 +75,16 @@ def layout_text(pdf_bytes, timeout=900):
         return r.stdout.decode("utf-8", "replace")
 
 
+def gz_layout_text(path, timeout=900):
+    """layout_text on a gzipped PDF in the archive."""
+    with gzip.open(path, "rb") as fh:
+        return layout_text(fh.read(), timeout)
+
+
 @contextlib.contextmanager
 def _bbox_file(pdf_bytes, timeout):
     """pdftotext -bbox-layout into a temp file, for as long as the caller reads it."""
+    require_poppler()
     with tempfile.TemporaryDirectory() as d:
         p, x = os.path.join(d, "b.pdf"), os.path.join(d, "b.xml")
         with open(p, "wb") as fh:
@@ -207,8 +254,27 @@ def _selftest_rows():
     return bad
 
 
+def _selftest_poppler():
+    bad = 0
+    for label, got, want in [
+            ("the version is read from pdftotext -v",
+             poppler_version("pdftotext version 26.10.0\nCopyright 2005-2026"), "26.10.0"),
+            ("an unreadable banner is no version", poppler_version("nothing here"), None)]:
+        bad += got != want
+        print(f"  {'ok  ' if got == want else 'FAIL'} {label}")
+    for v in ("24.02.0", None):
+        try:
+            check_poppler(v)
+            bad += 1
+            print(f"  FAIL poppler {v} is refused")
+        except SystemExit:
+            print(f"  ok   poppler {v} is refused")
+    check_poppler(POPPLER)
+    return bad
+
+
 def selftest():
-    bad = _selftest_snapshot() + _selftest_rows()
+    bad = _selftest_snapshot() + _selftest_rows() + _selftest_poppler()
     with tempfile.TemporaryDirectory() as d:
         open(os.path.join(d, "a.pdf.gz"), "wb").close()
         require_books(d, {"books_expected": ["a"]})

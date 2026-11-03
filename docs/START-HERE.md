@@ -27,9 +27,14 @@ when the sentence is screenshotted without its caption.
 ```bash
 git clone --filter=blob:none git@github.com:urbanmorph/schemes.git
 cd schemes
-brew install poppler        # or: apt-get install poppler-utils
+mamba create -n poppler -c conda-forge poppler=26.10.0   # the version in POPPLER_VERSION
+export PATH="$(mamba info --base)/envs/poppler/bin:$PATH"
 ./check.sh
 ```
+
+Use that poppler and no other: not Homebrew's and not apt's. pdftotext lays the state books
+out differently from one version to the next, the labels are keyed on what it prints, and a
+parse on another version refuses to run rather than quietly rekeying rows.
 
 `--filter=blob:none` matters: `archive/` is 0.69 GB of government PDFs and you do not need
 its history to work on the code. Git fetches blobs on demand.

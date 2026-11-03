@@ -1,0 +1,16 @@
+name: Install the pinned poppler
+description: >
+  pdftotext from conda-forge at the version in POPPLER_VERSION, put first on PATH.
+  Not apt: Ubuntu's 24.02 lays the state books out differently from the build the data and
+  its labels were made on, and on 2026-11-03 it rekeyed 34 Delhi rows (parse/pdf.py).
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        set -euo pipefail
+        v=$(cat POPPLER_VERSION)
+        "$CONDA/bin/conda" create -y -q -p "$RUNNER_TEMP/poppler" \
+          -c conda-forge --override-channels "poppler=$v" >/dev/null
+        echo "$RUNNER_TEMP/poppler/bin" >> "$GITHUB_PATH"
+        "$RUNNER_TEMP/poppler/bin/pdftotext" -v 2>&1 | head -1

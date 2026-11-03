@@ -57,10 +57,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install poppler
-        # pdftotext for the annual Budget statements. It does not exist in a Workers
-        # runtime, which is one of the reasons collection lives here (PLAN.md §6).
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Install the pinned poppler
+        # pdftotext for the Budget statements and the state books. It does not exist in a
+        # Workers runtime, which is one of the reasons collection lives here (PLAN.md §6).
+        # The version is pinned in parse/pdf.py and a parse on any other refuses.
+        uses: ./.github/actions/poppler
 
       - name: Install PyMuPDF
         # parse/chhattisgarh.py reads glyph positions with it; without it the state is

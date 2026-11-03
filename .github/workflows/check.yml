@@ -37,8 +37,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install poppler
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Install the pinned poppler
+        uses: ./.github/actions/poppler
 
       - name: check.sh
         run: ./check.sh

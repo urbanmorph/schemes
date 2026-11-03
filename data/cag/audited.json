@@ -1,12 +1,12 @@
 {
- "built": "2026-11-03T13:42:55Z",
+ "built": "2026-11-03T14:06:50Z",
  "joins_considered": 166,
  "joins_published": 27,
  "method_note": "Every one of the joins any rule produced was read by a model (Claude). The similarity tier was correct in all of them and is published; containment and the acronym rules were wrong often enough to reject, and the module records which errors decided that. A CAG title is a phrase and not a name, which is why containment fails here and works elsewhere: 'Employees' Provident Fund Organisation' contains every content word of 'Internship Scheme Of Employees' Provident Fund Organisation', and an audit of the organisation is not an audit of that scheme.",
  "pool_note": "Both halves of the register: every name from the four national sources and the Union schemes only a CAG report names, joinable to any government, plus each state's own budget schemes and the state schemes only its CAG reports name, joinable only to that state's reports. A Karnataka report cannot be an audit of a Kerala scheme.",
- "register_names": 10149,
+ "register_names": 10148,
  "register_names_national": 5619,
- "register_names_state": 4530,
+ "register_names_state": 4529,
  "reports_in_catalogue": 2754,
  "rule": "similarity >= 0.85, and no other rule",
  "schemes": {

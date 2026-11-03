@@ -1,5 +1,5 @@
 {
- "built": "2026-11-03T13:44:45Z",
+ "built": "2026-11-03T14:07:56Z",
  "by_family": {
   "andhra": {
    "classified": 225,
@@ -14,8 +14,8 @@
    "rows": 152
   },
   "delhi": {
-   "classified": 56,
-   "rows": 84
+   "classified": 57,
+   "rows": 85
   },
   "haryana": {
    "classified": 322,
@@ -74,7 +74,7 @@
   "Agriculture,Rural & Environment": 1119,
   "Banking,Financial Services and Insurance": 145,
   "Business & Entrepreneurship": 296,
-  "Education & Learning": 784,
+  "Education & Learning": 785,
   "Health & Wellness": 247,
   "Housing & Shelter": 227,
   "Public Safety,Law & Justice": 82,
@@ -88,12 +88,12 @@
   "Women and Child": 457,
   "not stated": 1313
  },
- "classified": 4862,
+ "classified": 4863,
  "counting_basis": "One row per key. A state votes a scheme's revenue head and its capital head separately and both are separate rows here, exactly as they are separate rows in the register.",
  "coverage": 0.787,
  "deciding_signal": {
   "a benefit phrase in the name": 3594,
-  "a topic word in the name": 242,
+  "a topic word in the name": 243,
   "the department or ministry": 1014,
   "the purpose line": 12
  },
@@ -261,7 +261,7 @@
   "why": "Chosen for usefulness, not for safety. A wrong sector is a browsing annoyance, not a false accusation, so this file does not run at the 0.95 precision bar the scheme-or-not classifiers in this directory use. It still abstains where nothing but one weak signal fires, because a wrong sector is worse than a missing one for a reader filtering by it."
  },
  "question": "Which of the 15 myScheme sectors does each register row belong to, for the rows myScheme does not list and which therefore carry no sector of their own?",
- "rows": 6175,
+ "rows": 6176,
  "scope": "The 680 registry entries with no myScheme source, plus every state classification row at or above site/build.py's listing bar that myScheme does not list. A superset of what the site shows by 366 centrally sponsored state shares that site/build.py folds into their parent scheme.",
  "sectors": {
   "andhra|Agriculture Department | Annadata Sukhibhava": {
@@ -4736,54 +4736,6 @@
    "name": "PM Kaushal Vikas Yojana CSS SCSP GIA-General",
    "sector": "Skills & Employment"
   },
-  "delhi|unsectored | Sub-Total & Poshan [Deptt. 2.0) CSS of Women & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS": {
-   "evidence": [
-    [
-     "+5",
-     "Women and Child",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "delhi",
-   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS",
-   "sector": "Women and Child"
-  },
-  "delhi|unsectored | Sub-Total & Poshan [Deptt. 2.0) CSS of Women & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS": {
-   "evidence": [
-    [
-     "+5",
-     "Women and Child",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "delhi",
-   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS",
-   "sector": "Women and Child"
-  },
-  "delhi|unsectored | Sub-Total & Poshan [Deptt. 2.0) CSS of Women & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP": {
-   "evidence": [
-    [
-     "+5",
-     "Women and Child",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "delhi",
-   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP",
-   "sector": "Women and Child"
-  },
-  "delhi|unsectored | Sub-Total & Poshan [Deptt. 2.0) CSS of Women & Child Development] | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi": {
-   "evidence": [
-    [
-     "+5",
-     "Women and Child",
-     "a benefit phrase in the name"
-    ]
-   ],
-   "family": "delhi",
-   "name": "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi",
-   "sector": "Women and Child"
-  },
   "delhi|unsectored | Sub-Total CSS | Post-matric Scholarship for OBC students CSS": {
    "evidence": [
     [
@@ -4817,6 +4769,54 @@
    "family": "delhi",
    "name": "Pre-matric Scholarship for SC students CSS SCSP",
    "sector": "Education & Learning"
+  },
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] CSS",
+   "sector": "Women and Child"
+  },
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS",
+   "sector": "Women and Child"
+  },
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "ICDS Projects (Saksham Aanganwadi & Poshan 2.0)Supplementary Nutrition Programme [SNP] SS SCSP",
+   "sector": "Women and Child"
+  },
+  "delhi|unsectored | Sub-Total Poshan [Deptt. of 2.0) Women CSS & Child Development] | Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &": {
+   "evidence": [
+    [
+     "+5",
+     "Women and Child",
+     "a benefit phrase in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "Rajiv Gandhi Scheme for Empowerment for Adolescent Girls for components other than Nutrition (Saksham Aanganwadi &",
+   "sector": "Women and Child"
   },
   "delhi|unsectored | Sub-Total [1 - 13] | Chief Minister Junior Scholarship Scheme for students upto middle classes": {
    "evidence": [
@@ -5182,6 +5182,18 @@
    ],
    "family": "delhi",
    "name": "upto secondary Scholarship level",
+   "sector": "Education & Learning"
+  },
+  "delhi|unsectored | Total [Revenue Department] | Award to Minority students (Statefunded Scheme)": {
+   "evidence": [
+    [
+     "+2",
+     "Education & Learning",
+     "a topic word in the name"
+    ]
+   ],
+   "family": "delhi",
+   "name": "Award to Minority students (Statefunded Scheme)",
    "sector": "Education & Learning"
   },
   "delhi|unsectored | Total [Revenue Department] | Reimbursement of Tution Fees to the Minority Student of Class I to XII(State funded scheme)": {

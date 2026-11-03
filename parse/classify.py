@@ -27,7 +27,6 @@ schemes.
 """
 
 import argparse
-import gzip
 import importlib.util
 import json
 import os
@@ -38,6 +37,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, utcnow, write_json  # noqa: E402
+from pdf import gz_layout_text  # noqa: E402
 
 
 def _load(name, path):
@@ -91,15 +91,7 @@ def demand_ministry_map(year):
         # Raised, not {}: an empty map silently removes the ministry signal from every
         # line's score, and the year used to be written into the path as 2026.
         raise SystemExit(f"no Outcome Budget at {os.path.relpath(p, ROOT)}")
-    import shutil, subprocess, tempfile
-    with tempfile.TemporaryDirectory() as td:
-        pdf = os.path.join(td, "o.pdf")
-        with gzip.open(p, "rb") as s, open(pdf, "wb") as d:
-            shutil.copyfileobj(s, d)
-        txt = os.path.join(td, "o.txt")
-        subprocess.run(["pdftotext", "-layout", pdf, txt], check=True,
-                       capture_output=True, timeout=300)
-        t = open(txt, encoding="utf-8", errors="replace").read()
+    t = gz_layout_text(p, timeout=300)
     out = {}
     for m, d, n in re.findall(
             r"^\s*(?:\d{1,3}\.)?\s*(M/o[^\n]{4,70}?)\s{2,}(.{2,60}?)\s{2,}(\d{1,3})\s+\d{1,3}\s*$",

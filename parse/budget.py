@@ -19,16 +19,13 @@ document offers, so every parse is checked against it and a mismatch is fatal.
 """
 
 import argparse
-import gzip
 import os
 import re
-import shutil
-import subprocess
 import sys
-import tempfile
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "collect"))
 from common import ROOT, write_json  # noqa: E402
+from pdf import gz_layout_text  # noqa: E402
 
 # A numbered scheme row: leading spaces, an index, a dot, then the name.
 ROW = re.compile(r"^\s+(\d+)\.\s+(\S.*?)\s{2,}(.*)$")
@@ -38,18 +35,8 @@ NUMS = re.compile(r"-?[\d,]+\.\d{2}|\.{3}")
 
 
 def to_text(gz_path):
-    """pdftotext -layout on a gzipped PDF, via a temp file."""
-    if not shutil.which("pdftotext"):
-        raise SystemExit("pdftotext not found — install poppler-utils")
-    with tempfile.TemporaryDirectory() as td:
-        pdf = os.path.join(td, "d.pdf")
-        with gzip.open(gz_path, "rb") as src, open(pdf, "wb") as dst:
-            shutil.copyfileobj(src, dst)
-        txt = os.path.join(td, "d.txt")
-        subprocess.run(["pdftotext", "-layout", pdf, txt], check=True,
-                       capture_output=True, timeout=180)
-        with open(txt, encoding="utf-8", errors="replace") as fh:
-            return fh.read()
+    """pdftotext -layout on a gzipped PDF."""
+    return gz_layout_text(gz_path, timeout=180)
 
 
 def cells(tail):

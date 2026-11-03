@@ -32,6 +32,21 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
+def _poppler_pin():
+    """The poppler version every parse runs on (POPPLER_VERSION; parse/pdf.py refuses others)."""
+    with open(os.path.join(ROOT, "POPPLER_VERSION"), encoding="utf-8") as fh:
+        return fh.read().strip()
+
+
+def _pdftotext_version():
+    try:
+        r = subprocess.run(["pdftotext", "-v"], capture_output=True, text=True)
+    except OSError:
+        return None
+    m = re.search(r"pdftotext version (\S+)", r.stderr + r.stdout)
+    return m[1] if m else None
+
+
 def _read(path):
     try:
         with open(path, encoding="utf-8") as fh:
@@ -168,21 +183,22 @@ def parsed(state, root=ROOT):
     Jharkhand PDFs differently from the one that built the committed data (26.04), which
     renamed group headings, cut two hand labels loose, and failed the ratios check. So a
     parse whose inputs and output are both unchanged since it was stamped is skipped.
+
+    And only if it was stamped on the pinned poppler (parse/pdf.py POPPLER): a parse made on
+    any other is re-done, or it would stand for good. A code change on 2026-10-31 let the
+    runner re-parse every state on 24.02 and stamp the results as current.
     """
     s = _read(_stamp_path(state, root)) or {}
     out = os.path.join(root, "data", state, "schemes.json")
     return bool(s and os.path.isfile(out) and s.get("output") == _sha(out)
-                and s.get("inputs") == _inputs(state, root)[0])
+                and s.get("inputs") == _inputs(state, root)[0]
+                and s.get("pdftotext") == _poppler_pin())
 
 
 def stamp(state, root=ROOT):
     """Record what data/STATE/schemes.json was built from, after a parse that succeeded."""
     digest, n = _inputs(state, root)
-    try:
-        v = subprocess.run(["pdftotext", "-v"], capture_output=True, text=True).stderr
-        v = (re.search(r"version (\S+)", v) or [None, None])[1]
-    except OSError:
-        v = None
+    v = _pdftotext_version()
     out = os.path.join(root, "data", state, "schemes.json")
     with open(_stamp_path(state, root), "w", encoding="utf-8") as fh:
         json.dump({"inputs": digest, "files": n, "output": _sha(out), "pdftotext": v},
@@ -290,6 +306,9 @@ def selftest():
         with open(p, "w", encoding="utf-8") as fh:
             fh.write(text)
 
+    global _pdftotext_version
+    real_version, pin = _pdftotext_version, _poppler_pin()
+    _pdftotext_version = lambda: pin  # noqa: E731
     write("parse/goa.py", "import os\nfrom common import ROOT\nfrom helper import x\n")
     write("parse/helper.py", "import re\n")
     write("collect/common.py", "ROOT = 1\n")
@@ -298,6 +317,11 @@ def selftest():
     write("data/goa/schemes.json", "{}")
     stamp("goa", r)
     check("parsed and unchanged is current", parsed("goa", r), True)
+    _pdftotext_version = lambda: "24.02.0"  # noqa: E731
+    stamp("goa", r)
+    check("a parse on another poppler is not", parsed("goa", r), False)
+    _pdftotext_version = lambda: pin  # noqa: E731
+    stamp("goa", r)
     write("archive/goa/2026-09-02/book.pdf", "other bytes")
     check("a changed book is not", parsed("goa", r), False)
     stamp("goa", r)
@@ -329,6 +353,7 @@ def selftest():
     write("data/myscheme/schemes/a.json", '{"changed": 1}')
     check("...but not once the myScheme records it reads change", parsed("uttarpradesh", r), False)
     tmp.cleanup()
+    _pdftotext_version = real_version
     return bad
 
 

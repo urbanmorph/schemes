@@ -218,18 +218,16 @@ the honest degradation.
 import argparse
 import glob
 import collections
-import gzip
 import os
 import re
 import shutil
-import subprocess
 import sys
-import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT_DIR, "collect"))
 from common import ROOT, read_json, utcnow, write_json  # noqa: E402
+from pdf import gz_layout_text  # noqa: E402
 
 # Which state rows the register shows is each classifier's own decision, published as
 # `listing_threshold` in its classification.json. This file used to hold a copy of those
@@ -473,14 +471,7 @@ def demand_ministries(cycle=None):
         src = os.path.join(base, cycle, stmt + ".pdf.gz")
         if not os.path.exists(src):
             continue
-        with tempfile.TemporaryDirectory() as td:
-            pdf, txt = os.path.join(td, "d.pdf"), os.path.join(td, "d.txt")
-            with gzip.open(src, "rb") as fh, open(pdf, "wb") as dst:
-                shutil.copyfileobj(fh, dst)
-            subprocess.run(["pdftotext", "-layout", pdf, txt],
-                           check=True, capture_output=True, timeout=180)
-            with open(txt, encoding="utf-8", errors="replace") as fh:
-                lines = fh.read().splitlines()
+        lines = gz_layout_text(src, timeout=180).splitlines()
         for i, line in enumerate(lines):
             m = DEMAND_LINE.match(line)
             if not m:
