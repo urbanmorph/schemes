@@ -40,6 +40,11 @@ jobs:
       - name: Install the pinned poppler
         uses: ./.github/actions/poppler
 
+      - name: Install PyMuPDF
+        # tools/cag_mirror.py joins chaptered CAG reports and spots placeholder pages with
+        # it, and its tests build PDFs with it. Same pin as collect.yml.
+        run: pip install -q pymupdf==1.27.2
+
       - name: check.sh
         run: ./check.sh
 

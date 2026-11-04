@@ -60,7 +60,7 @@ jobs:
       - name: Install the pinned poppler
         # pdftotext for the Budget statements and the state books. It does not exist in a
         # Workers runtime, which is one of the reasons collection lives here (PLAN.md §6).
-        # The version is pinned in parse/pdf.py and a parse on any other refuses.
+        # The version is pinned in POPPLER_VERSION and a parse on any other refuses.
         uses: ./.github/actions/poppler
 
       - name: Install PyMuPDF
