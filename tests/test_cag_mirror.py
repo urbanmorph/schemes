@@ -71,6 +71,15 @@ class Run(unittest.TestCase):
         man = self.manifest()
         self.assertEqual(man["1"]["url"], "https://new.cloudfront.net/uploads/download_audit_report/x/fresh.pdf")
 
+    def test_a_report_the_index_links_no_pdf_for_is_read_off_its_own_page(self):
+        r = {"id": 3, "pdf_url": None, "detail_url": "https://cag.gov.in/en/audit-report/details/3",
+             "title": "Three"}
+        m.mirror([r], self.dir, "https://new.cloudfront.net", fetch=self.fetch,
+                 sleep=lambda s: None, free_gb=lambda p: 500)
+        self.assertEqual(self.calls[0], r["detail_url"])
+        self.assertEqual(self.manifest()["3"]["url"],
+                         "https://new.cloudfront.net/uploads/download_audit_report/x/fresh.pdf")
+
     def test_a_second_run_fetches_nothing(self):
         self.run_once()
         self.calls.clear()
@@ -133,6 +142,99 @@ class Run(unittest.TestCase):
         m.mirror(self.reports()[:1], self.dir, "https://new.cloudfront.net", fetch=fetch,
                  sleep=lambda s: None, free_gb=lambda p: 500)
         self.assertFalse(os.path.exists(os.path.join(self.dir, "2.pdf")))
+
+
+
+def pdf_with(*pages):
+    """A real PDF with one page per string, so the merge and the placeholder test are run on
+    what PyMuPDF writes and not on stand-in bytes."""
+    import fitz
+    doc = fitz.open()
+    for text in pages:
+        doc.new_page().insert_text((72, 72), text)
+    return doc.tobytes()
+
+
+class Parts(unittest.TestCase):
+    def setUp(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.dir = tmp.name
+        self.files = {"toc.pdf": pdf_with("Table of contents"),
+                      "ch1.pdf": pdf_with("Chapter 1", "Chapter 1 continued"),
+                      "app.pdf": pdf_with("Appendices")}
+
+    def fetch(self, url):
+        if "detail" in url:
+            links = "".join(f'<a href="https://new.cloudfront.net/uploads/download_audit_report/x/{n}">'
+                            for n in ("toc.pdf", "ch1.pdf", "app.pdf", "toc.pdf"))
+            return 200, links.encode(), url
+        return 200, self.files[url.rsplit("/", 1)[1]], url
+
+    def test_a_report_split_into_chapters_is_saved_whole_in_page_order(self):
+        import fitz
+        r = {"id": 7, "pdf_url": None, "detail_url": "https://cag.gov.in/en/audit-report/details/7"}
+        m.mirror([r], self.dir, "https://new.cloudfront.net", fetch=self.fetch,
+                 sleep=lambda s: None, free_gb=lambda p: 500)
+        with open(os.path.join(self.dir, "manifest.json"), encoding="utf-8") as fh:
+            rec = json.load(fh)["7"]
+        self.assertEqual([p["url"].rsplit("/", 1)[1] for p in rec["parts"]],
+                         ["toc.pdf", "ch1.pdf", "app.pdf"])
+        self.assertEqual(rec["parts"][1]["sha256"], hashlib.sha256(self.files["ch1.pdf"]).hexdigest())
+        doc = fitz.open(os.path.join(self.dir, "7.pdf"))
+        self.assertEqual([pg.get_text().strip() for pg in doc],
+                         ["Table of contents", "Chapter 1", "Chapter 1 continued", "Appendices"])
+
+    def test_numbered_parts_are_joined_in_their_own_order_not_the_page_s(self):
+        urls = ["https://h/x/3-Preface-06.pdf", "https://h/x/10-Chapter-6-06.pdf",
+                "https://h/x/1-Inner-Cover-06.pdf", "https://h/x/2.-Contents-06.pdf"]
+        self.assertEqual([u.rsplit("/", 1)[1] for u in m.reading_order(urls)],
+                         ["1-Inner-Cover-06.pdf", "2.-Contents-06.pdf", "3-Preface-06.pdf",
+                          "10-Chapter-6-06.pdf"])
+
+    def test_parts_without_a_number_on_every_one_keep_the_page_s_order(self):
+        urls = ["https://h/x/Preface.pdf", "https://h/x/2-Chapter.pdf", "https://h/x/Cover.pdf"]
+        self.assertEqual(m.reading_order(urls), urls)
+
+    def test_a_missing_chapter_saves_nothing(self):
+        def fetch(url):
+            return (403, b"", url) if url.endswith("ch1.pdf") else self.fetch(url)
+        r = {"id": 7, "pdf_url": None, "detail_url": "https://cag.gov.in/en/audit-report/details/7"}
+        m.mirror([r], self.dir, "https://new.cloudfront.net", fetch=fetch,
+                 sleep=lambda s: None, free_gb=lambda p: 500)
+        self.assertFalse(os.path.exists(os.path.join(self.dir, "7.pdf")))
+
+
+class Placeholder(unittest.TestCase):
+    def test_the_cag_s_stand_in_pages_are_placeholders(self):
+        for text in ("Report Not Tabled Yet",
+                     '" For the contents of this paragraph/report, printed version of the '
+                     'relevant report may be referred to"', ""):
+            self.assertTrue(m.is_placeholder(pdf_with(text)), text)
+
+    def test_a_report_is_not(self):
+        self.assertFalse(m.is_placeholder(pdf_with("Chapter 1", "Chapter 2")))
+        self.assertFalse(m.is_placeholder(pdf_with("Preface. This Report of the CAG for the year "
+                                                   "ended 31 March 2021 has been prepared")))
+
+    def test_a_placeholder_is_counted_missing_and_asked_again_later(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        calls = []
+
+        def fetch(url):
+            calls.append(url)
+            return 200, pdf_with("Report Not Tabled Yet"), url
+        r = {"id": 5, "pdf_url": "https://x.net/uploads/download_audit_report/a.pdf", "detail_url": None}
+        run = lambda **kw: m.mirror([r], tmp.name, "https://new.cloudfront.net", fetch=fetch,  # noqa: E731
+                                    sleep=lambda s: None, free_gb=lambda p: 500, **kw)
+        done = run()
+        self.assertEqual(done["missing"], 1)
+        calls.clear()
+        run()
+        self.assertEqual(calls, [])
+        run(retry_missing=True)
+        self.assertEqual(len(calls), 1)
 
 
 if __name__ == "__main__":

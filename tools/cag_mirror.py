@@ -94,10 +94,65 @@ def save_manifest(out, man):
     os.replace(p + ".part", p)
 
 
+# What the CAG serves in place of a report: one page saying the report is not tabled, or to
+# see the printed copy, or nothing at all (the 2012-13 coal block allocation audit, 1837).
+PLACEHOLDER = re.compile(r"not tabled|printed version of the relevant report", re.I)
+
+
+def is_placeholder(body):
+    """A one-page stand-in rather than a report. Held as a file, counted as missing."""
+    import fitz
+    try:
+        doc = fitz.open(stream=body, filetype="pdf")
+    except (fitz.FileDataError, RuntimeError):
+        return False  # unreadable here is not evidence of a stand-in page
+    with doc:
+        if doc.page_count != 1:
+            return False
+        text = " ".join(doc[0].get_text().split())
+    return len(text) < 300 and (not text or bool(PLACEHOLDER.search(text)))
+
+
+def merged(bodies):
+    """Several PDFs as one, in the order given."""
+    import fitz
+    out = fitz.open()
+    for b in bodies:
+        with fitz.open(stream=b, filetype="pdf") as part:
+            out.insert_pdf(part)
+    return out.tobytes(garbage=3, deflate=True)
+
+
+PART_NO = re.compile(r"^(\d+)\.?[-_ ]")
+
+
+def reading_order(urls):
+    """Chapter files in reading order. The report page lists them in no fixed order
+    ("3-Preface", "5-Chapter-1", "1-Inner-Cover" on 118335), but the files are numbered;
+    where every one carries a number it decides, and otherwise the page's order stands."""
+    nos = [PART_NO.match(urllib.parse.unquote(u.rsplit("/", 1)[-1])) for u in urls]
+    if not all(nos):
+        return list(urls)
+    return [u for _, u in sorted(zip((int(n[1]) for n in nos), urls), key=lambda x: x[0])]
+
+
+def all_parts(urls, fetch, sleep, pace, tried):
+    """Every one of `urls` as a PDF, or None if any part cannot be had: a report missing a
+    chapter is not saved as though it were whole."""
+    parts = []
+    for u in urls:
+        body, final = first_pdf([u], fetch, sleep, pace, tried)
+        if not body:
+            return None
+        parts.append((final, body))
+    return parts
+
+
 def held(rec, path, verify):
     """True when the file on disk is the one the manifest recorded. A size check catches the
-    truncated and half-written files a stopped run leaves; only `verify` reads the bytes."""
-    if not rec.get("sha256") or not os.path.exists(path):
+    truncated and half-written files a stopped run leaves; only `verify` reads the bytes. A
+    placeholder is not held: it is asked for again, like a report with no file."""
+    if not rec.get("sha256") or rec.get("placeholder") or not os.path.exists(path):
         return False
     if verify:
         return sha(path) == rec["sha256"]
@@ -122,7 +177,7 @@ def recently_missing(rec, now, days=RETRY_DAYS):
     """A report checked within `days` and found to have no PDF anywhere. About 49 of the
     newest reports have been taken down; asked again on every run, they came first in
     newest-first order and spent a whole --limit while the run fetched nothing."""
-    if rec.get("sha256") or not rec.get("checked"):
+    if (rec.get("sha256") and not rec.get("placeholder")) or not rec.get("checked"):
         return False
     when = datetime.strptime(rec["checked"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
     return (now - when).days < days
@@ -170,9 +225,19 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
                 sleep(pace)
                 code, page, _ = fetch(r["detail_url"])
                 rec["detail_status"] = code
-                m = PDF_LINK.search(page.decode("utf-8", "replace")) if code == 200 else None
-                if m:
-                    body, final = first_pdf([html.unescape(m.group(1))], fetch, sleep, pace, tried)
+                links = list(dict.fromkeys(
+                    html.unescape(u) for u in PDF_LINK.findall(page.decode("utf-8", "replace"))
+                )) if code == 200 else []
+                # Some reports are published a chapter to a file. Only the first was saved,
+                # so ten reports were held as a contents page, a preface or a chapter.
+                parts = (all_parts(reading_order(links), fetch, sleep, pace, tried)
+                         if len(links) > 1 else None)
+                if parts:
+                    body, final = merged([b for _, b in parts]), parts[0][0]
+                    rec["parts"] = [{"url": u, "bytes": len(b),
+                                     "sha256": hashlib.sha256(b).hexdigest()} for u, b in parts]
+                elif len(links) == 1:
+                    body, final = first_pdf(links, fetch, sleep, pace, tried)
             rec["tried"], rec["checked"] = tried, datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             if body:
                 rec["url"] = final
@@ -180,7 +245,8 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
                 with open(path + ".part", "wb") as fh:
                     fh.write(body)
                 os.replace(path + ".part", path)
-                rec.update(bytes=len(body), sha256=hashlib.sha256(body).hexdigest())
+                rec.update(bytes=len(body), sha256=hashlib.sha256(body).hexdigest(),
+                           placeholder=is_placeholder(body))
                 got += 1
                 bytes_ += len(body)
             man[str(r["id"])] = rec
@@ -196,7 +262,7 @@ def mirror(reports, out, host, fetch=fetch, sleep=time.sleep, free_gb=None, min_
                     f"free {free_gb(out):.0f} GB")
     finally:
         save_manifest(out, man)
-    missing = sum(1 for v in man.values() if not v.get("sha256"))
+    missing = sum(1 for v in man.values() if not v.get("sha256") or v.get("placeholder"))
     log(f"done: saved {got:,} this run; manifest holds {len(man) - missing:,} files and "
         f"{missing:,} reports with no fetchable PDF")
     return {"saved": got, "bytes": bytes_, "stopped": stopped, "missing": missing}
@@ -237,7 +303,9 @@ def main():
     # A kill (timeout, Ctrl-C from another shell) becomes SystemExit, so mirror()'s finally
     # saves the manifest; without it a SIGTERM skipped finally and orphaned up to 24 files.
     signal.signal(signal.SIGTERM, lambda *_: sys.exit(143))
-    r = mirror(with_pdf, OUT, host, pace=a.pace, limit=a.limit, deadline=deadline,
+    # Every report, not only those the index links a PDF for: 26 in the November crawl link
+    # none, and a report's own page can link a file the index does not.
+    r = mirror(reports, OUT, host, pace=a.pace, limit=a.limit, deadline=deadline,
                min_free_gb=a.min_free_gb, verify=a.verify, retry_missing=a.retry_missing)
     sys.exit(75 if r["stopped"] else 0)
 
