@@ -8,7 +8,7 @@
    "what": "Scheme-wise Budget 2026-27: SCHEME/PROGRAMME/PROJECTS WISE OUTLAY, sector by department by scheme, four years of figures in lakh with a printed subtotal at every level and a Grand Total"
   }
  },
- "built": "2026-11-03T14:03:32Z",
+ "built": "2026-11-04T11:02:55Z",
  "caveat": "One row here is one line of Delhi's scheme-wise budget, keyed on (sector, name) because the document prints no scheme code. Rows repeating a name within one sector are ADDED, which is what the document means when it splits a scheme into GIA-General, GIA-Salary and GIA-Capital lines. This list is a superset of Delhi's citizen-facing schemes: works and establishment lines such as 'Construction of Residential Complex for Judicial Officers' sit at the same level as 'Laadli Yojana'. It is also slightly SHORT of the document: about ten nil-provision rows are read as headings by the blank-line rule described in parse/delhi.py, and appear under headings rather than under entries.",
  "counts": {
   "funded_at_nil": 450,
@@ -26414,6 +26414,25 @@
   },
   {
    "actual_2024_25_lakh": 0.0,
+   "be_2025_26_lakh": 100000.0,
+   "be_capital_or_loan_lakh": 0.0,
+   "be_lakh": 0.0,
+   "be_revenue_lakh": 0.0,
+   "group": "Total [WATER SUPPLY] *",
+   "key": "unsectored | Total [WATER SUPPLY] * | (East GIA o&DJB North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
+   "mre_2025_26_lakh": 0.0,
+   "name": "(East GIA o&DJB North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
+   "pages": [
+    89
+   ],
+   "rows_added": 1,
+   "sector": null,
+   "snos": [
+    "5"
+   ]
+  },
+  {
+   "actual_2024_25_lakh": 0.0,
    "be_2025_26_lakh": 1000.0,
    "be_capital_or_loan_lakh": 0.0,
    "be_lakh": 1007.0,
@@ -26448,25 +26467,6 @@
    "sector": null,
    "snos": [
     "3"
-   ]
-  },
-  {
-   "actual_2024_25_lakh": 0.0,
-   "be_2025_26_lakh": 100000.0,
-   "be_capital_or_loan_lakh": 0.0,
-   "be_lakh": 0.0,
-   "be_revenue_lakh": 0.0,
-   "group": "Total [WATER SUPPLY] *",
-   "key": "unsectored | Total [WATER SUPPLY] * | GIA o&DJB (East North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
-   "mre_2025_26_lakh": 0.0,
-   "name": "GIA o&DJB (East North forEast Zone) Capital of Delhi Water GIA-Capital Projects funded by GOI GIA- Capital",
-   "pages": [
-    89
-   ],
-   "rows_added": 1,
-   "sector": null,
-   "snos": [
-    "5"
    ]
   },
   {
