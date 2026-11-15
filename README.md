@@ -10,7 +10,10 @@ only in CAG audit reports, and 4,770 read out of sixteen state budget books, whe
 national source names them at all. **1,756 are funded by a state and listed by no national
 portal**, worth ₹3.44 lakh crore.
 
-Live at **<https://india-schemes.pages.dev>**.
+Live at **<https://india-schemes.pages.dev>**. For machines: [`llms.txt`](https://india-schemes.pages.dev/llms.txt),
+a read-only MCP server at `https://india-schemes.pages.dev/mcp`, and a monthly
+[release](https://india-schemes.pages.dev/releases) of the CSV under a code that never changes
+(`schemes-register-2026.11`) with its SHA-256.
 
 It is meant to be read two ways. As a **reckoner**: what schemes exist, who they are for,
 what they give, what they cost, and which government source says so, including the ones no

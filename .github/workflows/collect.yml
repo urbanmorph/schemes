@@ -142,6 +142,7 @@ jobs:
           for d in archive/cag/*/; do [ -f "$d/_manifest.json" ] || rm -rf "$d"; done
           if [ "$CODE" = 0 ] || [ "$CODE" = 1 ] || python3 progress.py finished myscheme "$SNAP"; then
             git add -A -- archive data status.json
+            [ -d releases ] && git add -A -- releases
             [ -f run.json ] && git add -- run.json
             if git diff --cached --quiet; then
               echo "nothing changed"

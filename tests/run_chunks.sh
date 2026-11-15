@@ -35,8 +35,9 @@ EOF
 chmod +x "$SP/bin/timeout"
 export PATH="$SP/bin:$PATH" BUDGET_UNIT=1
 
-# Every parser, enricher, verifier and the build: succeed, do nothing.
-for f in parse/*.py enrich/*.py verify/verify.py site/build.py; do echo 'import sys; sys.exit(0)' > "$f"; done
+# Every parser, enricher, verifier, the build and the release: succeed, do nothing.
+mkdir -p tools
+for f in parse/*.py enrich/*.py verify/verify.py site/build.py tools/release.py; do echo 'import sys; sys.exit(0)' > "$f"; done
 # myScheme: one record a second up to NEED, resuming from what is on disk, like the real one.
 cat > collect/myscheme.py <<'EOF'
 import argparse, json, os, time

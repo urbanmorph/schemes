@@ -363,6 +363,10 @@ step "parse/ratios" python3 parse/ratios.py
 
 say "build"
 step "site/build" python3 site/build.py
+# This month's release: the CSV just built, under a code that never changes, committed with
+# the snapshot by the Save step. Refuses (and fails the step) if that code already holds
+# different bytes, and releases nothing for a snapshot that is not COMPLETE.
+step "tools/release" python3 tools/release.py
 
 # What the archive costs, printed every run so its growth is never a surprise. The archive
 # is the evidence and stays in git, so it only grows; the question is when that stops being
