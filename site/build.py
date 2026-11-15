@@ -15,6 +15,7 @@ gets a notation rather than a gap.
 
 import argparse
 import collections
+import functools
 import glob
 import hashlib
 import html
@@ -2557,6 +2558,7 @@ def index_section(entries):
   {org_select}
   <span class="count" id="count" role="status" aria-live="polite" aria-atomic="true">{n:,} schemes</span>
   <a class="dl" href="schemes.csv" download>Download all {n:,} as CSV</a>
+  <a class="dl" href="{link("releases.html")}">Releases to cite</a>
 </div>
 <div class="pills">
   {level_pills}
@@ -3727,6 +3729,140 @@ def page_scheme(s, status, enrich=None, entry=None):
 
 # --------------------------------------------------------------------- build
 
+API_FIELDS = ["id", "name", "level", "states", "sector", "ministry", "audience", "beneficiaries",
+              "budget_cr", "sources", "on_myscheme", "checks_passed", "checks_total", "gaps",
+              "brief", "url"]
+
+
+def export_record(en):
+    """One scheme as the downloads publish it: the CSV's columns, and the API's."""
+    ck = en.get("checks") or {}
+    st = en.get("state")
+    return {
+        "id": en.get("slug"), "name": en.get("name"), "level": en.get("level") or "",
+        "where": where_full(en),
+        "states": [x for x in (st if isinstance(st, list) else [st] if st else []) if x and x != "All"],
+        "sector": en.get("category") or "", "ministry": en.get("org") or "",
+        "audience": en.get("audience") or "", "beneficiaries": list(en.get("beneficiaries") or []),
+        "budget_cr": en.get("be_cr"), "sources": list(en.get("sources") or []),
+        "on_myscheme": bool(en.get("on_myscheme")),
+        "on_myscheme_csv": "yes" if en.get("on_myscheme") else "similar page" if similar_pages(en) else "no",
+        "checks_passed": ck.get("passed"), "checks_total": ck.get("total"),
+        "gaps": [c["id"] for c in ck.get("checks") or [] if not c.get("ok")],
+        "brief": ck.get("brief") or "",
+        "url": SITE_BASE + "/" + (en["href"] if en.get("href") else "scheme/" + str(en["slug"])),
+    }
+
+
+@functools.lru_cache(maxsize=None)
+def _release():
+    """tools/release.py, which owns the release code and publishing; loaded once."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("release", os.path.join(ROOT, "tools", "release.py"))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def api_document(records, checks, status):
+    """api/schemes.json: the release it belongs to, the check labels, and one row per scheme."""
+    snap = status.get("snapshot")
+    summary = (checks or {}).get("summary") or {}
+    return {
+        "meta": {
+            "release": _release().release_code(snap) if snap else None,
+            "snapshot": snap,
+            "licence": "CC BY 4.0",
+            "attribution": "The Schemes Register (github.com/urbanmorph/schemes)",
+            "site": SITE_BASE,
+            "myscheme_records": summary.get("schemes"),
+            "check_labels": CHECK_LABEL,
+            "by_check": summary.get("by_check") or {},
+            "about": "id is the slug in the scheme's page URL; budget_cr is the 2026-27 allocation "
+                      "in crore where a budget names one; gaps are the documentation checks its "
+                      "myScheme record fails, keys of check_labels.",
+        },
+        "fields": API_FIELDS,
+        "rows": [[x[f] for f in API_FIELDS] for x in records],
+    }
+
+
+def page_releases(index):
+    """Every release, newest first, with what a citation needs."""
+    rows = "".join(
+        f'<tr id="{e(x["code"])}"><td><b>{e(x["code"])}</b></td><td>{e(x["snapshot"])}</td>'
+        f'<td class="num">{x["rows"]:,}</td>'
+        f'<td><a href="releases/{e(x["code"])}/schemes.csv">CSV</a> &middot; '
+        f'<a href="releases/{e(x["code"])}/manifest.json">manifest</a> &middot; '
+        f'<a href="releases/{e(x["code"])}/CHANGES.md">changes</a></td>'
+        f'<td><code style="word-break:break-all">{e(x["sha256"])}</code></td></tr>'
+        for x in index.get("releases") or [])
+    latest = index.get("latest")
+    cite = (f'<p>To cite this month&rsquo;s data: <i>The Schemes Register, release {e(latest)}</i>, '
+            f'github.com/urbanmorph/schemes, CC BY 4.0. The SHA-256 beside it proves which file '
+            'you used.</p>') if latest else ""
+    return f"""<h1>Releases</h1>
+<p class="lede">Each month&rsquo;s register as one CSV, under a code that is never reused and a
+file that never changes once released: <code>schemes-register-</code><i>year</i><code>.</code><i>month</i>.
+The live <a href="schemes.csv">schemes.csv</a> moves on every month; a release does not.</p>
+{cite}
+<div class="tscroll"><table aria-label="Every release">
+<thead><tr><th>Code</th><th>Snapshot</th><th class="num">Schemes</th><th>Files</th><th>SHA-256 of the CSV</th></tr></thead>
+<tbody>{rows}</tbody></table></div>
+<p>The same list as data: <a href="releases/index.json">releases/index.json</a>. A scheme&rsquo;s id
+is the slug in its page URL and stays the same while the scheme stays in the register.</p>
+"""
+
+
+def llms_txt(n, status):
+    """The register described for a language model: what it is, how to read it, how to cite it."""
+    snap = status.get("snapshot") or "unknown"
+    code = _release().release_code(snap) if status.get("snapshot") else None
+    rel = (f"- [This month's release]({SITE_BASE}/releases#{code}): `{code}`, the CSV with its "
+           f"SHA-256 and a manifest. Every release: {SITE_BASE}/releases\n") if code else ""
+    return f"""# The Schemes Register
+
+> A monthly, machine-built register of {n:,} Indian government schemes, assembled from official
+> sources (myScheme, DBT Bharat, the Union Budget and Outcome Budget, CAG audit reports and
+> {word(len(STATE_OF)).lower()} state budget books), recording what each source publishes about a
+> scheme and what it leaves out. Snapshot {snap}.
+
+It describes the data about schemes, never whether a scheme works. "No end date published" is a
+fact about a database field, not a judgement on the scheme. Labels that classify state budget
+rows were read by Claude, an AI model, and no person has checked them. Rows read from a state's
+budget book are heads that budget names; for a state with no classifier they make no claim to
+be schemes.
+
+## Read it
+
+- [All schemes as CSV]({SITE_BASE}/schemes.csv): one row per scheme, with level, state, sector,
+  ministry or department, audience, beneficiaries, 2026-27 allocation (crore), sources, whether
+  myScheme lists it, documentation checks passed, and its page.
+- [The same as JSON]({SITE_BASE}/api/schemes.json): rows as arrays under `fields`, with the
+  release code, the documentation check labels and how many records fail each.
+- MCP server (read-only, streamable HTTP, no key): {SITE_BASE}/mcp
+  Tools: `find_schemes` (by text, state, ministry, sector, beneficiary, level, on_myscheme),
+  `get_scheme` (by id), `documentation_gaps` (what the myScheme records leave out),
+  `list_values` (the exact spellings a filter accepts).
+{rel}- Each scheme's page: {SITE_BASE}/scheme/<id>. The id is the slug; a scheme keeps it while
+  it stays in the register.
+
+## Key pages
+
+- [Findings]({SITE_BASE}/findings): what the register has found.
+- [What each state's budget names]({SITE_BASE}/states)
+- [Where the sources disagree]({SITE_BASE}/divergence)
+- [CAG audit reports]({SITE_BASE}/audit)
+- [What changed this month]({SITE_BASE}/changes)
+
+## Licence and citation
+
+The derived data is CC BY 4.0; each source keeps its own terms. The code is MIT
+(github.com/urbanmorph/schemes). Cite the release code and the attribution "The Schemes
+Register (github.com/urbanmorph/schemes)".
+"""
+
+
 def build():
     status = load("status.json", {}) or {}
     shell.status = status
@@ -3810,7 +3946,36 @@ def build():
             "  Access-Control-Allow-Origin: *\n"
             "\n"
             "/sitemap.xml\n"
-            "  Cache-Control: public, max-age=86400\n")
+            "  Cache-Control: public, max-age=86400\n"
+            "\n"
+            # What the MCP server answers from, and a JSON form of the CSV for anyone else.
+            "/api/*\n"
+            "  Cache-Control: public, max-age=3600, stale-while-revalidate=86400\n"
+            "  Access-Control-Allow-Origin: *\n"
+            "\n"
+            "/llms.txt\n"
+            "  Content-Type: text/plain; charset=utf-8\n"
+            "  Cache-Control: public, max-age=3600, stale-while-revalidate=86400\n"
+            "\n"
+            # A release never changes once cut (tools/release.py refuses to), so its files
+            # can be cached for good. The index lists new ones and so is not immutable.
+            "/releases\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
+            "/releases.html\n"
+            "  Cache-Control: public, max-age=300, stale-while-revalidate=86400\n"
+            "\n"
+            "/releases/index.json\n"
+            "  Cache-Control: public, max-age=3600, stale-while-revalidate=86400\n"
+            "  Access-Control-Allow-Origin: *\n"
+            "\n"
+            "/releases/*/schemes.csv\n"
+            "  Content-Type: text/plain; charset=utf-8\n"
+            "  Cache-Control: public, max-age=31536000, immutable\n"
+            "  Access-Control-Allow-Origin: *\n"
+            "\n"
+            "/releases/*/CHANGES.md\n"
+            "  Content-Type: text/plain; charset=utf-8\n")
 
     def w(rel, s):
         with open(os.path.join(OUT, rel), "w", encoding="utf-8") as fh:
@@ -3869,26 +4034,29 @@ def build():
     # citizen-facing portal lists are in the file too. Those are the rows a reckoner cannot
     # get anywhere else.
     import csv as _csv
+    records = [export_record(en) for en in sorted(entries, key=lambda x: (x["name"] or "").lower())]
     with open(os.path.join(OUT, "schemes.csv"), "w", encoding="utf-8", newline="") as fh:
         wr = _csv.writer(fh)
         wr.writerow(["name", "slug", "level", "state", "sector", "ministry_or_department",
                      "audience", "beneficiaries", "budget_2026_27_cr", "sources",
                      "on_myscheme", "documentation_checks_passed",
                      "documentation_checks_total", "url"])
-        for en in sorted(entries, key=lambda x: (x["name"] or "").lower()):
-            ck = en.get("checks") or {}
+        for x in records:
             wr.writerow([
-                en.get("name"), en.get("slug"), en.get("level") or "",
-                where_full(en), en.get("category") or "", en.get("org") or "",
-                en.get("audience") or "",
-                "; ".join(en.get("beneficiaries") or []),
-                en.get("be_cr") if en.get("be_cr") is not None else "",
-                " ".join(en.get("sources") or []),
-                "yes" if en.get("on_myscheme") else "similar page" if similar_pages(en) else "no",
-                ck.get("passed", ""), ck.get("total", ""),
-                SITE_BASE + "/" + (en["href"] if en.get("href")
-                                    else "scheme/" + str(en["slug"])),
+                x["name"], x["id"], x["level"], x["where"], x["sector"], x["ministry"],
+                x["audience"], "; ".join(x["beneficiaries"]),
+                x["budget_cr"] if x["budget_cr"] is not None else "",
+                " ".join(x["sources"]), x["on_myscheme_csv"],
+                "" if x["checks_passed"] is None else x["checks_passed"],
+                "" if x["checks_total"] is None else x["checks_total"], x["url"],
             ])
+    # The same rows as JSON, for the MCP server (functions/mcp.js) and anyone who would
+    # rather not parse a CSV. Arrays, not objects, because 10,000 copies of every key name
+    # doubled the file. It names the release it belongs to, so an answer can cite it.
+    os.makedirs(os.path.join(OUT, "api"), exist_ok=True)
+    w("api/schemes.json", json.dumps(api_document(records, checks, status),
+                                     ensure_ascii=False, separators=(",", ":")))
+    w("llms.txt", llms_txt(len(records), status))
 
     # The date of the data, not of the build. A page rebuilt from the same snapshot has not
     # changed, and saying otherwise is how a sitemap's dates come to be ignored.
@@ -4087,6 +4255,15 @@ def build():
             fh.write(f"<url><loc>{SITE_BASE}/{u}</loc>"
                      f"<lastmod>{lastmod.get(u, snap)}</lastmod></url>\n")
         fh.write("</urlset>\n")
+    # Every release cut so far, served as it was cut (tools/release.py), and a page saying
+    # how to cite one.
+    _release().publish(ROOT, OUT)
+    w("releases.html", shell(
+        "Releases", "/releases", page_releases(load(os.path.join(OUT, "releases", "index.json"), {})),
+        desc="Monthly releases of the Schemes Register: each a CSV under a code that never changes, "
+             "with its SHA-256, to cite.",
+        canon=SITE_BASE + "/releases"))
+
     with open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8") as fh:
         fh.write("User-agent: *\nAllow: /\n"
                  f"Sitemap: {SITE_BASE}/sitemap.xml\n")

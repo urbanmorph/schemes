@@ -67,6 +67,23 @@ adapt to keep the run green.
 
 ---
 
+## Releases, and the MCP server
+
+After the site builds, `run.sh` runs `tools/release.py`: a COMPLETE snapshot's `schemes.csv` is
+copied to `releases/schemes-register-<year>.<month>/` with its SHA-256, a manifest and a
+CHANGES note, and the Save step commits it with the snapshot. A release never changes. If the
+same month is rebuilt and the CSV comes out different, the step refuses and fails: correct the
+data in the next month's release rather than rewriting one somebody may have cited. The site
+serves every release at `/releases`.
+
+`functions/mcp.js` is the read-only MCP server at `/mcp`, the only code that runs on a request.
+Its logic is `site/mcp.mjs` (tested by `node --test tests/mcp.test.mjs`) and its data is the
+build's `api/schemes.json`, so it answers from whatever was last deployed.
+
+Each release's manifest names a proposed w3id.org address
+(`https://w3id.org/india-schemes/register/<year>.<month>`). It resolves only once someone
+registers it with a pull request to github.com/perma-id/w3id.org.
+
 ## The monthly checks worth doing by hand
 
 - **Did the watchlist move?** `data/watchlist.json`. `since_listed` going above zero is the
