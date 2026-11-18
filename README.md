@@ -125,11 +125,11 @@ at all: firms, industries, registered societies, universities and NGOs.
         |
         +--  enrich/    secondary sources, kept strictly apart from the record.
         |
-        +--  site/      static build to site/_out/, deployed to Cloudflare Pages by hand.
+        +--  site/      static build to site/_out/, deployed to Cloudflare Pages automatically.
 ```
 
-The rules below are the short form. [PLAN.md](PLAN.md) is the long one, and it is what the
-76 files saying "read PLAN.md §7 before editing" are pointing at.
+The rules below are the short form. [PLAN.md](PLAN.md) is the long one, and it is what
+every file saying "read PLAN.md §7 before editing" is pointing at.
 
 **`git log` is the change feed.** One file per scheme, overwritten each month, so
 `git log -p data/myscheme/schemes/pm-kisan.json` is that scheme's history and
@@ -218,7 +218,6 @@ of them silently produced wrong output first.
 | [Union Budget](https://www.indiabudget.gov.in/) Statements 4A/4B | per-scheme allocations | Government of India |
 | Union Budget Outcome Budget | output and outcome targets | Government of India |
 | [DBT Bharat](https://dbtbharat.gov.in/) | DBT scheme lists and state counts | Government of India |
-
 | [CAG audit reports](https://cag.gov.in/) | that an audit exists, never what it found | Government of India |
 | Sixteen state budgets | each state's own scheme list, with allocations | the state that published it |
 
@@ -243,8 +242,10 @@ credential.
 ## Status
 
 Collection, verification, parsing, enrichment, the site and the monthly job are built and
-running. The site is deployed at <https://india-schemes.pages.dev>; deployment is by hand
-and documented in [PLAN.md §10](PLAN.md).
+running. The site is deployed at <https://india-schemes.pages.dev>, automatically:
+`check.yml` calls `.github/workflows/deploy.yml` once checks pass on a push to `main`, and
+`collect.yml` calls it after the monthly run commits a verified snapshot. It can also be
+run from the Actions tab. See [PLAN.md §10](PLAN.md).
 
 Sixteen states are read, six refuse and are published as refusals. Link reachability
 (Tier 2) is deliberately not shipped: it carries a real error rate and belongs behind a
