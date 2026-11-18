@@ -4243,7 +4243,7 @@ def build():
     # their own that was 15,108 URLs pointing at nothing. A sitemap of 404s is worse than no
     # sitemap: it is a list this register hands a crawler saying these exist.
     urls = [f.replace(".html", "") if f != "index.html" else ""
-            for _, f in ROUTES]
+            for _, f in ROUTES] + ["releases"]  # written below, and not a nav route
     urls += sorted(f"state/{n[:-5]}" for n in os.listdir(os.path.join(OUT, "state"))
                    if n.endswith(".html"))
     urls += sorted(f"scheme/{n[:-5]}" for n in os.listdir(os.path.join(OUT, "scheme"))

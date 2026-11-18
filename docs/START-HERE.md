@@ -72,13 +72,13 @@ is **allowed to have a hole**. Do not make it adapt to keep a run green. Changin
 is a deliberate, reviewed act.
 
 Every file says which half it is in, in its first three lines. `PLAN.md` §7 is the argument
-in full, and 67 files point at it.
+in full, and every one of those files points at it.
 
 ---
 
 ## 4. Read the code in this order
 
-The codebase is roughly 36,000 lines, and most of it is per-state parsing you can ignore
+The codebase is large, and most of it is per-state parsing you can ignore
 until you need it. Four files carry the ideas:
 
 | file | why |
@@ -131,7 +131,7 @@ deploys. If you need to publish without a commit: **Actions → Deploy → Run w
 - **Do not commit `data/`.** 73 files regenerated wholesale by every run, so two branches
   that both ran the pipeline conflict on all of them, meaninglessly. Take either side and
   re-run `./run.sh --skip-collect`.
-- **`site/build.py` is 3,716 lines** and is the likeliest collision. Say which page you are in.
+- **`site/build.py` is one long file** and is the likeliest collision. Say which page you are in.
 - **`archive/` is append-only** and never conflicts.
 
 ---

@@ -26,7 +26,7 @@ by every run, so two branches that both ran the pipeline conflict on all of them
 conflict is meaningless — the content is derived. Work on code, let `data/` regenerate on
 `main`, and if a merge conflicts there take either side and re-run `./run.sh --skip-collect`.
 
-**`site/build.py` is 3,716 lines and is the likeliest collision.** If we are both in it, say
+**`site/build.py` is one long file and is the likeliest collision.** If we are both in it, say
 which page. It is one file because the site is one build; splitting it is reasonable work
 that nobody has done.
 
@@ -135,7 +135,7 @@ totals to check a reconstruction against. Bihar publishes drawings.
 and the second costs the property that makes this auditable.
 
 ### Splitting `site/build.py`
-3,716 lines, one file, and the reason it has not been split is that nobody has needed to
+Thousands of lines in one file, and the reason it has not been split is that nobody has needed to
 badly enough. If you are going to live in it, this is worth doing first.
 
 ---
