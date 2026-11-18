@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 # Everything that can be checked without the network, in one command.
 #
-# There is no CI here beyond the monthly collection job, and that job is the wrong place
-# to find out you broke something: it runs once a month and its failure costs a snapshot.
-# Run this before you push. It touches no government server and takes a few seconds.
+# CI runs it too. .github/workflows/check.yml runs this and tests/run_chunks.sh on every
+# push and pull request; a push to main that passes then calls deploy.yml, which rebuilds
+# the site, checks every internal link and publishes it, so a failure here keeps that push
+# off the public site. The monthly job (collect.yml) is the only one that collects from
+# government servers. Run this before you push anyway: it is quicker than a CI round
+# trip, touches no government server and takes a few seconds.
 set -uo pipefail
 cd "$(dirname "$0")"
 
