@@ -3844,11 +3844,8 @@ be schemes.
   Tools: `find_schemes` (by text, state, ministry, sector, beneficiary, level, on_myscheme),
   `get_scheme` (by id), `documentation_gaps` (what the myScheme records leave out),
   `list_values` (the exact spellings a filter accepts).
-  AI apps send their own name when they connect. We count calls by app (Claude, Cursor, …)
-  and keep nothing else.
 - No key for any of these. Please send a `User-Agent` that names your app (for example
-  `my-app/1.0`). We read it only to tell apps, AI tools and crawlers apart, so our counts of how
-  each mode is used stay honest. We don't store it, and we don't track who you are.
+  `my-app/1.0`). We don't store it, and we don't track who you are.
 {rel}- Each scheme's page: {SITE_BASE}/scheme/<id>. The id is the slug; a scheme keeps it while
   it stays in the register.
 
@@ -4311,13 +4308,11 @@ def selftest():
         bad += not ok
         print(f"  {'ok  ' if ok else 'FAIL'} {label}" + ("" if ok else f"\n        want {want!r}\n        got  {got!r}"))
     llms = " ".join(llms_txt(1, {}).split())
-    check("llms.txt asks for a User-Agent, read only to sort calls by mode and not stored",
-          "Please send a `User-Agent` that names your app (for example `my-app/1.0`). We read it only "
-          "to tell apps, AI tools and crawlers apart, so our counts of how each mode is used stay "
-          "honest. We don't store it, and we don't track who you are." in llms, True)
-    check("llms.txt says the MCP server counts calls by app and keeps nothing else",
-          "AI apps send their own name when they connect. We count calls by app (Claude, Cursor, "
-          "\u2026) and keep nothing else." in llms, True)
+    check("llms.txt asks for a User-Agent and says it is not stored",
+          "Please send a `User-Agent` that names your app (for example `my-app/1.0`). We don't store "
+          "it, and we don't track who you are." in llms, True)
+    check("llms.txt claims no counting it does not do",
+          "counts of how each mode" in llms or "count calls by app" in llms, False)
     ut = {"state": ["Andaman and Nicobar Islands"], "level_value": "state"}
     check("acronym gets its place and the word people search",
           seo_title("ANIDAS", None, ut), "ANIDAS: Andaman and Nicobar Islands scheme")
