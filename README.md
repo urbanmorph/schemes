@@ -13,7 +13,9 @@ portal**, worth ₹3.44 lakh crore.
 Live at **<https://india-schemes.pages.dev>**. For machines: [`llms.txt`](https://india-schemes.pages.dev/llms.txt),
 a read-only MCP server at `https://india-schemes.pages.dev/mcp`, and a monthly
 [release](https://india-schemes.pages.dev/releases) of the CSV under a code that never changes
-(`schemes-register-2026.11`) with its SHA-256.
+(`schemes-register-2026.11`) with its SHA-256. No key for any of them. Please send a
+`User-Agent` that names your app (for example `my-app/1.0`). We don't store it, and we don't
+track who you are.
 
 It is meant to be read two ways. As a **reckoner**: what schemes exist, who they are for,
 what they give, what they cost, and which government source says so, including the ones no
