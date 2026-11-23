@@ -5,7 +5,14 @@
 //
 // The data is the site's own api/schemes.json, read through the static-asset binding once per
 // isolate and kept: it changes only when the site is redeployed, which starts new isolates.
-import { handleMcp } from "../site/mcp.mjs";
+//
+// Each request is counted after its answer is built (site/metrics.mjs): the D1 write runs in
+// waitUntil, and without the DB binding nothing is counted, so counting never changes or slows
+// an answer.
+import { handleMcp, TOOLS } from "../site/mcp.mjs";
+import { count } from "../site/metrics.mjs";
+
+const TOOL_NAMES = TOOLS.map((t) => t.name);
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -36,7 +43,7 @@ export const onRequestGet = () =>
     docs: "https://india-schemes.pages.dev/llms.txt",
   });
 
-export async function onRequestPost({ request, env }) {
+export async function onRequestPost({ request, env, waitUntil }) {
   let body;
   try {
     body = await request.json();
@@ -44,7 +51,8 @@ export async function onRequestPost({ request, env }) {
     return json({ jsonrpc: "2.0", id: null, error: { code: -32700, message: "Parse error" } }, 400);
   }
   const d = await load(env, request);
-  if (Array.isArray(body)) return json(body.map((r) => handleMcp(r, d)).filter(Boolean));
-  const res = handleMcp(body, d);
-  return res === null ? new Response(null, { status: 202, headers: CORS }) : json(res);
+  const out = Array.isArray(body) ? body.map((r) => handleMcp(r, d)).filter(Boolean) : handleMcp(body, d);
+  const res = out === null ? new Response(null, { status: 202, headers: CORS }) : json(out);
+  count(request, env, waitUntil, body, TOOL_NAMES);
+  return res;
 }

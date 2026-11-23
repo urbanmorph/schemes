@@ -104,8 +104,9 @@ jobs:
             [ "$code" = "200" ] || exit 1
           done
           # The MCP server is the one path that runs code: ask it something real.
+          # A monitor's user agent, so this check is never counted as use (site/metrics.mjs).
           out=$(curl -s -X POST "https://india-schemes.pages.dev/mcp?cb=${GITHUB_SHA}" \
-            -H 'content-type: application/json' \
+            -A 'schemes-deploy-monitor' -H 'content-type: application/json' \
             -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_scheme","arguments":{"id":"pm-kisan"}}}')
           echo "$out" | grep -q '"release":"schemes-register-' || { echo "  /mcp: $out" | head -c 300; exit 1; }
           echo "  /mcp           answers"

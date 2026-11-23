@@ -54,7 +54,7 @@ step "parse/changes.py self-tests"  python3 parse/changes.py --self-test
 step "verify/verify.py self-tests"  python3 verify/verify.py --self-test
 step "site/build.py self-tests"     python3 site/build.py --self-test
 step "tools/release.py tests"       python3 tests/test_release.py
-step "MCP server tests (node)"      node --test tests/mcp.test.mjs
+step "MCP server tests (node)"      node --test tests/mcp.test.mjs tests/metrics.test.mjs
 
 # 2b. The monthly run's chunking: what counts as finished, and the side-branch checkpoint.
 #     tests/run_chunks.sh drives run.sh itself through a stopped, resumed and repeated month
